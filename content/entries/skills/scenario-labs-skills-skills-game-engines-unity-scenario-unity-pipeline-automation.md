@@ -10,15 +10,15 @@ summary: "REQUIRED BACKGROUND: scenario-unity-expert (channels, job protocol,
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/game-engines/unity/scenario-unity-pipeline-automation/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.865Z
+  fetched_at: 2026-10-26T07:38:47.948Z
   truncated: false
 type: agent_skill
 skill:
@@ -68,7 +69,7 @@ skill:
     - scripts/AgentKit/Pipeline/EditorEditJobs.cs
     - scripts/AgentKit/Pipeline/PipelineBuild.cs
     - scripts/AgentKit/Pipeline/PipelineChecks.cs
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: false
   clients:
     - claude-code
@@ -240,14 +241,14 @@ this Mac against a 200-FBX Blender drop: `tests/code/unity-pipeline-automation/`
 | tests in a test asmdef calling code in Assembly-CSharp-Editor                        | CS0103, every batch job aborts                     | pipeline code in its own Editor asmdef                       |
 | `-quit` with Accelerator, no wait flag; server unreachable                           | uploads lost; job passes silently                  | `-cacheServerWaitForUploadCompletion`; check `cache server=` |
 | release from a dirty tree                                                            | provenance `dirty: true`, the CLI still builds     | clean tree, `RELEASE=1`, gitignore Addressables' `link.xml`  |
-| Blender default FBX export                                                           | root rotated 90 degrees, scale 100                 | FBX All + Apply Transform (scenario-blender-expert)          |
+| Blender default FBX export                                                           | root rotated 90 degrees, scale 100                 | FBX All + Apply Transform (scenario-blender-export)          |
 | duplicate name resolved by order                                                     | the wrong asset silently wins                      | reject every copy, ask                                       |
 | Addressables settings created inside a job                                           | the next run rewrites the settings file once       | set the two provider types after `GetSettings(true)`         |
 | `-quit` with `-runTests`; relative `--output-path`                                   | no XML; build outside the project                  | omit `-quit`; absolute path                                  |
 
 ## Handoffs
 
-- **Receives:** FBX and textures with export settings from scenario-blender-expert,
+- **Receives:** FBX and textures with export settings from scenario-blender-export,
   scenario-maya-expert, scenario-3d, scenario-textures; code layout and asmdefs from
   scenario-unity-architecture; which props load together from scenario-unity-world-building.
 - **Delivers:** to scenario-unity-performance the build report, bundle sizes, per-label loads; to

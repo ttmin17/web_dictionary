@@ -11,10 +11,10 @@ tags:
   - ai-agents
   - ai-memory
 status: active
-quality_percentile: 77
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: topoteretes/cognee
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32515
-  last_commit: 2026-10-19T05:14:14Z
-  stars_delta_7d: 340
-  stars_growth_pct: 1.1
-  trending_score: 343.59
-  rank_current: 37
-  rank_delta: null
+  stars: 32759
+  last_commit: 2026-10-23T23:13:45Z
+  stars_delta_7d: 244
+  stars_growth_pct: 0.8
+  trending_score: 245.83
+  rank_current: 56
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 31540
     - 32175
     - 32515
+    - 32759
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: topoteretes/cognee
   path: examples/demos/feedback/skill_feedback_loop/skills/diff-risk-explainer/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:23.378Z
+  fetched_at: 2026-10-26T07:44:09.062Z
   truncated: false
 type: agent_skill
 skill:

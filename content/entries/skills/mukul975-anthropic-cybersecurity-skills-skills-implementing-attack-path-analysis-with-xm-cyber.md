@@ -1,13 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-implementing-attack-path-analysis-with-xm-cyber
 name: implementing-attack-path-analysis-with-xm-cyber
-tagline: Deploys XM Cyber's continuous exposure management platform to build
-  attack graphs that chain vulnerabilities, misconfigurations, identity risks,
-  and c
-summary: "- When deploying or configuring implementing attack path analysis with
-  xm cyber capabilities in your environment - When establishing security
-  controls aligned to compliance requirements - When building or improving
-  se..."
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -16,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -27,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,17 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/implementing-attack-path-analysis-with-xm-cyber/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.883Z
+  fetched_at: 2026-10-26T07:43:39.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: implementing-attack-path-analysis-with-xm-cyber
-  description: Deploys XM Cyber's continuous exposure management platform to build
-    attack graphs that chain vulnerabilities, misconfigurations, identity risks,
-    and credential weaknesses toward critical assets, identifying the small
-    fraction of exposures sitting on converging "choke points". Use when mapping
-    attack paths across an environment or prioritizing remediation within a
-    continuous threat exposure management (CTEM) program.
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/implementing-attack-path-analysis-with-xm-cyber
   extra_files:
     - LICENSE

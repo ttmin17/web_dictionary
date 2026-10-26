@@ -11,10 +11,10 @@ tags:
   - harness
   - harness-engineering
 status: active
-quality_percentile: 65
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: revfactory/harness
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9204
+  stars: 9256
   last_commit: 2026-09-28T05:19:20Z
-  stars_delta_7d: 36
-  stars_growth_pct: 0.4
-  trending_score: 36.14
+  stars_delta_7d: 52
+  stars_growth_pct: 0.6
+  trending_score: 52.29
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9131
     - 9168
     - 9204
+    - 9256
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: revfactory/harness
   path: skills/harness/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:30.584Z
+  fetched_at: 2026-10-26T07:43:54.299Z
   truncated: false
 type: agent_skill
 skill:

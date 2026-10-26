@@ -11,10 +11,10 @@ tags:
   - deepseek
   - kimi
 status: active
-quality_percentile: 63
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: openinterpreter/openinterpreter
@@ -22,14 +22,15 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 68602
+  stars: 68672
   last_commit: 2026-10-11T00:56:06Z
-  stars_delta_7d: 365
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 70
+  stars_growth_pct: 0.1
+  trending_score: 70.07
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 68602
+    - 68672
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +38,7 @@ readme_source:
   repo: openinterpreter/openinterpreter
   path: codex-rs/skills/src/assets/samples/plugin-creator/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:41:17.616Z
+  fetched_at: 2026-10-26T07:45:40.574Z
   truncated: false
 type: agent_skill
 skill:

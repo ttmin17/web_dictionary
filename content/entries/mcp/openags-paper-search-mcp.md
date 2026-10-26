@@ -14,27 +14,28 @@ tags:
   - arxiv-papers
   - paper-search
 status: active
-quality_percentile: 43
+quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: openags/paper-search-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2863
+  stars: 2918
   last_commit: 2026-10-02T06:16:38Z
-  stars_delta_7d: 46
-  stars_growth_pct: 1.6
-  trending_score: 46.75
-  rank_current: 22
-  rank_delta: null
+  stars_delta_7d: 55
+  stars_growth_pct: 1.9
+  trending_score: 56.06
+  rank_current: 34
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2817
     - 2863
+    - 2918
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: openags/paper-search-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.261Z
+  fetched_at: 2026-10-26T07:37:58.938Z
   truncated: false
 type: mcp_server
 launch:

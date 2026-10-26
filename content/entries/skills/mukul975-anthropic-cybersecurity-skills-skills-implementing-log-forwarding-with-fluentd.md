@@ -1,12 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-implementing-log-forwarding-with-fluentd
 name: implementing-log-forwarding-with-fluentd
-tagline: Configures Fluent Bit as an endpoint log forwarder and Fluentd as the
-  central aggregator for centralized log collection, routing, filtering, and
-  enric
-summary: This skill covers configuring Fluentd and Fluent Bit for centralized
-  log collection, routing, and enrichment. Fluent Bit acts as a lightweight log
-  forwarder on endpoints, while Fluentd serves as the central aggregator...
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -15,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -26,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,17 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/implementing-log-forwarding-with-fluentd/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.895Z
+  fetched_at: 2026-10-26T07:43:39.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: implementing-log-forwarding-with-fluentd
-  description: Configures Fluent Bit as an endpoint log forwarder and Fluentd as
-    the central aggregator for centralized log collection, routing, filtering,
-    and enrichment, covering input plugins for syslog/file-tailing/application
-    logs and output routing to Elasticsearch, S3, and Splunk. Use when setting
-    up centralized log aggregation across distributed infrastructure or
-    generating Fluent Bit/Fluentd configuration files for a new log pipeline.
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/implementing-log-forwarding-with-fluentd
   extra_files:
     - LICENSE

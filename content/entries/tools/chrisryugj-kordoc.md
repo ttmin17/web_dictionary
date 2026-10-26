@@ -17,24 +17,25 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: chrisryugj/kordoc
   official_vendor: false
   license: MIT
 signals:
-  stars: 2588
-  last_commit: 2026-10-19T03:50:31Z
-  stars_delta_7d: 153
-  stars_growth_pct: 6.3
-  trending_score: 162.61
-  rank_current: 16
-  rank_delta: null
+  stars: 2771
+  last_commit: 2026-10-26T07:06:29Z
+  stars_delta_7d: 183
+  stars_growth_pct: 7.1
+  trending_score: 195.94
+  rank_current: 35
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2435
     - 2588
+    - 2771
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: chrisryugj/kordoc
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.436Z
+  fetched_at: 2026-10-26T07:37:58.921Z
   truncated: false
 type: agent_tool
 tool:
@@ -67,6 +68,7 @@ tool:
 
 [![npm version](https://img.shields.io/npm/v/kordoc.svg)](https://www.npmjs.com/package/kordoc)
 [![license](https://img.shields.io/npm/l/kordoc.svg)](https://raw.githubusercontent.com/chrisryugj/kordoc/main/LICENSE)
+[![MCP Registry](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.modelcontextprotocol.io%2Fv0%2Fservers%3Fsearch%3Dio.github.chrisryugj%2Fkordoc%26version%3Dlatest&query=%24.servers%5B0%5D.server.version&label=MCP%20Registry&color=blue)](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.chrisryugj/kordoc)
 
 > *대한민국에서 둘째가라면 서러울 문서지옥. 거기서 7년 버틴 공무원이 만들었습니다.*
 
@@ -74,16 +76,16 @@ HWP 3.x·5.x, HWPX, HWPML, PDF, XLS·XLSX, DOCX, PPTX, PNG·JPG·WebP를 Markdow
 
 [English](https://github.com/chrisryugj/kordoc/blob/main/README-EN.md) · [상세 사용법](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md) · [벤치마크](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md) · [변경 이력](https://github.com/chrisryugj/kordoc/blob/main/CHANGELOG.md)
 
-- 📊 **PDF 공개 벤치 종합 0.963** — opendataloader-bench 200문서. 공개 12개 파서 비교 1위(2026-09-29 기록). [측정 조건](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md)
-- 🇰🇷 **한국 공문서 표 구조 100%** — 원본 HWPX 2,429문서의 보이는 표 **10,461개 전부 구조 일치**. [4.22.0 검증](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md)
+![같은 법령 별표를 HWP·HWPX·PDF·스캔 이미지로 넣은 kordoc 실제 출력](https://raw.githubusercontent.com/chrisryugj/kordoc/main/docs/readme-hero.gif)
+
+<sub>같은 법령 별표 한 건을 HWP·HWPX·PDF·스캔 이미지로 넣은 실제 출력입니다. 네 경우 모두 병합 칸(`rowspan`·`colspan`)을 같은 짜임의 표로 읽습니다. 스캔 이미지는 OCR이 자동으로 켜집니다.</sub>
+
+- 📊 **PDF 공개 벤치 종합 0.964**: opendataloader-bench 200문서, 공개 리더보드 12개 파서보다 높은 점수(4.22.14 측정). [측정 조건](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md#pdf--markdown--opendataloader-bench)
+- 🇰🇷 **한국 공문서 표 구조 100%**: 원본 HWPX 2,424문서의 보이는 표 **10,342개 전부 구조 일치**. [검증 결과](#검증-결과)
 
 쓸모 있었다면 GitHub ⭐ 하나 눌러주세요. 다른 사람이 이 도구를 찾는 데 도움이 됩니다.
 
-[![Kordoc 활용하기 — 영상 보기](https://raw.githubusercontent.com/chrisryugj/kordoc/main/docs/video-demo.jpg)](https://youtu.be/Q13GmgDcIw0)
-
-<sub>▶ 클릭하면 유튜브에서 재생됩니다.</sub>
-
-**새 영상:** [kordoc 공개벤치 1위 마크](https://youtu.be/9kRbwiTRQLs) · 2026-09-27 · 1분 31초
+영상: [공개 벤치 측정 과정](https://youtu.be/9kRbwiTRQLs)(2026-09-27 판, 1분 31초) · [양식 일괄 채우기 시연](https://youtu.be/Q13GmgDcIw0)
 
 ## 설치
 
@@ -101,7 +103,11 @@ CLI는 설치 없이 `npx kordoc`으로 실행할 수 있습니다. PDF·OCR 의
 npx -y kordoc setup
 ```
 
-Claude Desktop·Claude Code·Cursor·Codex 등 설치된 클라이언트에 MCP를 등록합니다. 클라이언트를 재시작하면 파싱·비교·생성·렌더 등 **17개 도구**를 사용할 수 있습니다.
+Claude Desktop·Claude Code·Cursor·Codex 등 설치된 클라이언트에 MCP를 등록합니다. 공식 MCP 레지스트리에도 [`io.github.chrisryugj/kordoc`](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.chrisryugj/kordoc)으로 등재돼 있습니다. 클라이언트를 재시작하면 파싱·비교·생성·검수·렌더 등 **18개 도구**를 사용할 수 있습니다.
+
+VS Code·Cursor는 버튼 한 번으로 등록됩니다.
+
+[![VS Code에 설치](https://img.shields.io/badge/VS_Code-kordoc_설치-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=kordoc&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22kordoc%22%2C%22mcp%22%5D%7D) [![Cursor에 설치](https://img.shields.io/badge/Cursor-kordoc_설치-000000?style=flat-square&logo=cursor&logoColor=white)](https://cursor.com/en/install-mcp?name=kordoc&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsImtvcmRvYyIsIm1jcCJdfQ%3D%3D)
 
 Claude Code 플러그인:
 
@@ -123,11 +129,10 @@ npx kordoc 문서.pdf --format json --pages 1-3
 npx kordoc 스캔본.pdf --ocr -o 스캔본.md
 npx kordoc generate 보고서.md --preset 보고서 -o 보고서.hwpx
 npx kordoc fill --template gian -j 값.json -o 기안문.hwpx
+npx kordoc lint 보고서.hwpx --gate --preset 보고서
 ```
 
 `--jobs`는 파일 단위 병렬 변환이며 메모리 사용도 늘어납니다. [병렬 변환 안내](https://github.com/chrisryugj/kordoc/blob/main/docs/parallel-batch.md)
-
-보고서·계획서·개조식·서울방침은 `#` 제목 바로 뒤 인용문(`> …하고자 함`)이 요약 상자가 됩니다(개조식은 표지가 있을 때(기본) 본문 첫 쪽 제목 상자 아래 — `cover:false` 면 첫 `#` 이 장 머리라 인용문은 ※ 참고). 보고 목적 한 문장(쉼표 허용) 3줄 이내로 쓰고, 넘거나 두 문장 이상이면 경고합니다. 업무보고는 `> ▪ …` 인용문이 자리와 관계없이 성과 요약 상자가 됩니다.
 
 ### JavaScript / TypeScript
 
@@ -154,66 +159,47 @@ await writeFile("보고서.hwpx", Buffer.from(hwpx))
 | 작업 | 기능 |
 | --- | --- |
 | 읽기 | 문서 → Markdown·IR·쪽별 본문·RAG 청크, 로컬 OCR |
-| 비교·편집 | 블록·셀 단위 비교, HWPX·HWP 서식 보존 패치 |
-| 작성 | Markdown → HWPX, 공문서 프리셋, 표·수식·차트 |
+| 비교·편집 | 블록·셀 단위 비교, HWPX·HWP 서식 보존 패치, 견본 서식 그대로 새 내용 쓰기 |
+| 작성 | Markdown → HWPX, 공문서 프리셋·부서 서식 견본(`--template`), 표·수식·차트 |
 | 양식 | 필드·누름틀 채우기, 표준 기안문 2종, 도장 날인 |
-| 검토 | HWPX·HWP 미리보기·영역 추출, 구조·표기법 검사, 개인정보 마스킹 |
+| 검수 | 표기법·공공언어, 구성·AI 문체 게이트, 예산 산출근거 검산, 열린 문서 블록 단위 검수(`lint-blocks`) |
+| 보기·보안 | HWPX·HWP 미리보기·영역 추출, 개인정보 마스킹 |
 
-서식 보존 패치용 Markdown은 `--keep-layout-tables`로 추출합니다. 적용하지 못한 편집은 건너뛴 사유로 보고합니다. [CLI·API 상세](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md#-cli)
+서식 보존 패치용 Markdown은 `--keep-layout-tables`로 추출합니다. 적용하지 못한 편집은 건너뛴 사유로 보고합니다. [서식 보존 편집](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md#서식-보존-편집) · [CLI 전체](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md#-cli)
 
 ## 검증 결과
 
-**4.22.13 · 2026-10-18 검증**. 고정 코퍼스와 참조 기준으로 측정한 결과입니다.
+**4.22.14 · 2026-10-19 검증**(렌더 배치·PDF 글·표·OCR 은 4.24.9 · 2026-10-26). 고정 코퍼스와 참조 기준으로 측정한 결과입니다.
 
 | 대상 | 규모 | 결과 |
 | --- | --- | --- |
 | HWPX | 2,424문서 · 10,342표 | 표 구조 일치 **10,342/10,342 · 100%** |
 | HWP 5.x ↔ HWPX | 1,130쌍 · 4,315표 | 짝 문서의 표 구조 일치 **100%** |
-| PDF 글 | 744쌍 | 글자 재현율 **99.879%** · 정확도 **99.670%** · 읽기 순서 **99.247%** · 어절 F1 **99.049%** |
-| PDF 표 | 708쌍 · 2,331표 | 표 탐지 **99.87%** · 구조 일치 **98.16%** · 칸 F1 **0.9918** |
-| HWPX 재조판 | 다중줄 25,187문단 (12개 폴더) | 모든 줄 시작 일치 **24,940/25,187 · 99.02%** |
+| PDF 글 | 744쌍 | 글자 재현율 **99.881%** · 정확도 **99.676%** · 읽기 순서 **99.309%** · 어절 F1 **99.064%** |
+| PDF 표 | 708쌍 · 2,331표 | 표 탐지 **99.83%** · 구조 일치 **98.24%** · 칸 F1 **0.9919** |
+| HWPX 재조판 | 다중줄 25,187문단 (12개 폴더) | 모든 줄 시작 일치 **24,941/25,187 · 99.02%** |
 | PDF 중첩표 (텍스트층) | 29문서 · 101표 | 구조·칸 내용 **101/101 · 100%** |
 | 법령 별표 | 272건 · 346표 | HWP **346/346**, PDF **342/346 · 98.84%** |
 | PDF 전체 | 1,911문서 중 1,729건 채점 | 글 커버리지 **99.80%** |
-| OCR | 53문서 · 102쪽 | CER **0.0409** · 글자 재현율 **99.02%** |
+| OCR | 53문서 · 102쪽 · 67표 | CER **0.0313** · 글자 재현율 **99.06%** · 표 구조 일치 **25/67** |
+| opendataloader-bench | PDF 200문서 | 종합 기본값 **0.964** · OCR 끔 **0.939** |
+| HWPX 렌더 배치 (4.24.8) | 한컴 PDF 짝 · 글 조각 90,906 · 그림 4,107 | 글 위치(±1.5pt) **87,620 · 96.4%** · 그림 위치(±2pt) **4,019 · 97.9%** |
 
-표 구조 점수와 셀 내용·화면 재현은 별도 지표입니다. 중첩표 100%는 위 101표에 한정하며 전체 PDF·조판의 완전 일치를 뜻하지 않습니다. 채점 범위·제외 기준·전 벤치 문서별 비교는 [벤치마크 상세](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md)에 있습니다.
-
-**4.22.13 개선 검증(2026-10-18)**: 4.22.12와 같은 채점기·코퍼스로 다시 잰 결과 파서 출력(opendataloader-bench 네 모드·PDF 글·표·별표·OCR·기타 포맷·왕복·생성)은 문서별로 4.22.12와 같고 조판 저장본 대조 지표도 그대로이며, 렌더(한컴 PDF 짝) 글 조각 위치(1.5pt 안) **85,968/90,428→86,051/90,433**, 그림 위치 **3,869→3,872/3,976**, 쪽 수 **1,413→1,421/1,431**로 개선했습니다. 꼬리말 없는 구역의 쪽 번호 자리, 한컴이 쪽에서 갈라 저장한 표·행의 쪽 넘김, 칸 안 표가 줄을 민 자리, 쪽을 넘는 칸 안 표를 바로잡았습니다. [상세](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md)
-
-빈 행을 접을 때 기존 논리 격자 안의 병합 모서리 셀을 보존합니다. 재현 PDF의 번호 기호 6종은 복원했으며, HTML 선 출력과 미등록 글꼴 기호는 [남은 한계](https://github.com/chrisryugj/kordoc/blob/main/docs/parsing-loss-reproductions.md)로 기록했습니다.
-
-외부 PDF 벤치 **opendataloader-bench 200문서**는 4.22.13 배포 후보의 동일 코퍼스 재검증에서 기본값 종합 **0.964**, OCR 끔 **0.939**입니다. [옵션별 결과와 재현 방법](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md#pdf--markdown--opendataloader-bench)
+표 구조 점수와 셀 내용·화면 재현은 별도 지표입니다. 중첩표 100%는 위 101표에 한정하며 전체 PDF·조판의 완전 일치를 뜻하지 않습니다. 채점 범위·제외 기준·옵션별 수치·재현 방법은 [벤치마크 상세](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md)에 있습니다.
 
 ## 최근 업데이트
 
-최신 배포: **[4.22.13](https://github.com/chrisryugj/kordoc/releases/tag/v4.22.13)** · 2026-10-18
+최신 배포: **[4.24.9](https://github.com/chrisryugj/kordoc/releases/tag/v4.24.9)** · 2026-10-26
 
-| 버전 | 주요 변경 |
-| --- | --- |
-| 4.22.13 | 쪽 넘김·칸 안 표 렌더 보정 — 꼬리말 0 쪽 번호, 갈라 저장한 칸이 있는 표의 넘침 여유 해제, 첫 줄도 안 드는 갈라 저장 행은 다음 쪽, 칸 안 표에 밀린 줄, 쪽을 넘는 칸 안 표(한컴 PDF 글 조각 위치 85,968 → 86,051, 그림 3,869 → 3,872, 쪽 수 1,413 → 1,421) — 파서 출력·조판 지표는 4.22.12와 같음 |
-| 4.22.12 | 글상자 렌더 보정 — 지금 크기(curSz)·쪽 좌표 캐시 재조판·글 영역 폭 없는 글상자·옛한글 자모 폭, 제 표에 밀린 쪽 나누기 문단, 같은 너비 행 없는 표의 가장 긴 길 열 경계(한컴 PDF 글 조각 위치 85,837 → 85,968, 그림 3,866 → 3,869) — 파서 출력·조판 지표는 4.22.11과 같음 |
-| 4.22.11 | 렌더 보정 — 갈린 칸 안 표의 이어진 쪽 시작·갈린 행 마지막 조각의 개체 바닥·여러 행 칸 내용 높이·갈린 가운데 칸 마지막 조각 정렬(한컴 PDF 글 조각 위치 85,496 → 85,837), 빈 문단 그림이 쪽 아래로 밀리던 4.21.31 회귀 수정 — 파서 출력·조판은 4.22.10과 같음 |
-| 4.22.10 | MCP `parse_document` OCR 모델 인수(#165), 렌더 표 보정 — 행마다 다른 칸 너비의 열 경계·병합 칸 행 성장·갈라 저장한 칸·쪽 바닥 첫 행·갈린 가운데 칸 다음 쪽 조각(한컴 PDF 글 조각 위치 84,468 → 85,496, 쪽 수 1,410 → 1,413) — 파서 출력·조판은 4.22.9와 같음 |
-| 4.22.9 | 굴림체·돋움체 반각 기호 폭·글머리표 예약 폭 조판 보정(본문 첫 줄 위치 76,676 → 76,729, 표 칸 205,007 → 205,015), 렌더의 갈라 저장한 가운데 칸·행 단위 표 쪽 넘김·개체 뒤 자동 탭 보정(한컴 PDF 글 조각 위치 82,816 → 84,468) — 파서 출력은 4.22.8과 같음 |
-| 4.22.8 | PDF 표 아래 캡션 순서·한 단 본문의 가짜 2단 기각·그림 영역 OCR 지도 표 오판 정리(ODL 기본값 0.96305 → 0.96367), 칸 높이 고정 표 나눔·Wingdings 기호 폭·표만 든 줄 높이 조판 보정 — 본문 첫 줄 위치 76,631 → 76,676, 표 칸 205,005 → 205,007 |
-| 4.22.7 | 단어 안 밑줄·빈칸 선의 불필요한 이스케이프 정리(ODL 기본값 0.96291 → 0.96305), 쪽에서 갈리는 표의 캡션·문단 위 여백, 한글 2024 초기 빌드 글머리표 공백 압축 — 본문 첫 줄 위치 76,525 → 76,631, 표 칸 204,958 → 205,005(문서별 하락 0) |
-| 4.22.6 | 손글씨 OCR 모델 프리셋(#164), 글자 겹치기 원 번호·한컴 번호 PUA 를 HWPX·HWP·PDF 에서 같게, PDF 한컴 글꼴 기호 복원, 칸 나눔 표·종이 기준 그림·옮긴 문단 조판 보정 — 본문 첫 줄 위치 76,443 → 76,525, 표 칸 204,869 → 204,958 |
-| 4.22.5 | 0폭 탭·기호 폭·글머리표 예약·표 분할·줄 높이 보정, PDF 부분 셀 병합·본문 절 제목·누락 기호 복원 |
-| 4.22.4 | 그림·테두리·공백·세로쓰기 기준선·따옴표 조판 보정, PDF 글머리 칸·주석·양식 제목·쪽 경계 목록 행 복원 |
-| 4.22.3 | 넘친 표 점유 높이·그림 옆 줄 조각·선택 하이픈 조판 개선, PDF 감싸개 안 표 이어짐과 반복 자료행 복원, 빈 행을 접을 때 병합 모서리 셀 보존 |
-| 4.22.2 | 부분 편집 문단 위치·그림 어울림·고정폭 빈칸 조판 개선, PDF 독립 제목·번호 행 보존 및 연락처·음영 행 내용 복원 |
-| 4.22.1 | 텍스트층 PDF의 그림 영역 OCR에서 회전 보정·고해상도 재인식 좌표 혼합 수정. 전체 스캔의 기울기 보정 유지 |
-| 4.22.0 | PDF 중첩표 94/101 → 101/101, 쪽 경계 셀·HWP 캡션·표 칸 안 각주 보존. OCR 줄 좌표·모델 선택 추가, 수식 OCR 설치 경량화 |
-| 4.21.33 | 미주 단 흐름, 갈리는 표의 각주, 칸 간격 — 본문 줄 위치 일치 95.9% → 97.5%, 표 칸 99.5% → 99.7% |
-| 4.21.32 | 렌더·reflow 쪽 배치 개선 — 쪽을 넘는 표 칸과 떠 있는 개체. 표 칸 줄 위치 일치 97.4% → 99.5%, 본문 87.2% → 95.9% |
-| 4.21.31 | 렌더·reflow 조판 일치, 각주 안 표 구조 보존(#149), 인라인 수식 옵션(#150), 보안 점검 반영 |
-| 4.21.23 | HWP·HWPX 그림 속 글 OCR(`ocr: true`, #143) |
-| 4.21.0 | 중앙부처 기관 서식 `--agency`, 보도자료 담당 표 |
+| 버전 | 주요 변경 | 수치 변화 |
+| --- | --- | --- |
+| 4.24.9 | 견본 서식·patch 행 추가 표의 행마다 이중선 · OCR: 통째로 빠진 줄 머리 ○ · PDF: 쪽을 넘는 표가 다음 쪽 첫 행을 삼키던 것 | OCR CER 0.0314 → **0.0313** · 흐린 입력 OCR CER 0.0638 → **0.0635** · PDF 표 구조 98.20% → **98.24%** |
+| 4.24.8 | 보안: 알려진 의존성 취약점 6건 → 0건(zod 4, MCP SDK 하위 의존성), 출시·CI 에 `npm audit` 게이트 · OCR: 숫자로 읽은 줄 머리 고리 글머리, 다음 글자와 맞닿은 「 · PDF: 머리 칸에만 클립을 건 통계표 | `npm audit` 6 → **0** · OCR CER 0.0327 → **0.0314** · 흐린 입력 OCR CER 0.0663 → **0.0638** · PDF 글 순서 99.307% → **99.309%** |
+| 4.24.7 | 견본 생성: 목차 상자를 요약 상자로 쓰지 않음, 부호 문단 아래 들여 쓴 목록 단계 · HWPML: 묶음·고정폭 빈칸과 강제 줄바꿈 · OCR: 줄 끝 배경 무늬, 머리행에 붙은 숫자 열, 붙임표·줄표 길이 | OCR CER 0.0332 → **0.0327** · 글자 재현율 99.02% → **99.04%** |
+| 4.24.6 | OCR: 예산 사업명세서의 목·내역 하위 행, 칸마다 갈린 색 머리 띠, 칸 안 위아래 두 줄 뒤집힘 · PDF: 쪽 바깥 넉 자 세로 탭 · 렌더: 쪽 번호 새로 시작 · HWPX: 들여 써 저장한 XML 의 공백 | OCR CER 0.0409 → **0.0332** · OCR 표 구조 24 → **25/67** · 렌더 글 위치 87,509 → **87,620** · PDF 글 순서 99.302% → **99.307%** |
+| 4.24.5 | PDF: 분수 막대 수식 복원, 고정폭 글줄의 가짜 무괘선 표, 덧찍은 목차 쪽 번호 · OCR: 선 없이 쌓은 하위 행, 색 머리 띠 안 흰 구분선, 글의 밑줄 표지 · HWPX·HWP: 표 아래 캡션 차례 | PDF 글 순서 99.247% → **99.302%** · 별표 수식 7 → **11/11** · OCR 표 구조 21 → **24/67** |
 
-OCR 줄의 상자·신뢰도는 `--ocr --ocr-lines --format json`으로 받습니다. `--ocr-det`·`--ocr-det-long-side`로 검출 모델과 해상도를 선택할 수 있습니다. [OCR 줄·모델 사용법](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md#ocr-줄모델-선택)
-
-버전별 상세는 [변경 이력](https://github.com/chrisryugj/kordoc/blob/main/CHANGELOG.md)에 있습니다.
+이전 버전과 상세 내용은 [변경 이력](https://github.com/chrisryugj/kordoc/blob/main/CHANGELOG.md)에 있습니다.
 
 ## 자주 묻는 질문
 
@@ -228,6 +214,9 @@ OCR 줄의 상자·신뢰도는 `--ocr --ocr-lines --format json`으로 받습�
 
 **Q. RAG 색인용으로 쓸 수 있나요?**
 `--format chunks`가 제목 경로를 붙인 구조 청크와 독립 표 청크를 냅니다. 표를 HTML 없이 받으려면 `--table-format gfm`(API는 `tableFormat: "gfm"`)을 씁니다. Python·Java에서는 [Python SDK](https://github.com/chrisryugj/kordoc/blob/main/sdk/python/README.md)·[Java SDK](https://github.com/chrisryugj/kordoc/blob/main/sdk/java/README.md)로 부릅니다.
+
+**Q. OCR 줄 좌표나 다른 모델이 필요하면?**
+`--ocr --ocr-lines --format json`이 줄별 상자·신뢰도를 내고, `--ocr-det`·`--ocr-det-long-side`로 검출 모델과 해상도를 고릅니다. [OCR 줄·모델 선택](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md#ocr-줄모델-선택)
 
 ## 문서·보안
 

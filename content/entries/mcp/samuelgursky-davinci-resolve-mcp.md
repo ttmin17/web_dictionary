@@ -13,27 +13,28 @@ tags:
   - blackmagicdesign
   - davinci-resolve
 status: active
-quality_percentile: 68
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: samuelgursky/davinci-resolve-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3631
-  last_commit: 2026-10-18T17:53:22Z
-  stars_delta_7d: 111
-  stars_growth_pct: 3.2
-  trending_score: 114.5
-  rank_current: 11
-  rank_delta: null
+  stars: 3774
+  last_commit: 2026-10-23T11:24:58Z
+  stars_delta_7d: 143
+  stars_growth_pct: 3.9
+  trending_score: 148.63
+  rank_current: 15
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3520
     - 3631
+    - 3774
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: samuelgursky/davinci-resolve-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.853Z
+  fetched_at: 2026-10-26T07:37:00.866Z
   truncated: false
 type: mcp_server
 launch:
@@ -58,7 +59,7 @@ launch:
 # DaVinci Resolve MCP Server
 English | [简体中文](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.zh-CN.md)
 
-[![Version](https://img.shields.io/badge/version-4.14.1-blue.svg)](https://github.com/samuelgursky/davinci-resolve-mcp/releases)
+[![Version](https://img.shields.io/badge/version-4.15.3-blue.svg)](https://github.com/samuelgursky/davinci-resolve-mcp/releases)
 [![npm](https://img.shields.io/npm/v/davinci-resolve-mcp.svg?label=npm&color=CB3837)](https://www.npmjs.com/package/davinci-resolve-mcp)
 [![API Coverage](https://img.shields.io/badge/API%20Coverage-100%25-brightgreen.svg)](https://raw.githubusercontent.com/samuelgursky/davinci-resolve-mcp/main/docs/reference/api-coverage.md)
 [![Tools](https://img.shields.io/badge/MCP%20Tools-37%20(390%20full)-blue.svg)](#server-modes)
@@ -505,6 +506,7 @@ Extension authoring references live in [docs/authoring](https://github.com/samue
 
 - DaVinci Resolve 18.5+ on macOS, Windows, or Linux. **Studio** supports external scripting directly. The **free edition** does not — Blackmagic gates external scripting to Studio — but it is still reachable through the [in-app bridge](#free-edition-in-app-bridge), which runs inside Resolve from the ungated **Workspace ▸ Scripts** menu.
 - Python 3.10+ (3.10-3.12 is the lowest-risk range). Python 3.13/3.14 also work on recent Resolve builds (verified on Studio 20.3.2); older builds may fail to connect on 3.13+, in which case use 3.10-3.12.
+- Not connecting? `python3 scripts/doctor.py` checks the Python the server runs on and prints the exact fix for each problem: 32-bit or wrong-architecture Python, a Python too new for your Resolve build, or several Pythons where the MCP client starts the wrong one. See [Checking the Python environment](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/docs/install.md#checking-the-python-environment).
 - Resolve external scripting set to **Local** (Studio). On the free edition this
   preference has no effect — use the [in-app bridge](#free-edition-in-app-bridge)
   instead.

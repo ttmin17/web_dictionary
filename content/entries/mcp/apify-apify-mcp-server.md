@@ -11,28 +11,29 @@ categories:
 tags:
   - agents
 status: active
-quality_percentile: 79
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: apify/apify-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 11927
-  last_commit: 2026-10-16T15:37:39Z
-  stars_delta_7d: 969
-  stars_growth_pct: 8.8
-  trending_score: 1054.69
+  stars: 13196
+  last_commit: 2026-10-26T07:25:33Z
+  stars_delta_7d: 1269
+  stars_growth_pct: 10.6
+  trending_score: 1404.02
   rank_current: 1
-  rank_delta: null
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9987
     - 10958
     - 11927
+    - 13196
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: apify/apify-mcp-server
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:32:25.363Z
+  fetched_at: 2026-10-26T07:36:53.840Z
   truncated: false
 type: mcp_server
 launch:
@@ -303,7 +304,7 @@ Here are some special MCP operations and how the Apify MCP Server supports them:
 - **Actor tasks**: Create, inspect, and update your saved Actor tasks, and publish or unpublish their public landing pages.
 - **Schedules**: Create, inspect, update, and delete schedules that run your Actors and tasks automatically.
 - **Builds**: Build an Actor version, list builds, check the status of a build, and retrieve its build log.
-- **Actor source**: Read an Actor version's files, with a hash for each file and a revision for the whole set.
+- **Actor versions**: Read an Actor version's files with a hash for each file and a revision for the whole set, create an Actor from files, change a version's files with checks that catch changes made since your last read, add a version from files or as a copy of another version, and delete a version.
 - **Apify API**: Search the Apify API reference, inspect an operation, and send requests to the API to read or change data.
 
 ### Overview of available tools
@@ -352,11 +353,15 @@ Legend for the **Enabled by default** column:
 | `get-actor-build-log` | builds | Retrieve the logs for a specific Actor build. |  |
 | `get-actor-build-list` | builds | List the account's builds, or one Actor's, in every status, newest first. |  |
 | `build-actor` | builds | Build an Actor version and wait a bounded time for the build to finish. |  |
-| `get-actor-version` | source | Get an Actor version's file listing with hashes and the content of the files you ask for. |  |
+| `get-actor-version` | versions | Get an Actor version's file listing with hashes and the content of the files you ask for. |  |
+| `create-actor` | versions | Create a private Actor in your account from files, optionally starting a build. |  |
+| `update-actor-version` | versions | Write, edit, or delete files of an Actor version in one all-or-nothing write. |  |
+| `create-actor-version` | versions | Add a version to an Actor, from files or as a copy of another version, optionally starting a build. |  |
+| `delete-actor-version` | versions | Delete an Actor version; its builds and their tags stay. |  |
 | `apify-api-search` | api | Search the Apify API reference for operations by keywords. Returns each one's method, path, and docs page. |  |
 | `apify-api-details` | api | Get the parameters and request body schema of the Apify API operations on a path. |  |
 | `apify-api-read` | api | Send a GET request to an Apify API path, such as `actor-runs` or `/v2/actor-runs`, like `apify api` in the Apify CLI. Read-only: it refuses the `method` query parameter and a GET to the synchronous run endpoints, which starts a paid run. |  |
-| `apify-api-write` | none (select by name: `tools=apify-api-write`) | Send a POST, PUT, PATCH, or DELETE request to any Apify API path, with a JSON body, like `apify api` in the Apify CLI. It refuses the `method` query parameter. |  |
+| `apify-api-write` | api | Send a POST, PUT, PATCH, or DELETE request to any Apify API path, with a JSON body, like `apify api` in the Apify CLI. It refuses the `method` query parameter. |  |
 
 > **Note:**
 >
@@ -478,6 +483,7 @@ The v2 configuration preserves backward compatibility with v1 usage. Notes:
 - `call-actor` is now included by default via the `actors` category (additive change). To exclude it, specify an explicit `tools` list without `actors`.
 - `tools=add-actor`, `tools=experimental`, and `tools=preview` are retired: they are ignored and load no tools. Use `tools=call-actor` (or the default `actors` category) instead.
 - `tools=get-actor-log` is retired: the tool was renamed to `get-actor-run-log`. The old selector is ignored and loads no tools. Use `tools=get-actor-run-log` (or the `runs` category) instead.
+- `tools=source` is retired: the category was renamed to `versions`. The old selector is ignored and loads no tools. Use `tools=versions` instead.
 
 Existing URLs and commands using `?actors=...` or `--actors` continue to work unchanged.
 
@@ -521,6 +527,8 @@ Expected output: The tool returns the next page of structured data items from th
 
 The Apify MCP Server collects telemetry data about tool calls to help Apify understand usage patterns and improve the service.
 By default, telemetry is **enabled** for all tool calls.
+With telemetry enabled, Actor searches in the Apify Store send the MCP session id as `_traceId`, and tool-call events carry it as `trace_id`.
+Opting out of telemetry disables both.
 
 The stdio transport also uses [Sentry](https://sentry.io) for error tracking, which helps us identify and fix issues faster.
 Sentry is automatically disabled when telemetry is opted out.

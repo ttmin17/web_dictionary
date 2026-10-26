@@ -13,27 +13,28 @@ tags:
   - social-media-api
   - tweet-scraper
 status: active
-quality_percentile: 35
+quality_percentile: 31
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Xquik-dev/x-twitter-scraper
   official_vendor: false
   license: MIT
 signals:
-  stars: 214
-  last_commit: 2026-10-19T00:14:20Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0.5
-  trending_score: 1
-  rank_current: 85
-  rank_delta: null
+  stars: 220
+  last_commit: 2026-10-25T12:32:07Z
+  stars_delta_7d: 6
+  stars_growth_pct: 2.8
+  trending_score: 6.14
+  rank_current: 78
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 213
     - 214
+    - 220
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: Xquik-dev/x-twitter-scraper
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:39:42.804Z
+  fetched_at: 2026-10-26T07:44:00.713Z
   truncated: false
 type: mcp_server
 launch:

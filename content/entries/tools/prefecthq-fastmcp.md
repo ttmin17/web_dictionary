@@ -11,28 +11,29 @@ tags:
   - llms
   - mcp-clients
 status: active
-quality_percentile: 89
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: PrefectHQ/fastmcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 28132
-  last_commit: 2026-10-18T21:09:40Z
-  stars_delta_7d: 69
+  stars: 28202
+  last_commit: 2026-10-26T07:30:13Z
+  stars_delta_7d: 70
   stars_growth_pct: 0.2
-  trending_score: 69.17
-  rank_current: 27
-  rank_delta: null
+  trending_score: 70.17
+  rank_current: 63
+  rank_delta: -36
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27993
     - 28063
     - 28132
+    - 28202
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: PrefectHQ/fastmcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.452Z
+  fetched_at: 2026-10-26T07:38:03.299Z
   truncated: false
 type: agent_tool
 tool:
@@ -177,6 +178,8 @@ Documentation is also available in [llms.txt format](https://llmstxt.org/), whic
 
 - [`llms.txt`](https://gofastmcp.com/llms.txt) is essentially a sitemap, listing all the pages in the documentation.
 - [`llms-full.txt`](https://gofastmcp.com/llms-full.txt) contains the entire documentation. Note this may exceed the context window of your LLM.
+
+Give your coding agent [`llms.txt`](https://gofastmcp.com/llms.txt) as its starting point. See [Coding Agents](https://gofastmcp.com/getting-started/ai-assisted-development) for version-matched documentation and the optional server authoring skill.
 
 **Community:** Join our [Discord server](https://discord.gg/uu8dJCgttd) to connect with other FastMCP developers and share what you're building.
 

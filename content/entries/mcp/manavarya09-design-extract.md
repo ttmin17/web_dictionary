@@ -13,27 +13,28 @@ tags:
   - claude-code-plugin
   - cli
 status: active
-quality_percentile: 47
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Manavarya09/design-extract
   official_vendor: false
   license: MIT
 signals:
-  stars: 4259
-  last_commit: 2026-10-08T17:11:10Z
-  stars_delta_7d: 30
-  stars_growth_pct: 0.7
-  trending_score: 30.21
-  rank_current: 36
-  rank_delta: null
+  stars: 4377
+  last_commit: 2026-10-23T11:31:15Z
+  stars_delta_7d: 118
+  stars_growth_pct: 2.8
+  trending_score: 121.27
+  rank_current: 18
+  rank_delta: 18
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4229
     - 4259
+    - 4377
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: Manavarya09/design-extract
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.567Z
+  fetched_at: 2026-10-26T07:36:59.671Z
   truncated: false
 type: mcp_server
 launch:

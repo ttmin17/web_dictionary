@@ -15,10 +15,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 55
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 781
-  last_commit: 2026-10-07T14:45:41Z
-  stars_delta_7d: 36
-  stars_growth_pct: 4.8
-  trending_score: 37.74
+  stars: 788
+  last_commit: 2026-10-24T02:30:54Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.9
+  trending_score: 7.06
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
+    - 788
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/state-trees/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:34:23.739Z
+  fetched_at: 2026-10-26T07:38:54.128Z
   truncated: false
 type: agent_skill
 skill:
@@ -232,7 +233,7 @@ This skill's larger reference material has been split into sibling files. Load t
 `AgentSkillToolset` (`GetSkills` with `["state-trees/<name>"]`, see the `vibeue` skill) when you need the detail:
 
 - **`api-reference`** — `StateTreeService` API for asset/state discovery, asset creation, state management (add, type, move, remove, enable, select), and per-state tasks (add, inspect, set property — including the deterministic property pattern and `FStateTreeDebugTextTask` notes).
-- **`api-bindings`** — Evaluators & global tasks (add, inspect, bind), transitions (all triggers/types/priorities plus the full `OnDelegate` workflow), compile & save, setting the context actor class, property bindings (task → context / root parameter / global task / evaluator), assigning a StateTree to a `StateTreeComponent` (use `StateTreeRef` not `StateTree`), theme colors, expand/collapse, and the "service first vs `execute_python_code`" guidance.
+- **`api-bindings`** — Evaluators & global tasks (add, inspect, bind), transitions (all triggers/types/priorities plus the full `OnDelegate` workflow), compile & save, setting the context actor class, property bindings (task → context / root parameter / global task / evaluator) and reading them back (`get_bindings`, `is_bound`/`bound_to` on `get_task_property_names`), assigning a StateTree to a `StateTreeComponent` (use `StateTreeRef` not `StateTree`), theme colors, expand/collapse, and the "service first vs `execute_python_code`" guidance.
 - **`event-payloads`** — Sending a StateTree event with a struct payload from a Blueprint: the `Make <FMyStruct>` → `Make Instanced Struct` → `Make State Tree Event` → `Send State Tree Event` chain, `build_graph` pattern, pin names to verify, and common mistakes.
 - **`changelog`** — Phase 1 & 2 new methods: state properties (`set_selection_behavior`, `rename_state`, `set_state_tag`, `set_state_weight`, `set_task_considered_for_completion`), root parameters (`get_root_parameters`, `add_or_update_root_parameter`, `remove`/`rename_root_parameter`), per-instance overrides on placed actors (`get_component_state_tree_path`, `set_component_parameter_override`), transition editing (`update_transition`, `move_transition`), extended task management (`remove_task`, `move_task`, `set_task_enabled`), Utility AI considerations (Constant, FloatInput, EnumInput — add/inspect/set/bind), conditions (enter & transition — add/remove/operand/set/bind), and extended evaluator/global task management.
 - **`blueprint-tasks`** — Creating & editing `STT_*` StateTree Blueprint Tasks: discovery workflow for the parent class, `create_blueprint` usage, correct event functions (`ReceiveLatentTick`, `ReceiveLatentEnterState`, `ReceiveExitState`, `ReceiveStateCompleted`), finding the registered `_C` task type name after creation, and the extended fields available on `FStateTreeInfo` / `FStateTreeStateInfo` / `FStateTreeNodeInfo` / `FStateTreeTransitionInfo`.

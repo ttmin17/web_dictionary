@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 55431
-  last_commit: 2026-10-15T21:33:21Z
-  stars_delta_7d: 913
-  stars_growth_pct: 1.7
-  trending_score: 928.29
+  stars: 56570
+  last_commit: 2026-10-22T16:57:46Z
+  stars_delta_7d: 1139
+  stars_growth_pct: 2.1
+  trending_score: 1162.4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
+    - 56570
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ads/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:21.630Z
+  fetched_at: 2026-10-26T07:42:09.286Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,8 +59,9 @@ skill:
     working.' Use this for campaign strategy, audience targeting, bidding, and
     optimization. For bulk ad creative generation and iteration, see
     ad-creative. For landing page optimization, see cro. For outbound to target
-    accounts, see cold-email. End every recommendation with facts, hypotheses,
-    and missing data, and label unavailable inputs MISSING instead of estimating
+    accounts, see cold-email. For pixels, CAPI, and tracking audits, see
+    conversion-tracking. End every recommendation with facts, hypotheses, and
+    missing data, and label unavailable inputs MISSING instead of estimating
     them.
   folder_path: skills/ads
   extra_files:
@@ -69,11 +71,11 @@ skill:
     - references/audience-targeting.md
     - references/audit-guardrails.md
     - references/b2b-paid-playbook.md
-    - references/conversion-tracking.md
     - references/creative-research-automation.md
     - references/google-ads-audit-checklist.md
     - references/google-search-playbook.md
-  pack_total_skills: 50
+    - references/linkedin-b2b-playbook.md
+  pack_total_skills: 52
   is_pack_primary: false
   clients:
     - claude-code
@@ -135,7 +137,7 @@ This skill's depth lives in references — load by intent. For **any operational
 | Analyzing or reporting on Google Ads data, search-term waste, pause/keep/scale on low volume, client-facing findings | [reading-google-ads-data.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/reading-google-ads-data.md) | Withheld search terms (disclosed vs total clicks), conversions vs all_conversions, click-date attribution, experiment arms, 30-day change history, zero-in-N table, break-even CVR, verified/inferred/stale, "conclusions that sound right" |
 | Itemized Google Ads / ecommerce account audit (Search + Shopping + PMax + GMC + Demand Gen) | [google-ads-audit-checklist.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/google-ads-audit-checklist.md) | 32 checks across 11 categories — feed/GMC quality, Shopping segmentation, PMax signals/budget, DG format splits, lander funnels; each scored pass/fail/unknown/NA via audit-guardrails; deep dives for conversion signals and wasted-spend negatives |
 | Agentic creative/competitive research: ad-library teardown, review→persona mapping, organic competitor teardown | [creative-research-automation.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/creative-research-automation.md) | Ad Library output schema (format split, % partnership, inferred personas, top-10 by impressions), reviews→CSV→personas doc→deck, "who creatives target vs. who buys," connectors + scheduled-to-Slack workflow |
-| Audience setup, tracking setup, launch checklists, copy formulas | [audience-targeting.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/audience-targeting.md) · [conversion-tracking.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/conversion-tracking.md) · [platform-setup-checklists.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/platform-setup-checklists.md) · [ad-copy-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/ad-copy-templates.md) | Existing foundations |
+| Audience setup, tracking setup, launch checklists, copy formulas | [audience-targeting.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/audience-targeting.md) · [platform-setup-checklists.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/platform-setup-checklists.md) · [ad-copy-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/ad-copy-templates.md) | Existing foundations |
 
 ---
 
@@ -463,9 +465,7 @@ The most common scaling failure: a business at a 40 ROAS spending $5k/month, ref
 
 Before launching campaigns, ensure proper tracking and account setup.
 
-**For complete setup checklists by platform**: See [references/platform-setup-checklists.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/platform-setup-checklists.md)
-
-**For conversion pixel installation and event setup**: See [references/conversion-tracking.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/conversion-tracking.md)
+**For complete setup checklists by platform**: See [references/platform-setup-checklists.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/platform-setup-checklists.md). For conversion pixel installation and event setup, see the **conversion-tracking** skill.
 
 ### Universal Pre-Launch Checklist
 - [ ] Conversion tracking tested with real conversion
@@ -540,7 +540,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **LinkedIn Ads** | B2B, job title targeting | - | [linkedin-ads.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/linkedin-ads.md) |
 | **TikTok Ads** | Younger demographics, video | - | [tiktok-ads.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/tiktok-ads.md) |
 
-For tracking setup, see [references/conversion-tracking.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/conversion-tracking.md), [ga4.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/ga4.md), [segment.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/segment.md)
+For tracking setup, see the **conversion-tracking** skill; tool guides: [ga4.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/ga4.md), [segment.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/segment.md)
 
 ---
 
@@ -550,5 +550,6 @@ For tracking setup, see [references/conversion-tracking.md](https://github.com/c
 - **revops**: For the CRM side of ABM — lead scoring, routing, and the offline conversion loop
 - **customer-research / competitor-profiling / positioning**: Voice-of-customer that feeds ad copy and angles; and turning an organic-teardown shortlist + the personas doc from [creative-research-automation.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/creative-research-automation.md) into full competitor dossiers and positioning
 - **copywriting**: For landing page copy that converts ad traffic
-- **analytics / attribution**: Conversion tracking setup and the blended-CAC inputs behind [payback-period.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/payback-period.md); **pricing** sets the ARPU + plan structure that drive its Payback math (why blended LTV:CAC hides $9-vs-$999 variance)
+- **conversion-tracking**: For pixel and conversion tag installation, CAPI and server-side delivery, and tracking audits. Launching without conversion tracking is the first strategy mistake above
+- **analytics / attribution**: The blended-CAC inputs behind [payback-period.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/payback-period.md); **pricing** sets the ARPU + plan structure that drive its Payback math (why blended LTV:CAC hides $9-vs-$999 variance)
 - **ab-testing / cro**: For landing page tests and post-click conversion rates that improve ROAS

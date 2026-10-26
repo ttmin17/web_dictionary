@@ -15,21 +15,24 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: oomol-lab/open-connector
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6047
-  last_commit: 2026-10-19T07:10:49Z
-  stars_delta_7d: 378
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 6092
+  last_commit: 2026-10-26T05:18:46Z
+  stars_delta_7d: 45
+  stars_growth_pct: 0.7
+  trending_score: 45.33
+  rank_current: 82
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 6047
+    - 6092
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +41,7 @@ readme_source:
   repo: oomol-lab/open-connector
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.474Z
+  fetched_at: 2026-10-26T07:38:03.312Z
   truncated: false
 type: agent_tool
 tool:

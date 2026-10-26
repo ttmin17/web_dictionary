@@ -1,10 +1,8 @@
 ---
 slug: titanwings-distilly
 name: distilly
-tagline: Set up the owner profile so a personal agent knows who it works for
-  (first-run setup, "get to know me"), or distill colleague, relationship, or
-  celebr
-summary: Read only the flow file the request needs, then follow it.
+tagline: Agent skill from titanwings/distilly
+summary: Agent skill from titanwings/distilly
 categories:
   - agent-frameworks
 tags:
@@ -13,10 +11,10 @@ tags:
   - ai-agent
   - ai-agents
 status: active
-quality_percentile: 66
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-03-30T05:22:23
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: titanwings/distilly
@@ -24,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 25774
+  stars: 26015
   last_commit: 2026-10-13T05:57:17Z
-  stars_delta_7d: 201
-  stars_growth_pct: 0.8
-  trending_score: 202.58
-  rank_current: 51
-  rank_delta: null
+  stars_delta_7d: 241
+  stars_growth_pct: 0.9
+  trending_score: 243.25
+  rank_current: 57
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 25376
     - 25573
     - 25774
+    - 26015
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,14 +42,12 @@ readme_source:
   repo: titanwings/distilly
   path: SKILL.md
   branch: dot-skill
-  fetched_at: 2026-10-19T07:37:40.890Z
+  fetched_at: 2026-10-26T07:43:39.484Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: distilly
-  description: Set up the owner profile so a personal agent knows who it works for
-    (first-run setup, "get to know me"), or distill colleague, relationship, or
-    celebrity source material into reusable Person Profiles for agents.
+  description: Agent skill from titanwings/distilly
   folder_path: .
   extra_files:
     - .github/ISSUE_TEMPLATE/bug_report.md

@@ -11,10 +11,10 @@ tags:
   - dsh
   - dsh-plugin
 status: active
-quality_percentile: 58
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: deepseek-ai/deepseek-harness
@@ -22,14 +22,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 253669
-  last_commit: 2026-10-17T08:16:09Z
-  stars_delta_7d: 25990
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 261818
+  last_commit: 2026-10-23T15:25:40Z
+  stars_delta_7d: 8149
+  stars_growth_pct: 3.2
+  trending_score: 8410.78
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 253669
+    - 261818
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +38,7 @@ readme_source:
   repo: deepseek-ai/deepseek-harness
   path: packages/preset/agent-preset/skills/cordis-composition-reference/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:41:09.902Z
+  fetched_at: 2026-10-26T07:45:26.658Z
   truncated: false
 type: agent_skill
 skill:

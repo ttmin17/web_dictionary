@@ -4,22 +4,40 @@ name: codeburn
 tagline: "Free, local tool to track AI coding token usage and cost across 37
   tools and agents (Claude Code, Cursor, Codex, Gemini and more), by model,
   project, "
-summary: See where your AI spend goes.
+summary: Free, local tool to track AI coding token usage and cost across 37
+  tools and agents (Claude Code, Cursor, Codex, Gemini and more), by model,
+  project, and task. npx codeburn
 categories:
-  - security-auth
+  - coding-agents
+tags:
+  - ai-coding
+  - claude-code
+  - cli
+  - codex
 status: active
-quality_percentile: 61
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-04-13T22:11:53
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: getagentseal/codeburn
   official_vendor: false
   license: MIT
 signals:
-  stars: 11426
-  last_commit: 2026-10-13T08:10:41Z
+  stars: 11578
+  last_commit: 2026-10-26T02:59:49Z
+  stars_delta_7d: 67
+  stars_growth_pct: 0.6
+  trending_score: 67.39
+  rank_current: 29
+  rank_delta: -4
+  velocity_source: snapshot_delta
+  sparkline_4w:
+    - 11350
+    - 11426
+    - 11511
+    - 11578
 language: en
 needs_keys: false
 prerequisites:
@@ -28,7 +46,7 @@ readme_source:
   repo: getagentseal/codeburn
   path: README.md
   branch: main
-  fetched_at: 2026-10-14T14:55:16.165Z
+  fetched_at: 2026-10-26T07:43:49.373Z
   truncated: false
 type: mcp_server
 launch:
@@ -39,7 +57,6 @@ launch:
     - codeburn
   env_vars: []
   confidence: manifest
-tags: []
 ---
 
 <table align="center">

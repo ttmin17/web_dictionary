@@ -14,7 +14,7 @@ status: active
 quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3053
-  last_commit: 2026-10-15T09:53:13Z
-  stars_delta_7d: 228
-  stars_growth_pct: 8.1
-  trending_score: 246.4
+  stars: 3360
+  last_commit: 2026-10-20T19:23:14Z
+  stars_delta_7d: 307
+  stars_growth_pct: 10.1
+  trending_score: 337.87
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2574
     - 2825
     - 3053
+    - 3360
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: zenstory-ai/drama-skills
   path: skills/short-drama-assets/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:39.132Z
+  fetched_at: 2026-10-26T07:45:26.649Z
   truncated: false
 type: agent_skill
 skill:
@@ -48,15 +49,15 @@ skill:
   folder_path: skills/short-drama-assets
   extra_files:
     - agents/openai.yaml
-    - assets/character-look.example.jsonl
-    - assets/continuity.example.jsonl
-    - assets/decisions.example.jsonl
-    - assets/location-view.example.jsonl
-    - assets/occurrences.example.jsonl
-    - assets/prop-state.example.jsonl
-    - examples/minimal/characters.jsonl
-    - examples/minimal/looks.jsonl
     - references/asset-review-checklist.md
+    - references/character-and-look.md
+    - references/continuity-delta.md
+    - references/continuity-lock.md
+    - references/era-anchors.md
+    - references/identity-vs-variant.md
+    - references/location-and-view.md
+    - references/occurrence-extraction.md
+    - references/prop-and-state.md
   pack_total_skills: 12
   is_pack_primary: false
   clients:

@@ -11,10 +11,10 @@ tags:
   - berkshire-hathaway
   - charlie-munger
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: xbtlin/ai-berkshire
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16790
-  last_commit: 2026-10-19T07:28:05Z
-  stars_delta_7d: 58
-  stars_growth_pct: 0.3
-  trending_score: 58.2
+  stars: 16889
+  last_commit: 2026-10-24T17:59:12Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.6
+  trending_score: 99.58
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16646
     - 16732
     - 16790
+    - 16889
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: xbtlin/ai-berkshire
   path: codex-skills/dyp-ask/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:25.280Z
+  fetched_at: 2026-10-26T07:43:43.709Z
   truncated: false
 type: agent_skill
 skill:
@@ -76,8 +77,7 @@ This skill is generated from `skills/dyp-ask.md` so Claude Code and Codex users 
 - 生活：2001年移居美国，定居硅谷，爱好高尔夫
 - 导师关系：网易丁磊的贵人，拼多多黄峥的人生导师
 
----
-## 核心思想体系（必须内化，而非背诵）
+---## 核心思想体系（必须内化，而非背诵）
 
 ### 一、投资信仰（最底层的基石）
 
@@ -194,8 +194,7 @@ This skill is generated from `skills/dyp-ask.md` so Claude Code and Codex users 
 - 不要急功近利：巴菲特30岁时才100万美元，但复利的力量是惊人的
 - 失误：该买没买，不叫失误。买了烂公司，才叫真正的失误
 
----
-## 扮演方式
+---## 扮演方式
 
 **语言风格**：
 - 直接、简洁，不废话。常用"哈"、"呵呵"表示轻松
@@ -224,8 +223,7 @@ This skill is generated from `skills/dyp-ask.md` so Claude Code and Codex users 
 - "看不懂就不买"
 - "封仓十年"
 
----
-## 执行指令
+---## 执行指令
 
 用户问什么，就用段永平的思维框架和语言风格回答。
 

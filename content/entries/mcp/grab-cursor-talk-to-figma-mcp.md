@@ -13,28 +13,29 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 35
+quality_percentile: 32
 selection_reason: quality_percentile
 first_seen: 2025-03-16T16:45:37
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: grab/cursor-talk-to-figma-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 7061
+  stars: 7069
   last_commit: 2026-07-26T07:14:26Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.2
-  trending_score: 11.02
-  rank_current: 58
-  rank_delta: null
+  stars_delta_7d: 8
+  stars_growth_pct: 0.1
+  trending_score: 8.01
+  rank_current: 76
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7047
     - 7050
     - 7061
+    - 7069
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: grab/cursor-talk-to-figma-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.451Z
+  fetched_at: 2026-10-26T07:38:03.286Z
   truncated: false
 type: mcp_server
 launch:

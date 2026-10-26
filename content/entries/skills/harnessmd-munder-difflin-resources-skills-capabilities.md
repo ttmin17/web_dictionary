@@ -14,7 +14,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: HarnessMD/munder-difflin
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8896
-  last_commit: 2026-10-19T05:33:14Z
-  stars_delta_7d: 170
+  stars: 9069
+  last_commit: 2026-10-26T07:19:02Z
+  stars_delta_7d: 173
   stars_growth_pct: 1.9
-  trending_score: 173.31
-  rank_current: 53
-  rank_delta: null
+  trending_score: 176.36
+  rank_current: 65
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8550
     - 8726
     - 8896
+    - 9069
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: HarnessMD/munder-difflin
   path: resources/skills/capabilities/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:31.791Z
+  fetched_at: 2026-10-26T07:43:55.399Z
   truncated: false
 type: agent_skill
 skill:

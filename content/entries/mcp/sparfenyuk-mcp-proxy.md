@@ -11,28 +11,29 @@ tags:
   - sse
   - streamable-http
 status: active
-quality_percentile: 74
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2024-12-26T20:31:54
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: sparfenyuk/mcp-proxy
   official_vendor: false
   license: MIT
 signals:
-  stars: 2796
+  stars: 2806
   last_commit: 2026-10-14T21:57:15Z
-  stars_delta_7d: 15
-  stars_growth_pct: 0.5
-  trending_score: 15.08
-  rank_current: 50
-  rank_delta: null
+  stars_delta_7d: 10
+  stars_growth_pct: 0.4
+  trending_score: 10.04
+  rank_current: 74
+  rank_delta: -24
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2773
     - 2781
     - 2796
+    - 2806
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: sparfenyuk/mcp-proxy
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.295Z
+  fetched_at: 2026-10-26T07:37:58.901Z
   truncated: false
 type: mcp_server
 launch:

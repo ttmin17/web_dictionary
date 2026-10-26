@@ -14,28 +14,29 @@ tags:
   - ai-coding-assistant
   - antigravity
 status: active
-quality_percentile: 85
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: awslabs/cli-agent-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1451
-  last_commit: 2026-10-19T06:43:45Z
-  stars_delta_7d: 33
-  stars_growth_pct: 2.3
-  trending_score: 33.77
-  rank_current: 31
-  rank_delta: null
+  stars: 1473
+  last_commit: 2026-10-26T06:54:46Z
+  stars_delta_7d: 22
+  stars_growth_pct: 1.5
+  trending_score: 22.33
+  rank_current: 56
+  rank_delta: -25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1394
     - 1418
     - 1451
+    - 1473
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: awslabs/cli-agent-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:42.940Z
+  fetched_at: 2026-10-26T07:38:13.375Z
   truncated: false
 type: mcp_server
 launch:
@@ -191,6 +192,8 @@ provider override while keeping the same sequence.
   multi-step pipelines.
 - [Launch decisions](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/decisions.md): local routing settings and content-free records.
 - [Skills](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/skills.md): install, scope, and author reusable agent guidance.
+- [Skills lifecycle example](https://github.com/awslabs/cli-agent-orchestrator/blob/main/examples/skills/README.md): install, discover,
+  load, apply, update, and remove a reusable skill in an isolated home.
 - [Memory](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/memory.md) and [self-learning](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/self-learning.md):
   persistent cross-session memory, and the opt-in loop that turns workflow
   outcomes into lessons and promoted instructions.
@@ -198,6 +201,8 @@ provider override while keeping the same sequence.
   parallel AI-DLC intents across repositories and isolated worktrees.
 - [Cross-zone robot transport](https://github.com/awslabs/cli-agent-orchestrator/blob/main/examples/robotics/cross-zone-transport/README.md):
   coordinate simulated transport, measured custody handoffs, and independent checks.
+- [Self-hosted decision model](https://github.com/awslabs/cli-agent-orchestrator/blob/main/examples/decision-model-host/README.md): run the open
+  JevK5-4B decision model locally or on AWS (CDK), behind a loopback-only `/v1/systemone` API.
 - [Tool restrictions](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/tool-restrictions.md): roles, allowlists, and
   provider enforcement.
 - [Kubernetes deployment](https://github.com/awslabs/cli-agent-orchestrator/blob/main/examples/cao-clusters/kubernetes/eks/README.md): run a supervisor and worker fleet on

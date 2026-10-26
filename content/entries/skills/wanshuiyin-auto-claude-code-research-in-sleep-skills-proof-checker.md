@@ -15,10 +15,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 90
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 17693
-  last_commit: 2026-10-19T06:20:47Z
-  stars_delta_7d: 282
-  stars_growth_pct: 1.6
-  trending_score: 286.57
+  stars: 18088
+  last_commit: 2026-10-24T15:48:19Z
+  stars_delta_7d: 395
+  stars_growth_pct: 2.2
+  trending_score: 403.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17090
     - 17411
     - 17693
+    - 18088
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/proof-checker/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:25.051Z
+  fetched_at: 2026-10-26T07:36:53.556Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +57,7 @@ skill:
     verification of a theory paper.
   folder_path: skills/proof-checker
   extra_files: []
-  pack_total_skills: 85
+  pack_total_skills: 87
   is_pack_primary: false
   clients:
     - claude-code
@@ -92,7 +93,7 @@ Systematically verify a mathematical proof via cross-model adversarial review, f
 ## Constants
 
 - MAX_REVIEW_ROUNDS = 3
-- REVIEWER_MODEL = `gpt-6-astra` — Default model for the Codex backend, reasoning effort `ultra` (deep-audit tier; capability fallback `gpt-6-astra`+`xhigh` → `gpt-5.5`+`xhigh` per `shared-references/reviewer-routing.md`, capability errors only — never below `xhigh`). Manual backend uses a model the user chooses, **but it must be a non-Claude model ARIS can classify** (OpenAI, Google, DeepSeek, Moonshot/Kimi, Qwen) — the executor is Claude, so routing the proof review into any Claude product makes Claude judge Claude and voids the cross-model invariant (see `shared-references/reviewer-routing.md`).
+- REVIEWER_MODEL = `gpt-6-astra` — Default model for the Codex backend, reasoning effort `ultra` (deep-audit tier; per `shared-references/reviewer-routing.md`, capability fallback `gpt-6-astra`+`xhigh` then the model capability fallbacks starting with `gpt-6.1-sol`+`xhigh`, capability errors only — never below `xhigh`). Manual backend uses a model the user chooses, **but it must be a non-Claude model ARIS can classify** (OpenAI, Google, DeepSeek, Moonshot/Kimi, Qwen) — the executor is Claude, so routing the proof review into any Claude product makes Claude judge Claude and voids the cross-model invariant (see `shared-references/reviewer-routing.md`).
 - **REVIEWER_BACKEND = `codex`** — Default: Codex MCP (ultra). Override with `— reviewer: oracle-pro` for Oracle MCP, or `— reviewer: manual` for Manual Review MCP. If manual-review MCP is unavailable, stop and print the install command; do not fall back to Codex. See `shared-references/reviewer-routing.md`.
 
 ## Reviewer Calling Convention

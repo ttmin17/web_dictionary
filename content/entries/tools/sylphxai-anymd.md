@@ -15,27 +15,28 @@ tags:
   - document-conversion
   - docx
 status: active
-quality_percentile: 51
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: SylphxAI/anymd
   official_vendor: false
   license: MIT
 signals:
-  stars: 1044
-  last_commit: 2026-10-19T01:17:53Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.6
-  trending_score: 6.03
-  rank_current: 47
-  rank_delta: null
+  stars: 1054
+  last_commit: 2026-10-25T22:31:05Z
+  stars_delta_7d: 10
+  stars_growth_pct: 1
+  trending_score: 10.1
+  rank_current: 114
+  rank_delta: -67
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1038
     - 1044
+    - 1054
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: SylphxAI/anymd
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:54.109Z
+  fetched_at: 2026-10-26T07:38:23.816Z
   truncated: false
 type: agent_tool
 tool:
@@ -192,7 +193,7 @@ Any client that speaks MCP over stdio: command `npx`, args `["-y", "@sylphx/anym
 npm install -g @sylphx/anymd     # or run it once with: npx -y @sylphx/anymd <file>
 ```
 
-Python: `uvx anymd report.pdf > report.md` runs it once, `pip install anymd` installs it, and `uvx anymd mcp` starts the MCP server. The wheels carry the same prebuilt binary.
+Python wheels carry the same prebuilt binary and are on PyPI as `anymd` from the first release after publication.
 
 Windows: `winget install Sylphx.anymd`. macOS and Linux: `brew install sylphxai/tap/anymd`. Scoop: `scoop bucket add sylphx https://github.com/SylphxAI/scoop-bucket && scoop install anymd`.
 

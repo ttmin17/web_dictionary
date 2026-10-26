@@ -11,10 +11,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3475
-  last_commit: 2026-10-17T01:17:07Z
-  stars_delta_7d: 38
-  stars_growth_pct: 1.1
-  trending_score: 38.42
+  stars: 3530
+  last_commit: 2026-10-23T15:17:59Z
+  stars_delta_7d: 55
+  stars_growth_pct: 1.6
+  trending_score: 55.87
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
+    - 3530
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-reverse/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:39.008Z
+  fetched_at: 2026-10-26T07:44:56.560Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +57,7 @@ skill:
     - patterns-ctf-2.md
     - patterns-ctf-3.md
     - patterns-ctf.md
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: false
   clients:
     - claude-code

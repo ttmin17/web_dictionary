@@ -19,25 +19,26 @@ status: active
 quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: tt-a1i/archify
   subpath: archify
   official_vendor: false
-  license: MIT
+  license: Apache-2.0
 signals:
-  stars: 85550
-  last_commit: 2026-10-19T04:44:53Z
-  stars_delta_7d: 2610
-  stars_growth_pct: 3.1
-  trending_score: 2692.13
-  rank_current: 10
-  rank_delta: null
+  stars: 89390
+  last_commit: 2026-10-26T05:59:06Z
+  stars_delta_7d: 3840
+  stars_growth_pct: 4.5
+  trending_score: 4012.36
+  rank_current: 5
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 82940
     - 85550
+    - 89390
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +46,7 @@ readme_source:
   repo: tt-a1i/archify
   path: archify/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:39.444Z
+  fetched_at: 2026-10-26T07:41:15.127Z
   truncated: false
 type: agent_skill
 skill:
@@ -64,6 +65,8 @@ skill:
   folder_path: archify
   extra_files:
     - LICENSE
+    - LICENSE-MIT
+    - NOTICE
     - THIRD_PARTY_NOTICES.md
     - assets/JetBrainsMono-OFL.txt
     - assets/template.html
@@ -71,8 +74,6 @@ skill:
     - bin/delivery-update.mjs
     - bin/finalize.mjs
     - bin/open-artifact.mjs
-    - bin/preview.mjs
-    - bin/recover-output.mjs
   pack_total_skills: 1
   is_pack_primary: true
   clients:

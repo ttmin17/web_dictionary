@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,15 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 55431
-  last_commit: 2026-10-15T21:33:21Z
-  stars_delta_7d: 913
-  stars_growth_pct: 1.7
-  trending_score: 928.29
+  stars: 56570
+  last_commit: 2026-10-22T16:57:46Z
+  stars_delta_7d: 1139
+  stars_growth_pct: 2.1
+  trending_score: 1162.4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
+    - 56570
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/content-strategy/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:21.634Z
+  fetched_at: 2026-10-26T07:42:09.289Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,7 +63,7 @@ skill:
     - evals/evals.json
     - references/content-distribution.md
     - references/headless-cms.md
-  pack_total_skills: 50
+  pack_total_skills: 52
   is_pack_primary: false
   clients:
     - claude-code
@@ -207,6 +208,8 @@ When the goal of a piece is backlinks specifically, format choice matters more t
 | Templates / frameworks | 0.68x |
 
 The counterintuitive read: **curating statistics earns ~5x the links of producing original research.** Writers link to whatever makes citation easiest — a maintained stat-roundup page is citation infrastructure, while original research often gets cited *via* the roundups that aggregate it. Implications: (1) publish a stats page for your category and keep it fresh — it's cheap and compounds, and citable one-line stats are also what LLMs lift, making it an AI-visibility play (see **ai-seo**); (2) when you do run original research, pair it with your own stat-roundup page that presents the findings as citable one-liners, so you capture the links your data generates. The formats at the bottom aren't dead — guides, templates, and thought leadership earn their keep on rankings, conversions, and brand. Judge each piece by the job it's for, and don't expect links from formats that don't earn them.
+
+To get those assets in front of the people who link, and to point their authority at the pages that need it, see **link-building**.
 
 For programmatic content at scale, see **programmatic-seo** skill.
 
@@ -498,6 +501,7 @@ Visual or structured representation of how content interconnects.
 
 - **copywriting**: For writing individual content pieces
 - **seo-audit**: For technical SEO and on-page optimization
+- **link-building**: For earning links to the content and the pages it supports
 - **ai-seo**: For optimizing content for AI search engines and getting cited by LLMs
 - **programmatic-seo**: For scaled content generation
 - **site-architecture**: For page hierarchy, navigation design, and URL structure

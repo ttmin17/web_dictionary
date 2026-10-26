@@ -14,7 +14,7 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: latent-spaces/brag
@@ -22,17 +22,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16800
-  last_commit: 2026-10-13T11:08:09Z
-  stars_delta_7d: 1143
-  stars_growth_pct: 7.3
-  trending_score: 1226.44
-  rank_current: 18
-  rank_delta: null
+  stars: 18669
+  last_commit: 2026-10-23T21:18:13Z
+  stars_delta_7d: 1869
+  stars_growth_pct: 11.1
+  trending_score: 2076.93
+  rank_current: 16
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15657
     - 16800
+    - 18669
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: latent-spaces/brag
   path: skills/brag-slim/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:23.623Z
+  fetched_at: 2026-10-26T07:43:42.278Z
   truncated: false
 type: agent_skill
 skill:

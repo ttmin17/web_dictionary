@@ -10,15 +10,15 @@ summary: Scenario for Blender is an open-source extension for Blender 5.0 and
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/scenario-blender/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.877Z
+  fetched_at: 2026-10-26T07:38:47.958Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +57,7 @@ skill:
     placing saved results, Render Video camera paths, or execute_python."
   folder_path: skills/scenario-blender
   extra_files: []
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: false
   clients:
     - claude-code
@@ -86,10 +87,10 @@ carries each tool's full guidance. Local names are verb-first (`list_models`, `j
 never interchangeable with the hosted server's (`models_list`, `model_run`, `jobs_wait`). Training,
 collection rename or deletion, workflow authoring and usage stay on mcp.scenario.com: see the
 `scenario` skill, and connect both servers when a task needs both. Modeling, sculpting, rigging or
-shading through bpy is the `scenario-blender-expert` skill's work. If a sibling skill named here is
-missing from your available skills, ask the user to install it
-(`npx skills add scenario-labs/skills --skill <name>`); unattended, proceed from tool schemas and
-flag the gap.
+shading through bpy is the `scenario-blender-expert` skill's work; exporting for an engine is
+`scenario-blender-export`'s. If a sibling skill named here is missing from your available skills,
+ask the user to install it (`npx skills add scenario-labs/skills --skill <name>`); unattended,
+proceed from tool schemas and flag the gap.
 
 ## Setup
 
@@ -153,8 +154,9 @@ In call order:
 extension saved; any other path is refused, so capture the scene instead or ask the user to pick the
 file. Render Image and Render Video take no raw parameters: `render_form` with
 `action: "configure"`, then `action: "prepare"` captures and uploads the scene, then `estimate_cost`
-and `generate` with `parameters` omitted. A panorama goes into the World through
-`prepare_result_application` with `purpose: "world"`.
+and `generate` with `parameters` omitted. The model copies the capture's motion, limbs included: for
+characters that must walk or run naturally, block them as capsules (scenario-blender-blockout). A
+panorama goes into the World through `prepare_result_application` with `purpose: "world"`.
 
 ## Worked example: viewport to a mesh at the 3D cursor
 

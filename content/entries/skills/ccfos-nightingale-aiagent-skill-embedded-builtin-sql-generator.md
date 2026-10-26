@@ -18,7 +18,7 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13365
-  last_commit: 2026-10-15T09:16:24Z
-  stars_delta_7d: 28
+  stars: 13390
+  last_commit: 2026-10-22T09:22:55Z
+  stars_delta_7d: 25
   stars_growth_pct: 0.2
-  trending_score: 28.06
+  trending_score: 25.05
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
+    - 13390
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/sql-generator/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:28.334Z
+  fetched_at: 2026-10-26T07:36:56.895Z
   truncated: false
 type: agent_skill
 skill:
@@ -51,7 +52,7 @@ skill:
     MySQL/Doris/ClickHouse/PostgreSQL)
   folder_path: aiagent/skill/embedded/builtin/sql-generator
   extra_files: []
-  pack_total_skills: 22
+  pack_total_skills: 23
   is_pack_primary: false
   clients:
     - claude-code

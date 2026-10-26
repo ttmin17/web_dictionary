@@ -11,10 +11,10 @@ tags:
   - codex
   - decision-making
 status: active
-quality_percentile: 59
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-03-02T08:47:09
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: 0xNyk/council-of-high-intelligence
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4672
-  last_commit: 2026-10-19T05:29:20Z
-  stars_delta_7d: 50
-  stars_growth_pct: 1.1
-  trending_score: 50.54
-  rank_current: 83
-  rank_delta: null
+  stars: 4708
+  last_commit: 2026-10-26T05:31:39Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.8
+  trending_score: 36.28
+  rank_current: 108
+  rank_delta: -25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4550
     - 4622
     - 4672
+    - 4708
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: 0xNyk/council-of-high-intelligence
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:42.741Z
+  fetched_at: 2026-10-26T07:44:00.789Z
   truncated: false
 type: agent_skill
 skill:
@@ -131,8 +132,7 @@ This skill is distributed two ways, so council assets live in one of two roots. 
 
 Every later reference to a `~/.claude/...` council path means "the resolved asset root" — substitute the plugin paths when running from a marketplace install.
 
----
-## The 18 Council Members
+---## The 18 Council Members
 
 | Agent | Figure | Domain | Model | Polarity |
 |-------|--------|--------|-------|----------|
@@ -245,8 +245,7 @@ All 18 members with the domain triads above.
 - `launch-strategy` → Sun Tzu + Torvalds + Machiavelli (optional substitute)
 - `stability` → Ada + Feynman + Aurelius
 
----
-## Coordinator Execution Sequence
+---## Coordinator Execution Sequence
 
 Follow these steps in order. Do NOT skip steps or merge rounds.
 
@@ -648,8 +647,7 @@ Best-effort fields (write `~unknown` if not available):
 
 This block is intentionally not a sub-section of the verdict — it's session telemetry appended below a separator. Reasoning: keeps it cheap to grep, future-easy to redirect to a log file, and avoids polluting the auditable decision artifact with infra noise. Phase 2 (benchmarking harness) and Phase 3 (cost/quality sweet spots) build on this same schema once 5–10 real sessions have been collected.
 
----
-## Quick Mode Sequence (`--quick`)
+---## Quick Mode Sequence (`--quick`)
 
 Fast 2-round deliberation for simpler questions. No cross-examination.
 
@@ -722,8 +720,7 @@ no option.
 
 Dispatch synthesis to the Chairman selected via STEP 1.7 (auto-selected per `--chairman` / config / detected-providers; if no Chairman selection was performed for `--quick`, perform the same algorithm now). Use the Quick Verdict template below. Same fallback rule as STEP 7.
 
----
-## Duo Mode Sequence (`--duo`)
+---## Duo Mode Sequence (`--duo`)
 
 Two-member dialectic for rapid opposing perspectives.
 
@@ -789,8 +786,7 @@ Final statement. 50 words maximum. State your position. No new arguments.
 
 Dispatch synthesis to the Chairman selected via STEP 1.7. In duo mode the Chairman must NOT be either of the two duo members (hard constraint — Chairman audits, not participates). Use the Duo Verdict template below. Same fallback rule as STEP 7.
 
----
-## Output Templates
+---## Output Templates
 
 ### Council Verdict (Full Mode)
 
@@ -853,8 +849,7 @@ If no seat carried 1.5× (ambiguous match), say so. If split, show both options 
 ### Follow-Up
 After acting on this verdict, revisit: Was this verdict useful? Was the recommended action taken? What happened? {This section is a prompt for the user, not filled by the council.}
 
----
-### Session Metadata
+---### Session Metadata
 ```
 schema_version: 1
 mode: full | quick | duo | triad
@@ -914,8 +909,7 @@ fallbacks_triggered: <list of "member→provider/model" entries, or "none">
 ### Follow-Up
 After acting on this verdict, revisit: Was this useful? What happened?
 
----
-### Session Metadata
+---### Session Metadata
 ```
 schema_version: 1
 mode: quick
@@ -970,8 +964,7 @@ fallbacks_triggered: <list or "none">
 ### Follow-Up
 After deciding, revisit: Which perspective proved more useful? What happened?
 
----
-### Session Metadata
+---### Session Metadata
 ```
 schema_version: 1
 mode: duo
@@ -988,8 +981,7 @@ fallbacks_triggered: <list or "none">
 ```
 ```
 
----
-## Example Usage
+---## Example Usage
 
 **Full mode:**
 `/council --triad strategy Should we open-source our agent framework?`

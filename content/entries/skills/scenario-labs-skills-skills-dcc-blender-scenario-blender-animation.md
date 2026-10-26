@@ -10,15 +10,15 @@ summary: "REQUIRED BACKGROUND: scenario-blender-expert (execution channel,
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -26,17 +26,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
-  rank_current: 77
-  rank_delta: null
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
+  rank_current: 84
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/blender/scenario-blender-animation/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.835Z
+  fetched_at: 2026-10-26T07:38:47.916Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
     - references/procedures.md
     - references/sources.md
     - scripts/bx_anim.py
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: true
   clients:
     - claude-code
@@ -83,7 +84,9 @@ unattended, proceed from tool schemas and flag the gap.
 
 **REQUIRED BACKGROUND:** scenario-blender-expert (execution channel, review loop, 5.2 API changes).
 Shot planning, cameras and animatics belong to scenario-blender-previs-storyboard; building the rig
-to scenario-blender-rigging.
+to scenario-blender-rigging. A clip that guides a render-to-real video model belongs to
+scenario-blender-blockout: the model copies keyed limbs as they are, so its cast styles often hand
+it a limbless stand-in and let it animate the gait.
 
 Toolkit: [`scripts/bx_anim.py`](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-animation/scripts/bx_anim.py) (keying, blocking-to-spline, curve checks,
 measurement, staging, playblast light, knee-pop, flip and balance checks, onion-skin and curve
@@ -171,7 +174,9 @@ images, one-object `bouncing_ball`; API in procedures.md, tested on 5.2.1) and
 7. **Face and lip sync, stepped** (P6, P7): jaw rhythm, corners (never dead center), shapes from a
    pose library on the lower face minus the jaw, accents and asymmetry in small doses, tongue last,
    then spline the face. Eyes dart in 1 to 2 frames and lead the head; brows 3 to 10 frames (Rik).
-   GATE: `transitions` meets those counts; accents clearly fewer than syllables.
+   Keys an engine or capture app reads by name (ARKit, visemes): scenario-blender-rigging's
+   `shape_report` before keying. GATE: `transitions` meets those counts; accents clearly fewer than
+   syllables.
 8. **Polish.** `foot_slip` under 1 mm, `lowest_point` for penetration, `rotation_flips` empty
    (`fix_rotation_flips`), `limb_extension` under 0.99 wherever the leg should stay bent, smears 1
    frame (Pablo), burst spacing only now (Raymond), subdivision on. GATE: critique.md rubric passes

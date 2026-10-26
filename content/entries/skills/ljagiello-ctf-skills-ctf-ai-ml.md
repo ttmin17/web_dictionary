@@ -11,10 +11,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,17 +22,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3475
-  last_commit: 2026-10-17T01:17:07Z
-  stars_delta_7d: 38
-  stars_growth_pct: 1.1
-  trending_score: 38.42
-  rank_current: 88
-  rank_delta: null
+  stars: 3530
+  last_commit: 2026-10-23T15:17:59Z
+  stars_delta_7d: 55
+  stars_growth_pct: 1.6
+  trending_score: 55.87
+  rank_current: 97
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
+    - 3530
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-ai-ml/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:39.008Z
+  fetched_at: 2026-10-26T07:44:56.560Z
   truncated: false
 type: agent_skill
 skill:
@@ -51,7 +52,7 @@ skill:
     - adversarial-ml.md
     - llm-attacks.md
     - model-attacks.md
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: true
   clients:
     - claude-code
@@ -86,8 +87,7 @@ brew install python@3
 - [adversarial-ml.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-ai-ml/adversarial-ml.md) - Adversarial example generation (FGSM, PGD, C&W), adversarial patch generation, evasion attacks on ML classifiers, data poisoning, backdoor detection in neural networks
 - [llm-attacks.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-ai-ml/llm-attacks.md) - Prompt injection (direct/indirect), LLM jailbreaking, token smuggling, context window manipulation, tool use exploitation
 
----
-## When to Pivot
+---## When to Pivot
 
 - If the challenge becomes pure math, lattice reduction, or number theory with no ML component, switch to `/ctf-crypto`.
 - If the task is reverse engineering a compiled ML model binary (ONNX loader, TensorRT engine, custom inference binary), switch to `/ctf-reverse`.

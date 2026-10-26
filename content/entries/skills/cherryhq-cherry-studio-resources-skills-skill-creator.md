@@ -1,9 +1,8 @@
 ---
 slug: cherryhq-cherry-studio-resources-skills-skill-creator
 name: creator
-tagline: Create new skills, modify and improve existing skills, and measure
-  skill performance. Use when users want to create a skill from scratch, edit,
-  or opt
+tagline: Create, edit, evaluate, and optimize skills, including benchmarking and
+  description tuning for better triggering.
 summary: You are running inside Cherry Studio. Skills live in a managed registry
   that Cherry keeps in sync with the filesystem automatically — there is no
   install or register tool to call, and you should ignore any packageskil...
@@ -18,7 +17,7 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -26,16 +25,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 52736
-  last_commit: 2026-10-19T07:10:52Z
-  stars_delta_7d: 139
-  stars_growth_pct: 0.3
-  trending_score: 139.37
+  stars: 52987
+  last_commit: 2026-10-26T07:25:22Z
+  stars_delta_7d: 251
+  stars_growth_pct: 0.5
+  trending_score: 252.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 52419
     - 52597
     - 52736
+    - 52987
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,16 +43,13 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/skills/skill-creator/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:17.767Z
+  fetched_at: 2026-10-26T07:42:04.016Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: creator
-  description: Create new skills, modify and improve existing skills, and measure
-    skill performance. Use when users want to create a skill from scratch, edit,
-    or optimize an existing skill, run evals to test a skill, benchmark skill
-    performance with variance analysis, or optimize a skill's description for
-    better triggering accuracy.
+  description: Create, edit, evaluate, and optimize skills, including benchmarking
+    and description tuning for better triggering.
   folder_path: resources/skills/skill-creator
   extra_files:
     - LICENSE.txt

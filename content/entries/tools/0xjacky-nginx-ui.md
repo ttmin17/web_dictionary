@@ -11,25 +11,28 @@ tags:
   - cron
   - docker
 status: active
-quality_percentile: 75
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: 0xJacky/nginx-ui
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 11644
-  last_commit: 2026-10-19T02:28:02Z
-  stars_delta_7d: 39
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 11667
+  last_commit: 2026-10-26T06:02:22Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.2
+  trending_score: 23.05
+  rank_current: 96
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 11571
     - 11644
+    - 11667
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +41,7 @@ readme_source:
   repo: 0xJacky/nginx-ui
   path: README.md
   branch: dev
-  fetched_at: 2026-10-19T07:32:25.360Z
+  fetched_at: 2026-10-26T07:36:57.037Z
   truncated: false
 type: agent_tool
 tool:
@@ -270,12 +273,12 @@ Press `Control+C` in the terminal to exit Nginx UI.
 **Run Nginx UI in Background**
 
 ```shell
-nohup ./nginx-ui -config app.ini &
+nohup ./nginx-ui -config app.ini -pidfile nginx-ui.pid &
 ```
-Stop Nginx UI with the follow command.
+Stop Nginx UI gracefully with the following command.
 
 ```shell
-kill -9 $(ps -aux | grep nginx-ui | grep -v grep | awk '{print $2}')
+kill -TERM "$(cat nginx-ui.pid)"
 ```
 
 #### With Systemd
@@ -375,7 +378,9 @@ On platforms that do not have an official build version, they can be built manua
 
 - Make
 
-- Golang 1.23+
+- Golang 1.27.2+
+
+- Bun 1.4.3 (the version pinned by this repository's package manifest and CI)
 
 - node.js 21+
 

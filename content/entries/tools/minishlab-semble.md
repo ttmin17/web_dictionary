@@ -11,28 +11,29 @@ tags:
   - embeddings
   - model-context-protocol
 status: active
-quality_percentile: 69
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-04-06T14:56:45
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: MinishLab/semble
   official_vendor: false
   license: MIT
 signals:
-  stars: 6231
-  last_commit: 2026-10-16T10:48:43Z
-  stars_delta_7d: 32
-  stars_growth_pct: 0.5
-  trending_score: 32.17
-  rank_current: 33
-  rank_delta: null
+  stars: 6295
+  last_commit: 2026-10-25T08:32:10Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.66
+  rank_current: 70
+  rank_delta: -37
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6187
     - 6199
     - 6231
+    - 6295
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: MinishLab/semble
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:29.348Z
+  fetched_at: 2026-10-26T07:36:57.944Z
   truncated: false
 type: agent_tool
 tool:
@@ -108,6 +109,7 @@ semble install
 - **MCP server**: lets the agent call Semble directly as a tool.
 - **Instructions**: adds CLI usage guidance to AGENTS.md / CLAUDE.md.
 - **Sub-agent**: installs a dedicated `semble-search` sub-agent.
+- **Skill**: installs a `semble` skill plus a one-line pointer to it in AGENTS.md / CLAUDE.md, instead of the full instructions.
 
 To undo the setup, run `semble uninstall`.
 
@@ -132,7 +134,7 @@ For sandboxed or scripted environments, skip the prompts with `--agent` and, opt
 semble install --agent claude --type mcp subagent --yes
 ```
 
-`--agent` accepts one or more agent ids (e.g. `claude`, `codex`, `pi`); `--type` accepts `mcp`, `instructions`, `subagent`, or `all` (default: all); `--yes` skips the confirmation prompt (requires `--agent` for a fully non-interactive run).
+`--agent` accepts one or more agent ids (e.g. `claude`, `codex`, `pi`); `--type` accepts `mcp`, `instructions`, `subagent`, `skill`, or `all` (default: all but `skill`); `--yes` skips the confirmation prompt (requires `--agent` for a fully non-interactive run).
 
 </details>
 

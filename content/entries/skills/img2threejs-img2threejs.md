@@ -11,10 +11,10 @@ tags:
   - claude-code
   - computer-graphics
 status: active
-quality_percentile: 72
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-07-15T02:58:39
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: img2threejs/img2threejs
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 18402
-  last_commit: 2026-10-17T21:41:15Z
-  stars_delta_7d: 342
-  stars_growth_pct: 1.9
-  trending_score: 348.48
-  rank_current: 35
-  rank_delta: null
+  stars: 19278
+  last_commit: 2026-10-21T08:27:20Z
+  stars_delta_7d: 876
+  stars_growth_pct: 4.8
+  trending_score: 917.7
+  rank_current: 29
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17639
     - 18060
     - 18402
+    - 19278
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: img2threejs/img2threejs
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:21.074Z
+  fetched_at: 2026-10-26T07:43:42.184Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,7 +59,7 @@ skill:
     - .github/workflows/beta-release.yml
     - .github/workflows/ci.yml
     - .github/workflows/cli-publish.yml
-    - .github/workflows/issue-triage.yml
+    - .github/workflows/docs-quality.yml
   pack_total_skills: 1
   is_pack_primary: true
   clients:

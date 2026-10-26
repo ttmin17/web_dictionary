@@ -11,10 +11,10 @@ tags:
   - agents
   - ai-agents
 status: active
-quality_percentile: 64
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: DenisSergeevitch/agents-best-practices
@@ -22,17 +22,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2385
+  stars: 2396
   last_commit: 2026-10-19T00:12:05Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.3
-  trending_score: 7.02
-  rank_current: 107
-  rank_delta: null
+  stars_delta_7d: 11
+  stars_growth_pct: 0.5
+  trending_score: 11.05
+  rank_current: 127
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2378
     - 2385
+    - 2396
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: DenisSergeevitch/agents-best-practices
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:42.809Z
+  fetched_at: 2026-10-26T07:44:00.791Z
   truncated: false
 type: agent_skill
 skill:

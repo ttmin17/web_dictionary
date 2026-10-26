@@ -13,10 +13,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 90
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 17693
-  last_commit: 2026-10-19T06:20:47Z
-  stars_delta_7d: 282
-  stars_growth_pct: 1.6
-  trending_score: 286.57
+  stars: 18088
+  last_commit: 2026-10-24T15:48:19Z
+  stars_delta_7d: 395
+  stars_growth_pct: 2.2
+  trending_score: 403.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17090
     - 17411
     - 17693
+    - 18088
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/idea-discovery/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:25.040Z
+  fetched_at: 2026-10-26T07:36:53.546Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,7 +53,7 @@ skill:
     exploration workflow.'
   folder_path: skills/idea-discovery
   extra_files: []
-  pack_total_skills: 85
+  pack_total_skills: 87
   is_pack_primary: false
   clients:
     - claude-code
@@ -93,7 +94,7 @@ Each phase builds on the previous one's output. The final deliverables are a val
 - **MAX_PILOT_IDEAS = 3** — Run pilots for at most 3 top ideas in parallel. Additional ideas are validated on paper only.
 - **MAX_TOTAL_GPU_HOURS = 8** — Total GPU budget across all pilots. If exceeded, skip remaining pilots and note in report.
 - **AUTO_PROCEED = true** — When `true`, checkpoints are informational: report the selected option and continue in the same turn. Set to `false` to ask for explicit user confirmation and end the turn at each selection checkpoint.
-- **REVIEWER_MODEL = `gpt-6-astra`** — Model used via Codex MCP. For `backend=codex`, use an OpenAI model (e.g., `gpt-6-astra`, `o3`, `gpt-4o`). Passed to sub-skills.
+- **REVIEWER_MODEL = `gpt-6-astra`** — Model used via Codex MCP. For `backend=codex`, use an OpenAI model (e.g., `gpt-6-astra`, `gpt-6.1-sol`). Passed to sub-skills.
 - **OUTPUT_DIR = `idea-stage/`** — All idea-stage outputs go here. Create the directory if it doesn't exist.
 - **ARXIV_DOWNLOAD = false** — When `true`, `/research-lit` downloads the top relevant arXiv PDFs during Phase 1. When `false` (default), only fetches metadata. Passed through to `/research-lit`.
 - **COMPACT = false** — When `true`, generate compact summary files for short-context models and session recovery. Writes `idea-stage/IDEA_CANDIDATES.md` (top 3-5 ideas only) at the end of this workflow. Downstream skills read this instead of the full `idea-stage/IDEA_REPORT.md`.

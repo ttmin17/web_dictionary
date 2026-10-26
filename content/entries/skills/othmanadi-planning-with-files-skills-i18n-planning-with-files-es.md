@@ -14,10 +14,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27522
-  last_commit: 2026-10-17T21:51:12Z
-  stars_delta_7d: 92
-  stars_growth_pct: 0.3
-  trending_score: 92.31
+  stars: 27651
+  last_commit: 2026-10-24T17:24:38Z
+  stars_delta_7d: 129
+  stars_growth_pct: 0.5
+  trending_score: 129.6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27320
     - 27430
     - 27522
+    - 27651
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-es/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:37:41.715Z
+  fetched_at: 2026-10-26T07:42:27.103Z
   truncated: false
 type: agent_skill
 skill:
@@ -138,6 +139,18 @@ Antes de una tarea compleja:
 4. **Asigna un único propietario del plan.** Los workers informan mediante sus registros o archivos asignados; no reescriben los archivos de planificación compartidos.
 
 > **Nota:** Los archivos de planificación van en el directorio de tarea seleccionado dentro de tu proyecto, no en el directorio de instalación del skill.
+
+## Contrato para crear planes
+
+Antes de implementar una tarea nueva, ejecuta `init-session.sh` (PowerShell: `init-session.ps1`) desde la instalación del skill. Adapta el esquema generado; no lo sustituyas por una lista resumida. Define `PWF_SKILL_DIR` como el directorio de la SKILL.md que acabas de leer y valida la ruta explícita:
+
+```sh
+sh "$PWF_SKILL_DIR/scripts/check-complete.sh" --validate path/to/task_plan.md
+```
+
+En PowerShell: `check-complete.ps1 -Validate -PlanFile path/to/task_plan.md`. Conserva `### Phase N: Nombre` y exactamente un estado `**Estado:** pending`, `**Estado:** in_progress` o `**Estado:** complete` por fase. Una lista bajo `## Fases` no basta. La validación debe pasar antes de implementar y después de cambiar la estructura. Comprueba el formato, no la finalización ni la atestación.
+
+Conserva los planes existentes. Informa de formatos inválidos para que su responsable los revise; no los reescribas automáticamente. Si no puedes ejecutar los scripts, copia exactamente la plantilla incluida e indica que no se realizó la validación nativa.
 
 ## Patrón central
 

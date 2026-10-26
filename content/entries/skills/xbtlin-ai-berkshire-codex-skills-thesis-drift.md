@@ -11,10 +11,10 @@ tags:
   - berkshire-hathaway
   - charlie-munger
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: xbtlin/ai-berkshire
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16790
-  last_commit: 2026-10-19T07:28:05Z
-  stars_delta_7d: 58
-  stars_growth_pct: 0.3
-  trending_score: 58.2
+  stars: 16889
+  last_commit: 2026-10-24T17:59:12Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.6
+  trending_score: 99.58
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16646
     - 16732
     - 16790
+    - 16889
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: xbtlin/ai-berkshire
   path: codex-skills/thesis-drift/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:25.280Z
+  fetched_at: 2026-10-26T07:43:43.709Z
   truncated: false
 type: agent_skill
 skill:

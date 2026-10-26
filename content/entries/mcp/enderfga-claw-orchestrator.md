@@ -15,24 +15,27 @@ tags:
   - agent-orchestration
   - agentic-workflow
 status: active
-quality_percentile: 62
+quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Enderfga/claw-orchestrator
   official_vendor: false
   license: MIT
 signals:
-  stars: 595
-  last_commit: 2026-10-18T16:23:51Z
-  stars_delta_7d: 16
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 599
+  last_commit: 2026-10-24T16:19:28Z
+  stars_delta_7d: 4
+  stars_growth_pct: 0.7
+  trending_score: 4.03
+  rank_current: 88
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 595
+    - 599
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: Enderfga/claw-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:25.783Z
+  fetched_at: 2026-10-26T07:45:47.418Z
   truncated: false
 type: mcp_server
 launch:

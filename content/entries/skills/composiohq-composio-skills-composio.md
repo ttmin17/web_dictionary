@@ -14,7 +14,7 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ComposioHQ/composio
@@ -22,14 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 30635
-  last_commit: 2026-10-19T06:52:42Z
-  stars_delta_7d: 221
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 30752
+  last_commit: 2026-10-26T06:53:32Z
+  stars_delta_7d: 117
+  stars_growth_pct: 0.4
+  trending_score: 117.45
+  rank_current: 77
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 30635
+    - 30752
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +40,7 @@ readme_source:
   repo: ComposioHQ/composio
   path: skills/composio/SKILL.md
   branch: next
-  fetched_at: 2026-10-19T07:41:15.596Z
+  fetched_at: 2026-10-26T07:45:38.244Z
   truncated: false
 type: agent_skill
 skill:

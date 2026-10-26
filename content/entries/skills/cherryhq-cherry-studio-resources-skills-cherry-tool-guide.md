@@ -1,9 +1,8 @@
 ---
 slug: cherryhq-cherry-studio-resources-skills-cherry-tool-guide
 name: cherry-tool-guide
-tagline: "Cherry Studio first-party tool and bundled-shell routing for general
-  agents. For straightforward local work in shell-capable sessions, run JS/TS
-  with "
+tagline: "Cherry tool routing: bun, uv, rg, knowledge, memory, schedules,
+  skills, MCP, web. Read before shell workarounds."
 summary: This file is a router. It carries only the global rules and the intent
   → tool → reference table. Each reference holds that domain's prerequisites,
   sequencing, conditional availability, output interpretation, recovery,...
@@ -18,7 +17,7 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -26,16 +25,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 52736
-  last_commit: 2026-10-19T07:10:52Z
-  stars_delta_7d: 139
-  stars_growth_pct: 0.3
-  trending_score: 139.37
+  stars: 52987
+  last_commit: 2026-10-26T07:25:22Z
+  stars_delta_7d: 251
+  stars_growth_pct: 0.5
+  trending_score: 252.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 52419
     - 52597
     - 52736
+    - 52987
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,23 +43,13 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/skills/cherry-tool-guide/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:17.766Z
+  fetched_at: 2026-10-26T07:42:04.015Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: cherry-tool-guide
-  description: Cherry Studio first-party tool and bundled-shell routing for
-    general agents. For straightforward local work in shell-capable sessions,
-    run JS/TS with `bun <file>` and one-off JS tools with `bun x`; run Python
-    with `uv run [--with <pkg>] python` and one-off Python CLIs with `uvx`;
-    search with `rg`. Load this guide before changing project dependencies,
-    deciding whether a tool should be ephemeral or reusable, reading or
-    converting local Office/PDF files, coordinating or delegating across Agent
-    Sessions, or using Cherry-owned web/browser, knowledge, persistent memory,
-    schedules/notifications, IM channels, image generation, artifact reporting,
-    managed CLI, skill, or MCP-server-registration capabilities—even if the user
-    names no tool. Consult it before shell/file workarounds; live tool schemas
-    are authoritative.
+  description: "Cherry tool routing: bun, uv, rg, knowledge, memory, schedules,
+    skills, MCP, web. Read before shell workarounds."
   folder_path: resources/skills/cherry-tool-guide
   extra_files:
     - references/automation.md

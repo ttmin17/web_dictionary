@@ -5,8 +5,8 @@ tagline: Show a chart, diagram, table, report or mockup inline in this Orca chat
   as an HTML page. Use when a visual would help the user understand your answer.
 summary: "- Save it in the folder named by ORCACHATSCRATCHDIR (printenv
   ORCACHATSCRATCHDIR; in PowerShell $env:ORCACHATSCRATCHDIR). If it's unset or
-  you can't write there, skip the visual. This folder is temporary: Orca may
-  rem..."
+  you can't write there, skip the visual. This folder belongs to this chat and
+  i..."
 categories:
   - agent-frameworks
 tags:
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -26,18 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 97177
-  last_commit: 2026-10-19T07:28:54Z
-  stars_delta_7d: 5791
-  stars_growth_pct: 6.3
-  trending_score: 6157.97
-  rank_current: 2
-  rank_delta: null
+  stars: 106220
+  last_commit: 2026-10-26T07:33:33Z
+  stars_delta_7d: 9043
+  stars_growth_pct: 9.3
+  trending_score: 9884.51
+  rank_current: 1
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 86961
     - 91386
     - 97177
+    - 106220
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +46,7 @@ readme_source:
   repo: stablyai/orca
   path: resources/native-chat-visuals/skills/orca-chat-visuals/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:40.961Z
+  fetched_at: 2026-10-26T07:41:09.714Z
   truncated: false
 type: agent_skill
 skill:
@@ -73,16 +74,17 @@ clearer.
 
 - Save it in the folder named by `ORCA_CHAT_SCRATCH_DIR` (`printenv ORCA_CHAT_SCRATCH_DIR`; in
   PowerShell `$env:ORCA_CHAT_SCRATCH_DIR`). If it's unset or you can't write there, skip the visual.
-  This folder is temporary: Orca may remove it after 30 days without chat activity or changes.
-  Save files meant to last in the workspace.
+  This folder belongs to this chat and is kept as long as the chat. Save files meant for the
+  project in the workspace.
 - One complete HTML file per visual, directly in that folder, under 512 KB, with a new file name
   each time (e.g. `latency-by-region-7c1e.html`): letters, digits, `.`, `_`, `-`, ending in `.html`.
 - Inline your styles, scripts and data. Libraries and fonts may load only from cdn.jsdelivr.net,
   unpkg.com, cdnjs.cloudflare.com, esm.sh, fonts.googleapis.com and fonts.gstatic.com. The page
   can't make network requests; use inline SVG or `data:` URLs for images.
 - Don't size anything to the viewport height (`100vh`); Orca fits the frame to your content.
-- Optional: Orca's theme colors are available as CSS variables (`--background`, `--foreground`,
-  `--muted-foreground`, `--border`, `--primary`, `--chart-1` to `--chart-5`).
+- Use Orca's theme variables for surfaces, text, and controls; pair hover `--accent` with
+  `--accent-foreground`. Scope fixed-palette CSS to its mockup. Orca updates tokens and
+  `color-scheme` live. Charts use `--chart-1` to `--chart-5`.
 
 ## Showing it
 

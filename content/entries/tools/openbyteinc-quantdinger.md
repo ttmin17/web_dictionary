@@ -10,30 +10,33 @@ summary: QuantDinger Open-source AI Trading OS Turn trading ideas into Python
 categories:
   - domain-research
 tags:
-  - alpaca
   - backtesting
   - binance
   - crypto
+  - exchange
 status: active
-quality_percentile: 95
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OpenByteInc/QuantDinger
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12908
-  last_commit: 2026-10-19T07:04:55Z
-  stars_delta_7d: 307
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 13130
+  last_commit: 2026-10-26T07:25:33Z
+  stars_delta_7d: 222
+  stars_growth_pct: 1.7
+  trending_score: 225.82
+  rank_current: 30
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 12519
     - 12908
+    - 13130
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +45,7 @@ readme_source:
   repo: OpenByteInc/QuantDinger
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:25.368Z
+  fetched_at: 2026-10-26T07:36:53.887Z
   truncated: false
 type: agent_tool
 tool:
@@ -55,7 +58,10 @@ tool:
 
 <div align="center">
   <a href="https://github.com/OpenByteInc/QuantDinger">
-    <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/screenshots/logo.png" alt="QuantDinger logo" width="420">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/logo-dark.png">
+      <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/screenshots/logo.png" alt="QuantDinger logo" width="420">
+    </picture>
   </a>
 
   <h1>QuantDinger</h1>
@@ -69,6 +75,26 @@ tool:
     ·
     <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_CN.md"><strong>简体中文</strong></a>
     ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_TW.md"><strong>繁體中文</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_JA.md"><strong>日本語</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_KO.md"><strong>한국어</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_DE.md"><strong>Deutsch</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_FR.md"><strong>Français</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_RU.md"><strong>Русский</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_AR.md"><strong>العربية</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_TH.md"><strong>ไทย</strong></a>
+    ·
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/README_VI.md"><strong>Tiếng Việt</strong></a>
+  </p>
+
+  <p>
     <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/api/README.md"><strong>API</strong></a>
     ·
     <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/agent/README.md"><strong>AI Agents & MCP</strong></a>
@@ -93,6 +119,14 @@ tool:
 
   <p>
     <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="Apache 2.0"></a>
+    <a href="https://codecov.io/gh/OpenByteInc/QuantDinger"><img src="https://codecov.io/gh/OpenByteInc/QuantDinger/branch/main/graph/badge.svg" alt="Codecov"></a>
+    <a href="https://scorecard.dev/viewer/?uri=github.com/OpenByteInc/QuantDinger"><img src="https://api.scorecard.dev/projects/github.com/OpenByteInc/QuantDinger/badge" alt="OpenSSF Scorecard"></a>
+    <a href="https://www.bestpractices.dev/projects/15860"><img src="https://www.bestpractices.dev/projects/15860/baseline" alt="OpenSSF Baseline"></a>
+    <a href="https://www.bestpractices.dev/projects/15860"><img src="https://www.bestpractices.dev/projects/15860/badge" alt="OpenSSF Best Practices"></a>
+    <a href="https://sonarcloud.io/summary/new_code?id=OpenByteInc_QuantDinger"><img src="https://sonarcloud.io/api/project_badges/measure?project=OpenByteInc_QuantDinger&metric=alert_status" alt="SonarQube Cloud Quality Gate"></a>
+    <a href="https://api.reuse.software/info/github.com/OpenByteInc/QuantDinger"><img src="https://api.reuse.software/badge/github.com/OpenByteInc/QuantDinger" alt="REUSE status"></a>
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/OPENCHAIN_ISO_5230_SELF_ASSESSMENT.md"><img src="https://img.shields.io/badge/OpenChain_ISO%2FIEC_5230-self--assessed-0B6B53?style=flat-square" alt="OpenChain ISO/IEC 5230 self-assessed"></a>
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/OPENCHAIN_ISO_18974_SELF_ASSESSMENT.md"><img src="https://img.shields.io/badge/OpenChain_ISO%2FIEC_18974-self--assessed-0B6B53?style=flat-square" alt="OpenChain ISO/IEC 18974 self-assessed"></a>
     <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/badges/python-3.12.svg" alt="Python 3.12">
     <img src="https://img.shields.io/badge/PostgreSQL-18-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL 18">
     <img src="https://img.shields.io/badge/Redis-8-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis 8">
@@ -339,18 +373,37 @@ legacy-image recovery and rootless/NFS notes.
 ```bash
 git clone https://github.com/OpenByteInc/QuantDinger.git
 cd QuantDinger
-cp .env.example .env
+python scripts/bootstrap_env.py
 ```
 
-Before the first start, replace the example values in the unified environment file:
+Before the first start, review the unified environment file. The bootstrap command
+already generates the PostgreSQL, session-signing, and credential-encryption
+secrets; set the administrator credentials and review any production-only
+integrations:
 
 | File | Required production values |
 | --- | --- |
-| `.env` | `SECRET_KEY`, `CREDENTIAL_ENCRYPTION_KEY`, administrator, PostgreSQL, Redis, and Grafana credentials |
+| `.env` | Administrator credentials; optional Redis and Grafana credentials; deployment-specific URLs and integrations |
 
-After an update, `docker compose up` runs the one-shot `env-sync` service before
-database and Kafka initialization. It appends newly introduced settings, imports
-missing values from the legacy backend env files, preserves existing values and
+After pulling an update, initialize the unified environment before running any
+Compose command. This one-time step is required when upgrading from releases
+that relied on the former built-in PostgreSQL password:
+
+```bash
+git pull --ff-only
+python3 scripts/bootstrap_env.py
+docker compose up -d --build
+```
+
+The bootstrap command preserves existing credentials and can recover the former
+PostgreSQL password from a legacy `DATABASE_URL` or the existing database
+container. If it detects an existing data volume but cannot recover the password,
+it stops instead of disconnecting the database. Do not invent a replacement
+password and do not delete the volume.
+
+After bootstrap, Compose runs the one-shot `env-sync` service before database and
+Kafka initialization. It appends newly introduced settings, imports missing
+values from legacy backend environment files, preserves existing values and
 comments, and creates a timestamped backup only when the unified file changes.
 The command below remains available for a manual preview or maintenance run:
 
@@ -362,7 +415,9 @@ For a manual one-time migration from older releases, add
 `--legacy backend_api_python/.env` (source deployment) or `--legacy backend.env`
 (old GHCR deployment). The old file is not deleted.
 
-Generate independent secrets with:
+The bootstrap command creates `.env`, preserves existing values during upgrades,
+and generates independent PostgreSQL, session, and credential-encryption secrets.
+To generate another independent secret manually:
 
 ```bash
 python -c "import secrets; print(secrets.token_hex(32))"
@@ -721,6 +776,19 @@ needed when building those clients from source. For deeper ownership rules, read
 [Process roles](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/architecture/PROCESS_ROLES_AND_TASKS.md).
 
 ## Documentation
+
+Project engineering and assurance documents:
+
+- [Development environment](https://github.com/OpenByteInc/QuantDinger/blob/main/DEVELOPMENT.md)
+- [Testing policy](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/getting-started/TESTING.md)
+- [Architecture](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/architecture/ARCHITECTURE.md)
+- [Governance](https://github.com/OpenByteInc/QuantDinger/blob/main/GOVERNANCE.md) and [maintainers](https://github.com/OpenByteInc/QuantDinger/blob/main/MAINTAINERS.md)
+- [Security policy](https://github.com/OpenByteInc/QuantDinger/blob/main/SECURITY.md)
+- [Security assessment](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/security/SECURITY_ASSESSMENT.md)
+- [Secure development practices](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/security/SECURE_DEVELOPMENT.md)
+- [Dependency management policy](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/security/DEPENDENCY_POLICY.md)
+- [Open source compliance and security assurance program](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/README.md)
+- [Release history](https://github.com/OpenByteInc/QuantDinger/blob/main/CHANGELOG.md)
 
 The maintained documentation index is available at [`docs/README.md`](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/README.md).
 

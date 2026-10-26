@@ -15,28 +15,29 @@ tags:
   - agentic-ai
   - ai-security
 status: active
-quality_percentile: 89
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: NVIDIA/SkillSpector
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 20514
-  last_commit: 2026-10-19T07:01:16Z
-  stars_delta_7d: 400
-  stars_growth_pct: 2
-  trending_score: 407.95
-  rank_current: 8
-  rank_delta: null
+  stars: 21647
+  last_commit: 2026-10-23T09:40:29Z
+  stars_delta_7d: 1133
+  stars_growth_pct: 5.5
+  trending_score: 1195.58
+  rank_current: 14
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 19623
     - 20114
     - 20514
+    - 21647
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: NVIDIA/SkillSpector
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:39:21.137Z
+  fetched_at: 2026-10-26T07:43:39.604Z
   truncated: false
 type: agent_tool
 tool:

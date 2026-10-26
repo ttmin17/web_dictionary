@@ -11,28 +11,29 @@ tags:
   - "12306"
   - train-tickets
 status: active
-quality_percentile: 33
+quality_percentile: 28
 selection_reason: quality_percentile
 first_seen: 2025-04-14T14:31:32
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Joooook/12306-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2395
+  stars: 2406
   last_commit: 2026-07-31T06:22:59Z
-  stars_delta_7d: 23
-  stars_growth_pct: 1
-  trending_score: 23.22
-  rank_current: 41
-  rank_delta: null
+  stars_delta_7d: 11
+  stars_growth_pct: 0.5
+  trending_score: 11.05
+  rank_current: 72
+  rank_delta: -31
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2288
     - 2372
     - 2395
+    - 2406
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: Joooook/12306-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.984Z
+  fetched_at: 2026-10-26T07:38:02.898Z
   truncated: false
 type: mcp_server
 launch:

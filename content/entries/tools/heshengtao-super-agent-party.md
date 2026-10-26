@@ -13,27 +13,28 @@ tags:
   - ai-vtuber
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: heshengtao/super-agent-party
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2741
+  stars: 2754
   last_commit: 2026-10-18T04:24:20Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.3
-  trending_score: 8.02
-  rank_current: 44
-  rank_delta: null
+  stars_delta_7d: 13
+  stars_growth_pct: 0.5
+  trending_score: 13.06
+  rank_current: 109
+  rank_delta: -65
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2733
     - 2741
+    - 2754
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: heshengtao/super-agent-party
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:09.179Z
+  fetched_at: 2026-10-26T07:45:25.885Z
   truncated: false
 type: agent_tool
 tool:

@@ -14,28 +14,29 @@ tags:
   - ai-cybersecurity
   - ai-hacking
 status: active
-quality_percentile: 69
+quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2025-07-10T17:53:18
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: 0x4m4/hexstrike-ai
   official_vendor: false
   license: MIT
 signals:
-  stars: 12924
+  stars: 13097
   last_commit: 2026-08-03T14:33:09Z
   stars_delta_7d: 173
-  stars_growth_pct: 1.4
-  trending_score: 175.35
-  rank_current: 14
-  rank_delta: null
+  stars_growth_pct: 1.3
+  trending_score: 175.32
+  rank_current: 40
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12494
     - 12751
     - 12924
+    - 13097
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: 0x4m4/hexstrike-ai
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:32:25.336Z
+  fetched_at: 2026-10-26T07:36:53.821Z
   truncated: false
 type: agent_tool
 tool:

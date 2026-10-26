@@ -13,10 +13,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27522
-  last_commit: 2026-10-17T21:51:12Z
-  stars_delta_7d: 92
-  stars_growth_pct: 0.3
-  trending_score: 92.31
+  stars: 27651
+  last_commit: 2026-10-24T17:24:38Z
+  stars_delta_7d: 129
+  stars_growth_pct: 0.5
+  trending_score: 129.6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27320
     - 27430
     - 27522
+    - 27651
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/planning-with-files/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:37:41.716Z
+  fetched_at: 2026-10-26T07:42:27.104Z
   truncated: false
 type: agent_skill
 skill:
@@ -57,6 +58,7 @@ skill:
     tool calls.
   folder_path: skills/planning-with-files
   extra_files:
+    - evals/planning-with-files.eval.yaml
     - examples.md
     - reference.md
     - scripts/attest-plan.ps1
@@ -66,7 +68,6 @@ skill:
     - scripts/gate-stop.sh
     - scripts/init-session.ps1
     - scripts/init-session.sh
-    - scripts/inject-plan.py
   pack_total_skills: 6
   is_pack_primary: false
   clients:
@@ -123,12 +124,28 @@ Metadata mode may report that same-project session activity exists, but it emits
 
 Before a complex task:
 
-1. **Resolve or initialize the task directory.** Reuse the selected plan when resuming. For a separate task, run `scripts/init-session.sh "Task Name"` and use the printed `PLAN_ID` to pin its host.
-2. **Create missing planning files only.** Use [templates/task_plan.md](https://github.com/OthmanAdi/planning-with-files/blob/master/skills/planning-with-files/templates/task_plan.md), [templates/findings.md](https://github.com/OthmanAdi/planning-with-files/blob/master/skills/planning-with-files/templates/findings.md), and [templates/progress.md](https://github.com/OthmanAdi/planning-with-files/blob/master/skills/planning-with-files/templates/progress.md) in that directory. Preserve existing work.
+1. **Restore before creating.** Reuse the selected plan when resuming. For a new task, run the installed initializer before implementation; follow the creation contract below and pin the host with its printed `PLAN_ID` when using a named plan.
+2. **Preserve the initialized structure.** Fill in the selected plan and notes without replacing the native phase/status markers. Existing planning files must not be overwritten.
 3. **Re-read the selected plan before decisions.** Update progress after each phase.
 4. **Assign one plan owner.** The orchestrator owns `task_plan.md` and shared summaries. Workers report through their own ledgers or assigned files; they do not independently rewrite the shared planning files.
 
 > Planning files belong to the selected task directory in the project. The installation directory contains the scripts and templates.
+
+## New plan creation contract
+
+For a new task, use the installed initializer before implementation. Set `PWF_SKILL_DIR` to the directory containing the SKILL.md you just read, then run from the project root:
+
+```sh
+sh "$PWF_SKILL_DIR/scripts/init-session.sh"
+# After filling in the selected plan, validate its explicit path:
+sh "$PWF_SKILL_DIR/scripts/check-complete.sh" --validate path/to/task_plan.md
+```
+
+PowerShell equivalents are `init-session.ps1` and `check-complete.ps1 -Validate -PlanFile path/to/task_plan.md`. A named task may use the initializer's name argument and printed `PLAN_ID`.
+
+Keep each phase as `### Phase N: Name` with exactly one `**Status:** pending`, `**Status:** in_progress`, or `**Status:** complete` line. A `## Phases` checklist or numbered summary alone is not trackable. Preserve these markers when tailoring the generated plan; do not replace the skeleton with a compact custom format. Validation must succeed before substantive work and after changing phase structure. This checks format, not task completion or attestation.
+
+Reuse existing plans without overwriting them. If an existing plan fails validation, report the issue for its owner to review; do not automatically rewrite it. If helpers cannot run, copy the shipped template exactly and state that native validation is unavailable.
 
 ## The Core Pattern
 

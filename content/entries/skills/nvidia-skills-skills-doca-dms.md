@@ -11,10 +11,10 @@ tags:
   - ai-agents
   - claude-code
 status: active
-quality_percentile: 59
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: NVIDIA/skills
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3642
-  last_commit: 2026-10-17T15:10:49Z
-  stars_delta_7d: 61
-  stars_growth_pct: 1.7
-  trending_score: 62.04
+  stars: 3735
+  last_commit: 2026-10-26T00:12:40Z
+  stars_delta_7d: 93
+  stars_growth_pct: 2.6
+  trending_score: 95.37
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3536
     - 3581
     - 3642
+    - 3735
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: NVIDIA/skills
   path: skills/doca-dms/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:41:08.970Z
+  fetched_at: 2026-10-26T07:45:25.669Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,7 +55,7 @@ skill:
     - evals/evals.json
     - skill-card.md
     - skill.oms.sig
-  pack_total_skills: 417
+  pack_total_skills: 416
   is_pack_primary: false
   clients:
     - claude-code

@@ -13,28 +13,29 @@ tags:
   - chinese
   - emotion-recognition
 status: active
-quality_percentile: 79
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2022-11-24T02:28:11
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: modelscope/FunASR
   official_vendor: false
   license: MIT
 signals:
-  stars: 20748
-  last_commit: 2026-10-18T15:49:53Z
-  stars_delta_7d: 71
+  stars: 20817
+  last_commit: 2026-10-22T17:56:34Z
+  stars_delta_7d: 69
   stars_growth_pct: 0.3
-  trending_score: 71.24
-  rank_current: 18
-  rank_delta: null
+  trending_score: 69.23
+  rank_current: 28
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20602
     - 20677
     - 20748
+    - 20817
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: modelscope/FunASR
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:31:56.046Z
+  fetched_at: 2026-10-26T07:36:25.879Z
   truncated: false
 type: mcp_server
 launch:

@@ -13,28 +13,29 @@ tags:
   - crawler
   - crawling
 status: active
-quality_percentile: 94
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: D4Vinci/Scrapling
   official_vendor: false
   license: BSD-3-Clause
 signals:
-  stars: 88548
-  last_commit: 2026-10-18T17:41:44Z
-  stars_delta_7d: 1292
-  stars_growth_pct: 1.5
-  trending_score: 1311.13
-  rank_current: 6
-  rank_delta: null
+  stars: 89757
+  last_commit: 2026-10-22T20:43:49Z
+  stars_delta_7d: 1209
+  stars_growth_pct: 1.4
+  trending_score: 1225.51
+  rank_current: 13
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 86124
     - 87256
     - 88548
+    - 89757
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: D4Vinci/Scrapling
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:31:31.600Z
+  fetched_at: 2026-10-26T07:35:59.883Z
   truncated: false
 type: agent_tool
 tool:
@@ -181,12 +182,12 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
 <table>
   <tr>
     <td width="200">
-      <a href="https://go.nodemaven.com/scraplingseptember" target="_blank" title="Proxies with the Highest IP Scores">
+      <a href="https://go.nodemaven.com/scraplingoctober" target="_blank" title="Proxies with the Highest IP Scores">
         <img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/NodeMaven.jpg" width="240" height="100">
       </a>
     </td>
     <td>
-    <a href="https://go.nodemaven.com/scraplingseptember" target="_blank">NodeMaven</a> - The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market. Use code SCRAPLING35 for 35% discount.
+    <a href="https://go.nodemaven.com/scraplingoctober" target="_blank">NodeMaven</a> - The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market. Use code SCRAPLING35 for 35% discount.
     </td>
   </tr>
   <tr>
@@ -210,16 +211,6 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
         <b>Evomi</b>
       </a>: residential proxies from $0.49/GB. Scraping browser with fully spoofed Chromium, residential IPs, auto CAPTCHA solving, and anti-bot bypass. </br>
       <b>Scraper API for hassle-free results. MCP and N8N integrations are available.</b>
-    </td>
-  </tr>
-  <tr>
-    <td width="200">
-      <a href="https://tikhub.io/?utm_source=github.com/D4Vinci/Scrapling&utm_medium=marketing_social&utm_campaign=retargeting&utm_content=carousel_ad" target="_blank" title="Unlock the Power of Social Media Data & AI">
-        <img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/TikHub.jpg">
-      </a>
-    </td>
-    <td>
-      <a href="https://tikhub.io/?utm_source=github.com/D4Vinci/Scrapling&utm_medium=marketing_social&utm_campaign=retargeting&utm_content=carousel_ad" target="_blank">TikHub.io</a> provides 900+ stable APIs across 16+ platforms including TikTok, X, YouTube & Instagram, with 40M+ datasets. <br /> Also offers <a href="https://ai.tikhub.io/?ref=KarimShoair" target="_blank">DISCOUNTED AI models</a> - Claude, GPT, GEMINI & more up to 71% off.
     </td>
   </tr>
   <tr>

@@ -14,10 +14,10 @@ tags:
   - architecture-diagram
   - asyncapi
 status: active
-quality_percentile: 69
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Agents365-ai/drawio-skill
@@ -25,17 +25,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10231
+  stars: 10359
   last_commit: 2026-10-11T11:22:56Z
-  stars_delta_7d: 120
-  stars_growth_pct: 1.2
-  trending_score: 121.42
-  rank_current: 62
-  rank_delta: null
+  stars_delta_7d: 128
+  stars_growth_pct: 1.3
+  trending_score: 129.6
+  rank_current: 73
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10111
     - 10231
+    - 10359
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: Agents365-ai/drawio-skill
   path: skills/drawio-skill/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:28.520Z
+  fetched_at: 2026-10-26T07:36:57.055Z
   truncated: false
 type: agent_skill
 skill:

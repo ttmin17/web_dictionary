@@ -12,28 +12,29 @@ tags:
   - daw
   - generative-ai
 status: active
-quality_percentile: 68
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2025-03-19T17:00:09
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ahujasid/ableton-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3207
+  stars: 3247
   last_commit: 2026-09-22T10:37:13Z
-  stars_delta_7d: 30
-  stars_growth_pct: 0.9
-  trending_score: 30.28
-  rank_current: 35
-  rank_delta: null
+  stars_delta_7d: 40
+  stars_growth_pct: 1.2
+  trending_score: 40.5
+  rank_current: 42
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3148
     - 3177
     - 3207
+    - 3247
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: ahujasid/ableton-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:39.587Z
+  fetched_at: 2026-10-26T07:38:10.464Z
   truncated: false
 type: mcp_server
 launch:

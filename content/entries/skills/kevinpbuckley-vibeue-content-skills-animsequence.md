@@ -15,10 +15,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 55
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 781
-  last_commit: 2026-10-07T14:45:41Z
-  stars_delta_7d: 36
-  stars_growth_pct: 4.8
-  trending_score: 37.74
+  stars: 788
+  last_commit: 2026-10-24T02:30:54Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.9
+  trending_score: 7.06
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
+    - 788
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/animsequence/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:34:23.730Z
+  fetched_at: 2026-10-26T07:38:54.121Z
   truncated: false
 type: agent_skill
 skill:

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13365
-  last_commit: 2026-10-15T09:16:24Z
-  stars_delta_7d: 28
+  stars: 13390
+  last_commit: 2026-10-22T09:22:55Z
+  stars_delta_7d: 25
   stars_growth_pct: 0.2
-  trending_score: 28.06
+  trending_score: 25.05
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
+    - 13390
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/create-dashboard/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:28.330Z
+  fetched_at: 2026-10-26T07:36:56.892Z
   truncated: false
 type: agent_skill
 skill:
@@ -51,7 +52,7 @@ skill:
     a dashboard, a monitoring board, or a Dashboard.
   folder_path: aiagent/skill/embedded/builtin/create-dashboard
   extra_files: []
-  pack_total_skills: 22
+  pack_total_skills: 23
   is_pack_primary: false
   clients:
     - claude-code
@@ -125,7 +126,7 @@ When the same component often has both categraf and exporter templates, **prefer
 
 Use `create_dashboard`. **You only need to provide the panel title, type, and PromQL**; the tool automatically generates the full configuration (layout, datasource variables, styling, units, etc., are all handled automatically).
 
-> create_dashboard accepts the following set of **simplified fields**. Any field beyond these (thresholds, overrides, value mappings, heatmap/hexbin/tableNG/iframe, etc.) is **not supported** — they will be ignored even if written. When you need such rich configuration, switch to path A and import a template.
+> create_dashboard accepts the following set of **simplified fields**. Any field beyond these (overrides, value mappings, heatmap/hexbin/iframe, etc.) is **not supported** — they will be ignored even if written. When you need such rich configuration, switch to path A and import a template.
 
 ### Call example
 
@@ -158,7 +159,7 @@ Each panel requires 3 fields:
 | `stack` | Whether to stack (timeseries only) | false |
 | `description` | Panel description | none |
 
-Query field `instant`: for single-value panels such as stat/gauge/barGauge/pie/table, it is recommended to set `"instant": true` (instant query).
+Query field `instant`: for single-value panels such as stat/gauge/barGauge/pie, it is recommended to set `"instant": true` (instant query). tableNG always uses instant queries automatically.
 
 ### Supported panel types (only these 8)
 
@@ -169,7 +170,7 @@ Query field `instant`: for single-value panels such as stat/gauge/barGauge/pie/t
 | `gauge` | Gauge | 6×6 |
 | `barGauge` | Horizontal bar ranking | 8×8 |
 | `pie` | Pie chart | 6×6 |
-| `table` | Table | 12×10 |
+| `tableNG` | Table | 12×10 |
 | `text` | Text note (uses description as content) | 6×4 |
 | `row` | Grouping row (automatically full width) | 24×1 |
 

@@ -15,24 +15,27 @@ tags:
   - ai-agents
   - ai-roles
 status: active
-quality_percentile: 89
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: jnMetaCode/agency-agents-zh
   official_vendor: false
   license: MIT
 signals:
-  stars: 21355
-  last_commit: 2026-10-19T04:50:08Z
-  stars_delta_7d: 658
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 21602
+  last_commit: 2026-10-23T14:29:26Z
+  stars_delta_7d: 247
+  stars_growth_pct: 1.2
+  trending_score: 249.86
+  rank_current: 29
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 21355
+    - 21602
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: jnMetaCode/agency-agents-zh
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:39:21.174Z
+  fetched_at: 2026-10-26T07:43:39.613Z
   truncated: false
 type: agent_tool
 tool:

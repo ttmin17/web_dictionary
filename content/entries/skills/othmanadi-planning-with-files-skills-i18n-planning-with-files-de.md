@@ -13,10 +13,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27522
-  last_commit: 2026-10-17T21:51:12Z
-  stars_delta_7d: 92
-  stars_growth_pct: 0.3
-  trending_score: 92.31
+  stars: 27651
+  last_commit: 2026-10-24T17:24:38Z
+  stars_delta_7d: 129
+  stars_growth_pct: 0.5
+  trending_score: 129.6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27320
     - 27430
     - 27522
+    - 27651
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-de/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:37:41.715Z
+  fetched_at: 2026-10-26T07:42:27.103Z
   truncated: false
 type: agent_skill
 skill:
@@ -130,6 +131,18 @@ Vor einer komplexen Aufgabe:
 4. **Bestimme einen Planverantwortlichen.** Worker berichten über eigene Ledger oder zugewiesene Dateien und schreiben die gemeinsamen Planungsdateien nicht um.
 
 > **Hinweis:** Planungsdateien kommen in das ausgewählte Aufgabenverzeichnis deines Projekts, nicht in das Skill-Installationsverzeichnis.
+
+## Vertrag für neue Pläne
+
+Initialisiere einen neuen Plan vor der Umsetzung mit `init-session.sh` (PowerShell: `init-session.ps1`) aus dem installierten Skill-Verzeichnis. Passe das erzeugte Gerüst an, statt einen eigenen kompakten Plan zu schreiben. Prüfe danach den expliziten Planpfad:
+
+```sh
+sh "$PWF_SKILL_DIR/scripts/check-complete.sh" --validate path/to/task_plan.md
+```
+
+`PWF_SKILL_DIR` ist das Verzeichnis der gerade gelesenen SKILL.md. Unter PowerShell gilt `check-complete.ps1 -Validate -PlanFile path/to/task_plan.md`. Jede Phase behält `### Phase N: Name` und genau einen Status `**Status:** pending`, `**Status:** in_progress` oder `**Status:** complete`. Eine Liste unter `## Phases` reicht nicht. Die Prüfung muss vor der Umsetzung und nach Änderungen an der Phasenstruktur bestehen. Sie prüft das Format, nicht den Abschluss oder die Attestierung.
+
+Bestehende Pläne bleiben erhalten. Melde Formatfehler ihrem Eigentümer, ohne sie automatisch umzuschreiben. Wenn die Hilfsskripte nicht ausführbar sind, kopiere die mitgelieferte Vorlage unverändert und benenne die fehlende native Prüfung.
 
 ## Kernmuster
 

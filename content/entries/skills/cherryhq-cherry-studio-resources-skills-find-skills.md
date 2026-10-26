@@ -1,9 +1,8 @@
 ---
 slug: cherryhq-cherry-studio-resources-skills-find-skills
 name: find-skills
-tagline: Helps users discover and install agent skills when they ask questions
-  like "how do I do X", "find a skill for X", "is there a skill that can...", or
-  e
+tagline: Find and install agent skills when the user asks for a capability that
+  may already exist as a skill.
 summary: "Use this skill when the user:"
 categories:
   - coding-agents
@@ -16,7 +15,7 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -24,16 +23,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 52736
-  last_commit: 2026-10-19T07:10:52Z
-  stars_delta_7d: 139
-  stars_growth_pct: 0.3
-  trending_score: 139.37
+  stars: 52987
+  last_commit: 2026-10-26T07:25:22Z
+  stars_delta_7d: 251
+  stars_growth_pct: 0.5
+  trending_score: 252.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 52419
     - 52597
     - 52736
+    - 52987
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,16 +41,13 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/skills/find-skills/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:17.766Z
+  fetched_at: 2026-10-26T07:42:04.016Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: find-skills
-  description: Helps users discover and install agent skills when they ask
-    questions like "how do I do X", "find a skill for X", "is there a skill that
-    can...", or express interest in extending capabilities. This skill should be
-    used when the user is looking for functionality that might exist as an
-    installable skill.
+  description: Find and install agent skills when the user asks for a capability
+    that may already exist as a skill.
   folder_path: resources/skills/find-skills
   extra_files: []
   pack_total_skills: 20

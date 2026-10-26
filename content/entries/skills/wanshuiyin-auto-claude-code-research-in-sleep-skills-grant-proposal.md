@@ -13,10 +13,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 90
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 17693
-  last_commit: 2026-10-19T06:20:47Z
-  stars_delta_7d: 282
-  stars_growth_pct: 1.6
-  trending_score: 286.57
+  stars: 18088
+  last_commit: 2026-10-24T15:48:19Z
+  stars_delta_7d: 395
+  stars_growth_pct: 2.2
+  trending_score: 403.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17090
     - 17411
     - 17693
+    - 18088
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/grant-proposal/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:25.038Z
+  fetched_at: 2026-10-26T07:36:53.545Z
   truncated: false
 type: agent_skill
 skill:
@@ -55,7 +56,7 @@ skill:
     application.
   folder_path: skills/grant-proposal
   extra_files: []
-  pack_total_skills: 85
+  pack_total_skills: 87
   is_pack_primary: false
   clients:
     - claude-code
@@ -103,7 +104,7 @@ Grant proposals argue for **future work** (feasibility + potential), not complet
 
 - **GRANT_TYPE = `KAKENHI`** — Default grant type. Supported: `KAKENHI`, `NSF`, `NSFC`, `ERC`, `DFG`, `SNSF`, `ARC`, `NWO`, `GENERIC`. Override via argument (e.g., `/grant-proposal "topic — NSF"`).
 - **GRANT_SUBTYPE = `auto`** — Sub-type within the grant agency. Examples: KAKENHI `Start-up`/`Wakate`/`Kiban-B`; NSFC `Youth`/`Excellent-Youth`/`Distinguished`/`Overseas`/`Key`; NSF `CAREER`/`CRII`/`Standard`. Auto-detected from argument or defaults to the most common sub-type.
-- **REVIEWER_MODEL = `gpt-6-astra`** — Model used via Codex MCP for proposal review. For `backend=codex`, use an OpenAI model (e.g., `gpt-6-astra`, `o3`, `gpt-4o`).
+- **REVIEWER_MODEL = `gpt-6-astra`** — Model used via Codex MCP for proposal review. For `backend=codex`, use an OpenAI model (e.g., `gpt-6-astra`, `gpt-6.1-sol`).
 - **OUTPUT_FORMAT = `markdown`** — Output format. Supported: `markdown`, `latex`. LaTeX uses grant-specific templates when available.
 - **MAX_REVIEW_ROUNDS = 2** — Maximum external review-revise cycles before finalizing.
 - **OUTPUT_DIR = `grant-proposal/`** — Directory for generated proposal files.

@@ -11,10 +11,10 @@ tags:
   - claude-code-skill
   - marketing-automation
 status: active
-quality_percentile: 78
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-seo
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 19212
-  last_commit: 2026-10-04T23:41:12Z
-  stars_delta_7d: 369
-  stars_growth_pct: 2
-  trending_score: 376.23
+  stars: 21373
+  last_commit: 2026-10-22T16:47:40Z
+  stars_delta_7d: 2161
+  stars_growth_pct: 11.2
+  trending_score: 2404.07
   velocity_source: snapshot_delta
   sparkline_4w:
     - 18470
     - 18843
     - 19212
+    - 21373
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: AgriciDaniel/claude-seo
   path: extensions/dataforseo/skills/seo-dataforseo/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:23.479Z
+  fetched_at: 2026-10-26T07:43:42.111Z
   truncated: false
 type: agent_skill
 skill:
@@ -136,8 +137,7 @@ Load `references/cost-tiers.md` for the full pricing table, budget presets, and 
 | `/seo dataforseo ai-scrape <query>` | ChatGPT web scraper for GEO |
 | `/seo dataforseo ai-mentions <keyword>` | LLM mention tracking for GEO |
 
----
-## SERP Analysis
+---## SERP Analysis
 
 ### `/seo dataforseo serp <keyword>`
 
@@ -196,8 +196,7 @@ is the closest substitute.
 - Format distribution: WebP vs JPEG vs PNG in top results (infer from image_url extension)
 - Opportunity identification: keywords where user has organic rankings but no image presence
 
----
-## Keyword Research
+---## Keyword Research
 
 ### `/seo dataforseo keywords <seed>`
 
@@ -249,8 +248,7 @@ Analyze keyword trends over time using Google Trends data.
 
 **Output:** Keyword, time series data, trend direction, seasonality signals.
 
----
-## Domain & Competitor Analysis
+---## Domain & Competitor Analysis
 
 ### `/seo dataforseo backlinks <domain>`
 
@@ -320,8 +318,7 @@ Find the most popular search queries that mention a specific domain in results.
 
 **Output:** Query, search volume, domain position, SERP features, traffic share.
 
----
-## Technical / On-Page
+---## Technical / On-Page
 
 ### `/seo dataforseo onpage <url>`
 
@@ -352,8 +349,7 @@ Retrieve WHOIS registration data.
 
 **Output:** Registrar, creation date, expiration date, nameservers, registrant info (if public).
 
----
-## Content & Business Data
+---## Content & Business Data
 
 ### `/seo dataforseo content <keyword/url>`
 
@@ -375,8 +371,7 @@ Search business listings for local SEO competitive analysis.
 
 **Output:** Business name, description, category, address, phone, domain, rating, review count, claimed status.
 
----
-## AI Visibility / GEO
+---## AI Visibility / GEO
 
 ### `/seo dataforseo ai-scrape <query>`
 
@@ -406,8 +401,7 @@ Track how LLMs mention brands, domains, and topics. Critical for GEO. Measures a
 
 **Advanced:** Use `ai_opt_llm_ment_cross_agg_metrics` for cross-model comparison (how mentions differ across ChatGPT, Claude, Perplexity, etc.).
 
----
-## Available Utility Tools
+---## Available Utility Tools
 
 Additional DataForSEO MCP tools are available for internal use but do not have dedicated commands. Load `references/tool-catalog.md` when you need to find a specific utility tool (location lookups, bulk operations, historical data, filter options).
 

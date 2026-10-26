@@ -15,28 +15,29 @@ tags:
   - alert-triage
   - blue-team
 status: active
-quality_percentile: 73
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-05-02T03:30:19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: beenuar/AiSOC
   official_vendor: false
   license: MIT
 signals:
-  stars: 2418
-  last_commit: 2026-10-19T06:16:04Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.5
-  trending_score: 13.07
-  rank_current: 39
-  rank_delta: null
+  stars: 3838
+  last_commit: 2026-10-26T07:07:15Z
+  stars_delta_7d: 1420
+  stars_growth_pct: 58.7
+  trending_score: 2253.91
+  rank_current: 6
+  rank_delta: 33
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2387
     - 2405
     - 2418
+    - 3838
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: beenuar/AiSOC
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:39.622Z
+  fetched_at: 2026-10-26T07:38:10.476Z
   truncated: false
 type: agent_tool
 tool:
@@ -64,7 +65,7 @@ tool:
 
 **An open-source, self-hostable AI Security Operations Center.** It ingests your security telemetry, detects and correlates threats, investigates them with AI agents whose reasoning is fully auditable, and proposes responses a human approves.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-19.0.0-f59e0b?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/CHANGELOG.md) [![CI](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-20.1.0-f59e0b?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/CHANGELOG.md) [![CI](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/ci.yml)
 [![CodeQL](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/codeql.yml?branch=main&label=CodeQL&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/codeql.yml) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/beenuar/AiSOC/badge)](https://securityscorecards.dev/viewer/?uri=github.com/beenuar/AiSOC) [![Technical Guide](https://img.shields.io/badge/Technical%20Guide-26%20page%20PDF-dc2626?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf)
 
 **[Technical Guide (PDF)](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf)** · [Docs](https://beenuar.github.io/AiSOC/) · [Architecture](https://github.com/beenuar/AiSOC/blob/main/docs/architecture/README.md) · [What actually works](https://github.com/beenuar/AiSOC/blob/main/docs/audit/REPOSITORY_REALITY.md) · [Discussions](https://github.com/beenuar/AiSOC/discussions)
@@ -76,7 +77,7 @@ tool:
 ## What AiSOC does
 
 Telemetry arrives from your security tools. AiSOC normalizes it, runs the 2535 executable rules of
-its 6991-rule library, groups what fires into incidents, investigates each one with an AI agent whose
+its 7015-rule library, groups what fires into incidents, investigates each one with an AI agent whose
 every prompt and tool call is recorded, and proposes an action. New threat intelligence re-sweeps the
 history you already collected, and a human approves before anything reaches a vendor.
 
@@ -86,7 +87,7 @@ history you already collected, and a human approves before anything reaches a ve
 
 **[Watch the full three minutes](https://github.com/beenuar/AiSOC/blob/main/apps/web/public/demo/demo.mp4)** — install to AI verdict on one
 server against the published images, terminal waits shortened and the recording saying so on screen.
-The stills below are earlier runs under the same rules: no seeded rows, no demo mode, no mockups.
+The stills below are from a v20.1.0 run under the same rules — the recording is older than they are.
 ([step by step](https://github.com/beenuar/AiSOC/blob/main/apps/docs/docs/deployment/walkthrough.mdx) · [what is real](https://github.com/beenuar/AiSOC/blob/main/apps/web/public/screenshots/README.md))
 
 | | |
@@ -103,13 +104,11 @@ git clone https://github.com/beenuar/AiSOC && cd AiSOC
 make up
 ```
 
-The [Technical Guide](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf) covers this in depth: server sizing, where the
-model runs, every failure mode with its cause and fix, the REST API, MCP, and every console surface.
+**On Windows**, or on a machine with nothing installed yet, one line does the prerequisites too: `iwr -useb https://raw.githubusercontent.com/beenuar/AiSOC/main/install.ps1 | iex` (`curl -fsSL https://raw.githubusercontent.com/beenuar/AiSOC/main/install.sh | bash` on Linux and macOS). **Without Docker at all**, `pip install aisoc-sandbox && aisoc-sandbox demo` walks one alert through the agent funnel offline in under 30 seconds. **Without your own machine**, open the repo in GitHub Codespaces and run `make up` in its terminal. All four end at the same console; only the first three install anything.
 
-Needs Docker Compose v2 with **8 GB memory and 20 GB free disk in the Docker VM**, plus `python3`
-(3.9+) and `bash`; `make doctor` checks all of it and
-[Installation](https://beenuar.github.io/AiSOC/docs/installation#requirements) says what each number
-was measured against. The first run downloads a ~2 GB model into a volume only `make clean` clears.
+The [Technical Guide](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf) covers this in depth: server sizing, where the model runs, every failure mode with its cause and fix, the REST API, MCP, and every console surface.
+
+Needs Docker Compose v2 with **8 GB memory and 20 GB free disk in the Docker VM**, plus `python3` (3.9+) and `bash`; `make doctor` checks all of it and [Installation](https://beenuar.github.io/AiSOC/docs/installation#requirements) says what each number was measured against. The first run downloads a ~2 GB model into a volume only `make clean` clears.
 
 `make up` also creates `.env` and generates the **fifteen** secrets in it — the credential vault, the
 session signing key, five service-to-service credentials and four datastore passwords — then creates an
@@ -170,7 +169,7 @@ rule is harder to find than a missing one: of the 2,005 Splunk rules bundled her
 ## How it works
 
 Ingest normalizes to a common shape and stamps an **activity projection** on every event — actor, action, resource, location, outcome, with `actor.kind` read from each vendor's own documented field rather than inferred — then Kafka carries it.
-Then fusion runs 2535 executable detection rules, of 6991 on disk, plus 76 sliding-window rules (73 count across events; 3 match an ordered sequence), applies **your tenant's own tuning** on top — the disables, floors and suppressions the console writes, so a rule you turned off actually stops firing — and decides what becomes an alert.
+Then fusion runs 2535 executable detection rules, of 7015 on disk, plus 76 sliding-window rules (73 count across events; 3 match an ordered sequence), applies **your tenant's own tuning** on top — the disables, floors and suppressions the console writes, so a rule you turned off actually stops firing — and decides what becomes an alert.
 Correlation groups related alerts, an agent investigates and writes its reasoning to the Investigation Ledger, and a playbook may start from the result. Separately, new threat intelligence sweeps the lake for sightings you already collected, and a hypothesis becomes a hunt without anyone writing a query — the model fills a closed schema and every value is bound as a parameter, so it cannot express a query at all.
 
 **A playbook triggered by an alert previews before it acts.** Three switches must agree — the
@@ -249,7 +248,7 @@ Agents triage alerts and investigate incidents. What they can and cannot do:
 | Capability | Status | Tested | Production ready |
 |---|---|---|---|
 | Ingest → detect → correlate → alert | Stable | E2E + unit | Yes |
-| Detection engine (2535 executable rules) of 6991 | Stable | Replay proof | Yes |
+| Detection engine (2535 executable rules) of 7015 | Stable | Replay proof | Yes |
 | Alert correlation into incidents | Stable | Unit | Yes |
 | REST API + web console | Stable | Unit + integration | Yes |
 | AI triage + Investigation Ledger | Stable | Live Postgres ledger + a PR-gated local-model agent run. No hosted provider has been exercised | Yes, copilot mode |

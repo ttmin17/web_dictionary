@@ -14,25 +14,26 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ThinkInAIXYZ/deepchat
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6370
-  last_commit: 2026-10-19T07:10:05Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.2
-  trending_score: 11.02
-  rank_current: 40
-  rank_delta: null
+  stars: 6371
+  last_commit: 2026-10-26T07:26:53Z
+  stars_delta_7d: 1
+  stars_growth_pct: 0
+  trending_score: 1
+  rank_current: 137
+  rank_delta: -97
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6356
     - 6359
     - 6370
+    - 6371
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: ThinkInAIXYZ/deepchat
   path: README.md
   branch: dev
-  fetched_at: 2026-10-19T07:40:30.603Z
+  fetched_at: 2026-10-26T07:44:48.755Z
   truncated: false
 type: agent_tool
 tool:

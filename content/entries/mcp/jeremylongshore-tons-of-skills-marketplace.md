@@ -15,28 +15,29 @@ tags:
   - anthropic
   - automation
 status: active
-quality_percentile: 84
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: jeremylongshore/tons-of-skills-marketplace
   official_vendor: false
   license: MIT
 signals:
-  stars: 2851
-  last_commit: 2026-10-19T05:36:13Z
-  stars_delta_7d: 16
-  stars_growth_pct: 0.6
-  trending_score: 16.09
-  rank_current: 49
-  rank_delta: null
+  stars: 2872
+  last_commit: 2026-10-26T07:20:10Z
+  stars_delta_7d: 21
+  stars_growth_pct: 0.7
+  trending_score: 21.15
+  rank_current: 58
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2820
     - 2835
     - 2851
+    - 2872
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: jeremylongshore/tons-of-skills-marketplace
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:09.178Z
+  fetched_at: 2026-10-26T07:45:25.840Z
   truncated: false
 type: mcp_server
 launch:

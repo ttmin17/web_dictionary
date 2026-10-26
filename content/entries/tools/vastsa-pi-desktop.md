@@ -16,21 +16,24 @@ status: active
 quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: vastsa/PI-Desktop
   official_vendor: false
   license: LGPL-3.0
 signals:
-  stars: 7006
-  last_commit: 2026-10-18T15:16:11Z
-  stars_delta_7d: 37
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 7289
+  last_commit: 2026-10-25T15:52:32Z
+  stars_delta_7d: 283
+  stars_growth_pct: 4
+  trending_score: 294.43
+  rank_current: 26
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 7006
+    - 7289
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: vastsa/PI-Desktop
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:23.321Z
+  fetched_at: 2026-10-26T07:45:40.187Z
   truncated: false
 type: agent_tool
 tool:

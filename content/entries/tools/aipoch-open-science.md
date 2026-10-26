@@ -18,25 +18,26 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: aipoch/open-science
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5223
-  last_commit: 2026-10-19T07:04:22Z
-  stars_delta_7d: 148
-  stars_growth_pct: 2.9
-  trending_score: 152.32
-  rank_current: 18
-  rank_delta: null
+  stars: 5367
+  last_commit: 2026-10-26T06:31:56Z
+  stars_delta_7d: 144
+  stars_growth_pct: 2.8
+  trending_score: 147.97
+  rank_current: 47
+  rank_delta: -29
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5451
     - 5075
     - 5223
+    - 5367
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: aipoch/open-science
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.625Z
+  fetched_at: 2026-10-26T07:44:55.808Z
   truncated: false
 type: agent_tool
 tool:

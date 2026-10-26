@@ -14,28 +14,29 @@ tags:
   - claude-ai
   - claude-code
 status: active
-quality_percentile: 55
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-05-09T23:10:58
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: rahilp/second-brain-cloudflare
   official_vendor: false
   license: MIT
 signals:
-  stars: 814
+  stars: 826
   last_commit: 2026-10-14T11:53:04Z
   stars_delta_7d: 12
   stars_growth_pct: 1.5
   trending_score: 12.18
-  rank_current: 54
-  rank_delta: null
+  rank_current: 70
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 803
     - 802
     - 814
+    - 826
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: rahilp/second-brain-cloudflare
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.506Z
+  fetched_at: 2026-10-26T07:38:48.497Z
   truncated: false
 type: mcp_server
 launch:

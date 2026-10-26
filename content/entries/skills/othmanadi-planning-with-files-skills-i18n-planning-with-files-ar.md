@@ -13,10 +13,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -24,18 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27522
-  last_commit: 2026-10-17T21:51:12Z
-  stars_delta_7d: 92
-  stars_growth_pct: 0.3
-  trending_score: 92.31
-  rank_current: 67
-  rank_delta: null
+  stars: 27651
+  last_commit: 2026-10-24T17:24:38Z
+  stars_delta_7d: 129
+  stars_growth_pct: 0.5
+  trending_score: 129.6
+  rank_current: 72
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27320
     - 27430
     - 27522
+    - 27651
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-ar/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:37:41.715Z
+  fetched_at: 2026-10-26T07:42:27.103Z
   truncated: false
 type: agent_skill
 skill:
@@ -131,6 +132,18 @@ $(command -v python3 || command -v python) "${SKILL_DIR}/scripts/session-catchup
 4. **عيّن مالكًا واحدًا للخطة.** يرفع العاملون النتائج عبر دفاترهم أو ملفاتهم المخصصة ولا يعيدون كتابة ملفات التخطيط المشتركة.
 
 > **ملاحظة:** ملفات التخطيط توضع في دليل المهمة المحدد داخل مشروعك، وليس في دليل تثبيت المهارة.
+
+## عقد إنشاء خطة جديدة
+
+قبل تنفيذ مهمة جديدة، شغّل `init-session.sh` من تثبيت المهارة (وفي PowerShell استخدم `init-session.ps1`). عدّل الهيكل الناتج ولا تستبدله بقائمة مختصرة. عيّن `PWF_SKILL_DIR` إلى مجلد SKILL.md الذي قرأته، ثم تحقّق من مسار الخطة الصريح:
+
+```sh
+sh "$PWF_SKILL_DIR/scripts/check-complete.sh" --validate path/to/task_plan.md
+```
+
+في PowerShell استخدم `check-complete.ps1 -Validate -PlanFile path/to/task_plan.md`. احتفظ بعنوان `### المرحلة N: الاسم` وبحالة واحدة فقط لكل مرحلة: `**الحالة:** pending` أو `**الحالة:** in_progress` أو `**الحالة:** complete`. لا تكفي قائمة تحت عنوان المراحل. يجب نجاح التحقق قبل التنفيذ وبعد تعديل بنية المراحل. هذا تحقق من الصيغة، وليس من اكتمال العمل أو التصديق.
+
+احتفظ بالخطط الحالية. أبلغ مالك الخطة بأخطاء الصيغة ولا تعِد كتابتها تلقائياً. إن تعذّر تشغيل الأدوات المساعدة، انسخ القالب المرفق كما هو واذكر أن التحقق الأصلي لم يُجرَ.
 
 ## النمط الأساسي
 

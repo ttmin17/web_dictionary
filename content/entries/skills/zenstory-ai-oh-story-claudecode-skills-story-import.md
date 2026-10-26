@@ -11,10 +11,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7737
-  last_commit: 2026-10-18T01:05:23Z
-  stars_delta_7d: 220
-  stars_growth_pct: 2.9
-  trending_score: 226.44
+  stars: 8006
+  last_commit: 2026-10-23T08:07:10Z
+  stars_delta_7d: 269
+  stars_growth_pct: 3.5
+  trending_score: 278.35
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7340
     - 7517
     - 7737
+    - 8006
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-import/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:37.264Z
+  fetched_at: 2026-10-26T07:43:55.178Z
   truncated: false
 type: agent_skill
 skill:
@@ -99,8 +100,7 @@ skill:
 **换上下文**：深度分析、每批细纲、追踪初始化读的东西多。每个时刻交付后，汇报末尾加一句「下一步建议新开一个对话，说『继续导入』，会更专注」；作者要在本对话继续也照做。作者说「继续导入」时，在项目根下找进度没勾完的 `*/.story/work/导入记录.md`，从第一个未完成的进度接着做。
 **导入续写入口顺序**：用户只问流程时先答结论再收原文——推荐先 `/story-setup`，新开对话 `/story-import`，导完 `/story-long-write 日更`；也可直接导入，缺环境时 Step 4 给选择。导入过的书、旧版追踪的书、超过 200 章的书按 [import-special-cases.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-import/references/import-special-cases.md) 处理。
 
----
-## Phase 1：确认来源与范围
+---## Phase 1：确认来源与范围
 
 ### Step 1：确认意图
 
@@ -151,8 +151,7 @@ skill:
 - [ ] 汇报与激活
 ```
 
----
-## Phase 2：深度分析
+---## Phase 2：深度分析
 
 读 [deep-analysis.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-import/references/deep-analysis.md)，按导入记录的篇幅与写作环境进入对应拆解管道，自动跑完本次需要的范围，不把拆书中途的停靠询问甩给作者。完成后勾进度。
 
@@ -168,8 +167,7 @@ skill:
 
 读 [import-report.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-import/references/import-report.md)：自检、按模板向作者汇报、设置 `.active-book`。
 
----
-## 流程衔接
+---## 流程衔接
 
 | 时机 | 跳转到 | 命令 |
 |---|---|---|

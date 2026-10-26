@@ -17,7 +17,7 @@ status: active
 quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-04-16T18:01:16
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: cathrynlavery/diagram-design
@@ -25,18 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 57952
-  last_commit: 2026-10-16T19:42:46Z
-  stars_delta_7d: 4249
-  stars_growth_pct: 7.9
-  trending_score: 4585.18
-  rank_current: 6
-  rank_delta: null
+  stars: 61160
+  last_commit: 2026-10-26T04:42:00Z
+  stars_delta_7d: 3208
+  stars_growth_pct: 5.5
+  trending_score: 3385.58
+  rank_current: 7
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 44654
     - 53703
     - 57952
+    - 61160
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: cathrynlavery/diagram-design
   path: skills/diagram-design/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:14.830Z
+  fetched_at: 2026-10-26T07:42:01.115Z
   truncated: false
 type: agent_skill
 skill:
@@ -366,13 +367,13 @@ Run before producing any diagram.
 - [ ] **§6 rule 4:** a distinct attach point per connector on a shared edge, 12px or more apart, none hiding another?
 - [ ] **§6 rule 5:** no transit behind a non-endpoint box, except the unavoidable case (dashed, label at the visible end)?
 - [ ] **§6 rule 6:** no label mask overlapping a node drawn after it? (From a repository checkout, run `python3 <repo-root>/scripts/verify-geometry.py <file>`.)
-- [ ] Every arrow label has an opaque `fill="#f5f5f5"` rect behind it?
+- [ ] Every arrow label has an opaque `fill="{paper}"` rect behind it?
 - [ ] Legend is a horizontal bottom strip, not floating?
 - [ ] No vertical `writing-mode` text?
 - [ ] `viewBox` expanded for the legend strip (~60px)?
 - [ ] **`min-width` equals the viewBox width, and the SVG sits in a local `overflow-x: auto` wrapper? (Otherwise a phone scrolls the whole page — or an `overflow: hidden` ancestor clips the diagram with no scrollbar at all. See [output-spec.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/output-spec.md).)**
 - [ ] Node origins, dimensions, gaps, padding on the 4px grid; type sizes on the role ramp?
-- [ ] From the installed skill directory, did `python3 scripts/self_check.py <file>` pass? (Accessible-SVG contract, single-file safety, content inside the viewBox, motion basics.)
+- [ ] From the installed skill directory, did `python3 scripts/self_check.py <file>` pass? (Accessible-SVG contract, single-file safety, document completeness, content inside the viewBox, motion basics.)
 - [ ] If animated, does the complete static/no-JS frame work, does reduced motion hide/disable playback, and is the controller copied verbatim from `assets/template-motion.html`? From a repository checkout, also run `python3 <repo-root>/scripts/verify-motion.py path/to/generated.html` plus the skin linter; from an installed skill, manually check print and static-query states on top of the self-check.
 
 **Typography:**
@@ -395,7 +396,7 @@ Every diagram ships in three variants (see `assets/`):
 | **Minimal light** (default) | `assets/template.html`, `example-<type>.html` | Screenshot-ready. Diagram + title. Warm paper. |
 | **Minimal dark** | `assets/template-dark.html`, `example-<type>-dark.html` | Dark mode sites, slides, high-contrast posts. |
 | **Full editorial** | `assets/template-full.html`, `example-<type>-full.html` | Long-form posts where the diagram is the hero. |
-| **Consultant special** (quadrant only) | `example-quadrant-consultant.html` | BCG/McKinsey-style 2×2 scenario matrix. See [type-quadrant.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-quadrant.md#consultant-special-2x2-scenario-matrix). |
+| **Consultant special** (quadrant only) | `example-quadrant-consultant.html` | BCG/McKinsey-style 2×2 scenario matrix. See [type-quadrant.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-quadrant.md#consultant-special-22-scenario-matrix). |
 
 **Sketchy variant** (optional, applied to any of the above): a hand-drawn stroke filter for essays, not technical docs. See [primitive-sketchy.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/primitive-sketchy.md).
 

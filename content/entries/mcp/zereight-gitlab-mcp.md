@@ -1,10 +1,9 @@
 ---
 slug: zereight-gitlab-mcp
 name: gitlab-mcp
-tagline: "MCP server for GitLab: 100+ tools for projects, MRs, issues,
-  pipelines, wikis and more via the GitLab REST/GraphQL API"
-summary: 📖 Documentation → Setup guides, environment variables, and the full
-  tool reference live on the hosted docs site.
+tagline: "MCP server for GitLab: 277 tools for projects, MRs, issues, pipelines,
+  wikis and more via the GitLab REST/GraphQL API"
+summary: 📖 Documentation → · llms.txt · llms-full.txt
 categories:
   - coding-agents
 tags:
@@ -13,24 +12,27 @@ tags:
   - devtools
   - gitlab
 status: active
-quality_percentile: 86
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zereight/gitlab-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2049
-  last_commit: 2026-10-19T07:05:59Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 2065
+  last_commit: 2026-10-26T03:36:47Z
+  stars_delta_7d: 16
+  stars_growth_pct: 0.8
+  trending_score: 16.12
+  rank_current: 64
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 2049
+    - 2065
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +41,7 @@ readme_source:
   repo: zereight/gitlab-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.157Z
+  fetched_at: 2026-10-26T07:38:02.920Z
   truncated: true
 type: mcp_server
 launch:
@@ -55,25 +57,129 @@ launch:
 # GitLab MCP Server
 [English](https://github.com/zereight/gitlab-mcp/blob/main/README.md) | [한국어](https://github.com/zereight/gitlab-mcp/blob/main/README.ko.md) | [简体中文](https://github.com/zereight/gitlab-mcp/blob/main/README.zh-CN.md) | [Português (Brasil)](https://github.com/zereight/gitlab-mcp/blob/main/README.pt-BR.md)
 
-📖 **[Documentation →](https://zereight.github.io/gitlab-mcp/)** Setup guides, environment variables, and the full tool reference live on the hosted docs site.
+📖 **[Documentation →](https://zereight.github.io/gitlab-mcp/)** · [llms.txt](https://github.com/zereight/gitlab-mcp/blob/main/llms.txt) · [llms-full.txt](https://github.com/zereight/gitlab-mcp/blob/main/llms-full.txt)
 
-Install `@zereight/mcp-gitlab` with the recommended local personal-access-token setup. These commands use the same arguments as the [Claude Code](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/claude-code.md) and [Codex](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/codex.md) guides.
+**Default: 40 tools** (38 `core` + `discover_tools` + `help`). 278 tools exist in total (275 in toolsets + `execute_graphql` + `discover_tools` + `help`). Start lean; call `discover_tools` to activate more for this session.
 
-Install the `zereight-mcp-gitlab` binary first with `npm install -g @zereight/mcp-gitlab`, or Homebrew `brew tap zereight/gitlab-mcp https://github.com/zereight/gitlab-mcp` and `brew install zereight/gitlab-mcp/zereight-mcp-gitlab`.
+Install the `zereight-mcp-gitlab` binary first with `npm install -g @zereight/mcp-gitlab`, or Homebrew `brew tap zereight/gitlab-mcp https://github.com/zereight/gitlab-mcp` and `brew install zereight/gitlab-mcp/zereight-mcp-gitlab`. Official MCP Registry listing: [`io.github.zereight/gitlab-mcp`](https://registry.modelcontextprotocol.io/?q=io.github.zereight%2Fgitlab-mcp). One-liner: `npx -y @zereight/mcp-gitlab@latest`.
 
-Read the token without echo, then export it. The shell history keeps the variable name.
+### Without → With
+
+| Without this MCP | With this MCP |
+| ---------------- | ------------- |
+| Paste MR URLs and diffs into chat | `list_merge_request_changed_files` → batched `get_merge_request_file_diff` |
+| Hunt job logs in the GitLab UI | `get_pipeline_job_output` with pagination |
+| Re-explain the project path every turn | `project_id=group%2Fproject` and `merge_request_iid=123` |
+
+### Three install paths
+
+| Path | When | How |
+| ---- | ---- | --- |
+| Local IDE | Cursor, Claude Code, Codex on your machine | stdio + PAT or local OAuth |
+| Shared HTTP | Team or hosted MCP | Streamable HTTP URL + remote auth or MCP OAuth |
+| Claude.ai | Claude web connectors | Public HTTPS + `GITLAB_MCP_OAUTH` |
+
+### Install
+
+[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=zereight.gitlab-mcp&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB6ZXJlaWdodC9tY3AtZ2l0bGFiQGxhdGVzdCJdLCJlbnYiOnsiR0lUTEFCX1BFUlNPTkFMX0FDQ0VTU19UT0tFTiI6IiR7ZW52OkdJVExBQl9QRVJTT05BTF9BQ0NFU1NfVE9LRU59IiwiR0lUTEFCX0FQSV9VUkwiOiJodHRwczovL2dpdGxhYi5jb20vYXBpL3Y0In19)
+
+Install the binary first (`npm install -g @zereight/mcp-gitlab`, or Homebrew `brew tap zereight/gitlab-mcp https://github.com/zereight/gitlab-mcp` then `brew install zereight/gitlab-mcp/zereight-mcp-gitlab`). Read the token without echo:
 
 ```bash
 read -rs GITLAB_PERSONAL_ACCESS_TOKEN && export GITLAB_PERSONAL_ACCESS_TOKEN
 ```
 
-| Client       | Install                                                                                                                                                                                          |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Claude Code  | `claude mcp add gitlab --transport stdio --scope local --env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_PERSONAL_ACCESS_TOKEN" --env GITLAB_API_URL=https://gitlab.com/api/v4 -- zereight-mcp-gitlab` |
-| Codex        | `codex mcp add gitlab --env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_PERSONAL_ACCESS_TOKEN" --env GITLAB_API_URL=https://gitlab.com/api/v4 -- zereight-mcp-gitlab`                                  |
-| Cursor       | [Cursor setup guide](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/cursor.md)                                                                                                                                    |
-| VS Code      | [VS Code setup guide](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/vscode.md)                                                                                                                                   |
-| JSON clients | [JSON-based MCP clients setup guide](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/json-clients.md)                                                                                                              |
+```bash
+# Claude Code
+claude mcp add gitlab --transport stdio --scope local --env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_PERSONAL_ACCESS_TOKEN" --env GITLAB_API_URL=https://gitlab.com/api/v4 -- zereight-mcp-gitlab
+
+# Codex
+codex mcp add gitlab --env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_PERSONAL_ACCESS_TOKEN" --env GITLAB_API_URL=https://gitlab.com/api/v4 -- zereight-mcp-gitlab
+```
+
+Other clients: [VS Code](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/vscode.md) · [GitHub Copilot](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/copilot.md) · [JSON clients](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/json-clients.md) · [Cursor details](https://github.com/zereight/gitlab-mcp/blob/main/docs/clients/cursor.md)
+
+### Agent paste-prompt
+
+Copy this into an agent that can edit MCP config:
+
+```
+Install the GitLab MCP server (@zereight/mcp-gitlab) for this workspace.
+Binary: zereight-mcp-gitlab (npm i -g @zereight/mcp-gitlab, or npx -y @zereight/mcp-gitlab@latest).
+Auth: GITLAB_PERSONAL_ACCESS_TOKEN plus GITLAB_API_URL=https://gitlab.com/api/v4 (or GITLAB_USE_OAUTH=true).
+Local: claude mcp add gitlab --transport stdio --scope local --env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_PERSONAL_ACCESS_TOKEN" --env GITLAB_API_URL=https://gitlab.com/api/v4 -- zereight-mcp-gitlab
+Or: codex mcp add gitlab --env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_PERSONAL_ACCESS_TOKEN" --env GITLAB_API_URL=https://gitlab.com/api/v4 -- zereight-mcp-gitlab
+Cursor: use the README deeplink or docs/clients/cursor.md.
+Remote HTTP: point the client at https://mcp.example.com/mcp (Streamable HTTP). Claude.ai needs GITLAB_MCP_OAUTH on that host.
+Default list: 40 tools (38 core + discover_tools + help). Call discover_tools to expand. Do not enable the api toolset unless you accept its bypass risk.
+Equal non-MCP path: npx skills add zereight/gitlab-mcp --skill gitlab-mcp-skill plus the zereight-mcp-gitlab CLI.
+```
+
+### Remote HTTP
+
+First-class option for a hosted or self-hosted server. Point the client at a Streamable HTTP URL:
+
+```json
+{
+  "mcpServers": {
+    "gitlab": {
+      "type": "http",
+      "url": "https://mcp.example.com/mcp"
+    }
+  }
+}
+```
+
+- Hosted / Claude.ai: `GITLAB_MCP_OAUTH=true` on the server (see [MCP OAuth](#mcp-oauth-setup-claudeai-native-oauth))
+- Per-user PAT headers: `REMOTE_AUTHORIZATION=true` (see [Remote Authorization](#using-remote-authorization-remote_authorization))
+- Local Docker examples are in [Usage](#usage)
+
+### Skill + CLI (no MCP required)
+
+Skill + CLI is an equal path, not a fallback. Same workflows, full payloads in a terminal, no MCP registration.
+
+```bash
+npx skills add zereight/gitlab-mcp --skill gitlab-mcp-skill
+zereight-mcp-gitlab user whoami
+zereight-mcp-gitlab mr list
+```
+
+See [CLI without MCP](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-without-mcp.md) and [`skills/gitlab-mcp/`](https://github.com/zereight/gitlab-mcp/blob/main/skills/gitlab-mcp/).
+
+### MCP vs Human CLI
+
+| Use MCP when | Use the CLI when |
+| ------------ | ---------------- |
+| The agent needs structured tools in chat | You need the full payload (diffs, logs, artifacts) |
+| `jmespath` or compact results are enough | `GITLAB_MCP_COMPACT_RESULTS` is on and you want the rest in a terminal |
+| You already registered the server | You have a PAT or ran `auth` and do not want MCP |
+
+Human CLI is never compacted. Destructive tools and `GITLAB_TOOL_POLICY_APPROVE` tools need `--yes`.
+
+### Tips
+
+`project_id` is a numeric ID or a URL-encoded path. Example: group `group`, project `project`, merge request `!123` → `project_id=group%2Fproject`, `merge_request_iid=123`. Nested groups use `%2F` between every segment (`group%2Fsubgroup%2Fproject`).
+
+### FAQ
+
+**How do I authenticate?** Local desktop: `GITLAB_PERSONAL_ACCESS_TOKEN` (or `GITLAB_PERSONAL_ACCESS_TOKEN_FILE`) is the simplest. Local OAuth is `GITLAB_USE_OAUTH=true`. Remote Claude.ai uses `GITLAB_MCP_OAUTH`. Multi-user HTTP uses `REMOTE_AUTHORIZATION` and a per-request token header.
+
+**Why do I only see ~40 tools?** The default `core` toolset is 38 tools plus always-on `discover_tools` and `help`. Call `discover_tools` with no args to list categories, then pass a category (`pipelines`, `wiki`, …) to activate it for this session. `GITLAB_TOOLSETS=all` still does **not** enable `api`.
+
+**Local OAuth vs MCP OAuth vs remote auth?** Local OAuth opens a browser on the same machine as the server. MCP OAuth is for a public HTTPS server and clients such as Claude.ai. Remote authorization forwards the caller's PAT or job token; there is no OAuth dance.
+
+**How do I shrink huge replies?** Pass `jmespath` on any tool call. Or set `GITLAB_MCP_COMPACT_RESULTS=true` so oversized MCP replies become a preview plus a CLI command. Use the CLI when you need the full payload.
+
+**Why is the `api` toolset dangerous?** `gitlab_api_request` bypasses group/project allowlists, other tool filters, and per-tool safety checks. Prompt injection can drive it. Enable it only by listing `api` in `GITLAB_TOOLSETS`. `all`, `discover_tools`, and `GITLAB_TOOLS` do not.
+
+### Cursor rule / CLAUDE.md snippet
+
+```
+GitLab merge requests, issues, and pipelines go through this MCP (@zereight/mcp-gitlab).
+Start with the default core tools. Call discover_tools to expand.
+Prefer list_merge_request_changed_files, then batched get_merge_request_file_diff.
+Use jmespath or compact results; use the CLI for full diffs and job logs.
+```
 
 [![Star History Chart](https://raw.githubusercontent.com/zereight/gitlab-mcp/main/assets/star-history.png)](https://www.star-history.com/?repos=zereight%2Fgitlab-mcp&type=date&legend=top-left)
 
@@ -85,7 +191,7 @@ Supports PAT, OAuth, read-only mode, dynamic API URLs, and remote authorization 
 
 ### Why use this GitLab MCP?
 
-- **276 tools: 274 in toolsets + `execute_graphql` + `discover_tools`** — start with a small toolset; activate more at runtime without CQRS-style grouping
+- **Default 40 tools (38 `core` + `discover_tools` + `help`); 278 total** — start lean; call `discover_tools` to activate more without CQRS-style grouping
 - **MR 2-step review** — `list_merge_request_changed_files` → batched `get_merge_request_file_diff`
 - **Agent Skill built in** — workflow guidance in `skills/gitlab-mcp/`
 - **Flexible auth** — Personal Access Token, local OAuth2 browser flow, MCP OAuth proxy, and per-request remote authorization
@@ -99,12 +205,22 @@ Supports PAT, OAuth, read-only mode, dynamic API URLs, and remote authorization 
 |                | @zereight/mcp-gitlab                                              | GitLab MCP A (community CQRS-style)          | GitLab official MCP server                                                                                                                       |
 | -------------- | ----------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Best for**   | AI agent workflows                                                | Enterprise multi-instance / grouped tools    | Built into GitLab, no separate install                                                                                                           |
-| **Tool model** | 276 tools: 274 in toolsets + `execute_graphql` + `discover_tools` | ~50–60 grouped `browse_*` / `manage_*` tools | Toolsets chosen with an HTTP header                                                                                                              |
+| **Tool model** | 278 tools: 275 in toolsets + `execute_graphql` + `discover_tools` + `help` | ~50–60 grouped `browse_*` / `manage_*` tools | Toolsets chosen with an HTTP header                                                                                                              |
 | **MR review**  | 2-step batched diff                                               | Varies                                       | `get_merge_request` with diffs                                                                                                                   |
-| **Node.js**    | >=18.17                                                           | Often >=24                                   | Node.js 20+ for stdio via `mcp-remote`                                                                                                           |
+| **Node.js**    | >=20.0.0                                                          | Often >=24                                   | Node.js 20+ for stdio via `mcp-remote`                                                                                                           |
 | **License**    | MIT                                                               | Varies                                       | Part of GitLab                                                                                                                                   |
 
-[Full comparison with GitLab MCP A →](https://github.com/zereight/gitlab-mcp/blob/main/docs/comparison/community-gitlab-mcp-a.md)
+### tools/list size (measured 2026-10-24)
+
+A client sends the whole `tools/list` result to the model at session start. Token estimate is UTF-8 bytes / 4.
+
+| Profile | Tools | JSON bytes | Est. tokens |
+| ------- | ----: | ---------: | ----------: |
+| Default (`core` + `discover_tools` + `help`) | 40 | 50,682 | 12,671 |
+| `GITLAB_TOOL_PROFILE=slim` | 39 | 49,646 | 12,412 |
+| `GITLAB_TOOLSETS=all` | 276 | 285,677 | 71,420 |
+
+Re-measure with `npm run test:mock` (`test/tools-list-budget.test.ts`) after description or schema changes.
 
 GitLab also ships an [official MCP server](https://docs.gitlab.com/user/model_context_protocol/mcp_server/).
 
@@ -113,6 +229,8 @@ GitLab also ships an [official MCP server](https://docs.gitlab.com/user/model_co
 - Remote clients use HTTP `https://<gitlab.example.com>/api/v4/mcp` with OAuth 2.0 dynamic client registration.
 - stdio goes through `mcp-remote` and needs Node.js 20 or later.
 - Toolsets use the `X-Gitlab-Enabled-Mcp-Server-Toolsets` header. An optional `X-Gitlab-Mcp-Server-Tool-Name-Prefix` header keeps the first 32 characters of a tool-name prefix.
+
+[Full comparison with the official GitLab MCP server →](https://github.com/zereight/gitlab-mcp/blob/main/docs/comparison/official-gitlab-mcp.md)
 
 Quick start: choose either Personal Access Token or OAuth2 setup below, install `@zereight/mcp-gitlab`, and use `zereight-mcp-gitlab` in your MCP client configuration.
 
@@ -187,7 +305,7 @@ The store path is pinned by your lock file; update it with `nix flake update git
 
 The examples use `zereight-mcp-gitlab`, a less collision-prone alias for the legacy `mcp-gitlab` binary. If your MCP client cannot find it, use the absolute path from `which zereight-mcp-gitlab`.
 
-No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.3`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
+No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.10`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. To try a fix merged to `main` before the next stable release, use `npx -y @zereight/mcp-gitlab@next`, a pre-release build that is not meant for production. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
 
 #### Claude Desktop one-click install (MCP Bundle)
 
@@ -227,7 +345,7 @@ Some MCP clients (like GitHub Copilot CLI) have issues with environment variable
 - `--masking-config` - Path to a masking configuration file (replaces `GITLAB_MASKING_CONFIG`)
 - `--masking-policy-file` - Path to a protected managed-policy file (replaces `GITLAB_MASKING_POLICY_FILE`)
 - `--masking-workspace-dir` - Directory used to resolve masking files (replaces `GITLAB_MASKING_WORKSPACE_DIR`)
-- `--download-dir` - Directory `download_attachment` saves files under (replaces `GITLAB_DOWNLOAD_DIR`; default `.gitlab-mcp-downloads`)
+- `--download-dir` - Directory `download_attachment` and `download_job_artifacts` save files under (replaces `GITLAB_DOWNLOAD_DIR`; default `.gitlab-mcp-downloads`)
 - `--compact-results=true` - Truncate oversized MCP tool replies and attach a CLI command for the full payload (replaces `GITLAB_MCP_COMPACT_RESULTS`; default off)
 - `--compact-result-chars` - Character threshold for compacting (replaces `GITLAB_MCP_COMPACT_RESULT_CHARS`; default `4000`)
 - `--compact-tools` - Comma-separated tool names to compact when oversized, without turning global compact on (replaces `GITLAB_MCP_COMPACT_TOOLS`)
@@ -239,7 +357,7 @@ CLI arguments take precedence over environment variables.
 
 `zereight-mcp-gitlab auth` is a subcommand (not an MCP server flag). It runs GitLab device flow and exits. See [CLI Arguments](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-arguments.md#auth).
 
-The same binary is also a `gh`-style GitLab CLI (`tool <name>` or curated forms such as `mr list`). **No MCP registration is needed** — set a PAT, or run `auth` and set `GITLAB_USE_OAUTH=true`: see [CLI without MCP](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-without-mcp.md). Use it for the full payload in a terminal. MCP replies stay in the chat unless you set `GITLAB_MCP_COMPACT_RESULTS=true` (or `--compact-results`), which replaces oversized tool replies with a preview and a CLI command. Human CLI is never compacted. Same permission mode, toolsets, denied-tools regex, and tool-policy filters. Destructive tools and `GITLAB_TOOL_POLICY_APPROVE` tools need `--yes`. See [Human CLI](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-arguments.md#human-cli).
+The same binary is also a `gh`-style GitLab CLI (`tool <name>` or curated forms such as `mr list`). **No MCP registration is needed** — set a PAT, or run `auth` and set `GITLAB_USE_OAUTH=true`: see [CLI without MCP](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-without-mcp.md). `setup --cursor` / `setup --claude` prints client config; `doctor` checks token, API URL, toolsets, and version. Use it for the full payload in a terminal. MCP replies stay in the chat unless you set `GITLAB_MCP_COMPACT_RESULTS=true` (or `--compact-results`), which replaces oversized tool replies with a preview and a CLI command. Human CLI is never compacted. Same permission mode, toolsets, denied-tools regex, and tool-policy filters. Destructive tools and `GITLAB_TOOL_POLICY_APPROVE` tools need `--yes`. See [Human CLI](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-arguments.md#human-cli).
 
 > **Fine-grained tool filtering:** use `GITLAB_PERMISSION_MODE=modify` to allow create/update while
 > blocking every delete tool and the destructive teardown tools (`cancel_pipeline`,
@@ -261,7 +379,7 @@ The same binary is also a `gh`-style GitLab CLI (`tool <name>` or curated forms 
 
 > [!CAUTION]
 > `gitlab_api_request` (toolset `api`) bypasses `GITLAB_ALLOWED_GROUPS` and other group restrictions, project allowlists, tool-level restrictions (`GITLAB_TOOLS`, `GITLAB_DENIED_TOOLS_REGEX` on other tools), and individual tool safety checks. The full token permission scope is exposed. Prompt injection can drive this tool. Operators who rely on these restrictions must NOT enable it.
-> Enable it only by listing `api` in `GITLAB_TOOLSETS` (`GITLAB_TOOLSETS=all`, `discover_tools`, `GITLAB_TOOLS`, legacy `USE_*` flags, and `GITLAB_TOOL_PROFILE` do not). `GITLAB_ALLOWED_PROJECT_IDS` is checked only for `/projects/:id` paths. Endpoints such as `/search`, `/users`, `/groups/:id`, and `/runners` are not constrained. `GITLAB_PROJECT_ID` and OAuth group allowlists are not enforced.
+> Enable it only by listing `api` in `GITLAB_TOOLSETS` (`GITLAB_TOOLSETS=all`, `discover_tools`, `GITLAB_TOOLS`, legacy `USE_*` flags, and `GITLAB_TOOL_PROFILE` do not). With `GITLAB_ALLOWED_PROJECT_IDS` or a session project scope, only `/projects/:id` paths for an allowed project are accepted. Endpoints such as `/search`, `/users`, `/groups/:id`, and `/runners` are rejected. Body and query parameters that name another project are not checked. `GITLAB_PROJECT_ID` and OAuth group allowlists are not enforced.
 
 - sse
 
@@ -370,7 +488,7 @@ exchanging credentials with GitLab on behalf of the client.
 | Environment Variable          | Required | Description                                                                                                                             |
 | ----------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `GITLAB_MCP_OAUTH`            | ✅       | Set to `true` to enable                                                                                                                 |
-| `GITLAB_API_URL`              | ✅       | GitLab API base URL                                                                                                                     |
+| `GITLAB_API_URL`              | ✅       | GitLab API base URL. Do not embed credentials (`user:pass@`) in the URL; they are ignored. A comma in a password must be written as `%2C`. |
 | `GITLAB_OAUTH_APP_ID`         | ✅       | GitLab OAuth Application ID                                                                                                             |
 | `MCP_SERVER_URL`              | ✅       | Public HTTPS URL of this MCP server                                                                                                     |
 | `STREAMABLE_HTTP`             | ✅       | Must be `true`                                                                                                                          |
@@ -378,6 +496,7 @@ exchanging credentials with GitLab on behalf of the client.
 | `GITLAB_OAUTH_ALLOWED_REDIRECT_URIS` | optional | Client callback URLs that callback proxy mode will redirect to (default: Claude, ChatGPT, Cursor and loopback callbacks; `defaults,<url>` to add one) |
 | `GITLAB_OAUTH_SCOPES`         | optional | Comma-separated scopes (default: `api,read_api,read_user`)                                                                              |
 | `GITLAB_OAUTH_ALLOWED_GROUPS` | optional | Comma-separated group full paths — only members (and subgroup members) may use the server (replaces deprecated `GITLAB_ALLOWED_GROUPS`) |
+| `OAUTH_DISABLE_REFRESH_TOKEN` | optional | Set to `true` to issue no refresh tokens: users re-authorize in the browser each time the GitLab access token expires (2 h), regardless of the session TTL |
 
 When `STREAMABLE_HTTP=true`, server-side GitLab credentials (`GITLAB_PERSONAL_ACCESS_TOKEN`, `GITLAB_JOB_TOKEN`, `GITLAB_AUTH_COOKIE_PATH`, or `GITLAB_USE_OAUTH`) require `REMOTE_AUTHORIZATION=true`, `GITLAB_MCP_OAUTH=true`, or `STREAMABLE_HTTP_AUTH_TOKEN`.
 
@@ -496,6 +615,7 @@ Commonly referenced variables:
 - `GITLAB_OAUTH_CALLBACK_PROXY`
 - `GITLAB_OAUTH_ALLOWED_REDIRECT_URIS`
 - `OAUTH_REGISTER_RATE_LIMIT_PER_HOUR`
+- `OAUTH_DISABLE_REFRESH_TOKEN`
 - `OAUTH_STATELESS_MODE`
 - `OAUTH_STATELESS_SECRET`
 
@@ -557,7 +677,7 @@ or
 Private-Token: glpat-xxxxxxxxxxxxxxxxxxxx
 ```
 
-The token is stored per session (identified by `mcp-session-id` header) and reused for subsequent requests in the same session.
+The token is stored per session (identified by `mcp-session-id` header) and reused for subsequent requests in the same session. The session belongs to the GitLab user of that token: a request with another user's token gets `404 Session not found`, and `GET` / `DELETE /mcp` without a token get `401`.
 
 #### Remote Authorization Client Configuration Example with Cursor
 
@@ -658,10 +778,11 @@ No `headers` field is needed — Claude.ai obtains the token via OAuth automatic
 | `GITLAB_MCP_OAUTH`                          | Yes      | Set to `true` to enable                                                                                                                                                                                             |
 | `GITLAB_OAUTH_APP_ID`                       | Yes      | Client ID of the pre-registered GitLab OAuth application                                                                                                                                                            |
 | `MCP_SERVER_URL`                            | Yes      | Public HTTPS URL of your MCP server; also allowed for `/mcp` Host/Origin checks                                                                                                                                     |
-| `GITLAB_API_URL`                            | Yes      | Your GitLab instance API URL (e.g. `https://gitlab.com/api/v4`)                                                                                                                                                     |
+| `GITLAB_API_URL`                            | Yes      | Your GitLab instance API URL (e.g. `https://gitlab.com/api/v4`). Do not embed credentials (`user:pass@`) in the URL; they are ignored. A comma in a password must be written as `%2C`.                              |
 | `STREAMABLE_HTTP`                           | Yes      | Must be `true` (SSE is not supported)                                                                                                                                                                               |
 | `GITLAB_OAUTH_SCOPES`                       | No       | Comma-separated GitLab scopes to request (e.g. `api,read_user`). Defaults to `api` (or `read_api` when the effective permission mode is `readonly`). The pre-registered application must be configured with at least these scopes. |
 | `OAUTH_REGISTER_RATE_LIMIT_PER_HOUR`        | No       | Per-IP rolling limit for Dynamic Client Registration (`POST /register`). Default `20`/hour; range `1`–`1000`. Raise when clients (e.g. multiple IDE windows) hit registration throttling. Not a GitLab API limit. |
+| `OAUTH_DISABLE_REFRESH_TOKEN`               | No       | Set `true` to drop `refresh_token` from `/token` responses and reject the refresh grant with `invalid_grant`, so users re-authorize in the browser when the GitLab access token expires. Default `false`. In callback proxy mode, MCP clients that follow this server's flow never receive a GitLab refresh token (in passthrough the client can get one from GitLab directly). This is a re-authorization policy for standard MCP clients, not a security boundary. Refresh tokens issued before enabling stay valid until revoked in GitLab under **User Settings → Applications → Authorized applications → Revoke**. |
 | `MCP_DANGEROUSLY_ALLOW_INSECURE_ISSUER_URL` | No       | Set `true` for local HTTP dev only                                                                                                                                                                                  |
 
 **Important Notes:**
@@ -682,7 +803,7 @@ No `headers` field is needed — Claude.ai obtains the token via OAuth automatic
 
 ## Agent Skill Files
 
-Pre-built skill files are available in [`skills/gitlab-mcp/`](https://github.com/zereight/gitlab-mcp/blob/main/skills/gitlab-mcp/) for AI agents that support skill/instruction loading (Claude Code, GitHub Copilot, Cursor, etc.).
+Skill + CLI is an equal path to MCP (see [Skill + CLI](#skill--cli-no-mcp-required)). Pre-built skill files are available in [`skills/gitlab-mcp/`](https://github.com/zereight/gitlab-mcp/blob/main/skills/gitlab-mcp/) for AI agents that support skill/instruction loading (Claude Code, GitHub Copilot, Cursor, etc.).
 
 - **[SKILL.md](https://github.com/zereight/gitlab-mcp/blob/main/skills/gitlab-mcp/SKILL.md)** — Core guide (~800 tokens) with toolset overview, key workflows, and parameter hints
 - **[reference/](https://github.com/zereight/gitlab-mcp/blob/main/skills/gitlab-mcp/reference/)** — Detailed workflow docs for code review, merge requests, issues, pipelines, and vulnerability triage

@@ -16,10 +16,10 @@ tags:
   - anthropic
   - artificial-intelligence
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2025-08-31T20:50:03
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -27,18 +27,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 101675
-  last_commit: 2026-10-19T07:28:57Z
-  stars_delta_7d: 1341
-  stars_growth_pct: 1.3
-  trending_score: 1358.92
-  rank_current: 17
-  rank_delta: null
+  stars: 103202
+  last_commit: 2026-10-25T21:00:05Z
+  stars_delta_7d: 1527
+  stars_growth_pct: 1.5
+  trending_score: 1549.93
+  rank_current: 21
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 97519
     - 100334
     - 101675
+    - 103202
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +47,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: claude-mem-cursor/skills/agent-cost-report/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:38.585Z
+  fetched_at: 2026-10-26T07:41:14.400Z
   truncated: false
 type: agent_skill
 skill:
@@ -68,7 +69,7 @@ skill:
     - scripts/acr/devices.py
     - scripts/acr/evidence.py
     - scripts/acr/labels.py
-  pack_total_skills: 31
+  pack_total_skills: 33
   is_pack_primary: true
   clients:
     - claude-code

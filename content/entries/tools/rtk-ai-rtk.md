@@ -17,21 +17,24 @@ status: active
 quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: rtk-ai/rtk
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 83907
-  last_commit: 2026-10-19T00:38:06Z
-  stars_delta_7d: 2171
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 84575
+  last_commit: 2026-10-25T18:16:27Z
+  stars_delta_7d: 668
+  stars_growth_pct: 0.8
+  trending_score: 673.32
+  rank_current: 18
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 83907
+    - 84575
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +43,7 @@ readme_source:
   repo: rtk-ai/rtk
   path: README.md
   branch: develop
-  fetched_at: 2026-10-19T07:36:39.581Z
+  fetched_at: 2026-10-26T07:41:15.288Z
   truncated: false
 type: agent_tool
 tool:
@@ -96,6 +99,8 @@ tool:
 </p>
 
 rtk filters and compresses command outputs before they reach your LLM context. Single Rust binary, 100+ supported commands, <10ms overhead.
+
+Angular builds are supported with `rtk ng build`: compact build tables with every bundle and diagnostic retained.
 
 ## What RTK Does
 

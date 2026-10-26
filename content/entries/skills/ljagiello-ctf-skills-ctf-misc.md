@@ -11,10 +11,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3475
-  last_commit: 2026-10-17T01:17:07Z
-  stars_delta_7d: 38
-  stars_growth_pct: 1.1
-  trending_score: 38.42
+  stars: 3530
+  last_commit: 2026-10-23T15:17:59Z
+  stars_delta_7d: 55
+  stars_growth_pct: 1.6
+  trending_score: 55.87
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
+    - 3530
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-misc/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:39.008Z
+  fetched_at: 2026-10-26T07:44:56.560Z
   truncated: false
 type: agent_skill
 skill:
@@ -46,6 +47,7 @@ skill:
   description: Agent skill from ljagiello/ctf-skills
   folder_path: ctf-misc
   extra_files:
+    - audio.md
     - bashjails.md
     - ctfd-navigation.md
     - dns.md
@@ -55,8 +57,7 @@ skill:
     - games-and-vms-3.md
     - games-and-vms-4.md
     - games-and-vms.md
-    - linux-privesc.md
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: false
   clients:
     - claude-code
@@ -103,8 +104,7 @@ brew install ffmpeg qrencode
 - [linux-privesc.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/linux-privesc.md) - Sudo wildcard parameter injection (fnmatch), crafted pcap for sudoers.d, monit confcheck process injection, Apache -d override, backup cronjob SUID, PostgreSQL COPY TO PROGRAM RCE, PostgreSQL backup credential extraction, NFS share exploitation, SSH Unix socket tunneling, PaperCut Print Deploy privesc, Squid proxy pivoting, Zabbix admin password reset via MySQL, WinSSHTerm credential decryption
 - [ctfd-navigation.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/ctfd-navigation.md) - CTFd platform API navigation without browser: detection, token auth, challenge listing, file download, flag submission, scoreboard, hints, notifications, Python client class
 
----
-## When to Pivot
+---## When to Pivot
 
 - If the puzzle is actually centered on cryptography or number theory, switch to `/ctf-crypto`.
 - If the challenge is a real binary exploit instead of a jail, toy VM, or encoding problem, switch to `/ctf-pwn` or `/ctf-reverse`.
@@ -330,8 +330,7 @@ new_data = sha.extend(b'extension', b'original_message', len_secret, known_hash_
 
 Flags hidden in Discord metadata (roles, animated emoji, embeds). Invoke `/ctf-osint` for Discord API enumeration technique and code (see social-media.md in ctf-osint).
 
----
-## SUID Binary Exploitation (0xFun 2026)
+---## SUID Binary Exploitation (0xFun 2026)
 
 ```bash
 # Find SUID binaries
@@ -344,8 +343,7 @@ find / -perm -4000 2>/dev/null
 
 **Reference:** https://gtfobins.github.io/
 
----
-## Linux Privilege Escalation Quick Checks
+---## Linux Privilege Escalation Quick Checks
 
 ```bash
 # GECOS field passwords
@@ -400,8 +398,7 @@ Root cronjob copying directories preserves SUID bit but changes ownership to roo
 
 Root process runs scripts from user-owned directory. Modify `server-command`, trigger via Mobility Print API refresh. See [linux-privesc.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/linux-privesc.md#papercut-print-deploy-privilege-escalation-bamboo-htb).
 
----
-## CTFd Platform Navigation (No Browser)
+---## CTFd Platform Navigation (No Browser)
 
 Detect CTFd (`curl -s "$CTF_URL/api/v1/" | head -5`) and interact via API. **Ask the user for their API token** (CTFd Settings > Access Tokens) — it is not provided by default. Then use `Authorization: Token $CTF_TOKEN` header for all requests.
 
@@ -413,8 +410,7 @@ curl -s -X POST -H "Authorization: Token $CTF_TOKEN" -H "Content-Type: applicati
 
 See [ctfd-navigation.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/ctfd-navigation.md) for full workflow, Python client class, session login, hints, notifications, file download, and troubleshooting.
 
----
-## Useful One-Liners
+---## Useful One-Liners
 
 ```bash
 grep -rn "flag{" .

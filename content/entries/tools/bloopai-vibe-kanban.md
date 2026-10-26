@@ -11,24 +11,27 @@ tags:
   - management
   - task-manager
 status: active
-quality_percentile: 54
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: BloopAI/vibe-kanban
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 28389
-  last_commit: 2026-09-19T06:52:48Z
-  stars_delta_7d: 269
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 28457
+  last_commit: 2026-10-26T07:14:36Z
+  stars_delta_7d: 68
+  stars_growth_pct: 0.2
+  trending_score: 68.16
+  rank_current: 68
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 28389
+    - 28457
 language: en
 needs_keys: false
 prerequisites:
@@ -37,7 +40,7 @@ readme_source:
   repo: BloopAI/vibe-kanban
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:15.776Z
+  fetched_at: 2026-10-26T07:45:38.846Z
   truncated: false
 type: agent_tool
 tool:

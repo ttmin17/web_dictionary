@@ -11,10 +11,10 @@ tags:
   - ai-content-creation
   - ai-filmmaking
 status: active
-quality_percentile: 84
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: HBAI-Ltd/Toonflow-app
@@ -22,14 +22,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 18170
-  last_commit: 2026-10-16T08:31:49Z
-  stars_delta_7d: 468
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 19429
+  last_commit: 2026-10-26T03:06:43Z
+  stars_delta_7d: 1259
+  stars_growth_pct: 6.9
+  trending_score: 1346.24
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 18170
+    - 19429
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +38,7 @@ readme_source:
   repo: HBAI-Ltd/Toonflow-app
   path: packages/teams/storyboardTeam/skills/storyboard/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:41:16.305Z
+  fetched_at: 2026-10-26T07:45:39.021Z
   truncated: false
 type: agent_skill
 skill:

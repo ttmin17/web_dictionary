@@ -15,28 +15,29 @@ tags:
   - ai-agents
   - autogen
 status: active
-quality_percentile: 86
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: doobidoo/mcp-memory-service
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2021
-  last_commit: 2026-10-19T04:32:23Z
-  stars_delta_7d: 9
-  stars_growth_pct: 0.4
-  trending_score: 9.04
-  rank_current: 63
-  rank_delta: null
+  stars: 2046
+  last_commit: 2026-10-26T04:42:53Z
+  stars_delta_7d: 25
+  stars_growth_pct: 1.2
+  trending_score: 25.31
+  rank_current: 52
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1993
     - 2012
     - 2021
+    - 2046
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: doobidoo/mcp-memory-service
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.036Z
+  fetched_at: 2026-10-26T07:38:02.870Z
   truncated: false
 type: mcp_server
 launch:
@@ -372,6 +373,10 @@ Every release, with upgrade notes:
 
 We welcome contributions! See [CONTRIBUTING.md](https://github.com/doobidoo/mcp-memory-service/blob/main/CONTRIBUTING.md) for guidelines
 and [SECURITY.md](https://github.com/doobidoo/mcp-memory-service/blob/main/SECURITY.md) for reporting a vulnerability.
+
+Releases, good first issues and new Discussions are announced on our
+[Discord server](https://discord.gg/zrsNMEzmCj), which is also the place for informal chat.
+Claiming an issue, decisions and reviews stay on GitHub.
 
 Who authors this project, who holds copyright, and what every change passes before
 it reaches `main`: [AUTHORSHIP.md](https://github.com/doobidoo/mcp-memory-service/blob/main/AUTHORSHIP.md).

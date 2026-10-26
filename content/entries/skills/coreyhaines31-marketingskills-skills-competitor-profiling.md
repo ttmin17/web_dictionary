@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,15 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 55431
-  last_commit: 2026-10-15T21:33:21Z
-  stars_delta_7d: 913
-  stars_growth_pct: 1.7
-  trending_score: 928.29
+  stars: 56570
+  last_commit: 2026-10-22T16:57:46Z
+  stars_delta_7d: 1139
+  stars_growth_pct: 2.1
+  trending_score: 1162.4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
+    - 56570
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/competitor-profiling/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:21.633Z
+  fetched_at: 2026-10-26T07:42:09.288Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
     - evals/evals.json
     - references/templates.md
     - references/tool-reference.md
-  pack_total_skills: 50
+  pack_total_skills: 52
   is_pack_primary: false
   clients:
     - claude-code
@@ -500,6 +501,7 @@ Only ask if not answered by context or input:
 - **customer-research**: For mining reviews and community sentiment in depth
 - **content-strategy**: For using competitor content gaps to plan your own content
 - **seo-audit**: For auditing your own site relative to competitors
+- **link-building**: For turning competitors' referring domains into a link gap prospect list
 - **sales-enablement**: For turning profiles into battle cards and sales collateral
 - **ads**: For analyzing competitor ad strategies
 - **pricing**: For deeper pricing analysis informed by competitor profiles

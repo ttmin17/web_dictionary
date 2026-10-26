@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 55431
-  last_commit: 2026-10-15T21:33:21Z
-  stars_delta_7d: 913
-  stars_growth_pct: 1.7
-  trending_score: 928.29
+  stars: 56570
+  last_commit: 2026-10-22T16:57:46Z
+  stars_delta_7d: 1139
+  stars_growth_pct: 2.1
+  trending_score: 1162.4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
+    - 56570
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,19 +43,20 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/analytics/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:21.631Z
+  fetched_at: 2026-10-26T07:42:09.286Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: analytics
   description: When the user wants to set up, improve, or audit analytics tracking
     and measurement. Also use when the user mentions "set up tracking," "GA4,"
-    "Google Analytics," "conversion tracking," "event tracking," "UTM
-    parameters," "tag manager," "GTM," "analytics implementation," "tracking
-    plan," "how do I measure this," "track conversions," "Mixpanel," "Segment,"
-    "are my events firing," or "analytics isn't working." Use this whenever
-    someone asks how to know if something is working or wants to measure
-    marketing results. For choosing attribution models, comparing
+    "Google Analytics," "event tracking," "UTM parameters," "tag manager,"
+    "GTM," "analytics implementation," "tracking plan," "how do I measure this,"
+    "Mixpanel," "Segment," "are my events firing," or "analytics isn't working."
+    Use this whenever someone asks how to know if something is working or wants
+    to measure marketing results. For getting conversions into ad platforms
+    (pixels, conversion tags, CAPI, server-side) and verifying they arrived, see
+    conversion-tracking. For choosing attribution models, comparing
     multi-touch/MMM/incrementality, or reconciling conflicting numbers across
     tools, see attribution. For A/B test measurement, see ab-testing. Rate
     metrics divide matching closed windows — never full-period spend by
@@ -65,7 +67,7 @@ skill:
     - references/event-library.md
     - references/ga4-implementation.md
     - references/gtm-implementation.md
-  pack_total_skills: 50
+  pack_total_skills: 52
   is_pack_primary: false
   clients:
     - claude-code
@@ -429,6 +431,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 ## Related Skills
 
 - **ab-testing**: For experiment tracking
+- **conversion-tracking**: For getting conversions (including GA4 key events from forms and bookings) to ad platforms and GA4, and verifying they arrive
 - **attribution**: For attribution models, multi-touch/MMM/incrementality, and reconciling conflicting numbers across tools (once tracking is live)
 - **seo-audit**: For organic traffic analysis
 - **cro**: For conversion optimization (uses this data)

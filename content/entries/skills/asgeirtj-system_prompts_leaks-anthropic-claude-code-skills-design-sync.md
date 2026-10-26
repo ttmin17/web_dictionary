@@ -4,10 +4,9 @@ name: design-sync
 tagline: Push a React design system to claude.ai/design. This runs a converter
   that bundles the real component code (from Storybook or a bare package) and
   uplo
-summary: "Claude Design (claude.ai/design) is Claude's design tool: users prompt
-  a design agent and it builds working UI - screens, flows, prototypes -
-  rendered live in the browser from real React code. Out of the box it
-  design..."
+summary: 'Before anything else, tell the user this, as written: "Standalone
+  Claude Design (claude.ai/design) closes by December 14, 2026. Claude Design
+  now lives in Claude." Then carry on.'
 categories:
   - media-creative
 tags:
@@ -16,10 +15,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 85
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -27,14 +26,15 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 69880
-  last_commit: 2026-10-16T08:29:42Z
-  stars_delta_7d: 885
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 70224
+  last_commit: 2026-10-25T19:55:03Z
+  stars_delta_7d: 344
+  stars_growth_pct: 0.5
+  trending_score: 345.69
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
+    - 70224
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/design-sync/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:14.461Z
+  fetched_at: 2026-10-26T07:42:00.810Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,7 +53,6 @@ skill:
     my design system to Claude Design".
   folder_path: Anthropic/claude-code/skills/design-sync
   extra_files:
-    - design-sync.skill
     - lib/bundle.mjs
     - lib/common.mjs
     - lib/css-fallback.mjs
@@ -63,14 +62,18 @@ skill:
     - lib/dts.mjs
     - lib/emit.mjs
     - lib/preview-gen-storybook.mjs
-  pack_total_skills: 205
+    - lib/preview-rebuild.mjs
+  pack_total_skills: 217
   is_pack_primary: false
   clients:
     - claude-code
   pack_slug: asgeirtj-system_prompts_leaks
 ---
 
+Before anything else, tell the user this, as written: "Standalone Claude Design (claude.ai/design) closes by December 14, 2026. Claude Design now lives in Claude." Then carry on.
+
 # Sync a design system to claude.ai/design
+
 ## What this is for
 
 **Claude Design** (claude.ai/design) is Claude's design tool: users prompt a design agent and it builds working UI - screens, flows, prototypes - rendered live in the browser from real React code. Out of the box it designs with generic components. This skill changes that: it converts the user's design-system repo into the format Claude Design consumes and uploads it, so from then on **the design agent builds with the customer's actual components** - every design it produces is on-brand, made of their real parts, and maps 1:1 onto code their engineers can ship.

@@ -14,28 +14,29 @@ tags:
   - compression
   - context-engineering
 status: active
-quality_percentile: 85
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-01-07T19:58:51
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: headroomlabs-ai/headroom
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 75939
-  last_commit: 2026-10-17T18:29:50Z
-  stars_delta_7d: 750
-  stars_growth_pct: 1
-  trending_score: 757.48
-  rank_current: 7
-  rank_delta: null
+  stars: 77847
+  last_commit: 2026-10-24T19:15:37Z
+  stars_delta_7d: 1908
+  stars_growth_pct: 2.5
+  trending_score: 1955.94
+  rank_current: 8
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74574
     - 75189
     - 75939
+    - 77847
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: headroomlabs-ai/headroom
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:36:39.641Z
+  fetched_at: 2026-10-26T07:41:15.266Z
   truncated: false
 type: agent_tool
 tool:
@@ -247,13 +248,10 @@ back at you, and deep reasoning spent on routine steps like reading a file.
 Headroom trims it from the proxy, with no change to your code:
 
 - **Verbosity steering** appends a short "be terse, don't restate context" note to the *end* of the system prompt, so your prompt cache still hits.
-- **Effort routing** dials thinking effort down when a turn is only the model resuming after a tool result — a file read, a passing test. New questions and errors keep full effort.
 
-Both apply to Anthropic `/v1/messages` and to OpenAI-compatible
-`/v1/chat/completions` and `/v1/responses`. Effort routing uses
-`reasoning_effort` on OpenAI and `thinking.budget_tokens` / `output_config.effort`
-on Anthropic, with the same clamp-only invariant and the same `output_shaper:*`
-labels on both paths.
+It applies to Anthropic `/v1/messages` and to OpenAI-compatible
+`/v1/chat/completions` and `/v1/responses`, with the same `output_shaper:*`
+labels on all paths.
 
 ```bash
 export HEADROOM_OUTPUT_SHAPER=1     # off by default

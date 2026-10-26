@@ -11,10 +11,10 @@ tags:
   - ai-agent
   - ai-agents
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2024-08-04T12:15:06
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: feder-cr/invisible_dots
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 32155
-  last_commit: 2026-10-19T01:04:36Z
-  stars_delta_7d: 140
-  stars_growth_pct: 0.4
-  trending_score: 140.61
-  rank_current: 56
-  rank_delta: null
+  stars: 32250
+  last_commit: 2026-10-25T01:04:52Z
+  stars_delta_7d: 95
+  stars_growth_pct: 0.3
+  trending_score: 95.28
+  rank_current: 82
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 31792
     - 32015
     - 32155
+    - 32250
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: feder-cr/invisible_dots
   path: invisible_engine_dots/skills/invisible-playwright/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:23.264Z
+  fetched_at: 2026-10-26T07:44:08.926Z
   truncated: false
 type: agent_skill
 skill:
@@ -60,8 +61,7 @@ skill:
 
 ---name: invisible-playwright
 description: Use the Dot's browser identities for any task on a website or search on the web: which identity to use, opening and closing one, and when a plain download is simpler than a browser.
----
-# The browser identities
+---# The browser identities
 
 Your browser is invisible_playwright: a real Firefox that a site sees as a person at a computer. How to drive a page
 (finding a page, the order to try things in, what a page can tell) is in the browser server's instructions, which your

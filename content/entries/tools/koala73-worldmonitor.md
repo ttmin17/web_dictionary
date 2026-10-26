@@ -18,25 +18,26 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: koala73/worldmonitor
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 88774
-  last_commit: 2026-10-19T06:43:33Z
-  stars_delta_7d: 400
-  stars_growth_pct: 0.5
-  trending_score: 401.81
-  rank_current: 9
-  rank_delta: null
+  stars: 89544
+  last_commit: 2026-10-26T06:46:32Z
+  stars_delta_7d: 770
+  stars_growth_pct: 0.9
+  trending_score: 776.68
+  rank_current: 17
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 87972
     - 88374
     - 88774
+    - 89544
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: koala73/worldmonitor
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:31:31.599Z
+  fetched_at: 2026-10-26T07:35:59.790Z
   truncated: false
 type: agent_tool
 tool:
@@ -114,7 +115,7 @@ tool:
 | **Web app** | [worldmonitor.app](https://www.worldmonitor.app) and the tech, finance, commodity, happy and energy variants | [Getting Started](https://www.worldmonitor.app/docs/getting-started) |
 | **Desktop app** (Tauri) | Windows, macOS and Linux downloads above | [Desktop App](https://www.worldmonitor.app/docs/desktop-app) |
 | **Terminal dashboard** | `npx worldmonitor` | [Terminal Dashboard](https://www.worldmonitor.app/docs/cli-dashboard) |
-| **CLI** | `npm install -g worldmonitor` | [Command-Line Client](https://www.worldmonitor.app/docs/cli) |
+| **CLI** | `npm install -g worldmonitor` or `brew install worldmonitor` | [Command-Line Client](https://www.worldmonitor.app/docs/cli) |
 | **SDKs** | Python `worldmonitor-sdk`, Ruby `worldmonitor`, Go `sdk/go` | [SDKs](https://www.worldmonitor.app/docs/sdks) |
 | **MCP server** | `https://worldmonitor.app/mcp` | [MCP Overview](https://www.worldmonitor.app/docs/mcp-overview) |
 
@@ -130,7 +131,7 @@ The terminal dashboard runs the same live data in your shell: world map, news, m
 - **Dual map engine** — 3D globe (globe.gl) and WebGL flat map (deck.gl) with a shared map-layer catalog
 - **Panel inventory** — concrete panel implementations across specialized variants
 - **Cross-stream correlation** — military, economic, disaster, and escalation signal convergence
-- **[Country Instability Index (CII)](https://www.worldmonitor.app/country-instability-index/)** — live CII v8 scores, bands, and approximate 24-hour movement for 31 Tier-1 countries
+- **[Country Instability Index (CII)](https://www.worldmonitor.app/country-instability-index/)** — live CII v14 scores, bands, and approximate 24-hour movement for 31 Tier-1 countries
 - **Finance radar** — stock exchanges, commodities, crypto, and a market composite
 - **Local AI** — run everything with Ollama, no API keys required
 - **Site variants** from a single codebase (world, tech, finance, commodity, happy, energy)
@@ -209,6 +210,7 @@ World Monitor is built for agents and scripts as well as browsers:
   ```sh
   npx worldmonitor tools          # run ad-hoc — list every MCP tool (no key needed)
   npm install -g worldmonitor     # or install the `worldmonitor` (alias `wm`) command
+  brew install worldmonitor       # or install it with Homebrew
   worldmonitor risk IR --api-key wm_xxx
   ```
 

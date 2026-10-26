@@ -14,10 +14,10 @@ tags:
   - codex
   - docx
 status: active
-quality_percentile: 60
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: iOfficeAI/OfficeCLI
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32159
-  last_commit: 2026-10-13T02:29:44Z
-  stars_delta_7d: 217
-  stars_growth_pct: 0.7
-  trending_score: 218.47
+  stars: 32477
+  last_commit: 2026-10-26T07:13:11Z
+  stars_delta_7d: 318
+  stars_growth_pct: 1
+  trending_score: 321.14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 31654
     - 31942
     - 32159
+    - 32477
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: iOfficeAI/OfficeCLI
   path: skills/officecli-docx/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:42.645Z
+  fetched_at: 2026-10-26T07:42:28.190Z
   truncated: false
 type: agent_skill
 skill:
@@ -97,8 +98,8 @@ A `.docx` is a ZIP of XML parts (`document.xml`, `styles.xml`, `numbering.xml`, 
 docx paths contain `[]`; some prop values contain `$`. Both are shell metacharacters. Escaping happens at three layers — keep them separate.
 
 1. **Shell.** ALWAYS quote element paths: `"/body/p[1]"`, not `/body/p[1]` (zsh/bash glob `[N]`). Single-quote any value containing `$`: `--prop text='$50M'` — at any length, the whole value inside one pair of single quotes. Unquoted `$50M` is stripped to `M`; mixing `'…$var…'` and `"…$50…"` on one long string is where the `$50` silently vanishes.
-2. **CLI (`text=`).** The two-char escapes `\n` and `\t` ARE interpreted in `--prop text=` — `\n` becomes a `<w:br/>` soft line break, `\t` a `<w:tab/>` — consistently across docx / pptx / xlsx. Double them (`\\n`) for a literal backslash-n (rarely wanted). This applies to row-level table `c1…cN` shortcuts too (`\n` → `<w:br/>` within the cell).
-3. **JSON (batch).** A real newline can also be passed as `"\n"` in the JSON string of a `batch` heredoc; same result.
+2. **CLI (`text=`).** The two-char escapes `\n`, `\v` and `\t` ARE interpreted in `--prop text=` (same rule as pptx): `\n` starts a **new paragraph** (each new `<w:p>` inherits the source paragraph's style), `\v` is a **soft line break** within one paragraph (`<w:br/>`), `\t` a `<w:tab/>`. Double the backslash (`\\n`) for a literal backslash-n (rarely wanted). Row-level table shortcuts `c1…cN` are the exception: there `\n` is a `<w:br/>` line break inside the cell (see recipe (e)).
+3. **JSON (batch).** Batch does NOT interpret the two-char escapes — a JSON `"\\n"` or `"\\v"` lands as literal text. Use JSON escapes for the real characters: `"\n"` (a newline) starts a new paragraph, `"\u000b"` is a soft line break.
 
 If in doubt, `view text` after writing and compare character-for-character.
 

@@ -11,10 +11,10 @@ tags:
   - content-generation
   - openclaw
 status: active
-quality_percentile: 92
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3844
-  last_commit: 2026-10-18T10:45:50Z
-  stars_delta_7d: 277
-  stars_growth_pct: 7.8
-  trending_score: 298.51
+  stars: 4090
+  last_commit: 2026-10-25T06:24:22Z
+  stars_delta_7d: 246
+  stars_growth_pct: 6.4
+  trending_score: 261.74
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3567
     - 3844
+    - 4090
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/chart-visualization/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:51.002Z
+  fetched_at: 2026-10-26T07:44:08.721Z
   truncated: false
 type: agent_skill
 skill:
@@ -47,7 +48,7 @@ skill:
   folder_path: skills/builtin/chart-visualization
   extra_files:
     - EASEL-META.md
-  pack_total_skills: 114
+  pack_total_skills: 115
   is_pack_primary: false
   clients:
     - claude-code

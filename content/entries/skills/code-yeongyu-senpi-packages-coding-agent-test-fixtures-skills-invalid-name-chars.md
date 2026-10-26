@@ -11,10 +11,10 @@ tags:
   - coding-agent
   - llm
 status: active
-quality_percentile: 70
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: code-yeongyu/senpi
@@ -22,14 +22,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 484
-  last_commit: 2026-10-19T07:21:05Z
-  stars_delta_7d: 15
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 497
+  last_commit: 2026-10-26T07:32:52Z
+  stars_delta_7d: 13
+  stars_growth_pct: 2.7
+  trending_score: 13.35
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 484
+    - 497
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +38,7 @@ readme_source:
   repo: code-yeongyu/senpi
   path: packages/coding-agent/test/fixtures/skills/invalid-name-chars/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:41:27.174Z
+  fetched_at: 2026-10-26T07:45:48.978Z
   truncated: false
 type: agent_skill
 skill:

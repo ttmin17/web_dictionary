@@ -1,12 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-implementing-container-image-minimal-base-with-distroless
 name: implementing-container-image-minimal-base-with-distroless
-tagline: Reduces container attack surface by building application images on
-  Google distroless base images that ship only the application runtime - no
-  shell, pa
-summary: Google distroless images contain only your application and its runtime
-  dependencies, without package managers, shells, or other programs found in
-  standard Linux distributions. By eliminating unnecessary OS components,...
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -15,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -26,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,20 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/implementing-container-image-minimal-base-with-distroless/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.888Z
+  fetched_at: 2026-10-26T07:43:39.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: implementing-container-image-minimal-base-with-distroless
-  description: "Reduces container attack surface by building application images on
-    Google distroless base images that ship only the application runtime - no
-    shell, package manager, or OS utilities - using multi-stage build patterns
-    plus debugging and scanning techniques adapted to distroless. Use when
-    hardening container images, cutting attack surface in a container
-    architecture, or answering an assessment finding about bloated base images.
-    Keywords: distroless, multi-stage build, no shell, nonroot tag, debug image,
-    scratch, attack surface. Do not use for scanning an image for known CVEs -
-    use scanning-docker-images-with-trivy."
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/implementing-container-image-minimal-base-with-distroless
   extra_files:
     - LICENSE

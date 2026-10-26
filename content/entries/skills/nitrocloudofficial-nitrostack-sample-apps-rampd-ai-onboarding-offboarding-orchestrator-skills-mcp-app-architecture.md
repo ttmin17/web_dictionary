@@ -18,7 +18,7 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: nitrocloudofficial/nitrostack
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2536
-  last_commit: 2026-10-18T15:38:39Z
-  stars_delta_7d: 74
-  stars_growth_pct: 3
-  trending_score: 76.22
+  stars: 2528
+  last_commit: 2026-10-19T12:56:19Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2465
     - 2462
     - 2536
+    - 2528
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: nitrocloudofficial/nitrostack
   path: sample-apps/Rampd-AI-Onboarding-Offboarding-Orchestrator/skills/mcp-app-architecture/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:33:30.910Z
+  fetched_at: 2026-10-26T07:38:02.722Z
   truncated: false
 type: agent_skill
 skill:

@@ -15,24 +15,27 @@ tags:
   - cli
   - coding-agent
 status: active
-quality_percentile: 57
+quality_percentile: 51
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ConardLi/easy-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 1016
+  stars: 1015
   last_commit: 2026-10-17T15:39:34Z
-  stars_delta_7d: 36
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  rank_current: 140
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1016
+    - 1015
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: ConardLi/easy-agent
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:25.506Z
+  fetched_at: 2026-10-26T07:45:47.383Z
   truncated: false
 type: agent_tool
 tool:

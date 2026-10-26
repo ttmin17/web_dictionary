@@ -1,13 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-hardening-docker-daemon-configuration
 name: hardening-docker-daemon-configuration
-tagline: Hardens the Docker daemon (dockerd) through /etc/docker/daemon.json
-  with user namespace remapping, TLS client authentication, seccomp profiles,
-  and CI
-summary: The Docker daemon (dockerd) runs with root privileges and controls all
-  container operations. Hardening its configuration through
-  /etc/docker/daemon.json, TLS certificates, user namespace remapping, and
-  network restric...
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -16,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -27,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,20 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/hardening-docker-daemon-configuration/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.876Z
+  fetched_at: 2026-10-26T07:43:39.356Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: hardening-docker-daemon-configuration
-  description: "Hardens the Docker daemon (dockerd) through
-    /etc/docker/daemon.json with user namespace remapping, TLS client
-    authentication, seccomp profiles, and CIS Docker Benchmark controls such as
-    icc, no-new-privileges, and live-restore. Use when securing a Docker host's
-    daemon to prevent privilege escalation, breakout, or lateral movement, or
-    when auditing daemon settings against CIS requirements. Keywords: dockerd,
-    daemon.json, userns-remap, no-new-privileges, icc, live-restore, TLS socket.
-    Do not use for hardening images and per-container runtime flags - use
-    hardening-docker-containers-for-production."
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/hardening-docker-daemon-configuration
   extra_files:
     - LICENSE

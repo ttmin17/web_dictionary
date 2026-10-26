@@ -11,10 +11,10 @@ tags:
   - ai-agents
   - ai-coding
 status: active
-quality_percentile: 56
+quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: codeaholicguy/ai-devkit
@@ -22,14 +22,15 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1648
-  last_commit: 2026-10-18T07:50:55Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 1653
+  last_commit: 2026-10-25T13:08:20Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.3
+  trending_score: 5.02
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1648
+    - 1653
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +38,7 @@ readme_source:
   repo: codeaholicguy/ai-devkit
   path: skills/session-compact/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:41:31.464Z
+  fetched_at: 2026-10-26T07:45:53.189Z
   truncated: false
 type: agent_skill
 skill:
@@ -45,7 +46,7 @@ skill:
   description: Agent skill from codeaholicguy/ai-devkit
   folder_path: skills/session-compact
   extra_files: []
-  pack_total_skills: 29
+  pack_total_skills: 31
   is_pack_primary: false
   clients:
     - claude-code

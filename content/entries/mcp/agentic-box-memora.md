@@ -12,27 +12,28 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 50
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: agentic-box/memora
   official_vendor: false
   license: MIT
 signals:
-  stars: 742
-  last_commit: 2026-10-18T11:47:39Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.7
-  trending_score: 5.03
-  rank_current: 71
-  rank_delta: null
+  stars: 746
+  last_commit: 2026-10-26T05:10:55Z
+  stars_delta_7d: 4
+  stars_growth_pct: 0.5
+  trending_score: 4.02
+  rank_current: 91
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 737
     - 742
+    - 746
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: agentic-box/memora
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.497Z
+  fetched_at: 2026-10-26T07:38:48.523Z
   truncated: false
 type: mcp_server
 launch:

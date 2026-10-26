@@ -13,27 +13,28 @@ tags:
   - api
   - developer-tools
 status: active
-quality_percentile: 14
+quality_percentile: 12
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Klavis-AI/klavis
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5814
+  stars: 5827
   last_commit: 2026-06-01T21:21:04Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.1
-  trending_score: 5
-  rank_current: 73
-  rank_delta: null
+  stars_delta_7d: 13
+  stars_growth_pct: 0.2
+  trending_score: 13.03
+  rank_current: 69
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5809
     - 5814
+    - 5827
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: Klavis-AI/klavis
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:29.328Z
+  fetched_at: 2026-10-26T07:36:57.994Z
   truncated: false
 type: mcp_server
 launch:

@@ -11,10 +11,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 63
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-05-04T06:24:37
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: muxuuu/serenity-skill
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4114
+  stars: 4118
   last_commit: 2026-10-11T06:10:53Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0.8
-  trending_score: 31.24
-  rank_current: 92
-  rank_delta: null
+  stars_delta_7d: 4
+  stars_growth_pct: 0.1
+  trending_score: 4
+  rank_current: 132
+  rank_delta: -40
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4054
     - 4083
     - 4114
+    - 4118
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: muxuuu/serenity-skill
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:38.205Z
+  fetched_at: 2026-10-26T07:44:55.802Z
   truncated: false
 type: agent_skill
 skill:

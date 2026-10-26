@@ -11,10 +11,10 @@ tags:
   - ai-skill
   - china-stocks
 status: active
-quality_percentile: 85
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-05-11T01:08:15
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: simonlin1212/a-stock-data
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10946
-  last_commit: 2026-10-11T13:08:34Z
-  stars_delta_7d: 103
-  stars_growth_pct: 0.9
-  trending_score: 103.98
-  rank_current: 66
-  rank_delta: null
+  stars: 11139
+  last_commit: 2026-10-23T13:56:57Z
+  stars_delta_7d: 193
+  stars_growth_pct: 1.8
+  trending_score: 196.4
+  rank_current: 62
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10657
     - 10843
     - 10946
+    - 11139
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: simonlin1212/a-stock-data
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:30.480Z
+  fetched_at: 2026-10-26T07:43:49.332Z
   truncated: false
 type: agent_skill
 skill:
@@ -449,8 +450,7 @@ ETF期权层 (V3.3 新增)
 
 > 注：`em_get` / `EM_SESSION` / `EM_MIN_INTERVAL` 是所有东财代码块共用的前置定义，使用任一东财端点前需先执行「共用 helper」代码块。
 
----
-## When to Activate
+---## When to Activate
 
 - 用户需要**指数成分、指数权重、指数 PE / 股息率、官方交易日历、沪深官方两融或北交所行情备份**（V3.8）。
 - 用户要看**商品期货 / 期权 / 持仓排名 / A50 / 黄金现货**，或**业绩预告 / 机构调研 / 增减持 / 回购 / 股权质押 / 新股申购 / 可转债**，
@@ -482,8 +482,7 @@ ETF期权层 (V3.3 新增)
 - 用户要做产业链调研 / 批量横向对比
 - 关键词：估值、一致预期、机构预测、市盈率、PEG、市值、研报、产业链、行业研究、K线、盘口、公告、新闻、**强势股、题材、热点、概念归因、北向资金、沪股通、深股通、概念板块、资金流向、主力、龙虎榜、席位、营业部、全市场龙虎榜、净买入、解禁、限售、行业对比、行业轮动、融资融券、两融、大宗交易、股东户数、筹码集中、分红、派息、送股、指数、ETF、涨停、打板、连板、炸板、跌停、涨停原因、封板、晋级率、ETF期权、希腊字母、隐含波动率、互动易、投资者关系、热榜、人气榜、市场热度、期货、商品期权、股指期权、持仓排名、A50、黄金、上海金、业绩预告、机构调研、增减持、回购、股权质押、新股申购、打新、可转债、转股溢价率、国债收益率、收益率曲线、回购利率、FR007、LPR、宏观日历、ETF份额、ST、新闻联播、上证e互动、聚宽、回测**
 
----
-## Prerequisites
+---## Prerequisites
 
 ```bash
 pip install mootdx requests pandas stockstats numpy baostock xlrd openpyxl
@@ -1107,8 +1106,7 @@ def _em_day(value):
 ```
 <!-- v39-helpers:end -->
 
----
-## Layer 1: 行情层（实时，不封IP）
+---## Layer 1: 行情层（实时，不封IP）
 
 > **V3.10.0 起本层重排：能用的在前，2026-09 起失效的 mootdx 行情命令移到最后（§1.7，留档）。**
 > 旧编号 → 新编号：1.2→1.1 腾讯实时、1.5→1.2 腾讯 K 线、1.6→1.3 通达信盘后包、1.3→1.5 百度、1.4→1.6 新浪复权因子、1.1→1.7 mootdx；

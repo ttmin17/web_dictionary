@@ -13,28 +13,29 @@ tags:
   - ai-agents
   - autogen-alternative
 status: active
-quality_percentile: 56
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: jnMetaCode/agency-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2382
-  last_commit: 2026-10-19T04:57:55Z
-  stars_delta_7d: 26
-  stars_growth_pct: 1.1
-  trending_score: 26.29
-  rank_current: 39
-  rank_delta: null
+  stars: 2405
+  last_commit: 2026-10-22T06:14:05Z
+  stars_delta_7d: 23
+  stars_growth_pct: 1
+  trending_score: 23.22
+  rank_current: 54
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2330
     - 2356
     - 2382
+    - 2405
 language: zh
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: jnMetaCode/agency-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.518Z
+  fetched_at: 2026-10-26T07:38:02.930Z
   truncated: false
 type: mcp_server
 launch:
@@ -887,3 +888,7 @@ ao-output/产品需求评审-2026-03-22/
 ## 许可证
 
 [Apache-2.0](https://github.com/jnMetaCode/agency-orchestrator/blob/main/LICENSE)
+
+## Code signing policy
+
+Windows 当前发布包未签名；SignPath 免费签名申请已提交，等待审核，尚未获批。[Code signing policy](https://github.com/jnMetaCode/agency-orchestrator/blob/main/docs/CODE_SIGNING_POLICY.md) · [联网与数据说明](https://github.com/jnMetaCode/agency-orchestrator/blob/main/docs/PRIVACY.md) · [申请评估](https://github.com/jnMetaCode/agency-orchestrator/blob/main/docs/SIGNPATH.md)

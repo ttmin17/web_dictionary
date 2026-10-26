@@ -11,10 +11,10 @@ tags:
   - ai-agents
   - ai-design
 status: active
-quality_percentile: 65
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: nexu-io/html-anything
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9173
+  stars: 9246
   last_commit: 2026-10-13T02:33:42Z
-  stars_delta_7d: 74
+  stars_delta_7d: 73
   stars_growth_pct: 0.8
-  trending_score: 74.6
+  trending_score: 73.58
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9099
     - 9173
+    - 9246
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: nexu-io/html-anything
   path: next/src/lib/templates/skills/deck-product-launch/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:36.182Z
+  fetched_at: 2026-10-26T07:43:59.806Z
   truncated: false
 type: agent_skill
 skill:

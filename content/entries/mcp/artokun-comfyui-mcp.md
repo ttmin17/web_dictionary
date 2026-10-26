@@ -18,24 +18,25 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: artokun/comfyui-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 840
-  last_commit: 2026-10-14T15:35:51Z
-  stars_delta_7d: 21
-  stars_growth_pct: 2.6
-  trending_score: 21.54
-  rank_current: 42
-  rank_delta: null
+  stars: 863
+  last_commit: 2026-10-25T07:16:17Z
+  stars_delta_7d: 23
+  stars_growth_pct: 2.7
+  trending_score: 23.63
+  rank_current: 53
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 819
     - 840
+    - 863
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: artokun/comfyui-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.252Z
+  fetched_at: 2026-10-26T07:38:48.278Z
   truncated: false
 type: mcp_server
 launch:
@@ -58,14 +59,6 @@ launch:
 ---
 
 # comfyui-mcp — drive ComfyUI with ANY LLM
-> [!NOTE]
-> **Limited maintenance has resumed.** We support the local Agent Panel and your choice of
-> provider, including offline models. Releases focus on verified critical fixes; there is
-> no broad feature roadmap. Automatic issue reporting remains disabled.
->
-> We will reassess support when Comfy’s official local panel becomes publicly available.
-> [Maintenance update](https://comfyui-mcp.artokun.io/docs/blog/goodbye).
-
 <p align="center">
   <a href="https://comfyui-mcp.artokun.io/docs">
     <img src="https://raw.githubusercontent.com/artokun/comfyui-mcp/main/docs/images/demo-poster.jpg" width="760"
@@ -441,8 +434,9 @@ Install [comfy-cli](https://docs.comfy.org/comfy-cli/getting-started#install-cli
 | Tool | Description |
 |------|-------------|
 | `restart_comfyui` `action:"restart"` | Stop and restart ComfyUI, preserving all launch arguments |
-| `restart_comfyui` `action:"stop"` | Stop the running ComfyUI process (saves PID and launch args for restart) |
-| `restart_comfyui` `action:"start"` | Start ComfyUI using info saved from a previous stop |
+| `restart_comfyui` `action:"stop"` | Stop the running ComfyUI process (saves PID and launch args for restart; on Windows, `action:"start"` cannot bring it back) |
+| `restart_comfyui` `action:"start"` | Start ComfyUI using info saved from a previous stop (macOS/Linux; refused on Windows) |
+| `restart_comfyui` `action:"status"` | Read-only: what start/stop/restart would do now, and whether a stop could be undone by this tool. Call it before `stop` |
 
 ### Generation Tracker
 

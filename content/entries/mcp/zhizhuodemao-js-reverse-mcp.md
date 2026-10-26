@@ -13,28 +13,29 @@ tags:
   - cdp
   - chrome-devtools
 status: active
-quality_percentile: 51
+quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2025-11-29T15:42:31
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zhizhuodemao/js-reverse-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2979
+  stars: 3001
   last_commit: 2026-09-03T11:45:13Z
-  stars_delta_7d: 34
-  stars_growth_pct: 1.2
-  trending_score: 34.39
-  rank_current: 30
-  rank_delta: null
+  stars_delta_7d: 22
+  stars_growth_pct: 0.7
+  trending_score: 22.16
+  rank_current: 57
+  rank_delta: -27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2904
     - 2945
     - 2979
+    - 3001
 language: zh
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: zhizhuodemao/js-reverse-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.196Z
+  fetched_at: 2026-10-26T07:37:58.878Z
   truncated: false
 type: mcp_server
 launch:

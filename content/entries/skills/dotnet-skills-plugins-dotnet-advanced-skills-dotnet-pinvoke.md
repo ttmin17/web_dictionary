@@ -8,10 +8,10 @@ categories:
 tags:
   - agent-skills
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: dotnet/skills
@@ -19,16 +19,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 5669
-  last_commit: 2026-10-19T07:23:49Z
-  stars_delta_7d: 52
-  stars_growth_pct: 0.9
-  trending_score: 52.48
+  stars: 5730
+  last_commit: 2026-10-26T07:32:44Z
+  stars_delta_7d: 61
+  stars_growth_pct: 1.1
+  trending_score: 61.66
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5571
     - 5617
     - 5669
+    - 5730
 language: en
 needs_keys: false
 prerequisites: []
@@ -36,7 +37,7 @@ readme_source:
   repo: dotnet/skills
   path: plugins/dotnet-advanced/skills/dotnet-pinvoke/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:38.125Z
+  fetched_at: 2026-10-26T07:45:03.646Z
   truncated: false
 type: agent_skill
 skill:
@@ -46,7 +47,7 @@ skill:
   extra_files:
     - references/diagnostics.md
     - references/type-mapping.md
-  pack_total_skills: 107
+  pack_total_skills: 108
   is_pack_primary: false
   clients:
     - claude-code
@@ -88,8 +89,7 @@ This skill covers both `DllImport` (available since .NET Framework 1.0) and `Lib
 
 **Agent behavior:** When documentation and native headers diverge, always trust the header. Online documentation (including official Win32 API docs) frequently omits or simplifies details about types, calling conventions, and struct layout that are critical for correct P/Invoke signatures.
 
----
-## Workflow
+---## Workflow
 
 ### Step 1: Choose DllImport or LibraryImport
 
@@ -372,8 +372,7 @@ NativeUsesCallback(fnPtr);
 GC.KeepAlive(callback); // prevent collection — fnPtr does not root the delegate
 ```
 
----
-## Cross-Platform Library Loading
+---## Cross-Platform Library Loading
 
 Use `NativeLibrary.SetDllImportResolver` for complex scenarios, or conditional compilation for simple cases. Use `CLong`/`CULong` for C `long`/`unsigned long`. Note: `CLong`/`CULong` with `LibraryImport` requires `[assembly: DisableRuntimeMarshalling]`.
 
@@ -412,8 +411,7 @@ NativeLibrary.SetDllImportResolver(typeof(MyLib).Assembly,
     });
 ```
 
----
-## Migrating DllImport to LibraryImport
+---## Migrating DllImport to LibraryImport
 
 For codebases targeting .NET 7+, migrating provides AOT compatibility and trimming safety.
 
@@ -433,8 +431,7 @@ Enable the interop analyzers:
 </PropertyGroup>
 ```
 
----
-## Tooling
+---## Tooling
 
 ### CsWin32 (Win32 APIs)
 
@@ -452,8 +449,7 @@ For WinRT interop, use [Microsoft.Windows.CsWinRT](https://github.com/microsoft/
 
 For binding Objective-C libraries (macOS/iOS), use [Objective Sharpie](https://learn.microsoft.com/previous-versions/xamarin/cross-platform/macios/binding/objective-sharpie) to generate initial P/Invoke and binding definitions from Objective-C headers.
 
----
-## Validation
+---## Validation
 
 ### Review checklist
 

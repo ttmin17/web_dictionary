@@ -11,15 +11,15 @@ summary: "Sonilo, an audio family on Scenario, splits along two axes: what the
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -27,15 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/scenario-sonilo/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.890Z
+  fetched_at: 2026-10-26T07:38:47.969Z
   truncated: false
 type: agent_skill
 skill:
@@ -57,7 +58,7 @@ skill:
     keepSpeechVocal, segments, royalty-free."
   folder_path: skills/scenario-sonilo
   extra_files: []
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: false
   clients:
     - claude-code

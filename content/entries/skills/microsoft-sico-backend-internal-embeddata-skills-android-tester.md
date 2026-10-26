@@ -14,7 +14,7 @@ status: active
 quality_percentile: 61
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: microsoft/Sico
@@ -22,14 +22,17 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 283
-  last_commit: 2026-10-15T06:34:50Z
-  stars_delta_7d: 8
+  stars: 282
+  last_commit: 2026-10-24T01:40:19Z
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  rank_current: 140
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 283
+    - 282
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +40,7 @@ readme_source:
   repo: microsoft/Sico
   path: backend/internal/embeddata/skills/android-tester/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:41:31.705Z
+  fetched_at: 2026-10-26T07:45:53.390Z
   truncated: false
 type: agent_skill
 skill:

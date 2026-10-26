@@ -11,10 +11,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3475
-  last_commit: 2026-10-17T01:17:07Z
-  stars_delta_7d: 38
-  stars_growth_pct: 1.1
-  trending_score: 38.42
+  stars: 3530
+  last_commit: 2026-10-23T15:17:59Z
+  stars_delta_7d: 55
+  stars_growth_pct: 1.6
+  trending_score: 55.87
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
+    - 3530
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-forensics/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:39.008Z
+  fetched_at: 2026-10-26T07:44:56.560Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +57,7 @@ skill:
     - peripheral-capture.md
     - signals-and-hardware.md
     - steganography.md
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: false
   clients:
     - claude-code
@@ -109,8 +110,7 @@ gem install zsteg
 - [linux-forensics.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/linux-forensics.md) - Linux/app forensics (log analysis, Docker image forensics, attack chains, browser credentials, Firefox history, TFTP, TLS weak RSA, USB audio, Git directory recovery, KeePass v4 cracking, Git reflog/fsck squash recovery, browser artifact analysis (Chrome/Chromium/Firefox history, cookies, downloads, local storage, session restore), corrupted git blob repair via byte brute-force, VBA macro Excel cell data to ELF binary extraction, Python in-memory source recovery via pyrasite)
 - [signals-and-hardware.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/signals-and-hardware.md) - Hardware signal decoding with decode code (VGA frame parsing, HDMI TMDS symbol decode, DisplayPort 8b/10b + LFSR descrambler), Voyager Golden Record audio, Saleae Logic 2 UART decode, Flipper Zero .sub files, side-channel power analysis (DPA), keyboard acoustic side-channel, CD audio disc image steganography (CIRC de-interleaving + spiral rendering), caps-lock LED Morse code from video, Linux input_event keylogger dump parsing, serial UART from WAV audio, USB MIDI Launchpad grid reconstruction
 
----
-## When to Pivot
+---## When to Pivot
 
 - If you recover an encrypted blob and the hard part becomes RSA, AES, or lattice work, switch to `/ctf-crypto`.
 - If the evidence really points to malware staging, beacon config extraction, or packed samples, switch to `/ctf-malware`.

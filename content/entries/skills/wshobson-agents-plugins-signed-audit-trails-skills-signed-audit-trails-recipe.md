@@ -16,7 +16,7 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: wshobson/agents
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 41052
-  last_commit: 2026-10-19T01:07:28Z
-  stars_delta_7d: 462
-  stars_growth_pct: 1.1
-  trending_score: 467.26
+  stars: 41725
+  last_commit: 2026-10-26T01:08:14Z
+  stars_delta_7d: 673
+  stars_growth_pct: 1.6
+  trending_score: 684.03
   velocity_source: snapshot_delta
   sparkline_4w:
     - 40271
     - 40590
     - 41052
+    - 41725
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: wshobson/agents
   path: plugins/signed-audit-trails/skills/signed-audit-trails-recipe/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:40.660Z
+  fetched_at: 2026-10-26T07:42:26.205Z
   truncated: false
 type: agent_skill
 skill:

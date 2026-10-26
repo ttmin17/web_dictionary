@@ -12,28 +12,29 @@ tags:
   - open-webui
   - openapi
 status: active
-quality_percentile: 8
+quality_percentile: 6
 selection_reason: quality_percentile
 first_seen: 2025-03-30T10:03:03
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: open-webui/mcpo
   official_vendor: false
   license: MIT
 signals:
-  stars: 4405
+  stars: 4411
   last_commit: 2026-05-17T20:40:30Z
   stars_delta_7d: 6
   stars_growth_pct: 0.1
   trending_score: 6.01
-  rank_current: 68
-  rank_delta: null
+  rank_current: 82
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4392
     - 4399
     - 4405
+    - 4411
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: open-webui/mcpo
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.542Z
+  fetched_at: 2026-10-26T07:36:59.056Z
   truncated: false
 type: mcp_server
 launch:

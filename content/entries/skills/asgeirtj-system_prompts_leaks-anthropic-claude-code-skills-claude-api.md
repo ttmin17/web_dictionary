@@ -16,10 +16,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 85
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -27,14 +27,15 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 69880
-  last_commit: 2026-10-16T08:29:42Z
-  stars_delta_7d: 885
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 70224
+  last_commit: 2026-10-25T19:55:03Z
+  stars_delta_7d: 344
+  stars_growth_pct: 0.5
+  trending_score: 345.69
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
+    - 70224
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/claude-api/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:14.460Z
+  fetched_at: 2026-10-26T07:42:00.809Z
   truncated: true
 type: agent_skill
 skill:
@@ -79,7 +80,7 @@ skill:
     - curl/managed-agents.md
     - go/claude-api/README.md
     - go/claude-api/files-api.md
-  pack_total_skills: 205
+  pack_total_skills: 217
   is_pack_primary: false
   clients:
     - claude-code
@@ -102,9 +103,11 @@ When the user asks you to add, modify, or implement a Claude feature, your code 
 
 Never mix the two - don't reach for `requests`/`fetch` in a Python or TypeScript project just because it feels lighter. Never fall back to OpenAI-compatible shims.
 
-**Never guess SDK usage.** Function names, class names, namespaces, method signatures, and import paths must come from explicit documentation - either the `{lang}/` files in this skill or the official SDK repositories or documentation links listed in `shared/live-sources.md`. If the binding you need is not explicitly documented in the skill files, WebFetch the relevant SDK repo from `shared/live-sources.md` before writing code. Do not infer Ruby/Java/Go/PHP/C# APIs from cURL shapes or from another language's SDK.
+**Never guess SDK usage.** Function names, class names, namespaces, method signatures, and import paths must come from explicit documentation - either the `{lang}/` files in this skill or the official SDK repositories or documentation links listed in `shared/live-sources.md`. If the binding you need is not explicitly documented in the skill files, fetch the relevant SDK repo from `shared/live-sources.md` before writing code. Do not infer Ruby/Java/Go/PHP/C# APIs from cURL shapes or from another language's SDK.
 
-**If WebFetch or repository access fails** (network restricted, timeouts, clone blocked): do not keep retrying - write code from the patterns and namespace/package tables in the `{lang}/` file, run the compiler or interpreter on it, and iterate on the error output. For statically-typed SDKs (C#, Java, Go) a compile-fix loop against local errors reaches working code faster than blocked network research.
+If you cannot call WebFetch yet and ToolSearch is among your tools, call ToolSearch with `select:WebFetch` first; of the tools it loads, call only the one named exactly `WebFetch`.
+
+**If fetching or repository access fails** (network restricted, timeouts, clone blocked): do not keep retrying - write code from the patterns and namespace/package tables in the `{lang}/` file, run the compiler or interpreter on it, and iterate on the error output. For statically-typed SDKs (C#, Java, Go) a compile-fix loop against local errors reaches working code faster than blocked network research.
 
 ## Defaults
 
@@ -136,7 +139,8 @@ If the User Request at the bottom of this prompt is a bare subcommand string (no
 |---|---|
 | `migrate` | Migrate existing Claude API code to a newer model. **Read `shared/model-migration.md` immediately** and follow it in order: Step 0 (confirm scope - ask which files/directories before any edit), Step 1 (classify each file), then the per-target breaking-changes section. Do not summarize the guide - execute it. If the user did not name a target model, ask which model to migrate to in the same turn as the scope question. After the per-target changes are applied, audit the in-scope prompt text, tool descriptions, and request code against `shared/prompt-audit.md` - prompting written for the source model is part of every migration, and it does not announce itself. |
 | `prompt-audit` | Audit existing prompts, tool descriptions, skills, and agent configuration files (`CLAUDE.md`, rule files, commands, subagents) for dated patterns ("cruft"): text written for older models, and instructions the repository has outgrown or that contradict each other. **Read `shared/prompt-audit.md` immediately** and follow it in order: Step 0 (establish scope and target model from the request and the repository - state the assumptions in the report, do not stop to ask), inventory, provenance, then the pattern scan. Produce both deliverables in full - the audit report (findings with `file:line`, pattern, why it's obsolete, confidence) and a proposed diff - without pausing for confirmation; apply edits only if the request explicitly asked for them. Do not summarize the guide - execute it. |
-| `upgrade` | Upgrade the project's Anthropic SDK dependency across a major version - currently the Python SDK, `anthropic` 0.x -> 1.x. Trailing words may name the language and/or a scope (`upgrade python`, `upgrade python sdk src/`). **Read `python/claude-api/sdk-upgrade.md` immediately** and follow it in order: Step 0 (confirm scope, then establish the current and target versions - a published 1.x must exist before you write a pin), the Step 1 inventory, each numbered section, then verification and the report. Do not summarize the guide - execute it. If the detected or named language has no `sdk-upgrade.md` in this skill, say that no major-version upgrade guide is bundled for that SDK yet and point the user at that SDK's CHANGELOG (repositories in `shared/live-sources.md`); do not improvise one from the Python guide. This is not model migration - to move code to a newer Claude model, use `migrate`. |
+| `upgrade` | Upgrade the project's Anthropic SDK dependency across a major version. Trailing words may name the language and/or a scope (`upgrade python`, `upgrade python sdk src/`). Read the declared version first. Python 1.x, other SDKs and the `ant` CLI: follow the `api-version` row if the upgrade reaches or passes the release in its guide's "Set the version" table; if not, point the user at that SDK's CHANGELOG (repositories in `shared/live-sources.md`). Don't improvise from the Python guide. Python 0.x: **read `python/claude-api/sdk-upgrade.md` immediately** and follow it in order: Step 0 (confirm scope, then establish the current and target versions - a published 1.x must exist before you write a pin), the Step 1 inventory, each numbered section, then verification and the report. Do not summarize the guide - execute it. This is not model migration - to move code to a newer Claude model, use `migrate`. |
+| `api-version` | Move code to a newer API version (`anthropic-version` header). **Read `shared/api-version-migration.md` immediately** and follow it in order. |
 | `cost-optimize` | Reduce what existing Claude API code costs to run, without sacrificing output quality. **Read `shared/cost-optimization.md` immediately** and follow it in order: Step 0 (establish scope, quality bar, and baseline), the token profile - measured through the Usage and Cost Admin API when the user has an Admin API key, from the app's own `response.usage` logs when it has those (ask), or estimated from the code otherwise - then a savings-ranked shortlist of levers (quoted in dollars, % of bill, or relative buckets depending on which of those data sources you have), free wins (caching, input-token hygiene, loop hygiene, output-token hygiene, batch) before tradeoffs (budgets, effort, model choice, multi-model); any lever that earns a place becomes its own diff - proposed by default, applied and measured against the eval covering the traffic it touches when the user asks and approves - and "no changes recommended" is a valid outcome. Two standing rules: every run that exercises the model spends real money, so get the user's approval first; and when context for a lever is missing, work through it interactively with the user - this workflow is not expected to one-shot the audit. Do not summarize the guide - execute it; presenting the profile and the ranked plan to the user is part of executing it. |
 | `build-eval` | Help the user build an eval set for their Claude-powered app. **Read `shared/evals/build-eval.md` immediately** and run its interview: Step 0 (what's being evaluated), Step 1 (source the prompts - existing eval / transcripts / synthesized), Step 2 (grading method), Step 3 (runnable script + measured cost). Get the user's explicit sign-off on the inputs, the grading method, and the cost before producing the eval. |
 | `preserved-thinking-migration` | Make an existing integration compatible with preserved thinking - the check that keeps a thinking block valid only in the conversation that produced it. **Read `shared/preserved-thinking-migration.md` immediately** and follow it in order: Step 0 (scope, traffic classes, platform and model, enforcement status, quality bar, baseline), Step 0.5 (prove the check is running with the three-request self-test), Step 1 (capture request bodies, diff consecutive pairs with `shared/preserved-thinking-migration/prefix_diff.py`, scan the code for the causes, name each edit and whether it is deliberate), Step 2 (replay a test slice with `prefix_mismatch_behavior: "drop_block"` under the `thinking-binding-controls-2026-08-01` header, count new dropped blocks per conversation, read the diagnosis header when present), Step 3 (one cause per diff in order of reasoning lost - proposed by default, applied when the user asks - then re-measure, keep or revert; the three-arm protocol when an eval exists), the model-switch section (in `shared/preserved-thinking-migration/causes.md`, with the cause table and the keep list) when the harness routes between models, Step 4 (the break profile and the changes). Two standing rules: every replay spends real money, so get the user's approval for the measurement budget first; and "no changes recommended" - the slice replayed thinking and nothing was dropped - is a valid outcome. Causes that have an append-only form only under a newer beta (keep-tail and background compaction: `compact-2026-09-04`; same-name tool changes: `inline-tools-2026-09-15`) are, where that beta is not available, measured and decided, not rewritten. For the *why* (the three-step check, the append-only edit table) it chains to `shared/model-migration.md` -> Breaking change 3; do not summarize the guide - execute it. |
@@ -201,7 +205,7 @@ Every SDK language above supports both the beta Tool Runner and Managed Agents (
 | Long-running multi-turn agent with file mounts  | Agent           | **Managed Agents**        | Per-session containers, SSE event stream, Skills + MCP       |
 | Agent that runs on a schedule (cron, "every night") | Agent       | **Managed Agents** - scheduled deployments | Deployments fire sessions autonomously; no client-side scheduler |
 | One deliverable that must meet a quality bar ("until it's right") | Agent | **Managed Agents** - outcomes | A separate grader iterates the agent against your rubric until it passes |
-| Agent work too big to hand out one task at a time | Agent | **Managed Agents** - dynamic workflows | Many agents in phases |
+| Agent work split across several agents | Agent | **Managed Agents** - dynamic workflows | Many agents in phases |
 
 > **Note:** Managed Agents is the right choice when you want Anthropic to run the agent loop *and* host the container where tools execute - file ops, bash, code execution all run in the per-session workspace. If you want to host the compute yourself or run your own custom tool runtime, Claude API + tool use is the right choice - use the tool runner for the agentic loop - its per-turn hooks still give you approval gates, logging, error interception, and conditional execution (see `shared/tool-use-concepts.md`) - or the manual loop when you want to own the entire loop yourself.
 
@@ -273,7 +277,7 @@ Everything goes through `POST /v1/messages`. Tools and output constraints are fe
 | Claude Haiku 5.5 | `claude-haiku-5-5` | 1M | $0.10 | $0.50 |
 | Claude Haiku 4.5  | `claude-haiku-4-5`  | 200K           | $1.00      | $5.00       |
 
-**Partner pricing:** The prices above are Anthropic first-party API rates - they also apply to Claude on Microsoft Foundry, which is billed through the Microsoft Marketplace at standard API rates. Claude on Amazon Bedrock and Vertex AI is partner-operated with separate pricing - see [Bedrock](https://aws.amazon.com/bedrock/pricing/) or [Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/pricing#claude-models). For WebFetch, use the Pricing row in `shared/live-sources.md`.
+**Partner pricing:** The prices above are Anthropic first-party API rates - they also apply to Claude on Microsoft Foundry, which is billed through the Microsoft Marketplace at standard API rates. Claude on Amazon Bedrock and Vertex AI is partner-operated with separate pricing - see [Bedrock](https://aws.amazon.com/bedrock/pricing/) or [Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/pricing#claude-models). For current prices, use the Pricing row in `shared/live-sources.md`.
 
 **ALWAYS use `claude-opus-5-5` unless the user explicitly names a different model.** This is non-negotiable. Do not use `claude-sonnet-5-5`, `claude-sonnet-5`, or any other model unless the user literally says "use sonnet" or "use haiku". Never downgrade for cost - that's the user's decision, not yours. A request that describes a Sonnet by attribute ("cheapest Sonnet", "cheaper Sonnet", "newest Sonnet", "latest Sonnet") resolves to `claude-sonnet-5-5`. Where a second, cheaper model is in play alongside the main one (worker or sub-agent threads, bulk extractors, LLM judges, the executor under an advisor) - because the user asked for one or a guide in this skill calls for it - or the user says "sonnet" or "haiku" without a version, that means the current generation from the table above (`claude-sonnet-5-5`, `claude-haiku-5-5`); previous-generation IDs such as `claude-sonnet-5` are only for users who name that version. Use `claude-fable-5-1` only when the user explicitly asks for Claude Fable 5.1, "fable", or Anthropic's most capable model - it has different API behavior than the Opus family (see below) and pricing that exceeds Opus-tier. **Use only the exact model ID strings from the table - they are complete as-is; never append date suffixes** (`claude-opus-5-5`, never `claude-opus-5-5-20260401` or any other date-suffixed variant you might recall from training data). If the user requests an older model not in the table (e.g., "opus 4.5", "sonnet 3.7"), read `shared/models.md` for the exact ID - do not construct one yourself.
 
@@ -339,6 +343,8 @@ Use adaptive thinking (`thinking: {type: "adaptive"}`) on every current model ex
 | Opus 4.6 / Sonnet 4.6 | `{type: "adaptive"}` (recommended; auto-enables interleaved thinking, no beta header) | Set `{type: "adaptive"}` explicitly | Deprecated - do not use in new code; transitional escape hatch only (see below) | Allowed | `low`/`medium`/`high`/`max` (`xhigh` arrived with Opus 4.7) |
 | Haiku 4.5; older models (Sonnet 4.5, ...) only if explicitly requested | `{type: "enabled", budget_tokens: N}` | No thinking | Required for thinking; must be less than `max_tokens`, minimum 1024 - errors otherwise | Allowed | `effort` works on Opus 4.5 (`low`/`medium`/`high` only - no `xhigh`/`max`); errors on Sonnet 4.5 / Haiku 4.5 |
 
+On `2026-10-21`, a Messages request sending `temperature`, `top_p` or `top_k` returns a 400 on every model; read `shared/api-version-migration.md` before removing them.
+
 Opus 4.8 keeps 4.7's request surface - see `shared/model-migration.md` -> Migrating to Opus 4.8 (and -> Migrating to Opus 4.7 from 4.6 or earlier). With `thinking` disabled, Opus 4.8 may write longer reasoning into the visible response - leave adaptive thinking on, or add a final-answer-only instruction.
 
 - **Effort (GA, no beta header):** `output_config: {effort: "low"|"medium"|"high"|"xhigh"|"max"}` - inside `output_config`, not top-level; default `high` (equivalent to omitting it) on every current model except Claude Opus 5.5 and Claude Haiku 5.5, whose default is `medium` (thinking table above) - set it explicitly there. Controls thinking depth and overall token spend; combine with adaptive thinking for the best cost-quality tradeoffs. `xhigh` (added on Opus 4.7, between `high` and `max`) is the best setting for most coding and agentic use cases on Fable 5 / Opus 4.7/4.8 / Sonnet 5, and the default in Claude Code; effort matters more on those models than on any prior model in their tier - re-tune it when migrating, and run long-horizon/agentic tasks at `high`/`xhigh` with the full task spec given up front. Use a minimum of `high` for intelligence-sensitive work, `max` when correctness matters more than cost, and `low` for subagents or simple tasks - lower effort means fewer and more-consolidated tool calls, less preamble, and terser confirmations (`high` is often the sweet spot balancing quality and token efficiency).
@@ -354,7 +360,7 @@ Opus 4.8 keeps 4.7's request surface - see `shared/model-migration.md` -> Migrat
 
 **Critical:** Append `response.content` (not just the text) back to your messages on every turn. Compaction blocks in the response must be preserved - the API uses them to replace the compacted history on the next request. Extracting only the text string and appending that will silently lose the compaction state.
 
-See `{lang}/claude-api/README.md` (Compaction section) for code examples. Full docs via WebFetch in `shared/live-sources.md`.
+See `{lang}/claude-api/README.md` (Compaction section) for code examples. Full docs: the Compaction row in `shared/live-sources.md`.
 
 ---
 
@@ -451,9 +457,5 @@ Use the **Mantle** client (Messages-API Bedrock endpoint). Bedrock model IDs tak
 | PHP | `Foundry\Client::withCredentials(...)` |
 
 The Go and Ruby SDKs do not currently support Foundry. For Ruby, use the standard `Anthropic::Client.new(base_url: "<foundry endpoint>")` as a fallback (Entra ID auth is not built in). For Claude Platform on AWS, see `shared/claude-platform-on-aws.md`.
-
-### Google Cloud Vertex AI
-
-Two required constructor args: GCP `project_id` and `region`. Vertex model IDs take **no prefix** - current-generation models (Opus 5.5/5/4.8/4.7/4.6, Sonnet 5.5, Sonnet 5, Sonnet 4.6) use the bare first-party ID (e.g. `"claude-opus-5-5"`); dated-snapshot models use an `@` version separator (e.g. `claude-opus-4-5@20251101`, **not** `claude-opus-4-5-20251101`). Auth is GCP ADC (`gcloud auth application-default login`); no Anthropic API key. `region` can be `"global"` (recommended), a multi-region (`"us"`/`"eu"`), or a specific region. After construction, use the same `messages.create` / `.stream` surface.
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/asgeirtj/system_prompts_leaks)).*

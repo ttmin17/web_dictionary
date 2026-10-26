@@ -13,28 +13,29 @@ tags:
   - anthropic
   - anti-bot-bypass
 status: active
-quality_percentile: 56
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: vibheksoni/stealth-browser-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3000
-  last_commit: 2026-10-12T13:19:48Z
-  stars_delta_7d: 777
-  stars_growth_pct: 35
-  trending_score: 1048.58
-  rank_current: 2
-  rank_delta: null
+  stars: 3281
+  last_commit: 2026-10-24T06:02:59Z
+  stars_delta_7d: 281
+  stars_growth_pct: 9.4
+  trending_score: 307.32
+  rank_current: 8
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2212
     - 2223
     - 3000
+    - 3281
 language: en
 needs_keys: false
 prerequisites:
@@ -44,14 +45,14 @@ readme_source:
   repo: vibheksoni/stealth-browser-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:33:27.211Z
+  fetched_at: 2026-10-26T07:37:00.858Z
   truncated: false
 type: mcp_server
 launch:
   transport: stdio
   command: uvx
   args:
-    - stealth-browser-mcp
+    - browserstealthmcp
   env_vars: []
   confidence: manifest
 ---
@@ -67,11 +68,11 @@ launch:
 Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrome-family browser instances powered by [nodriver](https://github.com/ultrafunkamsterdam/nodriver), Chrome DevTools Protocol, and [FastMCP](https://github.com/jlowin/fastmcp).
 
 [![MCP](https://img.shields.io/badge/MCP-Compatible-blue?style=flat-square)](https://modelcontextprotocol.io)
-[![Version](https://img.shields.io/badge/version-0.2.5-blue?style=flat-square)](https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/pyproject.toml)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square)](https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/pyproject.toml)
+[![PyPI](https://img.shields.io/pypi/v/browserstealthmcp?style=flat-square)](https://pypi.org/project/browserstealthmcp/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square)](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/pyproject.toml)
 [![Stars](https://img.shields.io/github/stars/vibheksoni/stealth-browser-mcp?style=flat-square)](https://github.com/vibheksoni/stealth-browser-mcp/stargazers)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/CONTRIBUTING.md)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/CONTRIBUTING.md)
 
 </div>
 
@@ -129,7 +130,7 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 <div align="center">
 <img src="https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/media/showcase-demo-full.gif" alt="Stealth Browser MCP demo" width="800" style="border-radius: 8px;">
 <br><br>
-<a href="https://github.com/vibheksoni/stealth-browser-mcp/blob/master/media/Showcase%20Stealth%20Browser%20Mcp.mp4" download>
+<a href="https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/media/Showcase%20Stealth%20Browser%20Mcp.mp4" download>
   <img src="https://img.shields.io/badge/Watch%20HD%20Video-red?style=for-the-badge&logo=video&logoColor=white" alt="Watch HD Video">
 </a>
 </div>
@@ -156,9 +157,21 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 
 ## Quickstart
 
-### 1. Clone and install
+### 1. Install
 
 Requires Python 3.10+ and Chrome, Chromium, or Microsoft Edge.
+
+**With pipx (recommended):**
+
+```bash
+pipx install browserstealthmcp
+```
+
+This puts a `stealth-browser-mcp` command on your `PATH`. Upgrade with `pipx upgrade browserstealthmcp`. `uvx browserstealthmcp` runs it without installing. To run the latest commit instead of a release, use `pipx install git+https://github.com/vibheksoni/stealth-browser-mcp.git`.
+
+The PyPI package is named `browserstealthmcp` because `stealth-browser-mcp` on PyPI belongs to a different, unrelated project. `pipx install stealth-browser-mcp` installs that project, not this one.
+
+**From a clone (for development):**
 
 ```bash
 git clone https://github.com/vibheksoni/stealth-browser-mcp.git
@@ -176,7 +189,29 @@ pip install -r requirements.txt
 
 ### 2. Add to your MCP client
 
-**Claude Code CLI (recommended):**
+**Installed with pipx:**
+
+```bash
+claude mcp add stealth-browser-mcp -- stealth-browser-mcp
+```
+
+Or in any client's JSON config:
+
+```json
+{
+  "mcpServers": {
+    "stealth-browser-mcp": {
+      "command": "stealth-browser-mcp",
+      "args": [],
+      "env": {}
+    }
+  }
+}
+```
+
+If your client cannot find the command, use the full path printed by `pipx list`. With uv you can skip the install and use `"command": "uvx", "args": ["browserstealthmcp"]`.
+
+**From a clone with Claude Code CLI:**
 
 Windows:
 
@@ -279,12 +314,14 @@ Choose exactly what functionality you need. Run the full 101-tool suite or strip
 | **Xpool safe** (`--xpool-safe`) | 84 | Disable CDP function tools that trigger `Runtime.enable` |
 
 ```bash
-python src/server.py --minimal
-python src/server.py --disable-cdp-functions --disable-dynamic-hooks
-python src/server.py --list-sections
-python src/server.py --debug
-python src/server.py --transport http --host 127.0.0.1 --port 8000
+stealth-browser-mcp --minimal
+stealth-browser-mcp --disable-cdp-functions --disable-dynamic-hooks
+stealth-browser-mcp --list-sections
+stealth-browser-mcp --debug
+stealth-browser-mcp --transport http --host 127.0.0.1 --port 8000
 ```
+
+From a clone, `python src/server.py` takes the same flags.
 
 Use `--debug` or set `STEALTH_BROWSER_DEBUG=1` to enable verbose server diagnostics on `stderr`. Normal MCP `stdio` runs stay quiet by default to avoid corrupting JSON-RPC transport output.
 
@@ -319,7 +356,8 @@ These are environment variables for the MCP server process. Set them in your she
 | `BROWSER_TAB_RECYCLE_NAVIGATIONS` | `0` | Replace the main tab with a fresh one after this many navigations. `0` keeps the same tab, which preserves history and session storage. |
 | `BROWSER_ORPHAN_PROFILE_MAX_AGE` | `21600` | Startup cleanup threshold in seconds for stale `uc_*` temp profiles. Set `0` to disable this startup sweep. |
 | `STEALTH_BROWSER_EXECUTABLE` | auto-detect | Path to the Chrome, Chromium, or Edge executable to launch instead of the auto-detected one. |
-| `BROWSER_FILE_UPLOAD_ALLOWED_DIRS` | repo root | Directories that `file_upload()` may read from. Separate multiple roots with `;` on Windows or `:` on macOS/Linux. |
+| `BROWSER_FILE_UPLOAD_ALLOWED_DIRS` | repo root or data dir | Directories that `file_upload()` may read from. Separate multiple roots with `;` on Windows or `:` on macOS/Linux. Defaults to the repo root for a clone and to the `uploads` folder in the data directory for an installed package. |
+| `STEALTH_BROWSER_MCP_DATA_DIR` | repo root or user data dir | Where element clones and large responses are written. Defaults to the repo root for a clone, and for an installed package to `%LOCALAPPDATA%\stealth-browser-mcp` on Windows, `~/Library/Application Support/stealth-browser-mcp` on macOS, or `$XDG_DATA_HOME/stealth-browser-mcp` (`~/.local/share/stealth-browser-mcp`) on Linux. |
 | `STEALTH_BROWSER_DEBUG` | `0` | Enable verbose debug logging to `stderr` when set to `1`. |
 | `DEBUG` | `0` | Legacy alias for `STEALTH_BROWSER_DEBUG`. |
 | `XPOOL_SAFE_MODE` | `0` | Disable the `cdp-functions` section at startup. |
@@ -409,6 +447,8 @@ client = Client(
 | `execute_script()` | Run page JavaScript |
 | `get_page_content()` | Read page HTML and text |
 | `take_screenshot()` | Capture screenshots |
+
+`take_screenshot` returns an MCP image with metadata (format, size, scale, quality, byte count, SHA-256), so remote clients can show it without reading the server's disk. Large captures, such as long full-page screenshots, are scaled down to fit client limits (8000 px per side, about 5 MB), and the metadata reports the original size. Pass `format="jpeg"` with a lower `quality`, or `max_width`, for smaller images, or `file_path` to save the full-resolution image on the server.
 
 </details>
 

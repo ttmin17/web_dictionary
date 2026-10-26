@@ -17,25 +17,26 @@ status: active
 quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2020-10-20T08:49:48
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: devlikeapro/waha
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 7629
-  last_commit: 2026-10-15T09:41:27Z
-  stars_delta_7d: 42
-  stars_growth_pct: 0.6
-  trending_score: 42.23
-  rank_current: 26
-  rank_delta: null
+  stars: 7685
+  last_commit: 2026-10-22T10:49:15Z
+  stars_delta_7d: 56
+  stars_growth_pct: 0.7
+  trending_score: 56.41
+  rank_current: 33
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7562
     - 7587
     - 7629
+    - 7685
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: devlikeapro/waha
   path: README.md
   branch: core
-  fetched_at: 2026-10-19T07:32:28.467Z
+  fetched_at: 2026-10-26T07:36:57.975Z
   truncated: false
 type: mcp_server
 launch:

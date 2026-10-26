@@ -11,10 +11,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3475
-  last_commit: 2026-10-17T01:17:07Z
-  stars_delta_7d: 38
-  stars_growth_pct: 1.1
-  trending_score: 38.42
+  stars: 3530
+  last_commit: 2026-10-23T15:17:59Z
+  stars_delta_7d: 55
+  stars_growth_pct: 1.6
+  trending_score: 55.87
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
+    - 3530
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-crypto/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:39.008Z
+  fetched_at: 2026-10-26T07:44:56.560Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +57,7 @@ skill:
     - lattice-and-lwe.md
     - modern-ciphers-2.md
     - modern-ciphers-3.md
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: false
   clients:
     - claude-code
@@ -116,8 +117,7 @@ brew install hashcat
 - [exotic-crypto.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-crypto/exotic-crypto.md) - Exotic algebraic structures (braid group DH / Alexander polynomial, monotone function inversion, tropical semiring residuation, Paillier cryptosystem, Hamming code helical interleaving, ElGamal universal re-encryption, FPE Feistel brute-force, icosahedral symmetry group cipher, Goldwasser-Micali replication oracle)
 - [exotic-crypto-2.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-crypto/exotic-crypto-2.md) - Exotic algebraic structures (Part 2, 2017+): BB-84 QKD MITM, ElGamal trivial DLP (B=p-1), Paillier LSB oracle via homomorphic doubling, differential privacy noise cancellation, homomorphic encryption bit-extraction, ElGamal over matrices via Jordan normal form, OSS signature forgery via Pollard, Cayley-Purser decryption without private key, BIP39 partial mnemonic checksum brute force, Asmuth-Bloom CRT threshold recovery, Rabin with polynomial primes, LCG period detection, Vandermonde polynomial coefficient recovery
 
----
-## When to Pivot
+---## When to Pivot
 
 - If the real blocker is understanding a binary, obfuscated client, or weird VM, switch to `/ctf-reverse`.
 - If the challenge is mostly packet carving, disk recovery, or stego extraction before any decryption starts, switch to `/ctf-forensics`.

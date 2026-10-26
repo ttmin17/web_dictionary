@@ -11,10 +11,10 @@ tags:
   - berkshire-hathaway
   - charlie-munger
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: xbtlin/ai-berkshire
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16790
-  last_commit: 2026-10-19T07:28:05Z
-  stars_delta_7d: 58
-  stars_growth_pct: 0.3
-  trending_score: 58.2
+  stars: 16889
+  last_commit: 2026-10-24T17:59:12Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.6
+  trending_score: 99.58
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16646
     - 16732
     - 16790
+    - 16889
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: xbtlin/ai-berkshire
   path: codex-skills/earnings-team/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:25.280Z
+  fetched_at: 2026-10-26T07:43:43.709Z
   truncated: false
 type: agent_skill
 skill:
@@ -81,8 +82,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 - **阶段二·合成**：Team Lead 综合四个视角，产出研究报告初稿
 - **阶段三·发布**：编辑 Agent 改写为公众号文章 + 读者评审 Agent 提出修改意见 → Team Lead 定稿
 
----
-## 阶段一：四大师并行研究
+---## 阶段一：四大师并行研究
 
 ### 第一步：获取一手资料
 
@@ -121,8 +121,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 
 使用 Agent 工具在**同一条消息**中启动4个后台 Agent。
 
----
-#### Agent 1：生意本质解读（段永平视角）
+---#### Agent 1：生意本质解读（段永平视角）
 
 **核心问题：这份财报反映的生意本质，变好了还是变差了？**
 
@@ -156,8 +155,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 
 **输出要求**：每个子项标注 🟢改善 / 🟡持平 / 🔴恶化，给出段永平式总结点评。
 
----
-#### Agent 2：财务质量审计（巴菲特视角）
+---#### Agent 2：财务质量审计（巴菲特视角）
 
 **核心问题：这家公司赚的是真钱还是假钱？安全边际变了吗？**
 
@@ -207,8 +205,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 
 **输出要求**：所有计算附工具输出记录，利润质量信号灯 🟢/🟡/🔴，巴菲特式总结点评。
 
----
-#### Agent 3：竞争格局解读（芒格视角）
+---#### Agent 3：竞争格局解读（芒格视角）
 
 **核心问题：这份财报揭示了竞争格局的什么变化？**
 
@@ -243,8 +240,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 
 **输出要求**：竞争格局判断（加强/持平/恶化），竞争对手对比表，芒格式逆向点评。
 
----
-#### Agent 4：风险信号猎手（李录视角）
+---#### Agent 4：风险信号猎手（李录视角）
 
 **核心问题：管理层在这份财报里隐瞒了什么？哪些信号在闪烁？**
 
@@ -276,8 +272,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 
 **输出要求**：管理层可信度评分★1-5，承诺兑现率，风险信号清单，李录式总结点评。
 
----
-### 第四步：跟踪进度
+---### 第四步：跟踪进度
 
 向用户实时展示：
 
@@ -295,8 +290,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 
 每收到一份报告，更新进度并展示核心发现（3-5条）。
 
----
-## 阶段二：Team Lead 合成研究报告
+---## 阶段二：Team Lead 合成研究报告
 
 全部4份研究报告到齐后，Team Lead 综合产出研究报告初稿。
 
@@ -341,8 +335,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 4. 操作建议
 ```
 
----
-## 阶段三：编辑润色 + 读者评审
+---## 阶段三：编辑润色 + 读者评审
 
 研究报告完成后，**并行**启动两个 Agent：
 
@@ -386,8 +379,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 
 **输出**：改写后的完整公众号文章。
 
----
-### Agent 6：读者评审（普通投资者视角）
+---### Agent 6：读者评审（普通投资者视角）
 
 **定位**：以一个"关注价值投资、有基础财务知识、持有/关注该公司"的普通投资者身份审读文章。
 
@@ -440,8 +432,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 ### 一句话总评
 ```
 
----
-### Team Lead 定稿
+---### Team Lead 定稿
 
 收到编辑改写稿和读者评审报告后：
 
@@ -450,8 +441,7 @@ This skill is generated from `skills/earnings-team.md` so Claude Code and Codex 
 3. **补充"读者想知道但没回答的问题"**——如果有数据支撑就加上
 4. **最终通读**——确保修改后全文连贯、逻辑自洽
 
----
-## 输出文件
+---## 输出文件
 
 ```
 reports/{公司名}/

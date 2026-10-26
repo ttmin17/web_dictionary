@@ -15,10 +15,10 @@ tags:
   - ai-workflows
   - airflow-alternative
 status: active
-quality_percentile: 78
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2022-04-22T13:00:42
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: dagucloud/dagu
@@ -26,18 +26,19 @@ source:
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 4383
-  last_commit: 2026-10-18T16:12:43Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1
-  trending_score: 42.41
-  rank_current: 86
-  rank_delta: null
+  stars: 4445
+  last_commit: 2026-10-26T07:09:17Z
+  stars_delta_7d: 62
+  stars_growth_pct: 1.4
+  trending_score: 62.88
+  rank_current: 95
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4292
     - 4341
     - 4383
+    - 4445
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +46,7 @@ readme_source:
   repo: dagucloud/dagu
   path: skills/dagu/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.576Z
+  fetched_at: 2026-10-26T07:36:59.045Z
   truncated: false
 type: agent_skill
 skill:
@@ -105,7 +106,7 @@ Load only the reference file that matches the task.
 ## High-Signal Rules
 
 - `output:` has two modes:
-  - string form captures trimmed stdout into an env-scope variable such as `${env.VERSION}`
+  - string form captures trimmed stdout, including any log lines, into an env-scope variable such as `${env.VERSION}`
   - object form publishes structured step-scoped output for `${step_id.output.*}` access
 - Value declarations in step `outputs:` publish explicit values through `${steps.<step_id>.outputs.<name>}`. Write those values to `$DAGU_OUTPUT_FILE`; Dagu captures them only after the command succeeds. Build path declarations publish the final materialization path after commit or reuse.
 - `human.task` is a processless root-DAG step with an explicit `id`, a required `with.prompt`, and an optional flat scalar form. A root DAG containing one can run locally or on a distributed worker. Every declared form property is a step output, published when submitted or defaulted, and available as `${steps.<step_id>.outputs.<name>}`. Optional `with.push_back` (`rewind_to` plus an optional feedback `form`) lets the operator send the work back to an upstream step instead of completing it.

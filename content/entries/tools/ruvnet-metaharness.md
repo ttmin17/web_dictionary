@@ -15,24 +15,27 @@ tags:
   - agent-scaffolding
   - agentic-ai
 status: active
-quality_percentile: 47
+quality_percentile: 46
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ruvnet/metaharness
   official_vendor: false
   license: MIT
 signals:
-  stars: 707
-  last_commit: 2026-10-18T12:40:01Z
-  stars_delta_7d: 38
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 716
+  last_commit: 2026-10-25T08:32:58Z
+  stars_delta_7d: 9
+  stars_growth_pct: 1.3
+  trending_score: 9.11
+  rank_current: 118
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 707
+    - 716
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: ruvnet/metaharness
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:27.249Z
+  fetched_at: 2026-10-26T07:45:49.048Z
   truncated: false
 type: agent_tool
 tool:

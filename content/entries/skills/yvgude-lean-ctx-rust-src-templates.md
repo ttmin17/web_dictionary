@@ -1,24 +1,23 @@
 ---
 slug: yvgude-lean-ctx-rust-src-templates
 name: lean-ctx
-tagline: Pick the right lean-ctx tool for reading, searching, understanding and
-  running code with fewer tokens and fewer round trips. Use when lean-ctx MCP
-  too
+tagline: Use LeanCTX Context Gateway tools to select task-relevant code context,
+  apply supported controls, reuse local knowledge and inspect recorded evidence.
 summary: "lean-ctx shapes context before it reaches you: cached reads,
   compressed shell output, focused search, recovery to exact source. Two rules
   beat every detail:"
 categories:
-  - agent-frameworks
+  - security-auth
 tags:
   - agentic-coding
   - ai-agents
   - ai-coding
   - ai-governance
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-03-23T19:48:59
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: yvgude/lean-ctx
@@ -26,18 +25,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3888
-  last_commit: 2026-10-18T21:58:42Z
+  stars: 3901
+  last_commit: 2026-10-26T05:30:24Z
   stars_delta_7d: 13
   stars_growth_pct: 0.3
   trending_score: 13.04
-  rank_current: 102
-  rank_delta: null
+  rank_current: 125
+  rank_delta: -23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3866
     - 3875
     - 3888
+    - 3901
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,15 +45,15 @@ readme_source:
   repo: yvgude/lean-ctx
   path: rust/src/templates/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:31.110Z
+  fetched_at: 2026-10-26T07:36:59.943Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: lean-ctx
-  description: Pick the right lean-ctx tool for reading, searching, understanding
-    and running code with fewer tokens and fewer round trips. Use when lean-ctx
-    MCP tools (ctx_*) are available or when a command output, file read or
-    search would be large.
+  description: Use LeanCTX Context Gateway tools to select task-relevant code
+    context, apply supported controls, reuse local knowledge and inspect
+    recorded evidence. Use when lean-ctx MCP tools (ctx_*) are available or
+    file, search or command output needs a focused view.
   folder_path: rust/src/templates
   extra_files:
     - CLAUDE.md
@@ -78,7 +78,8 @@ skill:
 # LeanCTX — Context Gateway for AI Systems
 Control what your AI can see. LeanCTX Engine provides local context selection,
 supported access and content controls, and evidence of observed context operations
-for existing agents: Select → Control → Prove. Recovery depends on source or
+for existing agents: Select → Control → Learn → Prove. Learn means local task and
+knowledge continuity, not model training. Recovery depends on source or
 archive availability and access permissions. LeanCTX SDK is the separate
 integration surface for applications.
 

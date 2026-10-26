@@ -14,28 +14,29 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 83
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2025-02-12T06:39:48
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: haris-musa/excel-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 4248
-  last_commit: 2026-10-18T15:56:25Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.3
-  trending_score: 13.04
-  rank_current: 53
-  rank_delta: null
+  stars: 4264
+  last_commit: 2026-10-21T07:10:53Z
+  stars_delta_7d: 16
+  stars_growth_pct: 0.4
+  trending_score: 16.06
+  rank_current: 65
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4212
     - 4235
     - 4248
+    - 4264
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: haris-musa/excel-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.564Z
+  fetched_at: 2026-10-26T07:36:59.694Z
   truncated: false
 type: mcp_server
 launch:
@@ -257,6 +258,7 @@ docker run -p 8017:8017 -v "$PWD/workbooks:/data" -e EXCEL_MCP_AUTH_TOKEN=change
 | `--max-file-mb N` | `EXCEL_MCP_MAX_FILE_MB` | `100` | Largest workbook the server opens. Also sets the unpacked-size limit (10 times this) that every opened or uploaded workbook must stay under; parts compressed over 500:1 are refused |
 | `--max-cells N` | `EXCEL_MCP_MAX_CELLS` | `100000` | Most cells one call may read, write or format; reads are still returned in pages |
 | `--max-pivot-cells N` | `EXCEL_MCP_MAX_PIVOT_CELLS` | `3000000` | Largest PivotTable source in cells (a 230,000-row, 13-column sheet); creating one from the biggest sources takes a minute and about 2 GB of memory |
+| `--max-loaded-cells N` | `EXCEL_MCP_MAX_LOADED_CELLS` | `3000000` | Most cells and rows of a workbook that may be loaded into memory at once, about 0.5 KB each (a 3,000,000 limit is about 1.5 GB). A workbook with more is refused by the tools that must load whole sheets; `read_range` and the other streaming reads, and edits of large sheets that parse only some rows, are not limited by the size of the sheet |
 | `--log-level LEVEL` | | `WARNING` | Logging on stderr |
 | `--host HOST` | `EXCEL_MCP_HOST` | `127.0.0.1` | HTTP listen address |
 | `--port PORT` | `EXCEL_MCP_PORT` | `8017` | HTTP port |

@@ -11,28 +11,29 @@ tags:
   - anthropic
   - cursor
 status: active
-quality_percentile: 83
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2025-02-10T09:20:38
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: AgentDeskAI/browser-tools-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 7327
+  stars: 7333
   last_commit: 2026-10-16T18:21:25Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 86
-  rank_delta: null
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6
+  rank_current: 83
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7327
     - 7329
     - 7327
+    - 7333
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: AgentDeskAI/browser-tools-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:28.475Z
+  fetched_at: 2026-10-26T07:36:58.018Z
   truncated: false
 type: mcp_server
 launch:

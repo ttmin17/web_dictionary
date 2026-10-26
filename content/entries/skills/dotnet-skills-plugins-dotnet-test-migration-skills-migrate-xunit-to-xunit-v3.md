@@ -8,10 +8,10 @@ categories:
 tags:
   - agent-skills
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: dotnet/skills
@@ -19,16 +19,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 5669
-  last_commit: 2026-10-19T07:23:49Z
-  stars_delta_7d: 52
-  stars_growth_pct: 0.9
-  trending_score: 52.48
+  stars: 5730
+  last_commit: 2026-10-26T07:32:44Z
+  stars_delta_7d: 61
+  stars_growth_pct: 1.1
+  trending_score: 61.66
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5571
     - 5617
     - 5669
+    - 5730
 language: en
 needs_keys: false
 prerequisites: []
@@ -36,7 +37,7 @@ readme_source:
   repo: dotnet/skills
   path: plugins/dotnet-test-migration/skills/migrate-xunit-to-xunit-v3/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:38.126Z
+  fetched_at: 2026-10-26T07:45:03.646Z
   truncated: false
 type: agent_skill
 skill:
@@ -44,7 +45,7 @@ skill:
   description: Agent skill from dotnet/skills
   folder_path: plugins/dotnet-test-migration/skills/migrate-xunit-to-xunit-v3
   extra_files: []
-  pack_total_skills: 107
+  pack_total_skills: 108
   is_pack_primary: false
   clients:
     - claude-code

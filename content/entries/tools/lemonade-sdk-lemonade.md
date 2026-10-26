@@ -18,22 +18,25 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: lemonade-sdk/lemonade
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5930
-  last_commit: 2026-10-19T07:10:25Z
-  stars_delta_7d: 80
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 5999
+  last_commit: 2026-10-26T04:52:33Z
+  stars_delta_7d: 69
+  stars_growth_pct: 1.2
+  trending_score: 69.8
+  rank_current: 65
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 5839
     - 5930
+    - 5999
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +45,7 @@ readme_source:
   repo: lemonade-sdk/lemonade
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:29.398Z
+  fetched_at: 2026-10-26T07:36:58.005Z
   truncated: false
 type: agent_tool
 tool:
@@ -72,7 +75,7 @@ tool:
     <img src="https://img.shields.io/badge/Star%20History-View-brightgreen" alt="Star History Chart" /></a>
 </p>
 <p align="center">
-  <img src="https://github.com/lemonade-sdk/assets/blob/main/docs/banner_02.png?raw=true" alt="Lemonade Banner" />
+  <img src="https://github.com/lemonade-sdk/assets/blob/main/docs/banner_03.png?raw=true" alt="Lemonade Banner" />
 </p>
 <h3 align="center">
   <a href="https://github.com/lemonade-sdk/lemonade/blob/main/docs/guide/install/README.md">Download</a> |
@@ -175,7 +178,7 @@ For hybrid setups, Lemonade can also route to any OpenAI-compatible cloud provid
 
 ## Model Library
 
-<img align="right" src="https://github.com/lemonade-sdk/assets/blob/main/docs/model_manager_02.png?raw=true" alt="Model Manager" width="280" />
+<img align="right" src="https://github.com/lemonade-sdk/assets/blob/main/docs/model_manager_03.png?raw=true" alt="Model Manager" width="280" />
 
 Lemonade supports a wide variety of LLMs (**GGUF**, **FLM**, and **ONNX**), whisper, stable diffusion, etc. models across CPU, GPU, and NPU.
 
@@ -372,7 +375,7 @@ Lemonade supports multiple inference engines for LLM, speech, TTS, and image gen
     <tr>
       <td><code>rocm</code></td>
       <td>Supported AMD ROCm iGPU/dGPU families*</td>
-      <td>Linux</td>
+      <td>Windows, Linux</td>
     </tr>
     <tr>
       <td><code>cpu</code></td>

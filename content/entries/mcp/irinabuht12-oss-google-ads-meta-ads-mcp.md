@@ -14,28 +14,29 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 69
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-04-06T04:41:14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5247
-  last_commit: 2026-10-12T06:10:55Z
-  stars_delta_7d: 537
-  stars_growth_pct: 11.4
-  trending_score: 598.22
-  rank_current: 4
-  rank_delta: null
+  stars: 6011
+  last_commit: 2026-10-23T09:50:41Z
+  stars_delta_7d: 764
+  stars_growth_pct: 14.6
+  trending_score: 875.24
+  rank_current: 2
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4200
     - 4710
     - 5247
+    - 6011
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:29.341Z
+  fetched_at: 2026-10-26T07:36:57.973Z
   truncated: false
 type: mcp_server
 launch:
@@ -64,13 +65,13 @@ launch:
 [![Meta Ads](https://img.shields.io/badge/Meta%20Ads-Marketing%20API-0081FB?logo=meta&logoColor=white)](#meta-ads-tools)
 [![GA4](https://img.shields.io/badge/GA4-Data%20API-E37400?logo=google-analytics&logoColor=white)](#google-analytics-4-tools)
 [![Glama score](https://glama.ai/mcp/servers/irinabuht12-oss/google-meta-ads-ga4-mcp/badges/score.svg)](https://glama.ai/mcp/servers/irinabuht12-oss/google-meta-ads-ga4-mcp)
-[![Powered by Ryze AI](https://img.shields.io/badge/Powered%20by-Ryze%20AI-FF6B35?logo=rocket&logoColor=white)](https://www.get-ryze.ai/?utm_source=github&utm_content=google-ads-meta-ads-mcp)
+[![Powered by Ryze AI](https://img.shields.io/badge/Powered%20by-Ryze%20AI-FF6B35?logo=rocket&logoColor=white)](https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp)
 
-[![Google + Meta Ads in one MCP](https://raw.githubusercontent.com/irinabuht12-oss/google-ads-meta-ads-mcp/main/assets/banner.png)](https://www.get-ryze.ai/?utm_source=github&utm_content=google-ads-meta-ads-mcp)
+[![Google + Meta Ads in one MCP](https://raw.githubusercontent.com/irinabuht12-oss/google-ads-meta-ads-mcp/main/assets/banner.png)](https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp)
 
 Skip the setup: use the hosted Ryze MCP (no developer token, no Google Cloud project, approval-gated writes).
 
-**[Connect Ryze in one click →](https://www.get-ryze.ai/developers?utm_source=github&utm_content=google-ads-meta-ads-mcp)**
+**[Connect Ryze in one click →](https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp)**
 
 ## Product pages
 
@@ -94,9 +95,9 @@ claude.ai, Claude Desktop, ChatGPT, Cursor: **Settings › Connectors › Add cu
 
 https://github.com/user-attachments/assets/2f931292-a3af-4010-a72e-38b8cf6e62ba
 
-**What you'll see:** Connect your ad accounts → Claude analyzes campaign performance, budget efficiency, and targeting gaps across Google Ads & Meta Ads → generates a complete audit report with recommendations → builds a ready-to-share presentation. **[Try it free on Ryze AI →](https://www.get-ryze.ai/?utm_source=github&utm_content=google-ads-meta-ads-mcp)**
+**What you'll see:** Connect your ad accounts → Claude analyzes campaign performance, budget efficiency, and targeting gaps across Google Ads & Meta Ads → generates a complete audit report with recommendations → builds a ready-to-share presentation. **[Try it free on Ryze AI →](https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp)**
 
-One MCP server. Three platforms. **250+ tools.** Manage all your advertising and analytics from ChatGPT, Claude, Cursor, n8n, Windsurf, and more. Powered by [Ryze AI](https://www.get-ryze.ai/?utm_source=github&utm_content=google-ads-meta-ads-mcp).
+One MCP server. Three platforms. **250+ tools.** Manage all your advertising and analytics from ChatGPT, Claude, Cursor, n8n, Windsurf, and more. Powered by [Ryze AI](https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp).
 
 ### What is this?
 
@@ -677,5 +678,5 @@ This project is licensed under the MIT License — see the [LICENSE](https://git
   <br>
   Built for marketers, agencies, and developers who want AI-powered ad management.
   <br><br>
-  <a href="https://www.get-ryze.ai/?utm_source=github&utm_content=google-ads-meta-ads-mcp">🚀 Get started with Ryze AI</a>
+  <a href="https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp">🚀 Get started with Ryze AI</a>
 </p>

@@ -1,0 +1,175 @@
+---
+slug: alirezarezvani-claude-skills-c-level-agents-skills-post-mortem
+name: post-mortem
+tagline: /c-level-agents:post-mortem [decision] — Honest retrospective on an
+  executed decision, scored against original assumptions and dissent. Closes the
+  str
+summary: Closes the strategic sprint loop. Scores a decision against the success
+  and kill criteria written before the decision (not retro-fitted) and revisits
+  the preserved dissent. This is the rigor that compounds over time.
+categories:
+  - coding-agents
+tags:
+  - agent-plugins
+  - agent-skills
+  - agentic-ai
+  - ai-coding-agent
+status: active
+quality_percentile: 82
+selection_reason: quality_percentile
+first_seen: 2026-10-26
+last_updated: 2026-10-26T07:46:02.721Z
+source:
+  kind: github_repo
+  repo: alirezarezvani/claude-skills
+  subpath: c-level-agents/skills/post-mortem
+  official_vendor: false
+  license: MIT
+signals:
+  stars: 28730
+  last_commit: 2026-10-23T11:30:28Z
+  stars_delta_7d: 523
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 27812
+    - 28112
+    - 28730
+language: en
+needs_keys: false
+prerequisites: []
+readme_source:
+  repo: alirezarezvani/claude-skills
+  path: c-level-agents/skills/post-mortem/SKILL.md
+  branch: main
+  fetched_at: 2026-10-26T07:43:10.243Z
+  truncated: false
+type: agent_skill
+skill:
+  skill_name: post-mortem
+  description: /c-level-agents:post-mortem [decision] — Honest retrospective on an
+    executed decision, scored against original assumptions and dissent. Closes
+    the strategic sprint loop. Use when a decision hits its 90-day review
+    checkpoint or its kill criteria trigger — e.g. scoring last quarter's
+    pricing change against its pre-committed success metrics.
+  folder_path: c-level-agents/skills/post-mortem
+  extra_files: []
+  pack_total_skills: 383
+  is_pack_primary: false
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: alirezarezvani-claude-skills
+---
+
+# /c-level-agents:post-mortem — Honest Retrospective
+**Command:** `/c-level-agents:post-mortem <decision-path>`
+
+Closes the strategic sprint loop. Scores a decision against the success and kill criteria written **before** the decision (not retro-fitted) and revisits the preserved dissent. This is the rigor that compounds over time.
+
+## Pipeline Position
+
+```
+/c-level-agents:office-hours  →  /c-level-agents:brief  →  /c-level-agents:boardroom  →  /c-level-agents:decide  →  /c-level-agents:execute  →  /c-level-agents:post-mortem
+                                                                                       ↑ you are here
+```
+
+## When to Run
+
+- At the 90-day checkpoint (auto-scheduled by `/c-level-agents:decide`)
+- When a kill criterion triggers
+- After a major decision is reversed
+- Quarterly on all decisions of the past quarter
+
+## Inputs
+
+- The decision record (output of `/c-level-agents:decide`)
+- The execution plan (output of `/c-level-agents:execute`)
+- Actual outcomes (metrics, events, customer signals)
+
+## Output: Post-Mortem Record
+
+Saved to `~/.claude/postmortems/YYYY-MM-DD-<slug>.md`:
+
+```markdown
+# Post-Mortem: <decision title>
+**Decision date:** YYYY-MM-DD
+**Post-mortem date:** YYYY-MM-DD
+**Status:** WIN / PARTIAL / LOSS / MIXED
+
+## Outcome Scoring (against pre-committed criteria)
+
+| Success Criterion | Threshold | Actual | Met? |
+|---|---|---|---|
+| <metric 1> | <threshold> | <actual> | ✅ / ❌ |
+| <metric 2> | <threshold> | <actual> | ✅ / ❌ |
+
+| Kill Criterion | Threshold | Actual | Triggered? |
+|---|---|---|---|
+| <metric> | <threshold> | <actual> | ✅ / ❌ |
+
+**Overall:** WIN / PARTIAL / LOSS / MIXED
+
+## What We Got Right
+- <factor 1>
+- <factor 2>
+
+## What We Got Wrong
+- <factor 1>
+- <factor 2>
+
+## Preserved Dissent — Revisited
+[Original dissent from the boardroom memo, scored:]
+
+- **<dissenter>:** <original concern>
+  - **Did it materialize?** YES / NO / PARTIAL
+  - **Cost if YES:** <quantified impact>
+  - **Lesson:** <one sentence>
+
+## Assumption Audit
+[Original brief's assumptions, scored:]
+
+- **Assumption 1:** <text>
+  - **Held?** YES / NO / PARTIAL
+  - **Why:** <explanation>
+
+## Process Lessons
+- **Phase 2 isolation worked?** YES / NO
+- **Devil's advocate concerns played out?** YES / NO / PARTIAL
+- **Cadence was right?** YES / TOO LOOSE / TOO TIGHT
+
+## Forward Actions
+- [ ] <change to operating system or routing logic>
+- [ ] <new decision to make based on this learning>
+- [ ] <update company-context.md>
+
+## Status
+- WIN → archive, log lesson
+- LOSS → schedule follow-up boardroom: `/c-level-agents:brief` for the next call
+```
+
+## Why Pre-Committed Criteria Matter
+
+The biggest temptation in post-mortems is retroactive justification: "we always knew X, that's why we did Y." Pre-committed criteria, signed at `/c-level-agents:decide` time, eliminate that move. The numbers either matched or they didn't.
+
+## Why Revisit Dissent
+
+The dissent column from `/c-level-agents:boardroom` is the single most useful piece of organizational memory. Most of the time, the dissenter was directionally right. Revisiting and scoring it builds calibration over years.
+
+## Routing
+
+- `/c-level-agents:brief` — if the post-mortem surfaces a new decision
+- `/c-level-agents:freeze` — if the post-mortem reveals a process gap that needs cooldown enforcement
+- Updates to company-context.md via `cs-onboard`
+
+## Related
+
+- Skill: [`decision-logger`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/post-mortem/${CLAUDE_PLUGIN_ROOT}/vendor/c-level-advisor/decision-logger/SKILL.md)
+- Agent: [`cs-chief-of-staff`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/post-mortem/../../agents/cs-chief-of-staff.md)
+- Sibling: [`/em:postmortem`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/post-mortem/../../../c-level-advisor/executive-mentor/skills/postmortem/SKILL.md) — adversarial single-decision post-mortem
+
+---
+
+**Version:** 1.0.0

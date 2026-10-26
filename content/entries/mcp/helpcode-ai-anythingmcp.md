@@ -2,7 +2,7 @@
 slug: helpcode-ai-anythingmcp
 name: anythingmcp
 tagline: "MCP gateway for AI agents: turn any REST/OpenAPI, GraphQL, SOAP or SQL
-  API into MCP tools. 475 ready-made connectors (SAP, ERP, e-commerce) with
+  API into MCP tools. 547 ready-made connectors (SAP, ERP, e-commerce) with
   RBAC,"
 summary: "AnythingMCP: self-hosted MCP gateway"
 categories:
@@ -13,28 +13,29 @@ tags:
   - ai-gateway
   - api-gateway
 status: active
-quality_percentile: 50
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-02-28T12:01:26
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: HelpCode-ai/anythingmcp
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 760
-  last_commit: 2026-10-19T07:28:21Z
-  stars_delta_7d: 24
-  stars_growth_pct: 3.3
-  trending_score: 24.78
-  rank_current: 40
-  rank_delta: null
+  stars: 746
+  last_commit: 2026-10-26T07:33:24Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 109
+  rank_delta: -69
   velocity_source: snapshot_delta
   sparkline_4w:
     - 990
     - 736
     - 760
+    - 746
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: HelpCode-ai/anythingmcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.498Z
+  fetched_at: 2026-10-26T07:38:48.555Z
   truncated: false
 type: mcp_server
 launch:
@@ -55,7 +56,7 @@ launch:
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HelpCode-ai/anythingmcp/badges/banner.png" alt="AnythingMCP turns ERP, e-commerce, REST, SOAP and SQL systems into MCP tools for Claude and ChatGPT: 475 connectors, 20 of them with no API key." width="100%" />
+  <img src="https://raw.githubusercontent.com/HelpCode-ai/anythingmcp/badges/banner.png" alt="AnythingMCP turns ERP, e-commerce, REST, SOAP and SQL systems into MCP tools for Claude and ChatGPT: 547 connectors, 25 of them with no API key." width="100%" />
 </p>
 
 <h1 align="center">AnythingMCP: self-hosted MCP gateway</h1>
@@ -75,7 +76,7 @@ launch:
 
 <p align="center">
   <strong>AnythingMCP is an open-source, self-hosted MCP gateway that turns any REST/OpenAPI, SOAP, GraphQL, OData or SQL system into MCP tools for Claude, ChatGPT and Copilot, without writing an MCP server.</strong><br/>
-  It ships 475 ready connectors, among them SAP, Etsy, weclapp and Amazon Seller, and 20 of them need no API key.
+  It ships 547 ready connectors, among them SAP, Etsy, weclapp and Amazon Seller, and 26 of them need no API key.
 </p>
 
 <p align="center">
@@ -159,7 +160,7 @@ Tools register at runtime, without a restart. Per-connector `{{VAR}}` values are
 
 ## Connector catalog
 
-475 adapters, exposing 2,400+ tools. Every one has a setup guide on [anythingmcp.com/guides](https://anythingmcp.com/guides), in seven languages.
+547 adapters, exposing 2,400+ tools. Every one has a setup guide on [anythingmcp.com/guides](https://anythingmcp.com/guides), in seven languages.
 
 | Category | Examples |
 |---|---|

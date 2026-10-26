@@ -1,9 +1,8 @@
 ---
 slug: openosint-openosint
 name: OpenOSINT
-tagline: AI-powered OSINT agent with interactive REPL, MCP server, and CLI. 20
-  tools. Works with Claude, GPT-4, or local models. For authorized security
-  resear
+tagline: "Open-source engine for passive OSINT checks: 21 tools as CLI, MCP
+  server and web UI. Hosted Monitor & Diligence at app.openosint.tech."
 summary: "mcp-name: io.github.OpenOSINT/openosint"
 categories:
   - security-auth
@@ -16,25 +15,26 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-05-06T11:12:42
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OpenOSINT/OpenOSINT
   official_vendor: false
   license: MIT
 signals:
-  stars: 1777
-  last_commit: 2026-10-18T19:54:44Z
-  stars_delta_7d: 28
-  stars_growth_pct: 1.6
-  trending_score: 28.45
-  rank_current: 37
-  rank_delta: null
+  stars: 1813
+  last_commit: 2026-10-22T08:27:14Z
+  stars_delta_7d: 36
+  stars_growth_pct: 2
+  trending_score: 36.73
+  rank_current: 45
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1707
     - 1749
     - 1777
+    - 1813
 language: en
 needs_keys: false
 prerequisites:
@@ -44,8 +44,8 @@ readme_source:
   repo: OpenOSINT/OpenOSINT
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:42.987Z
-  truncated: false
+  fetched_at: 2026-10-26T07:38:13.350Z
+  truncated: true
 type: mcp_server
 launch:
   transport: stdio
@@ -79,7 +79,10 @@ mcp-name: io.github.OpenOSINT/openosint
 
 </div>
 
-**Hosted:** [Monitor](https://app.openosint.tech/monitor?utm_source=github&utm_medium=readme&utm_campaign=monitor) · [Diligence](https://app.openosint.tech/diligence?utm_source=github&utm_medium=readme&utm_campaign=diligence)
+**Hosted versions, built on this engine:**
+
+- **[Monitor](https://app.openosint.tech/monitor?utm_source=github&utm_medium=readme&utm_campaign=monitor)**: scheduled external checks of your domain's email authentication, TLS, security headers and lookalike domains, with an email when something gets worse. Free for one domain.
+- **[Diligence](https://app.openosint.tech/diligence?utm_source=github&utm_medium=readme&utm_campaign=diligence)**: due-diligence signals for UK companies and any company with an LEI, from official registries and sanctions lists, each with its source and retrieval time.
 
 **Docs:** https://openosint.tech/docs/
 
@@ -92,14 +95,14 @@ pip install openosint
 ```
 
 ```bash
+# Grade a domain's external exposure A-F (no API key, no AI provider)
+openosint exposure example.com
+
 # Interactive AI REPL (default)
 openosint
 
 # Web interface
 openosint web
-
-# Direct tool (no AI)
-openosint email target@example.com
 ```
 
 <div align="center">
@@ -117,14 +120,11 @@ openosint email target@example.com
 Start the REPL and investigate any target — the agent decides which tools to run and chains them on findings:
 
 ```text
-openosint > investigate target@example.com
+openosint > investigate example.com
 
-  -> generate_dorks('target@example.com')
-  -> search_breach('target@example.com')
-  Found in 2 breaches: LinkedIn (2016), Adobe (2013)
-
-  -> search_github('johndoe99')   <- pivoted from breach findings
-  Found: profile, 14 repos, commit-discovered emails
+  -> search_dns('example.com')
+  -> search_whois('example.com')
+  -> search_rdap('example.com')
 
   Report saved -> reports/2026-05-11_14-32-11_report.md
 ```
@@ -136,7 +136,7 @@ openosint > investigate target@example.com
 | AI tool chaining | The agent selects and chains tools based on findings; describe the target in plain language |
 | 21 modular tools | Email, username, breach, WHOIS, RDAP, IP, subdomain, dorks, paste, phone, Shodan, VirusTotal, Censys, IP2Location, AbuseIPDB, GitHub, DNS, GDELT news geo, live dork search, URL scraping, SERP footprint |
 | Three AI backends | Anthropic Claude (default), local Ollama, or any OpenAI-compatible endpoint (LiteLLM, vLLM, LM Studio, ...) |
-| Native MCP server | Passive tools (20) exposed by default, all 25 with `--allow-active` ([Passive by default](#passive-by-default)); runs with `uvx`, no separate install |
+| Native MCP server | 16 of the 21 tools are passive and on by default. The server lists 20 by default (those 16 plus 4 graph and batch helpers) and 25 with `--allow-active` ([Passive by default](#passive-by-default)); runs with `uvx`, no separate install |
 | Parallel execution | `--parallel` runs complementary tools concurrently via `asyncio.gather()` |
 | Reports | PDF + Markdown auto-saved after every investigation (`reportlab` optional) |
 | Session history | All REPL sessions saved to `~/.openosint/history/`; browse with `openosint history` |
@@ -180,9 +180,9 @@ openosint > investigate target@example.com
 | `search_dns` | dnspython (built-in) | A/AAAA/MX/NS/TXT/CNAME/SOA records; SPF, DMARC, DKIM analysis |
 | `search_rdap` | RDAP (IANA bootstrap, keyless) | Registrar, registration/expiry dates, name servers, status; registrant contacts redacted by policy |
 | `search_gdelt_geo` | GDELT 15-minute GKG feed (keyless) | Recent worldwide news placed on a map: headline, link, place; GeoJSON output |
-| `search_dorks_live` | Bright Data SERP API | Live Google search results for dork queries (title, URL, snippet) |
-| `scrape_url` | Bright Data Web Unlocker | Fetch any URL bypassing Cloudflare/CAPTCHA — returns clean Markdown *(touches the target, off by default)* |
-| `search_footprint` | Bright Data SERP API | Entity-type-aware public search-engine footprint: detects email/username/domain/phone/name and returns structured results + Entity Correlation Graph nodes/edges |
+| `search_dorks_live` | [Bright Data](https://get.brightdata.com/984ni58s2oad?utm_source=github&utm_medium=readme)¹ SERP API | Live Google search results for dork queries (title, URL, snippet) |
+| `scrape_url` | [Bright Data](https://get.brightdata.com/984ni58s2oad?utm_source=github&utm_medium=readme) Web Unlocker | Fetch any URL bypassing Cloudflare/CAPTCHA — returns clean Markdown *(touches the target, off by default)* |
+| `search_footprint` | [Bright Data](https://get.brightdata.com/984ni58s2oad?utm_source=github&utm_medium=readme) SERP API | Entity-type-aware public search-engine footprint: detects email/username/domain/phone/name and returns structured results + Entity Correlation Graph nodes/edges |
 
 Full per-tool documentation, CLI flags, and output formats: [openosint.tech](https://openosint.tech/).
 
@@ -249,10 +249,10 @@ This table says what each tool does according to its code. It is not a guarantee
 
 ### search_email
 
-Enumerates online services linked to an email address using [holehe](https://github.com/megadose/holehe).
+Enumerates online services linked to an email address using [holehe](https://github.com/megadose/holehe). Off by default because it is noisy: it needs the `holehe` binary installed and `--allow-active` (or `OPENOSINT_ALLOW_ACTIVE=1`).
 
 ```bash
-openosint email target@example.com
+openosint --allow-active email target@example.com
 ```
 
 ```text
@@ -538,7 +538,7 @@ of this README.
 
 ## External exposure report (beta)
 
-`openosint exposure` checks one domain from the outside and gives it an A-F grade. It is passive and point-in-time: organisation-level checks of email authentication, TLS, domain registration and security headers, plus optional lookalike domains. No AI provider or API key is needed.
+`openosint exposure` checks one domain from the outside and gives it an A-F grade. It is point-in-time: organisation-level checks of email authentication, TLS, domain registration and security headers, plus optional lookalike domains. The email, registration and lookalike checks are passive (DNS and RDAP only); the TLS and security-header checks make one connection to the target on port 443. No AI provider or API key is needed.
 
 ```bash
 openosint exposure example.com                       # terminal summary and grade
@@ -550,6 +550,8 @@ openosint exposure example.com --checks email,registration   # passive checks on
 ```
 
 `--checks` takes any of `email`, `registration`, `tls`, `http_headers` (default: all four). A selection is **not graded**: the report has no letter and no score, because a grade from some of the checks would read like a full result. In Python: `run_exposure("example.com", checks=PASSIVE_CHECKS)` (both names import from `openosint.exposure.api`); the report's `not_run` lists what was left out.
+
+**Want this every week, with history and an email when the grade drops?** [OpenOSINT Monitor](https://app.openosint.tech/monitor?utm_source=github&utm_medium=readme&utm_campaign=exposure) runs it for you, free for one domain.
 
 | Check | Noise level | What it contacts |
 |---|---|---|
@@ -682,7 +684,7 @@ Full per-tool reference, CLI flags, and configuration options at [openosint.tech
 
 ### MCP Server
 
-Expose OpenOSINT to any MCP-compatible AI client with no separate install step. [`uv`](https://docs.astral.sh/uv/getting-started/installation/) must be installed; `uvx` then fetches and runs `openosint` on demand. The server offers the 20 passive tools by default and 25 with `--allow-active` (see [Passive by default](#passive-by-default)).
+Expose OpenOSINT to any MCP-compatible AI client with no separate install step. [`uv`](https://docs.astral.sh/uv/getting-started/installation/) must be installed; `uvx` then fetches and runs `openosint` on demand. By default the server lists 20 entries (the 16 passive tools plus 4 graph and batch helpers), and 25 with `--allow-active` (see [Passive by default](#passive-by-default)).
 
 The command every client runs is the same:
 
@@ -745,7 +747,7 @@ claude mcp add openosint -e SHODAN_API_KEY=your-key -e HIBP_API_KEY=your-key -- 
 
 API keys go in the client's `env` block. MCP hosts launch the server with a cwd unrelated to your project, so a `.env` file is not picked up reliably; to use one, set `"OPENOSINT_ENV_FILE": "/absolute/path/to/.env"` in the same `env` block.
 
-By default the server lists **passive tools only**, so a client LLM cannot see the noisy ones. Each tool description carries its noise label. Pin a release with `--from openosint==2.36.0`. Running from a source checkout instead: `"command": "python", "args": ["-m", "openosint.mcp_server"]`.
+By default the server lists **passive tools only**, so a client LLM cannot see the noisy ones. Each tool description carries its noise label. Pin a release with `--from openosint==2.36.1`. Running from a source checkout instead: `"command": "python", "args": ["-m", "openosint.mcp_server"]`.
 
 **Agentic use via Claude Code:**
 
@@ -892,9 +894,12 @@ itself — the app starts and every key-less tool works with zero configuration.
 | `BRIGHTDATA_UNLOCKER_ZONE` | `scrape_url` | Required for this tool | Your Bright Data Web Unlocker zone name (e.g. `web_unlocker1`) |
 
 On a fresh install with no keys at all, these still work: `generate_dorks`,
-`search_dns`, `search_whois`, `search_domain`, `search_email`, `search_username`,
-`search_paste`, `search_phone`, `search_ip` (rate-limited), `search_github`
-(rate-limited), and `search_gdelt_geo`.
+`search_dns`, `search_whois`, `search_rdap`, `search_paste`, `search_ip`
+(rate-limited), `search_github` (rate-limited), and `search_gdelt_geo`.
+
+`search_email`, `search_username`, `search_domain` and `search_phone` also need no key,
+but they are off by default and need `--allow-active` plus their external binary
+(holehe, sherlock, sublist3r, phoneinfoga).
 
 ## CLI Reference
 
@@ -902,8 +907,9 @@ On a fresh install with no keys at all, these still work: `generate_dorks`,
 |---|---|
 | `openosint` | Interactive AI REPL (default) |
 | `openosint web [--port N] [--no-browser]` | Launch browser UI |
-| `openosint email ADDRESS [-t N]` | Direct email scan |
-| `openosint username HANDLE [-t N]` | Direct username scan |
+| `openosint exposure DOMAIN` | Grade a domain's external exposure A-F (see [External exposure report](#external-exposure-report-beta)) |
+| `openosint --allow-active email ADDRESS [-t N]` | Direct email scan (noisy, off by default) |
+| `openosint --allow-active username HANDLE [-t N]` | Direct username scan (noisy, off by default) |
 | `openosint shodan QUERY [-t N]` | Shodan lookup |
 | `openosint virustotal TARGET [-t N]` | VirusTotal lookup |
 | `openosint censys TARGET [-t N]` | Censys lookup |
@@ -911,9 +917,9 @@ On a fresh install with no keys at all, these still work: `generate_dorks`,
 | `openosint abuseipdb IP [-t N]` | AbuseIPDB reputation check |
 | `openosint github QUERY [-t N]` | GitHub profile/repo/email discovery |
 | `openosint dns DOMAIN [-t N]` | DNS records + email security analysis |
-| `openosint search-dorks-live TARGET [--max-dorks N] [-t N]` | Live Google dork results via Bright Data |
-| `openosint scrape URL [-t N]` | Fetch a URL via Bright Data Web Unlocker |
-| `openosint footprint TARGET [--max-queries N] [-t N]` | SERP footprint via Bright Data |
+| `openosint search-dorks-live TARGET [--max-dorks N] [-t N]` | Live Google dork results via [Bright Data](https://get.brightdata.com/984ni58s2oad?utm_source=github&utm_medium=readme)¹ |
+| `openosint scrape URL [-t N]` | Fetch a URL via [Bright Data](https://get.brightdata.com/984ni58s2oad?utm_source=github&utm_medium=readme) Web Unlocker |
+| `openosint footprint TARGET [--max-queries N] [-t N]` | SERP footprint via [Bright Data](https://get.brightdata.com/984ni58s2oad?utm_source=github&utm_medium=readme) |
 | `openosint multi TARGETS` | Parallel multi-target investigation (max 10) |
 | `openosint exposure DOMAIN [--lookalikes] [--report FILE.html] [--lang it\|en] [--resolver IP]` | External exposure report graded A-F (beta) |
 | `openosint playbook RECIPE TARGET` | Run a deterministic investigation playbook (no AI) |
@@ -942,7 +948,7 @@ On a fresh install with no keys at all, these still work: `generate_dorks`,
 docker compose up --build
 
 # One-off command
-docker compose run --rm openosint email target@example.com --json
+docker compose run --rm openosint exposure example.com --json
 ```
 
 `.env` is optional: with no keys the web UI still starts at <http://localhost:8080>. To provide keys today, list them under `environment:` in `docker-compose.yml` (or in a `.env` next to it), or put a `.env` in the data volume (`/data/.env`). Reports are persisted to `./reports/`; the graph database and session history live in the `openosint-data` volume (`/data` in the container, via `OPENOSINT_HOME`). The image includes the graph view.
@@ -987,7 +993,7 @@ The port is published on `127.0.0.1` only, and the `Host` check is on (`OPENOSIN
 - **Most tools depend on third-party services you don't control.** Nine of
   the 21 tools hard-require an API key and are subject to that provider's
   uptime, rate limits, and pricing (Shodan, VirusTotal, Censys, AbuseIPDB,
-  IP2Location, HaveIBeenPwned, and the three Bright Data–backed tools). Free
+  IP2Location, HaveIBeenPwned, and the three [Bright Data](https://get.brightdata.com/984ni58s2oad?utm_source=github&utm_medium=readme)¹–backed tools). Free
   tiers are small; heavy use requires a paid plan with the provider, not with
   OpenOSINT.
 - **Local binaries are unsandboxed subprocesses.** `holehe`, `sherlock`,
@@ -1070,8 +1076,6 @@ OpenOSINT is open source under the [MIT License](https://github.com/OpenOSINT/Op
 
 *For authorized security research only. See [DISCLAIMER.md](https://github.com/OpenOSINT/OpenOSINT/blob/main/DISCLAIMER.md).*
 
-*OpenOSINT v2.36.0 — October 2026*
+*OpenOSINT v2.36.1 — October 2026*
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=OpenOSINT/OpenOSINT&type=Date)](https://star-history.com/#OpenOSINT/OpenOSINT&Date)
+*(README truncated for display. [Read the full README on GitHub](https://github.com/OpenOSINT/OpenOSINT)).*

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: affaan-m/ECC
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 283494
-  last_commit: 2026-10-19T05:03:15Z
-  stars_delta_7d: 5114
-  stars_growth_pct: 1.8
-  trending_score: 5207.95
+  stars: 289072
+  last_commit: 2026-10-26T04:56:56Z
+  stars_delta_7d: 5578
+  stars_growth_pct: 2
+  trending_score: 5687.75
   velocity_source: snapshot_delta
   sparkline_4w:
     - 274698
     - 278380
     - 283494
+    - 289072
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: affaan-m/ECC
   path: skills/social-publisher/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:32.584Z
+  fetched_at: 2026-10-26T07:41:08.039Z
   truncated: false
 type: agent_skill
 skill:
@@ -90,6 +91,8 @@ printf 'header = "Authorization: Bearer %s"\n' "$SC_API_KEY" |
 npm install -g socialclaw@0.1.12
 socialclaw login --api-key <workspace-key>
 ```
+
+The CLI takes the key only as the `--api-key` argument and saves it to `~/.socialclaw/config.json`. While the command runs, other local users can see the argument in `ps`, and your shell may keep it in history. Run `socialclaw login` yourself, once, in your own terminal; do not have the agent expand `$SC_API_KEY` into the command line.
 
 ## Core Workflow
 
@@ -142,6 +145,9 @@ socialclaw validate -f schedule.json --json
 ```
 
 ### 5. Publish
+
+`apply` creates or schedules real posts on the user's accounts. Before running it, show the user every post in the validated `schedule.json` (provider, account, text, media, `scheduled_at`) and get explicit approval. If `schedule.json` changes after approval, ask again. Never run `apply` in the same step that generated the content.
+
 ```bash
 socialclaw apply -f schedule.json --json
 # → { "run_id": "..." }

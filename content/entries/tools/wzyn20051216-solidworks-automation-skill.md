@@ -11,27 +11,28 @@ tags:
   - autocad
   - cad
 status: active
-quality_percentile: 51
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: wzyn20051216/solidworks-automation-skill
   official_vendor: false
   license: MIT
 signals:
-  stars: 1291
-  last_commit: 2026-10-17T15:50:00Z
-  stars_delta_7d: 94
-  stars_growth_pct: 7.9
-  trending_score: 101.38
-  rank_current: 23
-  rank_delta: null
+  stars: 1484
+  last_commit: 2026-10-26T05:27:35Z
+  stars_delta_7d: 193
+  stars_growth_pct: 14.9
+  trending_score: 221.85
+  rank_current: 31
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1197
     - 1291
+    - 1484
 language: zh
 needs_keys: false
 prerequisites:
@@ -40,7 +41,7 @@ readme_source:
   repo: wzyn20051216/solidworks-automation-skill
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:42.915Z
+  fetched_at: 2026-10-26T07:38:13.352Z
   truncated: false
 type: agent_tool
 tool:
@@ -283,11 +284,11 @@ V2 附带 **37 个 deterministic reliability scenarios**，覆盖正常执行、
 
 ## License & Community
 
-[MIT](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/LICENSE) · [GitHub Issues](https://github.com/wzyn20051216/solidworks-automation-skill/issues) · [Star History](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/assets/star-history.svg)
+[MIT](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/LICENSE) · [GitHub Issues](https://github.com/wzyn20051216/solidworks-automation-skill/issues) · [Star History](https://star-history.com/#wzyn20051216/solidworks-automation-skill&Date)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/star-history-dark.svg">
-  <img src="https://raw.githubusercontent.com/wzyn20051216/solidworks-automation-skill/main/assets/star-history.svg" alt="SolidWorks Automation Skill 星标趋势" width="960">
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=wzyn20051216/solidworks-automation-skill&amp;type=Date&amp;theme=dark">
+  <img src="https://api.star-history.com/svg?repos=wzyn20051216/solidworks-automation-skill&amp;type=Date" alt="SolidWorks Automation Skill 星标趋势" width="960">
 </picture>
 
 ---

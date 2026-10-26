@@ -6,12 +6,17 @@ tagline: Phase 4 of building a Claude Managed Agent — make it run without you.
   event
 summary: See ../../references/loops-and-workflows.md.
 categories:
-  - other
+  - coding-agents
+tags:
+  - agent-plugins
+  - agent-skills
+  - agentic-ai
+  - ai-coding-agent
 status: active
-quality_percentile: 46
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -19,8 +24,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28112
-  last_commit: 2026-08-30T09:46:16Z
+  stars: 28730
+  last_commit: 2026-10-23T11:30:28Z
+  stars_delta_7d: 523
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 27812
+    - 28112
+    - 28730
 language: en
 needs_keys: false
 prerequisites: []
@@ -28,7 +41,7 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: agent-launcher/skills/run-without-you/SKILL.md
   branch: main
-  fetched_at: 2026-10-14T14:55:14.647Z
+  fetched_at: 2026-10-26T07:43:10.234Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,7 +65,13 @@ skill:
     - scripts/cron_validator.py
     - scripts/deployment_builder.py
     - scripts/next_directions_writer.py
-tags: []
+  pack_total_skills: 383
+  is_pack_primary: false
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: alirezarezvani-claude-skills
 ---
 
 # Phase 4 — Run Without You (the recurring loop)

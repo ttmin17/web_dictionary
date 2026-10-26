@@ -1,12 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-implementing-api-schema-validation-security
 name: implementing-api-schema-validation-security
-tagline: Implements API schema validation using OpenAPI Specification and JSON
-  Schema documents, enforced both at the API gateway (runtime) and during
-  developm
-summary: API schema validation enforces that all data exchanged through APIs
-  conforms to a predefined structure defined in OpenAPI Specification (OAS) or
-  JSON Schema documents. This prevents injection attacks (SQLi, XSS, XXE),...
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -15,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -26,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,17 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/implementing-api-schema-validation-security/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.882Z
+  fetched_at: 2026-10-26T07:43:39.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: implementing-api-schema-validation-security
-  description: Implements API schema validation using OpenAPI Specification and
-    JSON Schema documents, enforced both at the API gateway (runtime) and during
-    development (shift-left), to lock down request/response contracts and reject
-    unknown properties. Use when preventing injection attacks (SQLi, XSS, XXE),
-    blocking mass assignment, or stopping data leakage through unvalidated API
-    responses.
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/implementing-api-schema-validation-security
   extra_files:
     - LICENSE

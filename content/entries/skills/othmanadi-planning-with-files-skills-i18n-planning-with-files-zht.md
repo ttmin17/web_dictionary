@@ -16,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27522
-  last_commit: 2026-10-17T21:51:12Z
-  stars_delta_7d: 92
-  stars_growth_pct: 0.3
-  trending_score: 92.31
+  stars: 27651
+  last_commit: 2026-10-24T17:24:38Z
+  stars_delta_7d: 129
+  stars_growth_pct: 0.5
+  trending_score: 129.6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27320
     - 27430
     - 27522
+    - 27651
 language: zh
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-zht/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:37:41.716Z
+  fetched_at: 2026-10-26T07:42:27.104Z
   truncated: false
 type: agent_skill
 skill:
@@ -128,6 +129,18 @@ $(command -v python3 || command -v python) "${SKILL_DIR}/scripts/session-catchup
 4. **指定唯一的計畫負責人。** 工作者透過自己的帳本或指派檔案回報，不自行重寫共享規劃檔案。
 
 > **注意：** 規劃檔案放在專案中的選定任務目錄，不是技能安裝目錄。
+
+## 新計畫的建立約定
+
+開始實作新任務前，先執行已安裝 skill 中的 `init-session.sh`（PowerShell：`init-session.ps1`），再修改產生的範本，不要改成簡短的自訂清單。將 `PWF_SKILL_DIR` 設為剛才讀取的 SKILL.md 所在目錄，再檢查明確的計畫路徑：
+
+```sh
+sh "$PWF_SKILL_DIR/scripts/check-complete.sh" --validate path/to/task_plan.md
+```
+
+PowerShell 使用 `check-complete.ps1 -Validate -PlanFile path/to/task_plan.md`。每個階段保留 `### 階段 N：名稱`，並且只有一個 `**狀態：** pending`、`**狀態：** in_progress` 或 `**狀態：** complete` 狀態。只有 `## 階段` 下的清單無法被追蹤。實作前及修改階段結構後必須通過檢查。此檢查驗證格式，不驗證任務完成或雜湊證明。
+
+保留現有計畫。格式檢查失敗時，向計畫負責人說明問題，不要自動重寫。如果無法執行輔助腳本，請原樣複製附帶的範本，並明確說明未進行原生格式檢查。
 
 ## 核心模式
 

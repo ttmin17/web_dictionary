@@ -14,10 +14,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 90
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 17693
-  last_commit: 2026-10-19T06:20:47Z
-  stars_delta_7d: 282
-  stars_growth_pct: 1.6
-  trending_score: 286.57
+  stars: 18088
+  last_commit: 2026-10-24T15:48:19Z
+  stars_delta_7d: 395
+  stars_growth_pct: 2.2
+  trending_score: 403.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17090
     - 17411
     - 17693
+    - 18088
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/kill-argument/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:25.041Z
+  fetched_at: 2026-10-26T07:36:53.548Z
   truncated: false
 type: agent_skill
 skill:
@@ -55,7 +56,7 @@ skill:
     that has already passed standard review rounds.'
   folder_path: skills/kill-argument
   extra_files: []
-  pack_total_skills: 85
+  pack_total_skills: 87
   is_pack_primary: false
   clients:
     - claude-code
@@ -120,7 +121,7 @@ This skill is most valuable for **theory papers** with ≥5 theorem-class enviro
 
 ## Constants
 
-- **REVIEWER_MODEL** = `gpt-6-astra` (default; `gpt-5.5` is the capability fallback, `gpt-5.4` only as an explicit legacy override).  Reviewer reasoning effort = `ultra` for the attack / defense / adjudication threads (deep-audit tier; capability fallback per `shared-references/reviewer-routing.md`, never below `xhigh`).  Beast-mode axis probes stay at `xhigh`.
+- **REVIEWER_MODEL** = `gpt-6-astra` (default; `gpt-6.1-sol` is the first model capability fallback per `shared-references/reviewer-routing.md`, `gpt-5.4` only as an explicit legacy override).  Reviewer reasoning effort = `ultra` for the attack / defense / adjudication threads (deep-audit tier; capability fallback per `shared-references/reviewer-routing.md`, never below `xhigh`).  Beast-mode axis probes stay at `xhigh`.
 - **CONTEXT_POLICY** = `fresh` (REVIEWER_BIAS_GUARD).  Each thread is a fresh `mcp__codex__codex` call.  **Never** use `mcp__codex__codex-reply`.  No prior review summary, fix list, or executor explanation enters either prompt.
 - **ATTACK_LENGTH** = approximately 200 words (do not exceed 250).  Single coherent argument, not a list.
 - **DEFENSE_DECOMPOSITION** = 3-7 atomic rejection points extracted from the attack memo.  Each gets its own classification.

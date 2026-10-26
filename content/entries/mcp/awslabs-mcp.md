@@ -13,28 +13,29 @@ tags:
   - mcp-clients
   - mcp-host
 status: active
-quality_percentile: 94
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: awslabs/mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9793
-  last_commit: 2026-10-16T20:30:35Z
-  stars_delta_7d: 18
-  stars_growth_pct: 0.2
-  trending_score: 18.03
-  rank_current: 44
-  rank_delta: null
+  stars: 9832
+  last_commit: 2026-10-26T01:29:51Z
+  stars_delta_7d: 39
+  stars_growth_pct: 0.4
+  trending_score: 39.16
+  rank_current: 43
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9761
     - 9775
     - 9793
+    - 9832
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: awslabs/mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:28.536Z
+  fetched_at: 2026-10-26T07:36:57.073Z
   truncated: true
 type: mcp_server
 launch:

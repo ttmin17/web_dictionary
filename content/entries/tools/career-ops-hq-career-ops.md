@@ -16,22 +16,25 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: career-ops-hq/career-ops
   official_vendor: false
   license: MIT
 signals:
-  stars: 75550
-  last_commit: 2026-10-19T07:22:03Z
-  stars_delta_7d: 2677
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 77373
+  last_commit: 2026-10-26T06:20:18Z
+  stars_delta_7d: 1823
+  stars_growth_pct: 2.4
+  trending_score: 1866.99
+  rank_current: 9
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 73692
     - 75550
+    - 77373
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +43,7 @@ readme_source:
   repo: career-ops-hq/career-ops
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:36:39.741Z
+  fetched_at: 2026-10-26T07:41:15.257Z
   truncated: false
 type: agent_tool
 tool:
@@ -171,7 +174,7 @@ The silence after you hit send is not about you. Enough people saw the same thin
   <a href="https://career-ops.org/manifesto?utm_source=readme"><img src="https://raw.githubusercontent.com/career-ops-hq/career-ops/main/docs/manifesto-wall.svg" alt="Three signatures of the CareerOps manifesto, in their own words" width="800"></a>
 </p>
 
-<p align="center"><sub>Every signature is a commit you can audit. <a href="https://career-ops.org/manifesto?utm_source=readme">Read them all, or add yours →</a></sub></p>
+<p align="center"><sub>Every signature is a commit you can audit. <a href="https://career-ops.org/manifesto?utm_source=readme">Read them all, or add yours →</a> · <a href="https://career-ops.org/manifesto?utm_source=readme#what-is-ai-job-search">What is AI job search?</a></sub></p>
 
 <br>
 
@@ -284,17 +287,8 @@ npx playwright install chromium   # only needed for PDF generation
 # your distro's package manager if PDF generation fails to launch the browser
 # (Playwright's own docs list the required libraries per platform).
 
-# 2. Check setup
-npm run doctor                     # Validates all prerequisites
-
-# 3. Configure
-cp config/profile.example.yml config/profile.yml  # Edit with your details
-cp templates/portals.example.yml portals.yml       # Customize companies
-
-# 4. Add your CV
-# Create cv.md in the project root with your CV in markdown
-
-# 5. Open your AI CLI in this directory
+# 2. Open your AI CLI in this directory. On first launch it walks you
+#    through setup (your CV, profile and target roles) by chatting
 claude   # or codex / opencode / qwen / agy / grok
 
 # Then ask your CLI to adapt the system to you:
@@ -303,7 +297,7 @@ claude   # or codex / opencode / qwen / agy / grok
 # "Add these 5 companies to portals.yml"
 # "Update my profile with this CV I'm pasting"
 
-# 6. Start using
+# 3. Start using
 # Paste a job URL or JD text to trigger auto-pipeline
 # If your CLI supports slash commands, use /career-ops (or its CLI-specific alias)
 # In Codex, ask for the same mode in plain language, e.g.:
@@ -327,11 +321,11 @@ Set this flag **only when the configured proxy itself blocks connections to priv
 npm i -g @santifer/career-ops
 ```
 
-This installs the `career-ops` binary globally so you can run it directly instead of via `npx`. Unlike `npx @santifer/career-ops init` (which bootstraps a project directory), the global install gives you a persistent `career-ops` command available anywhere in your terminal.
+This installs the `career-ops` binary globally, so you can run `career-ops init [folder]` without `npx`. `init` is its only command: it sets up a workspace, and everything after that happens inside your AI coding CLI (see Usage below), not through this binary.
 
 **Which one should you use?**
 - `npx @santifer/career-ops init`: best for first use; creates a dedicated project folder.
-- `npm i -g @santifer/career-ops`: best once you have a project folder and want to run career-ops commands directly.
+- `npm i -g @santifer/career-ops`: if you'd rather type `career-ops init` than the `npx` form. It adds no other commands.
 
 > **The system is designed to be customized by your AI coding CLI itself.** Modes, archetypes, scoring weights, negotiation scripts -- just ask it to change them. It reads the same files it uses, so it knows exactly what to edit.
 
@@ -351,7 +345,7 @@ career-ops uses a shared command router. In CLIs that register slash commands, i
 /career-ops deep      → Deep research prompt about company
 /career-ops interview-prep → Generate company-specific interview prep doc
 /career-ops interview    → Interactive profile/CV onboarding interview
-/career-ops master-profile → Import, review, and validate your Master Career Profile
+/career-ops master-profile → Import, review, validate, and prepare selected Profile facts as CV bullets
 /career-ops eu-swe    → Calibrate a European SWE application before CV/apply/interview
 /career-ops interview/plan → Time-blocked prep plan for an upcoming interview
 /career-ops interview/practice → Practice interview, one question at a time with feedback
@@ -369,7 +363,7 @@ career-ops uses a shared command router. In CLIs that register slash commands, i
 /career-ops project   → Evaluate portfolio project idea
 /career-ops tracker   → Application status overview
 /career-ops agent-inbox → Queue/drain requests for the next session (data/agent-inbox.md)
-/career-ops apply     → Live application assistant (reads form + generates answers)
+/career-ops apply     → Live application assistant (Playwright from this checkout, does not submit)
 /career-ops scan      → Scan portals and discover new offers
 /career-ops discover  → Resolve a company list to scannable ATS boards + append to portals.yml (zero-token)
 /career-ops batch     → Batch processing with parallel workers
@@ -567,7 +561,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Features: 6 filter tabs, 4 sort modes, grouped/flat view, lazy-loaded previews, inline status changes.
+Features: 10 filter tabs, 8 sort modes, grouped/flat view, lazy-loaded previews, inline status changes.
 
 There is also an **experimental web UI** (alpha and opt-in: nothing runs unless you start it): see [`web/README.md`](https://github.com/career-ops-hq/career-ops/blob/main/web/README.md).
 
@@ -687,7 +681,7 @@ The Go dashboard TUI, Node.js scripts, and AI agent modes all automatically resp
 career-ops ([career-ops.org](https://career-ops.org), also known as **careerops**) is an open-source AI job search that runs locally in your AI coding CLI (Claude Code, Codex, OpenCode and others) and leaves every decision to you. It evaluates job offers against your CV, generates ATS-tailored PDFs, finds the right person to contact, and tracks everything in one place: you always have the final call. It is the first reference implementation of the [CareerOps Manifesto](https://career-ops.org/manifesto).
 
 **Can the tailored CV invent things?**
-It must not, and the prompts say so: reformulate, never fabricate. `generate-pdf` blocks a CV whose numbers or facts are missing from your sources, unless you pass `--skip-fact-check`. It does not yet check job titles or judge rewording. Two open issues track that: [#2677](https://github.com/career-ops-hq/career-ops/issues/2677) (job titles must match cv.md) and [#1411](https://github.com/career-ops-hq/career-ops/issues/1411) (fail-closed faithfulness check). Until they merge, read every CV before you send it. The [Legal Disclaimer](https://github.com/career-ops-hq/career-ops/blob/main/LEGAL_DISCLAIMER.md) says the same in longer words.
+It must not, and the prompts say so: reformulate, never fabricate. `generate-pdf` blocks a CV whose numbers or facts are missing from your sources, unless you pass `--skip-fact-check`. The `pdf` mode also runs `cv-title-check.mjs`, which compares each job title in the tailored CV with the title cv.md gives the same job (matched by company and dates) and asks you to keep or revert any that differ. It warns rather than blocks, because reframing a title is sometimes your call. Nothing judges rewording yet: [#1411](https://github.com/career-ops-hq/career-ops/issues/1411) (fail-closed faithfulness check) tracks that. Until then, read every CV before you send it. The [Legal Disclaimer](https://github.com/career-ops-hq/career-ops/blob/main/LEGAL_DISCLAIMER.md) says the same in longer words.
 
 **Can I run career-ops for free, or on a cheaper / local model?**
 Yes. career-ops is CLI-agnostic and runs on free and local models (OpenRouter free models, Ollama or any OpenAI-compatible endpoint), so you are not tied to a paid subscription. See [docs/RUNNING_ON_A_BUDGET.md](https://github.com/career-ops-hq/career-ops/blob/main/docs/RUNNING_ON_A_BUDGET.md) for the full setup.

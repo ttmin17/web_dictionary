@@ -1,13 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-hunting-for-unusual-network-connections
 name: hunting-for-unusual-network-connections
-tagline: Runs a hypothesis-driven threat hunt for command-and-control activity
-  (T1071) by querying SIEM/EDR network telemetry for anomalous outbound traffic,
-  r
-summary: "- When proactively hunting for indicators of hunting for unusual
-  network connections in the environment - After threat intelligence indicates
-  active campaigns using these techniques - During incident response to
-  scope..."
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -16,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -27,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,17 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/hunting-for-unusual-network-connections/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.880Z
+  fetched_at: 2026-10-26T07:43:39.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: hunting-for-unusual-network-connections
-  description: Runs a hypothesis-driven threat hunt for command-and-control
-    activity (T1071) by querying SIEM/EDR network telemetry for anomalous
-    outbound traffic, rare destinations, non-standard ports, and unusual
-    connection frequencies from endpoints. Use when hunting for beaconing/C2
-    traffic, after threat intel flags suspicious infrastructure, or when alerts
-    fire on anomalous connections.
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/hunting-for-unusual-network-connections
   extra_files:
     - LICENSE

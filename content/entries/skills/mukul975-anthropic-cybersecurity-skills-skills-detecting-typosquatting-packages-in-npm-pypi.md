@@ -1,13 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-detecting-typosquatting-packages-in-npm-pypi
 name: detecting-typosquatting-packages-in-npm-pypi
-tagline: Detects typosquatting attacks in npm and PyPI package registries by
-  analyzing package name similarity using Levenshtein distance and other string
-  metr
-summary: "- Auditing project dependencies to identify packages whose names are
-  suspiciously similar to popular libraries - Proactively scanning package
-  registries for newly published packages that may be typosquats of your
-  orga..."
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -16,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -27,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,22 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/detecting-typosquatting-packages-in-npm-pypi/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.866Z
+  fetched_at: 2026-10-26T07:43:39.356Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: detecting-typosquatting-packages-in-npm-pypi
-  description: >
-    Detects typosquatting attacks in npm and PyPI package registries by
-    analyzing package name similarity using Levenshtein distance and other
-    string metrics, examining publish date heuristics to identify recently
-    created packages mimicking established ones, and flagging download count
-    anomalies where suspicious packages have disproportionately low usage
-    compared to their legitimate targets. The analyst queries the PyPI JSON API
-    and npm registry API to gather package metadata for automated comparison.
-    Activates for requests involving package typosquatting detection, dependency
-    confusion analysis, malicious package identification, or software supply
-    chain threat hunting in package registries.
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/detecting-typosquatting-packages-in-npm-pypi
   extra_files:
     - LICENSE

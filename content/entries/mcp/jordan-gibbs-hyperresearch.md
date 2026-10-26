@@ -14,27 +14,28 @@ tags:
   - citations
   - claude-code
 status: active
-quality_percentile: 52
+quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: jordan-gibbs/hyperresearch
   official_vendor: false
   license: MIT
 signals:
-  stars: 3882
+  stars: 4111
   last_commit: 2026-10-10T22:36:54Z
-  stars_delta_7d: 32
-  stars_growth_pct: 0.8
-  trending_score: 32.27
-  rank_current: 33
-  rank_delta: null
+  stars_delta_7d: 229
+  stars_growth_pct: 5.9
+  trending_score: 242.51
+  rank_current: 9
+  rank_delta: 24
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3850
     - 3882
+    - 4111
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: jordan-gibbs/hyperresearch
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.830Z
+  fetched_at: 2026-10-26T07:36:59.669Z
   truncated: false
 type: mcp_server
 launch:

@@ -15,27 +15,28 @@ tags:
   - aws
   - azure
 status: active
-quality_percentile: 64
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: patrickchugh/terravision
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 1661
-  last_commit: 2026-10-18T22:28:05Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.5
-  trending_score: 8.04
-  rank_current: 65
-  rank_delta: null
+  stars: 1662
+  last_commit: 2026-10-23T09:32:29Z
+  stars_delta_7d: 1
+  stars_growth_pct: 0.1
+  trending_score: 1
+  rank_current: 98
+  rank_delta: -33
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1653
     - 1661
+    - 1662
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: patrickchugh/terravision
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:39:42.805Z
+  fetched_at: 2026-10-26T07:44:00.727Z
   truncated: false
 type: mcp_server
 launch:
@@ -76,13 +77,11 @@ TerraVision is a free, open-source **cloud architecture diagram generator** for 
 
 Ask your AI assistant for a cloud architecture diagram, in plain words, and get the diagram a cloud architect would draw: the official AWS, Azure and GCP icons, with every resource in its VPC, subnet, zone or resource group. From a description, from your Terraform code, or the other way round, with the Terraform written from the diagram. TerraVision runs on your own computer and needs no cloud access.
 
----
-## Watch the 90-Second Intro
+---## Watch the 90-Second Intro
 
 [![TerraVision extension for Claude and ChatGPT](https://raw.githubusercontent.com/patrickchugh/terravision/main/images/youtube-thumbnail.png)](https://youtu.be/BbXWR-v_Dl0)
 
----
-## Gallery
+---## Gallery
 
 The same three-tier design on each cloud, then a flagship for each. Every example comes with the prompt and the source file: **[see the full gallery of 12 →](https://patrickchugh.github.io/terravision/gallery/)**
 
@@ -101,8 +100,7 @@ The same three-tier design on each cloud, then a flagship for each. Every exampl
 
 More in the gallery: [AWS serverless event-driven](https://patrickchugh.github.io/terravision/gallery/#aws-serverless-event-driven-architecture-diagram) · [AWS data lake](https://patrickchugh.github.io/terravision/gallery/#aws-data-lake-architecture-diagram) · [AWS multi-region failover](https://patrickchugh.github.io/terravision/gallery/#aws-multi-region-failover-architecture-diagram) · [AWS multi-account network](https://patrickchugh.github.io/terravision/gallery/#aws-multi-account-network-architecture-diagram) · [Azure AKS](https://patrickchugh.github.io/terravision/gallery/#azure-aks-architecture-diagram) · [Google Cloud data pipeline](https://patrickchugh.github.io/terravision/gallery/#google-cloud-data-pipeline-architecture-diagram)
 
----
-## Get started in Claude or ChatGPT
+---## Get started in Claude or ChatGPT
 
 TerraVision installs as an extension in **Claude Desktop** and a plugin in the **ChatGPT desktop app**, where the diagram appears right in the chat. It also works in Claude Code, Codex CLI, GitHub Copilot, Cursor and any other MCP client.
 
@@ -222,8 +220,7 @@ The first diagram takes a little longer while TerraVision installs itself. If an
 
 The full guide, with more example prompts: **[Use TerraVision with AI assistants](https://patrickchugh.github.io/terravision/ai-assistants/)**.
 
----
-## Keep diagrams current in CI/CD
+---## Keep diagrams current in CI/CD
 
 Point the [TerraVision GitHub Action](https://github.com/patrickchugh/terravision-action) at your Terraform, and the diagram redraws itself on every change:
 
@@ -238,8 +235,7 @@ Point the [TerraVision GitHub Action](https://github.com/patrickchugh/terravisio
 
 A `terravision.yml` next to the Terraform adds the title, numbered flows and connection labels to every version. GitLab, Jenkins, Azure DevOps and others: [CI/CD Integration](https://patrickchugh.github.io/terravision/cicd-integration/).
 
----
-## Why TerraVision?
+---## Why TerraVision?
 
 - ✅ **Built for AI assistants** — marketplace extensions and plugins for Claude, Codex, Gemini, Copilot and Cursor; diagrams appear right in the chat in Claude Desktop and the ChatGPT desktop app ([guide](https://patrickchugh.github.io/terravision/ai-assistants/))
 - ✅ **Provably Accurate diagrams** — accurate diagrams generated directly from your Terraform code so your code is the source of truth - what you see is what you get
@@ -254,8 +250,7 @@ A `terravision.yml` next to the Terraform adds the title, numbered flows and con
 - ✅ **Editable draw.io export** — open in draw.io, Lucidchart, or any mxGraph editor
 - ✅ **Terragrunt compatible** — auto-detects single- and multi-module Terragrunt projects
 
----
-## How it compares
+---## How it compares
 
 | | TerraVision | Manual tools<br>(draw.io, Lucidchart, Visio) | AI workspaces<br>(Eraser) | Diagram as code<br>(Mermaid, D2, Python Diagrams) | Live cloud scanners<br>(e.g. Cloudcraft) |
 |---|---|---|---|---|---|
@@ -270,8 +265,7 @@ A `terravision.yml` next to the Terraform adds the title, numbered flows and con
 
 Already draw by hand? Generate the first version with TerraVision, then polish the exported file in draw.io or Lucidchart. Full comparison: [TerraVision vs draw.io, Lucidchart, Eraser, Mermaid and others](https://patrickchugh.github.io/terravision/alternatives/).
 
----
-## Supported Cloud Providers
+---## Supported Cloud Providers
 
 | Provider         | Status          | Resource types |
 | ---------------- | --------------- | -------------- |
@@ -281,8 +275,7 @@ Already draw by hand? Generate the first version with TerraVision, then polish t
 
 Full list: [Node types](https://github.com/patrickchugh/terravision/blob/main/docs/node-types.md).
 
----
-## Use it from the command line
+---## Use it from the command line
 
 TerraVision is also a command-line tool, for scripts and for people who prefer to write the graph themselves.
 
@@ -377,8 +370,7 @@ terravision visualise --source ./path-to-your-terraform --show
 
 Click any resource to see its Terraform metadata, search resources, pan/zoom, and watch animated data flow on edges. The HTML is a single self-contained file that works fully offline.
 
----
-## Try the Interactive Demos
+---## Try the Interactive Demos
 
 Click any of these to see the interactive HTML output TerraVision produces:
 
@@ -386,8 +378,7 @@ Click any of these to see the interactive HTML output TerraVision produces:
 - 🟦 **[Azure demo](https://patrickchugh.github.io/terravision/demo-azure.html)** — VM scale set with load balancer and VNet
 - 🟩 **[GCP demo](https://patrickchugh.github.io/terravision/demo-gcp.html)** — Core GCP networking and compute
 
----
-## Advanced Usage Examples
+---## Advanced Usage Examples
 
 ### Generate a diagram
 
@@ -454,8 +445,7 @@ Strips VPCs, subnets, and networking plumbing. Great for executive presentations
 
 [formats]: https://patrickchugh.github.io/terravision/usage-guide/#output-formats
 
----
-## Documentation
+---## Documentation
 
 The complete documentation lives at **[patrickchugh.github.io/terravision](https://patrickchugh.github.io/terravision/)**.
 
@@ -483,13 +473,11 @@ The complete documentation lives at **[patrickchugh.github.io/terravision](https
 - [Resource Handler Guide](https://github.com/patrickchugh/terravision/blob/main/docs/resource-handler-guide.md)
 - [Project Constitution](https://github.com/patrickchugh/terravision/blob/main/docs/constitution.md)
 
----
-## FAQ
+---## FAQ
 
 Common questions — cloud credentials, LLM data privacy, offline use, Terragrunt, output formats, and more — are answered in the **[FAQ on the documentation site](https://patrickchugh.github.io/terravision/faq/)**.
 
----
-## Contributing
+---## Contributing
 
 Contributions are very welcome. See [CONTRIBUTING.md](https://github.com/patrickchugh/terravision/blob/main/docs/CONTRIBUTING.md) for development setup, coding standards, and the PR process.
 

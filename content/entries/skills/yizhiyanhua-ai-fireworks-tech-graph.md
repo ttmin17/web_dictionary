@@ -1,19 +1,20 @@
 ---
 slug: yizhiyanhua-ai-fireworks-tech-graph
 name: fireworks-tech-graph
-tagline: Create precise SVG technical diagrams, export PNG or offline HTML, and
-  animate supported semantic SVGs to GIF. Use for architecture, UML, agent,
-  cloud
-summary: Resolve the directory containing this file as SKILLROOT. Use
-  ${CLAUDESKILLDIR} in Claude Code or the absolute directory in Codex's loaded
-  skill metadata. Do not assume cwd or a previous shell variable persists.
+tagline: Agent skill from yizhiyanhua-ai/fireworks-tech-graph
+summary: Agent skill from yizhiyanhua-ai/fireworks-tech-graph
 categories:
-  - databases-memory
+  - coding-agents
+tags:
+  - agent-workflows
+  - claude-code
+  - developer-tools
+  - diagrams
 status: active
-quality_percentile: 39
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: yizhiyanhua-ai/fireworks-tech-graph
@@ -21,8 +22,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 11699
-  last_commit: 2026-09-05T14:55:00Z
+  stars: 11839
+  last_commit: 2026-10-21T07:23:02Z
+  stars_delta_7d: 394
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 11699
+    - 11839
 language: en
 needs_keys: false
 prerequisites: []
@@ -30,15 +38,12 @@ readme_source:
   repo: yizhiyanhua-ai/fireworks-tech-graph
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-14T14:55:15.774Z
+  fetched_at: 2026-10-26T07:43:49.493Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: fireworks-tech-graph
-  description: Create precise SVG technical diagrams, export PNG or offline HTML,
-    and animate supported semantic SVGs to GIF. Use for architecture, UML,
-    agent, cloud or workflow diagrams; not photos, raster art or statistical
-    charts.
+  description: Agent skill from yizhiyanhua-ai/fireworks-tech-graph
   folder_path: .
   extra_files:
     - .github/FUNDING.yml
@@ -51,7 +56,13 @@ skill:
     - .nojekyll
     - .npmignore
     - CHANGELOG.md
-tags: []
+  pack_total_skills: 1
+  is_pack_primary: true
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: yizhiyanhua-ai-fireworks-tech-graph
 ---
 
 # Fireworks Tech Graph

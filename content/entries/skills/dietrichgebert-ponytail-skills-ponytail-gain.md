@@ -16,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 60
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: DietrichGebert/ponytail
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 167294
+  stars: 176404
   last_commit: 2026-10-18T01:55:14Z
-  stars_delta_7d: 4815
-  stars_growth_pct: 3
-  trending_score: 4957.69
+  stars_delta_7d: 9110
+  stars_growth_pct: 5.4
+  trending_score: 9606.09
   velocity_source: snapshot_delta
   sparkline_4w:
     - 157371
     - 162479
     - 167294
+    - 176404
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: DietrichGebert/ponytail
   path: skills/ponytail-gain/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:33.448Z
+  fetched_at: 2026-10-26T07:41:08.850Z
   truncated: false
 type: agent_skill
 skill:

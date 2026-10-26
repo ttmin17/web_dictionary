@@ -16,21 +16,24 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: nesquena/hermes-webui
   official_vendor: false
   license: MIT
 signals:
-  stars: 19028
-  last_commit: 2026-10-19T06:57:31Z
-  stars_delta_7d: 658
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 19190
+  last_commit: 2026-10-26T06:00:23Z
+  stars_delta_7d: 162
+  stars_growth_pct: 0.9
+  trending_score: 163.38
+  rank_current: 43
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 19028
+    - 19190
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: nesquena/hermes-webui
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:41:15.959Z
+  fetched_at: 2026-10-26T07:45:39.092Z
   truncated: false
 type: agent_tool
 tool:

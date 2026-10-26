@@ -18,21 +18,24 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: openlit/openlit
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2858
-  last_commit: 2026-10-15T12:21:46Z
-  stars_delta_7d: 19
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 2883
+  last_commit: 2026-10-26T05:31:46Z
+  stars_delta_7d: 25
+  stars_growth_pct: 0.9
+  trending_score: 25.22
+  rank_current: 92
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 2858
+    - 2883
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: openlit/openlit
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:24.136Z
+  fetched_at: 2026-10-26T07:45:45.993Z
   truncated: false
 type: agent_tool
 tool:

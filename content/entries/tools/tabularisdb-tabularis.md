@@ -15,25 +15,28 @@ tags:
   - cross-platform
   - database-client
 status: active
-quality_percentile: 79
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: TabularisDB/tabularis
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5236
-  last_commit: 2026-10-18T15:09:48Z
-  stars_delta_7d: 137
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 5287
+  last_commit: 2026-10-24T08:05:42Z
+  stars_delta_7d: 51
+  stars_growth_pct: 1
+  trending_score: 51.5
+  rank_current: 79
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 5134
     - 5236
+    - 5287
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +45,7 @@ readme_source:
   repo: TabularisDB/tabularis
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.540Z
+  fetched_at: 2026-10-26T07:36:59.078Z
   truncated: false
 type: agent_tool
 tool:
@@ -93,16 +96,16 @@ Tabularis is an open-source desktop SQL workspace with 3 built-in database drive
 <p align="center">
   <sub>
     <a href="https://github.com/TabularisDB/tabularis/blob/main/README.md">English</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.it.md">Italiano</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.es.md">Español</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.zh-CN.md">中文</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.fr.md">Français</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.de.md">Deutsch</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.ja.md">日本語</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.ru.md">Русский</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.tl.md">Tagalog</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.ko.md">한국어</a> ·
-    <a href="https://github.com/TabularisDB/tabularis/blob/main/README.pt-BR.md">Português (Brasil)</a>
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.it.md">Italiano</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.es.md">Español</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.zh-CN.md">中文</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.fr.md">Français</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.de.md">Deutsch</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.ja.md">日本語</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.ru.md">Русский</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.tl.md">Tagalog</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.ko.md">한국어</a> ·
+    <a href="https://github.com/TabularisDB/tabularis/blob/main/docs/translations/README.pt-BR.md">Português (Brasil)</a>
   </sub>
 </p>
 
@@ -122,11 +125,11 @@ sudo snap install tabularis       # Linux
 
 Or grab an installer directly:
 
-- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.28.0/tabularis_0.28.0_x64-setup.exe)
+- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_x64-setup.exe)
 
-- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.28.0/tabularis_0.28.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.28.0/tabularis_0.28.0_x64.dmg)
+- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_x64.dmg)
 
-- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.28.0/tabularis_0.28.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.28.0/tabularis_0.28.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.28.0/tabularis-0.28.0-1.x86_64.rpm)
+- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis-0.29.0-1.x86_64.rpm)
 
 The app UI is available in English, Italian, Spanish, Chinese (Simplified), French, German, Japanese, Russian, Korean, Tagalog and Portuguese (Brazilian).
 

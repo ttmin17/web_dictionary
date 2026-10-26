@@ -11,10 +11,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7737
-  last_commit: 2026-10-18T01:05:23Z
-  stars_delta_7d: 220
-  stars_growth_pct: 2.9
-  trending_score: 226.44
+  stars: 8006
+  last_commit: 2026-10-23T08:07:10Z
+  stars_delta_7d: 269
+  stars_growth_pct: 3.5
+  trending_score: 278.35
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7340
     - 7517
     - 7737
+    - 8006
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-deslop/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:37.264Z
+  fetched_at: 2026-10-26T07:43:55.178Z
   truncated: false
 type: agent_skill
 skill:
@@ -73,8 +74,7 @@ skill:
 
 **核心信念：AI 味的主要问题并非语法错误；更常见的是过度圆滑、工整、解释充分。改写目标是保留剧情功能，同时增加口语、停顿、跳跃和具体动作。**
 
----
-> Agent 兼容性：只检查当前运行时的 canonical 目录：Claude `.claude/agents/{agent}.md`、OpenCode `.opencode/agents/{agent}.md`、Codex `.codex/agents/{agent}.toml`、Antigravity `.agents/agents/agent-name/agent.md`（`agent-name` 为目标 agent 名），不得因其他端文件存在而误判。Claude 用 `subagent_type`，OpenCode 用 `subagent` 工具的 `agent` 参数，Codex 用同名 `agent_type`，Antigravity 用 `invoke_subagent` + `TypeName`。运行时未暴露 custom-agent registry / `invoke_subagent`、返回未知 agent，或检测到 `.zcode/`（ZCode 3.3.4 不执行项目 custom agents）时降级 solo/direct：报告里一句白话告诉作者「这次由我直接改」，`Fallback: project custom agents unavailable -> solo` 原文只写进报告最后一行「技术备注：」。
+---> Agent 兼容性：只检查当前运行时的 canonical 目录：Claude `.claude/agents/{agent}.md`、OpenCode `.opencode/agents/{agent}.md`、Codex `.codex/agents/{agent}.toml`、Antigravity `.agents/agents/agent-name/agent.md`（`agent-name` 为目标 agent 名），不得因其他端文件存在而误判。Claude 用 `subagent_type`，OpenCode 用 `subagent` 工具的 `agent` 参数，Codex 用同名 `agent_type`，Antigravity 用 `invoke_subagent` + `TypeName`。运行时未暴露 custom-agent registry / `invoke_subagent`、返回未知 agent，或检测到 `.zcode/`（ZCode 3.3.4 不执行项目 custom agents）时降级 solo/direct：报告里一句白话告诉作者「这次由我直接改」，`Fallback: project custom agents unavailable -> solo` 原文只写进报告最后一行「技术备注：」。
 >
 > Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 34` 不一致时（标记缺失、字段缺失/非整数、小于或大于 34）**照常按文件存在性检查并 spawn**，同时用一句白话提示作者「写作助手是旧版，运行 /story-setup 后新开对话」，`Notice: agents bundle 版本不匹配（项目 {N}，本版 34）` 原文写进技术备注行；大于 34 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有 agent 文件缺失、或运行时不暴露 custom agent 时才降级 solo/direct，`Fallback: ... -> solo` 同样只进技术备注行。
 
@@ -112,8 +112,7 @@ AI味不按语法错误处理，也不需要"修正"。它属于风格问题：�
 
 若作者记忆 state 已存在，改写前用 `scripts/author_memory_commit.py query --workspace {工作区} --book-root {书目录} --kind prose_style [--genre {题材}] [--workflow 去AI味]` 获取匹配的 active 文风条目（`--workspace` 必传；`--genre` 填本书题材类型），把输出的 `lines`（≤2KB）交给 inline/spawn 执行者作为自然倾向，不逐条展示或最大化命中，不牺牲连贯、节奏和字数；当前请求、原文剧情功能和本 skill 保护规则优先。用户明确声明长期文风习惯时，改写后按 [references/author-memory.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-deslop/references/author-memory.md) 用 `record` 写入并按其「回执怎么告诉作者」转告；只记作者明确说的，一次性要求、反复修改、检测器 findings 和助手自己的结果不记录。
 
----
-## 自然文本基准
+---## 自然文本基准
 
 去AI味需要知道自然网文文本的特征。以下是从热门网文中提炼的非模板化写作特征，作为对比基准：
 
@@ -140,8 +139,7 @@ AI味不按语法错误处理，也不需要"修正"。它属于风格问题：�
 - 替代"不禁..."→ 直接写动作
 - 替代"缓缓开口"→ "说" / 用动作引出对话
 
----
-## 检测流程
+---## 检测流程
 
 去 AI 味只有一条管线：确定性检测器 → 按分级选 Gate → 一次定点改写 → 复扫。长篇写作的章末检测与按需审查、story-review 的确定性预检用的是同一套检测器与 Gate，本 skill 是它的独立入口。
 
@@ -187,8 +185,7 @@ node scripts/check-ai-patterns.js --check --fail-on=blocking <正文文件...>
 - 处理方式：删掉否定铺垫，直接写后项；或改成角色动作、物件细节、身体反应来呈现。
 - 若用户只要检测，保留报告不改文。若执行去 AI 味，只改确实损害读感且无叙事功能的问题；功能性写法标 `[需复核]` 并保留。
 
----
-### Phase 2：诊断与分级
+---### Phase 2：诊断与分级
 
 用户明确指定 Gate 时，直接使用该范围；未指定时按下表定档、选处理策略：
 
@@ -216,8 +213,7 @@ node scripts/check-ai-patterns.js --check --fail-on=blocking <正文文件...>
 
 **改写顺序**（只排所选 Gate 的先后，不扩大范围）：先去泛化与套话（禁用词、抽象情绪、工整对仗、解释腔），再去书面腔，最后回自然节奏、对话差异与结尾落点；做法与范例见 [references/anti-ai-writing.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-deslop/references/anti-ai-writing.md)。
 
----
-### Phase 3：逐项清除
+---### Phase 3：逐项清除
 
 #### Agent 调用：narrative-writer（去AI味执行）
 
@@ -248,8 +244,7 @@ node scripts/normalize-punctuation.js <正文文件...>
 - `normalize-punctuation.js` 机械兜底：保留书级白名单获准的停顿，清除其余残留的 `……`、漏网破折号 `——`/`—`、双连字符 `--` 和独立行 `---`；默认不改变引号风格，也不把有功能的 `？` / 少量 `！` 改成句号。
 - 知乎盐言短篇可保留 `「」`；只有用户或项目明确要求时，才给标点脚本加 `--quote-mode ascii` 或 `--quote-mode yan`。
 
----
-**视角改写复核（仅本次要求切换视角时）**：交付前回读原文，逐项核对新增的感知/认知句。原文只说明事件发生，不等于人物已经看见或知道；不得自行补观察时点。没有原文依据的“进门时发现”“后来看到”等句子删去，或只呈现原有、当前场景可见的物件状态；不可得的信息暂不叙述。这个检查先于交付，不能用句式脚本通过代替。
+---**视角改写复核（仅本次要求切换视角时）**：交付前回读原文，逐项核对新增的感知/认知句。原文只说明事件发生，不等于人物已经看见或知道；不得自行补观察时点。没有原文依据的“进门时发现”“后来看到”等句子删去，或只呈现原有、当前场景可见的物件状态；不可得的信息暂不叙述。这个检查先于交付，不能用句式脚本通过代替。
 
 ### Phase 5：输出润色结果
 
@@ -280,8 +275,7 @@ node scripts/normalize-punctuation.js <正文文件...>
 2. 全文上限 3 轮重扫；第 3 轮仍有 ≥10 处改动 → 在报告里标 `[需复核]`，移交人工
 3. 每轮结束前都要做一遍"再检一次"：是否有不符合的地方，有则继续；没有则停
 
----
-## 使用场景
+---## 使用场景
 
 | 场景 | 操作 |
 |------|------|
@@ -290,8 +284,7 @@ node scripts/normalize-punctuation.js <正文文件...>
 | 用户说"检查下有没有AI味" | 只做检测，不做修改 |
 | 用户写作中要求 `仅标注 / 只检测 / 不要改` | 嵌入式提醒模式：执行「AI味扫描」和「诊断与分级」，跳过「逐项清除」「确定性收尾」「输出润色结果」；输出问题标记表，不修改原文，不写文件 |
 
----
-## 参考资料
+---## 参考资料
 
 按需加载以下文件：
 
@@ -306,8 +299,7 @@ node scripts/normalize-punctuation.js <正文文件...>
 | [scripts/check-degeneration.js](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-deslop/scripts/check-degeneration.js) | 文件模式「确定性收尾」复扫，只报告不改写 |
 | [references/author-memory.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-deslop/references/author-memory.md) + [scripts/author_memory_commit.py](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-deslop/scripts/author_memory_commit.py) | 读取或更新跨会话作者文风习惯时 |
 
----
-## 流程衔接
+---## 流程衔接
 
 **流水线：** 通用
 **位置：** 润色（共享收尾）
@@ -318,8 +310,7 @@ node scripts/normalize-punctuation.js <正文文件...>
 | 发现结构问题 | story-long-analyze / story-short-analyze | `/story-long-analyze` 或 `/story-short-analyze` |
 | 准备做封面 | story-cover | `/story-cover` |
 
----
-## 语言
+---## 语言
 
 - 跟随用户的语言回复，用户用什么语言就用什么语言回复
 - 中文回复遵循《中文文案排版指北》

@@ -18,21 +18,24 @@ status: active
 quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: infiniflow/ragflow
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 92449
-  last_commit: 2026-10-19T07:26:51Z
-  stars_delta_7d: 621
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 92879
+  last_commit: 2026-10-26T07:31:58Z
+  stars_delta_7d: 430
+  stars_growth_pct: 0.5
+  trending_score: 432
+  rank_current: 21
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 92449
+    - 92879
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: infiniflow/ragflow
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:09.154Z
+  fetched_at: 2026-10-26T07:45:34.193Z
   truncated: false
 type: agent_tool
 tool:

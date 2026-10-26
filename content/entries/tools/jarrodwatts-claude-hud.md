@@ -14,24 +14,27 @@ tags:
   - claude-code
   - cli
 status: active
-quality_percentile: 60
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: jarrodwatts/claude-hud
   official_vendor: false
   license: MIT
 signals:
-  stars: 28632
-  last_commit: 2026-10-18T00:02:47Z
-  stars_delta_7d: 680
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 28887
+  last_commit: 2026-10-26T07:15:19Z
+  stars_delta_7d: 255
+  stars_growth_pct: 0.9
+  trending_score: 257.27
+  rank_current: 28
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 28632
+    - 28887
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +43,7 @@ readme_source:
   repo: jarrodwatts/claude-hud
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:37:40.924Z
+  fetched_at: 2026-10-26T07:42:26.491Z
   truncated: false
 type: agent_tool
 tool:
@@ -154,7 +157,7 @@ Labels are available in English (the default), Simplified Chinese (`zh-Hans`, al
 | `pathLevels` | 1-3 \| `full` | 1 | Directory levels to show in project path, or `full` to show the entire absolute path |
 | `maxWidth` | number \| `null` | `null` | Optional fallback width used only when terminal width detection fails completely |
 | `forceMaxWidth` | boolean | false | Always use `maxWidth` when it is set, even if terminal width detection returns a smaller value |
-| `elementOrder` | string[] | `["project","addedDirs","context","usage","promptCache","cacheHitRate","memory","environment","tools","skills","mcp","agents","todos","sessionTime"]` | Expanded-mode element order. Omit entries to hide them in expanded mode. Existing configs keep their explicit order until updated. `sessionTokens` isn't in the default order: add it to place the `display.showSessionTokens` summary like any other element, for example in a `display.mergeGroups` group with `project`. Left out, it stays on its own last line. |
+| `elementOrder` | string[] | `["project","addedDirs","context","usage","promptCache","cacheHitRate","memory","environment","tools","skills","mcp","agents","todos","sessionTime"]` | Expanded-mode element order. Omit entries to hide them in expanded mode. Existing configs keep their explicit order until updated. `sessionTokens` isn't in the default order: add it to place the `display.showSessionTokens` summary like any other element, for example in a `display.mergeGroups` group with `project`. Left out, it stays on its own last line. `cost` works the same way: left out, the cost segment stays on the first line (where `projectLineOrder` can move it); added, it becomes its own element, for example `"context","usage","cost"` in `elementOrder` with `["context","usage","cost"]` in `display.mergeGroups` puts it beside context and usage. |
 | `projectLineOrder` | string[] | `[]` | Optional leading order of segments *within* the first line, in both layouts. Visibility stays with the `display.show*` flags, and omitted segments retain their existing renderer order. `model` covers provider + model + effort (plus the context bar in compact mode); `project` covers path + added dirs + git as one segment. Example: `["project","model"]` puts the project/git block before the model badge. |
 | `display.mergeGroups` | string[][] | `[["context","usage"]]` | Expanded-mode groups that should share a line when adjacent. Set `[]` to disable merged lines. |
 | `display.rightAlign` | string[] | `[]` | Starts a right-aligned suffix at the first listed element in a merged row, preserving `elementOrder` and padding the gap with spaces. Requires the anchor to be in a `display.mergeGroups` group that actually renders on one line. Ignored when the terminal width is unknown, the anchor is first, or there is no room for padding. Example: `["context"]` with a `["project","context","usage"]` group keeps project/git left and pins context + usage right. |
@@ -228,6 +231,7 @@ Labels are available in English (the default), Simplified Chinese (`zh-Hans`, al
 | `display.showCompactions` | boolean | false | Show how many context compactions (manual `/compact` or auto) have occurred this session, counted from transcript `compact_boundary` entries, e.g. `Compactions: 2`. Hidden until the first compaction |
 | `display.showEffortLevel` | boolean | false | Show the current reasoning effort in the model badge. Ultracode renders as `ultracode(xhigh)`, detected from the session transcript so it tracks `/effort` changes made at runtime |
 | `display.effortFormat` | `full` \| `symbol` \| `text` | `full` | How the effort renders when `display.showEffortLevel` is on: symbol and level text (`◑ high`), symbol only (`◑`), or level text only (`high`). Ultracode keeps the full `◕ ultracode(xhigh)` form under `symbol` so the marker is not lost, and levels without a known symbol fall back to the level text |
+| `display.showAgentEffort` | boolean | false | With `display.showAgents`, show each subagent's reasoning effort next to its model, e.g. `◐ code-reviewer [haiku-4.5 ◔ medium]`, in `display.effortFormat`. Read from the subagent's own transcript, so it appears once Claude Code has recorded the agent's id (at launch for background agents, at the end otherwise) and its first reply |
 | `display.showClaudeCodeVersion` | boolean | false | Show the running Claude Code version, e.g. `CC v2.1.81` |
 | `display.showMemoryUsage` | boolean | false | Show an approximate system RAM usage line in expanded layout |
 | `display.showPromptCache` | boolean | false | Show when the main conversation's prompt cache expires |
@@ -309,6 +313,8 @@ Set `jjStatus.enabled` to `true` to show jj status, such as `jj:(mybookmark*)` o
 ### Auto-Refresh
 
 Claude Code re-runs the status line after each message, `/compact`, a permission or vim mode change, a rate-limit reset, and a prompt-cache expiry. To keep countdowns and durations ticking while a session is idle, add `refreshInterval` (seconds) to the `statusLine` entry in `~/.claude/settings.json`.
+
+**Windows (Git Bash/MSYS2):** Short intervals, especially with several Claude Code sessions open, can leave Git Bash failing with `add_item ... failed, errno 1`. Leave `refreshInterval` unset, or use 30 seconds or more (longer with several sessions). To recover without rebooting, close every Claude Code session and Git Bash window.
 
 ### Turning It Off for a Session
 

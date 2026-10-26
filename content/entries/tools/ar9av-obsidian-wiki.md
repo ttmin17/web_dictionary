@@ -13,28 +13,29 @@ tags:
   - brain
   - claude-code
 status: active
-quality_percentile: 76
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Ar9av/obsidian-wiki
   official_vendor: false
   license: MIT
 signals:
-  stars: 3590
-  last_commit: 2026-10-18T14:40:05Z
-  stars_delta_7d: 32
+  stars: 3621
+  last_commit: 2026-10-21T04:14:42Z
+  stars_delta_7d: 31
   stars_growth_pct: 0.9
-  trending_score: 32.29
-  rank_current: 32
-  rank_delta: null
+  trending_score: 31.27
+  rank_current: 89
+  rank_delta: -57
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3529
     - 3558
     - 3590
+    - 3621
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: Ar9av/obsidian-wiki
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:40:38.320Z
+  fetched_at: 2026-10-26T07:44:55.827Z
   truncated: false
 type: agent_tool
 tool:

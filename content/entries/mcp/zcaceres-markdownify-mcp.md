@@ -13,28 +13,29 @@ tags:
   - anthropic-claude
   - markdown
 status: active
-quality_percentile: 51
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2024-12-18T21:14:52
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zcaceres/markdownify-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2997
-  last_commit: 2026-09-25T05:23:14Z
+  stars: 2996
+  last_commit: 2026-10-26T05:51:27Z
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 87
-  rank_delta: null
+  rank_current: 103
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3001
     - 2998
     - 2997
+    - 2996
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: zcaceres/markdownify-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:39.534Z
+  fetched_at: 2026-10-26T07:38:10.416Z
   truncated: false
 type: mcp_server
 launch:

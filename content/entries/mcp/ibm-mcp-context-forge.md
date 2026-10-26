@@ -18,25 +18,26 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2025-05-08T08:16:59
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: IBM/mcp-context-forge
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4649
-  last_commit: 2026-10-17T15:15:57Z
-  stars_delta_7d: 33
-  stars_growth_pct: 0.7
-  trending_score: 33.24
-  rank_current: 32
-  rank_delta: null
+  stars: 4692
+  last_commit: 2026-10-25T19:40:38Z
+  stars_delta_7d: 43
+  stars_growth_pct: 0.9
+  trending_score: 43.4
+  rank_current: 39
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4582
     - 4616
     - 4649
+    - 4692
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: IBM/mcp-context-forge
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.476Z
+  fetched_at: 2026-10-26T07:38:10.533Z
   truncated: false
 type: mcp_server
 launch:
@@ -86,7 +87,7 @@ launch:
 
 It runs as a fully compliant MCP server, deployable via PyPI or Docker, and scales to multi-cluster environments on Kubernetes with Redis-backed federation and caching.
 
-![ContextForge](https://ibm.github.io/mcp-context-forge/images/mcpgateway.gif)
+![ContextForge Web UI](https://raw.githubusercontent.com/IBM/mcp-context-forge/main/docs/docs/images/mcpgateway.gif)
 ---
 
 <!-- vscode-markdown-toc -->
@@ -95,6 +96,7 @@ It runs as a fully compliant MCP server, deployable via PyPI or Docker, and scal
 - [Overview & Goals](#overview--goals)
 - [Quick Start - PyPI](#quick-start---pypi)
 - [Quick Start - Containers](#quick-start---containers)
+  - [Optional Web UI](#optional-web-ui)
 - [VS Code Dev Container](#quick-start-vs-code-dev-container)
 - [Installation](#installation)
 - [Upgrading](#upgrading)
@@ -134,6 +136,7 @@ It currently supports:
 * Virtualization of legacy APIs as MCP-compliant tools and servers
 * Transport over HTTP, JSON-RPC, WebSocket, SSE (with configurable keepalive), and Streamable HTTP; stdio transport available for server-side use
 * An Admin UI for real-time management, configuration, and log monitoring (with airgapped deployment support)
+* A redesigned, more user-friendly [Web UI](#optional-web-ui) that runs in a separate container
 * Built-in auth, retries, and rate-limiting with user-scoped OAuth tokens and unconditional X-Upstream-Authorization header support
 * **OpenTelemetry observability** with Phoenix, Jaeger, Zipkin, and other OTLP backends
 * Scalable deployments via Docker or PyPI, Redis-backed caching, and multi-cluster federation
@@ -461,6 +464,27 @@ cp your-cert.pem certs/cert.pem && cp your-encrypted-key.pem certs/key-encrypted
 echo "KEY_FILE_PASSWORD=your-passphrase" >> .env
 make compose-tls
 ```
+
+#### Optional Web UI
+
+The **ContextForge Web UI v0.2.4** provides a redesigned, more user-friendly interface, separate from the built-in Admin UI.
+It runs in its own container and connects to the gateway API.
+
+After the Docker Compose setup above, start the Web UI with these commands from the gateway checkout:
+
+```bash
+make compose-pull PROFILE="--profile ui"
+make compose-up PROFILE="--profile ui"
+```
+
+Open [http://localhost:3001](http://localhost:3001) and sign in with your gateway account.
+Set `WEB_UI_PORT` in `.env` to change the port.
+The `ui` profile starts the Web UI and its dedicated Redis session store alongside the gateway.
+
+`PROFILE` replaces the Makefile's default profiles.
+On `linux/amd64`, use `PROFILE="--profile with-fast-time --profile ui"` in both commands to retain the default fast-time service.
+
+For separate npm development setup, see the [Web UI setup guide](https://github.com/contextforge-org/contextforge-web-ui/blob/v0.2.4/README.md#getting-started).
 
 ### ☸️ Quick Start - Helm (Kubernetes)
 
@@ -1034,17 +1058,6 @@ A complete changelog can be found here: [CHANGELOG.md](https://github.com/IBM/mc
 ## License
 
 Licensed under the **Apache License 2.0** - see [LICENSE](https://github.com/IBM/mcp-context-forge/blob/main/LICENSE)
-
-
-## Core Authors and Maintainers
-
-- [Mihai Criveti](https://www.linkedin.com/in/crivetimihai) - Distinguished Engineer, Agentic AI
-
-Special thanks to our contributors for helping us improve ContextForge:
-
-<a href="https://github.com/ibm/mcp-context-forge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ibm/mcp-context-forge&max=100&anon=0&columns=10" alt="Contributors to the mcp-context-forge repository" />
-</a>
 
 ## Star History and Project Activity
 

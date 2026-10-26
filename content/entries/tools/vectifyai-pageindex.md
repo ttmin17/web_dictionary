@@ -11,24 +11,27 @@ tags:
   - ai-agents
   - context-engineering
 status: active
-quality_percentile: 71
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: VectifyAI/PageIndex
   official_vendor: false
   license: MIT
 signals:
-  stars: 39265
-  last_commit: 2026-10-19T05:59:40Z
-  stars_delta_7d: 485
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 39741
+  last_commit: 2026-10-26T04:52:11Z
+  stars_delta_7d: 476
+  stars_growth_pct: 1.2
+  trending_score: 481.77
+  rank_current: 19
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 39265
+    - 39741
 language: en
 needs_keys: false
 prerequisites:
@@ -37,7 +40,7 @@ readme_source:
   repo: VectifyAI/PageIndex
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:11.392Z
+  fetched_at: 2026-10-26T07:45:38.242Z
   truncated: false
 type: agent_tool
 tool:

@@ -16,24 +16,27 @@ tags:
   - mcp-nest
   - model-context-protocol
 status: active
-quality_percentile: 67
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: rekog-labs/MCP-Nest
   official_vendor: false
   license: MIT
 signals:
-  stars: 718
-  last_commit: 2026-10-16T04:26:19Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 722
+  last_commit: 2026-10-20T20:46:59Z
+  stars_delta_7d: 4
+  stars_growth_pct: 0.6
+  trending_score: 4.02
+  rank_current: 127
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 718
+    - 722
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +45,7 @@ readme_source:
   repo: rekog-labs/MCP-Nest
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.480Z
+  fetched_at: 2026-10-26T07:38:48.535Z
   truncated: false
 type: agent_tool
 tool:

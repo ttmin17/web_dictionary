@@ -17,7 +17,7 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -25,15 +25,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13365
-  last_commit: 2026-10-15T09:16:24Z
-  stars_delta_7d: 28
+  stars: 13390
+  last_commit: 2026-10-22T09:22:55Z
+  stars_delta_7d: 25
   stars_growth_pct: 0.2
-  trending_score: 28.06
+  trending_score: 25.05
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
+    - 13390
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/notify-channel-copilot/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:28.332Z
+  fetched_at: 2026-10-26T07:36:56.894Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +57,7 @@ skill:
     switch to generate-message-template instead.
   folder_path: aiagent/skill/embedded/builtin/notify-channel-copilot
   extra_files: []
-  pack_total_skills: 22
+  pack_total_skills: 23
   is_pack_primary: false
   clients:
     - claude-code
@@ -96,7 +97,7 @@ type NotifyChannelConfig struct {
     Enable      bool
 
     ParamConfig   *NotifyParamConfig   // user parameters: contact_key + custom params
-    RequestType   string               // http | smtp | script | flashduty | pagerduty | jira | discord | jsm_alert | slackwebhook | mattermostwebhook
+    RequestType   string               // http | smtp | script | flashduty | pagerduty | jira | discord | jsm_alert | slackwebhook | mattermostwebhook | teams | twilio | pushover | ntfy | splunk_oncall | line
     RequestConfig *RequestConfig       // pick the matching sub-struct by ident/request_type
 
     Weight int
@@ -119,6 +120,10 @@ type NotifyChannelConfig struct {
 | `DiscordRequestConfig` | `discord` (native Discord channel, `request_type=discord`; optional, the webhook URL is a rule param) |
 | `JSMAlertRequestConfig` | `jsm_alert` (native JSM alert channel, `request_type=jsm_alert`; optional `api_url`, the integration key is a rule param) |
 | `SlackWebhookRequestConfig` / `MattermostWebhookRequestConfig` | `slackwebhook` / `mattermostwebhook` (native webhook channels; optional, the webhook URL is a rule param) |
+| `PushoverRequestConfig` | `pushover` (required `token` = application API token; optional `sound`; priorities are fixed: S1→High (1), S2/S3 and recovery→Normal (0), no Emergency mode; the user/group key is a rule param) |
+| `NtfyRequestConfig` | `ntfy` (all optional: `server_url` defaults to https://ntfy.sh, `token` or `username` + `password`; priorities are fixed: S1→5, S2→4, S3 and recovery→3; the topic is a rule param) |
+| `SplunkOnCallRequestConfig` | `splunk_oncall` (required `api_key` of the REST endpoint integration; message types are fixed: S1→CRITICAL, S2/S3→WARNING, recovery→RECOVERY; the routing key is a rule param) |
+| `LineRequestConfig` | `line` (required `channel_access_token` of the Messaging API channel; the recipient ID is a rule param) |
 
 ---
 
@@ -141,6 +146,10 @@ type NotifyChannelConfig struct {
 | `slackbot` / `mattermostbot` | simpleHTTPProvider | HTTP | legacy generic HTTP (Bot mode is not natively supported yet) |
 | `jira` (`request_type=jira`) | JiraProvider | HTTP | Jira issues: create on trigger, comment and close on recovery |
 | `jsm_alert` (`request_type=jsm_alert`) | JSMAlertProvider | HTTP | JSM Operations alerts: create on trigger, close on recovery |
+| `pushover` (`request_type=pushover`) | PushoverProvider | HTTP | Pushover push; emergency priority repeats until acknowledged and is canceled on recovery |
+| `ntfy` (`request_type=ntfy`) | NtfyProvider | HTTP | ntfy push (public ntfy.sh or self-hosted); built-in |
+| `splunk_oncall` (`request_type=splunk_oncall`) | SplunkOnCallProvider | HTTP | Splunk On-Call (VictorOps) REST endpoint: incident on trigger, RECOVERY on recovery |
+| `line` (`request_type=line`) | LineProvider | HTTP | LINE Messaging API push from an official account |
 | `jira` / `discord` / `jsm_alert` / `slackwebhook` / `mattermostwebhook` (legacy `request_type=http`) | callback | HTTP | legacy hand-made webhook configs |
 | `email` | EmailProvider | SMTP | Email |
 | `tx-sms` | TencentSmsProvider | HTTP | Tencent Cloud SMS |

@@ -16,24 +16,25 @@ status: active
 quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: skyhook-io/radar
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3851
-  last_commit: 2026-10-19T06:25:12Z
-  stars_delta_7d: 93
-  stars_growth_pct: 2.5
-  trending_score: 95.3
-  rank_current: 15
-  rank_delta: null
+  stars: 3911
+  last_commit: 2026-10-26T04:11:29Z
+  stars_delta_7d: 60
+  stars_growth_pct: 1.6
+  trending_score: 60.93
+  rank_current: 31
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3758
     - 3851
+    - 3911
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: skyhook-io/radar
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.866Z
+  fetched_at: 2026-10-26T07:36:59.704Z
   truncated: false
 type: mcp_server
 launch:
@@ -244,7 +245,7 @@ The table below covers common startup flags. See the [full CLI reference](https:
 | `--timeline-db` | `~/.radar/timeline.db` | Path to SQLite database (when using sqlite storage) |
 | `--timeline-max-size` | `1Gi` | Maximum SQLite DB + WAL size before pruning oldest events (e.g. `800Mi`, `8Gi`; `0` disables) |
 | `--history-limit` | `10000` | Maximum events to retain in timeline (memory only) |
-| `--disable-exec` | `false` | Disable terminal and debug shell |
+| `--disable-exec` | `false` | Disable pod terminal, debug shells and pod file browsing |
 | `--disable-helm-write` | `false` | Disable Helm write operations |
 | `--disable-local-terminal` | `false` | Disable the host local terminal |
 | `--debug-image` | `busybox:latest` | Image for ephemeral debug containers and node debug pods. If built-in restricted PodSecurity rejects the default pod debug container, Radar retries with a restricted-compatible Linux security context using the target/pod non-root UID, or UID `65532` by default; point at a compatible mirror for air-gapped / private-registry clusters. |
@@ -261,7 +262,8 @@ The table below covers common startup flags. See the [full CLI reference](https:
 | `--beyla-job-selector` | (empty) | Beyla Live Traffic matcher fragment (empty matches Beyla/Alloy jobs there). Workload charts use it only with an explicit scope override and accept one `job` equality or regex matcher. Automatic workload matching discovers custom jobs without it. [Details](https://github.com/skyhook-io/radar/blob/main/docs/workload-metrics.md#request-sources). |
 | `--opencost-currency` | (auto-detect, then USD) | Override the ISO 4217 currency label for OpenCost values. Radar labels values but does not convert them. |
 | `--auth-mode` | `none` | Authentication mode: `none`, `proxy`, or `oidc` ([details](https://github.com/skyhook-io/radar/blob/main/docs/authentication.md)) |
-| `--no-mcp` | `false` | Disable MCP server for AI tool integration |
+| `--no-mcp` | `false` | Disable all MCP endpoints |
+| `--mcp-read-only` | `false` | Expose only read-only MCP tools; disable `/mcp` (env: `RADAR_MCP_READ_ONLY`) |
 | `--mcp-catalog-stdio` | `false` | Start only the MCP catalog over stdio for registry introspection |
 | `--version` | | Show version and exit |
 
@@ -551,7 +553,10 @@ Radar includes a built-in [Model Context Protocol](https://modelcontextprotocol.
 
 Instead of raw `kubectl` output (verbose YAML that burns through LLM context windows), your AI gets pre-processed, token-optimized data: topology graphs, health assessments, deduplicated events, and filtered logs. Diagnosis is read-only by default; optional in-cluster route probing uses short-lived, self-deleting probe pods. Write operations such as restart, scale, apply, and rollback are identified for client confirmation and enforced through Kubernetes RBAC.
 
-Enabled by default. Disable with `--no-mcp`. See the **[MCP Guide](https://github.com/skyhook-io/radar/blob/main/docs/mcp.md)** for setup instructions.
+Enabled by default. Disable all MCP endpoints with `--no-mcp`, or expose only
+read-only MCP tools with `--mcp-read-only` and connect to `/mcp-readonly`.
+This setting does not restrict UI or REST API writes. See the
+**[MCP Guide](https://github.com/skyhook-io/radar/blob/main/docs/mcp.md)** for setup and configuration precedence.
 
 ### Authentication
 

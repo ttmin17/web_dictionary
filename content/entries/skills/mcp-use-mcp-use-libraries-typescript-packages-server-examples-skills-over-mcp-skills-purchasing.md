@@ -14,7 +14,7 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2025-03-28T10:06:31
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mcp-use/mcp-use
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10785
-  last_commit: 2026-10-18T01:04:46Z
-  stars_delta_7d: 32
+  stars: 10814
+  last_commit: 2026-10-22T00:22:30Z
+  stars_delta_7d: 29
   stars_growth_pct: 0.3
-  trending_score: 32.1
-  rank_current: 91
-  rank_delta: null
+  trending_score: 29.08
+  rank_current: 112
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10728
     - 10753
     - 10785
+    - 10814
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: mcp-use/mcp-use
   path: libraries/typescript/packages/server/examples/skills-over-mcp/skills/purchasing/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:29.191Z
+  fetched_at: 2026-10-26T07:36:57.658Z
   truncated: false
 type: agent_skill
 skill:

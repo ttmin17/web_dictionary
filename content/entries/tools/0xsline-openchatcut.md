@@ -18,25 +18,26 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: 0xsline/OpenChatCut
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2510
-  last_commit: 2026-10-18T17:16:43Z
-  stars_delta_7d: 181
-  stars_growth_pct: 7.8
-  trending_score: 195.07
-  rank_current: 12
-  rank_delta: null
+  stars: 2680
+  last_commit: 2026-10-21T13:09:03Z
+  stars_delta_7d: 170
+  stars_growth_pct: 6.8
+  trending_score: 181.51
+  rank_current: 39
+  rank_delta: -27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2170
     - 2329
     - 2510
+    - 2680
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: 0xsline/OpenChatCut
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:09.209Z
+  fetched_at: 2026-10-26T07:45:25.855Z
   truncated: false
 type: agent_tool
 tool:
@@ -615,8 +616,7 @@ See the bilingual [`CHANGELOG.md`](https://github.com/0xsline/OpenChatCut/blob/m
 OpenChatCut is licensed under the [GNU Affero General Public License v3.0 or later](https://github.com/0xsline/OpenChatCut/blob/main/LICENSE).
 Third-party components and assets remain subject to their respective licenses.
 
----
-## Contributing
+---## Contributing
 
 1. Create a branch from `main`.
 2. Add an executable check for non-trivial logic.

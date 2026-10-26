@@ -15,25 +15,26 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: pascalorg/editor
   official_vendor: false
   license: MIT
 signals:
-  stars: 24973
-  last_commit: 2026-10-18T19:29:31Z
-  stars_delta_7d: 133
-  stars_growth_pct: 0.5
-  trending_score: 133.71
-  rank_current: 21
-  rank_delta: null
+  stars: 25114
+  last_commit: 2026-10-25T14:33:46Z
+  stars_delta_7d: 141
+  stars_growth_pct: 0.6
+  trending_score: 141.8
+  rank_current: 48
+  rank_delta: -27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 24713
     - 24840
     - 24973
+    - 25114
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: pascalorg/editor
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:31:56.033Z
+  fetched_at: 2026-10-26T07:36:25.861Z
   truncated: false
 type: agent_tool
 tool:
@@ -68,7 +69,7 @@ WebGPU. Run it in the browser or from the CLI, and connect AI agents through MCP
 [![npm @pascal-app/viewer](https://img.shields.io/npm/v/@pascal-app/viewer?label=%40pascal-app%2Fviewer)](https://www.npmjs.com/package/@pascal-app/viewer)
 [![npm @pascal-app/cli](https://img.shields.io/npm/v/@pascal-app/cli?label=%40pascal-app%2Fcli)](https://www.npmjs.com/package/@pascal-app/cli)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/XRKsDcpqgS)
-[![X (Twitter)](https://img.shields.io/badge/follow-%40pascal__app-black?logo=x&logoColor=white)](https://x.com/pascal_app)
+[![X (Twitter)](https://img.shields.io/badge/follow-%40pascal-black?logo=x&logoColor=white)](https://x.com/pascal)
 
 https://github.com/user-attachments/assets/8b50e7cf-cebe-4579-9cf3-8786b35f7b6b
 
@@ -89,7 +90,7 @@ shown here is not yet part of the open-source editor release.
 
 We are exploring what this could make possible for facility management, home services,
 architecture, home building, and infrastructure.
-[Join the discussion on X](https://x.com/pascal_app/status/2102097655031558496)
+[Join the discussion on X](https://x.com/pascal/status/2102097655031558496)
 and tell us where you would use it.
 
 ### Make something with these videos
@@ -103,7 +104,7 @@ and note your edits; no separate permission is needed.
 
 ## Run the Editor Locally
 
-Node.js 22.13 or newer can create a persistent local Pascal installation without
+Node.js 22.23.4+ on 22.x, 24.22.1+ on 24.x, or 26.12.1+ can create a persistent local Pascal installation without
 cloning this repository:
 
 ```bash
@@ -187,10 +188,12 @@ These workflows require a connected Pascal MCP server for their tool-backed acti
 
 ### MCP Registry
 
-[`server.json`](https://github.com/pascalorg/editor/blob/main/server.json) is Pascal's manifest for the official MCP Registry. Its
-version tracks the hosted MCP implementation independently of the npm package version.
-Pull requests validate the manifest and production endpoint. A Pascal organization
-owner publishes an approved version from `main` with the official registry publisher.
+[`server.json`](https://github.com/pascalorg/editor/blob/main/server.json) is Pascal's manifest for the official MCP Registry, named
+`app.pascal/editor`. It lists the `@pascal-app/mcp` npm package and the hosted Streamable HTTP
+endpoint, which signs in with OAuth. Its version is the `@pascal-app/mcp` package version:
+`bun scripts/sync-agent-versions.ts` rewrites it, and the Cursor plugin's CLI pin, from the
+package versions, and CI fails when they drift. A Pascal owner publishes from `main` after a
+release; see [wiki/npm-release.md](https://github.com/pascalorg/editor/blob/main/wiki/npm-release.md#mcp-registry).
 
 ## Using Published Packages
 

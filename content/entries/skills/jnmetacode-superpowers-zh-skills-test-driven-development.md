@@ -11,10 +11,10 @@ tags:
   - ai-coding
   - chinese
 status: active
-quality_percentile: 88
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: jnMetaCode/superpowers-zh
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8344
-  last_commit: 2026-10-19T04:47:10Z
-  stars_delta_7d: 39
+  stars: 8385
+  last_commit: 2026-10-20T13:33:25Z
+  stars_delta_7d: 41
   stars_growth_pct: 0.5
-  trending_score: 39.18
+  trending_score: 41.2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8267
     - 8305
     - 8344
+    - 8385
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: jnMetaCode/superpowers-zh
   path: skills/test-driven-development/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:37.712Z
+  fetched_at: 2026-10-26T07:43:55.664Z
   truncated: false
 type: agent_skill
 skill:

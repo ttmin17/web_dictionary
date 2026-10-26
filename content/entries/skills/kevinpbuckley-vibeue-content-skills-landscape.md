@@ -15,10 +15,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 55
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 781
-  last_commit: 2026-10-07T14:45:41Z
-  stars_delta_7d: 36
-  stars_growth_pct: 4.8
-  trending_score: 37.74
+  stars: 788
+  last_commit: 2026-10-24T02:30:54Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.9
+  trending_score: 7.06
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
+    - 788
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/landscape/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:34:23.735Z
+  fetched_at: 2026-10-26T07:38:54.125Z
   truncated: false
 type: agent_skill
 skill:
@@ -291,6 +292,25 @@ When sculpting pushes vertices to 0 or 65535, a saturation warning is logged. To
 - **get_height_in_region** and **set_height_in_region** use landscape-local vertex indices
 - Heights in `set_height_in_region` are world-space Z values
 - Heights returned by `get_height_in_region` are world-space Z values
+
+### Spline Coordinates and Edit Layers
+
+- `create_spline_point`, `create_spline_from_points`, and `modify_spline_point` take
+  **world-space** locations; `get_spline_info().control_points[].location` also reports
+  world space. Internally, control points use the **spline component's** transform,
+  which cancels the landscape scale. Do not multiply locations or widths by landscape scale.
+- Prefer a reserved **Splines** edit layer (`LandscapeEditLayerSplines`, not an ordinary
+  sculpt layer merely named "Splines"). `apply_splines_to_landscape` rebuilds that layer
+  through the engine, including removal of old deformation after moving/deleting points,
+  without baking into the base sculpt layer.
+- Without a reserved Splines layer, apply requires an explicitly set, unlocked editing
+  layer and permanently bakes into that layer. If no target is set, it returns `False`
+  and logs an error; it never silently chooses layer 0. UI layer selection alone does
+  not establish the scoped editing layer used by Python calls.
+- After changing control point properties with `set_editor_property`, call
+  `apply_splines_to_landscape` to rebuild and merge terrain/paint. With a reserved Splines
+  layer, `landscape_actor.force_layers_full_update()` also forces the engine refresh;
+  property assignment alone is not evidence that terrain and collision have updated.
 
 ### ⚠️ GrassVariety Struct Properties Are Read-Only via Direct Assignment
 

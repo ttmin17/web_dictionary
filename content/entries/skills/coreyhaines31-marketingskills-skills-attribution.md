@@ -16,7 +16,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -24,15 +24,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 55431
-  last_commit: 2026-10-15T21:33:21Z
-  stars_delta_7d: 913
-  stars_growth_pct: 1.7
-  trending_score: 928.29
+  stars: 56570
+  last_commit: 2026-10-22T16:57:46Z
+  stars_delta_7d: 1139
+  stars_growth_pct: 2.1
+  trending_score: 1162.4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
+    - 56570
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/attribution/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:21.632Z
+  fetched_at: 2026-10-26T07:42:09.287Z
   truncated: false
 type: agent_skill
 skill:
@@ -57,8 +58,9 @@ skill:
     "SavvyCal/Calendly attribution," "close the identify gap," "track
     conversions on a third-party domain," "first-party / self-hosted
     attribution." For event tracking setup and UTMs, see analytics. For
-    ad-platform pixels/CAPI, see ads. For pipeline and CRM revenue reporting,
-    see revops. For the AI-search attribution blind spot, see ai-seo.
+    ad-platform pixels/CAPI and conversion tracking, see conversion-tracking.
+    For pipeline and CRM revenue reporting, see revops. For the AI-search
+    attribution blind spot, see ai-seo.
   folder_path: skills/attribution
   extra_files:
     - evals/evals.json
@@ -66,7 +68,7 @@ skill:
     - references/by-business-type.md
     - references/first-party-tracking.md
     - references/measurement-paradigms.md
-  pack_total_skills: 50
+  pack_total_skills: 52
   is_pack_primary: false
   clients:
     - claude-code
@@ -92,7 +94,7 @@ Product context: check for `.agents/product-marketing.md` and read it if present
 State these up front so you don't rebuild neighboring skills:
 
 - **General event tracking, tracking plans, UTM setup, GA4/GTM** → **analytics**. Attribution *assumes tracking exists*. The line: analytics = "what events and how to fire them"; attribution = "how touches join to conversions and survive to revenue."
-- **Ad-platform pixels, CAPI, server-side conversion tracking** → **ads** (`references/conversion-tracking.md`). Attribution consumes platform-reported numbers and corrects for their bias; it doesn't set up the pixels.
+- **Ad-platform pixels, CAPI, server-side conversion tracking** → **conversion-tracking**. Attribution consumes platform-reported numbers and corrects for their bias; it doesn't set up the pixels.
 - **Pipeline stages, lead lifecycle, CRM revenue dashboards** → **revops**. Attribution feeds pipeline data; it doesn't define stages.
 - **Showing up in / measuring AI search** → **ai-seo**. Attribution names AI traffic as a blind spot only.
 
@@ -290,7 +292,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 ## Related Skills
 
 - **analytics** — event tracking, tracking plans, UTMs, GA4/GTM setup. Do this *before* attribution.
-- **ads** — ad-platform pixels, CAPI, server-side conversion tracking (`references/conversion-tracking.md`).
+- **conversion-tracking** — ad-platform pixels, CAPI, server-side conversion tracking, and tracking audits.
 - **revops** — pipeline stages, lead lifecycle, CRM revenue reporting. Attribution feeds it.
 - **ai-seo** — the AI-search attribution blind spot in depth.
 - **ab-testing** — controlled experiments; the incrementality mindset applied to on-site changes.

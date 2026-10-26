@@ -1,8 +1,8 @@
 ---
 slug: cherryhq-cherry-studio-resources-skills-office-transform
 name: office-transform
-tagline: Derive new Office files from structural selections without touching the
-  original. Use when the user points at part of a spreadsheet, Word document, PD
+tagline: Extract or edit a selection from xlsx, docx, pdf, or pptx into a new
+  file; the source is never modified.
 summary: "Two invariants hold for every operation:"
 categories:
   - coding-agents
@@ -15,7 +15,7 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -23,16 +23,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 52736
-  last_commit: 2026-10-19T07:10:52Z
-  stars_delta_7d: 139
-  stars_growth_pct: 0.3
-  trending_score: 139.37
+  stars: 52987
+  last_commit: 2026-10-26T07:25:22Z
+  stars_delta_7d: 251
+  stars_growth_pct: 0.5
+  trending_score: 252.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 52419
     - 52597
     - 52736
+    - 52987
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,19 +41,13 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/skills/office-transform/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:17.767Z
+  fetched_at: 2026-10-26T07:42:04.016Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: office-transform
-  description: Derive new Office files from structural selections without touching
-    the original. Use when the user points at part of a spreadsheet, Word
-    document, PDF, or PowerPoint deck (a worksheet range, paragraph, page,
-    slide, shape, or a pasted selection-ref block) and wants it extracted,
-    converted, or edited — the result is always a NEW file; the source file is
-    never modified. Covers xlsx range extraction to csv/markdown/xlsx, docx
-    paragraph extraction and text replacement, pdf page extraction, pptx
-    slide/shape/table-cell extraction and editing, and targeted xlsx cell edits.
+  description: Extract or edit a selection from xlsx, docx, pdf, or pptx into a
+    new file; the source is never modified.
   folder_path: resources/skills/office-transform
   extra_files:
     - references/docx-edit.md

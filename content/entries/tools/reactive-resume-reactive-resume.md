@@ -14,28 +14,29 @@ tags:
   - hacktoberfest
   - javascript
 status: active
-quality_percentile: 79
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: reactive-resume/reactive-resume
   official_vendor: false
   license: MIT
 signals:
-  stars: 44513
-  last_commit: 2026-10-19T04:11:21Z
-  stars_delta_7d: 280
-  stars_growth_pct: 0.6
-  trending_score: 281.77
-  rank_current: 10
-  rank_delta: null
+  stars: 44867
+  last_commit: 2026-10-25T17:06:21Z
+  stars_delta_7d: 354
+  stars_growth_pct: 0.8
+  trending_score: 356.82
+  rank_current: 23
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 43949
     - 44233
     - 44513
+    - 44867
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: reactive-resume/reactive-resume
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:31:31.671Z
+  fetched_at: 2026-10-26T07:35:59.925Z
   truncated: false
 type: agent_tool
 tool:
@@ -86,7 +87,7 @@ tool:
     <img src="https://img.shields.io/github/stars/reactive-resume/reactive-resume?style=flat-square" alt="GitHub Stars">
     <img src="https://img.shields.io/github/license/reactive-resume/reactive-resume?style=flat-square" alt="License" />
     <img src="https://img.shields.io/docker/pulls/amruthpillai/reactive-resume?style=flat-square" alt="Docker Pulls" />
-    <a href="https://discord.gg/aSyA5ZSxpb"><img src="https://img.shields.io/discord/1173518977851473940?style=flat-square&label=discord" alt="Discord" /></a>
+    <a href="https://discord.gg/u9pAd3za9t"><img src="https://img.shields.io/discord/1173518977851473940?style=flat-square&label=discord" alt="Discord" /></a>
     <a href="https://crowdin.com/project/reactive-resume"><img src="https://badges.crowdin.net/reactive-resume/localized.svg?style=flat-square" alt="Crowdin" /></a>
     <a href="https://github.com/sponsors/AmruthPillai"><img src="https://img.shields.io/github/sponsors/AmruthPillai?style=flat-square&label=sponsors" alt="Sponsors" /></a>
     <a href="https://opencollective.com/reactive-resume/donate"><img src="https://img.shields.io/opencollective/backers/reactive-resume?style=flat-square&label=donations" alt="Donations" /></a>
@@ -128,6 +129,16 @@ Create a free account, import an existing resume or start fresh, and see the fin
 You own your data. The codebase is open source under the MIT license, with no tracking, no ads, and no paid tier. Optional AI features use a provider you connect; hosting and provider usage may have their own costs.
 
 ![Reactive Resume v6 editor with Write, Design, and Check modes and a live PDF preview](https://raw.githubusercontent.com/reactive-resume/reactive-resume/main/docs/images/getting-started/editor-overview.webp)
+
+## Build a better resume, together
+
+[Join the Reactive Resume community on Discord](https://discord.gg/u9pAd3za9t) to exchange resume feedback, get help using or self-hosting the app, and share ideas with other users and contributors.
+
+- **Resume feedback:** post a redacted resume and one specific question, or help someone improve theirs.
+- **Help:** find troubleshooting discussions and ask questions in dedicated forum threads.
+- **Contribute:** discuss ideas, translations, and code with the people building Reactive Resume.
+
+Feedback comes from fellow community members. Remove contact details and other private information before posting.
 
 ## Features
 

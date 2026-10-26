@@ -11,15 +11,15 @@ summary: "REQUIRED BACKGROUND: scenario-blender-expert (execution channel,
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -27,15 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/blender/scenario-blender-blockout/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.835Z
+  fetched_at: 2026-10-26T07:38:47.916Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,14 +55,17 @@ skill:
     the Scenario Blender Plugin): graybox or previs built for a video model,
     color-coded proxies at metric scale from rough to detailed, density levels
     from a simple shot to an expert scene with crowds, traffic and many cuts,
-    proxy figures, a camera locked to the timeline, rail or tracking camera
-    rigs, lens per shot, framing and occlusion checks, a playblast, a hand-off
-    sheet for the video prompt. Also when a render-to-real pass renders the
-    proxies as boxes, reads one figure as two people, swaps a car's front and
-    rear, drifts at the end, or the guide camera pops on a cut."
+    character stand-ins chosen per video model (colored capsules, capsules with
+    signature features, rigged gray mannequins), a camera locked to the
+    timeline, rail or tracking camera rigs, lens per shot, framing and occlusion
+    checks, a playblast, a hand-off sheet for the video prompt. Also when a
+    render-to-real pass renders the proxies as boxes, reads one figure as two
+    people, gives runners a stiff, lockstep or sliding gait, swaps a car's front
+    and rear, drifts at the end, or the guide camera pops on a cut."
   folder_path: skills/dcc/blender/scenario-blender-blockout
   extra_files:
     - references/audits.md
+    - references/cast.md
     - references/contract.md
     - references/examples.md
     - references/handoff.md
@@ -70,8 +74,7 @@ skill:
     - scripts/bx_blockout.py
     - scripts/bx_kits.py
     - scripts/examples/ex1_watchmaker.py
-    - scripts/examples/ex2_saltflat.py
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: false
   clients:
     - claude-code
@@ -103,7 +106,7 @@ left in Blender's one Python. Builders are get-or-create by name, so a call can 
 refuse a name the user's own work already holds (names are global to the file). An empty audit
 result is a pass. The module docstring shows the call order.
 [`scripts/bx_kits.py`](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/scripts/bx_kits.py) (`import bx_kits as K`, same rules) adds buildings,
-stalls, trees, lamps, rocks and vehicles at three fidelity tiers, figures that step or glide,
+stalls, trees, lamps, rocks and vehicles at three fidelity tiers, figures in four cast styles,
 crowds, traffic, color schemes and `K.audit_budget`. Four worked scenes, simple to expert, with
 render-pass results: [examples](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/examples.md) ([harness](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/scripts/examples/ex_common.py),
 [1](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/scripts/examples/ex1_watchmaker.py), [2](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/scripts/examples/ex2_saltflat.py),
@@ -117,8 +120,8 @@ model is rebuilt here.
 
 Before any call, write down:
 
-- **Elements and their primitive**: "bus = long box with a marked front", "figures = connected box
-  proxies". Never model past what the brief names.
+- **Elements and their primitive**: "bus = long box with a marked front", "figures = colored
+  capsules". Never model past what the brief names.
 - **Dimensions** in meters for everything; when the brief is silent, take them from
   [the contract tables](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/contract.md) and say so.
 - **Format**: integer fps, aspect, seconds. The range is 1 to fps x seconds (8 s at 24 fps: 1..192).
@@ -129,8 +132,14 @@ Before any call, write down:
   [levels](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/levels.md). Where the brief is silent (naming only heroes and shots is
   silent): advanced, shaped, category colors, and say so; drop to simple or medium only for one
   actor in one place. Expert means many elements, movers and cuts, never finer blocks.
-- **Video model**, now: figure fidelity and prompt grammar depend on it (`list_models` on the plugin
+- **Video model**, now: cast style and prompt grammar depend on it (`list_models` on the plugin
   lane, `recommend` on the hosted route).
+- **Cast style** per character ([cast](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/cast.md)): a stand-in with limbs hands the model a
+  gait to copy; one without limbs lets it invent body and motion. Default heroes to colored
+  capsules, featured (two or three signature features: goggles, a hood, a held lantern) when
+  characters must stay apart or carry the story's object; a rigged gray mannequin only when the
+  blockout must own limb motion. Tell the user the style chosen, what it costs in control, and that
+  the others can be A/B tested on a short window.
 - **Identity colors**: hero red, then blue, green, yellow, purple, cyan.
 - **Deliberate gaps** the video model fills, and **acceptance tests** the brief states: they become
   mandatory audits.
@@ -174,7 +183,7 @@ Four deliverables: the scene, a locked camera timeline, the playblast, the hand-
   `B.audit_handheld` against the budget in the contract; `animation_data_clear()` removes the
   modifiers, so re-add them after rekeying.
 
-## 3. Channel: the Scenario Blender Plugin
+## 3. Channel: the plugin or headless
 
 The live channel is the plugin's local Scenario MCP server, `scenario-blender` (the guide at
 [blender.scenario.com](https://blender.scenario.com/) calls the plugin Scenario for Blender). Tool
@@ -183,42 +192,33 @@ first: `execute_python` stays off until the user enables **Allow connected agent
 `PermissionError` means ask), and a call stops after 120 s, so send one stage piece per call and run
 `B.stage_backup(label)` after each stage.
 
-**Where the plugin's own tools fit.**
+**The plugin's own tools** ([plugin](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/plugin.md)): its paid **Blockout** suits a generic
+Stage 2 set, with no figures, cameras or identity colors; **`camera_path`** keys one shot around a
+static center, never tracking or multi-shot (`B.rail_camera`); **Render Video** is the video pass.
 
-- **Blockout** (`estimate_blockout` with `action` `DESIGN` or `REFINE`, `approve_blockout` with
-  `quote_id` and the user-approved `approved_cost`): the Scenario LLM turns the description, Type
-  and Scale the user typed in the Blockout panel into a plan of category-colored primitives, and the
-  user's **Build plan** button builds the `Blockout` collection (no tool builds geometry). It fits
-  Stage 2 for a generic set the user is willing to pay for. It makes no figures, facing, cameras,
-  timeline or identity colors; its category colors are muted (vehicles read pale red, so repaint
-  them neutral or in their identity color). A rebuild replaces the collection and drops manual
-  edits, and objects added to it block rebuilds: build everything else in your own collections.
-  After a failure or restart, recover the paid plan (`list_local_jobs`, `prepare_blockout_plan`,
-  `blockout_plan_status`, `apply_blockout_plan` after the user approves) instead of paying again.
-- **`camera_path`** (`preset` such as `orbit`, `push_in` or `crane`, or `waypoints`; `duration`,
-  `focal`, `aim_at_subject`): keys one `Scenario Shot Camera` around a static center (the selection
-  or the scene), sets it as scene camera, resets the frame range to its duration and turns the
-  preview range off. It fits a single shot of a static set. It cannot follow a moving subject or
-  bind cuts, so tracking, rails and multi-shot sequences use `B.rail_camera`. After it, run
-  `B.lock_format` and the audits again.
-- **Render Video** (`render_form`, `estimate_cost`, `generate`): the video pass inside Blender,
-  section 6.
+**Headless**, with no plugin: run each stage through scenario-blender-expert's headless helper. Load
+the preceding `.blend`, check it with `B.guard`, extend it, then save a new `B.stage_backup(label)`
+for the next stage. The [examples harness](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/scripts/examples/ex_common.py) is only for one-shot
+builds from factory startup: `start()` deletes all objects, including prior stages. Never reuse it
+to resume a backup. The 120 s limit is plugin-only.
 
 ## 4. Build order
 
 Back up after every stage; a reset is recovered from the last backup
-([contract](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/contract.md)). Every `execute_python` call starts with
+([contract](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/contract.md)). Every call or stage script starts with
 `B.guard(expected_file=..., scene=...)`: queued calls land in whatever file is open.
 
-0. **Probe**, read-only: `scene_summary`, `datablocks_summary`. Other work present: new scene.
+0. **Probe**, read-only: `scene_summary`, `datablocks_summary` (headless: `bpy.data`). Other work
+   present: new scene.
 1. **Format and scaffolding**: `B.make_scene`, `B.lock_format`, `B.collection` tree, `B.park`, dark
    world.
 2. **Set**: kits at the chosen fidelity (`K.building`, `K.stall`, `K.tree`) or thick boxes (`B.box`)
    at true scale, repeats as linked duplicates (`K.instance`). Or the plugin Blockout for a generic
    set.
-3. **Figures**: `K.figure` per hero, root at the feet, facing marked: shaped (jointed) for a
-   3D-to-video model, a rough capsule for a Seedance hero ([levels](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/levels.md)). Travel
-   with `K.walk_path` from a table of (frame, position); extras with `K.crowd`.
+3. **Figures**: `K.figure(..., style=, features=)` per hero in the chosen cast style, root at the
+   feet, facing along travel ([cast](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/cast.md)). Travel with `K.walk_path` from a table of
+   (frame, position), stride 0.42 x height for a walk, about 0.7 for a run; gestures with `K.pose`;
+   extras with `K.crowd(style=...)`.
 4. **Props and vehicles**: literal primitives at true position. Mark a vehicle's front in geometry
    (light blocks and grille in front, dark red at the rear); wheels at z = radius, separate with one
    spin channel only when a close shot reads rotation (kit wheels are body mesh). No loose blocks
@@ -263,31 +263,31 @@ blocks Blender while it renders: keep it to short clips, and after a timeout loo
 before running it again. Add camera stills at each shot's start, middle and end.
 
 **Hand-off sheet**, built from the scene ([template](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md)): color legend tied to
-reference images, the cut list from `B.cut_list()` with exact times, which entities are blocked and
-which exist only in words, every artifact with its timecode, each motion state in words ("creeps",
-"stands still"), and tie-break clauses ("if text and video disagree about motion, the video wins").
+reference images, `K.cast()` rows, the cut list from `B.cut_list()` with exact times, which entities
+are blocked and which exist only in words, every artifact with its timecode, each motion state in
+words ("creeps", "stands still"), and tie-break clauses ("if text and video disagree about motion,
+the video wins").
 
 **Video pass**, always through Scenario, after the user approves the exact price. Unattended, stop
 at the quote (`estimate_cost` or `dry_run`), report it, and skip local uploads that need the user's
 file choice:
 
-- **Plugin, Render Video lane**: `B.solid_view()` so the camera viewport shows identity colors,
-  `force_solid` false (it turns everything one gray), a timeline length the model accepts.
-  `list_models` with `lane` `render_video`, `model_schema`, `render_form` `configure` (`model_id`,
-  `look`, `capture_source` `CAMERA`, and `parameters` `{"duration": <clip seconds>}` when the schema
-  has one, since `match_timeline` does not set it here up to 0.11.0). Then `prepare` with `role`
-  `scene`, `inspect` until `ready_to_estimate`, `estimate_cost` and `generate` with that lane and no
-  `parameters`, `wait_for_job` re-called while `delivery_active`, then `prepare_result_application`
-  and `apply_result_application` to bring the clip in. The capture is a silent 1280x720 clip with
-  overlays hidden.
+- **Plugin, Render Video lane**: `B.solid_view()` so the capture shows identity colors,
+  `force_solid` false (it turns everything one gray), a timeline length the model accepts, then
+  `list_models`, `model_schema`, `render_form` (`configure` with `parameters`
+  `{"duration": <clip seconds>}`, `prepare`, `inspect`), `estimate_cost`, `generate`, `wait_for_job`
+  and the result application, step by step in [handoff](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md) Route 1. The capture
+  is a silent 1280x720 clip.
 - **Hosted Scenario MCP**, for the full-resolution playblast: upload the playblast as the `scenario`
   skill shows, discover a model that takes a reference video, `model_schema_get`, `model_run` with
   `dry_run` first, `jobs_wait`, `asset_download`.
 
 Write the prompt motion-first: the clip is rehearsal footage, the cast is described by role and
 motion, never by the proxies' shapes, and style comes from a four-panel style board rather than one
-restyled frame. On the plugin lane the plugin states the clip's and images' roles itself, so `look`
-holds only cast and style. Grammar, clauses and tested limits: [handoff](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md).
+restyled frame. A capsule cast adds a stand-in clause (the capsules only mark position, height, pace
+and heading) and a gait clause ([cast](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/cast.md)). On the plugin lane the plugin states
+the clip's and images' roles itself, so `look` holds only cast and style. Grammar, clauses and
+tested limits: [handoff](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md).
 
 ## Worked example
 
@@ -299,8 +299,9 @@ guard steps out at second 6; handheld 35 mm backing away."
 2. `execute_python`: `B.make_scene("BLK_warehouse")`; next call `B.guard(scene="BLK_warehouse")`,
    `B.lock_format(24, 10)` (1..240), collections, backup.
 3. Floor 34 x 20 m, 7 m walls, two rows of 1.2 m crates with `B.box`; backup.
-4. `B.proxy_figure("red", 1.8, (0, 15, 0), facing_deg=0)`, root keyed to (0, 1, 0) by frame 200; the
-   blue guard steps into the aisle over frames 144 to 156; backup.
+4. `K.figure("red", 1.8, (0, 15, 0), style="featured", features=("hood",))`, then `K.walk_path` to
+   (0, 1) by frame 200 with a sprint's stride (1.3 m); the blue guard, a capsule, steps into the
+   aisle over frames 144 to 156; backup.
 5. `B.rail_camera("s1", [(0, 3, 1.5), (0, -1, 1.5), (0, -4, 1.5)], follow="FIG_red", target_offset=(0, 0, 1.2), lens=35)`,
    `B.key_rail("RIG_dolly_s1", [(1, 0), (260, 1)])`, `B.bind_cuts([(1, "CAM_s1")])`, handheld noise
    within budget.
@@ -318,6 +319,8 @@ guard steps out at second 6; handheld 35 mm backing away."
 - **Camera grammar**: a key on the cut frame freezes motion there; an overhead orbit read as a cut;
   seats mirrored on a reverse camera; invented reverse shots in dialogue; drift in the last seconds.
 - **Ambiguous motion**: slow proxy motion reads as either rolling or still; the sheet decides.
+- **Copied limbs**: on a reference-video model, stepped or looped legs come back stiff, in lockstep
+  or sliding; switch that character to a capsule ([cast](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/cast.md)).
 - **Fragile detail**: sub-pixel parts change identity between restyles; a style that implies text
   invents gibberish lettering.
 - **Opening-frame fiction**: "starts at the door" needs a doorway behind frame 1; high shots over

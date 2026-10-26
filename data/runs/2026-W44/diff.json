@@ -1,0 +1,3978 @@
+{
+  "week": "2026-W44",
+  "generated_at": "2026-10-26T07:46:01.519Z",
+  "added": [
+    {
+      "slug": "xerj-org-xerj",
+      "name": "xerj",
+      "type": "mcp_server",
+      "stars": 15661,
+      "repo": "xerj-org/xerj"
+    },
+    {
+      "slug": "homarr-labs-dashboard-icons",
+      "name": "dashboard-icons",
+      "type": "agent_tool",
+      "stars": 8936,
+      "repo": "homarr-labs/dashboard-icons"
+    },
+    {
+      "slug": "osaurus-ai-osaurus-docs-examples-osaurus-bundle-example-skills-triage-ticket",
+      "name": "triage-ticket",
+      "type": "agent_skill",
+      "stars": 8076,
+      "repo": "osaurus-ai/osaurus"
+    },
+    {
+      "slug": "speedyapply-jobspy",
+      "name": "JobSpy",
+      "type": "mcp_server",
+      "stars": 4562,
+      "repo": "speedyapply/JobSpy"
+    },
+    {
+      "slug": "deedy5-ddgs",
+      "name": "ddgs",
+      "type": "agent_tool",
+      "stars": 3031,
+      "repo": "deedy5/ddgs"
+    },
+    {
+      "slug": "mcpjungle-mcpjungle",
+      "name": "MCPJungle",
+      "type": "agent_tool",
+      "stars": 1310,
+      "repo": "mcpjungle/MCPJungle"
+    },
+    {
+      "slug": "alisaitteke-photoshop-mcp",
+      "name": "photoshop-mcp",
+      "type": "mcp_server",
+      "stars": 737,
+      "repo": "alisaitteke/photoshop-mcp"
+    },
+    {
+      "slug": "cheaper-inference-omniroute",
+      "name": "OmniRoute",
+      "type": "agent_tool",
+      "stars": 81233,
+      "repo": "cheaper-inference/OmniRoute"
+    },
+    {
+      "slug": "heygen-com-hyperframes-registry-blocks-canopy-part-title",
+      "name": "canopy-part-title",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-registry-blocks-code-slice-hero",
+      "name": "code-slice-hero",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-registry-blocks-cuboid-carousel",
+      "name": "cuboid-carousel",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-registry-blocks-frost-sequence-camera-orbit",
+      "name": "frost-sequence-camera-orbit",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-registry-blocks-glass-shard-title",
+      "name": "glass-shard-title",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-registry-blocks-orbit-card",
+      "name": "orbit-card",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-registry-blocks-wireframe-portal-title",
+      "name": "wireframe-portal-title",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-skills-figma",
+      "name": "figma",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-skills-hyperframes-cli",
+      "name": "cli",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-skills-hyperframes-registry",
+      "name": "registry",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-skills-hyperframes",
+      "name": "hyperframes",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-skills-media-use",
+      "name": "media-use",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-skills-remotion-to-hyperframes",
+      "name": "remotion-to-hyperframes",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "heygen-com-hyperframes-skills-slideshow",
+      "name": "slideshow",
+      "type": "agent_skill",
+      "stars": 72435,
+      "repo": "heygen-com/hyperframes"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-motion",
+      "name": "simple-animation",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-control-browser",
+      "name": "control-browser",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-diagnosing-commands",
+      "name": "diagnosing-commands",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-diagnosing-hooks",
+      "name": "diagnosing-hooks",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-diagnosing-mcp",
+      "name": "diagnosing-mcp",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-diagnosing-plugins",
+      "name": "diagnosing-plugins",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-diagnosing-skills",
+      "name": "diagnosing-skills",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-dynamic-workflows",
+      "name": "dynamic-workflows",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-plugin-creator",
+      "name": "plugin-creator",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-visualize",
+      "name": "visualize",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-web-gui-tester",
+      "name": "web-gui-tester",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-glm-skills-zcode-configuration-guide",
+      "name": "zcode-configuration-guide",
+      "type": "agent_skill",
+      "stars": 70224,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-agent-launcher-skills-agent-launcher-orchestrator",
+      "name": "agent-launcher-orchestrator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-agent-launcher-skills-grade-iterate",
+      "name": "grade-iterate",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-agent-launcher-skills-interview",
+      "name": "interview",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-agent-launcher-skills-run-without-you",
+      "name": "run-without-you",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-agent-launcher-skills-stage-launch",
+      "name": "stage-launch",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-agent-launcher-skills-wrap-up",
+      "name": "wrap-up",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-growth-skills-business-growth-skills",
+      "name": "business-growth-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-growth-skills-contract-and-proposal-writer",
+      "name": "contract-and-proposal-writer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-growth-skills-customer-success-manager",
+      "name": "customer-success-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-growth-skills-revenue-operations",
+      "name": "revenue-operations",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-growth-skills-sales-engineer",
+      "name": "sales-engineer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-operations-skills-business-operations-skills",
+      "name": "business-operations-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-operations-skills-capacity-planner",
+      "name": "capacity-planner",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-operations-skills-internal-comms",
+      "name": "internal-comms",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-operations-skills-knowledge-ops",
+      "name": "knowledge-ops",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-operations-skills-process-mapper",
+      "name": "process-mapper",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-operations-skills-procurement-optimizer",
+      "name": "procurement-optimizer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-business-operations-skills-vendor-management",
+      "name": "vendor-management",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-arquiteto-de-empresa-skills-arquiteto-de-empresa",
+      "name": "arquiteto-de-empresa",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-chief-ai-officer-advisor-skills-chief-ai-officer-advisor",
+      "name": "chief-ai-officer-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-chief-customer-officer-advisor-skills-chief-customer-officer-advisor",
+      "name": "chief-customer-officer-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-chief-data-officer-advisor-skills-chief-data-officer-advisor",
+      "name": "chief-data-officer-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-board-prep",
+      "name": "board-prep",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-challenge",
+      "name": "challenge",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-executive-mentor",
+      "name": "executive-mentor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-hard-call",
+      "name": "hard-call",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-postmortem",
+      "name": "postmortem",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-stress-test",
+      "name": "stress-test",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-general-counsel-advisor-skills-general-counsel-advisor",
+      "name": "general-counsel-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-agent-protocol",
+      "name": "agent-protocol",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-board-deck-builder",
+      "name": "board-deck-builder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-board-meeting",
+      "name": "board-meeting",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-c-level-skills",
+      "name": "c-level-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-ceo-advisor",
+      "name": "ceo-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-cfo-advisor",
+      "name": "cfo-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-change-management",
+      "name": "change-management",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-chief-of-staff",
+      "name": "chief-of-staff",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-chro-advisor",
+      "name": "chro-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-ciso-advisor",
+      "name": "ciso-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-cmo-advisor",
+      "name": "cmo-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-company-os",
+      "name": "company-os",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-competitive-intel",
+      "name": "competitive-intel",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-context-engine",
+      "name": "context-engine",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-coo-advisor",
+      "name": "coo-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-cpo-advisor",
+      "name": "cpo-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-cro-advisor",
+      "name": "cro-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-cs-onboard",
+      "name": "cs-onboard",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-cto-advisor",
+      "name": "cto-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-culture-architect",
+      "name": "culture-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-decision-logger",
+      "name": "decision-logger",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-founder-coach",
+      "name": "founder-coach",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-internal-narrative",
+      "name": "internal-narrative",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-intl-expansion",
+      "name": "intl-expansion",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-ma-playbook",
+      "name": "ma-playbook",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-org-health-diagnostic",
+      "name": "org-health-diagnostic",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-scenario-war-room",
+      "name": "scenario-war-room",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-strategic-alignment",
+      "name": "strategic-alignment",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-advisor-skills-vpe-advisor",
+      "name": "vpe-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-boardroom",
+      "name": "boardroom",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-brief",
+      "name": "brief",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-c-level-agents",
+      "name": "c-level-agents",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-caio-review",
+      "name": "caio-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cco-review",
+      "name": "cco-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cdo-review",
+      "name": "cdo-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cfo-review",
+      "name": "cfo-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-ciso-review",
+      "name": "ciso-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cmo-review",
+      "name": "cmo-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cpo-review",
+      "name": "cpo-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cro-review",
+      "name": "cro-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cross-eval",
+      "name": "cross-eval",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-cto-review",
+      "name": "cto-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-decide",
+      "name": "decide",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-execute",
+      "name": "execute",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-founder-mode",
+      "name": "founder-mode",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-freeze",
+      "name": "freeze",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-gc-review",
+      "name": "gc-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-office-hours",
+      "name": "office-hours",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-onboard",
+      "name": "onboard",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-post-mortem",
+      "name": "post-mortem",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-c-level-agents-skills-vpe-review",
+      "name": "vpe-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-channel-economics",
+      "name": "channel-economics",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-commercial-forecaster",
+      "name": "commercial-forecaster",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-commercial-policy",
+      "name": "commercial-policy",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-commercial-skills",
+      "name": "commercial-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-deal-desk",
+      "name": "deal-desk",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-partnerships-architect",
+      "name": "partnerships-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-pricing-strategist",
+      "name": "pricing-strategist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-commercial-skills-rfp-responder",
+      "name": "rfp-responder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-ai-act-readiness",
+      "name": "ai-act-readiness",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-aims-audit",
+      "name": "aims-audit",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-compliance-os",
+      "name": "compliance-os",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-compliance-readiness",
+      "name": "compliance-readiness",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-fda-qsr-audit-prep",
+      "name": "fda-qsr-audit-prep",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-gdpr-audit-prep",
+      "name": "gdpr-audit-prep",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-iso13485-audit-prep",
+      "name": "iso13485-audit-prep",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-iso27001-audit-prep",
+      "name": "iso27001-audit-prep",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-compliance-os-skills-soc2-audit-prep",
+      "name": "soc2-audit-prep",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-a11y-audit-skills-a11y-audit",
+      "name": "a11y-audit",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-google-workspace-cli-skills-google-workspace-cli",
+      "name": "google-workspace-cli",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-browserstack",
+      "name": "browserstack",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-coverage",
+      "name": "coverage",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-fix",
+      "name": "fix",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-generate",
+      "name": "generate",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-migrate",
+      "name": "migrate",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-pw-init",
+      "name": "pw-init",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-pw-review",
+      "name": "pw-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-pw",
+      "name": "playwright-pro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-report",
+      "name": "report",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-testrail",
+      "name": "testrail",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-self-improving-agent-skills-extract",
+      "name": "extract",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-self-improving-agent-skills-memory-review",
+      "name": "memory-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-self-improving-agent-skills-memory-status",
+      "name": "memory-status",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-self-improving-agent-skills-promote",
+      "name": "promote",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-self-improving-agent-skills-remember",
+      "name": "remember",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-self-improving-agent-skills-self-improving-agent",
+      "name": "self-improving-agent",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-adversarial-reviewer",
+      "name": "adversarial-reviewer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-ai-security",
+      "name": "ai-security",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-aws-solution-architect",
+      "name": "aws-solution-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-azure-cloud-architect",
+      "name": "azure-cloud-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-cloud-security",
+      "name": "cloud-security",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-code-reviewer",
+      "name": "code-reviewer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-email-template-builder",
+      "name": "email-template-builder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-embedded-iot-mentor",
+      "name": "embedded-iot-mentor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-engineering-skills",
+      "name": "engineering-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-epic-design",
+      "name": "epic-design",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-gcp-cloud-architect",
+      "name": "gcp-cloud-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-incident-commander",
+      "name": "incident-commander",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-incident-response",
+      "name": "incident-response",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-ms365-tenant-manager",
+      "name": "ms365-tenant-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-named-persona-adversarial-review",
+      "name": "named-persona-adversarial-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-red-green-proof",
+      "name": "red-green-proof",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-red-team",
+      "name": "red-team",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-security-pen-testing",
+      "name": "security-pen-testing",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-architect",
+      "name": "senior-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-backend",
+      "name": "senior-backend",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-computer-vision",
+      "name": "senior-computer-vision",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-data-engineer",
+      "name": "senior-data-engineer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-data-scientist",
+      "name": "senior-data-scientist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-devops",
+      "name": "senior-devops",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-frontend",
+      "name": "senior-frontend",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-fullstack",
+      "name": "senior-fullstack",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-ml-engineer",
+      "name": "senior-ml-engineer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-prompt-engineer",
+      "name": "senior-prompt-engineer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-qa",
+      "name": "senior-qa",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-secops",
+      "name": "senior-secops",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-senior-security",
+      "name": "senior-security",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-stripe-integration-expert",
+      "name": "stripe-integration-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-tdd-guide",
+      "name": "tdd-guide",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-tech-stack-evaluator",
+      "name": "tech-stack-evaluator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-skills-threat-detection",
+      "name": "threat-detection",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-team-snowflake-development-skills-snowflake-development",
+      "name": "snowflake-development",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agent-harness-skills-agent-harness",
+      "name": "agent-harness",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agent-memory-skills-agent-memory",
+      "name": "agent-memory",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agent-regression-evals-skills-agent-regression-evals",
+      "name": "agent-regression-evals",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-agenthub",
+      "name": "agenthub",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-board",
+      "name": "board",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-eval",
+      "name": "eval",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-hub-init",
+      "name": "hub-init",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-hub-run",
+      "name": "hub-run",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-hub-status",
+      "name": "hub-status",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-merge",
+      "name": "merge",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-agenthub-skills-spawn",
+      "name": "spawn",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-autoresearch-agent-skills-ar-resume",
+      "name": "ar-resume",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-autoresearch-agent-skills-ar-run",
+      "name": "ar-run",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-autoresearch-agent-skills-ar-status",
+      "name": "ar-status",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-autoresearch-agent-skills-autoresearch-agent",
+      "name": "autoresearch-agent",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-autoresearch-agent-skills-loop",
+      "name": "loop",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-autoresearch-agent-skills-setup",
+      "name": "setup",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-behuman-skills-behuman",
+      "name": "behuman",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-book-to-skill-skills-book-to-skill",
+      "name": "book-to-skill",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-boost-asio-pro",
+      "name": "boost-asio-pro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-caveman-skills-caveman",
+      "name": "caveman",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-chaos-engineering-skills-chaos-engineering",
+      "name": "chaos-engineering",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-claude-coach-skills-claude-coach",
+      "name": "coach",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-code-tour-skills-code-tour",
+      "name": "code-tour",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-coding-agent-rollout-skills-coding-agent-rollout",
+      "name": "coding-agent-rollout",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-collab-proof-skills-collab-proof",
+      "name": "collab-proof",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-data-quality-auditor-skills-data-quality-auditor",
+      "name": "data-quality-auditor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-deep-learning-book-skills-deep-learning-book",
+      "name": "deep-learning-book",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-demo-video-skills-demo-video",
+      "name": "demo-video",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-docker-development-skills-docker-development",
+      "name": "docker-development",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-feature-flags-architect-skills-feature-flags-architect",
+      "name": "feature-flags-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-grill-me-skills-grill-me",
+      "name": "grill-me",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-grill-with-docs-skills-grill-with-docs",
+      "name": "grill-with-docs",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-handoff-skills-handoff",
+      "name": "handoff",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-helm-chart-builder-skills-helm-chart-builder",
+      "name": "helm-chart-builder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-hivemind",
+      "name": "hivemind",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-human-gate-skills-human-gate",
+      "name": "human-gate",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-karpathy-coder-skills-karpathy-coder",
+      "name": "karpathy-coder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-kubernetes-operator-skills-kubernetes-operator",
+      "name": "kubernetes-operator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-llm-cost-optimizer-skills-llm-cost-optimizer",
+      "name": "llm-cost-optimizer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-llm-wiki-skills-llm-wiki",
+      "name": "llm-wiki",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-memory-engineering-skills-memory-engineering",
+      "name": "memory-engineering",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-minimalist",
+      "name": "minimalist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-prompt-governance-skills-prompt-governance",
+      "name": "prompt-governance",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-security-guidance-skills-security-guidance",
+      "name": "security-guidance",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skill-doctor-skills-skill-doctor",
+      "name": "doctor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skillopt-sleep-skills-skillopt-sleep",
+      "name": "skillopt-sleep",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-agent-designer",
+      "name": "agent-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-agent-workflow-designer",
+      "name": "agent-workflow-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-api-design-reviewer",
+      "name": "api-design-reviewer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-api-test-suite-builder",
+      "name": "api-test-suite-builder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-browser-automation",
+      "name": "browser-automation",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-changelog-generator",
+      "name": "changelog-generator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-ci-cd-pipeline-builder",
+      "name": "ci-cd-pipeline-builder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-codebase-onboarding",
+      "name": "codebase-onboarding",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-database-designer",
+      "name": "database-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-database-schema-designer",
+      "name": "database-schema-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-dependency-auditor",
+      "name": "dependency-auditor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-engineering-advanced-skills",
+      "name": "engineering-advanced-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-env-secrets-manager",
+      "name": "env-secrets-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-focused-fix",
+      "name": "focused-fix",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-full-page-screenshot",
+      "name": "full-page-screenshot",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-git-worktree-manager",
+      "name": "git-worktree-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-interview-system-designer",
+      "name": "interview-system-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-mcp-server-builder",
+      "name": "mcp-server-builder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-migration-architect",
+      "name": "migration-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-monorepo-navigator",
+      "name": "monorepo-navigator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-observability-designer",
+      "name": "observability-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-performance-profiler",
+      "name": "performance-profiler",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-pr-review-expert",
+      "name": "pr-review-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-rag-architect",
+      "name": "rag-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-runbook-generator",
+      "name": "runbook-generator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-secrets-vault-manager",
+      "name": "secrets-vault-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-self-eval",
+      "name": "self-eval",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-ship-gate",
+      "name": "ship-gate",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-skill-security-auditor",
+      "name": "security-auditor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-skill-tester",
+      "name": "tester",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-skill-tester-assets-sample-skill",
+      "name": "sample-skill",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-slo-architect",
+      "name": "slo-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-spec-driven-workflow",
+      "name": "spec-driven-workflow",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-sql-database-assistant",
+      "name": "sql-database-assistant",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-tc-tracker",
+      "name": "tc-tracker",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-skills-tech-debt-tracker",
+      "name": "tech-debt-tracker",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-spinning-up-deep-rl-skills-spinning-up-deep-rl",
+      "name": "spinning-up-deep-rl",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-statistical-analyst-skills-statistical-analyst",
+      "name": "statistical-analyst",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-strict-api",
+      "name": "strict-api",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-terraform-patterns-skills-terraform-patterns",
+      "name": "terraform-patterns",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-universal-scraping-architect-skills-universal-scraping-architect",
+      "name": "universal-scraping-architect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-workflow-builder-skills-workflow-builder",
+      "name": "workflow-builder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-write-a-skill-skills-write-a-skill",
+      "name": "write-a-skill",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-engineering-zero-hallucination-coder-skills-zero-hallucination-coder",
+      "name": "zero-hallucination-coder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-finance-business-investment-advisor-skills-business-investment-advisor",
+      "name": "business-investment-advisor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-finance-month-end-close-skills-month-end-close",
+      "name": "month-end-close",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-finance-skills-finance-skills",
+      "name": "finance-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-finance-skills-financial-analyst",
+      "name": "financial-analyst",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-finance-skills-passive-deal-screener",
+      "name": "passive-deal-screener",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-finance-skills-saas-metrics-coach",
+      "name": "saas-metrics-coach",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-finance-skills-stock-analysis",
+      "name": "stock-analysis",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-loop-library",
+      "name": "loop-library",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-markdown-html-skills-design-system",
+      "name": "design-system",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-markdown-html-skills-markdown-html-orchestrator",
+      "name": "markdown-html-orchestrator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-markdown-html-skills-md-document",
+      "name": "md-document",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-markdown-html-skills-md-review",
+      "name": "md-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-markdown-html-skills-md-slides",
+      "name": "md-slides",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-ab-test-setup",
+      "name": "ab-test-setup",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-ad-creative",
+      "name": "ad-creative",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-aeo",
+      "name": "aeo",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-ai-decision-authority",
+      "name": "ai-decision-authority",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-analytics-tracking",
+      "name": "analytics-tracking",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-app-store-optimization",
+      "name": "app-store-optimization",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-brand-guidelines",
+      "name": "brand-guidelines",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-business-name-fit",
+      "name": "business-name-fit",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-campaign-analytics",
+      "name": "campaign-analytics",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-churn-prevention",
+      "name": "churn-prevention",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-cold-email",
+      "name": "cold-email",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-competitor-alternatives",
+      "name": "competitor-alternatives",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-content-creator",
+      "name": "content-creator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-content-humanizer",
+      "name": "content-humanizer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-content-production",
+      "name": "content-production",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-content-strategy",
+      "name": "content-strategy",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-copy-editing",
+      "name": "copy-editing",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-copywriting",
+      "name": "copywriting",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-email-sequence",
+      "name": "email-sequence",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-form-cro",
+      "name": "form-cro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-free-tool-strategy",
+      "name": "free-tool-strategy",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-launch-strategy",
+      "name": "launch-strategy",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-local-seo-manager",
+      "name": "local-seo-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-marketing-context",
+      "name": "marketing-context",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-marketing-demand-acquisition",
+      "name": "marketing-demand-acquisition",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-marketing-ideas",
+      "name": "marketing-ideas",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-marketing-ops",
+      "name": "marketing-ops",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-marketing-psychology",
+      "name": "marketing-psychology",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-marketing-skills",
+      "name": "marketing-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-marketing-strategy-pmm",
+      "name": "marketing-strategy-pmm",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-onboarding-cro",
+      "name": "onboarding-cro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-page-cro",
+      "name": "page-cro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-paid-ads",
+      "name": "paid-ads",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-paywall-upgrade-cro",
+      "name": "paywall-upgrade-cro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-popup-cro",
+      "name": "popup-cro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-pricing-strategy",
+      "name": "pricing-strategy",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-programmatic-seo",
+      "name": "programmatic-seo",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-prompt-engineer-toolkit",
+      "name": "prompt-engineer-toolkit",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-referral-program",
+      "name": "referral-program",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-schema-markup",
+      "name": "schema-markup",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-seo-audit",
+      "name": "seo-audit",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-signup-flow-cro",
+      "name": "signup-flow-cro",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-site-architecture",
+      "name": "site-architecture",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-social-content",
+      "name": "social-content",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-social-media-analyzer",
+      "name": "social-media-analyzer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-social-media-manager",
+      "name": "social-media-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-webinar-marketing",
+      "name": "webinar-marketing",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-x-twitter-growth",
+      "name": "x-twitter-growth",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-skills-youtube-full",
+      "name": "youtube-full",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-skill-video-content-strategist-skills-video-content-strategist",
+      "name": "video-content-strategist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-landing-skills-landing",
+      "name": "landing",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-linkedin-skills-linkedin-analytics",
+      "name": "linkedin-analytics",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-linkedin-skills-linkedin-content",
+      "name": "linkedin-content",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-linkedin-skills-linkedin-engagement",
+      "name": "linkedin-engagement",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-linkedin-skills-linkedin-profile",
+      "name": "linkedin-profile",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-linkedin-skills-linkedin-skills",
+      "name": "linkedin-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-marketing-linkedin-skills-linkedin-strategy",
+      "name": "linkedin-strategy",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-agile-product-owner-skills-agile-product-owner",
+      "name": "agile-product-owner",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-apple-hig-expert-skills-apple-hig-expert",
+      "name": "apple-hig-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-code-to-prd-skills-code-to-prd",
+      "name": "code-to-prd",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-research-summarizer-skills-research-summarizer",
+      "name": "research-summarizer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-competitive-teardown",
+      "name": "competitive-teardown",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-experiment-designer",
+      "name": "experiment-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-landing-page-generator",
+      "name": "landing-page-generator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-product-analytics",
+      "name": "product-analytics",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-product-discovery",
+      "name": "product-discovery",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-product-manager-toolkit",
+      "name": "product-manager-toolkit",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-product-skills",
+      "name": "product-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-product-strategist",
+      "name": "product-strategist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-roadmap-communicator",
+      "name": "roadmap-communicator",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-saas-scaffolder",
+      "name": "saas-scaffolder",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-spec-to-repo",
+      "name": "spec-to-repo",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-ui-design-system",
+      "name": "ui-design-system",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-product-team-skills-ux-researcher-designer",
+      "name": "ux-researcher-designer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-andreessen-skills-andreessen",
+      "name": "andreessen",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-capture-skills-capture",
+      "name": "capture",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-deep-work-skills-deep-work",
+      "name": "deep-work",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-email-skills-inbox-setup",
+      "name": "inbox-setup",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-email-skills-inbox-triage",
+      "name": "inbox-triage",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-fable-goal-skills-fable-goal",
+      "name": "fable-goal",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-handoff-skills-session-handoff",
+      "name": "session-handoff",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-meetings-skills-meetings",
+      "name": "meetings",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-reflect-skills-reflect",
+      "name": "reflect",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-roast-skills-roast",
+      "name": "roast",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-swedish-mentor",
+      "name": "swedish-mentor",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-productivity-weekly-review-skills-weekly-review",
+      "name": "weekly-review",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-atlassian-admin",
+      "name": "atlassian-admin",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-atlassian-templates",
+      "name": "atlassian-templates",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-confluence-expert",
+      "name": "confluence-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-jira-expert",
+      "name": "jira-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-meeting-analyzer",
+      "name": "meeting-analyzer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-pm-skills",
+      "name": "pm-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-scrum-master",
+      "name": "scrum-master",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-senior-pm",
+      "name": "senior-pm",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-project-management-skills-team-communications",
+      "name": "team-communications",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-compliance-team-eu-ai-act-skills-eu-ai-act-specialist",
+      "name": "eu-ai-act-specialist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-compliance-team-iso42001-skills-iso42001-specialist",
+      "name": "iso42001-specialist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-agent-decision-receipts",
+      "name": "agent-decision-receipts",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-capa-officer",
+      "name": "capa-officer",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-fda-consultant-specialist",
+      "name": "fda-consultant-specialist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-gdpr-dsgvo-expert",
+      "name": "gdpr-dsgvo-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-information-security-manager-iso27001",
+      "name": "information-security-manager-iso27001",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-isms-audit-expert",
+      "name": "isms-audit-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-mdr-745-specialist",
+      "name": "mdr-745-specialist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-qms-audit-expert",
+      "name": "qms-audit-expert",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-quality-documentation-manager",
+      "name": "quality-documentation-manager",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-quality-manager-qmr",
+      "name": "quality-manager-qmr",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-quality-manager-qms-iso13485",
+      "name": "quality-manager-qms-iso13485",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-ra-qm-skills",
+      "name": "ra-qm-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-regulatory-affairs-head",
+      "name": "regulatory-affairs-head",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-risk-management-specialist",
+      "name": "risk-management-specialist",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-ra-qm-team-skills-soc2-compliance",
+      "name": "soc2-compliance",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-ops-skills-clinical-research",
+      "name": "clinical-research",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-ops-skills-interview-mapper",
+      "name": "interview-mapper",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-ops-skills-market-research",
+      "name": "market-research",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-ops-skills-product-research",
+      "name": "product-research",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-ops-skills-research-finance",
+      "name": "research-finance",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-ops-skills-research-ops-skills",
+      "name": "research-ops-skills",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-deep-research-skills-deep-research",
+      "name": "deep-research",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-deepread",
+      "name": "deepread",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-dossier-skills-dossier",
+      "name": "dossier",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-grants-skills-grants",
+      "name": "grants",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-litreview-skills-litreview",
+      "name": "litreview",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-notebooklm-skills-notebooklm",
+      "name": "notebooklm",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-patent-skills-patent",
+      "name": "patent",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-pulse-skills-pulse",
+      "name": "pulse",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-research-skills-research",
+      "name": "research",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alirezarezvani-claude-skills-research-syllabus-skills-syllabus",
+      "name": "syllabus",
+      "type": "agent_skill",
+      "stars": 28730,
+      "repo": "alirezarezvani/claude-skills"
+    },
+    {
+      "slug": "alchaincyf-huashu-design",
+      "name": "huashu-design",
+      "type": "agent_skill",
+      "stars": 26362,
+      "repo": "alchaincyf/huashu-design"
+    },
+    {
+      "slug": "yetone-magpie",
+      "name": "magpie",
+      "type": "agent_tool",
+      "stars": 21841,
+      "repo": "yetone/magpie"
+    },
+    {
+      "slug": "onlook-dev-onlook",
+      "name": "onlook",
+      "type": "agent_tool",
+      "stars": 27006,
+      "repo": "onlook-dev/onlook"
+    },
+    {
+      "slug": "yizhiyanhua-ai-fireworks-tech-graph",
+      "name": "fireworks-tech-graph",
+      "type": "agent_skill",
+      "stars": 11839,
+      "repo": "yizhiyanhua-ai/fireworks-tech-graph"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-humanlayer-claude-plugin-skills-orchestrate",
+      "name": "orchestrate",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-humanlayer-claude-plugin-skills-show-me",
+      "name": "show-me",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-humanlayer-claude-plugin-skills-teleport",
+      "name": "teleport",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-create-design-discussion",
+      "name": "create-design-discussion",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-create-prd",
+      "name": "create-prd",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-create-research-questions",
+      "name": "create-research-questions",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-create-research",
+      "name": "create-research",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-create-structure-outline",
+      "name": "create-structure-outline",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-create-tech-design",
+      "name": "create-tech-design",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-describe-pr",
+      "name": "describe-pr",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-implement-outline",
+      "name": "implement-outline",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-implement-plan",
+      "name": "implement-plan",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-iterate-design-discussion",
+      "name": "iterate-design-discussion",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-iterate-implementation",
+      "name": "iterate-implementation",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-iterate-prd",
+      "name": "iterate-prd",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-iterate-research-questions",
+      "name": "iterate-research-questions",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-iterate-research",
+      "name": "iterate-research",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-iterate-structure-outline",
+      "name": "iterate-structure-outline",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-pi-extension-skills-iterate-tech-design",
+      "name": "iterate-tech-design",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-ci-commit",
+      "name": "ci-commit",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-configure-workspaces",
+      "name": "configure-workspaces",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-create-plan",
+      "name": "create-plan",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-create-tdd",
+      "name": "create-tdd",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-iterate-plan",
+      "name": "iterate-plan",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-iterate-tdd",
+      "name": "iterate-tdd",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-review-artifact-comments",
+      "name": "review-artifact-comments",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-setup-worktree",
+      "name": "setup-worktree",
+      "type": "agent_skill",
+      "stars": 12528,
+      "repo": "humanlayer/humanlayer"
+    },
+    {
+      "slug": "automazeio-ccpm-skill-ccpm",
+      "name": "ccpm",
+      "type": "agent_skill",
+      "stars": 8414,
+      "repo": "automazeio/ccpm"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-alipay-upload",
+      "name": "alipay-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-baijiahao-upload",
+      "name": "baijiahao-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-bilibili-upload",
+      "name": "bilibili-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-dayu-upload",
+      "name": "dayu-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-douyin-upload",
+      "name": "douyin-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-facebook-upload",
+      "name": "facebook-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-hupu-upload",
+      "name": "hupu-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-instagram-upload",
+      "name": "instagram-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-kuaishou-upload",
+      "name": "kuaishou-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-meta-upload",
+      "name": "meta-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-social-auto-upload",
+      "name": "social-auto-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-tencent-upload",
+      "name": "tencent-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-tiktok-upload",
+      "name": "tiktok-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-weibo-upload",
+      "name": "weibo-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-xiaohongshu-upload",
+      "name": "xiaohongshu-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-xueqiu-upload",
+      "name": "xueqiu-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-youtube-upload",
+      "name": "youtube-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "dreammis-social-auto-upload-skills-zhihu-upload",
+      "name": "zhihu-upload",
+      "type": "agent_skill",
+      "stars": 15815,
+      "repo": "dreammis/social-auto-upload"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-20-migration",
+      "name": "20-migration",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-3d-assets",
+      "name": "3d-assets",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-3d",
+      "name": "3d",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-audio",
+      "name": "audio",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-camera-and-drawing",
+      "name": "camera-and-drawing",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-deployment",
+      "name": "deployment",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-display-and-scaling",
+      "name": "display-and-scaling",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-effects-and-shaders",
+      "name": "effects-and-shaders",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-events",
+      "name": "events",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-getting-started",
+      "name": "getting-started",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-input",
+      "name": "input",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-lighting",
+      "name": "lighting",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-loading-assets",
+      "name": "loading-assets",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-math",
+      "name": "math",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-particles-and-trails",
+      "name": "particles-and-trails",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-performance",
+      "name": "performance",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-physics",
+      "name": "physics",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-plugins",
+      "name": "plugins",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-renderables",
+      "name": "renderables",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-renderer-backends",
+      "name": "renderer-backends",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-scenes-and-state",
+      "name": "scenes-and-state",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-sprites-and-animation",
+      "name": "sprites-and-animation",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-tilemaps",
+      "name": "tilemaps",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs-ui-and-text",
+      "name": "ui-and-text",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "melonjs-melonjs-packages-melonjs-skills-melonjs",
+      "name": "melonjs",
+      "type": "agent_skill",
+      "stars": 6419,
+      "repo": "melonjs/melonJS"
+    },
+    {
+      "slug": "kaomei-stickman-video-director-skills-directing-stickman-videos",
+      "name": "directing-stickman-videos",
+      "type": "agent_skill",
+      "stars": 3047,
+      "repo": "kaomei/stickman-video-director"
+    },
+    {
+      "slug": "nano-muse-nanomuse",
+      "name": "nanoMuse",
+      "type": "agent_tool",
+      "stars": 2606,
+      "repo": "nano-muse/nanoMuse"
+    },
+    {
+      "slug": "ebony-vinyl-dsh-our-free-model",
+      "name": "dsh-our-free-model",
+      "type": "agent_tool",
+      "stars": 43586,
+      "repo": "Ebony-Vinyl/dsh-our-free-model"
+    },
+    {
+      "slug": "emcie-co-parlant",
+      "name": "parlant",
+      "type": "agent_tool",
+      "stars": 18311,
+      "repo": "emcie-co/parlant"
+    },
+    {
+      "slug": "team-commonly-commonly",
+      "name": "commonly",
+      "type": "mcp_server",
+      "stars": 1370,
+      "repo": "Team-Commonly/commonly"
+    },
+    {
+      "slug": "useagenthq-useagent-docs-skills-task-convention",
+      "name": "task-convention",
+      "type": "agent_skill",
+      "stars": 366,
+      "repo": "useagenthq/useagent"
+    },
+    {
+      "slug": "demondamon-agenticx",
+      "name": "AgenticX",
+      "type": "agent_tool",
+      "stars": 693,
+      "repo": "DemonDamon/AgenticX"
+    },
+    {
+      "slug": "thinkflowlab-system1-agents",
+      "name": "system1-agents",
+      "type": "mcp_server",
+      "stars": 177,
+      "repo": "ThinkFlowLab/system1-agents"
+    }
+  ],
+  "removed": [
+    "agentforce314-clawcodex",
+    "agricidaniel-claude-blog-brain",
+    "agricidaniel-claude-blog-skills-blog",
+    "agricidaniel-claude-blog-skills-blog-analyze",
+    "agricidaniel-claude-blog-skills-blog-audio",
+    "agricidaniel-claude-blog-skills-blog-audit",
+    "agricidaniel-claude-blog-skills-blog-brand",
+    "agricidaniel-claude-blog-skills-blog-brief",
+    "agricidaniel-claude-blog-skills-blog-calendar",
+    "agricidaniel-claude-blog-skills-blog-cannibalization",
+    "agricidaniel-claude-blog-skills-blog-chart",
+    "agricidaniel-claude-blog-skills-blog-cluster",
+    "agricidaniel-claude-blog-skills-blog-decay",
+    "agricidaniel-claude-blog-skills-blog-discourse",
+    "agricidaniel-claude-blog-skills-blog-factcheck",
+    "agricidaniel-claude-blog-skills-blog-flow",
+    "agricidaniel-claude-blog-skills-blog-geo",
+    "agricidaniel-claude-blog-skills-blog-google",
+    "agricidaniel-claude-blog-skills-blog-image",
+    "agricidaniel-claude-blog-skills-blog-locale-audit",
+    "agricidaniel-claude-blog-skills-blog-localize",
+    "agricidaniel-claude-blog-skills-blog-multilingual",
+    "agricidaniel-claude-blog-skills-blog-notebooklm",
+    "agricidaniel-claude-blog-skills-blog-outline",
+    "agricidaniel-claude-blog-skills-blog-persona",
+    "agricidaniel-claude-blog-skills-blog-repurpose",
+    "agricidaniel-claude-blog-skills-blog-rewrite",
+    "agricidaniel-claude-blog-skills-blog-schema",
+    "agricidaniel-claude-blog-skills-blog-seo-check",
+    "agricidaniel-claude-blog-skills-blog-strategy",
+    "agricidaniel-claude-blog-skills-blog-style",
+    "agricidaniel-claude-blog-skills-blog-taxonomy",
+    "agricidaniel-claude-blog-skills-blog-translate",
+    "agricidaniel-claude-blog-skills-blog-write",
+    "aminforou-mcp-gsc",
+    "avids2-memorix",
+    "bgauryy-octocode",
+    "codeaholicguy-ai-devkit-skills-refactor",
+    "codeaholicguy-ai-devkit-skills-simplify-implementation",
+    "codeaholicguy-ai-devkit-skills-structured-debug",
+    "dataforseo-mcp-server-typescript",
+    "davepoon-buildwithclaude-plugins-datacircle-skills-datacircle",
+    "diegosouzapw-omniroute",
+    "earthtojake-text-to-cad-apps-web-skills-smui",
+    "earthtojake-text-to-cad-skills-bambu-labs",
+    "earthtojake-text-to-cad-skills-cad",
+    "earthtojake-text-to-cad-skills-dfam-check",
+    "earthtojake-text-to-cad-skills-dfm",
+    "earthtojake-text-to-cad-skills-dxf",
+    "earthtojake-text-to-cad-skills-engineering-drawing",
+    "earthtojake-text-to-cad-skills-gcode",
+    "earthtojake-text-to-cad-skills-sdf",
+    "earthtojake-text-to-cad-skills-sendcutsend",
+    "earthtojake-text-to-cad-skills-srdf",
+    "earthtojake-text-to-cad-skills-step-parts",
+    "earthtojake-text-to-cad-skills-urdf",
+    "forloopcodes-contextplus",
+    "googleworkspace-cli-skills-gws-admin-reports",
+    "googleworkspace-cli-skills-gws-calendar",
+    "googleworkspace-cli-skills-gws-calendar-agenda",
+    "googleworkspace-cli-skills-gws-calendar-insert",
+    "googleworkspace-cli-skills-gws-chat",
+    "googleworkspace-cli-skills-gws-chat-send",
+    "googleworkspace-cli-skills-gws-classroom",
+    "googleworkspace-cli-skills-gws-docs",
+    "googleworkspace-cli-skills-gws-docs-write",
+    "googleworkspace-cli-skills-gws-drive",
+    "googleworkspace-cli-skills-gws-drive-upload",
+    "googleworkspace-cli-skills-gws-events",
+    "googleworkspace-cli-skills-gws-events-renew",
+    "googleworkspace-cli-skills-gws-events-subscribe",
+    "googleworkspace-cli-skills-gws-forms",
+    "googleworkspace-cli-skills-gws-gmail",
+    "googleworkspace-cli-skills-gws-gmail-forward",
+    "googleworkspace-cli-skills-gws-gmail-read",
+    "googleworkspace-cli-skills-gws-gmail-reply",
+    "googleworkspace-cli-skills-gws-gmail-reply-all",
+    "googleworkspace-cli-skills-gws-gmail-send",
+    "googleworkspace-cli-skills-gws-gmail-triage",
+    "googleworkspace-cli-skills-gws-gmail-watch",
+    "googleworkspace-cli-skills-gws-keep",
+    "googleworkspace-cli-skills-gws-meet",
+    "googleworkspace-cli-skills-gws-modelarmor",
+    "googleworkspace-cli-skills-gws-modelarmor-create-template",
+    "googleworkspace-cli-skills-gws-modelarmor-sanitize-prompt",
+    "googleworkspace-cli-skills-gws-modelarmor-sanitize-response",
+    "googleworkspace-cli-skills-gws-people",
+    "googleworkspace-cli-skills-gws-script",
+    "googleworkspace-cli-skills-gws-script-push",
+    "googleworkspace-cli-skills-gws-shared",
+    "googleworkspace-cli-skills-gws-sheets",
+    "googleworkspace-cli-skills-gws-sheets-append",
+    "googleworkspace-cli-skills-gws-sheets-read",
+    "googleworkspace-cli-skills-gws-slides",
+    "googleworkspace-cli-skills-gws-tasks",
+    "googleworkspace-cli-skills-gws-workflow",
+    "googleworkspace-cli-skills-gws-workflow-email-to-task",
+    "googleworkspace-cli-skills-gws-workflow-file-announce",
+    "googleworkspace-cli-skills-gws-workflow-meeting-prep",
+    "googleworkspace-cli-skills-gws-workflow-standup-report",
+    "googleworkspace-cli-skills-gws-workflow-weekly-digest",
+    "googleworkspace-cli-skills-persona-content-creator",
+    "googleworkspace-cli-skills-persona-customer-support",
+    "googleworkspace-cli-skills-persona-event-coordinator",
+    "googleworkspace-cli-skills-persona-exec-assistant",
+    "googleworkspace-cli-skills-persona-hr-coordinator",
+    "googleworkspace-cli-skills-persona-it-admin",
+    "googleworkspace-cli-skills-persona-project-manager",
+    "googleworkspace-cli-skills-persona-researcher",
+    "googleworkspace-cli-skills-persona-sales-ops",
+    "googleworkspace-cli-skills-persona-team-lead",
+    "googleworkspace-cli-skills-recipe-backup-sheet-as-csv",
+    "googleworkspace-cli-skills-recipe-batch-invite-to-event",
+    "googleworkspace-cli-skills-recipe-block-focus-time",
+    "googleworkspace-cli-skills-recipe-bulk-download-folder",
+    "googleworkspace-cli-skills-recipe-collect-form-responses",
+    "googleworkspace-cli-skills-recipe-compare-sheet-tabs",
+    "googleworkspace-cli-skills-recipe-copy-sheet-for-new-month",
+    "googleworkspace-cli-skills-recipe-create-classroom-course",
+    "googleworkspace-cli-skills-recipe-create-doc-from-template",
+    "googleworkspace-cli-skills-recipe-create-events-from-sheet",
+    "googleworkspace-cli-skills-recipe-create-expense-tracker",
+    "googleworkspace-cli-skills-recipe-create-feedback-form",
+    "googleworkspace-cli-skills-recipe-create-gmail-filter",
+    "googleworkspace-cli-skills-recipe-create-meet-space",
+    "googleworkspace-cli-skills-recipe-create-presentation",
+    "googleworkspace-cli-skills-recipe-create-shared-drive",
+    "googleworkspace-cli-skills-recipe-create-task-list",
+    "googleworkspace-cli-skills-recipe-create-vacation-responder",
+    "googleworkspace-cli-skills-recipe-draft-email-from-doc",
+    "googleworkspace-cli-skills-recipe-email-drive-link",
+    "googleworkspace-cli-skills-recipe-find-free-time",
+    "googleworkspace-cli-skills-recipe-find-large-files",
+    "googleworkspace-cli-skills-recipe-forward-labeled-emails",
+    "googleworkspace-cli-skills-recipe-generate-report-from-sheet",
+    "googleworkspace-cli-skills-recipe-label-and-archive-emails",
+    "googleworkspace-cli-skills-recipe-log-deal-update",
+    "googleworkspace-cli-skills-recipe-organize-drive-folder",
+    "googleworkspace-cli-skills-recipe-plan-weekly-schedule",
+    "googleworkspace-cli-skills-recipe-post-mortem-setup",
+    "googleworkspace-cli-skills-recipe-reschedule-meeting",
+    "googleworkspace-cli-skills-recipe-review-meet-participants",
+    "googleworkspace-cli-skills-recipe-review-overdue-tasks",
+    "googleworkspace-cli-skills-recipe-save-email-attachments",
+    "googleworkspace-cli-skills-recipe-save-email-to-doc",
+    "googleworkspace-cli-skills-recipe-schedule-recurring-event",
+    "googleworkspace-cli-skills-recipe-send-team-announcement",
+    "googleworkspace-cli-skills-recipe-share-doc-and-notify",
+    "googleworkspace-cli-skills-recipe-share-event-materials",
+    "googleworkspace-cli-skills-recipe-share-folder-with-team",
+    "googleworkspace-cli-skills-recipe-sync-contacts-to-sheet",
+    "googleworkspace-cli-skills-recipe-watch-drive-changes",
+    "herdrdev-herdr-skills-herdr",
+    "htdt-godogen-asset-gen",
+    "ifuryst-open-computer-use-skills-open-computer-use",
+    "imkkingshuk-lockknife",
+    "inferstep-atlas",
+    "jasoncolapietro-suede-creator-skills",
+    "jmfederico-pi-web-pi-packages-relays-skills-relay",
+    "jmfederico-pi-web-pi-packages-relays-skills-relay-runner",
+    "leonxlnx-taste-skill-skills-brandkit",
+    "leonxlnx-taste-skill-skills-brutalist-skill",
+    "leonxlnx-taste-skill-skills-gpt-tasteskill",
+    "leonxlnx-taste-skill-skills-image-to-code-skill",
+    "leonxlnx-taste-skill-skills-imagegen-frontend-mobile",
+    "leonxlnx-taste-skill-skills-imagegen-frontend-web",
+    "leonxlnx-taste-skill-skills-minimalist-skill",
+    "leonxlnx-taste-skill-skills-redesign-skill",
+    "leonxlnx-taste-skill-skills-soft-skill",
+    "leonxlnx-taste-skill-skills-stitch-skill",
+    "leonxlnx-taste-skill-skills-taste-skill-v1",
+    "leonxlnx-taste-skill-skills-taste-skill-v2-experimental",
+    "microsoft-skillopt-plugins-claude-code-skills-skillopt-sleep",
+    "microsoft-skillopt-plugins-openclaw",
+    "msoedov-agentic_security-integrations-claude-skills-pentest",
+    "nateherkai-scroll-craft-plugins-nateherk-design-skills-scroll-craft",
+    "nicobailon-pi-mcp-adapter-skills-mcp-scripting",
+    "nvidia-skills-skills-doca-collectx-deployment",
+    "nvidia-skills-skills-doca-dpa-hl-tracer",
+    "nvidia-skills-skills-doca-flow-dpa-perf",
+    "nvidia-skills-skills-doca-flow-dpa-provider",
+    "nvidia-skills-skills-doca-flow-grpc-server",
+    "nvidia-skills-skills-doca-gpi",
+    "nvidia-skills-skills-doca-gpunetio-ib-write-bw",
+    "nvidia-skills-skills-doca-gpunetio-ib-write-lat",
+    "nvidia-skills-skills-doca-rdmi",
+    "nvidia-skills-skills-holohub-app-lifecycle",
+    "nvidia-skills-skills-holohub-debug-build-run",
+    "nvidia-skills-skills-holohub-module-lifecycle",
+    "nvidia-skills-skills-paidf-augmentation",
+    "nvidia-skills-skills-paidf-auto-labeling",
+    "nvidia-skills-skills-paidf-curation-and-retrieval",
+    "nvidia-skills-skills-paidf-orchestration-setup",
+    "nvidia-skills-skills-paidf-orchestration-write-dag",
+    "nvidia-skills-skills-physical-ai-event-video-generation",
+    "nvidia-skills-skills-physical-ai-image-attribute-augmentation",
+    "nvidia-skills-skills-vss-ask-video",
+    "nvidia-skills-skills-vss-deploy-dense-captioning",
+    "nvidia-skills-skills-vss-deploy-detection-tracking-2d",
+    "nvidia-skills-skills-vss-deploy-detection-tracking-3d",
+    "nvidia-skills-skills-vss-deploy-profile",
+    "nvidia-skills-skills-vss-deploy-video-embedding",
+    "nvidia-skills-skills-vss-generate-video-calibration",
+    "nvidia-skills-skills-vss-generate-video-report",
+    "nvidia-skills-skills-vss-manage-alerts",
+    "nvidia-skills-skills-vss-manage-video-io-storage",
+    "nvidia-skills-skills-vss-query-analytics",
+    "nvidia-skills-skills-vss-search-archive",
+    "nvidia-skills-skills-vss-setup-behavior-analytics",
+    "nvidia-skills-skills-vss-setup-video-analytics-api",
+    "nvidia-skills-skills-vss-summarize-video",
+    "redhat-et-ripwire-skills-hermes-ripwire-repo-map",
+    "redhat-et-ripwire-skills-ripwire-before-you-build",
+    "redhat-et-ripwire-skills-ripwire-change-check",
+    "redhat-et-ripwire-skills-ripwire-find-bug",
+    "redhat-et-ripwire-skills-ripwire-fresh-eyes",
+    "redhat-et-ripwire-skills-ripwire-graph-query",
+    "redhat-et-ripwire-skills-ripwire-handoff",
+    "redhat-et-ripwire-skills-ripwire-layers",
+    "redhat-et-ripwire-skills-ripwire-mcp",
+    "redhat-et-ripwire-skills-ripwire-navigate",
+    "redhat-et-ripwire-skills-ripwire-opt-remarks",
+    "redhat-et-ripwire-skills-ripwire-orient",
+    "redhat-et-ripwire-skills-ripwire-perf-target",
+    "redhat-et-ripwire-skills-ripwire-quality-bar",
+    "redhat-et-ripwire-skills-ripwire-reuse-first",
+    "redhat-et-ripwire-skills-ripwire-router",
+    "redhat-et-ripwire-skills-ripwire-security-scan",
+    "redhat-et-ripwire-skills-ripwire-write-tests",
+    "rllm-org-rllm",
+    "tbphp-gpt-load",
+    "trailhq-trail-code",
+    "usewhale-whale",
+    "winfunc-opcode",
+    "wshobson-maverick-mcp"
+  ],
+  "surging": [
+    {
+      "slug": "morluto-rea",
+      "name": "rea",
+      "type": "agent_tool",
+      "stars": 386611,
+      "stars_delta_7d": 59406,
+      "stars_growth_pct": 18.2,
+      "trending_score": 70191.51
+    },
+    {
+      "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
+      "name": "chat-visuals",
+      "type": "agent_skill",
+      "stars": 106220,
+      "stars_delta_7d": 9043,
+      "stars_growth_pct": 9.3,
+      "trending_score": 9884.51
+    },
+    {
+      "slug": "dietrichgebert-ponytail-skills-ponytail-audit",
+      "name": "audit",
+      "type": "agent_skill",
+      "stars": 176404,
+      "stars_delta_7d": 9110,
+      "stars_growth_pct": 5.4,
+      "trending_score": 9606.09
+    },
+    {
+      "slug": "deepseek-ai-deepseek-harness-packages-preset-agent-preset-skills-agent-experience",
+      "name": "agent-experience",
+      "type": "agent_skill",
+      "stars": 261818,
+      "stars_delta_7d": 8149,
+      "stars_growth_pct": 3.2,
+      "trending_score": 8410.78
+    },
+    {
+      "slug": "graphify-labs-graphify",
+      "name": "graphify",
+      "type": "agent_tool",
+      "stars": 135523,
+      "stars_delta_7d": 6919,
+      "stars_growth_pct": 5.4,
+      "trending_score": 7291.25
+    },
+    {
+      "slug": "affaan-m-ecc-docs-es-skills-api-design",
+      "name": "api-design",
+      "type": "agent_skill",
+      "stars": 289072,
+      "stars_delta_7d": 5578,
+      "stars_growth_pct": 2,
+      "trending_score": 5687.75
+    },
+    {
+      "slug": "tt-a1i-archify-archify",
+      "name": "archify",
+      "type": "agent_skill",
+      "stars": 89390,
+      "stars_delta_7d": 3840,
+      "stars_growth_pct": 4.5,
+      "trending_score": 4012.36
+    },
+    {
+      "slug": "leonxlnx-taste-skill-skills-taste-skill",
+      "name": "design-taste-frontend",
+      "type": "agent_skill",
+      "stars": 102637,
+      "stars_delta_7d": 3632,
+      "stars_growth_pct": 3.7,
+      "trending_score": 3765.24
+    },
+    {
+      "slug": "panniantong-agent-reach",
+      "name": "Agent-Reach",
+      "type": "agent_tool",
+      "stars": 102687,
+      "stars_delta_7d": 3450,
+      "stars_growth_pct": 3.5,
+      "trending_score": 3569.94
+    },
+    {
+      "slug": "cathrynlavery-diagram-design-skills-diagram-design",
+      "name": "diagram-design",
+      "type": "agent_skill",
+      "stars": 61160,
+      "stars_delta_7d": 3208,
+      "stars_growth_pct": 5.5,
+      "trending_score": 3385.58
+    },
+    {
+      "slug": "nextlevelbuilder-ui-ux-pro-max-skill-cli-assets-skills-banner-design",
+      "name": "banner-design",
+      "type": "agent_skill",
+      "stars": 140519,
+      "stars_delta_7d": 3172,
+      "stars_growth_pct": 2.3,
+      "trending_score": 3245.26
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-delegate-work",
+      "name": "delegate-work",
+      "type": "agent_skill",
+      "stars": 107406,
+      "stars_delta_7d": 3106,
+      "stars_growth_pct": 3,
+      "trending_score": 3198.5
+    },
+    {
+      "slug": "farion1231-cc-switch",
+      "name": "cc-switch",
+      "type": "agent_tool",
+      "stars": 148755,
+      "stars_delta_7d": 2682,
+      "stars_growth_pct": 1.8,
+      "trending_score": 2731.24
+    },
+    {
+      "slug": "ruvnet-ruflo",
+      "name": "ruflo",
+      "type": "agent_skill",
+      "stars": 79343,
+      "stars_delta_7d": 2614,
+      "stars_growth_pct": 3.4,
+      "trending_score": 2703.05
+    },
+    {
+      "slug": "blader-humanizer",
+      "name": "humanizer",
+      "type": "agent_skill",
+      "stars": 60713,
+      "stars_delta_7d": 2497,
+      "stars_growth_pct": 4.3,
+      "trending_score": 2604.1
+    },
+    {
+      "slug": "google-artemis",
+      "name": "artemis",
+      "type": "agent_tool",
+      "stars": 14863,
+      "stars_delta_7d": 2200,
+      "stars_growth_pct": 17.4,
+      "trending_score": 2582.22
+    },
+    {
+      "slug": "firecrawl-firecrawl-skills-firecrawl-build-interact",
+      "name": "build-interact",
+      "type": "agent_skill",
+      "stars": 195411,
+      "stars_delta_7d": 2534,
+      "stars_growth_pct": 1.3,
+      "trending_score": 2567.29
+    },
+    {
+      "slug": "agricidaniel-claude-seo-extensions-ahrefs-skills-seo-ahrefs",
+      "name": "seo-ahrefs",
+      "type": "agent_skill",
+      "stars": 21373,
+      "stars_delta_7d": 2161,
+      "stars_growth_pct": 11.2,
+      "trending_score": 2404.07
+    },
+    {
+      "slug": "addyosmani-agent-skills-skills-api-and-interface-design",
+      "name": "api-and-interface-design",
+      "type": "agent_skill",
+      "stars": 110580,
+      "stars_delta_7d": 2262,
+      "stars_growth_pct": 2.1,
+      "trending_score": 2309.24
+    },
+    {
+      "slug": "beenuar-aisoc",
+      "name": "AiSOC",
+      "type": "agent_tool",
+      "stars": 3838,
+      "stars_delta_7d": 1420,
+      "stars_growth_pct": 58.7,
+      "trending_score": 2253.91
+    },
+    {
+      "slug": "citrolabs-ego-lite-package-ego-browser-skill-body",
+      "name": "body",
+      "type": "agent_skill",
+      "stars": 19598,
+      "stars_delta_7d": 1940,
+      "stars_growth_pct": 11,
+      "trending_score": 2153.14
+    },
+    {
+      "slug": "nousresearch-hermes-agent",
+      "name": "hermes-agent",
+      "type": "agent_tool",
+      "stars": 257151,
+      "stars_delta_7d": 2120,
+      "stars_growth_pct": 0.8,
+      "trending_score": 2137.62
+    },
+    {
+      "slug": "latent-spaces-brag-skills-brag-slim",
+      "name": "slim",
+      "type": "agent_skill",
+      "stars": 18669,
+      "stars_delta_7d": 1869,
+      "stars_growth_pct": 11.1,
+      "trending_score": 2076.93
+    },
+    {
+      "slug": "k-dense-ai-scientific-agent-skills-skills-13c-metabolic-flux",
+      "name": "13c-metabolic-flux",
+      "type": "agent_skill",
+      "stars": 54638,
+      "stars_delta_7d": 1906,
+      "stars_growth_pct": 3.6,
+      "trending_score": 1974.89
+    },
+    {
+      "slug": "headroomlabs-ai-headroom",
+      "name": "headroom",
+      "type": "agent_tool",
+      "stars": 77847,
+      "stars_delta_7d": 1908,
+      "stars_growth_pct": 2.5,
+      "trending_score": 1955.94
+    }
+  ],
+  "summary": {
+    "week": "2026-W44",
+    "generated_at": "2026-10-26T07:46:01.519Z",
+    "added_count": 500,
+    "removed_count": 235,
+    "surging_count": 25,
+    "total_stars_gained": 5204171
+  }
+}

@@ -15,24 +15,27 @@ tags:
   - ai-assistant
   - anthropic
 status: active
-quality_percentile: 57
+quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: gptme/gptme
   official_vendor: false
   license: MIT
 signals:
-  stars: 4456
-  last_commit: 2026-10-19T07:18:05Z
-  stars_delta_7d: 24
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 4463
+  last_commit: 2026-10-26T07:21:36Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.2
+  trending_score: 7.01
+  rank_current: 124
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 4456
+    - 4463
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: gptme/gptme
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:41:25.782Z
+  fetched_at: 2026-10-26T07:45:47.564Z
   truncated: false
 type: agent_tool
 tool:

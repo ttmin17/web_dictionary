@@ -14,10 +14,10 @@ tags:
   - skills
   - discord
 status: active
-quality_percentile: 99
+quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2025-11-20T18:36:20
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -25,18 +25,19 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 42914
-  last_commit: 2026-10-18T17:04:56Z
-  stars_delta_7d: 5125
-  stars_growth_pct: 13.6
-  trending_score: 5820.06
-  rank_current: 3
-  rank_delta: null
+  stars: 44625
+  last_commit: 2026-10-25T07:34:42Z
+  stars_delta_7d: 1711
+  stars_growth_pct: 4
+  trending_score: 1779.22
+  rank_current: 18
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
     - 37497
     - 37789
     - 42914
+    - 44625
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: external_plugins/discord/skills/access/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:19.731Z
+  fetched_at: 2026-10-26T07:42:05.835Z
   truncated: false
 type: agent_skill
 skill:

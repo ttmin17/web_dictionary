@@ -14,10 +14,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 85
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -25,14 +25,15 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 69880
-  last_commit: 2026-10-16T08:29:42Z
-  stars_delta_7d: 885
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 70224
+  last_commit: 2026-10-25T19:55:03Z
+  stars_delta_7d: 344
+  stars_growth_pct: 0.5
+  trending_score: 345.69
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
+    - 70224
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/keybindings-help/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:14.469Z
+  fetched_at: 2026-10-26T07:42:00.817Z
   truncated: false
 type: agent_skill
 skill:
@@ -51,7 +52,7 @@ skill:
     keybindings".'
   folder_path: Anthropic/claude-code/skills/keybindings-help
   extra_files: []
-  pack_total_skills: 205
+  pack_total_skills: 217
   is_pack_primary: false
   clients:
     - claude-code
@@ -313,8 +314,8 @@ Claude Code validates `~/.claude/keybindings.json` when it loads; warnings go to
 | `footer:dismiss` | (none) | Footer |
 | `abovePrompt:toggle` | `ctrl+x ctrl+a` | Chat |
 | `abovePrompt:focus` | `ctrl+x tab` | Chat |
-| `abovePrompt:next` | `tab`, `right`, `tab`, `down`, `tab`, `tab` | AbovePrompt |
-| `abovePrompt:previous` | `shift+tab`, `left`, `shift+tab`, `up`, `shift+tab`, `shift+tab` | AbovePrompt |
+| `abovePrompt:next` | `tab`, `right`, `tab`, `tab`, `tab` | AbovePrompt |
+| `abovePrompt:previous` | `shift+tab`, `left`, `shift+tab`, `shift+tab`, `shift+tab` | AbovePrompt |
 | `abovePrompt:press` | `enter`, `space`, `enter`, `enter`, `enter` | AbovePrompt |
 | `abovePrompt:leave` | `escape`, `escape`, `escape`, `escape` | AbovePrompt |
 | `abovePrompt:highlightNext` | `down` | AbovePromptSelect |
@@ -360,6 +361,7 @@ Claude Code validates `~/.claude/keybindings.json` when it loads; warnings go to
 | `settings:retry` | `r` | Settings |
 | `settings:periodDay` | `d` | Settings |
 | `settings:periodWeek` | `w` | Settings |
+| `settings:fixUsage` | `f` | Settings |
 | `settings:sortByTokens` | `t` | Settings |
 | `voice:pushToTalk` | `space` | Chat |
 | `scroll:pageUp` | `pageup`, `pageup` | Scroll |

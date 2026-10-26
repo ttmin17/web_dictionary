@@ -11,10 +11,10 @@ tags:
   - agent-skills
   - ai-coding
 status: active
-quality_percentile: 59
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 7831
-  last_commit: 2026-10-19T07:16:52Z
-  stars_delta_7d: 454
-  stars_growth_pct: 6.2
-  trending_score: 481.94
+  stars: 8198
+  last_commit: 2026-10-26T07:30:13Z
+  stars_delta_7d: 367
+  stars_growth_pct: 4.7
+  trending_score: 384.2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5667
     - 7377
     - 7831
+    - 8198
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/specs/agents/shared/skills/process/dogfood/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:42.598Z
+  fetched_at: 2026-10-26T07:44:00.582Z
   truncated: false
 type: agent_skill
 skill:
@@ -47,6 +48,7 @@ skill:
   description: Agent skill from mvschwarz/openrig
   folder_path: packages/daemon/specs/agents/shared/skills/process/dogfood
   extra_files:
+    - LICENSE.txt
     - references/issue-taxonomy.md
     - templates/dogfood-report-template.md
   pack_total_skills: 54

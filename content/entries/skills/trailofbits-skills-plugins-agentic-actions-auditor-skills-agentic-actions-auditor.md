@@ -10,10 +10,10 @@ tags:
   - research
   - security
 status: active
-quality_percentile: 59
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-01-14T18:23:21
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: trailofbits/skills
@@ -21,18 +21,19 @@ source:
   official_vendor: false
   license: CC-BY-SA-4.0
 signals:
-  stars: 7640
-  last_commit: 2026-10-15T19:32:12Z
-  stars_delta_7d: 133
-  stars_growth_pct: 1.8
-  trending_score: 135.36
-  rank_current: 59
-  rank_delta: null
+  stars: 7804
+  last_commit: 2026-10-24T01:53:03Z
+  stars_delta_7d: 164
+  stars_growth_pct: 2.1
+  trending_score: 167.52
+  rank_current: 67
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7412
     - 7507
     - 7640
+    - 7804
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: trailofbits/skills
   path: plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:36.583Z
+  fetched_at: 2026-10-26T07:44:55.636Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,7 +59,7 @@ skill:
     - references/vector-c-cli-data-fetch.md
     - references/vector-d-pr-target-checkout.md
     - references/vector-e-error-log-injection.md
-  pack_total_skills: 85
+  pack_total_skills: 97
   is_pack_primary: true
   clients:
     - claude-code

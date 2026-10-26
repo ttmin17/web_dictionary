@@ -16,7 +16,7 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: affaan-m/ECC
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 283494
-  last_commit: 2026-10-19T05:03:15Z
-  stars_delta_7d: 5114
-  stars_growth_pct: 1.8
-  trending_score: 5207.95
+  stars: 289072
+  last_commit: 2026-10-26T04:56:56Z
+  stars_delta_7d: 5578
+  stars_growth_pct: 2
+  trending_score: 5687.75
   velocity_source: snapshot_delta
   sparkline_4w:
     - 274698
     - 278380
     - 283494
+    - 289072
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: affaan-m/ECC
   path: docs/ja-JP/skills/healthcare-cdss-patterns/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:32.557Z
+  fetched_at: 2026-10-26T07:41:08.014Z
   truncated: false
 type: agent_skill
 skill:

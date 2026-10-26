@@ -15,24 +15,25 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: vmoranv/jshookmcp
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2057
-  last_commit: 2026-10-18T02:33:42Z
-  stars_delta_7d: 16
-  stars_growth_pct: 0.8
-  trending_score: 16.13
-  rank_current: 48
-  rank_delta: null
+  stars: 2062
+  last_commit: 2026-10-25T09:21:53Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.2
+  trending_score: 5.01
+  rank_current: 86
+  rank_delta: -38
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2041
     - 2057
+    - 2062
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: vmoranv/jshookmcp
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:33:31.046Z
+  fetched_at: 2026-10-26T07:38:02.882Z
   truncated: false
 type: mcp_server
 launch:
@@ -116,18 +117,6 @@ English · [中文](https://github.com/vmoranv/jshookmcp/blob/master/README.zh.m
   <a href="https://vmoranv.github.io/jshookmcp/guide/getting-started.html">Getting Started</a> ·
   <a href="https://vmoranv.github.io/jshookmcp/guide/configuration.html">Configuration</a> ·
   <a href="https://vmoranv.github.io/jshookmcp/reference/">Tool Reference</a>
-</p>
-
-<p align="center">
-  <a href="https://www.swiftproxy.net/?code=R6KSMPQZ5">
-    <img src="https://raw.githubusercontent.com/vmoranv/jshookmcp/master/docs/public/swiftproxy_sponsor.png" alt="Sponsored by Swiftproxy" width="640" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://www.swiftproxy.net/?code=R6KSMPQZ5">
-    <b>Sponsored by Swiftproxy</b>
-  </a> — Premium Residential Proxies for Web Automation · 10% off code: <code>PROXY90</code>
 </p>
 
 ---
@@ -220,8 +209,9 @@ pnpm build
 pnpm daemon
 ```
 
-Vector search defaults to off for per-client stdio processes and on (lazy-loaded) for the shared
-HTTP daemon. Set `SEARCH_VECTOR_ENABLED=false` when lexical search is sufficient.
+Vector search is on by default on every transport — a lightweight static model whose catalog
+embeddings persist to disk, loaded lazily and released when idle. Set `SEARCH_VECTOR_ENABLED=false`
+when lexical search is sufficient.
 
 Then point every MCP client at `http://127.0.0.1:3000/mcp` using its HTTP/URL server
 configuration. Each client receives its own MCP session and response route while heavyweight

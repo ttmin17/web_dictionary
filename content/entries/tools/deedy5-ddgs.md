@@ -1,44 +1,49 @@
 ---
 slug: deedy5-ddgs
-type: agent_tool
 name: ddgs
 tagline: A metasearch library that aggregates results from diverse web search services
 summary: "For MCP clients like Cursor or Claude Desktop:"
 categories:
   - browser-web
-tags: []
+tags:
+  - api
+  - ddgs
+  - dht
+  - metasearch
 status: active
-quality_percentile: 38
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: deedy5/ddgs
   official_vendor: false
   license: MIT
 signals:
-  stars: 3017
-  last_commit: 2026-08-26T21:52:09Z
-  stars_delta_7d: 0
+  stars: 3031
+  last_commit: 2026-10-23T21:16:26Z
+  stars_delta_7d: 10
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
-  sparkline_4w: []
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 3017
+    - 3031
 language: en
 needs_keys: false
 prerequisites:
-  - Python >= 3.10
-  - uv
+  - python
 readme_source:
   repo: deedy5/ddgs
   path: README.md
   branch: main
-  fetched_at: 2026-10-14T14:55:01.323Z
+  fetched_at: 2026-10-26T07:37:00.886Z
   truncated: false
+type: agent_tool
 tool:
-  subcategory: browser_agent
-  install_command: pip install duckduckgo_search
+  subcategory: other
+  install_command: pip install ddgs
   runtime: python
   execution_mode: local
   has_mcp_support: true

@@ -17,7 +17,7 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
@@ -25,14 +25,15 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1933
-  last_commit: 2026-10-19T07:27:24Z
-  stars_delta_7d: 19
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 1947
+  last_commit: 2026-10-26T07:13:28Z
+  stars_delta_7d: 14
+  stars_growth_pct: 0.7
+  trending_score: 14.1
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1933
+    - 1947
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
   path: skills/benchmarking/vss-benchmark-vlm-qa/SKILL.md
   branch: develop
-  fetched_at: 2026-10-19T07:33:42.773Z
+  fetched_at: 2026-10-26T07:38:16.959Z
   truncated: false
 type: agent_skill
 skill:

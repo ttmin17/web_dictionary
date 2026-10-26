@@ -10,15 +10,15 @@ summary: Seedance, ByteDance's video family on Scenario, folds every mode below
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/scenario-seedance/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.889Z
+  fetched_at: 2026-10-26T07:38:47.968Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +57,7 @@ skill:
     T2V, I2V, V2V, native audio, OutputVideoSensitiveContentDetected."
   folder_path: skills/scenario-seedance
   extra_files: []
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: false
   clients:
     - claude-code
@@ -98,7 +99,10 @@ Mode follows from the inputs (names from the live schema):
 Reference parameters are arrays even for one asset. Prompt tags bind by array order: `@image1` is
 `referenceImages[0]`, likewise `@video1` and `@audio1`, and the prompt says what each tag governs
 and what it leaves alone ("@image1 defines the bottle and label, nothing of the set"), for video and
-audio tags as much as for images. No seed, mask, or camera parameter exists: camera moves live in
+audio tags as much as for images. A 3D blockout playblast as `@video1` passes on every limb that
+moves in it, so a stepped or rigged walk comes back stiff or sliding. Legless capsule stand-ins
+(scenario-blender-blockout builds them), with a sentence saying they only mark position, height and
+pace, let the model invent the gait. No seed, mask, or camera parameter exists: camera moves live in
 the prompt, one dominant move and one action per shot. Several actions go as timecoded beats ("0-2s
 ... 2-4s ..."), one per beat, the last ending inside `duration`, the shot named as one continuous
 take.

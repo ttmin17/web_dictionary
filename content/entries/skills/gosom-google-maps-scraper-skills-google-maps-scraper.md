@@ -11,10 +11,10 @@ tags:
   - codex-skills
   - distributed-scraper
 status: active
-quality_percentile: 64
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2023-04-22T14:35:13
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: gosom/google-maps-scraper
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6572
-  last_commit: 2026-09-24T04:54:54Z
-  stars_delta_7d: 166
-  stars_growth_pct: 2.6
-  trending_score: 170.3
-  rank_current: 54
-  rank_delta: null
+  stars: 6859
+  last_commit: 2026-10-21T10:24:36Z
+  stars_delta_7d: 287
+  stars_growth_pct: 4.4
+  trending_score: 299.53
+  rank_current: 50
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6309
     - 6406
     - 6572
+    - 6859
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: gosom/google-maps-scraper
   path: skills/google-maps-scraper/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.475Z
+  fetched_at: 2026-10-26T07:44:48.731Z
   truncated: false
 type: agent_skill
 skill:

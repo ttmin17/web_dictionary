@@ -2,7 +2,7 @@
 slug: apify-mcpc
 name: mcpc
 tagline: "The most compatible MCP CLI client. Supports: tools, resources,
-  prompts, completions, async tasks, skills, stdio and Streamable HTTP (MCP
+  prompts, completions, async tasks, skills, stdio and streamable HTTP (MCP
   2026-07-28 a"
 summary: mcpc is a command-line client for the Model Context Protocol (MCP) that
   maps every MCP operation to an intuitive shell command.
@@ -14,27 +14,28 @@ tags:
   - claude
   - cli
 status: active
-quality_percentile: 51
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: apify/mcpc
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1056
-  last_commit: 2026-10-17T22:00:06Z
-  stars_delta_7d: 30
-  stars_growth_pct: 2.9
-  trending_score: 30.88
-  rank_current: 34
-  rank_delta: null
+  stars: 1073
+  last_commit: 2026-10-21T18:59:27Z
+  stars_delta_7d: 17
+  stars_growth_pct: 1.6
+  trending_score: 17.27
+  rank_current: 63
+  rank_delta: -29
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1026
     - 1056
+    - 1073
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: apify/mcpc
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:54.012Z
+  fetched_at: 2026-10-26T07:38:23.894Z
   truncated: true
 type: mcp_server
 launch:
@@ -571,11 +572,11 @@ When logging in, `mcpc` supports all three OAuth client registration approaches 
 [MCP authorization spec](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization#client-registration-approaches),
 picking the one the authorization server advertises in its OAuth metadata:
 
-| **Approach**                            | **`mcpc login` flags**                              |
-| :-------------------------------------- | :-------------------------------------------------- |
-| **Pre-registration**                    | `--client-id` (and optional `--client-secret`)      |
-| **Client ID Metadata Documents (CIMD)** | default (or `--client-metadata-url <url>`)          |
-| **Dynamic Client Registration (DCR)**   | fallback (or force with `--no-client-metadata-url`) |
+| **Approach**                            | **`mcpc login` flags**                                                        |
+| :-------------------------------------- | :---------------------------------------------------------------------------- |
+| **Pre-registration**                    | `--client-id` (and optional `--client-secret`)                                |
+| **Client ID Metadata Documents (CIMD)** | default (or `--client-metadata-url <url>`)                                    |
+| **Dynamic Client Registration (DCR)**   | fallback (or force with `--no-client-metadata-url` or `--client-name <name>`) |
 
 `mcpc` ships with a hosted [Client ID Metadata Document](https://apify.github.io/mcpc/client-metadata.json)
 so every installation presents the same client identity to CIMD-capable authorization servers.
@@ -598,6 +599,9 @@ mcpc login mcp.example.com --client-metadata-url https://example.com/my-client.j
 
 # Disable CIMD: force Dynamic Client Registration even if the server supports CIMD.
 mcpc login mcp.example.com --no-client-metadata-url
+
+# Dynamic Client Registration under a client name other than "mcpc" (disables CIMD).
+mcpc login mcp.example.com --client-name "My Agent"
 ```
 
 See the [MCP authorization spec](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization#client-registration-approaches)
@@ -938,6 +942,16 @@ mcpc x402 sign <base64-payment-required> --amount 1.00 --expiry 3600 --json
 The command outputs the signed `PAYMENT-SIGNATURE` header value and an MCP config snippet
 that can be used directly with other MCP clients.
 
+`x402 sign` also works for plain HTTP (non-MCP) x402 v2 endpoints. Read the challenge from the
+`PAYMENT-REQUIRED` response header, sign it, then send the request again with the signature:
+
+```bash
+URL=https://api.example.com/paid-resource
+REQ=$(curl -s -D - -o /dev/null "$URL" | awk -F': ' 'tolower($1)=="payment-required"{print $2}' | tr -d '\r\n')
+SIG=$(mcpc x402 sign "$REQ" --json | jq -r .paymentSignature)
+curl -s -D - -H "PAYMENT-SIGNATURE: $SIG" "$URL"   # 200 + PAYMENT-RESPONSE header with the settlement tx
+```
+
 ### Using x402 with MCP servers
 
 Pass the `--x402` flag when connecting to a session. It accepts an optional scheme preference
@@ -1249,29 +1263,5 @@ input — `mcpc` only reads and prints it; it never executes hooks, scripts, or 
 behavior, and `allowed-tools` grants nothing.
 
 #### List change notifications
-
-When connected via a [session](#sessions), `mcpc` automatically handles `list_changed`
-notifications for tools, resources, and prompts. On `2025-11-25` servers these arrive as
-unsolicited notifications; on `2026-07-28` servers (where unsolicited notifications no
-longer exist) the session bridge opts in by opening a `subscriptions/listen` stream at
-connect and re-opens it automatically if it drops — the behavior is identical from the
-outside. As a safety net on `2026-07-28` connections, the bridge's tools cache also
-expires after 60 seconds, so a missed notification can never leave `tools-list` or
-[`grep`](#grep-search-across-sessions) stale for long.
-The bridge process tracks when each notification type was last received.
-The timestamps are available in the JSON output of `mcpc @session --json` under the `_mcpc.notifications`
-field - see [Server instructions](#server-instructions).
-
-#### Server logs
-
-`mcpc` supports server logging settings (`logging/setLevel`) and log messages (`notifications/message`).
-Log messages are printed to bridge log or stderr, subject to [verbosity level](#verbose-mode).
-
-You can instruct MCP servers to adjust their [logging level](https://modelcontextprotocol.io/specification/latest/server/utilities/logging)
-using the `logging-set-level` command:
-
-```bash
-# Set server log level to debug for detailed output
-mcpc @apify logging-set-level debug
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/apify/mcpc)).*

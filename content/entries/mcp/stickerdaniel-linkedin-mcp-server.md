@@ -14,28 +14,29 @@ tags:
   - chatgpt
   - chatgpt-desktop
 status: active
-quality_percentile: 93
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: stickerdaniel/linkedin-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3925
-  last_commit: 2026-10-19T06:35:05Z
-  stars_delta_7d: 73
-  stars_growth_pct: 1.9
-  trending_score: 74.38
-  rank_current: 17
-  rank_delta: null
+  stars: 4015
+  last_commit: 2026-10-26T05:02:18Z
+  stars_delta_7d: 90
+  stars_growth_pct: 2.3
+  trending_score: 92.06
+  rank_current: 24
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3782
     - 3852
     - 3925
+    - 4015
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: stickerdaniel/linkedin-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:30.859Z
+  fetched_at: 2026-10-26T07:36:59.668Z
   truncated: false
 type: mcp_server
 launch:
@@ -753,37 +754,6 @@ belongs behind something that provides it.
 
 
 ## Using a proxy
-
-<details open>
-<summary><strong>Sponsored proxy providers</strong></summary>
-
-<br/>
-<a href="https://www.swiftproxy.net/?ref=stickerdaniel">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/872f4efb-f329-4f3c-b864-cd1fac7a331b" />
-    <img src="https://github.com/user-attachments/assets/c413a236-a49f-4480-8dcc-b67de3093920" alt="Swiftproxy logo" width="240">
-  </picture>
-</a>
-
-> Swiftproxy offers residential proxies with sticky sessions and worldwide geo-targeting. Its dedicated static ISP options include networks such as AT&T, Sky UK, and Rogers, with unlimited traffic and renewable addresses.
-
-Use code <strong>PROXY90</strong> for 10% off <a href="https://www.swiftproxy.net/?ref=stickerdaniel">Try Swiftproxy →</a>
-<br/>
-
-<a href="https://www.rapidproxy.io/?ref=linkedin">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/47680db7-360f-4128-9e66-73f784c0fa85" />
-    <img src="https://github.com/user-attachments/assets/3daa30e1-ead1-4884-8388-b3024c026ba9" alt="RapidProxy logo" width="240">
-  </picture>
-</a>
-
-> RapidProxy offers 90M+ residential IPs worldwide for LinkedIn automation and browser workflows, with sticky sessions, geo-targeting, and high-concurrency support. Plans start at $0.55/GB with non-expiring traffic.
-
-Use code <strong>RAPID10</strong> for 10% off <a href="https://www.rapidproxy.io/?ref=linkedin">Try RapidProxy for free →</a>
-<br/>
-
-<br/>
-</details>
 
 LinkedIn scores the address a session signs in from. Your account's usual IP address is the safe one. You should use a proxy in your country when the server cannot use it: a VPS, another country, or a second account that must not share the first one's address.
 

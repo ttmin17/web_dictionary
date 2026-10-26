@@ -16,7 +16,7 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-03-17T03:28:57
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 97177
-  last_commit: 2026-10-19T07:28:54Z
-  stars_delta_7d: 5791
-  stars_growth_pct: 6.3
-  trending_score: 6157.97
+  stars: 106220
+  last_commit: 2026-10-26T07:33:33Z
+  stars_delta_7d: 9043
+  stars_growth_pct: 9.3
+  trending_score: 9884.51
   velocity_source: snapshot_delta
   sparkline_4w:
     - 86961
     - 91386
     - 97177
+    - 106220
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: stablyai/orca
   path: skills/computer-use/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:40.961Z
+  fetched_at: 2026-10-26T07:41:09.714Z
   truncated: false
 type: agent_skill
 skill:

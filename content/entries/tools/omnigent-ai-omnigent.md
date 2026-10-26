@@ -16,28 +16,29 @@ tags:
   - agent-orchestration
   - agents
 status: active
-quality_percentile: 84
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: omnigent-ai/omnigent
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10888
-  last_commit: 2026-10-19T07:29:05Z
-  stars_delta_7d: 107
-  stars_growth_pct: 1
-  trending_score: 108.06
-  rank_current: 22
-  rank_delta: null
+  stars: 11052
+  last_commit: 2026-10-26T07:29:32Z
+  stars_delta_7d: 164
+  stars_growth_pct: 1.5
+  trending_score: 166.47
+  rank_current: 42
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10648
     - 10781
     - 10888
+    - 11052
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: omnigent-ai/omnigent
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:39:30.542Z
+  fetched_at: 2026-10-26T07:43:49.394Z
   truncated: false
 type: agent_tool
 tool:

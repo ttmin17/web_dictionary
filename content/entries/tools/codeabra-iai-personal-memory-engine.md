@@ -13,28 +13,29 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 55
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-05-06T08:04:52
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: CodeAbra/iai-personal-memory-engine
   official_vendor: false
   license: MIT
 signals:
-  stars: 912
-  last_commit: 2026-10-17T01:35:59Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.7
-  trending_score: 6.04
-  rank_current: 46
-  rank_delta: null
+  stars: 915
+  last_commit: 2026-10-23T21:21:59Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0.3
+  trending_score: 3.01
+  rank_current: 132
+  rank_delta: -86
   velocity_source: snapshot_delta
   sparkline_4w:
     - 901
     - 906
     - 912
+    - 915
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: CodeAbra/iai-personal-memory-engine
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.154Z
+  fetched_at: 2026-10-26T07:38:48.217Z
   truncated: false
 type: agent_tool
 tool:
@@ -122,8 +123,10 @@ native engine that makes it fast.
 And unlike cloud memory services, there's no API key, no account, and no
 telemetry: the engine, the store, and the embeddings all run locally. The only
 things that leave your machine are the normal model calls your CLI already makes,
-plus one optional nightly consolidation step that asks your model for a single
-insight through the same subscription your CLI already uses.
+a nightly consolidation step that asks your model for a single insight through
+the same subscription your CLI already uses (on by default;
+`IAI_MCP_REM_DISABLED=1` turns it off), a daily version check, and the one-time
+download of the embedding model.
 
 ---
 
@@ -223,9 +226,10 @@ recency, temporal validity, and lexical evidence. `memory_recall` returns both
 interval, creates a new record, and links the two.
 
 While idle, the engine groups related episodes, induces semantic memory,
-reinforces useful paths, and decays weak unreviewed edges. One optional REM step
-may invoke `claude -p` through the user's existing Claude subscription, capped
-at no more than 1% of the daily quota. No Anthropic API key is required.
+reinforces useful paths, and decays weak unreviewed edges. One REM step, on by
+default, may invoke `claude -p` through the user's existing Claude subscription,
+capped at no more than 1% of the daily quota; `IAI_MCP_REM_DISABLED=1` turns it
+off. No Anthropic API key is required.
 
 ### First-party components
 
@@ -293,11 +297,12 @@ memory_reinforce           memory_consolidate
 profile_get_set            topology
 schema_list                events_query
 episodes_recent            curiosity_pending
+claim_check
 ```
 
-Fourteen tools cover cue, temporal, structural, and lexical recall; capture and
-correction; reinforcement and consolidation; behavioural-profile control; and
-store introspection.
+Fifteen tools cover cue, temporal, structural, and lexical recall; checking a
+claim against memory; capture and correction; reinforcement and consolidation;
+behavioural-profile control; and store introspection.
 
 ---
 
@@ -319,13 +324,24 @@ store introspection.
 ## Privacy and limitations
 
 - Records are encrypted at rest with AES-256-GCM. The store and key live under
-  `~/.iai-mcp/`; back them up together.
+  `~/.iai-mcp/`; back them up together. Two kinds of files there are plain
+  text: the per-turn capture spool until the engine's next pass encrypts it,
+  and the caches the hooks inject memory from. The
+  [plugin README](https://github.com/CodeAbra/iai-personal-memory-engine/blob/main/plugin/README.md#privacy) lists them.
 - macOS and Linux use a Unix socket. Windows uses an ephemeral loopback port
   with a per-user token.
 - There is no iai-memory account, telemetry pipeline, hosted dashboard, or
   cross-machine sync.
-- Optional iai-memory network activity is the REM `claude -p` step and a daily
-  PyPI version check. Set `IAI_MCP_VERSION_CHECK=0` to disable the check.
+- iai-memory goes online in three places, each with an off switch: the nightly
+  REM `claude -p` step (on by default, `IAI_MCP_REM_DISABLED=1`), a daily PyPI
+  version check (`IAI_MCP_VERSION_CHECK=0`), and the first-use download of the
+  embedding model from Hugging Face (`IAI_MCP_EMBED_OFFLINE=1`).
+- The engine checks that your Claude Code login is a subscription by reading
+  Claude Code's login record (`~/.claude/.credentials.json`, or the macOS
+  Keychain item) when the MCP server starts and before the REM step. Nothing
+  from the record is sent anywhere.
+- The MCP server starts the engine in the background, and it keeps running
+  after the session ends. Stop it with `iai-mcp daemon stop`.
 - The store refuses to mix incompatible embedding generations; changing the
   embedder requires an explicit migration.
 - Recall is usually mediocre during roughly the first ten sessions, and quality

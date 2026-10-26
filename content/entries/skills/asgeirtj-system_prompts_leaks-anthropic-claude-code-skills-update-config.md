@@ -15,10 +15,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 85
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -26,14 +26,15 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 69880
-  last_commit: 2026-10-16T08:29:42Z
-  stars_delta_7d: 885
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 70224
+  last_commit: 2026-10-25T19:55:03Z
+  stars_delta_7d: 344
+  stars_growth_pct: 0.5
+  trending_score: 345.69
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
+    - 70224
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/update-config/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:14.480Z
+  fetched_at: 2026-10-26T07:42:00.826Z
   truncated: true
 type: agent_skill
 skill:
@@ -58,7 +59,7 @@ skill:
     theme/model, suggest the /config command.'
   folder_path: Anthropic/claude-code/skills/update-config
   extra_files: []
-  pack_total_skills: 205
+  pack_total_skills: 217
   is_pack_primary: false
   clients:
     - claude-code
@@ -639,6 +640,20 @@ If a hook isn't running:
       },
       "additionalProperties": {}
     },
+    "attributionProject": {
+      "description": "The claude.ai Project this session names for your organization's usage reports: the Project's UUID, or its ID starting with "claude_proj_". An empty string names none and stops lower-precedence files from naming one; the organization default still applies. Sent only when Claude Code uses your claude.ai login, connects directly to the Anthropic API, is not in a cloud session, and CLAUDE_CODE_ATTRIBUTION_HEADER is not 0. CLAUDE_CODE_ATTRIBUTION_PROJECT takes precedence over it. Set in managed settings, it overrides people's own settings files. A project's .claude/settings.json and settings.local.json count only once the folder is trusted; for runs in a folder nobody has trusted, such as CI, use CLAUDE_CODE_ATTRIBUTION_PROJECT.",
+      "type": "string"
+    },
+    "attributionProjectPolicy": {
+      "description": "Your organization's default for attributionProject. Only honored from managed settings (server-managed, MDM / OS policy, or managed-settings.json); ignored in user, project, local and --settings sources.",
+      "type": "object",
+      "properties": {
+        "default": {
+          "description": "The Project used when neither CLAUDE_CODE_ATTRIBUTION_PROJECT nor attributionProject names one: its UUID, or its ID starting with "claude_proj_".",
+          "type": "string"
+        }
+      }
+    },
     "includeCoAuthoredBy": {
       "description": "Deprecated: Use attribution instead. Whether to include Claude's co-authored by attribution in commits and PRs (defaults to true)",
       "type": "boolean"
@@ -905,7 +920,7 @@ If a hook isn't running:
       }
     },
     "allowedMcpServers": {
-      "description": "Enterprise allowlist of the MCP servers users may use. Governs servers users add (user, project and local config, --mcp-config, agent frontmatter, plugins, claude.ai connectors); servers the organization itself delivers (managedMcpServers, and managed-mcp.json entries that use no ${VAR} expansion) are allowed without being listed; a managed-mcp.json entry that uses ${VAR} expansion is still checked against this list. If undefined, all servers are allowed. If empty array, users can use no servers of their own. Denylist takes precedence - if a server is on both lists, it is denied.",
+      "description": "Enterprise allowlist of the MCP servers users may use. Governs servers users add (user, project and local config, --mcp-config, agent frontmatter, plugins, claude.ai connectors); servers the organization itself delivers (managedMcpServers, and managed-mcp.json entries with no ${VAR} in their command, args, url or header values) are allowed without being listed; a managed-mcp.json entry with ${VAR} in any of those must match this list. If undefined, all servers are allowed. If empty array, users can use no servers of their own. Denylist takes precedence - if a server is on both lists, it is denied.",
       "type": "array",
       "items": {
         "type": "object",
@@ -1313,24 +1328,6 @@ If a hook isn't running:
           ]
         },
         "location": {
-          "description": "Directory under which Claude Code Desktop creates the worktrees of SSH sessions that run on this machine (an absolute path or one starting with ~/), instead of <project>/.claude/worktrees. Read by the desktop app from the SSH host user settings; a location chosen in the desktop app's SSH connection settings takes precedence. The CLI (--worktree, EnterWorktree, agent isolation) does not read it yet.",
-          "type": "string"
-        }
-      }
-    },
-    "disableAllHooks": {
-      "description": "Disable all hooks and statusLine execution: the hooks defined in settings files and by installed plugins. Features built into Claude Code are not hooks in this sense and keep working; each has its own switch.",
-      "type": "boolean"
-    },
-    "disableAgentView": {
-      "description": "Disable agent view (`claude agents`, `--bg`, /background, the on-demand daemon). Typically set in managed settings. Equivalent to CLAUDE_CODE_DISABLE_AGENT_VIEW=1.",
-      "type": "boolean"
-    },
-    "disableRemoteControl": {
-      "description": "Disable Remote Control (claude.ai/code, `claude remote-control`, `--remote-control`/`--rc`, auto-start, and the in-session toggle). Typically set in managed settings.",
-      "type": "boolean"
-    },
-    "disableWorkflows": {
-      "description": "Disable the Workflows feature. Code Review on pull requests and /ultrareview run in Anthropic's cloud and are not stopped by this setting, except an /ultrareview that has to restart partway through. A machine that runs a review itself refuses it when that machine's own administrator set this, or CLAUDE_CODE_DISABLE_WORKFLOWS in an `env` block, in its managed settings (MDM, the managed-settings file or an administrator's policy helper). Set in the environment before Cl
+          "description": "Directory under which Claude Code Desktop creates the worktrees of SSH sessions that run on this machine (an absolute path or one starting with ~/), instead of <project>/.claude/worktrees. Read by the desktop app from the SSH host user settings; a location chosen in the desktop app's SSH connection settings takes precedence. The CLI (--worktree, EnterWorktree, agent iso
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/asgeirtj/system_prompts_leaks)).*

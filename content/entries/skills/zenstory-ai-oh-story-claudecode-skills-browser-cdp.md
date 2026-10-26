@@ -11,10 +11,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-04-22T16:35:39
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7737
-  last_commit: 2026-10-18T01:05:23Z
-  stars_delta_7d: 220
-  stars_growth_pct: 2.9
-  trending_score: 226.44
-  rank_current: 46
-  rank_delta: null
+  stars: 8006
+  last_commit: 2026-10-23T08:07:10Z
+  stars_delta_7d: 269
+  stars_growth_pct: 3.5
+  trending_score: 278.35
+  rank_current: 51
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7340
     - 7517
     - 7737
+    - 8006
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/browser-cdp/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:37.264Z
+  fetched_at: 2026-10-26T07:43:55.178Z
   truncated: false
 type: agent_skill
 skill:
@@ -70,8 +71,7 @@ skill:
 
 > ⚠️ **首次启动会 kill 用户的常规 Chrome。** 在启动前必须征求用户同意（见下方"启动流程"），否则用户可能丢失未保存的标签页/草稿。
 
----
-## 启动流程（skill-mode 强制步骤）
+---## 启动流程（skill-mode 强制步骤）
 
 **第一步：探测当前状态（无副作用）**
 
@@ -106,8 +106,7 @@ CHROME_PID_COUNT=3
 
 **为什么不能直接 `--yes`：** 脚本在非 TTY（即 skill 模式 / Bash 工具）下，如果检测到 Chrome 在跑而没有 `--yes`，会以退出码 3 报 `NEEDS_CONSENT: ...` 并中止，**不会**静默杀进程。这是有意的兜底——但 skill 流程仍应先问用户，而不是看到 3 就盲传 `--yes`。
 
----
-## 启动脚本选项
+---## 启动脚本选项
 
 | 选项 | 说明 |
 |------|------|
@@ -119,8 +118,7 @@ CHROME_PID_COUNT=3
 
 退出码：`0` 成功 / `1` 通用错误 / `2` 用户拒绝（TTY）/ `3` 需同意但缺 `--yes`。
 
----
-## 常用操作
+---## 常用操作
 
 ### 打开页面并等待加载
 
@@ -164,8 +162,7 @@ agent-browser --cdp 9222 click "<CSS or @e1>"
 agent-browser --cdp 9222 type "<sel>" "<text>"
 ```
 
----
-## 停止 / 清理
+---## 停止 / 清理
 
 - 关掉 debug Chrome 窗口即可。若窗口无响应，先按 `--user-data-dir` 核验出 debug 实例的 PID 再只结束它：
   - macOS / Linux：`pgrep -af chrome-debug-profile`
@@ -174,8 +171,7 @@ agent-browser --cdp 9222 type "<sel>" "<text>"
   例外：`setup-cdp-chrome.js --reset` 内部确实会做一次按可执行名的清理，它属于本 skill 自带的、需 `--yes` 显式同意的启动流程；手工排障不要复制该做法。
 - 登录态失效：`node {SKILL_DIR}/scripts/setup-cdp-chrome.js 9222 --reset --yes`（注意 `--yes` 同样需要先问用户）。
 
----
-## OpenCode 环境注意事项
+---## OpenCode 环境注意事项
 
 opencode 没有后台执行命令行的工具，长时间的 CDP 操作（如等待页面加载、大批量数据抓取）会阻塞整个会话，导致 CLI 无响应。
 
@@ -210,8 +206,7 @@ timeout 30 agent-browser --cdp 9222 eval "window.location.replace('https://www.q
 
 如遇到持续卡死的操作，在 opencode 中按 `ESC` 手动打断。
 
----
-## 常见问题
+---## 常见问题
 
 | 问题 | 解决方案 |
 |------|----------|

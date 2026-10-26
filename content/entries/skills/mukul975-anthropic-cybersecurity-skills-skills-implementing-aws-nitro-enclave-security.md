@@ -1,13 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-implementing-aws-nitro-enclave-security
 name: implementing-aws-nitro-enclave-security
-tagline: Build AWS Nitro Enclave confidential computing environments using
-  nitro-cli to create enclave images, configure attestation-aware KMS policies
-  with PC
-summary: "- Processing sensitive data (PII, PHI, financial records,
-  cryptographic secrets) that must be isolated from EC2 instance operators and
-  administrators - Building confidential computing pipelines where even
-  root-level a..."
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -16,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -27,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,18 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/implementing-aws-nitro-enclave-security/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.884Z
+  fetched_at: 2026-10-26T07:43:39.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: implementing-aws-nitro-enclave-security
-  description: >
-    Build AWS Nitro Enclave confidential computing environments using nitro-cli
-    to create enclave images, configure attestation-aware KMS policies with PCR
-    condition keys, validate attestation documents against the Nitro PKI root,
-    and set up vsock/kmstool-enclave-cli pipelines for processing PII, keys, and
-    health records. Use for Nitro Enclave setup, attestation validation, or
-    scoping KMS to an enclave image hash.
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/implementing-aws-nitro-enclave-security
   extra_files:
     - LICENSE

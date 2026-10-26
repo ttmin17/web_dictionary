@@ -15,10 +15,10 @@ tags:
   - anthropic
   - artificial-intelligence
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 101675
-  last_commit: 2026-10-19T07:28:57Z
-  stars_delta_7d: 1341
-  stars_growth_pct: 1.3
-  trending_score: 1358.92
+  stars: 103202
+  last_commit: 2026-10-25T21:00:05Z
+  stars_delta_7d: 1527
+  stars_growth_pct: 1.5
+  trending_score: 1549.93
   velocity_source: snapshot_delta
   sparkline_4w:
     - 97519
     - 100334
     - 101675
+    - 103202
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: plugin/skills/childhood/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:38.587Z
+  fetched_at: 2026-10-26T07:41:14.401Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,7 +55,7 @@ skill:
     readiness before release.
   folder_path: plugin/skills/childhood
   extra_files: []
-  pack_total_skills: 31
+  pack_total_skills: 33
   is_pack_primary: false
   clients:
     - claude-code
@@ -83,9 +84,9 @@ Choose the checks relevant to its delivery surfaces; independent checks can run 
 | Hosted service | Confirm the live production alias serves the intended deployment/commit. Check health and the changed user path through the real authenticated interface, plus relevant error signals. For schema changes, verify the normal migration ledger reports no pending migrations or drift. |
 | Installed plugin | Discover the user's actual enabled registration/cache, not just the marketplace copy. Compare changed source/distribution artifacts and open a fresh tool connection. Compare the running worker's version/path to the enabled install; an updated cache can still talk to a stale process. Exercise the affected install/upgrade handoff where authorized. Check hooks or watcher configuration in their real project/runtime scope; label behavior you did not exercise as unverified. |
 
-For a claude-mem search release, exercise guided steps 1, 2, and 3, automatic search, and readable invalid-input guidance through fresh local and hosted MCP connections when those surfaces shipped. Verify selected evidence, short opaque continuations, and concise text without pure JSON or duplicated structured metadata. Keep probes read-only unless writes are part of the explicit test scope. Never print credentials or private result bodies.
+For a claude-mem search release, exercise Smart search as three separate calls: search for an index, timeline for context, and get_observations for only the selected records. Exercise optional dumb_search explicitly where available, and readable invalid-input guidance through fresh local and hosted MCP connections when those surfaces shipped. Verify that Smart is the default, no auto or guided mode or continuation cursor is exposed, and tool results are concise text without pure JSON or duplicated structured metadata. Keep probes read-only unless writes are part of the explicit test scope. Never print credentials or private result bodies.
 
-Publication can lag behind a successful command. An exact-version 404 or stale distribution tag remains pending until the registry agrees; use bounded retries and investigate the actual publish target/status before republishing. A warning alone is not a regression: verify the final artifact. Likewise, a failed automated publish job may be superseded by a verified authorized manual publish; retain the workflow failure as a separate finding.
+Publication can lag behind a successful command. An exact-version 404 or stale distribution tag remains pending until the registry agrees; use bounded retries and investigate the actual publish target/status before republishing. A warning alone is not a regression: verify the final artifact. When the repository publishes through CI, a failed publish job is a finding to fix through the normal release path, not to cover with a manual publish; for claude-mem, also confirm the published version carries a provenance attestation.
 
 ## Observe and repair
 

@@ -10,15 +10,15 @@ summary: "Status (2026-09-24): UE 5.8 is not installed. Every in-engine call in
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/game-engines/unreal/scenario-unreal-expert/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.872Z
+  fetched_at: 2026-10-26T07:38:47.954Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +68,7 @@ skill:
     - scripts/ue_review.py
     - scripts/ue_run.py
     - scripts/ue_stat.py
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: false
   clients:
     - claude-code
@@ -194,8 +195,8 @@ Never report a level, material, shot or build as done without numbers and a fram
 profile with no error, stat or trace numbers when performance matters, the frames the sender looked
 at with their `image_checks`, each toolkit call with its engine call, and the Verified and Assumed
 lists. Units are centimeters, Z-up [added]. Sister teams: scenario-maya-expert (1 unit = 1 cm, Y-up
-in Maya), scenario-zbrush-expert, scenario-blender-expert; scenario-3d for generated meshes to
-finish.
+in Maya), scenario-zbrush-expert, scenario-blender-expert (FBX through scenario-blender-export);
+scenario-3d for generated meshes to finish.
 
 ## 4. Shared toolkit (`scripts/`, in-engine parts not yet run in Unreal)
 

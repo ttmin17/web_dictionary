@@ -16,27 +16,28 @@ tags:
   - agentic-ai
   - arxiv
 status: active
-quality_percentile: 56
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: llmsresearch/paperbanana
   official_vendor: false
   license: MIT
 signals:
-  stars: 2406
+  stars: 2419
   last_commit: 2026-09-17T15:36:41Z
-  stars_delta_7d: 9
-  stars_growth_pct: 0.4
-  trending_score: 9.03
-  rank_current: 43
-  rank_delta: null
+  stars_delta_7d: 13
+  stars_growth_pct: 0.5
+  trending_score: 13.07
+  rank_current: 108
+  rank_delta: -65
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2397
     - 2406
+    - 2419
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: llmsresearch/paperbanana
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.536Z
+  fetched_at: 2026-10-26T07:37:58.971Z
   truncated: false
 type: agent_tool
 tool:

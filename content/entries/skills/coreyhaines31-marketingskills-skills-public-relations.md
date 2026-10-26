@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,15 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 55431
-  last_commit: 2026-10-15T21:33:21Z
-  stars_delta_7d: 913
-  stars_growth_pct: 1.7
-  trending_score: 928.29
+  stars: 56570
+  last_commit: 2026-10-22T16:57:46Z
+  stars_delta_7d: 1139
+  stars_growth_pct: 2.1
+  trending_score: 1162.4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
+    - 56570
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/public-relations/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:37:21.641Z
+  fetched_at: 2026-10-26T07:42:09.295Z
   truncated: false
 type: agent_skill
 skill:
@@ -73,7 +74,7 @@ skill:
     - references/press-platforms.md
     - references/statement-templates.md
     - references/story-angles.md
-  pack_total_skills: 50
+  pack_total_skills: 52
   is_pack_primary: false
   clients:
     - claude-code
@@ -228,3 +229,6 @@ Go to [podcast-guest-prep.md](https://github.com/coreyhaines31/marketingskills/b
 
 ### "Build my press page"
 Use the checklist above. Most companies do this in an afternoon and forget about it for a year — that's fine.
+
+### "Get us more backlinks"
+PR earns the highest-ceiling links but takes the most effort. For reclamation, partner pages, best-X lists, and the rest of a link program, use the **link-building** skill and treat PR as one of its tactics.

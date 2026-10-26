@@ -1,12 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-implementing-cloud-security-posture-management
 name: implementing-cloud-security-posture-management
-tagline: Continuously monitor multi-cloud environments (AWS, Azure, GCP) for
-  misconfigurations, compliance violations, and security risks using Prowler,
-  ScoutS
-summary: "- When establishing continuous security monitoring across AWS, Azure,
-  and GCP environments - When compliance requirements demand automated posture
-  assessment against CIS, SOC 2, or PCI DSS - When security teams need v..."
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -15,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -26,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,18 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/implementing-cloud-security-posture-management/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.886Z
+  fetched_at: 2026-10-26T07:43:39.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: implementing-cloud-security-posture-management
-  description: >
-    Continuously monitor multi-cloud environments (AWS, Azure, GCP) for
-    misconfigurations, compliance violations, and security risks using Prowler,
-    ScoutSuite, AWS Security Hub, Microsoft Defender for Cloud, and GCP Security
-    Command Center. Use for cross-cloud posture monitoring, CIS/SOC 2/PCI DSS
-    compliance, or drift-detection workflows; not for runtime workload
-    protection or application security testing.
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/implementing-cloud-security-posture-management
   extra_files:
     - LICENSE

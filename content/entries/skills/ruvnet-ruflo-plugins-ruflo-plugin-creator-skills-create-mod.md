@@ -15,10 +15,10 @@ tags:
   - agentic-workflow
   - agents
 status: active
-quality_percentile: 79
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ruvnet/ruflo
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 76729
-  last_commit: 2026-10-19T06:30:38Z
-  stars_delta_7d: 2217
-  stars_growth_pct: 3
-  trending_score: 2282.96
+  stars: 79343
+  last_commit: 2026-10-26T06:36:48Z
+  stars_delta_7d: 2614
+  stars_growth_pct: 3.4
+  trending_score: 2703.05
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74048
     - 74512
     - 76729
+    - 79343
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: ruvnet/ruflo
   path: plugins/ruflo-plugin-creator/skills/create-mod/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:31:55.779Z
+  fetched_at: 2026-10-26T07:36:25.548Z
   truncated: false
 type: agent_skill
 skill:
@@ -55,7 +56,7 @@ skill:
     mod, a function hook, or wants Claude Code to modify itself.
   folder_path: plugins/ruflo-plugin-creator/skills/create-mod
   extra_files: []
-  pack_total_skills: 161
+  pack_total_skills: 167
   is_pack_primary: false
   clients:
     - claude-code
@@ -88,4 +89,4 @@ Scaffold a mod the governed way, instead of an ad-hoc one: the template already 
    claude -p --plugin-dir <dir> "/<name>-status"   # writes .claude-plugin/types/ and proves a live load
    npx tsc -p <dir>                  # against those generated types
    ```
-8. **Ship it in a plugin marketplace** (`marketplace.json` entry), installed with `/plugin install <name>@<marketplace>` and picked up with `/reload-plugins`. If ruflo-mods is installed with `modTrust: refuse-risky`, a mod using `process.run`, `http.fetch`, `env.set` or `fs.write`, or hooking `tool.check`/`tool.call`/`*`, is refused unless its plugin id (`<name>@<marketplace>`) is in `modTrustAllow` — the template sets `env.set` (the fallback handshake), so allow-list it by id.
+8. **Ship it in a plugin marketplace** (`marketplace.json` entry), installed with `/plugin install <name>@<marketplace>` and picked up with `/reload-plugins`. If ruflo-mods is installed with `modTrust: refuse-risky`, a mod using `process.run`/`process.spawn`, `http.fetch`, `mcp.call`/`mcp.connect`, `session.send`, `config.set`, `env.set`, `fs.write`, `agent.spawn`/`agent.register`, `prompt.submit`, `session.append`, `tool.call` or `command.run`, or hooking any event in its `RISKY_EVENTS` (`tool.check`, `tool.call`, `prompt.*`, `agent.spawn`, `tool.describe`, `session.append`, `session.receive`, `turn.step`, `skill.prompt`, `session.compact`, `prompt.edit`, `fs.read`/`fs.stat`/`fs.exists`/`fs.list`, `settings.read`, `env.get`, a hook on any of the calls above (it can rewrite another mod's call), `plugin.register`, `classic.*`, `*`; a glob or a `!` negation is judged by what it selects), is refused unless its plugin id (`<name>@<marketplace>`) is in `modTrustAllow` — the template sets `env.set` (the fallback handshake), so allow-list it by id.

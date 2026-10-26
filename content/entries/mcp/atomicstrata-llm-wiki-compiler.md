@@ -3,9 +3,8 @@ slug: atomicstrata-llm-wiki-compiler
 name: llm-wiki-compiler
 tagline: The knowledge compiler. Raw sources in, interlinked wiki out. Inspired
   by Karpathy's LLM Wiki pattern.
-summary: A release candidate for 1.5.0 is available on the npm next dist-tag;
-  1.4.2 remains the stable release. Install it by exact version with npm install
-  --global llm-wiki-compiler@1.5.0-rc.1.
+summary: "1.5.0 is the stable release on npm latest: npm install --global
+  llm-wiki-compiler."
 categories:
   - coding-agents
 tags:
@@ -14,27 +13,28 @@ tags:
   - cli
   - compiler
 status: active
-quality_percentile: 74
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: atomicstrata/llm-wiki-compiler
   official_vendor: false
   license: MIT
 signals:
-  stars: 2197
-  last_commit: 2026-10-15T17:36:16Z
-  stars_delta_7d: 17
+  stars: 2215
+  last_commit: 2026-10-19T20:15:10Z
+  stars_delta_7d: 18
   stars_growth_pct: 0.8
-  trending_score: 17.13
-  rank_current: 45
-  rank_delta: null
+  trending_score: 18.15
+  rank_current: 61
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2180
     - 2197
+    - 2215
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: atomicstrata/llm-wiki-compiler
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.077Z
+  fetched_at: 2026-10-26T07:38:02.898Z
   truncated: false
 type: mcp_server
 launch:
@@ -57,16 +57,16 @@ launch:
 ---
 
 # llmwiki
-## Preview: 1.5.0-rc.1 — Wiki behavior separated from storage.
+## New in 1.5 — Wiki behavior separated from storage.
 
-A release candidate for `1.5.0` is available on the npm `next` dist-tag; `1.4.2` remains the stable release. Install it by exact version with `npm install --global llm-wiki-compiler@1.5.0-rc.1`.
+`1.5.0` is the stable release on npm `latest`: `npm install --global llm-wiki-compiler`.
 
 - **Same wiki, cleaner foundation.** Compilation, retrieval and review now describe what they need from storage instead of touching files directly. Your existing wiki keeps its layout and works as before, with no migration.
 - **Converse gateways.** Use a bearer-authenticated Converse endpoint as your provider.
 - **Pages that fit the source.** `llmwiki compile --no-pages-limit` drops the fixed concept count.
 - **A viewer that keeps up.** `llmwiki view` refreshes after a compile without a restart and reads its port from `LLMWIKI_VIEW_PORT`.
 
-[What's in the candidate](#current-release) · [Changelog](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/CHANGELOG.md)
+[What's in 1.5.0](#current-release) · [Changelog](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/CHANGELOG.md)
 
 ## New in 1.4 — Review answers before publishing.
 
@@ -138,7 +138,7 @@ Do not use llmwiki as a general static-site generator, a heavy ontology database
 - **SDK.** `createWiki({ root })` drives ingest, compile, query, context, status, export, eval, and OKF import/export from TypeScript without shelling out.
 - **Open Knowledge Format exchange.** Export and import OKF bundles for portable, markdown-native knowledge exchange. External OKF imports are staged through the review queue by default; trusted bundles can be written live explicitly.
 - **Other portable exports.** Export JSON, JSON-LD, GraphML, Marp slides, and `llms.txt` for downstream systems.
-- **Provider portable.** Anthropic, Claude Agent SDK local login, OpenAI Codex CLI local login, OpenAI-compatible servers, Ollama, GitHub Copilot, Atlas Cloud, OrcaRouter, Converse-compatible gateways (in `1.5.0-rc.1`), and local OpenAI-compatible runtimes.
+- **Provider portable.** Anthropic, Claude Agent SDK local login, OpenAI Codex CLI local login, OpenAI-compatible servers, Ollama, GitHub Copilot, Atlas Cloud, OrcaRouter, Converse-compatible gateways, and local OpenAI-compatible runtimes.
 
 ## Configurable Lifecycle Profiles (CLP)
 
@@ -460,7 +460,7 @@ volta run --node 24 npx mint dev --port 3001
 
 ## Current release
 
-**Release candidate `1.5.0-rc.1` (preview):** A preview of `1.5.0` for early testing, published to the npm `next` dist-tag. It is not the stable release: a plain `npm install llm-wiki-compiler` still installs `1.4.2`.
+**Stable release `1.5.0`:** The current release on the npm `latest` dist-tag. It ships the same code as the `1.5.0-rc.1` candidate.
 
 - **Wiki behavior is separated from local file I/O.** The code that decides what a wiki does, such as which sources changed, what a page links to, or whether a review candidate can be approved, used to open, lock and rename files inline. Those rules now work through focused storage boundaries, and the current local-disk layout is their first implementation. Locking, atomic writes, path confinement, symlink handling and recovery stay in the local implementation. For you, nothing changes: the same directory layout, file formats, defaults, and CLI, SDK and MCP entry points, with no migration or storage setting. This is groundwork for alternative storage and for testing wiki logic independently of the disk; it does not add hosted storage, a remote backend, role-based permissions, or a public storage-plugin API. See [`ARCHITECTURE.md`](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/ARCHITECTURE.md#storage-separation).
 - **Converse gateway provider.** `LLMWIKI_PROVIDER=converse` connects to a bearer-authenticated endpoint speaking the Converse protocols, with streaming and structured extraction. Its AWS protocol packages are optional and load only when you select it. See [provider setup](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/docs/configuration/providers.mdx).
@@ -470,16 +470,12 @@ volta run --node 24 npx mint dev --port 3001
 - **Prompt version `v7`.** Every newly generated page records prompt version `v7`, including pages from default runs. Unchanged sources are not recompiled by upgrading alone.
 
 ```bash
-npm install --global llm-wiki-compiler@1.5.0-rc.1
+npm install --global llm-wiki-compiler
 ```
 
-The supporting packages are pinned to the same version and install with it. The MCP Registry entry is not updated for the candidate. Read the [upgrade notes and contributor credits](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/CHANGELOG.md#150-rc1---2026-10-15) before trying it on a wiki you care about.
+The supporting packages are pinned to the same version and install with it. The MCP Registry entry `io.github.atomicstrata/llmwiki` is published for `1.5.0` after the npm release. Existing projects need no migration; read the [upgrade notes](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/CHANGELOG.md#150---2026-10-19) for the prompt-version change and the opt-in Converse dependencies.
 
-**Stable release `1.4.2`:** The current release on the npm `latest` dist-tag. It fixes `llmwiki compile` with the `codex-agent` provider and carries the `1.4.0` features: answer review before publishing, batch approval, extraction reuse, page-level answer citations, and the split-package SDK with matching supporting dependencies.
-
-```bash
-npm install --global llm-wiki-compiler@1.4.2
-```
+**Released `1.4.2`:** Fixes `llmwiki compile` with the `codex-agent` provider and carries the `1.4.0` features: answer review before publishing, batch approval, extraction reuse, page-level answer citations, and the split-package SDK with matching supporting dependencies.
 
 Experimental artifact types and workflow statuses can require source updates; read the [SDK upgrade notes](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/docs/guides/sdk-upgrade.mdx) before upgrading from `1.3`. See the [1.4.0 release summary](https://github.com/atomicstrata/llm-wiki-compiler/releases/tag/v1.4.0) and [changelog](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/CHANGELOG.md) for migration details, contributor credits, and limits.
 

@@ -14,27 +14,28 @@ tags:
   - com-automation
   - conditional-formatting
 status: active
-quality_percentile: 39
+quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: sbroenne/mcp-server-excel
   official_vendor: false
   license: MIT
 signals:
-  stars: 828
-  last_commit: 2026-10-19T07:20:00Z
-  stars_delta_7d: 11
-  stars_growth_pct: 1.3
-  trending_score: 11.15
-  rank_current: 57
-  rank_delta: null
+  stars: 834
+  last_commit: 2026-10-25T17:35:44Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.7
+  trending_score: 6.04
+  rank_current: 80
+  rank_delta: -23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 817
     - 828
+    - 834
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: sbroenne/mcp-server-excel
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.451Z
+  fetched_at: 2026-10-26T07:38:48.211Z
   truncated: false
 type: mcp_server
 launch:
@@ -68,7 +69,7 @@ its official COM API. It can refresh Power Query, recalculate formulas, evaluate
 DAX, run VBA and Python `=PY()`, and preserve PivotTables, charts, macros, the
 Data Model, and workbook formatting.
 
-**63 MCP tools across 33 feature areas, with 421 operations**, cover end-to-end Excel automation.
+**63 MCP tools across 33 feature areas, with 425 operations**, cover end-to-end Excel automation.
 
 > [!IMPORTANT]
 > Requires **Windows**, **Microsoft Excel 2016 or later**, and an interactive
@@ -106,7 +107,7 @@ while automating them.
 - **[Automation & advanced](https://excelmcpserver.dev/features/automation-advanced/):**
   VBA, Python in Excel, Goal Seek, scenarios, data tables, windows, and XML Maps.
 
-Explore the [capabilities behind all 421 operations](https://excelmcpserver.dev/features/).
+Explore the [capabilities behind all 425 operations](https://excelmcpserver.dev/features/).
 Current command details come from CLI help or the MCP tool descriptions.
 
 ## See It in Action
@@ -127,7 +128,7 @@ the workbook normally.
 
 ## MCP Server or CLI?
 
-Both entry points expose the same Core commands and behavior, so the choice is
+Both entry points expose the same Excel commands and behavior, so the choice is
 technical. Coding agents can use either one.
 
 | Interface | Works with | Why |
@@ -143,7 +144,7 @@ AI assistant or script
         │
    MCP Server / CLI
         │
- ExcelMcp Core commands
+ Shared Excel commands
         │
  Real Excel COM API
 ```

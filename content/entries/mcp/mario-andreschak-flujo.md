@@ -13,24 +13,27 @@ tags:
   - agentic-workflow
   - ai-chat
 status: active
-quality_percentile: 53
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mario-andreschak/FLUJO
   official_vendor: false
   license: MIT
 signals:
-  stars: 663
-  last_commit: 2026-10-18T18:25:07Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 666
+  last_commit: 2026-10-26T06:49:44Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0.5
+  trending_score: 3.01
+  rank_current: 93
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 663
+    - 666
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: mario-andreschak/FLUJO
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:27.534Z
+  fetched_at: 2026-10-26T07:45:49.272Z
   truncated: false
 type: mcp_server
 launch:

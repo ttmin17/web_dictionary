@@ -17,22 +17,25 @@ status: active
 quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Zipstack/unstract
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 7283
-  last_commit: 2026-10-19T04:29:30Z
-  stars_delta_7d: 52
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 7298
+  last_commit: 2026-10-26T07:27:35Z
+  stars_delta_7d: 15
+  stars_growth_pct: 0.2
+  trending_score: 15.03
+  rank_current: 106
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 7275
     - 7283
+    - 7298
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: Zipstack/unstract
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:32:28.481Z
+  fetched_at: 2026-10-26T07:36:57.948Z
   truncated: false
 type: agent_tool
 tool:

@@ -14,28 +14,29 @@ tags:
   - ai-agents
   - chatbot
 status: active
-quality_percentile: 97
+quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: HKUDS/nanobot
   official_vendor: false
   license: MIT
 signals:
-  stars: 49166
-  last_commit: 2026-10-19T07:15:41Z
-  stars_delta_7d: 173
+  stars: 49357
+  last_commit: 2026-10-26T07:23:55Z
+  stars_delta_7d: 191
   stars_growth_pct: 0.4
-  trending_score: 173.61
-  rank_current: 15
-  rank_delta: null
+  trending_score: 191.74
+  rank_current: 36
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 48838
     - 48993
     - 49166
+    - 49357
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: HKUDS/nanobot
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.102Z
+  fetched_at: 2026-10-26T07:38:03.334Z
   truncated: true
 type: agent_tool
 tool:
@@ -141,7 +142,12 @@ You need **Python 3.11 or newer** and access to a [supported model provider or l
 
 Choose the **stable release** for everyday use or **current source** for development and the latest features. This README describes current source; [published documentation](https://nanobot.wiki/docs/latest/getting-started/nanobot-overview) covers the released version.
 
-New to terminals or model credentials? Follow [Start Without Technical Background](https://github.com/HKUDS/nanobot/blob/main/docs/start-without-technical-background.md). Updating an existing instance? Stop every old nanobot process using that workspace, back up its config directory and workspace, then update and restart through the original launcher or service. See [session storage and version changes](https://github.com/HKUDS/nanobot/blob/main/docs/cli-reference.md#session-storage).
+New to terminals or model credentials? Follow [Start Without Technical Background](https://github.com/HKUDS/nanobot/blob/main/docs/start-without-technical-background.md). Updating an existing instance? Follow [updates and recovery](https://github.com/HKUDS/nanobot/blob/main/docs/updating.md) for your installation method, backup steps and restart checks.
+
+| Track | Install with | Update with | What runs |
+|---|---|---|---|
+| Stable | installer, `uv`, or pip | managed installer: WebUI update; other installs: original package tool | one released Python/WebUI/TUI version |
+| Current source | editable Git checkout | `git pull --ff-only` + editable dependency sync | Python, WebUI, and TUI from that checkout |
 
 **Stable release: automatic setup (recommended)**
 
@@ -168,7 +174,9 @@ irm https://raw.githubusercontent.com/HKUDS/nanobot/main/scripts/install.ps1 | i
 <details>
 <summary>Installer details, preview, and script review</summary>
 
-The installer installs or upgrades `nanobot-ai` using an active virtual environment, `uv`, `pipx`, or a managed venv under `~/.nanobot/venv`. Fresh local desktops open the WebUI; SSH, headless, existing-config, and older-release paths use the terminal setup wizard. Keep the printed command: it identifies the environment that owns the installation.
+The default command installs or upgrades the stable PyPI release. Fresh installations use a dedicated environment under `~/.nanobot/venv`. On a fresh local desktop it opens the WebUI for model setup. That gateway keeps running after the browser or terminal closes; use the printed `gateway stop` command to stop it. SSH, headless, existing-config and older-release installs use terminal setup.
+
+Existing installations keep their package manager, extras and constraints. An active ordinary venv remains an explicit target, not an installer-managed environment. The installer avoids system-wide pip and prints the command to reuse if `nanobot` is not on `PATH`.
 
 To preview the plan without changing your environment, pass `--dry-run`.
 
@@ -261,7 +269,7 @@ Verify the install:
 nanobot --version
 ```
 
-If `nanobot` is not on `PATH`, invoke it through the method that installed it: reuse the recommended installer's command, use `uv tool run --from nanobot-ai nanobot ...` or `pipx run --spec nanobot-ai nanobot ...`, or use the Python executable from the environment where pip installed the package.
+If `nanobot` is not on `PATH`, reuse the installer's printed command or run the Python executable from the existing installation with `-I -m nanobot`. For uv/pipx, locate that environment with the original manager. Do not use a temporary tool environment to manage an existing installation.
 
 </details>
 
@@ -372,7 +380,9 @@ After model setup, keep channels and automations running when interactive launch
 nanobot gateway --background
 ```
 
-This starts or promotes the shared gateway to a detached process. From the TUI, `/detach` does the same before closing that client. Background mode does not configure startup after a machine reboot or restart after a crash; use an [OS-managed service](https://github.com/HKUDS/nanobot/blob/main/docs/deployment.md#switch-an-existing-gateway-to-a-service) for that. Interrupted subagent tasks are not automatically relaunched after a restart, and missed scheduled times are not replayed; see [subagent recovery](https://github.com/HKUDS/nanobot/blob/main/docs/concepts.md#subagents) and [automation delivery](https://github.com/HKUDS/nanobot/blob/main/docs/automations.md#delivery-and-reliability).
+This starts or promotes the shared gateway to persistent background mode. Fresh official-installer environments already use that lifetime when you open `nanobot webui`; other Python installations can explicitly use `nanobot webui --detach`. Channels and automations remain active after local clients exit. Complete first-time model setup in the WebUI, and use the gateway commands below to manage the same instance.
+
+From the TUI, `/detach` does the same before closing that client. Background mode does not configure startup after a machine reboot or restart after a crash; use an [OS-managed service](https://github.com/HKUDS/nanobot/blob/main/docs/deployment.md#switch-an-existing-gateway-to-a-service) for that. Interrupted subagent tasks are not automatically relaunched after a restart, and missed scheduled times are not replayed; see [subagent recovery](https://github.com/HKUDS/nanobot/blob/main/docs/concepts.md#subagents) and [automation delivery](https://github.com/HKUDS/nanobot/blob/main/docs/automations.md#delivery-and-reliability).
 
 Manage the background gateway with:
 

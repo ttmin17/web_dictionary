@@ -16,7 +16,7 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mcp-use/mcp-use
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10785
-  last_commit: 2026-10-18T01:04:46Z
-  stars_delta_7d: 32
+  stars: 10814
+  last_commit: 2026-10-22T00:22:30Z
+  stars_delta_7d: 29
   stars_growth_pct: 0.3
-  trending_score: 32.1
+  trending_score: 29.08
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10728
     - 10753
     - 10785
+    - 10814
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: mcp-use/mcp-use
   path: skills/openapi-to-mcp/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:29.192Z
+  fetched_at: 2026-10-26T07:36:57.659Z
   truncated: false
 type: agent_skill
 skill:
@@ -267,7 +268,7 @@ const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 server.listen(PORT);
 ```
 
-**Transport must be streamable HTTP, not stdio.** mcp-use's `server.listen(port)` sets up the streamable-HTTP transport at `/mcp` — that's the right choice for every server this skill generates. Don't substitute stdio. Stdio servers can't be deployed to Manufact / mcp-use cloud (cloud needs an HTTP endpoint to route traffic to), can't be tested with the online inspector, can't be installed as a custom connector in ChatGPT or Claude (both connect over HTTPS), and can't be hit with the curl tests in `references/testing.md`. Stdio is for local CLI-tool MCP servers, which is not what we're building here.
+**Transport must be streamable HTTP, not stdio.** mcp-use's `server.listen(port)` sets up the streamable-HTTP transport at `/mcp` — that's the right choice for every server this skill generates. Don't substitute stdio. Stdio servers can't be deployed to Manufact / mcp-use cloud (cloud needs an HTTP endpoint to route traffic to), can't be tested with the online inspector, can't be added as a custom MCP server in ChatGPT or a custom connector in Claude (both connect over HTTPS), and can't be hit with the curl tests in `references/testing.md`. Stdio is for local CLI-tool MCP servers, which is not what we're building here.
 
 Full templates for each file in `references/code-templates.md`.
 
@@ -360,7 +361,7 @@ Read these when the relevant step lands. Each file is a focused deep-dive — do
 - `references/code-templates.md` — Copy-ready skeletons for `index.ts`, `src/client.ts`, `src/auth.ts`, `src/operations.ts`, `src/schema.ts`, `scripts/load-spec.ts`, `.env.example`, and `tsconfig.json`. Each is annotated.
 - `references/auth.md` — The four common auth schemes (apiKey, http bearer, http basic, OAuth2 bearer) and how each becomes a header. Includes the OAuth-with-refresh-token pattern.
 - `references/testing.md` — Inspector recipe, the `.mcp-use` stale-cache trap, how to force-invoke a tool, what to check in tool responses, common 4xx/5xx debugging.
-- `references/deploy.md` — `mcp-use deploy`, GitHub setup, env vars in the Manufact dashboard, branch deploys, observability tabs, and how to install the deployed URL as a custom MCP connector in ChatGPT or Claude.
+- `references/deploy.md` — `mcp-use deploy`, GitHub setup, env vars in the Manufact dashboard, branch deploys, observability tabs, and how to add the deployed URL as a custom MCP server in ChatGPT or a custom connector in Claude.
 
 ## Trigger words and aliases
 

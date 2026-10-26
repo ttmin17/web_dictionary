@@ -15,10 +15,10 @@ tags:
   - database-gui
   - desktop-app
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Syngnat/GoNavi
@@ -26,17 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2074
-  last_commit: 2026-10-19T07:03:13Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.3
-  trending_score: 7.02
-  rank_current: 108
-  rank_delta: null
+  stars: 2083
+  last_commit: 2026-10-26T07:30:13Z
+  stars_delta_7d: 9
+  stars_growth_pct: 0.4
+  trending_score: 9.04
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2067
     - 2074
+    - 2083
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +43,7 @@ readme_source:
   repo: Syngnat/GoNavi
   path: npm/gonavi-cli/skill/SKILL.md
   branch: dev
-  fetched_at: 2026-10-19T07:33:39.588Z
+  fetched_at: 2026-10-26T07:38:13.187Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,8 +61,8 @@ skill:
   folder_path: npm/gonavi-cli/skill
   extra_files:
     - references/connection-config.md
-  pack_total_skills: 1
-  is_pack_primary: true
+  pack_total_skills: 2
+  is_pack_primary: false
   clients:
     - claude-code
     - codex

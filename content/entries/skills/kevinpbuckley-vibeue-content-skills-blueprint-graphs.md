@@ -16,10 +16,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 55
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -27,15 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 781
-  last_commit: 2026-10-07T14:45:41Z
-  stars_delta_7d: 36
-  stars_growth_pct: 4.8
-  trending_score: 37.74
+  stars: 788
+  last_commit: 2026-10-24T02:30:54Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.9
+  trending_score: 7.06
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
+    - 788
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/blueprint-graphs/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:34:23.732Z
+  fetched_at: 2026-10-26T07:38:54.122Z
   truncated: false
 type: agent_skill
 skill:
@@ -861,6 +862,7 @@ This skill index contains the frontmatter, intro, and the **Critical Rules / got
 ## Additional gotchas
 
 - `discover_nodes` returns clean `FUNC <BP>_C::Fn` keys now (no `SKEL_` prefix to strip). BP custom events are callable cross-BP through such a key; BP functions cannot call custom events — `FUNC Self::<Event>` in a function graph returns "".
+- Class names in `FUNC <Class>::Fn` keys, `build_graph` nodes and class pin defaults accept a Blueprint SHORT name of any Blueprint type, with or without `_C` (`BP_Enemy_C`, `WBP_Menu_C`, `ABP_Zombie`), loaded or not. If two Blueprint assets share that short name the call is refused with a warning listing both paths: pass the full path (`/Game/UI/WBP_Menu.WBP_Menu_C`) instead.
 - Read pin defaults from `get_node_pins` (it now reports non-string defaults too); `get_graph_definition`'s `defaults` array and a node's `default_object` are the cross-checks. Bool pins on VariableSet nodes work (the pin name is the variable name).
 - Variable GET/SET spawners are scoped to the owning Blueprint now, so their keys are unambiguous — you no longer disambiguate by `n.category` (`Variables|<OwningBlueprint>`).
 - `build_graph` that fails on one node spec leaves the OTHER nodes behind; inspect the graph and delete the strays before retrying.

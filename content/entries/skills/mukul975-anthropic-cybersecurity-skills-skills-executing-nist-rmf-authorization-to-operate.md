@@ -1,12 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-executing-nist-rmf-authorization-to-operate
 name: executing-nist-rmf-authorization-to-operate
-tagline: "Drive a federal system through the NIST Risk Management Framework (SP
-  800-37 Rev 2) to an Authorization to Operate (ATO): Prepare, Categorize (FIPS
-  19"
-summary: "- When a federal or federally-aligned system (or a FedRAMP cloud
-  service) needs an Authorization to Operate, a re-authorization, or has fallen
-  out of authorization. - When you must produce or review the core authoriza..."
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -15,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -26,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,24 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/executing-nist-rmf-authorization-to-operate/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.868Z
+  fetched_at: 2026-10-26T07:43:39.356Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: executing-nist-rmf-authorization-to-operate
-  description: "Drive a federal system through the NIST Risk Management Framework
-    (SP 800-37 Rev 2) to an Authorization to Operate (ATO): Prepare, Categorize
-    (FIPS 199), Select a control baseline (FIPS 200 / SP 800-53 Rev 5),
-    Implement, Assess (SP 800-53A), Authorize, and Monitor continuously. Use
-    when a system needs an ATO or a renewal, when working a FISMA/FedRAMP
-    authorization package, when building or reviewing an SSP, SAR, or POA&M,
-    when categorizing a system as Low/Moderate/High impact, when selecting or
-    tailoring a control baseline, or when standing up continuous monitoring
-    (ConMon) after authorization. Covers ATO, conditional ATO (cATO), and the
-    artifacts assessors expect. Keywords: NIST RMF, 800-37, ATO, authorization
-    to operate, FISMA, FedRAMP, SSP, SAR, POA&M, FIPS 199, FIPS 200, 800-53,
-    800-53A, control baseline, security categorization, continuous monitoring,
-    authorizing official, system boundary, ongoing authorization."
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/executing-nist-rmf-authorization-to-operate
   extra_files:
     - LICENSE

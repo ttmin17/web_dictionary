@@ -14,7 +14,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13339
-  last_commit: 2026-10-19T06:42:40Z
-  stars_delta_7d: 201
-  stars_growth_pct: 1.5
-  trending_score: 204.08
-  rank_current: 50
-  rank_delta: null
+  stars: 13656
+  last_commit: 2026-10-26T07:29:59Z
+  stars_delta_7d: 317
+  stars_growth_pct: 2.4
+  trending_score: 324.53
+  rank_current: 46
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12863
     - 13138
     - 13339
+    - 13656
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: backend/internal/skillassets/using-ao/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:23.664Z
+  fetched_at: 2026-10-26T07:43:42.297Z
   truncated: false
 type: agent_skill
 skill:
@@ -50,6 +51,7 @@ skill:
   folder_path: backend/internal/skillassets/using-ao
   extra_files:
     - commands/automation.md
+    - commands/browser-remote.md
     - commands/browser.md
     - commands/cue.md
     - commands/doctor.md
@@ -58,7 +60,6 @@ skill:
     - commands/preview.md
     - commands/project.md
     - commands/render.md
-    - commands/report.md
   pack_total_skills: 1
   is_pack_primary: true
   clients:

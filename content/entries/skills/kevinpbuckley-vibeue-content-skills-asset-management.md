@@ -14,10 +14,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 55
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -25,15 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 781
-  last_commit: 2026-10-07T14:45:41Z
-  stars_delta_7d: 36
-  stars_growth_pct: 4.8
-  trending_score: 37.74
+  stars: 788
+  last_commit: 2026-10-24T02:30:54Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.9
+  trending_score: 7.06
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
+    - 788
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/asset-management/SKILL.md
   branch: master
-  fetched_at: 2026-10-19T07:34:23.731Z
+  fetched_at: 2026-10-26T07:38:54.121Z
   truncated: false
 type: agent_skill
 skill:
@@ -166,6 +167,23 @@ without prompting: on-disk asset references, the Blueprint-palette node spawners
 helpers like an anim data controller all delete fine. Read-only package files are also refused before
 the engine delete path, because Unreal can show a read-only-package prompt even when confirmation is
 disabled. Clear the filesystem/source-control read-only state explicitly, then retry.
+
+**Never delete inside an open transaction.** While a `unreal.ScopedEditorTransaction` block (or any
+editor transaction) is still open, every `delete_asset_unattended` call is refused with
+`result.error_code == "TRANSACTION_OPEN"` and nothing is touched: the engine's delete can reset the undo
+buffer, and a reset with a transaction open cancels that transaction. Leave the `with` block, then delete.
+
+**An asset held by the undo buffer still deletes, but it costs the undo history.** When undo is the
+asset's only holder (it was edited in a committed transaction), the engine's delete resets the undo
+history and removes the asset completely; it always did. The call logs a Warning and reports it:
+`result.b_undo_buffer_reset` is True and `result.message` says earlier edits can no longer be undone.
+`True` (force) does not change this; it only governs referencers.
+
+**Check the file, not just `b_success`.** If undo AND something else still hold the package, the engine
+drops the asset from the registry but keeps its `.uasset` on disk (it would come back on the next editor
+start). The call then fails with `error_code == "FILE_NOT_REMOVED"` and `file_status == "still_on_disk"`;
+delete the file with the editor closed. On success, `result.b_file_removed` / `result.file_status` say
+what happened to the file: `removed`, or `never_on_disk` for an asset that was never saved.
 
 The check never mutates state (it does not null any references before deciding), so a refusal leaves the
 asset and everything around it exactly as they were — safe to retry after releasing the global.

@@ -11,10 +11,10 @@ tags:
   - berkshire-hathaway
   - charlie-munger
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: xbtlin/ai-berkshire
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16790
-  last_commit: 2026-10-19T07:28:05Z
-  stars_delta_7d: 58
-  stars_growth_pct: 0.3
-  trending_score: 58.2
+  stars: 16889
+  last_commit: 2026-10-24T17:59:12Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.6
+  trending_score: 99.58
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16646
     - 16732
     - 16790
+    - 16889
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: xbtlin/ai-berkshire
   path: codex-skills/deep-company-series/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:25.280Z
+  fetched_at: 2026-10-26T07:43:43.709Z
   truncated: false
 type: agent_skill
 skill:
@@ -70,8 +71,7 @@ This skill is generated from `skills/deep-company-series.md` so Claude Code and 
 
 参考样本：`reports/腾讯/《看懂腾讯》/`
 
----
-## 一、触发场景
+---## 一、触发场景
 
 用户希望为一家公司做"教科书级别"的深度研究，并以**系列长文**形式公开发布。区别于一篇研报：
 - 3-8 篇（复杂公司 8 篇约 12 万字，简单公司 3 篇约 3 万字），从认知重置到决策框架完整闭环
@@ -80,8 +80,7 @@ This skill is generated from `skills/deep-company-series.md` so Claude Code and 
 
 **不适合用本 skill 的场景**：单篇研报、季报点评、行业研究——那些用 `/investment-research`、`/earnings-review`、`/industry-research`。
 
----
-## 二、系列篇目模板
+---## 二、系列篇目模板
 
 ### 篇数适配公司复杂度（先定篇数，再定篇目）
 
@@ -120,8 +119,7 @@ This skill is generated from `skills/deep-company-series.md` so Claude Code and 
 
 **篇目必须适配公司**：模板是腾讯长出来的，不是套子。某篇没有独立内容（如没有投资组合的公司写不了 04），就替换成该公司特有的主轴（如快手的可灵 AI、电商），或按上面的合并方式折进更少的篇数。判断标准：这一篇能否用"一个尖锐问题"独立成文。
 
----
-## 二·五、篇内结构模板（从《看懂腾讯》8 篇正文提炼）
+---## 二·五、篇内结构模板（从《看懂腾讯》8 篇正文提炼）
 
 每篇不是自由发挥，有固定骨架。共性结构：
 
@@ -143,8 +141,7 @@ This skill is generated from `skills/deep-company-series.md` so Claude Code and 
 | 07 管理层 | 核心团队表 → 关键人物的长期贡献（用具体决策，不用形容词）→ 利益对齐（持股/薪酬占利润比）→ **诚信检验：挑一次真实危机看应对** → 5 年承诺兑现率（逐条核对当年原话）→ 资本配置纪律 → 接班人隐忧（不回避）→ "买人三问"（诚实/能干/热爱）→ 综合评分 |
 | 08 决策 | SOTP 分部估值（说清"你买的到底是什么"）→ 历史估值分位 + **必须警告"后视镜不是导航仪"** → 未来利润三情景表（乐观/中性/保守 + 隐含增速，标明"是预测不是事实"）→ 红线清单（触发≠必卖，但必须重审）→ 赔率思维收尾 |
 
----
-## 三、写作风格规范
+---## 三、写作风格规范
 
 ### 语气
 
@@ -171,8 +168,7 @@ This skill is generated from `skills/deep-company-series.md` so Claude Code and 
 - **避免流量党比喻**："小巴菲特"、"中国版 X"、"YYDS" 一律避开
 - 用专业读者熟悉的术语（"伯克希尔"而不是"巴菲特"，公司名优于人名）
 
----
-## 四、严苛事实核查 Checklist（核心 IP）
+---## 四、严苛事实核查 Checklist（核心 IP）
 
 ### 写之前就要警惕的"伪精确"陷阱
 
@@ -202,8 +198,7 @@ This skill is generated from `skills/deep-company-series.md` so Claude Code and 
 - "派息分派"会计处理：视同处置收益按 IFRIC 17 在宣派日确认（如京东在 2021，美团在 2022 但金额小）
 - 总股本会反弹：SBC 集中年初授予会让股本短期上升
 
----
-## 五、执行流程
+---## 五、执行流程
 
 ### 阶段 1：调研（写 01-02 篇前完成）
 
@@ -237,8 +232,7 @@ grep -r "<本机用户名>\|/Users/\|<个人身份信息>" reports/ | head
 
 确认无误后才 `git pull --rebase && git commit && git push`。
 
----
-## 六、修订意见处理流程
+---## 六、修订意见处理流程
 
 用户给修订意见时，按以下顺序处理：
 
@@ -277,8 +271,7 @@ grep -r "<本机用户名>\|/Users/\|<个人身份信息>" reports/ | head
 下一步等指示。
 ```
 
----
-## 七、本 skill 不做什么
+---## 七、本 skill 不做什么
 
 - **不替读者做投资决策**——所有篇章末尾"不构成投资建议"
 - **不预测股价**——只给"情景 + 触发条件"
@@ -286,16 +279,14 @@ grep -r "<本机用户名>\|/Users/\|<个人身份信息>" reports/ | head
 - **不写"X 大佬也持有"** —— 用别人的持仓为自己的判断背书是反价值投资的
 - **不强求 8 篇都写**——如果某篇没足够独立内容（如某公司管理层不够特别），合并到其他篇或减篇数
 
----
-## 八、合规与隐私
+---## 八、合规与隐私
 
 - 所有公开报告**只用公开信息**（财报、官方披露、券商研报、知名第三方机构）
 - 不用任何**用户个人信息**（公司花名、内部 IM、未公开持仓信息）
 - 推送前必须用 grep 扫描 本机用户名 / `/Users/` / 真实姓名 等隐私字段
 - 公开署名按用户多层身份策略，不混用
 
----
-## 一句话总结
+---## 一句话总结
 
 **写《看懂 X 系列》的核心能力 ≠ 写得好，而是改得严**——
 89% 的财经长文死于伪精确数字、主观加权期望值、绝对化表述。本 skill 的存在就是为了把这些坑全部标记出来，写之前避开，写之后扫干净。

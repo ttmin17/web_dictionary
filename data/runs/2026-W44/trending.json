@@ -1,0 +1,1662 @@
+{
+  "week": "2026-W44",
+  "generated_at": "2026-10-26T07:46:01.518Z",
+  "summary": {
+    "week": "2026-W44",
+    "generated_at": "2026-10-26T07:46:01.518Z",
+    "total_new_tools": 500,
+    "total_stars_gained": 5204171,
+    "total_active_entries": 6167
+  },
+  "top25_overall": [
+    {
+      "slug": "morluto-rea",
+      "name": "rea",
+      "type": "agent_tool",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 386611,
+      "stars_delta_7d": 59406,
+      "stars_growth_pct": 18.2,
+      "trending_score": 70191.51,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        12895,
+        196748,
+        327205,
+        386611
+      ],
+      "tagline": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "repo": "morluto/rea",
+      "is_pack_primary": true,
+      "created_at": "2026-04-14T00:51:32Z",
+      "pushed_at": "2026-10-26T07:28:47Z",
+      "rank_current": 1,
+      "rank_delta": 0
+    },
+    {
+      "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
+      "name": "chat-visuals",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 106220,
+      "stars_delta_7d": 9043,
+      "stars_growth_pct": 9.3,
+      "trending_score": 9884.51,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        86961,
+        91386,
+        97177,
+        106220
+      ],
+      "tagline": "Show a chart, diagram, table, report or mockup inline in this Orca chat as an HTML page. Use when a visual would help the user understand your answer. Only available when the ORCA_CHAT_SCRATCH_DIR environment variable is set.",
+      "repo": "stablyai/orca",
+      "is_pack_primary": true,
+      "pack_slug": "stablyai-orca",
+      "created_at": "2026-03-17T03:28:57Z",
+      "pushed_at": "2026-10-26T07:33:33Z",
+      "rank_current": 1,
+      "rank_delta": 1
+    },
+    {
+      "slug": "dietrichgebert-ponytail-skills-ponytail-audit",
+      "name": "audit",
+      "type": "agent_skill",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 176404,
+      "stars_delta_7d": 9110,
+      "stars_growth_pct": 5.4,
+      "trending_score": 9606.09,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        157371,
+        162479,
+        167294,
+        176404
+      ],
+      "tagline": "Quality audit of a whole repo: bugs, security holes, what breaks under real load, risky code without tests, slow paths, and what to delete, merge or split. Ranked, each finding explained in plain English. One-shot report, changes nothing. Use for \"audit this codebase\", \"review the whole repo\", \"find bloat\", \"what can I delete\", /ponytail-audit.\n",
+      "repo": "DietrichGebert/ponytail",
+      "is_pack_primary": true,
+      "pack_slug": "dietrichgebert-ponytail",
+      "created_at": "2026-06-12T00:52:37Z",
+      "pushed_at": "2026-10-18T01:55:14Z",
+      "rank_current": 2,
+      "rank_delta": 3
+    },
+    {
+      "slug": "deepseek-ai-deepseek-harness-packages-preset-agent-preset-skills-agent-experience",
+      "name": "agent-experience",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 261818,
+      "stars_delta_7d": 8149,
+      "stars_growth_pct": 3.2,
+      "trending_score": 8410.78,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        253669,
+        261818
+      ],
+      "tagline": "Agent skill from deepseek-ai/deepseek-harness",
+      "repo": "deepseek-ai/deepseek-harness",
+      "is_pack_primary": true,
+      "pack_slug": "deepseek-ai-deepseek-harness",
+      "created_at": "2026-08-13T11:56:32Z",
+      "pushed_at": "2026-10-23T15:25:40Z",
+      "rank_current": 3,
+      "rank_delta": null
+    },
+    {
+      "slug": "graphify-labs-graphify",
+      "name": "graphify",
+      "type": "agent_tool",
+      "categories": [
+        "coding-agents"
+      ],
+      "stars": 135523,
+      "stars_delta_7d": 6919,
+      "stars_growth_pct": 5.4,
+      "trending_score": 7291.25,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        124586,
+        126101,
+        128604,
+        135523
+      ],
+      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "repo": "Graphify-Labs/graphify",
+      "is_pack_primary": true,
+      "created_at": "2026-04-03T15:49:07Z",
+      "pushed_at": "2026-10-23T17:59:28Z",
+      "rank_current": 2,
+      "rank_delta": 0
+    },
+    {
+      "slug": "affaan-m-ecc-docs-es-skills-api-design",
+      "name": "api-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 289072,
+      "stars_delta_7d": 5578,
+      "stars_growth_pct": 2,
+      "trending_score": 5687.75,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        274698,
+        278380,
+        283494,
+        289072
+      ],
+      "tagline": "Patrones de diseño REST API incluyendo nomenclatura de recursos, códigos de estado, paginación, filtrado, respuestas de error, versionado y rate limiting para APIs de producción.",
+      "repo": "affaan-m/ECC",
+      "is_pack_primary": true,
+      "pack_slug": "affaan-m-ecc",
+      "created_at": "2026-01-18T00:51:51Z",
+      "pushed_at": "2026-10-26T04:56:56Z",
+      "rank_current": 4,
+      "rank_delta": 0
+    },
+    {
+      "slug": "tt-a1i-archify-archify",
+      "name": "archify",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 89390,
+      "stars_delta_7d": 3840,
+      "stars_growth_pct": 4.5,
+      "trending_score": 4012.36,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        82940,
+        85550,
+        89390
+      ],
+      "tagline": "Create validated architecture, workflow, sequence, data-flow, lifecycle/state, ERD, class, tree, timeline, and waterfall diagrams as explorable standalone HTML with dark/light themes, motion and image/SVG/WebM export. Accept requirements or Mermaid; inspect repository evidence for code-backed diagrams. Use when visualizing systems, API calls, pipelines, schemas, histories, timings, or everyday steps, parts, relationships and states. Also turn an answer into a one-page explainer, with the conclusion first, structured panels, native diagrams and charts, when the user asks for a page, an explainer or an answer to share (做成一页, 用页面讲), or proactively when the user's rules opt in with an [archify explainer: ...] line. Not for dashboards.",
+      "repo": "tt-a1i/archify",
+      "is_pack_primary": true,
+      "pack_slug": "tt-a1i-archify",
+      "created_at": "2026-04-15T05:27:37Z",
+      "pushed_at": "2026-10-26T05:59:06Z",
+      "rank_current": 5,
+      "rank_delta": 5
+    },
+    {
+      "slug": "leonxlnx-taste-skill-skills-taste-skill",
+      "name": "design-taste-frontend",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 102637,
+      "stars_delta_7d": 3632,
+      "stars_growth_pct": 3.7,
+      "trending_score": 3765.24,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        93423,
+        95459,
+        99005,
+        102637
+      ],
+      "tagline": "tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated gallery sites (One Page Love, Awwwards Sites of the Day). Deals researched directions (idea, composition, type, palette, photographs, section blueprints) from a library, enforces a strict no-slop house style with a real-browser inspector, and runs a look-and-fix loop on screenshots. Use this whenever you build, design, redesign, restyle, polish or review a landing page, marketing site, portfolio, product page, one-pager, hero or any public-facing web page, in any stack (HTML/CSS, React, Next.js, Vue, Svelte, Astro, Tailwind) — also when the user says a page looks generic, templated, \"AI-made\", sloppy, or asks to make it look designed, premium, award-level or less like every other site. Also for app screens: dashboards, admin and analytics views, settings, inboxes and other screens people work in, with their own run and rules.",
+      "repo": "Leonxlnx/taste-skill",
+      "is_pack_primary": true,
+      "pack_slug": "leonxlnx-taste-skill",
+      "created_at": "2026-02-19T21:44:05Z",
+      "pushed_at": "2026-10-26T06:38:29Z",
+      "rank_current": 6,
+      "rank_delta": null
+    },
+    {
+      "slug": "panniantong-agent-reach",
+      "name": "Agent-Reach",
+      "type": "agent_tool",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 102687,
+      "stars_delta_7d": 3450,
+      "stars_growth_pct": 3.5,
+      "trending_score": 3569.94,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        93055,
+        96891,
+        99237,
+        102687
+      ],
+      "tagline": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "repo": "Panniantong/Agent-Reach",
+      "is_pack_primary": true,
+      "created_at": "2026-02-24T02:10:24Z",
+      "pushed_at": "2026-10-25T04:37:26Z",
+      "rank_current": 3,
+      "rank_delta": 0
+    },
+    {
+      "slug": "cathrynlavery-diagram-design-skills-diagram-design",
+      "name": "diagram-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 61160,
+      "stars_delta_7d": 3208,
+      "stars_growth_pct": 5.5,
+      "trending_score": 3385.58,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        44654,
+        53703,
+        57952,
+        61160
+      ],
+      "tagline": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph, UML class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
+      "repo": "cathrynlavery/diagram-design",
+      "is_pack_primary": true,
+      "pack_slug": "cathrynlavery-diagram-design",
+      "created_at": "2026-04-16T18:01:16Z",
+      "pushed_at": "2026-10-26T04:42:00Z",
+      "rank_current": 7,
+      "rank_delta": -1
+    },
+    {
+      "slug": "nextlevelbuilder-ui-ux-pro-max-skill-cli-assets-skills-banner-design",
+      "name": "banner-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 140519,
+      "stars_delta_7d": 3172,
+      "stars_growth_pct": 2.3,
+      "trending_score": 3245.26,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        133772,
+        135424,
+        137347,
+        140519
+      ],
+      "tagline": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage.",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "is_pack_primary": true,
+      "pack_slug": "nextlevelbuilder-ui-ux-pro-max-skill",
+      "created_at": "2025-11-30T11:36:31Z",
+      "pushed_at": "2026-10-26T07:06:53Z",
+      "rank_current": 8,
+      "rank_delta": 6
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-delegate-work",
+      "name": "delegate-work",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 107406,
+      "stars_delta_7d": 3106,
+      "stars_growth_pct": 3,
+      "trending_score": 3198.5,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        101411,
+        104300,
+        107406
+      ],
+      "tagline": "Delegate user-requested work to an existing Paperclip agent, with a durable task reference and clear execution expectations.",
+      "repo": "paperclipai/paperclip",
+      "is_pack_primary": true,
+      "pack_slug": "paperclipai-paperclip",
+      "created_at": "2026-03-02T15:01:51Z",
+      "pushed_at": "2026-10-26T06:44:43Z",
+      "rank_current": 9,
+      "rank_delta": 0
+    },
+    {
+      "slug": "farion1231-cc-switch",
+      "name": "cc-switch",
+      "type": "agent_tool",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 148755,
+      "stars_delta_7d": 2682,
+      "stars_growth_pct": 1.8,
+      "trending_score": 2731.24,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        146073,
+        148755
+      ],
+      "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
+      "repo": "farion1231/cc-switch",
+      "is_pack_primary": true,
+      "created_at": "2025-08-04T14:16:16Z",
+      "pushed_at": "2026-10-26T06:45:44Z",
+      "rank_current": 4,
+      "rank_delta": null
+    },
+    {
+      "slug": "ruvnet-ruflo",
+      "name": "ruflo",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 79343,
+      "stars_delta_7d": 2614,
+      "stars_growth_pct": 3.4,
+      "trending_score": 2703.05,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        74048,
+        74512,
+        76729,
+        79343
+      ],
+      "tagline": "Ruflo is a multi-agent orchestration platform for AI coding agents (Claude Code, Cursor, Codex, Copilot, Gemini, Amp, +12 more). Use this skill when the user wants to (1) install/init ruflo in a project, (2) run multi-agent swarms with hierarchical coordination, (3) use ruflo's 314+ MCP tools for memory, routing, hooks, sub-agents, or workflows, (4) check ruflo status/version/doctor health, or (5) discover which of ruflo's 30+ plugins fits their task.",
+      "repo": "ruvnet/ruflo",
+      "is_pack_primary": true,
+      "pack_slug": "ruvnet-ruflo",
+      "created_at": "2025-06-02T21:24:20Z",
+      "pushed_at": "2026-10-26T06:36:48Z",
+      "rank_current": 10,
+      "rank_delta": 2
+    },
+    {
+      "slug": "blader-humanizer",
+      "name": "humanizer",
+      "type": "agent_skill",
+      "categories": [
+        "other"
+      ],
+      "stars": 60713,
+      "stars_delta_7d": 2497,
+      "stars_growth_pct": 4.3,
+      "trending_score": 2604.1,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        54590,
+        56481,
+        58216,
+        60713
+      ],
+      "tagline": "Rewrite AI-sounding text so it reads like the writer without changing what it says.\nUse when editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line\nclosers, staged openers, forced triads, dashes everywhere, inflated claims, sales\nlanguage, stock AI words, bold labels, or filler. Based on Wikipedia's \"Signs of AI writing.\"\n",
+      "repo": "blader/humanizer",
+      "is_pack_primary": true,
+      "pack_slug": "blader-humanizer",
+      "created_at": "2026-01-18T05:30:15Z",
+      "pushed_at": "2026-10-16T19:12:03Z",
+      "rank_current": 11,
+      "rank_delta": 4
+    },
+    {
+      "slug": "google-artemis",
+      "name": "artemis",
+      "type": "agent_tool",
+      "categories": [
+        "productivity-ops"
+      ],
+      "stars": 14863,
+      "stars_delta_7d": 2200,
+      "stars_growth_pct": 17.4,
+      "trending_score": 2582.22,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        12663,
+        14863
+      ],
+      "tagline": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code.  It also achieves 99%+ success rate on AndroidWorld Benchmark.",
+      "repo": "google/artemis",
+      "is_pack_primary": true,
+      "created_at": "2026-08-13T17:59:37Z",
+      "pushed_at": "2026-10-01T21:37:15Z",
+      "rank_current": 5,
+      "rank_delta": null
+    },
+    {
+      "slug": "firecrawl-firecrawl-skills-firecrawl-build-interact",
+      "name": "build-interact",
+      "type": "agent_skill",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 195411,
+      "stars_delta_7d": 2534,
+      "stars_growth_pct": 1.3,
+      "trending_score": 2567.29,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        7566,
+        7593,
+        192877,
+        195411
+      ],
+      "tagline": "Agent skill from firecrawl/firecrawl",
+      "repo": "firecrawl/firecrawl",
+      "is_pack_primary": true,
+      "pack_slug": "firecrawl-firecrawl",
+      "created_at": "2024-04-15T21:02:29Z",
+      "pushed_at": "2026-10-26T04:20:44Z",
+      "rank_current": 12,
+      "rank_delta": -11
+    },
+    {
+      "slug": "agricidaniel-claude-seo-extensions-ahrefs-skills-seo-ahrefs",
+      "name": "seo-ahrefs",
+      "type": "agent_skill",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 21373,
+      "stars_delta_7d": 2161,
+      "stars_growth_pct": 11.2,
+      "trending_score": 2404.07,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        18470,
+        18843,
+        19212,
+        21373
+      ],
+      "tagline": "Agent skill from AgriciDaniel/claude-seo",
+      "repo": "AgriciDaniel/claude-seo",
+      "is_pack_primary": true,
+      "pack_slug": "agricidaniel-claude-seo",
+      "created_at": "2026-02-07T08:17:38Z",
+      "pushed_at": "2026-10-22T16:47:40Z",
+      "rank_current": 13,
+      "rank_delta": 21
+    },
+    {
+      "slug": "addyosmani-agent-skills-skills-api-and-interface-design",
+      "name": "api-and-interface-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 110580,
+      "stars_delta_7d": 2262,
+      "stars_growth_pct": 2.1,
+      "trending_score": 2309.24,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        102528,
+        106053,
+        108318,
+        110580
+      ],
+      "tagline": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
+      "repo": "addyosmani/agent-skills",
+      "is_pack_primary": true,
+      "pack_slug": "addyosmani-agent-skills",
+      "created_at": "2026-02-15T20:20:26Z",
+      "pushed_at": "2026-10-13T20:24:07Z",
+      "rank_current": 14,
+      "rank_delta": -3
+    },
+    {
+      "slug": "beenuar-aisoc",
+      "name": "AiSOC",
+      "type": "agent_tool",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 3838,
+      "stars_delta_7d": 1420,
+      "stars_growth_pct": 58.7,
+      "trending_score": 2253.91,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        2387,
+        2405,
+        2418,
+        3838
+      ],
+      "tagline": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
+      "repo": "beenuar/AiSOC",
+      "is_pack_primary": true,
+      "created_at": "2026-05-02T03:30:19Z",
+      "pushed_at": "2026-10-26T07:07:15Z",
+      "rank_current": 6,
+      "rank_delta": 33
+    },
+    {
+      "slug": "citrolabs-ego-lite-package-ego-browser-skill-body",
+      "name": "body",
+      "type": "agent_skill",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 19598,
+      "stars_delta_7d": 1940,
+      "stars_growth_pct": 11,
+      "trending_score": 2153.14,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        17284,
+        17658,
+        19598
+      ],
+      "tagline": "Agent skill from citrolabs/ego-lite",
+      "repo": "citrolabs/ego-lite",
+      "is_pack_primary": true,
+      "pack_slug": "citrolabs-ego-lite",
+      "created_at": "2026-04-16T12:51:09Z",
+      "pushed_at": "2026-10-26T06:17:13Z",
+      "rank_current": 15,
+      "rank_delta": 18
+    },
+    {
+      "slug": "nousresearch-hermes-agent",
+      "name": "hermes-agent",
+      "type": "agent_tool",
+      "categories": [
+        "domain-research"
+      ],
+      "stars": 257151,
+      "stars_delta_7d": 2120,
+      "stars_growth_pct": 0.8,
+      "trending_score": 2137.62,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        251859,
+        253381,
+        255031,
+        257151
+      ],
+      "tagline": "The agent that grows with you",
+      "repo": "NousResearch/hermes-agent",
+      "is_pack_primary": true,
+      "created_at": "2025-07-22T22:22:28Z",
+      "pushed_at": "2026-10-26T07:33:39Z",
+      "rank_current": 7,
+      "rank_delta": -2
+    },
+    {
+      "slug": "latent-spaces-brag-skills-brag-slim",
+      "name": "slim",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 18669,
+      "stars_delta_7d": 1869,
+      "stars_growth_pct": 11.1,
+      "trending_score": 2076.93,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        15657,
+        16800,
+        18669
+      ],
+      "tagline": "Agent skill from latent-spaces/brag",
+      "repo": "latent-spaces/brag",
+      "is_pack_primary": true,
+      "pack_slug": "latent-spaces-brag",
+      "created_at": "2026-06-16T19:36:36Z",
+      "pushed_at": "2026-10-23T21:18:13Z",
+      "rank_current": 16,
+      "rank_delta": 2
+    },
+    {
+      "slug": "k-dense-ai-scientific-agent-skills-skills-13c-metabolic-flux",
+      "name": "13c-metabolic-flux",
+      "type": "agent_skill",
+      "categories": [
+        "domain-research"
+      ],
+      "stars": 54638,
+      "stars_delta_7d": 1906,
+      "stars_growth_pct": 3.6,
+      "trending_score": 1974.89,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        48703,
+        52732,
+        54638
+      ],
+      "tagline": "Agent skill from K-Dense-AI/scientific-agent-skills",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "is_pack_primary": true,
+      "pack_slug": "k-dense-ai-scientific-agent-skills",
+      "created_at": "2025-10-19T20:54:15Z",
+      "pushed_at": "2026-10-19T09:33:57Z",
+      "rank_current": 17,
+      "rank_delta": -10
+    },
+    {
+      "slug": "headroomlabs-ai-headroom",
+      "name": "headroom",
+      "type": "agent_tool",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 77847,
+      "stars_delta_7d": 1908,
+      "stars_growth_pct": 2.5,
+      "trending_score": 1955.94,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        74574,
+        75189,
+        75939,
+        77847
+      ],
+      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "repo": "headroomlabs-ai/headroom",
+      "is_pack_primary": true,
+      "created_at": "2026-01-07T19:58:51Z",
+      "pushed_at": "2026-10-24T19:15:37Z",
+      "rank_current": 8,
+      "rank_delta": -1
+    }
+  ],
+  "breakout_new": [
+    {
+      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-ai-visibility",
+      "name": "ai-visibility",
+      "type": "agent_skill",
+      "categories": [
+        "domain-research"
+      ],
+      "stars": 7305,
+      "stars_delta_7d": 1227,
+      "stars_growth_pct": 20.2,
+      "trending_score": 1474.7,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        5240,
+        6078,
+        7305
+      ],
+      "tagline": "Measure real AI-engine visibility — traffic from ChatGPT, Perplexity, Claude, Gemini and which pages they cite — from actual GA4 referral data, not prompt sampling. Use when asked \"AI visibility\", \"GEO/AEO check\", \"do LLMs cite us\", \"traffic from ChatGPT\", or \"how do we show up in AI search\".",
+      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills",
+      "is_pack_primary": true,
+      "pack_slug": "ryze-ai-adgent-open-seo-mcp-skills",
+      "created_at": "2026-08-29T23:37:01Z",
+      "pushed_at": "2026-10-23T09:50:40Z",
+      "rank_current": 22,
+      "rank_delta": -3
+    },
+    {
+      "slug": "oldcircle-geo-sleuth-skills-geo-sleuth",
+      "name": "geo-sleuth",
+      "type": "agent_skill",
+      "categories": [
+        "domain-research"
+      ],
+      "stars": 4209,
+      "stars_delta_7d": 810,
+      "stars_growth_pct": 23.8,
+      "trending_score": 1003.03,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        3399,
+        4209
+      ],
+      "tagline": "Agent skill from Oldcircle/geo-sleuth",
+      "repo": "Oldcircle/geo-sleuth",
+      "is_pack_primary": true,
+      "pack_slug": "oldcircle-geo-sleuth",
+      "created_at": "2026-09-18T08:51:34Z",
+      "pushed_at": "2026-10-23T13:05:04Z",
+      "rank_current": 26,
+      "rank_delta": null
+    },
+    {
+      "slug": "zju-real-easel-skills-builtin-ai-image-gen",
+      "name": "ai-image-gen",
+      "type": "agent_skill",
+      "categories": [
+        "productivity-ops"
+      ],
+      "stars": 4090,
+      "stars_delta_7d": 246,
+      "stars_growth_pct": 6.4,
+      "trending_score": 261.74,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        3567,
+        3844,
+        4090
+      ],
+      "tagline": "Agent skill from ZJU-REAL/Easel",
+      "repo": "ZJU-REAL/Easel",
+      "is_pack_primary": true,
+      "pack_slug": "zju-real-easel",
+      "created_at": "2026-08-28T02:22:27Z",
+      "pushed_at": "2026-10-25T06:24:22Z",
+      "rank_current": 53,
+      "rank_delta": -12
+    },
+    {
+      "slug": "xiaoduoya-codex-with-chatgpt",
+      "name": "codex-with-chatgpt",
+      "type": "mcp_server",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 7553,
+      "stars_delta_7d": 96,
+      "stars_growth_pct": 1.3,
+      "trending_score": 97.24,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        7095,
+        7345,
+        7457,
+        7553
+      ],
+      "tagline": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
+      "repo": "XiaoDuoYa/codex-with-chatgpt",
+      "is_pack_primary": true,
+      "created_at": "2026-08-28T12:57:24Z",
+      "pushed_at": "2026-10-01T05:19:24Z",
+      "rank_current": 22,
+      "rank_delta": -10
+    },
+    {
+      "slug": "ebony-vinyl-dsh-our-free-model",
+      "name": "dsh-our-free-model",
+      "type": "agent_tool",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 43586,
+      "stars_delta_7d": 9629,
+      "stars_growth_pct": 0,
+      "trending_score": 0,
+      "velocity_source": "age_velocity",
+      "sparkline_4w": [
+        43586
+      ],
+      "tagline": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+      "repo": "Ebony-Vinyl/dsh-our-free-model",
+      "is_pack_primary": true,
+      "created_at": "2026-09-24T16:17:19Z",
+      "pushed_at": "2026-10-26T05:02:49Z"
+    },
+    {
+      "slug": "yetone-magpie",
+      "name": "magpie",
+      "type": "agent_tool",
+      "categories": [
+        "coding-agents"
+      ],
+      "stars": 21841,
+      "stars_delta_7d": 4683,
+      "stars_growth_pct": 0,
+      "trending_score": 0,
+      "velocity_source": "age_velocity",
+      "sparkline_4w": [
+        21841
+      ],
+      "tagline": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+      "repo": "yetone/magpie",
+      "is_pack_primary": true,
+      "created_at": "2026-09-23T16:22:35Z",
+      "pushed_at": "2026-10-26T07:32:37Z"
+    },
+    {
+      "slug": "nano-muse-nanomuse",
+      "name": "nanoMuse",
+      "type": "agent_tool",
+      "categories": [
+        "cloud-infra"
+      ],
+      "stars": 2606,
+      "stars_delta_7d": 551,
+      "stars_growth_pct": 0,
+      "trending_score": 0,
+      "velocity_source": "age_velocity",
+      "sparkline_4w": [
+        2606
+      ],
+      "tagline": "nanoMuse: an open-source personal agent for every device you own. One agent with a name and a look of its own that does things, keeps working while the app is closed, remembers you, and asks before anything you cannot undo. On Android, iPhone and iPad, Windows / macOS / Linux and in the browser; your phone's screen and your computer as its hands.",
+      "repo": "nano-muse/nanoMuse",
+      "is_pack_primary": true,
+      "created_at": "2026-09-23T06:13:06Z",
+      "pushed_at": "2026-10-26T03:14:52Z"
+    },
+    {
+      "slug": "useagenthq-useagent-docs-skills-task-convention",
+      "name": "task-convention",
+      "type": "agent_skill",
+      "categories": [
+        "productivity-ops"
+      ],
+      "stars": 366,
+      "stars_delta_7d": 44,
+      "stars_growth_pct": 0,
+      "trending_score": 0,
+      "velocity_source": "age_velocity",
+      "sparkline_4w": [
+        366
+      ],
+      "tagline": "Agent skill from useagenthq/useagent",
+      "repo": "useagenthq/useagent",
+      "is_pack_primary": true,
+      "pack_slug": "useagenthq-useagent",
+      "created_at": "2026-08-29T21:14:31Z",
+      "pushed_at": "2026-10-25T16:27:44Z"
+    },
+    {
+      "slug": "thinkflowlab-system1-agents",
+      "name": "system1-agents",
+      "type": "mcp_server",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 177,
+      "stars_delta_7d": 37,
+      "stars_growth_pct": 0,
+      "trending_score": 0,
+      "velocity_source": "age_velocity",
+      "sparkline_4w": [
+        177
+      ],
+      "tagline": "System 1 decision models (Jev, Laya, Cua-S1) as brain for agents: Browser use, computer use, games and robotics",
+      "repo": "ThinkFlowLab/system1-agents",
+      "is_pack_primary": true,
+      "created_at": "2026-09-22T16:42:42Z",
+      "pushed_at": "2026-10-26T02:12:36Z"
+    }
+  ],
+  "top10_mcp": [
+    {
+      "slug": "apify-apify-mcp-server",
+      "name": "apify-mcp-server",
+      "type": "mcp_server",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 13196,
+      "stars_delta_7d": 1269,
+      "stars_growth_pct": 10.6,
+      "trending_score": 1404.02,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        9987,
+        10958,
+        11927,
+        13196
+      ],
+      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
+      "repo": "apify/apify-mcp-server",
+      "is_pack_primary": true,
+      "created_at": "2025-01-02T15:43:09Z",
+      "pushed_at": "2026-10-26T07:25:33Z",
+      "rank_current": 1,
+      "rank_delta": 0
+    },
+    {
+      "slug": "irinabuht12-oss-google-ads-meta-ads-mcp",
+      "name": "google-ads-meta-ads-mcp",
+      "type": "mcp_server",
+      "categories": [
+        "productivity-ops"
+      ],
+      "stars": 6011,
+      "stars_delta_7d": 764,
+      "stars_growth_pct": 14.6,
+      "trending_score": 875.24,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        4200,
+        4710,
+        5247,
+        6011
+      ],
+      "tagline": "Google Ads MCP server + Meta Ads MCP (Facebook Ads MCP) + Google Analytics MCP (GA4) + Search Console in one hosted remote MCP for Claude, ChatGPT, Cursor & n8n: OAuth login, no API keys, approval-gated writes, 7-day free trial. By Ryze AI.",
+      "repo": "irinabuht12-oss/google-ads-meta-ads-mcp",
+      "is_pack_primary": true,
+      "created_at": "2026-04-06T04:41:14Z",
+      "pushed_at": "2026-10-23T09:50:41Z",
+      "rank_current": 2,
+      "rank_delta": 2
+    },
+    {
+      "slug": "ahujasid-mcp-for-blender",
+      "name": "mcp-for-blender",
+      "type": "mcp_server",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 32370,
+      "stars_delta_7d": 762,
+      "stars_growth_pct": 2.4,
+      "trending_score": 780.37,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        30173,
+        30632,
+        31608,
+        32370
+      ],
+      "tagline": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender Foundation.",
+      "repo": "ahujasid/mcp-for-blender",
+      "is_pack_primary": true,
+      "created_at": "2025-03-07T09:58:58Z",
+      "pushed_at": "2026-10-24T04:50:20Z",
+      "rank_current": 3,
+      "rank_delta": 0
+    },
+    {
+      "slug": "browser-use-browser-use",
+      "name": "browser-use",
+      "type": "mcp_server",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 119157,
+      "stars_delta_7d": 697,
+      "stars_growth_pct": 0.6,
+      "trending_score": 701.1,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        118460,
+        119157
+      ],
+      "tagline": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API.",
+      "repo": "browser-use/browser-use",
+      "is_pack_primary": true,
+      "created_at": "2024-10-31T16:00:56Z",
+      "pushed_at": "2026-10-24T07:23:03Z",
+      "rank_current": 4,
+      "rank_delta": null
+    },
+    {
+      "slug": "deusdata-codebase-memory-mcp",
+      "name": "codebase-memory-mcp",
+      "type": "mcp_server",
+      "categories": [
+        "coding-agents"
+      ],
+      "stars": 47498,
+      "stars_delta_7d": 611,
+      "stars_growth_pct": 1.3,
+      "trending_score": 618.96,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        45967,
+        46502,
+        46887,
+        47498
+      ],
+      "tagline": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent graph, with CBM Lens, MCP tools, agent integrations and change-aware test selection.",
+      "repo": "DeusData/codebase-memory-mcp",
+      "is_pack_primary": true,
+      "created_at": "2026-02-24T22:01:00Z",
+      "pushed_at": "2026-10-26T01:29:10Z",
+      "rank_current": 5,
+      "rank_delta": 0
+    },
+    {
+      "slug": "upstash-context7",
+      "name": "context7",
+      "type": "mcp_server",
+      "categories": [
+        "other"
+      ],
+      "stars": 63692,
+      "stars_delta_7d": 420,
+      "stars_growth_pct": 0.7,
+      "trending_score": 422.79,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        62764,
+        62986,
+        63272,
+        63692
+      ],
+      "tagline": "Context7 Platform -- Up-to-date docs for AI agents",
+      "repo": "upstash/context7",
+      "is_pack_primary": true,
+      "created_at": "2025-03-26T23:40:39Z",
+      "pushed_at": "2026-10-26T07:17:42Z",
+      "rank_current": 6,
+      "rank_delta": 1
+    },
+    {
+      "slug": "chromedevtools-chrome-devtools-mcp",
+      "name": "chrome-devtools-mcp",
+      "type": "mcp_server",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 54164,
+      "stars_delta_7d": 349,
+      "stars_growth_pct": 0.6,
+      "trending_score": 351.26,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        53072,
+        53450,
+        53815,
+        54164
+      ],
+      "tagline": "Chrome DevTools for coding agents",
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "is_pack_primary": true,
+      "created_at": "2025-09-11T10:39:55Z",
+      "pushed_at": "2026-10-26T05:27:10Z",
+      "rank_current": 7,
+      "rank_delta": -1
+    },
+    {
+      "slug": "vibheksoni-stealth-browser-mcp",
+      "name": "stealth-browser-mcp",
+      "type": "mcp_server",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 3281,
+      "stars_delta_7d": 281,
+      "stars_growth_pct": 9.4,
+      "trending_score": 307.32,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        2212,
+        2223,
+        3000,
+        3281
+      ],
+      "tagline": "Stealth browser automation for AI agents over MCP and the Chrome DevTools Protocol: navigation, network hooks, DOM extraction, and pixel-accurate UI cloning.",
+      "repo": "vibheksoni/stealth-browser-mcp",
+      "is_pack_primary": true,
+      "created_at": "2025-08-09T02:47:19Z",
+      "pushed_at": "2026-10-24T06:02:59Z",
+      "rank_current": 8,
+      "rank_delta": -6
+    },
+    {
+      "slug": "jordan-gibbs-hyperresearch",
+      "name": "hyperresearch",
+      "type": "mcp_server",
+      "categories": [
+        "domain-research"
+      ],
+      "stars": 4111,
+      "stars_delta_7d": 229,
+      "stars_growth_pct": 5.9,
+      "trending_score": 242.51,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        3850,
+        3882,
+        4111
+      ],
+      "tagline": "Convert Claude Code or Codex into the most intelligent Deep Research Agent. Collect, search, and synthesize web research into a persistent, searchable wiki that builds on itself. Hosted API + MCP: hyperresearch.ai",
+      "repo": "jordan-gibbs/hyperresearch",
+      "is_pack_primary": true,
+      "created_at": "2026-04-09T20:46:46Z",
+      "pushed_at": "2026-10-10T22:36:54Z",
+      "rank_current": 9,
+      "rank_delta": 24
+    },
+    {
+      "slug": "github-github-mcp-server",
+      "name": "github-mcp-server",
+      "type": "mcp_server",
+      "categories": [
+        "coding-agents"
+      ],
+      "stars": 33962,
+      "stars_delta_7d": 217,
+      "stars_growth_pct": 0.6,
+      "trending_score": 218.4,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        33427,
+        33579,
+        33745,
+        33962
+      ],
+      "tagline": "GitHub's official MCP Server",
+      "repo": "github/github-mcp-server",
+      "is_pack_primary": true,
+      "created_at": "2025-03-04T16:42:04Z",
+      "pushed_at": "2026-10-23T21:21:33Z",
+      "rank_current": 10,
+      "rank_delta": 0
+    }
+  ],
+  "top10_skills": [
+    {
+      "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
+      "name": "chat-visuals",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 106220,
+      "stars_delta_7d": 9043,
+      "stars_growth_pct": 9.3,
+      "trending_score": 9884.51,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        86961,
+        91386,
+        97177,
+        106220
+      ],
+      "tagline": "Show a chart, diagram, table, report or mockup inline in this Orca chat as an HTML page. Use when a visual would help the user understand your answer. Only available when the ORCA_CHAT_SCRATCH_DIR environment variable is set.",
+      "repo": "stablyai/orca",
+      "is_pack_primary": true,
+      "pack_slug": "stablyai-orca",
+      "created_at": "2026-03-17T03:28:57Z",
+      "pushed_at": "2026-10-26T07:33:33Z",
+      "rank_current": 1,
+      "rank_delta": 1
+    },
+    {
+      "slug": "dietrichgebert-ponytail-skills-ponytail-audit",
+      "name": "audit",
+      "type": "agent_skill",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 176404,
+      "stars_delta_7d": 9110,
+      "stars_growth_pct": 5.4,
+      "trending_score": 9606.09,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        157371,
+        162479,
+        167294,
+        176404
+      ],
+      "tagline": "Quality audit of a whole repo: bugs, security holes, what breaks under real load, risky code without tests, slow paths, and what to delete, merge or split. Ranked, each finding explained in plain English. One-shot report, changes nothing. Use for \"audit this codebase\", \"review the whole repo\", \"find bloat\", \"what can I delete\", /ponytail-audit.\n",
+      "repo": "DietrichGebert/ponytail",
+      "is_pack_primary": true,
+      "pack_slug": "dietrichgebert-ponytail",
+      "created_at": "2026-06-12T00:52:37Z",
+      "pushed_at": "2026-10-18T01:55:14Z",
+      "rank_current": 2,
+      "rank_delta": 3
+    },
+    {
+      "slug": "deepseek-ai-deepseek-harness-packages-preset-agent-preset-skills-agent-experience",
+      "name": "agent-experience",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 261818,
+      "stars_delta_7d": 8149,
+      "stars_growth_pct": 3.2,
+      "trending_score": 8410.78,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        253669,
+        261818
+      ],
+      "tagline": "Agent skill from deepseek-ai/deepseek-harness",
+      "repo": "deepseek-ai/deepseek-harness",
+      "is_pack_primary": true,
+      "pack_slug": "deepseek-ai-deepseek-harness",
+      "created_at": "2026-08-13T11:56:32Z",
+      "pushed_at": "2026-10-23T15:25:40Z",
+      "rank_current": 3,
+      "rank_delta": null
+    },
+    {
+      "slug": "affaan-m-ecc-docs-es-skills-api-design",
+      "name": "api-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 289072,
+      "stars_delta_7d": 5578,
+      "stars_growth_pct": 2,
+      "trending_score": 5687.75,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        274698,
+        278380,
+        283494,
+        289072
+      ],
+      "tagline": "Patrones de diseño REST API incluyendo nomenclatura de recursos, códigos de estado, paginación, filtrado, respuestas de error, versionado y rate limiting para APIs de producción.",
+      "repo": "affaan-m/ECC",
+      "is_pack_primary": true,
+      "pack_slug": "affaan-m-ecc",
+      "created_at": "2026-01-18T00:51:51Z",
+      "pushed_at": "2026-10-26T04:56:56Z",
+      "rank_current": 4,
+      "rank_delta": 0
+    },
+    {
+      "slug": "tt-a1i-archify-archify",
+      "name": "archify",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 89390,
+      "stars_delta_7d": 3840,
+      "stars_growth_pct": 4.5,
+      "trending_score": 4012.36,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        82940,
+        85550,
+        89390
+      ],
+      "tagline": "Create validated architecture, workflow, sequence, data-flow, lifecycle/state, ERD, class, tree, timeline, and waterfall diagrams as explorable standalone HTML with dark/light themes, motion and image/SVG/WebM export. Accept requirements or Mermaid; inspect repository evidence for code-backed diagrams. Use when visualizing systems, API calls, pipelines, schemas, histories, timings, or everyday steps, parts, relationships and states. Also turn an answer into a one-page explainer, with the conclusion first, structured panels, native diagrams and charts, when the user asks for a page, an explainer or an answer to share (做成一页, 用页面讲), or proactively when the user's rules opt in with an [archify explainer: ...] line. Not for dashboards.",
+      "repo": "tt-a1i/archify",
+      "is_pack_primary": true,
+      "pack_slug": "tt-a1i-archify",
+      "created_at": "2026-04-15T05:27:37Z",
+      "pushed_at": "2026-10-26T05:59:06Z",
+      "rank_current": 5,
+      "rank_delta": 5
+    },
+    {
+      "slug": "leonxlnx-taste-skill-skills-taste-skill",
+      "name": "design-taste-frontend",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 102637,
+      "stars_delta_7d": 3632,
+      "stars_growth_pct": 3.7,
+      "trending_score": 3765.24,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        93423,
+        95459,
+        99005,
+        102637
+      ],
+      "tagline": "tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated gallery sites (One Page Love, Awwwards Sites of the Day). Deals researched directions (idea, composition, type, palette, photographs, section blueprints) from a library, enforces a strict no-slop house style with a real-browser inspector, and runs a look-and-fix loop on screenshots. Use this whenever you build, design, redesign, restyle, polish or review a landing page, marketing site, portfolio, product page, one-pager, hero or any public-facing web page, in any stack (HTML/CSS, React, Next.js, Vue, Svelte, Astro, Tailwind) — also when the user says a page looks generic, templated, \"AI-made\", sloppy, or asks to make it look designed, premium, award-level or less like every other site. Also for app screens: dashboards, admin and analytics views, settings, inboxes and other screens people work in, with their own run and rules.",
+      "repo": "Leonxlnx/taste-skill",
+      "is_pack_primary": true,
+      "pack_slug": "leonxlnx-taste-skill",
+      "created_at": "2026-02-19T21:44:05Z",
+      "pushed_at": "2026-10-26T06:38:29Z",
+      "rank_current": 6,
+      "rank_delta": null
+    },
+    {
+      "slug": "cathrynlavery-diagram-design-skills-diagram-design",
+      "name": "diagram-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 61160,
+      "stars_delta_7d": 3208,
+      "stars_growth_pct": 5.5,
+      "trending_score": 3385.58,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        44654,
+        53703,
+        57952,
+        61160
+      ],
+      "tagline": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph, UML class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
+      "repo": "cathrynlavery/diagram-design",
+      "is_pack_primary": true,
+      "pack_slug": "cathrynlavery-diagram-design",
+      "created_at": "2026-04-16T18:01:16Z",
+      "pushed_at": "2026-10-26T04:42:00Z",
+      "rank_current": 7,
+      "rank_delta": -1
+    },
+    {
+      "slug": "nextlevelbuilder-ui-ux-pro-max-skill-cli-assets-skills-banner-design",
+      "name": "banner-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 140519,
+      "stars_delta_7d": 3172,
+      "stars_growth_pct": 2.3,
+      "trending_score": 3245.26,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        133772,
+        135424,
+        137347,
+        140519
+      ],
+      "tagline": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage.",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "is_pack_primary": true,
+      "pack_slug": "nextlevelbuilder-ui-ux-pro-max-skill",
+      "created_at": "2025-11-30T11:36:31Z",
+      "pushed_at": "2026-10-26T07:06:53Z",
+      "rank_current": 8,
+      "rank_delta": 6
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-delegate-work",
+      "name": "delegate-work",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 107406,
+      "stars_delta_7d": 3106,
+      "stars_growth_pct": 3,
+      "trending_score": 3198.5,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        101411,
+        104300,
+        107406
+      ],
+      "tagline": "Delegate user-requested work to an existing Paperclip agent, with a durable task reference and clear execution expectations.",
+      "repo": "paperclipai/paperclip",
+      "is_pack_primary": true,
+      "pack_slug": "paperclipai-paperclip",
+      "created_at": "2026-03-02T15:01:51Z",
+      "pushed_at": "2026-10-26T06:44:43Z",
+      "rank_current": 9,
+      "rank_delta": 0
+    },
+    {
+      "slug": "ruvnet-ruflo",
+      "name": "ruflo",
+      "type": "agent_skill",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 79343,
+      "stars_delta_7d": 2614,
+      "stars_growth_pct": 3.4,
+      "trending_score": 2703.05,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        74048,
+        74512,
+        76729,
+        79343
+      ],
+      "tagline": "Ruflo is a multi-agent orchestration platform for AI coding agents (Claude Code, Cursor, Codex, Copilot, Gemini, Amp, +12 more). Use this skill when the user wants to (1) install/init ruflo in a project, (2) run multi-agent swarms with hierarchical coordination, (3) use ruflo's 314+ MCP tools for memory, routing, hooks, sub-agents, or workflows, (4) check ruflo status/version/doctor health, or (5) discover which of ruflo's 30+ plugins fits their task.",
+      "repo": "ruvnet/ruflo",
+      "is_pack_primary": true,
+      "pack_slug": "ruvnet-ruflo",
+      "created_at": "2025-06-02T21:24:20Z",
+      "pushed_at": "2026-10-26T06:36:48Z",
+      "rank_current": 10,
+      "rank_delta": 2
+    }
+  ],
+  "top10_tools": [
+    {
+      "slug": "morluto-rea",
+      "name": "rea",
+      "type": "agent_tool",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 386611,
+      "stars_delta_7d": 59406,
+      "stars_growth_pct": 18.2,
+      "trending_score": 70191.51,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        12895,
+        196748,
+        327205,
+        386611
+      ],
+      "tagline": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "repo": "morluto/rea",
+      "is_pack_primary": true,
+      "created_at": "2026-04-14T00:51:32Z",
+      "pushed_at": "2026-10-26T07:28:47Z",
+      "rank_current": 1,
+      "rank_delta": 0
+    },
+    {
+      "slug": "graphify-labs-graphify",
+      "name": "graphify",
+      "type": "agent_tool",
+      "categories": [
+        "coding-agents"
+      ],
+      "stars": 135523,
+      "stars_delta_7d": 6919,
+      "stars_growth_pct": 5.4,
+      "trending_score": 7291.25,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        124586,
+        126101,
+        128604,
+        135523
+      ],
+      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "repo": "Graphify-Labs/graphify",
+      "is_pack_primary": true,
+      "created_at": "2026-04-03T15:49:07Z",
+      "pushed_at": "2026-10-23T17:59:28Z",
+      "rank_current": 2,
+      "rank_delta": 0
+    },
+    {
+      "slug": "panniantong-agent-reach",
+      "name": "Agent-Reach",
+      "type": "agent_tool",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 102687,
+      "stars_delta_7d": 3450,
+      "stars_growth_pct": 3.5,
+      "trending_score": 3569.94,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        93055,
+        96891,
+        99237,
+        102687
+      ],
+      "tagline": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "repo": "Panniantong/Agent-Reach",
+      "is_pack_primary": true,
+      "created_at": "2026-02-24T02:10:24Z",
+      "pushed_at": "2026-10-25T04:37:26Z",
+      "rank_current": 3,
+      "rank_delta": 0
+    },
+    {
+      "slug": "farion1231-cc-switch",
+      "name": "cc-switch",
+      "type": "agent_tool",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 148755,
+      "stars_delta_7d": 2682,
+      "stars_growth_pct": 1.8,
+      "trending_score": 2731.24,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        146073,
+        148755
+      ],
+      "tagline": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
+      "repo": "farion1231/cc-switch",
+      "is_pack_primary": true,
+      "created_at": "2025-08-04T14:16:16Z",
+      "pushed_at": "2026-10-26T06:45:44Z",
+      "rank_current": 4,
+      "rank_delta": null
+    },
+    {
+      "slug": "google-artemis",
+      "name": "artemis",
+      "type": "agent_tool",
+      "categories": [
+        "productivity-ops"
+      ],
+      "stars": 14863,
+      "stars_delta_7d": 2200,
+      "stars_growth_pct": 17.4,
+      "trending_score": 2582.22,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        12663,
+        14863
+      ],
+      "tagline": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code.  It also achieves 99%+ success rate on AndroidWorld Benchmark.",
+      "repo": "google/artemis",
+      "is_pack_primary": true,
+      "created_at": "2026-08-13T17:59:37Z",
+      "pushed_at": "2026-10-01T21:37:15Z",
+      "rank_current": 5,
+      "rank_delta": null
+    },
+    {
+      "slug": "beenuar-aisoc",
+      "name": "AiSOC",
+      "type": "agent_tool",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 3838,
+      "stars_delta_7d": 1420,
+      "stars_growth_pct": 58.7,
+      "trending_score": 2253.91,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        2387,
+        2405,
+        2418,
+        3838
+      ],
+      "tagline": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
+      "repo": "beenuar/AiSOC",
+      "is_pack_primary": true,
+      "created_at": "2026-05-02T03:30:19Z",
+      "pushed_at": "2026-10-26T07:07:15Z",
+      "rank_current": 6,
+      "rank_delta": 33
+    },
+    {
+      "slug": "nousresearch-hermes-agent",
+      "name": "hermes-agent",
+      "type": "agent_tool",
+      "categories": [
+        "domain-research"
+      ],
+      "stars": 257151,
+      "stars_delta_7d": 2120,
+      "stars_growth_pct": 0.8,
+      "trending_score": 2137.62,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        251859,
+        253381,
+        255031,
+        257151
+      ],
+      "tagline": "The agent that grows with you",
+      "repo": "NousResearch/hermes-agent",
+      "is_pack_primary": true,
+      "created_at": "2025-07-22T22:22:28Z",
+      "pushed_at": "2026-10-26T07:33:39Z",
+      "rank_current": 7,
+      "rank_delta": -2
+    },
+    {
+      "slug": "headroomlabs-ai-headroom",
+      "name": "headroom",
+      "type": "agent_tool",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 77847,
+      "stars_delta_7d": 1908,
+      "stars_growth_pct": 2.5,
+      "trending_score": 1955.94,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        74574,
+        75189,
+        75939,
+        77847
+      ],
+      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "repo": "headroomlabs-ai/headroom",
+      "is_pack_primary": true,
+      "created_at": "2026-01-07T19:58:51Z",
+      "pushed_at": "2026-10-24T19:15:37Z",
+      "rank_current": 8,
+      "rank_delta": -1
+    },
+    {
+      "slug": "career-ops-hq-career-ops",
+      "name": "career-ops",
+      "type": "agent_tool",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 77373,
+      "stars_delta_7d": 1823,
+      "stars_growth_pct": 2.4,
+      "trending_score": 1866.99,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        73692,
+        75550,
+        77373
+      ],
+      "tagline": "Open-source AI job search agent and job finder: scan job boards, score each job 1-5 against your CV before you apply, tailor an ATS-friendly resume and cover letter, get interview prep and a job application tracker. It helps you fill in each application; you press Submit. Runs locally in your AI coding CLI (Claude Code, Codex, OpenCode and more).",
+      "repo": "career-ops-hq/career-ops",
+      "is_pack_primary": true,
+      "created_at": "2026-04-04T18:21:18Z",
+      "pushed_at": "2026-10-26T06:20:18Z",
+      "rank_current": 9,
+      "rank_delta": null
+    },
+    {
+      "slug": "vxcontrol-pentagi",
+      "name": "pentagi",
+      "type": "agent_tool",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 32446,
+      "stars_delta_7d": 1239,
+      "stars_growth_pct": 4,
+      "trending_score": 1288.19,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        31207,
+        32446
+      ],
+      "tagline": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "repo": "vxcontrol/pentagi",
+      "is_pack_primary": true,
+      "created_at": "2025-01-06T22:22:48Z",
+      "pushed_at": "2026-10-22T23:26:13Z",
+      "rank_current": 10,
+      "rank_delta": null
+    }
+  ]
+}

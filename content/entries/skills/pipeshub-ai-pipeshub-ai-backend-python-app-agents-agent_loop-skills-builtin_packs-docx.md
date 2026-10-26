@@ -15,10 +15,10 @@ tags:
   - claude-code
   - context-engineering
 status: active
-quality_percentile: 90
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: pipeshub-ai/pipeshub-ai
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3838
-  last_commit: 2026-10-19T07:20:00Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.2
-  trending_score: 8.02
+  stars: 3850
+  last_commit: 2026-10-26T06:57:53Z
+  stars_delta_7d: 12
+  stars_growth_pct: 0.3
+  trending_score: 12.04
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3814
     - 3830
     - 3838
+    - 3850
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: pipeshub-ai/pipeshub-ai
   path: backend/python/app/agents/agent_loop/skills/builtin_packs/docx/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:31.910Z
+  fetched_at: 2026-10-26T07:37:00.721Z
   truncated: false
 type: agent_skill
 skill:

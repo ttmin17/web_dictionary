@@ -14,7 +14,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2025-07-29T15:56:02
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: eigent-ai/eigent
@@ -22,18 +22,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15599
-  last_commit: 2026-10-17T21:07:58Z
-  stars_delta_7d: 85
-  stars_growth_pct: 0.5
-  trending_score: 85.47
-  rank_current: 70
-  rank_delta: null
+  stars: 15663
+  last_commit: 2026-10-25T23:52:55Z
+  stars_delta_7d: 64
+  stars_growth_pct: 0.4
+  trending_score: 64.26
+  rank_current: 93
+  rank_delta: -23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15467
     - 15514
     - 15599
+    - 15663
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: eigent-ai/eigent
   path: resources/example-skills/docx/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:23.640Z
+  fetched_at: 2026-10-26T07:44:48.977Z
   truncated: false
 type: agent_skill
 skill:
@@ -114,8 +115,7 @@ To produce a clean document with all tracked changes accepted (requires LibreOff
 python scripts/accept_changes.py input.docx output.docx
 ```
 
----
-## Creating New Documents
+---## Creating New Documents
 
 Generate .docx files with JavaScript, then validate. Install: `npm install -g docx`
 
@@ -346,8 +346,7 @@ sections: [{
 - **Override built-in styles** - use exact IDs: "Heading1", "Heading2", etc.
 - **Include `outlineLevel`** - required for TOC (0 for H1, 1 for H2, etc.)
 
----
-## Editing Existing Documents
+---## Editing Existing Documents
 
 **Follow all 3 steps in order.**
 
@@ -403,8 +402,7 @@ Validates with auto-repair, condenses XML, and creates DOCX. Use `--validate fal
 - **Replace entire `<w:r>` elements**: When adding tracked changes, replace the whole `<w:r>...</w:r>` block with `<w:del>...<w:ins>...` as siblings. Don't inject tracked change tags inside a run.
 - **Preserve `<w:rPr>` formatting**: Copy the original run's `<w:rPr>` block into your tracked change runs to maintain bold, font size, etc.
 
----
-## XML Reference
+---## XML Reference
 
 ### Schema Compliance
 
@@ -531,8 +529,7 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 </w:drawing>
 ```
 
----
-## Dependencies
+---## Dependencies
 
 - **pandoc**: Text extraction
 - **docx**: `npm install -g docx` (new documents)

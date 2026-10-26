@@ -14,7 +14,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: eigent-ai/eigent
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15599
-  last_commit: 2026-10-17T21:07:58Z
-  stars_delta_7d: 85
-  stars_growth_pct: 0.5
-  trending_score: 85.47
+  stars: 15663
+  last_commit: 2026-10-25T23:52:55Z
+  stars_delta_7d: 64
+  stars_growth_pct: 0.4
+  trending_score: 64.26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15467
     - 15514
     - 15599
+    - 15663
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: eigent-ai/eigent
   path: resources/example-skills/pptx/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:23.640Z
+  fetched_at: 2026-10-26T07:44:48.977Z
   truncated: false
 type: agent_skill
 skill:
@@ -75,8 +76,7 @@ skill:
 | Edit or create from template | Read [editing.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/editing.md) |
 | Create from scratch | Read [pptxgenjs.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/pptxgenjs.md) |
 
----
-## Reading Content
+---## Reading Content
 
 ```bash
 # Text extraction
@@ -89,23 +89,20 @@ python scripts/thumbnail.py presentation.pptx
 python scripts/office/unpack.py presentation.pptx unpacked/
 ```
 
----
-## Editing Workflow
+---## Editing Workflow
 
 **Read [editing.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/editing.md) for full details.**
 
 1. Analyze template with `thumbnail.py`
 2. Unpack → manipulate slides → edit content → clean → pack
 
----
-## Creating from Scratch
+---## Creating from Scratch
 
 **Read [pptxgenjs.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/pptxgenjs.md) for full details.**
 
 Use when no template or reference presentation is available.
 
----
-## Design Ideas
+---## Design Ideas
 
 **Don't create boring slides.** Plain bullets on a white background won't impress anyone. Consider ideas from this list for each slide.
 
@@ -193,8 +190,7 @@ Choose colors that match your topic — don't default to generic blue. Use these
 - **Don't use low-contrast elements** — icons AND text need strong contrast against the background; avoid light text on light backgrounds or dark text on dark backgrounds
 - **NEVER use accent lines under titles** — these are a hallmark of AI-generated slides; use whitespace or background color instead
 
----
-## QA (Required)
+---## QA (Required)
 
 **Assume there are problems. Your job is to find them.**
 
@@ -228,8 +224,7 @@ If grep returns results, fix them before declaring success.
 
 **Do not declare success until you've completed at least one fix-and-verify cycle.**
 
----
-## Converting to Images
+---## Converting to Images
 
 Convert presentations to individual slide images for visual inspection:
 
@@ -246,8 +241,7 @@ To re-render specific slides after fixes:
 pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 ```
 
----
-## Dependencies
+---## Dependencies
 
 - `pip install "markitdown[pptx]"` - text extraction
 - `pip install Pillow` - thumbnail grids

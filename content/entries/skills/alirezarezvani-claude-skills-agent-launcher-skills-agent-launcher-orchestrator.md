@@ -8,12 +8,17 @@ summary: Inspired by Anthropic's launch-your-agent reference skill (Apache-2.0).
   This is an independent re-implementation; CMA semantics come from
   ../../references/cma-primitives.md.
 categories:
-  - agent-frameworks
+  - coding-agents
+tags:
+  - agent-plugins
+  - agent-skills
+  - agentic-ai
+  - ai-coding-agent
 status: active
-quality_percentile: 46
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -21,8 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28112
-  last_commit: 2026-08-30T09:46:16Z
+  stars: 28730
+  last_commit: 2026-10-23T11:30:28Z
+  stars_delta_7d: 523
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 27812
+    - 28112
+    - 28730
 language: en
 needs_keys: false
 prerequisites: []
@@ -30,7 +43,7 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: agent-launcher/skills/agent-launcher-orchestrator/SKILL.md
   branch: main
-  fetched_at: 2026-10-14T14:55:14.627Z
+  fetched_at: 2026-10-26T07:43:10.234Z
   truncated: false
 type: agent_skill
 skill:
@@ -55,7 +68,13 @@ skill:
     - scripts/goal_router.py
     - scripts/goal_state.py
     - scripts/loop_compiler.py
-tags: []
+  pack_total_skills: 383
+  is_pack_primary: true
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: alirezarezvani-claude-skills
 ---
 
 # agent-launcher — Domain Orchestrator
@@ -70,7 +89,7 @@ an independent re-implementation; CMA semantics come from
 ## The through-line: the session goal
 
 State lives at `./my-agent/goal.json` (the user's folder). Manage it with
-`goal_state.py` (init / set / status / advance) — it also backs the `/cs:goal`
+`goal_state.py` (init / set / status / advance) — it also backs the `/cs-goal`
 command and the opt-in `SessionStart` hook. The goal's `phase` selects the lane;
 the phase + recurrence selects the loop shape.
 

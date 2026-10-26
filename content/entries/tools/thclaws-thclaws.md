@@ -15,21 +15,24 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: thClaws/thClaws
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1241
-  last_commit: 2026-10-16T09:56:44Z
-  stars_delta_7d: 46
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 1243
+  last_commit: 2026-10-25T08:22:12Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.2
+  trending_score: 2
+  rank_current: 135
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1241
+    - 1243
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +41,7 @@ readme_source:
   repo: thClaws/thClaws
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:43.054Z
+  fetched_at: 2026-10-26T07:38:23.816Z
   truncated: false
 type: agent_tool
 tool:

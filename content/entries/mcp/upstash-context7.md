@@ -13,25 +13,26 @@ status: active
 quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: upstash/context7
   official_vendor: false
   license: MIT
 signals:
-  stars: 63272
-  last_commit: 2026-10-17T14:44:22Z
-  stars_delta_7d: 286
-  stars_growth_pct: 0.5
-  trending_score: 287.3
-  rank_current: 7
-  rank_delta: null
+  stars: 63692
+  last_commit: 2026-10-26T07:17:42Z
+  stars_delta_7d: 420
+  stars_growth_pct: 0.7
+  trending_score: 422.79
+  rank_current: 6
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 62764
     - 62986
     - 63272
+    - 63692
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +41,7 @@ readme_source:
   repo: upstash/context7
   path: README.md
   branch: master
-  fetched_at: 2026-10-19T07:31:31.545Z
+  fetched_at: 2026-10-26T07:35:59.794Z
   truncated: false
 type: mcp_server
 launch:

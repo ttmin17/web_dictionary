@@ -17,10 +17,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 56
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: alpic-ai/skybridge
@@ -28,15 +28,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2163
-  last_commit: 2026-10-15T12:11:21Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.1
-  trending_score: 3
+  stars: 2178
+  last_commit: 2026-10-23T13:48:04Z
+  stars_delta_7d: 15
+  stars_growth_pct: 0.7
+  trending_score: 15.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2160
     - 2163
+    - 2178
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: alpic-ai/skybridge
   path: skills/mcp-app-builder/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:33:31.310Z
+  fetched_at: 2026-10-26T07:38:03.167Z
   truncated: false
 type: agent_skill
 skill:

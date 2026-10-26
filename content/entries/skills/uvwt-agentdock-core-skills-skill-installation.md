@@ -13,10 +13,10 @@ tags:
   - automation
   - devops
 status: active
-quality_percentile: 61
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: uvwt/agentdock
@@ -24,15 +24,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1253
-  last_commit: 2026-10-18T06:58:34Z
-  stars_delta_7d: 19
-  stars_growth_pct: 1.5
-  trending_score: 19.29
+  stars: 1277
+  last_commit: 2026-10-25T08:40:11Z
+  stars_delta_7d: 24
+  stars_growth_pct: 1.9
+  trending_score: 24.46
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1234
     - 1253
+    - 1277
 language: zh
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: uvwt/agentdock
   path: core-skills/skill-installation/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:33:43.463Z
+  fetched_at: 2026-10-26T07:38:24.112Z
   truncated: false
 type: agent_skill
 skill:

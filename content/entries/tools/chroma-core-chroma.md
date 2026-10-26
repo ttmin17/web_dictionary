@@ -11,24 +11,27 @@ tags:
   - database
   - rust
 status: active
-quality_percentile: 54
+quality_percentile: 51
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: chroma-core/chroma
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 29530
-  last_commit: 2026-10-17T22:33:48Z
-  stars_delta_7d: 138
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29583
+  last_commit: 2026-10-26T03:26:30Z
+  stars_delta_7d: 53
+  stars_growth_pct: 0.2
+  trending_score: 53.1
+  rank_current: 77
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 29530
+    - 29583
 language: en
 needs_keys: false
 prerequisites:
@@ -37,7 +40,7 @@ readme_source:
   repo: chroma-core/chroma
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:15.717Z
+  fetched_at: 2026-10-26T07:45:38.239Z
   truncated: false
 type: agent_tool
 tool:

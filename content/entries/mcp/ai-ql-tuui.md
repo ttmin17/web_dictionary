@@ -15,10 +15,10 @@ tags:
   - anthropic
   - claude
 status: active
-quality_percentile: 5
+quality_percentile: 4
 selection_reason: quality_percentile
 first_seen: 2025-04-01T15:09:38
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: AI-QL/tuui
@@ -27,15 +27,16 @@ source:
 signals:
   stars: 1159
   last_commit: 2026-05-14T09:02:28Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.2
-  trending_score: 2
-  rank_current: 80
-  rank_delta: null
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 106
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1155
     - 1157
+    - 1159
     - 1159
 language: en
 needs_keys: false
@@ -45,7 +46,7 @@ readme_source:
   repo: AI-QL/tuui
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:54.014Z
+  fetched_at: 2026-10-26T07:38:23.855Z
   truncated: false
 type: mcp_server
 launch:

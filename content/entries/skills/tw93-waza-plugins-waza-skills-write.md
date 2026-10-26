@@ -11,10 +11,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 55
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: tw93/Waza
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7329
-  last_commit: 2026-10-18T08:14:09Z
-  stars_delta_7d: 43
-  stars_growth_pct: 0.6
-  trending_score: 43.25
+  stars: 7360
+  last_commit: 2026-10-25T04:38:00Z
+  stars_delta_7d: 31
+  stars_growth_pct: 0.4
+  trending_score: 31.13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7170
     - 7286
     - 7329
+    - 7360
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: tw93/Waza
   path: plugins/waza/skills/write/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:37.458Z
+  fetched_at: 2026-10-26T07:44:01.643Z
   truncated: false
 type: agent_skill
 skill:

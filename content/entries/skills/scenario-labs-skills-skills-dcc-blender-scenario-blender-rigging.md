@@ -9,15 +9,15 @@ summary: "REQUIRED BACKGROUND: scenario-blender-expert (execution channel,
 categories:
   - media-creative
 tags:
-  - 3d-generation
+  - 3d-models
   - agent-skills
-  - blender
-  - claude-code
+  - ai-agents
+  - ai-art
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -25,15 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1056
-  last_commit: 2026-10-19T07:24:34Z
-  stars_delta_7d: 61
-  stars_growth_pct: 6.1
-  trending_score: 64.74
+  stars: 1139
+  last_commit: 2026-10-25T22:41:37Z
+  stars_delta_7d: 83
+  stars_growth_pct: 7.9
+  trending_score: 89.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
+    - 1139
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/blender/scenario-blender-rigging/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:34:16.840Z
+  fetched_at: 2026-10-26T07:38:47.921Z
   truncated: false
 type: agent_skill
 skill:
@@ -50,16 +51,18 @@ skill:
     Python: "rig this character", Rigify metarig fitting or generation errors,
     automatic weights or "Bone Heat Weighting failed", weight painting fixes,
     clothes that do not follow, IK/FK switch, foot roll, twist bones, drivers
-    and custom properties, corrective shape keys, a stylized face rig, a
-    mechanical or hard-surface rig, or testing how a rig deforms.'
+    and custom properties, corrective shape keys, a stylized face rig, ARKit 52
+    blend shapes or viseme shape keys for face capture, lip sync or a game
+    engine, a mechanical or hard-surface rig, or testing how a rig deforms.'
   folder_path: skills/dcc/blender/scenario-blender-rigging
   extra_files:
     - references/critique.md
     - references/expert-notes.md
+    - references/face-shapes.md
     - references/procedures.md
     - references/sources.md
     - scripts/bx_rig.py
-  pack_total_skills: 149
+  pack_total_skills: 166
   is_pack_primary: false
   clients:
     - claude-code
@@ -204,6 +207,30 @@ intersecting, teeth and eyes lagging, widgets hidden inside the mesh. Numbers pa
 showed broken arms or crease spikes during testing: always open the render. Rubric:
 [`references/critique.md`](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-rigging/references/critique.md).
 
+## Face shapes for engines and capture
+
+Face capture apps, engines and lip-sync tools find shape keys by exact name. A key named with the
+wrong case (`JawOpen`) or still equal to the Basis animates nothing. Both survive FBX and glTF
+export [verified], so the file looks complete.
+
+- `R.SHAPE_SETS`: `"arkit"` (Apple's 52 names) and `"visemes"` (Meta Lipsync's 15, `sil` to `U`).
+  Lists, sources and Roblox's 50 FACS poses:
+  [`references/face-shapes.md`](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-rigging/references/face-shapes.md).
+- `R.shape_set(face, "arkit", rename={"JawOpen": "jawOpen"})` renames, then adds each missing key at
+  value 0 as a copy of the Basis, and returns the names it created. Existing keys keep their value:
+  set every key to 0 before export, or the face deforms at rest.
+- Sculpt the Left keys, then build each Right with `R.mirror_shape_key(face, n, n[:-4] + "Right")`
+  for every `n` in `R.ARKIT_52` ending in `Left`.
+- Before export, `R.shape_report(face, "arkit")`. GATE: `missing`, `wrong_case` and `side_conflicts`
+  empty, `left_is == "+X"`.
+- `empty` is the list of keys still to sculpt: report it when delivering placeholders, empty it for
+  a final head. The `sil` viseme is the neutral face, so it always stays in `empty`.
+- Sides: Apple's pages say "left eye" without saying whose, and its face coordinate space puts +X on
+  the face's own left. Build Left keys on the character's left (+X, the `.L` side) and check one
+  capture take before sculpting the whole set.
+- Roblox dynamic heads take joint poses, one per frame from frame 1 with the neutral face on frame
+  0, not shape keys.
+
 ## Common mistakes
 
 | Mistake                                             | What it looks like                        | Fix                                     |
@@ -223,6 +250,7 @@ showed broken arms or crease spikes during testing: always open the render. Rubr
 | Re-parenting a connected bone                       | head jumps to the new parent's tail       | `reparent` clears use_connect first     |
 | Symmetrize expected to copy drivers; `.L.001` names | right side dead                           | `mirror_drivers`; `side_of`             |
 | IK/FK left at 0.86                                  | mixed, unreadable deformation             | exactly 0 or 1                          |
+| ARKit key misspelled or left at the Basis           | capture app or engine moves nothing       | `shape_set`, then `shape_report`        |
 
 ## Blender 5.2 notes
 
@@ -251,4 +279,6 @@ showed broken arms or crease spikes during testing: always open the render. Rubr
   internals, weighting, mechanisms, faces) with timestamps; load when a decision is not covered
   above.
 - `references/critique.md`: the review rubric; load at every gate.
+- [`references/face-shapes.md`](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-rigging/references/face-shapes.md): ARKit, viseme and Roblox FACS names with
+  their sources; load when naming face shapes for an engine or capture app.
 - [`references/sources.md`](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-rigging/references/sources.md): videos, experts, best timestamps.

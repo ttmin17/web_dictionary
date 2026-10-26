@@ -5,9 +5,8 @@ tagline: "Fill in the per-paper TODO sections of research-wiki/papers/<slug>.md
   pages that literature-ingest skills leave as bare scaffolds. Use when user
   says "
 summary: ingestpaper (called by /research-lit, /arxiv, /alphaxiv, /deepxiv,
-  /semantic-scholar, /exa-search) only renders the per-paper scaffold —
-  frontmatter + abstract + 10 fillable TODO. placeholder sections (plus two
-  protec...
+  /semantic-scholar, /exa-search, /firecrawl-search) only renders the per-paper
+  scaffold — frontmatter + abstract + 10 fillable TODO. placeholder sectio...
 categories:
   - domain-research
 tags:
@@ -16,10 +15,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 90
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -27,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 17693
-  last_commit: 2026-10-19T06:20:47Z
-  stars_delta_7d: 282
-  stars_growth_pct: 1.6
-  trending_score: 286.57
+  stars: 18088
+  last_commit: 2026-10-24T15:48:19Z
+  stars_delta_7d: 395
+  stars_growth_pct: 2.2
+  trending_score: 403.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17090
     - 17411
     - 17693
+    - 18088
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/skills-codex/wiki-enrich/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:32:25.059Z
+  fetched_at: 2026-10-26T07:36:53.564Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +56,7 @@ skill:
     that left papers/ as TODO scaffolds.
   folder_path: skills/skills-codex/wiki-enrich
   extra_files: []
-  pack_total_skills: 85
+  pack_total_skills: 87
   is_pack_primary: false
   clients:
     - codex
@@ -70,7 +70,7 @@ Target: **$ARGUMENTS**
 
 ## Why this skill exists
 
-`ingest_paper` (called by `/research-lit`, `/arxiv`, `/alphaxiv`, `/deepxiv`, `/semantic-scholar`, `/exa-search`) only renders the per-paper scaffold — frontmatter + abstract + **10 fillable** `_TODO._` placeholder sections (plus two protected sections: `## Connections` is graph-summary and `## Abstract (original)` is auto-populated when `--arxiv-id` is given). No downstream skill in ARIS fills those 10 sections; the wiki sits as TODO until someone reads each paper.
+`ingest_paper` (called by `/research-lit`, `/arxiv`, `/alphaxiv`, `/deepxiv`, `/semantic-scholar`, `/exa-search`, `/firecrawl-search`) only renders the per-paper scaffold — frontmatter + abstract + **10 fillable** `_TODO._` placeholder sections (plus two protected sections: `## Connections` is graph-summary and `## Abstract (original)` is auto-populated when `--arxiv-id` is given). No downstream skill in ARIS fills those 10 sections; the wiki sits as TODO until someone reads each paper.
 
 This contradicts the Karpathy LLM-wiki design (https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f):
 

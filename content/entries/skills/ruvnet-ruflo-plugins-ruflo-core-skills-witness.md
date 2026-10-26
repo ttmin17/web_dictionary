@@ -1,9 +1,9 @@
 ---
 slug: ruvnet-ruflo-plugins-ruflo-core-skills-witness
 name: witness
-tagline: Sign, verify, and track fix-marker regressions over time using a
-  deterministic Ed25519 witness manifest. Works in any project — clone the
-  toolkit, run
+tagline: Sign, verify, and track fix-marker regressions over time using an
+  Ed25519 witness manifest. The default seed is public-commit-derived (integrity
+  only)
 summary: A temporal history (JSONL) tracks how the fix population evolves across
   releases — so when a regression appears, you can pinpoint the commit that
   introduced it, not just "it's broken now."
@@ -15,10 +15,10 @@ tags:
   - agentic-workflow
   - agents
 status: active
-quality_percentile: 79
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ruvnet/ruflo
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 76729
-  last_commit: 2026-10-19T06:30:38Z
-  stars_delta_7d: 2217
-  stars_growth_pct: 3
-  trending_score: 2282.96
+  stars: 79343
+  last_commit: 2026-10-26T06:36:48Z
+  stars_delta_7d: 2614
+  stars_growth_pct: 3.4
+  trending_score: 2703.05
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74048
     - 74512
     - 76729
+    - 79343
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,17 +44,19 @@ readme_source:
   repo: ruvnet/ruflo
   path: plugins/ruflo-core/skills/witness/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:31:55.773Z
+  fetched_at: 2026-10-26T07:36:25.543Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: witness
-  description: Sign, verify, and track fix-marker regressions over time using a
-    deterministic Ed25519 witness manifest. Works in any project — clone the
-    toolkit, run init, register fixes, regen on each release.
+  description: Sign, verify, and track fix-marker regressions over time using an
+    Ed25519 witness manifest. The default seed is public-commit-derived
+    (integrity only); set RUFLO_WITNESS_SEED/RUFLO_WITNESS_PUBLIC_KEY for
+    authorship. Works in any project — clone the toolkit, run init, register
+    fixes, regen on each release.
   folder_path: plugins/ruflo-core/skills/witness
   extra_files: []
-  pack_total_skills: 161
+  pack_total_skills: 167
   is_pack_primary: false
   clients:
     - claude-code
@@ -62,11 +65,13 @@ skill:
   pack_slug: ruvnet-ruflo
 ---
 
-# Witness — cryptographic fix-regression tracking
+# Witness — tamper-evident fix-regression tracking
 The witness toolkit lets you ship every release with a *signed* manifest
 that lists every documented fix in your codebase along with a sha256 +
-marker substring. Anyone with the same git commit can re-derive the
-public key and verify the signature without a committed private key.
+marker substring. By default the signing seed is derived from the public
+git commit, so anyone can reproduce the signature: this is an integrity
+checksum, not proof of authorship. For authenticity, sign with a 32-byte
+`RUFLO_WITNESS_SEED` and verify with a pinned `RUFLO_WITNESS_PUBLIC_KEY`.
 
 A temporal history (JSONL) tracks how the fix population evolves across
 releases — so when a regression appears, you can pinpoint *the commit
@@ -110,6 +115,10 @@ node plugins/ruflo-core/scripts/witness/verify.mjs \
 # For a CI hash tripwire, also fail when a file changes but its marker remains.
 node plugins/ruflo-core/scripts/witness/verify.mjs \
   --manifest verification.md.json --source-only --strict
+
+# Authenticity: pin a release public key (the flag wins over the env var).
+node plugins/ruflo-core/scripts/witness/verify.mjs \
+  --manifest verification.md.json --public-key <64-hex-public-key>
 ```
 
 Without `--strict`, marker-preserving SHA drift is reported but exits 0.

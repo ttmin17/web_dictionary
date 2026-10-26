@@ -14,24 +14,27 @@ tags:
   - api-gateway
   - api-integrations
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Anil-matcha/open-agent-connector
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 843
-  last_commit: 2026-10-19T06:39:20Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 845
+  last_commit: 2026-10-23T09:37:59Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.2
+  trending_score: 2
+  rank_current: 136
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 843
+    - 845
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +43,7 @@ readme_source:
   repo: Anil-matcha/open-agent-connector
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.053Z
+  fetched_at: 2026-10-26T07:38:48.172Z
   truncated: false
 type: agent_tool
 tool:
@@ -60,7 +63,7 @@ This project is for developers who want to inspect, run, and extend their own ag
 
 Open Agent Connector gives an agent a consistent way to discover connected services, find an action, read its input schema, and execute it. A FastAPI backend manages provider definitions, connections, outbound requests, and run records. A Next.js console provides screens for browsing providers and actions, managing connections and runtime tokens, and reviewing activity. SQLite stores application data locally by default, with PostgreSQL supported via SQLAlchemy async and Alembic migrations.
 
-The catalog currently registers **256 providers** with **8,385 actions** (counted from `server/app/providers/registry.py` and `actions_catalog.json`) spanning Developer tools, Project Management & CRM, Communication, Storage, AI/ML, E-Commerce, Social Media, Financial, and Utilities. For a complete list of all 256 providers, auth types, action counts, and category classifications, see [PROVIDER_GUIDE.md](https://github.com/Anil-matcha/open-agent-connector/blob/main/PROVIDER_GUIDE.md). Registered does not mean battle-tested: not every provider action or OAuth flow has been verified against a live account, so confirm the ones you depend on.
+The catalog currently registers **263 providers** with **8,472 actions** (counted from `server/app/providers/registry.py` and `actions_catalog.json`) spanning Developer tools, Project Management & CRM, Communication, Storage, AI/ML, E-Commerce, Social Media, Financial, and Utilities. For a complete list of all 263 providers, auth types, action counts, and category classifications, see [PROVIDER_GUIDE.md](https://github.com/Anil-matcha/open-agent-connector/blob/main/PROVIDER_GUIDE.md). Registered does not mean battle-tested: not every provider action or OAuth flow has been verified against a live account, so confirm the ones you depend on.
 
 ## Features
 
@@ -71,11 +74,11 @@ The catalog currently registers **256 providers** with **8,385 actions** (counte
 - **Direct MCP actions:** provider actions are exposed as individual MCP tools (scoped to caller token grants), alongside discovery and execution meta-tools.
 - **REST API:** list providers and actions, execute an action, or use a provider proxy where supported.
 - **Connections & credentials:** save named provider connections; credential values are encrypted at rest with AES-256-GCM.
-- **Local web console:** browse the 256-provider catalog, configure connections, execute test runs, and manage runtime tokens and audit logs.
+- **Local web console:** browse the 263-provider catalog, configure connections, execute test runs, and manage runtime tokens and audit logs.
 - **Outbound HTTP safeguards:** SSRF protection with hop-by-hop redirect verification, cross-origin secret stripping, response size caps, and socket-level IP address pinning to eliminate DNS-rebinding attacks.
 - **Idempotent execution:** action requests can use an `Idempotency-Key`; matching completed requests return saved responses and detect payload conflicts.
 - **Run records:** action executions record duration, HTTP status, and bounded, secret-redacted input/output summaries.
-- **Unified catalog:** 8,385 action schemas maintained in `server/app/providers/actions_catalog.json` and registered through extensible Python providers.
+- **Unified catalog:** 8,472 action schemas maintained in `server/app/providers/actions_catalog.json` and registered through extensible Python providers.
 
 ## How it compares
 
@@ -90,7 +93,7 @@ Agent or application
         └── REST: /v1/* (authenticated execution)
                 │
         FastAPI action runtime
-        ├── provider and action registry (256 providers / 8,385 actions)
+        ├── provider and action registry (263 providers / 8,472 actions)
         ├── principal resolution & deny-by-default policy enforcement
         ├── connection & AES-256-GCM credential encryption
         ├── DNS-pinned guarded outbound HTTP client (SSRF & rebinding guard)
@@ -113,7 +116,7 @@ Next.js web console ────────┘
 
 ## Provider catalog overview
 
-The registry includes 256 providers across 10 functional domains. Below is a representative cross-section:
+The registry includes 263 providers across 10 functional domains. Below is a representative cross-section:
 
 | Category | Provider count | Representative providers | Auth types |
 | --- | --- | --- | --- |
@@ -128,7 +131,7 @@ The registry includes 256 providers across 10 functional domains. Below is a rep
 | **Financial & Accounting** | 12+ | QuickBooks, Xero, FreshBooks, Wave, Plaid | OAuth2, API Key |
 | **Utilities & Data** | 20+ | Hacker News, OpenWeatherMap, Mapbox, IPinfo, Custom HTTP | None, API Key |
 
-For the complete 256-provider matrix and action schemas, consult [PROVIDER_GUIDE.md](https://github.com/Anil-matcha/open-agent-connector/blob/main/PROVIDER_GUIDE.md). Provider definitions and action schemas can also be queried programmatically via `GET /v1/providers` and `GET /v1/actions`.
+For the complete 263-provider matrix and action schemas, consult [PROVIDER_GUIDE.md](https://github.com/Anil-matcha/open-agent-connector/blob/main/PROVIDER_GUIDE.md). Provider definitions and action schemas can also be queried programmatically via `GET /v1/providers` and `GET /v1/actions`.
 
 ## Quick start
 

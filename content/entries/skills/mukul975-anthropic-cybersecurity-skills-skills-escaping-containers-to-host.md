@@ -1,12 +1,8 @@
 ---
 slug: mukul975-anthropic-cybersecurity-skills-skills-escaping-containers-to-host
 name: escaping-containers-to-host
-tagline: Exploits privileged pods, host mounts, runC CVEs, and exposed Docker
-  sockets to break out of a container and reach the underlying host during an
-  autho
-summary: Container escape (MITRE ATT&CK T1611, Escape to Host) is the act of
-  breaking the isolation boundary between a container and the host operating
-  system, giving an attacker code execution in the host namespace — and, on...
+tagline: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
+summary: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
 categories:
   - security-auth
 tags:
@@ -15,10 +11,10 @@ tags:
   - cloud-security
   - cybersecurity
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: mukul975/Anthropic-Cybersecurity-Skills
@@ -26,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34678
+  stars: 35031
   last_commit: 2026-08-31T04:32:44Z
-  stars_delta_7d: 311
-  stars_growth_pct: 0.9
-  trending_score: 313.81
+  stars_delta_7d: 353
+  stars_growth_pct: 1
+  trending_score: 356.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33900
     - 34367
     - 34678
+    - 35031
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,20 +40,12 @@ readme_source:
   repo: mukul975/Anthropic-Cybersecurity-Skills
   path: skills/escaping-containers-to-host/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:20.867Z
+  fetched_at: 2026-10-26T07:43:39.356Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: escaping-containers-to-host
-  description: "Exploits privileged pods, host mounts, runC CVEs, and exposed
-    Docker sockets to break out of a container and reach the underlying host
-    during an authorized container-security assessment. Use when executing an
-    approved breakout test, demonstrating the real impact of a privileged or
-    hostPath workload, or validating that escape mitigations actually hold.
-    Keywords: container breakout, privileged, hostPath, docker.sock, runC
-    CVE-2019-5736, CVE-2024-21626, release_agent, nsenter. Do not use for
-    defensive detection of these techniques - use
-    detecting-container-escape-attempts."
+  description: Agent skill from mukul975/Anthropic-Cybersecurity-Skills
   folder_path: skills/escaping-containers-to-host
   extra_files:
     - LICENSE

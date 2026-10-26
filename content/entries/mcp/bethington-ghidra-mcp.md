@@ -15,28 +15,29 @@ tags:
   - ghidra-extension
   - java
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2025-08-30T06:40:03
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: bethington/ghidra-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5782
-  last_commit: 2026-10-16T01:17:04Z
-  stars_delta_7d: 223
-  stars_growth_pct: 4
-  trending_score: 231.95
-  rank_current: 9
-  rank_delta: null
+  stars: 5910
+  last_commit: 2026-10-23T22:33:57Z
+  stars_delta_7d: 128
+  stars_growth_pct: 2.2
+  trending_score: 130.83
+  rank_current: 16
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4702
     - 5559
     - 5782
+    - 5910
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: bethington/ghidra-mcp
   path: README.md
   branch: dev
-  fetched_at: 2026-10-19T07:32:29.362Z
+  fetched_at: 2026-10-26T07:36:57.953Z
   truncated: true
 type: mcp_server
 launch:
@@ -536,6 +537,7 @@ uv run bridge-mcp-ghidra --transport sse --mcp-host 127.0.0.1 --mcp-port 8081
 | `--mcp-host` | `127.0.0.1` | Bind host for HTTP transports |
 | `--mcp-port` | — | Port for HTTP transports |
 | `--lazy` | (default) | Load only the default tool groups on connect, and let the model pull in the rest with `search_tools`/`load_tool_group`. |
+| `--project` | unset | Exact project name to select at startup, including when multiple instances are running. Overrides `GHIDRA_MCP_PROJECT`. |
 | `--no-lazy` | off | Load all tool groups immediately on connect. Needed only by MCP clients that ignore `tools/list_changed`; **rejected outright by the Gemini API** (see below). |
 | `--default-groups` | `listing,function,program` | Comma-separated groups loaded on connect under `--lazy`. |
 | `--tools-page-size` | `0` | Serve `tools/list` in pages of this size (`0` = one page). Only for a client that cannot take one large response; a client that ignores `nextCursor` sees only the first page. |
@@ -620,6 +622,15 @@ instead of registering everything:
   drop a category at runtime.
 - `check_tools("rename_symbol,batch_set_comments")` — confirm specific tools
   are callable right now.
+
+To select a project before the client discovers tools, use
+`bridge-mcp-ghidra --project MyProject --no-lazy`, or set
+`GHIDRA_MCP_PROJECT=MyProject` and `GHIDRA_MCP_LAZY=0` in the client's environment.
+Project names are matched exactly. A missing or ambiguous match leaves the bridge
+disconnected; background retries retain the selector. Blank environment values mean
+unset, and a blank `--project` is rejected. Without a selector, auto-connect behavior
+is unchanged. For TCP-only servers, `GHIDRA_MCP_URL` limits project discovery to that
+listener; otherwise the usual local TCP discovery range is searched.
 
 `search_tools` works in both lazy and `--no-lazy` modes, so agents that honor
 `tools/list_changed` get full discovery without the upfront context cost.
@@ -1215,18 +1226,5 @@ Available on the standalone headless server (`GhidraMCPHeadlessServer`).
 - `get_function_documentation` - Export function documentation
 - `get_function_hash` - Compute the normalized opcode hash of ONE function (function=), or of MANY in one call by omitting it: every function, paged, optionally only the documented or undocumented ones (filter=)
 - `merge_program_documentation` - Bulk merge: copy all RE documentation (function names, signatures, plate comments, instruction comments at EOL/PRE/POST, non-default labels & global symbols) from one program to another at matching addresses
-
-### Health, Schema & Tool Control
-
-- `check_connection` - Liveness probe: {status, server_kind (gui/headless), version, program when one is current}
-- `mcp_health` - Server health: kind (gui/headless), build, current program, uptime, HTTP pool, memory, endpoint count
-- `mcp_schema` - Machine-readable API schema with endpoint metadata
-- `tool_goto_address` - Navigate CodeBrowser listing and decompiler to a specific address **(GUI only)**
-- `tool_running_tools` - List all running Ghidra tool windows **(GUI only)**
-
-### Emulation
-
-- `emulate_function` - Emulate a single function with controlled register/memory inputs
-- `emulate_hash_batch` - Brute-force API hash resolution
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/bethington/ghidra-mcp)).*

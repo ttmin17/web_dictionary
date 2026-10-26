@@ -1,42 +1,43 @@
 ---
 slug: evil0ctal-douyin_tiktok_download_api
 name: Douyin_TikTok_Download_API
-tagline: "🚀 自托管的抖音、TikTok 数据采集与无水印视频下载 API，支持 AI agent 通过 MCP 调用与离线语音转文字，Docker
-  一键部署。| Self-hosted TikTok & Douyin scraper and no-watermark video downloader —
-  "
-summary: 🚀 A self-hosted data API for Douyin and TikTok. One docker compose up,
-  an identity pool that maintains itself, and a REST API, MCP server and web
-  console on top.
+tagline: "🚀 自托管的抖音、TikTok、B 站数据采集与无水印视频下载 API，支持 AI agent 通过 MCP
+  调用与离线语音转文字，Docker 一键部署。| Self-hosted TikTok, Douyin & Bilibili scraper and
+  no-watermark video "
+summary: 🚀 A self-hosted data API for Douyin, TikTok and Bilibili. One docker
+  compose up, an identity pool that maintains itself, and a REST API, MCP server
+  and web console on top.
 categories:
   - browser-web
 tags:
-  - ai-agents
+  - bilibili
   - crawler
   - data-collection
   - douyin
 status: active
-quality_percentile: 87
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2021-11-07T01:35:09
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Evil0ctal/Douyin_TikTok_Download_API
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 20779
-  last_commit: 2026-10-18T10:47:08Z
-  stars_delta_7d: 154
-  stars_growth_pct: 0.7
-  trending_score: 155.15
-  rank_current: 17
-  rank_delta: null
+  stars: 20906
+  last_commit: 2026-10-26T05:59:38Z
+  stars_delta_7d: 127
+  stars_growth_pct: 0.6
+  trending_score: 127.78
+  rank_current: 55
+  rank_delta: -38
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20496
     - 20625
     - 20779
+    - 20906
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: Evil0ctal/Douyin_TikTok_Download_API
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:31:56.059Z
+  fetched_at: 2026-10-26T07:36:25.844Z
   truncated: false
 type: agent_tool
 tool:
@@ -72,9 +73,9 @@ tool:
 
 [English](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/README.md) | [简体中文](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/README.zh-CN.md)
 
-🚀 A self-hosted data API for [Douyin](https://www.douyin.com) and [TikTok](https://www.tiktok.com). One `docker compose up`, an identity pool that maintains itself, and a REST API, MCP server and web console on top.
+🚀 A self-hosted data API for [Douyin](https://www.douyin.com), [TikTok](https://www.tiktok.com) and [Bilibili](https://www.bilibili.com). One `docker compose up`, an identity pool that maintains itself, and a REST API, MCP server and web console on top.
 
-Open source, free, and it runs on your own machine — no signup, no quota, nobody else in the path. It fetches posts, authors, comments and search, downloads video and image albums **without a watermark** (it picks the clean stream the platform already publishes rather than stripping anything), and keeps what it collects in your own PostgreSQL.
+Open source, free, and it runs on your own machine — no signup, no quota, nobody else in the path. It fetches posts, authors and comments, sounds, hashtags, live rooms, trending boards and search results, downloads video and image albums **without a watermark** (it picks the clean stream the platform already publishes rather than stripping anything), and keeps what it collects in your own PostgreSQL. A video it has downloaded can be turned into text on the same machine, offline, and an AI agent can drive all of it over MCP.
 
 [![GitHub license](https://img.shields.io/github/license/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/main/LICENSE)
 [![Release Version](https://img.shields.io/github/v/release/Evil0ctal/Douyin_TikTok_Download_API?style=flat-square)](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/releases/latest)
@@ -188,13 +189,14 @@ endpoint gets rate-limited, and you find out when someone files an issue. v5 put
 | Access control | None; anyone can call it | API keys with scopes and roles, managed in the console |
 | Interface | A single PyWebIO page | A React console: identity pool, scheduler, library, downloads, logs, diagnostics |
 | Ways in | REST | REST, MCP and a CLI, all over the same service layer |
-| Signing | X-Bogus, A_Bogus | a_bogus, X-Bogus, X-Gnarly, X-Dynosaur in pure Python, with a browser fallback |
+| Signing | X-Bogus, A_Bogus | a_bogus, X-Bogus, X-Gnarly, X-Dynosaur and Bilibili's WBI in pure Python, with a browser fallback |
 | Deployment | `pip install -r requirements.txt` + `python start.py` | `docker compose up`, three images |
-| Platforms | Douyin, TikTok, Bilibili | Douyin, TikTok |
+| Platforms | Douyin, TikTok, Bilibili | Douyin, TikTok, Bilibili |
 
-Bilibili is the one thing that went backwards: v5 does not have it yet. It shares
-neither the signing nor the identity machinery with Douyin and TikTok, so the rewrite
-left it out for now.
+Bilibili was the one thing that went backwards in 5.0, because it shares neither the
+signing nor the identity machinery with Douyin and TikTok. It is back in 5.1.6, with
+the two pieces of its own that needed writing: its WBI signature in pure Python, and
+guest identities minted over plain HTTP, so a Bilibili pool needs no browser container.
 
 ### Still on v4?
 
@@ -249,9 +251,10 @@ docker rm -f dtk-v4   # the container from the run above holds the name
 docker compose -p dtk-v4 up -d
 ```
 
-`main` is v5 now and `latest` follows `main`, so **pin the tag to stay on v4**. `V4.1.2`
-is the last v4 release; the branch merged a few PRs after it (Bilibili downloads, cookie
-hot-reload), and that code is published under the commit tag `5be4838`.
+`main` is v5 now and `latest` is the newest v5 release — it moves when a release is cut, never
+on a push to `main` — so **pin the tag to stay on v4**. `V4.1.2` is the last v4 release; the
+branch merged a few PRs after it (Bilibili downloads, cookie hot-reload), and that code is
+published under the commit tag `5be4838`.
 
 There is no guided installer for v4 — the script in Quick start below installs v5. What
 is above is all v4 gets: the branch still takes PRs, but nothing new is built on it, and
@@ -267,28 +270,94 @@ The groups are for learning from each other. **No advertising and nothing
 illegal** — they are for making friends and talking about the work.
 
 
-## 📦 What it can fetch from Douyin and TikTok
+## 📦 What it can fetch
 
-| Capability | Douyin | TikTok |
-|---|:---:|:---:|
-| One post (video or image album) | ✅ | ✅ |
-| Author profile | ✅ | ✅ |
-| An author's posts | ✅ | ✅ |
-| An author's liked posts | ✅ | ✅ |
-| Mixes / playlists | ✅ | ✅ |
-| Comments | ✅ | ✅ |
-| Comment replies | ✅ | ✅ |
-| Followers | ❌ | ✅ |
-| Following | ❌ | ✅ |
+| Capability | Douyin | TikTok | Bilibili |
+|---|:---:|:---:|:---:|
+| One post (video or image album) | ✅ | ✅ | ✅ |
+| Author profile | ✅ | ✅ | ✅ |
+| An author's posts | ✅ | ✅ | ✅ |
+| An author's liked posts | ✅ | ✅ | ❌ |
+| Mixes / playlists / seasons, and an author's list of them | ✅ | ✅ | ✅ |
+| Comments | ✅ | ✅ | ✅ |
+| Comment replies | ✅ | ✅ | ✅ |
+| Public folders and what is in them | ❌ | ✅ | ✅ |
+| A video's parts, for one uploaded in several | — | — | ✅ |
+| The site's popular boards: hot, weekly, all-time picks, top 100 | ❌ | ❌ | ✅ |
+| Followers | ❌ | ✅ | ❌ |
+| Following | ❌ | ✅ | ❌ |
+| Posts recommended beside a post | ✅ | ✅ | ✅ |
+| A sound, and the posts that use it | ✅ | ✅ | — |
+| A hashtag | ✅ | ✅ | — |
+| The posts under a hashtag | ❌ | ✅ | — |
+| Keyword search: posts and accounts | ❌ | ✅ | ✅ |
+| A live room: whether it is on, and its pull URLs | ✅ | ✅ | ✅ |
+| Trending boards | ✅ | ❌ | ✅ |
 
 Douyin serves its follower and following lists only to a signed-in session, so those
 two endpoints are not registered at all: an endpoint that always returns an empty page
-is worth nothing. Importing your own logged-in cookies widens what the rest can see, too.
+is worth nothing. Search and the posts under a hashtag are the same story: Douyin refuses
+both to a guest, and no signed-in answer has been measured yet, so neither is offered there.
+On TikTok search answers a guest one thin page, so an imported login is what pages it.
+Importing your own logged-in cookies widens what the rest can see, too.
+On Bilibili that matters most for comments: a guest is shown the three hottest and no
+more, so an imported login is what turns that into the full thread. On Douyin it decides
+an author's liked posts outright: a guest is shown none, public or not, so that list
+needs a logged-in identity in the pool.
+
+The dashes are not gaps: a Douyin or TikTok post is never more than one video, so it has no
+parts to list.
 
 Media downloads, the content archive, counter snapshots, collections and a watchlist
 are built in; none of them needs another service.
 
-## 🔗 Which Douyin and TikTok links it accepts
+## 🤖 Let an AI agent use it: MCP
+
+Point Claude Code, Claude Desktop, Codex CLI, Cherry Studio or any other MCP client at `/mcp` on
+your own instance, and the agent can read posts, authors and comments, store a post's media and
+transcribe it. It goes through the same service layer, identity pool and scheduler as the REST API,
+and an API key's scopes bound what it may do.
+
+```bash
+claude mcp add --transport http dtk http://127.0.0.1:8000/mcp/ \
+  --header "Authorization: Bearer dtk_YOUR_API_KEY"
+```
+
+| Tool | What it does |
+|---|---|
+| `parse_url` | Fetch whatever a link points at — a post, an author, a short link, pasted share text |
+| `get_video` · `get_user` | One post, or one author profile, by id |
+| `list_user_posts` · `list_comments` | An author's posts or a post's comments, a page at a time |
+| `get_content_history` | The recorded counter history of a post or an author, from the local database |
+| `pool_status` | Identity-pool and endpoint health, so an agent can tell "try later" from "broken" |
+| `download_media` | Store a post's media on this instance |
+| `transcribe_video` | Turn a stored video into text |
+| `get_task_result` | Collect a result that did not finish within the call |
+
+Ten tools, and few on purpose: every extra tool makes an agent worse at picking the right one, so a
+new capability arrives as an argument to an existing tool. Setup for each client, and what every
+tool returns: [MCP and AI agents](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/documents/en/12-mcp.md). The console shows the same guide at
+`/mcp-guide`.
+
+## 🎙 Speech to text, on your own machine
+
+A downloaded video can be transcribed where it is stored. FunASR models — Paraformer for the
+speech, FSMN-VAD to find where someone is talking, CT-Transformer for punctuation — run in a sidecar
+on a network with no route out, so the audio never leaves the host and no API is called.
+
+- **Where:** the **Transcriptions** page in the console, a **Transcribe video** button on every
+  finished download, the **Library** (one stored post, or a whole selection at once),
+  `POST /api/v1/transcriptions`, or the `transcribe_video` MCP tool
+- **What you get:** one whole text per video, with numbers written as digits, exportable as `.txt`
+- **How fast:** a 3 min 13 s clip took 3.7 seconds on two CPU cores; no GPU needed
+- **What it is good at:** Mandarin. The models are the general Chinese ones, so other languages
+  come out poorly
+
+It is off by default. The guided installer asks, then downloads the ~500 MB of models and checks
+each file against its SHA-256; by hand, see [Preparing the FunASR ONNX models](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/documents/en/18-funasr-models.md)
+and [Turning a stored video into text](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/documents/en/08-downloads-and-library.md#turning-a-stored-video-into-text).
+
+## 🔗 Which links it accepts
 
 Paste whatever you have — a short link, a post URL, or the whole caption a platform app
 puts on your clipboard:
@@ -300,11 +369,16 @@ https://www.douyin.com/jingxuan?modal_id=7660875690212492466
 https://www.tiktok.com/@evil0ctal/video/7156033831819037994
 https://www.tiktok.com/t/ZTR9nkkmL/
 2.84 nqe:/ <caption> https://v.douyin.com/L4FJNR3/ <sentence telling you to open the app>
+https://www.bilibili.com/video/BV1xx411c7mD
+https://www.bilibili.com/video/av170001
+https://b23.tv/<code>
+https://space.bilibili.com/2
 ```
 
 Short links are followed and a link buried in a caption is extracted. A post id is also
 checked against the platform's own encoding first, so an id that cannot exist is refused
-here rather than costing an upstream request.
+here rather than costing an upstream request. A Bilibili av number is turned into the
+bvid it stands for, so either spelling reaches the same post.
 
 ## ⚗️ Built with
 
@@ -314,8 +388,8 @@ here rather than costing an upstream request.
 | Transport | wreq (browser TLS fingerprint emulation) · httpx |
 | Data | PostgreSQL + TimescaleDB · Redis |
 | Console | React 19 · TypeScript · Vite · TanStack Query · wouter · i18next |
-| Signing | a_bogus, X-Bogus, X-Gnarly and X-Dynosaur in pure Python |
-| Identity minting | CloakBrowser, headless, in a container of its own, called over HTTP |
+| Signing | a_bogus, X-Bogus, X-Gnarly, X-Dynosaur and Bilibili's WBI in pure Python |
+| Identity minting | CloakBrowser, headless, in a container of its own, called over HTTP; Bilibili guests over plain HTTP, no browser |
 | Downloader | Go 1.23, standard library only, statically linked into a scratch image |
 | Transcription | FunASR ONNX (Paraformer, FSMN-VAD, CT-Transformer), offline, in a container with no network route |
 | Auth | argon2id password hashing · API keys with scopes |
@@ -343,8 +417,8 @@ name (`-p dtk`), and the three letters in the console's title bar. Where you see
 Douyin_TikTok_Download_API/
 ├── src/dtk/                the service; all of it lives here
 │   ├── api/                FastAPI routes, auth, OpenAPI localisation
-│   ├── platforms/          Douyin and TikTok adapters: endpoints, params, parsers
-│   ├── signing/            a_bogus / X-Bogus / X-Gnarly / X-Dynosaur
+│   ├── platforms/          Douyin, TikTok and Bilibili adapters: endpoints, params, parsers
+│   ├── signing/            a_bogus / X-Bogus / X-Gnarly / X-Dynosaur / WBI
 │   ├── transport/          outbound requests, response classification
 │   ├── identity/           identity minting and health
 │   ├── scheduler/          identity selection, token buckets, circuit breakers
@@ -353,7 +427,7 @@ Douyin_TikTok_Download_API/
 │   ├── db/                 SQLAlchemy models and Alembic migrations
 │   ├── ops/                diagnostics, backups, health checks, alerting
 │   ├── media/              downloader client
-│   ├── models/             one content model across both platforms
+│   ├── models/             one content model across every platform
 │   ├── urls/               link recognition, short-link expansion, id validation
 │   ├── mcp/                MCP server
 │   ├── cli/                the dtk command line
@@ -436,22 +510,36 @@ docker compose -p dtk -f docker/compose.yml logs api   # prints the setup token
 Open <http://127.0.0.1:8000> and use the token from the log to create the first
 administrator.
 
+That starts no browser container, and without it (`--profile browser`, see
+[the optional profiles](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/documents/en/02-installation.md#the-optional-profiles)) Douyin and
+TikTok identities can only be imported, not minted: both hand a visitor its cookies from inside
+their page scripts. Bilibili guests are minted over plain HTTP either way.
+
 ### Where the image comes from
 
 By default it is built locally: the first `up` compiles the application image from the
 Dockerfile in this repository, which takes a few minutes. To skip that, point compose at
-the published image instead:
+the published image instead, in the same `.env`:
 
 ```bash
-export DTK_IMAGE=evil0ctal/douyin_tiktok_download_api
-export DTK_IMAGE_TAG=latest
+cat >> .env <<'EOF'
+DTK_IMAGE=evil0ctal/douyin_tiktok_download_api
+DTK_IMAGE_TAG=latest
+EOF
+export COMPOSE_ENV_FILES=.env
 docker compose -p dtk -f docker/compose.yml pull
 docker compose -p dtk -f docker/compose.yml up -d
 ```
 
-The `pull` is not optional: these services declare both `image` and `build`, so compose
-builds from the local Dockerfile whenever the image is not already on the machine rather
-than reaching for a registry.
+These two are read by compose itself rather than by the containers, and compose looks for
+them in `docker/.env` unless `COMPOSE_ENV_FILES` says otherwise. Without the export it
+finds nothing, falls back to the local names and quietly builds from source again, so it
+belongs in every shell you run compose from. The script's `dtkctl` carries it for you.
+
+`latest` is the newest release and moves only when one is cut, so updating later needs
+nothing edited here. The `pull` is not optional: these services declare both `image` and
+`build`, so compose builds from the local Dockerfile whenever the image is not already on
+the machine rather than reaching for a registry.
 
 Images are published for `linux/amd64` and `linux/arm64`, so Apple Silicon and a
 Raspberry Pi both run natively. The browser container is not published: it installs
@@ -487,10 +575,10 @@ filesystem, process supervision — you put back yourself. That section lists th
 
 | Entry point | Where | What it is |
 |---|---|---|
-| Web console | `/` | Identity pool, scheduler, library, downloads, logs, diagnostics |
+| Web console | `/` | Identity pool, scheduler, library, downloads, transcriptions, logs, diagnostics |
 | API reference | `/docs` | Swagger UI inside the console, English and Chinese |
 | Bare reference | `/swagger`, `/redoc` | No login required |
-| REST API | `/api/v1/...` | 109 operations |
+| REST API | `/api/v1/...` | 126 operations |
 | MCP | `/mcp` | Shares the service layer with REST; client setup at `/mcp-guide` in the console |
 | CLI | `dtk --help` | Same |
 
@@ -500,6 +588,7 @@ The main capabilities:
 - **Archive** everything parsed, so a post deleted upstream is still here
 - **Download** media to your own disk, in bulk by author, skipping what you have,
   with duplicate cleanup
+- **Transcribe** a stored video to text, offline
 - **Watch** an author or a post and re-collect it on a timer
 - **iOS Shortcut** support at `/api/v1/ios/shortcut`
 
@@ -511,38 +600,59 @@ a day. That request goes from **your browser** to GitHub — the server never
 sends anything outward, so it does not tell anyone this instance exists. Turn it
 off in Settings if you would rather it did not.
 
-Updating is a pull and a restart. If you installed with the script, run it
-again and pick Upgrade:
+If you installed with the script, it is one command in the install directory:
 
 ```bash
-bash install.sh --manage    # pick 2
+cd /opt/dtk           # or ~/dtk - wherever you installed it
+./dtkctl upgrade      # the latest release; ./dtkctl upgrade 5.1.6 for a given one
 ```
+
+It moves the checkout to the release's tag, pulls the new images (or rebuilds them, on an
+install built from source), rebuilds the browser image, takes a backup, migrates, and only
+then writes the version it moved to into `.env` and restarts. Anything that fails before the
+restart puts the checkout and `.env` back, and the old version keeps running. There is
+nothing to edit by hand. An install from before
+5.1.6 does not have `upgrade` yet; there, once, run `git pull && bash install/install.sh
+--upgrade` in the same directory, and from then on it is `./dtkctl upgrade`. Running
+`bash install.sh --manage` and picking 2 does the same from the menu.
 
 By hand it is:
 
 ```bash
 cd /opt/dtk && git pull
+export COMPOSE_ENV_FILES=.env
 
-# Running the published images (recommended): point DTK_IMAGE_TAG at the new one
-docker compose -p dtk -f docker/compose.yml pull api worker downloader
+# Running the published images (recommended). Name the services you run:
+# add downloader and transcriber if you enabled them, with the same --profile flags.
+docker compose -p dtk -f docker/compose.yml pull api worker
+docker compose -p dtk -f docker/compose.yml build browser-rpc   # only with --profile browser
 docker compose -p dtk -f docker/compose.yml run --rm migrate
 docker compose -p dtk -f docker/compose.yml up -d
 ```
 
-Building locally instead? Swap `pull` for `build`. `migrate` runs on every start
-and Alembic is idempotent, so running it separately is only about getting the
-schema up before the containers switch over.
+With `DTK_IMAGE_TAG=latest` there is nothing to change first. A pinned version or
+`sha-` build is the one thing a pin costs: move it in `.env` before you pull, which is
+the step the script does for you. A checkout the script made sits on a release tag, where
+`git pull` has no branch to pull: there, use
+`git fetch origin tag v5.1.7 && git checkout --detach v5.1.7`.
+Building locally instead? Swap `pull` for `build`.
+`migrate` runs on every start and Alembic is idempotent, so running it separately is
+only about getting the schema up before the containers switch over.
 
 **Your data stays put.** The named volumes (`postgres-data`, `redis-data`,
 `media-data`) survive a rebuild, so the identity pool, the archive, the settings
 and the API keys are all where you left them.
 
-The browser image only needs rebuilding when `docker/Dockerfile.browser` or the
-CloakBrowser pin changes, which a normal version bump does not touch.
+The browser image is built from this checkout, never pulled, so rebuild it on every
+update: under a tag that stays the same - `latest`, or a local build's `dev` - the old
+one keeps running the old code. Cached layers keep it short.
 
-To go back, set `DTK_IMAGE_TAG` to the previous `sha-` or version and `up -d`
-again. Migrations have no automatic downgrade — back the database up before
-upgrading, which is the only rollback that always works.
+To go back, `./dtkctl upgrade 5.1.5` with the script, or set `DTK_IMAGE_TAG` to the
+previous version or `sha-` by hand and `up -d` again. Migrations have no automatic
+downgrade, so the script refuses, before pulling anything, a release that lacks the
+database's latest migration; past one, the way back is a new install of the old version
+with a backup taken on it restored. Back the database up before upgrading — the script
+does — which is the only rollback that always works.
 
 
 ## 📖 Documentation

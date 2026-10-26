@@ -18,22 +18,25 @@ status: active
 quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: 777genius/agent-teams-ai
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2278
-  last_commit: 2026-10-19T06:52:22Z
-  stars_delta_7d: 66
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 2332
+  last_commit: 2026-10-26T02:33:59Z
+  stars_delta_7d: 54
+  stars_growth_pct: 2.4
+  trending_score: 55.28
+  rank_current: 75
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 2235
     - 2278
+    - 2332
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +45,7 @@ readme_source:
   repo: 777genius/agent-teams-ai
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:27.512Z
+  fetched_at: 2026-10-26T07:38:02.894Z
   truncated: false
 type: agent_tool
 tool:
@@ -64,6 +67,7 @@ tool:
 <p align="center">
   <a href="https://github.com/777genius/agent-teams-ai/releases/latest"><img src="https://img.shields.io/github/v/release/777genius/agent-teams-ai?style=flat-square&label=version&color=007ec6" alt="Latest Release" /></a>&nbsp;
   <a href="https://discord.gg/qtqSZSyuEc"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Fv10%2Finvites%2FqtqSZSyuEc%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=Discord&logo=discord&logoColor=white&color=5865F2&style=flat-square&suffix=%20members" alt="Discord" /></a>&nbsp;
+  <a href="https://trendshift.io/repositories/24276?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-24276" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/24276" alt="777genius%2Fagent-teams-ai | Trendshift" width="125" height="26"/></a>
   <a href="https://agentteams.live/"><img src="https://img.shields.io/badge/site-agentteams.live-8B5CF6?style=flat-square&logo=googlechrome&logoColor=white" alt="AgentTeams" /></a>&nbsp;
   <a href="https://github.com/777genius/agent-teams-ai/actions/workflows/ci.yml"><img src="https://github.com/777genius/agent-teams-ai/actions/workflows/ci.yml/badge.svg" alt="CI Status" /></a>&nbsp;
 </p>
@@ -604,7 +608,7 @@ By opening a pull request you agree to the [Contributor License Agreement](https
 
 We are open to partnerships and collaboration opportunities. If you see a way to create value together, we are ready to discuss mutually beneficial terms.
 
-Contact: [quantjumppro@gmail.com](mailto:quantjumppro@gmail.com)
+Contact: [iliya@agentteams.live](mailto:iliya@agentteams.live)
 
 ## Security
 

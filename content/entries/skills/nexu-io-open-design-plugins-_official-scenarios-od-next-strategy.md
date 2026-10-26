@@ -14,7 +14,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 102299
-  last_commit: 2026-10-19T07:21:39Z
-  stars_delta_7d: 1391
-  stars_growth_pct: 1.4
-  trending_score: 1410.17
+  stars: 104025
+  last_commit: 2026-10-26T07:31:43Z
+  stars_delta_7d: 1726
+  stars_growth_pct: 1.7
+  trending_score: 1755.12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 99839
     - 100908
     - 102299
+    - 104025
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: nexu-io/open-design
   path: plugins/_official/scenarios/od-next-strategy/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:23.039Z
+  fetched_at: 2026-10-26T07:44:48.576Z
   truncated: false
 type: agent_skill
 skill:
@@ -50,13 +51,13 @@ skill:
     - AGENTS.md
     - assets/core-system-prompt.md
     - assets/general-orchestration.md
+    - assets/task-profiles/audio.md
+    - assets/task-profiles/discovery.md
+    - assets/task-profiles/document.md
     - assets/task-profiles/hyperframes.md
+    - assets/task-profiles/image.md
+    - assets/task-profiles/live-artifact.md
     - assets/task-profiles/marketing.md
-    - assets/task-profiles/motion-design.md
-    - assets/task-profiles/ppt.md
-    - assets/task-profiles/prototype.md
-    - assets/task-profiles/prototype/device-frames/android.html
-    - assets/task-profiles/prototype/device-frames/iphone.html
   pack_total_skills: 401
   is_pack_primary: false
   clients:

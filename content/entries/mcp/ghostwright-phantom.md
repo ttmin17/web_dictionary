@@ -15,24 +15,27 @@ tags:
   - anthropic
   - autonomous-agents
 status: active
-quality_percentile: 12
+quality_percentile: 9
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: ghostwright/phantom
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1485
+  stars: 1483
   last_commit: 2026-06-16T21:26:09Z
-  stars_delta_7d: 10
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  rank_current: 104
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1485
+    - 1483
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +44,7 @@ readme_source:
   repo: ghostwright/phantom
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:41:27.255Z
+  fetched_at: 2026-10-26T07:45:49.096Z
   truncated: false
 type: mcp_server
 launch:

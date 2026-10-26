@@ -16,7 +16,7 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: Leonxlnx/taste-skill
@@ -24,16 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 99005
-  last_commit: 2026-10-19T05:47:12Z
-  stars_delta_7d: 3546
+  stars: 102637
+  last_commit: 2026-10-26T06:38:29Z
+  stars_delta_7d: 3632
   stars_growth_pct: 3.7
-  trending_score: 3677.72
+  trending_score: 3765.24
+  rank_current: 6
+  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 93423
     - 95459
     - 99005
+    - 102637
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +44,7 @@ readme_source:
   repo: Leonxlnx/taste-skill
   path: skills/taste-skill/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:36:41.111Z
+  fetched_at: 2026-10-26T07:41:15.134Z
   truncated: false
 type: agent_skill
 skill:
@@ -71,8 +74,8 @@ skill:
     - evals/evals.json
     - library/app.json
     - library/directions.json
-  pack_total_skills: 13
-  is_pack_primary: false
+  pack_total_skills: 1
+  is_pack_primary: true
   clients:
     - claude-code
     - codex
@@ -207,8 +210,9 @@ The command prints a **direction sheet**. It is the art direction for this build
 - **Adopt it.** Do not blend it with the layout you would have made anyway. If it feels unfamiliar,
   good: the familiar layout is the one this skill exists to prevent.
 - Redraw one slot (`--redraw hero | type | palette | photos | scenes | section:<role> | direction`) only for a
-  reason you can state: it contradicts a stated brand constraint, or needs an asset that does not
-  exist. Never redraw to get something more comfortable. Record every redraw in your report.
+  reason you can state: it contradicts a stated brand constraint, needs an asset that does not exist,
+  or is a section that cannot hold the real content (next point). Never redraw to get something more
+  comfortable. Record every redraw in your report.
 - When a dealt section cannot hold the real content (it compares three plans and there is one price;
   it wants five quotations and there are none), do not bend the content to fit. List the others with
   `--alternatives <role>`, pick the one whose assumptions match the content, and take it with
@@ -362,7 +366,9 @@ not finished. Order of work:
    wrong ("no clear title", "random empty space", "everything is pushed to one side"), and the
    inspector measures each of them.
 9. **States and semantics.** Real links and buttons, visible focus, alt text, a phone layout that is
-   its own composition.
+   its own composition. Every control, the live thing included, works from the keyboard alone in
+   reading order and has an accessible name: its visible label, or `aria-label` when it shows only an
+   icon.
 
 Read `references/type.md`, `references/colour.md` and `references/layout.md` when you need the detail
 behind a decision; the laws below are the short form.
@@ -387,6 +393,11 @@ saves screenshots to `.taste-skill/inspect/`. Fix every `FAIL`. Treat each `WARN
 designer in one sentence. Re-run until there are no `FAIL`s. Do not argue with the meter and do not
 hide things from it. The inspector serves local files over a throwaway local server; if the page must
 also open straight from the file system, open `index.html` that way once before you finish.
+
+Inspect what the visitor receives. With a build step, run the last gate on the production build
+(`vite build && vite preview`, `next build && next start`, or the built `index.html`), not only on the
+dev server: minifiers and bundlers change what ships (one dropped a `backdrop-filter` that the dev
+server showed). The inspector warns when it is looking at a dev server.
 
 ### 8. Look
 
@@ -524,6 +535,11 @@ Short form. Numbers are from the study unless marked as house style.
   square, 23% pill; the 9–16px "soft" radius is the weak-site default). Most strong heroes have no
   button at all, or one.
 - Navigation: wordmark, three to five plain links, one action. No bar chrome.
+- A control explains how to use it by its form, its label and its place. When it seems to need a
+  sentence on how to operate it, redesign the control instead of adding the sentence. What a field
+  accepts is different. First remove the limit where you can: a date picker, or a parser that takes
+  any common format. A limit that remains, such as password rules or file type and size, stays visible
+  beside the field and is tied to it with `aria-describedby`.
 - The footer is a designed close, not a sitemap: on most strong sites the name returns at full width.
 
 ## Special cases

@@ -11,10 +11,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7737
-  last_commit: 2026-10-18T01:05:23Z
-  stars_delta_7d: 220
-  stars_growth_pct: 2.9
-  trending_score: 226.44
+  stars: 8006
+  last_commit: 2026-10-23T08:07:10Z
+  stars_delta_7d: 269
+  stars_growth_pct: 3.5
+  trending_score: 278.35
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7340
     - 7517
     - 7737
+    - 8006
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-cover/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:39:37.264Z
+  fetched_at: 2026-10-26T07:43:55.178Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,8 +64,7 @@ skill:
 
 **核心原则：封面是读者的第一印象，一眼传达题材和氛围。**
 
----
-## 生成通路
+---## 生成通路
 
 - **Codex 内置（优先）**：当前 Codex CLI 会话可调用 `$imagegen` / `image_gen` 时，直接生成并落盘；计入 Codex 通用用量，无需 `OPENAI_API_KEY` 或 `GPT_IMAGE_API_KEY`，也不运行 `curl`。`story-cover` 自行调用工具，不让用户另开命令。
 - **API 回退**：仅在会话没有内置工具或用户明确指定 API 时使用，需要 `GPT_IMAGE_API_KEY`。工具缺失不等于 Codex 订阅不支持生图；内置调用失败时先报告错误，不静默切换到可能收费的 API。
@@ -81,8 +81,7 @@ skill:
 | `BOOK_DIR` | ✅ | — | 输出目录，建议 `./covers/<书名>` |
 | `REF_IMAGE` | | — | 参考图本地路径或 URL；内置通路先把图片载入会话，API 回退走 `images/edits` 图生图 |
 
----
-## 生成流程
+---## 生成流程
 
 ### Step 1：收集信息
 
@@ -371,15 +370,13 @@ fi
 想调的话可以说：{2-3 个具体方向，如「换成人物特写」「书名改成毛笔字」}
 ```
 
----
-## 参考资料
+---## 参考资料
 
 | 文件 | 何时加载 |
 |:-----|:---------|
 | [references/cover-styles.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-cover/references/cover-styles.md) | 题材→视觉风格映射、平台风格详情、提示词模板 |
 
----
-## 语言
+---## 语言
 
 - 跟随用户的语言回复，用户用什么语言就用什么语言回复
 - 中文回复遵循《中文文案排版指北》

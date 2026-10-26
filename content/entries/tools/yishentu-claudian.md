@@ -10,31 +10,32 @@ categories:
 tags:
   - claude-code
   - codex
+  - deepseek-harness
   - grok
-  - ide
 status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2025-12-05T17:58:26
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-10-26T07:46:02.721Z
 source:
   kind: github_repo
   repo: YishenTu/claudian
   official_vendor: false
   license: MIT
 signals:
-  stars: 15725
-  last_commit: 2026-10-19T07:16:48Z
-  stars_delta_7d: 72
+  stars: 15800
+  last_commit: 2026-10-26T04:30:29Z
+  stars_delta_7d: 75
   stars_growth_pct: 0.5
-  trending_score: 72.33
-  rank_current: 26
-  rank_delta: null
+  trending_score: 75.36
+  rank_current: 60
+  rank_delta: -34
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15598
     - 15653
     - 15725
+    - 15800
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: YishenTu/claudian
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:39:23.549Z
+  fetched_at: 2026-10-26T07:43:42.183Z
   truncated: false
 type: agent_tool
 tool:
