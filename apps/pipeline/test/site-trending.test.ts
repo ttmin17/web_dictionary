@@ -38,12 +38,12 @@ describe('Phase 4: Site Trending Data Loaders, Formatters & RSS Helpers', () => 
       const latest = getLatestTrendingWeek();
       const all = getAvailableTrendingWeeks();
       expect(latest).toBe(all[0]);
-      expect(latest).toBe('2026-W42');
+      expect(latest).toMatch(/^\d{4}-W\d{2}$/);
     });
 
     it('loads and validates latest trending report against schema', () => {
       const report = getLatestTrendingReport();
-      expect(report.week).toBe('2026-W42');
+      expect(report.week).toBe(getLatestTrendingWeek());
 
       const parsed = TrendingReportSchema.safeParse(report);
       expect(parsed.success).toBe(true);

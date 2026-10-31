@@ -65,9 +65,7 @@ is `~/.claude/channels/telegram`.
 
 Arguments passed: `$ARGUMENTS`
 
----
-
-## State shape
+---## State shape
 
 `<state-dir>/access.json`:
 
@@ -90,9 +88,7 @@ Arguments passed: `$ARGUMENTS`
 
 Missing file = `{dmPolicy:"pairing", allowFrom:[], groups:{}, pending:{}}`.
 
----
-
-## Dispatch on arguments
+---## Dispatch on arguments
 
 Parse `$ARGUMENTS` (space-separated). If empty or unrecognized, show status.
 
@@ -159,9 +155,7 @@ Delivery/UX config. Supported keys: `ackReaction`, `replyToMode`,
 
 Read, set the key, write, confirm.
 
----
-
-## Implementation notes
+---## Implementation notes
 
 - **Always** Read the file before Write — the channel server may have added
   pending entries. Don't clobber.

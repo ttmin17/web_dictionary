@@ -22,6 +22,12 @@ source:
 signals:
   stars: 1675
   last_commit: 2026-10-01T15:33:54Z
+  stars_delta_7d: 30
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 1675
 language: en
 needs_keys: false
 prerequisites: []
@@ -93,9 +99,7 @@ Automated pipeline for **4K Bilibili horizontal knowledge videos** from a topic.
 - [User Preferences](#user-preferences)
 - [Troubleshooting](#troubleshooting)
 
----
-
-## Bootstrap
+---## Bootstrap
 
 Resolve `SKILL_DIR` to the directory containing this `SKILL.md`:
 
@@ -133,15 +137,11 @@ built in. `check_prereqs.py` validates the active backend's env vars.
 
 > **Design Learning shortcut**: If the user provides a reference video/image or asks to save/list/delete style profiles, see [references/design-learning.md](https://github.com/Agents365-ai/video-podcast-maker/blob/main/skills/video-podcast-maker/references/design-learning.md) instead of running the workflow below.
 
----
-
-## Execution Modes
+---## Execution Modes
 
 Detect Auto Mode (default) vs Interactive Mode at workflow start — the Auto-default decision table and per-request overrides are in [references/workflow-script.md](https://github.com/Agents365-ai/video-podcast-maker/blob/main/skills/video-podcast-maker/references/workflow-script.md#execution-modes).
 
----
-
-## Regenerating an Existing Video
+---## Regenerating an Existing Video
 
 If `videos/{name}/` **already exists** and the user is iterating on a finished or in-progress video, **reuse that directory**. Do NOT start a new project or a new `videos/{newname}/`.
 
@@ -160,9 +160,7 @@ Any re-run that changes what the viewer **sees or hears** re-enters the Step 8 g
 python3 ${SKILL_DIR}/scripts/verify_output.py videos/{name}/
 ```
 
----
-
-## Workflow
+---## Workflow
 
 > **Iterating on a finished video?** If `videos/{name}/` already exists, see [Regenerating an Existing Video](#regenerating-an-existing-video) above for the minimal re-run — do NOT start at Step 1.
 
@@ -212,9 +210,7 @@ Pick frames at: hero title (~10% in), a dense section midpoint, and the outro. R
 | 9 (Render) | `output.mp4` is 3840×2160 · audio-video sync · no black frames |
 | 10 (Verify) | `verify_output.py` exits 0 (or 2 with reviewed warnings) |
 
----
-
-## Hard Rules
+---## Hard Rules
 
 | Rule | Requirement |
 | ------ | ------------- |
@@ -296,9 +292,7 @@ npx remotion still ... videos/{name}/thumbnail.png --public-dir videos/{name}/
 - **Section name `{section}`**: lowercase English, underscore-separated, matches `[SECTION:xxx]`
 - **Thumbnails** (16:9 AND 4:3 both required): `thumbnail_remotion_16x9.png` + `thumbnail_remotion_4x3.png` (or `_ai_` prefix for AI-generated)
 
----
-
-## Additional Resources
+---## Additional Resources
 
 Load on demand — **do NOT load all at once**:
 
@@ -321,14 +315,10 @@ Load on demand — **do NOT load all at once**:
 
 All scripts are reachable through one dispatcher — start with `python3 ${SKILL_DIR}/scripts/cli.py --help`; full routes and envelope error codes: [references/troubleshooting.md](https://github.com/Agents365-ai/video-podcast-maker/blob/main/skills/video-podcast-maker/references/troubleshooting.md#discovery-when-youre-not-sure-which-script-to-run).
 
----
-
-## User Preferences
+---## User Preferences
 
 Mutable state (`user_prefs.json`, `phonemes.json`) lives in `~/.video-podcast-maker/` — safe from skill updates. Auto-migrated from the skill directory on first run. Run "show preferences" to view, or "set X Y" to change. Full commands: [references/troubleshooting.md](https://github.com/Agents365-ai/video-podcast-maker/blob/main/skills/video-podcast-maker/references/troubleshooting.md).
 
----
-
-## Troubleshooting
+---## Troubleshooting
 
 See [references/troubleshooting.md](https://github.com/Agents365-ai/video-podcast-maker/blob/main/skills/video-podcast-maker/references/troubleshooting.md) on errors, BGM options, preference learning, design-learning issues.

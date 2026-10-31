@@ -20,11 +20,12 @@ source:
 signals:
   stars: 700
   last_commit: 2026-10-11T22:26:42Z
-  stars_delta_7d: 0
+  stars_delta_7d: 33
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
-  sparkline_4w: []
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 700
 language: zh
 needs_keys: false
 prerequisites:
@@ -74,8 +75,7 @@ tool:
 > 将角色化聊天、个性化记忆、语音交互、工具调用与多平台接入整合在同一个桌面 Agent 中，  
 > 支持日常聊天（Chat）、辅助工作（Work）、代码协作（Code）、学习陪伴（Learn）四种对话模式。
 
----
-## ✨ 速览
+---## ✨ 速览
 
 - 🌸 **趣味桌面陪伴** — Live2D 角色常驻桌面，支持表情、动作、状态、心情、气泡互动、智能表情包与多套界面主题
 - 💬 **日常聊天（Chat）** — 专注角色化交流，结合会话历史、用户风格与长期记忆自然回应，不暴露任何工具
@@ -90,8 +90,7 @@ tool:
 - 📱 **多平台接入** — 支持桌面端、飞书、微信 iLink 与 QQ（NapCat / OneBot 11），共享角色能力与对话体验
 - 🌙 **主动聊天** — 根据时间、状态与用户偏好主动发起交流，并支持多渠道定向投递
 
----
-## ⚙️ CyreneHarness 核心引擎
+---## ⚙️ CyreneHarness 核心引擎
 
 > `Work / Code / Learn` 等需要工具调用的会话模式，全部跑在 **CyreneHarness** 之上。
 > 源码：[`src/main/orchestrator/harness/cyrene-harness.ts`](https://github.com/Playa-Cyrene/Cyrene-Agent/blob/master/src/main/orchestrator/harness/cyrene-harness.ts)
@@ -141,8 +140,7 @@ CyreneHarness 是 Cyrene Agent 的核心 Agent Loop，负责把**模型决策、
 
 </details>
 
----
-## 🚀 快速开始
+---## 🚀 快速开始
 
 ### 前置条件
 
@@ -210,8 +208,7 @@ Cyrene 无需本地大语言模型即可正常聊天，但建议安装 **BGE-M3 
 
 > `pnpm run build` 已包含 `build:cli`，但 `pnpm link --global` 仍需单独运行。正式安装版的 `cyrene desktop` 入口将在 1.x 提供。
 
----
-## 🔑 配置 API Key
+---## 🔑 配置 API Key
 
 应用启动后，**点击系统托盘图标 → 打开设置**，完成以下基础配置：
 
@@ -228,8 +225,7 @@ Cyrene 无需本地大语言模型即可正常聊天，但建议安装 **BGE-M3 
 
 相关配置会保存在应用的 `<userData>/` 目录中，修改后通常无需重启应用。
 
----
-## ✨ 功能
+---## ✨ 功能
 
 ### 核心功能
 
@@ -426,8 +422,7 @@ Cyrene 内置和扩展的工具较多，主要覆盖以下类别：
 
 </details>
 
----
-<details>
+---<details>
 <summary><b>🔧 开发功能</b>（点击展开）</summary>
 
 #### 🧪 单元测试
@@ -443,8 +438,7 @@ Cyrene 内置和扩展的工具较多，主要覆盖以下类别：
 
 </details>
 
----
-## 🧱 技术栈
+---## 🧱 技术栈
 
 | 层级 | 技术 |
 |---|---|
@@ -467,8 +461,7 @@ Cyrene 内置和扩展的工具较多，主要覆盖以下类别：
 | 文档与邮件 | ExcelJS、docx、PDFKit、Nodemailer |
 | 测试 | Vitest 5 |
 
----
-## 📦 项目结构
+---## 📦 项目结构
 
 ```
 models/                # 本机 AI 模型（用户放置，见 MODEL_LICENSE.md）
@@ -516,8 +509,7 @@ packages/plugin-sdk/   # @playa0v0/cyrene-plugin-sdk 源码
 > 静态资源源文件见 `src/renderer/public/`（音频 / 头像 / Cubism Core / 贴纸等），
 > Live2D 模型见 [MODEL_LICENSE.md](https://github.com/Playa-Cyrene/Cyrene-Agent/blob/master/MODEL_LICENSE.md)。
 
----
-## ⚠️ 免责声明
+---## ⚠️ 免责声明
 
 本项目为**非官方粉丝同人作品**，与 HoYoverse / 米哈游**无任何关联、
 背书或赞助关系**。
@@ -532,8 +524,7 @@ packages/plugin-sdk/   # @playa0v0/cyrene-plugin-sdk 源码
   [MODEL_LICENSE.md](https://github.com/Playa-Cyrene/Cyrene-Agent/blob/master/MODEL_LICENSE.md) 与米哈游同人创作规范处理。
 - 因底层角色 IP 涉及米哈游同人创作规范，**本项目内包含昔涟 IP、Live2D 模型和美术资产的衍生物禁止商业使用。**（售卖、付费社群、含广告变现、打包销售等）。
 
----
-## 📄 许可证
+---## 📄 许可证
 
 本仓库的**源代码**遵循 [MIT License](https://github.com/Playa-Cyrene/Cyrene-Agent/blob/master/LICENSE)，Copyright (c) 2026 Playa。
 MIT 仅约束本仓库的源代码，不适用于角色、Live2D 模型与美术资产。
@@ -546,8 +537,7 @@ MIT 仅约束本仓库的源代码，不适用于角色、Live2D 模型与美术
   修改，再分发。
 - **角色 IP / 美术** — 归 **HoYoverse / 米哈游**所有。
 
----
-## 🙏 致谢
+---## 🙏 致谢
 
 - **昔涟角色**：© HoYoverse / 米哈游
 - **Live2D 模型**：由 [@是依七哒](https://space.bilibili.com/457683484) 制作 —
@@ -653,13 +643,11 @@ MIT 仅约束本仓库的源代码，不适用于角色、Live2D 模型与美术
 
 特别感谢模型原作者慷慨授权本项目使用、修改并再分发其作品。
 
----
-## 💌 联系
+---## 💌 联系
 
 欢迎通过 GitHub Issues / PR 交流。请保持讨论的礼貌与主题相关性。
 
----
-## 💰 随缘支持
+---## 💰 随缘支持
 
 本项目由个人独立开发，所有功能免费开放。
 
@@ -676,5 +664,4 @@ MIT 仅约束本仓库的源代码，不适用于角色、Live2D 模型与美术
   </tr>
 </table>
 
----
-⭐ 如果你喜欢这个项目，欢迎点一个 Star。这会帮助更多喜欢昔涟的人发现它。
+---⭐ 如果你喜欢这个项目，欢迎点一个 Star。这会帮助更多喜欢昔涟的人发现它。

@@ -18,6 +18,15 @@ export async function extractFromPyproject(
   if (!nameMatch || !nameMatch[1]) return null;
 
   const packageName = nameMatch[1];
+
+  // Verify that pyproject.toml actually declares MCP dependencies or keywords
+  const isMcp =
+    /["']\s*(?:mcp|fastmcp)(?:\[[^\]]*\])?(?:\s*[>=<~!\s"']|$)/i.test(content) ||
+    /\b(?:mcp-server|model-context-protocol|model_context_protocol)\b/i.test(content) ||
+    /\bmcp\b/i.test(packageName);
+
+  if (!isMcp) return null;
+
   if (hasPlaceholder(packageName)) {
     return {
       transport: 'stdio',

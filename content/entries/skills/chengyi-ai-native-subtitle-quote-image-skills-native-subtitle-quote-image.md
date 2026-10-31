@@ -20,6 +20,12 @@ source:
 signals:
   stars: 2670
   last_commit: 2026-10-13T13:14:45Z
+  stars_delta_7d: 196
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 2670
 language: zh
 needs_keys: false
 prerequisites: []

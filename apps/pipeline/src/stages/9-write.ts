@@ -115,6 +115,17 @@ export async function runStage9Write(
       body = isMcp ? (repo.description || '') : (item.skillSpec?.description || repo.description || '');
     }
 
+    const pushedDaysAgo = repo.pushedAt
+      ? Math.max(0, (Date.now() - new Date(repo.pushedAt).getTime()) / (1000 * 60 * 60 * 24))
+      : 0;
+    const entryStatus: 'active' | 'slowing' | 'dormant' | 'archived' = repo.archived
+      ? 'archived'
+      : pushedDaysAgo > 180
+        ? 'dormant'
+        : pushedDaysAgo > 90
+          ? 'slowing'
+          : 'active';
+
     const baseData = {
       slug,
       name: title,
@@ -122,7 +133,7 @@ export async function runStage9Write(
       summary: item.summary || tagline,
       categories,
       tags,
-      status: 'active' as const,
+      status: entryStatus,
       quality_percentile: layer3?.percentileRank || 0,
       selection_reason: selectionReason || 'quality_percentile',
       first_seen: firstSeen,
@@ -279,9 +290,16 @@ export async function runStage9Write(
   const stateDir = path.join(rootDir, 'data/state');
   fs.mkdirSync(stateDir, { recursive: true });
   const stateFile = path.join(stateDir, 'catalog-state.json');
-  const totalStarsGained =
-    options?.totalStarsGained ??
-    enrichedEntries.reduce((sum, e) => sum + (e.trendMetrics?.stars_delta_7d ?? 0), 0);
+  const seenStateRepos = new Set<string>();
+  let fallbackStarsGained = 0;
+  for (const e of enrichedEntries) {
+    const repoKey = e.decision.repo.fullName;
+    if (!seenStateRepos.has(repoKey)) {
+      seenStateRepos.add(repoKey);
+      fallbackStarsGained += e.trendMetrics?.stars_delta_7d ?? 0;
+    }
+  }
+  const totalStarsGained = options?.totalStarsGained ?? fallbackStarsGained;
   const totalNewEntries =
     options?.totalNewEntries ??
     enrichedEntries.filter((e) => e.trendMetrics?.velocity_source === 'age_velocity').length;

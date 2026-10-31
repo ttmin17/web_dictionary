@@ -4,7 +4,10 @@ name: yahoo-finance2
 tagline: Use when building with the yahoo-finance2 TypeScript/Deno/npm library,
   using its Yahoo Finance data modules, CLI, or MCP server, or contributing to
   th
-summary: "Use this skill when a task involves yahoo-finance2, including:"
+summary: "- Adding Yahoo Finance market data to a server-side
+  JavaScript/TypeScript app. - Choosing between quote, chart, historical,
+  quoteSummary, fundamentalsTimeSeries, screener, options, or other modules. -
+  Using the packag..."
 categories:
   - productivity-ops
 status: active
@@ -21,6 +24,12 @@ source:
 signals:
   stars: 803
   last_commit: 2026-10-10T11:50:17Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 803
 language: en
 needs_keys: false
 prerequisites: []

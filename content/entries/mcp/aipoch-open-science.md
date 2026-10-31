@@ -20,6 +20,14 @@ source:
 signals:
   stars: 5075
   last_commit: 2026-10-13T16:21:15Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 62
+  velocity_source: snapshot_delta
+  sparkline_4w:
+    - 5451
+    - 5075
 language: en
 needs_keys: false
 prerequisites:

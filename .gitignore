@@ -17,6 +17,10 @@ dist/
 .cache/
 apps/pipeline/.cache/
 
+# Pipeline diagnostic & intermediate run dumps (keep trending.json, diff.json, report.md)
+data/runs/**/decisions.json
+data/runs/**/enriched.json
+
 # OS
 .DS_Store
 Thumbs.db

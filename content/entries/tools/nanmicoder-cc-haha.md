@@ -26,11 +26,14 @@ source:
 signals:
   stars: 14994
   last_commit: 2026-10-13T14:57:24Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars_delta_7d: 101
+  stars_growth_pct: 0.7
+  trending_score: 101.68
   velocity_source: snapshot_delta
-  sparkline_4w: []
+  sparkline_4w:
+    - 14893
+    - 14994
+  rank_current: 17
 language: zh
 needs_keys: false
 prerequisites:
@@ -97,8 +100,7 @@ cc-haha 是一个**桌面端 Claude Code 工作台**：多会话与全局搜索�
   <a href="#桌面端预览">桌面端预览</a> · <a href="#安装桌面端">安装桌面端</a> · <a href="#桌面端亮点">桌面端亮点</a> · <a href="#更多文档">更多文档</a> · <a href="#赞助与合作">赞助与合作</a> · <a href="#用户交流群">用户交流群</a>
 </p>
 
----
-## 桌面端预览
+---## 桌面端预览
 
 <p align="center">
   <a href="https://github.com/NanmiCoder/cc-haha/releases"><img src="https://img.shields.io/badge/⬇_下载桌面端-macOS_%7C_Windows_%7C_Linux-FF7A00?style=for-the-badge" alt="下载桌面端"></a>
@@ -111,8 +113,7 @@ cc-haha 是一个**桌面端 Claude Code 工作台**：多会话与全局搜索�
 
 从 0 开始：[下载安装](https://github.com/NanmiCoder/cc-haha/blob/main/docs/start/install.md) → [连接模型](https://github.com/NanmiCoder/cc-haha/blob/main/docs/start/models.md) → [跑通第一条会话](https://github.com/NanmiCoder/cc-haha/blob/main/docs/start/first-session.md) → [设置指南](https://github.com/NanmiCoder/cc-haha/blob/main/docs/desktop/settings.md) → [实战案例](https://github.com/NanmiCoder/cc-haha/blob/main/docs/cases/index.md)。想体验不抢鼠标的跨应用操作，接着看 [Computer Use 指南](https://github.com/NanmiCoder/cc-haha/blob/main/docs/desktop/computer-use.md)。
 
----
-## 赞助与合作
+---## 赞助与合作
 
 本项目由个人利用业余时间维护，欢迎企业或个人赞助支持持续开发，也可洽谈定制、集成或商务合作。
 
@@ -139,8 +140,7 @@ cc-haha 是一个**桌面端 Claude Code 工作台**：多会话与全局搜索�
 
 📧 **联系邮箱**：relakkes@gmail.com
 
----
-## 安装桌面端
+---## 安装桌面端
 
 1. 前往 [Releases](https://github.com/NanmiCoder/cc-haha/releases) 下载 macOS / Windows / Linux 桌面端安装包。
 2. 首次启动后，在桌面端设置里配置模型提供商、API Key 和默认模型。
@@ -160,8 +160,7 @@ cp .env.example .env
 
 更多配置见 [环境变量](https://github.com/NanmiCoder/cc-haha/blob/main/docs/cli/env.md) 和 [命令行安装与启动](https://github.com/NanmiCoder/cc-haha/blob/main/docs/cli/index.md)。
 
----
-## 用户交流群
+---## 用户交流群
 
 使用过程中有问题、想反馈 Bug，或者想看看别人怎么用，欢迎扫码加入 cc-haha 企业微信用户群。也可以直接来 [Issues](https://github.com/NanmiCoder/cc-haha/issues) 提问。企业定制 / 私有化部署 / Agent 定制需求，请联系作者 [NanmiCoder](https://github.com/NanmiCoder)。
 
@@ -169,8 +168,7 @@ cp .env.example .env
   <img src="https://raw.githubusercontent.com/NanmiCoder/cc-haha/main/docs/images/community/wechat-group-qr.png" width="300" alt="cc-haha 企业微信用户群二维码">
 </p>
 
----
-## ☕ 请作者喝杯咖啡
+---## ☕ 请作者喝杯咖啡
 
 如果这个项目对您有帮助，欢迎打赏支持，您的每一份支持都是我持续更新的动力 ❤️
 
@@ -193,8 +191,7 @@ cp .env.example .env
 </tr>
 </table>
 
----
-## 桌面端亮点
+---## 桌面端亮点
 
 - **多会话工作台**：标签页、项目切换、终端入口和会话历史集中管理，侧边栏宽度可拖拽。
 - **全局搜索**：按 Cmd+K 跨所有会话全文搜索，一键跳到命中位置。
@@ -218,8 +215,7 @@ cp .env.example .env
 - **IM 接入**：通过 Telegram / 飞书 / 微信 / 钉钉 / WhatsApp / 企业微信 / QQ / Slack 远程对话、切换项目和审批权限。
 - **定时任务与用量统计**：创建计划任务在独立会话执行，并查看本机 Token 使用趋势。
 
----
-## 更多文档
+---## 更多文档
 
 完整文档站：<https://cchaha.ai>
 
@@ -231,8 +227,7 @@ cp .env.example .env
 | **命令行** | [安装与启动](https://github.com/NanmiCoder/cc-haha/blob/main/docs/cli/index.md) · [命令参考](https://github.com/NanmiCoder/cc-haha/blob/main/docs/cli/reference.md) · [环境变量](https://github.com/NanmiCoder/cc-haha/blob/main/docs/cli/env.md) |
 | **深入原理** | [桌面端架构](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/desktop.md) · [多 Agent 系统](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/agent.md) · [Skills 系统](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/skills.md) · [记忆系统](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/memory.md) · [Computer Use 架构](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/computer-use.md) · [本地 Server 与 API](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/server.md) · [Channel 系统](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/channel.md) · [项目结构](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/structure.md) · [参与贡献与质量门禁](https://github.com/NanmiCoder/cc-haha/blob/main/docs/internals/contributing.md) |
 
----
-## 技术栈
+---## 技术栈
 
 | 类别 | 技术 |
 |------|------|
@@ -255,8 +250,7 @@ cp .env.example .env
 - [LINUX DO](https://linux.do/)：新的理想型开发者社区。
 - [AtomGit](https://atomgit.com/NanmiCoder/cc-haha)：为本项目提供国内代码托管。
 
----
-## ⭐ Star History
+---## ⭐ Star History
 
 如果这个项目对你有帮助，欢迎点一个 ⭐ Star，让更多人发现 cc-haha。
 

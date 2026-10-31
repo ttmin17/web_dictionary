@@ -3,8 +3,10 @@ slug: kyegomez-swarms
 name: swarms
 tagline: "The Enterprise-Grade Multi-Agent Orchestration Framework. Website:
   https://swarms.ai"
-summary: Swarms Website &nbsp;&nbsp;•&nbsp;&nbsp; Documentation
-  &nbsp;&nbsp;•&nbsp;&nbsp; Swarms Marketplace &nbsp;&nbsp;•&nbsp;&nbsp; 中文
+summary: Build, deploy, and scale high-performance multi-agent systems with
+  Swarms Python, a fast, flexible, and optimized agent framework. Featuring
+  production-ready harnesses for sequential, concurrent, and hierarchical
+  arch...
 categories:
   - agent-frameworks
 status: active
@@ -20,6 +22,14 @@ source:
 signals:
   stars: 7250
   last_commit: 2026-10-13T06:36:49Z
+  stars_delta_7d: 17
+  stars_growth_pct: 0.2
+  trending_score: 17.04
+  rank_current: 37
+  velocity_source: snapshot_delta
+  sparkline_4w:
+    - 7233
+    - 7250
 language: en
 needs_keys: false
 prerequisites:
@@ -143,9 +153,7 @@ $ docker run -it --rm -e OPENAI_API_KEY swarmscorp/swarms
 
 To build the image yourself, run `docker build -t swarms .` from the repository root.
 
----
-
-## Environment Configuration
+---## Environment Configuration
 
 [Learn more about the environment configuration here](https://docs.swarms.world/environment-setup)
 
@@ -411,9 +419,7 @@ results = concurrent_workflow.run(
 print(results)
 ```
 
----
-
-### AgentRearrange
+---### AgentRearrange
 
 Inspired by `einsum`, `AgentRearrange` lets you define complex, non-linear relationships between agents using a simple string-based syntax. [Learn more](https://docs.swarms.world/api/agent-rearrange). This architecture is perfect for orchestrating dynamic workflows where agents might work in parallel, in sequence, or in any combination you choose.
 
@@ -684,9 +690,7 @@ result = marketing_swarm.run(
 print(result)
 ```
 
----
-
-### HeavySwarm
+---### HeavySwarm
 
 `HeavySwarm` implements a sophisticated 5-phase workflow inspired by X.AI's Grok heavy implementation. It uses specialized agents (Research, Analysis, Alternatives, Verification) to provide comprehensive task analysis through intelligent question generation, parallel execution, and synthesis. An optional real-time dashboard shows the analysis as it runs. This architecture excels at financial analysis, strategic planning, research reports, and any task requiring thorough investigation and multiple perspectives. [Learn more about HeavySwarm](https://docs.swarms.world/api/heavy-swarm)
 
@@ -719,9 +723,7 @@ out = swarm.run(prompt)
 print(out)
 ```
 
----
-
-### Social Algorithms
+---### Social Algorithms
 
 **Social Algorithms** provide a flexible framework for defining custom communication patterns between agents. You can upload any arbitrary social algorithm as a callable that defines the sequence of communication, enabling agents to talk to each other in sophisticated ways. [Learn more about Social Algorithms](https://docs.swarms.world/api/social-algorithms)
 
@@ -775,9 +777,7 @@ result = social_alg.run("The impact of AI on healthcare")
 print(result.final_outputs)
 ```
 
----
-
-## Documentation
+---## Documentation
 
 The full documentation lives at **[docs.swarms.world](https://docs.swarms.world)**. Below are the resources most useful when building with Swarms, both for humans and for AI coding assistants.
 
@@ -791,17 +791,13 @@ The full documentation lives at **[docs.swarms.world](https://docs.swarms.world)
 
 > **Tip for AI coding assistants:** point your tool (Claude Code, Cursor, Windsurf, Continue, etc.) at `https://docs.swarms.world/llms.txt`. It will pull the entire docs index in one shot and write idiomatic Swarms code without per-question lookups.
 
----
-
-## Using Swarms with AI Coding Assistants
+---## Using Swarms with AI Coding Assistants
 
 The repo ships with a [`CLAUDE.md`](https://github.com/kyegomez/swarms/blob/master/CLAUDE.md) at the root, a focused guide that teaches Claude Code, Cursor, and other AI coding assistants how to build with Swarms. It covers the `Agent` primitive, every multi-agent architecture (`SequentialWorkflow`, `ConcurrentWorkflow`, `AgentRearrange`, `GraphWorkflow`, `MixtureOfAgents`, `HierarchicalSwarm`, `SwarmRouter`, and more), tools, streaming, memory, MCP integration, and the patterns to reach for in each situation.
 
 Drop `CLAUDE.md` (or symlink it as `AGENTS.md` / `.cursorrules`) into any project that depends on `swarms` and your assistant will write idiomatic Swarms code on the first try, with no extra prompting required.
 
----
-
-## Features
+---## Features
 
 Swarms delivers a comprehensive, enterprise-grade multi-agent infrastructure platform designed for production-scale deployments and seamless integration with existing systems. [Learn more about the swarms feature set here](https://docs.swarms.world/community/features)
 
@@ -827,15 +823,11 @@ Swarms seamlessly integrates with industry-standard protocols and open specifica
 | **[Agent Skills](https://docs.swarms.world/agents/agent-skills)** | Lightweight, markdown-based format for defining modular, reusable agent capabilities introduced by Anthropic. Enables specialization of agents without modifying code by loading skill definitions from simple SKILL.md files. | [Agent Skills Documentation](https://docs.swarms.world/agents/agent-skills) |
 
 
----
-
-## Examples
+---## Examples
 
 Explore comprehensive examples and tutorials to learn how to use Swarms effectively [HERE](https://github.com/kyegomez/swarms/blob/master/examples/README.md)
 
----
-
-## Contribute to Swarms
+---## Contribute to Swarms
 
 Swarms is an open-source, community-driven framework aiming to accelerate a fully autonomous world by providing robust infrastructure for deploying and orchestrating millions of agents. By contributing, you can help advance multi-agent AI, collaborate with passionate peers, shape the agent economy, and enhance your expertise. 
 
@@ -912,8 +904,6 @@ If you use **swarms** in your research, please cite the project by referencing t
   version = {latest}
 ```
 
----
-
-# License
+---# License
 
 Swarms is licensed under the Apache License 2.0. [Learn more here](https://github.com/kyegomez/swarms/blob/master/LICENSE)

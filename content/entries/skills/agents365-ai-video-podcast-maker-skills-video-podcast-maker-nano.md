@@ -4,7 +4,10 @@ name: video-podcast-maker-nano
 tagline: Smallest personal narrated-explainer-video pipeline (spoken narration
   over visuals, not an audio podcast), fully tool-agnostic and autonomous by
   defau
-summary: "What makes this work regardless of tool choice — the three invariants:"
+summary: "1. Checkpoints are never skipped — but who checks is policy. Three
+  checkpoints exist: script (after Step 2), audio (after Step 3), preview
+  (before render). Default checker is the agent itself (self-verification,
+  defin..."
 categories:
   - media-creative
 status: active
@@ -21,6 +24,12 @@ source:
 signals:
   stars: 1675
   last_commit: 2026-10-01T15:33:54Z
+  stars_delta_7d: 30
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 1675
 language: en
 needs_keys: false
 prerequisites: []

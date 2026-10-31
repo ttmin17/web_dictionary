@@ -23,6 +23,12 @@ source:
 signals:
   stars: 3404
   last_commit: 2026-10-11T12:20:45Z
+  stars_delta_7d: 80
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 3404
 language: en
 needs_keys: false
 prerequisites: []
@@ -59,9 +65,7 @@ Reads [Hyperliquid](https://app.hyperliquid.xyz) — the on-chain perps/spot DEX
 
 **How it works**: every command issues a single `POST https://api.hyperliquid.xyz/info` with a `{ "type": "..." }` body and normalizes the response. **No API key, no wallet, no login, no running app** — the info API is public.
 
----
-
-## Step 1: Ensure opencli + Plugin Are Installed and Ready
+---## Step 1: Ensure opencli + Plugin Are Installed and Ready
 
 **Current environment status:**
 
@@ -97,9 +101,7 @@ That's the entire setup — no auth, no launch step. Verify with `opencli hyperl
 | `Unknown command: hyperliquid` | `opencli plugin install github:himself65/finance-skills/hyperliquid` |
 | `hyperliquid info 429` | Rate limited — wait a few seconds and retry |
 
----
-
-## Step 2: Identify What the User Needs
+---## Step 2: Identify What the User Needs
 
 | User Request | Command | Key Flags |
 |---|---|---|
@@ -112,9 +114,7 @@ That's the entire setup — no auth, no launch step. Verify with `opencli hyperl
 | Historical funding for a coin | `opencli hyperliquid funding-history --coin BTC` | `--hours`, `--limit` |
 | Funding arb: HL vs Binance vs Bybit | `opencli hyperliquid funding-compare` | `--coin`, `--sort`, `--limit` |
 
----
-
-## Step 3: Execute the Command
+---## Step 3: Execute the Command
 
 ### General pattern
 
@@ -157,9 +157,7 @@ opencli hyperliquid book --coin ETH --depth 5 -f json
 - `funding-history` — `coin`, `fundingRatePct`, `fundingAprPct`, `premiumPct`, `time`
 - `funding-compare` — `coin`, `hlAprPct`, `binanceAprPct`, `bybitAprPct`, `hlVsBinancePct`, `hlVsBybitPct`, `nextHlFunding`
 
----
-
-## Step 4: Present the Results
+---## Step 4: Present the Results
 
 1. **Lead with the headline number, then the table.** For `markets --coin BTC`: state mark price, 24h change, funding APR, and open interest in prose first. For a full `markets` dump: lead with the count and the top movers / highest-funding names.
 2. **Frame funding in carry terms** — e.g. "BTC perp funding is +10.9% APR (longs pay shorts)". Positive funding ⇒ longs pay shorts; negative ⇒ shorts pay longs.
@@ -169,9 +167,7 @@ opencli hyperliquid book --coin ETH --depth 5 -f json
 6. **Filter aggressively before showing** — `markets` has ~180 perps and `mids` ~700 markets; cap to top 15-20 by the relevant sort unless the user asks for the full list.
 7. **Cross-reference for trade decisions** — Hyperliquid is the on-chain venue; for equities/options context pair it with the `tradingview-reader` skill. For funding/basis trades, `funding-compare` plus `markets` (premium, OI) is the core view.
 
----
-
-## Step 5: Diagnostics
+---## Step 5: Diagnostics
 
 ```bash
 opencli hyperliquid markets --coin BTC
@@ -179,9 +175,7 @@ opencli hyperliquid markets --coin BTC
 
 A successful BTC row confirms opencli, the plugin, and the public API are all reachable. If it errors with `Unknown command: hyperliquid`, reinstall the plugin (Step 1). A `hyperliquid info 4xx/5xx` is an upstream API issue — retry after a short wait.
 
----
-
-## Error Reference
+---## Error Reference
 
 | Error | Cause | Fix |
 |---|---|---|
@@ -190,8 +184,6 @@ A successful BTC row confirms opencli, the plugin, and the public API are all re
 | `hyperliquid info 422/500` | Malformed body or upstream issue | Re-check the coin/interval; retry after a wait |
 | `No perp market for coin "X"` | Wrong/unlisted symbol | Run `opencli hyperliquid markets` (or `mids`) to find the exact symbol |
 
----
-
-## Reference Files
+---## Reference Files
 
 - `references/commands.md` — Every command with all flags, output schemas, and analyst workflows (funding carry, basis/arb, spot snapshot)

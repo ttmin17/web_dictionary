@@ -4,9 +4,8 @@ name: copilot-humanize-korean
 tagline: AI(ChatGPT·Claude·Gemini)가 쓴 한글 텍스트를 사람이 쓴 글처럼 윤문한다. 번역투·영어 인용 과다·기계적
   병렬·관용구·피동 남용·접속사 남발·리듬 균일·이모지/불릿 과다 등 10대 카테고리 70개 AI 티 패턴을 탐지·분류해 내용은 한 글자도
   건드리
-summary: "1. 의미 불변: 사실·주장·수치·날짜·고유명사·인용문은 원문과 100% 일치. 2. 근거 기반: 룰북에 매핑되지 않는 구간은
-  건드리지 않는다. 3. 장르 유지: 입력 장르(칼럼·리포트·블로그·공적)에서 이탈 금지. 4. register 보존: 원문 격식체면 결과도
-  격식체. AI 티는 문법·수사이지 격식 자체가 아니다. 5. 과윤문 금지: 변경률 30% 초과 = 경고, 50% 초과 =..."
+summary: "- A: S1 0건, S2 2건 이하, 변경률 1025%, 자체검증 6/6. - B: S1 0건, S2 4건 이하, 자체검증
+  5/6 이상. - C/D: S1 잔존 또는 과윤문 시그널. 사람 검토를 권한다."
 categories:
   - other
 status: active
@@ -23,6 +22,12 @@ source:
 signals:
   stars: 5971
   last_commit: 2026-10-12T09:57:11Z
+  stars_delta_7d: 173
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 5971
 language: en
 needs_keys: false
 prerequisites: []

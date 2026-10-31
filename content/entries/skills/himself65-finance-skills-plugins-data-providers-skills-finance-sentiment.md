@@ -22,6 +22,12 @@ source:
 signals:
   stars: 3404
   last_commit: 2026-10-11T12:20:45Z
+  stars_delta_7d: 80
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 3404
 language: en
 needs_keys: false
 prerequisites: []
@@ -62,9 +68,7 @@ Use it when the user wants:
 - buzz, bullish percentage, mentions, trades, or trend
 - a quick answer to "what is the market talking about?"
 
----
-
-## Step 1: Ensure the API Key Is Available
+---## Step 1: Ensure the API Key Is Available
 
 **Current environment status:**
 
@@ -89,9 +93,7 @@ Base docs:
 https://api.adanos.org/docs
 ```
 
----
-
-## Step 2: Identify What the User Needs
+---## Step 2: Identify What the User Needs
 
 Match the request to the lightest endpoint that answers it.
 
@@ -111,9 +113,7 @@ Default lookback:
 Ticker count:
 - use compare endpoints for `1..10` tickers
 
----
-
-## Step 3: Execute the Request
+---## Step 3: Execute the Request
 
 Use `curl` with `X-API-Key`. Prefer compare endpoints because they are compact and batch-friendly.
 
@@ -159,9 +159,7 @@ curl -s "https://api.adanos.org/reddit/stocks/v1/compare?tickers=AMD,NVDA,META&d
 5. Treat missing source data as "no data", not bearish or neutral.
 6. Never execute trades or convert the result into trading instructions.
 
----
-
-## Step 4: Present the Results
+---## Step 4: Present the Results
 
 When reporting a single source, prioritize exactly these fields:
 - Buzz
@@ -193,9 +191,7 @@ When comparing multiple tickers:
 
 Do not overstate precision. These are research signals, not trade instructions.
 
----
-
-## Reference Files
+---## Reference Files
 
 - `references/api_reference.md` - endpoint guide, field meanings, and example workflows
 

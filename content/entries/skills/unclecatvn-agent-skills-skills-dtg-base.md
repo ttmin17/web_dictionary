@@ -23,6 +23,12 @@ source:
 signals:
   stars: 145
   last_commit: 2026-09-24T09:06:23Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 145
 language: en
 needs_keys: false
 prerequisites: []
@@ -67,9 +73,7 @@ DTG Base is a custom abstract model (`dtg_base.DTGBase`) that provides common ut
 | [File Utilities](#file-utilities) | Zip directories, get file size |
 | [Number Utilities](#number-utilities) | Round to decimal places |
 
----
-
-## Main Guide
+---## Main Guide
 
 **File**: `odoo-18-dtg-base-guide.md`
 
@@ -83,9 +87,7 @@ DTG Base is a custom abstract model (`dtg_base.DTGBase`) that provides common ut
 - Vietnamese text processing
 - File zipping utilities
 
----
-
-## DTGBase Abstract Model
+---## DTGBase Abstract Model
 
 ### Inherit from DTGBase
 
@@ -104,9 +106,7 @@ class MyModel(models.Model):
         utc_date = self.convert_local_to_utc('2024-01-15 10:00:00')
 ```
 
----
-
-## File Structure
+---## File Structure
 
 ```
 agent-skills/skills/dtg-base/
@@ -115,9 +115,7 @@ agent-skills/skills/dtg-base/
 └── README.md                      # Skill overview
 ```
 
----
-
-## Utilities Overview
+---## Utilities Overview
 
 ### Date & Period Utilities
 - `find_first_date_of_period(date, period_type)` - Get first date of period
@@ -147,6 +145,4 @@ agent-skills/skills/dtg-base/
 ### Number Utilities
 - `round_decimal(value, decimal_places)` - Round to specific decimal places
 
----
-
-**For detailed documentation, see [odoo-18-dtg-base-guide.md](https://github.com/unclecatvn/agent-skills/blob/main/skills/dtg-base/odoo-18-dtg-base-guide.md)**
+---**For detailed documentation, see [odoo-18-dtg-base-guide.md](https://github.com/unclecatvn/agent-skills/blob/main/skills/dtg-base/odoo-18-dtg-base-guide.md)**

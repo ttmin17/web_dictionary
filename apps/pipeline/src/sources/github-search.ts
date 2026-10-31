@@ -51,3 +51,38 @@ export async function searchRepositories(query: string, maxPages = 3): Promise<C
 
   return repos;
 }
+
+export async function fetchRepositoryByFullName(fullName: string): Promise<CandidateRepo | null> {
+  const [owner, repo] = fullName.split('/');
+  if (!owner || !repo) return null;
+
+  const cacheKey = `repo_meta_${owner.toLowerCase()}_${repo.toLowerCase()}`;
+  try {
+    const item = await cachedFetch(cacheKey, async () => {
+      const res = await octokit.rest.repos.get({ owner, repo });
+      return res.data;
+    });
+
+    return {
+      owner: item.owner?.login || owner,
+      name: item.name,
+      fullName: item.full_name,
+      description: item.description,
+      stars: item.stargazers_count,
+      forks: item.forks_count,
+      watchers: item.subscribers_count ?? item.watchers_count ?? item.stargazers_count,
+      archived: item.archived,
+      fork: item.fork,
+      isTemplate: item.is_template || false,
+      createdAt: item.created_at,
+      pushedAt: item.pushed_at || item.created_at,
+      license: item.license?.spdx_id || null,
+      language: item.language || null,
+      topics: item.topics || [],
+      defaultBranch: item.default_branch || 'main',
+    };
+  } catch (err: unknown) {
+    logger.warn(`Failed to fetch repository "${fullName}":`, (err as Error).message || err);
+    return null;
+  }
+}

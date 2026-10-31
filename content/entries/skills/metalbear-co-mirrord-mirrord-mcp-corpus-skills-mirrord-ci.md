@@ -23,6 +23,12 @@ source:
 signals:
   stars: 5365
   last_commit: 2026-10-13T15:20:03Z
+  stars_delta_7d: 17
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 5365
 language: en
 needs_keys: false
 prerequisites: []
@@ -342,8 +348,7 @@ kind: ServiceAccount
 metadata:
   name: ci-runner
   namespace: staging
----
-apiVersion: rbac.authorization.k8s.io/v1
+---apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: mirrord-ci-role
@@ -355,8 +360,7 @@ rules:
 - apiGroups: ["apps"]
   resources: ["deployments"]
   verbs: ["get", "list"]
----
-apiVersion: rbac.authorization.k8s.io/v1
+---apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: mirrord-ci-binding

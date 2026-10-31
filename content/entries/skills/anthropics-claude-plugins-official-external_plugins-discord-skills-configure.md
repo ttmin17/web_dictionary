@@ -67,9 +67,7 @@ user on access policy. The server reads both files at boot.
 
 Arguments passed: `$ARGUMENTS`
 
----
-
-## Dispatch on arguments
+---## Dispatch on arguments
 
 ### No args — status and guidance
 
@@ -138,9 +136,7 @@ as the correct long-term choice. Don't skip the lockdown offer.
 
 Delete the `DISCORD_BOT_TOKEN=` line (or the file if that's the only line).
 
----
-
-## Implementation notes
+---## Implementation notes
 
 - The channels dir might not exist if the server hasn't run yet. Missing file
   = not configured, not an error.

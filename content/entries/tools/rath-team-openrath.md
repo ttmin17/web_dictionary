@@ -21,11 +21,14 @@ source:
 signals:
   stars: 963
   last_commit: 2026-09-28T07:04:56Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars_delta_7d: 3
+  stars_growth_pct: 0.3
+  trending_score: 3.01
   velocity_source: snapshot_delta
-  sparkline_4w: []
+  sparkline_4w:
+    - 960
+    - 963
+  rank_current: 32
 language: en
 needs_keys: false
 prerequisites:
@@ -71,8 +74,7 @@ English | [简体中文](https://github.com/Rath-Team/OpenRath/blob/main/README_
 
 </div>
 
----
-**OpenRath is a PyTorch-like multi-agent & multi-session framework.**
+---**OpenRath is a PyTorch-like multi-agent & multi-session framework.**
 
 It turns agent runtime state into explicit, composable Python objects:
 
@@ -84,8 +86,7 @@ It turns agent runtime state into explicit, composable Python objects:
 - **Workflow** composes multiple agents and workflows into larger systems.
 - **Selector** routes between self-describing workflows at runtime, so `if` / `while` control flow stays plain Python.
 
----
-## OpenRath in the PyTorch Lens
+---## OpenRath in the PyTorch Lens
 
 <p align="center">
   <picture>
@@ -185,8 +186,7 @@ migration, security, and operations guidance lives in
 | Single agent, multi-session | One agent manages many session branches | OpenClaw-style session fanout |
 | Multi-agent, multi-session | Many agents share many sessions and collaborate or evolve through Session | **OpenRath** |
 
----
-## Why the Multi-Agent-Multi-Session Paradigm
+---## Why the Multi-Agent-Multi-Session Paradigm
 
 An agent is a transformation layer on Session, so what really needs to be forked, merged, reused, and traced is the Session dataflow—not a separate message history maintained by each agent.
 
@@ -208,8 +208,7 @@ OpenRath's design addresses the problems that appear when agent systems move fro
 
 The result is a runtime where state, execution, memory, and orchestration stay decoupled enough to scale, yet remain connected through one flowing value: `Session`.
 
----
-## A Minimal but Complete OpenRath Workflow
+---## A Minimal but Complete OpenRath Workflow
 
 ```python
 from collections.abc import Mapping
@@ -287,8 +286,7 @@ out = workflow(user_session)
 
 This small program shows the whole shape in a short span: `Session` carries the data, `Sandbox` places execution, `Tool` is registered on an `Agent`, `Memory` persists across runs, `Workflow` composes the path, and `Compressor` shrinks the resulting context.
 
----
-## The Runtime Pieces
+---## The Runtime Pieces
 
 ### Session — The Flowing State
 
@@ -373,8 +371,7 @@ while not isinstance(
     session = nxt(session)
 ```
 
----
-## Quick Install
+---## Quick Install
 
 ```bash
 pip install openrath
@@ -405,8 +402,7 @@ export OPENAI_DEFAULT_MODEL=your-model-name
 
 You can also configure providers in `~/.openrath/config.json`. Environment variables take precedence.
 
----
-## Learn By Running
+---## Learn By Running
 
 The `example/` directory is a numbered learning ladder. Each script introduces one concept, keeps boilerplate in `_shared/`, and shows how the core objects fit together.
 
@@ -437,8 +433,7 @@ For complete, production-shaped scenarios with fixed inputs, durable state, QA,
 and committed deliverables, see
 [`Rath-Team/OpenRath-Example`](https://github.com/Rath-Team/OpenRath-Example).
 
----
-## Docs and Links
+---## Docs and Links
 
 - Docs: [https://docs.openrath.com](https://docs.openrath.com)
 - Repository: [https://github.com/Rath-Team/OpenRath](https://github.com/Rath-Team/OpenRath)
@@ -450,7 +445,6 @@ Build docs locally:
 uv run sphinx-build -M html docs/source docs/_build
 ```
 
----
-## License
+---## License
 
 OpenRath uses a BSD-style license. See [LICENSE](https://github.com/Rath-Team/OpenRath/blob/main/LICENSE).

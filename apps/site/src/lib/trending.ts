@@ -167,7 +167,7 @@ export interface WeeklyDiffReport {
   week: string;
   generated_at: string;
   added: DiffItem[];
-  removed: DiffItem[];
+  removed: Array<string | DiffItem>;
   surging: TrendingItem[];
   summary: {
     week: string;

@@ -1,76 +1,15 @@
 {
   "week": "2026-W41",
-  "generated_at": "2026-10-17T14:42:57.807Z",
+  "generated_at": "2026-10-31T14:49:45.883Z",
   "summary": {
     "week": "2026-W41",
-    "generated_at": "2026-10-17T14:42:57.807Z",
+    "generated_at": "2026-10-31T14:49:45.883Z",
     "total_new_tools": 232,
-    "total_stars_gained": 107753,
+    "total_stars_gained": 82719,
     "total_active_entries": 232
   },
   "top25_overall": [],
-  "breakout_new": [
-    {
-      "slug": "xiaoduoya-codex-with-chatgpt-skill",
-      "name": "codex-with-chatgpt",
-      "type": "agent_skill",
-      "categories": [
-        "security-auth"
-      ],
-      "stars": 7095,
-      "stars_delta_7d": 811,
-      "stars_growth_pct": 0,
-      "trending_score": 406,
-      "velocity_source": "age_velocity",
-      "sparkline_4w": [
-        7095
-      ],
-      "tagline": "Use ChatGPT (web) as the planning and review brain for Codex coding sessions, while Codex keeps full execution ownership. Use when the user says \"使用 Codex with ChatGPT ...\" / \"Set up Codex with ChatGPT\" / \"用 ChatGPT 规划\", when they ask to connect ChatGPT to the current workspace, disconnect it, or run a task through the ChatGPT planning loop.\n",
-      "repo": "XiaoDuoYa/codex-with-chatgpt",
-      "created_at": "2026-08-28T12:57:24Z",
-      "pushed_at": "2026-10-01T05:19:24Z"
-    },
-    {
-      "slug": "jub0t-concat-claude-skills-run-concat",
-      "name": "run-concat",
-      "type": "agent_skill",
-      "categories": [
-        "productivity-ops"
-      ],
-      "stars": 4202,
-      "stars_delta_7d": 494,
-      "stars_growth_pct": 0,
-      "trending_score": 247,
-      "velocity_source": "age_velocity",
-      "sparkline_4w": [
-        4202
-      ],
-      "tagline": "Build, launch, and verify the Concat desktop app after a code change. Use this whenever the user asks to run Concat, test a change in the app, check whether something works, see the editor, or verify a fix \"in the real app\" rather than just via tests — even if they don't say \"run the app\" explicitly (e.g. \"does this look right now\", \"let's see it\"). Concat is a native Rust + Slint desktop video editor with a Cargo workspace root at src/, not the repo root, which trips up plain `cargo run`.",
-      "repo": "jub0t/concat",
-      "created_at": "2026-08-25T18:34:47Z",
-      "pushed_at": "2026-10-07T12:58:00Z"
-    },
-    {
-      "slug": "nateherkai-scroll-craft-plugins-nateherk-design-skills-scroll-craft",
-      "name": "scroll-craft",
-      "type": "agent_skill",
-      "categories": [
-        "media-creative"
-      ],
-      "stars": 2978,
-      "stars_delta_7d": 302,
-      "stars_growth_pct": 0,
-      "trending_score": 151,
-      "velocity_source": "age_velocity",
-      "sparkline_4w": [
-        2978
-      ],
-      "tagline": "Build premium scroll-driven landing pages for service, product, food, and drink brands. Plan the visitor journey, page grammar, emotional peak, and bespoke signature move. Create dimensional heroes with independent visual planes, restrained motion, and separate mobile composition. Use supplied photos and footage or generate photoreal assets through kie.ai, write semantic HTML, and verify desktop, mobile, and reduced-motion scroll states visually. Use for \"scrollcraft\", \"scroll craft\", \"layered hero\", \"premium hero\", \"cinematic hero\", \"scrollytelling\", \"scroll animation site\", \"a site where scrolling plays a video\", \"Apple-style landing page\", \"3D scroll world\", \"interactive landing page\", \"make my brand a scroll experience\", \"this looks like a template\", or requests for a distinctive website that feels like an experience rather than a document.\n",
-      "repo": "nateherkai/scroll-craft",
-      "created_at": "2026-08-22T15:25:08Z",
-      "pushed_at": "2026-09-30T13:31:42Z"
-    }
-  ],
+  "breakout_new": [],
   "top10_mcp": [],
   "top10_skills": [],
   "top10_tools": []

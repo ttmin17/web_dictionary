@@ -96,16 +96,12 @@ By leveraging native OAuth 2.1, stateless deployment capability and external aut
 </a>
 </div>
 
----
-
-**See it in action:**
+---**See it in action:**
 <div align="center">
   <video width="400" src="https://github.com/user-attachments/assets/a342ebb4-1319-4060-a974-39d202329710"></video>
 </div>
 
----
-
-## What It Does
+---## What It Does
 
 Workspace MCP connects AI assistants to all twelve major Google Workspace services - 120+ tools behind a single MCP server, with OAuth 2.1 multi-user auth, three progressive tool tiers, read-only mode, a full CLI, and stateless container deployment. It runs locally over stdio for legacy clients and remotely over streamable HTTP with full implementation of the latest MCP spec.
 
@@ -355,7 +351,5 @@ Single-file service modules live in `g<service>/`, tools are registered with `@s
 
 MIT - see [`LICENSE`](https://github.com/taylorwilsdon/google_workspace_mcp/blob/main/LICENSE). The license is 21 lines and says what it means.
 
----
-
-Validations:
+---Validations:
 [![MCP Badge](https://lobehub.com/badge/mcp/taylorwilsdon-google_workspace_mcp)](https://lobehub.com/mcp/taylorwilsdon-google_workspace_mcp)

@@ -22,6 +22,9 @@ jobs:
   run-pipeline:
     name: Execute Discovery & Catalog Update
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -46,6 +49,7 @@ jobs:
         run: pnpm run pipeline:run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_FULL_RUN: ${{ inputs.force_full_run }}
 
       - name: Commit & Push Catalog Changes
         id: commit_step
@@ -62,13 +66,17 @@ jobs:
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Setup Pages
+        if: steps.commit_step.outputs.has_changes == 'true'
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build Astro Site & Pagefind Search Index
         if: steps.commit_step.outputs.has_changes == 'true'
         run: pnpm run site:build
-
-      - name: Setup Pages
-        if: steps.commit_step.outputs.has_changes == 'true'
-        uses: actions/configure-pages@v5
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload Pages Artifact
         if: steps.commit_step.outputs.has_changes == 'true'
@@ -80,11 +88,3 @@ jobs:
         if: steps.commit_step.outputs.has_changes == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Trigger Deployment Workflow (Fallback for PAT)
-        if: steps.commit_step.outputs.has_changes == 'true'
-        run: |
-          echo "Triggering deploy.yml workflow fallback..."
-          gh workflow run deploy.yml --ref main || true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

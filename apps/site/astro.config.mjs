@@ -8,7 +8,7 @@ function normalizeBase(base) {
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://teikmin.github.io/web_dictionary',
+  site: process.env.SITE_URL || 'https://ttmin17.github.io/web_dictionary',
   base: normalizeBase(process.env.BASE_PATH || '/'),
   output: 'static',
   integrations: [tailwind()],

@@ -21,11 +21,12 @@ source:
 signals:
   stars: 7958
   last_commit: 2026-06-18T14:55:50Z
-  stars_delta_7d: 0
+  stars_delta_7d: 13
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
-  sparkline_4w: []
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 7958
 language: en
 needs_keys: false
 prerequisites:
@@ -72,8 +73,7 @@ tool:
 
 </div>
 
----
-## Overview
+---## Overview
 
 Upsonic is a Python framework for building autonomous agents like OpenClaw and Claude Cowork, as well as more traditional agent systems.
 
@@ -94,8 +94,7 @@ Add Upsonic docs as a source in your coding tools:
 
 Also works with VSCode, Windsurf, and similar tools.
 
----
-## Create Autonomous Agent
+---## Create Autonomous Agent
 
 ### Build Your Own
 
@@ -122,8 +121,7 @@ Learn more: [Prebuilt Autonomous Agents](https://docs.upsonic.ai/concepts/prebui
 
 > **Next steps:** Connect a [Sandbox Provider (E2B)](https://docs.upsonic.ai/concepts/autonomous-agent/overview) for isolated cloud execution environments.
 
----
-## Create Traditional Agent
+---## Create Traditional Agent
 
 ```python
 from upsonic import Agent, Task
@@ -167,8 +165,7 @@ result = agent.print_do(task)
 
 > **Next steps:** Integrate [MCP Tools](https://docs.upsonic.ai/concepts/tools/mcp-tools/overview) to connect your agents to thousands of external data sources and services.
 
----
-## OCR and Document Processing
+---## OCR and Document Processing
 
 Upsonic provides a unified OCR interface with a layered pipeline: Layer 0 handles document preparation (PDF to image conversion, preprocessing), Layer 1 runs the OCR engine.
 
@@ -191,8 +188,7 @@ Supported engines: EasyOCR, RapidOCR, Tesseract, PaddleOCR, DeepSeek OCR, DeepSe
 
 Learn more: [OCR Documentation](https://docs.upsonic.ai/concepts/ocr/overview)
 
----
-## Check Our Videos
+---## Check Our Videos
 
 <table>
   <tr>
@@ -209,8 +205,7 @@ Learn more: [OCR Documentation](https://docs.upsonic.ai/concepts/ocr/overview)
   </tr>
 </table>
 
----
-## Documentation and Resources
+---## Documentation and Resources
 
 - **[Documentation](https://docs.upsonic.ai)** - Complete guides and API reference
 - **[Quickstart Guide](https://docs.upsonic.ai/get-started/quickstart)** - Get started in 5 minutes

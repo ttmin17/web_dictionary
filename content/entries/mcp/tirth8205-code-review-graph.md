@@ -4,8 +4,10 @@ name: code-review-graph
 tagline: Local-first code intelligence graph for MCP and CLI. Builds a
   persistent map of your codebase so AI coding tools read only what matters,
   with benchmar
-summary: A local code knowledge graph that gives AI coding tools precise review
-  context over MCP. English | 简体中文 | 日本語 | 한국어 | हिन्दी
+summary: AI coding tools often re-read large parts of a codebase to review a
+  change. code-review-graph builds a structural map of the code with
+  Tree-sitter, keeps it updated incrementally, and serves compact context over
+  MCP,...
 categories:
   - coding-agents
 status: active
@@ -21,6 +23,14 @@ source:
 signals:
   stars: 32111
   last_commit: 2026-10-06T19:33:08Z
+  stars_delta_7d: 156
+  stars_growth_pct: 0.5
+  trending_score: 156.76
+  rank_current: 12
+  velocity_source: snapshot_delta
+  sparkline_4w:
+    - 31955
+    - 32111
 language: en
 needs_keys: false
 prerequisites:
@@ -97,9 +107,7 @@ AI coding tools often re-read large parts of a codebase to review a change. `cod
   <img src="https://raw.githubusercontent.com/tirth8205/code-review-graph/staging/diagrams/diagram1_before_vs_after.png" alt="The Token Problem: reading flask's whole corpus costs 143,594 tokens, a graph answer costs 2,196 (65x fewer)" width="85%" />
 </p>
 
----
-
-## Quick Start
+---## Quick Start
 
 ```bash
 pip install code-review-graph          # or: pipx install code-review-graph
@@ -231,9 +239,7 @@ jobs:
 
 See [docs/GITHUB_ACTION.md](https://github.com/tirth8205/code-review-graph/blob/staging/docs/GITHUB_ACTION.md) for inputs, risk levels and caching, or the workflow this repository runs on itself in [`.github/workflows/pr-review.yml`](https://github.com/tirth8205/code-review-graph/blob/staging/.github/workflows/pr-review.yml).
 
----
-
-## Benchmarks
+---## Benchmarks
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/tirth8205/code-review-graph/staging/diagrams/diagram5_benchmark_board.png" alt="Benchmarks across 6 repositories: ~63x median per-question token reduction (358x max), 0.69 average impact F1 against graph-derived ground truth" width="85%" />
@@ -317,9 +323,7 @@ From the same 2026-08-02 clean-room build at the pinned SHAs above. Embedding co
 - **Flow detection.** Entry-point detection is strongest for Python and PHP/Laravel. JavaScript and Go flow detection needs work.
 - **Precision vs recall.** Impact analysis is conservative. It flags files that might be affected, which means false positives in large dependency graphs.
 
----
-
-## Features
+---## Features
 
 | Feature | Details |
 |---------|---------|
@@ -355,9 +359,7 @@ From the same 2026-08-02 clean-room build at the pinned SHAs above. Embedding co
 | **Full-text search** | FTS5 hybrid search combining keyword and vector similarity |
 | **Local storage** | One SQLite file in `.code-review-graph/`; no external database or cloud service |
 
----
-
-## Usage
+---## Usage
 
 <details>
 <summary><strong>Skills</strong></summary>
@@ -652,9 +654,7 @@ The flag takes precedence over the variable. When neither is set, all tools are 
 
 </details>
 
----
-
-## FAQ and comparisons
+---## FAQ and comparisons
 
 Answers in [docs/FAQ.md](https://github.com/tirth8205/code-review-graph/blob/staging/docs/FAQ.md):
 

@@ -23,6 +23,12 @@ source:
 signals:
   stars: 2403
   last_commit: 2026-09-15T17:31:46Z
+  stars_delta_7d: 22
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 2403
 language: en
 needs_keys: false
 prerequisites: []
@@ -60,9 +66,7 @@ tags: []
 **Domain:** Financial Technical Analysis
 **Created:** 2025-10-23
 
----
-
-## Overview
+---## Overview
 
 The Stock Analyzer Skill provides comprehensive technical analysis capabilities for stocks and ETFs, utilizing industry-standard indicators and generating actionable trading signals.
 
@@ -78,9 +82,7 @@ Enable traders and investors to perform technical analysis through natural langu
 4. **Pattern Recognition**: Identify chart patterns and price action setups
 5. **Monitoring & Alerts**: Track stocks and alert on technical conditions
 
----
-
-## Activation
+---## Activation
 
 This skill activates through the `description` field in the SKILL.md frontmatter. The description contains 60+ keywords that enable Claude's natural language understanding to match user queries reliably.
 
@@ -93,9 +95,7 @@ This skill activates through the `description` field in the SKILL.md frontmatter
 
 **Activation reliability: 95%+** across tested query variations
 
----
-
-## Architecture
+---## Architecture
 
 ### Type Decision
 
@@ -128,9 +128,7 @@ stock-analyzer/
 └── requirements.txt              # Dependencies
 ```
 
----
-
-## Implementation Details
+---## Implementation Details
 
 ### Main Orchestrator (main.py)
 
@@ -270,9 +268,7 @@ class SignalGenerator:
         }
 ```
 
----
-
-## Usage Examples
+---## Usage Examples
 
 ### When to Use (from SKILL.md description)
 
@@ -290,9 +286,7 @@ class SignalGenerator:
 4. ❌ "Execute a trade on NVDA" → Brokerage operations, not analysis
 5. ❌ "Analyze options strategies" → Options analysis (different skill)
 
----
-
-## Quality Standards
+---## Quality Standards
 
 ### Activation Reliability
 
@@ -322,9 +316,7 @@ class SignalGenerator:
 - **Data Caching:** 15-minute cache for price data
 - **Rate Limiting:** Respects API limits (5 req/min)
 
----
-
-## Testing Strategy
+---## Testing Strategy
 
 ### Unit Tests
 
@@ -369,9 +361,7 @@ See `activation-testing-guide.md` for complete test suite:
 7. "Portfolio allocation advice" → ❌ (correctly did not activate)
 ```
 
----
-
-## Dependencies
+---## Dependencies
 
 ```txt
 # Data fetching
@@ -388,9 +378,7 @@ ta-lib>=0.4.0
 matplotlib>=3.7.0
 ```
 
----
-
-## Gotchas
+---## Gotchas
 
 - **Running the bundled `scripts/main.py` returns hardcoded mock prices, not market data.**
   `_fetch_data()` returns the same `close: 178.45` for every ticker, and
@@ -421,9 +409,7 @@ These apply to the *production* implementation this spec describes, once a real
 3. **Real-time:** 15-minute delayed quotes (upgrade needed for real-time)
 4. **Indicators:** Currently supports RSI, MACD, Bollinger (more coming)
 
----
-
-## Future Enhancements
+---## Future Enhancements
 
 ### v1.1 (Planned)
 - Add Fibonacci retracement levels
@@ -440,9 +426,7 @@ These apply to the *production* implementation this spec describes, once a real
 - Sector rotation analysis
 - Real-time data integration (premium)
 
----
-
-## Changelog
+---## Changelog
 
 ### v1.0.0 (2025-10-23)
 - Initial release
@@ -452,17 +436,13 @@ These apply to the *production* implementation this spec describes, once a real
 - Multi-stock comparison and ranking
 - Price monitoring and alerts
 
----
-
-## References
+---## References
 
 - **Activation Guide:** See `references/phase4-detection.md`
 - **Architecture Guide:** See `references/architecture-guide.md`
 - **Quality Standards:** See `references/quality-standards.md`
 
----
-
-**Version:** 1.0.0
+---**Version:** 1.0.0
 **Status:** Production Ready
 **Activation Grade:** A (98% success rate)
 **Created by:** Agent-Skill-Creator v3.0.0

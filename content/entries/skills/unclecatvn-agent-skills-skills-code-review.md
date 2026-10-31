@@ -4,7 +4,9 @@ name: code-review
 tagline: "Use when receiving code review feedback (especially if unclear or
   technically questionable), when completing tasks or major features requiring
   review "
-summary: "Code review requires three distinct practices:"
+summary: 1. Receiving feedback - Technical evaluation over performative
+  agreement 2. Requesting reviews - Systematic review via code-reviewer subagent
+  3. Verification gates - Evidence before any completion claims
 categories:
   - coding-agents
 status: active
@@ -21,6 +23,12 @@ source:
 signals:
   stars: 145
   last_commit: 2026-09-24T09:06:23Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 145
 language: en
 needs_keys: false
 prerequisites: []

@@ -23,6 +23,12 @@ source:
 signals:
   stars: 5969
   last_commit: 2026-10-09T06:36:34Z
+  stars_delta_7d: 114
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 5969
 language: en
 needs_keys: false
 prerequisites: []
@@ -95,9 +101,7 @@ Favor explicit, traceable code over implicit "magic". A reader (human or agent) 
 - Use `toMatchSnapshot` for complex outputs
 - Use `toMatchFileSnapshot` with explicit path for language-specific snapshots
 
----
-
-## Tooling Choices
+---## Tooling Choices
 
 ### @antfu/ni Commands
 
@@ -235,9 +239,7 @@ Use named catalogs in `pnpm-workspace.yaml` for version management:
 
 Avoid the default catalog. Catalog names can be adjusted per project needs.
 
----
-
-## References
+---## References
 
 | Topic | Description | Reference |
 |-------|-------------|-----------|

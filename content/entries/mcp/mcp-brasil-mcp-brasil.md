@@ -18,6 +18,14 @@ source:
 signals:
   stars: 1809
   last_commit: 2026-09-19T22:50:58Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0.2
+  trending_score: 3
+  rank_current: 58
+  velocity_source: snapshot_delta
+  sparkline_4w:
+    - 1806
+    - 1809
 language: en
 needs_keys: false
 prerequisites:
@@ -61,13 +69,9 @@ Conecte AI agents (Claude, GPT, Copilot, etc.) a dados governamentais do Brasil 
 
 </div>
 
----
+---> ⚠️ **Projeto independente.** `mcp-brasil` **NÃO** é serviço oficial do governo brasileiro nem de qualquer das instituições cujos dados ele torna acessíveis. A licença MIT cobre apenas o **código** — cada fonte de dado tem sua própria licença ([SOURCES.md](https://github.com/Mcp-Brasil/mcp-brasil/blob/main/SOURCES.md)) e o uso do servidor está sujeito à [Política de Uso Aceitável](https://github.com/Mcp-Brasil/mcp-brasil/blob/main/ACCEPTABLE_USE.md). Antes de uso comercial, jornalístico ou decisório, **leia ambos**.
 
-> ⚠️ **Projeto independente.** `mcp-brasil` **NÃO** é serviço oficial do governo brasileiro nem de qualquer das instituições cujos dados ele torna acessíveis. A licença MIT cobre apenas o **código** — cada fonte de dado tem sua própria licença ([SOURCES.md](https://github.com/Mcp-Brasil/mcp-brasil/blob/main/SOURCES.md)) e o uso do servidor está sujeito à [Política de Uso Aceitável](https://github.com/Mcp-Brasil/mcp-brasil/blob/main/ACCEPTABLE_USE.md). Antes de uso comercial, jornalístico ou decisório, **leia ambos**.
-
----
-
-## Features
+---## Features
 
 - **533 tools** em 70 features cobrindo 15 áreas — economia, legislativo, transparência, judiciário, eleitoral, ambiental, saúde, educação, segurança pública, compras públicas, fiscal subnacional, aviação, energia e mais
 - **Datasets grandes com cache local** — SIAPA (~813k imóveis), TSE 2014-2024 (candidatos, bens, votação, redes sociais, FEFC), ANP preços de combustíveis, INEP Censo Escolar e ENEM, ISP-RJ segurança pública, ANAC aeronaves e voos regulares — SQL via DuckDB embedded, opt-in via env

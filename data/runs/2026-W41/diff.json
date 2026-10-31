@@ -1,6 +1,6 @@
 {
   "week": "2026-W41",
-  "generated_at": "2026-10-17T14:42:57.813Z",
+  "generated_at": "2026-10-31T14:49:45.885Z",
   "added": [
     {
       "slug": "google-gemini-gemini-cli-gemini-skills-agent-tui",
@@ -1631,10 +1631,10 @@
   "surging": [],
   "summary": {
     "week": "2026-W41",
-    "generated_at": "2026-10-17T14:42:57.813Z",
+    "generated_at": "2026-10-31T14:49:45.885Z",
     "added_count": 232,
     "removed_count": 0,
     "surging_count": 0,
-    "total_stars_gained": 107753
+    "total_stars_gained": 82719
   }
 }

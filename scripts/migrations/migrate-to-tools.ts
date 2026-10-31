@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import yaml from 'yaml';
-import { ToolEntrySchema } from '../packages/schema/src/index.js';
+import { ToolEntrySchema } from '../../packages/schema/src/index.js';
 
 let rootDir = process.cwd();
 while (rootDir !== path.dirname(rootDir) && !fs.existsSync(path.join(rootDir, 'pnpm-workspace.yaml'))) {

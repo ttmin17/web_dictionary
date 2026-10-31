@@ -4,7 +4,9 @@ name: thesvg
 tagline: Fetch brand SVG logos and cloud architecture icons (AWS, Azure, GCP)
   from theSVG. Use when the user asks for a brand logo, company icon, framework
   mar
-summary: "Trigger on requests like:"
+summary: '- "Give me the GitHub logo as SVG" - "Insert a Stripe icon" - "I need
+  AWS Lambda and S3 architecture icons" - "Add brand icons for our integrations
+  page (Slack, Notion, Linear, Figma)" - "Find a Tailwind logo I can dr...'
 categories:
   - cloud-infra
 status: active
@@ -21,6 +23,12 @@ source:
 signals:
   stars: 2835
   last_commit: 2026-10-12T18:20:29Z
+  stars_delta_7d: 66
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 2835
 language: en
 needs_keys: false
 prerequisites: []

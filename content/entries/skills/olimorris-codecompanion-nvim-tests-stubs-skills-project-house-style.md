@@ -19,6 +19,12 @@ source:
 signals:
   stars: 6895
   last_commit: 2026-10-11T20:52:30Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 6895
 language: en
 needs_keys: false
 prerequisites: []

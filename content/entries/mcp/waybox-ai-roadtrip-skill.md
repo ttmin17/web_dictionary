@@ -19,6 +19,12 @@ source:
 signals:
   stars: 126
   last_commit: 2026-09-09T09:45:39Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 126
 language: en
 needs_keys: false
 prerequisites:
@@ -280,8 +286,6 @@ If RoadTrip Navigator helps you plan your next road trip, give us a star! ⭐
 
 [MIT](https://github.com/Waybox-AI/roadtrip-skill/blob/main/LICENSE) © yang-hong
 
----
-
-<div align="center">
+---<div align="center">
 <sub>Built by <a href="https://waybox.ai">Waybox</a>, maker of OMO, an in-car AI companion. RoadTrip Navigator checks the trip before departure; OMO rides along.</sub>
 </div>

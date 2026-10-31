@@ -10,7 +10,11 @@
     "site:dev": "pnpm --filter @web-db/site run dev",
     "site:build": "pnpm run build:packages && pnpm --filter @web-db/site run build",
     "test": "pnpm run build:packages && pnpm -r run test",
-    "typecheck": "pnpm run build:packages && pnpm -r run typecheck"
+    "typecheck": "pnpm run build:packages && pnpm -r run typecheck",
+    "clean": "node scripts/utils/clean.mjs",
+    "clean:cache": "node scripts/utils/clean.mjs --cache",
+    "trends:rebuild": "pnpm --filter @web-db/pipeline exec tsx ../../scripts/utils/build-trending-runs.ts",
+    "tools:find": "pnpm --filter @web-db/pipeline exec tsx ../../scripts/utils/find-candidate-tools.ts"
   },
   "devDependencies": {
     "typescript": "^5.8.2"

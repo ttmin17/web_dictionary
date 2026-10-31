@@ -22,6 +22,12 @@ source:
 signals:
   stars: 3404
   last_commit: 2026-10-11T12:20:45Z
+  stars_delta_7d: 80
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 3404
 language: en
 needs_keys: false
 prerequisites: []
@@ -56,9 +62,7 @@ Fetches real-time status of the Strait of Hormuz from the [Hormuz Strait Monitor
 
 **This skill is read-only.** It fetches public dashboard data — no authentication required.
 
----
-
-## Step 1: Fetch Dashboard Data
+---## Step 1: Fetch Dashboard Data
 
 Use `curl` to fetch the dashboard API:
 
@@ -70,9 +74,7 @@ Parse the JSON response. The API returns `{ "success": true, "data": { ... }, "t
 
 If `success` is `false` or the request fails, inform the user the monitor is temporarily unavailable and suggest checking https://hormuzstraitmonitor.com directly.
 
----
-
-## Step 2: Identify What the User Needs
+---## Step 2: Identify What the User Needs
 
 Match the user's request to the relevant data sections. If the user asks for a general status update, present all sections. If they ask about something specific, focus on the relevant section(s).
 
@@ -90,9 +92,7 @@ Match the user's request to the relevant data sections. If the user asks for a g
 | Tanker freight rates / VLCC rates | `tankerRates` | `currentRate`, `preCrisisRate`, `changePercent`, `route`, `vesselType`, `trend`, `unit` |
 | Latest news | `news` | `title`, `source`, `url`, `publishedAt`, `description` |
 
----
-
-## Step 3: Present the Data
+---## Step 3: Present the Data
 
 Format the results clearly for financial research. Adapt the presentation based on what the user asked for.
 
@@ -139,9 +139,7 @@ If the strait status is anything other than fully open, highlight:
 - LNG impact if applicable
 - SPR (Strategic Petroleum Reserve) status in days
 
----
-
-## Step 4: Respond to the User
+---## Step 4: Respond to the User
 
 - Lead with the most important information: strait status and any active disruption
 - Include data freshness (`lastUpdated` timestamp)
@@ -149,9 +147,7 @@ If the strait status is anything other than fully open, highlight:
 - Keep the response concise for routine "all clear" statuses; expand for active incidents
 - Add a disclaimer: data is sourced from Hormuz Strait Monitor and may have delays
 
----
-
-## Reference Files
+---## Reference Files
 
 - `references/api_schema.md` — Complete API response schema with field descriptions and data types
 

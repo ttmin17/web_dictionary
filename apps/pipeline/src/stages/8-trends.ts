@@ -293,6 +293,18 @@ export function computeTrendingMetrics(params: {
     }
   }
 
+  // Quarantine extreme inorganic bot-star spikes (e.g., >50,000 stars gained in 7d with >500% jump)
+  if (stars_delta_7d >= 50000 && stars_growth_pct >= 500) {
+    return {
+      stars_delta_7d: 0,
+      stars_growth_pct: 0.0,
+      trending_score: 0,
+      velocity_source: 'snapshot_delta',
+      sparkline_4w,
+      is_suspicious_burst: true,
+    };
+  }
+
   // 6. Patched Velocity Formula with Baseline Floor 250 and Max 2.0 Growth Bonus (3.0x Max Multiplier)
   const baselineFloor = 250;
   const effectiveBaseline = Math.max(safePrevStars, baselineFloor);
@@ -406,7 +418,15 @@ export function assembleTrendingLeaderboards(
   const top10_skills = getPillarTop10('agent_skill');
   const top10_tools = getPillarTop10('agent_tool');
 
-  const totalStarsGained = items.reduce((acc, curr) => acc + curr.stars_delta_7d, 0);
+  const seenReposForTotal = new Set<string>();
+  let totalStarsGained = 0;
+  for (const curr of items) {
+    const repoKey = curr.repo || curr.slug;
+    if (!seenReposForTotal.has(repoKey)) {
+      seenReposForTotal.add(repoKey);
+      totalStarsGained += curr.stars_delta_7d;
+    }
+  }
   const totalNewTools = items.filter((item) => item.velocity_source === 'age_velocity').length;
 
   return {
@@ -493,7 +513,15 @@ export function computeWeeklyDiff(params: {
     }
   }
 
-  const totalStarsGained = currentItems.reduce((acc, curr) => acc + curr.stars_delta_7d, 0);
+  const seenDiffReposForTotal = new Set<string>();
+  let totalStarsGained = 0;
+  for (const curr of currentItems) {
+    const repoKey = curr.repo || curr.slug;
+    if (!seenDiffReposForTotal.has(repoKey)) {
+      seenDiffReposForTotal.add(repoKey);
+      totalStarsGained += curr.stars_delta_7d;
+    }
+  }
 
   return {
     week: weekStr,

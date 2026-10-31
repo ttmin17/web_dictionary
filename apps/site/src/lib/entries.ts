@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export type McpCollectionItem = CollectionEntry<'mcp'>;
@@ -54,10 +56,12 @@ export function formatTimeAgo(isoString?: string): string {
 
 export function getCatalogState(): { refreshed_at: string; formattedDate: string } {
   try {
-    const fs = (globalThis as any).process?.versions?.node ? require('node:fs') : null;
-    const path = (globalThis as any).process?.versions?.node ? require('node:path') : null;
-    if (fs && path) {
-      const stateFile = path.resolve(process.cwd(), '../../data/state/catalog-state.json');
+    const candidates = [
+      path.resolve(process.cwd(), '../../data/state/catalog-state.json'),
+      path.resolve(process.cwd(), '../data/state/catalog-state.json'),
+      path.resolve(process.cwd(), 'data/state/catalog-state.json'),
+    ];
+    for (const stateFile of candidates) {
       if (fs.existsSync(stateFile)) {
         const data = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
         const d = new Date(data.refreshed_at);

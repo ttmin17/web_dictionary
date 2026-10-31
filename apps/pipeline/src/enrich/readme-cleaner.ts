@@ -210,6 +210,12 @@ export function extractSummary(content: string): string {
       .trim();
 
     if (clean.length >= 25) {
+      // Skip language switchers or navigation bars with 3+ middle-dot/pipe separators
+      const separatorCount = (clean.match(/[·|•]/g) || []).length;
+      if (separatorCount >= 3) continue;
+      // Skip short colon lead-in lines (e.g., "For MCP clients like Cursor or Claude Desktop:")
+      if (clean.endsWith(':') && clean.length < 80) continue;
+
       if (clean.length > 220) {
         return `${clean.slice(0, 217).trim()}...`;
       }

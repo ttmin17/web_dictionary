@@ -1,38 +1,14 @@
 {
   "week": "2026-W42",
-  "generated_at": "2026-10-17T14:42:58.193Z",
+  "generated_at": "2026-10-31T14:49:46.230Z",
   "summary": {
     "week": "2026-W42",
-    "generated_at": "2026-10-17T14:42:58.193Z",
+    "generated_at": "2026-10-31T14:49:46.230Z",
     "total_new_tools": 287,
-    "total_stars_gained": 477222,
+    "total_stars_gained": 92210,
     "total_active_entries": 690
   },
   "top25_overall": [
-    {
-      "slug": "morluto-rea",
-      "name": "rea",
-      "type": "agent_tool",
-      "categories": [
-        "security-auth"
-      ],
-      "stars": 196748,
-      "stars_delta_7d": 183853,
-      "stars_growth_pct": 1425.8,
-      "trending_score": 551559,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        12895,
-        196748
-      ],
-      "tagline": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "repo": "morluto/rea",
-      "is_pack_primary": true,
-      "created_at": "2026-04-14T00:51:32Z",
-      "pushed_at": "2026-10-13T16:25:01Z",
-      "rank_current": 1,
-      "rank_delta": null
-    },
     {
       "slug": "cathrynlavery-diagram-design-skills-diagram-design",
       "name": "diagram-design",
@@ -123,7 +99,7 @@
       "is_pack_primary": true,
       "created_at": "2026-02-24T02:10:24Z",
       "pushed_at": "2026-10-08T08:31:08Z",
-      "rank_current": 2,
+      "rank_current": 1,
       "rank_delta": null
     },
     {
@@ -239,7 +215,7 @@
       "is_pack_primary": true,
       "created_at": "2026-02-13T12:38:31Z",
       "pushed_at": "2026-10-13T16:20:19Z",
-      "rank_current": 3,
+      "rank_current": 2,
       "rank_delta": null
     },
     {
@@ -355,7 +331,7 @@
       "is_pack_primary": true,
       "created_at": "2026-04-03T15:49:07Z",
       "pushed_at": "2026-10-13T10:43:52Z",
-      "rank_current": 4,
+      "rank_current": 3,
       "rank_delta": null
     },
     {
@@ -379,7 +355,7 @@
       "is_pack_primary": true,
       "created_at": "2025-07-22T22:22:28Z",
       "pushed_at": "2026-10-13T16:25:31Z",
-      "rank_current": 5,
+      "rank_current": 4,
       "rank_delta": null
     },
     {
@@ -403,7 +379,7 @@
       "is_pack_primary": true,
       "created_at": "2024-10-13T20:29:53Z",
       "pushed_at": "2026-10-12T22:39:15Z",
-      "rank_current": 6,
+      "rank_current": 5,
       "rank_delta": null
     },
     {
@@ -591,136 +567,32 @@
       "pushed_at": "2026-10-13T16:25:20Z",
       "rank_current": 60,
       "rank_delta": null
-    }
-  ],
-  "breakout_new": [
-    {
-      "slug": "nateherkai-scroll-craft-plugins-nateherk-design-skills-scroll-craft",
-      "name": "scroll-craft",
-      "type": "agent_skill",
-      "categories": [
-        "media-creative"
-      ],
-      "stars": 3334,
-      "stars_delta_7d": 356,
-      "stars_growth_pct": 12,
-      "trending_score": 398.56,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        2978,
-        3334
-      ],
-      "tagline": "Build premium scroll-driven landing pages for service, product, food, and drink brands. Plan the visitor journey, page grammar, emotional peak, and bespoke signature move. Create dimensional heroes with independent visual planes, restrained motion, and separate mobile composition. Use supplied photos and footage or generate photoreal assets through kie.ai, write semantic HTML, and verify desktop, mobile, and reduced-motion scroll states visually. Use for \"scrollcraft\", \"scroll craft\", \"layered hero\", \"premium hero\", \"cinematic hero\", \"scrollytelling\", \"scroll animation site\", \"a site where scrolling plays a video\", \"Apple-style landing page\", \"3D scroll world\", \"interactive landing page\", \"make my brand a scroll experience\", \"this looks like a template\", or requests for a distinctive website that feels like an experience rather than a document.\n",
-      "repo": "nateherkai/scroll-craft",
-      "created_at": "2026-08-22T15:25:08Z",
-      "pushed_at": "2026-09-30T13:31:42Z",
-      "rank_current": 83,
-      "rank_delta": null
     },
     {
-      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-ai-visibility",
-      "name": "ai-visibility",
-      "type": "agent_skill",
-      "categories": [
-        "domain-research"
-      ],
-      "stars": 5240,
-      "stars_delta_7d": 717,
-      "stars_growth_pct": 0,
-      "trending_score": 359,
-      "velocity_source": "age_velocity",
-      "sparkline_4w": [
-        5240
-      ],
-      "tagline": "Measure real AI-engine visibility — traffic from ChatGPT, Perplexity, Claude, Gemini and which pages they cite — from actual GA4 referral data, not prompt sampling. Use when asked \"AI visibility\", \"GEO/AEO check\", \"do LLMs cite us\", \"traffic from ChatGPT\", or \"how do we show up in AI search\".",
-      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills",
-      "created_at": "2026-08-29T23:37:01Z",
-      "pushed_at": "2026-10-13T03:37:44Z"
-    },
-    {
-      "slug": "xiaoduoya-codex-with-chatgpt",
-      "name": "codex-with-chatgpt",
-      "type": "mcp_server",
-      "categories": [
-        "security-auth"
-      ],
-      "stars": 7345,
-      "stars_delta_7d": 250,
-      "stars_growth_pct": 3.5,
-      "trending_score": 258.81,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        7095,
-        7345
-      ],
-      "tagline": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
-      "repo": "XiaoDuoYa/codex-with-chatgpt",
-      "is_pack_primary": true,
-      "created_at": "2026-08-28T12:57:24Z",
-      "pushed_at": "2026-10-01T05:19:24Z",
-      "rank_current": 9,
-      "rank_delta": null
-    },
-    {
-      "slug": "zju-real-easel-skills-builtin-ai-image-gen",
-      "name": "ai-image-gen",
-      "type": "agent_skill",
-      "categories": [
-        "productivity-ops"
-      ],
-      "stars": 3567,
-      "stars_delta_7d": 466,
-      "stars_growth_pct": 0,
-      "trending_score": 233,
-      "velocity_source": "age_velocity",
-      "sparkline_4w": [
-        3567
-      ],
-      "tagline": "通用 AI 生图：文生图 / 图生图 / 图像变体。当用户说 AI 生图、AI 画图、文生图、图生图、生成图片、生成配图、图像生成、AI 出图、AI 作图、换图、改图、图像编辑、给我画一张、生成一张图 时使用。支持 OpenAI 兼容 API 与 apimart 异步 API，用户自备 API key。",
-      "repo": "ZJU-REAL/Easel",
-      "created_at": "2026-08-28T02:22:27Z",
-      "pushed_at": "2026-10-12T11:58:39Z"
-    },
-    {
-      "slug": "nanako0129-sepia-skills-sepia-hemingway",
-      "name": "sepia-hemingway",
+      "slug": "egonex-ai-understand-anything-understand-anything-plugin-skills-understand-chat",
+      "name": "understand-chat",
       "type": "agent_skill",
       "categories": [
         "coding-agents"
       ],
-      "stars": 3151,
-      "stars_delta_7d": 399,
-      "stars_growth_pct": 0,
-      "trending_score": 200,
-      "velocity_source": "age_velocity",
+      "stars": 86141,
+      "stars_delta_7d": 630,
+      "stars_growth_pct": 0.7,
+      "trending_score": 634.64,
+      "velocity_source": "snapshot_delta",
       "sparkline_4w": [
-        3151
+        85511,
+        86141
       ],
-      "tagline": "Use when a user asks to write or revise fiction in the Hemingway manner, or asks for strong de-AI on a story; applies Sepia's built-in Hemingway voice profile.",
-      "repo": "Nanako0129/sepia",
-      "created_at": "2026-08-28T05:56:49Z",
-      "pushed_at": "2026-10-09T15:16:26Z"
-    },
-    {
-      "slug": "duty1g-x64dbg-mcp-server",
-      "name": "x64dbg-mcp-server",
-      "type": "agent_skill",
-      "categories": [
-        "security-auth"
-      ],
-      "stars": 2484,
-      "stars_delta_7d": 292,
-      "stars_growth_pct": 0,
-      "trending_score": 146,
-      "velocity_source": "age_velocity",
-      "sparkline_4w": [
-        2484
-      ],
-      "tagline": "Agent skill from duty1g/x64dbg-mcp-server",
-      "repo": "duty1g/x64dbg-mcp-server",
-      "created_at": "2026-08-22T14:28:41Z",
-      "pushed_at": "2026-10-12T08:49:17Z"
-    },
+      "tagline": "Use when you need to ask questions about a codebase or understand code using a knowledge graph",
+      "repo": "Egonex-AI/Understand-Anything",
+      "created_at": "2026-03-15T02:30:51Z",
+      "pushed_at": "2026-10-12T10:24:59Z",
+      "rank_current": 63,
+      "rank_delta": null
+    }
+  ],
+  "breakout_new": [
     {
       "slug": "okf-memory-okf-agent-memory-pkg-okf-assets-skill",
       "name": "okf-agent-memory",
@@ -729,9 +601,9 @@
         "databases-memory"
       ],
       "stars": 771,
-      "stars_delta_7d": 122,
+      "stars_delta_7d": 76,
       "stars_growth_pct": 0,
-      "trending_score": 61,
+      "trending_score": 0,
       "velocity_source": "age_velocity",
       "sparkline_4w": [
         771
@@ -740,26 +612,6 @@
       "repo": "okf-memory/okf-agent-memory",
       "created_at": "2026-09-05T21:26:04Z",
       "pushed_at": "2026-10-12T10:08:28Z"
-    },
-    {
-      "slug": "kayforkind-reimagine-it-skills-reimagine-it",
-      "name": "reimagine-it",
-      "type": "agent_skill",
-      "categories": [
-        "media-creative"
-      ],
-      "stars": 207,
-      "stars_delta_7d": 22,
-      "stars_growth_pct": 0,
-      "trending_score": 11,
-      "velocity_source": "age_velocity",
-      "sparkline_4w": [
-        207
-      ],
-      "tagline": "Content-Derived Design — reads existing HTML and writes a stronger standalone page from headings, facts, names, dates, numbers, links, emails, and colors already in that file. CLI: npx reimagine-it --auto -i page.html -o out.html; also variations, lock, and audit. Use when the user says /reimagine-it, \"reimagine it\", \"reinvent this\", \"redesign this page\", \"make an infographic\", wants a content-aware redesign or a visual leap instead of a mood board.   All 17 tokens: webpage, infographic, svg, 3js, simulation, artistic, cinematic, dashboard, photography, landing, editorial, gradient, showcase, motion, glass, lookbook, particles — plus leftover words as a brief. Also /reimagine-it audit for quality checks. The agent runs the CLI; it does not hand-author the page. Installed via npx skills add Kayforkind/reimagine-it or plugin marketplace. Not /better. Not a mood board. Does not ingest PDF, PPTX, or DOCX.",
-      "repo": "Kayforkind/reimagine-it",
-      "created_at": "2026-08-19T02:12:07Z",
-      "pushed_at": "2026-10-10T14:17:43Z"
     }
   ],
   "top10_mcp": [
@@ -1238,30 +1090,6 @@
   ],
   "top10_tools": [
     {
-      "slug": "morluto-rea",
-      "name": "rea",
-      "type": "agent_tool",
-      "categories": [
-        "security-auth"
-      ],
-      "stars": 196748,
-      "stars_delta_7d": 183853,
-      "stars_growth_pct": 1425.8,
-      "trending_score": 551559,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        12895,
-        196748
-      ],
-      "tagline": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "repo": "morluto/rea",
-      "is_pack_primary": true,
-      "created_at": "2026-04-14T00:51:32Z",
-      "pushed_at": "2026-10-13T16:25:01Z",
-      "rank_current": 1,
-      "rank_delta": null
-    },
-    {
       "slug": "panniantong-agent-reach",
       "name": "Agent-Reach",
       "type": "agent_tool",
@@ -1282,7 +1110,7 @@
       "is_pack_primary": true,
       "created_at": "2026-02-24T02:10:24Z",
       "pushed_at": "2026-10-08T08:31:08Z",
-      "rank_current": 2,
+      "rank_current": 1,
       "rank_delta": null
     },
     {
@@ -1306,7 +1134,7 @@
       "is_pack_primary": true,
       "created_at": "2026-02-13T12:38:31Z",
       "pushed_at": "2026-10-13T16:20:19Z",
-      "rank_current": 3,
+      "rank_current": 2,
       "rank_delta": null
     },
     {
@@ -1330,7 +1158,7 @@
       "is_pack_primary": true,
       "created_at": "2026-04-03T15:49:07Z",
       "pushed_at": "2026-10-13T10:43:52Z",
-      "rank_current": 4,
+      "rank_current": 3,
       "rank_delta": null
     },
     {
@@ -1354,7 +1182,7 @@
       "is_pack_primary": true,
       "created_at": "2025-07-22T22:22:28Z",
       "pushed_at": "2026-10-13T16:25:31Z",
-      "rank_current": 5,
+      "rank_current": 4,
       "rank_delta": null
     },
     {
@@ -1378,7 +1206,7 @@
       "is_pack_primary": true,
       "created_at": "2024-10-13T20:29:53Z",
       "pushed_at": "2026-10-12T22:39:15Z",
-      "rank_current": 6,
+      "rank_current": 5,
       "rank_delta": null
     },
     {
@@ -1402,7 +1230,7 @@
       "is_pack_primary": true,
       "created_at": "2026-01-07T19:58:51Z",
       "pushed_at": "2026-10-13T02:36:25Z",
-      "rank_current": 7,
+      "rank_current": 6,
       "rank_delta": null
     },
     {
@@ -1426,7 +1254,7 @@
       "is_pack_primary": true,
       "created_at": "2026-03-21T00:28:43Z",
       "pushed_at": "2026-10-13T09:07:51Z",
-      "rank_current": 8,
+      "rank_current": 7,
       "rank_delta": null
     },
     {
@@ -1450,7 +1278,7 @@
       "is_pack_primary": true,
       "created_at": "2026-01-08T17:26:06Z",
       "pushed_at": "2026-10-13T16:25:20Z",
-      "rank_current": 9,
+      "rank_current": 8,
       "rank_delta": null
     },
     {
@@ -1474,6 +1302,30 @@
       "is_pack_primary": true,
       "created_at": "2020-03-25T14:08:22Z",
       "pushed_at": "2026-10-13T15:56:33Z",
+      "rank_current": 9,
+      "rank_delta": null
+    },
+    {
+      "slug": "0x4m4-hexstrike-ai",
+      "name": "hexstrike-ai",
+      "type": "agent_tool",
+      "categories": [
+        "security-auth"
+      ],
+      "stars": 12751,
+      "stars_delta_7d": 257,
+      "stars_growth_pct": 2.1,
+      "trending_score": 262.29,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        12494,
+        12751
+      ],
+      "tagline": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
+      "repo": "0x4m4/hexstrike-ai",
+      "is_pack_primary": true,
+      "created_at": "2025-07-10T17:53:18Z",
+      "pushed_at": "2026-08-03T14:33:09Z",
       "rank_current": 10,
       "rank_delta": null
     }

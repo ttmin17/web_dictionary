@@ -25,11 +25,12 @@ source:
 signals:
   stars: 776
   last_commit: 2026-10-11T23:22:22Z
-  stars_delta_7d: 0
+  stars_delta_7d: 18
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
-  sparkline_4w: []
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 776
 language: en
 needs_keys: false
 prerequisites:
@@ -94,8 +95,7 @@ Dependencies:  Zero runtime deps. Node.js 22.16+. Optional embeddings: bring-you
 
 **Contents:** [Why](#why-this-exists) · [Receipts](#receipts) · [Quick start](#quick-start) · [Agent setup](#framework-integrations) · [MCP server](#mcp-server) · [How it works](#how-it-works) · [Features](#key-features) · [CLI](#cli-reference) · [Comparison](#comparison) · [Benchmarks](#benchmarks) · [FAQ](#faq) · [Contributing](#contributing)
 
----
-## Why this exists
+---## Why this exists
 
 Most "AI memory" systems save everything and search later. That's storage with search on top. A note that turned out wrong ranks the same as one that held up, and an old fact sits beside the one that replaced it.
 
@@ -103,8 +103,7 @@ Hippo learns from outcomes. When a recalled memory turns out wrong, mark it bad 
 
 It also fixes the portability problem. Your ChatGPT memories don't travel to Claude. Your `.cursorrules` don't travel to Codex. Hippo is one store behind every agent. CLAUDE.md, Cursor rules, ChatGPT exports, Slack history, all in one SQLite store, all queryable from any tool that speaks MCP or HTTP.
 
----
-## Receipts
+---## Receipts
 
 Numbers, not adjectives. Every claim links to the benchmark or the test that proves it.
 Every measurement we have ever published is indexed in [`docs/evals/`](https://github.com/kitfunso/hippo-memory/blob/master/docs/evals/README.md),
@@ -119,8 +118,7 @@ claim we retracted.
 - **3,500+ tests on a real database.** No module mocks and no mocked store; only paid network calls are stubbed. Project rule. The one mocks-vs-prod divergence that bit us early is now the constraint that kept the next ten releases honest.
 - **3-cluster fixture where BM25 alone cannot discriminate: dlPFC goal-conditioned cluster discrimination passes 3 of 3 queries.** Full goal stack with policy weighting and lifespan-windowed outcome propagation, one query per goal; deterministic test in [`benchmarks/micro/results/b3-depth.json`](https://github.com/kitfunso/hippo-memory/blob/master/benchmarks/micro/results/b3-depth.json).
 
----
-## What it does for your agent
+---## What it does for your agent
 
 - **Keeps errors longer.** Tag a failure with `--tag error` and it gets twice the half-life of an ordinary memory, so the lesson is still in the store the next time a recall matches it. In Claude Code, a hook stores failed tool calls as error memories for you.
 - **Survives tool switches.** Use Claude Code on Monday, Cursor on Tuesday, Codex on Wednesday. They all read the same `.hippo/` store, so the memories come with you.
@@ -128,8 +126,7 @@ claim we retracted.
 - **Knows where every memory came from.** Every row carries `kind`, `scope`, `owner`, and `artifact_ref`. Right-to-be-forgotten is a single API call, not an audit nightmare.
 - **Plays nice with multi-tenant.** API keys, scrypt-hashed. Audit log on every mutation. Tenant A literally cannot see tenant B's memories. Proven by negative test.
 
----
-## Quick start
+---## Quick start
 
 Start in one project. [What hippo init changes](#what-hippo-init-changes) lists everything the second command writes.
 
@@ -160,8 +157,7 @@ hippo remember "FRED cache silently dropped the tips_10y series" --tag error
 hippo recall "data pipeline issues" --budget 2000
 ```
 
----
-Full release history: **[CHANGELOG.md](https://github.com/kitfunso/hippo-memory/blob/master/CHANGELOG.md)** · [GitHub Releases](https://github.com/kitfunso/hippo-memory/releases)
+---Full release history: **[CHANGELOG.md](https://github.com/kitfunso/hippo-memory/blob/master/CHANGELOG.md)** · [GitHub Releases](https://github.com/kitfunso/hippo-memory/releases)
 
 
 ### What hippo init changes
@@ -212,8 +208,7 @@ Not read: Windsurf (the file format is not documented, and Cascade reached end o
 
 `hippo import --agents` runs the import by hand; in a folder without a store it does what session end does there. With `--dry-run` it shows each tool's home, the folders found and what would change, and writes nothing. To choose tools, set `"agentMemories": { "tools": ["claude-code", "codex"] }` in `.hippo/config.json` (`[]` turns the import off), or `HIPPO_AGENT_MEMORY_TOOLS=claude-code,codex` in the environment (`none` turns it off), which wins over config.
 
----
-## Cross-Tool Import
+---## Cross-Tool Import
 
 Your memories shouldn't be locked inside one tool. Hippo pulls them in from anywhere.
 
@@ -343,8 +338,7 @@ hippo recall "data pipeline" --why --limit 5
 #     ...memory content...
 ```
 
----
-## How It Works
+---## How It Works
 
 Input enters the buffer. Important things get encoded into episodic memory. During "sleep," related episodes are merged into one semantic memory, by word overlap. Weak memories decay and disappear.
 
@@ -363,8 +357,7 @@ flowchart TD
     class X forgotten
 ```
 
----
-## Key Features
+---## Key Features
 
 A memory's life across a typical session, before walking each feature in turn:
 
@@ -401,8 +394,7 @@ hippo inspect mem_a1b2c3
 # strength: 0.25  (decayed by 2 half-lives)
 ```
 
----
-### Retrieval strengthens
+---### Retrieval strengthens
 
 Use it or lose it. Each recall boosts the half-life by 2 days.
 
@@ -418,8 +410,7 @@ hippo recall "cache issues"   # again next week
 # this memory is learning to survive
 ```
 
----
-### Active invalidation
+---### Active invalidation
 
 When you migrate from one tool to another, old memories about the replaced tool should die immediately. Hippo detects migration and breaking-change commits during `hippo learn --git` and actively weakens matching memories.
 
@@ -437,8 +428,7 @@ hippo invalidate "REST API" --reason "migrated to GraphQL"
 # Invalidated 5 memories referencing "REST API".
 ```
 
----
-### Architectural decisions
+---### Architectural decisions
 
 One-off decisions don't repeat, so they can't earn their keep through retrieval alone. `hippo decide` stores them with verified confidence and the store's default half-life, the same as any other memory, and sleep never retires the memory behind a decision. On a store made before 1.52.7, decisions get 90 days until the store's first `hippo sleep` on 1.52.7 or later moves them to the default.
 
@@ -456,8 +446,7 @@ hippo decide "Use CockroachDB for global services" \
 #   supersedes memory: mem_a1b2c3 (decision #1 superseded)
 ```
 
----
-### Error memories stick
+---### Error memories stick
 
 Tag a memory as an error and it gets 2x the half-life automatically.
 
@@ -470,8 +459,7 @@ hippo remember "deployment failed: forgot to run migrations" --error
 # production incidents don't fade quietly
 ```
 
----
-### Confidence tiers
+---### Confidence tiers
 
 Every memory carries a confidence level: `verified`, `observed`, `inferred`, or `stale`. This tells agents how much to trust what they're reading.
 
@@ -504,8 +492,7 @@ hippo conflicts   # inspect them
 
 Open conflicts are stored in SQLite, mirrored under `.hippo/conflicts/`, and linked back into each memory's `conflicts_with` field.
 
----
-### Observation framing
+---### Observation framing
 
 Memories aren't presented as bare assertions. By default, Hippo frames them as observations with dates, so agents treat them as context rather than commands.
 
@@ -522,8 +509,7 @@ hippo context --framing assert
 
 Three modes: `observe` (default), `suggest`, `assert`. Choose based on how directive you want the memory to be.
 
----
-### Sleep consolidation
+---### Sleep consolidation
 
 Run `hippo sleep` and related episodes merge into one memory.
 
@@ -636,8 +622,7 @@ and write no arm row. Agents are told to call the MCP context tool at session st
 are not recorded. Set the rate to 0 only after the pilot window closes, because 0 ends every holdout at once.
 `hippo doctor` shows the pilot when it is on.
 
----
-### Outcome feedback
+---### Outcome feedback
 
 Did the recalled memories actually help? Tell Hippo. It tightens the feedback loop.
 
@@ -658,8 +643,7 @@ Outcomes are cumulative. A memory with 5 positive outcomes and 0 negative has a 
 
 This is the mechanism with the clearest measured win. On the synthetic E1 test, plain BM25 plus the outcome nudge cut how often a marked-bad memory stayed in the top five from 71.9% to 0.0% ([mechanism audit, round 2](https://github.com/kitfunso/hippo-memory/pull/232)). Every mark in E1 is correct; real marks are noisier, since `--bad` marks the whole recall batch.
 
----
-### Token budgets
+---### Token budgets
 
 Recall only what fits. No context stuffing.
 
@@ -682,8 +666,7 @@ model reads. Recall always keeps its first `--min-results` memories (default 1),
 larger than the budget; `hippo context` skips a memory that does not fit and keeps filling.
 `--json` returns the memories the text form would print.
 
----
-### Auto-learn from git
+---### Auto-learn from git
 
 Hippo can scan your commit history and extract lessons from fix/revert/bug commits automatically.
 
@@ -707,8 +690,7 @@ hippo learn --git --repos "~/repo1,~/repo2" --days 7
 hippo sleep
 ```
 
----
-### Watch mode
+---### Watch mode
 
 Wrap any command with `hippo watch` to auto-learn from failures:
 
@@ -720,8 +702,7 @@ hippo watch -- npm run build
 
 The command runs with no shell, so each argument reaches the program as written. To run a shell line with pipes or `&&`, pass it as one string after `--shell`: `hippo watch --shell "npm test && npm run build"`.
 
----
-## CLI Reference
+---## CLI Reference
 
 | Command | What it does |
 |---------|-------------|
@@ -828,8 +809,7 @@ The command runs with no shell, so each argument reaches the program as written.
 
 On `heartbeat`, `block`, `review` and `complete`, a given `--run` is checked against the card's live run and the command is refused, unchanged, if the two do not match.
 
----
-## Framework Integrations
+---## Framework Integrations
 
 ### Auto-install (recommended)
 

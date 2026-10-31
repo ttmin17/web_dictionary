@@ -21,6 +21,12 @@ source:
 signals:
   stars: 695
   last_commit: 2026-10-06T05:59:34Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 695
 language: en
 needs_keys: false
 prerequisites:
@@ -64,9 +70,7 @@ tags: []
 
 </div>
 
----
-
-## Overview
+---## Overview
 
 Obsidian vault notes over the Local REST API plugin. Read, search, and write notes, edit single headings, blocks, and frontmatter fields in place, and manage tags, with folder-scoped read/write permissions built in. Runs as a stdio process or a local Streamable HTTP server.
 
@@ -107,77 +111,57 @@ Note and tag data are also reachable through tools (`obsidian_get_note`, `obsidi
 - `result.format` discriminates the payload; a `section` read that matches several headings returns the first and lists every full path in `candidates`
 - A `path` with no exact match but one case-insensitive match in its folder reads that file: `result.path` is the real name, `requestedPath` the one sent, and a `notice` names both
 
----
-
-### `obsidian_list_notes` <sub>tool</sub>
+---### `obsidian_list_notes` <sub>tool</sub>
 
 - Walks from `path` (default vault root) to `depth` 1–20 (default 2), filtered by `extension` and `nameRegex` (≤256 chars); a folder that fails `nameRegex` is not walked
 - Returns `entries[]` (`file` / `directory`), `totals`, and `appliedFilters`; the walk stops at 1,000 entries with `excluded.reason: "entry_cap"`, and a folder the depth limit stopped carries `truncated: true`
 - With `OBSIDIAN_READ_PATHS` set, a listing holds only readable entries and the folders leading to the scope; those folders are walked and accepted as `path`
 
----
-
-### `obsidian_list_tags` <sub>tool</sub>
+---### `obsidian_list_tags` <sub>tool</sub>
 
 - `nameRegex` (≤256 chars) and `minCount` narrow the set, then tags are ranked by count and capped at `limit` (default 200, max 10000); hierarchical parents count (`work/tasks` adds to `work`)
 - When the cap withholds tags, the response carries `truncated`, `shown`, and `cap`
 - With `OBSIDIAN_READ_PATHS` set, only tags from readable notes are listed, and `count` is the number of readable notes carrying the tag or a tag nested under it
 
----
-
-### `obsidian_search_notes` <sub>tool</sub>
+---### `obsidian_search_notes` <sub>tool</sub>
 
 - `mode: "text"` requires every whitespace-split token of `query` as a case-insensitive substring of the filename or body (quotes are literal), shaped by `contextLength` (default 100), `pathPrefix`, and `maxMatchesPerHit` (default 10); `mode: "jsonlogic"` evaluates a `logic` tree over `path`, `content`, `frontmatter.<key>`, `tags`, and `stat`, with `glob` / `regexp` taking `[PATTERN, VALUE]`
 - `result.mode` discriminates the payload; every mode reports `totalCount` and pages via `nextCursor`, and a text hit clipped to `maxMatchesPerHit` carries `truncated` and `totalMatches`
 - `mode: "omnisearch"` (BM25 ranking, quoted phrases, `-exclusion`, `path:` / `ext:` filters) is offered only when the Omnisearch plugin answered at startup; its 50-hit upstream cap sets `truncated: true`
 
----
-
-### `obsidian_write_note` <sub>tool</sub>
+---### `obsidian_write_note` <sub>tool</sub>
 
 - `target` and `content`, with optional `section` and `contentType` (`markdown` / `json`); a whole-file write to an existing note fails with `file_exists` unless `overwrite: true`
 - With `section`, replaces only that heading, block, or frontmatter field and keeps the heading line; output reports `created`, `sectionTargeted`, and the resolved `sectionTarget`
 
----
-
-### `obsidian_append_to_note` <sub>tool</sub>
+---### `obsidian_append_to_note` <sub>tool</sub>
 
 - Without `section`, appends to the file or creates it (`created: true`); with `section`, appends to that heading, block, or frontmatter field of an existing note, and `createTargetIfMissing: true` creates the section
 - A section append whose content is already at the target fails with `content_preexists`; block targets add no separator, so start `content` with a newline if you want one
 
----
-
-### `obsidian_patch_note` <sub>tool</sub>
+---### `obsidian_patch_note` <sub>tool</sub>
 
 - `operation: "append" | "prepend" | "replace"` against one `section` of an existing note; `patchOptions` takes `createTargetIfMissing`, `applyIfContentPreexists`, and `trimTargetWhitespace` (plugin v4.x only)
 - Echoes the resolved `section` and `operation`; a repeat of content already at the target fails with `content_preexists` unless `applyIfContentPreexists: true`
 
----
-
-### `obsidian_replace_in_note` <sub>tool</sub>
+---### `obsidian_replace_in_note` <sub>tool</sub>
 
 - `replacements[]` run in order, each over the previous one's output; each takes `useRegex` (≤1024 chars), `caseSensitive` (default `true`), `wholeWord`, `flexibleWhitespace` (literal mode only), and `replaceAll` (default `true`)
 - Returns `totalReplacements` and `perReplacement[]` with `bodyCount` / `frontmatterCount`
 - `scope: "body"` (default) leaves frontmatter byte-identical; `"frontmatter"` and `"both"` re-parse the YAML afterward and write nothing if it breaks (`frontmatter_invalid`)
 
----
-
-### `obsidian_manage_frontmatter` <sub>tool</sub>
+---### `obsidian_manage_frontmatter` <sub>tool</sub>
 
 - `operation: "get" | "set" | "delete"` on one `key`; `set` requires a JSON-typed `value`
 - `get` returns `exists` and `value` (`null` when absent); `set` and `delete` return the full `frontmatter` after the change, and a `delete` against unparseable YAML fails with `frontmatter_invalid` without writing
 
----
-
-### `obsidian_manage_tags` <sub>tool</sub>
+---### `obsidian_manage_tags` <sub>tool</sub>
 
 - `operation: "add" | "remove" | "list"` with `tags`; `location: "frontmatter"` (default, the `tags:` array), `"inline"` (body `#tag`; `add` appends at end of file), or `"both"`
 - `add` / `remove` report `applied`, `skipped`, and the resulting `tags`; `list` returns `frontmatter`, `inline`, and `all`
 - Inline detection follows Obsidian's tag grammar: code, wikilinks, images, link destinations, HTML, and math are skipped, and `%% … %%` comments are read
 
----
-
-### `obsidian_delete_note` <sub>tool</sub>
+---### `obsidian_delete_note` <sub>tool</sub>
 
 - Takes a `target` (path, active file, or periodic note) and checks it against the write scope first; a folder path fails with `path_is_directory`. There is no API-level undo, only Obsidian's local trash
 - The path must match exactly, letter case included, even on a case-insensitive filesystem. A different-case or extension-less spelling fails `note_missing` before anything is deleted, naming the near matches in `suggestions`
@@ -186,47 +170,35 @@ Note and tag data are also reachable through tools (`obsidian_get_note`, `obsidi
 - In that mode an answer counts only against the single-use consent record stored when the prompt was shown, bound to the caller, the path, and the note's content then. A pre-supplied or replayed answer, or one given after the note changed, gets a fresh prompt instead
 - Consent records live in the server's storage provider (`STORAGE_PROVIDER_TYPE`, default `in-memory`, process-local). That works for stdio or a single HTTP instance; several instances behind one endpoint need a shared provider (`filesystem`, `supabase`, or `cloudflare-d1`, never `cloudflare-kv`)
 
----
-
-### `obsidian_open_in_ui` <sub>tool</sub>
+---### `obsidian_open_in_ui` <sub>tool</sub>
 
 - `path`, `failIfMissing` (default `true`), and `newLeaf` (open in a split pane); with `failIfMissing: false` a missing file is created, which needs write access
 - `createdIfMissing` reports which branch ran
 - A case-mismatched `path` with one case-insensitive match opens that file instead of creating another, reporting the path sent as `requestedPath` with a `notice`
 
----
-
-### `obsidian_list_commands` <sub>tool</sub>
+---### `obsidian_list_commands` <sub>tool</sub>
 
 - Optional `nameRegex` (≤256 chars) matched against each command's display name
 - Returns `commands[]` of `id` and `name`, where `id` feeds `obsidian_execute_command`
 - Listed only when `OBSIDIAN_ENABLE_COMMANDS=true` and `OBSIDIAN_READ_ONLY` is off
 
----
-
-### `obsidian_execute_command` <sub>tool</sub>
+---### `obsidian_execute_command` <sub>tool</sub>
 
 - `commandId` from `obsidian_list_commands`; returns `executed: true`, or fails with `command_unknown` for an unregistered ID
 - Runs with the authority of a keyboard shortcut, so some commands are destructive (delete file, close vault); gated like `obsidian_list_commands`
 
----
-
-### `obsidian://vault/{+path}` <sub>resource</sub>
+---### `obsidian://vault/{+path}` <sub>resource</sub>
 
 - `{+path}` captures everything after `/vault/`, slashes included; literal and percent-encoded paths resolve to the same note
 - Returns `path`, `content`, `frontmatter`, `tags`, and `stat`, the same shape as `obsidian_get_note` with `format: "full"`; failures are `path_forbidden`, `note_missing`, or `path_is_directory`
 
----
-
-### `obsidian://tags` <sub>resource</sub>
+---### `obsidian://tags` <sub>resource</sub>
 
 - Every tag with its `count`, uncapped and unsorted, hierarchical parents included
 - With `OBSIDIAN_READ_PATHS` set, only tags from readable notes, counted the same way as `obsidian_list_tags`
 - No ranking or filters; `obsidian_list_tags` gives the count-ranked, capped view
 
----
-
-### `obsidian://status` <sub>resource</sub>
+---### `obsidian://status` <sub>resource</sub>
 
 - `status`, `service`, `authenticated`, `versions`, `manifest`, and `apiExtensions[]`; still answers with a wrong API key, reporting `authenticated: false`
 - On plugin v5.0.2 and later, check `apiExtensions` for `local-rest-api-periodic-notes` before using `periodic` targets

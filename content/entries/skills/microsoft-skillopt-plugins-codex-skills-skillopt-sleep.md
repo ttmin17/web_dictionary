@@ -23,6 +23,14 @@ source:
 signals:
   stars: 18302
   last_commit: 2026-10-06T17:42:32Z
+  stars_delta_7d: 204
+  stars_growth_pct: 1.1
+  trending_score: 206.3
+  rank_current: 133
+  velocity_source: snapshot_delta
+  sparkline_4w:
+    - 18098
+    - 18302
 language: en
 needs_keys: false
 prerequisites: []

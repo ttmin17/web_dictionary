@@ -57,9 +57,7 @@ just edit JSON; the channel server re-reads it.
 
 Arguments passed: `$ARGUMENTS`
 
----
-
-## State shape
+---## State shape
 
 `~/.claude/channels/imessage/access.json`:
 
@@ -89,9 +87,7 @@ Sender IDs are handle addresses (email or phone number, e.g. "+15551234567"
 or "user@example.com"). Chat IDs are iMessage chat GUIDs (e.g.
 "iMessage;-;+15551234567") — they differ from sender IDs.
 
----
-
-## Dispatch on arguments
+---## Dispatch on arguments
 
 Parse `$ARGUMENTS` (space-separated). If empty or unrecognized, show status.
 
@@ -155,9 +151,7 @@ Delivery config. Supported keys:
 
 Read, set the key, write, confirm.
 
----
-
-## Implementation notes
+---## Implementation notes
 
 - **Always** Read the file before Write — the channel server may have added
   pending entries. Don't clobber.

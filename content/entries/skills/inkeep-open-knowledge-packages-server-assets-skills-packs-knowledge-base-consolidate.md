@@ -23,6 +23,12 @@ source:
 signals:
   stars: 4559
   last_commit: 2026-10-13T13:58:36Z
+  stars_delta_7d: 170
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 4559
 language: en
 needs_keys: false
 prerequisites: []
@@ -120,8 +126,7 @@ Save inside the content directory. Path convention depends on the project:
 Frontmatter:
 
 ```yaml
----
-title: Descriptive title
+---title: Descriptive title
 description: One-line summary of what this article covers
 type: article
 status: stable
@@ -132,8 +137,7 @@ tags:
   - topic-tag
 supersedes:
   - <path-to-research-article>.md
----
-```
+---```
 
 Structure:
 

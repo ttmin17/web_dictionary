@@ -1,6 +1,6 @@
 import { config } from '../lib/config.js';
 import { logger } from '../lib/logger.js';
-import { searchRepositories } from '../sources/github-search.js';
+import { searchRepositories, fetchRepositoryByFullName } from '../sources/github-search.js';
 import { searchSkillCodeFiles } from '../sources/github-code-search.js';
 import { fetchMcpRegistry } from '../sources/mcp-registry.js';
 import type { CandidateRepo } from '@web-db/schema';
@@ -43,10 +43,34 @@ export async function runStage1Discover(): Promise<CandidateRepo[]> {
     }
   }
 
-  // 5. Official MCP Registry
+  // 5. Official MCP Registry & Pinned Overrides
   const registryServers = await fetchMcpRegistry();
   logger.info(`Discovered ${registryServers.length} servers from official MCP Registry`);
-  // Registry servers that have GitHub repo URLs are already tracked or can be linked
+
+  const extraRepoNames = new Set<string>();
+  for (const pinned of config.pin.pinned || []) {
+    if (pinned.repo && !candidatesMap.has(pinned.repo.toLowerCase())) {
+      extraRepoNames.add(pinned.repo);
+    }
+  }
+
+  for (const srv of registryServers) {
+    if (!srv.repositoryUrl) continue;
+    const match = srv.repositoryUrl.match(/github\.com\/([^/]+\/[^/#?.]+)/i);
+    if (match && match[1]) {
+      const fullName = match[1].replace(/\.git$/i, '');
+      if (!candidatesMap.has(fullName.toLowerCase())) {
+        extraRepoNames.add(fullName);
+      }
+    }
+  }
+
+  for (const fullName of Array.from(extraRepoNames).slice(0, 50)) {
+    const repo = await fetchRepositoryByFullName(fullName);
+    if (repo) {
+      candidatesMap.set(repo.fullName.toLowerCase(), repo);
+    }
+  }
 
   const total = Array.from(candidatesMap.values());
   logger.info(`Stage 1 Complete: Discovered ${total.length} unique candidate repositories.`);

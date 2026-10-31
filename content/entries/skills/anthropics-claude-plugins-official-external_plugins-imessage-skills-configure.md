@@ -48,9 +48,7 @@ access policy.
 
 Arguments passed: `$ARGUMENTS` (unused — this skill only shows status)
 
----
-
-## Status and guidance
+---## Status and guidance
 
 Read state and give the user a complete picture:
 
@@ -74,9 +72,7 @@ Read state and give the user a complete picture:
    - FDA granted, someone allowed → *"Ready. Self-chat works; {N} other
      sender(s) allowed."*
 
----
-
-## Build the allowlist — don't pair
+---## Build the allowlist — don't pair
 
 iMessage reads your **personal** `chat.db`. You already know the phone
 numbers and emails of people you'd allow — there's no ID-capture problem to
@@ -104,9 +100,7 @@ Drive the conversation this way:
 Handles are `+15551234567` or `someone@icloud.com`. `disabled` drops
 everything except self-chat.
 
----
-
-## Implementation notes
+---## Implementation notes
 
 - No `.env` file for this channel. No token. The only OS-level setup is FDA
   plus the one-time Automation prompt when the server first sends (which

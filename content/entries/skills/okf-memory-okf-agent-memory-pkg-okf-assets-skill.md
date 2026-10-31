@@ -21,6 +21,12 @@ source:
 signals:
   stars: 771
   last_commit: 2026-10-12T10:08:28Z
+  stars_delta_7d: 76
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 771
 language: en
 needs_keys: false
 prerequisites: []
@@ -79,9 +85,7 @@ Teaches AI agents deterministic interaction with an Open Knowledge Format (OKF v
 3. IF concepts_mutated => MUST sync(knowledge/log.md, knowledge/index.md)
 4. ASSERT(okf_validate(strict=true, drift=true) == {errors: 0, warnings: 0}, ELSE=fix_before_exit)
 
----
-
-## 4. Tooling Reference (Dual-Mode: MCP & CLI)
+---## 4. Tooling Reference (Dual-Mode: MCP & CLI)
 
 Default bundle: `./knowledge`. For custom paths, pass `bundle="path/to/bundle"`.
 
@@ -95,9 +99,7 @@ Default bundle: `./knowledge`. For custom paths, pass `bundle="path/to/bundle"`.
 | **Relate Concepts** | `okf_relate(source_id="<src>", target_id="<tgt>", description="<prose>")` | `okf relate <src> <tgt> knowledge --desc "<prose>" --json` |
 | **Validate Bundle** | `okf_validate(strict=true)` | `okf validate knowledge --strict --drift --json` |
 
----
-
-## 5. Workflow Guides (Progressive Disclosure)
+---## 5. Workflow Guides (Progressive Disclosure)
 
 - Discovery & Retrieval: [discovery.md](https://github.com/okf-memory/okf-agent-memory/blob/develop/pkg/okf/assets/skill/discovery.md)
 - Persistence Decisions: [remember.md](https://github.com/okf-memory/okf-agent-memory/blob/develop/pkg/okf/assets/skill/remember.md)

@@ -1,6 +1,6 @@
 # AI Tools Web Dictionary & Weekly Trend Radar
 
-[![CI](https://github.com/teikmin/web_dictionary/actions/workflows/ci.yml/badge.svg)](https://github.com/teikmin/web_dictionary/actions/workflows/ci.yml)
+[![CI](https://github.com/ttmin17/web_dictionary/actions/workflows/ci.yml/badge.svg)](https://github.com/ttmin17/web_dictionary/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
 
@@ -62,7 +62,7 @@ An authoritative, zero-database Web Dictionary and Weekly Velocity Radar for the
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/teikmin/web_dictionary.git
+git clone https://github.com/ttmin17/web_dictionary.git
 cd web_dictionary
 
 # 2. Install workspace dependencies
@@ -91,7 +91,7 @@ cp .env.example .env
 | Client | Launch Command / Snippet | Default Config Path | Skills Path |
 |---|---|---|---|
 | **Claude Code** | `claude mcp add <name> -- <cmd>` or `.mcp.json` | `.mcp.json` (workspace) / `~/.claude.json` (global) | `.claude/skills/<name>/SKILL.md` |
-| **OpenAI Codex** | `.codex/config.json` | `.codex/config.json` (workspace) / `~/.codex/config.json` (global) | `.codex/skills/<name>/SKILL.md` |
+| **OpenAI Codex** | `.codex/config.toml` | `.codex/config.toml` (workspace) / `~/.codex/config.toml` (global) | `.codex/skills/<name>/SKILL.md` |
 | **Google Antigravity** | `.gemini/mcp_servers.json` | `.gemini/mcp_servers.json` (workspace) / `~/.gemini/antigravity/mcp_servers.json` (global) | `~/.gemini/config/skills/<name>/SKILL.md` |
 
 ---
@@ -113,9 +113,8 @@ All architectural guidelines and reference specs are available in [`docs/`](docs
 - [`03_GROWTH_AND_SEO.md`](docs/03_GROWTH_AND_SEO.md): Programmatic SEO, 1-click config hooks, and growth timeline.
 - [`04_FUTURE_ROADMAP.md`](docs/04_FUTURE_ROADMAP.md): Deferred scope, non-goals, and future ideas parking lot.
 - [`05_FOLDER_STRUCTURE.md`](docs/05_FOLDER_STRUCTURE.md): Detailed workspace structure, content schemas, and folder ownership rules.
-- [`07_CHECKPOINT_STATUS.md`](docs/07_CHECKPOINT_STATUS.md): Current system state, monorepo metrics, verified client paths, and production catalog health report.
-- [`08_PRODUCT_AND_ARCHITECTURE_REVIEW.md`](docs/08_PRODUCT_AND_ARCHITECTURE_REVIEW.md): Deep architectural audit and technical critique.
-- [`09_V3_WEB_DICTIONARY_AND_TRENDING_PLAN.md`](docs/09_V3_WEB_DICTIONARY_AND_TRENDING_PLAN.md): Authoritative v3 execution plan with verified completion records across all 5 phases.
+- [`06_DEPLOYMENT_AND_HOSTING_GUIDE.md`](docs/06_DEPLOYMENT_AND_HOSTING_GUIDE.md): Zero-cost GitHub Pages deployment, GitHub Actions pipeline automation, and hosting setup.
+- [`docs/archive/`](docs/archive/): Historical sprint designs, milestone reviews, and implementation audits (`00` through `12`).
 
 ---
 

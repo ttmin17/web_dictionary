@@ -68,6 +68,8 @@ for (const e of allEntries) {
 }
 
 // Serialize lightweight items for client-side instant filtering
+const basePrefix = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const clientItems = allEntries.map((e) => {
   const d = e.data;
   const [owner, repoShortName] = d.source.repo.split('/');
@@ -75,6 +77,11 @@ const clientItems = allEntries.map((e) => {
   const packCount = isSkill ? (repoSkillCounts.get(d.source.repo) || 1) : 1;
   const isPrimary = isSkill ? (repoPrimarySkillSlug.get(d.source.repo) === d.slug) : true;
   const packSkills = isSkill ? (repoSkillNames.get(d.source.repo) || []) : [];
+  const clients = isSkill
+    ? (d.skill?.clients || ['claude-code', 'codex', 'antigravity'])
+    : (d.type === 'mcp_server' || d.tool?.has_mcp_support)
+      ? ['claude-code', 'codex', 'antigravity']
+      : [];
 
   return {
     slug: d.slug,
@@ -87,6 +94,7 @@ const clientItems = allEntries.map((e) => {
     summary: d.summary || d.tagline || '',
     categories: d.categories || [],
     category: d.categories[0] || 'other',
+    clients,
     status: d.status || 'active',
     stars: d.signals?.stars || 0,
     starsDelta7d: d.signals?.stars_delta_7d || 0,
@@ -97,7 +105,7 @@ const clientItems = allEntries.map((e) => {
     firstSeen: d.first_seen || '',
     license: d.source?.license || '',
     official: Boolean(d.source?.official_vendor),
-    href: d.type === 'mcp_server' ? `/mcp/${d.slug}` : d.type === 'agent_tool' ? `/tools/${d.slug}` : `/skills/${d.slug}`,
+    href: `${basePrefix}/${d.type === 'mcp_server' ? 'mcp' : d.type === 'agent_tool' ? 'tools' : 'skills'}/${d.slug}`,
     packCount,
     isPrimary,
     packSkills,
@@ -109,6 +117,14 @@ const initialItems = allEntries
   .filter((e) => {
     if (initialType !== 'all' && e.data.type !== initialType) return false;
     if (initialCategory !== 'all' && !e.data.categories.includes(initialCategory)) return false;
+    if (initialClient !== 'all') {
+      const supportedClients = e.data.type === 'agent_skill'
+        ? (e.data.skill?.clients || ['claude-code', 'codex', 'antigravity'])
+        : (e.data.type === 'mcp_server' || e.data.tool?.has_mcp_support)
+          ? ['claude-code', 'codex', 'antigravity']
+          : [];
+      if (!supportedClients.includes(initialClient as any)) return false;
+    }
     if (initialOfficial && !e.data.source.official_vendor) return false;
     if (e.data.type === 'agent_skill') {
       const isPrimary = repoPrimarySkillSlug.get(e.data.source.repo) === e.data.slug;
@@ -525,6 +541,19 @@ const initialItems = allEntries
       </div>`;
     }
 
+    function escapeHtml(str: unknown): string {
+      return String(str ?? '').replace(/[&<>"']/g, (c) => {
+        switch (c) {
+          case '&': return '&amp;';
+          case '<': return '&lt;';
+          case '>': return '&gt;';
+          case '"': return '&quot;';
+          case "'": return '&#39;';
+          default: return c;
+        }
+      });
+    }
+
     function renderChips(_totalFiltered?: number) {
       if (!chipsContainer) return;
       chipsContainer.innerHTML = '';
@@ -611,7 +640,7 @@ const initialItems = allEntries
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100 text-xs font-medium transition-colors cursor-pointer';
-        btn.innerHTML = `<span>${chip.label}</span><span class="text-blue-500 font-bold">&times;</span>`;
+        btn.innerHTML = `<span>${escapeHtml(chip.label)}</span><span class="text-blue-500 font-bold">&times;</span>`;
         btn.addEventListener('click', () => {
           chip.reset();
           state.limit = state.pageSize;
@@ -661,6 +690,7 @@ const initialItems = allEntries
       let filtered = items.filter((item: any) => {
         if (state.type !== 'all' && item.type !== state.type) return false;
         if (state.category !== 'all' && !item.categories.includes(state.category)) return false;
+        if (state.client !== 'all' && !(item.clients || []).includes(state.client)) return false;
         if (state.official && !item.official) return false;
         if (state.collapsePacks && !qLower && item.type === 'agent_skill' && !item.isPrimary) return false;
         if (state.license !== 'all') {
@@ -726,12 +756,15 @@ const initialItems = allEntries
           listContainer.innerHTML = visible.map((item: any) => {
             const hasDelta = item.starsDelta7d && item.starsDelta7d > 0;
             const isPack = item.type === 'agent_skill' && item.packCount > 1;
-            const displayName = (isPack && !qLower && item.repoName) ? item.repoName : item.name;
-            const catLabel = categoryLabels[item.category] || item.category;
+            const displayName = escapeHtml((isPack && !qLower && item.repoName) ? item.repoName : item.name);
+            const catLabel = escapeHtml(categoryLabels[item.category] || item.category);
+            const safeOwner = escapeHtml(item.owner);
+            const safeDesc = escapeHtml(item.summary || item.tagline);
+            const safeHref = escapeHtml(item.href);
             return `
-            <a href="${item.href}" class="flex items-center justify-between p-3.5 hover:bg-slate-50 transition-colors group">
+            <a href="${safeHref}" class="flex items-center justify-between p-3.5 hover:bg-slate-50 transition-colors group">
               <div class="flex items-center gap-3 min-w-0">
-                <img src="https://github.com/${item.owner}.png?size=40" alt="${item.owner}" class="w-8 h-8 rounded-lg bg-slate-50 border border-slate-200 object-cover shrink-0" loading="lazy" />
+                <img src="https://github.com/${encodeURIComponent(item.owner)}.png?size=40" alt="${safeOwner}" class="w-8 h-8 rounded-lg bg-slate-50 border border-slate-200 object-cover shrink-0" loading="lazy" />
                 <div class="min-w-0">
                   <div class="flex items-center gap-2">
                     <span class="font-semibold text-sm text-slate-900 group-hover:text-blue-600 truncate">${displayName}</span>
@@ -744,10 +777,10 @@ const initialItems = allEntries
                     }">
                       ${item.type === 'mcp_server' ? 'MCP' : item.type === 'agent_tool' ? 'Tool' : 'Skill'}
                     </span>
-                    ${isPack ? `<span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-medium">📦 Pack (${item.packCount})</span>` : ''}
+                    ${isPack ? `<span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-medium">📦 Pack (${Number(item.packCount) || 1})</span>` : ''}
                     ${item.official ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 font-medium">Official</span>' : ''}
                   </div>
-                  <p class="text-xs text-slate-500 truncate mt-0.5">${item.summary || item.tagline}</p>
+                  <p class="text-xs text-slate-500 truncate mt-0.5">${safeDesc}</p>
                 </div>
               </div>
               <div class="flex items-center gap-4 text-xs text-slate-500 font-mono shrink-0 pl-3">
@@ -779,21 +812,25 @@ const initialItems = allEntries
               ? 'Agent tool'
               : 'Agent skill';
             const isPack = item.type === 'agent_skill' && item.packCount > 1;
-            const displayName = (isPack && !qLower && item.repoName) ? item.repoName : item.name;
-            const packSub = (isPack && item.packSkills && item.packSkills.length > 0)
-              ? `<p class="text-[11px] text-amber-800 font-normal truncate mt-0.5" title="${item.packSkills.join(', ')}">Includes: ${item.packSkills.slice(0, 3).join(', ')}${item.packSkills.length > 3 ? ` +${item.packSkills.length - 3} more` : ''}</p>`
+            const displayName = escapeHtml((isPack && !qLower && item.repoName) ? item.repoName : item.name);
+            const escapedPackSkills = Array.isArray(item.packSkills) ? item.packSkills.map((s: string) => escapeHtml(s)) : [];
+            const packSub = (isPack && escapedPackSkills.length > 0)
+              ? `<p class="text-[11px] text-amber-800 font-normal truncate mt-0.5" title="${escapedPackSkills.join(', ')}">Includes: ${escapedPackSkills.slice(0, 3).join(', ')}${escapedPackSkills.length > 3 ? ` +${escapedPackSkills.length - 3} more` : ''}</p>`
               : '';
             const hasDelta = item.starsDelta7d && item.starsDelta7d > 0;
-            const catLabel = categoryLabels[item.category] || item.category;
+            const catLabel = escapeHtml(categoryLabels[item.category] || item.category);
+            const safeOwner = escapeHtml(item.owner);
+            const safeDesc = escapeHtml(item.summary || item.tagline);
+            const safeHref = escapeHtml(item.href);
             return `
-              <a href="${item.href}" class="group flex flex-col justify-between p-5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition-all duration-150 text-left">
+              <a href="${safeHref}" class="group flex flex-col justify-between p-5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition-all duration-150 text-left">
                 <div>
                   <div class="flex items-start justify-between gap-3 mb-3">
                     <div class="flex items-start gap-3 min-w-0">
-                      <img src="https://github.com/${item.owner}.png?size=64" alt="${item.owner}" class="w-10 h-10 rounded-lg border border-slate-200 bg-slate-50 object-cover shrink-0" loading="lazy" />
+                      <img src="https://github.com/${encodeURIComponent(item.owner)}.png?size=64" alt="${safeOwner}" class="w-10 h-10 rounded-lg border border-slate-200 bg-slate-50 object-cover shrink-0" loading="lazy" />
                       <div class="min-w-0">
                         <h3 class="text-base font-semibold text-slate-900 group-hover:text-blue-600 transition-colors truncate">${displayName}</h3>
-                        <p class="text-xs text-slate-500 font-mono truncate">${item.owner}</p>
+                        <p class="text-xs text-slate-500 font-mono truncate">${safeOwner}</p>
                         ${packSub}
                       </div>
                     </div>
@@ -801,10 +838,10 @@ const initialItems = allEntries
                       <span class="px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider rounded shrink-0 ${badgeClass}">
                         ${badgeText}
                       </span>
-                      ${isPack ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-50 text-amber-800 border border-amber-200 inline-flex items-center gap-1"><span>📦</span><span>Pack (${item.packCount})</span></span>` : ''}
+                      ${isPack ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-50 text-amber-800 border border-amber-200 inline-flex items-center gap-1"><span>📦</span><span>Pack (${Number(item.packCount) || 1})</span></span>` : ''}
                     </div>
                   </div>
-                  <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-4">${item.summary || item.tagline}</p>
+                  <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-4">${safeDesc}</p>
                 </div>
                 <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-sans gap-2">
                   <div class="flex items-center gap-1.5 truncate">

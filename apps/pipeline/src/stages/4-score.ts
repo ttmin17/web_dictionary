@@ -33,7 +33,7 @@ export function evaluateLayer3Scoring(candidates: TypeCheckedCandidate[]): Score
       continue;
     }
 
-    const { stars, forks, watchers, pushedAt, license, description } = c.repo;
+    const { stars, forks, watchers, pushedAt, createdAt, license, description } = c.repo;
 
     // 1. Anti-Fake Star Heuristics
     const antiFakeFlags: string[] = [];
@@ -42,6 +42,15 @@ export function evaluateLayer3Scoring(candidates: TypeCheckedCandidate[]): Score
 
     if (stars >= minStarsRatio && forks / Math.max(stars, 1) < minRatio) {
       antiFakeFlags.push(`Suspicious fork-to-star ratio: ${(forks / stars).toFixed(4)} (< ${minRatio})`);
+    }
+
+    if (stars >= 1000 && forks / Math.max(stars, 1) < minRatio * 0.25) {
+      antiFakeFlags.push(`Extreme fork-to-star anomaly on high-star repo: ${(forks / stars).toFixed(4)}`);
+    }
+
+    const ageDays = Math.max(0, (now - new Date(createdAt).getTime()) / msInDay);
+    if (ageDays > 0 && ageDays < 14 && stars >= 1000 && forks / Math.max(stars, 1) < 0.02) {
+      antiFakeFlags.push('Suspicious new-repo star burst with minimal forks');
     }
 
     if (stars >= 200 && watchers === 0) {

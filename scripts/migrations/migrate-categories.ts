@@ -2,11 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'yaml';
-import { classifyCategoryAndTags, CATEGORY_DEFINITIONS } from '../apps/pipeline/src/classify/categories.js';
+import { classifyCategoryAndTags, CATEGORY_DEFINITIONS } from '../../apps/pipeline/src/classify/categories.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const rootDir = path.resolve(__dirname, '../');
+const rootDir = path.resolve(__dirname, '../../');
 
 const LEGACY_MAPPING: Record<string, string> = {
   'browser-automation': 'browser-web',

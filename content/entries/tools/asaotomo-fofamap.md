@@ -23,11 +23,12 @@ source:
 signals:
   stars: 742
   last_commit: 2026-08-16T17:44:59Z
-  stars_delta_7d: 0
+  stars_delta_7d: 1
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
-  sparkline_4w: []
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 742
 language: zh
 needs_keys: false
 prerequisites:
@@ -91,8 +92,7 @@ FofaMap 既能像传统 CLI 一样直接执行 FOFA 语句，也能让 Agent 把
 
 快速链接：[效果预览](#screenshots) · [项目结构](#architecture) · [迁移指南](https://github.com/asaotomo/FofaMap/blob/v2.0.1/MIGRATION.md) · [安全策略](https://github.com/asaotomo/FofaMap/blob/v2.0.1/SECURITY.md) · [Agent 集成](https://github.com/asaotomo/FofaMap/blob/v2.0.1/docs/AGENT_INTEGRATIONS.md)
 
----
-## ✨ 为什么是 2.0.1
+---## ✨ 为什么是 2.0.1
 
 FofaMap 2.0 完成了从查询脚本到自然语言助手的跨越；2.0.1 把 Agent、Skill、MCP、CLI 和扫描审批收敛到同一套核心契约。
 
@@ -128,8 +128,7 @@ flowchart LR
 
 Agent 负责规划和总结；查询、分页、字段映射、导出、审批与扫描均由确定性代码执行。鉴权失败、额度耗尽、权限不足、限速或网络错误会明确失败，不会被伪装成“0 结果”。
 
----
-<a id="screenshots"></a>
+---<a id="screenshots"></a>
 
 ## 🖥️ 效果预览
 
@@ -156,8 +155,7 @@ Agent 负责规划和总结；查询、分页、字段映射、导出、审批�
 
 截图中的 `example-lab.com` 为合成演示名称，`192.0.2.0/24` 为文档保留网段；它们不代表真实扫描结果。
 
----
-<a id="quick-start"></a>
+---<a id="quick-start"></a>
 
 ## 🚀 5 分钟上手
 
@@ -283,8 +281,7 @@ fofamap -ai '收集 Example 公司的公开网站，区分高置信资产与待�
 
 结果默认写入 `results/{查询摘要}_{时间戳}/`。
 
----
-<a id="entrypoints"></a>
+---<a id="entrypoints"></a>
 
 ## 🧭 三种入口怎么选
 
@@ -542,8 +539,7 @@ app="nginx" && country="CN"
 | `2` | 参数、FOFA、模型、权限或任务执行错误 |
 | `130` | 用户按 `Ctrl+C` 取消 |
 
----
-<a id="agent-mcp-skill"></a>
+---<a id="agent-mcp-skill"></a>
 
 ## 🤖 Agent / MCP / Skill
 
@@ -670,8 +666,7 @@ fofamap-mcp --transport streamable-http --host 127.0.0.1 --port 8001
 
 更详细的宿主路径、配置位置与故障排查见 [Agent 集成文档](https://github.com/asaotomo/FofaMap/blob/v2.0.1/docs/AGENT_INTEGRATIONS.md)；能力对齐结论见 [Agent / Skill / CLI 审计](https://github.com/asaotomo/FofaMap/blob/v2.0.1/docs/AGENT_SKILL_CLI_AUDIT.md)。
 
----
-<a id="nuclei"></a>
+---<a id="nuclei"></a>
 
 ## ☢️ Nuclei：扫描前必须审批
 
@@ -734,8 +729,7 @@ fofamap -q 'domain="example.com"' -n \
 
 MCP / REST 的调用顺序是 `nuclei_plan` → 人工确认 → `nuclei_execute`。基线外的精确模板 ID 需要管理员通过 `FOFAMAP_NUCLEI_ID_ALLOWLIST` 加入允许列表。
 
----
-<a id="pagination-output"></a>
+---<a id="pagination-output"></a>
 
 ## 📄 分页、字段与输出
 
@@ -781,8 +775,7 @@ results/
 
 XLSX 适合人工查看，CSV / JSONL 适合大结果与后续管道。终端隐藏的字段仍会保留在导出文件中。
 
----
-<a id="architecture"></a>
+---<a id="architecture"></a>
 
 ## 🧱 项目结构
 
@@ -817,8 +810,7 @@ FofaMap/
 
 CLI、REST 和 MCP 共享数据契约、FOFA 客户端、字段能力、规则库和扫描审批逻辑，避免三套入口出现参数或安全语义漂移。
 
----
-<a id="rest-api"></a>
+---<a id="rest-api"></a>
 
 ## 🌐 REST / OpenAPI
 
@@ -870,8 +862,7 @@ curl -sS http://127.0.0.1:8000/v1/search \
 
 只有绑定回环地址时才允许无令牌运行；远程服务必须配置静态 Token 或 JWT。环境变量示例见 [.env.example](https://github.com/asaotomo/FofaMap/blob/v2.0.1/.env.example)。
 
----
-<a id="configuration"></a>
+---<a id="configuration"></a>
 
 ## 🔐 配置与环境变量手册
 
@@ -1005,8 +996,7 @@ FOFA 密钥读取优先级为：`FOFA_API_KEY` → `FOFA_KEY` → 系统钥匙�
 
 升级自 2.0 时请先阅读 [MIGRATION.md](https://github.com/asaotomo/FofaMap/blob/v2.0.1/MIGRATION.md)。若密钥曾写入并提交过 `config/settings.yaml`，请立即轮换。完整威胁模型与部署要求见 [SECURITY.md](https://github.com/asaotomo/FofaMap/blob/v2.0.1/SECURITY.md)。
 
----
-<a id="troubleshooting"></a>
+---<a id="troubleshooting"></a>
 
 ## ❓ 常见问题与排错
 
@@ -1132,8 +1122,7 @@ fofamap -up
 
 </details>
 
----
-## 🧪 开发与验证
+---## 🧪 开发与验证
 
 ```bash
 python -m pip install -e '.[test]'
@@ -1155,15 +1144,13 @@ FOFAMAP_RUN_LIVE_TESTS=true pytest -q -m live
 - [上游能力对照](https://github.com/asaotomo/FofaMap/blob/v2.0.1/docs/UPSTREAM_FEATURE_AUDIT.md)
 - [安全策略](https://github.com/asaotomo/FofaMap/blob/v2.0.1/SECURITY.md)
 
----
-## ⚖️ 免责声明
+---## ⚖️ 免责声明
 
 本项目仅用于合法授权的资产管理、安全建设、内部演练和授权测试。使用前请确认符合所在地法律法规，并已取得目标所有者的明确授权。禁止将本项目用于未授权访问、破坏、窃取或其他非法活动。
 
 FOFA 命中表示公开暴露信息；它不等于归属已确认，也不等于存在漏洞。Nuclei 结果必须由具备授权的人员复核。因使用者违反法律、授权范围或本说明造成的后果，由使用者自行承担。
 
----
-## 🤝 社区
+---## 🤝 社区
 
 如果 FofaMap 对你有帮助，欢迎提交 Issue、Pull Request 或 Star。
 

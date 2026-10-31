@@ -3,7 +3,9 @@ slug: himself65-finance-skills-plugins-data-providers-skills-fintel-data
 name: fintel-data
 tagline: Query Fintel (fintel.io) institutional market data through its REST API
   or official MCP server. Use this skill whenever the user mentions Fintel or as
-summary: "Fintel exposes two surfaces backed by the same data contract:"
+summary: Both require a Fintel API key. This skill is read-only — only call GET
+  endpoints. The API also exposes write endpoints (create/delete stock lists,
+  alert subscriptions, teams); do not call them.
 categories:
   - other
 status: active
@@ -20,6 +22,12 @@ source:
 signals:
   stars: 3404
   last_commit: 2026-10-11T12:20:45Z
+  stars_delta_7d: 80
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 3404
 language: en
 needs_keys: false
 prerequisites: []
@@ -68,9 +76,7 @@ Both require a Fintel API key. **This skill is read-only** — only call
 GET endpoints. The API also exposes write endpoints (create/delete stock
 lists, alert subscriptions, teams); do not call them.
 
----
-
-## Step 1: Resolve FINTEL_API_KEY
+---## Step 1: Resolve FINTEL_API_KEY
 
 The skill resolves `FINTEL_API_KEY` in this order:
 1. `FINTEL_API_KEY` environment variable
@@ -94,9 +100,7 @@ Then act on the result:
   `export FINTEL_API_KEY="..."` or add `FINTEL_API_KEY=...` to `.env` at
   the repo root (preferred for worktrees).
 
----
-
-## Step 2: Resolve the Security
+---## Step 2: Resolve the Security
 
 Most endpoints are addressed by `{country}/{symbol}` — an ISO country
 code plus ticker, e.g. `us/AAPL`. Default to `us` when the user gives
@@ -112,9 +116,7 @@ curl -s -H "X-API-KEY: $FINTEL_API_KEY" "https://api.fintel.io/v1/securities?que
 curl -s -H "X-API-KEY: $FINTEL_API_KEY" "https://api.fintel.io/v1/identifiers/isin/US0378331005"
 ```
 
----
-
-## Step 3: Match the Request to an Endpoint
+---## Step 3: Match the Request to an Endpoint
 
 | User wants | Endpoint | Notes |
 |---|---|---|
@@ -143,9 +145,7 @@ curl -s -H "X-API-KEY: $FINTEL_API_KEY" "https://api.fintel.io/v1/identifiers/is
 Full parameter details, country/exchange discovery endpoints, and more
 curl examples: read `references/api-reference.md`.
 
----
-
-## Step 4: Call the API
+---## Step 4: Call the API
 
 ```bash
 curl -s -H "X-API-KEY: $FINTEL_API_KEY" \
@@ -160,9 +160,7 @@ curl -s -H "X-API-KEY: $FINTEL_API_KEY" \
   service down — retry later, don't treat as empty data).
 - Usage is metered per account — batch thoughtfully; don't poll.
 
----
-
-## Step 5: MCP Alternative (Optional)
+---## Step 5: MCP Alternative (Optional)
 
 For MCP-native setups, the same tools are discoverable from the official
 server (tool names like `fintel.get_short_interest`,
@@ -176,9 +174,7 @@ Prefer REST via curl when shell access is available — it needs no setup
 beyond the key. Use MCP when the user explicitly asks for it or shell
 access is restricted (note: neither works on Claude.ai's sandbox).
 
----
-
-## Step 6: Respond to the User
+---## Step 6: Respond to the User
 
 - Format numbers cleanly: prices to 2 decimals, percentages to 1-2
   decimals, share counts with commas or abbreviations (2.3M, 1.1B).
@@ -193,9 +189,7 @@ access is restricted (note: neither works on Claude.ai's sandbox).
 - Never turn the data into a trading recommendation, price target, or
   squeeze call — present facts and let the user draw conclusions.
 
----
-
-## Reference Files
+---## Reference Files
 
 - `references/api-reference.md` — full REST endpoint reference: all GET
   endpoints with parameters, defaults, limits, error semantics, MCP tool

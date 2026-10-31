@@ -138,7 +138,7 @@ function getSkillInstallCommand(clientId: string): string {
                         <span>Run in terminal from your workspace root, or paste JSON into <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">.mcp.json</code> (workspace) or <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">~/.claude.json</code> (global).</span>
                       )}
                       {client.id === 'codex' && (
-                        <span>Paste into <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">.codex/config.json</code> in your project, or global config in <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">~/.codex/config.json</code>.</span>
+                        <span>Paste into <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">.codex/config.toml</code> in your project, or global config in <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">~/.codex/config.toml</code>.</span>
                       )}
                       {client.id === 'antigravity' && (
                         <span>Add server definition into <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">~/.gemini/antigravity/mcp_servers.json</code> or project <code class="text-blue-700 bg-blue-50 border border-blue-100 px-1 py-0.2 rounded font-mono">.gemini/mcp_servers.json</code>.</span>

@@ -1,6 +1,6 @@
 {
   "week": "2026-W42",
-  "generated_at": "2026-10-17T14:42:58.195Z",
+  "generated_at": "2026-10-31T14:49:46.231Z",
   "added": [
     {
       "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-alert-mute-copilot",
@@ -2127,15 +2127,6 @@
   ],
   "surging": [
     {
-      "slug": "morluto-rea",
-      "name": "rea",
-      "type": "agent_tool",
-      "stars": 196748,
-      "stars_delta_7d": 183853,
-      "stars_growth_pct": 1425.8,
-      "trending_score": 551559
-    },
-    {
       "slug": "cathrynlavery-diagram-design-skills-diagram-design",
       "name": "diagram-design",
       "type": "agent_skill",
@@ -2350,14 +2341,23 @@
       "stars_delta_7d": 635,
       "stars_growth_pct": 2,
       "trending_score": 647.78
+    },
+    {
+      "slug": "egonex-ai-understand-anything-understand-anything-plugin-skills-understand-chat",
+      "name": "understand-chat",
+      "type": "agent_skill",
+      "stars": 86141,
+      "stars_delta_7d": 630,
+      "stars_growth_pct": 0.7,
+      "trending_score": 634.64
     }
   ],
   "summary": {
     "week": "2026-W42",
-    "generated_at": "2026-10-17T14:42:58.195Z",
+    "generated_at": "2026-10-31T14:49:46.231Z",
     "added_count": 287,
     "removed_count": 111,
     "surging_count": 25,
-    "total_stars_gained": 477222
+    "total_stars_gained": 92210
   }
 }

@@ -22,6 +22,12 @@ source:
 signals:
   stars: 17353
   last_commit: 2026-10-13T16:11:58Z
+  stars_delta_7d: 722
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 17353
 language: en
 needs_keys: false
 prerequisites:
@@ -206,9 +212,7 @@ See [SPONSORS.md](https://github.com/lidge-jun/opencodex/blob/main/SPONSORS.md).
 </tbody>
 </table>
 
----
-
-<details>
+---<details>
 <summary>Docker Compose</summary>
 
 The repository ships a digest-pinned, non-root Compose build. The build generates and verifies the

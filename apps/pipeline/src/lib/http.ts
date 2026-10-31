@@ -49,7 +49,9 @@ export async function cachedFetch<T>(
   const safeFilename = cacheKey.replace(/[^a-zA-Z0-9_-]/g, '_') + '.json';
   const filePath = path.join(cacheDir, safeFilename);
 
-  if (fs.existsSync(filePath)) {
+  const forceFullRun = process.env.FORCE_FULL_RUN === 'true';
+
+  if (!forceFullRun && fs.existsSync(filePath)) {
     try {
       const stats = fs.statSync(filePath);
       const ageHours = (Date.now() - stats.mtimeMs) / (1000 * 60 * 60);

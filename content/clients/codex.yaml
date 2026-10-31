@@ -1,10 +1,10 @@
 id: codex
 name: OpenAI Codex
 tagline: OpenAI's CLI coding agent and tool orchestrator
-description: Codex CLI provides terminal-based autonomous coding assistance with JSON-configured MCP servers and agent skill instructions.
+description: Codex CLI provides terminal-based autonomous coding assistance with TOML-configured MCP servers and agent skill instructions.
 website: https://openai.com
-configFormat: json
-configPath: ~/.codex/config.json
+configFormat: toml
+configPath: ~/.codex/config.toml
 supportsMcp: true
 supportsSkills: true
 icon: /clients/codex.svg
