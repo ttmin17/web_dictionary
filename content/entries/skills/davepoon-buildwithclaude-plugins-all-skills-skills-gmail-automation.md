@@ -323,5 +323,4 @@ Automate Gmail operations through Composio's Gmail toolkit via Rube MCP.
 | Get attachment | GMAIL_GET_ATTACHMENT | message_id, attachment_id |
 | Search contacts | GMAIL_SEARCH_PEOPLE | query |
 | Get profile | GMAIL_GET_PROFILE | (none) |
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

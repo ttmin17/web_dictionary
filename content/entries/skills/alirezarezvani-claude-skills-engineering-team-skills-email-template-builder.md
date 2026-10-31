@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -72,13 +72,11 @@ skill:
 **Domain:** Transactional Email / Communications Infrastructure
 
 ---
-
 ## Overview
 
 Build complete transactional email systems: React Email templates, provider integration, preview server, i18n support, dark mode, spam optimization, and analytics tracking. Output production-ready code for Resend, Postmark, SendGrid, or AWS SES.
 
 ---
-
 ## Core Capabilities
 
 - React Email templates (welcome, verification, password reset, invoice, notification, digest)
@@ -91,7 +89,6 @@ Build complete transactional email systems: React Email templates, provider inte
 - Open/click tracking with UTM parameters
 
 ---
-
 ## When to Use
 
 - Setting up transactional email for a new product
@@ -101,7 +98,6 @@ Build complete transactional email systems: React Email templates, provider inte
 - Implementing i18n for email templates
 
 ---
-
 ## Project Structure
 
 ```
@@ -135,7 +131,6 @@ emails/
 ```
 
 ---
-
 ## Base Email Layout
 
 ```tsx
@@ -207,7 +202,6 @@ const styles = {
 ```
 
 ---
-
 ## Welcome Email
 
 ```tsx
@@ -264,7 +258,6 @@ const styles = {
 ```
 
 ---
-
 ## Invoice Email
 
 ```tsx
@@ -350,7 +343,6 @@ const styles = {
 ```
 
 ---
-
 ## Unified Send Function
 
 ```typescript
@@ -390,7 +382,6 @@ export async function sendEmail(to: string, payload: EmailPayload) {
 ```
 
 ---
-
 ## Preview Server Setup
 
 ```typescript
@@ -408,7 +399,6 @@ export async function sendEmail(to: string, payload: EmailPayload) {
 ```
 
 ---
-
 ## i18n Support
 
 ```typescript
@@ -438,7 +428,6 @@ const t = locale === "de" ? de : en
 ```
 
 ---
-
 ## Spam Score Optimization Checklist
 
 - [ ] Sender domain has SPF, DKIM, and DMARC records configured
@@ -455,7 +444,6 @@ const t = locale === "de" ? de : en
 - [ ] Test with Mail-Tester.com before first send (target: 9+/10)
 
 ---
-
 ## Analytics Tracking
 
 ```typescript
@@ -482,7 +470,6 @@ export function addTrackingParams(html: string, params: TrackingParams): string 
 ```
 
 ---
-
 ## Common Pitfalls
 
 - **Inline styles required** — most email clients strip `<head>` styles; React Email handles this

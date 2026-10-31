@@ -4,7 +4,8 @@ name: officecli
 tagline: Create, analyze, proofread, and modify Office documents (.docx, .xlsx,
   .pptx) using the officecli CLI tool. Use when the user wants to create,
   inspect
-summary: "If officecli is not installed:"
+summary: Verify with officecli --version. If still not found after install, open
+  a new terminal.
 categories:
   - media-creative
 tags:
@@ -92,7 +93,6 @@ irm https://d.officecli.ai/install.ps1 | iex
 Verify with `officecli --version`. If still not found after install, open a new terminal.
 
 ---
-
 ## Strategy
 
 **L1 (read) → L2 (DOM edit) → L3 (raw XML)**. Always prefer higher layers. Add `--json` for structured output.
@@ -100,7 +100,6 @@ Verify with `officecli --version`. If still not found after install, open a new 
 **Before doc work, check Specialized Skills** (bottom of this file). Fundraising decks, academic papers, financial models, dashboards, and Morph animations need their own skill loaded first — `load_skill` once, then proceed.
 
 ---
-
 ## Help System (IMPORTANT)
 
 **When unsure about property names, value formats, or command syntax, ALWAYS run help instead of guessing.** One help query beats guess-fail-retry loops.
@@ -118,7 +117,6 @@ officecli help docx paragraph --json            # Structured schema (machine-rea
 Format aliases: `word`→`docx`, `excel`→`xlsx`, `ppt`/`powerpoint`→`pptx`. Verbs: `add`, `set`, `get`, `query`, `remove`. MCP exposes the same schema via the single `command` string param: `{"command":"help docx paragraph"}` (not a structured `{"format":...,"type":...}` object — the MCP tool has exactly one param, `command`, and passes it through to the CLI verbatim).
 
 ---
-
 ## Performance: Resident Mode
 
 **Every command auto-starts a resident on first access** (60s idle timeout) — file-lock conflicts are automatically avoided. Explicit `open`/`close` is still recommended for longer sessions (12min idle):
@@ -133,7 +131,6 @@ Opt out of auto-start: `OFFICECLI_NO_AUTO_RESIDENT=1`.
 **Flush only at the non-officecli boundary.** officecli's own reads (`get`/`query`/`view`/`dump`) always see your latest edits, so you never need to save mid-workflow. Run `save` (keeps the resident) or `close` (flush + release) only **before a non-officecli program reads the file** — python-docx/openpyxl, Word, a renderer, delivery/upload. (Idle sessions auto-flush within seconds; `OFFICECLI_RESIDENT_FLUSH=each` makes every mutation flush before returning.)
 
 ---
-
 ## Quick Start
 
 **PPT:**
@@ -158,7 +155,6 @@ officecli set data.xlsx /Sheet1/A2 --prop value="Alice"
 ```
 
 ---
-
 ## L1: Create, Read & Inspect
 
 ```bash
@@ -216,7 +212,6 @@ officecli query slides.pptx 'shape[fill=FF0000]'
 ```
 
 ---
-
 ## Watch & Interactive Selection
 
 Live HTML preview that auto-refreshes on every file change. Browsers can click / shift-click / box-drag to select shapes; the CLI can read the current browser selection and act on it.
@@ -264,7 +259,6 @@ officecli get-marks <file> [--json]
 Props: `find` (literal or regex when `regex=true`; raw form `find='r"[abc]"'`), `color` (hex / `rgb(...)` / 22 named whitelist), `note`, `tofix` (drives apply pipeline). **Path** must be `data-path` format from watch HTML — see subskills for full pipeline.
 
 ---
-
 ## L2: DOM Operations
 
 ### set — modify properties
@@ -410,7 +404,6 @@ officecli batch data.xlsx --input updates.json --best-effort --json   # keep wha
 Supports: `add`, `set`, `get`, `query`, `remove`, `move`, `swap`, `view`, `raw`, `raw-set`, `validate`. Fields: `command` (or `op`), `path`, `parent`, `type`, `from`, `to`, `index`, `after`, `before`, `props`, `selector`, `mode`, `depth`, `part`, `xpath`, `action`, `xml`.
 
 ---
-
 ## L3: Raw XML
 
 Use when L2 cannot express what you need. No xmlns declarations needed — prefixes auto-registered.
@@ -424,7 +417,6 @@ officecli add-part <file> <parent>                   # create new document part 
 `raw-set` actions: `append`, `prepend`, `insertbefore`, `insertafter`, `replace`, `remove`, `setattr`. Run `officecli help <format> raw` for available parts.
 
 ---
-
 ## Common Pitfalls
 
 | Pitfall | Correct Approach |
@@ -439,7 +431,6 @@ officecli add-part <file> <parent>                   # create new document part 
 | `$` in shell text | `--prop text="$15M"` strips `$15`. Use single quotes: `--prop text='$15M'`, or heredoc batch |
 
 ---
-
 ## Specialized Skills
 
 `officecli load_skill <name>` — output is a SKILL.md, follow its rules.
@@ -477,7 +468,6 @@ officecli add-part <file> <parent>                   # create new document part 
 Example: a fundraising deck task → `officecli load_skill pitch-deck` → use the printed rules.
 
 ---
-
 ## Notes
 
 - Paths are **1-based** (XPath convention): `'/body/p[3]'` = third paragraph

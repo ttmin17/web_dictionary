@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -79,7 +79,6 @@ Expert guidance and automation for Google Workspace administration using the ope
 > **Verify before scripting:** `gws` generates commands at runtime from Google's API discovery documents, and the CLI is pre-v1.0. Always confirm a command's exact surface with `gws --help`, `gws <service> --help`, or `gws schema <service>.<resource>.<method>` before putting it in automation. Commands in this skill marked *(verify)* are illustrative of the `gws <service> <resource> <method>` pattern and must be checked against your installed version.
 
 ---
-
 ## Quick Start
 
 ### Check Installation
@@ -103,7 +102,6 @@ gws drive files list --params '{"pageSize": 20}' | python3 scripts/output_analyz
 ```
 
 ---
-
 ## Installation
 
 ### npm (recommended; requires Node.js 18+)
@@ -138,7 +136,6 @@ python3 scripts/gws_doctor.py
 ```
 
 ---
-
 ## Authentication
 
 ### OAuth Setup (Interactive)
@@ -189,7 +186,6 @@ python3 scripts/auth_setup_guide.py --validate --json
 ```
 
 ---
-
 ## Workflow 1: Gmail Automation
 
 **Goal:** Automate email operations — send, search, label, and filter management.
@@ -241,7 +237,6 @@ gws gmail users messages list --params '{"userId": "me", "q": "is:read older_tha
 ```
 
 ---
-
 ## Workflow 2: Drive & Sheets
 
 **Goal:** Manage files, create spreadsheets, configure sharing, and export data.
@@ -292,7 +287,6 @@ gws sheets spreadsheets values get --params '{"spreadsheetId": "<SHEET_ID>", "ra
 ```
 
 ---
-
 ## Workflow 3: Calendar & Meetings
 
 **Goal:** Schedule events, find available times, and generate standup reports.
@@ -331,7 +325,6 @@ gws workflow +meeting-prep
 ```
 
 ---
-
 ## Workflow 4: Security Audit
 
 **Goal:** Audit Google Workspace security configuration and generate remediation commands.
@@ -374,7 +367,6 @@ gws drive about get --params '{"fields": "*"}'
 ```
 
 ---
-
 ## Python Tools
 
 | Script | Purpose | Usage |
@@ -388,7 +380,6 @@ gws drive about get --params '{"fields": "*"}'
 All scripts are stdlib-only, support `--json` output, and include demo mode with embedded sample data.
 
 ---
-
 ## Best Practices
 
 ### Security
@@ -416,7 +407,6 @@ All scripts are stdlib-only, support `--json` output, and include demo mode with
 5. Cache frequently accessed data (e.g., label IDs, folder IDs) in variables
 
 ---
-
 ## Limitations
 
 | Constraint | Impact |

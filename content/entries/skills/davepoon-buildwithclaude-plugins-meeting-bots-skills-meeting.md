@@ -217,7 +217,6 @@ Before spawning any agent, create the transcript file.
 - Language: <detected user language>
 
 ---
-
 ## Topic
 
 <full topic, verbatim>
@@ -250,7 +249,6 @@ Once all outputs are in, **feed them to the file one at a time** using Bash appe
 cat >> <filepath> <<'CHAIR_EOF'
 
 ---
-
 ## Round 1, opening statements
 CHAIR_EOF
 ```
@@ -288,7 +286,6 @@ Once outputs are in, feed them to the file **one at a time** with Bash append, s
 cat >> <filepath> <<'CHAIR_EOF'
 
 ---
-
 ## Round 2, rebuttals
 CHAIR_EOF
 ```
@@ -318,7 +315,6 @@ Once outputs are in, feed them to the file **one at a time** with Bash append, s
 cat >> <filepath> <<'CHAIR_EOF'
 
 ---
-
 ## Round 3, closing statements
 CHAIR_EOF
 ```
@@ -374,13 +370,11 @@ Append the synthesis to the transcript file with Bash:
 cat >> <filepath> <<'CHAIR_EOF'
 
 ---
-
 ## Synthesis by <boss name>
 
 <synthesis verbatim>
 
 ---
-
 > The full debate (every persona, every round) is recorded above. This synthesis has also been shown in the console.
 CHAIR_EOF
 ```

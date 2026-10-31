@@ -112,8 +112,7 @@ core-skills/<skill-name>/
 AgentDock 使用 Agent Skills 风格的字段：
 
 ```yaml
----
-name: example-skill
+---name: example-skill
 description: 清楚说明何时使用、解决什么问题
 license: Apache-2.0
 compatibility: Requires Python 3.11 or later.
@@ -121,7 +120,6 @@ metadata:
   owner: example-team
 allowed-tools: exec_command
 ---
-
 # Example Skill
 ```
 

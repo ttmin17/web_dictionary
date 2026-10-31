@@ -27,7 +27,6 @@ signals:
   stars_growth_pct: 3
   trending_score: 1279
   rank_current: 11
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 41692
@@ -48,14 +47,7 @@ tool:
   install_command: pip install deeptutor
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - deeptutor
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.

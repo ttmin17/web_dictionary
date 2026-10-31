@@ -3,7 +3,9 @@ slug: oomol-lab-open-connector
 name: open-connector
 tagline: Open-source auth gateway connecting 1500+ SaaS providers to AI agents
   through SDK, CLI, MCP, HTTP, and OpenAPI.
-summary: English | 简体中文 | 繁體中文 | 日本語 | 한국어 | Русский | Français | Español
+summary: OpenConnector is an open-source connector gateway for AI agents and an
+  alternative to Pipedream/Composio. Connect user app accounts once, then expose
+  a shared catalog of 1,000+ providers and 10,000+ prebuilt Actions t...
 categories:
   - agent-frameworks
 tags:
@@ -27,8 +29,7 @@ signals:
   stars_delta_7d: 45
   stars_growth_pct: 0.7
   trending_score: 45.33
-  rank_current: 82
-  rank_delta: null
+  rank_current: 83
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6047

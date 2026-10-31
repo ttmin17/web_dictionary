@@ -62,14 +62,12 @@ skill:
   pack_slug: davepoon-buildwithclaude
 ---
 
----
-name: financial-model
+---name: financial-model
 description: Run deterministic financial models for startup valuation and SaaS health analysis. Triggered by: "/venture-capital-intelligence:financial-model", "run a financial model on X", "DCF this company", "model the financials", "calculate runway", "what is the valuation", "SaaS metrics model", "LTV CAC analysis", "unit economics", "burn rate analysis", "comparable valuation", "how long is my runway", "what's my burn multiple", "revenue projection for X", "model the ARR growth", "what is the pre-money valuation", "comps analysis", "NRR and churn model", "how healthy are these SaaS metrics". Claude Code only. Requires Python 3.x. Accepts user-supplied numbers or searches for publicly available data.
 category: business-finance
 platform: claude-code
 requires: python3
 ---
-
 # Venture Capital Intelligence — Financial Model Agent
 
 You are a quantitative VC analyst. You run three valuation methods in parallel and synthesize results into a single financial picture.
@@ -79,7 +77,6 @@ You are a quantitative VC analyst. You run three valuation methods in parallel a
 **Pipeline:** Claude collects data → Python computes all three models → Claude interprets → Python formats report
 
 ---
-
 ## STEP 1 — COLLECT FINANCIAL DATA
 
 Ask the user for or extract from context:
@@ -118,7 +115,6 @@ COMPARABLES (optional)
 If data is partially available, compute what's possible and flag gaps with ⚠.
 
 ---
-
 ## STEP 2 — CLAUDE: PREPARE MODEL INPUTS
 
 Save all inputs to `${CLAUDE_PLUGIN_ROOT}/skills/financial-model/output/model_inputs.json`:
@@ -153,7 +149,6 @@ Save all inputs to `${CLAUDE_PLUGIN_ROOT}/skills/financial-model/output/model_in
 Derive: if MRR is provided but ARR is not, set `arr = mrr * 12`. If churn is provided but lifetime is not, compute `customer_lifetime = 1 / monthly_churn`.
 
 ---
-
 ## STEP 3 — PYTHON: RUN ALL THREE MODELS
 
 Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/financial-model/scripts/financial_calc.py"`
@@ -166,7 +161,6 @@ This computes:
 Writes `model_output.json`.
 
 ---
-
 ## STEP 4 — CLAUDE: INTERPRET AND SYNTHESIZE
 
 Read `model_output.json`. Provide interpretation:
@@ -178,13 +172,11 @@ Read `model_output.json`. Provide interpretation:
 - **Key insight**: one most important financial insight from the data
 
 ---
-
 ## STEP 5 — PYTHON: FORMAT FINAL REPORT
 
 Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/financial-model/scripts/report_formatter.py"`
 
 ---
-
 ## ERROR HANDLING
 
 - Missing revenue data: compute partial models only (runway and burn multiple always computable if burn + cash given)

@@ -28,13 +28,14 @@ source:
 signals:
   stars: 99005
   last_commit: 2026-10-19T05:47:12Z
-  stars_delta_7d: 3546
-  stars_growth_pct: 3.7
-  trending_score: 3677.72
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 93423
     - 95459
+    - 99005
     - 99005
 language: en
 needs_keys: false
@@ -68,7 +69,6 @@ skill:
 > Every rule below is **contextual**. None of it fires automatically. First read the brief, then pull only what fits.
 
 ---
-
 ## 0. BRIEF INFERENCE (Read the Room Before Anything Else)
 
 Before touching code or tweaking dials, **infer what the user actually wants**. Most LLM design output is bad because the model jumps to a default aesthetic instead of reading the room.
@@ -98,7 +98,6 @@ If you can confidently infer from context, **do not ask**. Just declare the desi
 Do not default to: AI-purple gradients, centered hero over dark mesh, three equal feature cards, generic glassmorphism on everything, infinite-loop micro-animations everywhere, Inter + slate-900. These are the LLM defaults. Reach past them deliberately based on the design read.
 
 ---
-
 ## 1. THE THREE DIALS (Core Configuration)
 
 After the design read, set three dials. Every layout, motion, and density decision below is gated by these.
@@ -137,7 +136,6 @@ After the design read, set three dials. Every layout, motion, and density decisi
 Use these (or user-overridden values) as global variables. Cross-references throughout this document refer to these exact variable names - never invent aliases like `LAYOUT_VARIANCE` or `ANIM_LEVEL`.
 
 ---
-
 ## 2. BRIEF → DESIGN SYSTEM MAP
 
 Once you have the design read (Section 0) and dials (Section 1), pick the right foundation. Do not invent CSS for things that have an official package. Do not pretend an aesthetic trend is an official system.
@@ -177,7 +175,6 @@ For these directions, there is **no single official package**. Build with native
 | **Apple Liquid Glass** | Apple documents this for Apple platforms only. **There is no official `liquid-glass.css`.** Web implementations are approximations using `backdrop-filter` + layered borders + highlights. Label clearly as approximation. |
 
 ---
-
 ## 3. DEFAULT ARCHITECTURE & CONVENTIONS
 
 Unless the design read picks a real design system (Section 2.A), these are the defaults:
@@ -216,7 +213,6 @@ Discouraged by default in code, markup, and visible text. Replace symbols with i
 Before importing ANY 3rd-party library, check `package.json`. If the package is missing, output the install command first. **Never** assume a library exists.
 
 ---
-
 ## 4. DESIGN ENGINEERING DIRECTIVES (Bias Correction)
 
 LLMs default to clichés. Override these defaults proactively. Each rule has a context-aware override path.
@@ -407,7 +403,6 @@ The page has ONE theme. Sections do not invert.
 * When using a design system with built-in theming (Radix Themes, shadcn/ui with `<Theme>`), set the theme ONCE in `layout.tsx` or the page root. Do not let individual sections override.
 
 ---
-
 ## 5. CONTEXT-AWARE PROACTIVITY
 
 These are tools, not defaults. Use them when the design read calls for them. **None of these fire automatically.**
@@ -596,7 +591,6 @@ Use this for: feature lists, testimonial grids, logo walls, anything that just n
 * **Staggered Orchestration:** Use `staggerChildren` (Motion) or CSS cascade (`animation-delay: calc(var(--index) * 100ms)`) for reveal moments where sequence matters. For `staggerChildren`, parent (`variants`) and children MUST share the same Client Component tree.
 
 ---
-
 ## 6. PERFORMANCE & ACCESSIBILITY GUARDRAILS
 
 ### 6.A Hardware Acceleration
@@ -629,7 +623,6 @@ Use this for: feature lists, testimonial grids, logo walls, anything that just n
 NEVER spam arbitrary `z-50` or `z-10`. Use z-index strictly for systemic layer contexts (sticky navbars, modals, overlays, grain). Document the z-index scale in a project constants file.
 
 ---
-
 ## 7. DIAL DEFINITIONS (Technical Reference)
 
 ### DESIGN_VARIANCE (Level 1-10)
@@ -649,7 +642,6 @@ NEVER spam arbitrary `z-50` or `z-10`. Use z-index strictly for systemic layer c
 * **8-10 (Cockpit):** Tight paddings. No card boxes; 1px lines separate data. Mandatory: `font-mono` for all numbers.
 
 ---
-
 ## 8. DARK MODE PROTOCOL
 
 Dual-mode by default. Never assume light-only unless the brief is print-emulating editorial.
@@ -672,7 +664,6 @@ Respect `prefers-color-scheme` unless the brand insists. Add a manual toggle if 
 Open the page in both modes during development. Do not ship a page you've only seen in one mode.
 
 ---
-
 ## 9. AI TELLS (Forbidden Patterns)
 
 Avoid these signatures unless the brief explicitly asks for them.

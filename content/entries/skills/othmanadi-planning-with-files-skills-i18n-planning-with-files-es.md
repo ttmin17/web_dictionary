@@ -4,8 +4,9 @@ name: es
 tagline: Planificación persistente basada en archivos para tareas multipaso de
   agentes de IA. Mantiene task_plan.md, findings.md y progress.md en disco; los
   ho
-summary: "Antes de continuar, resuelve el directorio del plan que pertenece a
-  esta tarea:"
+summary: 1. Usa el scripts/resolve-plan-dir.sh instalado (o .ps1) con el PLANID
+  y PWFPLANROOT del host, y lee taskplan.md, progress.md y findings.md desde ese
+  único directorio seleccionado. 2. Si se rechaza un selector explíci...
 categories:
   - agent-frameworks
 tags:

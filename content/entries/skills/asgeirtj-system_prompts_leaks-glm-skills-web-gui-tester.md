@@ -57,11 +57,9 @@ skill:
   pack_slug: asgeirtj-system_prompts_leaks
 ---
 
----
-name: web-gui-tester
+---name: web-gui-tester
 description: Use the browser automation tooling available in the session to test web frontends interactively in a purely GUI-based, black-box manner: simulate real user clicks, text input, scrolling, and other actions; use screenshots for visual verification and read-only DOM inspection for cross-validation; and produce a final test report. Suitable for verifying whether web functionality works correctly, reproducing frontend bugs, checking interaction feedback and layout styling, or conducting exploratory testing of a page. Use this skill when the user asks to test a webpage/frontend feature, verify UI behavior, reproduce a page bug, or provides only a URL and asks you to "test it."
 ---
-
 ## Core Principles
 
 1. **Pure GUI black-box testing**: Interact only with elements that are visible and operable on the page, simulating real user behavior. During verification, screenshots and/or read-only DOM inspection are allowed, but injecting JavaScript to modify page state, trigger interactions, or bypass frontend logic is strictly prohibited.
@@ -71,7 +69,6 @@ description: Use the browser automation tooling available in the session to test
 5. **Follow the browser tooling's own usage rules**: Run the test with whatever browser automation tooling the session actually provides (a browser automation MCP tool, a built-in browser runtime, etc.). If that tooling ships its own usage skill or API documentation, complete its required initialization and read that documentation first, and obey its rules for actions, element location, waiting, and observation throughout the test. This skill defines the testing methodology only; when it conflicts with the tooling's own rules, the tooling's rules win.
 
 ---
-
 ## Phase One: Scenario Assessment and Test Planning
 
 Choose the appropriate strategy based on the completeness of the information provided by the user.
@@ -102,7 +99,6 @@ Choose the appropriate strategy based on the completeness of the information pro
 4. **Present the plan and begin immediately**: Show the test plan to the user, then start with P0 without waiting for confirmation. The user may interrupt or adjust the plan at any time. Exception: If the page requires login credentials or testing involves writing real data, such as placing an order, making a payment, or deleting data, stop and ask the user for confirmation before continuing.
 
 ---
-
 ## Phase Two: Test Environment Preparation, When Needed
 
 Before formal testing begins, any necessary method may be used to prepare the test environment. The black-box testing restrictions do not apply during this phase.
@@ -123,7 +119,6 @@ Before formal testing begins, any necessary method may be used to prepare the te
 4. **Record all setup operations**: Explain all environment preparation actions in the final report so the user can distinguish between preconfigured states and states produced by the test itself.
 
 ---
-
 ## Phase Three: Test Execution: Action → Observation → Action loop/cycle
 
 ### Permitted tools
@@ -199,7 +194,6 @@ Then view both screenshots as required under "Visual verification" above. For or
 If the browser tooling supports read-only console listening or log reading, register it at the start of testing (read-only, so it does not violate the black-box principle), collect error-level logs and uncaught page exceptions throughout, and list them separately in the final report with the operation step at which each occurred. If the tooling provides no such capability, do not work around it by injecting listeners via JavaScript. Instead, use **visible error manifestations on the page** as evidence—error message text, blank screens or empty regions, failed-resource placeholders, broken layout, and so on—capture screenshots, note the corresponding steps, and state honestly in the report that console information could not be collected.
 
 ---
-
 ## Phase Four: Output Test Conclusions
 
 After testing is complete, summarize the results based on every recorded observation:

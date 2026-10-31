@@ -98,7 +98,6 @@ Then run /gsd:graphify build to create the initial graph.
 ```
 
 ---
-
 ## Step 2 -- Parse Argument
 
 Parse `$ARGUMENTS` to determine the operation mode:
@@ -172,7 +171,6 @@ If no snapshot exists, suggest running `build` twice (first to create, second to
 **STOP** after displaying diff. Do not spawn an agent.
 
 ---
-
 ## Step 3 -- Build (Agent Spawn)
 
 Run pre-flight check first:
@@ -243,7 +241,6 @@ If something fails at any step, output: ## GRAPHIFY BUILD FAILED with details."
 Wait for the agent to complete.
 
 ---
-
 ## Anti-Patterns
 
 1. DO NOT spawn an agent for query/status/diff operations -- these are inline CLI calls

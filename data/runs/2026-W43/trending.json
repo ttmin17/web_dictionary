@@ -1,40 +1,14 @@
 {
   "week": "2026-W43",
-  "generated_at": "2026-10-19T07:41:40.292Z",
+  "generated_at": "2026-10-31T15:55:51.605Z",
   "summary": {
     "week": "2026-W43",
-    "generated_at": "2026-10-19T07:41:40.292Z",
+    "generated_at": "2026-10-31T15:55:51.605Z",
     "total_new_tools": 724,
-    "total_stars_gained": 6234921,
-    "total_active_entries": 5754
+    "total_stars_gained": 338728,
+    "total_active_entries": 5760
   },
   "top25_overall": [
-    {
-      "slug": "firecrawl-firecrawl-skills-firecrawl-build-interact",
-      "name": "build-interact",
-      "type": "agent_skill",
-      "categories": [
-        "browser-web"
-      ],
-      "stars": 192877,
-      "stars_delta_7d": 185284,
-      "stars_growth_pct": 2440.2,
-      "trending_score": 555852,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        7566,
-        7593,
-        192877
-      ],
-      "tagline": "Agent skill from firecrawl/firecrawl",
-      "repo": "firecrawl/firecrawl",
-      "is_pack_primary": true,
-      "pack_slug": "firecrawl-firecrawl",
-      "created_at": "2024-04-15T21:02:29Z",
-      "pushed_at": "2026-10-19T07:28:21Z",
-      "rank_current": 1,
-      "rank_delta": null
-    },
     {
       "slug": "morluto-rea",
       "name": "rea",
@@ -65,7 +39,7 @@
       "name": "chat-visuals",
       "type": "agent_skill",
       "categories": [
-        "agent-frameworks"
+        "coding-agents"
       ],
       "stars": 97177,
       "stars_delta_7d": 5791,
@@ -83,7 +57,7 @@
       "pack_slug": "stablyai-orca",
       "created_at": "2026-03-17T03:28:57Z",
       "pushed_at": "2026-10-19T07:28:54Z",
-      "rank_current": 2,
+      "rank_current": 1,
       "rank_delta": null
     },
     {
@@ -109,7 +83,7 @@
       "pack_slug": "anthropics-claude-plugins-official",
       "created_at": "2025-11-20T18:36:20Z",
       "pushed_at": "2026-10-18T17:04:56Z",
-      "rank_current": 3,
+      "rank_current": 2,
       "rank_delta": null
     },
     {
@@ -135,7 +109,7 @@
       "pack_slug": "affaan-m-ecc",
       "created_at": "2026-01-18T00:51:51Z",
       "pushed_at": "2026-10-19T05:03:15Z",
-      "rank_current": 4,
+      "rank_current": 3,
       "rank_delta": null
     },
     {
@@ -161,7 +135,7 @@
       "pack_slug": "dietrichgebert-ponytail",
       "created_at": "2026-06-12T00:52:37Z",
       "pushed_at": "2026-10-18T01:55:14Z",
-      "rank_current": 5,
+      "rank_current": 4,
       "rank_delta": null
     },
     {
@@ -187,7 +161,7 @@
       "pack_slug": "cathrynlavery-diagram-design",
       "created_at": "2026-04-16T18:01:16Z",
       "pushed_at": "2026-10-16T19:42:46Z",
-      "rank_current": 6,
+      "rank_current": 5,
       "rank_delta": null
     },
     {
@@ -212,7 +186,7 @@
       "pack_slug": "k-dense-ai-scientific-agent-skills",
       "created_at": "2025-10-19T20:54:15Z",
       "pushed_at": "2026-10-15T23:57:39Z",
-      "rank_current": 7,
+      "rank_current": 6,
       "rank_delta": null
     },
     {
@@ -220,7 +194,7 @@
       "name": "brandkit",
       "type": "agent_skill",
       "categories": [
-        "cloud-infra"
+        "coding-agents"
       ],
       "stars": 99005,
       "stars_delta_7d": 3546,
@@ -238,7 +212,7 @@
       "pack_slug": "leonxlnx-taste-skill",
       "created_at": "2026-02-19T21:44:05Z",
       "pushed_at": "2026-10-19T05:47:12Z",
-      "rank_current": 8,
+      "rank_current": 7,
       "rank_delta": null
     },
     {
@@ -308,7 +282,7 @@
         126101,
         128604
       ],
-      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, ",
       "repo": "Graphify-Labs/graphify",
       "is_pack_primary": true,
       "created_at": "2026-04-03T15:49:07Z",
@@ -410,7 +384,7 @@
         76033,
         78236
       ],
-      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 900+ contributors",
+      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Work",
       "repo": "diegosouzapw/OmniRoute",
       "is_pack_primary": true,
       "created_at": "2026-02-13T12:38:31Z",
@@ -423,7 +397,7 @@
       "name": "cavecrew",
       "type": "agent_skill",
       "categories": [
-        "agent-frameworks"
+        "other"
       ],
       "stars": 113528,
       "stars_delta_7d": 2123,
@@ -501,7 +475,7 @@
       "name": "hermes-agent",
       "type": "agent_tool",
       "categories": [
-        "domain-research"
+        "other"
       ],
       "stars": 255031,
       "stars_delta_7d": 1650,
@@ -590,7 +564,7 @@
         87256,
         88548
       ],
-      "tagline": "🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "tagline": "🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDce",
       "repo": "D4Vinci/Scrapling",
       "is_pack_primary": true,
       "created_at": "2024-10-13T20:29:53Z",
@@ -603,7 +577,7 @@
       "name": "slim",
       "type": "agent_skill",
       "categories": [
-        "media-creative"
+        "other"
       ],
       "stars": 16800,
       "stars_delta_7d": 1143,
@@ -640,142 +614,41 @@
         10958,
         11927
       ],
-      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
+      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thou",
       "repo": "apify/apify-mcp-server",
       "is_pack_primary": true,
       "created_at": "2025-01-02T15:43:09Z",
       "pushed_at": "2026-10-16T15:37:39Z",
       "rank_current": 1,
       "rank_delta": null
+    },
+    {
+      "slug": "vibheksoni-stealth-browser-mcp",
+      "name": "stealth-browser-mcp",
+      "type": "mcp_server",
+      "categories": [
+        "browser-web"
+      ],
+      "stars": 3000,
+      "stars_delta_7d": 777,
+      "stars_growth_pct": 35,
+      "trending_score": 1048.58,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        2212,
+        2223,
+        3000
+      ],
+      "tagline": "Stealth browser automation for AI agents over MCP and the Chrome DevTools Protocol: navigation, network hooks, DOM extraction, and pixel-accurate UI c",
+      "repo": "vibheksoni/stealth-browser-mcp",
+      "is_pack_primary": true,
+      "created_at": "2025-08-09T02:47:19Z",
+      "pushed_at": "2026-10-12T13:19:48Z",
+      "rank_current": 2,
+      "rank_delta": null
     }
   ],
   "breakout_new": [
-    {
-      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-ai-visibility",
-      "name": "ai-visibility",
-      "type": "agent_skill",
-      "categories": [
-        "domain-research"
-      ],
-      "stars": 6078,
-      "stars_delta_7d": 838,
-      "stars_growth_pct": 16,
-      "trending_score": 972.02,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        5240,
-        6078
-      ],
-      "tagline": "Measure real AI-engine visibility — traffic from ChatGPT, Perplexity, Claude, Gemini and which pages they cite — from actual GA4 referral data, not prompt sampling. Use when asked \"AI visibility\", \"GEO/AEO check\", \"do LLMs cite us\", \"traffic from ChatGPT\", or \"how do we show up in AI search\".",
-      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills",
-      "is_pack_primary": true,
-      "pack_slug": "ryze-ai-adgent-open-seo-mcp-skills",
-      "created_at": "2026-08-29T23:37:01Z",
-      "pushed_at": "2026-10-13T03:37:44Z",
-      "rank_current": 19,
-      "rank_delta": null
-    },
-    {
-      "slug": "nateherkai-scroll-craft-plugins-nateherk-design-skills-scroll-craft",
-      "name": "scroll-craft",
-      "type": "agent_skill",
-      "categories": [
-        "media-creative"
-      ],
-      "stars": 3649,
-      "stars_delta_7d": 315,
-      "stars_growth_pct": 9.4,
-      "trending_score": 344.76,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        2978,
-        3334,
-        3649
-      ],
-      "tagline": "Agent skill from nateherkai/scroll-craft",
-      "repo": "nateherkai/scroll-craft",
-      "is_pack_primary": true,
-      "pack_slug": "nateherkai-scroll-craft",
-      "created_at": "2026-08-22T15:25:08Z",
-      "pushed_at": "2026-09-30T13:31:42Z",
-      "rank_current": 36,
-      "rank_delta": null
-    },
-    {
-      "slug": "zju-real-easel-skills-builtin-ai-image-gen",
-      "name": "ai-image-gen",
-      "type": "agent_skill",
-      "categories": [
-        "productivity-ops"
-      ],
-      "stars": 3844,
-      "stars_delta_7d": 277,
-      "stars_growth_pct": 7.8,
-      "trending_score": 298.51,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        3567,
-        3844
-      ],
-      "tagline": "Agent skill from ZJU-REAL/Easel",
-      "repo": "ZJU-REAL/Easel",
-      "is_pack_primary": true,
-      "pack_slug": "zju-real-easel",
-      "created_at": "2026-08-28T02:22:27Z",
-      "pushed_at": "2026-10-18T10:45:50Z",
-      "rank_current": 41,
-      "rank_delta": null
-    },
-    {
-      "slug": "xiaoduoya-codex-with-chatgpt",
-      "name": "codex-with-chatgpt",
-      "type": "mcp_server",
-      "categories": [
-        "security-auth"
-      ],
-      "stars": 7457,
-      "stars_delta_7d": 112,
-      "stars_growth_pct": 1.5,
-      "trending_score": 113.71,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        7095,
-        7345,
-        7457
-      ],
-      "tagline": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
-      "repo": "XiaoDuoYa/codex-with-chatgpt",
-      "is_pack_primary": true,
-      "created_at": "2026-08-28T12:57:24Z",
-      "pushed_at": "2026-10-01T05:19:24Z",
-      "rank_current": 12,
-      "rank_delta": null
-    },
-    {
-      "slug": "duty1g-x64dbg-mcp-server",
-      "name": "x64dbg-mcp-server",
-      "type": "agent_skill",
-      "categories": [
-        "security-auth"
-      ],
-      "stars": 2563,
-      "stars_delta_7d": 79,
-      "stars_growth_pct": 3.2,
-      "trending_score": 81.51,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        2484,
-        2563
-      ],
-      "tagline": "Agent skill from duty1g/x64dbg-mcp-server",
-      "repo": "duty1g/x64dbg-mcp-server",
-      "is_pack_primary": true,
-      "pack_slug": "duty1g-x64dbg-mcp-server",
-      "created_at": "2026-08-22T14:28:41Z",
-      "pushed_at": "2026-10-12T08:49:17Z",
-      "rank_current": 71,
-      "rank_delta": null
-    },
     {
       "slug": "oldcircle-geo-sleuth-skills-geo-sleuth",
       "name": "geo-sleuth",
@@ -784,7 +657,7 @@
         "domain-research"
       ],
       "stars": 3399,
-      "stars_delta_7d": 761,
+      "stars_delta_7d": 469,
       "stars_growth_pct": 0,
       "trending_score": 0,
       "velocity_source": "age_velocity",
@@ -817,7 +690,7 @@
         10958,
         11927
       ],
-      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
+      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thou",
       "repo": "apify/apify-mcp-server",
       "is_pack_primary": true,
       "created_at": "2025-01-02T15:43:09Z",
@@ -842,7 +715,7 @@
         2223,
         3000
       ],
-      "tagline": "Stealth browser automation for AI agents over MCP and the Chrome DevTools Protocol: navigation, network hooks, DOM extraction, and pixel-accurate UI cloning.",
+      "tagline": "Stealth browser automation for AI agents over MCP and the Chrome DevTools Protocol: navigation, network hooks, DOM extraction, and pixel-accurate UI c",
       "repo": "vibheksoni/stealth-browser-mcp",
       "is_pack_primary": true,
       "created_at": "2025-08-09T02:47:19Z",
@@ -892,7 +765,7 @@
         4710,
         5247
       ],
-      "tagline": "Google Ads MCP server + Meta Ads MCP (Facebook Ads MCP) + Google Analytics MCP (GA4) + Search Console in one hosted remote MCP for Claude, ChatGPT, Cursor & n8n: OAuth login, no API keys, approval-gated writes, 7-day free trial. By Ryze AI.",
+      "tagline": "Google Ads MCP server + Meta Ads MCP (Facebook Ads MCP) + Google Analytics MCP (GA4) + Search Console in one hosted remote MCP for Claude, ChatGPT, Cu",
       "repo": "irinabuht12-oss/google-ads-meta-ads-mcp",
       "is_pack_primary": true,
       "created_at": "2026-04-06T04:41:14Z",
@@ -917,7 +790,7 @@
         46502,
         46887
       ],
-      "tagline": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 162 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+      "tagline": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent graph, with CBM Lens, MCP tools, agent int",
       "repo": "DeusData/codebase-memory-mcp",
       "is_pack_primary": true,
       "created_at": "2026-02-24T22:01:00Z",
@@ -930,7 +803,7 @@
       "name": "chrome-devtools-mcp",
       "type": "mcp_server",
       "categories": [
-        "browser-web"
+        "coding-agents"
       ],
       "stars": 53815,
       "stars_delta_7d": 365,
@@ -1001,6 +874,30 @@
       "rank_delta": null
     },
     {
+      "slug": "lidge-jun-opencodex",
+      "name": "opencodex",
+      "type": "mcp_server",
+      "categories": [
+        "agent-frameworks"
+      ],
+      "stars": 17586,
+      "stars_delta_7d": 233,
+      "stars_growth_pct": 1.3,
+      "trending_score": 236.13,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        17353,
+        17586
+      ],
+      "tagline": "Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude C",
+      "repo": "lidge-jun/opencodex",
+      "is_pack_primary": true,
+      "created_at": "2026-06-01T00:00:00Z",
+      "pushed_at": "2026-10-19T07:25:46Z",
+      "rank_current": 9,
+      "rank_delta": null
+    },
+    {
       "slug": "bethington-ghidra-mcp",
       "name": "ghidra-mcp",
       "type": "mcp_server",
@@ -1017,73 +914,22 @@
         5559,
         5782
       ],
-      "tagline": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch operations, Ghidra Server integration, and Docker deployment.",
+      "tagline": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch ",
       "repo": "bethington/ghidra-mcp",
       "is_pack_primary": true,
       "created_at": "2025-08-30T06:40:03Z",
       "pushed_at": "2026-10-16T01:17:04Z",
-      "rank_current": 9,
-      "rank_delta": null
-    },
-    {
-      "slug": "github-github-mcp-server",
-      "name": "github-mcp-server",
-      "type": "mcp_server",
-      "categories": [
-        "coding-agents"
-      ],
-      "stars": 33745,
-      "stars_delta_7d": 166,
-      "stars_growth_pct": 0.5,
-      "trending_score": 166.82,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        33427,
-        33579,
-        33745
-      ],
-      "tagline": "GitHub's official MCP Server",
-      "repo": "github/github-mcp-server",
-      "is_pack_primary": true,
-      "created_at": "2025-03-04T16:42:04Z",
-      "pushed_at": "2026-10-15T21:16:40Z",
       "rank_current": 10,
       "rank_delta": null
     }
   ],
   "top10_skills": [
     {
-      "slug": "firecrawl-firecrawl-skills-firecrawl-build-interact",
-      "name": "build-interact",
-      "type": "agent_skill",
-      "categories": [
-        "browser-web"
-      ],
-      "stars": 192877,
-      "stars_delta_7d": 185284,
-      "stars_growth_pct": 2440.2,
-      "trending_score": 555852,
-      "velocity_source": "snapshot_delta",
-      "sparkline_4w": [
-        7566,
-        7593,
-        192877
-      ],
-      "tagline": "Agent skill from firecrawl/firecrawl",
-      "repo": "firecrawl/firecrawl",
-      "is_pack_primary": true,
-      "pack_slug": "firecrawl-firecrawl",
-      "created_at": "2024-04-15T21:02:29Z",
-      "pushed_at": "2026-10-19T07:28:21Z",
-      "rank_current": 1,
-      "rank_delta": null
-    },
-    {
       "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
       "name": "chat-visuals",
       "type": "agent_skill",
       "categories": [
-        "agent-frameworks"
+        "coding-agents"
       ],
       "stars": 97177,
       "stars_delta_7d": 5791,
@@ -1101,7 +947,7 @@
       "pack_slug": "stablyai-orca",
       "created_at": "2026-03-17T03:28:57Z",
       "pushed_at": "2026-10-19T07:28:54Z",
-      "rank_current": 2,
+      "rank_current": 1,
       "rank_delta": null
     },
     {
@@ -1127,7 +973,7 @@
       "pack_slug": "anthropics-claude-plugins-official",
       "created_at": "2025-11-20T18:36:20Z",
       "pushed_at": "2026-10-18T17:04:56Z",
-      "rank_current": 3,
+      "rank_current": 2,
       "rank_delta": null
     },
     {
@@ -1153,7 +999,7 @@
       "pack_slug": "affaan-m-ecc",
       "created_at": "2026-01-18T00:51:51Z",
       "pushed_at": "2026-10-19T05:03:15Z",
-      "rank_current": 4,
+      "rank_current": 3,
       "rank_delta": null
     },
     {
@@ -1179,7 +1025,7 @@
       "pack_slug": "dietrichgebert-ponytail",
       "created_at": "2026-06-12T00:52:37Z",
       "pushed_at": "2026-10-18T01:55:14Z",
-      "rank_current": 5,
+      "rank_current": 4,
       "rank_delta": null
     },
     {
@@ -1205,7 +1051,7 @@
       "pack_slug": "cathrynlavery-diagram-design",
       "created_at": "2026-04-16T18:01:16Z",
       "pushed_at": "2026-10-16T19:42:46Z",
-      "rank_current": 6,
+      "rank_current": 5,
       "rank_delta": null
     },
     {
@@ -1230,7 +1076,7 @@
       "pack_slug": "k-dense-ai-scientific-agent-skills",
       "created_at": "2025-10-19T20:54:15Z",
       "pushed_at": "2026-10-15T23:57:39Z",
-      "rank_current": 7,
+      "rank_current": 6,
       "rank_delta": null
     },
     {
@@ -1238,7 +1084,7 @@
       "name": "brandkit",
       "type": "agent_skill",
       "categories": [
-        "cloud-infra"
+        "coding-agents"
       ],
       "stars": 99005,
       "stars_delta_7d": 3546,
@@ -1256,7 +1102,7 @@
       "pack_slug": "leonxlnx-taste-skill",
       "created_at": "2026-02-19T21:44:05Z",
       "pushed_at": "2026-10-19T05:47:12Z",
-      "rank_current": 8,
+      "rank_current": 7,
       "rank_delta": null
     },
     {
@@ -1308,6 +1154,32 @@
       "pushed_at": "2026-10-19T04:44:53Z",
       "rank_current": 10,
       "rank_delta": null
+    },
+    {
+      "slug": "addyosmani-agent-skills-skills-api-and-interface-design",
+      "name": "api-and-interface-design",
+      "type": "agent_skill",
+      "categories": [
+        "media-creative"
+      ],
+      "stars": 108318,
+      "stars_delta_7d": 2265,
+      "stars_growth_pct": 2.1,
+      "trending_score": 2313.37,
+      "velocity_source": "snapshot_delta",
+      "sparkline_4w": [
+        102528,
+        106053,
+        108318
+      ],
+      "tagline": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
+      "repo": "addyosmani/agent-skills",
+      "is_pack_primary": true,
+      "pack_slug": "addyosmani-agent-skills",
+      "created_at": "2026-02-15T20:20:26Z",
+      "pushed_at": "2026-10-13T20:24:07Z",
+      "rank_current": 11,
+      "rank_delta": null
     }
   ],
   "top10_tools": [
@@ -1353,7 +1225,7 @@
         126101,
         128604
       ],
-      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, ",
       "repo": "Graphify-Labs/graphify",
       "is_pack_primary": true,
       "created_at": "2026-04-03T15:49:07Z",
@@ -1403,7 +1275,7 @@
         76033,
         78236
       ],
-      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 900+ contributors",
+      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Work",
       "repo": "diegosouzapw/OmniRoute",
       "is_pack_primary": true,
       "created_at": "2026-02-13T12:38:31Z",
@@ -1416,7 +1288,7 @@
       "name": "hermes-agent",
       "type": "agent_tool",
       "categories": [
-        "domain-research"
+        "other"
       ],
       "stars": 255031,
       "stars_delta_7d": 1650,
@@ -1453,7 +1325,7 @@
         87256,
         88548
       ],
-      "tagline": "🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "tagline": "🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDce",
       "repo": "D4Vinci/Scrapling",
       "is_pack_primary": true,
       "created_at": "2024-10-13T20:29:53Z",
@@ -1466,7 +1338,7 @@
       "name": "headroom",
       "type": "agent_tool",
       "categories": [
-        "agent-frameworks"
+        "databases-memory"
       ],
       "stars": 75939,
       "stars_delta_7d": 750,
@@ -1478,7 +1350,7 @@
         75189,
         75939
       ],
-      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same a",
       "repo": "headroomlabs-ai/headroom",
       "is_pack_primary": true,
       "created_at": "2026-01-07T19:58:51Z",
@@ -1503,7 +1375,7 @@
         20114,
         20514
       ],
-      "tagline": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
+      "tagline": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chai",
       "repo": "NVIDIA/SkillSpector",
       "is_pack_primary": true,
       "created_at": "2026-03-21T00:28:43Z",
@@ -1528,7 +1400,7 @@
         88374,
         88774
       ],
-      "tagline": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "tagline": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational aw",
       "repo": "koala73/worldmonitor",
       "is_pack_primary": true,
       "created_at": "2026-01-08T17:26:06Z",
@@ -1553,7 +1425,7 @@
         44233,
         44513
       ],
-      "tagline": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
+      "tagline": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out to",
       "repo": "reactive-resume/reactive-resume",
       "is_pack_primary": true,
       "created_at": "2020-03-25T14:08:22Z",

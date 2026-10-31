@@ -267,5 +267,4 @@ Most Calendly list endpoints use token-based pagination:
 | Revoke org invitation | `CALENDLY_REVOKE_USER_S_ORGANIZATION_INVITATION` | org UUID, invitation UUID |
 | Remove from org | `CALENDLY_REMOVE_USER_FROM_ORGANIZATION` | membership UUID |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

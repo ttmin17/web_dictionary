@@ -222,5 +222,4 @@ Backward pagination:
 | List canned responses | HELPDESK_LIST_CANNED_RESPONSES | (none) |
 | List custom fields | HELPDESK_LIST_CUSTOM_FIELDS | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

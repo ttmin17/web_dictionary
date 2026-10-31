@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -80,7 +80,6 @@ Autonomous experiment loop inspired by [Karpathy's autoresearch](https://github.
 Not one guess — fifty measured attempts, compounding.
 
 ---
-
 ## Slash Commands
 
 | Command | What it does |
@@ -92,7 +91,6 @@ Not one guess — fifty measured attempts, compounding.
 | `/ar:ar-resume` | Resume a paused experiment |
 
 ---
-
 ## When This Skill Activates
 
 Recognize these patterns from the user:
@@ -107,7 +105,6 @@ Recognize these patterns from the user:
 If the user describes a target file + a way to measure success → this skill applies.
 
 ---
-
 ## Setup
 
 ### First Time — Create the Experiment
@@ -177,7 +174,6 @@ The `--scope` flag determines where `.autoresearch/` lives:
 The user may have written their own `program.md`. If found in the experiment directory, read it. It overrides the template. Only ask for what's missing.
 
 ---
-
 ## Agent Protocol
 
 You are the loop. The scripts handle setup and evaluation — you handle the creative work.
@@ -247,7 +243,6 @@ Future iterations benefit from this accumulated knowledge.
 - **No new dependencies.** Only use what's already available in the project.
 
 ---
-
 ## Evaluators
 
 Ready-to-use evaluation scripts. Copied into the experiment directory during setup with `--evaluator`.
@@ -291,7 +286,6 @@ print(f"my_metric: {parse_score(result.stdout)}")
 ```
 
 ---
-
 ## Viewing Results
 
 ```bash
@@ -327,7 +321,6 @@ prompts         support-tone         15     6   82/100       +46.4%        done
 - **Markdown** — formatted table, readable in GitHub/docs
 
 ---
-
 ## Proactive Triggers
 
 Flag these without being asked:
@@ -341,7 +334,6 @@ Flag these without being asked:
 - **No improvement in 20+ runs** → Suggest changing strategy in program.md or trying a different approach.
 
 ---
-
 ## Installation
 
 ### One-liner (any tool)
@@ -361,7 +353,6 @@ clawhub install cs-autoresearch-agent
 ```
 
 ---
-
 ## Related Skills
 
 - **self-improving-agent** — improves an agent's own memory/rules over time. NOT for structured experiment loops.

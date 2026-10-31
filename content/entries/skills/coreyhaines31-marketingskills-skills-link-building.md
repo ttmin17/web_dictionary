@@ -100,7 +100,6 @@ Gather this context (ask if not provided):
 7. **History.** Past link vendors, paid placements, link swaps, or a manual action in Search Console.
 
 ---
-
 ## Step 1: Confirm Links Are the Bottleneck
 
 Links fix an authority gap. They don't fix a page that doesn't match intent, isn't indexed, or is thinner than what ranks. Before any outreach:

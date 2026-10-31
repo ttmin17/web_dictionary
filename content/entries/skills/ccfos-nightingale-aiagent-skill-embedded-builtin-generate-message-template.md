@@ -68,7 +68,6 @@ Nightingale message templates use Go `text/template` / `html/template` syntax (e
 This skill focuses on **writing/modifying the template fragment itself**, and does not cover creating notification rules or channel configuration.
 
 ---
-
 ## Render Context
 
 The `renderData` passed in when the backend executes:
@@ -90,7 +89,6 @@ The `renderData` passed in when the backend executes:
 So inside the template you can directly use `$event.xxx`, `$labels.agent_hostname`, and `$value`.
 
 ---
-
 ## Available `$event` Fields (`*AlertCurEvent`)
 
 ### Common Fields
@@ -133,7 +131,6 @@ So inside the template you can directly use `$event.xxx`, `$labels.agent_hostnam
 > User objects are commonly used in DingTalk/Feishu/Lark templates to build @-mentions; see the `ats` family of helpers below.
 
 ---
-
 ## Available Helper Functions (`tplx.TemplateFuncMap`)
 
 ### Time
@@ -186,7 +183,6 @@ So inside the template you can directly use `$event.xxx`, `$labels.agent_hostnam
 - `mapDifference <a> <b>` — set difference
 
 ---
-
 ## Syntax Differences Across Channels (`notify_channel_ident`)
 
 A message template is bound to a specific channel; the channel ident determines the text engine and escaping behavior:
@@ -200,7 +196,6 @@ A message template is bound to a specific channel; the channel ident determines 
 > Important: `html/template` automatically escapes `<` `>` `&`. **Where you don't want escaping, use `{{unescaped "…"}}` or `{{safeHtml .X}}`**, otherwise DingTalk will render a literal `&lt;`.
 
 ---
-
 ## Template Writing Workflow
 
 1. **Confirm the channel ident**: when the user says "DingTalk" it is `dingtalk`, "Feishu card" is `feishucard`, "email" is `email`. Different channels differ significantly in style.
@@ -220,7 +215,6 @@ A message template is bound to a specific channel; the channel ident determines 
 6. **Output**: wrap the template body in a markdown ``` ```gotemplate ``` code block, and at the end provide a **variable/function explanation** with each non-trivial variable/function on its own line.
 
 ---
-
 ## Output Format
 
 When replying to the user:
@@ -235,15 +229,13 @@ When replying to the user:
 The language follows the user's input (use Chinese if the input is Chinese).
 
 ---
-
 ## Built-in Reference Templates (Starting Points for Customization)
 
 ### DingTalk markdown (full version)
 
 ```gotemplate
 #### {{if $event.IsRecovered}}<font color="#008800">💚{{$event.RuleName}}</font>{{else}}<font color="#FF0000">💔{{$event.RuleName}}</font>{{end}}
----
-{{$duration := sub now.Unix $event.FirstTriggerTime}}{{if $event.IsRecovered}}{{$duration = sub $event.LastEvalTime $event.FirstTriggerTime}}{{end}}
+---{{$duration := sub now.Unix $event.FirstTriggerTime}}{{if $event.IsRecovered}}{{$duration = sub $event.LastEvalTime $event.FirstTriggerTime}}{{end}}
 - **Alert Level**: S{{$event.Severity}}
 {{- if $event.RuleNote}}
 - **Rule Note**: {{$event.RuleNote}}
@@ -295,7 +287,6 @@ Severity/State: S{{$event.Severity}} {{if $event.IsRecovered}}Recovered{{else}}T
 ```
 
 ---
-
 ## Typical Customization Scenarios
 
 ### 1) "Add the hostname to the DingTalk template"
@@ -418,8 +409,7 @@ DingTalk/email use `<font color>`, Feishu cards use the `template` field to fill
 ```gotemplate
 {{range $i, $e := .events}}
 {{- if $i}}
----
-{{end -}}
+---{{end -}}
 - Rule: {{$e.RuleName}}
 - Target: {{$e.TargetIdent}}
 - Trigger Value: {{$e.TriggerValue}}
@@ -430,7 +420,6 @@ DingTalk/email use `<font color>`, Feishu cards use the `template` field to fill
 > In the default scenario one notification has exactly one event, and the template renders with `$event = index .events 0`. When one notification aggregates multiple events (subscription aggregation, batch send) you must `range .events` to expand them.
 
 ---
-
 ## Key Considerations
 
 1. **`html/template` HTML-escapes**. Tags such as `<font>` and `<at>` in DingTalk/Feishu/Lark **must be wrapped in `unescaped` or placed in content where Go template recognizes them itself**. Email uses `text/template` and is not subject to this.
@@ -443,7 +432,6 @@ DingTalk/email use `<font color>`, Feishu cards use the `template` field to fill
 8. **Use `.domain` for links**: don't hardcode `http://localhost:17000`, otherwise switching environments breaks it.
 
 ---
-
 ## Common Mistakes
 
 - ❌ `{{$event.TriggerValue | printf "%.2f"}}` — for `printf`, the first argument is the format, and `TriggerValue` is a string.

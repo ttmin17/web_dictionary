@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -108,7 +108,6 @@ Prompts are stored somewhere but there is no systematic quality testing. Build a
 Registry and evals exist. Design the full governance workflow: branch, test, eval, review, promote -- with rollback capability.
 
 ---
-
 ## Mode 1: Build Prompt Registry
 
 **What a prompt registry provides:**
@@ -160,7 +159,6 @@ For larger teams: API-accessible prompt registry with key tables for prompts and
 To initialize a file-based registry, create the directory structure above and populate the registry YAML with your existing prompts, their current versions, and ownership metadata.
 
 ---
-
 ## Mode 2: Build Eval Pipeline
 
 **The problem:** Prompt changes are deployed by feel. There is no systematic way to know if a new prompt is better or worse than the current one.
@@ -201,7 +199,6 @@ Pass thresholds (calibrate to your use case):
 To execute evals, build a runner that iterates through the golden dataset, calls the LLM with the prompt version under test, scores each response against the expected output, and reports aggregate pass rate and failure details.
 
 ---
-
 ## Mode 3: Governed Iteration
 
 The full prompt deployment lifecycle with gates at each stage:
@@ -232,7 +229,6 @@ When you want to measure real-user impact, not just eval scores:
 One-command rollback promotes the previous version back to production status in the registry, then verify by re-running evals against the restored version.
 
 ---
-
 ## Proactive Triggers
 
 Surface these without being asked:
@@ -245,7 +241,6 @@ Surface these without being asked:
 - **Prompt changes deployed without eval** -- Every uneval'd deploy is a bet. Flag when the team skips evals "just this once."
 
 ---
-
 ## Output Artifacts
 
 | When you ask for... | You get... |
@@ -257,7 +252,6 @@ Surface these without being asked:
 | Governance policy | Team-facing policy doc: ownership model, review requirements, deployment gates |
 
 ---
-
 ## Communication
 
 All output follows the structured standard:
@@ -267,7 +261,6 @@ All output follows the structured standard:
 - **Confidence tagging** -- verified / medium / assumed
 
 ---
-
 ## Anti-Patterns
 
 | Anti-Pattern | Why It Fails | Better Approach |

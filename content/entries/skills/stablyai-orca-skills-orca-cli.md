@@ -4,7 +4,9 @@ name: cli
 tagline: Operate Orca-managed worktrees, folder contexts, terminals, repos,
   automations, artifacts, skill sharing, worktree comments, and Orca's embedded
   brows
-summary: "Choose the executable once and reuse it for every later command:"
+summary: "- If the ORCACLICOMMAND environment variable is set, use its value.
+  Orca exports this for managed WSL sessions. - Otherwise, in a dev checkout
+  whose session exposes ORCADEVREPOROOT, use orca-dev. - Otherwise, on Linux..."
 categories:
   - agent-frameworks
 tags:

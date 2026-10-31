@@ -4,7 +4,9 @@ name: run-experiment
 tagline: Deploy and run ML experiments on local, remote, Vast.ai, or Modal
   serverless GPU. Use when user says "run experiment", "deploy to server",
   "跑实验", or n
-summary: "Read the project's CLAUDE.md to determine the experiment environment:"
+summary: "- Local GPU (gpu: local): Look for local CUDA/MPS setup info - Remote
+  server (gpu: remote): Look for SSH alias, conda env, code directory - Vast.ai
+  (gpu: vast): Check for vast-instances.json at project root — if a run..."
 categories:
   - domain-research
 tags:

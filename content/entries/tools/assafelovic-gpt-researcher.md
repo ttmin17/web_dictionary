@@ -3,7 +3,8 @@ slug: assafelovic-gpt-researcher
 name: gpt-researcher
 tagline: An autonomous agent that conducts deep research on any data using any
   LLM providers
-summary: English | 中文 | 日本語 | 한국어 | Русский
+summary: GPT Researcher the first open deep research agent designed for both web
+  and local research on any given task.
 categories:
   - domain-research
 tags:
@@ -422,7 +423,6 @@ Our view on unbiased research claims:
 3. In research, people also tend towards biases as most have already opinions on the topics they research about. This tool scrapes many opinions and will evenly explain diverse views that a biased person would never have read.
 
 ---
-
 <p align="center">
 <a href="https://star-history.com/#assafelovic/gpt-researcher">
   <picture>

@@ -4,7 +4,10 @@ name: dexpaprika-api
 tagline: "Access DeFi data from DexPaprika: token prices, liquidity pools,
   OHLCV, transactions across 34+ blockchains and 30M+ pools. Free, no API key
   needed. I"
-summary: "Add the MCP server to your Claude Code config:"
+summary: "- getCapabilities — Server capabilities, workflow examples, network
+  synonyms - getNetworks — List 34+ supported blockchains - getStats —
+  Platform-wide statistics - getNetworkDexes — DEXes on a network -
+  getNetworkPool..."
 categories:
   - agent-frameworks
 tags:

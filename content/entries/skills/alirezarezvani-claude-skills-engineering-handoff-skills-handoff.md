@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -95,6 +95,5 @@ If the user passed arguments, treat them as a description of what the next sessi
 See [references/companion_tooling.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/handoff/skills/handoff/references/companion_tooling.md). Tools: template + dedup + recommender. Agent: `cs-handoff-author`. Command: `/cs-handoff`.
 
 ---
-
 **Version:** 1.0.0
 **Derived:** Matt Pocock (MIT) + this repo's wrapper

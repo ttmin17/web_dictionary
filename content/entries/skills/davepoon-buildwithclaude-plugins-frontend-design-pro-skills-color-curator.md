@@ -155,7 +155,6 @@ tailwind.config = {
 ```
 
 ---
-
 ## Fallback Mode
 
 When browser tools are unavailable, use curated palettes.
@@ -188,7 +187,6 @@ Users can also provide:
 - Reference: "Match these colors from my logo"
 
 ---
-
 ## Palette Best Practices
 
 ### 60-30-10 Rule
@@ -218,7 +216,6 @@ Always verify:
 | Text Muted | Captions, placeholders | 1 |
 
 ---
-
 ## Output Format
 
 Provide the selected palette in this format:
@@ -264,7 +261,6 @@ colors: {
 ```
 
 ---
-
 ## References
 
 See `references/color-theory.md` for:

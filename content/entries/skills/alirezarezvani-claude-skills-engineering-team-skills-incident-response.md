@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -70,7 +70,6 @@ skill:
 Incident response skill for the full lifecycle from initial triage through forensic collection, severity declaration, and escalation routing. This is NOT threat hunting (see threat-detection) or post-incident compliance mapping (see governance/compliance-mapping) — this is about classifying, triaging, and managing declared security incidents.
 
 ---
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -86,7 +85,6 @@ Incident response skill for the full lifecycle from initial triage through foren
 - [Cross-References](#cross-references)
 
 ---
-
 ## Overview
 
 ### What This Skill Does
@@ -107,7 +105,6 @@ This skill provides the methodology and tooling for **incident triage and respon
 A security event must be ingested before triage. Events can come from SIEM alerts, EDR detections, threat intel feeds, or user reports. The triage tool accepts JSON event payloads; see the input schema below.
 
 ---
-
 ## Incident Triage Tool
 
 The `incident_triage.py` tool classifies events, checks false positives, scores severity, determines escalation, and performs forensic pre-analysis.
@@ -149,7 +146,6 @@ echo '{"event_type": "ransomware", "host": "prod-db-01", "raw_payload": {}}' | \
 | 2 | SEV1 — critical | Immediate 15-minute war room, all-hands |
 
 ---
-
 ## Incident Classification
 
 Security events are classified into 14 incident types. Classification drives default severity, MITRE technique mapping, and response SLA.
@@ -188,7 +184,6 @@ Any of the following automatically re-declare a higher severity:
 | C-suite account accessed | SEV2 minimum |
 
 ---
-
 ## Severity Framework
 
 ### SEV Level Matrix
@@ -201,7 +196,6 @@ Any of the following automatically re-declare a higher severity:
 | SEV4 | Low | Security alert with no confirmed impact; informational indicator; policy violation with no data risk | triage only | L3 Analyst queue |
 
 ---
-
 ## False Positive Filtering
 
 The triage tool applies five filters before escalating to prevent false positive inflation.
@@ -219,7 +213,6 @@ The triage tool applies five filters before escalating to prevent false positive
 A confirmed false positive suppresses escalation and logs the suppression reason for audit purposes. Recurring false positives from the same source should be tuned out at the detection layer, not filtered repeatedly at triage.
 
 ---
-
 ## Forensic Evidence Collection
 
 Evidence collection follows the DFRWS six-phase framework and the principle of volatile-first acquisition.
@@ -253,7 +246,6 @@ Every evidence item must be recorded with:
 - Transfer log (who had custody and when)
 
 ---
-
 ## Escalation Paths
 
 ### By Severity
@@ -276,7 +268,6 @@ Every evidence item must be recorded with:
 | Supply chain | CISO + Vendor management | Board |
 
 ---
-
 ## Regulatory Notification Obligations
 
 The notification clock starts at incident declaration, not at investigation completion.
@@ -296,7 +287,6 @@ The notification clock starts at incident declaration, not at investigation comp
 Full deadline reference: `references/regulatory-deadlines.md`
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Quick Triage (15 Minutes)
@@ -361,7 +351,6 @@ done
 ```
 
 ---
-
 ## Anti-Patterns
 
 1. **Starting the notification clock at investigation completion** — Regulatory clocks (GDPR 72 hours, PCI 24 hours) start at discovery, not investigation completion. Declaring late exposes the organization to maximum penalties even if the incident itself was minor.
@@ -373,7 +362,6 @@ done
 7. **Bypassing human approval gates for containment** — Automated containment actions (network isolation, credential revocation) taken without human approval can cause production outages, destroy evidence, and create liability. Human approval is non-negotiable for all mutating containment actions.
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |

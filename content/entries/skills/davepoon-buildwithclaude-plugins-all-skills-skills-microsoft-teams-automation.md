@@ -267,5 +267,4 @@ Automate Microsoft Teams operations through Composio's Microsoft Teams toolkit v
 | Get chat message | MICROSOFT_TEAMS_GET_CHAT_MESSAGE | chat_id, message_id |
 | List joined teams | MICROSOFT_TEAMS_LIST_USER_JOINED_TEAMS | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

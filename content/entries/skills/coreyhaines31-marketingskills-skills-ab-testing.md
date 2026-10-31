@@ -91,7 +91,6 @@ Before designing a test, understand:
 3. **Constraints** - Technical complexity? Timeline? Tools available?
 
 ---
-
 ## Core Principles
 
 ### 1. Start with a Hypothesis
@@ -114,7 +113,6 @@ Before designing a test, understand:
 - Guardrail metrics to prevent harm
 
 ---
-
 ## Hypothesis Framework
 
 ### Structure
@@ -134,7 +132,6 @@ We'll know this is true when [metrics].
 **Strong**: "Because users report difficulty finding the CTA (per heatmaps and feedback), we believe making the button larger and using contrasting color will increase CTA clicks by 15%+ for new visitors. We'll measure click-through rate from page view to signup start."
 
 ---
-
 ## Test Types
 
 | Type | Description | Traffic Needed |
@@ -145,7 +142,6 @@ We'll know this is true when [metrics].
 | Split URL | Different URLs for variants | Moderate |
 
 ---
-
 ## Sample Size
 
 ### Quick Reference
@@ -164,7 +160,6 @@ We'll know this is true when [metrics].
 **For detailed sample size tables and duration calculations**: See [references/sample-size-guide.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/references/sample-size-guide.md)
 
 ---
-
 ## Metrics Selection
 
 ### Primary Metric
@@ -186,7 +181,6 @@ We'll know this is true when [metrics].
 - **Guardrail**: Support tickets, refund rate
 
 ---
-
 ## Designing Variants
 
 ### What to Vary
@@ -204,7 +198,6 @@ We'll know this is true when [metrics].
 - True to the hypothesis
 
 ---
-
 ## Traffic Allocation
 
 | Approach | Split | When to Use |
@@ -218,7 +211,6 @@ We'll know this is true when [metrics].
 - Balanced exposure across time of day/week
 
 ---
-
 ## Implementation
 
 ### Client-Side
@@ -232,7 +224,6 @@ We'll know this is true when [metrics].
 - Tools: PostHog, LaunchDarkly, Split
 
 ---
-
 ## Running the Test
 
 ### Pre-Launch Checklist
@@ -259,7 +250,6 @@ We'll know this is true when [metrics].
 Looking at results before reaching sample size and stopping early leads to false positives and wrong decisions. Pre-commit to sample size and trust the process.
 
 ---
-
 ## Analyzing Results
 
 ### Statistical Significance
@@ -289,7 +279,6 @@ These distinctions follow the [American Statistical Association's p-value statem
 | Mixed signals | Check data quality and planned metrics; label unplanned segment findings exploratory and confirm them in a new test |
 
 ---
-
 ## Documentation
 
 Document every test with:
@@ -301,7 +290,6 @@ Document every test with:
 **For templates**: See [references/test-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/references/test-templates.md)
 
 ---
-
 ## Growth Experimentation Program
 
 Individual tests are valuable. A continuous experimentation program is a compounding asset. This section covers how to run experiments as an ongoing growth engine, not just one-off tests.
@@ -388,7 +376,6 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 **Quarterly**: Audit the playbook. Which patterns have been applied broadly? Which winning patterns haven't been scaled yet? What areas of the funnel are under-tested?
 
 ---
-
 ## Common Mistakes
 
 ### Test Design
@@ -407,7 +394,6 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 - Over-interpreting inconclusive results
 
 ---
-
 ## Task-Specific Questions
 
 1. What's your current conversion rate?
@@ -418,7 +404,6 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 6. Have you tested this area before?
 
 ---
-
 ## Related Skills
 
 - **cro**: For generating test ideas based on CRO principles

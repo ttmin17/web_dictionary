@@ -102,7 +102,6 @@ Gather this context (ask if not provided):
 - Budget constraints? (Some tools charge per minute of video)
 
 ---
-
 ## Choosing Your Approach
 
 Pick the right tool for the job:
@@ -115,7 +114,6 @@ Pick the right tool for the job:
 | **Editing/Repurposing** | Cutting long-form into short clips | Descript, Opus Clip, CapCut | Podcast/webinar → social clips |
 
 ---
-
 ## Programmatic Video
 
 Build videos with code. Best for repeatable, templated, or data-driven video at scale.
@@ -177,7 +175,6 @@ export const ProductDemo: React.FC<{ title: string; features: string[] }> = ({
 | License | Apache 2.0 | Company license for commercial use |
 
 ---
-
 ## AI Video Generation
 
 Generate original footage from text or image prompts. Use for B-roll, hero visuals, and scenes you can't practically film.
@@ -232,7 +229,6 @@ cinematic color grading, 4K
 | Quick B-roll | Either works | Faster |
 
 ---
-
 ## AI Avatars
 
 Create talking-head videos without filming. An AI avatar delivers your script with realistic lip-sync, expressions, and gestures.
@@ -273,7 +269,6 @@ Full-body avatars with expressive body language. Built-in script generation from
 | Creative/artistic video | No | AI generation |
 
 ---
-
 ## Editing & Repurposing Tools
 
 Turn existing content into multiple video formats.
@@ -304,7 +299,6 @@ Distribute: TikTok, Reels, Shorts, LinkedIn
 To replicate the *style* of a video edit you admire — the cut rhythm, caption treatment, punch-ins, on-screen text, sound design — decompose it into a reusable **edit spec** (a beat sheet) and apply it to your own footage. Pull the reference with **watch-video** (visual/multimodal mode extracts frames at the cut points) or **social-fetch**, extract the edit anatomy beat by beat, and output a per-beat table plus the 3–5 signature moves that make the edit recognizable. Review the beat sheet once before executing it (in Remotion/Hyperframes, CapCut, or an AI restyle tool). Copies the editing grammar, never the reference's footage/script/music. Full method: [references/edit-anatomy.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/video/references/edit-anatomy.md).
 
 ---
-
 ## Video Production Workflows
 
 ### Product Demo Video
@@ -335,7 +329,6 @@ To replicate the *style* of a video edit you admire — the cut rhythm, caption 
 5. **Schedule** across platforms
 
 ---
-
 ## Agent-Native Video Pipeline
 
 The most powerful setup combines tools that agents can control directly:
@@ -361,7 +354,6 @@ Output: Ready-to-publish video
 - No manual editing step required
 
 ---
-
 ## Common Mistakes
 
 1. **Starting with tools, not strategy** — decide what video you need before picking tools
@@ -372,7 +364,6 @@ Output: Ready-to-publish video
 6. **Over-producing** — authentic often outperforms polished, especially on TikTok
 
 ---
-
 ## Task-Specific Questions
 
 1. What type of video do you need? (Demo, explainer, social clip, ad, tutorial)
@@ -383,7 +374,6 @@ Output: Ready-to-publish video
 6. What's your budget for video tools?
 
 ---
-
 ## Tool Integrations
 
 | Tool | Type | MCP | Guide |
@@ -394,7 +384,6 @@ Output: Ready-to-publish video
 | **Runway** | AI generation | - | [runwayml.com/docs](https://docs.dev.runwayml.com) |
 
 ---
-
 ## Related Skills
 
 - **social**: For video content strategy, hooks, and what to post

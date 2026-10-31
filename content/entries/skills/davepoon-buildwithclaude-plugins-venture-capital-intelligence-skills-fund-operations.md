@@ -62,14 +62,12 @@ skill:
   pack_slug: davepoon-buildwithclaude
 ---
 
----
-name: fund-operations
+---name: fund-operations
 description: Compute fund KPIs (TVPI, DPI, IRR, MOIC), model carried interest and management fees, and generate LP quarterly update narratives. Triggered by: "/venture-capital-intelligence:fund-operations", "calculate fund KPIs", "what is my fund TVPI", "IRR calculation", "compute MOIC", "LP report", "quarterly update draft", "carried interest calculation", "management fee calculation", "fund performance report", "write my LP update", "how is my fund performing", "what is my DPI", "fund returns analysis", "model my carry", "how much carry do I earn", "portfolio performance summary", "generate investor update". Claude Code only. Requires Python 3.x.
 category: business-finance
 platform: claude-code
 requires: python3
 ---
-
 # Venture Capital Intelligence — Fund Operations Agent
 
 You are a fund administrator and CFO for a venture capital fund. You compute LP-grade fund metrics, model carried interest and management fees, and draft LP quarterly narratives.
@@ -77,7 +75,6 @@ You are a fund administrator and CFO for a venture capital fund. You compute LP-
 **Pipeline:** Claude collects fund data → Python computes KPIs and economics → Claude writes LP narrative → Python formats report
 
 ---
-
 ## STEP 1 — COLLECT FUND DATA
 
 Ask for or extract:
@@ -102,7 +99,6 @@ Company name | Invested amount | Current fair value | Realized proceeds | Invest
 - Distribution dates and amounts
 
 ---
-
 ## STEP 2 — CLAUDE: PREPARE FUND INPUTS
 
 Save to `${CLAUDE_PLUGIN_ROOT}/skills/fund-operations/output/fund_inputs.json`:
@@ -134,7 +130,6 @@ Save to `${CLAUDE_PLUGIN_ROOT}/skills/fund-operations/output/fund_inputs.json`:
 ```
 
 ---
-
 ## STEP 3 — PYTHON: COMPUTE FUND KPIs AND ECONOMICS
 
 Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/fund-operations/scripts/fund_kpi_calc.py"`
@@ -152,7 +147,6 @@ Computes:
 Writes `fund_output.json`.
 
 ---
-
 ## STEP 4 — CLAUDE: WRITE LP QUARTERLY NARRATIVE
 
 Using fund_output.json, write a 300-word LP quarterly update in the tone of a professional fund manager:
@@ -169,13 +163,11 @@ Using fund_output.json, write a 300-word LP quarterly update in the tone of a pr
 **Tone:** Professional, honest, direct. LPs are sophisticated. Never say "exciting" or "pleased to announce." Say what happened and what it means.
 
 ---
-
 ## STEP 5 — PYTHON: FORMAT FINAL REPORT
 
 Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/fund-operations/scripts/fund_formatter.py"`
 
 ---
-
 ## KEY FORMULAS
 
 ```

@@ -4,7 +4,10 @@ name: competitive-intel
 tagline: "Systematic competitor tracking that feeds CMO positioning, CRO
   battlecards, and CPO roadmap decisions. Use when analyzing competitors,
   building sales "
-summary: "Ask in natural language for the deliverable you need:"
+summary: 'Direct competitors: Same ICP, same problem, comparable solution,
+  similar price point. Indirect competitors: Same budget, different solution
+  (including "do nothing" and "build in-house"). Future competitors:
+  Well-funde...'
 categories:
   - coding-agents
 tags:
@@ -26,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -164,7 +167,6 @@ See `templates/battlecard-template.md`
 - Add/remove companies from tracking list
 
 ---
-
 ## Win/Loss Analysis
 
 This is the highest-signal competitive data you have. Most companies do it too rarely.
@@ -193,7 +195,6 @@ This is the highest-signal competitive data you have. Most companies do it too r
 - Patterns over time
 
 ---
-
 ## The Balance: Intelligence Without Obsession
 
 **Signs you're over-tracking competitors:**
@@ -214,7 +215,6 @@ This is the highest-signal competitive data you have. Most companies do it too r
 - Your roadmap is led by customer problems, informed by competitive gaps
 
 ---
-
 ## Distributing Intelligence
 
 | Audience | Format | Cadence | Owner |
@@ -228,7 +228,6 @@ This is the highest-signal competitive data you have. Most companies do it too r
 **One source of truth:** All competitive intel lives in one place (Notion, Confluence, Salesforce). Avoid Slack-only distribution — it disappears.
 
 ---
-
 ## Red Flags in Competitive Intelligence
 
 | Signal | What it means |

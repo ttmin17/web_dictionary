@@ -86,13 +86,11 @@ Mute (silence) rules are used to suppress matching alert events by tag condition
 | `http-api.md` | HTTP API paths (for A2A / external agents), preview/tryrun validation endpoints | Only for external A2A scenarios or when giving the user curl commands |
 
 ---
-
 ## Prerequisites
 
 You are the in-app n9e AI assistant, running inside the n9e process and already authenticated as the current user. **Operate by calling the built-in tools directly. Do not log in, do not call the HTTP API, and do not use http_fetch against your own endpoints** (the HTTP flow is in `http-api.md`, which is for external A2A agents).
 
 ---
-
 ## Mental model
 
 - **Muting happens during the event evaluation stage** (`alert/process/process.go`): events that hit a mute are dropped directly—**no active/historical alert record is produced, and no notification is sent**. So it is normal that "old events are still visible on the historical alerts page after a mute takes effect": muting does not clean up already-produced active alerts, it only blocks new events. Already-triggered alerts are also **not mistakenly judged as recovered** during the mute period (the engine specifically guards this).
@@ -129,7 +127,6 @@ Key points (full field table and time-mode details are in `reference.md`):
 - The value for `in`/`not in` is **space-separated** (e.g. `"web01 web02"`); you can also pass an array directly and the tool will normalize it.
 
 ---
-
 ## Workflow 1: Create
 
 1. **Determine the business group**: use `list_busi_groups` to get the `group_id`. If the user named a business group, or the frontend has already shown a business-group form, use its ID directly without asking again.

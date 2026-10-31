@@ -84,7 +84,6 @@ Your job is not to write a pile of docs for the user, but to: **clarify intent �
 > Permissions: creating/modifying skills requires the `/ai-config/skills` permission. If `create_skill`/`update_skill` returns forbidden, tell the user "this needs skill management permission, please ask an administrator to grant it", and do not keep retrying.
 
 ---
-
 ## 1. The two kinds of skills (decide which path first)
 
 | Kind | What it is | Typical scenarios | How to persist |
@@ -97,7 +96,6 @@ How to decide: **one question is enough** —— "Does this skill teach the AI t
 Script-kind notes: scripts **hold no platform token whatsoever**, run with restrictions in the sandbox as the identity of the user who started the conversation, and their output is treated as untrusted data. Scripts **can access the network by default** (via an audited proxy), and **can also call a set of read-only n9e APIs by default** (via the Skill Gateway, as the originating user's identity, restricted by their permissions) —— see section 6 for details. Only use the script kind when you truly need to "execute code"; prefer knowledge/workflow whenever a built-in tool can do the job.
 
 ---
-
 ## 2. Interview (clarify before acting, but don't interrogate)
 
 Extract answers from the existing conversation as much as possible, fill in what's missing, and ask just 2-3 key points at a time:
@@ -110,7 +108,6 @@ Extract answers from the existing conversation as much as possible, fill in what
 Stop interviewing once you can write a decent draft; don't fire off chained follow-ups just to fill in fields.
 
 ---
-
 ## 3. Writing a good description —— the crux of triggering
 
 Normally only `name + description` of a skill stays resident in the "available skills catalog", and the AI decides whether to use it based on the `description`. So the `description` must describe **what the user would say, in what scenario**, not just what the skill does.
@@ -121,7 +118,6 @@ Normally only `name + description` of a skill stays resident in the "available s
 Key points: cover **multiple colloquial phrasings**, include trigger scenarios, push moderately ("the Nightingale AI tends to under-trigger skills, so writing the description proactively corrects for that"), but **do not exaggerate** to the point of pulling in unrelated requests.
 
 ---
-
 ## 4. Writing good instructions —— the skill body
 
 The body is the working manual for the "AI that executes this skill". A good body:
@@ -135,7 +131,6 @@ The body is the working manual for the "AI that executes this skill". A good bod
 When the body gets long (>500 lines) you can split it: keep the core workflow in `SKILL.md`, move details into `reference.md` etc. under `files`, and state in the body "read reference.md when you need X".
 
 ---
-
 ## 5. Picking the right builtin_tools (almost always needed for knowledge/workflow)
 
 If the skill will have the AI call platform features (query alerts, query datasources, build dashboards…), you must declare those tools in `builtin_tools`.
@@ -145,7 +140,6 @@ If the skill will have the AI call platform features (query alerts, query dataso
 Declare only the tools the skill actually uses; don't cram them all in.
 
 ---
-
 ## 6. The scripts of a script-kind skill
 
 - Put scripts in `files`, each item is `{path, content}`, e.g. `[{"path":"main.py","content":"...python..."}]`.
@@ -169,7 +163,6 @@ Declare only the tools the skill actually uses; don't cram them all in.
 - **Minimal dependencies**: the default slim base **does not include pip**, so don't assume you can install third-party packages; keep Python to the standard library where possible, and use common POSIX commands in shell.
 
 ---
-
 ## 7. Persistence flow (the unified action)
 
 1. **Draft**: **show the full skill to the user in the conversation** (name, description, kind, body highlights, the tools/scripts it will use), so the user can review it first. This step is for humans —— don't skip it.
@@ -186,7 +179,6 @@ Declare only the tools the skill actually uses; don't cram them all in.
 > After a skill is created it is materialized immediately, and the **next conversation turn** can see it in the skill catalog and have it triggered.
 
 ---
-
 ## 8. Improving / editing an existing skill
 
 1. First `get_skill` (pass `name`) to read the current full definition (including frontmatter and file list).
@@ -195,7 +187,6 @@ Declare only the tools the skill actually uses; don't cram them all in.
 4. Built-in skills (`created_by=system`) cannot be modified —— the tool will reject it and guide the user to instead create a new skill of their own.
 
 ---
-
 ## 9. The "test it" loop for script-kind skills (when the sandbox is available)
 
 After creating a script-kind skill, if the `run_skill_script` tool is available (meaning this server has the sandbox enabled), you can:
@@ -207,7 +198,6 @@ After creating a script-kind skill, if the `run_skill_script` tool is available 
 Treat this as "lightweight verification", not a mandatory step; skip it when the sandbox isn't enabled, and don't refuse to create the skill just because you can't test it.
 
 ---
-
 ## 10. Principles and boundaries
 
 - **Don't create harmful skills**: don't help build skills used for unauthorized access, data exfiltration, bypassing permissions, or hiding malicious behavior. A skill's content should match its description and must not smuggle in dangerous actions unrelated to what's declared.
@@ -216,7 +206,6 @@ Treat this as "lightweight verification", not a mandatory step; skip it when the
 - **Don't over-engineer**: don't turn a two-step workflow into ten steps; don't write a script for something one built-in tool can do.
 
 ---
-
 ## Full example (knowledge/workflow)
 
 User: "Make me a skill so that from now on when I say MySQL connections are high, it troubleshoots following a fixed routine."

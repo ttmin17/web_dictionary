@@ -93,14 +93,12 @@ skill:
    abstain.
 
 ---
-
 **Tool policy**: Solvers and verifiers use THINKING ONLY in the tight-budget
 workflow. Competition math is reasoning. Computation is for deep mode (§6c), and
 even then bounded — a recurrence that's doubly-exponential can't be computed
 past n~30, work mod 2^m instead.
 
 ---
-
 ## When to use which approach
 
 | Problem                                              | Approach                                                                       | Verification              |
@@ -128,7 +126,6 @@ mechanical: collect the per-problem outputs, fill in LaTeX sections, compile
 once. | "Simplify this proof" | Skip to presentation (step 8) | — |
 
 ---
-
 ## The Workflow
 
 ### 1. Interpretation check (30 seconds, catches 50/63 of one class of errors)
@@ -419,7 +416,6 @@ Output: LaTeX-formatted proof. If `pdflatex` is available
 `scripts/compile_pdf.sh`.
 
 ---
-
 ## Model tier defaults
 
 Read `references/model_tier_defaults.md` for full details. Summary:
@@ -434,7 +430,6 @@ Weaker models: more parallel attempts, faster abstention. Stronger models:
 deeper verification, more presentation effort.
 
 ---
-
 ## For numeric-answer problems (AIME-style)
 
 Skip the proof machinery. Run 5-7 solvers with varied approaches, take majority
@@ -442,7 +437,6 @@ vote on the numeric answer. If no majority: verify the top 2 candidates by
 substitution.
 
 ---
-
 ## Key references
 
 - `references/verifier_patterns.md` — the 12 adversarial checks
@@ -451,7 +445,6 @@ substitution.
 - `references/model_tier_defaults.md` — per-model configuration
 
 ---
-
 ## What makes this different from generic verify-and-refine
 
 1. **Dual context isolation**: verifier is blind to (a) the solver's thinking

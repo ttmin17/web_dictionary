@@ -31,7 +31,6 @@ signals:
   stars_growth_pct: 1.4
   trending_score: 172.42
   rank_current: 41
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11926
@@ -52,14 +51,7 @@ tool:
   install_command: pip install MemoryOS
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - MemoryOS
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings and DeepSeek Harness support.

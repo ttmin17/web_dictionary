@@ -30,10 +30,11 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 90
-  rank_delta: null
+  rank_current: 121
+  rank_delta: -31
   velocity_source: snapshot_delta
   sparkline_4w:
+    - 127
     - 127
     - 127
 language: en
@@ -73,8 +74,7 @@ launch:
 
 </div>
 
----
-## Suede Creator Skills for SEO and business growth
+---## Suede Creator Skills for SEO and business growth
 
 Suede Creator Skills gives founders, marketers, and small teams reusable workflows for SEO audits, AI search visibility, conversion copy, and business operations. Run them in Claude Code or OpenAI Codex, with instructions you can inspect and adapt to your business.
 

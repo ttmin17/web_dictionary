@@ -3,7 +3,9 @@ slug: nitrocloudofficial-nitrostack-sample-apps-rampd-ai-onboarding-offboarding-
 name: middleware-pipeline
 tagline: Best practices for implementing and applying Guards, Interceptors,
   Middleware, Pipes, and Exception Filters in the NitroStack SDK.
-summary: "Apply the guard using @UseGuards(...):"
+summary: "--- ## 1. Guards (Guard and @UseGuards) Guards determine if a request
+  should be processed by a tool handler based on authentication, authorization,
+  or other conditions."
 categories:
   - agent-frameworks
 tags:
@@ -63,7 +65,6 @@ skill:
 Use this skill when implementing request validation, authorization checks, response mapping, logging, error handling, or performance tracking on NitroStack tool methods.
 
 ---
-
 ## 1. Guards (`Guard` and `@UseGuards`)
 Guards determine if a request should be processed by a tool handler based on authentication, authorization, or other conditions.
 
@@ -108,7 +109,6 @@ export class AdminTools {
 ```
 
 ---
-
 ## 2. Interceptors (`InterceptorInterface` and `@UseInterceptors`)
 Interceptors can transform/intercept input arguments or mapped output from a tool method execution.
 
@@ -141,7 +141,6 @@ export class TimingInterceptor implements InterceptorInterface {
 ```
 
 ---
-
 ## 3. Exception Filters (`ExceptionFilterInterface` and `@UseFilters`)
 Exception filters catch any errors thrown within guards, interceptors, or the tool handlers themselves, mapping them into user-friendly JSON payloads.
 
@@ -191,7 +190,6 @@ export class LoggingTools {
 ```
 
 ---
-
 ## 4. Middleware (`MiddlewareInterface`, `@Middleware` and `@UseMiddleware`)
 Middleware executes before the request reaches the tool handler, and can wrap the handler execution by invoking `next()`.
 
@@ -243,7 +241,6 @@ export class StationTools {
 ```
 
 ---
-
 ## 5. Pipes (`PipeInterface`, `@Pipe` and `@UsePipes`)
 Pipes are used to transform or validate input arguments before they reach the tool handler method.
 

@@ -3,7 +3,9 @@ slug: paperclipai-paperclip-packages-adapters-hermes-skills-paperclip-task-bridg
 name: task-bridge
 tagline: Create, comment on, update, and list Paperclip tasks from Hermes using
   scoped Paperclip API credentials.
-summary: "Configure these in Hermes env/profile secrets, not in prompt text:"
+summary: '- PAPERCLIPAPIURL - Paperclip base URL, with or without /api. -
+  PAPERCLIPBRIDGEAPIKEY - a Paperclip agent API key created with scope.kind =
+  "taskbridge".'
 categories:
   - agent-frameworks
 tags:

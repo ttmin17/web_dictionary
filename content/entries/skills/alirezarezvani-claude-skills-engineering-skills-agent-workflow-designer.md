@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -71,7 +71,6 @@ skill:
 **Domain:** Multi-Agent Systems / AI Orchestration
 
 ---
-
 ## Overview
 
 Design production-grade multi-agent workflows with clear pattern choice, handoff contracts, failure handling, and cost/context controls.
@@ -85,7 +84,6 @@ Design production-grade multi-agent workflows with clear pattern choice, handoff
 - Documentation pointers for operational pattern tradeoffs
 
 ---
-
 ## When to Use
 
 - A single prompt is insufficient for task complexity
@@ -94,7 +92,6 @@ Design production-grade multi-agent workflows with clear pattern choice, handoff
 - You need validation loops for quality or safety gates
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -106,7 +103,6 @@ python3 scripts/workflow_scaffolder.py orchestrator --name incident-triage --out
 ```
 
 ---
-
 ## Pattern Map
 
 - `sequential`: strict step-by-step dependency chain
@@ -118,7 +114,6 @@ python3 scripts/workflow_scaffolder.py orchestrator --name incident-triage --out
 Detailed templates: `references/workflow-patterns.md`
 
 ---
-
 ## Recommended Workflow
 
 1. Select pattern based on dependency shape and risk profile.
@@ -128,7 +123,6 @@ Detailed templates: `references/workflow-patterns.md`
 5. Dry-run with small context budgets before scaling.
 
 ---
-
 ## Common Pitfalls
 
 - Over-orchestrating tasks solvable by one well-structured prompt

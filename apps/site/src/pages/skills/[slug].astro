@@ -7,32 +7,70 @@ import { formatStars } from '../../lib/entries';
 
 export async function getStaticPaths() {
   const skillEntries = await getCollection('skills');
-  return skillEntries.map((entry) => ({
-    params: { slug: entry.data.slug },
-    props: { entry },
-  }));
+
+  // Pre-group by primary category (sorted by stars desc) and by repo (sorted by name asc) in O(N)
+  const byCategory = new Map<string, typeof skillEntries>();
+  const byRepo = new Map<string, typeof skillEntries>();
+
+  for (const entry of skillEntries) {
+    for (const cat of entry.data.categories) {
+      let catList = byCategory.get(cat);
+      if (!catList) {
+        catList = [];
+        byCategory.set(cat, catList);
+      }
+      catList.push(entry);
+    }
+
+    const repoKey = entry.data.source.repo;
+    let repoList = byRepo.get(repoKey);
+    if (!repoList) {
+      repoList = [];
+      byRepo.set(repoKey, repoList);
+    }
+    repoList.push(entry);
+  }
+
+  for (const list of byCategory.values()) {
+    list.sort((a, b) => (b.data.signals?.stars || 0) - (a.data.signals?.stars || 0));
+  }
+  for (const list of byRepo.values()) {
+    list.sort((a, b) => a.data.name.localeCompare(b.data.name));
+  }
+
+  return skillEntries.map((entry) => {
+    const primaryCategory = entry.data.categories[0] || 'other';
+    const catCandidates = byCategory.get(primaryCategory) || [];
+    const relatedTools = catCandidates.filter((e) => e.data.slug !== entry.data.slug).slice(0, 4);
+
+    const repoAll = byRepo.get(entry.data.source.repo) || [entry];
+    const packTotalCount = repoAll.length;
+    // Cap rendered pack drawer items to 24 (always keeping current entry visible) to avoid O(N^2) DOM bloat on 800-skill monorepos
+    let packSkills = repoAll.slice(0, 24);
+    if (packTotalCount > 24 && !packSkills.some((s) => s.data.slug === entry.data.slug)) {
+      packSkills = [...repoAll.slice(0, 23), entry];
+    }
+
+    return {
+      params: { slug: entry.data.slug },
+      props: {
+        entry,
+        relatedTools,
+        packSkills,
+        packTotalCount,
+      },
+    };
+  });
 }
 
-const { entry } = Astro.props;
+const { entry, relatedTools = [], packSkills = [], packTotalCount = 1 } = Astro.props;
 const data = entry.data;
 const { Content, headings } = await render(entry);
 
 // Headings for table of contents
 const tocHeadings = headings ? headings.filter((h) => h.depth >= 2 && h.depth <= 3) : [];
-
-// Find related skills (Task C6)
-const allSkills = await getCollection('skills');
 const primaryCategory = data.categories[0] || 'other';
-const relatedTools = allSkills
-  .filter((e) => e.data.slug !== data.slug && e.data.categories.includes(primaryCategory))
-  .sort((a, b) => (b.data.signals?.stars || 0) - (a.data.signals?.stars || 0))
-  .slice(0, 4);
-
-// Skill Pack detection for monorepos (Step 5.3)
-const packSkills = allSkills
-  .filter((s) => s.data.source.repo === data.source.repo)
-  .sort((a, b) => a.data.name.localeCompare(b.data.name));
-const isPack = packSkills.length > 1;
+const isPack = packTotalCount > 1;
 
 // Format why listed in plain words (Task C5)
 function getWhyListedText(reason: string, percentile: number): string {
@@ -91,7 +129,7 @@ const upstreamSkillUrl = cleanSubpath
             <span class="text-xl">📦</span>
             <div>
               <h2 class="text-sm font-bold text-slate-900 tracking-tight">
-                Repository Skill Pack: {packSkills.length} Skills in this Repository
+                Repository Skill Pack: {packTotalCount} Skills in this Repository
               </h2>
               <p class="text-xs text-slate-600 mt-0.5">
                 All skills packaged and maintained inside <code class="font-mono font-medium text-slate-800">{data.source.repo}</code>.
@@ -99,7 +137,7 @@ const upstreamSkillUrl = cleanSubpath
             </div>
           </div>
           <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 border border-amber-300 font-mono">
-            {packSkills.length} Skills
+            {packTotalCount} Skills
           </span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
@@ -124,6 +162,11 @@ const upstreamSkillUrl = cleanSubpath
             );
           })}
         </div>
+        {packTotalCount > packSkills.length && (
+          <p class="mt-3 text-xs text-amber-800 font-medium">
+            Showing {packSkills.length} of {packTotalCount} skills in <code class="font-mono">{data.source.repo}</code>. Use the catalog search to browse all skills from this repository.
+          </p>
+        )}
       </section>
     )}
 

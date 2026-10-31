@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 18
   stars_growth_pct: 0.8
   trending_score: 18.15
-  rank_current: 61
-  rank_delta: -16
+  rank_current: 66
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2180
@@ -103,7 +103,6 @@ Create signed template distributions, discover them through explicitly trusted c
 [Explore Configurable Lifecycle Profiles →](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/docs/concepts/configurable-lifecycle-profiles.mdx)
 
 ---
-
 ## What llmwiki does
 
 Compile raw sources into an interlinked, citation-traceable markdown wiki that agents and humans can browse, query, lint, export, and reuse. The default profile preserves the classic concepts-and-queries layout; optional profiles add domain-specific types and workflows without adding domain branches to the compiler.

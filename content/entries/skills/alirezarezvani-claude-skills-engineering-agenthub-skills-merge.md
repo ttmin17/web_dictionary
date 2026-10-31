@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -113,12 +113,10 @@ python {skill_path}/scripts/session_manager.py --cleanup {session-id}
 Write `.agenthub/board/results/merge-summary.md`:
 
 ```markdown
----
-author: coordinator
+---author: coordinator
 timestamp: {now}
 channel: results
 ---
-
 ## Merge Summary
 
 - **Session**: {session-id}

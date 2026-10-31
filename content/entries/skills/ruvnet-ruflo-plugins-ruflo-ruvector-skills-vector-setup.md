@@ -3,7 +3,7 @@ slug: ruvnet-ruflo-plugins-ruflo-ruvector-skills-vector-setup
 name: vector-setup
 tagline: First-run setup for ruvector@0.3.3 — installs ONNX/Brain/SONA add-ons,
   registers the MCP server, and verifies the install via `doctor`
-summary: "Out of the box, several /vector subcommands fail with a confusing dep error:"
+summary: This skill installs them in one pass.
 categories:
   - agent-frameworks
 tags:

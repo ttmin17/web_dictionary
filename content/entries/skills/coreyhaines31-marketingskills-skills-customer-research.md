@@ -87,7 +87,6 @@ You are an expert customer researcher. Your goal is to help uncover what custome
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context to skip questions already answered.
 
 ---
-
 ## Three Modes of Research
 
 ### Mode 1: Analyze Existing Assets
@@ -102,7 +101,6 @@ No signal exists yet, or you need answers only the customer can give. You run in
 Most engagements combine modes. Mine what's already public (Mode 2) before you ask (Mode 3) — it tells you what to ask and in whose words. Establish which mode(s) apply before proceeding.
 
 ---
-
 ## Mode 1: Analyzing Existing Research Assets
 
 ### Asset Types
@@ -185,7 +183,6 @@ Label every insight with a confidence level before presenting it:
 **Minimum viable sample**: Don't build personas or draw messaging conclusions from fewer than 5 independent data points per segment.
 
 ---
-
 ## Mode 2: Digital Watering Hole Research
 
 Online communities are where customers speak without a filter. The goal is to find authentic, unmoderated language about the problem space.
@@ -242,7 +239,6 @@ After gathering from multiple sources, synthesize into:
 ```
 
 ---
-
 ## Mode 3: Interviews & Surveys (Primary Research)
 
 When there's no signal yet — or you need answers only the customer can give — go ask. This is the highest-signal, first-party research: weight it above scraped sources when they conflict.
@@ -260,7 +256,6 @@ When there's no signal yet — or you need answers only the customer can give �
 Analyze whatever you gather back through the Mode 1 extraction framework and confidence guardrails above.
 
 ---
-
 ## Persona Generation
 
 ### When there are no reviews yet
@@ -332,7 +327,6 @@ Words and phrases they actually use (sourced from research):
 - **Revisit quarterly** — personas decay as your market and product evolve
 
 ---
-
 ## Deliverable Formats
 
 Depending on what the user needs, offer:
@@ -347,7 +341,6 @@ Depending on what the user needs, offer:
 Ask the user which deliverable(s) they need before generating output.
 
 ---
-
 ## Questions to Ask Before Proceeding
 
 If context is unclear:
@@ -361,7 +354,6 @@ If context is unclear:
 Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 
 ---
-
 ## Related Skills
 
 | When to hand off | Skill |

@@ -123,7 +123,6 @@ Gather this context (ask if not provided):
 - Any mandatory elements? (Brand name, trademark symbols, disclaimers)
 
 ---
-
 ## How This Skill Works
 
 This skill supports four modes:
@@ -149,7 +148,6 @@ For **text-led static headlines**, select treatments by the reader's awareness s
 For deciding **which ads are worth making before making them**: synthesize three signal sources (account performance, customer language, external organic) into evidence-ranked concepts, branch the creative mix on account state (exploration vs. scaling), maintain a capacity-checked roadmap with production tiers, and run a monthly retro that feeds the next slate. The full system lives in [references/creative-roadmap.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/creative-roadmap.md); for hook generation and funnel-stage diagnosis inside any mode, load [references/hook-system.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/hook-system.md).
 
 ---
-
 ## Grounded Inputs
 
 Most AI ad generation fails on input grounding, not output quality: ungrounded generation produces plausible-sounding ads based on training data, not on what converts for this brand. For scaled production (Mode 3), maintain a durable inputs corpus:
@@ -175,7 +173,6 @@ outputs/         Dated batch folders (outputs/YYYY-MM-DD/)
 - Inputs decay: refresh `inputs/winning-ads/` as new ads scale; refresh `inputs/reviews/` and `inputs/comments/` monthly
 
 ---
-
 ## Platform Specs
 
 Platforms reject or truncate creative that exceeds these limits, so verify every piece of copy fits before delivering.
@@ -230,7 +227,6 @@ Platforms reject or truncate creative that exceeds these limits, so verify every
 For detailed specs and format variations, see [references/platform-specs.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/platform-specs.md).
 
 ---
-
 ## Generating Ad Visuals
 
 **To decide *which format to make next*** (before briefing any specific ad), consult the Meta creative format taxonomy in [references/meta-creative-formats.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/meta-creative-formats.md) — a prioritized S→F catalog of ~51 formats ranked by one question: is it a *unicorn scaler* that punctures cold net-new audiences, or a *supporting cast* member that only converts mid-funnel? Leads with the persona-based Andromeda context (why creator-fronted formats top the list), S-tier callouts (founder content, partnership ads, VSL), the A-tier bench, and explicit F-tier de-prioritization (press, podcast, notes-app fake-native). Use it to pick a format and build a portfolio; the how-to-build detail lives in the static/video references below. For the account-level kill/keep/scale math once ads are live, cross-reference the `ads` skill's the **ads** skill's Meta decision system reference.
@@ -259,7 +255,6 @@ For image and video generation tools, see [references/generative-tools.md](https
 4. Iterate — AI for new angles, Remotion for scale
 
 ---
-
 ## Generating Ad Copy
 
 ### Step 1: Define Your Angles
@@ -296,7 +291,6 @@ Before delivering, check every piece of creative against the platform's characte
 Present creative in a structured format that maps to the ad platform's upload requirements.
 
 ---
-
 ## Iterating from Performance Data
 
 When the user provides performance data, follow this process:
@@ -341,7 +335,6 @@ Track what was learned and what's being tested:
 ```
 
 ---
-
 ## Writing Quality Standards
 
 ### Headlines That Click
@@ -402,7 +395,6 @@ Descriptions should complement headlines, not repeat them. Use descriptions to:
 - Add urgency when genuine ("Limited to first 500 signups")
 
 ---
-
 ## Output Formats
 
 ### Standard Output
@@ -468,7 +460,6 @@ When iterating, include a summary:
 ```
 
 ---
-
 ## Batch Generation Workflow
 
 For large-scale creative production (Anthropic's growth team generates 100+ variations per cycle):
@@ -490,7 +481,6 @@ For large-scale creative production (Anthropic's growth team generates 100+ vari
 - Ensure headline/description combinations make sense together
 
 ---
-
 ## Common Mistakes
 
 - **Writing headlines that only work together** — RSA headlines get combined randomly
@@ -505,7 +495,6 @@ For large-scale creative production (Anthropic's growth team generates 100+ vari
 - **Retiring creative too early** — Allow 1,000+ impressions before judging
 
 ---
-
 ## Tool Integrations
 
 For pulling performance data and managing campaigns, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
@@ -542,7 +531,6 @@ node tools/clis/google-ads.js reports get --type ad_performance --date-range las
 > or a reporting connector such as Supermetrics or Coupler.
 
 ---
-
 ## Related Skills
 
 - **ads**: For campaign strategy, targeting, budgets, and optimization

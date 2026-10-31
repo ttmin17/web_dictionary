@@ -4,7 +4,9 @@ name: latency-critical-systems
 tagline: "Optimize and verify latency-sensitive systems — realtime dashboards,
   market data feeds, streaming agents, execution gateways, queues, and caches —
   by "
-summary: 'Do not collapse everything into "fast." Track:'
+summary: "- p50, p95, and p99 latency; - throughput; - freshness age; - queue
+  depth; - cache hit rate; - provider/API response time; - browser render time;
+  - correctness under load; - failure and retry behavior."
 categories:
   - productivity-ops
 tags:

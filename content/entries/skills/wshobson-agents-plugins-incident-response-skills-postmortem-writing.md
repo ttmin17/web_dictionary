@@ -133,7 +133,6 @@ Payment service experienced 47-minute outage due to database connection exhausti
 **Evidence**: Metrics showed connection count at 100/100 (max), with 500+ pending requests.
 
 ---
-
 ### Why #2: Why were database connections exhausted?
 
 **Answer**: Each incoming request opened a new database connection instead of using the connection pool.
@@ -141,7 +140,6 @@ Payment service experienced 47-minute outage due to database connection exhausti
 **Evidence**: Code diff shows direct `DriverManager.getConnection()` instead of pooled `DataSource`.
 
 ---
-
 ### Why #3: Why did the code bypass the connection pool?
 
 **Answer**: A developer refactored the repository class and inadvertently changed the connection acquisition method.
@@ -149,7 +147,6 @@ Payment service experienced 47-minute outage due to database connection exhausti
 **Evidence**: PR #1234 shows the change, made while fixing a different bug.
 
 ---
-
 ### Why #4: Why wasn't this caught in code review?
 
 **Answer**: The reviewer focused on the functional change (the bug fix) and didn't notice the infrastructure change.
@@ -157,7 +154,6 @@ Payment service experienced 47-minute outage due to database connection exhausti
 **Evidence**: Review comments only discuss business logic.
 
 ---
-
 ### Why #5: Why isn't there a safety net for this type of change?
 
 **Answer**: We lack automated tests that verify connection pool behavior and lack documentation about our connection patterns.

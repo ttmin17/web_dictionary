@@ -280,5 +280,4 @@ Bitbucket Query Language is available on list endpoints:
 | Delete issue | `BITBUCKET_DELETE_ISSUE` | `workspace`, `repo_slug`, `issue_id` |
 | List members | `BITBUCKET_LIST_WORKSPACE_MEMBERS` | `workspace` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

@@ -241,5 +241,4 @@ Automate Jira operations through Composio's Jira toolkit via Rube MCP.
 | Project roles | JIRA_GET_PROJECT_ROLES | projectIdOrKey |
 | Project versions | JIRA_GET_PROJECT_VERSIONS | projectIdOrKey |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

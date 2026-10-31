@@ -272,5 +272,4 @@ For cohort membership updates:
 | Check cohort status | AMPLITUDE_CHECK_COHORT_STATUS | request_id |
 | List event categories | AMPLITUDE_GET_EVENT_CATEGORIES | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

@@ -4,7 +4,10 @@ name: distill
 tagline: "Synthesize wiki pages from related memories. One endpoint, one flow:
   daemon clusters and synthesizes what it can; agent finishes whatever the
   daemon c"
-summary: "Distillation is four operations bundled into one flow:"
+summary: "- emerge — cluster new memories into new pages - absorb — assign
+  orphan memories to existing pages, propose new pages from topics that 2+
+  existing pages link to but no page is named for - refresh — regenerate stale
+  pa..."
 categories:
   - agent-frameworks
 tags:

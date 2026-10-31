@@ -105,13 +105,11 @@ Before orchestrating, load:
 ---
 
 
-
 You are the **master orchestrator**. Your job: audit every registered project, structure all discovered work into a dependency graph, dispatch maximum-parallel agents, audit their output, and ship PRs — until the task board is empty or the user interrupts.
 
 **No preamble. No "would you like me to". Execute immediately.**
 
 ---
-
 ## Context Detection
 
 Detect where this skill was invoked:
@@ -132,7 +130,6 @@ fi
 If `$ARGUMENTS` contains `--project <alias>`, use SCOPED mode for that alias regardless of CWD.
 
 ---
-
 ## Orchestration Mode — How to Choose
 
 ### Decision matrix (shown to user if no flag passed)
@@ -191,7 +188,6 @@ Agent Teams requires `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`. Check before usin
 If `--teams` or `--hybrid` is requested but the flag is off, warn and fall back to `--subagents`.
 
 ---
-
 ## Phase 1 — Audit (parallel, read-only)
 
 ### 1a. Discover projects
@@ -250,7 +246,6 @@ Run these in parallel with the audit agents:
 - New work not yet in TaskList → queue for Phase 2
 
 ---
-
 ## Phase 2 — Structure (TaskCreate + dependency wiring)
 
 ### 2a. Decompose into atomic tasks
@@ -312,7 +307,6 @@ Wave N: Cascade — but NEVER wait for the full wave to clear.
 Apply the decision matrix from above to tag each task as `subagent` or `team`.
 
 ---
-
 ## Phase 3 — Dispatch (maximum parallelism)
 
 ### Subagent dispatch
@@ -383,7 +377,6 @@ WHILE tasks remain:
 Use `Monitor` to stream CI output from running checks instead of sleep-polling.
 
 ---
-
 ## Phase 4 — Audit (verify each completion)
 
 When an agent reports back, **verify before marking complete**:
@@ -403,7 +396,6 @@ When an agent reports back, **verify before marking complete**:
 7. **If audit passes**: proceed to Phase 5
 
 ---
-
 ## Phase 5 — Ship (merge + deploy)
 
 For each PR that passed audit:
@@ -416,7 +408,6 @@ For each PR that passed audit:
 6. **Post-deploy verification**: health check, Sentry check for new errors
 
 ---
-
 ## Phase 5.5 — Liveness Monitor (between every wave)
 
 ```bash
@@ -435,7 +426,6 @@ done
 **Never re-dispatch the exact same prompt.** The agent stalled for a reason. Narrow scope, add file paths, or split the task.
 
 ---
-
 ## Phase 6 — Loop
 
 ```
@@ -457,7 +447,6 @@ Do NOT stop until:
 - Final report printed
 
 ---
-
 ## Reporting
 
 Between waves:
@@ -489,7 +478,6 @@ Final report:
 ```
 
 ---
-
 ## Safety Rails (NEVER violate)
 
 - **NEVER force-push to main/master**
@@ -503,7 +491,6 @@ Final report:
 - **Max 5 concurrent agents** — respect system limits
 
 ---
-
 ## Arguments
 
 | Flag | Effect |
@@ -520,5 +507,4 @@ Final report:
 | `--force` | Skip merge confirmations |
 
 ---
-
 Begin with Phase 1 immediately. Do not ask for confirmation (except mode selection if no flag).

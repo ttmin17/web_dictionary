@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -135,12 +135,10 @@ Transform the learning from auto-memory's note format into CLAUDE.md's instructi
 3. Write the rule content
 
 ```markdown
----
-paths:
+---paths:
   - "src/api/**/*.ts"
   - "tests/api/**/*"
 ---
-
 # API Development Rules
 
 - All endpoints must validate input with Zod schemas

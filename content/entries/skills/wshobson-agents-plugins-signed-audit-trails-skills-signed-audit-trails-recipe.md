@@ -4,7 +4,9 @@ name: signed-audit-trails-recipe
 tagline: Step-by-step cookbook for setting up cryptographically signed audit
   trails on Claude Code tool calls. Use when explaining, evaluating, or
   demonstratin
-summary: "Every tool call (Bash, Edit, Write, WebFetch) is:"
+summary: 1. Evaluated against a Cedar policy before execution. If the policy
+  denies the call, the tool does not run. 2. Signed as an Ed25519 receipt after
+  execution. Receipts are JCS-canonical and verifiable offline by anyone...
 categories:
   - coding-agents
 tags:

@@ -661,7 +661,6 @@ After parsing the assessment, append to the canonical memory artifact at `review
 - **Patterns**: [recurring issues the reviewer noticed]
 
 ---
-
 ## Round 2 — Score: X/10
 
 ### Raw Reviewer Response (verbatim)
@@ -672,8 +671,7 @@ After parsing the assessment, append to the canonical memory artifact at `review
 - **New suspicions**: [...]
 - **Unresolved**: [carried forward + new]
 
----
-```
+---```
 
 **Rules**:
 - **Append-only — never delete, never truncate.** The file is a reviewer-owned audit trail. The executor must never summarize, curate, or edit prior rounds' content. Append the reviewer's full raw response for this round verbatim, then append a memory update section if the reviewer provided one.

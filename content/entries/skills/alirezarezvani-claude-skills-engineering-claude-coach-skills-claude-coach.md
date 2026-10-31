@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -140,7 +140,6 @@ When you do surface a tip, append it to the end of your response in this exact f
 
 ```
 ---
-
 ⚡ **Power-user tip:** [one sentence on what they could have done differently or a capability they missed]
 
 [Optional: one-line example showing the improved approach]
@@ -200,7 +199,6 @@ Good: "One thing — adding 'in 200 words' to that prompt would have cut three t
 - `references/coaching-rules.md` — extended decision rules for when to coach and when to stay silent. Read if uncertain whether a moment is coachable.
 
 ---
-
 ## Name
 
 claude-coach

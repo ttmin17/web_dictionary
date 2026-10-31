@@ -31,8 +31,7 @@ signals:
   stars_delta_7d: 25
   stars_growth_pct: 0.4
   trending_score: 25.1
-  rank_current: 93
-  rank_delta: null
+  rank_current: 94
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6126
@@ -53,15 +52,7 @@ tool:
   install_command: git clone https://github.com/netease-youdao/LobsterAI.git
   runtime: node
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: npx
-    args:
-      - -y
-      - lobsterai
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Open-source, desktop-grade AI agent that gets real work done — data analysis, slides, docs, video & web research. Built on OpenClaw; runs tools on your real desktop and takes commands from your phone via WeChat, Feishu, DingTalk & Telegram.

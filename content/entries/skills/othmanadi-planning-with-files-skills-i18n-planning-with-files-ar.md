@@ -4,7 +4,9 @@ name: ar
 tagline: "تخطيط مستمر قائم على الملفات لعمل وكلاء الذكاء الاصطناعي متعدد
   الخطوات. يحتفظ بملفات task_plan.md و findings.md و progress.md على القرص،
   وتحقن خطافات "
-summary: "قبل المتابعة، حدّد دليل الخطة الذي تملكه هذه المهمة:"
+summary: 1. استخدم scripts/resolve-plan-dir.sh (أو .ps1) المثبت مع PLANID
+  وPWFPLANROOT الخاصين بالمضيف، ثم اقرأ taskplan.md وprogress.md وfindings.md من
+  ذلك الدليل المحدد. 2. إذا رُفض محدد صريح، أو كانت عزلة الجلسة مفعلة وفيها...
 categories:
   - agent-frameworks
 tags:

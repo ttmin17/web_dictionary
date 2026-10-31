@@ -97,7 +97,6 @@ Before designing a programmatic SEO strategy, understand:
    - Can you realistically compete?
 
 ---
-
 ## Core Principles
 
 ### 1. Unique Value Per Page
@@ -131,7 +130,6 @@ Better to have 100 great pages than 10,000 thin ones.
 - Genuine utility for users
 
 ---
-
 ## The 12 Playbooks (Overview)
 
 | Playbook | Pattern | Example |
@@ -152,7 +150,6 @@ Better to have 100 great pages than 10,000 thin ones.
 **For detailed playbook implementation**: See [references/playbooks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/programmatic-seo/references/playbooks.md)
 
 ---
-
 ## Choosing Your Playbook
 
 | If you have... | Consider... |
@@ -169,7 +166,6 @@ Better to have 100 great pages than 10,000 thin ones.
 You can layer multiple playbooks (e.g., "Best coworking spaces in San Diego").
 
 ---
-
 ## Implementation Framework
 
 ### 1. Keyword Pattern Research
@@ -229,7 +225,6 @@ You can layer multiple playbooks (e.g., "Best coworking spaces in San Diego").
 Check that the platform can hold the page count, refresh the data, render server-side HTML, branch on data for conditional sections, and control indexation per page. Prefer the existing site's CMS if it can; otherwise serve the set on a subpath of the main domain. Options and tradeoffs: [references/implementation-platforms.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/programmatic-seo/references/implementation-platforms.md).
 
 ---
-
 ## Quality Checks
 
 ### Pre-Launch Checklist
@@ -262,7 +257,6 @@ Track: Indexation rate, Rankings, Traffic, Engagement, Conversion
 Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 
 ---
-
 ## Common Mistakes
 
 - **Thin content**: Just swapping city names in identical content
@@ -272,7 +266,6 @@ Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 - **Ignoring UX**: Pages exist for Google, not users
 
 ---
-
 ## Output Format
 
 ### Strategy Document
@@ -287,7 +280,6 @@ Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 - Schema markup
 
 ---
-
 ## Task-Specific Questions
 
 1. What keyword patterns are you targeting?
@@ -298,7 +290,6 @@ Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 6. What's your technical stack?
 
 ---
-
 ## Related Skills
 
 - **seo-audit**: For auditing programmatic pages after launch

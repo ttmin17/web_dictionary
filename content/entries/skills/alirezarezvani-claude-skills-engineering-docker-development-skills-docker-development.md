@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -78,7 +78,6 @@ Opinionated Docker workflow that turns bloated Dockerfiles into production-grade
 Not a Docker tutorial — a set of concrete decisions about how to build containers that don't waste time, space, or attack surface.
 
 ---
-
 ## Slash Commands
 
 | Command | What it does |
@@ -88,7 +87,6 @@ Not a Docker tutorial — a set of concrete decisions about how to build contain
 | `/docker:security` | Audit a Dockerfile or running container for security issues |
 
 ---
-
 ## When This Skill Activates
 
 Recognize these patterns from the user:
@@ -105,7 +103,6 @@ Recognize these patterns from the user:
 If the user has a Dockerfile or wants to containerize something → this skill applies.
 
 ---
-
 ## Workflow
 
 ### `/docker:optimize` — Dockerfile Optimization
@@ -239,7 +236,6 @@ If the user has a Dockerfile or wants to containerize something → this skill a
    ```
 
 ---
-
 ## Tooling
 
 ### `scripts/dockerfile_analyzer.py`
@@ -295,7 +291,6 @@ python3 scripts/compose_validator.py docker-compose.yml --strict
 ```
 
 ---
-
 ## Multi-Stage Build Patterns
 
 ### Pattern 1: Compiled Language (Go, Rust, C++)
@@ -363,7 +358,6 @@ CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000
 ```
 
 ---
-
 ## Base Image Decision Tree
 
 ```
@@ -382,7 +376,6 @@ Is it a compiled binary (Go, Rust, C)?
 ```
 
 ---
-
 ## Proactive Triggers
 
 Flag these without being asked:
@@ -397,7 +390,6 @@ Flag these without being asked:
 - **apt-get without cleanup in same layer** → `rm -rf /var/lib/apt/lists/*` in the same RUN.
 
 ---
-
 ## Installation
 
 ### One-liner (any tool)
@@ -417,7 +409,6 @@ clawhub install cs-docker-development
 ```
 
 ---
-
 ## Related Skills
 
 - **senior-devops** — Broader DevOps scope (CI/CD, IaC, monitoring). Complementary — use docker-development for container-specific work, senior-devops for pipeline and infrastructure.

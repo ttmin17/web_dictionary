@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -85,7 +85,6 @@ Evaluate and compare technologies, frameworks, and cloud providers with data-dri
 - [References](#references)
 
 ---
-
 ## Capabilities
 
 | Capability | Description |
@@ -98,7 +97,6 @@ Evaluate and compare technologies, frameworks, and cloud providers with data-dri
 | Cloud Comparison | Compare AWS, Azure, GCP for specific workloads |
 
 ---
-
 ## Quick Start
 
 ### Compare Two Technologies
@@ -123,7 +121,6 @@ Codebase: 50,000 lines, 200 components. Team: 6 developers.
 ```
 
 ---
-
 ## Input Formats
 
 The evaluator accepts three input formats:
@@ -153,7 +150,6 @@ comparison:
 ```
 
 ---
-
 ## Analysis Types
 
 ### Quick Comparison (200-300 tokens)
@@ -172,7 +168,6 @@ comparison:
 - Detailed recommendations
 
 ---
-
 ## Scripts
 
 ### stack_comparator.py
@@ -216,7 +211,6 @@ python scripts/migration_analyzer.py --from angular-1.x --to react
 ```
 
 ---
-
 ## References
 
 | Document | Content |
@@ -226,7 +220,6 @@ python scripts/migration_analyzer.py --from angular-1.x --to react
 | `references/workflows.md` | Step-by-step evaluation workflows |
 
 ---
-
 ## Confidence Levels
 
 | Level | Score | Interpretation |
@@ -236,7 +229,6 @@ python scripts/migration_analyzer.py --from angular-1.x --to react
 | Low | < 50% | Close call, limited data |
 
 ---
-
 ## When to Use
 
 - Comparing frontend/backend frameworks for new projects

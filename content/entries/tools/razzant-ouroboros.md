@@ -26,8 +26,7 @@ signals:
   stars_delta_7d: 26
   stars_growth_pct: 1.7
   trending_score: 26.43
-  rank_current: 91
-  rank_delta: null
+  rank_current: 92
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1560
@@ -48,14 +47,7 @@ tool:
   install_command: pip install ouroboros
   runtime: python
   execution_mode: hybrid
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - ouroboros
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Ouroboros — self-creating AI agent. Born Feb 16, 2026.

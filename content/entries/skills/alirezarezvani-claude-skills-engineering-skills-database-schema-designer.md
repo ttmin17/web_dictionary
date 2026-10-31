@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -68,7 +68,6 @@ skill:
 **Domain:** Data Architecture / Backend  
 
 ---
-
 ## Overview
 
 Design relational database schemas from requirements and generate migrations, TypeScript/Python types, seed data, RLS policies, and indexes. Handles multi-tenancy, soft deletes, audit trails, versioning, and polymorphic associations.
@@ -84,7 +83,6 @@ Design relational database schemas from requirements and generate migrations, Ty
 - **ERD generation** — Mermaid diagram from schema
 
 ---
-
 ## When to Use
 
 - Designing a new feature that needs database tables
@@ -94,7 +92,6 @@ Design relational database schemas from requirements and generate migrations, Ty
 - Planning a schema migration for a breaking change
 
 ---
-
 ## Schema Design Process
 
 ### Step 1: Requirements → Entities
@@ -125,7 +122,6 @@ User 1──* AuditLog
 - Versioning: add `version INTEGER` for optimistic locking
 
 ---
-
 ## Full Schema Example (Task Management SaaS)
 → See references/full-schema-examples.md for details
 
@@ -174,7 +170,6 @@ SELECT set_config('app.current_user_id', $1, true);
 ```
 
 ---
-
 ## Seed Data Generation
 
 ```typescript
@@ -240,7 +235,6 @@ seed().catch(console.error).finally(() => process.exit(0))
 ```
 
 ---
-
 ## ERD Generation (Mermaid)
 
 ```
@@ -283,7 +277,6 @@ npx prisma-erd-generator
 ```
 
 ---
-
 ## Common Pitfalls
 
 - **Soft delete without index** — `WHERE deleted_at IS NULL` without index = full scan
@@ -294,7 +287,6 @@ npx prisma-erd-generator
 - **RLS not tested** — always test RLS with a non-superuser role
 
 ---
-
 ## Best Practices
 
 1. **Timestamps everywhere** — `created_at`, `updated_at` on every table

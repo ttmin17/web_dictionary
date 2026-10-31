@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -174,5 +174,4 @@ This is also the **artifact handoff** — the next command consumes this file, n
 - Skills: [`context-engine`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/brief/${CLAUDE_PLUGIN_ROOT}/vendor/c-level-advisor/context-engine/SKILL.md), [`board-meeting`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/brief/${CLAUDE_PLUGIN_ROOT}/vendor/c-level-advisor/board-meeting/SKILL.md)
 
 ---
-
 **Version:** 1.0.0

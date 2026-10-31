@@ -148,7 +148,6 @@ Static meshes support at most 8 UV channels. `add_uv_channel` returns failure be
 `pack_uvs` rescales the entire channel's UV bounds into `[padding, 1-padding]^2`. It does **not** detect connected islands and shelf-pack them. For real island packing, run `auto_unwrap_uvs` with `Box` projection first — that produces island-shaped charts the engine packs internally.
 
 ---
-
 ## Per-Region UV Edits (Artist-Grade)
 
 For meshes where one face/region needs a different UV transform than the rest (e.g. a thin disc whose side strip distorts a wall texture while the cap looks fine), use the per-region transforms. They apply an affine transform to a *subset* of vertex instances, leaving everything else untouched.
@@ -241,7 +240,6 @@ unreal.UVMappingService.transform_u_vs_by_polygon_group(
 ```
 
 ---
-
 ## Common Mistakes to Avoid
 
 | WRONG | CORRECT |
@@ -254,7 +252,6 @@ unreal.UVMappingService.transform_u_vs_by_polygon_group(
 | Setting `LightMapCoordinateIndex` past the channel count | Use `set_uv_channel_count` first, or `add_uv_channel` |
 
 ---
-
 ## Return Types — Exact Properties
 
 ### FUVMappingResult (every mutating call)
@@ -299,7 +296,6 @@ unreal.UVMappingService.transform_u_vs_by_polygon_group(
 | `min_lightmap_resolution` | int | Min allowed lightmap resolution |
 
 ---
-
 ## Workflows
 
 ### Workflow: Generate Lightmap UVs for a Newly Imported Mesh
@@ -418,7 +414,6 @@ for asset in results["assets"]:
 ```
 
 ---
-
 ## Property Formats
 
 ### Projection Types (`auto_unwrap_uvs`)
@@ -440,7 +435,6 @@ Power of two preferred:
 - `256`–`512` — hero props, large architecture
 
 ---
-
 ## Verification After Edits
 
 For lightmap-related changes, **always re-run `get_uv_health`** after the save to verify:

@@ -25,15 +25,16 @@ source:
 signals:
   stars: 78236
   last_commit: 2026-10-19T07:21:28Z
-  stars_delta_7d: 2203
-  stars_growth_pct: 2.9
-  trending_score: 2266.83
-  rank_current: 4
-  rank_delta: null
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 140
+  rank_delta: -136
   velocity_source: snapshot_delta
   sparkline_4w:
     - 73849
     - 76033
+    - 78236
     - 78236
 language: en
 needs_keys: false

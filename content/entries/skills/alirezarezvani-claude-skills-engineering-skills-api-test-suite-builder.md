@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -67,7 +67,6 @@ skill:
 **Domain:** Testing / API Quality
 
 ---
-
 ## Overview
 
 Scans API route definitions across frameworks (Next.js App Router, Express, FastAPI, Django REST) and
@@ -76,7 +75,6 @@ uploads, and rate limiting. Outputs ready-to-run test files for Vitest+Supertest
 (Python).
 
 ---
-
 ## Core Capabilities
 
 - **Route detection** — scan source files to extract all API endpoints
@@ -88,7 +86,6 @@ uploads, and rate limiting. Outputs ready-to-run test files for Vitest+Supertest
 - **Rate limiting** — burst detection, per-user vs global limits
 
 ---
-
 ## When to Use
 
 - New API added — generate test scaffold before writing implementation (TDD)
@@ -98,7 +95,6 @@ uploads, and rate limiting. Outputs ready-to-run test files for Vitest+Supertest
 - Security audit prep — generate adversarial input tests
 
 ---
-
 ## Route Detection
 
 ### Next.js App Router
@@ -156,7 +152,6 @@ grep -rn "router\.register\|DefaultRouter\|SimpleRouter" . --include="*.py"
 ```
 
 ---
-
 ## Test Generation Patterns
 
 ### Auth Test Matrix
@@ -190,7 +185,6 @@ For every POST/PUT/PATCH endpoint with a request body:
 | Null values for required fields | 400 or 422 |
 
 ---
-
 ## Example Test Files
 → See references/example-test-files.md for details
 
@@ -210,7 +204,6 @@ When given a codebase, follow this process:
 6. **Assert response shape**, not just status code
 
 ---
-
 ## Common Pitfalls
 
 - **Testing only happy paths** — 80% of bugs live in error paths; test those first
@@ -222,7 +215,6 @@ When given a codebase, follow this process:
 - **Ignoring Content-Type** — test that API rejects wrong content types (xml when json expected)
 
 ---
-
 ## Best Practices
 
 1. One describe block per endpoint — keeps failures isolated and readable

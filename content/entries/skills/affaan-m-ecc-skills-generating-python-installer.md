@@ -94,13 +94,11 @@ This skill targets advanced size/startup optimization — not basic one-file "sc
 - "安装后在纯净系统打不开" → ensure the matching-arch VC++ redistributable is bundled in the Inno Setup script.
 
 ---
-
 ## 核心理念
 
 坚持 **"Nuitka 文件夹模式(dist) + Inno Setup 封装"** 方案。拒绝单文件版，拒绝黑窗。
 
 ---
-
 ## 实战参考案例（生产级 PySide2 桌面应用，323 MB，含 OpenCV / Playwright）
 
 ### 项目概况
@@ -134,7 +132,6 @@ This skill targets advanced size/startup optimization — not basic one-file "sc
 | 含 numpy/pandas | 300-600 MB | **180-350 MB** | - |
 
 ---
-
 ## 核心工作流 (Workflow) - WARNING: 严格执行
 
 当用户请求打包时，按照以下步骤操作：
@@ -183,7 +180,6 @@ This skill targets advanced size/startup optimization — not basic one-file "sc
 用户确认后，输出包含 **完整元数据** 和 **卸载图标修复** 的代码。
 
 ---
-
 ## Nuitka 极限优化编译（基于 参考项目经验）
 
 ### 一、32 位 vs 64 位选择策略
@@ -654,7 +650,6 @@ python analyze_dlls.py dist/你的软件名.dist
 ```
 
 ---
-
 ## 完整优化工作流
 
 ### 步骤 1：修改编译脚本配置
@@ -701,7 +696,6 @@ Remove-Item "opengl32sw.dll" -Force
 ```
 
 ---
-
 ## VC++ 运行库处理方案
 
 ### 方案一：静态链接（推荐）
@@ -726,7 +720,6 @@ Filename: "{tmp}\vc_redist.x86.exe"; Parameters: "/quiet /norestart"; StatusMsg:
 > 下载地址：[Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)
 
 ---
-
 ## Inno Setup 脚本模板（商业终极版）
 
 ```iss
@@ -807,7 +800,6 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#MyAppName}}
 ```
 
 ---
-
 ## 占位符说明
 
 | 占位符 | 说明 | 示例值 |
@@ -823,7 +815,6 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#MyAppName}}
 | `{{GENERATE_RANDOM_GUID}}` | **需生成唯一GUID** | 使用 Inno Setup "Tools > Generate GUID" |
 
 ---
-
 ## 常见问题 (FAQ)
 
 ### Q1: 安装后双击程序无反应？
@@ -850,7 +841,6 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#MyAppName}}
 - 普通代码签名证书需要积累安装量后逐渐获得信任
 
 ---
-
 ## 实战问题处理记录（更新 2026-02-07）
 
 - **安装后提示缺少 python3xx.dll**：必须使用 Nuitka `--standalone`；确认 dist 内存在该 dll；不要打单文件版。
@@ -861,7 +851,6 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#MyAppName}}
 - **dist 出现 `_nuitka_temp.exe`**：在 [Files] 中排除它。
 
 ---
-
 ## 优化效果预期
 
 | 优化组合 | 体积减少 | 启动提升 | 风险等级 |
@@ -877,5 +866,4 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#MyAppName}}
 > WARNING: **不建议使用 UPX 压缩**，虽然能进一步减小体积，但极易触发杀毒软件误报。
 
 ---
-
 **基于 参考项目实战经验优化，助你打造商业级安装包！**

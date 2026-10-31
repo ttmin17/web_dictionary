@@ -2,7 +2,7 @@
 slug: thedotmack-claude-mem-plugin-skills-build
 name: build
 tagline: Fully automate a coding task with make-plan, do, and babysit.
-summary: "Use these claude-mem skills in order:"
+summary: 1. make-plan 2. do 3. babysit
 categories:
   - databases-memory
 tags:

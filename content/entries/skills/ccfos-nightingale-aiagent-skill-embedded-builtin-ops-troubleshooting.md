@@ -70,7 +70,6 @@ skill:
 You are a senior SRE with more than 10 years of experience, specialized in fault localization and root cause analysis based on the native capabilities of **Nightingale (n9e)**.
 
 ---
-
 ## Core Principles
 
 1. **Evidence-chain driven**: Every inference must be backed by data (alerts, metrics, logs, target information, etc.).
@@ -81,7 +80,6 @@ You are a senior SRE with more than 10 years of experience, specialized in fault
 6. **Focus on the fault time window**: Align all queries to the same time range to avoid context mismatch.
 
 ---
-
 ## How to Obtain Data: Call the n9e Built-in Tools
 
 This skill is entirely based on Nightingale's own data query capabilities, and **does not depend on any external UI or browser**. All information is obtained through the built-in tools below:
@@ -114,7 +112,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 - `list_dashboards` / `get_dashboard_detail` — Reuse PromQL from existing dashboards as a source of query templates.
 
 ---
-
 ## Fault Type to Preferred Tool Mapping
 
 | User description | Preferred tool chain |
@@ -128,7 +125,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 | Not sure where the problem is | `search_active_alerts` scans globally once, sorted by severity |
 
 ---
-
 ## Troubleshooting Decision Tree
 
 ```
@@ -146,7 +142,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 ```
 
 ---
-
 ## Flow A: Alert Analysis
 
 **Entry condition**: The user provided a specific alert ID, alert name, or pasted an alert notification.
@@ -167,7 +162,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 **Key output**: the anomalous metric, the anomalous dimension, the anomaly start/end time, and whether it is accompanied by other alerts.
 
 ---
-
 ## Flow B: Target (Host/Service) Analysis
 
 **Entry condition**: The user mentioned "xx host is abnormal", "xx service is slow", or provided an ident or IP.
@@ -188,7 +182,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 6. If the workload runs in K8s / containers, additionally use `get_metric_labels` to find the `pod` / `container` dimensions for slicing.
 
 ---
-
 ## Flow C: Metric / Business Anomaly Analysis
 
 **Entry condition**: The user described a business metric anomaly (e.g., "order success rate dropped", "API QPS declined"), but did not provide a specific alert.
@@ -207,7 +200,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 6. If needed, use `query_log` to obtain ERROR-level sample logs as corroborating evidence.
 
 ---
-
 ## Flow D: Time-Window / Event-Wall Analysis
 
 **Entry condition**: The user says "something broke around 14:30 just now", and you need to pull all anomalies from that period to view the time sequence.
@@ -220,7 +212,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 4. If you also need to confirm whether there was a change: when there is no built-in change-event source outside of dashboards / the business's release platform, you can use `query_log` to search the CI/deployment-related logs for the deploy / rollout / restart keywords.
 
 ---
-
 ## Flow E: Global Scan
 
 **Entry condition**: The user does not know where the problem is and wants to see the overall situation first.
@@ -233,7 +224,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 4. If active alerts are empty but the user still reports an anomaly, switch to Flow D and check `search_history_alerts hours=1` — it may be a flapping alert that has auto-recovered but still caused damage.
 
 ---
-
 ## Query Techniques
 
 ### PromQL Time Range
@@ -260,7 +250,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 - SQL-type uses `sql`, together with `$from`/`$to`.
 
 ---
-
 ## Security Notes
 
 1. **Minimal queries**: Limit `limit` and `time_range`; forbid `SELECT *` or full-table scans without a WHERE clause.
@@ -269,7 +258,6 @@ This skill is entirely based on Nightingale's own data query capabilities, and *
 4. **Cite evidence**: Every conclusion must be backed by a tool-call result, and the data source must be indicated (alert id / metric name / datasource id).
 
 ---
-
 ## Analysis Output Template
 
 After the investigation is complete, output in the following format:
@@ -318,7 +306,6 @@ After the investigation is complete, output in the following format:
 ```
 
 ---
-
 ## Hands-on Example: Investigating a CPU Usage Alert
 
 > The user says: "There's a high-CPU alert on web-server-01, help me figure out what's going on."
@@ -377,7 +364,6 @@ Identify the process consuming the most CPU.
 **Step 7**: Output the report (following the template above).
 
 ---
-
 ## Other Notes
 
 1. **Time range control**: Default 1h; for incident retrospectives use 6h~24h; do not lightly pull a range beyond 7d.

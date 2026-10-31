@@ -26,14 +26,14 @@ source:
 signals:
   stars: 14994
   last_commit: 2026-10-13T14:57:24Z
-  stars_delta_7d: 101
-  stars_growth_pct: 0.7
-  trending_score: 101.68
-  velocity_source: snapshot_delta
+  stars_delta_7d: 550
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
     - 14893
     - 14994
-  rank_current: 17
+    - 14994
 language: zh
 needs_keys: false
 prerequisites:

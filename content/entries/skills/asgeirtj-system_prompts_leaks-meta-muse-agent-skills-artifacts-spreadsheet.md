@@ -4,7 +4,10 @@ name: artifact_spreadsheet
 tagline: "Create, read, edit, fix, or clean spreadsheet files (.xlsx, .xlsm,
   .csv, .tsv). Use whenever a build task's artifact kind is spreadsheet, or the
   task "
-summary: "Requirements on every delivered workbook:"
+summary: "- Set a non-empty workbook.properties.title and a human-readable
+  filename. Data enters the workbook from the build's gathered content only; a
+  value you do not have is a blank cell or a question, never an invented
+  numb..."
 categories:
   - cloud-infra
 tags:

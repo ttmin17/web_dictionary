@@ -92,7 +92,6 @@ skill:
 > Handing judgment / sign-off / the last switch to the machine = removing the high-level feedback = it sprints, fast and hard, toward a goal no one questioned → wrong output.
 
 ---
-
 ## Action 1 — Write a loop (5 steps)
 
 ### Step 0 · Subtract first: should you even build it? (4-condition gate, any miss = veto)
@@ -154,7 +153,6 @@ Retry cap, hard stop, human flips the last switch = damping. **Negative feedback
 ① **Run it once by hand** (forces you to state exactly "how the judge decides") → ② harden into a skill / Claude Code sub-agents (a main Claude loops, dispatching plan/build/judge) → ③ hang it on cron for full automation.
 
 ---
-
 ## Action 2 — Review a loop (checklist = five failure modes)
 
 > Run the loop past each row. **Hitting any loop will misfire; send it back.** These five are negative experience (gotchas) — worth more than positive rules.
@@ -173,7 +171,6 @@ Retry cap, hard stop, human flips the last switch = damping. **Negative feedback
 - **Counter-intuitive warning.** The more "self-improving / rewrites-its-own-rules" a loop is, the **stricter the human review it needs** (to see what it rewrote the rules into) — not looser. The machine is too fast to intercept after the fact, so the human's judgment must sit **before the action** (a hard gate), not as a post-hoc patch.
 
 ---
-
 ## Worked example — reviewing a "nightly green-keeper" loop
 
 You want a loop that runs every night and fixes whatever tests are failing.
@@ -192,13 +189,11 @@ Now run the **review checklist**, and it catches what the naive version would ha
 The naive loop and the reviewed loop differ by four lines of constraint — and that's the difference between "wakes you to a deleted test suite" and "wakes you to a clean PR."
 
 ---
-
 ## One-line close
 
 > The hard part of writing a loop isn't "can I write a loop," it's **defining a goal a machine can reconcile** — decidable, bounded, reconciliation-based. The controller must be deterministic and external; keep judgment and the standard with the human; the system tends toward entropy, so maintain it.
 > **A loop only rewards someone who has already thought it through. Count on it to think for you, and it will happily think wrong, with you, at scale.**
 
 ---
-
 > Lineage: Wiener's two-level feedback (*The Human Use of Human Beings*, 1950) for the judgment/execution split and red lines; the plan/build/judge pattern from Anatoli's *Loops explained* and Addy's *Loop Engineering*.
 > Mechanism layer (how to wire the loop architecture): see `autonomous-loops` / `continuous-agent-loop`. This skill does not re-implement mechanism; it covers goal definition and runaway prevention only.

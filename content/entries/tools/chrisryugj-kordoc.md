@@ -4,8 +4,9 @@ name: kordoc
 tagline: "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘
   CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown —
   CLI "
-summary: HWP 3.x·5.x, HWPX, HWPML, PDF, XLS·XLSX, DOCX, PPTX, PNG·JPG·WebP를
-  Markdown과 구조화 데이터로 변환합니다. 라이브러리·CLI·MCP 서버로 사용할 수 있습니다.
+summary: "- 📊 PDF 공개 벤치 종합 0.964: opendataloader-bench 200문서, 공개 리더보드 12개 파서보다
+  높은 점수(4.22.14 측정). 측정 조건 - 🇰🇷 한국 공문서 표 구조 100%: 원본 HWPX 2,424문서의 보이는 표
+  10,342개 전부 구조 일치. 검증 결과"
 categories:
   - media-creative
 tags:

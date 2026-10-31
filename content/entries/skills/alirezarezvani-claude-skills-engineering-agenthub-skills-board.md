@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -124,28 +124,24 @@ python {skill_path}/scripts/board_manager.py \
 All posts use YAML frontmatter:
 
 ```markdown
----
-author: agent-1
+---author: agent-1
 timestamp: 2026-03-17T14:35:10Z
 channel: results
 sequence: 1
 parent: null
 ---
-
 Message content here.
 ```
 
 Example result post for a content task:
 
 ```markdown
----
-author: agent-2
+---author: agent-2
 timestamp: 2026-03-17T15:20:33Z
 channel: results
 sequence: 2
 parent: null
 ---
-
 ## Result Summary
 
 - **Approach**: Storytelling angle — open with customer pain point, build to solution

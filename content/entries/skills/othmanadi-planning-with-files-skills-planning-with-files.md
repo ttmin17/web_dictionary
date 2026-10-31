@@ -4,7 +4,9 @@ name: planning-with-files
 tagline: Persistent file-based planning for multi-step AI-agent work. Keeps
   task_plan.md, findings.md, and progress.md on disk; lifecycle hooks inject
   selected
-summary: "Before continuing, resolve the plan this task owns:"
+summary: 1. Use the installed scripts/resolve-plan-dir.sh (or .ps1) with the
+  task's PLANID and PWFPLANROOT. Read taskplan.md, progress.md, and findings.md
+  from that one selected directory. A root taskplan.md must not override...
 categories:
   - agent-frameworks
 tags:

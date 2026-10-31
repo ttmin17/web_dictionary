@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -69,7 +69,6 @@ skill:
 Threat detection skill for proactive discovery of attacker activity through hypothesis-driven hunting, IOC analysis, and behavioral anomaly detection. This is NOT incident response (see incident-response) or red team operations (see red-team) — this is about finding threats that have evaded automated controls.
 
 ---
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -84,7 +83,6 @@ Threat detection skill for proactive discovery of attacker activity through hypo
 - [Cross-References](#cross-references)
 
 ---
-
 ## Overview
 
 ### What This Skill Does
@@ -105,7 +103,6 @@ This skill provides the methodology and tooling for **proactive threat detection
 Read access to SIEM/EDR telemetry, endpoint logs, and network flow data. IOC feeds require freshness within 30 days to avoid false positives. Hunting hypotheses must be scoped to the environment before execution.
 
 ---
-
 ## Threat Signal Analyzer
 
 The `threat_signal_analyzer.py` tool supports three modes: `hunt` (hypothesis scoring), `ioc` (sweep generation), and `anomaly` (statistical detection).
@@ -157,7 +154,6 @@ python3 scripts/threat_signal_analyzer.py --list-techniques
 | 2 | High-priority confirmed findings |
 
 ---
-
 ## Threat Hunting Methodology
 
 Structured threat hunting follows a five-step loop: hypothesis → data source identification → query execution → finding triage → feedback to detection engineering.
@@ -185,7 +181,6 @@ Priority score = (actor_relevance × 3) + (control_gap × 2) + (data_availabilit
 | Scheduled task persistence | T1053.005 | Sysmon Event 1/11, Windows 4698 | Scheduled task created in non-standard directory |
 
 ---
-
 ## IOC Analysis
 
 IOC analysis determines whether indicators are fresh, maps them to required sweep targets, and filters stale data that generates false positives.
@@ -205,7 +200,6 @@ IOC analysis determines whether indicators are fresh, maps them to required swee
 IOCs older than their threshold are flagged as `stale` and excluded from sweep target generation. Running sweeps against stale IOCs inflates false positive rates and reduces SOC credibility. Refresh IOC feeds from threat intelligence platforms (MISP, OpenCTI, commercial TI) before every hunt cycle.
 
 ---
-
 ## Anomaly Detection
 
 Statistical anomaly detection identifies behavior that deviates from established baselines without relying on known-bad signatures.
@@ -236,7 +230,6 @@ Effective anomaly detection requires at least 14 days of historical telemetry to
 | Cloud IAM | API calls per identity per hour | Credential compromise, exfiltration |
 
 ---
-
 ## MITRE ATT&CK Signal Prioritization
 
 Each hunting hypothesis maps to one or more ATT&CK techniques. Techniques with multiple confirmed signals in your environment are higher priority.
@@ -256,7 +249,6 @@ Each hunting hypothesis maps to one or more ATT&CK techniques. Techniques with m
 | Command & Control | T1071, T1572, T1568 | Beaconing, protocol tunneling, DNS C2 |
 
 ---
-
 ## Deception and Honeypot Integration
 
 Deception assets generate high-fidelity alerts — any interaction with a honeypot is an unambiguous signal requiring investigation.
@@ -274,7 +266,6 @@ Deception assets generate high-fidelity alerts — any interaction with a honeyp
 Honeypot alerts bypass the standard scoring pipeline — any hit is an automatic SEV2 until proven otherwise.
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Quick Hunt (30 Minutes)
@@ -337,7 +328,6 @@ fi
 ```
 
 ---
-
 ## Anti-Patterns
 
 1. **Hunting without a hypothesis** — Running broad queries across all telemetry without a focused question generates noise, not signal. Every hunt must start with a testable hypothesis scoped to one or two ATT&CK techniques.
@@ -349,7 +339,6 @@ fi
 7. **Ignoring honeypot alerts** — Any interaction with a deception asset is a high-fidelity signal. Treating honeypot alerts as noise invalidates the entire deception investment.
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |

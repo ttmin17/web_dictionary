@@ -4,7 +4,9 @@ name: FunASR
 tagline: Open-source speech recognition toolkit for training, inference,
   streaming ASR, VAD, punctuation, speaker diarization pipelines, and
   OpenAI-compatible/
-summary: (简体中文|English|日本語|한국어)
+summary: For Fun-ASR-Nano transcription with the Hugging Face API, start with
+  the Transformers 5.17.0 CPU quickstart. No FunASR toolkit or remote Python
+  code is needed.
 categories:
   - media-creative
 tags:
@@ -28,8 +30,8 @@ signals:
   stars_delta_7d: 69
   stars_growth_pct: 0.3
   trending_score: 69.23
-  rank_current: 28
-  rank_delta: -10
+  rank_current: 32
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20602
@@ -81,7 +83,6 @@ launch:
 </p>
 
 ---
-
 ## Quick Start
 
 ### Native Transformers
@@ -204,7 +205,6 @@ and hardware before choosing a runtime.
 Trying FunASR for the first time? Use the [Colab quickstart](https://github.com/modelscope/FunASR/blob/main/examples/colab/) before setting up a local environment. Choosing a first model? Start with the [model selection guide](https://github.com/modelscope/FunASR/blob/main/docs/model_selection.md). Planning a switch from Whisper or a cloud ASR provider? Use the [migration guide](https://github.com/modelscope/FunASR/blob/main/docs/migration_from_whisper.md) and [benchmark example](https://github.com/modelscope/FunASR/blob/main/examples/migration/) to test representative audio, map features, and roll out safely.
 
 ---
-
 ## Installation
 
 ```bash
@@ -222,7 +222,6 @@ Requirements: Python ≥ 3.8. Install PyTorch + torchaudio first ([pytorch.org](
 </details>
 
 ---
-
 ## Model Zoo
 
 This list includes third-party models. **OpenMOSS** publishes MOSS-Transcribe-Diarize;
@@ -248,7 +247,6 @@ known-person identification. Model licenses are separate from the toolkit's MIT 
 | emotion2vec+large | Emotion recognition | — | 300M | [⭐](https://modelscope.cn/models/iic/emotion2vec_plus_large/summary) [🤗](https://huggingface.co/emotion2vec/emotion2vec_plus_large) |
 
 ---
-
 ## Usage
 
 > [Python tutorial](https://github.com/modelscope/FunASR/blob/main/docs/tutorial/README.md) · [SDK parameters and outputs](https://github.com/modelscope/FunASR/blob/main/docs/python_api.md) · [Training](https://github.com/modelscope/FunASR/blob/main/docs/training.md) · [Model registration](https://github.com/modelscope/FunASR/blob/main/docs/model_registration.md)
@@ -313,7 +311,6 @@ funasr *.wav --output-format srt --output-dir ./output
 Available models: `sensevoice` (default), `paraformer`, `paraformer-en`, `fun-asr-nano`
 
 ---
-
 ## Deploy
 
 Start a local SenseVoice CPU service from a fresh directory in a POSIX shell with
@@ -400,7 +397,6 @@ inference on physical Blackwell hardware.
 [OpenAI API example →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/) · [Gradio demo →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/GRADIO.md) · [Client recipes →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/CLIENTS.md) · [JavaScript/TypeScript recipes →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/JAVASCRIPT.md) · [Kubernetes template →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/kubernetes/) · [Workflow recipes →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/WORKFLOWS.md) · [Postman collection →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/POSTMAN.md) · [OpenAPI spec →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/OPENAPI.md) · [Security guide →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/SECURITY.md) · [Deployment matrix →](https://github.com/modelscope/FunASR/blob/main/docs/deployment_matrix.md) · [Deployment docs →](https://github.com/modelscope/FunASR/blob/main/runtime/readme.md) · [Agent integration →](https://modelscope.github.io/FunASR/agent.html)
 
 ---
-
 ## Benchmark
 
 The [historical benchmark report](https://modelscope.github.io/FunASR/benchmark.html)
@@ -415,7 +411,6 @@ scope, and CER/WER. Offline throughput is not streaming latency. The
 recordings with the same evaluation scope.
 
 ---
-
 ## What's new
 
 - **MOSS-Transcribe-Diarize** brings long-form ASR, timestamps, and anonymous speaker labels to FunASR services, Docker, Kubernetes, vLLM/SGLang workflows, and FunClip. [Deploy MOSS ->](https://github.com/modelscope/FunASR/blob/main/docs/moss_transcribe_diarize.md)
@@ -425,7 +420,6 @@ recordings with the same evaluation scope.
 > See [GitHub Releases](https://github.com/modelscope/FunASR/releases) for the complete changelog and downloadable assets.
 
 ---
-
 ## Community
 
 Start with [troubleshooting](https://github.com/modelscope/FunASR/blob/main/docs/troubleshooting.md) before reporting a problem.

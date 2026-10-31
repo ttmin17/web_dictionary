@@ -3,7 +3,8 @@ slug: asgeirtj-system_prompts_leaks-meta-muse-agent-skills-philips-hue
 name: philips_hue
 tagline: Control Philips Hue smart lights, rooms, scenes, and devices via the
   Hue Remote API v2.
-summary: "When a user first asks to set up or use Philips Hue:"
+summary: 'Tell the user: "Click here to sign into your Philips Hue account. Make
+  sure to use the same account your Hue Bridge is registered to."'
 categories:
   - cloud-infra
 tags:

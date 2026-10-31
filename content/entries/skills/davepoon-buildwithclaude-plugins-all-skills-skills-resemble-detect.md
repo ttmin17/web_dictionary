@@ -129,7 +129,6 @@ When the Resemble MCP server is connected, use these tools instead of raw API ca
 **Tool usage pattern**: Use `resemble_docs_lookup` with topic `"detect"` to get the full picture, then `resemble_api_endpoint` for exact request/response schemas before making API calls.
 
 ---
-
 ## Phase 1: Deepfake Detection
 
 The core capability. Submit any audio, image, or video for AI-generated content analysis.
@@ -250,7 +249,6 @@ Authorization: Bearer <API_KEY>
 **Always present scores with context.** Say "The detection returned a score of 0.87, indicating high confidence that this audio is AI-generated" — never just "it's fake."
 
 ---
-
 ## Phase 2: Intelligence — Media Analysis
 
 Analyze media for rich structured insights independent of or alongside detection.
@@ -327,7 +325,6 @@ This returns a question UUID. Poll `GET /detects/{detect_uuid}/intelligence/{que
 **Prerequisite:** The detection must have `status: "completed"`. Submitting a question against a processing or failed detection returns a 422 error.
 
 ---
-
 ## Phase 3: Audio Source Tracing
 
 When audio is detected as synthetic (`label: "fake"`), identify which AI platform generated it.
@@ -351,7 +348,6 @@ Known source labels include: `resemble_ai`, `elevenlabs`, `real`, and others as 
 - `GET /audio_source_tracings/{uuid}` — get specific report
 
 ---
-
 ## Phase 4: Watermarking
 
 Apply invisible watermarks to media for provenance tracking, or detect existing watermarks.
@@ -405,7 +401,6 @@ Prefer: wait
 ```
 
 ---
-
 ## Phase 5: Identity — Speaker Verification (Beta)
 
 Create voice identity profiles and match incoming audio against them.
@@ -451,7 +446,6 @@ Authorization: Bearer <API_KEY>
 Lower `distance` = closer match. Higher `confidence` = stronger match.
 
 ---
-
 ## Phase 6: Text Detection
 
 Detect whether text content is AI-generated or human-written.
@@ -529,7 +523,6 @@ On failure:
 ```
 
 ---
-
 ## Recommended Workflows
 
 ### Full Media Forensics (Most Thorough)
@@ -571,7 +564,6 @@ For creators who want to prove their content is authentic:
 3. Later, verify provenance: `POST /watermark/detect` against any copy
 
 ---
-
 ## Red Flags — Stop and Reassess
 
 - **Declaring authenticity without a detection result** — Never say media is real or fake based on visual/auditory inspection alone

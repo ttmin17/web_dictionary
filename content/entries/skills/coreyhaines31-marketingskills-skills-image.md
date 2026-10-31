@@ -100,7 +100,6 @@ Gather this context (ask if not provided):
 - Do you need the image optimized for web performance?
 
 ---
-
 ## Choosing Your Approach
 
 Pick the right tool for the job:
@@ -114,7 +113,6 @@ Pick the right tool for the job:
 | **Stock Photography** | Generic business/lifestyle scenes | Unsplash, Pexels | When speed matters more than uniqueness |
 
 ---
-
 ## AI Image Generation
 
 Generate original images from text prompts. The fastest way to create unique marketing visuals.
@@ -179,7 +177,6 @@ clean commercial photography style, 16:9 aspect ratio, 4K
 For detailed prompting guides per model, see [references/ai-image-prompting.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/image/references/ai-image-prompting.md).
 
 ---
-
 ## Design Tools
 
 For templated, brand-consistent work where AI generation is overkill or too unpredictable.
@@ -214,7 +211,6 @@ Best for teams with design systems or pixel-perfect needs.
 | Abstract/creative visual | No | Yes |
 
 ---
-
 ## Marketing Image Workflows
 
 ### Blog & Article Hero Images
@@ -304,7 +300,6 @@ Logos, icons, and illustrations. AI generation has limits here.
 | Social icons | No | Yes | Use platform-provided assets |
 
 ---
-
 ## Image Optimization
 
 Every image on your site affects page speed, which affects SEO and conversions.
@@ -346,7 +341,6 @@ curl -s https://yoursite.com | grep -oP 'src="[^"]+\.(jpg|png|webp)"' | head -20
 ```
 
 ---
-
 ## OG & Social Preview Images
 
 The image that appears when your URL is shared on social media, Slack, Discord, etc.
@@ -372,7 +366,6 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 **Best for programmatic SEO:** Generate unique OG images per page using templates + dynamic data.
 
 ---
-
 ## Common Mistakes
 
 1. **Using AI for product UI screenshots** — models hallucinate interfaces; capture real screenshots
@@ -385,7 +378,6 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 8. **Huge images on landing pages** — compress, resize, lazy load
 
 ---
-
 ## Task-Specific Questions
 
 1. What type of image do you need? (Blog hero, social graphic, mockup, banner, brand asset)
@@ -396,7 +388,6 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 6. Does this need to be optimized for web performance?
 
 ---
-
 ## Related Skills
 
 - **ad-creative**: For paid ad image creative, platform-specific ad specs, and scaled ad production

@@ -2,9 +2,10 @@
 slug: chromedevtools-chrome-devtools-mcp
 name: chrome-devtools-mcp
 tagline: Chrome DevTools for coding agents
-summary: "[Tool reference][tool-reference] | [CLI][cli] | [Skills][skills] |
-  [Changelog][changelog] | [Contributing][contributing] |
-  [Troubleshooting][troubleshooting] | [Design Principles][design-principles]"
+summary: "- Get performance insights: Uses [Chrome
+  DevTools](https://github.com/ChromeDevTools/devtools-frontend) to record
+  traces and extract actionable performance insights. - Advanced browser
+  debugging: Analyze network reque..."
 categories:
   - browser-web
 tags:

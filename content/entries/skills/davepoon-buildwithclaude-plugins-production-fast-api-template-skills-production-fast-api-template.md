@@ -4,7 +4,9 @@ name: production-fast-api-template
 tagline: Structure and execution rules for a unified, production-ready backend
   combining domain-oriented FastAPI, Retrieval-Augmented Generation (RAG) and
   Agen
-summary: "Companion references. Read the relevant file before writing code:"
+summary: "- 🟢 Convention. A proposed rule. Follow it by default. - 🟡 Needs
+  approval. An open team decision. Surface the options to the user and never
+  pick one silently."
 categories:
   - agent-frameworks
 tags:
@@ -118,7 +120,6 @@ implementation. If a rule doesn't fit a real need, raise it with the user instea
 working around it.
 
 ---
-
 ## 1. Core structure rules 🟢
 
 1. **One application.** FastAPI, RAG and Agentic AI are **not** separate apps. There is exactly one `src/` package, one FastAPI entry point (`src/main.py`) and one shared infrastructure layer.
@@ -136,7 +137,6 @@ working around it.
 13. **Reuse existing files before adding new ones.** Extend `execution/background_worker.py` rather than creating `execution/worker2.py` or `rag/worker.py`.
 
 ---
-
 ## 2. Canonical structure
 
 ```text
@@ -385,7 +385,6 @@ working around it.
 `__init__.py` files are omitted above for brevity. Rule 11 still applies.
 
 ---
-
 ## 3. Where does new code go?
 
 | You are adding… | Put it in | Not in |
@@ -459,7 +458,6 @@ working around it.
 If none of these rows fit, **ask the user** before inventing a new top-level package.
 
 ---
-
 ## 4. RAG naming conventions 🟢
 
 Use these names. The alternatives were rejected for the reasons given.
@@ -487,7 +485,6 @@ Trained model artifacts, datasets and domain-specific label lists are **data**, 
 Keep them under `data/` or external storage 🟡, never hard-coded in `src/`.
 
 ---
-
 ## 5. Execution rules (summary of ASYNC_EXECUTION.md) 🟢
 
 **Async vs sync**
@@ -544,7 +541,6 @@ Keep them under `data/` or external storage 🟡, never hard-coded in `src/`.
 - Python runtime
 
 ---
-
 ## 6. Pydantic and structured-output rules (summary of PYDANTIC_STANDARDS.md) 🟢
 
 **Models**
@@ -578,7 +574,6 @@ Keep them under `data/` or external storage 🟡, never hard-coded in `src/`.
 18. Schema tests use synthetic data, a fake LLM client, no live calls and no credentials. Assert on error `type` and `loc`.
 
 ---
-
 ## 7. API, dependency, database and tooling rules (summary of API_CONVENTIONS.md) 🟢
 
 **Dependencies**
@@ -611,7 +606,6 @@ Keep them under `data/` or external storage 🟡, never hard-coded in `src/`.
 17. Ruff is the only linter and formatter (`ruff check --fix`, `ruff format`). Its configuration, pre-commit hooks and a type checker are 🟡.
 
 ---
-
 ## 8. Guardrail rules (summary of GUARDRAILS.md) 🟢
 
 1. Guardrails check **content risk** (harmful content, PII, prompt injection, denied topics). They don't replace Pydantic validation, citation checks, authorization or evaluation, and a system prompt is not a guardrail.
@@ -628,7 +622,6 @@ Keep them under `data/` or external storage 🟡, never hard-coded in `src/`.
 12. Never log triggering text. Alarm on `not_evaluated` spikes and block-rate shifts. Measure false positives and negatives with paired harmful and benign datasets in `evaluation/datasets/guardrails/`, including indirect injection.
 
 ---
-
 ## 9. AI evaluation rules (summary of AI_EVALUATION.md) 🟢
 
 1. Evaluation is **offline**: never in the interactive request path, never blocking the event loop. Large runs use the worker path.
@@ -650,7 +643,6 @@ Keep them under `data/` or external storage 🟡, never hard-coded in `src/`.
 **Open decisions 🟡:** framework choice per project, pinned versions, judge provider/model/hosting, thresholds and gating, claim segmentation, dataset storage and access, tracing hook design, budgets, calibration sample sizes (full list in AI_EVALUATION.md §18).
 
 ---
-
 ## 10. API and agent security rules (summary of API_SECURITY.md and AGENT_SECURITY.md) 🟢
 
 **Authentication and tokens**
@@ -687,7 +679,6 @@ Keep them under `data/` or external storage 🟡, never hard-coded in `src/`.
 **Open decisions 🟡:** IdP and token format, algorithms and lifetimes, BFF details, local accounts, policy engine, 404 vs 403, on-behalf-of mechanism, limits, malware scanning, egress allowlists, rate-limit backend, vector-store tenancy, approval tool list, sandboxing, audit sink, CI tools and SLAs (full lists in API_SECURITY.md §17 and AGENT_SECURITY.md §11).
 
 ---
-
 ## 11. Scaffolding a new project
 
 When the user asks you to create a project from this template:
@@ -724,7 +715,6 @@ GitHub Actions, Docker, Kubernetes, Terraform/CDK, migrations, `alembic.ini`, ru
 deployment scripts without being asked. Don't install dependencies (Celery, Redis, RabbitMQ, AWS SDKs, DeepEval, Ragas, JWT or crypto libraries, etc.) without approval. Don't run evaluations against live or paid judges, create signing keys or credentials, deploy security infrastructure or test external systems without being asked and authorized.
 
 ---
-
 ## 12. Working on an existing project
 
 - Before adding a file, locate its row in section 3, and check that no file with the same responsibility exists already.

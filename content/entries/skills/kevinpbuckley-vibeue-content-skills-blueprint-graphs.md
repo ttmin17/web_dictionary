@@ -842,7 +842,6 @@ this is critical for State Tree tasks, animation blueprints, and any actor that 
 ticking during the wait period.
 
 ---
-
 ## Sample scripts (run via `execute_python_code`)
 
 - **`scripts/build_event_graph.txt`** — wire Event BeginPlay → Print String, verify connection, compile.

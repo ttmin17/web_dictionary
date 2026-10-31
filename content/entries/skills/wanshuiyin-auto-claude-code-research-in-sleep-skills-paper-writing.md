@@ -896,7 +896,6 @@ This is documented here, not required. Phase 6.0's verifier-as-truth
 pattern is the default repo behavior.
 
 ---
-
 **Phase 6.1 — Final Report** (runs only after the submission gate is green,
 or directly if `assurance=draft`)
 

@@ -224,5 +224,4 @@ For advanced operations:
 | GraphQL | SHOPIFY_GRAPH_QL_QUERY | query |
 | Bulk query | SHOPIFY_BULK_QUERY_OPERATION | query |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

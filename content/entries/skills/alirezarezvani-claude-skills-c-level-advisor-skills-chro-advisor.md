@@ -4,10 +4,10 @@ name: chro-advisor
 tagline: "People leadership for scaling companies. Hiring strategy, compensation
   design, org structure, culture, and retention. Use when building hiring plans,
   "
-summary: "Performance Rating Distribution (calibrated): | Rating | Expected % |
-  Action | |--------|-----------|--------| | 5 – Exceptional | 5–10% |
-  Fast-track, equity refresh | | 4 – Exceeds | 20–25% | Merit increase,
-  stretch..."
+summary: "- \"Which roles are blocking revenue if unfilled for 30+ days?\" -
+  \"What's our regrettable attrition rate? Who left that we wish hadn't?\" -
+  \"Are managers our retention asset or our attrition cause?\" - \"Can a new
+  hire ex..."
 categories:
   - coding-agents
 tags:
@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

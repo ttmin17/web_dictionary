@@ -122,7 +122,6 @@ skill:
 - 如生图 スキル 后续接口发生变化，调用前应重新核对其参数和输出契约
 
 ---
-
 ## 核心理念
 
 好的龙虾灵魂 = **身份张力** + **底线规则** + **性格缺陷** + **名字** + **视觉锚点**
@@ -140,7 +139,6 @@ skill:
 | "帮我优化这个灵魂" / 附带已有 SOUL.md | → **打磨模式**（跳到 Step 4） |
 
 ---
-
 ## Step 1：选方向（引导模式）
 
 展示 10 类虾生方向（每类精选 1 个代表），让用户选择或混搭：
@@ -269,7 +267,6 @@ python3 ${SKILL_DIR}/gacha.py [次数]
 > 好了。从虚无中走出来一只新的龙虾——[名字]。它的灵魂、规矩、名字、长相都有了。要我把它的灵魂刻进 SOUL.md，把它的身份证写成 IDENTITY.md 吗？告诉我放哪个目录，我来落笔。
 
 ---
-
 ## Examples
 
 - `帮我设计一只 OpenClaw 龙虾灵魂，气质要冷幽默但可靠`
@@ -283,7 +280,6 @@ python3 ${SKILL_DIR}/gacha.py [次数]
   - `references/output-template.md`
 
 ---
-
 ## 错误处理
 
 **完整降级策略**：见 [references/error-handling.md](https://github.com/affaan-m/ECC/blob/main/docs/ja-JP/skills/openclaw-persona-forge/references/error-handling.md)
@@ -308,7 +304,6 @@ python3 ${SKILL_DIR}/gacha.py [次数]
 ```
 
 ---
-
 ## 注意事项
 
 ### 好灵魂的检验标准
@@ -333,7 +328,6 @@ python3 ${SKILL_DIR}/gacha.py [次数]
 3. 你在配合AI说话 → 主客倒置
 
 ---
-
 ## 兼容性
 
 本 スキル 遵循 Markdown 指令注入标准：

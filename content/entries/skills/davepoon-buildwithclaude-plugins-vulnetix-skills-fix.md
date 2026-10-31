@@ -769,7 +769,6 @@ Before proposing a version bump, evaluate whether the dependency can be removed 
 Categorize fixes into 5 categories (A0-D) and present them in priority order. **Every option MUST include the Safe Harbour confidence score and all version details per the Mandatory Reporting Requirements above.**
 
 ---
-
 #### **A0. Inline as First-Party Code** (Best — when viable)
 
 If the inlining evaluation in Step 4 passed:
@@ -785,7 +784,6 @@ License: <original license> (attribution preserved in source header)
 **Action:** Write inlined module, update all imports, remove from manifests and lockfiles.
 
 ---
-
 #### **A. Version Bump** (Preferred when inlining is not viable)
 
 If a patched version is available in the registry:
@@ -802,7 +800,6 @@ If a patched version is available in the registry:
 - **Major version** (2.x → 3.0): High risk, breaking changes expected
 
 ---
-
 #### **B. Patch** (Alternative)
 
 If a source patch or distro patch is available:
@@ -815,7 +812,6 @@ If a source patch or distro patch is available:
 **Action:** Download patch and apply to local dependency copy (advanced users only).
 
 ---
-
 #### **C. Workaround** (Temporary Mitigation)
 
 If no fix is available yet, provide temporary mitigations:
@@ -829,7 +825,6 @@ If no fix is available yet, provide temporary mitigations:
 **Action:** Apply configuration changes to relevant files.
 
 ---
-
 #### **D. Advisory Guidance** (Informational)
 
 - **Vendor advisory links** (official fix documentation)
@@ -839,7 +834,6 @@ If no fix is available yet, provide temporary mitigations:
 **Action:** No immediate action, but monitor for updates.
 
 ---
-
 ### Step 6: Apply Fixes Immediately
 
 After presenting the options, **immediately begin applying the preferred fix** (do not wait for a planning interview unless the situation is ambiguous). Apply changes in this order:

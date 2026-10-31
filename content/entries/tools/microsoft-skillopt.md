@@ -52,14 +52,7 @@ tool:
   install_command: pip install skillopt
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - skillopt
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.

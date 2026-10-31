@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -154,5 +154,4 @@ Saved to `~/.claude/execution/YYYY-MM-DD-<slug>.md`:
 - Agent: [`cs-coo-advisor`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/execute/../../agents/cs-coo-advisor.md)
 
 ---
-
 **Version:** 1.0.0

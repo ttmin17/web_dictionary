@@ -128,7 +128,6 @@ internally to avoid gimbal lock. Inspect with `quat_to_euler(quat)`. Don't guess
 read the reference pose first (`get_reference_pose`).
 
 ---
-
 ## Task Index
 
 | Task | Workflow | Sample script |

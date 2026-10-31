@@ -2,7 +2,8 @@
 slug: ruvnet-ruflo-plugins-ruflo-swarm-skills-monitor-stream
 name: monitor-stream
 tagline: Stream live swarm events using the Monitor tool for real-time observability
-summary: "Use the Monitor tool to stream swarm events in real time instead of polling:"
+summary: 'Run via Monitor: node "${CLAUDEPLUGINROOT}/scripts/swarm-watch.mjs"
+  (add --interval 5 for faster updates; minimum 2 s)'
 categories:
   - agent-frameworks
 tags:

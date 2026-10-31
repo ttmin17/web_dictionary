@@ -27,8 +27,8 @@ signals:
   stars_delta_7d: 36
   stars_growth_pct: 0.2
   trending_score: 36.06
-  rank_current: 46
-  rank_delta: -23
+  rank_current: 50
+  rank_delta: -27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 23049
@@ -513,13 +513,11 @@ See [CONTRIBUTING.md](https://github.com/czlonkowski/n8n-mcp/blob/main/CONTRIBUT
 See [Acknowledgments](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/ACKNOWLEDGMENTS.md) for credits and template attribution.
 
 ---
-
 <div align="center">
   <strong>Built with care for the n8n community</strong>
 </div>
 
 ---
-
 > 💼 **Need it built for you?**
 >
 > Work with [AiAdvisors — n8n automation audits, builds, and operations](https://aiadvisors.pl/en), run by the author of n8n-mcp and n8n-skills.

@@ -69,13 +69,11 @@ Hookify rules are markdown files with YAML frontmatter that define patterns to w
 ### Basic Structure
 
 ```markdown
----
-name: rule-identifier
+---name: rule-identifier
 enabled: true
 event: bash|file|stop|prompt|all
 pattern: regex-pattern-here
 ---
-
 Message to show Claude when this rule triggers.
 Can include markdown formatting, warnings, suggestions, etc.
 ```
@@ -93,8 +91,7 @@ Can include markdown formatting, warnings, suggestions, etc.
 ### Advanced Format (Multiple Conditions)
 
 ```markdown
----
-name: warn-env-api-keys
+---name: warn-env-api-keys
 enabled: true
 event: file
 conditions:
@@ -105,7 +102,6 @@ conditions:
     operator: contains
     pattern: API_KEY
 ---
-
 You're adding an API key to a .env file. Ensure this file is in .gitignore!
 ```
 
@@ -173,11 +169,9 @@ python3 -c "import re; print(re.search(r'your_pattern', 'test text'))"
 
 Minimum viable rule:
 ```markdown
----
-name: my-rule
+---name: my-rule
 enabled: true
 event: bash
 pattern: dangerous_command
----
-Warning message here
+---Warning message here
 ```

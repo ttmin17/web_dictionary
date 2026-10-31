@@ -4,7 +4,10 @@ name: gcp-cloud-architect
 tagline: Design GCP architectures for startups and enterprises. Use when asked
   to design Google Cloud infrastructure, deploy to GKE or Cloud Run, configure
   Big
-summary: "Collect application specifications:"
+summary: "Select from recommended patterns: - Serverless Web: Cloud Storage +
+  Cloud CDN + Cloud Run + Firestore - Microservices on GKE: GKE Autopilot +
+  Cloud SQL + Memorystore + Cloud Pub/Sub - Serverless Data Pipeline:
+  Pub/Sub..."
 categories:
   - coding-agents
 tags:
@@ -26,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -71,7 +74,6 @@ skill:
 Design scalable, cost-effective Google Cloud architectures for startups and enterprises with infrastructure-as-code templates.
 
 ---
-
 ## Workflow
 
 ### Step 1: Gather Requirements
@@ -318,7 +320,6 @@ gcloud access-context-manager perimeters list --policy=$POLICY_ID
 - Region not enabled -- enable the required APIs with `gcloud services enable`
 
 ---
-
 ## Tools
 
 ### architecture_designer.py
@@ -363,7 +364,6 @@ python scripts/deployment_manager.py --app-name my-app --pattern serverless_web 
 - Cloud Monitoring and Logging
 
 ---
-
 ## Quick Start
 
 ### Web App on Cloud Run (< $100/month)
@@ -420,7 +420,6 @@ Result:
 ```
 
 ---
-
 ## Input Requirements
 
 Provide these details for architecture design:
@@ -450,7 +449,6 @@ Provide these details for architecture design:
 ```
 
 ---
-
 ## Output Formats
 
 ### Architecture Design
@@ -471,7 +469,6 @@ Provide these details for architecture design:
 - Priority action list (high/medium/low) and implementation checklist
 
 ---
-
 ## Anti-Patterns
 
 | Anti-Pattern | Why It Fails | Better Approach |
@@ -485,7 +482,6 @@ Provide these details for architecture design:
 | Running Cloud Functions for long tasks | 9-minute timeout, cold starts | Use Cloud Run for tasks > 60 seconds |
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |
@@ -497,7 +493,6 @@ Provide these details for architecture design:
 | `engineering/ci-cd-pipeline-builder` | Pipeline construction — automates Cloud Build and deployment |
 
 ---
-
 ## Reference Documentation
 
 | Document | Contents |

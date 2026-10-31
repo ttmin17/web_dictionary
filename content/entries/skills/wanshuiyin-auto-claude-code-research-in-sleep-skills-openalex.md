@@ -4,7 +4,9 @@ name: openalex
 tagline: Search academic papers via OpenAlex API for open citation data,
   institutional affiliations, and funding information. Use when user says
   "openalex sear
-summary: "This skill uses OpenAlex as a comprehensive open academic graph source:"
+summary: "Use OpenAlex when you want: - Open citation data — fully open citation
+  graph (no API key required for basic use) - Institutional affiliations —
+  author institutions and collaborations - Funding information — NSF, NIH,..."
 categories:
   - domain-research
 tags:

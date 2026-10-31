@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 13
   stars_growth_pct: 0.2
   trending_score: 13.03
-  rank_current: 69
-  rank_delta: 4
+  rank_current: 74
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5809
@@ -209,7 +209,6 @@ curl -X POST "https://api.klavis.ai/v1/mcp-server/instance" \
 - 🌐 [Klavis AI Website](https://www.klavis.ai)
 
 ---
-
 <div align="center">
   <p><strong>Made with ❤️ by the Klavis Team</strong></p>
 </div>

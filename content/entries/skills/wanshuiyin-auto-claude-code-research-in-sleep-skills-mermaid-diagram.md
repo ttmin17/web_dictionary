@@ -471,5 +471,4 @@ figures/
 11. **Use descriptive file names** — kebab-case derived from the diagram content
 
 ---
-
 User requirements: $ARGUMENTS

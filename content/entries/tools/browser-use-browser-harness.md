@@ -29,7 +29,6 @@ signals:
   stars_growth_pct: 0.7
   trending_score: 129.9
   rank_current: 54
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 18491
@@ -50,14 +49,7 @@ tool:
   install_command: pip install browser-harness
   runtime: python
   execution_mode: cloud
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - browser-harness
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Let Claude Code, Codex or Cursor use your real Chrome, logged in as you. One prompt to set up. Open source, MIT.

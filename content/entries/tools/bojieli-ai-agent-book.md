@@ -27,7 +27,6 @@ signals:
   stars_growth_pct: 1.9
   trending_score: 1050.37
   rank_current: 16
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54876
@@ -48,14 +47,7 @@ tool:
   install_command: pip install agentbook
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - agentbook
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码

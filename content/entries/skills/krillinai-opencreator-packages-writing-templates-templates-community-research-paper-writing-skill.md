@@ -22,13 +22,15 @@ source:
 signals:
   stars: 12884
   last_commit: 2026-10-13T09:45:23Z
-  stars_delta_7d: 270
-  stars_growth_pct: 2.1
-  trending_score: 275.78
-  rank_current: 123
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 152
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12614
+    - 12884
+    - 13701
     - 12884
 language: zh
 needs_keys: false

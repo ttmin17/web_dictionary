@@ -95,7 +95,6 @@ skill:
 | `capture_scene(location, rotation, width, height, out_png, ortho_width=0, fov=90, manual_ev100=0)` | Synchronous SceneCapture2D → PNG that works while the editor is backgrounded (see below) |
 
 ---
-
 > 🔀 **Camera get/set moved to the engine.** `ViewportService` no longer has
 > `set_camera_location` / `set_camera_rotation`. Reading and positioning the viewport camera is
 > now Unreal 5.8's native **`EditorAppToolset`** (`GetCameraTransform` / `SetCameraTransform`, plus
@@ -338,7 +337,6 @@ res = unreal.ViewportService.capture_scene(
   this north-up view.
 
 ---
-
 ## Workflows
 
 ### Inspect Current Viewport State

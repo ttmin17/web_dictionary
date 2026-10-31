@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -212,5 +212,4 @@ python ../../skills/compliance-os/scripts/audit_simulator.py iso13485_scope.json
 - Adjacent: `../fda-qsr-audit-prep/`, `../aims-audit/`, `../compliance-readiness/`
 
 ---
-
 **Version:** 1.0.0

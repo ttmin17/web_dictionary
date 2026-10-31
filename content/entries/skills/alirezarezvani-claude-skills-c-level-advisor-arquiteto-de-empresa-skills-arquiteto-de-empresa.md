@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -155,5 +155,4 @@ Recommended flow: **scaffold → interview per phase → write concepts → `okf
 - [`assets/exemplo-bundle/`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/arquiteto-de-empresa/skills/arquiteto-de-empresa/assets/exemplo-bundle/) — mini example bundle (`00-fundacao` + `index.md` + `log.md`)
 
 ---
-
 **Version:** 1.0.0 · **Language:** English · **Output format:** OKF bundle (Open Knowledge Format v0.1)

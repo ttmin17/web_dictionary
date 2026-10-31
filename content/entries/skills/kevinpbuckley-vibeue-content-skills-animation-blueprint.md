@@ -157,7 +157,6 @@ unreal.AnimGraphService.open_anim_state(path, "state controller", "in air loop")
 ```
 
 ---
-
 ## Workflows
 
 ### Create Animation Blueprint
@@ -283,7 +282,6 @@ idle_transitions = unreal.AnimGraphService.get_state_transitions(abp_path, machi
 ```
 
 ---
-
 ## Authoring State Machines (build / edit)
 
 ### ⭐ Fastest path: declarative `build_state_machine`
@@ -366,7 +364,6 @@ Treat any `errors` as a build failure. The most common error is an **inert trans
 (a transition with no rule) — fix it with one of the `set_transition_rule_*` calls.
 
 ---
-
 ### Find Used Animation Sequences
 
 ```python
@@ -394,7 +391,6 @@ unreal.AnimGraphService.focus_node(abp_path, node_id)
 ```
 
 ---
-
 ## Data Structures
 
 > **Python Naming Convention**: C++ types like `FAnimStateMachineInfo` are exposed as `AnimStateMachineInfo` in Python (no `F` prefix).
@@ -448,7 +444,6 @@ Returned by `validate_state_machine()`.
 | `warnings` | [string] | Non-blocking issues (unreachable states, states with no animation) |
 
 ---
-
 ## Driving bones directly — skeletal controls, no state machine
 
 Not every AnimBP is a state machine. A spinning rotor, a windmill sail, a turret yaw, a rudder that

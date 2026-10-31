@@ -27,8 +27,8 @@ signals:
   stars_delta_7d: 2
   stars_growth_pct: 0.2
   trending_score: 2
-  rank_current: 97
-  rank_delta: -35
+  rank_current: 102
+  rank_delta: -40
   velocity_source: snapshot_delta
   sparkline_4w:
     - 851
@@ -434,5 +434,4 @@ mypy mcp_nixos/      # Type check
 MIT - Because sharing is caring.
 
 ---
-
 *Created by James Brink. Maintained by mass̶o̶c̶h̶i̶s̶t̶s̶ enthusiasts who enjoy Nix.*

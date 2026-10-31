@@ -55,11 +55,9 @@ skill:
   pack_slug: asgeirtj-system_prompts_leaks
 ---
 
----
-name: setup-cowork
+---name: setup-cowork
 description: Guided Cowork setup — install a matching plugin, try a skill, connect tools. Use when: set up cowork, setup cowork, get started with cowork, cowork onboarding, configure cowork, personalize cowork.
 ---
-
 # Setup Cowork
 
 Help the user get Cowork configured for their work. Six steps — role, plugins, connectors, try a skill, writing voice, wrap.

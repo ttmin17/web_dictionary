@@ -3,7 +3,9 @@ slug: ruvnet-ruflo-plugins-ruflo-core-skills-ruflo-status
 name: status
 tagline: Diagnose Ruflo health, then report system, MCP server, and active-agent
   status without changing the installation
-summary: "Run these commands in order:"
+summary: Summarize the diagnostics and status together. Do not repair, reset,
+  start, stop, install, or otherwise change anything during the default
+  workflow.
 categories:
   - agent-frameworks
 tags:

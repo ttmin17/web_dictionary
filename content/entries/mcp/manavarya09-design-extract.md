@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 118
   stars_growth_pct: 2.8
   trending_score: 121.27
-  rank_current: 18
-  rank_delta: 18
+  rank_current: 22
+  rank_delta: 14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4229
@@ -104,7 +104,6 @@ launch:
 </p>
 
 ---
-
 **designlang** points a headless browser at any URL and reads the design system off the live DOM. One command emits 17+ files — DTCG tokens, Tailwind config, shadcn theme, Figma variables, motion tokens, typed component anatomy, brand voice, page-intent labels, and a paste-ready prompt pack for v0 / Lovable / Cursor / Claude Artifacts.
 
 It also goes where extractors don't: **layout patterns**, **responsive behavior across 4 breakpoints**, **hover / focus / active states**, **WCAG contrast scoring**, **multi-page consistency**, **drift checks against a live source-of-truth**, **visual-diffs**, and a **shareable graded report card**.

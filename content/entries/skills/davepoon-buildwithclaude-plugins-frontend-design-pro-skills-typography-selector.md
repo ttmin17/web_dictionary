@@ -149,7 +149,6 @@ tailwind.config = {
 ```
 
 ---
-
 ## Fallback Mode
 
 When browser tools are unavailable, use curated pairings.
@@ -174,7 +173,6 @@ When browser tools are unavailable, use curated pairings.
 | Corporate | Work Sans + Inter |
 
 ---
-
 ## Typography Best Practices
 
 ### Font Pairing Rules
@@ -229,7 +227,6 @@ Use a consistent type scale:
 | Small caps | Wide | tracking-wide |
 
 ---
-
 ## Fonts to Avoid
 
 **Overused (instant "template" feeling):**
@@ -247,7 +244,6 @@ Use a consistent type scale:
 - Signal "no design decision made"
 
 ---
-
 ## Output Format
 
 Provide selected typography in this format:
@@ -293,7 +289,6 @@ fontFamily: {
 ```
 
 ---
-
 ## References
 
 See `references/font-pairing.md` for:

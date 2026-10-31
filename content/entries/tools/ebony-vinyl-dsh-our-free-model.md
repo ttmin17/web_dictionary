@@ -28,7 +28,7 @@ source:
 signals:
   stars: 43586
   last_commit: 2026-10-26T05:02:49Z
-  stars_delta_7d: 9629
+  stars_delta_7d: 7749
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

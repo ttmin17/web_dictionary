@@ -4,7 +4,9 @@ name: scenario-kinetic-music-video
 tagline: "Use when turning a song into a kinetic-typography or motion-design
   music video, lyric video, visualizer or K-pop style MV with Scenario,
   landscape or "
-summary: "The work splits by what each tool does best:"
+summary: "- Scenario supplies what code can't: a consistent subject with real
+  physics, choreography, hair and lip-sync, in whatever art style each section
+  needs. - The JS engine supplies what video models can't: exact typograph..."
 categories:
   - media-creative
 tags:

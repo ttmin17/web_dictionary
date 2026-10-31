@@ -16,16 +16,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 39864
-  last_commit: 2026-10-13T16:11:17Z
+  stars: 40270
+  last_commit: 2026-10-26T07:08:08Z
   stars_delta_7d: 215
   stars_growth_pct: 0.5
-  trending_score: 216.17
-  rank_current: 11
+  trending_score: 216.15
+  rank_current: 32
   velocity_source: snapshot_delta
   sparkline_4w:
     - 39649
     - 39864
+    - 40055
+    - 40270
+  rank_delta: -19
 language: en
 needs_keys: false
 prerequisites:

@@ -232,5 +232,4 @@ Automate Google Calendar workflows including event creation, scheduling, availab
 | Get current time | `GOOGLECALENDAR_GET_CURRENT_DATE_TIME` | `timezone` |
 | Get calendar | `GOOGLECALENDAR_GET_CALENDAR` | `calendar_id` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

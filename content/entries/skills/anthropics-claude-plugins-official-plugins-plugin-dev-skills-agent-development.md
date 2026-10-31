@@ -85,14 +85,12 @@ Agents are autonomous subprocesses that handle complex, multi-step tasks indepen
 ### Complete Format
 
 ```markdown
----
-name: agent-identifier
+---name: agent-identifier
 description: Use this agent when [triggering conditions]. Typical triggers include [scenario 1 in prose], [scenario 2 in prose], and [scenario 3 in prose]. See "When to invoke" in the agent body for worked scenarios.
 model: inherit
 color: blue
 tools: ["Read", "Write", "Grep"]
 ---
-
 You are [agent role description]...
 
 ## When to invoke
@@ -373,13 +371,11 @@ Ensure system prompt is complete:
 ### Minimal Agent
 
 ```markdown
----
-name: simple-agent
+---name: simple-agent
 description: Use this agent when [condition]. Typical triggers include [trigger 1] and [trigger 2]. See "When to invoke" in the agent body.
 model: inherit
 color: blue
 ---
-
 You are an agent that [does X].
 
 ## When to invoke

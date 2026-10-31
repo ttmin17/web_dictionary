@@ -27,6 +27,7 @@ signals:
   velocity_source: age_velocity
   sparkline_4w:
     - 771
+    - 771
 language: en
 needs_keys: false
 prerequisites: []

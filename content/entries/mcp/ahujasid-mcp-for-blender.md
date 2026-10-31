@@ -90,7 +90,6 @@ Prompt-assisted 3D modeling, scene creation, and manipulation — driven by AI.
 </div>
 
 ---
-
 ## Quickstart
 
 > **Note:** the PyPI package `blender-mcp` is now **`mcp-for-blender`**. Existing setups
@@ -206,7 +205,6 @@ The addon starts its server when Blender opens. To check, press `N` in the 3D vi
 > **Note:** Only run **one** instance of the MCP server (either Cursor or Claude Desktop), not both.
 
 ---
-
 ## Table of Contents
 
 - [Quickstart](#quickstart)
@@ -246,7 +244,6 @@ The addon starts its server when Blender opens. To check, press `N` in the 3D vi
 - [Star History](#star-history)
 
 ---
-
 ## Features
 
 | | |
@@ -270,7 +267,6 @@ The system consists of two main components:
 2. **MCP Server** (`src/blender_mcp/server.py`) — a Python server that implements the Model Context Protocol and connects to the Blender addon
 
 ---
-
 ## Installation
 
 ### Automatic setup
@@ -472,7 +468,6 @@ Each instance needs its own port set in the Blender addon panel to match.
 By default, the AI can run any Python code in Blender. Set `BLENDER_MCP_SAFE_MODE=1` to check every script before it runs and block risky code — things like reading or writing files directly, running other programs, accessing the network, or installing code that keeps running after the script ends. Normal Blender work (modeling, materials, rendering, saving, import/export) still works. Blocked scripts are sent back to the AI with the reason, so it can try again with a corrected version.
 
 ---
-
 ## MCP Client Setup
 
 ### Claude for Desktop
@@ -635,7 +630,6 @@ env = { BLENDER_HOST = "localhost", BLENDER_PORT = "9876" }
 ```
 
 ---
-
 ## Installing the Blender Addon
 
 > `uvx mcp-for-blender setup` (see [Quickstart](#quickstart)) does all of this, including enabling the addon. The steps below are for doing it by hand.
@@ -683,7 +677,6 @@ If a client is still set up with the old `blender-mcp` package name, `update` sa
 > **Note:** the MCP server never modifies your Blender addon files on its own. When it starts, it checks whether the installed addon is behind the bundled copy and logs how to update; `update` and `install-addon` are what actually write. Trajectory capture still works on older loaded addons via an `execute_code` fallback.
 
 ---
-
 ## Usage
 
 ### Starting the Connection
@@ -827,7 +820,6 @@ Here are some examples of what you can ask Claude to do:
 | *"Point the camera at the scene, and make it isometric"* | |
 
 ---
-
 ## Persistent API Credentials
 
 MCP for Blender supports persistent credentials via Blender Add-on Preferences:
@@ -856,7 +848,6 @@ For headless setups or CI, credentials can also be injected by environment varia
 | `BLENDERMCP_MESHY_API_KEY` |
 
 ---
-
 ## Troubleshooting
 
 | Problem | Fix |
@@ -920,7 +911,6 @@ Telemetry data is not linked to your name or account. It may be used to improve 
 Full detail on what is collected, and the license you grant by opting in, is in [TERMS_AND_CONDITIONS.md](https://github.com/ahujasid/mcp-for-blender/blob/main/TERMS_AND_CONDITIONS.md).
 
 ---
-
 ## Feedback
 
 We are actively looking for feedback on MCP for Blender. If you have thoughts, share them [here](https://bit.ly/blender-mcp-form).
@@ -940,7 +930,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This is a third-party integration and not made by Blender. Made by [Siddharth](https://x.com/sidahuj).
 
 ---
-
 ## Star History
 
 <a href="https://star-history.com/#ahujasid/blender-mcp&Date">

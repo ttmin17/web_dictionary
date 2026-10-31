@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -222,7 +222,6 @@ The cache prevents nag-spam but is per-session. Don't rely on "I dismissed this 
 - "GitHub Actions security hook"
 
 ---
-
 **Version:** 2.7.3
 **Source:** Ported from [`alirezarezvani/aeo-box`](https://github.com/alirezarezvani/aeo-box) `.claude/plugins/security-guidance/` (originally by David Dworken at Anthropic, MIT)
 **License:** MIT

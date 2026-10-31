@@ -3,7 +3,10 @@ slug: alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-pw-ini
 name: pw-init
 tagline: Set up Playwright in a project. Use when user says "set up playwright",
   "add e2e tests", "configure playwright", "testing setup", "init playwright", o
-summary: "Use the Explore subagent to scan the project:"
+summary: "- Check package.json for framework (React, Next.js, Vue, Angular,
+  Svelte) - Check for tsconfig.json → use TypeScript; otherwise JavaScript -
+  Check if Playwright is already installed (@playwright/test in
+  dependencies)..."
 categories:
   - coding-agents
 tags:
@@ -25,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

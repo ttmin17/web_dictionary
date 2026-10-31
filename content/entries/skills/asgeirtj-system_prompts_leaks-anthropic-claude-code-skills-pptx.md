@@ -4,7 +4,8 @@ name: pptx
 tagline: "Use this skill any time a .pptx or .potx file is involved in any way —
   as input, output, or both. This includes: creating slide decks, pitch decks,
   or"
-summary: "A .pptx is a ZIP archive of XML files. Choose your approach by task:"
+summary: Paths are relative to this skill's directory. Everything else is plain
+  Python, node, or shell.
 categories:
   - media-creative
 tags:

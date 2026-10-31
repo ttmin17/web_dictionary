@@ -147,8 +147,7 @@ metadata:
   name: my-app
   annotations:
     linkerd.io/inject: enabled
----
-# Or inject specific deployment
+---# Or inject specific deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -233,8 +232,7 @@ spec:
       app: my-service
   port: http
   proxyProtocol: HTTP/1
----
-# Allow traffic from specific clients
+---# Allow traffic from specific clients
 apiVersion: policy.linkerd.io/v1beta1
 kind: ServerAuthorization
 metadata:
@@ -248,8 +246,7 @@ spec:
       serviceAccounts:
         - name: frontend
           namespace: my-namespace
----
-# Allow unauthenticated traffic (e.g., from ingress)
+---# Allow unauthenticated traffic (e.g., from ingress)
 apiVersion: policy.linkerd.io/v1beta1
 kind: ServerAuthorization
 metadata:

@@ -80,7 +80,6 @@ Before advising, load:
 | `gh pr list --state open --json number,title,statusCheckRollup,reviewDecision` | Open PRs with CI/review status | JSON array |
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** when gathering priority data in parallel. This enables:
@@ -139,7 +138,6 @@ done
 ```
 
 ---
-
 ## Your task
 
 Apply the priority stack to all pre-gathered data:
@@ -174,7 +172,6 @@ From GSD state, find the highest revenue-impact active phase across all projects
 Revenue weighting: read `revenue.stage` and `priority` from `scripts/registry.json` — projects with lower priority numbers (higher priority) and revenue stage of `growth` or `active` outrank `pre-launch` or `development`. Within the same tier, prioritize closest-to-done phases.
 
 ---
-
 ## Output format
 
 ```
@@ -210,7 +207,6 @@ Use AskUserQuestion. When user selects an option, invoke the corresponding skill
 If `$ARGUMENTS` contains context (e.g., "focus on <project-alias>"), constrain the analysis to that context.
 
 ---
-
 ## Native tool usage
 
 ### Tasks — action tracking

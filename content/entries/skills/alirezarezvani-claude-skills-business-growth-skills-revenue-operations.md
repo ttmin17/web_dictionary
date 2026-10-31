@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -80,7 +80,6 @@ Pipeline analysis, forecast accuracy tracking, and GTM efficiency measurement fo
 > **Output formats:** All scripts support `--format text` (human-readable) and `--format json` (dashboards/integrations).
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -95,7 +94,6 @@ python scripts/gtm_efficiency_calculator.py assets/sample_gtm_data.json --format
 ```
 
 ---
-
 ## Tools Overview
 
 ### 1. Pipeline Analyzer
@@ -239,7 +237,6 @@ python scripts/gtm_efficiency_calculator.py gtm_data.json --format text
 ```
 
 ---
-
 ## Revenue Operations Workflows
 
 ### Weekly Pipeline Review
@@ -321,7 +318,6 @@ Combine all three tools for a comprehensive QBR analysis.
 5. Align GTM efficiency metrics with growth targets
 
 ---
-
 ## Reference Documentation
 
 | Reference | Description |
@@ -331,7 +327,6 @@ Combine all three tools for a comprehensive QBR analysis.
 | [GTM Efficiency Benchmarks](https://github.com/alirezarezvani/claude-skills/blob/main/business-growth/skills/revenue-operations/references/gtm-efficiency-benchmarks.md) | SaaS benchmarks by stage, industry standards, improvement strategies |
 
 ---
-
 ## Templates
 
 | Template | Use Case |

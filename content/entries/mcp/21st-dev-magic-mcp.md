@@ -4,7 +4,7 @@ name: magic-mcp
 tagline: "It's like v0, but in your Cursor / Claude Code / Windsurf: search
   10,000+ React/Tailwind components, generate new UI with AI, and publish your
   own — r"
-summary: "Or add it manually — it is a plain HTTP MCP server:"
+summary: Get an API key at 21st.dev/mcp.
 categories:
   - browser-web
 tags:
@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 147
   stars_growth_pct: 2.4
   trending_score: 150.54
-  rank_current: 14
-  rank_delta: -1
+  rank_current: 16
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6003

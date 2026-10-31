@@ -3,7 +3,9 @@ slug: alirezarezvani-claude-skills-engineering-team-skills-azure-cloud-architect
 name: azure-cloud-architect
 tagline: Design Azure architectures for startups and enterprises. Use when asked
   to design Azure infrastructure, create Bicep/ARM templates, optimize Azure cos
-summary: "Collect application specifications:"
+summary: "Select from recommended patterns: - App Service Web: Front Door + App
+  Service + Azure SQL + Redis Cache - Microservices on AKS: AKS + Service Bus +
+  Cosmos DB + API Management - Serverless Event-Driven: Functions + Eve..."
 categories:
   - coding-agents
 tags:
@@ -25,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -70,7 +72,6 @@ skill:
 Design scalable, cost-effective Azure architectures for startups and enterprises with Bicep infrastructure-as-code templates.
 
 ---
-
 ## Workflow
 
 ### Step 1: Gather Requirements
@@ -328,7 +329,6 @@ Validate security posture before production:
 - Quota exceeded — request quota increase via Azure Portal > Subscriptions > Usage + quotas
 
 ---
-
 ## Tools
 
 ### architecture_designer.py
@@ -378,7 +378,6 @@ python scripts/bicep_generator.py --arch-type microservices --output main.bicep
 - Tags for cost allocation
 
 ---
-
 ## Quick Start
 
 ### Web App Architecture (< $100/month)
@@ -437,7 +436,6 @@ Result:
 ```
 
 ---
-
 ## Input Requirements
 
 Provide these details for architecture design:
@@ -467,7 +465,6 @@ Provide these details for architecture design:
 ```
 
 ---
-
 ## Anti-Patterns
 
 | Anti-Pattern | Why It Fails | Do This Instead |
@@ -482,7 +479,6 @@ Provide these details for architecture design:
 | Using classic resources | Deprecated, limited features | Use ARM/Bicep resources exclusively |
 
 ---
-
 ## Output Formats
 
 ### Architecture Design
@@ -503,7 +499,6 @@ Provide these details for architecture design:
 - Priority action list (high/medium/low) and implementation checklist
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |
@@ -515,7 +510,6 @@ Provide these details for architecture design:
 | `engineering/ci-cd-pipeline-builder` | Pipeline construction — automates Azure DevOps and GitHub Actions |
 
 ---
-
 ## Reference Documentation
 
 | Document | Contents |

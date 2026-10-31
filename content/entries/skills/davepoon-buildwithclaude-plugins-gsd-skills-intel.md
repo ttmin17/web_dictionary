@@ -96,7 +96,6 @@ Then run /gsd:intel refresh to build the initial index.
 ```
 
 ---
-
 ## Step 2 -- Parse Argument
 
 Parse `$ARGUMENTS` to determine the operation mode:
@@ -171,7 +170,6 @@ If no snapshot exists, suggest running `refresh` first.
 **STOP** after displaying diff. Do not spawn an agent.
 
 ---
-
 ## Step 3 -- Refresh (Agent Spawn)
 
 Display before spawning:
@@ -206,7 +204,6 @@ If something fails, output: ## INTEL UPDATE FAILED with details."
 Wait for the agent to complete.
 
 ---
-
 ## Step 4 -- Post-Refresh Summary
 
 After the agent completes, run:
@@ -221,7 +218,6 @@ Display a summary showing:
 - Overall health of the intel index
 
 ---
-
 ## Anti-Patterns
 
 1. DO NOT spawn an agent for query/status/diff operations -- these are inline CLI calls

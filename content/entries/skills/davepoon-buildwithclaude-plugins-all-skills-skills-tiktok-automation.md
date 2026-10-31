@@ -234,5 +234,4 @@ Automate TikTok content creation and profile operations through Composio's TikTo
 | Get basic info | TIKTOK_GET_USER_BASIC_INFO | (none) |
 | Check publish status | TIKTOK_FETCH_PUBLISH_STATUS | publish_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

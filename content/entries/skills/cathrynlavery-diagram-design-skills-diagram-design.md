@@ -89,7 +89,6 @@ Create diagrams as self-contained HTML files with inline SVG and an editorial de
 Forty-five visual types. Semantic patterns describe behavior; type references describe layout.
 
 ---
-
 ## 0. First-time setup — style guide gate
 
 **Before generating your first diagram in a new project, verify the style guide has been customized.**
@@ -107,7 +106,6 @@ Then branch per the matching section of [`references/onboarding.md`](https://git
 **Once the style guide has been customized** (or the user explicitly chose default), skip this gate on later runs. A leading profile header names the copied-in active profile. Without a header, any semantic-role value or typography family differing from shipped defaults means **custom-unsaved**: skip the gate and offer to save it as a profile. All-default tokens with no marker/header trigger the gate. After onboarding, offer to save as a named client profile per `references/profiles.md`.
 
 ---
-
 ## 1. Philosophy
 
 **The highest-quality move is usually deletion.**
@@ -122,7 +120,6 @@ Applied to schematics:
 **Target density: 4/10.** Enough to be technically complete. Not so dense it needs a guide. Above 9 nodes, it's probably two diagrams.
 
 ---
-
 ## 2. When to Use
 
 Use for any of the 45 visual types (§3) when a reader will learn more from a visual than from prose, a table, or a bulleted list.
@@ -137,7 +134,6 @@ Use for any of the 45 visual types (§3) when a reader will learn more from a vi
 Before drawing, ask: *Would the reader learn more from this than from a well-written paragraph?* If no, don't draw.
 
 ---
-
 ## 3. Selection: semantic pattern, then visual type
 
 When behavior, state, enforcement, or risk carries the meaning, first load [`references/semantic-patterns.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/semantic-patterns.md) and choose one primary pattern. Then choose the nearest visual type for layout. If no pattern matches, choose the type directly.
@@ -219,7 +215,6 @@ Rules of thumb:
 Before rendering, state the plan in one short message: the chosen visual type (and semantic pattern, if routed), the size preset, and anything the complexity budget (§7) will force out. If the user is reachable, let them redirect before you draw; if not, proceed and note the assumptions beside the deliverable. Skip the pause only when the request already pins type, size, and content exactly.
 
 ---
-
 ## 4. Universal Anti-patterns
 
 These mark "AI slop" schematics of any type:
@@ -242,7 +237,6 @@ These mark "AI slop" schematics of any type:
 Type-specific anti-patterns live in each type reference linked in the guide.
 
 ---
-
 ## 5. Design System
 
 **The design system is skinnable.** [`references/style-guide.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/style-guide.md) is the single source of truth for colors, typography, tokens, and the default palette; this file names semantic roles (`paper`, `ink`, `muted`, `accent`, `link`, …). To apply a brand, edit `style-guide.md` or run the URL-based flow in [`references/onboarding.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/onboarding.md).
@@ -273,7 +267,6 @@ Type-reference snippets write roles as placeholders: `{ink}`, `{ink @ 0.40}` for
 **Mono is for technical content only** — never as a blanket "dev" font, and never JetBrains Mono.
 
 ---
-
 ## 6. Core SVG Primitives
 
 Universal building blocks. Type-specialized primitives (lifeline, activation bar, region) live in the relevant type reference linked in the guide. Optional primitives:
@@ -301,7 +294,6 @@ Non-negotiable, and §9 checks each one. Full text and edge cases: [primitives-c
 6. **Mask before node.** A label mask must not overlap a node drawn after it; badge masks fully inside a node and masks over earlier zones are fine. From a repository checkout, verify with `python3 <repo-root>/scripts/verify-geometry.py <file>`.
 
 ---
-
 ## 7. Layout & Spacing
 
 Structural geometry sits on a 4px grid: node origins, widths, heights, gaps, and padding divide by 4. Type sizes follow the role ramp in [output-spec.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/output-spec.md), not the grid. Allowed values, the off-grid exceptions, and page layout: [`references/layout-budget.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/layout-budget.md).
@@ -321,13 +313,11 @@ Per-type limits (lifelines, lanes, series, bars, stages, and the rest): [layout-
 If you exceed, split into two diagrams (overview + detail).
 
 ---
-
 ## 8. Summary Card Pattern
 
 Don't use 3 identical generic cards. Vary the treatment: column widths such as `1.1fr 1fr 0.9fr`, a white background with a 1px hairline border and 6px radius, no `box-shadow`. Markup and the card-dot variants: [layout-budget.md § Summary Card Pattern](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/layout-budget.md#summary-card-pattern).
 
 ---
-
 ## 9. Pre-Output Checklist (Taste Gate)
 
 Run before producing any diagram.
@@ -386,7 +376,6 @@ Run before producing any diagram.
 - [ ] No JetBrains Mono anywhere?
 
 ---
-
 ## 10. Templates & Variants
 
 Every diagram ships in three variants (see `assets/`):
@@ -413,7 +402,6 @@ Every diagram ships in three variants (see `assets/`):
 5. Run the §9 taste gate.
 
 ---
-
 ## 11. Importing an Existing Diagram (draw.io), Mermaid, and Excalidraw
 
 Route by source: `.drawio*` → [import-drawio.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/import-drawio.md); `.mmd`, `.mermaid`, or Markdown containing a fenced `mermaid` block → [import-mermaid.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/import-mermaid.md); `.excalidraw` → [import-excalidraw.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/import-excalidraw.md). Follow it for "convert this", "redraw this diagram", "make this presentable", and the matching import command.
@@ -441,7 +429,6 @@ Set these four import decisions **before** drawing. Full spec: [output-spec.md](
 The size preset sets the `viewBox` **and** the type ramp; `faithful` is the only exemption from the §7 budget — zoned above 9 nodes, split above 24. The §6 connector rules never relax.
 
 ---
-
 ## 12. Output
 
 Always produce a single self-contained `.html` file:

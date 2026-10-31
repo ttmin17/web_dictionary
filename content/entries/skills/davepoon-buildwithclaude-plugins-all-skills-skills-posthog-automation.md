@@ -280,5 +280,4 @@ Feature flags support sophisticated targeting:
 | Who am I | POSTHOG_WHOAMI | (none) |
 | User profile | POSTHOG_RETRIEVE_CURRENT_USER_PROFILE | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

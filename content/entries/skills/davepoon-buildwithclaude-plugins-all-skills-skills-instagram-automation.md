@@ -248,5 +248,4 @@ Automate Instagram operations through Composio's Instagram toolkit via Rube MCP.
 | Get media comments | INSTAGRAM_GET_IG_MEDIA_COMMENTS | ig_media_id |
 | Get carousel children | INSTAGRAM_GET_IG_MEDIA_CHILDREN | ig_media_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

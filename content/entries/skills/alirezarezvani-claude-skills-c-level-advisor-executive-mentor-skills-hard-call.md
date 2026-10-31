@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -71,7 +71,6 @@ For the decisions that keep you up at 3am. Firing a co-founder. Laying off 20% o
 These decisions don't have a right answer. They have a less wrong answer. This framework helps you find it.
 
 ---
-
 ## Why These Decisions Are Hard
 
 Not because the data is unclear. Often, the data is clear. They're hard because:
@@ -86,7 +85,6 @@ The longer you avoid a hard call, the worse the situation usually gets. The comp
 **Most hard decisions are late decisions.**
 
 ---
-
 ## The Framework
 
 ### Step 1: The Reversibility Test
@@ -155,7 +153,6 @@ For every hard call, plan:
 - **What comes next** (give them a clear picture of what happens after)
 
 ---
-
 ## Decision-Specific Frameworks
 
 ### Firing a Co-Founder
@@ -199,7 +196,6 @@ Key questions:
 - What's the narrative — internally and externally?
 
 ---
-
 ## The Avoiding-It Test
 
 You know you've been avoiding a hard call if:

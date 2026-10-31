@@ -102,7 +102,6 @@ fal.ai MCPは以下のツールを提供します:
 - `upload` — 入力として使用するファイルをアップロード
 
 ---
-
 ## 画像生成
 
 ### Nano Banana 2（高速）
@@ -164,7 +163,6 @@ generate(
 ```
 
 ---
-
 ## 動画生成
 
 ### Seedance 1.0 Pro（ByteDance）
@@ -234,7 +232,6 @@ generate(
 | `image_url` | string | URL | 画像から動画用のソース画像 |
 
 ---
-
 ## 音声生成
 
 ### CSM-1B（会話的スピーチ）
@@ -301,7 +298,6 @@ sfx = coll.generate_sound_effect(prompt="thunder crack followed by rain")
 ```
 
 ---
-
 ## コスト見積もり
 
 生成前に見積もりコストを確認:

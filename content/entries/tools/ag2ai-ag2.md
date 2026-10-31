@@ -28,8 +28,7 @@ signals:
   stars_delta_7d: 15
   stars_growth_pct: 0.3
   trending_score: 15.04
-  rank_current: 105
-  rank_delta: null
+  rank_current: 106
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5004
@@ -50,14 +49,7 @@ tool:
   install_command: pip install ag2
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - ag2
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x

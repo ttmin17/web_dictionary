@@ -4,7 +4,9 @@ name: citation-audit
 tagline: Zero-context verification that every bibliographic entry in the paper
   is real, correctly attributed, and used in a context the cited paper actually
   su
-summary: "Verify every \\cite{...} in a paper against three independent layers:"
+summary: 1. Existence — the cited paper actually exists at the claimed arXiv ID
+  / DOI / venue. 2. Metadata correctness — author names, year, venue, and title
+  match canonical sources (DBLP, arXiv, ACL Anthology, Nature, OpenRev...
 categories:
   - domain-research
 tags:

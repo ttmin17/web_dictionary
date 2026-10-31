@@ -4,7 +4,7 @@ name: skyvern
 tagline: AI-powered browser automation — navigate sites, fill forms, extract
   structured data, log in with stored credentials, and build reusable multi-step
   wor
-summary: "Or add the MCP server directly to your Claude Code config:"
+summary: Get your API key at app.skyvern.com.
 categories:
   - agent-frameworks
 tags:

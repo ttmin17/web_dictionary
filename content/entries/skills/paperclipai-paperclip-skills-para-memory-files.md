@@ -4,7 +4,8 @@ name: para-memory-files
 tagline: Use a file-based PARA memory system to store, retrieve, and organize
   durable knowledge across sessions. Trigger on saving facts, daily notes,
   entity r
-summary: "Entity-based storage. Each entity gets a folder with two tiers:"
+summary: 1. summary.md -- quick context, load first. 2. items.yaml -- atomic
+  facts, load on demand.
 categories:
   - agent-frameworks
 tags:

@@ -188,11 +188,9 @@ commands/
 
 **File format**:
 ```markdown
----
-name: command-name
+---name: command-name
 description: Command description
 ---
-
 Command implementation instructions...
 ```
 
@@ -214,13 +212,11 @@ agents/
 
 **File format**:
 ```markdown
----
-description: Agent role and expertise
+---description: Agent role and expertise
 capabilities:
   - Specific task 1
   - Specific task 2
 ---
-
 Detailed agent instructions and knowledge...
 ```
 
@@ -249,12 +245,10 @@ skills/
 
 **SKILL.md format**:
 ```markdown
----
-name: Skill Name
+---name: Skill Name
 description: When to use this skill
 version: 1.0.0
 ---
-
 Skill instructions and guidance...
 ```
 
@@ -537,5 +531,4 @@ my-plugin/
 - Consider command prefixes for related functionality
 
 ---
-
 For detailed examples and advanced patterns, see files in `references/` and `examples/` directories.

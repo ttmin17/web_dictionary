@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 54
   stars_growth_pct: 2.4
   trending_score: 55.28
-  rank_current: 75
-  rank_delta: null
+  rank_current: 76
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2235
@@ -376,7 +375,6 @@ Existing product evidence was checked on August 27, 2026. OpenRig was checked on
 </details>
 
 ---
-
 ## Quick start
 
 1. **Download** the app for your platform (see [Installation](#installation))
@@ -387,7 +385,6 @@ Existing product evidence was checked on August 27, 2026. OpenRig was checked on
 The desktop app is the main product. The web version is currently in active development.
 
 ---
-
 ## FAQ
 
 <details>
@@ -433,7 +430,6 @@ Some RDP (Remote Desktop Protocol) sessions expose virtual GPU drivers that can 
 </details>
 
 ---
-
 ## Roadmap (new)
 
 - [ ] Launching 24/7 autonomous teams in the cloud with current UI (in progress)
@@ -572,8 +568,7 @@ local packaging.
 
 </details>
 
----
-<!--
+---<!--
 ## Ideas
 
 - [ ] Planning mode to organize agent plans before execution
@@ -597,7 +592,6 @@ local packaging.
       ...
 -->
 ---
-
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/777genius/agent-teams-ai/blob/main/.github/CONTRIBUTING.md) for development guidelines. Please read our [Code of Conduct](https://github.com/777genius/agent-teams-ai/blob/main/.github/CODE_OF_CONDUCT.md).

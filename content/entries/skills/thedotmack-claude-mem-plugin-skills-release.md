@@ -2,7 +2,7 @@
 slug: thedotmack-claude-mem-plugin-skills-release
 name: release
 tagline: Fully automate a release with version-bump and childhood.
-summary: "Use these claude-mem skills in order:"
+summary: 1. version-bump 2. childhood
 categories:
   - databases-memory
 tags:

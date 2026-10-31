@@ -7,19 +7,30 @@ export type SkillCollectionItem = CollectionEntry<'skills'>;
 export type ToolCollectionItem = CollectionEntry<'tools'>;
 export type AnyCollectionItem = McpCollectionItem | SkillCollectionItem | ToolCollectionItem;
 
+let cachedMcp: McpCollectionItem[] | null = null;
+let cachedSkills: SkillCollectionItem[] | null = null;
+let cachedTools: ToolCollectionItem[] | null = null;
+let cachedCatalogState: { refreshed_at: string; formattedDate: string } | null = null;
+
 export async function getAllMcp(): Promise<McpCollectionItem[]> {
+  if (cachedMcp) return cachedMcp;
   const items = await getCollection('mcp');
-  return items.sort((a, b) => (b.data.signals.stars || 0) - (a.data.signals.stars || 0));
+  cachedMcp = items.sort((a, b) => (b.data.signals.stars || 0) - (a.data.signals.stars || 0));
+  return cachedMcp;
 }
 
 export async function getAllSkills(): Promise<SkillCollectionItem[]> {
+  if (cachedSkills) return cachedSkills;
   const items = await getCollection('skills');
-  return items.sort((a, b) => (b.data.signals.stars || 0) - (a.data.signals.stars || 0));
+  cachedSkills = items.sort((a, b) => (b.data.signals.stars || 0) - (a.data.signals.stars || 0));
+  return cachedSkills;
 }
 
 export async function getAllTools(): Promise<ToolCollectionItem[]> {
+  if (cachedTools) return cachedTools;
   const items = await getCollection('tools');
-  return items.sort((a, b) => (b.data.signals.stars || 0) - (a.data.signals.stars || 0));
+  cachedTools = items.sort((a, b) => (b.data.signals.stars || 0) - (a.data.signals.stars || 0));
+  return cachedTools;
 }
 
 export async function getAllEntries(): Promise<AnyCollectionItem[]> {
@@ -55,6 +66,7 @@ export function formatTimeAgo(isoString?: string): string {
 }
 
 export function getCatalogState(): { refreshed_at: string; formattedDate: string } {
+  if (cachedCatalogState) return cachedCatalogState;
   try {
     const candidates = [
       path.resolve(process.cwd(), '../../data/state/catalog-state.json'),
@@ -70,11 +82,13 @@ export function getCatalogState(): { refreshed_at: string; formattedDate: string
           month: 'short',
           day: 'numeric',
         });
-        return { refreshed_at: data.refreshed_at, formattedDate };
+        cachedCatalogState = { refreshed_at: data.refreshed_at, formattedDate };
+        return cachedCatalogState;
       }
     }
   } catch {
     // fallback
   }
-  return { refreshed_at: '2026-10-14T13:10:15.358Z', formattedDate: 'Oct 14, 2026' };
+  cachedCatalogState = { refreshed_at: '2026-10-14T13:10:15.358Z', formattedDate: 'Oct 14, 2026' };
+  return cachedCatalogState;
 }

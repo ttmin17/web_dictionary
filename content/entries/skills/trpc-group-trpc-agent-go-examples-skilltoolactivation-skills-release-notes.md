@@ -3,7 +3,9 @@ slug: trpc-group-trpc-agent-go-examples-skilltoolactivation-skills-release-notes
 name: release-notes
 tagline: Use this skill when the user asks about release dates, release owners,
   rollout status, or launch checklist details.
-summary: "After loading this skill:"
+summary: 1. Use releasedocsreadfile to read releasenotes.md. 2. Answer from the
+  file content only. 3. If the requested detail is not in the file, say that the
+  release notes do not contain it.
 categories:
   - agent-frameworks
 tags:

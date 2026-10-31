@@ -4,7 +4,8 @@ name: memory-status
 tagline: Memory health dashboard showing line counts, topic files, capacity,
   stale entries, and recommendations. Use when the user runs /si:memory-status
   or as
-summary: "For each MEMORY.md entry that references a file path:"
+summary: "Output: 📊 Memory: {{n}}/200 lines | {{count}} rules | {{statusemoji}}
+  {{statusword}}"
 categories:
   - coding-agents
 tags:
@@ -26,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

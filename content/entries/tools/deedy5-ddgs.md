@@ -2,7 +2,7 @@
 slug: deedy5-ddgs
 name: ddgs
 tagline: A metasearch library that aggregates results from diverse web search services
-summary: "For MCP clients like Cursor or Claude Desktop:"
+summary: DDGS class is lazy-loaded.
 categories:
   - browser-web
 tags:
@@ -23,7 +23,7 @@ source:
 signals:
   stars: 3031
   last_commit: 2026-10-23T21:16:26Z
-  stars_delta_7d: 10
+  stars_delta_7d: 127
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

@@ -189,7 +189,6 @@ Fold findings into the takes with citations ("In a 2023 interview on X, Dunford 
 [One line on why this bench, including who was seated as the dissenter]
 
 ---
-
 ### [Advisor A] — [their lens, 3-5 words]
 [2-4 paragraph take]
 **Bottom line:** [one sentence]
@@ -198,7 +197,6 @@ Fold findings into the takes with citations ("In a 2023 interview on X, Dunford 
 …
 
 ---
-
 ## Where the council disagrees
 1. **[Conflict]** — [A] says X because [framework]; [B] says Y because
    [framework]. The real trade-off: [underlying tension]. What would

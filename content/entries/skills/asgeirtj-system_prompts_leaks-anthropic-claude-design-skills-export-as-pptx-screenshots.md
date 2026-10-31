@@ -2,7 +2,9 @@
 slug: asgeirtj-system_prompts_leaks-anthropic-claude-design-skills-export-as-pptx-screenshots
 name: export-as-pptx-screenshots
 tagline: Flat images — pixel-perfect but not editable
-summary: "1. showtouser the deck. 2. Call genpptx:"
+summary: "If — and only if — the user asked for Google Slides, also pass
+  \"offergoogleslides\": true: the export dialog gains a 'Send to Google Slides'
+  button, and the upload happens only if they click it."
 categories:
   - media-creative
 tags:

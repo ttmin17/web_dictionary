@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 6
   stars_growth_pct: 0.7
   trending_score: 6.04
-  rank_current: 81
-  rank_delta: -11
+  rank_current: 86
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 791
@@ -237,7 +237,6 @@ Thanks to these wonderful people for their contributions ⭐
 #### Download now: https://github.com/zinja-coder/jadx-ai-mcp/releases
 
 ---
-
 ## 🤖 What is JADX-MCP-SERVER?
 
 **JADX MCP Server** is a standalone Python server that interacts with a modified version of `jadx-gui` (see: [jadx-ai-mcp](https://github.com/zinja-coder/jadx-ai-mcp)) via MCP (Model Context Protocol). It lets LLMs communicate with the decompiled Android app context live.
@@ -290,7 +289,6 @@ It is combination of two tools:
 2. JADX MCP SERVER
 
 ---
-
 # Zin MCP Suite
  - **[APKTool-MCP-Server](https://github.com/zinja-coder/apktool-mcp-server)**
  - **[JAD-AI-MCP-Plugin](https://github.com/zinja-coder/jadx-ai-mcp)**
@@ -333,7 +331,6 @@ raw dump. Stripping never changes line numbers, so `with_line_numbers=True` and
 - `xrefs_to_method()` : Find all references to a method (includes override-related methods, supports pagination)
 - `xrefs_to_field()` : Find all references to a field (returns methods that access the field, supports pagination)
 ---
-
 #### Note: Tested on Claude Desktop. Support for other LLMs might be tested in future.
 
 ## 🗒️ Sample Prompts
@@ -401,7 +398,6 @@ raw dump. Stripping never changes line numbers, so `with_line_numbers=True` and
 
 
 ---
-
 ## 🛠️ Getting Started
 
 [READ HERE](https://github.com/zinja-coder/jadx-ai-mcp?tab=readme-ov-file#%EF%B8%8F-getting-started)
@@ -582,7 +578,6 @@ The developers of `jadx-ai-mcp` and `jadx_mcp_server` shall not be held liable f
 Use responsibly. Respect intellectual property. Follow ethical hacking practices.
 
 ---
-
 ## 🙌 Contribute or Support
 
 - Found it useful? Give it a ⭐️
@@ -590,5 +585,4 @@ Use responsibly. Respect intellectual property. Follow ethical hacking practices
 - Built something on top? DM me or mention me — I’ll add it to the README!
 
 ---
-
 Built with ❤️ for the reverse engineering and AI communities.

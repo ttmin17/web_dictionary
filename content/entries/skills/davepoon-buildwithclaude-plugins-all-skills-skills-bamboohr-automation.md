@@ -276,5 +276,4 @@ For keeping external systems in sync with BambooHR:
 | List dependents | BAMBOOHR_DEPENDENTS_GET_ALL | employeeId |
 | Benefit coverages | BAMBOOHR_BENEFIT_GET_COVERAGES | (check schema) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

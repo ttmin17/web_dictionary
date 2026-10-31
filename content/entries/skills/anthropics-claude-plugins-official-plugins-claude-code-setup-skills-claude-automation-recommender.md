@@ -226,7 +226,6 @@ I've analyzed your codebase and identified the top automations for each category
 - **Key Libraries**: [relevant libraries detected]
 
 ---
-
 ### 🔌 MCP Servers
 
 #### context7
@@ -234,7 +233,6 @@ I've analyzed your codebase and identified the top automations for each category
 **Install**: `claude mcp add context7`
 
 ---
-
 ### 🎯 Skills
 
 #### [skill name]
@@ -243,15 +241,12 @@ I've analyzed your codebase and identified the top automations for each category
 **Invocation**: User-only / Both / Claude-only
 **Also available in**: [plugin-name] plugin (if applicable)
 ```yaml
----
-name: [skill-name]
+---name: [skill-name]
 description: [what it does]
 disable-model-invocation: true  # for user-only
----
-```
+---```
 
 ---
-
 ### ⚡ Hooks
 
 #### [hook name]
@@ -259,7 +254,6 @@ disable-model-invocation: true  # for user-only
 **Where**: `.claude/settings.json`
 
 ---
-
 ### 🤖 Subagents
 
 #### [agent name]
@@ -267,7 +261,6 @@ disable-model-invocation: true  # for user-only
 **Where**: `.claude/agents/[name].md`
 
 ---
-
 **Want more?** Ask for additional recommendations for any specific category (e.g., "show me more MCP server options" or "what other hooks would help?").
 
 **Want help implementing any of these?** Just ask and I can help you set up any of the recommendations above.
@@ -312,7 +305,6 @@ disable-model-invocation: true  # for user-only
 - Team-wide standardization
 
 ---
-
 ## Configuration Tips
 
 ### MCP Server Setup

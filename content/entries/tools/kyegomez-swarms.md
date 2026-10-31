@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 20
   stars_growth_pct: 0.3
   trending_score: 20.05
-  rank_current: 100
-  rank_delta: -66
+  rank_current: 101
+  rank_delta: -67
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7233
@@ -52,14 +52,7 @@ tool:
   install_command: pip install swarms
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - swarms
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 The Enterprise-Grade Multi-Agent Orchestration Framework. Website: https://swarms.ai

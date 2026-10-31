@@ -108,7 +108,6 @@ Fetch detailed metrics, readme content, and version history for a specific packa
 - `include_versions` (boolean, optional): Include version history in response
 
 ---
-
 ## How It Works
 
 ### Finding Packages
@@ -135,7 +134,6 @@ When the user needs Laravel or PHP version compatibility:
 2. Or get details on a specific package to see its supported versions
 
 ---
-
 ## Examples
 
 ### Example: Find Authentication Packages
@@ -192,7 +190,6 @@ SearchPluginTool({
 Returns all healthy packages from vendor "spatie".
 
 ---
-
 ## Filtering Best Practices
 
 ### By Health Score
@@ -230,7 +227,6 @@ SearchPluginTool({
 ```
 
 ---
-
 ## Response Interpretation
 
 ### Search Results
@@ -252,7 +248,6 @@ The detailed response includes:
 - **Version History**: Recent release timeline
 
 ---
-
 ## Common Use Cases
 
 | Scenario | Recommended Approach |
@@ -264,7 +259,6 @@ The detailed response includes:
 | "Check vendor reputation" | Search by vendor, check details |
 
 ---
-
 ## Best Practices
 
 1. **Always filter by health** — Use `health_score: "Healthy"` for production projects
@@ -274,7 +268,6 @@ The detailed response includes:
 5. **No API key needed** — The MCP is free, no authentication required
 
 ---
-
 ## Related Skills
 
 - `laravel-patterns` — Laravel architecture and patterns

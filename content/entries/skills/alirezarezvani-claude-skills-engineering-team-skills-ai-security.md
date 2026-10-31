@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -69,7 +69,6 @@ skill:
 AI and LLM security assessment skill for detecting prompt injection, jailbreak vulnerabilities, model inversion risk, data poisoning exposure, and agent tool abuse. This is NOT general application security (see security-pen-testing) or behavioral anomaly detection in infrastructure (see threat-detection) — this is about security assessment of AI/ML systems and LLM-based agents specifically.
 
 ---
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -86,7 +85,6 @@ AI and LLM security assessment skill for detecting prompt injection, jailbreak v
 - [Cross-References](#cross-references)
 
 ---
-
 ## Overview
 
 ### What This Skill Does
@@ -107,7 +105,6 @@ This skill provides the methodology and tooling for **AI/ML security assessment*
 Access to test prompts or a prompt test file (JSON array). For gray-box and white-box access levels, written authorization is required before testing. The tool uses static signature matching and does not require live model access — it assesses inputs before they reach the model.
 
 ---
-
 ## AI Threat Scanner Tool
 
 The `ai_threat_scanner.py` tool scans prompts for injection signatures, scores model-level risks, and maps findings to MITRE ATLAS techniques.
@@ -163,7 +160,6 @@ Accepts plain strings or objects with a `"prompt"` key.
 | 2 | Critical findings or missing authorization for invasive access levels |
 
 ---
-
 ## Prompt Injection Detection
 
 Prompt injection occurs when adversarial input overrides the model's system prompt, instructions, or safety constraints.
@@ -194,7 +190,6 @@ For RAG-augmented LLMs and web-browsing agents, external content retrieved from 
 All retrieved external content must be treated as untrusted user input, not trusted context.
 
 ---
-
 ## Jailbreak Assessment
 
 Jailbreak attempts bypass safety alignment training through roleplay framing, persona manipulation, or hypothetical context framing.
@@ -214,7 +209,6 @@ Jailbreak attempts bypass safety alignment training through roleplay framing, pe
 Test jailbreak resistance by feeding known jailbreak templates through the scanner before production deployment. Any template that scores `critical` in the scanner requires guardrail remediation before the model is exposed to untrusted users.
 
 ---
-
 ## Model Inversion Risk
 
 Model inversion attacks reconstruct training data from model outputs, potentially exposing PII, proprietary data, or confidential business information embedded in training corpora.
@@ -236,7 +230,6 @@ Monitor inference API logs for:
 - Queries structured to probe confidence boundaries
 
 ---
-
 ## Data Poisoning Risk
 
 Data poisoning attacks insert malicious examples into training data, creating backdoors or biases that activate on specific trigger inputs.
@@ -259,7 +252,6 @@ Data poisoning attacks insert malicious examples into training data, creating ba
 - Training loss anomalies during fine-tuning (unusually easy examples)
 
 ---
-
 ## Agent Tool Abuse
 
 LLM agents with tool access (file operations, API calls, code execution) have a broader attack surface than stateless models.
@@ -282,7 +274,6 @@ LLM agents with tool access (file operations, API calls, code execution) have a 
 5. **Output filtering** — validate tool outputs before returning to user or feeding back to agent context
 
 ---
-
 ## MITRE ATLAS Coverage
 
 Full ATLAS technique coverage reference: `references/atlas-coverage.md`
@@ -300,7 +291,6 @@ Full ATLAS technique coverage reference: `references/atlas-coverage.md`
 | AML.T0024 | Exfiltration via ML Inference API | Exfiltration | Model inversion risk scoring |
 
 ---
-
 ## Guardrail Design Patterns
 
 ### Input Validation Guardrails
@@ -327,7 +317,6 @@ For agentic systems with tool access:
 - **Context integrity monitoring** — detect unexpected role changes or instruction overrides mid-session
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Quick LLM Security Scan (20 Minutes)
@@ -402,7 +391,6 @@ fi
 ```
 
 ---
-
 ## Anti-Patterns
 
 1. **Testing only known jailbreak templates** — Published jailbreak templates (DAN, STAN, etc.) are already blocked by most frontier models. Security assessment must include domain-specific and novel prompt injection patterns relevant to the application's context, not just publicly known templates.
@@ -414,7 +402,6 @@ fi
 7. **Skipping authorization check for gray-box/white-box testing** — Gray-box and white-box access to a production model enables data extraction and model inversion attacks that can expose real user data. Written authorization and legal review are required before any gray-box or white-box assessment.
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |

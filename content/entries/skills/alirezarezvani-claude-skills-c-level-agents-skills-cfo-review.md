@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -159,5 +159,4 @@ The numerate skeptic stress-tests anything that touches money. Six questions bef
 - Skill: [`cfo-advisor`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/cfo-review/${CLAUDE_PLUGIN_ROOT}/vendor/c-level-advisor/cfo-advisor/SKILL.md)
 
 ---
-
 **Version:** 1.0.0

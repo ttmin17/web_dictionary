@@ -4,9 +4,7 @@ name: board-meeting
 tagline: "Multi-agent board meeting protocol for strategic decisions. Runs a
   structured 6-phase deliberation: context loading, independent C-suite
   contributions"
-summary: "Chief of Staff selects relevant roles based on topic (not all 14 every
-  time): | Topic | Activate | |-------|----------| | Market expansion | CEO,
-  CMO, CFO, CRO, COO | | Product direction | CEO, CPO, CTO, CMO | | Hirin..."
+summary: "--- ## The 6-Phase Protocol"
 categories:
   - coding-agents
 tags:
@@ -28,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -78,7 +76,6 @@ board meeting, executive deliberation, strategic decision, C-suite, multi-agent,
 `/c-level-agents:boardroom [topic]` — e.g. `/c-level-agents:boardroom Should we expand to Spain in Q3?`
 
 ---
-
 ## The 6-Phase Protocol
 
 ### PHASE 1: Context Gathering
@@ -102,7 +99,6 @@ board meeting, executive deliberation, strategic decision, C-suite, multi-agent,
 | Eng delivery / DORA / team structure | VPE, CTO, CHRO, CFO |
 
 ---
-
 ### PHASE 2: Independent Contributions (ISOLATED)
 
 **No cross-pollination. Each agent runs before seeing others' outputs.**
@@ -128,7 +124,6 @@ What would change my mind: [specific condition]
 Each agent self-verifies before contributing: source attribution, assumption audit, confidence scoring. No untagged claims.
 
 ---
-
 ### PHASE 3: Critic Analysis
 Executive Mentor receives ALL Phase 2 outputs simultaneously. Role: adversarial reviewer, not synthesizer.
 
@@ -140,7 +135,6 @@ Checklist:
 - Which agent operated outside their domain?
 
 ---
-
 ### PHASE 4: Synthesis
 Chief of Staff delivers using the **Board Meeting Output** format (defined in `../agent-protocol/SKILL.md`):
 - Decision Required (one sentence)
@@ -151,7 +145,6 @@ Chief of Staff delivers using the **Board Meeting Output** format (defined in `.
 - Your Call (options if founder disagrees)
 
 ---
-
 ### PHASE 5: Human in the Loop ⏸️
 
 **Full stop. Wait for the founder.**
@@ -168,7 +161,6 @@ Options: ✅ Approve | ✏️ Modify | ❌ Reject | ❓ Ask follow-up
 - Reopen any time with `/c-level-agents:boardroom resume`
 
 ---
-
 ### PHASE 6: Decision Extraction
 After founder approval:
 - **Layer 1:** Write full transcript → `~/.claude/decisions/raw/YYYY-MM-DD-<slug>.md`
@@ -177,7 +169,6 @@ After founder approval:
 - Confirm to founder with count of decisions logged, actions tracked, flags added
 
 ---
-
 ## Memory Structure
 
 Uses the canonical two-layer decision memory (see `../agent-protocol/SKILL.md` → "Decision Memory (Canonical Layout)"):
@@ -195,7 +186,6 @@ Uses the canonical two-layer decision memory (see `../agent-protocol/SKILL.md` �
 Migration: a legacy `memory/board-meetings/` folder may exist from earlier versions; read it for history but write new transcripts and decisions to `~/.claude/decisions/`.
 
 ---
-
 ## Failure Mode Quick Reference
 | Failure | Fix |
 |---------|-----|
@@ -206,7 +196,6 @@ Migration: a legacy `memory/board-meetings/` folder may exist from earlier versi
 | Layer contamination | Phase 1 loads `~/.claude/decisions/approved/` only — hard rule |
 
 ---
-
 ## References
 - `templates/meeting-agenda.md` — agenda format
 - `templates/meeting-minutes.md` — final output format

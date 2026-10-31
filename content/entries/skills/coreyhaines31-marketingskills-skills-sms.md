@@ -107,7 +107,6 @@ Gather this context (ask if not provided):
 - Transactional (order updates, auth codes, alerts)
 
 ---
-
 ## When SMS Beats Email
 
 SMS is not "another email." Use it where the channel's properties win:
@@ -127,7 +126,6 @@ SMS is not "another email." Use it where the channel's properties win:
 **General rule**: SMS earns the right to interrupt because of opt-in. Use it for messages that genuinely benefit from immediacy. If it could wait 24 hours, send it via email.
 
 ---
-
 ## WhatsApp
 
 If most customers are outside the US (LATAM, Europe, Africa, Middle East, India, Southeast Asia), WhatsApp often beats SMS for the same flows. It runs on different rules:
@@ -141,7 +139,6 @@ If most customers are outside the US (LATAM, Europe, Africa, Middle East, India,
 **For the 24-hour window, templates, opt-in, quality and tiers, pricing, click-to-WhatsApp ads, and WhatsApp playbooks**: see [references/whatsapp.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sms/references/whatsapp.md).
 
 ---
-
 ## Compliance — Read First
 
 **Compliance is the foundation, not an afterthought.** A single TCPA class-action settlement runs $5M–$40M. The basics:
@@ -180,7 +177,6 @@ Application-to-Person 10-digit long codes must be registered through The Campaig
 **For full compliance details, edge cases, opt-in copy templates, and STOP/HELP response templates**: see [references/compliance.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sms/references/compliance.md).
 
 ---
-
 ## Phone Number Types (US)
 
 | Type | Throughput | Cost | Use Case | Trust |
@@ -192,7 +188,6 @@ Application-to-Person 10-digit long codes must be registered through The Campaig
 **Rule of thumb**: list <10K = 10DLC. List 10K–100K = toll-free. List 100K+ = short code.
 
 ---
-
 ## Core Principles
 
 ### 1. Every send has a real cost
@@ -214,7 +209,6 @@ Short links are mandatory (`klvy.co`, `txt.attn.tv`, branded short domain). Trac
 "From [Brand]:" or branded short code at the start of every message. Even on automated flows. Recipients can't see "from" address — they need it inline.
 
 ---
-
 ## SMS Sequence Types
 
 ### Welcome / Opt-In Confirmation (immediate)
@@ -262,7 +256,6 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 **For full sequence templates with copy and timing**: see [references/sequence-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sms/references/sequence-templates.md).
 
 ---
-
 ## SMS Copy Guidelines
 
 ### Structure
@@ -296,7 +289,6 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 **For complete copy patterns by sequence type with character counts**: see [references/sequence-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sms/references/sequence-templates.md).
 
 ---
-
 ## Platform Selection
 
 | Platform | Best For | Native MCP | Cost Tier |
@@ -318,7 +310,6 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 **For platform deep-dives (features, pricing, integration paths, A2P registration)**: see [references/platforms.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sms/references/platforms.md).
 
 ---
-
 ## Measurement
 
 ### Key Metrics
@@ -350,7 +341,6 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 Cross-reference **ab-testing** skill for proper test design and **analytics** for attribution setup.
 
 ---
-
 ## Output Format
 
 When the user asks for an SMS plan, return:
@@ -365,7 +355,6 @@ When the user asks for an SMS plan, return:
 Keep recommendations specific. Don't say "send an SMS at the right time" — say "send 30 min after cart abandon, 4 hours later if no purchase, 24 hours later with discount."
 
 ---
-
 ## Task-Specific Questions
 
 1. Are you US, EU, or both? (Changes compliance approach entirely.)
@@ -377,7 +366,6 @@ Keep recommendations specific. Don't say "send an SMS at the right time" — say
 7. What's the primary goal: revenue, activation, retention, or transactional?
 
 ---
-
 ## Common Mistakes
 
 1. **Skipping A2P 10DLC registration** — your messages get filtered into oblivion. Register first, send second.
@@ -392,7 +380,6 @@ Keep recommendations specific. Don't say "send an SMS at the right time" — say
 10. **No throttling on bulk sends** — burst sends trigger carrier filtering. Use platform throttling.
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key SMS tools:
@@ -409,7 +396,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Customer.io** | Behavior-based SMS automation | - | [customer-io.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/customer-io.md) |
 
 ---
-
 ## Related Skills
 
 - **emails**: Sister channel — almost always run together. Email carries the long-form content; SMS carries the urgent nudges.

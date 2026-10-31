@@ -73,7 +73,6 @@ tool:
 </div>
 
 ---
-
 ## What AiSOC does
 
 Telemetry arrives from your security tools. AiSOC normalizes it, runs the 2535 executable rules of

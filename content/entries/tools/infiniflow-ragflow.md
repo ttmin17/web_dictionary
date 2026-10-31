@@ -31,7 +31,6 @@ signals:
   stars_growth_pct: 0.5
   trending_score: 432
   rank_current: 21
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 92449
@@ -52,14 +51,7 @@ tool:
   install_command: pip install ragflow
   runtime: multi
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - ragflow
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs

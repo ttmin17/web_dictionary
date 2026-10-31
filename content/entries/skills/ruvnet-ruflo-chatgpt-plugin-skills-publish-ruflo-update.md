@@ -4,7 +4,10 @@ name: publish-ruflo-update
 tagline: Prepare and publish a concise, gateway-attributed RuFlo federation
   update when the user explicitly asks to announce status, tasks, results, or
   help. U
-summary: "Choose the narrowest publishing tool:"
+summary: "- Use channelpublish for a named public channel such as pub:announce,
+  pub:help, pub:claims, or pub:showcase. - Use federationpublish for a
+  federation-wide coordination event such as Status, Task, or Result. - Do not
+  s..."
 categories:
   - agent-frameworks
 tags:

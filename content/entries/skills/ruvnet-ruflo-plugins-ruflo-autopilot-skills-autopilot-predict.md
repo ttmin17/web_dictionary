@@ -2,7 +2,9 @@
 slug: ruvnet-ruflo-plugins-ruflo-autopilot-skills-autopilot-predict
 name: autopilot-predict
 tagline: Use learned patterns and current state to predict the optimal next action
-summary: "Predict what to work on next using Ruflo autopilot intelligence:"
+summary: 1. Call mcppluginruflo-corerufloautopilotpredict for the recommended
+  next action 2. If confidence > 0.7, execute the prediction directly 3. If
+  confidence < 0.7, check mcppluginruflo-corerufloautopilotprogress for task...
 categories:
   - agent-frameworks
 tags:

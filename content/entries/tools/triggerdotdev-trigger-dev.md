@@ -2,8 +2,9 @@
 slug: triggerdotdev-trigger-dev
 name: trigger.dev
 tagline: Trigger.dev – build and deploy durable AI agents and workflows
-summary: Website | Docs | Issues | Example projects | Feature requests | Public
-  roadmap | Self-hosting
+summary: Trigger.dev is the open-source platform for building AI workflows in
+  TypeScript. Long-running tasks with retries, queues, observability, and
+  elastic scaling.
 categories:
   - agent-frameworks
 tags:
@@ -27,8 +28,8 @@ signals:
   stars_delta_7d: 46
   stars_growth_pct: 0.3
   trending_score: 46.13
-  rank_current: 80
-  rank_delta: -50
+  rank_current: 81
+  rank_delta: -51
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16493
@@ -51,7 +52,7 @@ tool:
   install_command: git clone https://github.com/triggerdotdev/trigger.dev.git
   runtime: node
   execution_mode: cloud
-  has_mcp_support: true
+  has_mcp_support: false
 ---
 
 <div align="center">

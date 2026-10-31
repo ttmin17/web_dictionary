@@ -3,7 +3,10 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-go
 name: ops-go
 tagline: Token-efficient morning briefing. Pre-gathers all data via shell
   scripts, then presents a unified business dashboard with prioritized actions.
-summary: "Before executing, load available context:"
+summary: '1. Preferences: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/preferences.json
+  - owner — use in the greeting header ("Good morning, [owner]") - timezone —
+  display all timestamps in this t...'
 categories:
   - agent-frameworks
 tags:
@@ -96,7 +99,6 @@ Before executing, load available context:
 | `gog gmail search -j --results-only --no-input --max 30 "in:inbox"` | Search inbox | JSON array of threads |
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** when gathering briefing data in parallel. This enables:
@@ -228,7 +230,6 @@ For Slack counts: if the pre-gathered data shows `"count": -1`, use `mcp__claude
 For Notion counts: if `NOTION_MCP_ENABLED=true` and pre-gathered data shows Notion as available, use `mcp__claude_ai_Notion__notion-search` with `query: ""` sorted by `last_edited_time` descending to surface recently active pages. Then call `mcp__claude_ai_Notion__notion-get-comments` on the top results to find comments needing response. Note: Notion search does not support date range filters — sort by recency and limit to the first 10-20 results instead.
 
 ---
-
 ## Native tool usage
 
 ### Tasks — briefing action tracking

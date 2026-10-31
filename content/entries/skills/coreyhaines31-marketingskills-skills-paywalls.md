@@ -89,7 +89,6 @@ Before providing recommendations, understand:
 3. **User Journey** - When does this appear? What have they experienced? What are they trying to do?
 
 ---
-
 ## Core Principles
 
 ### 1. Value Before Ask
@@ -112,7 +111,6 @@ Before providing recommendations, understand:
 - Maintain trust for future conversion
 
 ---
-
 ## Paywall Trigger Points
 
 ### Feature Gates
@@ -141,7 +139,6 @@ After X days of free use:
 - Easy to dismiss
 
 ---
-
 ## Paywall Screen Components
 
 1. **Headline** - Focus on what they get: "Unlock [Feature] to [Benefit]"
@@ -159,7 +156,6 @@ After X days of free use:
 7. **Escape Hatch** - Clear "Not now" or "Continue with Free"
 
 ---
-
 ## Specific Paywall Types
 
 ### Feature Lock Paywall
@@ -204,7 +200,6 @@ What you've accomplished:
 ```
 
 ---
-
 ## Timing and Frequency
 
 ### When to Show
@@ -223,7 +218,6 @@ What you've accomplished:
 - Track annoyance signals
 
 ---
-
 ## Upgrade Flow Optimization
 
 ### From Paywall to Payment
@@ -237,7 +231,6 @@ What you've accomplished:
 - Guide to new features
 
 ---
-
 ## A/B Testing
 
 ### What to Test
@@ -258,7 +251,6 @@ What you've accomplished:
 **For comprehensive experiment ideas**: See [references/experiments.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/paywalls/references/experiments.md)
 
 ---
-
 ## Anti-Patterns to Avoid
 
 ### Dark Patterns
@@ -273,7 +265,6 @@ What you've accomplished:
 - Complicated upgrade process
 
 ---
-
 ## Task-Specific Questions
 
 1. What's your current free → paid conversion rate?
@@ -284,7 +275,6 @@ What you've accomplished:
 6. Mobile app, web app, or both?
 
 ---
-
 ## Related Skills
 
 - **churn-prevention**: For cancel flows, save offers, and reducing churn post-upgrade

@@ -287,5 +287,4 @@ subscriber_hash = hashlib.md5(email.lower().encode()).hexdigest()
 | Member recent activity | `MAILCHIMP_VIEW_RECENT_ACTIVITY` | `list_id`, `subscriber_hash` |
 | Campaign content | `MAILCHIMP_GET_CAMPAIGN_CONTENT` | `campaign_id` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

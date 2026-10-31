@@ -4,7 +4,9 @@ name: duffel
 tagline: "Use Duffel to search, book, pay for, or manage flights. Use Duffel to
   monitor an already booked flight's fare when the user directly asks for
   ongoing "
-summary: "Use only this public CLI surface:"
+summary: Do not invent identifiers, call undocumented endpoints, or expose off,
+  ord, or ore ids to users. Do not show a Duffel command. Keep sensitive values
+  out of chat unless the booking JSON, validate-booking, or book accep...
 categories:
   - cloud-infra
 tags:

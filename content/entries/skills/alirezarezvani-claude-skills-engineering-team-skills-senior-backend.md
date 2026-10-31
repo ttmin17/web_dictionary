@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -79,7 +79,6 @@ skill:
 Backend development patterns, API design, database optimization, and security practices.
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -94,7 +93,6 @@ python scripts/api_load_tester.py https://api.example.com/users --concurrency 50
 ```
 
 ---
-
 ## Tools Overview
 
 ### 1. API Scaffolder
@@ -123,7 +121,6 @@ python scripts/api_scaffolder.py src/routes/ --generate-spec --output openapi.ya
 - Koa (`--framework koa`)
 
 ---
-
 ### 2. Database Migration Tool
 
 Analyzes database schemas, detects changes, and generates migration files with rollback support.
@@ -147,7 +144,6 @@ python scripts/database_migration_tool.py --connection postgres://localhost/mydb
 ```
 
 ---
-
 ### 3. API Load Tester
 
 Performs HTTP load testing with configurable concurrency, measuring latency percentiles and throughput.
@@ -175,7 +171,6 @@ python scripts/api_load_tester.py https://api.example.com/v1/users https://api.e
 ```
 
 ---
-
 ## Backend Development Workflows
 
 ### API Design Workflow
@@ -242,7 +237,6 @@ python scripts/api_scaffolder.py src/routes/ --generate-spec --output openapi.ya
 ```
 
 ---
-
 ### Database Optimization Workflow
 
 Use when queries are slow or database performance needs improvement.
@@ -286,7 +280,6 @@ python scripts/database_migration_tool.py --connection $DATABASE_URL --analyze
 ```
 
 ---
-
 ### Security Hardening Workflow
 
 Use when preparing an API for production or after a security review.
@@ -356,7 +349,6 @@ app.use(helmet({
 ```
 
 ---
-
 ## Reference Documentation
 
 | File | Contains | Use When |
@@ -366,7 +358,6 @@ app.use(helmet({
 | `references/backend_security_practices.md` | OWASP Top 10, auth patterns, input validation | Security hardening |
 
 ---
-
 ## Common Patterns Quick Reference
 
 ### REST API Response Format
@@ -418,7 +409,6 @@ CREATE INDEX idx_users_email_name ON users(email) INCLUDE (name);
 ```
 
 ---
-
 ## Common Commands
 
 ```bash
@@ -436,7 +426,6 @@ python scripts/api_load_tester.py https://api.example.com/endpoint --compare bas
 ```
 
 ---
-
 ## Assumptions and Verifiable Success Criteria (Karpathy discipline)
 
 Before this skill scaffolds, recommends a pattern, or modifies a schema, the following four assumptions MUST be surfaced. If any are unknown, the skill stops and walks the [Forcing-question library](#forcing-question-library-matt-pocock-grill) instead.
@@ -457,7 +446,6 @@ If any of those three is not stated, the recommendation is incomplete — return
 The `scripts/backend_decision_engine.py` tool encodes these checks: it refuses to recommend a profile without read/write ratio + QPS + tenancy + data sensitivity + pattern preference.
 
 ---
-
 ## Customization profiles
 
 Four built-in profiles in `profiles/` calibrate every recommendation:
@@ -483,7 +471,6 @@ The tool returns the best-fit profile, runner-up tradeoff (if within 15%), stack
 To add a custom profile: copy `profiles/node-express.json` to `profiles/<your-org>.json` and adjust `constraints` + `success_thresholds` + `named_approver_chain`.
 
 ---
-
 ## Composition map
 
 This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It forks into them. See `references/composition_map.md` for the full routing table. Key forks:
@@ -504,7 +491,6 @@ This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It
 The `cs-backend-engineer` agent orchestrates these forks via `context: fork`. Invoke it from another agent with `Agent({subagent_type: "cs-backend-engineer", prompt: "..."})` or via `/cs-backend-review <your problem>`.
 
 ---
-
 ## Forcing-question library (Matt Pocock grill)
 
 Before locking any backend decision, walk the seven forcing questions in `references/forcing_questions.md`. Discipline:
@@ -526,7 +512,6 @@ Summary:
 7. SLO + named error-budget consumer?
 
 ---
-
 ## Invocation from other agents and skills
 
 Three surfaces:

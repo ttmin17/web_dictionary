@@ -89,7 +89,6 @@ Understand the situation (ask if not provided):
 Work with whatever context is available. If key details are missing, make reasonable assumptions and flag them.
 
 ---
-
 ## Community Strategy Principles
 
 ### Build around a shared identity, not just a product
@@ -126,7 +125,6 @@ Members join → get value → engage → create content/help others
 Design for the flywheel from day one. Every decision should ask: *Does this accelerate the loop or slow it down?*
 
 ---
-
 ## Playbooks by Goal
 
 ### Launching a Community from Zero
@@ -161,7 +159,6 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 4. **Monitor sentiment weekly** — Look for patterns in complaints or confusion before they become churn signals
 
 ---
-
 ## Community Models & Scaling Phases
 
 Before picking tactics, pick the **shape** of the community and match your effort to its stage. See **`references/community-models.md`** for:
@@ -173,7 +170,6 @@ Before picking tactics, pick the **shape** of the community and match your effor
 Route here when the user asks *what kind* of community to build, which model fits their goal, or how their role should change as the community grows.
 
 ---
-
 ## Platform Selection Guide
 
 | Platform | Best For | Watch Out For |
@@ -186,7 +182,6 @@ Route here when the user asks *what kind* of community to build, which model fit
 | Forum (Discourse) | Long-form technical communities; SEO-rich | Slower velocity; higher effort to post |
 
 ---
-
 ## Community Health Metrics
 
 Track these signals weekly:
@@ -204,7 +199,6 @@ Track these signals weekly:
 - New members stop posting after their intro message
 
 ---
-
 ## Output Formats
 
 Depending on what the user needs, produce one of:
@@ -219,7 +213,6 @@ Depending on what the user needs, produce one of:
 Always be specific. Generic advice ("be consistent," "provide value") is not useful. Give the user something they can act on today.
 
 ---
-
 ## Task-Specific Questions
 
 1. What platform are you building on (or considering)?
@@ -230,7 +223,6 @@ Always be specific. Generic advice ("be consistent," "provide value") is not use
 6. How much time can you dedicate to community management weekly?
 
 ---
-
 ## Related Skills
 
 - **referrals**: For structured referral and ambassador incentive programs

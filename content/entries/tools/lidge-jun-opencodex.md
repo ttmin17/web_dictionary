@@ -53,15 +53,7 @@ tool:
   install_command: npx @bitkyc08/opencodex
   runtime: node
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: npx
-    args:
-      - -y
-      - "@bitkyc08/opencodex"
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Universal provider proxy for OpenAI Codex & Claude Code — use any LLM (Claude, Gemini, Grok, DeepSeek, Ollama…) with Codex CLI, App, SDK, and Claude Code

@@ -262,5 +262,4 @@ criteria: '((Last_Name:equals:Doe)AND(Email:contains:example.com))'
 | Create tag | ZOHO_CREATE_ZOHO_TAG | module, tag_name |
 | Update related records | ZOHO_UPDATE_RELATED_RECORDS | module, record_id, related_module, data |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

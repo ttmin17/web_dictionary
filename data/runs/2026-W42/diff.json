@@ -1,692 +1,13 @@
 {
   "week": "2026-W42",
-  "generated_at": "2026-10-31T14:49:46.231Z",
+  "generated_at": "2026-10-31T15:55:43.565Z",
   "added": [
-    {
-      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-alert-mute-copilot",
-      "name": "alert-mute-copilot",
-      "type": "agent_skill",
-      "stars": 13337,
-      "repo": "ccfos/nightingale"
-    },
-    {
-      "slug": "agents365-ai-drawio-skill-skills-drawio-skill",
-      "name": "drawio-skill",
-      "type": "agent_skill",
-      "stars": 10111,
-      "repo": "Agents365-ai/drawio-skill"
-    },
-    {
-      "slug": "yusufkaraaslan-skill_seekers",
-      "name": "Skill_Seekers",
-      "type": "mcp_server",
-      "stars": 15141,
-      "repo": "yusufkaraaslan/Skill_Seekers"
-    },
-    {
-      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-alert-rule-troubleshoot",
-      "name": "alert-rule-troubleshoot",
-      "type": "agent_skill",
-      "stars": 13337,
-      "repo": "ccfos/nightingale"
-    },
-    {
-      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-alert-subscribe-copilot",
-      "name": "alert-subscribe-copilot",
-      "type": "agent_skill",
-      "stars": 13337,
-      "repo": "ccfos/nightingale"
-    },
-    {
-      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-analyze-dashboard",
-      "name": "analyze-dashboard",
-      "type": "agent_skill",
-      "stars": 13337,
-      "repo": "ccfos/nightingale"
-    },
-    {
-      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-categraf-deploy-guide",
-      "name": "categraf-deploy-guide",
-      "type": "agent_skill",
-      "stars": 13337,
-      "repo": "ccfos/nightingale"
-    },
-    {
-      "slug": "klavis-ai-klavis",
-      "name": "klavis",
-      "type": "mcp_server",
-      "stars": 5809,
-      "repo": "Klavis-AI/klavis"
-    },
-    {
-      "slug": "getsentry-mobilebuildmcp",
-      "name": "MobileBuildMCP",
-      "type": "mcp_server",
-      "stars": 6476,
-      "repo": "getsentry/MobileBuildMCP"
-    },
-    {
-      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-ai-visibility",
-      "name": "ai-visibility",
-      "type": "agent_skill",
-      "stars": 5240,
-      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
-    },
-    {
-      "slug": "clidey-whodb-cli-external-plugin-openai-skills-whodb",
-      "name": "whodb",
-      "type": "agent_skill",
-      "stars": 5036,
-      "repo": "clidey/whodb"
-    },
-    {
-      "slug": "exa-labs-exa-mcp-server",
-      "name": "exa-mcp-server",
-      "type": "mcp_server",
-      "stars": 5118,
-      "repo": "exa-labs/exa-mcp-server"
-    },
-    {
-      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-backlink-check",
-      "name": "backlink-check",
-      "type": "agent_skill",
-      "stars": 5240,
-      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
-    },
-    {
-      "slug": "clidey-whodb-cli-external-plugin-whodb-skills-query-builder",
-      "name": "query-builder",
-      "type": "agent_skill",
-      "stars": 5036,
-      "repo": "clidey/whodb"
-    },
-    {
-      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-competitor-gap",
-      "name": "competitor-gap",
-      "type": "agent_skill",
-      "stars": 5240,
-      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
-    },
-    {
-      "slug": "clidey-whodb-cli-external-plugin-whodb-skills-schema-designer",
-      "name": "schema-designer",
-      "type": "agent_skill",
-      "stars": 5036,
-      "repo": "clidey/whodb"
-    },
-    {
-      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-content-brief",
-      "name": "content-brief",
-      "type": "agent_skill",
-      "stars": 5240,
-      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
-    },
-    {
-      "slug": "clidey-whodb-cli-external-plugin-whodb-skills-whodb",
-      "name": "whodb-whodb",
-      "type": "agent_skill",
-      "stars": 5036,
-      "repo": "clidey/whodb"
-    },
-    {
-      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-keyword-research",
-      "name": "keyword-research",
-      "type": "agent_skill",
-      "stars": 5240,
-      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
-    },
-    {
-      "slug": "clidey-whodb-cli-skills-query-builder",
-      "name": "cli-query-builder",
-      "type": "agent_skill",
-      "stars": 5036,
-      "repo": "clidey/whodb"
-    },
-    {
-      "slug": "manavarya09-design-extract",
-      "name": "design-extract",
-      "type": "mcp_server",
-      "stars": 4229,
-      "repo": "Manavarya09/design-extract"
-    },
-    {
-      "slug": "jordan-gibbs-hyperresearch",
-      "name": "hyperresearch",
-      "type": "mcp_server",
-      "stars": 3850,
-      "repo": "jordan-gibbs/hyperresearch"
-    },
-    {
-      "slug": "skyhook-io-radar",
-      "name": "radar",
-      "type": "mcp_server",
-      "stars": 3758,
-      "repo": "skyhook-io/radar"
-    },
-    {
-      "slug": "bytebase-dbhub",
-      "name": "dbhub",
-      "type": "agent_tool",
-      "stars": 3639,
-      "repo": "bytebase/dbhub"
-    },
-    {
-      "slug": "rusq-slackdump-cmd-slackdump-internal-mcp-assets-skills-slackdump-source",
-      "name": "slackdump-source",
-      "type": "agent_skill",
-      "stars": 2822,
-      "repo": "rusq/slackdump"
-    },
-    {
-      "slug": "samuelgursky-davinci-resolve-mcp",
-      "name": "davinci-resolve-mcp",
-      "type": "mcp_server",
-      "stars": 3520,
-      "repo": "samuelgursky/davinci-resolve-mcp"
-    },
-    {
-      "slug": "punitarani-fli",
-      "name": "fli",
-      "type": "mcp_server",
-      "stars": 3225,
-      "repo": "punitarani/fli"
-    },
-    {
-      "slug": "deedy5-ddgs",
-      "name": "ddgs",
-      "type": "agent_tool",
-      "stars": 3017,
-      "repo": "deedy5/ddgs"
-    },
-    {
-      "slug": "rusq-slackdump-cmd-slackdump-internal-mcp-assets-skills-slackdump-sqlite3",
-      "name": "slackdump-sqlite3",
-      "type": "agent_skill",
-      "stars": 2822,
-      "repo": "rusq/slackdump"
-    },
-    {
-      "slug": "taylorwilsdon-google_workspace_mcp",
-      "name": "google_workspace_mcp",
-      "type": "mcp_server",
-      "stars": 3332,
-      "repo": "taylorwilsdon/google_workspace_mcp"
-    },
-    {
-      "slug": "blazickjp-arxiv-mcp-server",
-      "name": "arxiv-mcp-server",
-      "type": "mcp_server",
-      "stars": 3214,
-      "repo": "blazickjp/arxiv-mcp-server"
-    },
-    {
-      "slug": "rusq-slackdump-cmd-slackdump-internal-mcp-assets-skills-slackdump",
-      "name": "slackdump",
-      "type": "agent_skill",
-      "stars": 2822,
-      "repo": "rusq/slackdump"
-    },
-    {
-      "slug": "duty1g-x64dbg-mcp-server",
-      "name": "x64dbg-mcp-server",
-      "type": "agent_skill",
-      "stars": 2484,
-      "repo": "duty1g/x64dbg-mcp-server"
-    },
-    {
-      "slug": "redhat-et-ripwire-skills-hermes-ripwire-repo-map",
-      "name": "ripwire-repo-map",
-      "type": "agent_skill",
-      "stars": 2443,
-      "repo": "redhat-et/ripwire"
-    },
-    {
-      "slug": "openags-paper-search-mcp",
-      "name": "paper-search-mcp",
-      "type": "mcp_server",
-      "stars": 2817,
-      "repo": "openags/paper-search-mcp"
-    },
-    {
-      "slug": "redhat-et-ripwire-skills-ripwire-before-you-build",
-      "name": "ripwire-before-you-build",
-      "type": "agent_skill",
-      "stars": 2443,
-      "repo": "redhat-et/ripwire"
-    },
-    {
-      "slug": "chrisryugj-kordoc",
-      "name": "kordoc",
-      "type": "agent_tool",
-      "stars": 2435,
-      "repo": "chrisryugj/kordoc"
-    },
-    {
-      "slug": "llmsresearch-paperbanana",
-      "name": "paperbanana",
-      "type": "agent_tool",
-      "stars": 2397,
-      "repo": "llmsresearch/paperbanana"
-    },
-    {
-      "slug": "redhat-et-ripwire-skills-ripwire-change-check",
-      "name": "ripwire-change-check",
-      "type": "agent_skill",
-      "stars": 2443,
-      "repo": "redhat-et/ripwire"
-    },
-    {
-      "slug": "redhat-et-ripwire-skills-ripwire-find-bug",
-      "name": "ripwire-find-bug",
-      "type": "agent_skill",
-      "stars": 2443,
-      "repo": "redhat-et/ripwire"
-    },
-    {
-      "slug": "redhat-et-ripwire-skills-ripwire-fresh-eyes",
-      "name": "ripwire-fresh-eyes",
-      "type": "agent_skill",
-      "stars": 2443,
-      "repo": "redhat-et/ripwire"
-    },
-    {
-      "slug": "alpic-ai-skybridge-skills-chatgpt-app-builder",
-      "name": "chatgpt-app-builder",
-      "type": "agent_skill",
-      "stars": 2160,
-      "repo": "alpic-ai/skybridge"
-    },
-    {
-      "slug": "atomicstrata-llm-wiki-compiler",
-      "name": "llm-wiki-compiler",
-      "type": "mcp_server",
-      "stars": 2180,
-      "repo": "atomicstrata/llm-wiki-compiler"
-    },
-    {
-      "slug": "forloopcodes-contextplus",
-      "name": "contextplus",
-      "type": "mcp_server",
-      "stars": 1983,
-      "repo": "forloopcodes/contextplus"
-    },
-    {
-      "slug": "alpic-ai-skybridge-skills-mcp-app-builder",
-      "name": "mcp-app-builder",
-      "type": "agent_skill",
-      "stars": 2160,
-      "repo": "alpic-ai/skybridge"
-    },
-    {
-      "slug": "aminforou-mcp-gsc",
-      "name": "mcp-gsc",
-      "type": "mcp_server",
-      "stars": 1915,
-      "repo": "AminForou/mcp-gsc"
-    },
-    {
-      "slug": "vmoranv-jshookmcp",
-      "name": "jshookmcp",
-      "type": "mcp_server",
-      "stars": 2041,
-      "repo": "vmoranv/jshookmcp"
-    },
-    {
-      "slug": "alpic-ai-skybridge-skills-skybridge",
-      "name": "skybridge",
-      "type": "agent_skill",
-      "stars": 2160,
-      "repo": "alpic-ai/skybridge"
-    },
-    {
-      "slug": "timescale-pg-aiguide-skills-design-postgis-tables",
-      "name": "design-postgis-tables",
-      "type": "agent_skill",
-      "stars": 1866,
-      "repo": "timescale/pg-aiguide"
-    },
-    {
-      "slug": "timescale-pg-aiguide-skills-design-postgres-tables",
-      "name": "design-postgres-tables",
-      "type": "agent_skill",
-      "stars": 1866,
-      "repo": "timescale/pg-aiguide"
-    },
-    {
-      "slug": "upsonic-upsonic",
-      "name": "Upsonic",
-      "type": "agent_tool",
-      "stars": 7958,
-      "repo": "Upsonic/Upsonic"
-    },
-    {
-      "slug": "timescale-pg-aiguide-skills-find-hypertable-candidates",
-      "name": "find-hypertable-candidates",
-      "type": "agent_skill",
-      "stars": 1866,
-      "repo": "timescale/pg-aiguide"
-    },
-    {
-      "slug": "timescale-pg-aiguide-skills-migrate-postgres-tables-to-hypertables",
-      "name": "migrate-postgres-tables-to-hypertables",
-      "type": "agent_skill",
-      "stars": 1866,
-      "repo": "timescale/pg-aiguide"
-    },
-    {
-      "slug": "timescale-pg-aiguide-skills-pgvector-semantic-search",
-      "name": "pgvector-semantic-search",
-      "type": "agent_skill",
-      "stars": 1866,
-      "repo": "timescale/pg-aiguide"
-    },
-    {
-      "slug": "the-open-agent-openagent-skills-1password",
-      "name": "1password",
-      "type": "agent_skill",
-      "stars": 5688,
-      "repo": "the-open-agent/openagent"
-    },
-    {
-      "slug": "appllama-appllama-skills-skills-appllama-app-design-skill",
-      "name": "appllama-app-design-skill",
-      "type": "agent_skill",
-      "stars": 2796,
-      "repo": "Appllama/appllama-skills"
-    },
-    {
-      "slug": "ifuryst-open-codex-computer-use-skills-open-computer-use",
-      "name": "open-computer-use",
-      "type": "agent_skill",
-      "stars": 2410,
-      "repo": "iFurySt/open-codex-computer-use"
-    },
     {
       "slug": "21st-dev-magic-mcp",
       "name": "magic-mcp",
       "type": "mcp_server",
       "stars": 6003,
       "repo": "21st-dev/magic-mcp"
-    },
-    {
-      "slug": "the-open-agent-openagent-skills-apple-notes",
-      "name": "apple-notes",
-      "type": "agent_skill",
-      "stars": 5688,
-      "repo": "the-open-agent/openagent"
-    },
-    {
-      "slug": "appllama-appllama-skills-skills-appllama-usage",
-      "name": "appllama-usage",
-      "type": "agent_skill",
-      "stars": 2796,
-      "repo": "Appllama/appllama-skills"
-    },
-    {
-      "slug": "homeassistant-ai-ha-mcp",
-      "name": "ha-mcp",
-      "type": "mcp_server",
-      "stars": 5050,
-      "repo": "homeassistant-ai/ha-mcp"
-    },
-    {
-      "slug": "the-open-agent-openagent-skills-apple-reminders",
-      "name": "apple-reminders",
-      "type": "agent_skill",
-      "stars": 5688,
-      "repo": "the-open-agent/openagent"
-    },
-    {
-      "slug": "the-open-agent-openagent-skills-bear-notes",
-      "name": "bear-notes",
-      "type": "agent_skill",
-      "stars": 5688,
-      "repo": "the-open-agent/openagent"
-    },
-    {
-      "slug": "the-open-agent-openagent-skills-blogwatcher",
-      "name": "blogwatcher",
-      "type": "agent_skill",
-      "stars": 5688,
-      "repo": "the-open-agent/openagent"
-    },
-    {
-      "slug": "syngnat-gonavi-npm-gonavi-cli-skill",
-      "name": "gonavi-cli",
-      "type": "agent_skill",
-      "stars": 2067,
-      "repo": "Syngnat/GoNavi"
-    },
-    {
-      "slug": "trpc-group-trpc-agent-go-examples-agui-server-skill_artifacts-skills-artifact_demo",
-      "name": "artifact_demo",
-      "type": "agent_skill",
-      "stars": 1860,
-      "repo": "trpc-group/trpc-agent-go"
-    },
-    {
-      "slug": "jau123-meigen-ai-design-mcp",
-      "name": "MeiGen-AI-Design-MCP",
-      "type": "mcp_server",
-      "stars": 1781,
-      "repo": "jau123/MeiGen-AI-Design-MCP"
-    },
-    {
-      "slug": "trpc-group-trpc-agent-go-examples-dynamicworkflow-skills-skills-fanout-analysis",
-      "name": "fanout-analysis",
-      "type": "agent_skill",
-      "stars": 1860,
-      "repo": "trpc-group/trpc-agent-go"
-    },
-    {
-      "slug": "trpc-group-trpc-agent-go-examples-dynamicworkflow-skills-skills-quality-loop",
-      "name": "quality-loop",
-      "type": "agent_skill",
-      "stars": 1860,
-      "repo": "trpc-group/trpc-agent-go"
-    },
-    {
-      "slug": "trpc-group-trpc-agent-go-examples-evaluation-skill-skills-write-ok",
-      "name": "write-ok",
-      "type": "agent_skill",
-      "stars": 1860,
-      "repo": "trpc-group/trpc-agent-go"
-    },
-    {
-      "slug": "trpc-group-trpc-agent-go-examples-mcpbroker-basic-skills-remote-http-mcp",
-      "name": "remote-http-mcp",
-      "type": "agent_skill",
-      "stars": 1860,
-      "repo": "trpc-group/trpc-agent-go"
-    },
-    {
-      "slug": "uvwt-agentdock-core-skills-agentdock-user-guide",
-      "name": "agentdock-user-guide",
-      "type": "agent_skill",
-      "stars": 1234,
-      "repo": "uvwt/agentdock"
-    },
-    {
-      "slug": "awdr74100-figwright-skills-figma-build",
-      "name": "figma-build",
-      "type": "agent_skill",
-      "stars": 1028,
-      "repo": "awdr74100/figwright"
-    },
-    {
-      "slug": "atlassian-atlassian-mcp-server",
-      "name": "atlassian-mcp-server",
-      "type": "mcp_server",
-      "stars": 1090,
-      "repo": "atlassian/atlassian-mcp-server"
-    },
-    {
-      "slug": "wzyn20051216-solidworks-automation-skill",
-      "name": "solidworks-automation-skill",
-      "type": "agent_tool",
-      "stars": 1197,
-      "repo": "wzyn20051216/solidworks-automation-skill"
-    },
-    {
-      "slug": "apify-mcpc",
-      "name": "mcpc",
-      "type": "mcp_server",
-      "stars": 1026,
-      "repo": "apify/mcpc"
-    },
-    {
-      "slug": "uvwt-agentdock-core-skills-plugin-import",
-      "name": "plugin-import",
-      "type": "agent_skill",
-      "stars": 1234,
-      "repo": "uvwt/agentdock"
-    },
-    {
-      "slug": "arcadeai-arcade-mcp",
-      "name": "arcade-mcp",
-      "type": "mcp_server",
-      "stars": 1049,
-      "repo": "ArcadeAI/arcade-mcp"
-    },
-    {
-      "slug": "awdr74100-figwright-skills-figma-codegen",
-      "name": "figma-codegen",
-      "type": "agent_skill",
-      "stars": 1028,
-      "repo": "awdr74100/figwright"
-    },
-    {
-      "slug": "uvwt-agentdock-core-skills-skill-authoring",
-      "name": "skill-authoring",
-      "type": "agent_skill",
-      "stars": 1234,
-      "repo": "uvwt/agentdock"
-    },
-    {
-      "slug": "sylphxai-anymd",
-      "name": "anymd",
-      "type": "agent_tool",
-      "stars": 1038,
-      "repo": "SylphxAI/anymd"
-    },
-    {
-      "slug": "uvwt-agentdock-core-skills-skill-installation",
-      "name": "skill-installation",
-      "type": "agent_skill",
-      "stars": 1234,
-      "repo": "uvwt/agentdock"
-    },
-    {
-      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-animation",
-      "name": "scenario-blender-animation",
-      "type": "agent_skill",
-      "stars": 995,
-      "repo": "scenario-labs/skills"
-    },
-    {
-      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-expert",
-      "name": "scenario-blender-expert",
-      "type": "agent_skill",
-      "stars": 995,
-      "repo": "scenario-labs/skills"
-    },
-    {
-      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-geometry-nodes",
-      "name": "scenario-blender-geometry-nodes",
-      "type": "agent_skill",
-      "stars": 995,
-      "repo": "scenario-labs/skills"
-    },
-    {
-      "slug": "bgauryy-octocode",
-      "name": "octocode",
-      "type": "agent_tool",
-      "stars": 950,
-      "repo": "bgauryy/octocode"
-    },
-    {
-      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-grease-pencil",
-      "name": "scenario-blender-grease-pencil",
-      "type": "agent_skill",
-      "stars": 995,
-      "repo": "scenario-labs/skills"
-    },
-    {
-      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-hair",
-      "name": "scenario-blender-hair",
-      "type": "agent_skill",
-      "stars": 995,
-      "repo": "scenario-labs/skills"
-    },
-    {
-      "slug": "okf-memory-okf-agent-memory-pkg-okf-assets-skill",
-      "name": "okf-agent-memory",
-      "type": "agent_skill",
-      "stars": 771,
-      "repo": "okf-memory/okf-agent-memory"
-    },
-    {
-      "slug": "unbrowse-ai-unbrowse",
-      "name": "unbrowse",
-      "type": "agent_tool",
-      "stars": 786,
-      "repo": "unbrowse-ai/unbrowse"
-    },
-    {
-      "slug": "avids2-memorix",
-      "name": "memorix",
-      "type": "agent_tool",
-      "stars": 836,
-      "repo": "AVIDS2/memorix"
-    },
-    {
-      "slug": "artokun-comfyui-mcp",
-      "name": "comfyui-mcp",
-      "type": "mcp_server",
-      "stars": 819,
-      "repo": "artokun/comfyui-mcp"
-    },
-    {
-      "slug": "kitfunso-hippo-memory",
-      "name": "hippo-memory",
-      "type": "agent_tool",
-      "stars": 776,
-      "repo": "kitfunso/hippo-memory"
-    },
-    {
-      "slug": "sbroenne-mcp-server-excel",
-      "name": "mcp-server-excel",
-      "type": "mcp_server",
-      "stars": 817,
-      "repo": "sbroenne/mcp-server-excel"
-    },
-    {
-      "slug": "kevinpbuckley-vibeue-content-skills-animation-blueprint",
-      "name": "animation-blueprint",
-      "type": "agent_skill",
-      "stars": 745,
-      "repo": "kevinpbuckley/VibeUE"
-    },
-    {
-      "slug": "playa-cyrene-cyrene-agent",
-      "name": "Cyrene-Agent",
-      "type": "agent_tool",
-      "stars": 700,
-      "repo": "Playa-Cyrene/Cyrene-Agent"
-    },
-    {
-      "slug": "kevinpbuckley-vibeue-content-skills-animation-editing",
-      "name": "animation-editing",
-      "type": "agent_skill",
-      "stars": 745,
-      "repo": "kevinpbuckley/VibeUE"
-    },
-    {
-      "slug": "asaotomo-fofamap",
-      "name": "FofaMap",
-      "type": "agent_tool",
-      "stars": 742,
-      "repo": "asaotomo/FofaMap"
     },
     {
       "slug": "agentic-box-memora",
@@ -696,564 +17,53 @@
       "repo": "agentic-box/memora"
     },
     {
-      "slug": "cyanheads-obsidian-mcp-server",
-      "name": "obsidian-mcp-server",
+      "slug": "aminforou-mcp-gsc",
+      "name": "mcp-gsc",
       "type": "mcp_server",
-      "stars": 695,
-      "repo": "cyanheads/obsidian-mcp-server"
+      "stars": 1915,
+      "repo": "AminForou/mcp-gsc"
     },
     {
-      "slug": "sandbaseai-sandbase-harness",
-      "name": "sandbase-harness",
+      "slug": "apify-mcpc",
+      "name": "mcpc",
       "type": "mcp_server",
-      "stars": 682,
-      "repo": "sandbaseai/sandbase-harness"
+      "stars": 1026,
+      "repo": "apify/mcpc"
     },
     {
-      "slug": "kevinpbuckley-vibeue-content-skills-animation-montage",
-      "name": "animation-montage",
-      "type": "agent_skill",
-      "stars": 745,
-      "repo": "kevinpbuckley/VibeUE"
-    },
-    {
-      "slug": "kevinpbuckley-vibeue-content-skills-animsequence",
-      "name": "animsequence",
-      "type": "agent_skill",
-      "stars": 745,
-      "repo": "kevinpbuckley/VibeUE"
-    },
-    {
-      "slug": "kevinpbuckley-vibeue-content-skills-asset-management",
-      "name": "asset-management",
-      "type": "agent_skill",
-      "stars": 745,
-      "repo": "kevinpbuckley/VibeUE"
-    },
-    {
-      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-delegate-work",
-      "name": "delegate-work",
-      "type": "agent_skill",
-      "stars": 101411,
-      "repo": "paperclipai/paperclip"
-    },
-    {
-      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-follow-up-results",
-      "name": "follow-up-results",
-      "type": "agent_skill",
-      "stars": 101411,
-      "repo": "paperclipai/paperclip"
-    },
-    {
-      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-review-my-team",
-      "name": "review-my-team",
-      "type": "agent_skill",
-      "stars": 101411,
-      "repo": "paperclipai/paperclip"
-    },
-    {
-      "slug": "paperclipai-paperclip-integrations-assistant-plugins-openai-paperclip-skills-delegate-work",
-      "name": "paperclip-delegate-work",
-      "type": "agent_skill",
-      "stars": 101411,
-      "repo": "paperclipai/paperclip"
-    },
-    {
-      "slug": "paperclipai-paperclip-integrations-assistant-plugins-openai-paperclip-skills-follow-up-results",
-      "name": "paperclip-follow-up-results",
-      "type": "agent_skill",
-      "stars": 101411,
-      "repo": "paperclipai/paperclip"
-    },
-    {
-      "slug": "tt-a1i-archify-archify",
-      "name": "archify",
-      "type": "agent_skill",
-      "stars": 82940,
-      "repo": "tt-a1i/archify"
-    },
-    {
-      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-dashboard",
-      "name": "dashboard",
-      "type": "agent_skill",
-      "stars": 69549,
-      "repo": "asgeirtj/system_prompts_leaks"
-    },
-    {
-      "slug": "coreyhaines31-marketingskills-skills-ab-testing",
-      "name": "ab-testing",
-      "type": "agent_skill",
-      "stars": 54518,
-      "repo": "coreyhaines31/marketingskills"
-    },
-    {
-      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-design-system",
-      "name": "design-system",
-      "type": "agent_skill",
-      "stars": 69549,
-      "repo": "asgeirtj/system_prompts_leaks"
-    },
-    {
-      "slug": "coreyhaines31-marketingskills-skills-ad-creative",
-      "name": "ad-creative",
-      "type": "agent_skill",
-      "stars": 54518,
-      "repo": "coreyhaines31/marketingskills"
-    },
-    {
-      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-design",
-      "name": "design",
-      "type": "agent_skill",
-      "stars": 69549,
-      "repo": "asgeirtj/system_prompts_leaks"
-    },
-    {
-      "slug": "coreyhaines31-marketingskills-skills-ads",
-      "name": "ads",
-      "type": "agent_skill",
-      "stars": 54518,
-      "repo": "coreyhaines31/marketingskills"
-    },
-    {
-      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-docs",
-      "name": "pages",
-      "type": "agent_skill",
-      "stars": 69549,
-      "repo": "asgeirtj/system_prompts_leaks"
-    },
-    {
-      "slug": "coreyhaines31-marketingskills-skills-ai-seo",
-      "name": "ai-seo",
-      "type": "agent_skill",
-      "stars": 54518,
-      "repo": "coreyhaines31/marketingskills"
-    },
-    {
-      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-slides",
-      "name": "slides",
-      "type": "agent_skill",
-      "stars": 69549,
-      "repo": "asgeirtj/system_prompts_leaks"
-    },
-    {
-      "slug": "coreyhaines31-marketingskills-skills-analytics",
-      "name": "analytics",
-      "type": "agent_skill",
-      "stars": 54518,
-      "repo": "coreyhaines31/marketingskills"
-    },
-    {
-      "slug": "citrolabs-ego-lite-skills-ego-browser",
-      "name": "ego-browser",
-      "type": "agent_skill",
-      "stars": 17284,
-      "repo": "citrolabs/ego-lite"
-    },
-    {
-      "slug": "latent-spaces-brag-skills-brag-slim",
-      "name": "brag-slim",
-      "type": "agent_skill",
-      "stars": 15657,
-      "repo": "latent-spaces/brag"
-    },
-    {
-      "slug": "orchestra-research-ai-research-skills-0-autoresearch-skill",
-      "name": "autoresearch",
-      "type": "agent_skill",
-      "stars": 13529,
-      "repo": "Orchestra-Research/AI-Research-SKILLs"
-    },
-    {
-      "slug": "lidge-jun-opencodex",
-      "name": "opencodex",
+      "slug": "arcadeai-arcade-mcp",
+      "name": "arcade-mcp",
       "type": "mcp_server",
-      "stars": 17353,
-      "repo": "lidge-jun/opencodex"
+      "stars": 1049,
+      "repo": "ArcadeAI/arcade-mcp"
     },
     {
-      "slug": "latent-spaces-brag-skills-brag",
-      "name": "brag",
-      "type": "agent_skill",
-      "stars": 15657,
-      "repo": "latent-spaces/brag"
-    },
-    {
-      "slug": "orchestra-research-ai-research-skills-01-model-architecture-litgpt",
-      "name": "implementing-llms-litgpt",
-      "type": "agent_skill",
-      "stars": 13529,
-      "repo": "Orchestra-Research/AI-Research-SKILLs"
-    },
-    {
-      "slug": "orchestra-research-ai-research-skills-01-model-architecture-mamba",
-      "name": "mamba-architecture",
-      "type": "agent_skill",
-      "stars": 13529,
-      "repo": "Orchestra-Research/AI-Research-SKILLs"
-    },
-    {
-      "slug": "orchestra-research-ai-research-skills-01-model-architecture-nanogpt",
-      "name": "nanogpt",
-      "type": "agent_skill",
-      "stars": 13529,
-      "repo": "Orchestra-Research/AI-Research-SKILLs"
-    },
-    {
-      "slug": "orchestra-research-ai-research-skills-01-model-architecture-rwkv",
-      "name": "rwkv-architecture",
-      "type": "agent_skill",
-      "stars": 13529,
-      "repo": "Orchestra-Research/AI-Research-SKILLs"
-    },
-    {
-      "slug": "yizhiyanhua-ai-fireworks-tech-graph",
-      "name": "fireworks-tech-graph",
-      "type": "agent_skill",
-      "stars": 11699,
-      "repo": "yizhiyanhua-ai/fireworks-tech-graph"
-    },
-    {
-      "slug": "tigerless-labs-autoharness-skills-learn",
-      "name": "learn",
-      "type": "agent_skill",
-      "stars": 11051,
-      "repo": "tigerless-labs/autoharness"
-    },
-    {
-      "slug": "open-gsd-gsd-core-skills-gsd-add-tests",
-      "name": "gsd-add-tests",
-      "type": "agent_skill",
-      "stars": 10480,
-      "repo": "open-gsd/gsd-core"
-    },
-    {
-      "slug": "pacifio-atlas-src-tauri-resources-skills-atlas-self-configure",
-      "name": "atlas-self-configure",
-      "type": "agent_skill",
-      "stars": 9593,
-      "repo": "pacifio/atlas"
-    },
-    {
-      "slug": "yizhiyanhua-ai-fireworks-tech-graph-skills-fireworks-tech-graph",
-      "name": "skills-fireworks-tech-graph",
-      "type": "agent_skill",
-      "stars": 11699,
-      "repo": "yizhiyanhua-ai/fireworks-tech-graph"
-    },
-    {
-      "slug": "open-gsd-gsd-core-skills-gsd-ai-integration-phase",
-      "name": "gsd-ai-integration-phase",
-      "type": "agent_skill",
-      "stars": 10480,
-      "repo": "open-gsd/gsd-core"
-    },
-    {
-      "slug": "pacifio-atlas-src-tauri-resources-skills-remember",
-      "name": "remember",
-      "type": "agent_skill",
-      "stars": 9593,
-      "repo": "pacifio/atlas"
-    },
-    {
-      "slug": "open-gsd-gsd-core-skills-gsd-audit-fix",
-      "name": "gsd-audit-fix",
-      "type": "agent_skill",
-      "stars": 10480,
-      "repo": "open-gsd/gsd-core"
-    },
-    {
-      "slug": "pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-plugin-creator",
-      "name": "plugin-creator",
-      "type": "agent_skill",
-      "stars": 9593,
-      "repo": "pacifio/atlas"
-    },
-    {
-      "slug": "open-gsd-gsd-core-skills-gsd-audit-milestone",
-      "name": "gsd-audit-milestone",
-      "type": "agent_skill",
-      "stars": 10480,
-      "repo": "open-gsd/gsd-core"
-    },
-    {
-      "slug": "pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-review-agent",
-      "name": "review-agent",
-      "type": "agent_skill",
-      "stars": 9593,
-      "repo": "pacifio/atlas"
-    },
-    {
-      "slug": "open-gsd-gsd-core-skills-gsd-audit-uat",
-      "name": "gsd-audit-uat",
-      "type": "agent_skill",
-      "stars": 10480,
-      "repo": "open-gsd/gsd-core"
-    },
-    {
-      "slug": "pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-skill-creator",
-      "name": "skill-creator",
-      "type": "agent_skill",
-      "stars": 9593,
-      "repo": "pacifio/atlas"
-    },
-    {
-      "slug": "chuspeeism-dashi-ppt-skill-skills-dashi-ppt",
-      "name": "dashi-ppt",
-      "type": "agent_skill",
-      "stars": 9465,
-      "repo": "chuspeeism/dashi-ppt-skill"
-    },
-    {
-      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-article-magazine",
-      "name": "article-magazine",
-      "type": "agent_skill",
-      "stars": 9099,
-      "repo": "nexu-io/html-anything"
-    },
-    {
-      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-branch-pr",
-      "name": "branch-pr",
-      "type": "agent_skill",
-      "stars": 7736,
-      "repo": "Gentleman-Programming/gentle-ai"
-    },
-    {
-      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-article-sketchnote-editorial",
-      "name": "article-sketchnote-editorial",
-      "type": "agent_skill",
-      "stars": 9099,
-      "repo": "nexu-io/html-anything"
-    },
-    {
-      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-chained-pr",
-      "name": "chained-pr",
-      "type": "agent_skill",
-      "stars": 7736,
-      "repo": "Gentleman-Programming/gentle-ai"
-    },
-    {
-      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-blog-post",
-      "name": "blog-post",
-      "type": "agent_skill",
-      "stars": 9099,
-      "repo": "nexu-io/html-anything"
-    },
-    {
-      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-cognitive-doc-design",
-      "name": "cognitive-doc-design",
-      "type": "agent_skill",
-      "stars": 7736,
-      "repo": "Gentleman-Programming/gentle-ai"
-    },
-    {
-      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-card-twitter",
-      "name": "card-twitter",
-      "type": "agent_skill",
-      "stars": 9099,
-      "repo": "nexu-io/html-anything"
-    },
-    {
-      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-comment-writer",
-      "name": "comment-writer",
-      "type": "agent_skill",
-      "stars": 7736,
-      "repo": "Gentleman-Programming/gentle-ai"
-    },
-    {
-      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-card-xiaohongshu",
-      "name": "card-xiaohongshu",
-      "type": "agent_skill",
-      "stars": 9099,
-      "repo": "nexu-io/html-anything"
-    },
-    {
-      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-gentle-ai-bench",
-      "name": "gentle-ai-bench",
-      "type": "agent_skill",
-      "stars": 7736,
-      "repo": "Gentleman-Programming/gentle-ai"
-    },
-    {
-      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-house-style",
-      "name": "house-style",
-      "type": "agent_skill",
-      "stars": 6895,
-      "repo": "olimorris/codecompanion.nvim"
-    },
-    {
-      "slug": "ningzimu-codex-ppt-skill-skills-codex-ppt",
-      "name": "codex-ppt",
-      "type": "agent_skill",
-      "stars": 6807,
-      "repo": "ningzimu/codex-ppt-skill"
-    },
-    {
-      "slug": "zju-real-easel-skills-builtin-ai-image-gen",
-      "name": "ai-image-gen",
-      "type": "agent_skill",
-      "stars": 3567,
-      "repo": "ZJU-REAL/Easel"
-    },
-    {
-      "slug": "oil-oil-oil-motion",
-      "name": "oil-motion",
-      "type": "agent_skill",
-      "stars": 2582,
-      "repo": "oil-oil/oil-motion"
-    },
-    {
-      "slug": "denissergeevitch-agents-best-practices",
-      "name": "agents-best-practices",
-      "type": "agent_skill",
-      "stars": 2378,
-      "repo": "DenisSergeevitch/agents-best-practices"
-    },
-    {
-      "slug": "mex-memory-mex-skills-mex-inbox",
-      "name": "mex-inbox",
-      "type": "agent_skill",
-      "stars": 1767,
-      "repo": "mex-memory/mex"
-    },
-    {
-      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-name-not-a-string",
-      "name": "true",
-      "type": "agent_skill",
-      "stars": 6895,
-      "repo": "olimorris/codecompanion.nvim"
-    },
-    {
-      "slug": "zju-real-easel-skills-builtin-ai-music",
-      "name": "ai-music",
-      "type": "agent_skill",
-      "stars": 3567,
-      "repo": "ZJU-REAL/Easel"
-    },
-    {
-      "slug": "mex-memory-mex-skills-mex-relay",
-      "name": "mex-relay",
-      "type": "agent_skill",
-      "stars": 1767,
-      "repo": "mex-memory/mex"
-    },
-    {
-      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-no-description",
-      "name": "no-description",
-      "type": "agent_skill",
-      "stars": 6895,
-      "repo": "olimorris/codecompanion.nvim"
-    },
-    {
-      "slug": "zju-real-easel-skills-builtin-ai-video-gen",
-      "name": "ai-video-gen",
-      "type": "agent_skill",
-      "stars": 3567,
-      "repo": "ZJU-REAL/Easel"
-    },
-    {
-      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-pdf-forms",
-      "name": "pdf-forms",
-      "type": "agent_skill",
-      "stars": 6895,
-      "repo": "olimorris/codecompanion.nvim"
-    },
-    {
-      "slug": "zju-real-easel-skills-builtin-asset-manager",
-      "name": "asset-manager",
-      "type": "agent_skill",
-      "stars": 3567,
-      "repo": "ZJU-REAL/Easel"
-    },
-    {
-      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-project-house-style",
-      "name": "skills-house-style",
-      "type": "agent_skill",
-      "stars": 6895,
-      "repo": "olimorris/codecompanion.nvim"
-    },
-    {
-      "slug": "zju-real-easel-skills-builtin-audio-denoise",
-      "name": "audio-denoise",
-      "type": "agent_skill",
-      "stars": 3567,
-      "repo": "ZJU-REAL/Easel"
-    },
-    {
-      "slug": "agents365-ai-video-podcast-maker-skills-video-podcast-maker-lite",
-      "name": "video-podcast-maker-lite",
-      "type": "agent_skill",
-      "stars": 1675,
-      "repo": "Agents365-ai/video-podcast-maker"
-    },
-    {
-      "slug": "gadicc-yahoo-finance2-skills-yahoo-finance2",
-      "name": "yahoo-finance2",
-      "type": "agent_skill",
-      "stars": 803,
-      "repo": "gadicc/yahoo-finance2"
-    },
-    {
-      "slug": "sergebulaev-instagram-skills",
-      "name": "instagram-marketing",
-      "type": "agent_skill",
-      "stars": 389,
-      "repo": "sergebulaev/instagram-skills"
-    },
-    {
-      "slug": "kayforkind-reimagine-it-skills-reimagine-it",
-      "name": "reimagine-it",
-      "type": "agent_skill",
-      "stars": 207,
-      "repo": "Kayforkind/reimagine-it"
-    },
-    {
-      "slug": "unclecatvn-agent-skills-skills-code-review",
-      "name": "code-review",
-      "type": "agent_skill",
-      "stars": 145,
-      "repo": "unclecatvn/agent-skills"
-    },
-    {
-      "slug": "xquik-dev-x-twitter-scraper",
-      "name": "x-twitter-scraper",
+      "slug": "artokun-comfyui-mcp",
+      "name": "comfyui-mcp",
       "type": "mcp_server",
-      "stars": 213,
-      "repo": "Xquik-dev/x-twitter-scraper"
+      "stars": 819,
+      "repo": "artokun/comfyui-mcp"
     },
     {
-      "slug": "agents365-ai-video-podcast-maker-skills-video-podcast-maker-nano",
-      "name": "video-podcast-maker-nano",
-      "type": "agent_skill",
-      "stars": 1675,
-      "repo": "Agents365-ai/video-podcast-maker"
-    },
-    {
-      "slug": "sergebulaev-instagram-skills-skills-ig-audience-insights",
-      "name": "ig-audience-insights",
-      "type": "agent_skill",
-      "stars": 389,
-      "repo": "sergebulaev/instagram-skills"
-    },
-    {
-      "slug": "kayforkind-reimagine-it-skills-reimagine-it-audit",
-      "name": "reimagine-it-audit",
-      "type": "agent_skill",
-      "stars": 207,
-      "repo": "Kayforkind/reimagine-it"
-    },
-    {
-      "slug": "unclecatvn-agent-skills-skills-dtg-base",
-      "name": "dtg-base",
-      "type": "agent_skill",
-      "stars": 145,
-      "repo": "unclecatvn/agent-skills"
-    },
-    {
-      "slug": "waybox-ai-roadtrip-skill",
-      "name": "roadtrip-skill",
+      "slug": "atlassian-atlassian-mcp-server",
+      "name": "atlassian-mcp-server",
       "type": "mcp_server",
-      "stars": 126,
-      "repo": "Waybox-AI/roadtrip-skill"
+      "stars": 1090,
+      "repo": "atlassian/atlassian-mcp-server"
+    },
+    {
+      "slug": "atomicstrata-llm-wiki-compiler",
+      "name": "llm-wiki-compiler",
+      "type": "mcp_server",
+      "stars": 2180,
+      "repo": "atomicstrata/llm-wiki-compiler"
+    },
+    {
+      "slug": "blazickjp-arxiv-mcp-server",
+      "name": "arxiv-mcp-server",
+      "type": "mcp_server",
+      "stars": 3214,
+      "repo": "blazickjp/arxiv-mcp-server"
     },
     {
       "slug": "cablate-mcp-google-map",
@@ -1263,39 +73,46 @@
       "repo": "cablate/mcp-google-map"
     },
     {
-      "slug": "patrickchugh-terravision",
-      "name": "terravision",
+      "slug": "cyanheads-obsidian-mcp-server",
+      "name": "obsidian-mcp-server",
       "type": "mcp_server",
-      "stars": 1653,
-      "repo": "patrickchugh/terravision"
+      "stars": 695,
+      "repo": "cyanheads/obsidian-mcp-server"
     },
     {
-      "slug": "agents365-ai-video-podcast-maker-skills-video-podcast-maker",
-      "name": "video-podcast-maker",
-      "type": "agent_skill",
-      "stars": 1675,
-      "repo": "Agents365-ai/video-podcast-maker"
+      "slug": "dataforseo-mcp-server-typescript",
+      "name": "mcp-server-typescript",
+      "type": "mcp_server",
+      "stars": 253,
+      "repo": "dataforseo/mcp-server-typescript"
     },
     {
-      "slug": "sergebulaev-instagram-skills-skills-ig-caption-writer",
-      "name": "ig-caption-writer",
-      "type": "agent_skill",
-      "stars": 389,
-      "repo": "sergebulaev/instagram-skills"
+      "slug": "exa-labs-exa-mcp-server",
+      "name": "exa-mcp-server",
+      "type": "mcp_server",
+      "stars": 5118,
+      "repo": "exa-labs/exa-mcp-server"
     },
     {
-      "slug": "kayforkind-reimagine-it-skills-reimagine-it-extract",
-      "name": "reimagine-it-extract",
-      "type": "agent_skill",
-      "stars": 207,
-      "repo": "Kayforkind/reimagine-it"
+      "slug": "forloopcodes-contextplus",
+      "name": "contextplus",
+      "type": "mcp_server",
+      "stars": 1983,
+      "repo": "forloopcodes/contextplus"
     },
     {
-      "slug": "unclecatvn-agent-skills-skills-flow-diagram",
-      "name": "flow-diagram",
-      "type": "agent_skill",
-      "stars": 145,
-      "repo": "unclecatvn/agent-skills"
+      "slug": "getsentry-mobilebuildmcp",
+      "name": "MobileBuildMCP",
+      "type": "mcp_server",
+      "stars": 6476,
+      "repo": "getsentry/MobileBuildMCP"
+    },
+    {
+      "slug": "homeassistant-ai-ha-mcp",
+      "name": "ha-mcp",
+      "type": "mcp_server",
+      "stars": 5050,
+      "repo": "homeassistant-ai/ha-mcp"
     },
     {
       "slug": "jasoncolapietro-suede-creator-skills",
@@ -1305,186 +122,242 @@
       "repo": "JasonColapietro/suede-creator-skills"
     },
     {
-      "slug": "sergebulaev-instagram-skills-skills-ig-carousel-planner",
-      "name": "ig-carousel-planner",
-      "type": "agent_skill",
-      "stars": 389,
-      "repo": "sergebulaev/instagram-skills"
+      "slug": "jau123-meigen-ai-design-mcp",
+      "name": "MeiGen-AI-Design-MCP",
+      "type": "mcp_server",
+      "stars": 1781,
+      "repo": "jau123/MeiGen-AI-Design-MCP"
     },
     {
-      "slug": "kayforkind-reimagine-it-skills-reimagine-it-generate",
-      "name": "reimagine-it-generate",
-      "type": "agent_skill",
-      "stars": 207,
-      "repo": "Kayforkind/reimagine-it"
+      "slug": "jordan-gibbs-hyperresearch",
+      "name": "hyperresearch",
+      "type": "mcp_server",
+      "stars": 3850,
+      "repo": "jordan-gibbs/hyperresearch"
     },
     {
-      "slug": "unclecatvn-agent-skills-skills-odoo-16-0",
-      "name": "odoo-16",
-      "type": "agent_skill",
-      "stars": 145,
-      "repo": "unclecatvn/agent-skills"
+      "slug": "klavis-ai-klavis",
+      "name": "klavis",
+      "type": "mcp_server",
+      "stars": 5809,
+      "repo": "Klavis-AI/klavis"
     },
     {
-      "slug": "sergebulaev-instagram-skills-skills-ig-content-planner",
-      "name": "ig-content-planner",
-      "type": "agent_skill",
-      "stars": 389,
-      "repo": "sergebulaev/instagram-skills"
+      "slug": "lidge-jun-opencodex",
+      "name": "opencodex",
+      "type": "mcp_server",
+      "stars": 17353,
+      "repo": "lidge-jun/opencodex"
     },
     {
-      "slug": "kayforkind-reimagine-it-skills-reimagine-it-infographic",
-      "name": "reimagine-it-infographic",
-      "type": "agent_skill",
-      "stars": 207,
-      "repo": "Kayforkind/reimagine-it"
+      "slug": "manavarya09-design-extract",
+      "name": "design-extract",
+      "type": "mcp_server",
+      "stars": 4229,
+      "repo": "Manavarya09/design-extract"
     },
     {
-      "slug": "unclecatvn-agent-skills-skills-odoo-17-0",
-      "name": "odoo-17",
-      "type": "agent_skill",
-      "stars": 145,
-      "repo": "unclecatvn/agent-skills"
+      "slug": "openags-paper-search-mcp",
+      "name": "paper-search-mcp",
+      "type": "mcp_server",
+      "stars": 2817,
+      "repo": "openags/paper-search-mcp"
     },
     {
-      "slug": "k-dense-ai-scientific-agent-skills-skills-13c-metabolic-flux",
-      "name": "13c-metabolic-flux",
-      "type": "agent_skill",
-      "stars": 48703,
-      "repo": "K-Dense-AI/scientific-agent-skills"
+      "slug": "patrickchugh-terravision",
+      "name": "terravision",
+      "type": "mcp_server",
+      "stars": 1653,
+      "repo": "patrickchugh/terravision"
     },
     {
-      "slug": "k-dense-ai-scientific-agent-skills-skills-adaptyv",
-      "name": "adaptyv",
-      "type": "agent_skill",
-      "stars": 48703,
-      "repo": "K-Dense-AI/scientific-agent-skills"
+      "slug": "punitarani-fli",
+      "name": "fli",
+      "type": "mcp_server",
+      "stars": 3225,
+      "repo": "punitarani/fli"
     },
     {
-      "slug": "k-dense-ai-scientific-agent-skills-skills-aeon",
-      "name": "aeon",
-      "type": "agent_skill",
-      "stars": 48703,
-      "repo": "K-Dense-AI/scientific-agent-skills"
+      "slug": "samuelgursky-davinci-resolve-mcp",
+      "name": "davinci-resolve-mcp",
+      "type": "mcp_server",
+      "stars": 3520,
+      "repo": "samuelgursky/davinci-resolve-mcp"
     },
     {
-      "slug": "k-dense-ai-scientific-agent-skills-skills-alphagenome",
-      "name": "alphagenome",
-      "type": "agent_skill",
-      "stars": 48703,
-      "repo": "K-Dense-AI/scientific-agent-skills"
+      "slug": "sandbaseai-sandbase-harness",
+      "name": "sandbase-harness",
+      "type": "mcp_server",
+      "stars": 682,
+      "repo": "sandbaseai/sandbase-harness"
     },
     {
-      "slug": "k-dense-ai-scientific-agent-skills-skills-analytical-method-validation",
-      "name": "analytical-method-validation",
-      "type": "agent_skill",
-      "stars": 48703,
-      "repo": "K-Dense-AI/scientific-agent-skills"
+      "slug": "sbroenne-mcp-server-excel",
+      "name": "mcp-server-excel",
+      "type": "mcp_server",
+      "stars": 817,
+      "repo": "sbroenne/mcp-server-excel"
     },
     {
-      "slug": "miqdadbadjuber-anti-slop-skills-antislop-code",
-      "name": "antislop-code",
-      "type": "agent_skill",
-      "stars": 5989,
-      "repo": "miqdadbadjuber/anti-slop"
+      "slug": "skyhook-io-radar",
+      "name": "radar",
+      "type": "mcp_server",
+      "stars": 3758,
+      "repo": "skyhook-io/radar"
     },
     {
-      "slug": "epoko77-ai-im-not-ai-codex-skills-humanize-korean",
-      "name": "humanize-korean",
-      "type": "agent_skill",
-      "stars": 5971,
-      "repo": "epoko77-ai/im-not-ai"
+      "slug": "taylorwilsdon-google_workspace_mcp",
+      "name": "google_workspace_mcp",
+      "type": "mcp_server",
+      "stars": 3332,
+      "repo": "taylorwilsdon/google_workspace_mcp"
     },
     {
-      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow",
-      "name": "sn-da-excel-workflow",
-      "type": "agent_skill",
-      "stars": 5754,
-      "repo": "OpenSenseNova/SenseNova-Skills"
+      "slug": "vmoranv-jshookmcp",
+      "name": "jshookmcp",
+      "type": "mcp_server",
+      "stars": 2041,
+      "repo": "vmoranv/jshookmcp"
     },
     {
-      "slug": "miqdadbadjuber-anti-slop-skills-antislop-copywriting",
-      "name": "antislop-copywriting",
-      "type": "agent_skill",
-      "stars": 5989,
-      "repo": "miqdadbadjuber/anti-slop"
+      "slug": "waybox-ai-roadtrip-skill",
+      "name": "roadtrip-skill",
+      "type": "mcp_server",
+      "stars": 126,
+      "repo": "Waybox-AI/roadtrip-skill"
     },
     {
-      "slug": "epoko77-ai-im-not-ai-copilot-skills-humanize-korean",
-      "name": "copilot-humanize-korean",
-      "type": "agent_skill",
-      "stars": 5971,
-      "repo": "epoko77-ai/im-not-ai"
+      "slug": "xquik-dev-x-twitter-scraper",
+      "name": "x-twitter-scraper",
+      "type": "mcp_server",
+      "stars": 213,
+      "repo": "Xquik-dev/x-twitter-scraper"
     },
     {
-      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-category-coloring",
-      "name": "large-file-parquet-analysis-and-highlight",
-      "type": "agent_skill",
-      "stars": 5754,
-      "repo": "OpenSenseNova/SenseNova-Skills"
+      "slug": "yusufkaraaslan-skill_seekers",
+      "name": "Skill_Seekers",
+      "type": "mcp_server",
+      "stars": 15141,
+      "repo": "yusufkaraaslan/Skill_Seekers"
     },
     {
-      "slug": "miqdadbadjuber-anti-slop-skills-antislop-human",
-      "name": "antislop-human",
+      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-ad-account-auditor",
+      "name": "ad-account-auditor",
       "type": "agent_skill",
-      "stars": 5989,
-      "repo": "miqdadbadjuber/anti-slop"
+      "stars": 2930,
+      "repo": "aaron-he-zhu/aaron-marketing-skills"
     },
     {
-      "slug": "epoko77-ai-im-not-ai-extras-skills-commit-ko",
-      "name": "commit-ko",
+      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-conversion-signal-qa",
+      "name": "conversion-signal-qa",
       "type": "agent_skill",
-      "stars": 5971,
-      "repo": "epoko77-ai/im-not-ai"
+      "stars": 2930,
+      "repo": "aaron-he-zhu/aaron-marketing-skills"
     },
     {
-      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-duplicate-value-coloring",
-      "name": "excel-conditional-comparison-and-large-file-processing",
+      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-conversion-value-mapper",
+      "name": "conversion-value-mapper",
       "type": "agent_skill",
-      "stars": 5754,
-      "repo": "OpenSenseNova/SenseNova-Skills"
+      "stars": 2930,
+      "repo": "aaron-he-zhu/aaron-marketing-skills"
     },
     {
-      "slug": "miqdadbadjuber-anti-slop-skills-antislop-layoutmobile",
-      "name": "antislop-layoutmobile",
+      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-placement-exclusion-manager",
+      "name": "placement-exclusion-manager",
       "type": "agent_skill",
-      "stars": 5989,
-      "repo": "miqdadbadjuber/anti-slop"
+      "stars": 2930,
+      "repo": "aaron-he-zhu/aaron-marketing-skills"
     },
     {
-      "slug": "epoko77-ai-im-not-ai-skills-humanize-korean",
-      "name": "skills-humanize-korean",
+      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-orchestrate-ad-creative-builder",
+      "name": "ad-creative-builder",
       "type": "agent_skill",
-      "stars": 5971,
-      "repo": "epoko77-ai/im-not-ai"
+      "stars": 2930,
+      "repo": "aaron-he-zhu/aaron-marketing-skills"
     },
     {
-      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-outlier-coloring",
-      "name": "excel-outlier-detection-and-highlighting",
+      "slug": "agents365-ai-drawio-skill-skills-drawio-skill",
+      "name": "drawio-skill",
       "type": "agent_skill",
-      "stars": 5754,
-      "repo": "OpenSenseNova/SenseNova-Skills"
+      "stars": 10111,
+      "repo": "Agents365-ai/drawio-skill"
     },
     {
-      "slug": "miqdadbadjuber-anti-slop-skills-antislop-ui",
-      "name": "antislop-ui",
+      "slug": "agents365-ai-video-podcast-maker-skills-video-podcast-maker-lite",
+      "name": "video-podcast-maker-lite",
       "type": "agent_skill",
-      "stars": 5989,
-      "repo": "miqdadbadjuber/anti-slop"
+      "stars": 1675,
+      "repo": "Agents365-ai/video-podcast-maker"
     },
     {
-      "slug": "epoko77-ai-im-not-ai-skills-humanize-redo",
-      "name": "humanize-redo",
+      "slug": "agents365-ai-video-podcast-maker-skills-video-podcast-maker-nano",
+      "name": "video-podcast-maker-nano",
       "type": "agent_skill",
-      "stars": 5971,
-      "repo": "epoko77-ai/im-not-ai"
+      "stars": 1675,
+      "repo": "Agents365-ai/video-podcast-maker"
     },
     {
-      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-threshold-cell-coloring",
-      "name": "large-file-conditional-formatting",
+      "slug": "agents365-ai-video-podcast-maker-skills-video-podcast-maker",
+      "name": "video-podcast-maker",
       "type": "agent_skill",
-      "stars": 5754,
-      "repo": "OpenSenseNova/SenseNova-Skills"
+      "stars": 1675,
+      "repo": "Agents365-ai/video-podcast-maker"
+    },
+    {
+      "slug": "alpic-ai-skybridge-skills-chatgpt-app-builder",
+      "name": "chatgpt-app-builder",
+      "type": "agent_skill",
+      "stars": 2160,
+      "repo": "alpic-ai/skybridge"
+    },
+    {
+      "slug": "alpic-ai-skybridge-skills-mcp-app-builder",
+      "name": "mcp-app-builder",
+      "type": "agent_skill",
+      "stars": 2160,
+      "repo": "alpic-ai/skybridge"
+    },
+    {
+      "slug": "alpic-ai-skybridge-skills-skybridge",
+      "name": "skybridge",
+      "type": "agent_skill",
+      "stars": 2160,
+      "repo": "alpic-ai/skybridge"
+    },
+    {
+      "slug": "amelnagdy-delegate-skills-skills-agy-delegate",
+      "name": "agy-delegate",
+      "type": "agent_skill",
+      "stars": 2372,
+      "repo": "amElnagdy/delegate-skills"
+    },
+    {
+      "slug": "amelnagdy-delegate-skills-skills-aider-delegate",
+      "name": "aider-delegate",
+      "type": "agent_skill",
+      "stars": 2372,
+      "repo": "amElnagdy/delegate-skills"
+    },
+    {
+      "slug": "amelnagdy-delegate-skills-skills-claude-delegate",
+      "name": "claude-delegate",
+      "type": "agent_skill",
+      "stars": 2372,
+      "repo": "amElnagdy/delegate-skills"
+    },
+    {
+      "slug": "amelnagdy-delegate-skills-skills-cline-delegate",
+      "name": "cline-delegate",
+      "type": "agent_skill",
+      "stars": 2372,
+      "repo": "amElnagdy/delegate-skills"
+    },
+    {
+      "slug": "amelnagdy-delegate-skills-skills-codex-delegate",
+      "name": "codex-delegate",
+      "type": "agent_skill",
+      "stars": 2372,
+      "repo": "amElnagdy/delegate-skills"
     },
     {
       "slug": "antfu-skills-skills-antfu-create-pr",
@@ -1522,340 +395,102 @@
       "repo": "antfu/skills"
     },
     {
-      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-chaos",
-      "name": "mirrord-chaos",
+      "slug": "appllama-appllama-skills-skills-appllama-app-design-skill",
+      "name": "appllama-app-design-skill",
       "type": "agent_skill",
-      "stars": 5365,
-      "repo": "metalbear-co/mirrord"
+      "stars": 2796,
+      "repo": "Appllama/appllama-skills"
     },
     {
-      "slug": "inkeep-open-knowledge-packages-server-assets-skills-discovery",
-      "name": "open-knowledge-discovery",
+      "slug": "appllama-appllama-skills-skills-appllama-usage",
+      "name": "appllama-usage",
       "type": "agent_skill",
-      "stars": 4559,
-      "repo": "inkeep/open-knowledge"
+      "stars": 2796,
+      "repo": "Appllama/appllama-skills"
     },
     {
-      "slug": "jimliu-baoyu-design-skills-baoyu-design",
-      "name": "baoyu-design",
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-dashboard",
+      "name": "dashboard",
       "type": "agent_skill",
-      "stars": 4344,
-      "repo": "JimLiu/baoyu-design"
+      "stars": 69549,
+      "repo": "asgeirtj/system_prompts_leaks"
     },
     {
-      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-debug",
-      "name": "kiro-debug",
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-design-system",
+      "name": "design-system",
       "type": "agent_skill",
-      "stars": 3710,
-      "repo": "gotalab/cc-sdd"
+      "stars": 69549,
+      "repo": "asgeirtj/system_prompts_leaks"
     },
     {
-      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-ci",
-      "name": "mirrord-ci",
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-design",
+      "name": "design",
       "type": "agent_skill",
-      "stars": 5365,
-      "repo": "metalbear-co/mirrord"
+      "stars": 69549,
+      "repo": "asgeirtj/system_prompts_leaks"
     },
     {
-      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-codebase-wiki",
-      "name": "codebase-wiki",
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-docs",
+      "name": "pages",
       "type": "agent_skill",
-      "stars": 4559,
-      "repo": "inkeep/open-knowledge"
+      "stars": 69549,
+      "repo": "asgeirtj/system_prompts_leaks"
     },
     {
-      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-discovery",
-      "name": "kiro-discovery",
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-slides",
+      "name": "slides",
       "type": "agent_skill",
-      "stars": 3710,
-      "repo": "gotalab/cc-sdd"
+      "stars": 69549,
+      "repo": "asgeirtj/system_prompts_leaks"
     },
     {
-      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-config",
-      "name": "mirrord-config",
+      "slug": "awdr74100-figwright-skills-figma-build",
+      "name": "figma-build",
       "type": "agent_skill",
-      "stars": 5365,
-      "repo": "metalbear-co/mirrord"
+      "stars": 1028,
+      "repo": "awdr74100/figwright"
     },
     {
-      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-entity-vault",
-      "name": "personal-crm",
+      "slug": "awdr74100-figwright-skills-figma-codegen",
+      "name": "figma-codegen",
       "type": "agent_skill",
-      "stars": 4559,
-      "repo": "inkeep/open-knowledge"
+      "stars": 1028,
+      "repo": "awdr74100/figwright"
     },
     {
-      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-impl",
-      "name": "kiro-impl",
+      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-alert-mute-copilot",
+      "name": "alert-mute-copilot",
       "type": "agent_skill",
-      "stars": 3710,
-      "repo": "gotalab/cc-sdd"
+      "stars": 13337,
+      "repo": "ccfos/nightingale"
     },
     {
-      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-db-branching",
-      "name": "mirrord-db-branching",
+      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-alert-rule-troubleshoot",
+      "name": "alert-rule-troubleshoot",
       "type": "agent_skill",
-      "stars": 5365,
-      "repo": "metalbear-co/mirrord"
+      "stars": 13337,
+      "repo": "ccfos/nightingale"
     },
     {
-      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-knowledge-base",
-      "name": "knowledge-base",
+      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-alert-subscribe-copilot",
+      "name": "alert-subscribe-copilot",
       "type": "agent_skill",
-      "stars": 4559,
-      "repo": "inkeep/open-knowledge"
+      "stars": 13337,
+      "repo": "ccfos/nightingale"
     },
     {
-      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-review",
-      "name": "kiro-review",
+      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-analyze-dashboard",
+      "name": "analyze-dashboard",
       "type": "agent_skill",
-      "stars": 3710,
-      "repo": "gotalab/cc-sdd"
+      "stars": 13337,
+      "repo": "ccfos/nightingale"
     },
     {
-      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-header-propagation",
-      "name": "mirrord-header-propagation",
+      "slug": "ccfos-nightingale-aiagent-skill-embedded-builtin-categraf-deploy-guide",
+      "name": "categraf-deploy-guide",
       "type": "agent_skill",
-      "stars": 5365,
-      "repo": "metalbear-co/mirrord"
-    },
-    {
-      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-knowledge-base-consolidate",
-      "name": "consolidate-notes",
-      "type": "agent_skill",
-      "stars": 4559,
-      "repo": "inkeep/open-knowledge"
-    },
-    {
-      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-spec-batch",
-      "name": "kiro-spec-batch",
-      "type": "agent_skill",
-      "stars": 3710,
-      "repo": "gotalab/cc-sdd"
-    },
-    {
-      "slug": "samber-cc-skills-golang-skills-golang-benchmark",
-      "name": "golang-benchmark",
-      "type": "agent_skill",
-      "stars": 3467,
-      "repo": "samber/cc-skills-golang"
-    },
-    {
-      "slug": "ljagiello-ctf-skills-ctf-ai-ml",
-      "name": "ctf-ai-ml",
-      "type": "agent_skill",
-      "stars": 3437,
-      "repo": "ljagiello/ctf-skills"
-    },
-    {
-      "slug": "himself65-finance-skills-plugins-data-providers-skills-finance-sentiment",
-      "name": "finance-sentiment",
-      "type": "agent_skill",
-      "stars": 3404,
-      "repo": "himself65/finance-skills"
-    },
-    {
-      "slug": "lackeyjb-playwright-skill-skills-playwright-skill",
-      "name": "playwright-skill",
-      "type": "agent_skill",
-      "stars": 3186,
-      "repo": "lackeyjb/playwright-skill"
-    },
-    {
-      "slug": "nanako0129-sepia-skills-sepia-hemingway",
-      "name": "sepia-hemingway",
-      "type": "agent_skill",
-      "stars": 3151,
-      "repo": "Nanako0129/sepia"
-    },
-    {
-      "slug": "ciembor-agent-rules-books-a-philosophy-of-software-design",
-      "name": "a-philosophy-of-software-design",
-      "type": "agent_skill",
-      "stars": 3022,
-      "repo": "ciembor/agent-rules-books"
-    },
-    {
-      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-ad-account-auditor",
-      "name": "ad-account-auditor",
-      "type": "agent_skill",
-      "stars": 2930,
-      "repo": "aaron-he-zhu/aaron-marketing-skills"
-    },
-    {
-      "slug": "glincker-thesvg-skills-thesvg",
-      "name": "thesvg",
-      "type": "agent_skill",
-      "stars": 2835,
-      "repo": "glincker/thesvg"
-    },
-    {
-      "slug": "samber-cc-skills-golang-skills-golang-cli",
-      "name": "golang-cli",
-      "type": "agent_skill",
-      "stars": 3467,
-      "repo": "samber/cc-skills-golang"
-    },
-    {
-      "slug": "ljagiello-ctf-skills-ctf-crypto",
-      "name": "ctf-crypto",
-      "type": "agent_skill",
-      "stars": 3437,
-      "repo": "ljagiello/ctf-skills"
-    },
-    {
-      "slug": "himself65-finance-skills-plugins-data-providers-skills-fintel-data",
-      "name": "fintel-data",
-      "type": "agent_skill",
-      "stars": 3404,
-      "repo": "himself65/finance-skills"
-    },
-    {
-      "slug": "nanako0129-sepia-skills-sepia-recreate",
-      "name": "sepia-recreate",
-      "type": "agent_skill",
-      "stars": 3151,
-      "repo": "Nanako0129/sepia"
-    },
-    {
-      "slug": "ciembor-agent-rules-books-clean-architecture",
-      "name": "clean-architecture",
-      "type": "agent_skill",
-      "stars": 3022,
-      "repo": "ciembor/agent-rules-books"
-    },
-    {
-      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-conversion-signal-qa",
-      "name": "conversion-signal-qa",
-      "type": "agent_skill",
-      "stars": 2930,
-      "repo": "aaron-he-zhu/aaron-marketing-skills"
-    },
-    {
-      "slug": "samber-cc-skills-golang-skills-golang-code-style",
-      "name": "golang-code-style",
-      "type": "agent_skill",
-      "stars": 3467,
-      "repo": "samber/cc-skills-golang"
-    },
-    {
-      "slug": "ljagiello-ctf-skills-ctf-forensics",
-      "name": "ctf-forensics",
-      "type": "agent_skill",
-      "stars": 3437,
-      "repo": "ljagiello/ctf-skills"
-    },
-    {
-      "slug": "himself65-finance-skills-plugins-data-providers-skills-hormuz-strait",
-      "name": "hormuz-strait",
-      "type": "agent_skill",
-      "stars": 3404,
-      "repo": "himself65/finance-skills"
-    },
-    {
-      "slug": "nanako0129-sepia-skills-sepia-refactor",
-      "name": "sepia-refactor",
-      "type": "agent_skill",
-      "stars": 3151,
-      "repo": "Nanako0129/sepia"
-    },
-    {
-      "slug": "ciembor-agent-rules-books-clean-code",
-      "name": "clean-code",
-      "type": "agent_skill",
-      "stars": 3022,
-      "repo": "ciembor/agent-rules-books"
-    },
-    {
-      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-conversion-value-mapper",
-      "name": "conversion-value-mapper",
-      "type": "agent_skill",
-      "stars": 2930,
-      "repo": "aaron-he-zhu/aaron-marketing-skills"
-    },
-    {
-      "slug": "samber-cc-skills-golang-skills-golang-concurrency",
-      "name": "golang-concurrency",
-      "type": "agent_skill",
-      "stars": 3467,
-      "repo": "samber/cc-skills-golang"
-    },
-    {
-      "slug": "ljagiello-ctf-skills-ctf-malware",
-      "name": "ctf-malware",
-      "type": "agent_skill",
-      "stars": 3437,
-      "repo": "ljagiello/ctf-skills"
-    },
-    {
-      "slug": "himself65-finance-skills-plugins-data-providers-skills-hyperliquid-reader",
-      "name": "hyperliquid-reader",
-      "type": "agent_skill",
-      "stars": 3404,
-      "repo": "himself65/finance-skills"
-    },
-    {
-      "slug": "nanako0129-sepia-skills-sepia-review",
-      "name": "sepia-review",
-      "type": "agent_skill",
-      "stars": 3151,
-      "repo": "Nanako0129/sepia"
-    },
-    {
-      "slug": "ciembor-agent-rules-books-code-complete",
-      "name": "code-complete",
-      "type": "agent_skill",
-      "stars": 3022,
-      "repo": "ciembor/agent-rules-books"
-    },
-    {
-      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-activate-placement-exclusion-manager",
-      "name": "placement-exclusion-manager",
-      "type": "agent_skill",
-      "stars": 2930,
-      "repo": "aaron-he-zhu/aaron-marketing-skills"
-    },
-    {
-      "slug": "samber-cc-skills-golang-skills-golang-context",
-      "name": "golang-context",
-      "type": "agent_skill",
-      "stars": 3467,
-      "repo": "samber/cc-skills-golang"
-    },
-    {
-      "slug": "ljagiello-ctf-skills-ctf-misc",
-      "name": "ctf-misc",
-      "type": "agent_skill",
-      "stars": 3437,
-      "repo": "ljagiello/ctf-skills"
-    },
-    {
-      "slug": "himself65-finance-skills-plugins-data-providers-skills-tradingview-mcp",
-      "name": "tradingview-mcp",
-      "type": "agent_skill",
-      "stars": 3404,
-      "repo": "himself65/finance-skills"
-    },
-    {
-      "slug": "nanako0129-sepia-skills-sepia-write",
-      "name": "sepia-write",
-      "type": "agent_skill",
-      "stars": 3151,
-      "repo": "Nanako0129/sepia"
-    },
-    {
-      "slug": "ciembor-agent-rules-books-designing-data-intensive-applications",
-      "name": "designing-data-intensive-applications",
-      "type": "agent_skill",
-      "stars": 3022,
-      "repo": "ciembor/agent-rules-books"
-    },
-    {
-      "slug": "aaron-he-zhu-aaron-marketing-skills-ad-orchestrate-ad-creative-builder",
-      "name": "ad-creative-builder",
-      "type": "agent_skill",
-      "stars": 2930,
-      "repo": "aaron-he-zhu/aaron-marketing-skills"
+      "stars": 13337,
+      "repo": "ccfos/nightingale"
     },
     {
       "slug": "chengyi-ai-native-subtitle-quote-image-skills-native-subtitle-quote-image",
@@ -1865,11 +500,123 @@
       "repo": "chengyi-ai/native-subtitle-quote-image"
     },
     {
-      "slug": "amelnagdy-delegate-skills-skills-agy-delegate",
-      "name": "agy-delegate",
+      "slug": "chuspeeism-dashi-ppt-skill-skills-dashi-ppt",
+      "name": "dashi-ppt",
       "type": "agent_skill",
-      "stars": 2372,
-      "repo": "amElnagdy/delegate-skills"
+      "stars": 9465,
+      "repo": "chuspeeism/dashi-ppt-skill"
+    },
+    {
+      "slug": "ciembor-agent-rules-books-a-philosophy-of-software-design",
+      "name": "a-philosophy-of-software-design",
+      "type": "agent_skill",
+      "stars": 3022,
+      "repo": "ciembor/agent-rules-books"
+    },
+    {
+      "slug": "ciembor-agent-rules-books-clean-architecture",
+      "name": "clean-architecture",
+      "type": "agent_skill",
+      "stars": 3022,
+      "repo": "ciembor/agent-rules-books"
+    },
+    {
+      "slug": "ciembor-agent-rules-books-clean-code",
+      "name": "clean-code",
+      "type": "agent_skill",
+      "stars": 3022,
+      "repo": "ciembor/agent-rules-books"
+    },
+    {
+      "slug": "ciembor-agent-rules-books-code-complete",
+      "name": "code-complete",
+      "type": "agent_skill",
+      "stars": 3022,
+      "repo": "ciembor/agent-rules-books"
+    },
+    {
+      "slug": "ciembor-agent-rules-books-designing-data-intensive-applications",
+      "name": "designing-data-intensive-applications",
+      "type": "agent_skill",
+      "stars": 3022,
+      "repo": "ciembor/agent-rules-books"
+    },
+    {
+      "slug": "citrolabs-ego-lite-skills-ego-browser",
+      "name": "ego-browser",
+      "type": "agent_skill",
+      "stars": 17284,
+      "repo": "citrolabs/ego-lite"
+    },
+    {
+      "slug": "clidey-whodb-cli-external-plugin-openai-skills-whodb",
+      "name": "whodb",
+      "type": "agent_skill",
+      "stars": 5036,
+      "repo": "clidey/whodb"
+    },
+    {
+      "slug": "clidey-whodb-cli-external-plugin-whodb-skills-query-builder",
+      "name": "query-builder",
+      "type": "agent_skill",
+      "stars": 5036,
+      "repo": "clidey/whodb"
+    },
+    {
+      "slug": "clidey-whodb-cli-external-plugin-whodb-skills-schema-designer",
+      "name": "schema-designer",
+      "type": "agent_skill",
+      "stars": 5036,
+      "repo": "clidey/whodb"
+    },
+    {
+      "slug": "clidey-whodb-cli-external-plugin-whodb-skills-whodb",
+      "name": "whodb-whodb",
+      "type": "agent_skill",
+      "stars": 5036,
+      "repo": "clidey/whodb"
+    },
+    {
+      "slug": "clidey-whodb-cli-skills-query-builder",
+      "name": "cli-query-builder",
+      "type": "agent_skill",
+      "stars": 5036,
+      "repo": "clidey/whodb"
+    },
+    {
+      "slug": "coreyhaines31-marketingskills-skills-ab-testing",
+      "name": "ab-testing",
+      "type": "agent_skill",
+      "stars": 54518,
+      "repo": "coreyhaines31/marketingskills"
+    },
+    {
+      "slug": "coreyhaines31-marketingskills-skills-ad-creative",
+      "name": "ad-creative",
+      "type": "agent_skill",
+      "stars": 54518,
+      "repo": "coreyhaines31/marketingskills"
+    },
+    {
+      "slug": "coreyhaines31-marketingskills-skills-ads",
+      "name": "ads",
+      "type": "agent_skill",
+      "stars": 54518,
+      "repo": "coreyhaines31/marketingskills"
+    },
+    {
+      "slug": "coreyhaines31-marketingskills-skills-ai-seo",
+      "name": "ai-seo",
+      "type": "agent_skill",
+      "stars": 54518,
+      "repo": "coreyhaines31/marketingskills"
+    },
+    {
+      "slug": "coreyhaines31-marketingskills-skills-analytics",
+      "name": "analytics",
+      "type": "agent_skill",
+      "stars": 54518,
+      "repo": "coreyhaines31/marketingskills"
     },
     {
       "slug": "datopian-portaljs-skills-arcgis-to-portaljs",
@@ -1879,46 +626,11 @@
       "repo": "datopian/portaljs"
     },
     {
-      "slug": "dstackai-dstack-skills-dstack-presets",
-      "name": "dstack-presets",
-      "type": "agent_skill",
-      "stars": 2279,
-      "repo": "dstackai/dstack"
-    },
-    {
-      "slug": "amelnagdy-delegate-skills-skills-aider-delegate",
-      "name": "aider-delegate",
-      "type": "agent_skill",
-      "stars": 2372,
-      "repo": "amElnagdy/delegate-skills"
-    },
-    {
       "slug": "datopian-portaljs-skills-portaljs-add-chart",
       "name": "portaljs-add-chart",
       "type": "agent_skill",
       "stars": 2362,
       "repo": "datopian/portaljs"
-    },
-    {
-      "slug": "dstackai-dstack-skills-dstack-prototyping",
-      "name": "dstack-prototyping",
-      "type": "agent_skill",
-      "stars": 2279,
-      "repo": "dstackai/dstack"
-    },
-    {
-      "slug": "heshengtao-super-agent-party",
-      "name": "super-agent-party",
-      "type": "agent_tool",
-      "stars": 2733,
-      "repo": "heshengtao/super-agent-party"
-    },
-    {
-      "slug": "amelnagdy-delegate-skills-skills-claude-delegate",
-      "name": "claude-delegate",
-      "type": "agent_skill",
-      "stars": 2372,
-      "repo": "amElnagdy/delegate-skills"
     },
     {
       "slug": "datopian-portaljs-skills-portaljs-add-dataset",
@@ -1928,32 +640,11 @@
       "repo": "datopian/portaljs"
     },
     {
-      "slug": "dstackai-dstack-skills-dstack",
-      "name": "dstack",
-      "type": "agent_skill",
-      "stars": 2279,
-      "repo": "dstackai/dstack"
-    },
-    {
-      "slug": "amelnagdy-delegate-skills-skills-cline-delegate",
-      "name": "cline-delegate",
-      "type": "agent_skill",
-      "stars": 2372,
-      "repo": "amElnagdy/delegate-skills"
-    },
-    {
       "slug": "datopian-portaljs-skills-portaljs-add-dcat",
       "name": "portaljs-add-dcat",
       "type": "agent_skill",
       "stars": 2362,
       "repo": "datopian/portaljs"
-    },
-    {
-      "slug": "amelnagdy-delegate-skills-skills-codex-delegate",
-      "name": "codex-delegate",
-      "type": "agent_skill",
-      "stars": 2372,
-      "repo": "amElnagdy/delegate-skills"
     },
     {
       "slug": "datopian-portaljs-skills-portaljs-add-geo",
@@ -1963,11 +654,74 @@
       "repo": "datopian/portaljs"
     },
     {
-      "slug": "francyjglisboa-agent-skills-platform",
-      "name": "agent-skills-platform",
+      "slug": "denissergeevitch-agents-best-practices",
+      "name": "agents-best-practices",
       "type": "agent_skill",
-      "stars": 2403,
-      "repo": "FrancyJGLisboa/agent-skills-platform"
+      "stars": 2378,
+      "repo": "DenisSergeevitch/agents-best-practices"
+    },
+    {
+      "slug": "dstackai-dstack-skills-dstack-presets",
+      "name": "dstack-presets",
+      "type": "agent_skill",
+      "stars": 2279,
+      "repo": "dstackai/dstack"
+    },
+    {
+      "slug": "dstackai-dstack-skills-dstack-prototyping",
+      "name": "dstack-prototyping",
+      "type": "agent_skill",
+      "stars": 2279,
+      "repo": "dstackai/dstack"
+    },
+    {
+      "slug": "dstackai-dstack-skills-dstack",
+      "name": "dstack",
+      "type": "agent_skill",
+      "stars": 2279,
+      "repo": "dstackai/dstack"
+    },
+    {
+      "slug": "duty1g-x64dbg-mcp-server",
+      "name": "x64dbg-mcp-server",
+      "type": "agent_skill",
+      "stars": 2484,
+      "repo": "duty1g/x64dbg-mcp-server"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-codex-skills-humanize-korean",
+      "name": "humanize-korean",
+      "type": "agent_skill",
+      "stars": 5971,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-copilot-skills-humanize-korean",
+      "name": "copilot-humanize-korean",
+      "type": "agent_skill",
+      "stars": 5971,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-extras-skills-commit-ko",
+      "name": "commit-ko",
+      "type": "agent_skill",
+      "stars": 5971,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-skills-humanize-korean",
+      "name": "skills-humanize-korean",
+      "type": "agent_skill",
+      "stars": 5971,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-skills-humanize-redo",
+      "name": "humanize-redo",
+      "type": "agent_skill",
+      "stars": 5971,
+      "repo": "epoko77-ai/im-not-ai"
     },
     {
       "slug": "francyjglisboa-agent-skills-platform-references-examples-github-release-briefing-skill",
@@ -1998,6 +752,174 @@
       "repo": "FrancyJGLisboa/agent-skills-platform"
     },
     {
+      "slug": "francyjglisboa-agent-skills-platform",
+      "name": "agent-skills-platform",
+      "type": "agent_skill",
+      "stars": 2403,
+      "repo": "FrancyJGLisboa/agent-skills-platform"
+    },
+    {
+      "slug": "gadicc-yahoo-finance2-skills-yahoo-finance2",
+      "name": "yahoo-finance2",
+      "type": "agent_skill",
+      "stars": 803,
+      "repo": "gadicc/yahoo-finance2"
+    },
+    {
+      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-branch-pr",
+      "name": "branch-pr",
+      "type": "agent_skill",
+      "stars": 7736,
+      "repo": "Gentleman-Programming/gentle-ai"
+    },
+    {
+      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-chained-pr",
+      "name": "chained-pr",
+      "type": "agent_skill",
+      "stars": 7736,
+      "repo": "Gentleman-Programming/gentle-ai"
+    },
+    {
+      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-cognitive-doc-design",
+      "name": "cognitive-doc-design",
+      "type": "agent_skill",
+      "stars": 7736,
+      "repo": "Gentleman-Programming/gentle-ai"
+    },
+    {
+      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-comment-writer",
+      "name": "comment-writer",
+      "type": "agent_skill",
+      "stars": 7736,
+      "repo": "Gentleman-Programming/gentle-ai"
+    },
+    {
+      "slug": "gentleman-programming-gentle-ai-internal-assets-skills-gentle-ai-bench",
+      "name": "bench",
+      "type": "agent_skill",
+      "stars": 7736,
+      "repo": "Gentleman-Programming/gentle-ai"
+    },
+    {
+      "slug": "glincker-thesvg-skills-thesvg",
+      "name": "thesvg",
+      "type": "agent_skill",
+      "stars": 2835,
+      "repo": "glincker/thesvg"
+    },
+    {
+      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-debug",
+      "name": "kiro-debug",
+      "type": "agent_skill",
+      "stars": 3710,
+      "repo": "gotalab/cc-sdd"
+    },
+    {
+      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-discovery",
+      "name": "kiro-discovery",
+      "type": "agent_skill",
+      "stars": 3710,
+      "repo": "gotalab/cc-sdd"
+    },
+    {
+      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-impl",
+      "name": "kiro-impl",
+      "type": "agent_skill",
+      "stars": 3710,
+      "repo": "gotalab/cc-sdd"
+    },
+    {
+      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-review",
+      "name": "kiro-review",
+      "type": "agent_skill",
+      "stars": 3710,
+      "repo": "gotalab/cc-sdd"
+    },
+    {
+      "slug": "gotalab-cc-sdd-tools-cc-sdd-templates-agents-antigravity-skills-skills-kiro-spec-batch",
+      "name": "kiro-spec-batch",
+      "type": "agent_skill",
+      "stars": 3710,
+      "repo": "gotalab/cc-sdd"
+    },
+    {
+      "slug": "himself65-finance-skills-plugins-data-providers-skills-finance-sentiment",
+      "name": "finance-sentiment",
+      "type": "agent_skill",
+      "stars": 3404,
+      "repo": "himself65/finance-skills"
+    },
+    {
+      "slug": "himself65-finance-skills-plugins-data-providers-skills-fintel-data",
+      "name": "fintel-data",
+      "type": "agent_skill",
+      "stars": 3404,
+      "repo": "himself65/finance-skills"
+    },
+    {
+      "slug": "himself65-finance-skills-plugins-data-providers-skills-hormuz-strait",
+      "name": "hormuz-strait",
+      "type": "agent_skill",
+      "stars": 3404,
+      "repo": "himself65/finance-skills"
+    },
+    {
+      "slug": "himself65-finance-skills-plugins-data-providers-skills-hyperliquid-reader",
+      "name": "hyperliquid-reader",
+      "type": "agent_skill",
+      "stars": 3404,
+      "repo": "himself65/finance-skills"
+    },
+    {
+      "slug": "himself65-finance-skills-plugins-data-providers-skills-tradingview-mcp",
+      "name": "tradingview-mcp",
+      "type": "agent_skill",
+      "stars": 3404,
+      "repo": "himself65/finance-skills"
+    },
+    {
+      "slug": "ifuryst-open-codex-computer-use-skills-open-computer-use",
+      "name": "open-computer-use",
+      "type": "agent_skill",
+      "stars": 2410,
+      "repo": "iFurySt/open-codex-computer-use"
+    },
+    {
+      "slug": "inkeep-open-knowledge-packages-server-assets-skills-discovery",
+      "name": "open-knowledge-discovery",
+      "type": "agent_skill",
+      "stars": 4559,
+      "repo": "inkeep/open-knowledge"
+    },
+    {
+      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-codebase-wiki",
+      "name": "codebase-wiki",
+      "type": "agent_skill",
+      "stars": 4559,
+      "repo": "inkeep/open-knowledge"
+    },
+    {
+      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-entity-vault",
+      "name": "personal-crm",
+      "type": "agent_skill",
+      "stars": 4559,
+      "repo": "inkeep/open-knowledge"
+    },
+    {
+      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-knowledge-base-consolidate",
+      "name": "consolidate-notes",
+      "type": "agent_skill",
+      "stars": 4559,
+      "repo": "inkeep/open-knowledge"
+    },
+    {
+      "slug": "inkeep-open-knowledge-packages-server-assets-skills-packs-knowledge-base",
+      "name": "knowledge-base",
+      "type": "agent_skill",
+      "stars": 4559,
+      "repo": "inkeep/open-knowledge"
+    },
+    {
       "slug": "jdarmy-break",
       "name": "break",
       "type": "agent_skill",
@@ -2005,11 +927,1096 @@
       "repo": "JDArmy/BREAK"
     },
     {
-      "slug": "dataforseo-mcp-server-typescript",
-      "name": "mcp-server-typescript",
-      "type": "mcp_server",
-      "stars": 253,
-      "repo": "dataforseo/mcp-server-typescript"
+      "slug": "jimliu-baoyu-design-skills-baoyu-design",
+      "name": "baoyu-design",
+      "type": "agent_skill",
+      "stars": 4344,
+      "repo": "JimLiu/baoyu-design"
+    },
+    {
+      "slug": "k-dense-ai-scientific-agent-skills-skills-13c-metabolic-flux",
+      "name": "13c-metabolic-flux",
+      "type": "agent_skill",
+      "stars": 48703,
+      "repo": "K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "slug": "k-dense-ai-scientific-agent-skills-skills-adaptyv",
+      "name": "adaptyv",
+      "type": "agent_skill",
+      "stars": 48703,
+      "repo": "K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "slug": "k-dense-ai-scientific-agent-skills-skills-aeon",
+      "name": "aeon",
+      "type": "agent_skill",
+      "stars": 48703,
+      "repo": "K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "slug": "k-dense-ai-scientific-agent-skills-skills-alphagenome",
+      "name": "alphagenome",
+      "type": "agent_skill",
+      "stars": 48703,
+      "repo": "K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "slug": "k-dense-ai-scientific-agent-skills-skills-analytical-method-validation",
+      "name": "analytical-method-validation",
+      "type": "agent_skill",
+      "stars": 48703,
+      "repo": "K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "slug": "kayforkind-reimagine-it-skills-reimagine-it-audit",
+      "name": "reimagine-it-audit",
+      "type": "agent_skill",
+      "stars": 207,
+      "repo": "Kayforkind/reimagine-it"
+    },
+    {
+      "slug": "kayforkind-reimagine-it-skills-reimagine-it-extract",
+      "name": "reimagine-it-extract",
+      "type": "agent_skill",
+      "stars": 207,
+      "repo": "Kayforkind/reimagine-it"
+    },
+    {
+      "slug": "kayforkind-reimagine-it-skills-reimagine-it-generate",
+      "name": "reimagine-it-generate",
+      "type": "agent_skill",
+      "stars": 207,
+      "repo": "Kayforkind/reimagine-it"
+    },
+    {
+      "slug": "kayforkind-reimagine-it-skills-reimagine-it-infographic",
+      "name": "reimagine-it-infographic",
+      "type": "agent_skill",
+      "stars": 207,
+      "repo": "Kayforkind/reimagine-it"
+    },
+    {
+      "slug": "kayforkind-reimagine-it-skills-reimagine-it",
+      "name": "reimagine-it",
+      "type": "agent_skill",
+      "stars": 207,
+      "repo": "Kayforkind/reimagine-it"
+    },
+    {
+      "slug": "kevinpbuckley-vibeue-content-skills-animation-blueprint",
+      "name": "animation-blueprint",
+      "type": "agent_skill",
+      "stars": 745,
+      "repo": "kevinpbuckley/VibeUE"
+    },
+    {
+      "slug": "kevinpbuckley-vibeue-content-skills-animation-editing",
+      "name": "animation-editing",
+      "type": "agent_skill",
+      "stars": 745,
+      "repo": "kevinpbuckley/VibeUE"
+    },
+    {
+      "slug": "kevinpbuckley-vibeue-content-skills-animation-montage",
+      "name": "animation-montage",
+      "type": "agent_skill",
+      "stars": 745,
+      "repo": "kevinpbuckley/VibeUE"
+    },
+    {
+      "slug": "kevinpbuckley-vibeue-content-skills-animsequence",
+      "name": "animsequence",
+      "type": "agent_skill",
+      "stars": 745,
+      "repo": "kevinpbuckley/VibeUE"
+    },
+    {
+      "slug": "kevinpbuckley-vibeue-content-skills-asset-management",
+      "name": "asset-management",
+      "type": "agent_skill",
+      "stars": 745,
+      "repo": "kevinpbuckley/VibeUE"
+    },
+    {
+      "slug": "lackeyjb-playwright-skill-skills-playwright-skill",
+      "name": "playwright-skill",
+      "type": "agent_skill",
+      "stars": 3186,
+      "repo": "lackeyjb/playwright-skill"
+    },
+    {
+      "slug": "latent-spaces-brag-skills-brag-slim",
+      "name": "slim",
+      "type": "agent_skill",
+      "stars": 15657,
+      "repo": "latent-spaces/brag"
+    },
+    {
+      "slug": "latent-spaces-brag-skills-brag",
+      "name": "brag",
+      "type": "agent_skill",
+      "stars": 15657,
+      "repo": "latent-spaces/brag"
+    },
+    {
+      "slug": "ljagiello-ctf-skills-ctf-ai-ml",
+      "name": "ctf-ai-ml",
+      "type": "agent_skill",
+      "stars": 3437,
+      "repo": "ljagiello/ctf-skills"
+    },
+    {
+      "slug": "ljagiello-ctf-skills-ctf-crypto",
+      "name": "ctf-crypto",
+      "type": "agent_skill",
+      "stars": 3437,
+      "repo": "ljagiello/ctf-skills"
+    },
+    {
+      "slug": "ljagiello-ctf-skills-ctf-forensics",
+      "name": "ctf-forensics",
+      "type": "agent_skill",
+      "stars": 3437,
+      "repo": "ljagiello/ctf-skills"
+    },
+    {
+      "slug": "ljagiello-ctf-skills-ctf-malware",
+      "name": "ctf-malware",
+      "type": "agent_skill",
+      "stars": 3437,
+      "repo": "ljagiello/ctf-skills"
+    },
+    {
+      "slug": "ljagiello-ctf-skills-ctf-misc",
+      "name": "ctf-misc",
+      "type": "agent_skill",
+      "stars": 3437,
+      "repo": "ljagiello/ctf-skills"
+    },
+    {
+      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-chaos",
+      "name": "mirrord-chaos",
+      "type": "agent_skill",
+      "stars": 5365,
+      "repo": "metalbear-co/mirrord"
+    },
+    {
+      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-ci",
+      "name": "mirrord-ci",
+      "type": "agent_skill",
+      "stars": 5365,
+      "repo": "metalbear-co/mirrord"
+    },
+    {
+      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-config",
+      "name": "mirrord-config",
+      "type": "agent_skill",
+      "stars": 5365,
+      "repo": "metalbear-co/mirrord"
+    },
+    {
+      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-db-branching",
+      "name": "mirrord-db-branching",
+      "type": "agent_skill",
+      "stars": 5365,
+      "repo": "metalbear-co/mirrord"
+    },
+    {
+      "slug": "metalbear-co-mirrord-mirrord-mcp-corpus-skills-mirrord-header-propagation",
+      "name": "mirrord-header-propagation",
+      "type": "agent_skill",
+      "stars": 5365,
+      "repo": "metalbear-co/mirrord"
+    },
+    {
+      "slug": "mex-memory-mex-skills-mex-inbox",
+      "name": "mex-inbox",
+      "type": "agent_skill",
+      "stars": 1767,
+      "repo": "mex-memory/mex"
+    },
+    {
+      "slug": "mex-memory-mex-skills-mex-relay",
+      "name": "mex-relay",
+      "type": "agent_skill",
+      "stars": 1767,
+      "repo": "mex-memory/mex"
+    },
+    {
+      "slug": "miqdadbadjuber-anti-slop-skills-antislop-code",
+      "name": "antislop-code",
+      "type": "agent_skill",
+      "stars": 5989,
+      "repo": "miqdadbadjuber/anti-slop"
+    },
+    {
+      "slug": "miqdadbadjuber-anti-slop-skills-antislop-copywriting",
+      "name": "antislop-copywriting",
+      "type": "agent_skill",
+      "stars": 5989,
+      "repo": "miqdadbadjuber/anti-slop"
+    },
+    {
+      "slug": "miqdadbadjuber-anti-slop-skills-antislop-human",
+      "name": "antislop-human",
+      "type": "agent_skill",
+      "stars": 5989,
+      "repo": "miqdadbadjuber/anti-slop"
+    },
+    {
+      "slug": "miqdadbadjuber-anti-slop-skills-antislop-layoutmobile",
+      "name": "antislop-layoutmobile",
+      "type": "agent_skill",
+      "stars": 5989,
+      "repo": "miqdadbadjuber/anti-slop"
+    },
+    {
+      "slug": "miqdadbadjuber-anti-slop-skills-antislop-ui",
+      "name": "antislop-ui",
+      "type": "agent_skill",
+      "stars": 5989,
+      "repo": "miqdadbadjuber/anti-slop"
+    },
+    {
+      "slug": "nanako0129-sepia-skills-sepia-hemingway",
+      "name": "sepia-hemingway",
+      "type": "agent_skill",
+      "stars": 3151,
+      "repo": "Nanako0129/sepia"
+    },
+    {
+      "slug": "nanako0129-sepia-skills-sepia-recreate",
+      "name": "sepia-recreate",
+      "type": "agent_skill",
+      "stars": 3151,
+      "repo": "Nanako0129/sepia"
+    },
+    {
+      "slug": "nanako0129-sepia-skills-sepia-refactor",
+      "name": "sepia-refactor",
+      "type": "agent_skill",
+      "stars": 3151,
+      "repo": "Nanako0129/sepia"
+    },
+    {
+      "slug": "nanako0129-sepia-skills-sepia-review",
+      "name": "sepia-review",
+      "type": "agent_skill",
+      "stars": 3151,
+      "repo": "Nanako0129/sepia"
+    },
+    {
+      "slug": "nanako0129-sepia-skills-sepia-write",
+      "name": "sepia-write",
+      "type": "agent_skill",
+      "stars": 3151,
+      "repo": "Nanako0129/sepia"
+    },
+    {
+      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-article-magazine",
+      "name": "article-magazine",
+      "type": "agent_skill",
+      "stars": 9099,
+      "repo": "nexu-io/html-anything"
+    },
+    {
+      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-article-sketchnote-editorial",
+      "name": "article-sketchnote-editorial",
+      "type": "agent_skill",
+      "stars": 9099,
+      "repo": "nexu-io/html-anything"
+    },
+    {
+      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-blog-post",
+      "name": "blog-post",
+      "type": "agent_skill",
+      "stars": 9099,
+      "repo": "nexu-io/html-anything"
+    },
+    {
+      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-card-twitter",
+      "name": "card-twitter",
+      "type": "agent_skill",
+      "stars": 9099,
+      "repo": "nexu-io/html-anything"
+    },
+    {
+      "slug": "nexu-io-html-anything-next-src-lib-templates-skills-card-xiaohongshu",
+      "name": "card-xiaohongshu",
+      "type": "agent_skill",
+      "stars": 9099,
+      "repo": "nexu-io/html-anything"
+    },
+    {
+      "slug": "ningzimu-codex-ppt-skill-skills-codex-ppt",
+      "name": "codex-ppt",
+      "type": "agent_skill",
+      "stars": 6807,
+      "repo": "ningzimu/codex-ppt-skill"
+    },
+    {
+      "slug": "oil-oil-oil-motion",
+      "name": "oil-motion",
+      "type": "agent_skill",
+      "stars": 2582,
+      "repo": "oil-oil/oil-motion"
+    },
+    {
+      "slug": "okf-memory-okf-agent-memory-pkg-okf-assets-skill",
+      "name": "okf-agent-memory",
+      "type": "agent_skill",
+      "stars": 771,
+      "repo": "okf-memory/okf-agent-memory"
+    },
+    {
+      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-house-style",
+      "name": "house-style",
+      "type": "agent_skill",
+      "stars": 6895,
+      "repo": "olimorris/codecompanion.nvim"
+    },
+    {
+      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-name-not-a-string",
+      "name": "true",
+      "type": "agent_skill",
+      "stars": 6895,
+      "repo": "olimorris/codecompanion.nvim"
+    },
+    {
+      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-no-description",
+      "name": "no-description",
+      "type": "agent_skill",
+      "stars": 6895,
+      "repo": "olimorris/codecompanion.nvim"
+    },
+    {
+      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-personal-pdf-forms",
+      "name": "pdf-forms",
+      "type": "agent_skill",
+      "stars": 6895,
+      "repo": "olimorris/codecompanion.nvim"
+    },
+    {
+      "slug": "olimorris-codecompanion-nvim-tests-stubs-skills-project-house-style",
+      "name": "skills-house-style",
+      "type": "agent_skill",
+      "stars": 6895,
+      "repo": "olimorris/codecompanion.nvim"
+    },
+    {
+      "slug": "open-gsd-gsd-core-skills-gsd-add-tests",
+      "name": "gsd-add-tests",
+      "type": "agent_skill",
+      "stars": 10480,
+      "repo": "open-gsd/gsd-core"
+    },
+    {
+      "slug": "open-gsd-gsd-core-skills-gsd-ai-integration-phase",
+      "name": "gsd-ai-integration-phase",
+      "type": "agent_skill",
+      "stars": 10480,
+      "repo": "open-gsd/gsd-core"
+    },
+    {
+      "slug": "open-gsd-gsd-core-skills-gsd-audit-fix",
+      "name": "gsd-audit-fix",
+      "type": "agent_skill",
+      "stars": 10480,
+      "repo": "open-gsd/gsd-core"
+    },
+    {
+      "slug": "open-gsd-gsd-core-skills-gsd-audit-milestone",
+      "name": "gsd-audit-milestone",
+      "type": "agent_skill",
+      "stars": 10480,
+      "repo": "open-gsd/gsd-core"
+    },
+    {
+      "slug": "open-gsd-gsd-core-skills-gsd-audit-uat",
+      "name": "gsd-audit-uat",
+      "type": "agent_skill",
+      "stars": 10480,
+      "repo": "open-gsd/gsd-core"
+    },
+    {
+      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-category-coloring",
+      "name": "large-file-parquet-analysis-and-highlight",
+      "type": "agent_skill",
+      "stars": 5754,
+      "repo": "OpenSenseNova/SenseNova-Skills"
+    },
+    {
+      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-duplicate-value-coloring",
+      "name": "excel-conditional-comparison-and-large-file-processing",
+      "type": "agent_skill",
+      "stars": 5754,
+      "repo": "OpenSenseNova/SenseNova-Skills"
+    },
+    {
+      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-outlier-coloring",
+      "name": "excel-outlier-detection-and-highlighting",
+      "type": "agent_skill",
+      "stars": 5754,
+      "repo": "OpenSenseNova/SenseNova-Skills"
+    },
+    {
+      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow-capability-excel-cell-coloring-threshold-cell-coloring",
+      "name": "large-file-conditional-formatting",
+      "type": "agent_skill",
+      "stars": 5754,
+      "repo": "OpenSenseNova/SenseNova-Skills"
+    },
+    {
+      "slug": "opensensenova-sensenova-skills-skills-sn-da-excel-workflow",
+      "name": "sn-da-excel-workflow",
+      "type": "agent_skill",
+      "stars": 5754,
+      "repo": "OpenSenseNova/SenseNova-Skills"
+    },
+    {
+      "slug": "orchestra-research-ai-research-skills-0-autoresearch-skill",
+      "name": "0-autoresearch-skill",
+      "type": "agent_skill",
+      "stars": 13529,
+      "repo": "Orchestra-Research/AI-Research-SKILLs"
+    },
+    {
+      "slug": "orchestra-research-ai-research-skills-01-model-architecture-litgpt",
+      "name": "litgpt",
+      "type": "agent_skill",
+      "stars": 13529,
+      "repo": "Orchestra-Research/AI-Research-SKILLs"
+    },
+    {
+      "slug": "orchestra-research-ai-research-skills-01-model-architecture-mamba",
+      "name": "mamba",
+      "type": "agent_skill",
+      "stars": 13529,
+      "repo": "Orchestra-Research/AI-Research-SKILLs"
+    },
+    {
+      "slug": "orchestra-research-ai-research-skills-01-model-architecture-nanogpt",
+      "name": "nanogpt",
+      "type": "agent_skill",
+      "stars": 13529,
+      "repo": "Orchestra-Research/AI-Research-SKILLs"
+    },
+    {
+      "slug": "orchestra-research-ai-research-skills-01-model-architecture-rwkv",
+      "name": "rwkv",
+      "type": "agent_skill",
+      "stars": 13529,
+      "repo": "Orchestra-Research/AI-Research-SKILLs"
+    },
+    {
+      "slug": "pacifio-atlas-src-tauri-resources-skills-atlas-self-configure",
+      "name": "self-configure",
+      "type": "agent_skill",
+      "stars": 9593,
+      "repo": "pacifio/atlas"
+    },
+    {
+      "slug": "pacifio-atlas-src-tauri-resources-skills-remember",
+      "name": "remember",
+      "type": "agent_skill",
+      "stars": 9593,
+      "repo": "pacifio/atlas"
+    },
+    {
+      "slug": "pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-plugin-creator",
+      "name": "plugin-creator",
+      "type": "agent_skill",
+      "stars": 9593,
+      "repo": "pacifio/atlas"
+    },
+    {
+      "slug": "pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-review-agent",
+      "name": "review-agent",
+      "type": "agent_skill",
+      "stars": 9593,
+      "repo": "pacifio/atlas"
+    },
+    {
+      "slug": "pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-skill-creator",
+      "name": "creator",
+      "type": "agent_skill",
+      "stars": 9593,
+      "repo": "pacifio/atlas"
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-delegate-work",
+      "name": "delegate-work",
+      "type": "agent_skill",
+      "stars": 101411,
+      "repo": "paperclipai/paperclip"
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-follow-up-results",
+      "name": "follow-up-results",
+      "type": "agent_skill",
+      "stars": 101411,
+      "repo": "paperclipai/paperclip"
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-claude-paperclip-skills-review-my-team",
+      "name": "review-my-team",
+      "type": "agent_skill",
+      "stars": 101411,
+      "repo": "paperclipai/paperclip"
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-openai-paperclip-skills-delegate-work",
+      "name": "paperclip-delegate-work",
+      "type": "agent_skill",
+      "stars": 101411,
+      "repo": "paperclipai/paperclip"
+    },
+    {
+      "slug": "paperclipai-paperclip-integrations-assistant-plugins-openai-paperclip-skills-follow-up-results",
+      "name": "paperclip-follow-up-results",
+      "type": "agent_skill",
+      "stars": 101411,
+      "repo": "paperclipai/paperclip"
+    },
+    {
+      "slug": "redhat-et-ripwire-skills-hermes-ripwire-repo-map",
+      "name": "repo-map",
+      "type": "agent_skill",
+      "stars": 2443,
+      "repo": "redhat-et/ripwire"
+    },
+    {
+      "slug": "redhat-et-ripwire-skills-ripwire-before-you-build",
+      "name": "before-you-build",
+      "type": "agent_skill",
+      "stars": 2443,
+      "repo": "redhat-et/ripwire"
+    },
+    {
+      "slug": "redhat-et-ripwire-skills-ripwire-change-check",
+      "name": "change-check",
+      "type": "agent_skill",
+      "stars": 2443,
+      "repo": "redhat-et/ripwire"
+    },
+    {
+      "slug": "redhat-et-ripwire-skills-ripwire-find-bug",
+      "name": "find-bug",
+      "type": "agent_skill",
+      "stars": 2443,
+      "repo": "redhat-et/ripwire"
+    },
+    {
+      "slug": "redhat-et-ripwire-skills-ripwire-fresh-eyes",
+      "name": "fresh-eyes",
+      "type": "agent_skill",
+      "stars": 2443,
+      "repo": "redhat-et/ripwire"
+    },
+    {
+      "slug": "rusq-slackdump-cmd-slackdump-internal-mcp-assets-skills-slackdump-source",
+      "name": "slackdump-source",
+      "type": "agent_skill",
+      "stars": 2822,
+      "repo": "rusq/slackdump"
+    },
+    {
+      "slug": "rusq-slackdump-cmd-slackdump-internal-mcp-assets-skills-slackdump-sqlite3",
+      "name": "slackdump-sqlite3",
+      "type": "agent_skill",
+      "stars": 2822,
+      "repo": "rusq/slackdump"
+    },
+    {
+      "slug": "rusq-slackdump-cmd-slackdump-internal-mcp-assets-skills-slackdump",
+      "name": "slackdump",
+      "type": "agent_skill",
+      "stars": 2822,
+      "repo": "rusq/slackdump"
+    },
+    {
+      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-ai-visibility",
+      "name": "ai-visibility",
+      "type": "agent_skill",
+      "stars": 5240,
+      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
+    },
+    {
+      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-backlink-check",
+      "name": "backlink-check",
+      "type": "agent_skill",
+      "stars": 5240,
+      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
+    },
+    {
+      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-competitor-gap",
+      "name": "competitor-gap",
+      "type": "agent_skill",
+      "stars": 5240,
+      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
+    },
+    {
+      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-content-brief",
+      "name": "content-brief",
+      "type": "agent_skill",
+      "stars": 5240,
+      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
+    },
+    {
+      "slug": "ryze-ai-adgent-open-seo-mcp-skills-skills-keyword-research",
+      "name": "keyword-research",
+      "type": "agent_skill",
+      "stars": 5240,
+      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills"
+    },
+    {
+      "slug": "samber-cc-skills-golang-skills-golang-benchmark",
+      "name": "golang-benchmark",
+      "type": "agent_skill",
+      "stars": 3467,
+      "repo": "samber/cc-skills-golang"
+    },
+    {
+      "slug": "samber-cc-skills-golang-skills-golang-cli",
+      "name": "golang-cli",
+      "type": "agent_skill",
+      "stars": 3467,
+      "repo": "samber/cc-skills-golang"
+    },
+    {
+      "slug": "samber-cc-skills-golang-skills-golang-code-style",
+      "name": "golang-code-style",
+      "type": "agent_skill",
+      "stars": 3467,
+      "repo": "samber/cc-skills-golang"
+    },
+    {
+      "slug": "samber-cc-skills-golang-skills-golang-concurrency",
+      "name": "golang-concurrency",
+      "type": "agent_skill",
+      "stars": 3467,
+      "repo": "samber/cc-skills-golang"
+    },
+    {
+      "slug": "samber-cc-skills-golang-skills-golang-context",
+      "name": "golang-context",
+      "type": "agent_skill",
+      "stars": 3467,
+      "repo": "samber/cc-skills-golang"
+    },
+    {
+      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-animation",
+      "name": "scenario-blender-animation",
+      "type": "agent_skill",
+      "stars": 995,
+      "repo": "scenario-labs/skills"
+    },
+    {
+      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-expert",
+      "name": "scenario-blender-expert",
+      "type": "agent_skill",
+      "stars": 995,
+      "repo": "scenario-labs/skills"
+    },
+    {
+      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-geometry-nodes",
+      "name": "scenario-blender-geometry-nodes",
+      "type": "agent_skill",
+      "stars": 995,
+      "repo": "scenario-labs/skills"
+    },
+    {
+      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-grease-pencil",
+      "name": "scenario-blender-grease-pencil",
+      "type": "agent_skill",
+      "stars": 995,
+      "repo": "scenario-labs/skills"
+    },
+    {
+      "slug": "scenario-labs-skills-skills-dcc-blender-scenario-blender-hair",
+      "name": "scenario-blender-hair",
+      "type": "agent_skill",
+      "stars": 995,
+      "repo": "scenario-labs/skills"
+    },
+    {
+      "slug": "sergebulaev-instagram-skills-skills-ig-audience-insights",
+      "name": "ig-audience-insights",
+      "type": "agent_skill",
+      "stars": 389,
+      "repo": "sergebulaev/instagram-skills"
+    },
+    {
+      "slug": "sergebulaev-instagram-skills-skills-ig-caption-writer",
+      "name": "ig-caption-writer",
+      "type": "agent_skill",
+      "stars": 389,
+      "repo": "sergebulaev/instagram-skills"
+    },
+    {
+      "slug": "sergebulaev-instagram-skills-skills-ig-carousel-planner",
+      "name": "ig-carousel-planner",
+      "type": "agent_skill",
+      "stars": 389,
+      "repo": "sergebulaev/instagram-skills"
+    },
+    {
+      "slug": "sergebulaev-instagram-skills-skills-ig-content-planner",
+      "name": "ig-content-planner",
+      "type": "agent_skill",
+      "stars": 389,
+      "repo": "sergebulaev/instagram-skills"
+    },
+    {
+      "slug": "sergebulaev-instagram-skills",
+      "name": "instagram-marketing",
+      "type": "agent_skill",
+      "stars": 389,
+      "repo": "sergebulaev/instagram-skills"
+    },
+    {
+      "slug": "syngnat-gonavi-npm-gonavi-cli-skill",
+      "name": "cli",
+      "type": "agent_skill",
+      "stars": 2067,
+      "repo": "Syngnat/GoNavi"
+    },
+    {
+      "slug": "the-open-agent-openagent-skills-1password",
+      "name": "1password",
+      "type": "agent_skill",
+      "stars": 5688,
+      "repo": "the-open-agent/openagent"
+    },
+    {
+      "slug": "the-open-agent-openagent-skills-apple-notes",
+      "name": "apple-notes",
+      "type": "agent_skill",
+      "stars": 5688,
+      "repo": "the-open-agent/openagent"
+    },
+    {
+      "slug": "the-open-agent-openagent-skills-apple-reminders",
+      "name": "apple-reminders",
+      "type": "agent_skill",
+      "stars": 5688,
+      "repo": "the-open-agent/openagent"
+    },
+    {
+      "slug": "the-open-agent-openagent-skills-bear-notes",
+      "name": "bear-notes",
+      "type": "agent_skill",
+      "stars": 5688,
+      "repo": "the-open-agent/openagent"
+    },
+    {
+      "slug": "the-open-agent-openagent-skills-blogwatcher",
+      "name": "blogwatcher",
+      "type": "agent_skill",
+      "stars": 5688,
+      "repo": "the-open-agent/openagent"
+    },
+    {
+      "slug": "tigerless-labs-autoharness-skills-learn",
+      "name": "learn",
+      "type": "agent_skill",
+      "stars": 11051,
+      "repo": "tigerless-labs/autoharness"
+    },
+    {
+      "slug": "timescale-pg-aiguide-skills-design-postgis-tables",
+      "name": "design-postgis-tables",
+      "type": "agent_skill",
+      "stars": 1866,
+      "repo": "timescale/pg-aiguide"
+    },
+    {
+      "slug": "timescale-pg-aiguide-skills-design-postgres-tables",
+      "name": "design-postgres-tables",
+      "type": "agent_skill",
+      "stars": 1866,
+      "repo": "timescale/pg-aiguide"
+    },
+    {
+      "slug": "timescale-pg-aiguide-skills-find-hypertable-candidates",
+      "name": "find-hypertable-candidates",
+      "type": "agent_skill",
+      "stars": 1866,
+      "repo": "timescale/pg-aiguide"
+    },
+    {
+      "slug": "timescale-pg-aiguide-skills-migrate-postgres-tables-to-hypertables",
+      "name": "migrate-postgres-tables-to-hypertables",
+      "type": "agent_skill",
+      "stars": 1866,
+      "repo": "timescale/pg-aiguide"
+    },
+    {
+      "slug": "timescale-pg-aiguide-skills-pgvector-semantic-search",
+      "name": "pgvector-semantic-search",
+      "type": "agent_skill",
+      "stars": 1866,
+      "repo": "timescale/pg-aiguide"
+    },
+    {
+      "slug": "trpc-group-trpc-agent-go-examples-agui-server-skill_artifacts-skills-artifact_demo",
+      "name": "artifact_demo",
+      "type": "agent_skill",
+      "stars": 1860,
+      "repo": "trpc-group/trpc-agent-go"
+    },
+    {
+      "slug": "trpc-group-trpc-agent-go-examples-dynamicworkflow-skills-skills-fanout-analysis",
+      "name": "fanout-analysis",
+      "type": "agent_skill",
+      "stars": 1860,
+      "repo": "trpc-group/trpc-agent-go"
+    },
+    {
+      "slug": "trpc-group-trpc-agent-go-examples-dynamicworkflow-skills-skills-quality-loop",
+      "name": "quality-loop",
+      "type": "agent_skill",
+      "stars": 1860,
+      "repo": "trpc-group/trpc-agent-go"
+    },
+    {
+      "slug": "trpc-group-trpc-agent-go-examples-evaluation-skill-skills-write-ok",
+      "name": "write-ok",
+      "type": "agent_skill",
+      "stars": 1860,
+      "repo": "trpc-group/trpc-agent-go"
+    },
+    {
+      "slug": "trpc-group-trpc-agent-go-examples-mcpbroker-basic-skills-remote-http-mcp",
+      "name": "remote-http-mcp",
+      "type": "agent_skill",
+      "stars": 1860,
+      "repo": "trpc-group/trpc-agent-go"
+    },
+    {
+      "slug": "tt-a1i-archify-archify",
+      "name": "archify",
+      "type": "agent_skill",
+      "stars": 82940,
+      "repo": "tt-a1i/archify"
+    },
+    {
+      "slug": "unclecatvn-agent-skills-skills-code-review",
+      "name": "code-review",
+      "type": "agent_skill",
+      "stars": 145,
+      "repo": "unclecatvn/agent-skills"
+    },
+    {
+      "slug": "unclecatvn-agent-skills-skills-dtg-base",
+      "name": "dtg-base",
+      "type": "agent_skill",
+      "stars": 145,
+      "repo": "unclecatvn/agent-skills"
+    },
+    {
+      "slug": "unclecatvn-agent-skills-skills-flow-diagram",
+      "name": "flow-diagram",
+      "type": "agent_skill",
+      "stars": 145,
+      "repo": "unclecatvn/agent-skills"
+    },
+    {
+      "slug": "unclecatvn-agent-skills-skills-odoo-16-0",
+      "name": "odoo-16",
+      "type": "agent_skill",
+      "stars": 145,
+      "repo": "unclecatvn/agent-skills"
+    },
+    {
+      "slug": "unclecatvn-agent-skills-skills-odoo-17-0",
+      "name": "odoo-17",
+      "type": "agent_skill",
+      "stars": 145,
+      "repo": "unclecatvn/agent-skills"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-agentdock-user-guide",
+      "name": "user-guide",
+      "type": "agent_skill",
+      "stars": 1234,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-plugin-import",
+      "name": "plugin-import",
+      "type": "agent_skill",
+      "stars": 1234,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-skill-authoring",
+      "name": "authoring",
+      "type": "agent_skill",
+      "stars": 1234,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-skill-installation",
+      "name": "installation",
+      "type": "agent_skill",
+      "stars": 1234,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "yizhiyanhua-ai-fireworks-tech-graph-skills-fireworks-tech-graph",
+      "name": "skills-fireworks-tech-graph",
+      "type": "agent_skill",
+      "stars": 11699,
+      "repo": "yizhiyanhua-ai/fireworks-tech-graph"
+    },
+    {
+      "slug": "yizhiyanhua-ai-fireworks-tech-graph",
+      "name": "fireworks-tech-graph",
+      "type": "agent_skill",
+      "stars": 11699,
+      "repo": "yizhiyanhua-ai/fireworks-tech-graph"
+    },
+    {
+      "slug": "zju-real-easel-skills-builtin-ai-image-gen",
+      "name": "ai-image-gen",
+      "type": "agent_skill",
+      "stars": 3567,
+      "repo": "ZJU-REAL/Easel"
+    },
+    {
+      "slug": "zju-real-easel-skills-builtin-ai-music",
+      "name": "ai-music",
+      "type": "agent_skill",
+      "stars": 3567,
+      "repo": "ZJU-REAL/Easel"
+    },
+    {
+      "slug": "zju-real-easel-skills-builtin-ai-video-gen",
+      "name": "ai-video-gen",
+      "type": "agent_skill",
+      "stars": 3567,
+      "repo": "ZJU-REAL/Easel"
+    },
+    {
+      "slug": "zju-real-easel-skills-builtin-asset-manager",
+      "name": "asset-manager",
+      "type": "agent_skill",
+      "stars": 3567,
+      "repo": "ZJU-REAL/Easel"
+    },
+    {
+      "slug": "zju-real-easel-skills-builtin-audio-denoise",
+      "name": "audio-denoise",
+      "type": "agent_skill",
+      "stars": 3567,
+      "repo": "ZJU-REAL/Easel"
+    },
+    {
+      "slug": "asaotomo-fofamap",
+      "name": "FofaMap",
+      "type": "agent_tool",
+      "stars": 742,
+      "repo": "asaotomo/FofaMap"
+    },
+    {
+      "slug": "avids2-memorix",
+      "name": "memorix",
+      "type": "agent_tool",
+      "stars": 836,
+      "repo": "AVIDS2/memorix"
+    },
+    {
+      "slug": "bgauryy-octocode",
+      "name": "octocode",
+      "type": "agent_tool",
+      "stars": 950,
+      "repo": "bgauryy/octocode"
+    },
+    {
+      "slug": "bytebase-dbhub",
+      "name": "dbhub",
+      "type": "agent_tool",
+      "stars": 3639,
+      "repo": "bytebase/dbhub"
+    },
+    {
+      "slug": "chrisryugj-kordoc",
+      "name": "kordoc",
+      "type": "agent_tool",
+      "stars": 2435,
+      "repo": "chrisryugj/kordoc"
+    },
+    {
+      "slug": "deedy5-ddgs",
+      "name": "ddgs",
+      "type": "agent_tool",
+      "stars": 3017,
+      "repo": "deedy5/ddgs"
+    },
+    {
+      "slug": "heshengtao-super-agent-party",
+      "name": "super-agent-party",
+      "type": "agent_tool",
+      "stars": 2733,
+      "repo": "heshengtao/super-agent-party"
+    },
+    {
+      "slug": "kitfunso-hippo-memory",
+      "name": "hippo-memory",
+      "type": "agent_tool",
+      "stars": 776,
+      "repo": "kitfunso/hippo-memory"
+    },
+    {
+      "slug": "lidge-jun-opencodex",
+      "name": "opencodex",
+      "type": "agent_tool",
+      "stars": 17353,
+      "repo": "lidge-jun/opencodex"
+    },
+    {
+      "slug": "llmsresearch-paperbanana",
+      "name": "paperbanana",
+      "type": "agent_tool",
+      "stars": 2397,
+      "repo": "llmsresearch/paperbanana"
+    },
+    {
+      "slug": "playa-cyrene-cyrene-agent",
+      "name": "Cyrene-Agent",
+      "type": "agent_tool",
+      "stars": 700,
+      "repo": "Playa-Cyrene/Cyrene-Agent"
+    },
+    {
+      "slug": "sylphxai-anymd",
+      "name": "anymd",
+      "type": "agent_tool",
+      "stars": 1038,
+      "repo": "SylphxAI/anymd"
+    },
+    {
+      "slug": "unbrowse-ai-unbrowse",
+      "name": "unbrowse",
+      "type": "agent_tool",
+      "stars": 786,
+      "repo": "unbrowse-ai/unbrowse"
+    },
+    {
+      "slug": "upsonic-upsonic",
+      "name": "Upsonic",
+      "type": "agent_tool",
+      "stars": 7958,
+      "repo": "Upsonic/Upsonic"
+    },
+    {
+      "slug": "wzyn20051216-solidworks-automation-skill",
+      "name": "solidworks-automation-skill",
+      "type": "agent_tool",
+      "stars": 1197,
+      "repo": "wzyn20051216/solidworks-automation-skill"
     }
   ],
   "removed": [
@@ -2137,7 +2144,7 @@
     },
     {
       "slug": "dietrichgebert-ponytail-skills-ponytail-audit",
-      "name": "ponytail-audit",
+      "name": "audit",
       "type": "agent_skill",
       "stars": 162479,
       "stars_delta_7d": 5108,
@@ -2146,7 +2153,7 @@
     },
     {
       "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
-      "name": "orca-chat-visuals",
+      "name": "chat-visuals",
       "type": "agent_skill",
       "stars": 91386,
       "stars_delta_7d": 4425,
@@ -2190,8 +2197,8 @@
       "trending_score": 2896.26
     },
     {
-      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review",
-      "name": "open-code-review",
+      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review-delegate",
+      "name": "delegate",
       "type": "agent_skill",
       "stars": 46827,
       "stars_delta_7d": 2633,
@@ -2354,10 +2361,10 @@
   ],
   "summary": {
     "week": "2026-W42",
-    "generated_at": "2026-10-31T14:49:46.231Z",
-    "added_count": 287,
+    "generated_at": "2026-10-31T15:55:43.565Z",
+    "added_count": 288,
     "removed_count": 111,
     "surging_count": 25,
-    "total_stars_gained": 92210
+    "total_stars_gained": 99209
   }
 }

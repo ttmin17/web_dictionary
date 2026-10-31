@@ -4,7 +4,8 @@ name: cost-projection
 tagline: Forward-looking spend extrapolation. Computes a USD-per-day rate from
   the recent measurement window, projects to 7d/30d/90d/365d horizons, and
   surface
-summary: "Forward-looking cost projection that pairs with cost-budget-check:"
+summary: '- cost-budget-check answers "have we crossed the line?" — reactive -
+  cost-projection answers "when will we cross the line?" — predictive'
 categories:
   - agent-frameworks
 tags:

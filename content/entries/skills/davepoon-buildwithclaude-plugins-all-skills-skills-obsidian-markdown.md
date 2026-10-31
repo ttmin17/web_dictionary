@@ -344,15 +344,13 @@ Inline %%comment%% within text.
 ### Basic Properties
 
 ```yaml
----
-title: My Note Title
+---title: My Note Title
 date: 2024-01-15
 tags:
   - tag1
   - tag2
 author: John Doe
----
-```
+---```
 
 ### Property Types
 
@@ -369,8 +367,7 @@ author: John Doe
 ### Multi-value Properties
 
 ```yaml
----
-tags:
+---tags:
   - project
   - work
   - important
@@ -380,8 +377,7 @@ aliases:
 cssclasses:
   - wide-page
   - cards
----
-```
+---```
 
 ## Tags
 
@@ -402,13 +398,11 @@ This note is about #productivity and #tools.
 ### Tags in Frontmatter
 
 ```yaml
----
-tags:
+---tags:
   - project
   - project/work
   - status/active
----
-```
+---```
 
 ## HTML Support
 
@@ -430,15 +424,13 @@ Hidden content here
 ## Complete Example
 
 ```markdown
----
-title: Project Alpha Overview
+---title: Project Alpha Overview
 date: 2024-01-15
 tags:
   - project
   - documentation
 status: active
 ---
-
 # Project Alpha Overview
 
 ## Summary

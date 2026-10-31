@@ -4,7 +4,9 @@ name: data-throughput-accelerator
 tagline: Diagnose and accelerate large data movement — ingestion, backfill,
   export, ETL, warehouse loading, manifest catch-up, and table synchronization —
   by i
-summary: "Separate these before optimizing:"
+summary: "- source extraction speed; - network transfer speed; - warehouse/load
+  speed; - transform speed; - serving-table freshness; - live tail growth while
+  the job runs."
 categories:
   - productivity-ops
 tags:

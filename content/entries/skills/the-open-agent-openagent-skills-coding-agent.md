@@ -4,8 +4,10 @@ name: coding-agent
 tagline: "Delegate coding tasks to Codex, Claude Code, or Pi agents via
   background process. Use when: (1) building/creating new features or apps, (2)
   reviewing "
-summary: "For Codex, Pi, and OpenCode, PTY is still required (interactive
-  terminal apps):"
+summary: For Claude Code (claude CLI), use --print --permission-mode
+  bypassPermissions instead. --dangerously-skip-permissions with PTY can exit
+  after the confirmation dialog. --print mode keeps full tool access and avoids
+  int...
 categories:
   - agent-frameworks
 tags:
@@ -119,7 +121,6 @@ bash pty:true command:"claude --dangerously-skip-permissions 'task'"
 | `kill`      | Terminate the session                                |
 
 ---
-
 ## Quick Start: One-Shot Tasks
 
 For quick prompts/chats, create a temp git repo and run:
@@ -135,7 +136,6 @@ bash pty:true workdir:~/Projects/myproject command:"codex exec 'Add error handli
 **Why git init?** Codex refuses to run outside a trusted git directory. Creating a temp repo solves this for scratch work.
 
 ---
-
 ## The Pattern: workdir + background + pty
 
 For longer tasks, use background mode with PTY:
@@ -164,7 +164,6 @@ process action:kill sessionId:XXX
 **Why workdir matters:** Agent wakes up in a focused directory, doesn't wander off reading unrelated files (like your soul.md 😅).
 
 ---
-
 ## Codex CLI
 
 **Model:** `gpt-5.2-codex` is the default (set in ~/.codex/config.toml)
@@ -223,7 +222,6 @@ gh pr comment <PR#> --body "<review content>"
 ```
 
 ---
-
 ## Claude Code
 
 ```bash
@@ -235,7 +233,6 @@ bash workdir:~/project background:true command:"claude --permission-mode bypassP
 ```
 
 ---
-
 ## OpenCode
 
 ```bash
@@ -243,7 +240,6 @@ bash pty:true workdir:~/project command:"opencode run 'Your task'"
 ```
 
 ---
-
 ## Pi Coding Agent
 
 ```bash
@@ -260,7 +256,6 @@ bash pty:true command:"pi --provider openai --model gpt-4o-mini -p 'Your task'"
 **Note:** Pi now has Anthropic prompt caching enabled (PR #584, merged Jan 2026)!
 
 ---
-
 ## Parallel Issue Fixing with git worktrees
 
 For fixing multiple issues in parallel, use git worktrees:
@@ -288,7 +283,6 @@ git worktree remove /tmp/issue-99
 ```
 
 ---
-
 ## ⚠️ Rules
 
 1. **Use the right execution mode per agent**:
@@ -306,7 +300,6 @@ git worktree remove /tmp/issue-99
 9. **NEVER checkout branches in ~/Projects/openclaw/** - that's the LIVE OpenClaw instance!
 
 ---
-
 ## Progress Updates (Critical)
 
 When you spawn coding agents in the background, keep the user in the loop.
@@ -322,7 +315,6 @@ When you spawn coding agents in the background, keep the user in the loop.
 This prevents the user from seeing only "Agent failed before reply" and having no idea what happened.
 
 ---
-
 ## Auto-Notify on Completion
 
 For long-running background tasks, append a wake trigger to your prompt so OpenClaw gets notified immediately when the agent finishes (instead of waiting for the next heartbeat):
@@ -345,7 +337,6 @@ When completely finished, run: openclaw system event --text \"Done: Built todos 
 This triggers an immediate wake event — Skippy gets pinged in seconds, not 10 minutes.
 
 ---
-
 ## Learnings (Jan 2026)
 
 - **PTY is essential:** Coding agents are interactive terminal apps. Without `pty:true`, output breaks or agent hangs.

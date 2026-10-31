@@ -209,14 +209,12 @@ If $ARGUMENTS is a new description (no matching thread file):
 3. Use the Write tool to create `.planning/threads/{SLUG}.md` with this content:
 
 ```
----
-slug: {SLUG}
+---slug: {SLUG}
 title: {description}
 status: open
 created: {today ISO date}
 updated: {today ISO date}
 ---
-
 # Thread: {description}
 
 ## Goal

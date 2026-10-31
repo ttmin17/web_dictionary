@@ -89,7 +89,6 @@ For **scratch-pad module graphs** (Custom HLSL, Map Get/Set, Op, typed pins, wir
 **`NiagaraScratchPadService`** — also documented in the `niagara-emitters` skill.
 
 ---
-
 ## Loading skills
 
 Skills load through the engine's `AgentSkillToolset` (`ListSkills` / `GetSkills`) — there is no
@@ -98,7 +97,6 @@ Skills load through the engine's `AgentSkillToolset` (`ListSkills` / `GetSkills`
 reached with `call_tool` (discover them with `list_toolsets` / `describe_toolset`).
 
 ---
-
 ## ⚠️ System / emitter / parameter CRUD → engine NiagaraToolsets
 
 > 🛑 **CRASH RISK — Niagara user-parameter ops (issue #464).** The engine
@@ -135,7 +133,6 @@ Always inspect existing systems before creating a new one (use the engine `…_I
 toolset to search/summarize), and ask the user before duplicating an effect as a template.
 
 ---
-
 ## ⚠️ Parameter Discovery Order (rapid-iteration tuning)
 
 When tuning a parameter (e.g., color), VibeUE's `NiagaraService` covers the **rapid-iteration
@@ -158,7 +155,6 @@ for p in params:
 ```
 
 ---
-
 ## Quick Reference (VibeUE NiagaraService — kept methods)
 
 ```python
@@ -203,7 +199,6 @@ engine `NiagaraToolsets.*` tools shown above. After tuning, compile via the engi
   exists on disk (`unreal.EditorAssetLibrary.does_asset_exist(path)`) before doing anything else.
 
 ---
-
 ## ⚠️ User Parameter Types (engine `NiagaraToolsets` — reference)
 
 Adding a user-exposed parameter is now an engine `NiagaraToolsets` operation (run
@@ -245,7 +240,6 @@ engine `NiagaraToolsets` "add user parameter" tool (see `describe_toolset` for t
 names); data-interface types ignore the default value (a default DI instance is allocated).
 
 ---
-
 ## Related
 
 - **niagara-emitters** — color/curve authoring + scratch-pad Custom HLSL.

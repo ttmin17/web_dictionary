@@ -67,7 +67,6 @@ skill:
 Query and view alert events on the Nightingale monitoring platform. Supports querying current active alerts (not yet recovered), historical alerts (recovered/not recovered), and retrieving the detailed information of a single alert.
 
 ---
-
 ## Prerequisites
 
 The user must provide:
@@ -78,7 +77,6 @@ The user must provide:
 If the user has not provided the information above, use the AskUserQuestion tool to ask.
 
 ---
-
 ## Execution Steps
 
 ### Step 1: Log in to obtain a Token
@@ -142,7 +140,6 @@ Authorization: Bearer <token>
 Present the query results to the user in a readable Markdown table or list, including the key information: alert name, severity, trigger time, duration, trigger value, tags, etc.
 
 ---
-
 ## Query Parameter Reference
 
 ### Active alerts query parameters (alert-cur-events/list)
@@ -205,7 +202,6 @@ There are two ways to specify a time range (choose one):
 - When only `stime` is passed, `etime` is automatically set to the current time + 24 hours
 
 ---
-
 ## Response Data Structure
 
 ### List response
@@ -272,7 +268,6 @@ Historical alert events add the following on top of active alerts:
 | 1 | Recovered |
 
 ---
-
 ## Auxiliary Query APIs
 
 ### Get available event tag keys
@@ -308,7 +303,6 @@ Authorization: Bearer <token>
 ```
 
 ---
-
 ## Common Query Examples
 
 ### Example 1: View all active alerts
@@ -360,7 +354,6 @@ GET /api/n9e/alert-cur-event/12345
 ```
 
 ---
-
 ## Key Considerations
 
 1. **Active alerts vs. historical alerts**: active alerts include only the alerts currently not recovered; historical alerts include both recovered and not-recovered alerts

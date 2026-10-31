@@ -28,15 +28,16 @@ source:
 signals:
   stars: 707
   last_commit: 2026-10-17T23:30:31Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.4
-  trending_score: 3.01
-  rank_current: 76
-  rank_delta: null
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 118
+  rank_delta: -42
   velocity_source: snapshot_delta
   sparkline_4w:
     - 701
     - 704
+    - 707
     - 707
 language: en
 needs_keys: false

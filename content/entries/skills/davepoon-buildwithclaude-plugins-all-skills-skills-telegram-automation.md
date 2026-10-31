@@ -275,5 +275,4 @@ Automate Telegram operations through Composio's Telegram toolkit via Rube MCP.
 | Set bot commands | TELEGRAM_SET_MY_COMMANDS | commands |
 | Answer callback | TELEGRAM_ANSWER_CALLBACK_QUERY | callback_query_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

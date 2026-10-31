@@ -4,7 +4,9 @@ name: per-workspace-env
 tagline: "Set up, review, debug, or validate an Orca per-workspace environment
   recipe: the on-demand, disposable runtime (cloud sandbox, VM, SSH host, or
   local "
-summary: "Choose the executable once and reuse it for every later command:"
+summary: "- If the ORCACLICOMMAND environment variable is set, use its value.
+  Orca exports this for managed WSL sessions. - Otherwise, in a dev checkout
+  whose session exposes ORCADEVREPOROOT, use orca-dev. - Otherwise, on Linux..."
 categories:
   - agent-frameworks
 tags:

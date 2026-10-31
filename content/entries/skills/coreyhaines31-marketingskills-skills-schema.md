@@ -87,7 +87,6 @@ Before implementing schema, understand:
 3. **Goals** - Which rich results are you targeting? What's the business value?
 
 ---
-
 ## Core Principles
 
 ### 1. Accuracy First
@@ -111,7 +110,6 @@ Before implementing schema, understand:
 - Fix errors promptly
 
 ---
-
 ## Common Schema Types
 
 | Type | Use For | Required Properties |
@@ -140,7 +138,6 @@ Schema.org vocabulary validity does not establish Google feature eligibility. Be
 These types can still describe matching visible content in Schema.org. Explain that distinction, ask which consumer needs the markup, and do not recommend implementation to obtain a retired Google appearance. Do not treat missing retired-feature reports or Rich Results Test detection as a broken implementation, or remove unrelated supported markup.
 
 ---
-
 ## Quick Reference
 
 ### Organization (Company Page)
@@ -163,7 +160,6 @@ Optional semantic markup for visible FAQs; not a way to obtain Google FAQ rich r
 Required: itemListElement (array with position, name, item)
 
 ---
-
 ## Multiple Schema Types
 
 You can combine multiple schema types on one page using `@graph`:
@@ -180,7 +176,6 @@ You can combine multiple schema types on one page using `@graph`:
 ```
 
 ---
-
 ## Validation and Testing
 
 ### Tools
@@ -197,7 +192,6 @@ You can combine multiple schema types on one page using `@graph`:
 **Mismatch with page content** - Schema doesn't match visible content
 
 ---
-
 ## Implementation
 
 ### Static Sites
@@ -215,7 +209,6 @@ You can combine multiple schema types on one page using `@graph`:
 - Custom fields to structured data
 
 ---
-
 ## Output Format
 
 ### Schema Implementation
@@ -236,7 +229,6 @@ You can combine multiple schema types on one page using `@graph`:
 - [ ] All required properties included
 
 ---
-
 ## Task-Specific Questions
 
 1. What type of page is this?
@@ -246,7 +238,6 @@ You can combine multiple schema types on one page using `@graph`:
 5. What's your tech stack?
 
 ---
-
 ## Related Skills
 
 - **seo-audit**: For overall SEO including schema review

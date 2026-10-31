@@ -28,14 +28,15 @@ source:
 signals:
   stars: 846
   last_commit: 2026-10-17T16:47:08Z
-  stars_delta_7d: 10
-  stars_growth_pct: 1.2
-  trending_score: 10.12
-  rank_current: 41
-  rank_delta: null
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 151
+  rank_delta: -110
   velocity_source: snapshot_delta
   sparkline_4w:
     - 836
+    - 846
     - 846
 language: en
 needs_keys: false
@@ -107,7 +108,6 @@ tool:
 </p>
 
 ---
-
 > Maintainer status and the current public work boundary live in
 > [ACTIVE_WORK.md](https://github.com/AVIDS2/memorix/blob/main/ACTIVE_WORK.md). It is the repository's single living work
 > tracker.

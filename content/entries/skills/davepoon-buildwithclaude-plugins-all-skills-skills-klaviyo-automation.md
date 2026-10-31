@@ -246,5 +246,4 @@ fields__template=['name', 'html', 'text']
 | Get campaign tags | KLAVIYO_GET_CAMPAIGN_RELATIONSHIPS_TAGS | id |
 | Get send job status | KLAVIYO_GET_CAMPAIGN_SEND_JOB | id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

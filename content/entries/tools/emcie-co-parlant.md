@@ -27,7 +27,7 @@ source:
 signals:
   stars: 18311
   last_commit: 2026-10-23T13:49:00Z
-  stars_delta_7d: 126
+  stars_delta_7d: 764
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -49,14 +49,7 @@ tool:
   install_command: pip install parlant
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - parlant
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Build reliable customer-facing AI agents with Parlant: an interaction control harness optimized for controlled, consistent, and predictable LLM interactions.

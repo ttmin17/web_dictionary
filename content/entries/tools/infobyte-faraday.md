@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 18
   stars_growth_pct: 0.3
   trending_score: 18.05
-  rank_current: 104
-  rank_delta: null
+  rank_current: 105
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6803
@@ -52,14 +51,7 @@ tool:
   install_command: pip install faradaysec
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - faradaysec
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Open-source and AI-powered cybersecurity tools for offensive security, vulnerability management, and autonomous pentesting. Built by hackers in Latin America, used worldwide.

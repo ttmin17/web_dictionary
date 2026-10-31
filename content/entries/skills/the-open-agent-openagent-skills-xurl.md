@@ -66,7 +66,6 @@ skill:
 `xurl` is a CLI tool for the X API. It supports both **shortcut commands** (human/agent‑friendly one‑liners) and **raw curl‑style** access to any v2 endpoint. All commands return JSON to stdout.
 
 ---
-
 ## Installation
 
 ### Homebrew (macOS)
@@ -96,7 +95,6 @@ go install github.com/xdevplatform/xurl@latest
 ```
 
 ---
-
 ## Prerequisites
 
 This skill requires the `xurl` CLI utility: <https://github.com/xdevplatform/xurl>.
@@ -138,7 +136,6 @@ Examples with inline secret flags are intentionally omitted. If OAuth1 or app-on
 Tokens are persisted to `~/.xurl` in YAML format. Each app has its own isolated tokens. Do not read this file through the agent/LLM. Once authenticated, every command below will auto‑attach the right `Authorization` header.
 
 ---
-
 ## Quick Reference
 
 | Action                    | Command                                               |
@@ -188,7 +185,6 @@ Tokens are persisted to `~/.xurl` in YAML format. Each app has its own isolated 
 > **Usernames:** Leading `@` is optional. `@elonmusk` and `elonmusk` both work.
 
 ---
-
 ## Command Details
 
 ### Posting
@@ -329,7 +325,6 @@ xurl post "lol" --media-id MEDIA_ID
 ```
 
 ---
-
 ## Global Flags
 
 These flags work on every command:
@@ -343,7 +338,6 @@ These flags work on every command:
 | `--trace`    | `-t`  | Add `X-B3-Flags: 1` trace header                                   |
 
 ---
-
 ## Raw API Access
 
 The shortcut commands cover the most common operations. For anything else, use xurl's raw curl‑style mode — it works with **any** X API v2 endpoint:
@@ -369,7 +363,6 @@ xurl https://api.x.com/2/users/me
 ```
 
 ---
-
 ## Common Workflows
 
 ### Post with an image
@@ -413,7 +406,6 @@ xurl timeline -n 20
 ```
 
 ---
-
 ## Error Handling
 
 - Non‑zero exit code on any error.
@@ -422,7 +414,6 @@ xurl timeline -n 20
 - If a command requires your user ID (like, repost, bookmark, follow, etc.), xurl will automatically fetch it via `/2/users/me`. If that fails, you'll see an auth error.
 
 ---
-
 ## Notes
 
 - **Rate limits:** The X API enforces rate limits per endpoint. If you get a 429 error, wait and retry. Write endpoints (post, reply, like, repost) have stricter limits than read endpoints.

@@ -29,7 +29,6 @@ signals:
   stars_growth_pct: 0.7
   trending_score: 155.14
   rank_current: 44
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20721
@@ -50,14 +49,7 @@ tool:
   install_command: pip install pydantic-ai
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - pydantic-ai
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.

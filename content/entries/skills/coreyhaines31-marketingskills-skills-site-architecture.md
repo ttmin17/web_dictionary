@@ -111,7 +111,6 @@ Gather this context (ask if not provided):
 - Any planned sections or expansions?
 
 ---
-
 ## Site Types and Starting Points
 
 | Site Type | Typical Depth | Key Sections | URL Pattern |
@@ -126,7 +125,6 @@ Gather this context (ask if not provided):
 **For full page hierarchy templates**: See [references/site-type-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/site-architecture/references/site-type-templates.md)
 
 ---
-
 ## Page Hierarchy Design
 
 ### The 3-Click Rule
@@ -182,7 +180,6 @@ Homepage (/)
 - Mermaid: visual presentations, complex relationships, showing nav zones or linking patterns
 
 ---
-
 ## Navigation Design
 
 ### Navigation Types
@@ -224,7 +221,6 @@ Breadcrumbs should mirror the URL hierarchy. Every breadcrumb segment should be 
 **For detailed navigation patterns**: See [references/navigation-patterns.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/site-architecture/references/navigation-patterns.md)
 
 ---
-
 ## URL Structure
 
 ### Design Principles
@@ -273,7 +269,6 @@ The breadcrumb trail should mirror the URL path:
 | `/docs/api/auth` | Home > Docs > API > Authentication |
 
 ---
-
 ## Visual Sitemap Output (Mermaid)
 
 Use Mermaid `graph TD` for visual sitemaps. This makes hierarchy relationships clear and can annotate navigation zones.
@@ -326,7 +321,6 @@ graph TD
 **For more Mermaid templates**: See [references/mermaid-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/site-architecture/references/mermaid-templates.md)
 
 ---
-
 ## Internal Linking Strategy
 
 ### Link Types
@@ -372,7 +366,6 @@ Each spoke links back to the hub. The hub links to all spokes. Spokes link to ea
 - [ ] Cross-section links connect features to case studies, blog to product pages
 
 ---
-
 ## Output Format
 
 When creating a site architecture plan, provide these deliverables:
@@ -406,7 +399,6 @@ Mermaid diagram showing page relationships and navigation zones. Use `graph TD` 
 - Recommended links per key page
 
 ---
-
 ## Task-Specific Questions
 
 1. Is this a new site or are you restructuring an existing one?
@@ -417,7 +409,6 @@ Mermaid diagram showing page relationships and navigation zones. Use `graph TD` 
 6. Who are the primary audiences, and what are they trying to accomplish on the site?
 
 ---
-
 ## Related Skills
 
 - **content-strategy**: For planning what content to create and topic clusters

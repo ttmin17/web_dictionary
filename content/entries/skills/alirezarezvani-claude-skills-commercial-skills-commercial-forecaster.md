@@ -4,7 +4,9 @@ name: commercial-forecaster
 tagline: Use when building a quarterly bookings forecast, ARR projection,
   pipeline forecast, NRR projection, or commit/best-case/pipe-only board number
   — espec
-summary: "Help Commercial leaders answer three questions at the forecast moment:"
+summary: 1. What's the commit / best-case / pipe-only number? (3-tier bookings
+  forecast with disclosed assumptions) 2. Which cohorts are leaking, and is the
+  consolidated NRR hiding the leak? (per-cohort NRR/GRR projection over...
 categories:
   - coding-agents
 tags:
@@ -26,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

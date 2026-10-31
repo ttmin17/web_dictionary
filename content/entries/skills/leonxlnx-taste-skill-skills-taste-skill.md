@@ -4,7 +4,9 @@ name: design-taste-frontend
 tagline: "tasteskill v2, the anti-slop frontend skill. Art direction for
   websites, distilled from a study of 247 curated gallery sites (One Page Love,
   Awwwards "
-summary: "This skill replaces those defaults with decisions, in four ways:"
+summary: 1. A script deals the directions, you choose among them. Asked to
+  invent a look, a model picks the category default every time. scripts/draw.mjs
+  deals three of twenty researched directions; you choose the one that car...
 categories:
   - media-creative
 tags:
@@ -30,7 +32,6 @@ signals:
   stars_growth_pct: 3.7
   trending_score: 3765.24
   rank_current: 6
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 93423

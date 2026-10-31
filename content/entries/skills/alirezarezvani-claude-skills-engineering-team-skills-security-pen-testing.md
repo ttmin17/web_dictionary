@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -73,7 +73,6 @@ skill:
 Hands-on offensive security testing skill for finding vulnerabilities before attackers do. This is NOT compliance checking (see senior-secops) or security policy writing (see senior-security) — this is about systematic vulnerability discovery through authorized testing.
 
 ---
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -91,7 +90,6 @@ Hands-on offensive security testing skill for finding vulnerabilities before att
 - [Cross-References](#cross-references)
 
 ---
-
 ## Overview
 
 ### What This Skill Does
@@ -112,7 +110,6 @@ This skill provides the methodology, checklists, and automation for **offensive 
 All testing described here assumes **written authorization** from the system owner. Unauthorized testing is illegal under the CFAA and equivalent laws worldwide. Always obtain a signed scope-of-work or rules-of-engagement document before starting.
 
 ---
-
 ## OWASP Top 10 Systematic Audit
 
 Use the vulnerability scanner tool for automated checklist generation:
@@ -149,7 +146,6 @@ python scripts/dependency_auditor.py --file requirements.txt --json
 See [owasp_top_10_checklist.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering-team/skills/security-pen-testing/references/owasp_top_10_checklist.md) for detailed test procedures, code patterns to detect, remediation steps, and CVSS scoring guidance for each category.
 
 ---
-
 ## Static Analysis
 
 **Recommended tools:** CodeQL (custom queries for project-specific patterns), Semgrep (rule-based scanning with auto-fix), ESLint security plugins (`eslint-plugin-security`, `eslint-plugin-no-unsanitized`).
@@ -159,7 +155,6 @@ Key patterns to detect: SQL injection via string concatenation, hardcoded JWT se
 See [attack_patterns.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering-team/skills/security-pen-testing/references/attack_patterns.md) for code patterns and detection payloads across injection types.
 
 ---
-
 ## Dependency Vulnerability Scanning
 
 **Ecosystem commands:** `npm audit`, `pip audit`, `govulncheck ./...`, `bundle audit check`
@@ -176,7 +171,6 @@ python scripts/dependency_auditor.py --file package.json --severity critical --j
 ```
 
 ---
-
 ## Secret Scanning
 
 **Tools:** TruffleHog (git history + filesystem), Gitleaks (regex-based with custom rules).
@@ -192,7 +186,6 @@ trufflehog filesystem . --json
 **Integration points:** Pre-commit hooks (gitleaks, trufflehog), CI/CD gates (GitHub Actions with `trufflesecurity/trufflehog@main`). Configure `.gitleaks.toml` for custom rules (AWS keys, API keys, private key headers) and allowlists for test fixtures.
 
 ---
-
 ## API Security Testing
 
 ### Authentication Bypass
@@ -214,7 +207,6 @@ trufflehog filesystem . --json
 See [attack_patterns.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering-team/skills/security-pen-testing/references/attack_patterns.md) for complete JWT manipulation payloads, IDOR testing methodology, BFLA endpoint lists, GraphQL introspection/depth/batch attack patterns, and rate limiting bypass techniques.
 
 ---
-
 ## Web Vulnerability Testing
 
 | Vulnerability | Key Tests |
@@ -228,7 +220,6 @@ See [attack_patterns.md](https://github.com/alirezarezvani/claude-skills/blob/ma
 See [attack_patterns.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering-team/skills/security-pen-testing/references/attack_patterns.md) for complete test payloads (XSS filter bypasses, context-specific XSS, SQL injection per database engine, SSRF bypass techniques, and DOM-based XSS source/sink pairs).
 
 ---
-
 ## Infrastructure Security
 
 **Key checks:**
@@ -238,7 +229,6 @@ See [attack_patterns.md](https://github.com/alirezarezvani/claude-skills/blob/ma
 - **Port scanning:** `nmap -sV target.com` — flag dangerous open ports (FTP/21, Telnet/23, Redis/6379, MongoDB/27017)
 
 ---
-
 ## Pen Test Report Generation
 
 Generate professional reports from structured findings:
@@ -281,7 +271,6 @@ python scripts/pentest_report_generator.py --findings findings.json --format jso
 7. **Appendix**: Raw tool output, full payload lists
 
 ---
-
 ## Responsible Disclosure Workflow
 
 Responsible disclosure is **mandatory** for any vulnerability found during authorized testing. Standard timeline: report on day 1, follow up at day 7, status update at day 30, public disclosure at day 90.
@@ -291,7 +280,6 @@ Responsible disclosure is **mandatory** for any vulnerability found during autho
 See [responsible_disclosure.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering-team/skills/security-pen-testing/references/responsible_disclosure.md) for full disclosure timelines (standard 90-day, accelerated 30-day, extended 120-day), communication templates, legal considerations, bug bounty program integration, and CVE request process.
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Quick Security Check (15 Minutes)
@@ -347,7 +335,6 @@ Automated security checks on every PR: secret scanning (TruffleHog), dependency 
 **Gate Policy**: Block merge on critical/high findings. Warn on medium. Log low/info.
 
 ---
-
 ## Anti-Patterns
 
 1. **Testing in production without authorization** — Always get written permission and use staging/test environments when possible
@@ -360,7 +347,6 @@ Automated security checks on every PR: secret scanning (TruffleHog), dependency 
 8. **One-time testing** — Security testing must be continuous; integrate into CI/CD and schedule periodic assessments
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |

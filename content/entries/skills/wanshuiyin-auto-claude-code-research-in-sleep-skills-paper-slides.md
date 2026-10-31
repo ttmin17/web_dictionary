@@ -543,7 +543,6 @@ This is different from speaker notes (brief reminders). The talk script is a **f
 **Total slides**: [N]
 
 ---
-
 ## Slide 1: Title [0:00 - 0:15]
 
 *[Wait for chair introduction]*
@@ -551,7 +550,6 @@ This is different from speaker notes (brief reminders). The talk script is a **f
 "Thank you [chair name]. I'm [author] from [affiliation], and today I'll be talking about [short title]."
 
 ---
-
 ## Slide 2: Motivation [0:15 - 1:30]
 
 "Let me start with the problem. [Describe the real-world motivation in accessible terms]. This matters because [impact statement].
@@ -561,7 +559,6 @@ The current state of the art approaches this with [brief existing approach]. But
 → *Transition*: "So what's our key insight?"
 
 ---
-
 ## Slide 3: Key Insight [1:30 - 2:30]
 
 "Our key observation is that [core insight in one sentence].
@@ -571,13 +568,11 @@ This leads us to propose [method name], which [one-sentence description]."
 → *Transition*: "Let me walk you through how this works."
 
 ---
-
 ## Slide 4-N: [Continue for each slide...]
 
 ...
 
 ---
-
 ## Slide [N]: Thank You [TALK_MINUTES:00]
 
 "To summarize: we've shown that [main result]. The key takeaway is [memorable final message].
@@ -585,7 +580,6 @@ This leads us to propose [method name], which [one-sentence description]."
 The paper and code are available at the QR code on screen. I'm happy to take questions."
 
 ---
-
 ## Time Budget Summary
 
 | Slide | Topic | Duration | Cumulative |
@@ -599,7 +593,6 @@ The paper and code are available at the QR code on screen. I'm happy to take que
 **Total**: [sum] min (target: [TALK_MINUTES] min)
 
 ---
-
 ## Anticipated Q&A
 
 ### Q1: How does this compare to [strongest baseline]?

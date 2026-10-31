@@ -3,7 +3,10 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-linear
 name: ops-linear
 tagline: Linear command center. Shows current sprint, creates/updates issues,
   manages priorities, syncs with GSD phases.
-summary: "Before executing, load available context:"
+summary: "1. Secrets: Linear API key required for MCP fallback queries. ###
+  Secret Resolution - Check $LINEARAPIKEY env var - Then: Doppler MCP tools
+  (mcpdoppler) — if Doppler MCP server is configured - Then: doppler secrets
+  ge..."
 categories:
   - productivity-ops
 tags:
@@ -82,7 +85,6 @@ Before executing, load available context:
 | `curl -X POST https://api.linear.app/graphql -H "Authorization: $LINEAR_API_KEY" -H "Content-Type: application/json" -d '{"query":"{ cycles(filter: {isActive: {eq: true}}) { nodes { id number startsAt endsAt } } }"}'` | Current cycles | JSON |
 
 ---
-
 ## Phase 1 — Load data
 
 Run in parallel:
@@ -93,7 +95,6 @@ Run in parallel:
 Then fetch issues for the current cycle: `mcp__linear__list_issues` filtered to current cycle ID.
 
 ---
-
 ## Route by `$ARGUMENTS`
 
 | Argument        | Action                                  |
@@ -106,7 +107,6 @@ Then fetch issues for the current cycle: `mcp__linear__list_issues` filtered to 
 | [issue-id]      | Show and edit that specific issue       |
 
 ---
-
 ## Sprint board view
 
 ```
@@ -148,7 +148,6 @@ AskUserQuestion call 2 (only if "More..."):
 ```
 
 ---
-
 ## Create issue flow
 
 Collect from user (or parse from `$ARGUMENTS`):
@@ -163,7 +162,6 @@ Collect from user (or parse from `$ARGUMENTS`):
 Use `mcp__linear__create_issue` to create. Confirm: `Created [id]: [title]`
 
 ---
-
 ## GSD sync flow
 
 Read all active GSD STATE.md files across projects. For each active phase:
@@ -177,7 +175,6 @@ Update Linear issues to match GSD phase completion status.
 Use AskUserQuestion after displaying any view to get the next action.
 
 ---
-
 ## Native tool usage
 
 ### Tasks — sprint work tracking

@@ -4,7 +4,9 @@ name: process-mapper
 tagline: Use when a BizOps lead, COO, or process-improvement owner needs to
   document an end-to-end business process (procurement, employee onboarding,
   incident
-summary: "Internal-operations work suffers from three recurring failure modes:"
+summary: 1. Implicit process — the steps exist only in tribal knowledge, so
+  handoffs drop and onboarding takes weeks. 2. Invisible waiting — most of the
+  elapsed time on any business process is queue / wait / approval time, not...
 categories:
   - coding-agents
 tags:
@@ -26,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

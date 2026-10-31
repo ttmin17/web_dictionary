@@ -25,11 +25,12 @@ source:
 signals:
   stars: 776
   last_commit: 2026-10-11T23:22:22Z
-  stars_delta_7d: 18
+  stars_delta_7d: 28
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
+    - 776
     - 776
 language: en
 needs_keys: false

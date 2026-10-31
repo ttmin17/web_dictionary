@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -77,7 +77,6 @@ skill:
 Test automation, coverage analysis, and quality assurance patterns for React and Next.js applications.
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -92,7 +91,6 @@ python scripts/e2e_test_scaffolder.py src/app/ --output e2e/
 ```
 
 ---
-
 ## Tools Overview
 
 ### 1. Test Suite Generator
@@ -121,7 +119,6 @@ python scripts/test_suite_generator.py src/ --template custom-template.tsx
 - Form components with validation
 
 ---
-
 ### 2. Coverage Analyzer
 
 Parses Jest/Istanbul coverage reports and identifies gaps, uncovered branches, and provides actionable recommendations.
@@ -142,7 +139,6 @@ python scripts/coverage_analyzer.py coverage/ --format html --output report.html
 ```
 
 ---
-
 ### 3. E2E Test Scaffolder
 
 Scans Next.js pages/app directory and generates Playwright test files with common interactions.
@@ -163,7 +159,6 @@ python scripts/e2e_test_scaffolder.py src/app/ --routes "/login,/dashboard,/chec
 ```
 
 ---
-
 ## QA Workflows
 
 ### Unit Test Generation Workflow
@@ -210,7 +205,6 @@ python scripts/coverage_analyzer.py coverage/coverage-final.json
 ```
 
 ---
-
 ### Coverage Analysis Workflow
 
 Use when improving test coverage or preparing for release.
@@ -242,7 +236,6 @@ python scripts/coverage_analyzer.py coverage/ --compare previous-coverage.json
 ```
 
 ---
-
 ### E2E Test Setup Workflow
 
 Use when setting up Playwright for a Next.js project.
@@ -293,7 +286,6 @@ npx playwright show-report
 ```
 
 ---
-
 ## Reference Documentation
 
 | File | Contains | Use When |
@@ -303,7 +295,6 @@ npx playwright show-report
 | `references/qa_best_practices.md` | Testable code, flaky tests, debugging, quality metrics | Improving test quality |
 
 ---
-
 ## Common Patterns Quick Reference
 
 ### React Testing Library Queries
@@ -378,7 +369,6 @@ module.exports = {
 ```
 
 ---
-
 ## Common Commands
 
 ```bash

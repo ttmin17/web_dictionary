@@ -3,9 +3,7 @@ slug: morluto-rea
 name: rea
 tagline: Reverse engineer anything with agents, from app behavior down to native
   binaries.
-summary: English · 简体中文 · 繁體中文 · 日本語 · 한국어 · Türkçe · Русский · Tiếng Việt · ไทย
-  · Deutsch · Español · Français · Українська · Polski · Português (Brasil) ·
-  العربية · فارسی · Bahasa Indonesia · Italiano · Ελληνικά · മലയാളം · R...
+summary: See a feature you like. Understand how it works, down to the binary level.
 categories:
   - security-auth
 tags:
@@ -123,7 +121,6 @@ tool:
 </div>
 
 ---
-
 See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project.
 
 REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion.

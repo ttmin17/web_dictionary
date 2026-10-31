@@ -2,7 +2,7 @@
 slug: thedotmack-claude-mem-plugin-skills-build-and-release
 name: build-and-release
 tagline: Fully automate building and releasing a coding task.
-summary: "Use these claude-mem skills in order:"
+summary: 1. build 2. Merge the ready PR and continue from updated main. 3. release
 categories:
   - databases-memory
 tags:

@@ -3,7 +3,7 @@ slug: alirezarezvani-claude-skills-engineering-autoresearch-agent-skills-ar-stat
 name: ar-status
 tagline: Show experiment dashboard with results, active loops, and progress. Use
   when the user runs /ar:ar-status or asks how an autoresearch experiment is goi
-summary: "Also check for active loop:"
+summary: For each experiment, also check for loop.json and show loop status.
 categories:
   - coding-agents
 tags:
@@ -25,7 +25,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

@@ -27,8 +27,8 @@ signals:
   stars_delta_7d: 36
   stars_growth_pct: 2
   trending_score: 36.73
-  rank_current: 45
-  rank_delta: -8
+  rank_current: 49
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1707
@@ -153,7 +153,6 @@ openosint > investigate example.com
   The entities are seeded at the statement layer, not produced by today's mappers — see <a href="https://github.com/OpenOSINT/OpenOSINT/blob/main/demo/README.md">demo/README.md</a>.</em></p>
 </div>
 ---
-
 > **Legal Disclaimer**: OpenOSINT is intended for **legal and authorized use only**.
 > Users are solely responsible for ensuring their use complies with all applicable laws and regulations.
 > The authors accept no liability for misuse. See [DISCLAIMER.md](https://github.com/OpenOSINT/OpenOSINT/blob/main/DISCLAIMER.md).
@@ -510,7 +509,6 @@ openosint footprint johndoe99
 ```
 
 ---
-
 ## Graph module (optional)
 
 An additive [FollowTheMoney](https://followthemoney.tech/) entity graph —
@@ -535,7 +533,6 @@ passes `ftm validate` — in the terminal demo in
 of this README.
 
 ---
-
 ## External exposure report (beta)
 
 `openosint exposure` checks one domain from the outside and gives it an A-F grade. It is point-in-time: organisation-level checks of email authentication, TLS, domain registration and security headers, plus optional lookalike domains. The email, registration and lookalike checks are passive (DNS and RDAP only); the TLS and security-header checks make one connection to the target on port 443. No AI provider or API key is needed.
@@ -566,7 +563,6 @@ It does **not** scan ports, log in to anything, or collect personal data. The gr
 This feature is **beta**: checks, scoring and the report format may change between releases. The HTML report footer shows its `report_version`.
 
 ---
-
 ## Interfaces
 
 ### Web UI
@@ -758,7 +754,6 @@ $ claude
 ```
 
 ---
-
 ## Installation
 
 ### Quickstart — web UI in one command
@@ -1071,7 +1066,6 @@ See [`scripts/record-demo/README.md`](https://github.com/OpenOSINT/OpenOSINT/blo
 OpenOSINT is open source under the [MIT License](https://github.com/OpenOSINT/OpenOSINT/blob/main/LICENSE) — free for any use, including personal, commercial, academic, and closed-source.
 
 ---
-
 ¹ Bright Data links in this README are affiliate/referral links — OpenOSINT earns a commission if you sign up through them, at no extra cost to you.
 
 *For authorized security research only. See [DISCLAIMER.md](https://github.com/OpenOSINT/OpenOSINT/blob/main/DISCLAIMER.md).*

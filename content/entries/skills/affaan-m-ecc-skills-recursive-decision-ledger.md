@@ -4,7 +4,10 @@ name: recursive-decision-ledger
 tagline: Run repeated rollouts ("Prime Gauss" style recursive prompting) while
   keeping an append-only decision ledger of trials, marks, coherence checks, and
   p
-summary: "Every rollout should record:"
+summary: "- rollout id and timestamp; - prior accepted winner and prior
+  watchlist; - fresh information ingested; - search space size; - model families
+  or heuristics used; - trial count and effective trial count; - top
+  candidate..."
 categories:
   - productivity-ops
 tags:

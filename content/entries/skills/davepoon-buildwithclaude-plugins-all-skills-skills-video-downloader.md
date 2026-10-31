@@ -4,7 +4,8 @@ name: video-downloader
 tagline: Download YouTube videos with customizable quality and format options.
   Use this skill when the user asks to download, save, or grab YouTube videos.
   Sup
-summary: "The simplest way to download a video:"
+summary: This downloads the video in best available quality as MP4 to
+  /mnt/user-data/outputs/.
 categories:
   - browser-web
 tags:

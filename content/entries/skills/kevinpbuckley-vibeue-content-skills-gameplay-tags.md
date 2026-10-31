@@ -148,7 +148,6 @@ if info is not None:
 ```
 
 ---
-
 ## Workflows
 
 ### Add Tags for StateTree Events
@@ -241,7 +240,6 @@ Removing a single tag is an engine **`GameplayTagsToolset`** action (via `call_t
 is gone from Python with `has_tag` / `get_children` on the parent.
 
 ---
-
 ## API Reference
 
 VibeUE delta (call as `unreal.GameplayTagService.<method>` via `execute_python_code`):

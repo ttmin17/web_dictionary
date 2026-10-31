@@ -3,7 +3,10 @@ slug: ruvnet-ruflo-plugins-ruflo-autopilot-skills-autopilot-loop
 name: autopilot-loop
 tagline: Run an autonomous /loop iteration -- check progress, work on next task,
   schedule next wake
-summary: "Run one autopilot iteration using Claude Code's native /loop:"
+summary: "1. Check status: mcppluginruflo-corerufloautopilotstatus 2. If all
+  tasks complete or max iterations reached, call
+  mcppluginruflo-corerufloautopilotdisable and stop 3. Get prediction:
+  mcppluginruflo-corerufloautopilotp..."
 categories:
   - agent-frameworks
 tags:

@@ -280,7 +280,6 @@ Rejects moving a panel into itself/a descendant; the root cannot be reparented.
 | `Overlay` | Stack children on top of each other |
 
 ---
-
 ## Task Index
 
 Pick the task, load its workflow section, and/or run its sample script via `execute_python_code`.

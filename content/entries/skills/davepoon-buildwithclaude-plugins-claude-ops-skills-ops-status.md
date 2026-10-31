@@ -93,7 +93,6 @@ Each integration resolves to one of four status strings:
 The script is designed to run in **under 1 second** with no network calls.
 
 ---
-
 ## What this skill does
 
 1. Run the status script and print its output verbatim:
@@ -109,7 +108,6 @@ ${CLAUDE_PLUGIN_ROOT}/bin/ops-status $ARGUMENTS
    - `/ops:go` — full morning briefing with live data
 
 ---
-
 ## Example output
 
 ```

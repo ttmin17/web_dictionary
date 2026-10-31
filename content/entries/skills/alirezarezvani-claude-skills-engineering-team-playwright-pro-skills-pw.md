@@ -4,7 +4,10 @@ name: playwright-pro
 tagline: "Production-grade Playwright testing toolkit. Use when the user
   mentions Playwright tests, end-to-end testing, browser automation, fixing
   flaky tests, "
-summary: "When installed as a Claude Code plugin, these are available as /pw: commands:"
+summary: "Validation checkpoints: - After /pw:generate — always run
+  /pw:pw-review before committing; it catches locator anti-patterns and missing
+  assertions automatically. - After /pw:fix — re-run the full suite locally (npx
+  pl..."
 categories:
   - coding-agents
 tags:
@@ -26,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

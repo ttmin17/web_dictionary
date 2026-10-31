@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -79,7 +79,6 @@ skill:
 Test-driven development skill for generating tests, analyzing coverage, and guiding red-green-refactor workflows across Jest, Pytest, JUnit, and Vitest.
 
 ---
-
 ## Workflows
 
 ### Generate Tests from Code
@@ -108,7 +107,6 @@ Test-driven development skill for generating tests, analyzing coverage, and guid
 6. **Validation:** All tests pass after each cycle
 
 ---
-
 ## Examples
 
 ### Test Generation — Input → Output (Pytest)
@@ -150,7 +148,6 @@ class TestDivide:
 ```
 
 ---
-
 ### Coverage Analysis — Sample P0/P1/P2 Output
 
 **Command:**
@@ -177,7 +174,6 @@ Recommended: Generate tests for P0 items first to reach 80% threshold.
 ```
 
 ---
-
 ## Key Tools
 
 | Tool | Purpose | Usage |
@@ -190,7 +186,6 @@ Recommended: Generate tests for P0 items first to reach 80% threshold.
 Additional scripts: `framework_adapter.py` (convert between frameworks), `metrics_calculator.py` (quality metrics), `format_detector.py` (detect language/framework), `output_formatter.py` (CLI/desktop/CI output).
 
 ---
-
 ## Input Requirements
 
 **For Test Generation:**
@@ -209,7 +204,6 @@ Additional scripts: `framework_adapter.py` (convert between frameworks), `metric
 - Test code and implementation status
 
 ---
-
 ## Spec-First Workflow
 
 TDD is most effective when driven by a written spec. The flow:
@@ -250,7 +244,6 @@ Each acceptance criterion in a spec maps to at least one test:
 > **Cross-reference:** See `engineering/spec-driven-workflow` for the full spec methodology, including spec templates and review checklists.
 
 ---
-
 ## Red-Green-Refactor Examples Per Language
 
 ### TypeScript / Jest
@@ -353,7 +346,6 @@ func TestApplyDiscount(t *testing.T) {
 ```
 
 ---
-
 ## Bounded Autonomy Rules
 
 When generating tests autonomously, follow these rules to decide when to stop and ask the user:
@@ -375,7 +367,6 @@ When generating tests autonomously, follow these rules to decide when to stop an
 - **Existing test patterns** — the codebase already has similar tests to follow
 
 ---
-
 ## Property-Based Testing
 
 Property-based testing generates random inputs to verify invariants instead of relying on hand-picked examples. Use it when the input space is large and the expected behavior can be described as a property.
@@ -422,7 +413,6 @@ test("encode/decode roundtrip", () => {
 | Parser correctness | Valid input always parses without error |
 
 ---
-
 ## Mutation Testing
 
 Mutation testing modifies your production code (creates "mutants") and checks whether your tests catch the changes. If a mutant survives (tests still pass), your tests have a gap that coverage alone cannot reveal.
@@ -445,7 +435,6 @@ Mutation testing modifies your production code (creates "mutants") and checks wh
 **Recommendation:** Run mutation testing on critical paths (auth, payments, data processing) even if overall coverage is high. Target 85%+ mutation score on P0 modules.
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |
@@ -457,7 +446,6 @@ Mutation testing modifies your production code (creates "mutants") and checks wh
 | `engineering-team/senior-fullstack` | Project scaffolders include testing infrastructure compatible with TDD workflows |
 
 ---
-
 ## Limitations
 
 | Scope | Details |

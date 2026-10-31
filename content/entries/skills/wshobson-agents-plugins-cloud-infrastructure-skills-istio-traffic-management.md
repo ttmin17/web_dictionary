@@ -120,8 +120,7 @@ spec:
         - destination:
             host: reviews
             subset: v1
----
-apiVersion: networking.istio.io/v1beta1
+---apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: reviews-destination
@@ -160,8 +159,7 @@ spec:
             host: my-service
             subset: canary
           weight: 10
----
-apiVersion: networking.istio.io/v1beta1
+---apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: my-service-dr
@@ -299,8 +297,7 @@ spec:
         credentialName: my-tls-secret
       hosts:
         - "*.example.com"
----
-apiVersion: networking.istio.io/v1beta1
+---apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: my-vs
@@ -332,8 +329,7 @@ spec:
   trafficPolicy:
     loadBalancer:
       simple: ROUND_ROBIN # or LEAST_CONN, RANDOM, PASSTHROUGH
----
-# Consistent hashing for sticky sessions
+---# Consistent hashing for sticky sessions
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:

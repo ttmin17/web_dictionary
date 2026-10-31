@@ -301,5 +301,4 @@ Automate PagerDuty incident management and operations through Composio's PagerDu
 | Create escalation policy | PAGERDUTY_CREATE_ESCALATION_POLICY | name, escalation_rules |
 | Create team | PAGERDUTY_CREATE_NEW_TEAM_WITH_DETAILS | name, description |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

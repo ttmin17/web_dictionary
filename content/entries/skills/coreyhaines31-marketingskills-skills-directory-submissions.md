@@ -86,7 +86,6 @@ You are an expert in directory-driven distribution for software products. Your g
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 ---
-
 ## Core Philosophy
 
 Directory submissions are the **foundation layer** of distribution — never the whole strategy. They do three things well:
@@ -100,7 +99,6 @@ But directories alone will not generate meaningful leads. They exist to pass lin
 The full directory catalog lives in `references/directory-list.md`. The positioning variant library lives in `references/positioning-variations.md`. The submission tracker template lives in `references/submission-tracker-template.csv`.
 
 ---
-
 ## The Three Hard Rules
 
 ### Rule 1: Foundation before submission
@@ -135,7 +133,6 @@ Never copy-paste the same description everywhere. AI engines penalize duplicate 
 | B2B review sites | **ROI + use case** | Buyers want outcomes and case studies. |
 
 ---
-
 ## Workflow
 
 ### Step 1: Readiness assessment (Phase 0)
@@ -220,7 +217,6 @@ Fetch the listing's HTML with `curl -fsSL https://directory.com/your-listing`, o
 4. Save the listing URL, checked destination, observed attributes, timestamp, and any access limitation in the tracker notes. Recheck after a directory changes its template or submission tier.
 
 ---
-
 ## Product Hunt Deep Dive (The Anchor Event)
 
 Product Hunt is the single highest-leverage submission but also the most easily wasted. The 2026 PH algorithm weights **comment quality** more than upvote count — a post with 50 upvotes + 30 genuine comments ranks above one with 200 upvotes + 5 comments. **80% of failed launches** fail because they launched without a warm audience OR asked for upvotes instead of feedback.
@@ -251,7 +247,6 @@ Product Hunt is the single highest-leverage submission but also the most easily 
 - Only submit to Show HN if you have a *technical* angle to share (architecture, DSL, novel approach). A generic "we launched a SaaS" post will get flagged to death.
 
 ---
-
 ## Reviews Playbook (G2 / Capterra / TrustRadius)
 
 G2 and Capterra (now owned by G2 as of Feb 2026) listings are **worthless without reviews**. 10 reviews is the magic threshold for Grid appearance. Run the 10-in-30 protocol during launch month.
@@ -282,7 +277,6 @@ G2 and Capterra (now owned by G2 as of Feb 2026) listings are **worthless withou
 - Capterra auto-syncs from Gartner Digital Markets in some categories — may populate without direct action.
 
 ---
-
 ## Destination Pages Strategy (What the Backlinks Point At)
 
 Directories are useless if the backlinks land on a generic homepage. Build these destination pages *before* submitting:
@@ -323,7 +317,6 @@ Write honest roundups of your own category: `/blog/best-[category]-tools-2026`. 
 Every integration = one landing page at `/integrations/[partner]`. Follows the Zapier playbook: Zapier gets **~2.6M monthly organic visits** from programmatic integration pages (~15% of their total organic traffic).
 
 ---
-
 ## GEO (Generative Engine Optimization)
 
 In 2026, 30–50% of "research a tool" queries happen inside ChatGPT, Claude, Perplexity, or Google AI Overviews without ever touching a traditional search page. Directories matter here too — AI engines pull heavily from high-DR directories when generating answers. But the *destination pages* also need to be GEO-optimized.
@@ -345,7 +338,6 @@ In 2026, 30–50% of "research a tool" queries happen inside ChatGPT, Claude, Pe
 Manually check monthly: ask ChatGPT, Claude, and Perplexity "what are the best [category] tools?" and log where the product appears. Free GEO tracking tools (GeoTracker, llmrefs) automate this.
 
 ---
-
 ## Community & Ongoing Distribution
 
 Directories are one-shot. Community is ongoing. Both feed the same funnel.
@@ -389,7 +381,6 @@ Build-in-public threads on architecture, revenue, decisions. Technical deep-dive
 Every substantial technical post = dofollow backlink + dev audience reach. Cross-post with canonical URL back to main blog.
 
 ---
-
 ## KPIs & Tracking
 
 Track weekly. If a number isn't moving, investigate — don't just submit more directories.
@@ -410,7 +401,6 @@ Track weekly. If a number isn't moving, investigate — don't just submit more d
 One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, submitted to ~35 directories (MCP registries, GitHub lists, indie launch sites), went from DR 4 to 26 in about 40 days, and from 8 to 33 referring domains in about 3 weeks. That's a single anecdote, but it suggests the Day 30 targets are reachable for a focused campaign.
 
 ---
-
 ## What NOT to Do
 
 1. **Don't pay for directory submission services** ($60–$200 packages). The whole point is these are free. It's an afternoon of copy-paste.
@@ -427,7 +417,6 @@ One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, su
 12. **Don't forget Crunchbase, LinkedIn company page, and Wikidata.** These feed AI training corpora and matter for GEO.
 
 ---
-
 ## Task-Specific Questions
 
 1. **What are you launching?** (Category changes tier mix — AI vs traditional SaaS vs no-code vs dev tool.)
@@ -441,7 +430,6 @@ One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, su
 9. **Current DR and referring domain count?** (Baseline for measuring the compounding effect.)
 
 ---
-
 ## Output Format
 
 When the user asks for a directory plan, return:
@@ -459,7 +447,6 @@ When the user asks for a directory plan, return:
 Keep the plan actionable. Every item should be something the user can do today.
 
 ---
-
 ## Related Skills
 
 - **launch** — broader launch moment, ORB framework, five-phase approach

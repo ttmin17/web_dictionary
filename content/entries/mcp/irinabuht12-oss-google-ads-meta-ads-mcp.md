@@ -139,7 +139,6 @@ You can run this server next to the official ones; they do not conflict. Use the
 **Which tools are included?** 150+ Google Ads tools, 80+ Meta Ads tools, 20+ GA4 tools. The full list is in [All Available Tools](#all-available-tools); per-platform pages: [Google Ads MCP](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/google-ads-mcp/README.md) and [Meta Ads MCP](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/meta-ads-mcp/README.md).
 
 ---
-
 ## Why This Exists
 
 Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with its own dashboard, API, and workflow. Existing MCP servers only cover **one platform at a time**, forcing you to install and configure multiple tools.
@@ -154,7 +153,6 @@ Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with 
 | No analytics integration | GA4 built-in for data-driven decisions |
 
 ---
-
 ## Works With
 
 | AI Assistant | Status | Setup Guide |
@@ -170,7 +168,6 @@ Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with 
 | Cline | **Supported** | [Setup Guide](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/docs/SETUP_CURSOR.md#cline) |
 
 ---
-
 ## Features
 
 ### Google Ads (150+ tools)
@@ -218,7 +215,6 @@ Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with 
 - Cross-platform budget allocation recommendations
 
 ---
-
 ## Quick start: Google Ads MCP, Meta Ads MCP and Google Analytics MCP setup
 
 ### Claude Desktop and claude.ai (Recommended)
@@ -277,7 +273,6 @@ claude mcp add google-meta-ads-ga4 --transport http https://connector.get-ryze.a
 ```
 
 ---
-
 ## Example Prompts
 
 ### Google Ads
@@ -322,7 +317,6 @@ claude mcp add google-meta-ads-ga4 --transport http https://connector.get-ryze.a
 ```
 
 ---
-
 ## Architecture
 
 ```
@@ -343,7 +337,6 @@ claude mcp add google-meta-ads-ga4 --transport http https://connector.get-ryze.a
 Your AI assistant communicates with this MCP server using the [Model Context Protocol](https://modelcontextprotocol.io). The server handles authentication and routes requests to the appropriate Google Ads, Meta Ads, or GA4 API.
 
 ---
-
 ## All Available Tools
 
 <details>
@@ -598,7 +591,6 @@ Your AI assistant communicates with this MCP server using the [Model Context Pro
 </details>
 
 ---
-
 ## Security & Privacy
 
 - **OAuth 2.1 with PKCE** — Industry-standard authentication
@@ -608,7 +600,6 @@ Your AI assistant communicates with this MCP server using the [Model Context Pro
 - **Scoped access** — Request only the permissions you need
 
 ---
-
 ## FAQ
 
 <details>
@@ -648,7 +639,6 @@ The server respects Google and Meta API rate limits automatically. For high-volu
 </details>
 
 ---
-
 ## Contributing
 
 Contributions are welcome! Please see our [issue templates](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/.github/ISSUE_TEMPLATE/) to report bugs or request features.
@@ -660,19 +650,16 @@ Contributions are welcome! Please see our [issue templates](https://github.com/i
 5. Open a Pull Request
 
 ---
-
 ## Star History
 
 If this project helps you manage ads more efficiently, please give it a star! It helps others discover it.
 
 ---
-
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/LICENSE) file for details.
 
 ---
-
 <p align="center">
   <strong>Google Ads MCP</strong> · <strong>Meta Ads MCP</strong> · <strong>Facebook Ads MCP</strong> · <strong>GA4 MCP</strong> · <strong>Model Context Protocol</strong>
   <br>

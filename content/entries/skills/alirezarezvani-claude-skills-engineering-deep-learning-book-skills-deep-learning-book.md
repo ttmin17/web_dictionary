@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -106,7 +106,6 @@ When asked about something outside these 20 chapters, say so and route to the de
 rather than improvising the book's position on material published after it.
 
 ---
-
 ## Core Frameworks & Mental Models
 
 ### The (T, P, E) frame — ch05
@@ -169,7 +168,6 @@ Gradient norm exploding → clip. Norm large but loss flat → ill-conditioning.
 high loss → saturation or dead units. NaN → numerics first. Change one thing per experiment.
 
 ---
-
 ## Chapter Index
 
 | # | Title | Key content |
@@ -250,7 +248,6 @@ Every tool supports `--help`, `--sample` and `--output json`, uses the standard 
 returns typed exit codes.
 
 ---
-
 ## Scope & Limits
 
 This companion covers the 2016 edition's 20 chapters and the delta between them and 2026

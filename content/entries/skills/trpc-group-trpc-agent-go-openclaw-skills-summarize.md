@@ -3,7 +3,9 @@ slug: trpc-group-trpc-agent-go-openclaw-skills-summarize
 name: summarize
 tagline: Summarize or extract text/transcripts from URLs, podcasts, and local
   files (great fallback for “transcribe this YouTube/video”).
-summary: "Use this skill immediately when the user asks any of:"
+summary: "- “use summarize.sh” - “what’s this link/video about?” - “summarize
+  this URL/article” - “transcribe this YouTube/video” (best-effort transcript
+  extraction; no yt-dlp needed)"
 categories:
   - agent-frameworks
 tags:

@@ -81,7 +81,6 @@ You are an expert in SaaS product launches and feature announcements. Your goal 
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 ---
-
 ## Core Philosophy
 
 The best companies don't just launch once—they launch again and again. Every new feature, improvement, and update is an opportunity to capture attention and engage your audience.
@@ -93,7 +92,6 @@ A strong launch isn't about a single moment. It's about:
 - Building momentum that compounds over time
 
 ---
-
 ## The ORB Framework
 
 Structure your launch marketing across three channel types. Everything should ultimately lead back to owned channels.
@@ -167,7 +165,6 @@ Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just
 Borrowed channels give instant credibility, but only work if you convert borrowed attention into owned relationships.
 
 ---
-
 ## Readiness Gate: Are You Ready to Launch?
 
 Run this **before** the phased mechanics. Products don't market themselves—but a product that isn't ready won't market either. The launch mechanics only pay off if what you're launching is worth launching.
@@ -195,7 +192,6 @@ The middle path is **SLC — Simple, Lovable, Complete** (Jason Cohen), the anti
 Pass the gate, then run the phases below.
 
 ---
-
 ## Five-Phase Launch Approach
 
 Launching isn't a one-day event. It's a phased process that builds momentum.
@@ -272,7 +268,6 @@ Open the floodgates.
 **Goal:** Maximum visibility and conversion to paying users.
 
 ---
-
 ## Product Hunt Launch Strategy
 
 Product Hunt can be powerful for reaching early adopters, but it's not magic—it requires preparation.
@@ -325,7 +320,6 @@ Product Hunt can be powerful for reaching early adopters, but it's not magic—i
 - Result: #1 Product of the Day
 
 ---
-
 ## Post-Launch Product Marketing
 
 Your launch isn't over when the announcement goes live. Now comes adoption and retention work.
@@ -351,7 +345,6 @@ Create no-code interactive demo (using tools like Navattic) so visitors can expl
 It's easier to build on existing momentum than start from scratch. Every touchpoint reinforces the launch.
 
 ---
-
 ## Ongoing Launch Strategy
 
 Don't rely on a single launch event. Regular updates and feature rollouts sustain engagement.
@@ -393,7 +386,6 @@ Even small changelog updates remind customers your product is evolving. This bui
 If you can read the product repo, generate the week's changelog, announcement drafts, and pages-to-update list straight from merged PRs. See [references/shipped-changes.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/launch/references/shipped-changes.md).
 
 ---
-
 ## Launch Checklist
 
 ### Pre-Launch
@@ -429,7 +421,6 @@ If you can read the product repo, generate the week's changelog, announcement dr
 - [ ] Plan next launch moment
 
 ---
-
 ## Task-Specific Questions
 
 1. What are you launching? (New product, major feature, minor update)
@@ -440,7 +431,6 @@ If you can read the product repo, generate the week's changelog, announcement dr
 6. Are you considering Product Hunt? What's your preparation status?
 
 ---
-
 ## Related Skills
 
 - **marketing-ideas**: For additional launch tactics (#22 Product Hunt, #23 Early Access Referrals)

@@ -296,7 +296,6 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
 <i><sub>Do you want to show your ad here? Click [here](https://github.com/sponsors/D4Vinci) and choose the tier that suits you!</sub></i>
 
 ---
-
 ## Key Features
 
 ### Spiders - A Full Crawling Framework
@@ -657,5 +656,4 @@ This work is licensed under the BSD-3-Clause License.
 This project includes code adapted from:
 - Parsel (BSD License)-Used for [translator](https://github.com/D4Vinci/Scrapling/blob/main/scrapling/core/translator.py) submodule
 
----
-<div align="center"><small>Designed & crafted with ❤️ by Karim Shoair.</small></div><br>
+---<div align="center"><small>Designed & crafted with ❤️ by Karim Shoair.</small></div><br>

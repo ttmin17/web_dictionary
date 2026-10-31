@@ -167,7 +167,6 @@ export class PromptTemplates {
 ```
 
 ---
-
 ## Tool Policies: Caching (`@Cache`) and Rate Limiting (`@RateLimit`)
 You can control tool execution behaviors (such as performance optimization and throttling) using method decorators.
 
@@ -248,7 +247,6 @@ export class DiagnosticTools {
 ```
 
 ---
-
 ## Handling File Uploads in Tools
 NitroStack supports file uploads from MCP clients (like NitroStudio) by passing the file as a base64-encoded string inside a tool's input parameters.
 

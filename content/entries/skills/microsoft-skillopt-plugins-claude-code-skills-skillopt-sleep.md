@@ -22,15 +22,16 @@ source:
 signals:
   stars: 18547
   last_commit: 2026-10-18T17:03:51Z
-  stars_delta_7d: 245
-  stars_growth_pct: 1.3
-  trending_score: 248.28
-  rank_current: 43
-  rank_delta: null
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 147
+  rank_delta: -104
   velocity_source: snapshot_delta
   sparkline_4w:
     - 18098
     - 18302
+    - 18547
     - 18547
 language: en
 needs_keys: false

@@ -248,5 +248,4 @@ For Google Workspace files, set `mime_type` to export:
 | Drive info | `GOOGLEDRIVE_GET_ABOUT` | (none) |
 | Create shortcut | `GOOGLEDRIVE_CREATE_SHORTCUT_TO_FILE` | target file_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

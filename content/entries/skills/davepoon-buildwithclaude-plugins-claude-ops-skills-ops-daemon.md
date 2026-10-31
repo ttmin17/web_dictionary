@@ -115,7 +115,6 @@ Accepts `--plugin-root PATH` to override auto-detection and `--dry-run` to previ
 A healthy daemon refreshes this file every 30s. An `mtime` older than 120s is a strong fail signal.
 
 ---
-
 ## Your task
 
 Route on the first argument:

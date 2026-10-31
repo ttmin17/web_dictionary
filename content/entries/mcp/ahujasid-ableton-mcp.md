@@ -27,8 +27,8 @@ signals:
   stars_delta_7d: 40
   stars_growth_pct: 1.2
   trending_score: 40.5
-  rank_current: 42
-  rank_delta: -7
+  rank_current: 46
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3148
@@ -73,7 +73,6 @@ Prompt-assisted music production, end-to-end track creation, and Live session an
 </div>
 
 ---
-
 ## Quickstart
 
 Three steps: install `uv`, point your MCP client at the server, install the Ableton Remote Script.
@@ -137,7 +136,6 @@ uvx --from ableton-mcp ableton-mcp-install-script --list-targets   # preview tar
 That's it — ask Claude to build something.
 
 ---
-
 ## Table of Contents
 
 - [Quickstart](#quickstart)
@@ -162,7 +160,6 @@ That's it — ask Claude to build something.
 - [Disclaimer](#disclaimer)
 
 ---
-
 ## Features
 
 | | |
@@ -183,7 +180,6 @@ The system consists of two main components:
 2. **MCP Server** (`server.py`) — a Python server that implements the Model Context Protocol and connects to the Ableton Remote Script
 
 ---
-
 ## Installation
 
 ### Prerequisites
@@ -286,7 +282,6 @@ If you've moved your User Library, use its actual location (shown in Live under 
 The MCP server and Remote Script share a version handshake (`get_remote_script_info`). If they diverge, newer tools degrade gracefully until Live is restarted.
 
 ---
-
 ## Usage
 
 ### Starting the Connection
@@ -329,7 +324,6 @@ Here are some examples of what you can ask Claude to do:
 | *"Play the clip in track 2"* | |
 
 ---
-
 ## Troubleshooting
 
 | Problem | Fix |
@@ -354,7 +348,6 @@ The system uses a simple JSON-based protocol over TCP sockets:
 - Always save your work before extensive experimentation
 
 ---
-
 ## Telemetry
 
 There are two tiers, and they have different defaults.
@@ -407,7 +400,6 @@ For Claude Desktop, add the environment variable to your config:
 ```
 
 ---
-
 ## Join the Community
 
 Give feedback, get inspired, and build on top of the MCP: [**Discord**](https://discord.gg/JK4hNKGprW)
@@ -421,7 +413,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This is a third-party integration and not made by Ableton. Made by [Siddharth](https://x.com/sidahuj).
 
 ---
-
 <div align="center">
 
 **If Ableton MCP is useful to you, consider starring the repo**

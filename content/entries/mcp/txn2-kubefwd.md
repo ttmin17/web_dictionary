@@ -2,8 +2,10 @@
 slug: txn2-kubefwd
 name: kubefwd
 tagline: Bulk port forwarding Kubernetes services for local development.
-summary: Documentation | Getting Started | User Guide | API Reference | MCP (AI
-  Integration)
+summary: kubefwd enables developers to work on their local machine while
+  seamlessly accessing services running in a Kubernetes cluster. If you're
+  building a new API that needs to connect to a database at db:5432, an auth
+  servi...
 categories:
   - cloud-infra
 tags:
@@ -27,8 +29,8 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 102
-  rank_delta: -20
+  rank_current: 107
+  rank_delta: -25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4173
@@ -199,5 +201,4 @@ We welcome contributions for bug fixes, tests, and documentation. Feature develo
 [Apache License 2.0](https://github.com/txn2/kubefwd/blob/master/LICENSE)
 
 ---
-
 Open source by [Craig Johnston](https://twitter.com/cjimti), sponsored by [Deasil Works, Inc.](https://deasil.works/)

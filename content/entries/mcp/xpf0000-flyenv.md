@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 21
   stars_growth_pct: 0.6
   trending_score: 21.13
-  rank_current: 59
-  rank_delta: -8
+  rank_current: 63
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3265
@@ -82,7 +82,6 @@ launch:
 </div>
 
 ---
-
 ## Why FlyEnv?
 
 FlyEnv brings the local development tools you normally manage separately into one native desktop workspace.
@@ -97,7 +96,6 @@ FlyEnv brings the local development tools you normally manage separately into on
 > If XAMPP, MAMP, Laragon, or Laravel Herd already make sense to you, FlyEnv solves a similar local-development problem — but across a broader stack.
 
 ---
-
 ## Coming from XAMPP, MAMP, Laragon, or Laravel Herd?
 
 | If you are familiar with... | FlyEnv may fit when you need... |
@@ -110,7 +108,6 @@ FlyEnv brings the local development tools you normally manage separately into on
 Docker and FlyEnv solve overlapping but different problems. Use Docker when containerized reproducibility or production parity is the goal; use FlyEnv when you want a native local development workspace with less setup overhead.
 
 ---
-
 ## What Can You Run?
 
 FlyEnv can manage complete local project stacks, not just one runtime.
@@ -125,7 +122,6 @@ FlyEnv can manage complete local project stacks, not just one runtime.
 **[Browse FlyEnv demos →](https://flyenv.com/demos)**
 
 ---
-
 ## Core Capabilities
 
 ### Local stack management
@@ -159,7 +155,6 @@ FlyEnv can manage complete local project stacks, not just one runtime.
 ![FlyEnv MCP and AI CLI workflow](https://raw.githubusercontent.com/xpf0000/FlyEnv/master/flyenv-mcp.jpeg)
 
 ---
-
 ## Installation
 
 ### Windows
@@ -186,7 +181,6 @@ brew install flyenv
 For the latest packages, see **[GitHub Releases](https://github.com/xpf0000/FlyEnv/releases)**.
 
 ---
-
 ## Interface Preview
 
 <table>
@@ -201,7 +195,6 @@ For the latest packages, see **[GitHub Releases](https://github.com/xpf0000/FlyE
 </table>
 
 ---
-
 ## Open Source & Build Transparency
 
 FlyEnv is open source under the **BSD 3-Clause License**.
@@ -211,7 +204,6 @@ Installation packages are built through **[GitHub Actions](https://github.com/xp
 Free Windows code signing is provided by [SignPath.io](https://signpath.io), with the certificate provided by the [SignPath Foundation](https://signpath.org).
 
 ---
-
 ## Development & Contribution
 
 ```bash
@@ -224,7 +216,6 @@ yarn run dev
 See the [Development Guide](https://github.com/xpf0000/FlyEnv/blob/master/DEV.md).
 
 ---
-
 ## Community & Support
 
 - Website: https://flyenv.com

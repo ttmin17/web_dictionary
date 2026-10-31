@@ -21,11 +21,12 @@ source:
 signals:
   stars: 1781
   last_commit: 2026-10-12T12:22:46Z
-  stars_delta_7d: 37
+  stars_delta_7d: 64
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
+    - 1781
     - 1781
 language: en
 needs_keys: false

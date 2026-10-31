@@ -103,7 +103,6 @@ exec_command command:"codex exec 'Your prompt'"
 | `kill_session` | Terminate a background session                       |
 
 ---
-
 ## Quick Start: One-Shot Tasks
 
 For quick prompts/chats, create a temp git repo and run:
@@ -119,7 +118,6 @@ exec_command tty:true workdir:~/Projects/myproject command:"codex exec 'Add erro
 **Why git init?** Codex refuses to run outside a trusted git directory. Creating a temp repo solves this for scratch work.
 
 ---
-
 ## The Pattern: workdir + background + pty
 
 For longer tasks, use background mode with PTY:
@@ -149,7 +147,6 @@ kill_session session_id:XXX
 doesn't wander off reading unrelated files.
 
 ---
-
 ## Codex CLI
 
 **Model:** `gpt-5.2-codex` is the default (set in ~/.codex/config.toml)
@@ -214,7 +211,6 @@ Use one managed subagent per PR:
 Monitor with `subagents_list` / `subagents_get` / `subagents_wait`.
 
 ---
-
 ## Claude Code
 
 ```bash
@@ -226,7 +222,6 @@ exec_command tty:true workdir:~/project background:true command:"claude 'Your ta
 ```
 
 ---
-
 ## OpenCode
 
 ```bash
@@ -234,7 +229,6 @@ exec_command tty:true workdir:~/project command:"opencode run 'Your task'"
 ```
 
 ---
-
 ## Pi Coding Agent
 
 ```bash
@@ -251,7 +245,6 @@ exec_command tty:true command:"pi --provider openai --model gpt-4o-mini -p 'Your
 **Note:** Pi now has Anthropic prompt caching enabled (PR #584, merged Jan 2026)!
 
 ---
-
 ## Parallel Issue Fixing with managed worktrees
 
 For fixing multiple issues in parallel, prefer OpenClaw-managed worktree
@@ -274,7 +267,6 @@ Only fall back to manual `git worktree` commands when the task explicitly
 requires an external CLI outside OpenClaw-managed subagents.
 
 ---
-
 ## ⚠️ Rules
 
 1. **Always use `tty:true`** - coding agents need a terminal.
@@ -290,7 +282,6 @@ requires an external CLI outside OpenClaw-managed subagents.
 9. **NEVER checkout branches in ~/Projects/openclaw/** - that's the LIVE OpenClaw instance!
 
 ---
-
 ## Progress Updates (Critical)
 
 When you spawn coding agents in the background, keep the user in the loop.
@@ -306,7 +297,6 @@ When you spawn coding agents in the background, keep the user in the loop.
 This prevents the user from seeing only "Agent failed before reply" and having no idea what happened.
 
 ---
-
 ## Auto-Notify on Completion
 
 For long-running background tasks, append a wake trigger to your prompt so OpenClaw gets notified immediately when the agent finishes (instead of waiting for the next heartbeat):
@@ -329,7 +319,6 @@ When completely finished, run: openclaw system event --text \"Done: Built todos 
 This triggers an immediate wake event — Skippy gets pinged in seconds, not 10 minutes.
 
 ---
-
 ## Learnings (Jan 2026)
 
 - **PTY is essential:** Coding agents are interactive terminal apps.

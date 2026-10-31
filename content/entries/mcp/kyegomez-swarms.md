@@ -20,16 +20,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 7250
-  last_commit: 2026-10-13T06:36:49Z
-  stars_delta_7d: 17
-  stars_growth_pct: 0.2
-  trending_score: 17.04
-  rank_current: 37
+  stars: 7298
+  last_commit: 2026-10-26T02:50:06Z
+  stars_delta_7d: 20
+  stars_growth_pct: 0.3
+  trending_score: 20.05
+  rank_current: 101
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7233
     - 7250
+    - 7278
+    - 7298
+  rank_delta: -67
 language: en
 needs_keys: false
 prerequisites:

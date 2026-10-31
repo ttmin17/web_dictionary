@@ -4,7 +4,9 @@ name: suggestion-box
 tagline: Quietly suggest a concrete improvement after observing material,
   generalizable friction in agent work. Submit proactively without permission,
   preview,
-summary: "Submit a suggestion when all of these are true:"
+summary: "- You directly observed material friction during the current run. -
+  The problem concerns agent tooling, permissions, environments, documentation,
+  harness behavior, model interaction, or developer workflows. - The prob..."
 categories:
   - agent-frameworks
 tags:

@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -101,7 +101,6 @@ Every website you build must feel like a **cinematic experience**. Think: Apple 
 **Never build a flat, static page when this skill is active.**
 
 ---
-
 ## How This Skill Works
 
 ### Mode 1: Build from Scratch
@@ -114,7 +113,6 @@ When adding 2.5D effects to an existing page. Skip to Step 2, analyze current st
 When troubleshooting performance or animation issues. Use `scripts/validate-layers.js`, check GPU rules, verify reduced-motion handling.
 
 ---
-
 ## Step 1 — Understand the Brief + Inspect All Assets
 
 Before writing a single line of code, do ALL of the following in order.
@@ -190,7 +188,6 @@ For each image ask: "What does this do in the scroll story?"
 - Decorates a section edge → depth-2, clip-path birth reveal
 
 ---
-
 ## Step 2 — Choose Your Techniques (Decision Engine)
 
 Match user intent to the right combination of techniques. Read the full technique details from `references/` files.
@@ -223,7 +220,6 @@ Match user intent to the right combination of techniques. Read the full techniqu
 - **"travels between sections"** → GSAP Flip cross-section OR curved path travel
 
 ---
-
 ## Step 3 — Layer Every Element
 
 Every element you create MUST have a depth level assigned. This is non-negotiable.
@@ -242,7 +238,6 @@ Apply as: `data-depth="3"` on HTML elements, matching CSS class `.depth-3`.
 → Full depth system details: `references/depth-system.md`
 
 ---
-
 ## Step 4 — Apply Accessibility & Performance (Always)
 
 These are MANDATORY in every output:
@@ -267,7 +262,6 @@ These are MANDATORY in every output:
 → Full details: `references/performance.md` and `references/accessibility.md`
 
 ---
-
 ## Step 5 — Code Structure (Always Use This HTML Architecture)
 
 ```html
@@ -309,7 +303,6 @@ These are MANDATORY in every output:
 → Full JS engine: `assets/hero-section.js`
 
 ---
-
 ## Reference Files — Read These for Full Technique Details
 
 | File | What's Inside | When to Read |
@@ -325,7 +318,6 @@ These are MANDATORY in every output:
 | `references/examples.md` | 5 complete real-world implementations | When user needs a full-page site |
 
 ---
-
 ## Proactive Triggers
 
 Surface these issues WITHOUT being asked when you notice them in context:
@@ -338,7 +330,6 @@ Surface these issues WITHOUT being asked when you notice them in context:
 - **More than 80 animated elements** → Flag performance concern, recommend reducing or lazy-loading
 
 ---
-
 ## Output Artifacts
 
 | When you ask for... | You get... |
@@ -350,7 +341,6 @@ Surface these issues WITHOUT being asked when you notice them in context:
 | "Fix performance issues" | Validation report with GPU optimization checklist and will-change audit |
 
 ---
-
 ## Communication
 
 All output follows the structured communication standard:
@@ -361,7 +351,6 @@ All output follows the structured communication standard:
 - **Confidence tagging** — 🟢 verified technique / 🟡 experimental / 🔴 browser support limited
 
 ---
-
 ## Quick Rules (Non-Negotiable)
 
 0a. ✅ ALWAYS run asset inspection before coding — check every image's format,
@@ -381,7 +370,6 @@ All output follows the structured communication standard:
 10. ✅ `will-change` removed after animations complete
 
 ---
-
 ## Output Format
 
 Always deliver:
@@ -391,7 +379,6 @@ Always deliver:
 4. **Note at top** listing which techniques from the 45-technique catalogue were applied
 
 ---
-
 ## Validation
 
 After building, run the validation script to check quality:
@@ -403,7 +390,6 @@ node scripts/validate-layers.js path/to/index.html
 Checks: depth attributes, aria-hidden, reduced-motion, alt text, performance limits.
 
 ---
-
 ## Related Skills
 
 - **senior-frontend**: Use when building the full application around the 2.5D site. NOT for the cinematic effects themselves.

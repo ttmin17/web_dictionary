@@ -27,7 +27,6 @@ signals:
   stars_growth_pct: 11.1
   trending_score: 1226.11
   rank_current: 12
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9981
@@ -48,14 +47,7 @@ tool:
   install_command: pip install octop
   runtime: python
   execution_mode: hybrid
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - octop
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 A smarter, self-hosted AI assistant — multi-user, multi-agent.

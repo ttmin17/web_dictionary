@@ -269,5 +269,4 @@ Automate Notion operations through Composio's Notion toolkit via Rube MCP.
 | Create comment | NOTION_CREATE_COMMENT | page_id, rich_text |
 | List comments | NOTION_FETCH_COMMENTS | page_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

@@ -24,15 +24,16 @@ source:
 signals:
   stars: 7160
   last_commit: 2026-10-16T14:56:03Z
-  stars_delta_7d: 54
-  stars_growth_pct: 0.8
-  trending_score: 54.41
-  rank_current: 80
-  rank_delta: null
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 159
+  rank_delta: -79
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7059
     - 7106
+    - 7160
     - 7160
 language: en
 needs_keys: false

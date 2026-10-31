@@ -67,7 +67,6 @@ skill:
 Use this skill when designing, building, or modifying interactive user interface widgets that display custom React content inside AI clients or NitroStudio.
 
 ---
-
 ## 1. Backend Definition (`@Widget`)
 To display a React-based widget for a tool's output, decorate the tool method with `@Widget`.
 
@@ -100,7 +99,6 @@ export class CatalogTools {
 ```
 
 ---
-
 ## 2. Frontend React Widget (`@nitrostack/widgets`)
 In your React widget frontend application (typically a Next.js client component), use the `useWidgetSDK` hook to receive input data from the client host.
 
@@ -140,7 +138,6 @@ export default function ProductDetailsWidget() {
 ```
 
 ---
-
 ## 3. State Management & Synchronization (`useWidgetState`)
 Use `useWidgetState` to manage and persist client-side widget state (e.g. selected tabs, filter values, input states). This state automatically synchronizes with the host application context, persisting it across page re-renders.
 
@@ -167,7 +164,6 @@ export default function StationPanelWidget() {
 ```
 
 ---
-
 ## 4. Calling Core Tools from Widgets (`callTool`)
 You can invoke other backend MCP tools directly from the frontend widget using `callTool`. This is useful for tool chaining or triggering detailed audits.
 
@@ -203,7 +199,6 @@ export default function SystemDiagnostics() {
 ```
 
 ---
-
 ## 5. Layout & Display Controls
 Widgets can dynamically request size mode changes (fullscreen, inline, picture-in-picture) and adapt layouts to safe areas (dynamic islands/notches) or maximum height constraints.
 
@@ -242,7 +237,6 @@ export default function StatusBoard() {
 ```
 
 ---
-
 ## 6. Chat Navigation & Actions
 Widgets can interact with the host chat pane using external browser links and follow-up prompts.
 
@@ -275,7 +269,6 @@ export default function MissionControl() {
 ```
 
 ---
-
 ## 7. Media & Accessibility Queries
 The SDK provides helper utilities to query target client capabilities for styling or accessibility.
 
@@ -305,7 +298,6 @@ export default function AccessiblePanel() {
 ```
 
 ---
-
 ## 8. Testing Widgets
 * Open your project in **NitroStudio** for visual preview.
 * Invoke the tool from the AI chat or testing pane to verify the widget updates instantly with the returned JSON structure.

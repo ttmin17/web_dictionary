@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -90,7 +90,6 @@ ADKAR is a change management model by Prosci. Original version is for enterprise
 **Startup shortcut:** A 5-minute video from the CEO or decision-maker explaining the "why" in plain language beats a formal change announcement document every time.
 
 ---
-
 ### D — Desire
 
 **What it is:** People want to make the change happen — or at least don't actively resist it.
@@ -110,7 +109,6 @@ ADKAR is a change management model by Prosci. Original version is for enterprise
 **Startup shortcut:** Run a short "concerns and questions" session within 48 hours of announcement. Not to reverse the decision — to address the fears and show you're listening.
 
 ---
-
 ### K — Knowledge
 
 **What it is:** People know HOW to operate in the new world — the specific skills, behaviors, and processes.
@@ -133,7 +131,6 @@ ADKAR is a change management model by Prosci. Original version is for enterprise
 | Office hours | Any change with many edge cases | First 4–6 weeks |
 
 ---
-
 ### A — Ability
 
 **What it is:** People have the time, tools, and support to actually do things differently.
@@ -152,7 +149,6 @@ ADKAR is a change management model by Prosci. Original version is for enterprise
 - Training scores are high but actual behavior hasn't changed
 
 ---
-
 ### R — Reinforcement
 
 **What it is:** The change sticks. The new behavior becomes the default.
@@ -173,7 +169,6 @@ ADKAR is a change management model by Prosci. Original version is for enterprise
 Only reinforcement creates adoption. Compliance is the result of enforcement. Aim for adoption.
 
 ---
-
 ## Change Types and ADKAR Application
 
 ### Process Change (new tools, new workflows)
@@ -191,7 +186,6 @@ Only reinforcement creates adoption. Compliance is the result of enforcement. Ai
 6. Week 8: Old system deprecated
 
 ---
-
 ### Org Change (reorg, new leader, team splits/merges)
 
 **Timeline:** 3–6 months for full stabilization
@@ -210,7 +204,6 @@ Only reinforcement creates adoption. Compliance is the result of enforcement. Ai
 Be honest about what you can share. Never: "We can't share the reasons." Always: either a truthful explanation or "we're not able to share the specifics, but I can tell you [what this means for you]."
 
 ---
-
 ### Strategy Pivot (new direction, killed products)
 
 **Timeline:** 3–12 months for full alignment
@@ -227,7 +220,6 @@ Be honest about what you can share. Never: "We can't share the reasons." Always:
 **What kills pivots:** Announcing a new direction while still funding the old one at the same level.
 
 ---
-
 ### Culture Change (values refresh, behavior expectations)
 
 **Timeline:** 12–24 months for genuine behavior change
@@ -243,7 +235,6 @@ Be honest about what you can share. Never: "We can't share the reasons." Always:
 6. Celebrate the right behaviors: when someone exemplifies the new culture, name it publicly
 
 ---
-
 ## Resistance Patterns
 
 Resistance is information, not defiance. Diagnose before responding.
@@ -260,7 +251,6 @@ Resistance is information, not defiance. Diagnose before responding.
 **The worst response to resistance:** Dismissing it. "Some people are resistant to change" as if resistance is a personality flaw rather than a signal.
 
 ---
-
 ## Change Fatigue
 
 When organizations change too fast, people stop believing any change will stick.
@@ -284,7 +274,6 @@ When organizations change too fast, people stop believing any change will stick.
 - Communicate stability: "Here's what is NOT changing this quarter"
 
 ---
-
 ## Key Questions for Change Management
 
 - "Who are the most skeptical people about this change? Have we talked to them directly?"

@@ -107,7 +107,6 @@ Gather this context (ask if not provided):
 - Timeline and resource constraints?
 
 ---
-
 ## Lead Magnet Principles
 
 ### 1. Solve a Specific Problem
@@ -135,7 +134,6 @@ Gather this context (ask if not provided):
 - No special software required
 
 ---
-
 ## Lead Magnet Types
 
 | Type | Best For | Effort | Time to Create |
@@ -157,7 +155,6 @@ Gather this context (ask if not provided):
 **Agent skills as a lead magnet**: a course, webinar series, podcast, or newsletter archive you own can ship as an installable agent skill. See [references/content-to-skill.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/lead-magnets/references/content-to-skill.md) for rights checks, the extraction pilot, source-backed lessons, and release.
 
 ---
-
 ## Matching Lead Magnets to Buyer Stage
 
 ### Awareness Stage
@@ -191,7 +188,6 @@ Goal: Help implement. Remove friction to purchase.
 | ROI calculator | "Calculate Your Savings" (→ see **free-tools**) |
 
 ---
-
 ## Gating Strategy
 
 ### Gating Options
@@ -223,7 +219,6 @@ Rule of thumb: Ask for the minimum needed. Every extra field reduces conversion 
 **For popup implementation**: See **popups** skill
 
 ---
-
 ## Landing Page & Delivery
 
 ### Landing Page Structure
@@ -255,7 +250,6 @@ Don't waste the thank you page. After they've converted:
 - Recommend related content
 
 ---
-
 ## Promotion & Distribution
 
 ### Blog CTAs & Content Upgrades
@@ -293,7 +287,6 @@ Don't waste the thank you page. After they've converted:
 - Bundle in resource collections
 
 ---
-
 ## Measuring Success
 
 ### Key Metrics
@@ -326,7 +319,6 @@ Good lead magnet attracted quality leads if:
 - Leads match ICP demographics
 
 ---
-
 ## Output Format
 
 When creating a lead magnet strategy, provide:
@@ -357,7 +349,6 @@ When creating a lead magnet strategy, provide:
 - What to A/B test first
 
 ---
-
 ## Task-Specific Questions
 
 1. What existing content or expertise could you turn into a lead magnet?
@@ -367,7 +358,6 @@ When creating a lead magnet strategy, provide:
 5. What's your budget for design and promotion?
 
 ---
-
 ## Related Skills
 
 - **free-tools**: For interactive tools as lead magnets (calculators, graders, quizzes)

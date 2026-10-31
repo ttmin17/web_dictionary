@@ -4,7 +4,7 @@ name: engineering-skills
 tagline: Index of the engineering-team skills bundle for Claude Code, Codex,
   Gemini CLI, Cursor, OpenClaw, and 6 more tools. Architecture, frontend,
   backend, Q
-summary: "30+ scripts, all stdlib-only. Run directly:"
+summary: No pip install needed. Scripts include embedded samples for demo mode.
 categories:
   - coding-agents
 tags:
@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

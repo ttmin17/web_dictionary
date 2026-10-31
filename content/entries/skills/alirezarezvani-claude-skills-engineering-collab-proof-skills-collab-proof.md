@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -69,7 +69,6 @@ Surfaces AI collaboration evidence the developer didn't consciously record.
 Vela 3-layer pipeline × ADHD 4-frame reasoning — prompt-native, zero dependencies.
 
 ---
-
 ## Layer 01 — Signal detection
 
 Run `git log --oneline -10` and `git diff --stat HEAD~3..HEAD` first.
@@ -103,7 +102,6 @@ than a 10-file feature with no discussion.
 Show the user: `Signal: HIGH / MEDIUM / LOW — [one-line reason]`
 
 ---
-
 ## Layer 02 — WorkIntentClassifier
 
 Run all four frames simultaneously against conversation context + git diff.
@@ -132,7 +130,6 @@ Score each frame 0.0–1.0 using the rubric below. Then apply pruning and classi
 - `0.2` Claude reformatted or transcribed developer-directed code without independent contribution
 
 ---
-
 ### Pruning rule
 
 Prune any frame scoring < 0.4.
@@ -144,7 +141,6 @@ This is a boilerplate-heavy FEATURE_BUILDING session. Classify immediately as `F
 Rationale: zero uncertainty in a fast-moving session is a feature, not a reason to discard it.
 
 ---
-
 ### Intent classification
 
 | Surviving frames | Dominant intent | Meaning |
@@ -158,7 +154,6 @@ If multiple intents tie, pick the one with the highest combined frame score.
 Record the runner-up — it belongs in the session narrative.
 
 ---
-
 ### Internal output format
 
 Before proceeding to Layer 03, resolve to this structure (show it to the user):
@@ -179,7 +174,6 @@ Before proceeding to Layer 03, resolve to this structure (show it to the user):
 ```
 
 ---
-
 ## Layer 03 — Output
 
 ### If HIGH signal
@@ -388,7 +382,6 @@ HTMLEOF
 After writing, show: `open session-history/YYYY-MM-DD-HHMM-proof.html`
 
 ---
-
 ### If MEDIUM signal
 
 Append one line to `WORKLOG.md` only:
@@ -397,13 +390,11 @@ YYYY-MM-DD HH:MM | [intent] | MEDIUM | D:[score] | cache:[hit%]% | tok:[total] |
 ```
 
 ---
-
 ### If LOW signal
 
 Tell user: "Signal: LOW — Routine session, nothing recorded."
 
 ---
-
 ## Honesty rules
 
 - Never invent decisions not in the conversation or implied by the diff
@@ -412,7 +403,6 @@ Tell user: "Signal: LOW — Routine session, nothing recorded."
 - If all frames score < 0.4 → write nothing
 
 ---
-
 ## PreCompact snapshot (context compaction defence)
 
 When context compaction is about to happen (triggered by the PreCompact hook),

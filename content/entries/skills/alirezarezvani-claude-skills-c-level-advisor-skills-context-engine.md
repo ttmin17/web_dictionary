@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -72,7 +72,6 @@ The memory layer for C-suite advisors. Every advisor skill loads this first. Con
 company context, context loading, context engine, company profile, advisor context, stale context, context refresh, privacy, anonymization
 
 ---
-
 ## Load Protocol (Run at Start of Every C-Suite Session)
 
 **Step 1 — Check for context file:** `~/.claude/company-context.md`
@@ -94,7 +93,6 @@ company context, context loading, context engine, company profile, advisor conte
 - 12-month target
 
 ---
-
 ## Context Quality Signals
 
 | Condition | Confidence | Action |
@@ -108,7 +106,6 @@ company context, context loading, context engine, company profile, advisor conte
 If Low: *"My context is [stale/incomplete] — I'm assuming [X]. Correct me if I'm wrong."*
 
 ---
-
 ## Context Enrichment
 
 During conversations, you'll learn things not in the file. Capture them.
@@ -123,7 +120,6 @@ During conversations, you'll learn things not in the file. Capture them.
 **Never silently overwrite.** Always confirm before modifying the context file.
 
 ---
-
 ## Privacy Rules
 
 ### Never send externally
@@ -149,7 +145,6 @@ Apply `references/anonymization-protocol.md`:
 - Customers → "Customer A, B, C"
 
 ---
-
 ## Missing or Partial Context
 
 Handle gracefully — never block the conversation.
@@ -160,7 +155,6 @@ Handle gracefully — never block the conversation.
 - **Multiple founders:** Context reflects the interviewee. Note co-founder perspective may differ.
 
 ---
-
 ## Required Context Fields
 
 ```
@@ -182,6 +176,5 @@ High-value optional:
 Missing required fields: note gaps, work around in session, ask in-session only when critical.
 
 ---
-
 ## References
 - `references/anonymization-protocol.md` — detailed rules for stripping sensitive data before external calls

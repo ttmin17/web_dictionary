@@ -112,7 +112,6 @@ Gather this context (ask if not provided):
    - What do reps ask for most?
 
 ---
-
 ## Core Principles
 
 ### Sales Uses What Sales Trusts
@@ -134,7 +133,6 @@ Reps repeat what you write to buyers who can check it. Anything a buyer can disp
 - **Include where you lose.** A competitive doc that admits when the competitor is the better fit is one reps will trust in front of a buyer.
 
 ---
-
 ## Sales Deck / Pitch Deck
 
 ### 10-12 Slide Framework
@@ -168,7 +166,6 @@ Reps repeat what you write to buyers who can check it. Anything a buyer can disp
 **For full slide-by-slide guidance**: See [references/deck-frameworks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sales-enablement/references/deck-frameworks.md)
 
 ---
-
 ## One-Pagers / Leave-Behinds
 
 ### When to Use
@@ -195,7 +192,6 @@ Reps repeat what you write to buyers who can check it. Anything a buyer can disp
 **For templates by use case**: See [references/one-pager-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sales-enablement/references/one-pager-templates.md)
 
 ---
-
 ## Objection Handling Docs
 
 ### Objection Categories
@@ -239,7 +235,6 @@ When a rep brings one objection from a live deal ("the CFO just said Acme is hal
 Afterward, suggest the rep log the objection and how it went. Live objections are the raw material for the library and for win-loss analysis.
 
 ---
-
 ## Battle Cards
 
 A battle card is a reusable one-competitor guide for reps, used across many deals. For a single live objection, use Live Deal Objection. For public comparison pages, see competitors. Every line follows Claims Reps Can Defend.
@@ -266,7 +261,6 @@ A battle card is a reusable one-competitor guide for reps, used across many deal
 Pull competitor facts from competitor-profiling dossiers when they exist. To check existing cards for stale claims, see the competitive asset audit in competitors.
 
 ---
-
 ## Win-Loss Analysis
 
 Win-loss analysis turns CRM outcomes, call transcripts, and buyer interviews into an evidence-backed answer to "why do we win and lose, against whom?" It's the evidence that battle cards and "why we win" sections need.
@@ -283,7 +277,6 @@ Win-loss analysis turns CRM outcomes, call transcripts, and buyer interviews int
 **For coding schemes, interview questions, and report format**: See [references/win-loss-analysis.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sales-enablement/references/win-loss-analysis.md)
 
 ---
-
 ## ROI Calculators & Value Props
 
 ### Calculator Design
@@ -320,7 +313,6 @@ Win-loss analysis turns CRM outcomes, call transcripts, and buyer interviews int
 - **Slide-based** — ROI story embedded in the deck. Good for executive presentations.
 
 ---
-
 ## Demo Scripts & Talk Tracks
 
 ### Script Structure
@@ -351,7 +343,6 @@ Win-loss analysis turns CRM outcomes, call transcripts, and buyer interviews int
 **For cold call openers, voicemails, and first-minute pushback**: See [references/cold-call-scripts.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/sales-enablement/references/cold-call-scripts.md)
 
 ---
-
 ## Case Study Briefs (Sales Format)
 
 ### How Sales Case Studies Differ
@@ -375,7 +366,6 @@ Organize case studies so reps can find the right one instantly:
 - **By company size** — "Show me an enterprise example"
 
 ---
-
 ## Proposal Templates
 
 ### Structure
@@ -400,7 +390,6 @@ Organize case studies so reps can find the right one instantly:
 - **Burying the price** — Don't make them hunt for it. Be transparent and confident.
 
 ---
-
 ## Sales Playbooks
 
 ### What Goes in a Playbook
@@ -424,7 +413,6 @@ Organize case studies so reps can find the right one instantly:
 Playbooks die when they're not updated. Review quarterly, get input from top reps, and remove anything outdated. Assign an owner — if nobody owns it, it rots.
 
 ---
-
 ## Buyer Persona Cards
 
 ### Card Structure
@@ -448,7 +436,6 @@ Playbooks die when they're not updated. Review quarterly, get input from top rep
 - **Blocker** — Opposes the purchase. Understand their concern to neutralize it.
 
 ---
-
 ## Output Format
 
 Deliver the right format for each asset type:
@@ -467,7 +454,6 @@ Deliver the right format for each asset type:
 | Proposal | Section-by-section copy with customization notes |
 
 ---
-
 ## Task-Specific Questions
 
 If context is missing, ask:
@@ -479,7 +465,6 @@ If context is missing, ask:
 5. What are the top 3 objections you hear most?
 
 ---
-
 ## Tool Integrations
 
 For partner sales enablement, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md):
@@ -489,7 +474,6 @@ For partner sales enablement, see the [tools registry](https://github.com/coreyh
 | **Introw** | Partner engagement tracking, deal registration, mutual action plans | [introw.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/introw.md) |
 
 ---
-
 ## Related Skills
 
 - **competitors**: For public-facing comparison and alternative pages

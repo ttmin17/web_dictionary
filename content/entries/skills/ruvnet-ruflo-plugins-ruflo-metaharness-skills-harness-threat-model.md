@@ -2,10 +2,7 @@
 slug: ruvnet-ruflo-plugins-ruflo-metaharness-skills-harness-threat-model
 name: harness-threat-model
 tagline: Agent skill from ruvnet/ruflo
-summary: "--- name: harness-threat-model description: Enterprise-review-grade
-  threat model from harness threat-model {path}. Categorizes MCP-surface
-  threats; emits worst: 'clean'|'low'|'medium'|'high' + per-threat findings.
-  Pur..."
+summary: "Implementation: scripts/threat-model.mjs."
 categories:
   - agent-frameworks
 tags:
@@ -60,13 +57,11 @@ skill:
   pack_slug: ruvnet-ruflo
 ---
 
----
-name: harness-threat-model
+---name: harness-threat-model
 description: Enterprise-review-grade threat model from `harness threat-model {path}`. Categorizes MCP-surface threats; emits `worst: 'clean'|'low'|'medium'|'high'` + per-threat findings. Pure-read.
 argument-hint: "[--path .] [--fail-on clean|low|medium|high] [--format table|json]"
 allowed-tools: Bash
 ---
-
 The companion to `harness-mcp-scan` for enterprise security reviews.
 Where mcp-scan is a per-server static lint, threat-model produces a
 categorized report suitable for sharing with an InfoSec team.

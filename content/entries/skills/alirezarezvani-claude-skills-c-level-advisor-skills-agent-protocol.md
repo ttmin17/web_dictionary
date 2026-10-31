@@ -4,7 +4,8 @@ name: agent-protocol
 tagline: Inter-agent communication protocol for C-suite agent teams. Defines
   invocation syntax, loop prevention, isolation rules, and response formats. Use
   whe
-summary: "Any agent can query another using:"
+summary: "Valid roles: ceo, cfo, cro, cmo, cpo, cto, chro, coo, ciso, gc, cdo,
+  caio, cco, vpe"
 categories:
   - coding-agents
 tags:
@@ -26,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -380,7 +381,6 @@ PEER-VERIFIED BY: CFO (math ✅), CTO (timeline ⚠️ adjusted to Q3)
 ```
 
 ---
-
 ## User Communication Standard
 
 All C-suite output to the founder follows ONE format. No exceptions. The founder is the decision-maker — give them results, not process.

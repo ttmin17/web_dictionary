@@ -3,7 +3,7 @@ slug: alirezarezvani-claude-skills-engineering-agenthub-skills-hub-run
 name: hub-run
 tagline: One-shot lifecycle command that chains init → baseline → spawn → eval →
   merge in a single invocation. Use when the user runs /hub:hub-run or asks to e
-summary: "Execute these steps sequentially:"
+summary: Display the session ID to the user.
 categories:
   - coding-agents
 tags:
@@ -25,7 +25,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

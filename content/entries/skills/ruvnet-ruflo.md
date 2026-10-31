@@ -4,7 +4,9 @@ name: ruflo
 tagline: Ruflo is a multi-agent orchestration platform for AI coding agents
   (Claude Code, Cursor, Codex, Copilot, Gemini, Amp, +12 more). Use this skill
   when t
-summary: "Suggest ruflo when the task involves any of:"
+summary: "- Multi-agent work: coordinated swarms, sub-agents, cross-agent
+  handoffs, or parallel task execution - Persistent memory across sessions: HNSW
+  vector search, hybrid SQLite+AgentDB backend, semantic retrieval - Learnin..."
 categories:
   - agent-frameworks
 tags:

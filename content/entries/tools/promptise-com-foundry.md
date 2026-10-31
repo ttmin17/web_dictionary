@@ -26,8 +26,7 @@ signals:
   stars_delta_7d: 18
   stars_growth_pct: 2.1
   trending_score: 18.37
-  rank_current: 102
-  rank_delta: null
+  rank_current: 103
   velocity_source: snapshot_delta
   sparkline_4w:
     - 874
@@ -48,14 +47,7 @@ tool:
   install_command: pip install promptise
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - promptise
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 The foundation layer for agentic intelligence.

@@ -3,7 +3,8 @@ slug: davepoon-buildwithclaude-plugins-all-skills-skills-slack-gif-creator
 name: slack-gif-creator
 tagline: Toolkit for creating animated GIFs optimized for Slack, with validators
   for size constraints and composable animation primitives. This skill applies w
-summary: "Slack has specific requirements for GIFs based on their use:"
+summary: "Message GIFs: - Max size: 2MB - Optimal dimensions: 480x480 - Typical
+  FPS: 15-20 - Color limit: 128-256 - Duration: 2-5s"
 categories:
   - productivity-ops
 tags:

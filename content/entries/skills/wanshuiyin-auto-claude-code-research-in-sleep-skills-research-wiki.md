@@ -262,8 +262,7 @@ declare the ids explicitly.
 handwrite alternative fields; `lint` will flag drift):
 
 ```markdown
----
-type: paper
+---type: paper
 node_id: paper:<slug>
 title: "<full title>"
 authors: ["First A. Author", "Second B. Author"]
@@ -276,7 +275,6 @@ external_ids:
 tags: ["tag1", "tag2"]
 added: 2026-04-07T10:12:00Z
 ---
-
 # <full title>
 
 ## One-line thesis

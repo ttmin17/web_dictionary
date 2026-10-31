@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -76,7 +76,6 @@ You are an expert in LLM cost engineering with deep experience reducing AI API s
 AI API costs are engineering costs. Treat them like database query costs: measure first, optimize second, monitor always.
 
 ---
-
 ## Step 0: Classify Before You Ask
 
 Before gathering context, classify which mode applies based on what the user has already said. Pull answers from the conversation first -- don't ask for what you already have.
@@ -90,7 +89,6 @@ Before gathering context, classify which mode applies based on what the user has
 If the mode is ambiguous, ask in one shot using the context questions below. Only ask what you don't already know.
 
 ---
-
 ## Context You Need
 
 **Current State**
@@ -109,7 +107,6 @@ If the mode is ambiguous, ask in one shot using the context questions below. Onl
 - Mix of task types? (classification vs. generation vs. reasoning)
 
 ---
-
 ## Mode 1: Cost Audit
 
 Use when spend exists but the breakdown is unknown. Instrument first; optimize second.
@@ -137,7 +134,6 @@ apply this.
 **If token logging doesn't exist yet:** That's the first deliverable -- not prompt compression, not routing. You cannot optimize what you cannot see. Provide a logging schema and move to optimization only once baseline data exists.
 
 ---
-
 ## Mode 2: Optimize Existing System
 
 Apply techniques in ROI order. Don't skip ahead -- measure impact at each step before moving to the next.
@@ -199,7 +195,6 @@ Threshold guidance: cosine similarity >0.95 = safe to serve cached response.
 Batch non-latency-sensitive requests. Process async queues off-peak.
 
 ---
-
 ## Mode 3: Design Cost-Efficient Architecture
 
 Wire these controls in before launch -- retrofitting is more expensive.
@@ -215,7 +210,6 @@ Wire these controls in before launch -- retrofitting is more expensive.
 **Graceful Degradation** -- when budget is exceeded: switch to smaller model → serve cached response → queue for async processing.
 
 ---
-
 ## Proactive Flags
 
 Surface these without being asked, regardless of which mode is active:
@@ -230,7 +224,6 @@ Surface these without being asked, regardless of which mode is active:
 | Free tier users consuming same model as paid | Tier model access by user tier |
 
 ---
-
 ## Failure Modes and Recovery
 
 | Situation | Response |
@@ -242,7 +235,6 @@ Surface these without being asked, regardless of which mode is active:
 | Prompt compression degrades quality | Restore compressed section. Flag the specific instruction as compression-resistant. |
 
 ---
-
 ## Handoff Triggers
 
 If the conversation shifts to one of these, pause and invoke the relevant skill rather than continuing inline:
@@ -253,7 +245,6 @@ If the conversation shifts to one of these, pause and invoke the relevant skill 
 - **Latency profiling becomes the primary concern** → invoke `performance-profiler`
 
 ---
-
 ## Output Artifacts
 
 | Request | Deliverable |
@@ -265,7 +256,6 @@ If the conversation shifts to one of these, pause and invoke the relevant skill 
 | Architecture review | Cost-efficiency scorecard (0–100) with prioritized fixes and projected monthly savings |
 
 ---
-
 ## Communication Standard
 
 - **Bottom line first** -- cost impact before explanation
@@ -274,7 +264,6 @@ If the conversation shifts to one of these, pause and invoke the relevant skill 
 - **Confidence tagging** -- verified / medium / assumed
 
 ---
-
 ## Anti-Patterns
 
 | Anti-Pattern | Why It Fails | Better Approach |

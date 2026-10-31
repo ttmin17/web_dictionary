@@ -4,7 +4,9 @@ name: internal-comms
 tagline: Use when a Head of People Ops, BizOps lead, or Internal Communications
   owner needs to draft and sequence an internal-only change-management
   communicat
-summary: "Internal change announcements fail in four predictable ways:"
+summary: 1. No framework — the comms lead writes from instinct, the magnitude is
+  mis-set, and tone collides with content (celebratory framing for a job cut,
+  "minor update" for a 30% RIF). 2. No touchpoint sequencing — one Slac...
 categories:
   - coding-agents
 tags:
@@ -26,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -170,7 +170,6 @@ Legacy deploy scripts | P3       | 5 days      | 1 service    | LOW
 ```
 
 ---
-
 ### ADR Creation Workflow
 
 **Step 1 — Identify the decision**
@@ -200,7 +199,6 @@ Consequences: [What becomes easier? What becomes harder?]
 Share the accepted ADR in the engineering all-hands or architecture sync. Link it from the relevant service's README.
 
 ---
-
 ### Build vs Buy Analysis Workflow
 
 **Step 1 — Define requirements** (functional + non-functional)

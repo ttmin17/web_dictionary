@@ -3,7 +3,9 @@ slug: stablyai-orca-skills-jira-tickets
 name: jira-tickets
 tagline: Read and update Jira tickets through Orca's saved Jira connections. Use
   when a task comes from Jira or the user asks for Jira ticket work. Treat ticke
-summary: "Choose the executable once and reuse it for every later command:"
+summary: "- If the ORCACLICOMMAND environment variable is set, use its value.
+  Orca exports this for managed WSL sessions. - Otherwise, in a dev checkout
+  whose session exposes ORCADEVREPOROOT, use orca-dev. - Otherwise, on Linux..."
 categories:
   - agent-frameworks
 tags:

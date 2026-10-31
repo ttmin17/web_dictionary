@@ -105,7 +105,6 @@ Measure the latency and throughput limits of a deployed LVS (Long Video Summariz
 | Repeat run, setup already complete | Use `run_benchmark.sh` (see **Repeat Runs** section) |
 
 ---
-
 ## Prerequisites
 
 | Requirement | How to Check |
@@ -121,7 +120,6 @@ Measure the latency and throughput limits of a deployed LVS (Long Video Summariz
 | Docker with Compose plugin | `docker compose version` |
 
 ---
-
 ## Deploy LVS for Benchmarking
 
 Before benchmarking, deploy a fresh LVS instance using `vss-build-vision-ai`. On shared systems, always use a unique `COMPOSE_PROJECT_NAME` so your containers and volumes are isolated from other users.
@@ -165,7 +163,6 @@ export LLM_GPUS=<LLM_GPU>
 > **Model downloads:** First deployment downloads LLM (~20 GB) and VLM (~17 GB) model weights. This takes 20–40 minutes depending on network speed. Subsequent deployments reuse the volumes created under your `COMPOSE_PROJECT_NAME` and start in minutes.
 
 ---
-
 ## Step 0: Pre-flight Check
 
 **On shared systems another tenant may hold port 38111 — so the benchmark must verify it is hitting YOUR instance and YOUR GPUs, not someone else's.** `preflight.sh` does this (and fails fast if not).
@@ -227,7 +224,6 @@ release ships a new minor; a new deployment version never silently widens it.
 If `/files` returns 404, the dev route is off — enable `VIA_DEV_API=true` on your LVS (see the deploy step) before continuing.
 
 ---
-
 ## Step 1: Download Test Videos
 
 The benchmark uses warehouse surveillance videos from the VSS sample dataset, hosted in NGC. `scripts/fetch-videos.sh` downloads the package and places a curated set — `warehouse_4min.mp4`, `warehouse_5min.mp4`, `warehouse_10min.mp4` — into `<VSS_BENCHMARK_DATA_DIR>/videos/`, the exact filenames the default `scripts/config.yaml` references. It requires the `ngc` CLI and an NGC API key, and prints install/auth instructions if either is missing.
@@ -246,7 +242,6 @@ done
 ```
 
 ---
-
 ## Step 2: Generate Test Clips (if needed)
 
 Normally Step 1 provides real 5- and 10-minute clips and this step can be skipped. Use it only if a curated clip is missing (e.g. the NGC package layout changed) or you need custom durations: loop an available source video into the filenames the default `scripts/config.yaml` references — `warehouse_5min.mp4` (300s) and `warehouse_10min.mp4` (600s).
@@ -275,7 +270,6 @@ done
 ```
 
 ---
-
 ## Step 3: Start Media Server
 
 The media server serves test videos over HTTP so the LVS `/files` endpoint can download them by URL.
@@ -299,7 +293,6 @@ curl -s "http://localhost:8888/videos/" | python3 -m json.tool 2>/dev/null || \
 Note the filenames returned — you will need them in the next step to update `config.yaml`.
 
 ---
-
 ## Step 4: Configure
 
 Edit `scripts/config.yaml` with the actual video filenames discovered in Step 3:
@@ -317,7 +310,6 @@ docker inspect "${LVS_CONTAINER_NAME}" \
 4. **Adjust concurrency levels** — The default `concurrency_levels: [1, 2, 4, 8]` for file_burst. Remove levels that exceed your hardware's memory capacity.
 
 ---
-
 ## Step 5: Run Benchmark
 
 ```bash
@@ -355,7 +347,6 @@ mv vss-perf-report vss-perf-report-$(date +%Y%m%d-%H%M%S)
 ```
 
 ---
-
 ## Step 6: Analyze Results
 
 ```bash
@@ -392,7 +383,6 @@ Read the JSON result files and extract the following key metrics for analysis:
 - **Optimal concurrency** (`optimal_target_concurrency.estimated_concurrency`): the concurrency level that meets `target_latency_seconds`
 
 ---
-
 ## Step 7: Suggest Improvements
 
 After analyzing the results, present a findings table and recommendations based on the following rules:
@@ -408,7 +398,6 @@ After analyzing the results, present a findings table and recommendations based 
 | LLM GPU utilization mean < 50% | LLM is waiting on VLM output | VLM is the bottleneck; optimize VLM settings first |
 
 ---
-
 ## Repeat Runs
 
 Once setup is complete (Steps 1–4), use `run_benchmark.sh` for subsequent runs:
@@ -436,7 +425,6 @@ cd "${SKILL_DIR}"
 `run_benchmark.sh` checks LVS readiness, starts the media server if needed, creates/reuses the Python venv, and passes all extra arguments directly to `vss_perf_benchmark.py`.
 
 ---
-
 ## Troubleshooting
 
 | Symptom | Cause | Fix |
@@ -450,7 +438,6 @@ cd "${SKILL_DIR}"
 | `ModuleNotFoundError` in benchmark | Python venv not activated or requirements not installed | Run `source scripts/vss-bench-env/bin/activate && pip install -r scripts/requirements.txt` |
 
 ---
-
 ## Cross-reference
 
 - **vss-build-vision-ai** — deploy LVS with the `lvs` profile before benchmarking

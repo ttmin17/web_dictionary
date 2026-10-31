@@ -344,8 +344,7 @@ spec:
           mountPath: "kubernetes"
           role: "production"
 
----
-apiVersion: external-secrets.io/v1beta1
+---apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
   name: database-credentials

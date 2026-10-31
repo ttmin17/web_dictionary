@@ -2,7 +2,9 @@
 slug: punitarani-fli
 name: fli
 tagline: Google Flights MCP, CLI and Python Library
-summary: "The MCP server provides two main tools:"
+summary: 🔍 Powerful Search One-way flight searches Multi-city flight searches
+  Flexible departure times Multi-airline support Cabin class selection Stop
+  preferences Custom result sorting
 categories:
   - domain-research
 tags:
@@ -26,8 +28,8 @@ signals:
   stars_delta_7d: 196
   stars_growth_pct: 6.1
   trending_score: 207.88
-  rank_current: 11
-  rank_delta: 53
+  rank_current: 13
+  rank_delta: 51
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3225

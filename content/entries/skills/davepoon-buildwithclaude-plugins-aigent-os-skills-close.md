@@ -168,13 +168,11 @@ For each file:
 Create or update `vault/daily/YYYY-MM-DD.md`:
 
 ```markdown
----
-title: "YYYY-MM-DD"
+---title: "YYYY-MM-DD"
 tags:
   - daily
 date: YYYY-MM-DD
 ---
-
 # YYYY-MM-DD
 
 ## Session Work

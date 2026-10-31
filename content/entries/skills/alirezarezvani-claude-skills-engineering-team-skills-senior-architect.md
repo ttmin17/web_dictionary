@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -92,7 +92,6 @@ Architecture design and analysis tools for making informed technical decisions.
 - [Common Commands](#common-commands)
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -107,7 +106,6 @@ python scripts/project_architect.py ./my-project --verbose
 ```
 
 ---
-
 ## Tools Overview
 
 ### 1. Architecture Diagram Generator
@@ -149,7 +147,6 @@ graph TD
 ```
 
 ---
-
 ### 2. Dependency Analyzer
 
 Analyzes project dependencies for coupling, circular dependencies, and outdated packages.
@@ -203,7 +200,6 @@ Recommendations:
 ```
 
 ---
-
 ### 3. Project Architect
 
 Analyzes project structure and detects architectural patterns, code smells, and improvement opportunities.
@@ -257,7 +253,6 @@ Recommendations:
 ```
 
 ---
-
 ## Decision Workflows
 
 ### Database Selection Workflow
@@ -300,7 +295,6 @@ TimescaleDB → Time-series data with SQL interface
 ```
 
 ---
-
 ### Architecture Pattern Selection Workflow
 
 Use when designing a new system or refactoring existing architecture.
@@ -336,7 +330,6 @@ Use when designing a new system or refactoring existing architecture.
 See `references/architecture_patterns.md` for detailed pattern descriptions.
 
 ---
-
 ### Monolith vs Microservices Decision
 
 **Choose Monolith when:**
@@ -360,7 +353,6 @@ Start with a modular monolith. Extract services only when:
 3. Technology constraints require separation
 
 ---
-
 ## Reference Documentation
 
 Load these files for detailed information:
@@ -372,7 +364,6 @@ Load these files for detailed information:
 | `references/tech_decision_guide.md` | Decision matrices for technology choices | "which database?", "which framework?", "which cloud?", "which cache?" |
 
 ---
-
 ## Tech Stack Coverage
 
 **Languages:** TypeScript, JavaScript, Python, Go, Swift, Kotlin, Rust
@@ -383,7 +374,6 @@ Load these files for detailed information:
 **CI/CD:** GitHub Actions, GitLab CI, CircleCI, Jenkins
 
 ---
-
 ## Common Commands
 
 ```bash
@@ -404,7 +394,6 @@ python scripts/project_architect.py . --output json
 ```
 
 ---
-
 ## Getting Help
 
 1. Run any script with `--help` for usage information

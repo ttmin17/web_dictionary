@@ -179,7 +179,6 @@ unreal.MaterialNodeService.add_function_input(func_path, "Roughness", "Scalar", 
 ```
 
 ---
-
 ## Sub-docs available
 
 Read these sibling files directly (the engine AgentSkillToolset `GetSkills` is the loader; this `SKILL.md` is the index, the deeper docs live alongside it):
@@ -195,7 +194,6 @@ Read these sibling files directly (the engine AgentSkillToolset `GetSkills` is t
 | `rvt-setup.md` | RVT material types, sizing guidelines, inspection code, common RVT issues with causes/fixes |
 
 ---
-
 ## Common Mistakes
 
 ### 1. Forgetting `bUsedWithVirtualTexturing`
@@ -232,7 +230,6 @@ If a landscape is switched to a different master/instance family, existing Layer
 RVT asset assignment alone is not enough. Ensure each landscape has an RVT volume covering its bounds; recreate volume per landscape after major transform/scale changes.
 
 ---
-
 ## Related Skills
 
 | Task | Skills to Load |

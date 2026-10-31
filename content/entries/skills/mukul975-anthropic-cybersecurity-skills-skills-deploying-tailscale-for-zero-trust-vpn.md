@@ -184,8 +184,7 @@ metadata:
 type: Opaque
 stringData:
   TS_AUTHKEY: "tskey-auth-xxxxx"
----
-apiVersion: apps/v1
+---apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: tailscale

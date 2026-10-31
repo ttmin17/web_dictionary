@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -171,5 +171,4 @@ The dissent column from `/c-level-agents:boardroom` is the single most useful pi
 - Sibling: [`/em:postmortem`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/post-mortem/../../../c-level-advisor/executive-mentor/skills/postmortem/SKILL.md) — adversarial single-decision post-mortem
 
 ---
-
 **Version:** 1.0.0

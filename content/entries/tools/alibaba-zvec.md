@@ -26,8 +26,7 @@ signals:
   stars_delta_7d: 25
   stars_growth_pct: 0.2
   trending_score: 25.04
-  rank_current: 94
-  rank_delta: null
+  rank_current: 95
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16126
@@ -48,14 +47,7 @@ tool:
   install_command: pip install zvec
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - zvec
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 A lightweight, lightning-fast, in-process vector database

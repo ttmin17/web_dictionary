@@ -29,8 +29,7 @@ signals:
   stars_delta_7d: 15
   stars_growth_pct: 0.2
   trending_score: 15.03
-  rank_current: 106
-  rank_delta: null
+  rank_current: 107
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7275
@@ -338,7 +337,6 @@ Unstract integrates Posthog to track minimal usage analytics. Disable by setting
 Unstract is released under the [AGPL-3.0 License](https://github.com/Zipstack/unstract/blob/main/LICENSE).
 
 ---
-
 <div align="center">
   <p>Built with ❤️ by <a href="https://zipstack.com">Zipstack</a></p>
   <p>

@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 60
   stars_growth_pct: 1.6
   trending_score: 60.93
-  rank_current: 31
-  rank_delta: -16
+  rank_current: 35
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3758
@@ -110,7 +110,6 @@ curl -fsSL https://get.radarhq.io | sh && kubectl radar
 > "Have Radar deployed at work. As far as Kubernetes dashboards go, this is one of the best." — u/TheRealNetroxen
 
 ---
-
 ## Installation
 
 **Quick Install:**
@@ -197,7 +196,6 @@ See the [In-Cluster Deployment Guide](https://github.com/skyhook-io/radar/blob/m
 </details>
 
 ---
-
 ## Usage
 
 ```bash
@@ -309,7 +307,6 @@ Defaults are preserved when neither the flag nor the env var is set, so
 existing deployments are unaffected.
 
 ---
-
 ## Views
 
 ### Topology
@@ -570,7 +567,6 @@ For shared in-cluster deployments, Radar supports optional user authentication w
 No auth by default (local use). See the **[Authentication Guide](https://github.com/skyhook-io/radar/blob/main/docs/authentication.md)** for setup.
 
 ---
-
 ## Supported Resources
 
 Radar auto-discovers any CRD in your cluster. Popular tools get [dedicated integrations](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md) with topology edges, detail views, and AI summaries.
@@ -628,7 +624,6 @@ Upgrade impact also gets list-only access to CSIStorageCapacities, FlowSchemas, 
 | **CRDs** | Any Custom Resource Definition in your cluster (auto-discovered) |
 
 ---
-
 ## Keyboard Shortcuts
 
 | Shortcut | Action |
@@ -651,13 +646,11 @@ Upgrade impact also gets list-only access to CSIStorageCapacities, FlowSchemas, 
 **Topology:** Pan (drag), Zoom (scroll), Select (click), Multi-select (Shift+click)
 
 ---
-
 ## Security
 
 Radar reads your cluster through your own credentials and keeps cluster data local. It does not upload manifests, logs, events, metrics, or resource data to Skyhook, and it does not require an account, agent, or cloud backend. Found a vulnerability? Please report it privately to **security@skyhook.io** — see [SECURITY.md](https://github.com/skyhook-io/radar/blob/main/SECURITY.md) for the process and response timelines.
 
 ---
-
 ## Development
 
 See the **[Development Guide](https://github.com/skyhook-io/radar/blob/main/DEVELOPMENT.md)** for building from source and contributing. For automation and integrations, see the [HTTP API reference](https://radarhq.io/docs/reference/api).
@@ -676,7 +669,6 @@ make watch-backend
 ```
 
 ---
-
 ## Contributing
 
 Contributions are welcome! Please read our [Contributing Guide](https://github.com/skyhook-io/radar/blob/main/CONTRIBUTING.md) for details on the development workflow, pull request process, and coding standards.
@@ -684,7 +676,6 @@ Contributions are welcome! Please read our [Contributing Guide](https://github.c
 Questions or ideas? [GitHub Discussions](https://github.com/skyhook-io/radar/discussions) is the place — or come say hi at [radarhq.io/community](https://radarhq.io/community).
 
 ---
-
 ## About
 
 Radar is built and maintained by [Skyhook](https://skyhook.io) (YC W23) and is open source under Apache-2.0. The OSS version is fully featured and the recommended way to run Radar.
@@ -692,13 +683,11 @@ Radar is built and maintained by [Skyhook](https://skyhook.io) (YC W23) and is o
 For teams that want hosted multi-cluster Radar with SSO and shared dashboards, we also offer [Radar Cloud](https://radarhq.io).
 
 ---
-
 ## License
 
 Apache 2.0 — see [LICENSE](https://github.com/skyhook-io/radar/blob/main/LICENSE)
 
 ---
-
 <p align="center">
   <strong>Open source. Free forever.</strong>
   <br>

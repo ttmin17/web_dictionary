@@ -4,7 +4,7 @@ name: agency-orchestrator
 tagline: 🚀 One sentence → your one-person company of AI experts → complete
   deliverable in minutes. 276 CN + 184 EN + 5 more languages (ko/ru/pt-BR/id/ar)
   · ze
-summary: 一句话出结果 · 276 个专业 AI 角色 · YAML 零代码 · 20+ 家 API（推荐 DeepSeek）· 10 种免 key 方式
+summary: 网页 Studio：打一句话，AI 自动从 200+ 专家里组队并运行
 categories:
   - agent-frameworks
 tags:
@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 23
   stars_growth_pct: 1
   trending_score: 23.22
-  rank_current: 54
-  rank_delta: -15
+  rank_current: 58
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2330
@@ -81,7 +81,6 @@ launch:
 </p>
 
 ---
-
 ## ❤️ 赞助商 &nbsp;<sub>🙏 想出现在这里？联系 **jnMetaCode@qq.com** 赞助</sub>
 
 <table>
@@ -100,7 +99,6 @@ launch:
 </table>
 
 ---
-
 ## 网页 Studio（图形界面）
 
 不想敲命令行？本地跑一条 `ao web`，浏览器里勾选专家、运行工作流、查看产物、实时介入——全程图形界面，全中英双语。
@@ -145,7 +143,6 @@ launch:
 > 英文界面同样完整 → 见 [English README](https://github.com/jnMetaCode/agency-orchestrator/blob/main/README.en.md)。
 
 ---
-
 ## 一句话出结果
 
 也可以纯命令行——一条命令，一句话出结果：
@@ -193,7 +190,6 @@ ao compose "设计一个 SaaS 产品的定价策略" --run                   # �
 每个场景自动匹配不同的 AI 角色组合。
 
 ---
-
 ## 为什么需要 Agency Orchestrator
 
 跟一个 AI 聊天，它给你一个视角。但做任何决策，你需要产品的视角、技术的视角、财务的视角、营销的视角……

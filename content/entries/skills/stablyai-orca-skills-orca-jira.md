@@ -3,7 +3,9 @@ slug: stablyai-orca-skills-orca-jira
 name: jira
 tagline: Jira issue work through Orca's CLI. Use when working from a linked Jira
   issue, finishing work with a PR/MR link and a completion comment, moving an is
-summary: "Choose the executable once and reuse it for every later command:"
+summary: "- If the ORCACLICOMMAND environment variable is set, use its value.
+  Orca exports this for managed WSL sessions. - Otherwise, in a dev checkout
+  whose session exposes ORCADEVREPOROOT, use orca-dev. - Otherwise, on Linux..."
 categories:
   - agent-frameworks
 tags:

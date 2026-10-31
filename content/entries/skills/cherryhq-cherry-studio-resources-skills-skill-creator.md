@@ -101,7 +101,6 @@ skill. The evaluation loop itself still applies; only the packaging and install
 mechanics change.
 
 ---
-
 # Skill Creator
 
 A skill for creating new skills and iteratively improving them.
@@ -140,7 +139,6 @@ So please pay attention to context cues to understand how to phrase your communi
 It's OK to briefly explain terms if you're in doubt, and feel free to clarify terms with a short definition if you're unsure if the user will get it.
 
 ---
-
 ## Creating a skill
 
 ### Capture Intent
@@ -387,7 +385,6 @@ kill $VIEWER_PID 2>/dev/null
 ```
 
 ---
-
 ## Improving the skill
 
 This is the heart of the loop. You've run the test cases, the user has reviewed the results, and now you need to make the skill better based on their feedback.
@@ -420,7 +417,6 @@ Keep going until:
 - You're not making meaningful progress
 
 ---
-
 ## Advanced: Blind comparison
 
 For situations where you want a more rigorous comparison between two versions of a skill (e.g., the user asks "is the new version actually better?"), there's a blind comparison system. Read `agents/comparator.md` and `agents/analyzer.md` for the details. The basic idea is: give two outputs to an independent agent without telling it which is which, and let it judge quality. Then analyze why the winner won.
@@ -428,7 +424,6 @@ For situations where you want a more rigorous comparison between two versions of
 This is optional, requires subagents, and most users won't need it. The human review loop is usually sufficient.
 
 ---
-
 ## Description Optimization
 
 The description field in SKILL.md frontmatter is the primary mechanism that determines whether Claude invokes a skill. After creating or improving a skill, offer to optimize the description for better triggering accuracy.
@@ -503,7 +498,6 @@ This means your eval queries should be substantive enough that Claude would actu
 Take `best_description` from the JSON output and update the skill's SKILL.md frontmatter. Show the user before/after and report the scores.
 
 ---
-
 ### Package and Present (only if `present_files` tool is available)
 
 Check whether you have access to the `present_files` tool. If you don't, skip this step. If you do, package the skill and present the .skill file to the user:
@@ -515,7 +509,6 @@ python -m scripts.package_skill <path/to/skill-folder>
 After packaging, direct the user to the resulting `.skill` file path so they can install it.
 
 ---
-
 ## Claude.ai-specific instructions
 
 In Claude.ai, the core workflow is the same (draft → test → review → improve → repeat), but because Claude.ai doesn't have subagents, some mechanics change. Here's what to adapt:
@@ -540,7 +533,6 @@ In Claude.ai, the core workflow is the same (draft → test → review → impro
 - **If packaging manually, stage in `/tmp/` first**, then copy to the output directory -- direct writes may fail due to permissions.
 
 ---
-
 ## Cowork-Specific Instructions
 
 If you're in Cowork, the main things to know are:
@@ -554,7 +546,6 @@ If you're in Cowork, the main things to know are:
 - **Updating an existing skill**: The user might be asking you to update an existing skill, not create a new one. Follow the update guidance in the claude.ai section above.
 
 ---
-
 ## Reference files
 
 The agents/ directory contains instructions for specialized subagents. Read them when you need to spawn the relevant subagent.
@@ -567,7 +558,6 @@ The references/ directory has additional documentation:
 - `references/schemas.md` — JSON structures for evals.json, grading.json, etc.
 
 ---
-
 Repeating one more time the core loop here for emphasis:
 
 - Figure out what the skill is about

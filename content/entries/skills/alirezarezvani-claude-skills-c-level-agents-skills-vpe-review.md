@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -184,5 +184,4 @@ python ${CLAUDE_PLUGIN_ROOT}/vendor/c-level-advisor/vpe-advisor/scripts/eng_team
 - Adjacent: `../../../engineering/slo-architect/`, `../../../engineering/feature-flags-architect/`, `../../../engineering/chaos-engineering/`
 
 ---
-
 **Version:** 1.0.0

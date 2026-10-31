@@ -29,7 +29,6 @@ signals:
   stars_growth_pct: 0.9
   trending_score: 163.38
   rank_current: 43
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 19028
@@ -50,14 +49,7 @@ tool:
   install_command: pip install hermes-webui
   runtime: multi
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - hermes-webui
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!

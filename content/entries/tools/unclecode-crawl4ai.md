@@ -31,7 +31,6 @@ signals:
   stars_growth_pct: 0.6
   trending_score: 475.61
   rank_current: 20
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 85806
@@ -52,14 +51,7 @@ tool:
   install_command: pip install Crawl4AI
   runtime: python
   execution_mode: cloud
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - Crawl4AI
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key.

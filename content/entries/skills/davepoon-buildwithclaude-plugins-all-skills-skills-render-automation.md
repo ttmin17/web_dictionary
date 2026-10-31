@@ -235,5 +235,4 @@ Automate Render cloud platform operations through Composio's Render toolkit via 
 | Get deploy status | RENDER_RETRIEVE_DEPLOY | serviceId, deployId |
 | List projects | RENDER_LIST_PROJECTS | limit, cursor |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

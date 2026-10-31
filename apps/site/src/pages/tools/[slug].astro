@@ -7,26 +7,41 @@ import { formatStars } from '../../lib/entries';
 
 export async function getStaticPaths() {
   const toolEntries = await getCollection('tools');
-  return toolEntries.map((entry) => ({
-    params: { slug: entry.data.slug },
-    props: { entry },
-  }));
+  const byCategory = new Map<string, typeof toolEntries>();
+
+  for (const entry of toolEntries) {
+    for (const cat of entry.data.categories) {
+      let list = byCategory.get(cat);
+      if (!list) {
+        list = [];
+        byCategory.set(cat, list);
+      }
+      list.push(entry);
+    }
+  }
+  for (const list of byCategory.values()) {
+    list.sort((a, b) => (b.data.signals?.stars || 0) - (a.data.signals?.stars || 0));
+  }
+
+  return toolEntries.map((entry) => {
+    const primaryCategory = entry.data.categories[0] || 'other';
+    const relatedTools = (byCategory.get(primaryCategory) || [])
+      .filter((e) => e.data.slug !== entry.data.slug)
+      .slice(0, 4);
+    return {
+      params: { slug: entry.data.slug },
+      props: { entry, relatedTools },
+    };
+  });
 }
 
-const { entry } = Astro.props;
+const { entry, relatedTools = [] } = Astro.props;
 const data = entry.data;
 const { Content, headings } = await render(entry);
 
 // Headings for table of contents
 const tocHeadings = headings ? headings.filter((h) => h.depth >= 2 && h.depth <= 3) : [];
-
-// Find related tools
-const allTools = await getCollection('tools');
 const primaryCategory = data.categories[0] || 'other';
-const relatedTools = allTools
-  .filter((e) => e.data.slug !== data.slug && e.data.categories.includes(primaryCategory))
-  .sort((a, b) => (b.data.signals?.stars || 0) - (a.data.signals?.stars || 0))
-  .slice(0, 4);
 
 // Format why listed
 function getWhyListedText(reason: string, percentile: number): string {

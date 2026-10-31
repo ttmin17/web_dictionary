@@ -106,7 +106,6 @@ Gather this context (ask if not provided):
 - Brand tone for offboarding? (Empathetic, direct, playful)
 
 ---
-
 ## How This Skill Works
 
 Churn has two types requiring different strategies:
@@ -125,7 +124,6 @@ This skill supports three modes:
 3. **Set up dunning** — Failed payment recovery with retries and email sequences
 
 ---
-
 ## Cancel Flow Design
 
 ### The Cancel Flow Structure
@@ -270,7 +268,6 @@ The key insight: **match the offer to the reason.** A discount won't save someon
 For detailed cancel flow patterns by industry and billing provider, see [references/cancel-flow-patterns.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/churn-prevention/references/cancel-flow-patterns.md).
 
 ---
-
 ## Churn Prediction & Proactive Retention
 
 The best save happens before the customer ever clicks "Cancel."
@@ -335,7 +332,6 @@ Validate score mappings and intervention thresholds against later observed renew
 | Annual renewal in 30 days | Value recap email + renewal confirmation |
 
 ---
-
 ## Involuntary Churn: Payment Recovery
 
 Failed payments cause 30-50% of all churn but are the most recoverable.
@@ -400,7 +396,6 @@ Not all failures are the same. Retry strategy by decline type:
 For the complete dunning playbook with provider-specific setup, see [references/dunning-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/churn-prevention/references/dunning-playbook.md).
 
 ---
-
 ## Metrics & Measurement
 
 ### Key Churn Metrics
@@ -439,7 +434,6 @@ Test one variable at a time:
 **How to run cancel flow experiments:** Use the **ab-testing** skill to design statistically rigorous tests. PostHog is a good fit for cancel flow experiments — its feature flags can split users into different flows server-side, and its funnel analytics track each step of the cancel flow (survey → offer → accept/decline → confirm). See the [PostHog integration guide](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/posthog.md) for setup.
 
 ---
-
 ## Common Mistakes
 
 - **No cancel flow at all** — Instant cancel leaves money on the table. Even a simple survey + one offer saves 10-15%
@@ -454,7 +448,6 @@ Test one variable at a time:
 - **No post-cancel path** — Make reactivation easy and trigger win-back emails, because some churned users will want to come back
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
@@ -489,7 +482,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | `segment` | Event routing for health scoring |
 
 ---
-
 ## Related Skills
 
 - **emails**: For win-back email sequences after cancellation

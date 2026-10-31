@@ -31,8 +31,8 @@ signals:
   stars_delta_7d: 68
   stars_growth_pct: 7
   trending_score: 72.78
-  rank_current: 26
-  rank_delta: 12
+  rank_current: 30
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 657
@@ -75,7 +75,6 @@ Built for AI agents that need world awareness: market conditions, geopolitical r
 For research, the collector keeps a dated history of what it captures. Each observation carries the period it describes, the publisher's release date when known, and when it was saved, so earlier copies, revised values, lagged correlations between series and any past day can be queried, and collection health is measured from the collector's run log rather than inferred from cache freshness. The server also exposes **29 MCP prompts** (worked research questions, each naming the tools it needs and the limit to respect) and **3 MCP resources**: a research guide generated from the live tool registry (`intel://guide`), a measures glossary (`intel://guide/measures`) and live source health (`intel://guide/source-health`).
 
 ---
-
 ## What You Get
 
 | Domain | Tools | Data Sources |
@@ -136,7 +135,6 @@ For research, the collector keeps a dated history of what it captures. Each obse
 **Total: 160 tools** across 30+ intelligence domains.
 
 ---
-
 ## Quick Start
 
 ### Install
@@ -226,7 +224,6 @@ intel history backfill ecb BSI.M.U2.Y.V.M30.X.1.U2.2300.Z01.E   # load ECB Data 
 ```
 
 ---
-
 ## Architecture
 
 ```
@@ -246,7 +243,6 @@ collector.py  (daemon)    ─┘
 - **Config** (`config/*.py`): Curated datasets — 22 hotspots, 70+ bases, 40 ports, 24 pipelines, 24 nuclear facilities, 34 cables, 48 datacenters, 27 spaceports, 82 exchanges.
 
 ---
-
 ## Research Guide: MCP Prompts and Resources
 
 Besides its tools, the server answers the MCP `resources` and `prompts`
@@ -309,7 +305,6 @@ at all, `intel --help` and `intel guide --measures` included, creates
 `~/.cache/world-intel-mcp/temporal.db` under your home directory.
 
 ---
-
 ## MCP Tools Reference
 
 ### Financial Markets (7)
@@ -714,7 +709,6 @@ Reads the history store only, so the sample is what the collector saved, not eac
 | `intel_lagged_connections` | Correlation between 2 to 8 stored series (keys as `intel_series_history` lists them) on a UTC day, week or month grid, tested at every lag from `-max_lag` to `+max_lag` (default 5, at most 30, at most 1,000 tests a call). Default transform is period-over-period changes, because levels of trending series correlate spuriously; `levels` on request. Per pair: the lag with the smallest p, with Pearson r, overlap n, two-sided p from Student's t (periods treated as independent), `p_ar1` recomputed with an AR(1) effective sample size from both series' lag-1 autocorrelations, and the Benjamini-Hochberg `q` and `q_ar1` across every test in the call. `significant` means `q_ar1` <= 0.05 by default (`significant_if_independent` applies the threshold to `q`); an effective sample under 3 is reported as no evidence, and `data_gaps` names autocorrelated series and pairs where serial correlation dominates. Lag +k compares A at period t with B at t+k, so A leads B by k. Pair/lag overlaps under `min_overlap` points (default 30, clamped to 20..3,000; `--min-overlap` in the CLI) are listed as not tested with their n; revised points use the latest vintage; rows without `observed_at` (Yahoo quotes) are not used; every clamped input is reported, in the CLI too |
 
 ---
-
 ## Watching your own area (geofences/AOIs)
 
 Static infrastructure results (bases, ports, nuclear, cables, datacenters, spaceports) draw on this repo's curated strategic datasets, which are global and deliberately sparse, not exhaustive local registries. A quiet AOI brief means nothing from those curated sets is in range, not that your area has no infrastructure.
@@ -812,7 +806,6 @@ baseline files. Databases open on first use, not on import. If you set
 to `$XDG_CACHE_HOME/world-intel-mcp/` to keep existing baselines.
 
 ---
-
 ## Vector Store
 
 The optional Qdrant vector store accumulates intelligence over time for semantic retrieval. All data fetched through the Fetcher is automatically embedded and stored.
@@ -871,7 +864,6 @@ Once data accumulates, AI agents can query across all domains:
 The vector store uses FastEmbed (ONNX-based, BAAI/bge-small-en-v1.5) for embeddings — no GPU required, ~3 second cold start.
 
 ---
-
 ## Environment Variables
 
 | Variable | Required | Description |
@@ -908,7 +900,6 @@ The vector store uses FastEmbed (ONNX-based, BAAI/bge-small-en-v1.5) for embeddi
 Everything else uses free, unauthenticated public APIs.
 
 ---
-
 ## Development
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/marc-shade/world-intel-mcp)).*

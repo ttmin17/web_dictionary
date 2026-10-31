@@ -310,5 +310,4 @@ When using project paths as identifiers:
 | List project members | `GITLAB_LIST_ALL_PROJECT_MEMBERS` | `id`, `query`, `state` |
 | List project users | `GITLAB_LIST_PROJECT_USERS` | `id`, `search` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

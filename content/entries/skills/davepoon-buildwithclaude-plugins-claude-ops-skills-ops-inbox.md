@@ -4,7 +4,10 @@ name: ops-inbox
 tagline: Full inbox management across all channels — WhatsApp (wacli), Email
   (Gmail MCP), Slack (MCP), Telegram (user-auth MCP), Discord (webhook + REST
   read),
-summary: "Before executing, load available context:"
+summary: "1. Preferences: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/prefer\
+  ences.json - defaultchannels — which channels to scan by default -
+  secretsmanager / doppler — how to resolve channel cr..."
 categories:
   - agent-frameworks
 tags:
@@ -116,7 +119,6 @@ Before executing, load available context:
 | `gog gmail labels list -j` | List all labels | Labels JSON |
 
 ---
-
 
 ## Agent Teams support
 
@@ -273,7 +275,6 @@ AskUserQuestion call 2 (only if "More..."):
 If only 3 channels are configured, "All channels" + 3 channel options = 4, fits in one call. Then process the selected channel(s).
 
 ---
-
 ## Processing each channel
 
 ### WhatsApp (FULL SCAN + DEEP CONTEXT)
@@ -587,7 +588,6 @@ If `bin/ops-discord` exits 1 with `{"error":"no discord credential configured �
 ```
 
 ---
-
 ## Completion
 
 After all selected channels are processed, print:
@@ -602,7 +602,6 @@ After all selected channels are processed, print:
 If `$ARGUMENTS` specifies a channel (e.g. `whatsapp`), skip the menu and go directly to that channel.
 
 ---
-
 ## Native tool usage
 
 ### Tasks — inbox progress

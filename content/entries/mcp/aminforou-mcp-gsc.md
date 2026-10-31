@@ -24,14 +24,15 @@ source:
 signals:
   stars: 1979
   last_commit: 2026-09-15T16:54:24Z
-  stars_delta_7d: 64
-  stars_growth_pct: 3.3
-  trending_score: 66.14
-  rank_current: 19
-  rank_delta: null
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 110
+  rank_delta: -91
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1915
+    - 1979
     - 1979
 language: en
 needs_keys: false
@@ -61,7 +62,6 @@ A Model Context Protocol (MCP) server that connects [Google Search Console](http
 > → [**Advanced GSC MCP (hosted)**](https://www.advancedgsc.com/mcp?utm_source=github&utm_medium=readme&utm_campaign=mcp-gsc&utm_content=hero-callout)
 
 ---
-
 ## What's New
 
 ### [0.4.1] — September 2026
@@ -85,7 +85,6 @@ A Model Context Protocol (MCP) server that connects [Google Search Console](http
 - **Better auth error messages** — all tools now tell you exactly what to do when credentials are missing or expired.
 
 ---
-
 ## What Can This Do?
 
 **Property Management**
@@ -110,7 +109,6 @@ A Model Context Protocol (MCP) server that connects [Google Search Console](http
 - Check for errors or warnings
 
 ---
-
 ## Available Tools
 
 | Tool | What It Does | What You Need to Provide |
@@ -134,7 +132,6 @@ A Model Context Protocol (MCP) server that connects [Google Search Console](http
 *Ask your AI assistant to "call get_capabilities" for the full list of all 20 tools.*
 
 ---
-
 <div align="center">
   <a href="https://www.advancedgsc.com/mcp?utm_source=github&utm_medium=readme&utm_campaign=mcp-gsc&utm_content=banner">
     <img src="https://raw.githubusercontent.com/AminForou/mcp-gsc/main/assets/banner-1.jpg" alt="Skip setup — try the hosted MCP server with one-click Google sign-in. Works in ChatGPT and Claude web. Includes GA4 and advanced SEO tools." width="800" style="margin: 20px 0; border-radius: 8px;">
@@ -142,7 +139,6 @@ A Model Context Protocol (MCP) server that connects [Google Search Console](http
 </div>
 
 ---
-
 ## Getting Started
 
 ### Step 1 — Set Up Google API Credentials
@@ -179,7 +175,6 @@ On first use, a browser window will open asking you to sign in to your Google ac
 *Updated 2026 — covers the full installation process using the new uvx method, from setting up your Google credentials to your first successful query.*
 
 ---
-
 ### Step 2 — Installation
 
 #### Option A — uvx (Recommended)
@@ -209,7 +204,6 @@ uv --version
 Now configure your AI client:
 
 ---
-
 **Claude Desktop**
 
 Config file: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -246,7 +240,6 @@ Service Account:
 ```
 
 ---
-
 **Cursor**
 
 Config file: `~/.cursor/mcp.json`
@@ -267,7 +260,6 @@ OAuth:
 ```
 
 ---
-
 **Codex CLI**
 
 Config file: `~/.codex/config.toml`
@@ -291,7 +283,6 @@ env = { GSC_CREDENTIALS_PATH = "/full/path/to/service_account.json", GSC_SKIP_OA
 ```
 
 ---
-
 > **Finding your uvx path:** On macOS/Linux run `which uvx` in Terminal after installing uv (typically `/Users/YOUR_NAME/.local/bin/uvx`). On Windows, run `Get-Command uvx | Select-Object -ExpandProperty Source` in PowerShell (or `where uvx` in cmd) — it's usually `C:\Users\YOUR_NAME\.local\bin\uvx.exe`. Replace `/FULL/PATH/TO/uvx` in the configs above with that path.
 >
 > **Why the full path?** GUI apps like Claude Desktop and Cursor launch without reading your shell config (`~/.zshrc`), so they don't know about `~/.local/bin`. Using the full path guarantees it works regardless of how the app is launched. If you see a `spawn uvx ENOENT` error, this is the fix.
@@ -301,7 +292,6 @@ After saving the config, **fully quit the app (`Cmd+Q`) and reopen it**.
 For OAuth: on first use, a browser window will open automatically for login. After that, the token is cached and you won't be asked again.
 
 ---
-
 #### Option B — Clone (Advanced)
 
 **Prefer a video walkthrough for this method?** The tutorial below covers the clone install path step by step — virtual environment setup, dependencies, and config:
@@ -368,7 +358,6 @@ Mac path examples:
 - Script: `/Users/yourname/Documents/mcp-gsc/gsc_server.py`
 
 ---
-
 ### Step 3 — Test
 
 Ask your AI assistant: **"List my GSC properties"**
@@ -376,7 +365,6 @@ Ask your AI assistant: **"List my GSC properties"**
 If you see your properties — it's working. If not, ask: **"Call get_capabilities"** to see auth status and diagnose the issue.
 
 ---
-
 ## Environment Variables Reference
 
 | Variable | Required | Default | Description |
@@ -388,7 +376,6 @@ If you see your properties — it's working. If not, ask: **"Call get_capabiliti
 | `GSC_ALLOW_DESTRUCTIVE` | No | `false` | Set to `"true"` to enable add/delete site and delete sitemap tools |
 
 ---
-
 ## Cursor Marketplace
 
 One-click install available — search for `mcp-search-console` in the Cursor Marketplace.
@@ -403,7 +390,6 @@ After installing, configure your credentials (see Step 1 above) then use the bun
 | `content-opportunities` | *"Find content opportunities for example.com"* | Surfaces position-11-20 queries with high impressions and low CTR |
 
 ---
-
 ## Sample Prompts
 
 | Tool | Sample Prompt |
@@ -417,7 +403,6 @@ After installing, configure your credentials (see Step 1 above) then use the bun
 | `get_advanced_search_analytics` | "Analyze queries with high impressions but positions below 10, filtered to mobile traffic in the US only." |
 
 ---
-
 ## Troubleshooting
 
 ### `spawn uvx ENOENT` or `command not found: uvx`
@@ -471,7 +456,6 @@ The MCP server runs locally on your machine. It only works in the **Claude Deskt
 3. Ask your AI assistant to "call get_capabilities" — it will report the exact auth status and error
 
 ---
-
 ## Safety: Destructive Operations
 
 By default, `add_site`, `delete_site`, and `delete_sitemap` are disabled. To enable them:
@@ -481,7 +465,6 @@ By default, `add_site`, `delete_site`, and `delete_sitemap` are disabled. To ena
 ```
 
 ---
-
 ## Remote Deployment & Docker (Advanced)
 
 The standard setup runs the server locally. This section is only for users who want to run it on a remote server or in a container.
@@ -514,13 +497,11 @@ docker run \
 ```
 
 ---
-
 ## Related Tools
 
 **[Advanced GSC Visualizer](https://www.advancedgsc.com/?utm_source=github&utm_medium=readme&utm_campaign=mcp-gsc&utm_content=related-tools)** — A Chrome extension (14,000+ users) with interactive charts, one-click export of up to 25,000 rows, keyword cannibalization detection, and an AI assistant — all directly inside Google Search Console. Built by the same author. [Install from the Chrome Web Store →](https://chromewebstore.google.com/detail/advanced-gsc-visualizer/cdiccpnglfpnclonhpchpaaoigfpieel)
 
 ---
-
 ## Contributing
 
 Found a bug or have an idea for improvement? Open an issue or submit a pull request on GitHub.
@@ -530,13 +511,11 @@ Thanks to everyone who has reported issues and contributed fixes, including
 [@JKdreaming](https://github.com/JKdreaming), and [@kuldiph](https://github.com/kuldiph).
 
 ---
-
 ## License
 
 MIT License. See the [LICENSE](https://github.com/AminForou/mcp-gsc/blob/main/LICENSE) file for details.
 
 ---
-
 ## Changelog
 
 ### [0.4.1] — September 2026

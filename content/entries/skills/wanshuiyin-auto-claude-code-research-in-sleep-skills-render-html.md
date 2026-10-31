@@ -4,7 +4,10 @@ name: render-html
 tagline: "Render an ARIS Markdown / JSON artifact (IDEA_REPORT, AUTO_REVIEW,
   KILL_ARGUMENT, PAPER_PLAN, research-wiki state, etc.) into a single-file HTML
   view "
-summary: "Use /render-html for ARIS artifacts that have a real human reader:"
+summary: "Do NOT use for: - LaTeX paper output — the final reader-facing
+  artifact is PDF, not HTML. - SKILL.md files — those are internal LLM-facing
+  protocol. - .aris/traces/ review traces — forensic debug, not human display.
+  -..."
 categories:
   - domain-research
 tags:

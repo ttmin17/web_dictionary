@@ -86,7 +86,6 @@ mkdir -p startup/competitors
 ```
 
 ---
-
 ## When competitors already exist
 
 Load and understand them for context.
@@ -108,7 +107,6 @@ If any thin files are found, surface this before doing anything else:
 If all existing files are properly filled out, skip this check silently and proceed.
 
 ---
-
 Infer intent from the conversation — don't mechanically ask "what do you want to do?" If the founder is:
 
 - **Asking about a specific competitor** — load that file, discuss, help update it
@@ -136,7 +134,6 @@ When adding or updating competitor files, follow the file conventions:
 Read before writing, and if you need to make some updates and it might not be oobvious from the context, it's always better running them by the user.
 
 ---
-
 ## Research guidance
 
 ### Ad-hoc web search vs. dispatching web-researcher
@@ -153,7 +150,6 @@ Rough rule: one fact in flow → inline. Multi-source or results-should-persist 
 When dispatching the `web-researcher` agent for competitor research, use a `fast` model unless the founder explicitly asks for a more thorough or higher-quality search. Competitor research is token-intensive due to web fetching, and a lighter model handles it well.
 
 ---
-
 ## When no competitors exist (or a large-scale competitor discovery or landscape reassessment needed)
 
 If `startup/competitors/` is empty or the situation suggests that a profound research is needed, load the reference file:

@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -70,7 +70,6 @@ skill:
 Systematically finds weaknesses in any plan before reality does. Not to kill the plan — to make it survive contact with reality.
 
 ---
-
 ## The Core Idea
 
 Most plans fail for predictable reasons. Not bad luck — bad assumptions. Overestimated demand. Underestimated complexity. Dependencies nobody questioned. Timing that made sense in a spreadsheet but not in the real world.
@@ -80,7 +79,6 @@ The pre-mortem technique: **imagine it's 12 months from now and this plan failed
 That's not pessimism. It's how you build something that doesn't collapse.
 
 ---
-
 ## When to Run a Challenge
 
 - Before committing significant resources to a plan
@@ -91,7 +89,6 @@ That's not pessimism. It's how you build something that doesn't collapse.
 - When you feel excited about the plan (excitement is a signal to scrutinize harder)
 
 ---
-
 ## The Challenge Framework
 
 ### Step 1: Extract Core Assumptions
@@ -157,7 +154,6 @@ For each critical vulnerability: if this assumption turns out to be wrong at mon
 The less reversible, the more rigorously you need to validate before committing.
 
 ---
-
 ## Output Format
 
 **Challenge Report: [Plan Name]**
@@ -194,7 +190,6 @@ HARDENING ACTIONS
 ```
 
 ---
-
 ## Challenge Patterns by Plan Type
 
 ### Product Roadmap
@@ -222,7 +217,6 @@ HARDENING ACTIONS
 - What assumptions break if you raise 50% of the target amount?
 
 ---
-
 ## The Hardest Questions
 
 These are the ones people skip:
@@ -233,7 +227,6 @@ These are the ones people skip:
 - "What would an enemy of this plan attack first?"
 
 ---
-
 ## Deliverable
 
 The output of `/em:challenge` is not permission to stop. It's a vulnerability map. Now you can make conscious decisions: validate the risky assumptions, hedge the critical ones, or accept the bets you're making knowingly.

@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -73,13 +73,11 @@ skill:
 **Domain:** Payments / Billing Infrastructure
 
 ---
-
 ## Overview
 
 Implement production-grade Stripe integrations: subscriptions with trials and proration, one-time payments, usage-based billing, checkout sessions, idempotent webhook handlers, customer portal, and invoicing. Covers Next.js, Express, and Django patterns.
 
 ---
-
 ## Core Capabilities
 
 - Subscription lifecycle management (create, upgrade, downgrade, cancel, pause)
@@ -92,7 +90,6 @@ Implement production-grade Stripe integrations: subscriptions with trials and pr
 - Full Stripe CLI local testing setup
 
 ---
-
 ## When to Use
 
 - Adding subscription billing to any web app
@@ -102,7 +99,6 @@ Implement production-grade Stripe integrations: subscriptions with trials and pr
 - Migrating from one billing model to another
 
 ---
-
 ## Subscription Lifecycle State Machine
 
 ```
@@ -124,7 +120,6 @@ FREE_TRIAL ──paid──► ACTIVE ──cancel──► CANCEL_PENDING ─�
 `trialing | active | past_due | canceled | cancel_pending | paused | unpaid`
 
 ---
-
 ## Stripe Client Setup
 
 ```typescript
@@ -156,7 +151,6 @@ export const PLANS = {
 ```
 
 ---
-
 ## Checkout Session (Next.js App Router)
 
 ```typescript
@@ -204,7 +198,6 @@ export async function POST(req: Request) {
 ```
 
 ---
-
 ## Subscription Upgrade/Downgrade
 
 ```typescript
@@ -255,7 +248,6 @@ export async function previewProration(subscriptionId: string, newPriceId: strin
 ```
 
 ---
-
 ## Complete Webhook Handler (Idempotent)
 
 ```typescript
@@ -416,7 +408,6 @@ async function handleInvoicePaymentSucceeded(invoice: Stripe.Invoice) {
 ```
 
 ---
-
 ## Usage-Based Billing
 
 ```typescript
@@ -445,7 +436,6 @@ export async function trackApiCall(userId: string) {
 ```
 
 ---
-
 ## Customer Portal
 
 ```typescript
@@ -470,7 +460,6 @@ export async function POST() {
 ```
 
 ---
-
 ## Testing with Stripe CLI
 
 ```bash
@@ -503,7 +492,6 @@ stripe events list --limit 10
 ```
 
 ---
-
 ## Feature Gating Helper
 
 ```typescript
@@ -528,7 +516,6 @@ export async function requireActiveSubscription() {
 ```
 
 ---
-
 ## Common Pitfalls
 
 - **Webhook delivery order not guaranteed** — always re-fetch from Stripe API, never trust event data alone for DB updates

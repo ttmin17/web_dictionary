@@ -253,5 +253,4 @@ Google Sheets enforces strict rate limits:
 | Spreadsheet info | `GOOGLESHEETS_GET_SPREADSHEET_INFO` | `spreadsheet_id` |
 | Update tab props | `GOOGLESHEETS_UPDATE_SHEET_PROPERTIES` | `spreadsheetId`, properties |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

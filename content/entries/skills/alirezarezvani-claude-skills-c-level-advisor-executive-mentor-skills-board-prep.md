@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -71,7 +71,6 @@ skill:
 Prepare for the adversarial version of your board, not the friendly one. Every hard question they'll ask. Every number you need cold. The narrative that acknowledges weakness without losing the room.
 
 ---
-
 ## The Reality of Board Meetings
 
 Your board members have seen 50+ companies. They've watched founders flinch at their own numbers, spin bad news as "learning opportunities," and present sanitized decks that hide what's actually happening.
@@ -81,7 +80,6 @@ They know when you're not being straight with them. The question isn't whether t
 The best board meetings aren't the ones where everything looks good. They're the ones where the CEO demonstrates they see reality clearly, have a plan, and can execute under pressure.
 
 ---
-
 ## The Preparation Framework
 
 ### Phase 1: Numbers Cold
@@ -175,7 +173,6 @@ Not all board members want the same thing from a meeting.
 - **The independent** — watching governance, team dynamics, and your judgment
 
 ---
-
 ## Pre-Meeting Checklist
 
 **48 hours before:**
@@ -192,7 +189,6 @@ Not all board members want the same thing from a meeting.
 - [ ] Follow-up action template ready
 
 ---
-
 ## During the Meeting
 
 **What the board is watching:**
@@ -205,7 +201,6 @@ Not all board members want the same thing from a meeting.
 **The single best thing you can do:** Name the hard thing before they do. "I want to address the revenue miss directly. Here's what happened, here's what I should have caught earlier, here's what changes."
 
 ---
-
 ## After the Meeting
 
 Within 24 hours:

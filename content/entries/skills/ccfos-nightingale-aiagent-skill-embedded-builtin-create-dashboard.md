@@ -86,7 +86,6 @@ When the same component often has both categraf and exporter templates, **prefer
    c. If there are multiple candidates and none is the default, **do not blindly take the first one**; list them in your reply and let the user confirm
 
 ---
-
 ## Path A: Import an integration template (preferred)
 
 `import_dashboard_template` reads the complete template under `integrations/` (preserving layout, thresholds, units, overrides, and value mappings in full), and automatically rewrites the template's datasource binding onto the Prometheus datasource you chose.
@@ -121,7 +120,6 @@ When the same component often has both categraf and exporter templates, **prefer
 - When it returns `Name duplicate`, **do not** call `list_dashboards`; just change the name (add a `-v2`, `-AI`, or timestamp suffix) and retry
 
 ---
-
 ## Path B: Custom creation (when there is no template)
 
 Use `create_dashboard`. **You only need to provide the panel title, type, and PromQL**; the tool automatically generates the full configuration (layout, datasource variables, styling, units, etc., are all handled automatically).
@@ -205,7 +203,6 @@ Panels are arranged automatically from left to right and top to bottom, with sam
 - When it returns `Name duplicate`, just change the name and retry; do not call `list_dashboards`
 
 ---
-
 ## Step 3 (common to both paths): Output the result
 
 **Keep it short**. A one-sentence confirmation is enough, for example:

@@ -96,7 +96,6 @@ tool:
 </p>
 
 ---
-
 ## ❤️赞助商
 
 > [想出现在这里？](mailto:pnt01@foxmail.com)
@@ -134,7 +133,6 @@ tool:
 </details>
 
 ---
-
 ## 为什么需要 Agent Reach？
 
 **Agent Reach 让你的 Agent 真正连上互联网，用上它自己够不着的平台和能力。**
@@ -160,7 +158,6 @@ agent-reach read https://www.v2ex.com/t/123   # 按链接自动选渠道
 - **会碰我的浏览器和账号吗？** 要登录的平台用 Agent Reach 自己的专用浏览器，在后台运行、不弹窗。第一次用某个网站时，会把你 Chrome 里这个网站的登录复制一份过去，原浏览器不变，不读密码库。复制过来的通常是主账号，建议换成小号，做法见下面的"安全性"。详见[会话配置](https://github.com/Panniantong/Agent-Reach/blob/main/agent_reach/skill/references/sessions.md)。
 
 ---
-
 ## 支持的平台
 
 下表是当前版本的情况。
@@ -187,7 +184,6 @@ agent-reach read https://www.v2ex.com/t/123   # 按链接自动选渠道
 - **实验**：能用，但平台反爬更严，可能随时失效。
 
 ---
-
 ## 快速上手
 
 把这句话发给你的 Agent：
@@ -209,7 +205,6 @@ agent-reach read https://www.v2ex.com/t/123   # 按链接自动选渠道
 > ⚠️ PyPI 上叫 `agent-reach` 的包不是本项目，请勿从 PyPI 安装，只用 install.md 里的 GitHub 地址。
 
 ---
-
 ## 装好之后怎么管
 
 Agent Reach 装的所有东西（各渠道的工具、登录、设置）都放在你电脑上同一个文件夹里（`~/.agent-reach/`），不散落到别处。所以升级、管理、删除都很省事，一句话就行。
@@ -228,7 +223,6 @@ Agent Reach 装的所有东西（各渠道的工具、登录、设置）都放�
 出了问题，Agent 会告诉你是哪个平台、什么原因、下一步怎么做。常见问题见 [troubleshooting.md](https://github.com/Panniantong/Agent-Reach/blob/main/docs/troubleshooting.md)。
 
 ---
-
 ## 设计理念
 
 ### 🔌 每个平台 = 首选 + 备选的有序工具列表
@@ -249,7 +243,6 @@ flowchart LR
 平台改版、工具失效是常态。换工具只是调整这个列表，Agent 的用法不变。
 
 ---
-
 ## 安全性
 
 - **只读**：只搜索和读取，不发帖、不评论、不点赞、不私信。
@@ -263,7 +256,6 @@ flowchart LR
 跟 Agent 说"卸载 Agent Reach"。它会先列出要删的东西，你确认后再删。只删 Agent Reach 自己装的东西，你的其他文件和浏览器都不动。最后它会告诉你怎么删掉程序本身。
 
 ---
-
 ## ⭐ 为什么值得 Star
 
 这个项目我自己每天在用，所以我会一直维护它。
@@ -275,7 +267,6 @@ flowchart LR
 Star 一下，下次需要的时候能找到。⭐
 
 ---
-
 ## 致谢
 
 [OpenCLI](https://github.com/jackwener/opencli) · [bili-cli](https://github.com/public-clis/bilibili-cli) · [boss-agent-cli](https://github.com/can4hou6joeng4/boss-agent-cli) · [yt-dlp](https://github.com/yt-dlp/yt-dlp) · [Jina Reader](https://github.com/jina-ai/reader) · [Exa](https://exa.ai)

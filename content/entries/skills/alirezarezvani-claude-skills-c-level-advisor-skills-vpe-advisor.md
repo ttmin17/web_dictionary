@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -287,6 +287,5 @@ python ../../skills/vpe-advisor/scripts/eng_team_structure_designer.py team.json
 - [production_discipline.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/skills/vpe-advisor/references/production_discipline.md) — On-call rotation design + incident response + blameless postmortem culture + deployment cadence + SLO discipline integration
 
 ---
-
 **Version:** 1.0.0
 **Status:** Production Ready

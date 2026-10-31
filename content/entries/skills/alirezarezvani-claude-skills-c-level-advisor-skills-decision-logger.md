@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -85,7 +85,6 @@ python scripts/decision_tracker.py --search "pricing" # Search decisions
 ```
 
 ---
-
 ## Commands
 
 | Command | Effect |
@@ -98,7 +97,6 @@ python scripts/decision_tracker.py --search "pricing" # Search decisions
 | `/decision-logger review --overdue` | Items past deadline |
 
 ---
-
 ## Two-Layer Architecture
 
 Storage follows the canonical two-layer decision memory (see `../agent-protocol/SKILL.md` → "Decision Memory (Canonical Layout)") — the same layout `/c-level-agents:decide` writes.
@@ -120,7 +118,6 @@ Storage follows the canonical two-layer decision memory (see `../agent-protocol/
 Migration: a legacy `memory/board-meetings/` folder may exist from earlier versions; read it for history but write all new entries to `~/.claude/decisions/`.
 
 ---
-
 ## Decision Entry Format
 
 ```markdown
@@ -146,7 +143,6 @@ Migration: a legacy `memory/board-meetings/` folder may exist from earlier versi
 ```
 
 ---
-
 ## Conflict Detection
 
 Before logging, Chief of Staff checks for:
@@ -170,7 +166,6 @@ To reopen: founder must explicitly say "reopen [topic] from [DATE]".
 ```
 
 ---
-
 ## Logging Workflow (Post Phase 5)
 
 1. Founder approves synthesis
@@ -181,7 +176,6 @@ To reopen: founder must explicitly say "reopen [topic] from [DATE]".
 6. Confirm: decisions logged, actions tracked, DO_NOT_RESURFACE flags added
 
 ---
-
 ## Marking Actions Complete
 
 ```markdown
@@ -191,7 +185,6 @@ To reopen: founder must explicitly say "reopen [topic] from [DATE]".
 Never delete completed items. The history is the record.
 
 ---
-
 ## File Structure
 
 ```
@@ -203,7 +196,6 @@ Never delete completed items. The history is the record.
 ```
 
 ---
-
 ## References
 - `templates/decision-entry.md` — single entry template with field rules
 - `scripts/decision_tracker.py` — CLI parser, overdue tracker, conflict detector

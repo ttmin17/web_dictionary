@@ -3,7 +3,10 @@ slug: cherryhq-cherry-studio-resources-skills-office-transform
 name: office-transform
 tagline: Extract or edit a selection from xlsx, docx, pdf, or pptx into a new
   file; the source is never modified.
-summary: "Two invariants hold for every operation:"
+summary: 1. The source file is read-only. Every result is a new file; both
+  scripts refuse to write to the source path or overwrite an existing file.
+  Never work around this with ad-hoc shell edits to the original. 2. Anchors
+  ar...
 categories:
   - coding-agents
 tags:

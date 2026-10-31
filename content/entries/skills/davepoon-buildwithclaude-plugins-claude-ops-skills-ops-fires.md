@@ -3,7 +3,10 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-fires
 name: ops-fires
 tagline: Production incidents dashboard. Reads ECS health, Sentry errors, CI
   failures. Offers to dispatch fix agents for active fires.
-summary: "Before executing, load available context:"
+summary: "1. Daemon health: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/daemon\
+  -health.json - Check infra-monitor service status — if not running,
+  pre-gathered infra data may be stale - If actionn..."
 categories:
   - agent-frameworks
 tags:
@@ -100,7 +103,6 @@ Before executing, load available context:
 | `curl -H "Authorization: Bearer $SENTRY_AUTH_TOKEN" "https://sentry.io/api/0/projects/<org>/<proj>/issues/?query=is:unresolved"` | API fallback when MCP unavailable | JSON array |
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** when dispatching multiple fix agents simultaneously. This enables:
@@ -154,7 +156,6 @@ Classify each issue by severity:
 | LOW      | Warning-level, non-urgent                         |
 
 ---
-
 ## Output format
 
 ```
@@ -206,7 +207,6 @@ AskUserQuestion call 2 (only if "More..."):
 If no fires: show "ALL SYSTEMS OPERATIONAL" with last-checked timestamps.
 
 ---
-
 ## Dispatch fix agent
 
 When user selects to fix an issue, use `AskUserQuestion` to confirm the scope before dispatching:
@@ -237,7 +237,6 @@ Use the `agents/infra-monitor.md` agent definition for infra issues.
 If `$ARGUMENTS` contains a project alias, filter to that project's services only.
 
 ---
-
 ## Native tool usage
 
 ### Monitor — live service health

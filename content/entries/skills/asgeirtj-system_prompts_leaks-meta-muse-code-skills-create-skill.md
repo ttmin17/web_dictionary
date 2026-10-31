@@ -4,7 +4,10 @@ name: create-skill
 tagline: Create and validate a new Muse skill — project-local in the current
   workspace by default, or a personal skill staged for `muse skills install`
   into th
-summary: "Two scopes exist (ADR 8975):"
+summary: '- Project scope (the default): the skill lives in the current
+  workspace at .agents/skills//. - Personal scope (the user asked for a
+  "personal", "user", or "cross-project" skill): the skill belongs in the
+  managed perso...'
 categories:
   - cloud-infra
 tags:
@@ -158,11 +161,9 @@ below is `.agents/skills/<skill-id>` (project scope) or
 Use this shape:
 
 ```markdown
----
-name: <skill-id>
+---name: <skill-id>
 description: <one sentence>
 ---
-
 # <Readable Skill Name>
 
 <Instructions for when and how to use the skill.>

@@ -3,7 +3,10 @@ slug: alirezarezvani-claude-skills-engineering-agenthub-skills-hub-init
 name: hub-init
 tagline: Create a new AgentHub collaboration session with task, agent count, and
   evaluation criteria. Use when the user runs /hub:hub-init or asks to start a m
-summary: "Pass them to the init script:"
+summary: "1. Task — What should the agents do? (required) 2. Agent count — How
+  many parallel agents? (default: 3) 3. Eval command — Command to measure
+  results (optional — skip for LLM judge mode) 4. Metric name — What metric
+  to..."
 categories:
   - coding-agents
 tags:
@@ -25,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 6
   stars_growth_pct: 0.7
   trending_score: 6.04
-  rank_current: 79
-  rank_delta: -12
+  rank_current: 84
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
     - 846
@@ -796,7 +796,6 @@ curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=reddit-mcp-b
 MIT - Use it however you want!
 
 ---
-
 Made with ❤️ for the MCP community. No venture capital, no tracking, just a good MCP server.
 
 Built by [Karan Bansal](https://karanbansal.in) (Head of AI at ArmorCode). I write about Claude Code, MCP, and production agentic AI at [karanbansal.in/blog](https://karanbansal.in/blog/).

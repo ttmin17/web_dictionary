@@ -70,7 +70,6 @@ skill:
 > Este archivo se mantiene como referencia de archivo y compatibilidad retroactiva con instalaciones existentes.
 
 ---
-
 ## Documentación Original v1 (archivo)
 
 Evalúa automáticamente las sesiones de Claude Code al terminar para extraer patrones reutilizables que pueden guardarse como skills aprendidos.
@@ -159,7 +158,6 @@ Agregar a tu `~/.claude/settings.json`:
 - `/learn` — Extracción manual de patrones a mitad de sesión
 
 ---
-
 ## Notas de Comparación (Investigación: Ene 2025)
 
 ### vs Homunculus

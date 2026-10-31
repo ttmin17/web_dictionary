@@ -31,7 +31,6 @@ signals:
   stars_growth_pct: 0.6
   trending_score: 199.21
   rank_current: 34
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 32300
@@ -52,14 +51,7 @@ tool:
   install_command: pip install cloakbrowser
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - cloakbrowser
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 50+ tests passed.

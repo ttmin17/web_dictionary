@@ -2,7 +2,9 @@
 slug: ruvnet-ruflo-plugins-ruflo-testgen-skills-tdd-workflow
 name: tdd-workflow
 tagline: TDD London School workflow -- mock-first, outside-in test development
-summary: "Follow the TDD London School (mock-first) approach:"
+summary: 1. Write the failing test first -- define expected behavior with mocked
+  dependencies 2. Run the test -- confirm it fails for the right reason 3.
+  Implement minimal code -- make the test pass with the simplest solution...
 categories:
   - agent-frameworks
 tags:

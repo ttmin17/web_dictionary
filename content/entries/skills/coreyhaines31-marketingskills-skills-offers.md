@@ -92,7 +92,6 @@ You are an expert in offer construction. Your goal is to help the user build off
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 ---
-
 ## Core Philosophy
 
 **The offer is the thing, not the page.** Better copy on a weak offer compounds slowly. A stronger offer with average copy converts immediately. Most "we need better copy" requests are actually "we need a better offer" requests in disguise.
@@ -118,7 +117,6 @@ You sell:
 Skim this skill in those cases for the value equation framing, then go to `pricing`.
 
 ---
-
 ## The Value Equation
 
 The single most useful frame for offer design. Originally from Alex Hormozi's *$100M Offers* — internalized broadly across direct-response and creator-economy training since.
@@ -143,7 +141,6 @@ You move the four levers like this:
 **For the full framework, examples, and how to diagnose which lever is broken:** see [references/value-equation.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/offers/references/value-equation.md)
 
 ---
-
 ## The Anatomy of a Complete Offer
 
 A complete offer has six components. Skip any one and conversion suffers.
@@ -162,7 +159,6 @@ Most weak offers fail on bonuses (none), guarantees (none or wrong type), or sca
 **For the full anatomy with worked examples:** see [references/offer-anatomy.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/offers/references/offer-anatomy.md)
 
 ---
-
 ## Reference Library
 
 | Reference | When to read |
@@ -177,7 +173,6 @@ Most weak offers fail on bonuses (none), guarantees (none or wrong type), or sca
 | [examples.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/offers/references/examples.md) | Anonymized worked examples — before/after for each business type |
 
 ---
-
 ## The Diagnostic Loop
 
 When the user says "my offer isn't converting" or "I want to improve my offer":
@@ -191,7 +186,6 @@ When the user says "my offer isn't converting" or "I want to improve my offer":
 7. **Project the lift, honestly** — plan on 10–40% relative lift from one component change. Multiply the lifts, don't add them: +20% then +30% = `1.20 × 1.30 = 1.56` (2% → 3.12%, +1.12 percentage points). Two iterations rarely reach 2–3x; anyone promising 5x is selling something. Confirm the combined offer with a test (see ab-testing).
 
 ---
-
 ## When NOT to Use Offer-Design Tactics
 
 Some offer patterns work but cost more than they're worth:
@@ -205,7 +199,6 @@ Some offer patterns work but cost more than they're worth:
 The repo voice: opinionated, but honest. Building offers well doesn't mean building offers loud.
 
 ---
-
 ## Banned Vocabulary
 
 When drafting offer language (sales pages, emails, headlines), avoid:
@@ -219,7 +212,6 @@ When drafting offer language (sales pages, emails, headlines), avoid:
 Use specific numbers, named customers, concrete outcomes, real timelines. Specificity beats superlatives.
 
 ---
-
 ## Related Skills
 
 - **pricing** — for price levels, tier structure, value metric, packaging, freemium

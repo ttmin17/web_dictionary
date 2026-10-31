@@ -25,12 +25,14 @@ source:
 signals:
   stars: 911
   last_commit: 2026-10-18T18:01:27Z
-  stars_delta_7d: 35
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 911
+    - 911
+  rank_current: 150
 language: en
 needs_keys: false
 prerequisites:
@@ -47,14 +49,7 @@ tool:
   install_command: pip install clawcodex-cli
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - clawcodex-cli
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Token efficient Claude Code full Python rebuild. AI Coding Agent in 310K LoC Python.

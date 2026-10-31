@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -84,7 +84,6 @@ At ~15 people, you hit the first ceiling: you can't be in every meeting and stil
 The earlier you address this, the better.
 
 ---
-
 ## 1. Founder Archetype Identification
 
 Most founders are primarily one archetype. Knowing yours predicts what you'll struggle with.
@@ -105,7 +104,6 @@ Most founders are primarily one archetype. Knowing yours predicts what you'll st
 Most founders are Builder or Visionary. Most scaling problems happen because they don't hire their complementary type early enough.
 
 ---
-
 ## 2. Delegation Framework
 
 Founders fail to delegate for four reasons:
@@ -160,7 +158,6 @@ Start at level 2–3. Move people up as trust is established. Most founders neve
 - M&A decisions
 
 ---
-
 ## 3. Energy Management
 
 Founders manage energy, not just time. Time is fixed. Energy is renewable — but only if you manage it.
@@ -193,7 +190,6 @@ Map your week by energy, not tasks. See `references/founder-toolkit.md` for the 
 **Identify your peak window.** Most people have 4–6 peak hours per day. Schedule your hardest work in those windows.
 
 ---
-
 ## 4. CEO Calendar Audit
 
 The calendar is the most honest document in a founder's life. It shows what you actually prioritize, not what you say you prioritize.
@@ -230,7 +226,6 @@ Pull the last 4 weeks of calendar data. Categorize every meeting/block:
 If you're spending time on things from two stages ago, you haven't made the transition.
 
 ---
-
 ## 5. Leadership Style Evolution
 
 The job changes at every stage. Most founders don't change with it.
@@ -250,7 +245,6 @@ You're a symbol as much as a manager. The skill: build systems that work without
 **The hardest transition:** Manager → Leader. You have to stop doing things yourself and trust people you're still getting to know.
 
 ---
-
 ## 6. Blind Spot Identification
 
 Everyone has them. Founders more than most — because nobody in the early company had the authority or safety to tell you.
@@ -272,7 +266,6 @@ Everyone has them. Founders more than most — because nobody in the early compa
 4. **The energy audit:** Where do you consistently drain the people around you?
 
 ---
-
 ## 7. Imposter Syndrome Toolkit
 
 It doesn't go away. It evolves. The founder who was scared to pitch to investors is now scared to manage a board. The founder who was scared to hire is now scared to fire.
@@ -286,7 +279,6 @@ It doesn't go away. It evolves. The founder who was scared to pitch to investors
 - **Name it:** Saying "I'm feeling imposter syndrome about this investor meeting" to a trusted person removes 50% of its power.
 
 ---
-
 ## 8. Founder Mental Health
 
 Burnout isn't weakness. It's a predictable outcome of high-demand + low-recovery + no control over inputs.
@@ -307,7 +299,6 @@ Late: Can't function, decisions have stopped, team notices before you do.
 - **Clear off-ramps.** Know what "enough for today" looks like. Don't let the work be infinite.
 
 ---
-
 ## 9. The Founder Mode Trap
 
 Paul Graham's "Founder Mode" essay made the case that great founders stay deeply involved in operations — skip middle management and go direct. It resonated because it's sometimes true.
@@ -327,7 +318,6 @@ Paul Graham's "Founder Mode" essay made the case that great founders stay deeply
 **The test:** Are you going deep because the situation requires it, or because you're uncomfortable with the loss of control? The first is leadership. The second is the trap.
 
 ---
-
 ## 10. Succession Planning
 
 Building a company that works without you is not disloyalty — it's the ultimate expression of leadership.
@@ -343,7 +333,6 @@ Building a company that works without you is not disloyalty — it's the ultimat
 Most founders are at Level 0. Level 2 is a reasonable target. Level 3 is a strategic asset.
 
 ---
-
 ## Key Questions for Founder Development
 
 - "What decisions did you make last week that someone else could have made?"

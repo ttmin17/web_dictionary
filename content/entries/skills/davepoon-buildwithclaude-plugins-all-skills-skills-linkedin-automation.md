@@ -231,5 +231,4 @@ Automate LinkedIn operations through Composio's LinkedIn toolkit via Rube MCP.
 | Delete post | LINKEDIN_DELETE_LINKED_IN_POST | post_id |
 | Comment on post | LINKEDIN_CREATE_COMMENT_ON_POST | post_id, text, actor |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

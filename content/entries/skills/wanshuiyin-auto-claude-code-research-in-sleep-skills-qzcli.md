@@ -96,7 +96,6 @@ codex mcp add qzcli -- qzcli-mcp
 ```
 
 ---
-
 ## Configuration
 
 Credentials are read in this priority order:
@@ -119,7 +118,6 @@ export QZCLI_API_URL="https://qz.yourorg.edu.cn"
 Config files are stored in `~/.qzcli/`: `config.json`, `.cookie`, `resources.json`, `jobs.json`.
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -137,7 +135,6 @@ qzcli ls -c -r
 ```
 
 ---
-
 ## Authentication
 
 ```bash
@@ -160,7 +157,6 @@ qzcli cookie --clear
 **Note:** `qzcli avail` auto-refreshes the cookie if it expires and credentials are configured.
 
 ---
-
 ## Resource Discovery
 
 ```bash
@@ -178,7 +174,6 @@ qzcli res -w ws-xxxxxxxx --name "My Workspace"
 ```
 
 ---
-
 ## Check Available Nodes
 
 ```bash
@@ -202,7 +197,6 @@ qzcli avail -w MY_WORKSPACE -v
 ```
 
 ---
-
 ## Job Submission
 
 ### Interactive (recommended for first-time use)
@@ -288,7 +282,6 @@ qzcli hpc \
 ```
 
 ---
-
 ## Batch Submission
 
 ```bash
@@ -340,7 +333,6 @@ done
 ```
 
 ---
-
 ## Job Management
 
 ```bash
@@ -366,7 +358,6 @@ qzcli ws -p "My Project"
 ```
 
 ---
-
 ## Troubleshooting
 
 | Problem | Cause | Fix |

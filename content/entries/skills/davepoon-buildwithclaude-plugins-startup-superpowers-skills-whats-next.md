@@ -76,7 +76,6 @@ Orient the user on where their project stands and what to focus on next. Most of
 Check whether `./startup/core.md` exists in the current working directory. Use a relative path. Do not list parent directories or absolute paths — the project is always the current working directory.
 
 ---
-
 ## When no `startup/` exists
 
 The project hasn't been initialized yet. Load the initialization workflow:
@@ -92,7 +91,6 @@ The reference file's instructions take over from this point. For founders who al
 ```
 
 ---
-
 ## When `startup/` exists and `plan.md` is present
 
 Start with a quick orientation. Only escalate to a full reassessment if the plan needs structural changes.

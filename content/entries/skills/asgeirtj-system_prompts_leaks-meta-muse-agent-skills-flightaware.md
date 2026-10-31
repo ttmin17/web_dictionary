@@ -61,13 +61,11 @@ skill:
   pack_slug: asgeirtj-system_prompts_leaks
 ---
 
----
-name: "flightaware"
+---name: "flightaware"
 title: "FlightAware AeroAPI"
 description: "Use for questions about a specific flight's departure or arrival time, including "when's my flight?" and confirmation of remembered times, plus flight status, delays, and cancellations. Verify the exact dated flight before answering; memory identifies the itinerary but does not verify its current schedule. Use FlightAware to monitor operational changes for an upcoming booked flight when the user directly asks for ongoing monitoring."
 metadata: { "includeInPrompt": true }
 ---
-
 # FlightAware
 
 ## Connecting

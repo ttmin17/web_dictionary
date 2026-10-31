@@ -253,5 +253,4 @@ Automate Brevo (formerly Sendinblue) email marketing operations through Composio
 | Delete template | BREVO_DELETE_EMAIL_TEMPLATE | templateId |
 | List senders | BREVO_GET_ALL_SENDERS | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

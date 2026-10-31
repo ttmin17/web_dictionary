@@ -77,7 +77,6 @@ svc = unreal.SoundCueService()
 ```
 
 ---
-
 ## Audio Flow Direction
 
 **Audio flows FROM leaves TOWARD root.**
@@ -92,7 +91,6 @@ svc = unreal.SoundCueService()
 - `set_root_node(index)` makes that node the final output (what you hear).
 
 ---
-
 ## Critical Rules
 
 ### ⚠️ Bool Properties — `b` prefix stripped in Python
@@ -137,7 +135,6 @@ svc.connect_nodes('/Game/MyCue', 1, 0, 0)
 ```
 
 ---
-
 ## Workflows
 
 ### Create a Simple SoundCue
@@ -220,7 +217,6 @@ svc.set_sound_class('/Game/Audio/SC_Explosion', '/Game/Audio/SC_SFX')
 ```
 
 ---
-
 ## API Reference
 
 ### Asset Lifecycle

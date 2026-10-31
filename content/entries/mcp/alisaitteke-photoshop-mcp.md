@@ -2,7 +2,9 @@
 slug: alisaitteke-photoshop-mcp
 name: photoshop-mcp
 tagline: MCP for Adobe Photoshop. 118 tools. Control from Cursor, Claude or custom LLMs.
-summary: "Languages: English · 简体中文 · Español · Deutsch · 日本語 · Türkçe · Website"
+summary: Chat with Photoshop like a colleague. Describe what you want in plain
+  words — "remove this background", "resize these for Instagram" — and your AI
+  assistant does the clicking for you. Works with Cursor, Claude, or the...
 categories:
   - productivity-ops
 tags:
@@ -23,7 +25,7 @@ source:
 signals:
   stars: 737
   last_commit: 2026-10-24T23:44:40Z
-  stars_delta_7d: 19
+  stars_delta_7d: 31
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

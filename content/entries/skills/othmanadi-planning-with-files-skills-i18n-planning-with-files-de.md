@@ -4,7 +4,9 @@ name: de
 tagline: Persistente dateibasierte Planung für mehrstufige Arbeit mit
   KI-Agenten. Hält task_plan.md, findings.md und progress.md auf dem
   Datenträger; Lebenszyk
-summary: "Bevor du fortfährst, ermittle das Planverzeichnis, das diese Aufgabe besitzt:"
+summary: 1. Verwende das installierte scripts/resolve-plan-dir.sh (oder .ps1)
+  mit dem PLANID und PWFPLANROOT des Hosts. Lies taskplan.md, progress.md und
+  findings.md aus genau diesem Verzeichnis. 2. Wenn ein expliziter Selekto...
 categories:
   - agent-frameworks
 tags:

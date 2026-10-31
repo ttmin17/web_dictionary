@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -77,7 +77,6 @@ skill:
 Production ML engineering patterns for model deployment, MLOps infrastructure, and LLM integration.
 
 ---
-
 ## Table of Contents
 
 - [Model Deployment Workflow](#model-deployment-workflow)
@@ -89,7 +88,6 @@ Production ML engineering patterns for model deployment, MLOps infrastructure, a
 - [Tools](#tools)
 
 ---
-
 ## Model Deployment Workflow
 
 Deploy a trained model to production with monitoring:
@@ -131,7 +129,6 @@ CMD ["uvicorn", "src.server:app", "--host", "0.0.0.0", "--port", "8080"]
 | Ray Serve | Medium | High | Complex pipelines, multi-model |
 
 ---
-
 ## MLOps Pipeline Setup
 
 Establish automated training and deployment:
@@ -174,7 +171,6 @@ user_features = FeatureView(
 | New data volume | X new samples | Incremental update |
 
 ---
-
 ## LLM Integration Workflow
 
 Integrate LLM APIs into production applications:
@@ -225,7 +221,6 @@ The ratios between tiers are far more stable than the absolute prices, so
 build the model-routing decision on the ratio.
 
 ---
-
 ## RAG System Implementation
 
 Build retrieval-augmented generation pipeline:
@@ -259,7 +254,6 @@ Build retrieval-augmented generation pipeline:
 | Recursive | Hierarchical | Parent-child | Long documents |
 
 ---
-
 ## Model Monitoring
 
 Monitor production models for drift and degradation:
@@ -297,7 +291,6 @@ def detect_drift(reference, current, threshold=0.05):
 | Accuracy drop | > 2% | > 5% |
 
 ---
-
 ## Reference Documentation
 
 ### MLOps Production Patterns
@@ -331,7 +324,6 @@ def detect_drift(reference, current, threshold=0.05):
 - Hybrid search and reranking patterns
 
 ---
-
 ## Tools
 
 ### Model Deployment Pipeline
@@ -359,7 +351,6 @@ python scripts/ml_monitoring_suite.py --config monitoring.yaml --deploy
 Sets up drift detection, alerting, and performance dashboards.
 
 ---
-
 ## Tech Stack
 
 | Category | Tools |

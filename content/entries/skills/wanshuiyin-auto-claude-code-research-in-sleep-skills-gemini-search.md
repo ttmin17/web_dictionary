@@ -4,7 +4,9 @@ name: search
 tagline: 'Search research papers via Gemini for broad literature discovery. Use
   when user says "gemini search", "gemini papers", "search with gemini", or
   wants '
-summary: "This skill uses Gemini as a broad literature discovery source:"
+summary: Use Gemini when you want AI-driven discovery that goes beyond keyword
+  matching — Gemini decomposes topics into sub-problems, explores naming
+  variants, and surfaces papers that traditional API searches may miss.
 categories:
   - domain-research
 tags:

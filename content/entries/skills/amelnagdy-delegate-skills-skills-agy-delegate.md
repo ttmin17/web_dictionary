@@ -23,11 +23,12 @@ source:
 signals:
   stars: 2372
   last_commit: 2026-10-07T15:35:08Z
-  stars_delta_7d: 88
+  stars_delta_7d: 80
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
+    - 2372
     - 2372
 language: en
 needs_keys: false

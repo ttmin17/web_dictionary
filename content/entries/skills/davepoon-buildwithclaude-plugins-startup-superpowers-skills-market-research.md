@@ -77,7 +77,6 @@ Read `startup/core.md` to load project context (name, seed description, type of 
 Check if `startup/market-research.md` exists.
 
 ---
-
 ## When market research already exists
 
 Load it for context. Infer intent from the conversation — don't ask "what do you want to do?" If the founder is:
@@ -96,7 +95,6 @@ When updating the file, follow the format conventions:
 Read before writing, propose before saving, get confirmation.
 
 ---
-
 ## When no market research exists
 
 Load the reference file for the guided first-time workflow:
@@ -108,7 +106,6 @@ Load the reference file for the guided first-time workflow:
 The reference file's instructions take over from this point.
 
 ---
-
 ## Ad-hoc web search vs. dispatching web-researcher
 
 Not every web question needs a subagent:

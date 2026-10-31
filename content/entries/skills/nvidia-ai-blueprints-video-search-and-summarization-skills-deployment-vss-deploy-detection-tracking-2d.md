@@ -122,7 +122,6 @@ Unified skill for the **Real Time Video Intelligence CV (RTVI-CV)** microservice
 > **Hardware**: x86/aarch64 dGPU (T4, A100, L40, H100, B200, RTX), SBSA (Spark, Grace-Hopper), Jetson (Thor, Orin, Xavier)
 
 ---
-
 ## Action routing — pick once per invocation
 
 | User intent (sample phrasing) | Flow | Load this reference |
@@ -137,7 +136,6 @@ Unified skill for the **Real Time Video Intelligence CV (RTVI-CV)** microservice
 If intent is genuinely ambiguous (e.g., the user says just "I want to use rtvi-cv"), ask one `AskQuestion`: deploy a new instance, or call an already-running one?
 
 ---
-
 ## What lives where
 
 ```
@@ -155,7 +153,6 @@ For the full per-file inventory and what each reference covers, see
 All scripts are invoked from the skill root via `$SKILL_DIR/scripts/<name>` — paths inside the deploy reference doc are preserved verbatim and resolve correctly when the agent runs from skill root.
 
 ---
-
 ## Available Scripts
 
 Helpers live in `scripts/` and are invoked from the skill root by name —
@@ -189,7 +186,6 @@ For the full inventory of helpers (cache, GPU checks, setup) browse
 5. **For DEPLOY**, the reference doc enforces its own startup contract: one-line acknowledgement → planning-tool call (`TodoWrite` array of 5 todos, OR 5 successive `TaskCreate` calls on newer Claude Code) → Step 1 question. Do not narrate, do not pre-flight, and never print "loading TodoWrite/TaskCreate" or any deferred-tool resolution prose — the planning tool is loaded silently.
 
 ---
-
 ## Output contract — DEPLOY flow
 
 When running the DEPLOY / TEARDOWN / DEBUG flow, the agent MUST honour

@@ -2,7 +2,9 @@
 slug: ruvnet-ruflo-plugins-ruflo-docs-skills-api-docs
 name: api-docs
 tagline: Generate API documentation from source code with JSDoc and OpenAPI support
-summary: "Generate API documentation from TypeScript/JavaScript source:"
+summary: "1. Scan exports: Find all public functions, classes, and interfaces 2.
+  Extract JSDoc: Parse @param, @returns, @throws, @example annotations 3.
+  Generate missing docs: Add JSDoc for undocumented public APIs 4. OpenAPI s..."
 categories:
   - agent-frameworks
 tags:

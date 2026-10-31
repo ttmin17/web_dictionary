@@ -127,7 +127,6 @@ If you get `instances_added=0` with `instances_rejected ≈ 4× requested`, ever
 | `AssetDiscoveryService.list_assets(path)` for cleanup | `AssetDiscoveryService.list_assets_in_path(path, asset_type)` — or the `manage_asset` tool with `action='list'` |
 
 ---
-
 ## Return Types - EXACT Properties
 
 ### FFoliageScatterResult (from scatter_foliage, scatter_foliage_rect, add_foliage_instances, scatter_foliage_on_layer)
@@ -184,7 +183,6 @@ If you get `instances_added=0` with `instances_rejected ≈ 4× requested`, ever
 | `instance_index` | int | Index in the foliage info array |
 
 ---
-
 ## Workflows
 
 ### Quick Scatter Trees

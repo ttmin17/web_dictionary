@@ -290,5 +290,4 @@ Always resolve names to IDs through the hierarchy:
 | Get user details | `CLICKUP_GET_USER` | `team_id`, `user_id` |
 | Custom roles | `CLICKUP_GET_CUSTOM_ROLES` | `team_id` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

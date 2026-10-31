@@ -4,8 +4,8 @@ name: headroom
 tagline: Compress tool outputs, logs, files, and RAG chunks before they reach
   the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON,
   same a
-summary: Quickstart · Headroom for Teams · Install · Proof · Agents · Docs ·
-  Discord · llms.txt
+summary: "AI agents / LLMs: read /llms.txt here, or fetch the live index · full
+  docs blob."
 categories:
   - agent-frameworks
 tags:

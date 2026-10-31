@@ -71,13 +71,11 @@ Hookify rules are markdown files with YAML frontmatter that define patterns to w
 ### Basic Structure
 
 ```markdown
----
-name: rule-identifier
+---name: rule-identifier
 enabled: true
 event: bash|file|stop|prompt|all
 pattern: regex-pattern-here
 ---
-
 Message to show Claude when this rule triggers.
 Can include markdown formatting, warnings, suggestions, etc.
 ```
@@ -122,8 +120,7 @@ pattern: rm\s+-rf
 For complex rules with multiple conditions:
 
 ```markdown
----
-name: warn-env-file-edits
+---name: warn-env-file-edits
 enabled: true
 event: file
 conditions:
@@ -134,7 +131,6 @@ conditions:
     operator: contains
     pattern: API_KEY
 ---
-
 You're adding an API key to a .env file. Ensure this file is in .gitignore!
 ```
 
@@ -187,11 +183,9 @@ You're adding console.log to production code.
 Match Bash command patterns:
 
 ```markdown
----
-event: bash
+---event: bash
 pattern: sudo\s+|rm\s+-rf|chmod\s+777
 ---
-
 Dangerous command detected!
 ```
 
@@ -205,18 +199,15 @@ Dangerous command detected!
 Match Edit/Write/MultiEdit operations:
 
 ```markdown
----
-event: file
+---event: file
 pattern: console\.log\(|eval\(|innerHTML\s*=
 ---
-
 Potentially problematic code pattern detected!
 ```
 
 **Match on different fields:**
 ```markdown
----
-event: file
+---event: file
 conditions:
   - field: file_path
     operator: regex_match
@@ -225,7 +216,6 @@ conditions:
     operator: regex_match
     pattern: console\.log\(
 ---
-
 Console.log in TypeScript file!
 ```
 
@@ -240,11 +230,9 @@ Console.log in TypeScript file!
 Match when agent wants to stop (completion checks):
 
 ```markdown
----
-event: stop
+---event: stop
 pattern: .*
 ---
-
 Before stopping, verify:
 - [ ] Tests were run
 - [ ] Build succeeded
@@ -261,14 +249,12 @@ Before stopping, verify:
 Match user prompt content (advanced):
 
 ```markdown
----
-event: prompt
+---event: prompt
 conditions:
   - field: user_prompt
     operator: contains
     pattern: deploy to production
 ---
-
 Production deployment checklist:
 - [ ] Tests passing?
 - [ ] Reviewed by team?
@@ -386,20 +372,17 @@ See `${CLAUDE_PLUGIN_ROOT}/examples/` for complete examples:
 
 **Minimum viable rule:**
 ```markdown
----
-name: my-rule
+---name: my-rule
 enabled: true
 event: bash
 pattern: dangerous_command
 ---
-
 Warning message here
 ```
 
 **Rule with conditions:**
 ```markdown
----
-name: my-rule
+---name: my-rule
 enabled: true
 event: file
 conditions:
@@ -410,7 +393,6 @@ conditions:
     operator: contains
     pattern: any
 ---
-
 Warning message
 ```
 

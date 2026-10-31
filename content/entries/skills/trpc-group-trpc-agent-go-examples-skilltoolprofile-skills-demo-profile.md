@@ -2,7 +2,8 @@
 slug: trpc-group-trpc-agent-go-examples-skilltoolprofile-skills-demo-profile
 name: demo-profile
 tagline: Demo skill for the SkillToolProfile example.
-summary: "In full mode, you can run:"
+summary: In knowledge-only mode, treat this command as reference material and
+  use the docs for reasoning instead of executing it.
 categories:
   - agent-frameworks
 tags:

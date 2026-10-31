@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -229,7 +229,6 @@ GROUP BY GROUPING SETS ((region, product), (region), ());
 ```
 
 ---
-
 ## Migration Patterns
 
 ### Up/Down Migration Scripts
@@ -269,7 +268,6 @@ WHERE id IN (SELECT id FROM users WHERE email_normalized IS NULL LIMIT 5000);
 - For irreversible changes (dropping columns with data), take a logical backup first
 
 ---
-
 ## Performance Optimization
 
 ### Indexing Strategies
@@ -319,7 +317,6 @@ Fixes:
 - Use `pg_last_wal_replay_lsn()` to detect lag before reading critical data
 
 ---
-
 ## Multi-Database Decision Matrix
 
 | Criteria | PostgreSQL | MySQL | SQLite | SQL Server |
@@ -347,7 +344,6 @@ Fixes:
 > Use SQL as default. Reach for NoSQL only when the access pattern clearly benefits from it.
 
 ---
-
 ## Sharding & Replication
 
 ### Horizontal vs Vertical Partitioning
@@ -372,7 +368,6 @@ Fixes:
 | **Semi-synchronous** | At-least-one replica confirmed | Moderate | Balance of safety and speed |
 
 ---
-
 ## Cross-References
 
 - **sql-database-assistant** — query writing, optimization, and debugging for day-to-day SQL work

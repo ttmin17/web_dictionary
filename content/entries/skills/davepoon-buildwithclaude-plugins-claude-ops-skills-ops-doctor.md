@@ -91,7 +91,6 @@ Before diagnosing, load:
 | `${CLAUDE_PLUGIN_ROOT}/scripts/registry.json` | Project registry validation |
 
 ---
-
 ## Phase 1 — Run diagnostics
 
 Run the diagnostic script to get a full health report:
@@ -180,7 +179,6 @@ ${CLAUDE_PLUGIN_ROOT}/bin/ops-doctor 2>/dev/null
 Display updated results. If errors remain, report them to the user with manual fix instructions.
 
 ---
-
 ## Native tool usage
 
 ### WebSearch — known issue lookup

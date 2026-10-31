@@ -290,5 +290,4 @@ Basecamp uses page-based pagination on list endpoints:
 | List project people | `BASECAMP_LIST_PROJECT_PEOPLE` | `project_id` |
 | Manage access | `BASECAMP_PUT_PROJECTS_PEOPLE_USERS` | `project_id`, `grant`, `revoke`, `create` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

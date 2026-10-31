@@ -101,7 +101,6 @@ Understand the situation (ask if not provided):
 Work with whatever the user gives you. If they have a strong signal and a clear value prop, that's enough to write. Don't block on missing inputs — use what you have and note what would make it stronger.
 
 ---
-
 ## Writing Principles
 
 ### Write like a peer, not a vendor
@@ -127,7 +126,6 @@ The reader should see their own situation reflected back. "You/your" should domi
 Interest-based CTAs ("Worth exploring?" / "Would this be useful?") beat meeting requests. One CTA per email. Make it easy to say yes with a one-line reply.
 
 ---
-
 ## Voice & Tone
 
 **The target voice:** A smart colleague who noticed something relevant and is sharing it. Conversational but not sloppy. Confident but not pushy.
@@ -146,7 +144,6 @@ Interest-based CTAs ("Worth exploring?" / "Would this be useful?") beat meeting 
 - An AI-generated email (avoid the telltale patterns: "I hope this email finds you well," "I came across your profile," "leverage," "synergy," "best-in-class")
 
 ---
-
 ## Structure
 
 There's no single right structure. Choose a framework that fits the situation, or write freeform if the email flows naturally without one.
@@ -161,7 +158,6 @@ There's no single right structure. Choose a framework that fits the situation, o
 For the full catalog of frameworks with examples, see [frameworks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cold-email/references/frameworks.md).
 
 ---
-
 ## Subject Lines
 
 Short, boring, internal-looking. The subject line's only job is to get the email opened.
@@ -173,7 +169,6 @@ Short, boring, internal-looking. The subject line's only job is to get the email
 See [subject-lines.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cold-email/references/subject-lines.md) for the full data.
 
 ---
-
 ## Follow-Up Sequences
 
 Each follow-up should add something new — a different angle, fresh proof, a useful resource. "Just checking in" gives the reader no reason to respond.
@@ -185,7 +180,6 @@ Each follow-up should add something new — a different angle, fresh proof, a us
 See [follow-up-sequences.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cold-email/references/follow-up-sequences.md) for cadence, angle rotation, and breakup email templates.
 
 ---
-
 ## Before You Send
 
 Copy only matters if it reaches the inbox. Before the first send:
@@ -197,7 +191,6 @@ Copy only matters if it reaches the inbox. Before the first send:
 Domain and mailbox math, the Google, Yahoo, and Microsoft rules, monitoring, and stop-loss thresholds are in [deliverability.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cold-email/references/deliverability.md).
 
 ---
-
 ## Beyond Email
 
 Most outbound that works in 2026 runs on more than one channel:
@@ -210,7 +203,6 @@ Most outbound that works in 2026 runs on more than one channel:
 Classify every reply (positive, information request, objection, not now, referral, out of office, unsubscribe), answer positive replies within minutes, and book with two proposed times plus a link. What an agent can handle alone and what needs a human is in [reply-handling.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cold-email/references/reply-handling.md).
 
 ---
-
 ## Quality Check
 
 Before presenting, gut-check:
@@ -222,7 +214,6 @@ Before presenting, gut-check:
 - Is there one clear, low-friction ask?
 
 ---
-
 ## What to Avoid
 
 - Opening with "I hope this email finds you well" or "My name is X and I work at Y"
@@ -242,7 +233,6 @@ Before presenting, gut-check:
 - "Just checking in" follow-ups
 
 ---
-
 ## Data & Benchmarks
 
 The references contain performance data if you need to make informed choices:
@@ -261,7 +251,6 @@ The references contain performance data if you need to make informed choices:
 Use this data to inform your writing — not as a checklist to satisfy.
 
 ---
-
 ## Tool Integrations
 
 For setup, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md), including its sales outbound quick start. Tools most used with this skill:
@@ -277,7 +266,6 @@ For setup, see the [tools registry](https://github.com/coreyhaines31/marketingsk
 Instantly's webhooks (reply received, lead interested, bounced, unsubscribed) are the simplest way to drive the cross-channel stop and reply triage from an agent.
 
 ---
-
 ## Related Skills
 
 - **prospecting**: For building and qualifying the prospect list, signals, enrichment, verification, and account research — the natural upstream step before cold-email

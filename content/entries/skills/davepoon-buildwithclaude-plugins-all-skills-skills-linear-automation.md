@@ -232,5 +232,4 @@ Automate Linear operations through Composio's Linear toolkit via Rube MCP.
 | Current user | LINEAR_GET_CURRENT_USER | (none) |
 | Run GraphQL | LINEAR_RUN_QUERY_OR_MUTATION | query, variables |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

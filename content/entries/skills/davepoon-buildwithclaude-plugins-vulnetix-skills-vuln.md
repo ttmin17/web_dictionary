@@ -154,7 +154,6 @@ gh api repos/{owner}/{repo}/dependabot/alerts?state=open --jq '[.[] | select(.de
 ```
 
 ---
-
 ## Vuln Lookup Mode Workflow
 
 Use this workflow when the argument matches a vulnerability identifier pattern.
@@ -251,7 +250,6 @@ If no affected packages found: **"No affected packages detected in this reposito
 Update `.vulnetix/memory.yaml` as described in "Writing Updated State" above. If the user provides a decision during the conversation, record it using the risk treatment categories defined in `/vulnetix:exploits`.
 
 ---
-
 ## Package Vulns Mode Workflow
 
 Use this workflow when the argument does not match a vulnerability identifier pattern.
@@ -340,7 +338,6 @@ Total: N known vulnerabilities (M affect your version)
 Update `.vulnetix/memory.yaml` as described in "Writing Updated State" above. Only create stub entries for vulns that **affect the installed version** to prevent memory file bloat.
 
 ---
-
 ## Error Handling
 
 **Vuln lookup mode:**

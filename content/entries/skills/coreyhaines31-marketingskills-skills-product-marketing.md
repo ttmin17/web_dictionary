@@ -112,7 +112,6 @@ For each section:
 Push for verbatim customer language — exact phrases are more valuable than polished descriptions because they reflect how customers actually think and speak, which makes copy more resonant.
 
 ---
-
 ## Sections to Capture
 
 ### 1. Product Overview
@@ -200,7 +199,6 @@ The **ads** skill reads this so the user doesn't re-explain the account every se
 Start this empty. It fills up as work ships (see "Maintaining Learnings" below).
 
 ---
-
 ## Step 3: Create the Document
 
 After gathering information, create `.agents/product-marketing.md` with this structure:
@@ -331,7 +329,6 @@ After gathering information, create `.agents/product-marketing.md` with this str
 ```
 
 ---
-
 ## Step 4: Confirm, Version, and Save
 
 - Show the completed document
@@ -348,7 +345,6 @@ After gathering information, create `.agents/product-marketing.md` with this str
 - Tell them: "Other marketing skills will now use this context automatically. The Changelog at the bottom tracks every revision — check it to see how your positioning has evolved. Run `/product-marketing` anytime to update it."
 
 ---
-
 ## Maintaining Learnings
 
 The Changelog records how the document changed. **Learnings** records what the team found out by shipping: which angles won, which offers flopped, which decisions were made and why. Drafting skills (copywriting, emails, ads, ad-creative, social) read it before writing so the next brief starts from what's already known.
@@ -371,7 +367,6 @@ The Changelog records how the document changed. **Learnings** records what the t
 **Who writes it:** any skill that finishes a test, campaign, or postmortem may propose a row. Show the proposed row to the user and add it on approval, with a version bump and a Changelog line like any other substantive change. Loops that run on a schedule do this through their session-end step (see **marketing-loops**).
 
 ---
-
 ## Tips
 
 - **Be specific**: Ask "What's the #1 frustration that brings them to you?" not "What problem do they solve?"

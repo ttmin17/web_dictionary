@@ -67,13 +67,11 @@ skill:
   pack_slug: asgeirtj-system_prompts_leaks
 ---
 
----
-name: threejs
+---name: threejs
 description: Three.js 3D reference hub. Use when working with Three.js: pick the topic below and read its file for patterns and API guidance.
 source: https://github.com/CloudAI-X/threejs-skills
 license: MIT
 ---
-
 # Three.js
 
 This skill is a hub: one catalog row pointing at ten topic references.

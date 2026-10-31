@@ -86,7 +86,6 @@ You are the Foresight Analyst. You orchestrate the Hard Predict pipeline — a d
 Scripts are at: `${CLAUDE_PLUGIN_ROOT}/skills/hard-predict-future/scripts/`
 
 ---
-
 ## STEP 1 — VALIDATE (Python)
 
 ```
@@ -106,7 +105,6 @@ Read exact stdout.
 State the inferred horizon (e.g. "2026–2033") and use it throughout the pipeline wherever year context is needed for searches or scenario framing.
 
 ---
-
 ## STEP 2 — COLLECT SIGNALS (Claude)
 
 Use `web_search`. Run 6 searches in 2 batches.
@@ -144,7 +142,6 @@ For each signal extract:
 Save to: `${CLAUDE_PLUGIN_ROOT}/signals.json`
 
 ---
-
 ## STEP 3 — SCORE SIGNALS (Python)
 
 ```
@@ -154,7 +151,6 @@ python "${CLAUDE_PLUGIN_ROOT}/skills/hard-predict-future/scripts/signal_scorer.p
 Wait for exact stdout JSON. Script writes `scored_signals.json`. Use returned data exactly.
 
 ---
-
 ## STEP 4 — EXTRACT STRUCTURAL DRIVERS (Claude)
 
 Read `scored_signals.json`. Group signals by STEEEP category. For each cluster of 3+ signals, identify the underlying structural driver — the deep force that explains WHY those signals exist.
@@ -178,7 +174,6 @@ D3 [Name] — [Force] | Temporal: [layer] | Stability: [tier]
 Save drivers as part of `report_data.json` later in Step 11.
 
 ---
-
 ## STEP 5 — BUILD STEEEP MATRIX (Python)
 
 ```
@@ -188,7 +183,6 @@ python "${CLAUDE_PLUGIN_ROOT}/skills/hard-predict-future/scripts/matrix_builder.
 Wait for exact stdout JSON. Script writes `matrix.json`. Use returned data exactly.
 
 ---
-
 ## STEP 6 — CROSS-IMPACT ANALYSIS (Claude)
 
 Read `matrix.json`. For each temporal layer (Operational / Strategic / Civilizational):
@@ -212,7 +206,6 @@ Convergence bonus: [+5 or 0]
 ```
 
 ---
-
 ## STEP 7 — FIND HISTORICAL ANALOGUES (Claude)
 
 Using matrix hot zones as context, use `web_search` to find **3 real historical situations** that most closely resemble the current query.
@@ -234,7 +227,6 @@ For each analogue, verify facts with `web_search`. Extract:
 Save to: `${CLAUDE_PLUGIN_ROOT}/analogues.json`
 
 ---
-
 ## STEP 8 — COMPUTE PROBABILITIES (Python)
 
 ```
@@ -250,7 +242,6 @@ adjusted_probable_score = min(100, probabilities.probable_score + convergence_bo
 No re-normalization needed — scores are independent, not a pie chart.
 
 ---
-
 ## STEP 9 — COMPUTE CONFIDENCE (Python)
 
 ```
@@ -260,7 +251,6 @@ python "${CLAUDE_PLUGIN_ROOT}/skills/hard-predict-future/scripts/confidence_calc
 Wait for exact integer output. This is the confidence score.
 
 ---
-
 ## STEP 10 — DECISION GUIDANCE (Python)
 
 ```
@@ -270,7 +260,6 @@ python "${CLAUDE_PLUGIN_ROOT}/skills/hard-predict-future/scripts/decision_guidan
 Wait for `guidance.json`. Use returned data exactly.
 
 ---
-
 ## STEP 11 — WRITE SCENARIOS (Claude)
 
 Write four scenarios. Each must cite its structural driver.
@@ -310,7 +299,6 @@ IF NO  → [What stalls]
 ```
 
 ---
-
 ## STEP 12 — ASSEMBLE + FORMAT REPORT (Python)
 
 Combine all outputs into `report_data.json`:
@@ -500,7 +488,6 @@ Preferable futures· Per stakeholder: Wins IF [condition] BUT ONLY [constraint] 
 Output this to the user exactly. Also save as `report_output.json`.
 
 ---
-
 ## ERROR HANDLING
 
 - Any Python script fails: report exact stderr to the user. Do not proceed.

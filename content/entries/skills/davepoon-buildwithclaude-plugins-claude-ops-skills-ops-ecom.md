@@ -3,7 +3,10 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-ecom
 name: ops-ecom
 tagline: Shopify store command center. Orders, inventory, fulfillment,
   analytics, and store health. Works with any Shopify store via Admin API.
-summary: "Before executing, load available context:"
+summary: "1. Preferences: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/prefer\
+  ences.json - timezone — display all timestamps correctly - shopifystoreurl,
+  shopifyadmintoken — check userConfig keys b..."
 categories:
   - agent-frameworks
 tags:
@@ -149,7 +152,6 @@ SHOPIFY_AUTH="X-Shopify-Access-Token: ${SHOPIFY_TOKEN}"
 ```
 
 ---
-
 ## Phase 2 — Route by $ARGUMENTS
 
 | Input                                      | Action              |
@@ -165,7 +167,6 @@ SHOPIFY_AUTH="X-Shopify-Access-Token: ${SHOPIFY_TOKEN}"
 | setup, configure, init, token              | Setup flow          |
 
 ---
-
 ## ORDERS
 
 Fetch recent orders and compute revenue:
@@ -222,7 +223,6 @@ RECENT ORDERS
 Use `AskUserQuestion` for action selection.
 
 ---
-
 ## INVENTORY
 
 Fetch all products and variant inventory:
@@ -276,7 +276,6 @@ ALL PRODUCTS
 Use `AskUserQuestion` for action selection.
 
 ---
-
 ## FULFILLMENT
 
 Fetch unfulfilled orders and ShipBob status (if token available):
@@ -327,7 +326,6 @@ Render fulfillment dashboard with pending/in-transit/delivered counts.
 Use `AskUserQuestion` for action selection (mark fulfilled, update tracking, etc.).
 
 ---
-
 ## HEALTH
 
 Run the health check script, then augment with API checks:
@@ -382,7 +380,6 @@ ISSUES
 Use `AskUserQuestion` for action selection.
 
 ---
-
 ## PRODUCTS
 
 List, search, and manage products:
@@ -417,7 +414,6 @@ curl -s -X PUT -H "$SHOPIFY_AUTH" -H "Content-Type: application/json" \
 Use `AskUserQuestion` before making any product updates. Show before/after prices.
 
 ---
-
 ## CUSTOMERS
 
 Fetch customer stats:
@@ -448,7 +444,6 @@ curl -s -H "$SHOPIFY_AUTH" \
 Render customer overview with LTV stats and top spenders.
 
 ---
-
 ## ANALYTICS
 
 Pull revenue and order data for dashboard:
@@ -504,7 +499,6 @@ TOP PRODUCTS (30d)
 Use `AskUserQuestion` for action selection.
 
 ---
-
 ## SETUP FLOW
 
 **Before asking the user for anything**, auto-discover store URLs and tokens. Run ALL of these scans in a single batch:
@@ -570,7 +564,6 @@ curl -s -H "X-Shopify-Access-Token: ${PROVIDED_TOKEN}" \
 If the connectivity check returns valid shop data, confirm success. If it fails with 401/403, explain the token is invalid and re-prompt.
 
 ---
-
 ## STORE SUMMARY (empty $ARGUMENTS)
 
 When called with no arguments, show a compact store overview:

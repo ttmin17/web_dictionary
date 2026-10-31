@@ -274,5 +274,4 @@ Automate YouTube operations through Composio's YouTube toolkit via Rube MCP.
 | List comments | YOUTUBE_LIST_COMMENT_THREADS | videoId |
 | Channel activities | YOUTUBE_GET_CHANNEL_ACTIVITIES | (check schema) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

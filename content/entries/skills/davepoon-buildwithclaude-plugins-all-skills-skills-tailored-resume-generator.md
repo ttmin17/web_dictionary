@@ -206,7 +206,6 @@ State University | Graduated 2018
 - Consider mentioning any familiarity with healthcare regulations (HIPAA, etc.)
 
 ---
-
 ## Instructions
 
 When a user requests resume tailoring:
@@ -388,7 +387,6 @@ Ask if user wants to:
 - Consider more creative formatting (while maintaining ATS compatibility)
 
 ---
-
 ## Tips for Best Results
 
 - **Be specific**: Provide complete job descriptions and detailed background information

@@ -32,7 +32,6 @@ signals:
   stars_growth_pct: 17.4
   trending_score: 2582.22
   rank_current: 5
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12663
@@ -53,14 +52,7 @@ tool:
   install_command: pip install artemis
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - artemis
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code.  It also achieves 99%+ success rate on AndroidWorld Benchmark.

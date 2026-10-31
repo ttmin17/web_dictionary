@@ -304,5 +304,4 @@ Automate Intercom operations through Composio's Intercom toolkit via Rube MCP.
 | Get counts | INTERCOM_GET_COUNTS | type, count |
 | List companies | INTERCOM_LIST_ALL_COMPANIES | page, per_page |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

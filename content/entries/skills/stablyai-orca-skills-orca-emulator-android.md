@@ -3,7 +3,9 @@ slug: stablyai-orca-skills-orca-emulator-android
 name: emulator-android
 tagline: Android device and emulator control from inside Orca over adb, with the
   live device view in Orca's emulator pane. Use when driving an adb-connected em
-summary: "Choose the executable once and reuse it for every later command:"
+summary: "- If the ORCACLICOMMAND environment variable is set, use its value.
+  Orca exports this for managed WSL sessions. - Otherwise, in a dev checkout
+  whose session exposes ORCADEVREPOROOT, use orca-dev. - Otherwise, on Linux..."
 categories:
   - agent-frameworks
 tags:

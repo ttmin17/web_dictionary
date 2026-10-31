@@ -4,7 +4,10 @@ name: attribution
 tagline: When the user wants to figure out which marketing actually drives
   conversions and revenue, choose or interpret an attribution model, or
   reconcile conf
-summary: "This skill has two pillars. Know which one the user needs before you dive in:"
+summary: "- (A) Interpretation — choosing an attribution model, picking a
+  measurement approach, and reconciling the conflicting numbers your tools
+  report. This applies to everyone, even with zero engineering. - (B) Own your
+  att..."
 categories:
   - productivity-ops
 tags:
@@ -99,7 +102,6 @@ State these up front so you don't rebuild neighboring skills:
 - **Showing up in / measuring AI search** → **ai-seo**. Attribution names AI traffic as a blind spot only.
 
 ---
-
 ## Pillar A — Interpretation
 
 ### 1. What attribution can and can't tell you
@@ -201,7 +203,6 @@ Defaults differ sharply. Summary here; full playbooks in `references/by-business
 - **Ecommerce / DTC (short cycle, self-serve):** fast journeys, high volume, spend concentrated in paid social + search. Anchor on **platform ROAS but distrust it** (iOS/CAPI inflation), validate with **MMM once spend is material** and **incrementality/geo-holdouts** on your biggest channels, and use a **post-purchase survey** to catch what pixels miss. Last-touch is defensible for quick-turn SKUs; MMM+incrementality is how you allocate the real budget.
 
 ---
-
 ## Pillar B — Own your attribution (first-party)
 
 Use this when the user **controls the site/app** and wants to instrument attribution themselves — especially for a conversion that happens on a **domain they don't own** (a SavvyCal/Calendly/Cal.com booking, a Stripe Checkout page). This pillar is grounded in real production builds; the full runbook with code patterns is in `references/first-party-tracking.md`. The essentials:
@@ -243,7 +244,6 @@ But first-touch alone can't run the multi-touch models from §2. **Store the ful
 The pattern is tool-agnostic: identify + merge exists in PostHog, Segment, Amplitude, and via user-id in GA4; the third-party stitch works with any tool that has a metadata passthrough + webhook. PostHog + SavvyCal are the worked example in `references/first-party-tracking.md`.
 
 ---
-
 ## Output format
 
 Deliver an **attribution readout**, not a data dump:
@@ -288,7 +288,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **RB2B** | De-anonymize B2B website visitors | - | [rb2b.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/rb2b.md) |
 
 ---
-
 ## Related Skills
 
 - **analytics** — event tracking, tracking plans, UTMs, GA4/GTM setup. Do this *before* attribution.

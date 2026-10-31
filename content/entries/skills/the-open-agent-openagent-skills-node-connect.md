@@ -4,7 +4,8 @@ name: node-connect
 tagline: "Diagnose OpenClaw node connection and pairing failures for Android,
   iOS, and macOS companion apps. Use when QR/setup code/manual connect fails,
   local "
-summary: "Decide which case you are in before proposing fixes:"
+summary: "- same machine / emulator / USB tunnel - same LAN / local Wi-Fi - same
+  Tailscale tailnet - public URL / reverse proxy"
 categories:
   - agent-frameworks
 tags:

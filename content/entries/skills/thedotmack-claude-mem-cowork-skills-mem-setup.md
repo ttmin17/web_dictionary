@@ -4,7 +4,8 @@ name: mem-setup
 tagline: This skill should be used when the user asks to "set up claude-mem",
   "pair claude-mem", "connect cmem", "add my cmem key", "set up cloud sync in
   Cowor
-summary: "From cmem.ai → Connect, the user has three values:"
+summary: 1. sync token (starts with cm) — used as the bearer API key 2. user id
+  (UUID) 3. SyncHub URL (https://sync.cmem.ai)
 categories:
   - databases-memory
 tags:

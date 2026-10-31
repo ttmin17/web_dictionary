@@ -4,7 +4,9 @@ name: before-you-build
 tagline: Pre-build product and feature risk review for founders, product
   managers, and AI-assisted builders. Use this skill when the user is about to
   build a l
-summary: "Use this skill when a user asks to build or ship:"
+summary: "- A new product, MVP, prototype, landing page, SaaS app, marketplace,
+  content site, agent workflow, or internal tool - A major feature with unclear
+  adoption, revenue, retention, trust, or distribution impact - A publi..."
 categories:
   - coding-agents
 tags:

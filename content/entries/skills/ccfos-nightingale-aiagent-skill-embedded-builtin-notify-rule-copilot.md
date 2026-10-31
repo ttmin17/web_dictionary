@@ -87,7 +87,6 @@ A notify rule defines how alert events are delivered: the notification method, r
 | `http-api.md` | HTTP API paths (for A2A / external agents), the GET→modify→PUT editing pattern, direct DB edits | Only for external A2A scenarios, or when producing curl commands for the user |
 
 ---
-
 ## Scope (first determine which layer the user is changing)
 
 Nightingale's notification pipeline is a three-layer abstraction, with one skill per layer — **do not cross wires**:
@@ -106,13 +105,11 @@ How to judge:
 - The wording mentions "an event already fired but no notification was received, help me find out why" — **post-hoc diagnosis**, hand off to `alert-rule-troubleshoot` flow B. This skill is only responsible for "pulling up the correct rule configuration", not for replaying logs.
 
 ---
-
 ## Prerequisites
 
 You are the in-app n9e AI assistant, running inside the n9e process and already authenticated as the current user. **Call the built-in tools to operate directly — do not log in, do not call the HTTP API, and do not use http_fetch to hit your own endpoints** (the HTTP flow in `http-api.md` is for external A2A agents).
 
 ---
-
 ## Mental model: NotifyRule + NotifyConfig
 
 One `NotifyRule` is like a folder holding N `NotifyConfig`s, where **each NotifyConfig is an independent "route"** — with its own severity/time/label/attribute filters, going through its own medium, using its own template, sent to its own recipients. Multiple NotifyConfigs are **OR'd in parallel**: whichever an event matches is the route it takes, and it can match several at once and be sent through all of them.
@@ -157,7 +154,6 @@ Key points (full field table and per-channel `params` shapes are in `reference.m
 - `label_keys` / `attributes` are all **AND'd** across entries; the value of `in`/`not in` is **space-separated**.
 
 ---
-
 ## Workflow 1: Create
 
 1. **Determine the team (user group) that receives notifications**: use `list_teams` to get `user_group_ids`. If the user named a team, or the frontend already popped a team form, use those IDs directly without asking again.

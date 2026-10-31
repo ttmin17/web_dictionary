@@ -4,7 +4,7 @@ name: agenthub
 tagline: Multi-agent collaboration plugin that spawns N parallel subagents
   competing on the same task via git worktree isolation. Agents work
   independently, re
-summary: "When spawning with --template, agents follow a predefined iteration pattern:"
+summary: Templates are defined in references/agent-templates.md.
 categories:
   - coding-agents
 tags:
@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -217,13 +217,11 @@ Location: `.agenthub/board/`
 ### Post Format
 
 ```markdown
----
-author: agent-1
+---author: agent-1
 timestamp: 2026-03-17T14:30:22Z
 channel: results
 parent: null
 ---
-
 ## Result Summary
 
 - **Approach**: Replaced O(n²) sort with hash map

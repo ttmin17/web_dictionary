@@ -292,5 +292,4 @@ filter: "contains(subject, 'Review') and categories/any(c:c eq 'Work')"
 | List calendars | OUTLOOK_LIST_CALENDARS | user_id |
 | Mailbox settings | OUTLOOK_GET_MAILBOX_SETTINGS | select |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

@@ -3,7 +3,8 @@ slug: asgeirtj-system_prompts_leaks-meta-muse-agent-skills-image-search
 name: image_search
 tagline: Search the web by text query for image URLs and source pages for feeds,
   artifacts, and visual references. Does not identify a supplied image or person
-summary: "Optional result language:"
+summary: "The CLI returns structured results and omits unavailable fields.
+  Interpret the URLs as follows:"
 categories:
   - cloud-infra
 tags:

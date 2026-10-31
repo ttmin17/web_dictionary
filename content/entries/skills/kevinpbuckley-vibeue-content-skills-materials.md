@@ -369,7 +369,6 @@ Common material property internal names: `TwoSided`, `BlendMode`, `ShadingModel`
 `MaterialDomain`, `OpacityMaskClipValue`, `bUsedWithStaticLighting`, `DitheredLODTransition`.
 
 ---
-
 ## Task Index
 
 | Task | Workflow | Sample script |

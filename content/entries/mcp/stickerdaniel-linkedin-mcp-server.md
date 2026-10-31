@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 90
   stars_growth_pct: 2.3
   trending_score: 92.06
-  rank_current: 24
-  rank_delta: -7
+  rank_current: 28
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3782
@@ -102,7 +102,6 @@ Use code <strong>FOUNDING20</strong> for 20% off your first year. <a href="https
 </details>
 
 ---
-
 <a id="installation-methods"></a>
 
 ## Installation Methods - LinkedIn MCP Server

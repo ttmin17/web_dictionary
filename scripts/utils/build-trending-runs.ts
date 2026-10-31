@@ -154,7 +154,7 @@ function buildEnrichedFromMarkdown(
 
 async function main() {
   const rootDir = path.resolve(__dirname, '../..');
-  const runs = ['2026-W41', '2026-W42'];
+  const runs = ['2026-W41', '2026-W42', '2026-W43', '2026-W44'];
   const mdEntries = loadCatalogMarkdownEntries(rootDir);
   const createdAtMap = loadExistingCreatedAtMap(rootDir);
 

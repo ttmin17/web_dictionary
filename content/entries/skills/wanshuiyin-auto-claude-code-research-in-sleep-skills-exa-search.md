@@ -4,7 +4,9 @@ name: exa-search
 tagline: AI-powered web search via Exa with content extraction. Use when user
   says "exa search", "web search with content", "find similar pages", or needs
   broa
-summary: "Exa is the broad web search source with built-in content extraction:"
+summary: Use Exa when you need results beyond academic databases, or when you
+  want content (highlights, full text, summaries) extracted alongside search
+  results.
 categories:
   - domain-research
 tags:

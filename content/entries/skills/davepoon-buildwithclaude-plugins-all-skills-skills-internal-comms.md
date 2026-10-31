@@ -4,7 +4,10 @@ name: internal-comms
 tagline: A set of resources to help me write all kinds of internal
   communications, using the formats that my company likes to use. Claude should
   use this skill
-summary: "To write any internal communication:"
+summary: "1. Identify the communication type from the request 2. Load the
+  appropriate guideline file from the examples/ directory: -
+  examples/3p-updates.md - For Progress/Plans/Problems team updates -
+  examples/company-newslette..."
 categories:
   - agent-frameworks
 tags:

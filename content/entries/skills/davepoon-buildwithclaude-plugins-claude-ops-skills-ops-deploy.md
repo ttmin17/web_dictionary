@@ -3,7 +3,9 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-deploy
 name: ops-deploy
 tagline: Deploy status across all projects. Shows ECS service versions, Vercel
   deployments, recent deploys, pending deploys, and CI/CD pipeline state.
-summary: "Before executing, load available context:"
+summary: "1. Preferences: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/prefer\
+  ences.json - timezone — display all deploy timestamps in the correct timezone"
 categories:
   - cloud-infra
 tags:
@@ -94,7 +96,6 @@ Before executing, load available context:
 | `gh run watch <run-id> --repo <repo>` | Stream CI run | Live output (use with Monitor) |
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** when checking deploy platforms in parallel. This enables:
@@ -150,7 +151,6 @@ done
 Use `mcp__claude_ai_Vercel__list_projects` then `mcp__claude_ai_Vercel__list_deployments` for each project (limit 5 per project).
 
 ---
-
 ## Phase 2 — Render dashboard
 
 ```
@@ -201,7 +201,6 @@ AskUserQuestion call 2 (only if "More actions..."):
 ```
 
 ---
-
 ## Deep-dive by project
 
 If `$ARGUMENTS` has a project alias, show only that project's deploy info + last 10 CI runs + option to view logs.
@@ -225,7 +224,6 @@ Trigger deploy for [project]:
 ```
 
 ---
-
 ## Native tool usage
 
 ### Monitor — live deploy streaming

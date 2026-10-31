@@ -126,7 +126,6 @@ subsys.new_level_from_template("/Game/Maps/MyLevel", "/Engine/Maps/Templates/Tem
 **Template names:** `Template_Default` = Basic, `OpenWorld`, `TimeOfDay_Default`, `VR-Basic`
 
 ---
-
 ### �🚫 DEPRECATED: `unreal.EditorLevelLibrary`
 
 **DO NOT use `unreal.EditorLevelLibrary`.** The entire Editor Scripting Utilities Plugin is deprecated in UE 5.7+. Use `unreal.EditorActorSubsystem` via `unreal.get_editor_subsystem()` for all level actor operations.
@@ -274,7 +273,6 @@ level_subsys.editor_invalidate_viewports()
 ```
 
 ---
-
 ## Workflows
 
 ### Create Level from Template
@@ -320,7 +318,6 @@ print(f"Created from template: {result}")
 ```
 
 ---
-
 ### Save the Current Level (Save / Save As)
 
 **Getting the editor world** — it lives on `UnrealEditorSubsystem`, NOT `LevelEditorSubsystem`, NOT the deprecated `EditorLevelLibrary`:
@@ -353,7 +350,6 @@ print(f"Saved: {ok}")
 To also make the saved level the editor startup map, load the `project-settings` skill and set `maps` / `EditorStartupMap` with the full asset path (`/Game/Maps/MyLevel.MyLevel`).
 
 ---
-
 ### Spawn Built-in Actor
 
 ```python
@@ -581,7 +577,6 @@ view = actor_service.calculate_actor_view("MyActor", unreal.ViewDirection.RIGHT,
 > ⚠️ **Do NOT switch to `set_viewport_camera` with manual coordinates to get a "better angle".** Manual positions almost always miss the subject and point at sky or empty space. If the view isn't wide enough, **increase the padding** or switch to `TOP`. There is no need for a diagonal camera — `TOP` and `FRONT` with adequate padding cover every screenshot use case.
 
 ---
-
 ### Transform Locking & Constraints
 
 #### 🔒 Location Locking (Per-Actor, Native UE5)

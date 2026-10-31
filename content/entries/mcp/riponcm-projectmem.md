@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 107
-  rank_delta: -33
+  rank_current: 114
+  rank_delta: -40
   velocity_source: snapshot_delta
   sparkline_4w:
     - 852
@@ -105,7 +105,6 @@ launch:
 </div>
 
 ---
-
 > ## 🚀 Start here — five minutes, once
 >
 > *Five minutes if you follow along here. Want to be shown instead — every
@@ -182,7 +181,6 @@ launch:
 > outlives the session.
 
 ---
-
 ## What is coding agent memory?
 
 **Coding agent memory is a persistent record of what happened while building a
@@ -207,7 +205,6 @@ cd your-project && pjm init
 ```
 
 ---
-
 ## 🎬 Watch the demo
 
 <p align="center">
@@ -229,7 +226,6 @@ cd your-project && pjm init
 | **[LICENSE](https://github.com/riponcm/projectmem/blob/main/LICENSE)** | MIT |
 
 ---
-
 ## The Problem
 
 Every new AI session starts from zero. Claude, Cursor, Aider — they all forget yesterday's decisions, repeat failed debugging attempts, and burn millions of tokens reconstructing context from raw source files.
@@ -260,7 +256,6 @@ That's it. `pjm init` installs three git hooks (pre-commit warnings, post-commit
 > The canonical command is `projectmem`. A `pjm` alias is installed for speed.
 
 ---
-
 ## ✨ New in 0.3.4 — memory that stays small, and warnings you can trust
 
 **The summary no longer grows forever.** Notes were capped, but Recent issues
@@ -462,7 +457,6 @@ Your project's memory is also something you can *watch* — and share.
 </p>
 
 ---
-
 ## Why You'll Love It
 
 - **Pre-Commit Warnings** — `pjm precheck` warns you *before* you commit if you're about to repeat a failed approach, modify a high-churn file, or touch an unresolved issue. It works from this project's own recorded failures, which is why it needs the memory layer underneath. The warning now lists the dead ends themselves (*"What already failed here: ✗ tried CSS contain:layout"*), and `pjm precheck --snooze 2h` silences it politely — the snooze is itself logged, so even the silence is audited.
@@ -948,7 +942,6 @@ If projectmem is useful in your research or writing, please cite:
 MIT — free for personal, commercial, and enterprise use forever.
 
 ---
-
 ## Help Us Reach More Developers
 
 **We don't need money. We need you.**
@@ -964,7 +957,6 @@ MIT — free for personal, commercial, and enterprise use forever.
 *Stars and shares matter more than money — but if you really want to:* [sponsor on GitHub](https://github.com/sponsors/riponcm) →
 
 ---
-
 <div align="center">
   <sub>Built with care by the open-source community. Every contribution, no matter how small, makes a difference.</sub>
 </div>

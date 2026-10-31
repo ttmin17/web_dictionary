@@ -30,7 +30,6 @@ signals:
   stars_growth_pct: 1.2
   trending_score: 429.02
   rank_current: 22
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 35842
@@ -51,14 +50,7 @@ tool:
   install_command: pip install qwenpaw
   runtime: python
   execution_mode: hybrid
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - qwenpaw
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.

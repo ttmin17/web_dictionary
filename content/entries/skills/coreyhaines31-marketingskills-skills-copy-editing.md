@@ -96,7 +96,6 @@ Good copy editing improves what's already there. Each pass focuses on one dimens
 **Pick the mode before editing.** Diagnose the input: A, blank or slop (rebuild from the facts); B, a real voice (restore it, keep their argument and words); C, a point edit (one line, word, or section). **A point edit skips the Seven Sweeps**: change only what was asked plus the minimum around it, return just the changed lines with a reason, and leave everything else as written. Run the full sweeps for A and B. See [references/checklist.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/references/checklist.md#pick-the-edit-mode).
 
 ---
-
 ## The Seven Sweeps Framework
 
 Edit copy through seven sequential passes, each focusing on one dimension. After each sweep, loop back to check previous sweeps aren't compromised.
@@ -127,7 +126,6 @@ Edit copy through seven sequential passes, each focusing on one dimension. After
 **After this sweep:** Confirm the "Rule of One" (one main idea per section) and "You Rule" (copy speaks to the reader) are intact.
 
 ---
-
 ### Sweep 2: Voice and Tone
 
 **Focus:** Is the copy consistent in how it sounds?
@@ -153,7 +151,6 @@ Edit copy through seven sequential passes, each focusing on one dimension. After
 **After this sweep:** Return to Clarity Sweep to ensure voice edits didn't introduce confusion.
 
 ---
-
 ### Sweep 3: So What
 
 **Focus:** Does every claim answer "why should I care?"
@@ -186,7 +183,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 **After this sweep:** Return to Voice and Tone, then Clarity.
 
 ---
-
 ### Sweep 4: Prove It
 
 **Focus:** Is every claim supported with evidence?
@@ -221,7 +217,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 **After this sweep:** Return to So What, Voice and Tone, then Clarity.
 
 ---
-
 ### Sweep 5: Specificity
 
 **Focus:** Is the copy concrete enough to be compelling?
@@ -257,7 +252,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 **After this sweep:** Return to Prove It, So What, Voice and Tone, then Clarity.
 
 ---
-
 ### Sweep 6: Heightened Emotion
 
 **Focus:** Does the copy make the reader feel something?
@@ -292,7 +286,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 **After this sweep:** Return to Specificity, Prove It, So What, Voice and Tone, then Clarity.
 
 ---
-
 ### Sweep 7: Zero Risk
 
 **Focus:** Have we removed every barrier to action?
@@ -328,7 +321,6 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 **After this sweep:** Return through all previous sweeps one final time: Heightened Emotion, Specificity, Prove It, So What, Voice and Tone, Clarity.
 
 ---
-
 ## Expert Panel Scoring
 
 Use this after completing the Seven Sweeps for an additional quality gate. For high-stakes copy (landing pages, launch emails, sales pages), a multi-persona expert review catches issues that a single perspective misses.
@@ -379,7 +371,6 @@ Use this after completing the Seven Sweeps for an additional quality gate. For h
 - **Skip** for quick updates, minor edits, and low-stakes content
 
 ---
-
 ## Quick-Pass Editing Checks
 
 Use these for faster reviews when a full seven-sweep process isn't needed.
@@ -456,13 +447,11 @@ Run this on every edit, after the sweeps. A reader who spots an AI tell tends to
 For the full blacklist with examples, use the **copywriting** skill's AI-tells reference.
 
 ---
-
 ## Copy Editing Checklist
 
 For a final QA pass before delivering edits, work through the full checklist in [references/checklist.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/references/checklist.md) — covering all seven sweeps plus pre-start and final-check items.
 
 ---
-
 ## Common Copy Problems & Fixes
 
 ### Problem: Wall of Features
@@ -502,7 +491,6 @@ For a final QA pass before delivering edits, work through the full checklist in 
 **Fix:** Focus on 3-5 key benefits that matter most to the audience
 
 ---
-
 ## Working with Copy Sweeps
 
 When editing collaboratively:
@@ -516,7 +504,6 @@ When editing collaboratively:
 This iterative process ensures each edit doesn't create new problems while respecting the author's ownership of the copy.
 
 ---
-
 ## References
 
 - [Plain English Alternatives](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/references/plain-english-alternatives.md): Replace complex words with simpler alternatives
@@ -524,7 +511,6 @@ This iterative process ensures each edit doesn't create new problems while respe
 - [Copy Editing Checklist](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/references/checklist.md): Full QA checklist across all seven sweeps plus the AI-tell check
 
 ---
-
 ## Content Refresh Editing
 
 Copy editing isn't just for new content. Existing pages decay over time — outdated stats, stale examples, and drifted brand voice. Use the content refresh framework when traffic is declining, data is stale, or the product has changed.
@@ -532,7 +518,6 @@ Copy editing isn't just for new content. Existing pages decay over time — outd
 **For the SERP gap analysis, full refresh checklist, refresh vs. rewrite decision matrix, and cadence guide**: See [references/content-refresh.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copy-editing/references/content-refresh.md)
 
 ---
-
 ## Task-Specific Questions
 
 1. What's the goal of this copy? (Awareness, conversion, retention)
@@ -542,7 +527,6 @@ Copy editing isn't just for new content. Existing pages decay over time — outd
 5. Is this new copy or a refresh of existing content?
 
 ---
-
 ## Related Skills
 
 - **copywriting**: For writing new copy from scratch (use this skill to edit after your first draft is complete)
@@ -551,7 +535,6 @@ Copy editing isn't just for new content. Existing pages decay over time — outd
 - **ab-testing**: For testing copy variations
 
 ---
-
 ## When to Use Each Skill
 
 | Task | Skill to Use |

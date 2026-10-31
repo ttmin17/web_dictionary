@@ -297,5 +297,4 @@ Automate Coda document and data operations through Composio's Coda toolkit via R
 | Unpublish doc | CODA_UNPUBLISH_DOC | docId |
 | List packs | CODA_LIST_PACKS | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

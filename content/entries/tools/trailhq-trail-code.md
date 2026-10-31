@@ -25,12 +25,14 @@ source:
 signals:
   stars: 10412
   last_commit: 2026-10-18T11:33:26Z
-  stars_delta_7d: 670
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 10412
+    - 10412
+  rank_current: 142
 language: en
 needs_keys: false
 prerequisites:
@@ -117,7 +119,6 @@ npm install -g @trailhq/trail-code && trail init
 </p>
 
 ---
-
 ## What changes in your agent
 
 | Without Trail-code | With Trail-code |
@@ -134,7 +135,6 @@ npm install -g @trailhq/trail-code && trail init
 **Cheaper and faster.** Across 162 runs of the same agent on the same tasks: **32% lower cost**, **42% fewer uncached input tokens**, **60% less time**, and the same share of correct answers. On PocketBase, 15 real tasks ran **21% cheaper** and **14% faster**. [Details](#benchmark)
 
 ---
-
 ## Contents
 
 - [How it works](#how-it-works)
@@ -149,7 +149,6 @@ npm install -g @trailhq/trail-code && trail init
 - Reference: [How the graph gets built](#how-the-graph-gets-built) · [Supported languages](#supported-languages) · [What's in a node](#whats-in-a-node) · [What runs where](#what-runs-where) · [Agent integration](#agent-integration) · [CLI](#cli) · [Search & orient](#search--orient-trail-grep--trail-map) · [Monorepos](#monorepos-submodules--multi-repo-folders) · [Visualize it](#visualize-it-trail-viz) · [Development](#development)
 
 ---
-
 ## How it works
 
 Trail-code has two parts. Both run on your machine.
@@ -160,7 +159,6 @@ Trail-code has two parts. Both run on your machine.
 The graft map tells your agent *where* things are. Learnings tell it *why* they are that way, and *how* the work gets done here.
 
 ---
-
 ## Quick start
 
 ```bash
@@ -200,7 +198,6 @@ Repos that graft set up move to trail on their own: once the `trail` command is 
 
 
 ---
-
 ## Part 1: The graft map
 
 Without a map, your coding agent starts every task blind. It greps a term, opens a file, follows an import, backs out and tries again, rebuilding a picture of a codebase it mapped an hour ago and threw away. That rediscovery burns most of a run's tool calls, tokens and time. People onboard to a codebase once. Agents onboard every single time.
@@ -222,7 +219,6 @@ The graft map builds that understanding once, and keeps it current:
 How it is measured: [Benchmark](#benchmark), [SWE-bench Verified](#swe-bench-verified) and [Tested on popular repos](#tested-on-popular-repos). How it is built: [the reference](#how-the-graph-gets-built).
 
 ---
-
 ## Part 2: Learnings
 
 Your agent forgets everything when a session ends. Next week, it digs through the same code again, or worse, undoes a decision it never knew was made. Your teammates' agents do the same.
@@ -300,15 +296,13 @@ None of this needs a server. Learnings travel through git, like the code they ar
 A decision is a short markdown file in `.trail/learnings/`, reviewed in the pull request like any other change:
 
 ```markdown
----
-title: Keep the default retry count at 4
+---title: Keep the default retry count at 4
 author: Anirudh
 date: 2026-10-09
 cost: { tokens: 27400 }
 touches:
   - client.go
 ---
-
 ## Decided
 - Keep defaultRetryMax = 4: ten retries with the default backoff can hold one Do() call for over an hour.
 
@@ -352,7 +346,6 @@ trail status                               # the graft map, learnings and tokens
 ```
 
 ---
-
 ## Your team
 
 Learnings reach your teammates through git, with no server: commit `.trail/`, and every clone has them. Learnings on a teammate's pushed branch show up before it merges, marked "pushed and not merged yet", with only their first lines.
@@ -366,7 +359,6 @@ trail team                     # this week's learnings and overlaps
 Coming soon: a Trail workspace, for your team's view across repos. A team page will show who is learning what, how often learnings were reused, and where work overlaps.
 
 ---
-
 ## What stays on your machine
 
 - **Your code.** The graft map is built on your machine with tree-sitter. No model, no network. The optional `trail build --deep` summaries go to the model provider you choose, under your own key.
@@ -378,7 +370,6 @@ Coming soon: a Trail workspace, for your team's view across repos. A team page w
 - **Anonymous usage stats.** Buckets and fixed labels only, never the title, text or paths of a learning. [`TELEMETRY.md`](https://github.com/trailhq/Trail-Code/blob/main/TELEMETRY.md) lists every field. Turn it off with `trail telemetry disable` or `DO_NOT_TRACK=1`.
 
 ---
-
 ## Benchmark
 
 An agent that reads the graft map should be cheaper and faster without getting more answers wrong. That's the whole claim, so we measured it instead of asserting it.
@@ -398,7 +389,6 @@ The harness ran three variants of the same agent loop on Claude Sonnet 5, with t
 Push, the column above, gave up 3 correctness points on one corpus for its savings. The pull variant never answered worse than cold on any corpus, and gave up most of that speed for something bigger: correctness jumped to 98%, 5 points over cold, the strongest single result in the sweep. Push when speed is what you need; pull when being right matters more.
 
 ---
-
 ## SWE-bench Verified
 
 The sweep above is our harness measuring our mechanism. So we ran the industry-standard one too: **SWE-bench Verified**, real GitHub issues from real repos, graded by the official `swebench` harness. No judge model, no similarity score: your patch is applied, the maintainers' own tests are run, and you either flip the failing test without breaking the passing ones or you don't.
@@ -421,7 +411,6 @@ Two harnesses, two claims: the controlled sweep says the graft map is cheaper an
 <sub>Correctness over all instances; tokens, cost and calls over the instances both arms resolved, for a like-for-like comparison. Official SWE-bench Verified images and official `swebench` 4.1.0 grader, native x86_64.</sub>
 
 ---
-
 ## Tested on popular repos
 
 The [benchmarks](#benchmark) measure the mechanism. The real test is whether the graft map helps an agent **ship real changes** on code people actually run, not just answer questions. So we benchmark it on popular open-source repos: **15 tasks each**, 10 real developer questions plus **5 actual implementation tasks** (real merged pull requests, each re-implemented from its base commit and scored against the files the maintainers actually changed). Same agent (Claude Opus), same file tools; the only difference is whether the graft map is wired in.
@@ -477,7 +466,6 @@ Two clones of PocketBase at the same commit: one wired with `graft init`, one un
 </details>
 
 ---
-
 ## FAQ
 
 **Is this graft?**
@@ -508,7 +496,6 @@ Yes: one repo with many packages, submodules, and folders of separate repos. See
 The CLI is free and open source under the MIT license.
 
 ---
-
 ## How the graph gets built
 
 The graft map is built in layers. Tier 1 is tree-sitter: every symbol and call edge, no model, no key. `trail build --deep` adds two language-model passes on top:
@@ -532,7 +519,6 @@ That cheapness is what lets **every query refresh the graph before it answers**.
 Alongside the markdown graph, `trail build` builds `graft/.graph/wiring.json` (a per-symbol code graph) plus a per-file wiring card mirroring your source tree. Tier 1 is pure tree-sitter (every function, class, and call edge; deterministic, no model, no network), which is why plain `trail build` needs no key. The `--deep` pass adds a one-line summary and a crux excerpt per symbol, cached by body hash.
 
 ---
-
 ## Supported languages
 
 The graft map parses with tree-sitter at two levels of fidelity, plus an optional
@@ -564,7 +550,6 @@ indexed. Adding a broad-tier language is a small contribution; see
 [CREDITS.md](https://github.com/trailhq/Trail-Code/blob/main/CREDITS.md) for the folks who added the current set.
 
 ---
-
 ## What's in a node
 
 A node is a single markdown file. Most code maps stop at an address: this thing lives in that file, on that line. That tells an agent where to look, not what it will find, so it still has to open the source and read. A graft map node holds the meaning inline, so the agent learns what it needs up front and opens the file only when it wants more.
@@ -586,7 +571,6 @@ The crux is stored as the code itself, not as a line range, on purpose. Line num
 _Summary, sources, links, and your text ship today in markdown nodes. The crux ships per-symbol in the code graph (`trail build --deep`); inlining it into markdown nodes is next._
 
 ---
-
 ## What runs where
 
 - **On your machine, no key, no network:** the structural code graph. `trail build` (wiring graph + per-file cards), `trail build --check`, `trail ask`, learnings and `trail check` are deterministic. They never call a model.
@@ -597,7 +581,6 @@ _Summary, sources, links, and your text ship today in markdown nodes. The crux s
 Settings keep their `GRAFT_` names. See [`.env.example`](https://github.com/trailhq/Trail-Code/blob/main/.env.example) for the full list (model, base URL, graph directory).
 
 ---
-
 ## Agent integration
 
 One command wires Trail-code into the coding agents you use:
@@ -683,7 +666,6 @@ When Claude Code is selected (it is by default), it gets more than the skill fil
 `trail init` is idempotent and never clobbers your existing `.claude/settings.json`: it merges its blocks and leaves the rest alone. A `statusLine` that is not Trail-code's is left untouched; re-running `init` refreshes Trail-code's own helper command if it is already installed. Pass `--no-statusline` (or `GRAFT_NO_STATUSLINE=1`) to skip installing one at all, since a project-level `statusLine` would otherwise hide a custom one in `~/.claude/settings.json`. Want the LLM summaries too? Run `trail build --deep` (with a key) whenever you like; auto-sync will never do it for you.
 
 ---
-
 ## CLI
 
 `trail --help` lists the commands in four groups. Every `graft` command still works too.

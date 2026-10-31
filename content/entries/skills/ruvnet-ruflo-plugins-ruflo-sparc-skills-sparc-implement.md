@@ -145,7 +145,6 @@ Complexity: O(n) time, O(1) space
 - {StructName}: { field1: type, field2: type }
 
 ---
-
 # Architecture: {Feature Name}
 
 ## Bounded Contexts
@@ -174,6 +173,5 @@ src/{feature}/
 - Caching: {strategy}
 - Events: {strategy}
 
----
-Phases 2-3 complete. Run `/ruflo-sparc:ruflo-sparc advance` to pass the gate check.
+---Phases 2-3 complete. Run `/ruflo-sparc:ruflo-sparc advance` to pass the gate check.
 ```

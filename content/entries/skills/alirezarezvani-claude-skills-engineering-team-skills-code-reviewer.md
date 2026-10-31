@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -79,7 +79,6 @@ skill:
 Automated code review tools for analyzing pull requests, detecting code quality issues, and generating review reports.
 
 ---
-
 ## How This Skill Is Organized
 
 ```
@@ -128,7 +127,6 @@ That is always exactly **2 additional files**, regardless of scope.
 | `.dart` | `languages/dart.md` |
 
 ---
-
 ## Tools
 
 ### PR Analyzer
@@ -162,7 +160,6 @@ python scripts/pr_analyzer.py /path/to/repo --json
 - Commit message validation
 
 ---
-
 ### Code Quality Checker
 
 Analyzes source code for structural issues, code smells, and SOLID violations.
@@ -193,7 +190,6 @@ python scripts/code_quality_checker.py /path/to/code --json
 Language-specific checks are defined in each `languages/*.md` file.
 
 ---
-
 ### Review Report Generator
 
 Combines PR analysis and code quality findings into structured review reports.
@@ -221,7 +217,6 @@ python scripts/review_report_generator.py . \
 | <50 or critical issues | Block |
 
 ---
-
 ## Adding a New Language
 
 **Reviewer guidance (required):**
@@ -241,7 +236,6 @@ score the new language:
 6. Add `assets/sample_<name>_smells.<ext>` + `_clean` fixtures and commit the expected `--json` output under `expected_outputs/` as a regression guard.
 
 ---
-
 ## Regression Fixtures
 
 Labelled fixtures live in `assets/` with their committed `--json` output in

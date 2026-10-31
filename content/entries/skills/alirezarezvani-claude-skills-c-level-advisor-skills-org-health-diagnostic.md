@@ -3,7 +3,9 @@ slug: alirezarezvani-claude-skills-c-level-advisor-skills-org-health-diagnostic
 name: org-health-diagnostic
 tagline: Cross-functional organizational health check combining signals from all
   C-suite roles. Scores 8 dimensions on a traffic-light scale with drill-down re
-summary: "Or describe your metrics in natural language:"
+summary: "Key metrics: - Runway — months at current burn (Green: >12, Yellow:
+  6-12, Red: 2.5x) - Gross margin — SaaS target: >65% (Green: >70%, Yellow:
+  55-70%, Red: 25%)"
 categories:
   - coding-agents
 tags:
@@ -25,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -164,7 +166,6 @@ Key metrics:
 - **Brand NPS** — awareness + preference scores in ICP
 
 ---
-
 ## Scoring & Traffic Lights
 
 Each dimension is scored 1-10 with traffic light:
@@ -176,7 +177,6 @@ Each dimension is scored 1-10 with traffic light:
 Weighted average by company stage (see `references/health-benchmarks.md` for weights).
 
 ---
-
 ## Dimension Interactions (Why One Problem Creates Another)
 
 | If this dimension is red... | Watch these dimensions next |
@@ -189,7 +189,6 @@ Weighted average by company stage (see `references/health-benchmarks.md` for wei
 | Operational Health | All dimensions degrade over time (execution failure cascades everywhere) |
 
 ---
-
 ## Dashboard Output Format
 
 ```
@@ -221,7 +220,6 @@ WATCH
 ```
 
 ---
-
 ## Graceful Degradation
 
 You don't need all metrics to run a diagnostic. The tool handles partial data:

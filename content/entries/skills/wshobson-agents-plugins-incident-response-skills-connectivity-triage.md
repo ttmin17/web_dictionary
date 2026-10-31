@@ -4,7 +4,9 @@ name: connectivity-triage
 tagline: "Use this skill when debugging active macOS connectivity failures, when
   an API or MCP service times out or disconnects, when DNS resolution is failing
   "
-summary: "Use this workflow when a macOS endpoint has an active symptom such as:"
+summary: "- an API, website, or MCP service timing out or disconnecting; - DNS
+  lookup failures or inconsistent name resolution; - packet loss, latency, or
+  unstable interactive traffic; - an application that appears offline whil..."
 categories:
   - coding-agents
 tags:

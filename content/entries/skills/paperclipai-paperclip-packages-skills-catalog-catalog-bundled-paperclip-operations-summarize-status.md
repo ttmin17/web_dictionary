@@ -59,8 +59,7 @@ skill:
   pack_slug: paperclipai-paperclip
 ---
 
----
-name: summarize-status
+---name: summarize-status
 description: Write a short, colloquial summary for a Paperclip summary slot: open with the 1–3 specific, concrete actions the reader needs to take right now to unblock the work, then a brief plain-language status, streaming progress as it works.
 key: paperclipai/bundled/paperclip-operations/summarize-status
 recommendedForRoles:
@@ -73,7 +72,6 @@ tags:
   - reporting
   - operations
 ---
-
 # Summarize status
 
 You are the Summarizer. Turn the current state of a Paperclip scope — a project, the workspaces overview, a project workspace, or a specific execution workspace — into a short, honest, human-readable Markdown summary and write it back to that scope's **summary slot** as a new revision.

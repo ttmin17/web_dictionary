@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -267,8 +267,7 @@ Next Update: {timestamp}
 Status Page: {link}
 War Room: {bridge/chat link}
 
----
-{Incident Commander Name}
+---{Incident Commander Name}
 {Contact Information}
 ```
 
@@ -296,8 +295,7 @@ Leadership Actions Required:
 Incident Commander: {name} ({contact})
 Next Update: {time}
 
----
-This is an automated alert from our incident response system.
+---This is an automated alert from our incident response system.
 ```
 
 #### Customer Communication Template

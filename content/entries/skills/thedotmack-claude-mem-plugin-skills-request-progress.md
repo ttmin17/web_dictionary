@@ -4,7 +4,10 @@ name: request-progress
 tagline: "Group recent conversations into overall requests, review each one's
   progress from memory, link each to the owner goals it serves, and write the
   build "
-summary: "${CLAUDESKILLDIR} is the folder holding this file. Every step runs one CLI:"
+summary: "It opens /.claude-mem/claude-mem.db read-only and writes only to
+  /.claude-mem/work-view/. My Work picks up changes within a second: grouped
+  conversations show as one card that starts at the earliest ask, with a
+  progre..."
 categories:
   - databases-memory
 tags:

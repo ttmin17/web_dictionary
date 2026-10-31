@@ -74,7 +74,6 @@ By George Hartley, co-founder of [Nitrosend](https://nitrosend.com).
 > Part A is the operating manual, Part B the reference. Figures are mid-2026; verify anything volatile (inbox rules, ESP features, pricing, model names) before acting.
 
 ---
-
 # PART A: OPERATING MANUAL
 
 ## 0. AGENT OPERATING RULES
@@ -182,7 +181,6 @@ AI defaults to competent and generic; force it off its defaults.
 - **Who to follow** (Chapter 18, 49 practitioners, five added in v2.7): Anshu Chimala @anshuc, Karri Saarinen @karrisaarinen, Ryo Lu @ryolu_, Jenny Wen @jenny_wen, Lee Munroe @leemunroe.
 
 ---
-
 # PART B: REFERENCE
 
 ## 6. FUNDAMENTALS & METRICS
@@ -336,7 +334,6 @@ Also: narrow width, one font family, personalise with unexpected data. Feed the 
 **Ecommerce DTC:** email = 25-40% of revenue; welcome, cart, post-purchase first; the profit sits in the flows nobody watches. **SaaS B2B:** behaviour-based onboarding, one CTA per email. **SaaS B2C:** re-engage at 7 days inactive. **Newsletter/Creator:** inflection ~10K subs; sponsorships → paid → affiliates → products; referral programmes grow 30-40% faster. **Nonprofit:** 3:1 value-to-ask; mission storytelling; start year-end in November. Plus Agency, Healthcare, Financial, Real Estate, Travel, Education, Professional Services, Retail, Events, B2B Manufacturing, Restaurant, Fitness, Media and Marketplace in the chapter.
 
 ---
-
 ## APPENDIX: BENCHMARKS (mid-2026)
 
 **By industry** (open / CTR / unsub): Ecommerce 15-20% / 2-3% / 0.2% · SaaS 20-25% / 2-3% / 0.2% · Financial 20-25% / 2.5-3.5% / 0.15% · Healthcare 20-25% / 2-3% / 0.15% · Education 25-30% / 3-4% / 0.1% · Nonprofit 25-30% / 2.5-3.5% / 0.1% · Media 20-25% / 4-5% / 0.1% · Retail 15-20% / 2-3% / 0.2%. Opens directional only (§6).
@@ -350,7 +347,6 @@ Also: narrow width, one font family, personalise with unexpected data. Feed the 
 **Frequency:** Ecommerce DTC 3-5x/wk · SaaS B2B 1-2x/wk · Newsletter daily-3x/wk · Nonprofit 1-2x/mo · Retail 3-5x/wk.
 
 ---
-
 ## CHAPTER SLUGS (https://emailmarketingskill.com/<slug>/)
 
 01-fundamentals · 02-building-your-list · 03-segmentation-and-personalisation · 04-the-emails-that-make-money · 05-copywriting-that-converts · 06-design-and-technical · 07-deliverability · 08-testing-and-optimisation · 09-analytics-and-measurement · 10-compliance-and-privacy · 11-industry-playbooks · 12-choosing-your-platform · 13-cold-email-and-b2b-outbound · 14-whatsapp-business · 15-sms-and-rcs · 16-ai-and-agentic-marketing · 17-company-case-studies · 18-expert-directory · 19-best-email-designs-2026 · appendix-a-benchmarks · appendix-b-frequency-guide · appendix-c-calendar · appendix-d-methodology

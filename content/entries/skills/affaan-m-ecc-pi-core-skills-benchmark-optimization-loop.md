@@ -4,7 +4,9 @@ name: benchmark-optimization-loop
 tagline: Convert 'make it faster' requests into a bounded measured optimization
   loop — baseline first, generate one-hypothesis variants, benchmark each
   against
-summary: "Do not optimize until these exist:"
+summary: "- the operation being optimized; - the correctness gate that must stay
+  green; - the metric: wall time, p95 latency, rows/sec, cost/run, memory, error
+  rate; - the current baseline; - the search budget: max variants, ma..."
 categories:
   - productivity-ops
 tags:

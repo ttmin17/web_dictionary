@@ -27,12 +27,14 @@ source:
 signals:
   stars: 7149
   last_commit: 2026-10-19T07:23:21Z
-  stars_delta_7d: 100
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 7149
+    - 7149
+  rank_current: 143
 language: en
 needs_keys: false
 prerequisites:

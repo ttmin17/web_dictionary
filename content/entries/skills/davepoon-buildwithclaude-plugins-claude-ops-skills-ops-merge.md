@@ -89,7 +89,6 @@ Before executing, load:
 | `gh api repos/<repo>/pulls/<n>/comments --jq '.[].body'` | PR review comments | Comment text |
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** for fixer agents (Phase 3). This enables:
@@ -321,7 +320,6 @@ Main sync: N repos synced (dev → main → dev)
 ```
 
 ---
-
 ## Safety Rails (NEVER violate)
 
 - **NEVER force-push to main/master**
@@ -334,7 +332,6 @@ Main sync: N repos synced (dev → main → dev)
 - **If a PR has > 50 files changed**, flag it for manual review instead of auto-merging
 
 ---
-
 ## Native tool usage
 
 ### Monitor — live CI watching

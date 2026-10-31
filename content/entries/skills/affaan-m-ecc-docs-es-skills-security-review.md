@@ -559,5 +559,4 @@ Antes de CUALQUIER despliegue a producción:
 - Web Security Academy (PortSwigger)
 
 ---
-
 **Recuerda**: La seguridad no es opcional. Una sola vulnerabilidad puede comprometer toda la plataforma. Ante la duda, optar por el lado de la precaución.

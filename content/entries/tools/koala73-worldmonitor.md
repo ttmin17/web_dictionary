@@ -124,7 +124,6 @@ The terminal dashboard runs the same live data in your shell: world map, news, m
 ![World Monitor terminal dashboard](https://raw.githubusercontent.com/koala73/worldmonitor/main/docs/images/tui/overview.webp)
 
 ---
-
 ## What It Does
 
 - **Curated news feeds** across global and regional categories, AI-synthesized into briefs
@@ -141,7 +140,6 @@ The terminal dashboard runs the same live data in your shell: world map, news, m
 For the full feature list, architecture, data sources, and algorithms, see the **[documentation](https://www.worldmonitor.app/docs/documentation)**.
 
 ---
-
 ## Support Status
 
 All site variants and desktop binaries are built from a single codebase and ship from the same release process. The table below clarifies maintenance status so you know which surfaces are safe to depend on.
@@ -155,7 +153,6 @@ All site variants and desktop binaries are built from a single codebase and ship
 Issues filed against any of the above are triaged from the same backlog — see the [issues board](https://github.com/koala73/worldmonitor/issues) for currently-open work.
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -182,7 +179,6 @@ npm run dev:energy     # energy.worldmonitor.app
 See the **[self-hosting guide](https://www.worldmonitor.app/docs/getting-started)** for deployment options (Vercel, Docker, static).
 
 ---
-
 ## Tech Stack
 
 | Category | Technologies |
@@ -197,7 +193,6 @@ See the **[self-hosting guide](https://www.worldmonitor.app/docs/getting-started
 Full stack details in the **[architecture docs](https://www.worldmonitor.app/docs/architecture)**.
 
 ---
-
 ## Programmatic Access
 
 World Monitor is built for agents and scripts as well as browsers:
@@ -219,19 +214,16 @@ World Monitor is built for agents and scripts as well as browsers:
 Agent discovery files: [`llms.txt`](https://worldmonitor.app/llms.txt) · [agent-skills manifest](https://worldmonitor.app/.well-known/agent-skills/index.json) · [api-catalog](https://worldmonitor.app/.well-known/api-catalog). Get an API key at [worldmonitor.app/pro](https://www.worldmonitor.app/pro).
 
 ---
-
 ## Flight Data
 
 Flight data provided graciously by [Wingbits](https://wingbits.com?utm_source=worldmonitor&utm_medium=referral&utm_campaign=worldmonitor), the most advanced ADS-B flight data solution.
 
 ---
-
 ## Data Sources
 
 WorldMonitor aggregates attributed upstream sources across geopolitics, finance, energy, climate, aviation, cyber, military, infrastructure, and news intelligence. Curated feeds and freshness-tracked source groups are published in the full [data sources catalog](https://www.worldmonitor.app/docs/data-sources), with provider, feed-tier, license-posture, and collection-method details.
 
 ---
-
 ## Contributing
 
 Contributions welcome! See [CONTRIBUTING.md](https://github.com/koala73/worldmonitor/blob/main/CONTRIBUTING.md) for guidelines.
@@ -242,7 +234,6 @@ npm run build:full       # Production build
 ```
 
 ---
-
 ## License
 
 **AGPL-3.0-only** for the source code. Commercial use is permitted under the AGPL when you comply with its copyleft and source-availability terms.
@@ -260,7 +251,6 @@ See [LICENSE](https://github.com/koala73/worldmonitor/blob/main/LICENSE) for the
 Copyright (C) 2024-2026 Elie Habib. All rights reserved.
 
 ---
-
 ## Author
 
 **Elie Habib** — [GitHub](https://github.com/koala73)
@@ -280,7 +270,6 @@ We thank the following researchers for responsibly disclosing security issues:
 See our [Security Policy](https://github.com/koala73/worldmonitor/blob/main/SECURITY.md) for responsible disclosure guidelines.
 
 ---
-
 <p align="center">
   <a href="https://www.worldmonitor.app">worldmonitor.app</a> &nbsp;·&nbsp;
   <a href="https://www.worldmonitor.app/docs/documentation">docs.worldmonitor.app</a> &nbsp;·&nbsp;

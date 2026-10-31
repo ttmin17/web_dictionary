@@ -171,7 +171,6 @@ Success example only: use actual evidence and show completion only after the fin
 | Response time | <200ms | 145ms | Pass |
 
 ---
-
 # Completion: {Feature Name}
 
 ## Traceability Matrix
@@ -189,6 +188,5 @@ Success example only: use actual evidence and show completion only after the fin
 - [x] Rollback plan defined
 - [x] Security reviewed
 
----
-SPARC workflow complete. Run `/ruflo-sparc:ruflo-sparc report` for the full methodology report.
+---SPARC workflow complete. Run `/ruflo-sparc:ruflo-sparc report` for the full methodology report.
 ```

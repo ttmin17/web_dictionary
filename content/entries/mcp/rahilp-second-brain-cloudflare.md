@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 12
   stars_growth_pct: 1.5
   trending_score: 12.18
-  rank_current: 70
-  rank_delta: -16
+  rank_current: 75
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 803
@@ -76,13 +76,11 @@ Claude, ChatGPT, Cursor, Codex, and the other AI tools you use do not naturally 
 Second Brain gives those tools one persistent memory system. It runs in your own Cloudflare account, stays under your control, and retrieves the right context by meaning rather than exact wording.
 
 ---
-
 The desktop app is the easiest way to start. It builds your Second Brain and connects your AI tools in about two minutes—no terminal or Cloudflare setup required.
 
 ### [Download for Mac or Windows](https://github.com/rahilp/second-brain-cloudflare/blob/main/releases/latest)
 
 ---
-
 [Deploy to Cloudflare](https://deploy.workers.cloudflare.com/?url=https://github.com/rahilp/second-brain-cloudflare) · [Read the documentation](https://github.com/rahilp/second-brain-cloudflare/blob/main/wiki)
 
 

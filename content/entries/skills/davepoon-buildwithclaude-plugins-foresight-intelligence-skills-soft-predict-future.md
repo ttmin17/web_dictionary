@@ -73,7 +73,6 @@ skill:
 Activate when the user asks any future-oriented question — "Will [X]?", "Who will win [X]?", "What happens to [X]?", "Can [X] succeed?", or any question about a future outcome. **Year is NOT required.** Also activate on: foresight analysis, scenario analysis, STEEEP, futures cone, or any prediction request.
 
 ---
-
 ## Try Asking
 
 ```
@@ -94,13 +93,11 @@ TRY ASKING  (year optional — engine infers the horizon)
 > **Soft Predict Future** uses Claude's native reasoning + web search. Outputs are structurally correct and fast. For deterministic, auditable scoring say: **"Run hard predict future: [your question]"**
 
 ---
-
 ## The 9-Step Pipeline
 
 Execute ALL steps in order. Never skip. Never combine. Show your work at each step.
 
 ---
-
 ### Step 1 — Validate Input
 
 Apply exactly 5 binary rules. If ANY rule fails, stop and explain why. Do not proceed.
@@ -135,7 +132,6 @@ Result: PROCEED / STOP
 ```
 
 ---
-
 ### Step 2 — Collect Signals
 
 Run exactly 6 web searches. Collect a minimum of 18 signals total. Do not proceed with fewer than 18.
@@ -161,7 +157,6 @@ For each signal, classify all 6 attributes:
 Present signals in a table with all 6 columns filled for every row.
 
 ---
-
 ### Step 3 — Score Signals
 
 Score every signal individually using this formula:
@@ -195,7 +190,6 @@ final_score = min(1.0, base_score × regional_multiplier[steeep][temporal])
 Show scoring table: Signal | recency_w | reliability_w | type_w | evidence_mult | base_score | regional_mult | final_score
 
 ---
-
 ### Step 4 — Extract Structural Drivers
 
 A **driver** is the deep structural force that explains WHY a cluster of signals exists. Signals are observable. Drivers are causal.
@@ -227,7 +221,6 @@ D3 [Name] — [Force]
 Drivers feed directly into scenario writing in Step 8. Each scenario must be traceable to at least one driver.
 
 ---
-
 ### Step 5 — Build 6×3 STEEEP Matrix
 
 Populate all 18 cells. Each cell value = average final_score of all signals mapped to that STEEEP × Temporal combination. Empty cells = 0.
@@ -247,7 +240,6 @@ Apply regional multipliers to each cell. Then identify:
 - **Dominant zone:** single highest-scoring cell
 
 ---
-
 ### Step 6 — Cross-Impact Analysis
 
 Signals are scored independently in Step 3, but structural forces interact. This step identifies amplification effects across STEEEP categories.
@@ -276,7 +268,6 @@ Convergence bonus: [+X% to probable_pct if Strategic convergence exists]
 Apply convergence bonus: if Strategic layer has CONVERGENCE, add 5% to probable_pct before normalization in Step 7.
 
 ---
-
 ### Step 7 — Find 3 Historical Analogues
 
 Identify exactly 3 real historical cases that parallel the question's trajectory.
@@ -291,7 +282,6 @@ For each:
 Prefer analogues with similarity ≥ 60%. If none exceed 60%, note as a confidence penalty.
 
 ---
-
 ### Step 8 — Compute Probabilities + Confidence
 
 #### Predictions — Independent Confidence Scores
@@ -332,7 +322,6 @@ confidence = round(signal_count_score + signal_diversity + recency_score + evide
 ```
 
 ---
-
 ### Step 9 — Write Scenarios + Assemble Report
 
 #### Scenario Rules
@@ -525,7 +514,6 @@ Preferable futures     Per stakeholder: Wins IF [condition] BUT ONLY [constraint
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ---
-
 ## Visual Output (claude.ai with Artifacts)
 
 If running on claude.ai and Artifacts are enabled, after the text report generate an HTML Artifact:
@@ -541,7 +529,6 @@ If running on claude.ai and Artifacts are enabled, after the text report generat
 ```
 
 ---
-
 ## Regional Multiplier Tables
 
 Apply in Step 3 and Step 5.

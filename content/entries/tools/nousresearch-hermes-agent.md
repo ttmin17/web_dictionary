@@ -95,7 +95,6 @@ Use any model you want — [Nous Portal](https://portal.nousresearch.com), OpenR
 </table>
 
 ---
-
 ## Quick Install
 
 ### Linux, macOS, WSL2
@@ -167,7 +166,6 @@ If attestation says "Verification succeeded" and the last line prints `True`, yo
 For more context, see the upstream Astral reports: [astral-sh/uv#13553](https://github.com/astral-sh/uv/issues/13553), [astral-sh/uv#15011](https://github.com/astral-sh/uv/issues/15011), [astral-sh/uv#10079](https://github.com/astral-sh/uv/issues/10079).
 
 ---
-
 ## Getting Started
 
 ```bash
@@ -185,7 +183,6 @@ hermes doctor       # Diagnose any issues
 📖 **[Full documentation →](https://hermes-agent.nousresearch.com/docs/)**
 
 ---
-
 ## Skip the API-key collection — Nous Portal
 
 Hermes works with whatever provider you want — that's not changing. But if you'd rather not collect five separate API keys for the model, web search, image generation, TTS, and a cloud browser, **[Nous Portal](https://portal.nousresearch.com)** covers all of them under one subscription:
@@ -204,7 +201,6 @@ That logs you in via OAuth, sets Nous as your provider, and turns on the Tool Ga
 You can still bring your own keys per-tool whenever you want — the gateway is per-backend, not all-or-nothing.
 
 ---
-
 ## CLI vs Messaging Quick Reference
 
 Hermes has two entry points: start the terminal UI with `hermes`, or run the gateway and talk to it from Telegram, Discord, Slack, WhatsApp, Signal, or Email. Once you're in a conversation, many slash commands are shared across both interfaces.
@@ -224,7 +220,6 @@ Hermes has two entry points: start the terminal UI with `hermes`, or run the gat
 For the full command lists, see the [CLI guide](https://hermes-agent.nousresearch.com/docs/user-guide/cli) and the [Messaging Gateway guide](https://hermes-agent.nousresearch.com/docs/user-guide/messaging).
 
 ---
-
 ## Documentation
 
 All documentation lives at **[hermes-agent.nousresearch.com/docs](https://hermes-agent.nousresearch.com/docs/)**:
@@ -248,7 +243,6 @@ All documentation lives at **[hermes-agent.nousresearch.com/docs](https://hermes
 | [Environment Variables](https://hermes-agent.nousresearch.com/docs/reference/environment-variables) | Complete env var reference                                 |
 
 ---
-
 ## Migrating from OpenClaw or another agent
 
 If you're coming from OpenClaw, Claude Code, Codex CLI or Cursor, Hermes can import your settings, memories and skills (and, for OpenClaw, API keys when you ask for them).
@@ -279,7 +273,6 @@ What gets imported from OpenClaw:
 `hermes claw migrate` still works as the older spelling. See the [OpenClaw migration guide](https://hermes-agent.nousresearch.com/docs/guides/migrate-from-openclaw) and [Import from Other Agents](https://hermes-agent.nousresearch.com/docs/user-guide/import-from-other-agents).
 
 ---
-
 ## Contributing
 
 We welcome contributions! See the [Contributing Guide](https://hermes-agent.nousresearch.com/docs/developer-guide/contributing) for development setup, code style, and PR process.
@@ -289,7 +282,6 @@ for activation, daily use, dependency changes, and leaving the environment.
 [Development Setup](https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md#development-setup) covers the separate test environment and verification commands.
 
 ---
-
 ## Community
 
 - 💬 [Discord](https://discord.gg/NousResearch)
@@ -299,7 +291,6 @@ for activation, daily use, dependency changes, and leaving the environment.
 - 🔌 [HermesClaw](https://github.com/AaronWong1999/hermesclaw) — Community WeChat bridge: Run Hermes Agent and OpenClaw on the same WeChat account.
 
 ---
-
 ## License
 
 MIT — see [LICENSE](https://github.com/NousResearch/hermes-agent/blob/main/LICENSE).

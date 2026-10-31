@@ -122,7 +122,6 @@ The alerts profile runs in one of two modes (chosen at the `/vss-build-vision-ai
 - Add a new camera to the alerts pipeline (Workflow A)
 
 ---
-
 ## Deployment prerequisite
 
 Requires the VSS **alerts** profile in either `verification` (CV) or `real-time`
@@ -175,7 +174,6 @@ autonomous deploy → run directly with `verification` by default). If it
 passes, detect the mode per Step 1.
 
 ---
-
 ## The Two Modes (Deploy-Time Choice)
 
 | Mode | Deploy flag | Env (`.env`) | What runs | What is available |
@@ -188,7 +186,6 @@ passes, detect the mode per Step 1.
 **`RTVI_VLM_KAFKA_ENABLED` is mode-specific.** `overrides.env` ships `RTVI_VLM_KAFKA_ENABLED=false` for verification (`2d_cv`), where nothing consumes RT-VLM's Kafka output and leaving it on makes RT-VLM publish duplicate incidents that Logstash indexes under `mdx-vlm-incidents-1970-01-01`. Real-time (`2d_vlm`) alerts depend on RT-VLM publishing to Kafka, so the line must be commented out in that mode — `dev-profile.sh` does this automatically for `-m real-time`. If a real-time deployment produces no alerts, check that this override is not still active in `generated.env`.
 
 ---
-
 ## Step 1 — Detect the Currently Deployed Mode
 
 Before running any alert workflow, check which mode is live.
@@ -243,7 +240,6 @@ fi
 ```
 
 ---
-
 ## Step 2 — Route by Deployed Mode
 
 | Deployed mode | User asks about… | Action |
@@ -312,7 +308,6 @@ Verification verdicts and on-demand verification exist only on a CV (verificatio
 No auto-redeploy here either.
 
 ---
-
 ## Prereq for Either Mode: Sensor Must Be in VIOS
 
 Both modes require the camera registered in VIOS first:
@@ -331,7 +326,6 @@ Both modes require the camera registered in VIOS first:
 On **CV**, adding the RTSP is the *entire* onboarding step (VIOS `camera_streaming` webhook registers the stream with RT-CV). On **VLM**, it is the prerequisite for creating a realtime alert rule (Workflow D).
 
 ---
-
 ## The Alert Bridge API (direct — no `/generate`)
 
 Alert rule CRUD (Workflow D) and incident queries (Workflow C) call the **Alert Bridge REST API directly** — do **not** use the VSS Agent `POST /generate`, and do **not** call the `rtvi-vlm` microservice directly.
@@ -351,7 +345,6 @@ Resolve `$AB` / `$VST` once in *Deployment prerequisite* (Kubernetes forces
 Never fabricate a `sensor_id` or `live_stream_url`.
 
 ---
-
 ## Workflow A — CV Mode (`-m verification` / `MODE=2d_cv`)
 
 CV alerts are **deployment-driven, not request-driven** — there is no agent
@@ -381,7 +374,6 @@ vss configure --base-url "${VSS_PUBLIC_URL:-http://${HOST_IP:-localhost}:7777}" 
 A static-CV-pipeline alert on a VLM-only deployment is a mode mismatch — see the routing table above.
 
 ---
-
 ## Workflow B — Verification Results & Verdicts (CV mode)
 
 How a CV alert becomes a verdict: RT-CV (Grounding DINO) detections → Behavior Analytics emits a candidate alert → Alert Bridge invokes the VLM verifier (prompts per `alert_type`) → the verified document lands in Elasticsearch **`mdx-vlm-incidents-*`** with `verdict` + `verificationResponseCode` + `reasoning` in its `info` block. That is the store `GET $AB/api/v1/realtime/incidents` reads, shared with RT-VLM real-time chunks: a verifier result carries `info.verificationResponseCode`, an RT-VLM chunk carries `info.chunkIdx` instead. VLM real-time incidents carry only `info.verdict: "confirmed"` — RT-VLM writes it on every positive chunk because the Yes/No trigger *is* the verdict (`rtvi_stream_handler.py`), so there is no rejected value to look for there; it is also what Workflow C's consolidated view keys on, so that view never returns verifier results. `mdx-vlm-alerts-*` receives only alert-kind input (`nv.Behavior` events on `mdx-alerts`, or a payload carrying `notification_type: "alert"`), which no Alert Bridge endpoint reads. The alerts profile's Behavior Analytics publishes only incidents, so its verdicts never land there; where Behavior Analytics also publishes `mdx-alerts` (Smart Cities: `/verification/config` lists `stop anomaly module` / `movement anomaly module` — it returns alert types lower-cased), those verdicts do — read them with the alert-kind recipe in `references/verification.md` and report them beside the `/incidents` results, never as none.
@@ -402,7 +394,6 @@ How a CV alert becomes a verdict: RT-CV (Grounding DINO) detections → Behavior
 Load `references/verification.md` for the full verdict table, query recipes, and prompt-customization rules. CV mode only for execution; explain-only asks are answerable in any mode.
 
 ---
-
 ## Workflow D — Alert Rules (create / list / stop, VLM real-time mode only)
 
 Create / list / delete persistent realtime alert rules on Alert Bridge (`POST` / `GET` / `DELETE $AB/api/v1/realtime`). Route here for **any** realtime-alert request on a sensor: rule keywords (`rule`, `subscription`, a rule ID), a sensor with a detection condition ("Set up a realtime alert on warehouse-dock-1 for PPE violations", "Watch entrance-1 for tailgating"), a **bare start with no condition** ("Start a real-time alert on warehouse_sample"), or "Stop rule 496aebd1-…".
@@ -418,7 +409,6 @@ Create / list / delete persistent realtime alert rules on Alert Bridge (`POST` /
 `references/alert-subscriptions.md` is the full playbook. VLM real-time mode only; refuse with the canonical refusal text on CV.
 
 ---
-
 ## Workflow E — Slack Notifications (VLM real-time mode only)
 
 Use when the user **explicitly mentions Slack or the webhook relay** (start/stop webhook server, check status/health, send a test message, set Slack channel/token). The word `notify` alone is **not** enough.
@@ -446,7 +436,6 @@ Routes here: "Set up Slack notifications", "Check if alert-notify is running", "
 Load and follow `references/alert-notify.md`. Code lives in `scripts/alert-notify/`. VLM real-time mode only.
 
 ---
-
 ## Workflow F — On-Demand Verification (CV mode)
 
 One-shot verification of a **specific media artifact** the user points at — never a continuous rule. Endpoint is **`POST $AB/api/v1/verification/ondemand`** (there is **no** `/verification/verify` route):
@@ -465,7 +454,6 @@ One-shot verification of a **specific media artifact** the user points at — ne
 Load `references/on-demand-verification.md` for the full contract, media constraints, and result-validation checklist. CV mode for execution; explain-only asks answerable anywhere. A 202 means **accepted**, not verified — never report a verdict at submit time.
 
 ---
-
 ## Workflow G — Always-On Operation (VLM real-time mode only)
 
 Always-on alerting starts pre-configured rules automatically when VIOS posts a camera lifecycle webhook (`notification_config_2d_vlm.json` → `camera_streaming` starts one realtime rule per `always_on_rules` YAML entry; `camera_remove` tears them down) via `POST $AB/api/v1/realtime/always-on`. **Operate, don't author** — this workflow never creates or edits always-on rule config; it checks status, queries results, and troubleshoots.
@@ -477,7 +465,6 @@ Always-on alerting starts pre-configured rules automatically when VIOS posts a c
 Load `references/always-on.md` for the event contract, reason-code table, the `ALWAYS_ON_RULES_CONFIG` rules-YAML contract, and the troubleshooting ladder. VLM real-time mode only; refuse on CV with the canonical text. Config authoring (editing `always_on_rules`) is **out of scope** in this pass — say so when asked.
 
 ---
-
 ## Workflow C — Query Incidents (real-time incident store)
 
 Query past incidents **directly** from Alert Bridge (`GET $AB/api/v1/realtime/incidents`) — no
@@ -516,7 +503,6 @@ alternate-identity check, the VIOS-down fallback) and the response contract. Its
 **Scope — the `mdx-vlm-incidents-*` store.** On VLM real-time its rows are RT-VLM chunks; on CV they are the Alert Bridge verifier results for Behavior Analytics candidates (PPE, ladder, proximity, restricted-area — `info.verificationResponseCode` set) plus on-demand results: list them as incident records with each row's `info.verdict` — a `rejected` row is a candidate the verifier dismissed as a false positive, not a triggered alert — and an alert count is counted as Workflow B step 2 counts — its query (`limit=1000`; the all-pages recipe once when `complete` is false) and program — as `by_verdict.confirmed` (the `by_category` entry for a named kind) with its rejected / verification-failed / empty counts, never `verified` or `total` alone, never counted by hand from a C page; a verdict question goes to Workflow B. For occupancy / PPE / CV behaviour-alert metrics use the **`vss-query-analytics` skill** (`vss analytics` CLI); a period-bounded real-time event count stays here (query (c)).
 
 ---
-
 ## Cross-Skill Links
 
 | Task | Skill |
@@ -531,7 +517,6 @@ alternate-identity check, the VIOS-down fallback) and the response contract. Its
 | Alert Bridge deployment / integration contracts | `references/deploy-alerts.md`, `references/integrate-alerts.md` |
 
 ---
-
 ## Gotchas
 
 - **`alert-notify` (port 9090) ≠ `vss-alert-bridge`.** Slack ops → Workflow E (`alert-notify`); never route Slack to `vss-alert-bridge`'s `/api/v1/realtime`.

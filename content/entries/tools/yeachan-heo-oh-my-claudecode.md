@@ -2,7 +2,7 @@
 slug: yeachan-heo-oh-my-claudecode
 name: oh-my-claudecode
 tagline: Teams-first Multi-agent orchestration for Claude Code
-summary: English | 한국어 | 中文 | 日本語 | Español | Tiếng Việt | Português
+summary: Multi-agent orchestration for Claude Code. Zero learning curve.
 categories:
   - agent-frameworks
 tags:
@@ -84,7 +84,6 @@ _Don't learn Claude Code. Just use OMC._
 [Get Started](#quick-start) • [Documentation](https://yeachan-heo.github.io/oh-my-claudecode-website) • [CLI Reference](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#cli-reference) • [Workflows](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#workflows) • [Migration Guide](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/MIGRATION.md) • [Discord](https://discord.gg/wSyUQYfhAw)
 
 ---
-
 ## Core Maintainers
 
 | Role           | Name        | GitHub                                         |
@@ -344,7 +343,6 @@ If you experience issues after updating, clear the old plugin cache:
 </p>
 
 ---
-
 ## Why oh-my-claudecode?
 
 - **Zero configuration required** - Works out of the box with intelligent defaults
@@ -357,7 +355,6 @@ If you experience issues after updating, clear the old plugin cache:
 - **Real-time visibility** - HUD statusline shows what's happening under the hood
 
 ---
-
 ## Features
 
 ### Orchestration Modes
@@ -412,13 +409,11 @@ Learn once, reuse forever. OMC extracts hard-won debugging knowledge into portab
 
 ```yaml
 # .omc/skills/fix-proxy-crash.md
----
-name: Fix Proxy Crash
+---name: Fix Proxy Crash
 description: aiohttp proxy crashes on ClientDisconnectedError
 triggers: ["proxy", "aiohttp", "disconnected"]
 source: extracted
----
-Wrap handler at server.py:42 in try/except ClientDisconnectedError...
+---Wrap handler at server.py:42 in try/except ClientDisconnectedError...
 ```
 
 **Manage skills:** `/skill list | add | remove | edit | search`
@@ -453,7 +448,6 @@ cd ../repo-B && omc ultragoal create-goals --auto-plan-id --brief "..."
 See [Multi-repo workspaces in REFERENCE.md](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/REFERENCE.md#multi-repo-workspaces-with-omc-workspace) for resolution order, `OMC_STATE_DIR`, and workspace identifier options.
 
 ---
-
 ## In-session shortcuts
 
 These shortcuts run **inside a Claude Code / OMC session**, not as terminal CLI commands. For shell commands, use the `omc ...` forms shown above. Team mode is explicit: use `/team ...` in-session or `omc team ...` from your shell rather than expecting a bare `team` keyword trigger.
@@ -654,7 +648,6 @@ Forward Claude Code session events to an [OpenClaw](https://openclaw.ai/) gatewa
 See `scripts/openclaw-gateway-demo.mjs` for a reference gateway that relays OpenClaw payloads to a custom HTTPS automation endpoint.
 
 ---
-
 ## Documentation
 
 - **[Full Reference](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/REFERENCE.md)** - Complete feature documentation
@@ -670,7 +663,6 @@ See `scripts/openclaw-gateway-demo.mjs` for a reference gateway that relays Open
 - **[Security Guide](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/SECURITY.md)** - Enterprise deployment and hardening
 
 ---
-
 ## Requirements
 
 - [Claude Code](https://docs.anthropic.com/claude-code) CLI
@@ -707,13 +699,11 @@ OMC can optionally orchestrate external AI providers for cross-validation and de
 **Cost:** 3 Pro plans (Claude + Antigravity/Gemini + ChatGPT) cover everything for ~$60/month.
 
 ---
-
 ## License
 
 MIT
 
 ---
-
 <div align="center">
 
 **Inspired by:** [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) • [claude-hud](https://github.com/ryanjoachim/claude-hud) • [Superpowers](https://github.com/obra/superpowers) • [everything-claude-code](https://github.com/affaan-m/everything-claude-code) • [Ouroboros](https://github.com/Q00/ouroboros)

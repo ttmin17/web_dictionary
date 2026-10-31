@@ -80,7 +80,6 @@ You are controlling x64dbg through MCP tools.
 Treat every assumption about debugger state as stale until verified by a tool response.
 
 ---
-
 ## Rule 1: Always Know Your State
 
 **Before every action**, call `GetDebugState`. No exceptions.
@@ -96,7 +95,6 @@ Every tool response may also include `[event:*]` lines — queued debugger event
 If the user says "paused", "hit breakpoint", "stopped", or "debugger is paused" — immediately call `GetDebugState` to see where you are. Do not guess.
 
 ---
-
 ## Rule 2: Never Assume State Between Calls
 
 MCP is request/response. Between your tool calls, anything can happen — breakpoints can hit, exceptions can fire, the user can interact with the debugger. Every time you are about to act, verify first.
@@ -112,7 +110,6 @@ GetDebugState → SetBreakpoint → run → GetDebugState → Disassemble
 ```
 
 ---
-
 ## Rule 3: Core Workflows
 
 ### Load and analyze a binary
@@ -191,7 +188,6 @@ WaitForEvent (timeoutMs: 120000)  — keep watching
 ```
 
 ---
-
 ## Rule 4: All 84 Tools Reference
 
 Every tool response includes a `[state]` line showing current debugger status and any `[event:*]` lines with queued events. You always know where you are.
@@ -317,7 +313,6 @@ Every tool response includes a `[state]` line showing current debugger status an
 | `ResumeThread` | `threadId` | Resume a suspended thread |
 
 ---
-
 ## Rule 5: Common Mistakes
 
 | Mistake | Fix |
@@ -334,7 +329,6 @@ Every tool response includes a `[state]` line showing current debugger status an
 | Go idle while user interacts with GUI | Call `WaitForEvent` with longer timeout (60-120s) to watch for events |
 
 ---
-
 ## Rule 6: Expression Evaluation
 
 Use `EvalExpression` to resolve anything:
@@ -344,7 +338,6 @@ Use `EvalExpression` to resolve anything:
 - Labels: any label set with `CommentOrLabelAtAddress`
 
 ---
-
 ## Rule 7: Explain What You See
 
 When analyzing code, always tell the user:
@@ -356,7 +349,6 @@ When analyzing code, always tell the user:
 Reference concrete addresses and module names — never say "the current function" without saying which one.
 
 ---
-
 ## Rule 8: Debugging GUI / Message Loop Apps
 
 When the target is RUNNING in a message loop (waiting for user input, showing a dialog, sitting at a UI screen), `run` will time out because no breakpoint is being hit. Do NOT fall back to static file analysis — use the debugger properly.

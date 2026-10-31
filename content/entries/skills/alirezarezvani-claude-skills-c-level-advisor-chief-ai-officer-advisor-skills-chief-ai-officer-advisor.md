@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -293,7 +293,6 @@ python scripts/ai_cost_economics.py workload.json
 - [ai_team_org_evolution.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor/references/ai_team_org_evolution.md) — Stage-to-role map + role definitions (AI engineer ≠ ML engineer ≠ scientist) + anti-patterns
 
 ---
-
 **Version:** 1.0.0
 **Status:** Production Ready
 **Disclaimer:** AI regulation is evolving rapidly. This skill surfaces decisions and tradeoffs as of 2026 but cannot replace qualified AI counsel for binding compliance decisions, especially under EU AI Act conformity assessments.

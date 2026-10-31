@@ -28,8 +28,7 @@ signals:
   stars_delta_7d: 1
   stars_growth_pct: 0.1
   trending_score: 1
-  rank_current: 138
-  rank_delta: null
+  rank_current: 139
   velocity_source: snapshot_delta
   sparkline_4w:
     - 867
@@ -50,15 +49,7 @@ tool:
   install_command: npx @intrect/openswarm
   runtime: node
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: npx
-    args:
-      - -y
-      - "@intrect/openswarm"
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 OpenSwarm — Autonomous AI dev team orchestrator powered by Claude Code CLI. Discord control, Linear integration, cognitive memory.

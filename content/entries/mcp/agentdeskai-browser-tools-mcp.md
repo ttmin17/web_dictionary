@@ -26,8 +26,8 @@ signals:
   stars_delta_7d: 6
   stars_growth_pct: 0.1
   trending_score: 6
-  rank_current: 83
-  rank_delta: 3
+  rank_current: 88
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7327
@@ -68,7 +68,6 @@ client: Cursor, Claude Code, Windsurf, Cline, Zed, Gemini CLI, and others.
 > [SECURITY.md](https://github.com/AgentDeskAI/browser-tools-mcp/blob/main/SECURITY.md).
 
 ---
-
 ## Why this instead of a CDP-based server
 
 Tools like Chrome DevTools MCP and Playwright MCP drive a *fresh, automated*

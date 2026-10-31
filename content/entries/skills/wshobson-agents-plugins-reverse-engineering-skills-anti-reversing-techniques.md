@@ -82,7 +82,6 @@ Understanding protection mechanisms encountered during authorized software analy
 For advanced techniques, see [references/advanced-techniques.md](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/skills/anti-reversing-techniques/references/advanced-techniques.md)
 
 ---
-
 ## Input / Output
 
 **What you provide:**
@@ -99,7 +98,6 @@ For advanced techniques, see [references/advanced-techniques.md](https://github.
 - **Code artifacts**: Python/IDAPython scripts, GDB command sequences, or C stubs for bypassing or implementing checks
 
 ---
-
 ## Detailed patterns and worked examples
 
 Detailed pattern documentation lives in `references/details.md`. Read that file when the navigation tier above is insufficient.
@@ -119,7 +117,6 @@ Timing checks fire when Process Monitor or AV hooks inflate syscall latency. Cal
 Before NOPing a conditional jump, trace the "detected" branch fully. If it initializes or frees heap state needed later, patching the jump skips that setup and corrupts state. Instead, patch the comparison operand to the expected "clean" value, or use x64dbg's "Set condition to always false" on the breakpoint rather than modifying bytes.
 
 ---
-
 ## Related Skills
 
 - `binary-analysis-patterns` — static and dynamic analysis workflows for ELF/PE/Mach-O

@@ -4,7 +4,8 @@ name: bulkpublish-social-scheduling
 tagline: Schedule, publish and analyze social posts across 15 networks via
   BulkPublish (MCP or REST) — Facebook, Instagram, X, TikTok, YouTube, Threads,
   Bluesk
-summary: "MCP (recommended) — hosted server, no install:"
+summary: Add it as a custom connector and OAuth 2.1 walks you through consent —
+  no key in the URL.
 categories:
   - agent-frameworks
 tags:

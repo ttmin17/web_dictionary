@@ -96,7 +96,6 @@ Before providing recommendations, identify:
 3. **Traffic Context**: Where are visitors coming from? (organic, paid, email, social)
 
 ---
-
 ## CRO Analysis Framework
 
 Analyze the page across these dimensions, in order of impact:
@@ -178,7 +177,6 @@ Analyze the page across these dimensions, in order of impact:
 - Long load times
 
 ---
-
 ## Output Format
 
 Structure your recommendations as:
@@ -196,7 +194,6 @@ Hypotheses worth A/B testing rather than assuming.
 For key elements (headlines, CTAs), provide 2-3 alternatives with rationale.
 
 ---
-
 ## Page-Specific Frameworks
 
 ### Homepage CRO
@@ -224,7 +221,6 @@ For key elements (headlines, CTAs), provide 2-3 alternatives with rationale.
 - Inline CTAs at natural stopping points
 
 ---
-
 ## Experiment Ideas
 
 When recommending experiments, consider tests for:
@@ -237,7 +233,6 @@ When recommending experiments, consider tests for:
 **For comprehensive experiment ideas by page type**: See [references/experiments.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cro/references/experiments.md)
 
 ---
-
 ## Task-Specific Questions
 
 1. What's your current conversion rate and goal?
@@ -247,7 +242,6 @@ When recommending experiments, consider tests for:
 5. What have you already tried?
 
 ---
-
 ## Related Skills
 
 - **signup**: If the issue is in the signup process itself
@@ -256,7 +250,6 @@ When recommending experiments, consider tests for:
 - **ab-testing**: To properly test recommended changes
 
 ---
-
 ## Form Optimization
 
 When enrichment controls the next step after a lead form, use the [revops inbound-routing playbook](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/inbound-routing.md): preserve valid submissions, bound the lookup wait, and provide a useful fallback when qualification is unknown.

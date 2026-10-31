@@ -4,7 +4,8 @@ name: ops-gtm
 tagline: Go-to-market strategy planner. Generates a complete GTM plan across
   paid, unpaid, marketing, sales, and AI-automation channels for any project —
   and h
-summary: "Before executing, load available context:"
+summary: "2. Cached plans: List ${CLAUDEPLUGINDATADIR}/gtm/.md to surface recent
+  plans. Never overwrite a prior plan file — always append a new dated file."
 categories:
   - agent-frameworks
 tags:
@@ -99,7 +100,6 @@ Agent(team_name="gtm-research-team", name="automation-research", prompt="Propose
 If the flag is NOT set, use standard fire-and-forget subagents with the same four prompts.
 
 ---
-
 ## Sub-command Routing
 
 Route `$ARGUMENTS` to the correct section below:
@@ -118,7 +118,6 @@ Route `$ARGUMENTS` to the correct section below:
 Arguments are free-form — treat `/gtm plan for my-project $2k/mo pre-launch` as equivalent to `plan` with intake values pre-filled.
 
 ---
-
 ## Project Intake
 
 Before producing any plan section, make sure the following are known. Source them in this order — only ask the user for what's still missing.
@@ -140,7 +139,6 @@ If a Rule-1 batch overflows (e.g. more than 4 project types needed), paginate wi
 Per Rule 3, never silently skip an intake question — if the user hits Escape, offer `[Paste manually]` / `[Use default]` / `[Skip this only]`.
 
 ---
-
 ## Channel / Avenue Catalog
 
 This is the source-of-truth list the planner draws from. Each row: avenue → fit signals → cost profile → **execution path**. The execution path is what makes `/gtm` seamless with `/marketing`: if a `/marketing` sub-command exists for a channel, the plan recommends it by name; otherwise the channel is marked `manual` and the plan includes templated next-actions instead.
@@ -195,7 +193,6 @@ This is the source-of-truth list the planner draws from. Each row: avenue → fi
 | Content repurposing | Long-form → tweets, LinkedIn posts, newsletter | Claude | `/marketing instagram` · manual social |
 
 ---
-
 ## plan — full GTM plan (default)
 
 1. **Intake** per Project Intake section.
@@ -259,7 +256,6 @@ Never silently skip an item (Rule 3) — for each, ask `[Launch, Skip, Edit firs
 Per Rule 5, do NOT auto-launch anything that spends money or sends to real recipients without explicit per-item confirmation. The plan recommends; `/marketing` executes; the user approves each paid or outbound action.
 
 ---
-
 ## paid — paid acquisition deep-dive
 
 Same intake, but only spawn the `paid-research` agent. Render just the PAID block, with up to 5 channel rows and for each:
@@ -273,7 +269,6 @@ Same intake, but only spawn the `paid-research` agent. Render just the PAID bloc
 End with the same handoff prompt as `plan`, scoped to paid channels.
 
 ---
-
 ## unpaid — organic deep-dive
 
 Spawn `unpaid-research` only. For each recommended channel output:
@@ -285,7 +280,6 @@ Spawn `unpaid-research` only. For each recommended channel output:
 - Lifecycle email is first-class here — recommend specific Klaviyo flows and note that `/marketing email` can scaffold them
 
 ---
-
 ## sales — sales motion
 
 Spawn `sales-research` only. Produce:
@@ -297,7 +291,6 @@ Spawn `sales-research` only. Produce:
 5. **Handoff** — offer `[Automate outreach via /gtm automation, Skip, Edit motion]`.
 
 ---
-
 ## automation — AI automation playbook
 
 Spawn `automation-research` only. Render each recipe with:
@@ -311,7 +304,6 @@ Spawn `automation-research` only. Render each recipe with:
 End with `AskUserQuestion` offering `[Scaffold recipe now, Save only, Pick different recipe]`.
 
 ---
-
 ## launch — 30/60/90 launch calendar
 
 Used at stage = pre-launch or beta. Produces a week-by-week calendar of launch activities across all four avenues.
@@ -332,7 +324,6 @@ Required pre-flight checklist (render and check what's ready vs open):
 Launch-day playbook: render hourly timeline for T-7d through T+14d, with concrete actions and the `/marketing` command (or manual step) for each.
 
 ---
-
 ## brief — one-page positioning brief
 
 Fast path — does NOT spawn the four research agents. Just intake + a single call to write the brief. Fields: **ICP**, **Pain**, **Value prop**, **3 messaging pillars**, **Proof points**, **Anti-positioning (who it's NOT for)**. Save to `${CLAUDE_PLUGIN_DATA_DIR}/gtm/<project-slug>-brief-$(date +%Y-%m-%d).md`.
@@ -340,7 +331,6 @@ Fast path — does NOT spawn the four research agents. Just intake + a single ca
 This is the cheapest entry point — recommend running `/gtm brief` before `/gtm plan` when the project's positioning isn't already written down.
 
 ---
-
 ## setup
 
 Configure GTM defaults so subsequent runs skip the intake questions. Per Rule 4, run every Bash call with `run_in_background: true` unless the result is needed for the very next decision.
@@ -370,7 +360,6 @@ Save to `$PREFS_PATH` as `gtm_default_project`, `gtm_project_type`, `gtm_stage`,
 Finish with a smoke test: run `/gtm brief` in background and report `✓ setup complete — try /gtm plan` or `✗ [error]`.
 
 ---
-
 ## Plugin Rules compliance (required reading)
 
 All behavior above respects `claude-ops/CLAUDE.md`:
@@ -382,7 +371,6 @@ All behavior above respects `claude-ops/CLAUDE.md`:
 - **Rule 5 — destructive actions need explicit confirmation**: `/gtm` never spends money or sends messages directly — it delegates to `/marketing`, which owns per-action confirmation. Recommendations are just that.
 
 ---
-
 ## Why this skill is thin
 
 `/gtm` deliberately does NOT re-implement channel APIs. Credential resolution, curl calls, daemon data, and dashboards all live in `/marketing`. This skill is a strategy-and-handoff layer. If a capability belongs to a channel API, add it to `/marketing`; if it belongs to planning, it goes here.

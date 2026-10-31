@@ -104,7 +104,6 @@ param **writes** (`set_rapid_iteration_param*`) live on **`NiagaraService`** (ni
 > (`unreal.<Service>.<method>()`); reach engine toolsets with `call_tool`.
 
 ---
-
 ## ⚠️ CRITICAL: Script Stages
 
 Niagara modules exist in different **script stages**:
@@ -174,7 +173,6 @@ unreal.NiagaraService.set_rapid_iteration_param_by_stage(
 
 
 ---
-
 ## Task Index
 
 | Task | Sub-doc / where |

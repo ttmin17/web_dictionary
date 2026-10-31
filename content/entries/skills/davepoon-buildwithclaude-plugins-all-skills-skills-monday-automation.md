@@ -289,5 +289,4 @@ Different column types require different value formats:
 | Add comment/update | `MONDAY_CREATE_UPDATE` | `item_id`, `body` |
 | Raw GraphQL mutation | `MONDAY_CREATE_OBJECT` | `query`, `variables` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

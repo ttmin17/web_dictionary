@@ -86,7 +86,6 @@ When asked for marketing ideas:
 4. Consider their resources (time, budget, team size)
 
 ---
-
 ## Ideas by Category (Quick Reference)
 
 | Category | Ideas | Examples |
@@ -115,7 +114,6 @@ When asked for marketing ideas:
 - **Guerrilla marketing (#121)**: [references/guerrilla-marketing.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/marketing-ideas/references/guerrilla-marketing.md) — the direct-mail 3-rule framework (relevance / relationship-building / precision targeting), ROI discipline, "think in stories, not campaigns," "test small before going big," and a named case library (WePay, Xero, Red Bull, Antimetal, Arrows, ProfitWell, Buzzsprout, Wistia).
 
 ---
-
 ## Implementation Tips
 
 ### By Stage
@@ -175,7 +173,6 @@ When asked for marketing ideas:
 - Brand, thought leadership, platform effects
 
 ---
-
 ## Top Ideas by Use Case
 
 ### Need Leads Fast
@@ -204,7 +201,6 @@ When asked for marketing ideas:
 - Conference Sponsorship (#72)
 
 ---
-
 ## Output Format
 
 When recommending ideas, provide for each:
@@ -216,7 +212,6 @@ When recommending ideas, provide for each:
 - **Resources needed**: Time, budget, skills required
 
 ---
-
 ## Task-Specific Questions
 
 1. What's your current stage and main growth goal?
@@ -225,7 +220,6 @@ When recommending ideas, provide for each:
 4. What competitor tactics do you admire?
 
 ---
-
 ## Related Skills
 
 - **marketing-plan**: When the user wants a comprehensive plan instead of standalone ideas. Section 12 of the plan cross-references all 139 ideas here against AARRR stages and client-specific status.

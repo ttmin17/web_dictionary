@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 22
   stars_growth_pct: 0.8
   trending_score: 22.17
-  rank_current: 97
-  rank_delta: null
+  rank_current: 98
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2926
@@ -52,14 +51,7 @@ tool:
   install_command: pip install cocoindex-code
   runtime: multi
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - cocoindex-code
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 A super light-weight embedded code search engine CLI (AST based) that just works -  improves speed and efficiency for coding agent  🌟 Star if you like it!

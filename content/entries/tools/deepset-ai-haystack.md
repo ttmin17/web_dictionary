@@ -32,7 +32,6 @@ signals:
   stars_growth_pct: 0.3
   trending_score: 71.19
   rank_current: 62
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 26773
@@ -53,14 +52,7 @@ tool:
   install_command: pip install haystack-ai
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - haystack-ai
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.

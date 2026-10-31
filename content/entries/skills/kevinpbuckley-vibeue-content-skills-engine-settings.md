@@ -111,7 +111,6 @@ if unreal.EngineSettingsService.get_console_variable_info("r.MaxQualityMode", in
 results come from the engine `ConfigSettingsToolset` instead.)
 
 ---
-
 ## Browsing registered settings
 
 Listing categories and the settings inside them is now an engine **`ConfigSettingsToolset`** job —
@@ -121,7 +120,6 @@ categories cover rendering, physics, audio, GC, networking, collision, AI, input
 For everything VibeUE still owns, see the cvar / INI / scalability workflows below.
 
 ---
-
 ## Workflows
 
 ### Enable Ray Tracing
@@ -183,7 +181,6 @@ result = unreal.EngineSettingsService.set_engine_ini_value(
 ```
 
 ---
-
 ## Data Structures
 
 > **Python Naming Convention**: C++ types like `FEngineSettingResult` are exposed as `EngineSettingResult` in Python (no `F` prefix).

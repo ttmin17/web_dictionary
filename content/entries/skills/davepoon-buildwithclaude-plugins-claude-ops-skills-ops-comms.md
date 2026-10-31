@@ -3,7 +3,10 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-comms
 name: ops-comms
 tagline: Send and read messages across all channels. Routes based on arguments —
   whatsapp, email, slack, telegram, discord, notion, or natural language like "s
-summary: "Before executing, load available context:"
+summary: "1. Daemon health: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/daemon\
+  -health.json - Check wacli-sync status before any WhatsApp operation - Also
+  check /.wacli/.health — if not status=con..."
 categories:
   - agent-frameworks
 tags:
@@ -103,7 +106,6 @@ Before executing, load available context:
 | `gog gmail archive <messageId> ... --no-input --force` | Archive messages | Archive result |
 
 ---
-
 Parse `$ARGUMENTS` and route immediately:
 
 ## Routing table
@@ -123,7 +125,6 @@ Parse `$ARGUMENTS` and route immediately:
 Natural-language parsing: phrases like `send "deploy done" to #general on discord` or `to #ops-alerts on Discord` should resolve to the `discord` branch below. Extract the channel token (the word after `#`, case-insensitive) and pass it as the first arg to `bin/ops-discord send`.
 
 ---
-
 ## Send flow: `send [message] to [contact]`
 
 1. Parse contact name and message from `$ARGUMENTS`.
@@ -178,7 +179,6 @@ Draft created for [recipient]:
 ```
 
 ---
-
 ## Read flow: `read [channel]`
 
 **WhatsApp:**
@@ -247,7 +247,6 @@ If the script exits 1 with `{"error":"no discord credential configured — run /
 Note: `DISCORD_WEBHOOK_URL` is shared with the ops-fires notification sink (`scripts/ops-notify.sh`). When pre-existing, prefer it as the default for `/ops:comms discord send` rather than asking the user to set a separate value.
 
 ---
-
 ## Empty arguments — channel picker
 
 Display the header, then use **batched AskUserQuestion calls** (max 4 options each):

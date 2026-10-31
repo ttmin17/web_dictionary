@@ -92,7 +92,6 @@ fi
 and stop.
 
 ---
-
 ## Sub-command Routing
 
 Route `$ARGUMENTS`:
@@ -107,7 +106,6 @@ Route `$ARGUMENTS`:
 | setup | Configure WhatsApp Business API credentials |
 
 ---
-
 ## list-templates
 
 List all message templates for the WhatsApp Business Account.
@@ -141,7 +139,6 @@ echo "Note: Per-template pricing applies since July 2025. Check Meta pricing pag
 ```
 
 ---
-
 ## send-template
 
 Send an approved template message to one or more recipients.
@@ -222,7 +219,6 @@ For templates with header + body variables:
 For templates with no variables: `TEMPLATE_COMPONENTS_JSON=[]`
 
 ---
-
 ## create-template
 
 Guided template creation wizard.
@@ -288,7 +284,6 @@ fi
 ```
 
 ---
-
 ## check-template \<NAME\>
 
 Poll approval status for a specific template by name.
@@ -320,7 +315,6 @@ esac
 ```
 
 ---
-
 ## catalog
 
 View and manage the product catalog linked to your WhatsApp Business Account.
@@ -361,7 +355,6 @@ echo "Total products shown: ${PRODUCT_COUNT} (use catalog in message templates w
 **MM Lite note**: Marketing Messages Lite (AI-optimized sends) is a beta API as of 2026. It is not implemented here — check Meta's developer documentation for current availability and enrollment requirements.
 
 ---
-
 ## setup
 
 Configure WhatsApp Business API credentials.

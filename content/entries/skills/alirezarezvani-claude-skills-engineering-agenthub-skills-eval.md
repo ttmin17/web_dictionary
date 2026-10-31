@@ -4,7 +4,10 @@ name: eval
 tagline: "Evaluate and rank agent results by metric or LLM judge for an AgentHub
   session. Use when the user runs /hub:eval or asks to score, compare, or pick a
   "
-summary: "Run the evaluation command in each agent's worktree:"
+summary: "For each agent: 1. Get the diff: git diff {basebranch}...{agentbranch}
+  2. Read the agent's result post from
+  .agenthub/board/results/agent-{i}-result.md 3. Compare all diffs and rank by:
+  - Correctness — Does it solve t..."
 categories:
   - coding-agents
 tags:
@@ -26,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

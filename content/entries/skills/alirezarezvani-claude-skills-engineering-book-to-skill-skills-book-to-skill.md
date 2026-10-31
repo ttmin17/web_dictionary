@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -100,7 +100,6 @@ resident core, one chapter file at a time, and never the whole book again.
 documentation, brand systems, standards, specs, research clusters, a folder of RFCs.
 
 ---
-
 ## Philosophy
 
 **Extract structure, not summaries.** A skill is not a book report. It is a toolkit of
@@ -117,7 +116,6 @@ gets chapter files and a real topic index.
 name — do not copy passages. See `references/rights_and_provenance.md`.
 
 ---
-
 ## Modes
 
 | Mode | Trigger | Runs |
@@ -132,7 +130,6 @@ Mode 5 is this repository's addition. Upstream stops at a bare folder in a perso
 home; Step 11 wraps that folder in a plugin package other skills and agents can route to.
 
 ---
-
 ## Hard rules
 
 1. **Never convert a source the user cannot show you.** No web-scraping a book, no
@@ -152,7 +149,6 @@ home; Step 11 wraps that folder in a plugin package other skills and agents can 
    boundary, so the agent says "the source doesn't cover this" instead of improvising.
 
 ---
-
 ## Pipeline
 
 ```
@@ -166,7 +162,6 @@ extract_document.py  →  analyze  →  chapter files  →  supporting files  �
 All four tools live in `scripts/` and run on the standard library alone.
 
 ---
-
 ## Run it
 
 ```bash
@@ -267,7 +262,6 @@ Walk these one at a time, with a recommended answer, before running a conversion
    the agent no way to choose. (Step 0.)
 
 ---
-
 ## References
 
 - `references/conversion_workflow.md` — **the full procedure**: Steps 0–11, the file
@@ -291,6 +285,5 @@ Walk these one at a time, with a recommended answer, before running a conversion
   This skill compiles one bounded source set into one skill.
 
 ---
-
 *Adapted from [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) (MIT).
 See `../../README.md` for the full list of deviations.*

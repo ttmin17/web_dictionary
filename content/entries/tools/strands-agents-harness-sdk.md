@@ -29,7 +29,6 @@ signals:
   stars_growth_pct: 1
   trending_score: 88.87
   rank_current: 59
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8862
@@ -50,14 +49,7 @@ tool:
   install_command: pip install strands-monorepo-tools
   runtime: multi
   execution_mode: cloud
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - strands-monorepo-tools
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.

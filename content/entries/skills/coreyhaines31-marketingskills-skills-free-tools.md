@@ -89,7 +89,6 @@ Before designing a tool strategy, understand:
 3. **Resources** - Technical capacity to build? Ongoing maintenance bandwidth? Budget for promotion?
 
 ---
-
 ## Core Principles
 
 **"Your product is my marketing opportunity."** Bezos said "your margin is my opportunity." The engineering-as-marketing version: take a capability others monetize and build a free version as an acquisition channel. Unsplash gave away the stock photos Getty sold — and Getty acquired it. See [references/tool-benchmarks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/free-tools/references/tool-benchmarks.md) for sourced cases and measurement limits.
@@ -113,7 +112,6 @@ Before designing a tool strategy, understand:
 - Lead value × expected leads > build cost + maintenance
 
 ---
-
 ## Tool Types Overview
 
 | Type | Examples | Best For |
@@ -130,7 +128,6 @@ Before designing a tool strategy, understand:
 **For sourced case examples (Unsplash, HubSpot Website Grader, Buffer, Shopify) and evidence requirements**: See [references/tool-benchmarks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/free-tools/references/tool-benchmarks.md)
 
 ---
-
 ## Ideation Framework
 
 ### Start with Pain Points
@@ -151,7 +148,6 @@ Before designing a tool strategy, understand:
 - **Build feasibility**: How complex? Can you scope an MVP?
 
 ---
-
 ## Lead Capture Strategy
 
 ### Gating Options
@@ -170,7 +166,6 @@ Before designing a tool strategy, understand:
 - Optional: Segment by asking one qualifying question
 
 ---
-
 ## SEO Considerations
 
 ### Keyword Strategy
@@ -185,7 +180,6 @@ Free tools attract links because:
 - Shareable (social amplification)
 
 ---
-
 ## Build vs. Buy
 
 ### Build Custom
@@ -199,7 +193,6 @@ When: Speed to market, limited dev resources, testing concept
 When: Something good exists, white-label available, not core differentiator
 
 ---
-
 ## MVP Scope
 
 ### Minimum Viable Tool
@@ -211,7 +204,6 @@ When: Something good exists, white-label available, not core differentiator
 Account creation, saving results, advanced features, perfect design, every edge case
 
 ---
-
 ## Evaluation Scorecard
 
 Rate each factor 1-5:
@@ -230,7 +222,6 @@ Rate each factor 1-5:
 **25+**: Strong candidate | **15-24**: Promising | **<15**: Reconsider
 
 ---
-
 ## Task-Specific Questions
 
 1. What existing tools does your audience use for workarounds?
@@ -239,7 +230,6 @@ Rate each factor 1-5:
 4. What's the timeline and budget?
 
 ---
-
 ## Common Pitfalls
 
 - **Over-engineering** — Shipping a bloated tool before validating demand. Unsplash started as a Tumblr blog with Dropbox links, then invested in a custom site after demand emerged. Scope to one useful job and test it with your audience.

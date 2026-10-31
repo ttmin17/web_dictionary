@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 10
   stars_growth_pct: 1
   trending_score: 10.1
-  rank_current: 114
-  rank_delta: -67
+  rank_current: 115
+  rank_delta: -68
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1038
@@ -263,13 +263,11 @@ anymd exposes four tools.
 A `read` answer looks like this:
 
 ```markdown
----
-source: papers/attention.pdf
+---source: papers/attention.pdf
 title: Attention Is All You Need
 pages: 15
 showing: pages 1-9
 ---
-
 <!-- page 1 -->
 
 # Attention Is All You Need

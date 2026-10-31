@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -79,7 +79,6 @@ skill:
 Production-grade customer success analytics with multi-dimensional health scoring, churn risk prediction, and expansion opportunity identification. Three Python CLI tools provide deterministic, repeatable analysis using standard library only -- no external dependencies, no API calls, no ML models.
 
 ---
-
 ## Table of Contents
 
 - [Input Requirements](#input-requirements)
@@ -92,7 +91,6 @@ Production-grade customer success analytics with multi-dimensional health scorin
 - [Limitations](#limitations)
 
 ---
-
 ## Input Requirements
 
 All scripts accept a JSON file as positional input argument. See `assets/sample_customer_data.json` for complete schema examples and sample data.
@@ -110,7 +108,6 @@ Required fields per customer object: `customer_id`, `name`, `segment`, `arr`, `c
 Required fields per customer object: `customer_id`, `name`, `segment`, `arr`, and nested objects `contract` (licensed_seats, active_seats, plan_tier, available_tiers), `product_usage` (per-module adoption flags and usage percentages), and `departments` (current and potential).
 
 ---
-
 ## Output Formats
 
 All scripts support two output formats via the `--format` flag:
@@ -119,7 +116,6 @@ All scripts support two output formats via the `--format` flag:
 - **`json`**: Machine-readable JSON output for integrations and pipelines
 
 ---
-
 ## How to Use
 
 ### Quick Start
@@ -164,7 +160,6 @@ python scripts/expansion_opportunity_scorer.py customer_portfolio.json --format 
 - Output files from prior steps are non-empty before piping into subsequent steps
 
 ---
-
 ## Scripts
 
 ### 1. health_score_calculator.py
@@ -231,7 +226,6 @@ python scripts/expansion_opportunity_scorer.py customer_data.json --format json
 ```
 
 ---
-
 ## Reference Guides
 
 | Reference | Description |
@@ -241,7 +235,6 @@ python scripts/expansion_opportunity_scorer.py customer_data.json --format json
 | `references/cs-metrics-benchmarks.md` | Industry benchmarks for NRR, GRR, churn rates, health scores, expansion rates by segment and industry |
 
 ---
-
 ## Templates
 
 | Template | Purpose |
@@ -252,7 +245,6 @@ python scripts/expansion_opportunity_scorer.py customer_data.json --format json
 | `assets/executive_business_review_template.md` | Executive stakeholder review for strategic accounts |
 
 ---
-
 ## Best Practices
 
 1. **Combine signals**: Use all three scripts together for a complete customer picture
@@ -261,7 +253,6 @@ python scripts/expansion_opportunity_scorer.py customer_data.json --format json
 4. **Prepare with data**: Run scripts before every QBR and executive meeting; reference `references/cs-playbooks.md` for intervention guidance
 
 ---
-
 ## Limitations
 
 - **No real-time data**: Scripts analyze point-in-time snapshots from JSON input files
@@ -271,7 +262,6 @@ python scripts/expansion_opportunity_scorer.py customer_data.json --format json
 - **Revenue estimates**: Expansion revenue estimates are approximations based on usage patterns
 
 ---
-
 **Last Updated:** February 2026
 **Tools:** 3 Python CLI tools
 **Dependencies:** Python 3.7+ standard library only

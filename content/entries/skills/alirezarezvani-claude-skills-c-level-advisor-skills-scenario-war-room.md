@@ -4,7 +4,9 @@ name: scenario-war-room
 tagline: Cross-functional what-if modeling for cascading multi-variable
   scenarios. Unlike single-assumption stress testing, this models compound
   adversity acro
-summary: "Or describe the scenario in natural language:"
+summary: "- Not a single-assumption stress test (that's /em:stress-test) - Not
+  financial modeling only — every function gets modeled - Not worst-case-only —
+  models 3 severity levels - Not paralysis by analysis — outputs concret..."
 categories:
   - coding-agents
 tags:
@@ -26,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -194,7 +196,6 @@ For each scenario: actions to take **now** (before the scenario materializes) th
 | Compress fundraise timeline, start parallel process | CEO time | Closes before runways merge | CEO | Immediate |
 
 ---
-
 ## Output Format
 
 Every war room session produces:
@@ -227,7 +228,6 @@ RECOMMENDED DECISION
 ```
 
 ---
-
 ## Rules for Good War Room Sessions
 
 **Max 3 variables per scenario.** More than 3 is noise — you can't meaningfully prepare for 5-variable collapse. Model the 3 that actually worry you.
@@ -243,7 +243,6 @@ RECOMMENDED DECISION
 **Don't over-model.** 3-4 scenarios per planning cycle is the right number. More creates analysis paralysis.
 
 ---
-
 ## Common Scenarios by Stage
 
 **Seed:**

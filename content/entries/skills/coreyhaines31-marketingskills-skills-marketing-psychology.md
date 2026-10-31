@@ -86,7 +86,6 @@ Mental models are thinking tools that help you make better decisions, understand
 4. Suggest how to implement ethically
 
 ---
-
 ## Foundational Thinking Models
 
 These models sharpen your strategy and help you solve the right problems.
@@ -162,7 +161,6 @@ Combine extreme safety with small high-risk/high-reward bets. Avoid the mediocre
 **Marketing application**: Put 80% of budget into proven channels, 20% into experimental bets. Avoid moderate-risk, moderate-reward middle.
 
 ---
-
 ## Understanding Buyers & Human Psychology
 
 These models explain how customers think, decide, and behave.
@@ -278,7 +276,6 @@ People follow what others are doing. Popularity signals quality and safety.
 **Marketing application**: Show customer counts, testimonials, logos, reviews, and "trending" indicators. Numbers create confidence.
 
 ---
-
 ## Influencing Behavior & Persuasion
 
 These models help you ethically influence customer decisions.
@@ -349,7 +346,6 @@ Things seem different depending on what they're compared to.
 **Marketing application**: Show the "before" state clearly. The contrast with your "after" makes improvements vivid.
 
 ---
-
 ## Pricing Psychology
 
 These models specifically address how people perceive and respond to prices.
@@ -380,7 +376,6 @@ Framing the same price differently changes perception.
 **Marketing application**: "$1/day" feels cheaper than "$30/month." "Less than your morning coffee" reframes the expense.
 
 ---
-
 ## Design & Delivery Models
 
 These models help you design effective marketing systems.
@@ -436,7 +431,6 @@ When incentives backfire and produce the opposite of intended results.
 **Marketing application**: Test incentive structures. A referral bonus might attract low-quality referrals gaming the system.
 
 ---
-
 ## Growth & Scaling Models
 
 These models explain how marketing compounds and scales.
@@ -482,7 +476,6 @@ Focusing on successes while ignoring failures that aren't visible.
 **Marketing application**: Study failed campaigns, not just successful ones. The viral hit you're copying had 99 failures you didn't see.
 
 ---
-
 ## Quick Reference
 
 When facing a marketing challenge, consider:
@@ -499,7 +492,6 @@ When facing a marketing challenge, consider:
 | Onboarding | Goal-Gradient, IKEA Effect, Commitment & Consistency |
 
 ---
-
 ## Task-Specific Questions
 
 1. What specific behavior are you trying to influence?
@@ -509,7 +501,6 @@ When facing a marketing challenge, consider:
 5. Have you tested this with real customers?
 
 ---
-
 ## Related Skills
 
 - **cro**: Apply psychology to page optimization

@@ -83,13 +83,11 @@ A subscription rule filters alert events by condition, **clones** a copy, and fo
 | `http-api.md` | HTTP API paths (for A2A / external agents), tryrun validation endpoint | Only for external A2A scenarios or when providing the user with curl commands |
 
 ---
-
 ## Prerequisites
 
 You are the in-app AI assistant for n9e, running inside the n9e process and already authenticated as the current user. **Operate directly via the built-in tools — do not log in, do not call HTTP APIs, and do not use http_fetch against your own endpoints** (the HTTP flow in `http-api.md` is for external A2A agents).
 
 ---
-
 ## Mental model
 
 - **Subscription happens at the notification stage** (`alert/dispatch/dispatch.go:handleSubs`): the original event still travels its own notification path as usual; each matching subscription **clones a copy** of the event, rewrites it per the subscription config, and then runs it through the notification chain again. A subscription is **additive** — it does not intercept and does not replace the original notification.
@@ -131,7 +129,6 @@ Key points (full field table and new vs. old version differences are in `referen
 - `datasource_ids` empty array = all datasources; `cluster` is fixed at `"0"`.
 
 ---
-
 ## Workflow one: creating
 
 1. **Determine the business group** (management ownership): use `list_busi_groups` to get the `group_id`. If the user named a business group, or the front end already popped up a business group form, use its ID directly without asking again.

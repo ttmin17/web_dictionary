@@ -570,8 +570,7 @@ Use Activity Explorer and the DLP alerts dashboard to monitor policy effectivene
 **Current Mode**: Simulation (TestWithNotifications)
 **Locations**: Exchange Online, SharePoint Online, OneDrive, Teams, Endpoints
 
----
-### Simulation Results (14-Day Period)
+---### Simulation Results (14-Day Period)
 
 **Total Policy Matches**: 4,287
 **Unique Users Affected**: 892
@@ -607,8 +606,7 @@ Use Activity Explorer and the DLP alerts dashboard to monitor policy effectivene
 4. **Deploy endpoint DLP** in audit mode for 7 additional days before
    enabling block actions on USB copy and cloud upload.
 
----
-### DLP Alert Summary (Last 7 Days)
+---### DLP Alert Summary (Last 7 Days)
 
 | Severity | Count | Top Policy | Top User |
 |----------|-------|------------|----------|

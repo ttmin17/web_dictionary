@@ -107,7 +107,6 @@ Gather this context (ask if not provided):
 - Budget for referral incentives?
 
 ---
-
 ## Should You Engineer Virality First?
 
 Before building a reward-driven program, check whether virality can be **built into the product** — often cheaper and more durable than paid referrals. But **don't force virality where it doesn't naturally fit.**
@@ -121,7 +120,6 @@ If the product is on the natural end, consider **product-embedded viral mechanis
 **For the spectrum diagnostic, the 7 viral mechanisms, value-presentation and timing best practices, and affiliate power-law mechanics**: See [references/viral-mechanisms.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/referrals/references/viral-mechanisms.md)
 
 ---
-
 ## Referral vs. Affiliate
 
 ### Customer Referral Programs
@@ -151,7 +149,6 @@ For partner recruitment/activation, cohort economics, executable terms, reconcil
 - Higher volume, variable trust
 
 ---
-
 ## Referral Program Design
 
 ### The Referral Loop
@@ -192,7 +189,6 @@ Trigger Moment → Share Action → Convert Referred → Reward → (Loop)
 **For product-embedded virality, value-presentation rules, and affiliate power-law mechanics**: See [references/viral-mechanisms.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/referrals/references/viral-mechanisms.md)
 
 ---
-
 ## Program Optimization
 
 ### Improving Referral Rate
@@ -227,7 +223,6 @@ Trigger Moment → Share Action → Convert Referred → Reward → (Loop)
 | One-time referrers | Add tiered/gamified rewards |
 
 ---
-
 ## Measuring Success
 
 ### Key Metrics
@@ -250,7 +245,6 @@ Trigger Moment → Share Action → Convert Referred → Reward → (Loop)
 - Referred customers refer others at 2-3x rate
 
 ---
-
 ## Launch Checklist
 
 ### Before Launch
@@ -277,7 +271,6 @@ Trigger Moment → Share Action → Convert Referred → Reward → (Loop)
 - [ ] Send reminder emails to non-referrers
 
 ---
-
 ## Email Sequences
 
 ### Referral Program Launch
@@ -305,7 +298,6 @@ They get [their reward] too.
 - After milestone: "You achieved [X]—know others who'd want this?"
 
 ---
-
 ## Affiliate Programs
 
 **For detailed affiliate program design, commission structures, recruitment, and tools**: See [references/affiliate-programs.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/referrals/references/affiliate-programs.md)
@@ -313,7 +305,6 @@ They get [their reward] too.
 **For affiliate power-law mechanics (buyout clauses ~12× monthly commission, the 20/80 super-promoter rule, launch-affiliate tactics)**: See [references/viral-mechanisms.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/referrals/references/viral-mechanisms.md)
 
 ---
-
 ## Review Programs
 
 Reviews are the other half of customer advocacy. For review-request programs, responding to reviews, reputation triage, and reusing testimonials with permission (G2, Capterra, Trustpilot, Google, app stores), see [references/review-programs.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/referrals/references/review-programs.md). Platform rules differ, so check [references/review-platform-rules.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/referrals/references/review-platform-rules.md) before proposing incentives or automation.
@@ -328,7 +319,6 @@ Reviews are the other half of customer advocacy. For review-request programs, re
 6. Is your product naturally shareable?
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key tools for referral programs:
@@ -344,7 +334,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **PartnerStack** | Enterprise partner and affiliate programs | [partnerstack.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/partnerstack.md) |
 
 ---
-
 ## Related Skills
 
 - **launch**: For launching referral program effectively

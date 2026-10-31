@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -73,7 +73,6 @@ skill:
 **Domain:** Legal Documents, Business Development, Client Relations
 
 ---
-
 ## Overview
 
 Generate professional, jurisdiction-aware business documents: freelance contracts, project proposals, SOWs, NDAs, and MSAs. Outputs structured Markdown with docx conversion instructions. Covers US (Delaware), EU (GDPR), UK, and DACH (German law) jurisdictions.
@@ -81,7 +80,6 @@ Generate professional, jurisdiction-aware business documents: freelance contract
 **Not a substitute for legal counsel.** Use these templates as strong starting points; review with an attorney for high-value or complex engagements.
 
 ---
-
 ## Core Capabilities
 
 - Freelance development contracts (fixed-price & hourly)
@@ -93,7 +91,6 @@ Generate professional, jurisdiction-aware business documents: freelance contract
 - GDPR Data Processing Addenda (EU/DACH)
 
 ---
-
 ## Key Clauses Reference
 
 | Clause | Options |
@@ -107,7 +104,6 @@ Generate professional, jurisdiction-aware business documents: freelance contract
 | Dispute resolution | Arbitration (AAA/ICC), courts (jurisdiction-specific) |
 
 ---
-
 ## When to Use
 
 - Starting a new client engagement and need a contract fast
@@ -117,7 +113,6 @@ Generate professional, jurisdiction-aware business documents: freelance contract
 - EU/DACH project requiring GDPR-compliant data clauses
 
 ---
-
 ## Workflow
 
 ### 1. Gather Requirements
@@ -172,7 +167,6 @@ pandoc contract.md -o contract.docx \
 ```
 
 ---
-
 ## Jurisdiction Notes
 
 ### US (Delaware)
@@ -202,7 +196,6 @@ pandoc contract.md -o contract.docx \
 - Kuendigungsfristen: statutory notice periods apply
 
 ---
-
 ## Template A: Web Dev Fixed-Price Contract
 
 ```markdown
@@ -213,7 +206,6 @@ pandoc contract.md -o contract.docx \
 **Developer:** [YOUR LEGAL NAME / COMPANY], [ADDRESS] ("Developer")
 
 ---
-
 ## 1. SERVICES
 
 Developer agrees to design, develop, and deliver:
@@ -288,7 +280,6 @@ UK: LCIA Rules, London. English law.
 - Independent Contractor: Developer is not an employee of Client.
 
 ---
-
 CLIENT: _________________________ Date: _________
 [CLIENT NAME], [TITLE]
 
@@ -297,7 +288,6 @@ DEVELOPER: _________________________ Date: _________
 ```
 
 ---
-
 ## Template B: Monthly Consulting Retainer
 
 ```markdown
@@ -308,7 +298,6 @@ DEVELOPER: _________________________ Date: _________
 **Consultant:** [YOUR NAME / COMPANY] ("Consultant")
 
 ---
-
 ## 1. SERVICES
 
 Consultant provides [DOMAIN, e.g., "CTO advisory and technical architecture"] services.
@@ -356,12 +345,10 @@ Consultant's aggregate liability is capped at [3x] the fees paid in the [3] mont
 preceding the claim.
 
 ---
-
 Signatures as above.
 ```
 
 ---
-
 ## Template C: SaaS Partnership Agreement
 
 ```markdown
@@ -372,7 +359,6 @@ Signatures as above.
 **Partner:** [NAME], [ADDRESS]
 
 ---
-
 ## 1. PURPOSE
 
 Provider grants Partner [reseller / referral / white-label / integration] rights to
@@ -416,12 +402,10 @@ Each party's liability capped at [1x] fees paid/received in prior [12] months.
 Mutual indemnification for IP infringement claims from own products.
 
 ---
-
 Signatures, exhibits, and governing law per applicable jurisdiction.
 ```
 
 ---
-
 ## GDPR Data Processing Addendum (EU/DACH Clause Block)
 
 ```markdown
@@ -462,7 +446,6 @@ Data transfers outside EEA covered by: [ ] SCCs  [ ] Adequacy Decision  [ ] BCRs
 ```
 
 ---
-
 ## Common Pitfalls
 
 1. **Missing IP assignment language** - "work for hire" alone is insufficient in EU; need explicit assignment of Nutzungsrechte in DACH
@@ -473,7 +456,6 @@ Data transfers outside EEA covered by: [ ] SCCs  [ ] Adequacy Decision  [ ] BCRs
 6. **Oral amendments** - Contracts modified verbally are hard to enforce; always require written amendments
 
 ---
-
 ## Best Practices
 
 - Use **milestone payments** over net-30 for projects >$10K - reduces cash flow risk

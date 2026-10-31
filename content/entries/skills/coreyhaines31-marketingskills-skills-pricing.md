@@ -108,7 +108,6 @@ Gather this context (ask if not provided):
 - Moving upmarket or expanding downmarket?
 
 ---
-
 ## Pricing Fundamentals
 
 ### The Three Pricing Axes
@@ -141,7 +140,6 @@ Price should be based on value delivered, not cost to serve:
 - **Not cost-based** — cost is a floor, never the basis. Value + differentiation set the price.
 
 ---
-
 ## Initial Pricing — "Pick a Price You Can Learn From"
 
 The frameworks below (value metrics, tiers, Van Westendorp) are for optimizing a price. **On day one you don't have a price to optimize — you have a bet to place.** The goal of your first price is *learning*, not precision. Pick a number, ship it, and let real buyers tell you if it's wrong.
@@ -171,7 +169,6 @@ When early Intercom agonized over pricing, Jason Fried's advice was essentially:
 **For the eight ways to structure how you charge (flat, usage, tier, user, feature, credit, outcome, hybrid) and the value/price ratio:** See [references/pricing-models.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/pricing/references/pricing-models.md).
 
 ---
-
 ## Value Metrics
 
 ### What is a Value Metric?
@@ -204,7 +201,6 @@ Ask: "As a customer uses more of [metric], do they get more value?"
 **The value metric picks the pricing model.** Once you know what scales with value, choose how to charge on it — flat, usage, tier, user, feature, credit, outcome, or a hybrid. See [references/pricing-models.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/pricing/references/pricing-models.md).
 
 ---
-
 ## Tier Structure Overview
 
 ### Good-Better-Best Framework
@@ -223,7 +219,6 @@ Ask: "As a customer uses more of [metric], do they get more value?"
 **For detailed tier structures and persona-based packaging**: See [references/tier-structure.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/pricing/references/tier-structure.md)
 
 ---
-
 ## Pricing Research
 
 ### Van Westendorp Method
@@ -246,7 +241,6 @@ Identifies which features customers value most:
 **For detailed research methods**: See [references/research-methods.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/pricing/references/research-methods.md)
 
 ---
-
 ## When to Raise Prices
 
 ### Signs It's Time
@@ -284,7 +278,6 @@ A price change is a rollout, not a switch you flip. Sequence it to de-risk:
 Expect — and accept — some churn. The customers most likely to leave over a justified increase are usually your least-profitable, highest-support, most price-sensitive accounts.
 
 ---
-
 ## Pricing Page Best Practices
 
 ### Above the Fold
@@ -308,7 +301,6 @@ Expect — and accept — some churn. The customers most likely to leave over a 
 - **Round pricing:** $50 vs. $49 (for premium)
 
 ---
-
 ## Pricing Page Teardown
 
 When someone wants to audit an existing pricing *page* for **clarity, transparency, and AI-readability** (not the pricing strategy itself, and not conversion-rate optimization — that's `cro`), run a **teardown** that scores it across two axes and returns prioritized fixes:
@@ -323,7 +315,6 @@ The AI-readiness fixes are usually high-impact, low-effort (put prices in text, 
 **For the full 10-dimension rubric, scoring, and report template:** See [references/pricing-page-teardown.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/pricing/references/pricing-page-teardown.md). *(AI-agent-readiness lens adapted from Kyle Poyar / Growth Unhinged.)*
 
 ---
-
 ## Pricing Checklist
 
 ### Before Setting Prices
@@ -341,7 +332,6 @@ The AI-readiness fixes are usually high-impact, low-effort (put prices in text, 
 - [ ] Planned enterprise/custom tier
 
 ---
-
 ## Task-Specific Questions
 
 1. What pricing research have you done?
@@ -352,7 +342,6 @@ The AI-readiness fixes are usually high-impact, low-effort (put prices in text, 
 6. What pricing changes are you considering?
 
 ---
-
 ## Related Skills
 
 - **churn-prevention**: For cancel flows, save offers, and reducing revenue churn

@@ -261,5 +261,4 @@ Automate Miro whiteboard operations through Composio's Miro toolkit via Rube MCP
 | Get members | MIRO_GET_BOARD_MEMBERS | board_id |
 | Get connectors | MIRO_GET_CONNECTORS2 | board_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

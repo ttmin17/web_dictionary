@@ -264,5 +264,4 @@ Confluence uses two pagination styles:
 | Page versions | `CONFLUENCE_GET_PAGE_VERSIONS` | `id` |
 | Space labels | `CONFLUENCE_GET_LABELS_FOR_SPACE` | space ID |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

@@ -3,7 +3,10 @@ slug: asgeirtj-system_prompts_leaks-anthropic-claude-code-skills-batch
 name: batch
 tagline: Research and plan a large-scale change, then execute it in parallel
   across 5–30 isolated worktree agents that each open a PR.
-summary: "Call the EnterPlanMode tool now to enter plan mode, then:"
+summary: 1. Understand the scope. Launch one or more subagents (in the
+  foreground — you need their results) to deeply research what this instruction
+  touches. Find all the files, patterns, and call sites that need to change.
+  Un...
 categories:
   - cloud-infra
 tags:

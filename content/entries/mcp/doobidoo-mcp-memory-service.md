@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 25
   stars_growth_pct: 1.2
   trending_score: 25.31
-  rank_current: 52
-  rank_delta: 11
+  rank_current: 56
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1993
@@ -69,7 +69,6 @@ context in 5ms — without cloud lock-in or API costs.
 **Works with LangGraph · CrewAI · AutoGen · any HTTP client · Claude Desktop · OpenCode**
 
 ---
-
 [![Website](https://img.shields.io/badge/Website-mcpmemory.services-00e5ff?logo=cloudflare&logoColor=white)](https://mcpmemory.services)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PyPI version](https://img.shields.io/pypi/v/mcp-memory-service?color=blue&logo=pypi&logoColor=white)](https://pypi.org/project/mcp-memory-service/)
@@ -80,7 +79,6 @@ context in 5ms — without cloud lock-in or API costs.
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/doobidoo/mcp-memory-service)
 
 ---
-
 <div align="center">
   <video src="https://mcpmemory.services/assets/videos/knowledge-graph-3d.mp4" poster="https://mcpmemory.services/assets/images/knowledge-graph-3d-poster.png" width="820" autoplay loop muted playsinline controls>
     <a href="https://mcpmemory.services/"><img src="https://mcpmemory.services/assets/images/knowledge-graph-3d.png" alt="3D knowledge graph — memories as a glowing, interactive galaxy" width="820"></a>
@@ -89,7 +87,6 @@ context in 5ms — without cloud lock-in or API costs.
 </div>
 
 ---
-
 ## Why Agents Need This
 
 Your AI assistant forgets everything when you start a new chat. You spend 10 minutes re-explaining your architecture. **Again.** MCP Memory Service captures project context, architecture decisions, and code patterns automatically — new sessions start with everything already known.
@@ -111,7 +108,6 @@ Your AI assistant forgets everything when you start a new chat. You spend 10 min
 - **Embeddings run locally via ONNX** — memory never leaves your infrastructure
 
 ---
-
 ## 🚀 Get Started in 60 Seconds
 
 > Not sure which setup fits? The **[Setup Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/setup-guide.md)** walks you to the right path in under a minute.
@@ -238,7 +234,6 @@ For long-lived services, prefer Docker Milvus or Zilliz Cloud over Milvus Lite �
 </details>
 
 ---
-
 ## ⚡ Works With Your Favorite AI Tools
 
 - **Agent frameworks (REST):** LangGraph · CrewAI · AutoGen · OpenClaw/Nanobot · any HTTP client
@@ -250,7 +245,6 @@ Full list, plus clients without OAuth such as Home Assistant:
 **[docs/integrations.md](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/integrations.md)**
 
 ---
-
 ## ✨ Features
 
 ### Store and retrieve context
@@ -317,7 +311,6 @@ How it compares to Mem0, Zep and the MCP-native alternatives, benchmark results,
 deployments people run in production: **[mcpmemory.services](https://mcpmemory.services)**
 
 ---
-
 ## 🛠️ Configuration Highlights
 
 ```bash
@@ -340,7 +333,6 @@ Backends, embedding models, quality scoring and every environment variable:
 **[Configuration Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/mastery/configuration-guide.md)**
 
 ---
-
 ## 📚 Documentation
 
 - **[Setup Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/setup-guide.md)** – Decision tree and step-by-step paths
@@ -359,7 +351,6 @@ Also listed on [Glama](https://glama.ai/mcp/servers/doobidoo/mcp-memory-service)
 [Spark](https://spark.entire.vc/mcps/vb-mcp-memory-service).
 
 ---
-
 ## 📦 Releases
 
 Every release, with upgrade notes:
@@ -368,7 +359,6 @@ Every release, with upgrade notes:
 [archived history](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/archive/CHANGELOG-HISTORIC.md)
 
 ---
-
 ## 🤝 Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](https://github.com/doobidoo/mcp-memory-service/blob/main/CONTRIBUTING.md) for guidelines
@@ -390,7 +380,6 @@ pytest tests/      # Run test suite
 ```
 
 ---
-
 ## Supporting the Project
 
 MCP Memory Service is maintained by one person. If it saves you or your company time,

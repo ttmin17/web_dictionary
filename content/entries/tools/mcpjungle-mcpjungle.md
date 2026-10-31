@@ -25,7 +25,7 @@ source:
 signals:
   stars: 1310
   last_commit: 2026-10-25T23:05:24Z
-  stars_delta_7d: 17
+  stars_delta_7d: 56
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -184,7 +184,6 @@ You now have a working MCP setup with a single unified endpoint!
 Next, explore the complete documentation at [docs.mcpjungle.com](https://docs.mcpjungle.com/) and the [public roadmap](https://docs.mcpjungle.com/roadmap).
 
 ---
-
 <details>
 <summary>Legacy README reference</summary>
 

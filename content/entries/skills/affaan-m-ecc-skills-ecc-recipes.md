@@ -4,7 +4,9 @@ name: recipes
 tagline: "Map a described workflow to the right ECC command group with run-order
   and stop condition, or browse all command-group recipe families read live from
   "
-summary: "Fills the gap between two existing skills:"
+summary: "- ecc-guide — lists commands and where to read docs, but as a flat
+  catalog. - prompt-optimizer — matches a task to components, but outputs a
+  single prompt, not a multi-command group with run-order and stop condition."
 categories:
   - productivity-ops
 tags:

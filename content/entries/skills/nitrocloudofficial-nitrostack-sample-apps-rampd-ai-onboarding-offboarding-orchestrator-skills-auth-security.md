@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 139
-  rank_delta: -65
+  rank_current: 165
+  rank_delta: -91
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2465
@@ -66,7 +66,6 @@ skill:
 Use this skill when configuring security modules, implementing user authentication, restricting tool access via guards, or handling sensitive tokens.
 
 ---
-
 ## 1. JSON Web Tokens (JWT)
 To secure tools with JWT authentication:
 
@@ -126,7 +125,6 @@ export class JWTGuard implements Guard {
 ```
 
 ---
-
 ## 2. API Key Authentication
 Use `ApiKeyModule` for service-to-service validation.
 
@@ -169,7 +167,6 @@ export class ApiKeyGuard implements Guard {
 ```
 
 ---
-
 ## 3. Role-Based Access Control (RBAC)
 Chain guards sequentially to implement user-role authorization.
 

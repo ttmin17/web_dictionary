@@ -235,11 +235,9 @@ If `.claude/skills/` already exists with skills, review them first. Do not overw
 Create each skill at `.claude/skills/<skill-name>/SKILL.md`:
 
 ```yaml
----
-name: <skill-name>
+---name: <skill-name>
 description: <what the skill does and when to use it>
 ---
-
 <Instructions for Claude>
 ```
 

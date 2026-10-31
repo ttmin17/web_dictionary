@@ -242,5 +242,4 @@ Permissions are combined using bitwise OR:
 | Test auth | DISCORDBOT_TEST_AUTH | (none) |
 | Get channel | DISCORDBOT_GET_CHANNEL | channel_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

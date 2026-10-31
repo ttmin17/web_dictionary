@@ -65,7 +65,6 @@ skill:
 You are running an **interactive configuration wizard** for the `claude-ops` plugin. The user wants you to walk them through every step needed to get the plugin working: installing CLIs, setting env vars, configuring channels, populating the project registry, and saving preferences.
 
 ---
-
 **RULE ZERO — EVERY BASH CALL USES `run_in_background: true`**
 
 This is non-negotiable. EVERY SINGLE Bash tool call in this entire setup wizard MUST set `run_in_background: true`. There are ZERO exceptions. This applies to:
@@ -83,7 +82,6 @@ While background commands run, immediately continue to the next independent step
 Every Bash tool call MUST include a short `description` parameter (5-10 words, e.g. "Install missing CLIs", "Scout keychain for Telegram creds", "Reload daemon"). This is what the user sees instead of the raw command. Keep setup clean and quiet — the user should see progress titles, not shell scripts.
 
 ---
-
 **Other hard rules:**
 
 - This is a _conversation_, not a script dump. Use `AskUserQuestion` for every decision — never ask in prose when a structured selector will do.
@@ -102,7 +100,6 @@ Every Bash tool call MUST include a short `description` parameter (5-10 words, e
 - At the top of every wizard step, make sure `$PREFS_PATH`'s parent directory exists: `mkdir -p "$(dirname "$PREFS_PATH")"`. Claude Code creates `~/.claude/plugins/data/ops-ops-marketplace/` on plugin install but don't assume.
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** when multiple "Deep hunt" credential agents are needed simultaneously. This enables:
@@ -123,7 +120,6 @@ Each agent reports back its findings. Merge results and present to the user for 
 If the flag is NOT set, use independent fire-and-forget subagents with `run_in_background: true`.
 
 ---
-
 ## Setup agent delegation pattern
 
 When the user asks a complex integration-specific question during setup (e.g., "how does /ops:ecom handle multi-store setups?"), the setup agent can load the related skill's SKILL.md for deeper context:
@@ -135,7 +131,6 @@ cat "${CLAUDE_PLUGIN_ROOT}/skills/ops-ecom/SKILL.md"
 Each sub-step below includes a `> **Deep-dive:**` pointer to the related skill file. Follow these pointers instead of duplicating operational details in this wizard.
 
 ---
-
 ## Step 0 — Preflight (runs in background while you read)
 
 ```!
@@ -160,7 +155,6 @@ ${CLAUDE_PLUGIN_ROOT}/bin/ops-setup-preflight &>/dev/null &
 Wait for `/tmp/ops-preflight/.complete` to exist before reading (it should be ready within 2-3 seconds). NEVER re-run a probe that already has cached results — read the cache file instead.
 
 ---
-
 ## Step 0b — Detect current state
 
 Run the detector and parse its JSON output (or read from preflight cache if available):
@@ -197,7 +191,6 @@ Print a compact status header to the user, one line per category:
 Use `✓` for present/set, `○` for missing/unset, `✗` for broken.
 
 ---
-
 ## Step 1 — Ask which sections to configure
 
 First, offer a quick "set up everything" option:
@@ -247,7 +240,6 @@ Use `AskUserQuestion` with `multiSelect: true`. Offer **only sections that need 
 Present each batch as a separate `AskUserQuestion` call. Skip batches where all items are already green. Collect all selections across batches and run each selected section in order.
 
 ---
-
 ## Step 2 — Install CLIs (if selected)
 
 If multiple CLIs are missing, offer a bulk install first:
@@ -278,7 +270,6 @@ Report success/failure. If Homebrew is missing on macOS, stop and tell the user 
 After installation, re-run `ops-setup-detect` to refresh status before continuing.
 
 ---
-
 ## Step 2b — Companion plugins (if selected)
 
 ### GSD (Get Shit Done)
@@ -329,7 +320,6 @@ Skipped GSD. Install later with: /plugin marketplace add gsd-build/get-shit-done
 ```
 
 ---
-
 ## Step 2c — Background Daemon (early install, pre-warm caches)
 
 **Why install the daemon this early?** Running the daemon in parallel with the rest of setup lets it start pre-warming the briefing cache (`ops-gather` results for infra/git/PRs/CI), so by the time the user reaches Step 7 and runs `/ops:go`, the briefing is already cached and loads in under 3 seconds instead of 10. Channel-dependent services (wacli-sync, message-listener, inbox-digest, store-health) are added later in Step 5b once their channels are configured.
@@ -454,7 +444,6 @@ Continue immediately to Step 3 — do NOT wait for the daemon to confirm startup
 > **Deep-dive:** see `${CLAUDE_PLUGIN_ROOT}/docs/daemon-guide.md` for full operational instructions, CLI reference, and troubleshooting for the background daemon. The setup agent can load that file directly when it needs more depth than this wizard provides.
 
 ---
-
 ## Step 3 — Configure channels (if selected)
 
 First, offer a quick "configure everything" option before individual selection. Use `AskUserQuestion`:
@@ -491,7 +480,6 @@ If the user selects "Pick individually", ask which channels using `AskUserQuesti
 Present each batch as a separate `AskUserQuestion` call. Skip batches where all items are already configured. For each selected channel, run the matching sub-flow below.
 
 ---
-
 #### Shared: detect the host OS before suggesting installs
 
 The claude-ops wizard runs on macOS, Linux (all major distros + WSL), and Windows (native + WSL). Before printing any install command, the skill MUST detect the host OS and pick the OS-appropriate variant. Never print a `brew install …` command to a Windows user, and never print `winget install …` to a macOS user.
@@ -529,7 +517,6 @@ When the preferred manager isn't installed, fall forward to the next available o
 For the authoritative cross-OS detection logic, reuse `bin/ops-setup-detect` (which emits `os`, `pkg_mgr`, `arch`, `keyring_backend`, `shell`, `browser_profiles_found` in its JSON output).
 
 ---
-
 #### Shared: prefer OAuth over manual tokens
 
 Whenever a channel has a **browser-based OAuth flow** available, offer that first and put manual-token entry behind it as a fallback. OAuth is safer (scoped, revocable, no secrets in dotfiles), and usually faster for the user.
@@ -554,9 +541,7 @@ When a channel supports OAuth, the default `AskUserQuestion` should lead with it
 Only go into the credential auto-scan flow below when the user picks "manually" or when the channel (Telegram, local tools) has no OAuth path.
 
 ---
-
 ---
-
 ## Universal Credential Auto-Scan
 
 **BEFORE asking the user for ANY credential**, run this scan sequence. This applies to ALL steps — channels, ecommerce, marketing, voice, and MCPs. The user should never be asked to find a key that's already on their system.
@@ -665,7 +650,6 @@ Rules for the prompt:
 **On selection**, use the chosen value as the source of truth and — with the user's consent — optionally propagate it back to the other sources (e.g. "Also update ~/.zshrc and Doppler to match?"). Default to NO for propagation unless the user opts in.
 
 ---
-
 #### Shared: credential auto-scan
 
 **This section applies specifically to channel tokens (Telegram, Slack).** For all other steps, see the [Universal Credential Auto-Scan](#universal-credential-auto-scan) section above — the same pattern applies everywhere.
@@ -673,7 +657,6 @@ Rules for the prompt:
 **Before prompting the user to paste any token**, scan for it using the Universal Credential Auto-Scan sequence above. Show the user what was found and ask them to confirm or override. Never silently use a token without confirmation.
 
 ---
-
 ### 3a — Telegram (user-auth via ops-telegram-autolink)
 
 **Always ask before starting the Telegram flow** — even when the user selected "all channels". Use `AskUserQuestion`:

@@ -3,8 +3,9 @@ slug: asgeirtj-system_prompts_leaks-anthropic-claude-code-skills-computer-use
 name: computer-use
 tagline: Read this skill before the first step of any request to do something in
   an app on the person's own computer (Notes, Finder, System Settings, any deskt
-summary: "What Claude does first depends on which tools are present (loaded or
-  deferred):"
+summary: 1. Computer-use tools are present. Claude goes straight to the access
+  flow below. 2. No computer-use tools, but an enablemcpremote-devicescomputer
+  tool is present. Claude calls that tool once, before any other step of...
 categories:
   - cloud-infra
 tags:

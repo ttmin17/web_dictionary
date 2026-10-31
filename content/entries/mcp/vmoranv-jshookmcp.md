@@ -27,8 +27,8 @@ signals:
   stars_delta_7d: 5
   stars_growth_pct: 0.2
   trending_score: 5.01
-  rank_current: 86
-  rank_delta: -38
+  rank_current: 91
+  rank_delta: -43
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2041
@@ -120,7 +120,6 @@ English · [中文](https://github.com/vmoranv/jshookmcp/blob/master/README.zh.m
 </p>
 
 ---
-
 </div>
 
 ## What makes jshook different
@@ -134,7 +133,6 @@ Most MCP servers for JS analysis expose a handful of hand-rolled tools or wrap a
 - **Dynamic extensibility.** Hot-reload plugins, declarative workflows, and auto-discovery keep the server growing without a redeploy.
 
 ---
-
 ## Capability overview
 
 A scan of what's in the box. Each row links to the detailed [Capability overview](#capability-overview) below.
@@ -156,7 +154,6 @@ A scan of what's in the box. Each row links to the detailed [Capability overview
 | **Pluggable extension registry** | Hot-reload plugins · declarative workflows · auto-discovered domains |
 
 ---
-
 ## Use cases
 
 | Scenario | What you do | Domains involved |
@@ -172,7 +169,6 @@ A scan of what's in the box. Each row links to the detailed [Capability overview
 | Hook a function in a live process | `frida_spawn` → `frida_attach_interceptor` → `frida_run_script` → `frida_enumerate_functions` | `binary-instrument` |
 
 ---
-
 ## Quick start
 
 No global install needed — add to your MCP client config and you're ready.
@@ -232,7 +228,6 @@ Switch `MCP_TOOL_PROFILE` to `workflow` once you start chaining composite script
 when you need every tool. `coverage_report` shows the active set on demand.
 
 ---
-
 ## Highlights
 
 - **Profile ladder.** Start in `search` (~3K tokens of metadata); promote to `workflow` when chaining composite scripts; escalate to `full` only when every tool is actually needed. `coverage_report` shows what's active on demand.
@@ -244,7 +239,6 @@ when you need every tool. `coverage_report` shows the active set on demand.
 - **Plugins and workflows.** Drop a directory, get a domain. Write a YAML pipeline, run it as one tool. The registry self-discovers.
 
 ---
-
 ## Transport and deployment
 
 The server supports two transports out of the box.
@@ -261,7 +255,6 @@ and tool activations across reconnects.
 For production deployments see the [Security and Production guide](https://vmoranv.github.io/jshookmcp/operations/security-and-production.html).
 
 ---
-
 ## Recent runtime notes
 
 - HTTP transport now multiplexes independent MCP sessions and restores runtime state after reconnects.
@@ -269,7 +262,6 @@ For production deployments see the [Security and Production guide](https://vmora
 - Browser CAPTCHA solving is now explicit-input driven: pass `taskKind`, `siteKey`, `imageBase64`, `callbackName`, and `responseSelector` as needed. Built-in widget/page signature probing is intentionally not used.
 
 ---
-
 ## Registry snapshot
 
 The built-in surface below is generated from the runtime registry and checked in CI.
@@ -284,7 +276,6 @@ The built-in surface below is generated from the runtime registry and checked in
 > **[View the complete Tool Reference ↗](https://vmoranv.github.io/jshookmcp/reference/)**
 
 ---
-
 ## Architecture
 
 - **Runtime registry** — domains auto-discovered via `manifest.ts`; add a domain by creating one file.
@@ -297,7 +288,6 @@ The built-in surface below is generated from the runtime registry and checked in
 See the [Architecture guide](https://vmoranv.github.io/jshookmcp/guide/best-practices.html) and [Configuration reference](https://vmoranv.github.io/jshookmcp/guide/configuration.html) for the canonical details.
 
 ---
-
 ## Build from source
 
 Requirements: Node.js 22.22.2+, pnpm 10.x.
@@ -317,7 +307,6 @@ Native helpers are bundled via `pnpm build`; on first run the server may downloa
 runtimes (ONNX, Z3, Binaryen, Camoufox, Playwright) depending on the profile.
 
 ---
-
 ## Project stats
 
 <div align="center">
@@ -335,7 +324,6 @@ runtimes (ONNX, Z3, Binaryen, Camoufox, Playwright) depending on the profile.
 </div>
 
 ---
-
 ## License
 
 [AGPLv3](https://github.com/vmoranv/jshookmcp/blob/master/LICENSE).

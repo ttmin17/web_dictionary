@@ -4,7 +4,10 @@ name: hermes-tweet
 tagline: Install and operate Hermes Tweet, a Hermes Agent plugin for X/Twitter
   research, timeline reading, tweet analysis, and approval-gated private or
   state-
-summary: "Use this skill when the user wants to:"
+summary: "- Install Hermes Tweet into a Hermes Agent runtime - Discover
+  available X/Twitter read and action routes - Read X/Twitter account, tweet,
+  trend, monitor, or search data - Summarize public signal before drafting
+  respon..."
 categories:
   - coding-agents
 tags:

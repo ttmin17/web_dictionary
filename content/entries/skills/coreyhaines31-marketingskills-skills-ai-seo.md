@@ -139,7 +139,6 @@ Gather this context (ask if not provided):
 - Do you have Wikipedia coverage or a presence on review sites?
 
 ---
-
 ## How AI Search Works
 
 ### The AI Search Landscape
@@ -205,7 +204,6 @@ Google's own example: a user asking "how to fix lawns" triggers fan-out queries 
 ChatGPT fans out too — and you can extract its *literal* background queries for your niche via DevTools (method in [references/format-volatility.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/format-volatility.md)). Post-5.6, ChatGPT's fan-outs shifted away from "best/vs/top" modifiers toward `site:` and "official" searches — use the extraction to see where your category's fan-outs stand today.
 
 ---
-
 ## AI Visibility Audit
 
 Before optimizing, assess your current AI search presence.
@@ -267,7 +265,6 @@ Audit AI user agents by purpose. Search-discovery, user-triggered retrieval, mod
 Check each relevant user-agent group and any WAF or CDN rules separately. A publisher can allow search discovery while disallowing model-development crawlers; do not infer that blocking a training crawler necessarily blocks citations. See [references/platform-ranking-factors.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/platform-ranking-factors.md) for the full robots.txt configuration.
 
 ---
-
 ## Optimization Strategy
 
 ### The Three Pillars
@@ -438,7 +435,6 @@ Structured data helps AI systems understand your content. Key schemas:
 No well-documented study isolates a schema lift on AI citations, so treat schema as context that helps engines parse your pages and expect no fixed lift from it. **Google's note**: structured data is "not required for generative AI search" but is recommended for overall SEO strategy. For implementation, use the **schema** skill.
 
 ---
-
 ## Agentic Experiences
 
 Beyond AI search engines summarizing content, autonomous agents are starting to access sites directly — clicking, reading, comparing, even buying on behalf of users. Google's guide flags this as an emerging category to plan for.
@@ -464,7 +460,6 @@ For ecom and local business specifically, Google highlights:
 - **Business Agent** for conversational customer engagement (where applicable)
 
 ---
-
 ## Content Types That Get Cited Most
 
 Not all content is equally citable — and the format mix is **volatile**. The long-standing baseline had comparison articles (~33%) and listicles (~10%) among the top citation earners, but **ChatGPT 5.6 (Aug 2026) demoted the exploited formats: listicle citations fell −50.5% and comparison-page citations −32.1%, while `site:` and "official" retrieval surged** — a shift toward primary sources and owned pages. Format strategy is now per-platform (comparisons still work on Google AIO/Gemini/Perplexity). See [references/format-volatility.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/format-volatility.md) for the shift data, the per-platform format table, LinkedIn's citation numbers, and the ChatGPT fan-out extraction diagnostic.
@@ -476,7 +471,6 @@ Not all content is equally citable — and the format mix is **volatile**. The l
 **Citation ≠ recommendation.** Getting cited means your content was useful to consult; getting *recommended* — onto the buyer's actual shortlist — is governed by web-wide consensus (reviews, forums, analysts, press) and is largely independent of your own content. Self-promotional "best [category]" listicles can even backfire for emerging brands: in one 100-query B2B study, 69% of the AI Overview citations that self-promotional listicles earned came in answers that recommended competitors instead of the publishing brand. See [references/citations-vs-recommendations.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/citations-vs-recommendations.md) for the visibility ladder (retrieved → cited → mentioned → recommended), stage-dependent buyer's-guide strategy, what earns recommendations, and the attribution blind spot.
 
 ---
-
 ## Monitoring AI Visibility
 
 ### What to Track
@@ -515,7 +509,6 @@ AI answers are **non-deterministic** — one run is an anecdote, not a measureme
 Google's guide is explicit: **there is no AI-specific Search Console reporting**. AI Overviews and AI Mode use core Search ranking, so the standard Search Console reports (Performance, Coverage, Core Web Vitals) are still what you measure with for Google. The third-party tools above are the only way to see cross-platform AI citation behavior.
 
 ---
-
 ## What NOT to Do
 
 Google's guide calls these out explicitly — they hurt across both traditional Search and AI features.
@@ -529,13 +522,11 @@ Google's guide calls these out explicitly — they hurt across both traditional 
 7. **Skip E-E-A-T fundamentals**. Author identity, first-hand experience, expertise signals, transparent sourcing — Google's guide leans heavily on these for AI features.
 
 ---
-
 ## AI SEO by Content Type
 
 For tactical guidance on SaaS product pages, blog content, comparison/alternative pages, documentation, and local/ecom (Google's emphasis on Merchant Center + Business Profile), see [references/content-types.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/content-types.md).
 
 ---
-
 ## Common Mistakes
 
 - **Ignoring AI search entirely** — AI Overviews appear on roughly half of tracked queries in many industries (BrightEdge, Feb 2026), and assistant usage keeps growing
@@ -552,7 +543,6 @@ For tactical guidance on SaaS product pages, blog content, comparison/alternativ
 - **Forgetting to monitor** — You can't improve what you don't measure. Check AI visibility monthly at minimum
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
@@ -565,7 +555,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | `ga4` | Referral traffic from AI sources |
 
 ---
-
 ## Related Skills
 
 - **seo-audit**: For traditional technical and on-page SEO audits; **link-building** for earning links and mentions on the third-party pages AI engines cite

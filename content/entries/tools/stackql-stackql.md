@@ -4,9 +4,8 @@ name: stackql
 tagline: Query, provision and operate Cloud, SaaS, API and Model Context
   Protocol (MCP) resources through a unified SQL-based framework for humans and
   AI agent
-summary: "[Read the docs »][docs] [Raise an Issue][issues] · [Request a
-  Feature][features] · [Developer Guide][developers] · [BYO
-  Providers][registrycont]"
+summary: Contents About The Project MCP Server Installation Usage Roadmap -->
+  Contributing License Contact Acknowledgements
 categories:
   - cloud-infra
 tags:
@@ -30,8 +29,7 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 139
-  rank_delta: null
+  rank_current: 146
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1069

@@ -4,7 +4,9 @@ name: report
 tagline: Generate test report. Use when user says "test report", "results
   summary", "test status", "show results", "test dashboard", or "how did tests
   go".
-summary: "Check if recent test results exist:"
+summary: "Extract: - Total tests, passed, failed, skipped, flaky - Duration per
+  test and total - Failed test names with error messages - Flaky tests (passed
+  on retry)"
 categories:
   - coding-agents
 tags:
@@ -26,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

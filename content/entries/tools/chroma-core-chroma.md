@@ -26,8 +26,7 @@ signals:
   stars_delta_7d: 53
   stars_growth_pct: 0.2
   trending_score: 53.1
-  rank_current: 77
-  rank_delta: null
+  rank_current: 78
   velocity_source: snapshot_delta
   sparkline_4w:
     - 29530
@@ -48,14 +47,7 @@ tool:
   install_command: pip install chromadb
   runtime: multi
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - chromadb
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Search infrastructure for AI

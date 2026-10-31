@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 7
   stars_growth_pct: 0.3
   trending_score: 7.02
-  rank_current: 77
-  rank_delta: -11
+  rank_current: 82
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2659
@@ -89,7 +89,6 @@ launch:
 </div>
 
 ---
-
 ## Overview
 
 The Bright Data MCP server gives AI agents real-time access to public web data. It exposes **32 tools** covering:
@@ -105,7 +104,6 @@ Every request is routed through Bright Data's unblocking infrastructure, so page
 Two deployment options: a hosted remote server (one URL, no installation) or a local instance via `npx @brightdata/mcp`.
 
 ---
-
 ## Quick Start
 
 **Hosted server — no installation.** Add this URL to your MCP client:
@@ -281,7 +279,6 @@ For any client that supports local MCP servers:
 </details>
 
 ---
-
 ## Pricing and Free Tier
 
 Every account includes a recurring monthly free tier. **No credit card or commitment required to start.**
@@ -310,7 +307,6 @@ Beyond the free tier — pay as you go, no commitment:
 [Full pricing, volume plans and enterprise →](https://brightdata.com/pricing/mcp-server)
 
 ---
-
 ## Use Cases
 
 ### Real-time research
@@ -408,7 +404,6 @@ Gather source material from many pages at once, filtered by recency and relevanc
 | News and finance data | `search_engine` with news queries, `run_scraper` with the Yahoo Finance scraper |
 
 ---
-
 ## How It Compares
 
 | Capability | Bright Data MCP | Typical web MCP servers |
@@ -425,7 +420,6 @@ Gather source material from many pages at once, filtered by recency and relevanc
 | Free tier | 5,000 requests/month, browser automation included, no credit card | Varies; often rate-limited keyless access |
 
 ---
-
 ## Tool Selection: Groups
 
 Tools are organized into groups so you only load what you need. Fewer tools means less context for your agent to process.
@@ -483,7 +477,6 @@ Coding agent setup (Claude Code / Cursor / Windsurf) — npm, PyPI and GitHub da
 ```
 
 ---
-
 ## Tools Reference (32 Tools)
 
 ### Which tool to use
@@ -599,7 +592,6 @@ Filter search over stored LinkedIn datasets; returns matching records at once, w
 [Full tool reference in the docs →](https://docs.brightdata.com/ai/mcp-server/tools)
 
 ---
-
 ## Agent Skills
 
 Ready-to-use skills that teach your agent how to use this MCP server correctly. The full collection lives at [github.com/brightdata/skills](https://github.com/brightdata/skills) — 21 skills covering MCP orchestration, competitive intelligence, price comparison, brand listening, SEO audits, scraper building, RAG pipelines, and more.
@@ -615,7 +607,6 @@ Three of the highest-impact skills:
 [Browse all 21 skills →](https://github.com/brightdata/skills)
 
 ---
-
 ## Configuration
 
 ### Basic setup (local)
@@ -686,7 +677,6 @@ extend their tool timeout on progress will cap the wait at their own limit — `
 is the knob on the server side. Browser tools are not covered.
 
 ---
-
 ## Documentation
 
 | Resource | Link |
@@ -698,7 +688,6 @@ is the knob on the server side. Browser tools are not covered.
 | Changelog | [CHANGELOG.md](https://github.com/brightdata-com/brightdata-mcp/blob/main/CHANGELOG.md) |
 
 ---
-
 ## Troubleshooting
 
 <details>
@@ -732,7 +721,6 @@ Check your internet connection and firewall settings.
 </details>
 
 ---
-
 ## Contributing
 
 - [Report bugs](https://github.com/brightdata-com/brightdata-mcp/issues)
@@ -742,7 +730,6 @@ Check your internet connection and firewall settings.
 Please follow [Bright Data's coding standards](https://brightdata.com/dna/js_code).
 
 ---
-
 ## Support
 
 | Channel | Link |
@@ -752,7 +739,6 @@ Please follow [Bright Data's coding standards](https://brightdata.com/dna/js_cod
 | Email | [support@brightdata.com](mailto:support@brightdata.com) |
 
 ---
-
 ## License
 
 MIT © [Bright Data Ltd.](https://brightdata.com)

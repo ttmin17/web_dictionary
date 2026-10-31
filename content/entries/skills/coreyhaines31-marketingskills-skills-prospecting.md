@@ -112,7 +112,6 @@ For the branch-specific deep dives:
 - **Demand-signal** (find your first customers) → see [references/demand-signals.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/prospecting/references/demand-signals.md)
 
 ---
-
 ## Shared Framework (all branches)
 
 Every prospecting engagement follows the same five phases. Tools and qualification signals change per branch; the phases don't.
@@ -178,7 +177,6 @@ Columns vary by branch (see reference files), but every lead sheet includes:
 - score, business/company name, contact (where applicable), why-it's-a-prospect, source(s), confidence, last verified date
 
 ---
-
 ## Compliance Guardrails
 
 These apply to every branch. **Read first, every engagement.**
@@ -195,7 +193,6 @@ These apply to every branch. **Read first, every engagement.**
 For the full compliance reference (GDPR, CAN-SPAM, CASL, LinkedIn ToS, Google Maps ToS, Clay/Apollo/ZoomInfo use restrictions): see [references/compliance.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/prospecting/references/compliance.md).
 
 ---
-
 ## Inputs to Collect
 
 If missing, ask once, then infer reasonable defaults and continue:
@@ -209,13 +206,11 @@ If missing, ask once, then infer reasonable defaults and continue:
 - **Buying signal preference** — what triggers should they prioritize? (funding rounds, hiring, recent move, etc.)
 
 ---
-
 ## Enrichment Workflows
 
 For multi-provider lookups, cache reuse, and per-credit budgets, load [the enrichment playbook](https://github.com/coreyhaines31/marketingskills/blob/main/skills/prospecting/references/enrichment-playbook.md). Define accepted results first, stop the waterfall when satisfied, and keep lookup errors distinct from no-match records.
 
 ---
-
 ## Tool Selection Quick Picks
 
 Full breakdown in [references/data-sources.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/prospecting/references/data-sources.md). Quick picks:
@@ -239,7 +234,6 @@ Full breakdown in [references/data-sources.md](https://github.com/coreyhaines31/
 **If the user has no enrichment tools**: lean on browser-assisted research with public sources — company website, About page, LinkedIn company page, news mentions. Slower but works.
 
 ---
-
 ## Output Formats
 
 ### Default — chat table
@@ -279,7 +273,6 @@ score,business,category,area,distance_km,website_status,website_url,social_urls,
 - **Open questions**: anything you couldn't verify and the user should look at
 
 ---
-
 ## Quality Checks (before finalizing)
 
 - [ ] Remove duplicates (by domain for SaaS/B2B, by business + address for Local SMB)
@@ -292,7 +285,6 @@ score,business,category,area,distance_km,website_status,website_url,social_urls,
 - [ ] Final count matches user's request, or you've explained why it's smaller (quality bar)
 
 ---
-
 ## Common Mistakes
 
 1. **Starting discovery without an ICP**. Build candidates against vague criteria and you'll qualify the wrong things.
@@ -306,7 +298,6 @@ score,business,category,area,distance_km,website_status,website_url,social_urls,
 9. **Forgetting to retain consent / lineage records**. Required for GDPR DSARs and CAN-SPAM audits.
 
 ---
-
 ## Task-Specific Questions
 
 1. Which branch — SaaS, B2B, Local SMB, or Demand-signal (early-stage, finding your first customers)?
@@ -318,7 +309,6 @@ score,business,category,area,distance_km,website_status,website_url,social_urls,
 7. Chat table or CSV?
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key prospecting tools:
@@ -343,7 +333,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Browserbase** | Real-browser site research when rendering or interaction needed | ✓ | [browserbase.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/browserbase.md) |
 
 ---
-
 ## Related Skills
 
 - **cold-email**: For writing outbound sequences against the qualified list (the natural next step after prospecting)

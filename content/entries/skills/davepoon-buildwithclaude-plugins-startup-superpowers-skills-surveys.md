@@ -81,7 +81,6 @@ This skill covers two modes:
 2. **Active Tally mode** — creating the survey in Tally via the Tally MCP, returning a shareable link, and later fetching and analyzing results.
 
 ---
-
 ## Before you start
 
 Read `startup/core.md` to load project context.
@@ -94,7 +93,6 @@ mkdir -p startup/surveys
 ```
 
 ---
-
 ## Applicability assessment
 
 Use judgment when assessing whether surveys make sense right now. This is advisory — never a gate.
@@ -112,7 +110,6 @@ Use judgment when assessing whether surveys make sense right now. This is adviso
 If the founder insists on a survey despite caution signals, help them build a good one. The goal is to inform, not gatekeep.
 
 ---
-
 ## When no surveys exist
 
 Share a brief applicability assessment (2–3 sentences): what's looking solid, what the risk is, whether this is a good moment for surveys. Then ask if they'd like to proceed.
@@ -126,7 +123,6 @@ If proceeding, load the reference file:
 The reference file's instructions take over from this point.
 
 ---
-
 ## When surveys already exist
 
 Load and read the relevant files for context. Infer intent from the conversation — don't mechanically ask "what do you want to do?" If the founder is:
@@ -148,8 +144,7 @@ When adding or updating surveys, follow these file conventions:
 
 **Frontmatter:**
 ```yaml
----
-status: draft|ready|active|closed|archived
+---status: draft|ready|active|closed|archived
 mode: questions-only|tally
 date_created: YYYY-MM-DD
 target_persona: One-line segment descriptor
@@ -159,8 +154,7 @@ hypothesis_slugs:
 response_goal: 30
 tally_form_id: abc123          # tally mode only — omit if questions-only
 tally_url: https://tally.so/r/abc123  # tally mode only — omit if questions-only
----
-```
+---```
 
 **Required sections:**
 - `## Purpose` — why this survey exists and what decisions it will inform
@@ -175,7 +169,6 @@ tally_url: https://tally.so/r/abc123  # tally mode only — omit if questions-on
 Read before writing, propose before saving, get confirmation.
 
 ---
-
 ## After saving a survey
 
 Briefly confirm: "Saved to `startup/surveys/{slug}.md`."

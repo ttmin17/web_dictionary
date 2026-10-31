@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -191,5 +191,4 @@ python ../../skills/compliance-os/scripts/audit_simulator.py scope.json
 - Adjacent: `${CLAUDE_PLUGIN_ROOT}/vendor/ra-qm-team/iso42001-specialist/`, `${CLAUDE_PLUGIN_ROOT}/vendor/ra-qm-team/eu-ai-act-specialist/`, `${CLAUDE_PLUGIN_ROOT}/vendor/ra-qm-team/information-security-manager-iso27001/`, `${CLAUDE_PLUGIN_ROOT}/vendor/ra-qm-team/soc2-compliance/`, `${CLAUDE_PLUGIN_ROOT}/vendor/ra-qm-team/gdpr-dsgvo-expert/`
 
 ---
-
 **Version:** 1.0.0

@@ -80,13 +80,11 @@ Two modes:
 2. **Scaffold and deploy** — optional Layer 2 reference that writes code to the project root and deploys using Vercel MCP, Supabase MCP, and the v0 Platform API
 
 ---
-
 ## Before you start
 
 Read `startup/core.md` and scan `startup/hypotheses/` to understand what's been established and what's still untested. Check `startup/interviews/` and `startup/surveys/` for evidence gathered so far. No directory scaffolding is needed — `startup/` is created during project initialization.
 
 ---
-
 ## When no `startup/mvp-plan.md` exists
 
 Load the reference file that runs the design conversation:
@@ -98,7 +96,6 @@ Load the reference file that runs the design conversation:
 The reference file's instructions take over from this point.
 
 ---
-
 ## When `startup/mvp-plan.md` exists
 
 Read it for context. Infer intent from the conversation — don't ask "what do you want to do?"
@@ -130,7 +127,6 @@ Read the existing hypotheses. Brief honest check (2–3 sentences): is the propo
 Archiving marks this MVP track as closed — the plan remains for reference but is no longer the active experiment. Read the file. Set `status: archived`, `last_updated: today`. Add a final log entry summarising the experiment outcome. Propose changes, get confirmation, write back.
 
 ---
-
 ## After saving `startup/mvp-plan.md`
 
 Briefly confirm: "Saved to `startup/mvp-plan.md`."

@@ -83,7 +83,6 @@ The Nightingale notification pipeline has three layers, each with different pain
 - The user's wording mentions "who to send to/recipient/subscription/filter/label matching"—**rule layer**, out of scope for this skill.
 
 ---
-
 ## Data model `NotifyChannelConfig`
 
 `models/notify_channel.go`:
@@ -126,7 +125,6 @@ type NotifyChannelConfig struct {
 | `LineRequestConfig` | `line` (required `channel_access_token` of the Messaging API channel; the recipient ID is a rule param) |
 
 ---
-
 ## Built-in ident overview (`models/user.go` + `alert/sender/provider/init.go`)
 
 | Ident | Provider | Request type | One-liner |
@@ -164,7 +162,6 @@ type NotifyChannelConfig struct {
 **Registration mechanism**: `Resolve()` in `provider/registry.go`: first does an exact lookup by `Ident` → if not found, falls back by `RequestType` to a generic provider (`callback`/`script`/`email`/`flashduty`/`pagerduty`). So **a custom ident (e.g. `my-internal-webhook`) works as long as `request_type=http`, falling back to callback**.
 
 ---
-
 ## `HTTPRequestConfig` field details
 
 ```go
@@ -195,7 +192,6 @@ Examples:
   `?ats={{range $i,$s := $sendtos}}{{if $i}},{{end}}{{$s}}{{end}}`
 
 ---
-
 ## Template context — variables you can use
 
 All HTTP-type providers share `alert/sender/provider/http_common.go:SendHTTPRequest`. When rendering Body / URL / Headers / Parameters, these 6 variables are injected uniformly (line 34-44):
@@ -223,7 +219,6 @@ Take the `user_ids` + `user_group_ids` from this notify_rule's NotifyConfig → 
 - This is the most common root cause of "test notification works but real alerts don't go out" (see the dedicated "Test works but real alerts don't go out" section in the debugging chapter).
 
 ---
-
 ## The "required-fields map" for each channel
 
 Below is the minimal usable configuration for each channel—when the user asks "how do I integrate X", just tell them to fill in these few fields.
@@ -357,7 +352,6 @@ Below is the minimal usable configuration for each channel—when the user asks 
 It's not that the context lacks it—it's that the default template doesn't reference it.
 
 ---
-
 ## Three paths to modify a notify channel
 
 ### Path A: UI (recommended)
@@ -375,7 +369,6 @@ It's not that the context lacks it—it's that the default template doesn't refe
 - Note: ① after editing, the server must reload (n9e pulls every 9 seconds, no restart needed); ② a bad JSON edit will cause Verify to fail and make the whole channel unusable—before editing, `mysqldump -t notify_channel > backup.sql`.
 
 ---
-
 ## Debugging and troubleshooting
 
 ### Check whether the channel actually sent a request
@@ -456,7 +449,6 @@ If any layer is empty → sendtos is empty → real alerts don't send on this pa
 3. Real alerts go out but the content is wrong → go to layer 2 of the "Check whether the channel actually sent a request" section above, enable debug log, and capture the full request body.
 
 ---
-
 ## The standard procedure for "adding/copying a channel"
 
 When the user asks "I want to integrate Slack / Feishu with signing / an internal HTTP system", give them this template:
@@ -494,7 +486,6 @@ When the user asks "I want to integrate Slack / Feishu with signing / an interna
 5. **Test → Save → select it in the notify rule.**
 
 ---
-
 ## Output style
 
 When the user asks "how do I change X", answer using this routine:

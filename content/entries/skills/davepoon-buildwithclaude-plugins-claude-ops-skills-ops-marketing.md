@@ -4,7 +4,10 @@ name: ops-marketing
 tagline: Marketing command center. Email campaigns (Klaviyo), paid ads
   (Meta/Google), analytics (GA4), SEO, and social media metrics. One dashboard
   for all mar
-summary: "Before executing, load available context:"
+summary: "1. Preferences: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/prefer\
+  ences.json - timezone — display all timestamps correctly - klaviyoprivatekey,
+  metaadstoken, metaadaccountid, ga4propert..."
 categories:
   - productivity-ops
 tags:
@@ -202,7 +205,6 @@ fi
 ```
 
 ---
-
 ## Sub-command Routing
 
 Route `$ARGUMENTS` to the correct section below:
@@ -225,7 +227,6 @@ Route `$ARGUMENTS` to the correct section below:
 | setup | Configure API keys |
 
 ---
-
 ## email / klaviyo
 
 Pull Klaviyo metrics for last 30 days.
@@ -274,7 +275,6 @@ curl -s "https://a.klaviyo.com/api/metrics/" \
 ```
 
 ---
-
 ## ads / meta
 
 Pull Meta Ads insights for the configured ad account.
@@ -320,7 +320,6 @@ curl -s "https://graph.facebook.com/v18.0/${META_ACCOUNT}/ads?fields=name,adset_
 ```
 
 ---
-
 ## meta-manage
 
 Full Meta Ads campaign management. Uses same `META_TOKEN` and `META_ACCOUNT` credentials as read-only `ads` section.
@@ -604,7 +603,6 @@ curl -s -X POST "https://graph.facebook.com/v20.0/${META_ACCOUNT}/campaigns" \
 Print: `Advantage+ campaign "${CAMPAIGN_NAME}" created (ID: <ID>, status: PAUSED). Meta AI will optimize targeting and creative delivery once enabled.`
 
 ---
-
 ## analytics / ga4
 
 Pull GA4 data via the Data API using gcloud ADC.
@@ -681,7 +679,6 @@ If `GA4_TOKEN` is empty or gcloud not available, output: `GA4 not configured —
 ```
 
 ---
-
 ## ga4-advanced
 
 Advanced GA4 analytics: realtime, funnel, cohort, audience export, and pivot reports.
@@ -961,7 +958,6 @@ echo "$RESULT" | jq -r '.rows[]? | [
 ```
 
 ---
-
 ## seo / gsc
 
 Pull Google Search Console data.
@@ -1033,7 +1029,6 @@ If GSC not configured, output: `Search Console not configured — run /ops:marke
 ```
 
 ---
-
 ## social
 
 Aggregate available social media metrics. Check which are configured.
@@ -1069,7 +1064,6 @@ Show `[not configured]` for any unconfigured channels rather than failing.
 ```
 
 ---
-
 ## instagram
 
 Instagram publishing and insights via Instagram Graph API (same `META_TOKEN` as Meta Ads).
@@ -1307,7 +1301,6 @@ echo "$RESULT" | jq -r '.data[]? | select(.name == "audience_country") | .values
 ```
 
 ---
-
 ## google-ads
 
 **Credential check**: If `GADS_DEV_TOKEN` or `GADS_REFRESH_TOKEN` is empty after resolution, print:

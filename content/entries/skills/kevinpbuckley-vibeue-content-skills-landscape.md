@@ -374,7 +374,6 @@ Do this in separate steps:
 3. **Block 3**: Create layer info objects, assign to landscape
 
 ---
-
 ### ⚠️ Common Mistakes to Avoid
 
 | WRONG | CORRECT |
@@ -424,7 +423,6 @@ Do this in separate steps:
 | `info.rotation.x` (Rotator) | Rotator fields are `.roll` / `.pitch` / `.yaw` — there is no `.x/.y/.z` on Rotator (only Vector has those) |
 
 ---
-
 ## Related Skills
 
 | Task | Skills to Load |

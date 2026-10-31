@@ -85,7 +85,6 @@ ms = unreal.MetaSoundService()
   - `Audio:0` (Audio input on the graph output node) — connect your audio signal here
 
 ---
-
 ## Workflow
 
 ### 1 — Discover available nodes
@@ -172,7 +171,6 @@ ms.save_meta_sound(asset_path)
 ```
 
 ---
-
 ## Method Reference
 
 ### Lifecycle
@@ -223,7 +221,6 @@ ms.save_meta_sound(asset_path)
 | `set_node_location(asset_path, node_id, pos_x, pos_y)` | `FMetaSoundResult` | Update editor position. |
 
 ---
-
 ## Common DataTypes
 
 | Type name | Description |
@@ -238,7 +235,6 @@ ms.save_meta_sound(asset_path)
 | `WaveAsset` | Reference to a SoundWave asset |
 
 ---
-
 ## Complete Example — 880 Hz Sine Tone
 
 ```python
@@ -276,7 +272,6 @@ print("Done:", ap)
 ```
 
 ---
-
 ## Complete Example — One-Shot SoundWave (Gunshot)
 
 ```python
@@ -327,7 +322,6 @@ print("Done:", ap)
 ```
 
 ---
-
 ## Return Type Attribute Reference
 
 Use these exact attribute names — guessing leads to `AttributeError`.
@@ -349,7 +343,6 @@ if not r.success:
 ```
 
 ---
-
 ### `FMetaSoundInfo` — returned by `get_meta_sound_info()`
 
 | Attribute | Type | Example |
@@ -368,7 +361,6 @@ print(info.node_count, info.output_format)
 ```
 
 ---
-
 ### `FMetaSoundNodeInfo` — returned by `list_nodes()` and `get_node_pins()`
 
 | Attribute | Type | Example |
@@ -406,7 +398,6 @@ for n in nodes:
 ```
 
 ---
-
 ## Known Node Pins
 
 Use these instead of calling `get_node_pins` on freshly-added nodes (can time out).
@@ -469,7 +460,6 @@ The audio output format depends on the `output_format` passed to `create_meta_so
 (Left `:0`, Right `:1`); a Quad source has four. Mono has one.
 
 ---
-
 ## Connecting to a Stereo (or Quad) output
 
 A Mono asset has a single audio sink, so `next(...)` is fine. **Stereo/Quad assets have one
@@ -502,7 +492,6 @@ stereo mixer, search `list_available_nodes("Mixer")` for a `(Stereo, …)` varia
 > `:TypeName`), so you can pass `n.inputs[0]` directly without manual splitting.
 
 ---
-
 ## Notes
 
 - **Save after every batch of edits**, not after each individual operation, to avoid excessive disk I/O.

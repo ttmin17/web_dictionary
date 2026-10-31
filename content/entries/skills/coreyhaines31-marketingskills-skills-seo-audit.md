@@ -108,7 +108,6 @@ Before auditing, understand:
    - Access to Search Console / analytics?
 
 ---
-
 ## Audit Framework
 
 ### Schema Markup Detection Limitation
@@ -134,7 +133,6 @@ Reporting "no schema found" based solely on `web_fetch` or `curl` leads to false
 Once the foundations are sound, the fastest wins are usually pages already ranking in positions 8–20. See [rankings-push.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/references/rankings-push.md) for that workflow and the checklist for shipping new pages.
 
 ---
-
 ## Technical SEO Audit
 
 ### Crawlability
@@ -232,7 +230,6 @@ Once the foundations are sound, the fastest wins are usually pages already ranki
 - Lowercase and hyphen-separated
 
 ---
-
 ## International SEO & Localization
 
 Check when the site serves multiple languages or regions. Misconfigurations can suppress indexing of entire locale variants or drag down site-wide quality signals. See [International SEO reference](https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/references/international-seo.md) for evidence and source URLs.
@@ -306,7 +303,6 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 - Broken hreflang links (404s, redirects) waste crawl budget AND invalidate hreflang clusters
 
 ---
-
 ## On-Page SEO Audit
 
 ### Title Tags
@@ -401,7 +397,6 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 - Logical topical clusters
 
 ---
-
 ## Content Quality Assessment
 
 ### E-E-A-T Signals
@@ -443,7 +438,6 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 - Return visits
 
 ---
-
 ## Common Issues by Site Type
 
 ### SaaS/Product Sites
@@ -487,7 +481,6 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 For Google Business Profiles, the map pack, citations, reviews, and location pages, see [local-seo.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/references/local-seo.md).
 
 ---
-
 ## Output Format
 
 ### Audit Report Structure
@@ -518,7 +511,6 @@ Same format as above
 4. Long-term recommendations
 
 ---
-
 ## References
 
 - [AI Writing Detection](https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/references/ai-writing-detection.md): Common AI writing patterns to avoid (em dashes, overused phrases, filler words)
@@ -529,7 +521,6 @@ Same format as above
 - For AI search optimization (AEO, GEO, LLMO, AI Overviews), see the **ai-seo** skill
 
 ---
-
 ## Tools Referenced
 
 **Free Tools**
@@ -549,7 +540,6 @@ Same format as above
 - ContentKing
 
 ---
-
 ## Task-Specific Questions
 
 1. What pages/keywords matter most?
@@ -559,7 +549,6 @@ Same format as above
 5. What's your current organic traffic baseline?
 
 ---
-
 ## Related Skills
 
 - **ai-seo**: For optimizing content for AI search engines (AEO, GEO, LLMO)

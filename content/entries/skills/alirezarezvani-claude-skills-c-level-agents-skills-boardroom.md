@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -190,5 +190,4 @@ If advisors see each other's positions before forming their own, they anchor. Ph
 - Skills: [`board-meeting`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/boardroom/${CLAUDE_PLUGIN_ROOT}/vendor/c-level-advisor/board-meeting/SKILL.md), [`executive-mentor`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-agents/skills/boardroom/../../../c-level-advisor/executive-mentor/)
 
 ---
-
 **Version:** 1.0.0

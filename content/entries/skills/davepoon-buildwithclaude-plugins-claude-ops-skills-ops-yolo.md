@@ -91,7 +91,6 @@ Before YOLO analysis, load:
 | `gh run list --limit 20 --json status,conclusion,name,headBranch,createdAt` | Recent CI runs | JSON array |
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** instead of fire-and-forget subagents for the C-suite analysis (Phase 2). This enables:
@@ -156,7 +155,6 @@ done
 ```
 
 ---
-
 ## Phase 2 — Spawn 4 C-suite agents in parallel
 
 Spawn these 4 agents simultaneously using all pre-gathered data as context. Each writes their analysis to a file in `/tmp/yolo-[session]/`:
@@ -198,7 +196,6 @@ Uses `agents/yolo-coo.md`. Writes `/tmp/yolo-[session]/coo-analysis.md`.
 - What should be automated that isn't?
 
 ---
-
 ## Phase 3 — Hard Truths Report (orchestrator synthesis)
 
 **This skill (the main orchestrator) is the synthesizer** — NOT `yolo-ceo`. After all 4 parallel agents complete and have written their analysis files to `/tmp/yolo-[session]/{ceo,cto,cfo,coo}-analysis.md`, read all four files here in the main context and synthesize them into a unified report:
@@ -255,7 +252,6 @@ AskUserQuestion call 2 (only if "More..."):
 ```
 
 ---
-
 ## Phase 4 — YOLO Autonomous Mode
 
 If user types `YOLO` (all caps), enter autonomous mode via `/loop`.
@@ -308,7 +304,6 @@ If `$ARGUMENTS` is `YOLO`, skip to Phase 4.
 If `$ARGUMENTS` is `report`, skip to Phase 3 (reads existing analysis files if present).
 
 ---
-
 ## Native tool usage
 
 ### Tasks — progress tracking

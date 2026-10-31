@@ -166,7 +166,6 @@ independent. Publishers with a licensing position and companies that want to be
 recommended by AI assistants land in different places, and both are legitimate.
 
 ---
-
 ## About
 
 Maintained by MaxAEO — <https://maxaeo.ai> — which works on AI answer-engine

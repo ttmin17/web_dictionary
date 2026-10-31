@@ -98,7 +98,6 @@ Before triaging, load:
 | `curl -X POST https://api.linear.app/graphql -H "Authorization: $LINEAR_API_KEY" -H "Content-Type: application/json" -d '{"query":"{ issues(filter: {state: {type: {in: [\"started\",\"unstarted\"]}}}) { nodes { id title state { name } priority assignee { name } } } }"}'` | Active issues | JSON |
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** when dispatching fix agents for multiple issues. This enables:
@@ -147,7 +146,6 @@ Otherwise run: `echo "Sentry MCP not available"`
 Use `mcp__linear__list_teams` to get team IDs, then `mcp__linear__list_issues` with `filter: {state: {type: {in: ["unstarted", "started"]}}}` for each team.
 
 ---
-
 ## Phase 2 — Cross-reference against code
 
 For each Sentry issue, check if it's already fixed:
@@ -163,7 +161,6 @@ For each GitHub Issue:
 - If referenced and merged, mark as potentially resolved
 
 ---
-
 ## Phase 3 — Confirm and resolve fixed issues
 
 For issues confirmed fixed in code AND deployed, show the full list and use `AskUserQuestion`:
@@ -189,7 +186,6 @@ For confirmed issues:
 Log all resolutions.
 
 ---
-
 ## Phase 4 — Present triage board
 
 ```
@@ -227,7 +223,6 @@ AskUserQuestion call 2 (only if "More..."):
 ```
 
 ---
-
 ## Dispatch fix agent
 
 When dispatching for an issue, spawn an Agent using `agents/triage-agent.md` with:
@@ -239,7 +234,6 @@ When dispatching for an issue, spawn an Agent using `agents/triage-agent.md` wit
 Filter to `$ARGUMENTS` project/source if specified.
 
 ---
-
 ## Native tool usage
 
 ### Tasks — triage progress

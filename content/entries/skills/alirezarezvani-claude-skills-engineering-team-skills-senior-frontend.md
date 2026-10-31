@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -84,7 +84,6 @@ Frontend development patterns, performance optimization, and automation tools fo
 - [Accessibility and Testing](#accessibility-and-testing)
 
 ---
-
 ## Project Scaffolding
 
 Generate a new Next.js or React project with TypeScript, Tailwind CSS, and best practice configurations.
@@ -144,7 +143,6 @@ my-app/
 ```
 
 ---
-
 ## Component Generation
 
 Generate React components with TypeScript, tests, and Storybook stories.
@@ -206,7 +204,6 @@ export function Button({ className, children }: ButtonProps) {
 ```
 
 ---
-
 ## Bundle Analysis
 
 Analyze package.json and project structure for bundle optimization opportunities.
@@ -260,7 +257,6 @@ The analyzer identifies these common heavy packages:
 | @mui/material | Large | shadcn/ui or Radix UI |
 
 ---
-
 ## React Patterns
 
 Reference: `references/react_patterns.md`
@@ -339,7 +335,6 @@ function DataFetcher({ url, render }) {
 ```
 
 ---
-
 ## Next.js Optimization
 
 Reference: `references/nextjs_optimization_guide.md`
@@ -425,7 +420,6 @@ async function ProductPage({ params }) {
 ```
 
 ---
-
 ## Accessibility and Testing
 
 Reference: `references/frontend_best_practices.md`
@@ -479,7 +473,6 @@ test('dialog is accessible', async () => {
 ```
 
 ---
-
 ## Quick Reference
 
 ### Common Next.js Config
@@ -531,7 +524,6 @@ function List<T>({ items, renderItem }: ListProps<T>) {
 ```
 
 ---
-
 ## Resources
 
 - React Patterns: `references/react_patterns.md`
@@ -541,7 +533,6 @@ function List<T>({ items, renderItem }: ListProps<T>) {
 - Composition map (which specialist to fork into): `references/composition_map.md`
 
 ---
-
 ## Assumptions and Verifiable Success Criteria (Karpathy discipline)
 
 Before this skill scaffolds a component, recommends a framework, or audits a bundle, the following four assumptions MUST be surfaced.
@@ -562,7 +553,6 @@ If any of those three is not stated, the recommendation is incomplete — return
 The `scripts/frontend_decision_engine.py` tool encodes these checks: it refuses to recommend a profile without the four assumption inputs and prints the verifiable thresholds for the matched profile.
 
 ---
-
 ## Customization profiles
 
 Four built-in profiles in `profiles/` calibrate every recommendation:
@@ -587,7 +577,6 @@ The tool returns the best-fit profile, the runner-up tradeoff (if within 15%), t
 To add a custom profile (e.g., your org's internal-tool defaults): copy `profiles/vite-spa.json` to `profiles/<your-org>.json` and adjust `constraints` + `success_thresholds`.
 
 ---
-
 ## Composition map
 
 This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It forks into them. See `references/composition_map.md` for the full routing table. Key forks:
@@ -604,7 +593,6 @@ This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It
 The `cs-frontend-engineer` agent orchestrates these forks via `context: fork`. Invoke it from another agent with `Agent({subagent_type: "cs-frontend-engineer", prompt: "..."})` or via `/cs-frontend-review <your problem>`.
 
 ---
-
 ## Forcing-question library (Matt Pocock grill)
 
 Before locking any framework or rendering decision, walk the seven forcing questions in `references/forcing_questions.md`. Discipline:
@@ -626,7 +614,6 @@ Summary:
 7. WCAG target + named a11y owner?
 
 ---
-
 ## Invocation from other agents and skills
 
 Three surfaces:

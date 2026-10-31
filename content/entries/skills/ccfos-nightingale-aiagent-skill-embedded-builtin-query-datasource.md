@@ -89,7 +89,6 @@ Based on the datasource type the user needs, read the corresponding file under t
 - [datasources/victorialogs.md](https://github.com/ccfos/nightingale/blob/main/aiagent/skill/embedded/builtin/query-datasource/datasources/victorialogs.md) - VictoriaLogs log queries (LogsQL)
 
 ---
-
 ## Prerequisites
 
 The user needs to provide:
@@ -100,7 +99,6 @@ The user needs to provide:
 If the user has not provided the above information, use the AskUserQuestion tool to ask.
 
 ---
-
 ## Execution Steps
 
 ### Step 1: Log in to obtain a Token
@@ -137,7 +135,6 @@ Based on the datasource's `plugin_type`, read the corresponding `datasources/*.m
 Present the query result to the user as a readable Markdown table or list.
 
 ---
-
 ## Datasource Type Quick Reference
 
 | plugin_type | Datasource | Query Language | Use Case | Reference File |
@@ -154,7 +151,6 @@ Present the query result to the user as a readable Markdown table or list.
 | `victorialogs` | VictoriaLogs | LogsQL | Log query | [victorialogs.md](https://github.com/ccfos/nightingale/blob/main/aiagent/skill/embedded/builtin/query-datasource/datasources/victorialogs.md) |
 
 ---
-
 ## Generic Proxy API
 
 All datasources can access their native APIs through the generic proxy:
@@ -170,7 +166,6 @@ For example:
 - Loki: `/api/n9e/proxy/3/loki/api/v1/labels`
 
 ---
-
 ## Generic Time-Series Query API
 
 All datasources (except Prometheus) can use the unified time-series query endpoint:
@@ -208,7 +203,6 @@ Content-Type: application/json
 The exact structure of the query object varies by datasource type; see each datasource file for details.
 
 ---
-
 ## Generic Metadata API for SQL-type Datasources
 
 ClickHouse, MySQL, PostgreSQL, and Doris share the following metadata query endpoints:
@@ -228,7 +222,6 @@ POST /api/n9e/tdengine-columns
 ```
 
 ---
-
 ## Key Considerations
 
 1. **Query the datasource list first to get the ID**: All queries require a `datasource_id`; obtain it first via `POST /api/n9e/datasource/list`

@@ -77,7 +77,6 @@ Read `startup/core.md` to load project context (name, seed description, and all 
 Check if `startup/hypotheses/` contains any `.md` files.
 
 ---
-
 ## When hypotheses already exist
 
 Load and understand them for context. Infer intent from the conversation — don't mechanically ask "what do you want to do?" If the user is:
@@ -103,7 +102,6 @@ When adding or updating hypotheses, follow the file conventions:
 Read before writing, propose before saving, get confirmation.
 
 ---
-
 ## When no hypotheses exist
 
 Check if `startup/core.md` has at minimum **Audience** and **Problem** defined under `## Core`.
@@ -118,7 +116,6 @@ Check if `startup/core.md` has at minimum **Audience** and **Problem** defined u
 The reference file's instructions take over from this point.
 
 ---
-
 ## Assessing hypothesis state
 
 State assessment is one of this skill's core capabilities. When hypothesis state is in question, dispatch the `hypotheses-manager` subagent rather than evaluating evidence inline — it's bias-isolated, reads across interview evidence independently, and returns structured recommendations.
@@ -148,7 +145,6 @@ State assessment is one of this skill's core capabilities. When hypothesis state
 This is the same subagent dispatched by the `interviews` skill after a transcript is analyzed — so state assessment is centralized here regardless of which entry point triggers it.
 
 ---
-
 ## Ad-hoc web search vs. dispatching web-researcher
 
 Not every web question needs a subagent:

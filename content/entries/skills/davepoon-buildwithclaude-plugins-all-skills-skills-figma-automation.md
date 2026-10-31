@@ -237,5 +237,4 @@ Extract IDs from Figma URLs:
 | File styles | FIGMA_GET_FILE_STYLES | file_key |
 | Image fills | FIGMA_GET_IMAGE_FILLS | file_key |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

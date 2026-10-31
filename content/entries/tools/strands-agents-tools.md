@@ -26,8 +26,7 @@ signals:
   stars_delta_7d: 10
   stars_growth_pct: 0.8
   trending_score: 10.08
-  rank_current: 115
-  rank_delta: null
+  rank_current: 116
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1327
@@ -48,14 +47,7 @@ tool:
   install_command: pip install strands-agents-tools
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - strands-agents-tools
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 A set of tools that gives agents powerful capabilities.

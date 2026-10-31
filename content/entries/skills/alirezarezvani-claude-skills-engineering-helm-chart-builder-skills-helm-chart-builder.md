@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -77,7 +77,6 @@ Opinionated Helm workflow that turns ad-hoc Kubernetes manifests into maintainab
 Not a Helm tutorial — a set of concrete decisions about how to build charts that operators trust and developers don't fight.
 
 ---
-
 ## Slash Commands
 
 | Command | What it does |
@@ -87,7 +86,6 @@ Not a Helm tutorial — a set of concrete decisions about how to build charts th
 | `/helm:security` | Audit chart for security issues — RBAC, network policies, pod security, secrets handling |
 
 ---
-
 ## When This Skill Activates
 
 Recognize these patterns from the user:
@@ -104,7 +102,6 @@ Recognize these patterns from the user:
 If the user has a Helm chart or wants to package Kubernetes resources → this skill applies.
 
 ---
-
 ## Workflow
 
 ### `/helm:create` — Chart Scaffolding
@@ -262,7 +259,6 @@ If the user has a Helm chart or wants to package Kubernetes resources → this s
    ```
 
 ---
-
 ## Tooling
 
 ### `scripts/chart_analyzer.py`
@@ -315,7 +311,6 @@ python3 scripts/values_validator.py values.yaml --strict
 ```
 
 ---
-
 ## Template Patterns
 
 ### Pattern 1: Standard Labels (_helpers.tpl)
@@ -417,7 +412,6 @@ spec:
 ```
 
 ---
-
 ## Values Design Principles
 
 ```
@@ -444,7 +438,6 @@ ANTI-PATTERNS
 ```
 
 ---
-
 ## Dependency Management
 
 ```
@@ -464,7 +457,6 @@ LIBRARY CHARTS
 ```
 
 ---
-
 ## Proactive Triggers
 
 Flag these without being asked:
@@ -479,7 +471,6 @@ Flag these without being asked:
 - **Missing app.kubernetes.io labels** → Add via _helpers.tpl. Required for proper resource tracking.
 
 ---
-
 ## Installation
 
 ### One-liner (any tool)
@@ -499,7 +490,6 @@ clawhub install cs-helm-chart-builder
 ```
 
 ---
-
 ## Related Skills
 
 - **senior-devops** — Broader DevOps scope (CI/CD, IaC, monitoring). Complementary — use helm-chart-builder for chart-specific work, senior-devops for pipeline and infrastructure.

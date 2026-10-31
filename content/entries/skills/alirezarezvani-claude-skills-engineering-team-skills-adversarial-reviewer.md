@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -176,7 +176,6 @@ After all three personas have reported:
 **You MUST find at least one issue. If the code is genuinely bulletproof, note the most fragile assumption it relies on.**
 
 ---
-
 ### Persona 2: The New Hire
 
 **Mindset:** "I just joined this team. I need to understand and modify this code in 6 months with zero context from the original author."
@@ -200,7 +199,6 @@ After all three personas have reported:
 **You MUST find at least one issue. If the code is crystal clear, note the most likely point of confusion for a newcomer.**
 
 ---
-
 ### Persona 3: The Security Auditor
 
 **Mindset:** "This code will be attacked. My job is to find the vulnerability before an attacker does."

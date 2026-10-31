@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -78,7 +78,6 @@ skill:
 Fullstack development skill with project scaffolding and code quality analysis tools.
 
 ---
-
 ## Table of Contents
 
 - [Trigger Phrases](#trigger-phrases)
@@ -87,7 +86,6 @@ Fullstack development skill with project scaffolding and code quality analysis t
 - [Reference Guides](#reference-guides)
 
 ---
-
 ## Trigger Phrases
 
 Use this skill when you hear:
@@ -101,7 +99,6 @@ Use this skill when you hear:
 - "generate project boilerplate"
 
 ---
-
 ## Tools
 
 ### Decision Engine
@@ -131,7 +128,6 @@ Returns: matched profile name, score, matched/violated constraints, stack recomm
 The engine encodes the same matrix the conversational grill walks through — use it directly when inputs are already known, or via the `cs-fullstack-engineer` agent for the question-by-question grill.
 
 ---
-
 ### Project Scaffolder
 
 Generates fullstack project structures with boilerplate code.
@@ -186,7 +182,6 @@ python scripts/project_scaffolder.py nextjs my-app --json
 - Next steps for running the project
 
 ---
-
 ### Code Quality Analyzer
 
 Analyzes fullstack codebases for quality issues.
@@ -262,7 +257,6 @@ Total Lines: 12,500
 ```
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Start New Project
@@ -324,7 +318,6 @@ Use the tech stack guide to evaluate options:
 See `references/tech_stack_guide.md` for detailed comparison.
 
 ---
-
 ## Reference Guides
 
 ### Architecture Patterns (`references/architecture_patterns.md`)
@@ -357,7 +350,6 @@ See `references/tech_stack_guide.md` for detailed comparison.
 - Stack recommendations by use case (MVP, SaaS, Enterprise)
 
 ---
-
 ## Quick Reference
 
 ### Stack Decision Matrix
@@ -383,7 +375,6 @@ See `references/tech_stack_guide.md` for detailed comparison.
 | CORS issues | Configure middleware properly |
 
 ---
-
 ## Assumptions and Verifiable Success Criteria (Karpathy discipline)
 
 Before this skill scaffolds, recommends, or modifies any code, the following four assumptions MUST be surfaced. If any are unknown, the skill stops and walks the [Forcing-question library](#forcing-question-library-matt-pocock-grill) instead.
@@ -404,7 +395,6 @@ If any of those three is not stated, the recommendation is incomplete — go bac
 The `scripts/fullstack_decision_engine.py` tool encodes these checks: it refuses to recommend a profile without all four assumption inputs and prints the verifiable thresholds for the matched profile.
 
 ---
-
 ## Customization profiles
 
 Four built-in profiles in `profiles/` calibrate every recommendation:
@@ -430,7 +420,6 @@ The tool returns the best-fit profile, the tradeoff against the runner-up (if wi
 To add a custom profile: copy `profiles/saas-startup.json` to `profiles/<your-org>.json`, adjust the `constraints` and `stack_recommendations` blocks, and rerun. The JSON is the customization surface — no code changes needed.
 
 ---
-
 ## Composition map
 
 This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It forks into them. See `references/composition_map.md` for the full routing table. Key forks:
@@ -448,7 +437,6 @@ This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It
 The `cs-fullstack-engineer` agent (in `agents/engineering/cs-fullstack-engineer.md`) orchestrates these forks via `context: fork`. Invoke it from another agent with `Agent({subagent_type: "cs-fullstack-engineer", prompt: "..."})` or via the slash command `/cs-fullstack-review <your problem>`.
 
 ---
-
 ## Forcing-question library (Matt Pocock grill)
 
 Before locking any architecture or stack decision, walk the seven forcing questions in `references/forcing_questions.md`. Each has a recommended answer, canon citation, and kill criterion. The discipline:
@@ -470,7 +458,6 @@ Summary of the seven questions (full content in the reference):
 7. Three verifiable success criteria with numeric targets?
 
 ---
-
 ## Invocation from other agents and skills
 
 This skill is invokable by any other agent or skill via three surfaces:

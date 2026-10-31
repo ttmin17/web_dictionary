@@ -146,6 +146,5 @@ When starting a new feature or project that needs structured requirements gather
 ## Integration Points
 - IP-1: ...
 
----
-Phase 1 complete. Run `/ruflo-sparc:ruflo-sparc advance` to pass the gate check.
+---Phase 1 complete. Run `/ruflo-sparc:ruflo-sparc advance` to pass the gate check.
 ```

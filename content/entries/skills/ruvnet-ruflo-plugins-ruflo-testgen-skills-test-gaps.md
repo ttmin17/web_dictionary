@@ -4,7 +4,8 @@ name: test-gaps
 tagline: Detect missing test coverage and generate test suggestions. Use when
   the user asks about coverage gaps, untested code, or what tests to write next;
   al
-summary: "Find test coverage gaps via CLI:"
+summary: 'Or dispatch the testgaps worker via MCP:
+  mcppluginruflo-coreruflohooksworker-dispatch({ trigger: "testgaps" })'
 categories:
   - agent-frameworks
 tags:

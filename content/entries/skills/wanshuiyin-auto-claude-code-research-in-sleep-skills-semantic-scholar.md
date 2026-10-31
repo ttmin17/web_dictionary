@@ -4,7 +4,8 @@ name: semantic-scholar
 tagline: Search published venue papers (IEEE, ACM, Springer, etc.) via Semantic
   Scholar API. Complements /arxiv (preprints) with citation counts, venue
   metadat
-summary: "This skill is the published venue counterpart to /arxiv:"
+summary: Do NOT duplicate arXiv's job. If results contain an externalIds.ArXiv
+  field, the paper is also on arXiv — note this but do not re-fetch from arXiv.
 categories:
   - domain-research
 tags:

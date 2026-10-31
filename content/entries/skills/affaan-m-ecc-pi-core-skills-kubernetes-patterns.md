@@ -109,7 +109,6 @@ See the sections below for complete, runnable examples. Quick references:
 | Autoscaling | [HPA](#horizontal-pod-autoscaler-hpa) |
 
 ---
-
 ## Core Workload Patterns
 
 ### Deployment — Production Template
@@ -218,7 +217,6 @@ spec:
 ```
 
 ---
-
 ## Probes — Liveness, Readiness, Startup
 
 Understanding when to use each probe is critical:
@@ -265,7 +263,6 @@ livenessProbe:
 ```
 
 ---
-
 ## Services and Ingress
 
 ### Service Types
@@ -327,7 +324,6 @@ spec:
 ```
 
 ---
-
 ## ConfigMaps and Secrets
 
 ### ConfigMap — Non-sensitive configuration
@@ -389,7 +385,6 @@ data:
 > **Important:** Raw Kubernetes Secrets are only base64-encoded, not encrypted at rest unless your cluster has encryption configured. Use [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets) or [External Secrets Operator](https://external-secrets.io) for production.
 
 ---
-
 ## Resource Requests and Limits
 
 ```yaml
@@ -427,7 +422,6 @@ resources:
 ```
 
 ---
-
 ## RBAC — Roles and ServiceAccounts
 
 ### Principle of Least Privilege
@@ -515,7 +509,6 @@ spec:
 ```
 
 ---
-
 ## Horizontal Pod Autoscaler (HPA)
 
 ```yaml
@@ -549,7 +542,6 @@ spec:
 > HPA requires `resources.requests` to be set on all containers — it calculates utilization as `current / request`.
 
 ---
-
 ## PodDisruptionBudget (PDB)
 
 Prevent too many pods going down during node drains or rolling updates:
@@ -568,7 +560,6 @@ spec:
 ```
 
 ---
-
 ## Namespaces and Multi-Tenancy
 
 ```bash
@@ -593,7 +584,6 @@ EOF
 ```
 
 ---
-
 ## Jobs and CronJobs
 
 ```yaml
@@ -646,7 +636,6 @@ spec:
 ```
 
 ---
-
 ## kubectl Debugging Cheatsheet
 
 ```bash
@@ -708,7 +697,6 @@ kubectl describe pod <pod-name> -n my-namespace | grep -A5 "Last State"
 ```
 
 ---
-
 ## Anti-Patterns
 
 ```yaml
@@ -778,7 +766,6 @@ spec:
 ```
 
 ---
-
 ## Best Practices Checklist
 
 ### Security
@@ -805,7 +792,6 @@ spec:
 - [ ] Resource labels: `app`, `version`, `environment`
 
 ---
-
 ## Related Skills
 
 - `docker-patterns` — Multi-stage Dockerfiles and image security

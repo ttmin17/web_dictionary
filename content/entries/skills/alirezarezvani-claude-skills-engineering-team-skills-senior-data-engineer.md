@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -86,7 +86,6 @@ Production-grade data engineering skill for building scalable, reliable data sys
 7. [Troubleshooting](#troubleshooting)
 
 ---
-
 ## Trigger Phrases
 
 Activate this skill when you see:
@@ -122,7 +121,6 @@ Activate this skill when you see:
 - "Tune Airflow DAG"
 
 ---
-
 ## Quick Start
 
 ### Core Tools
@@ -149,7 +147,6 @@ python scripts/etl_performance_optimizer.py analyze \
 ```
 
 ---
-
 ## Workflows
 → See references/workflows.md for details
 
@@ -210,7 +207,6 @@ Is real-time insight required?
 | **Ecosystem** | Mature BI tools | Growing ML tooling |
 
 ---
-
 ## Tech Stack
 
 | Category | Technologies |
@@ -225,7 +221,6 @@ Is real-time insight required?
 | **Monitoring** | Prometheus, Grafana, Datadog |
 
 ---
-
 ## Reference Documentation
 
 ### 1. Data Pipeline Architecture
@@ -253,6 +248,5 @@ See `references/dataops_best_practices.md` for:
 - Incident response
 
 ---
-
 ## Troubleshooting
 → See references/troubleshooting.md for details

@@ -4,7 +4,7 @@ name: word-form
 tagline: Use this skill to create fillable Word forms (.docx) with real Content
   Controls (SDT) + legacy FormField checkboxes + MERGEFIELD mail-merge
   placeholde
-summary: "If officecli is not installed:"
+summary: "Verify: officecli --version"
 categories:
   - media-creative
 tags:

@@ -4,7 +4,10 @@ name: setup
 tagline: Set up a new autoresearch experiment interactively. Collects domain,
   target file, eval command, metric, direction, and evaluator. Use when the user
   ru
-summary: "Pass them directly to the setup script:"
+summary: '1. Domain — Ask: "What domain? (engineering, marketing, content,
+  prompts, custom)" 2. Name — Ask: "Experiment name? (e.g., api-speed,
+  blog-titles)" 3. Target file — Ask: "Which file to optimize?" Verify it
+  exists. 4....'
 categories:
   - coding-agents
 tags:
@@ -26,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

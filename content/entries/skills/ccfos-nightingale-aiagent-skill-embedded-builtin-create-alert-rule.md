@@ -123,7 +123,6 @@ When a component ships both a categraf and an exporter rule pack, **prefer categ
    c. When there are multiple candidates and none is the default, **do not blindly take the first one**; list them in your reply and ask the user to confirm
 
 ---
-
 ## Approach A: reuse validated rules in integrations (as needed: single / batch / whole pack)
 
 `import_alert_rule_template` imports rules from the rule pack under `integrations/<component>/alerts/` (each rule's severity, duration, evaluation interval, appended tags, annotations, and effective time window are all preserved), binds the rules to the data source you select, and uniformly switches them to the enabled state. **How many rules are imported is controlled by the `names` parameter**, driven by the user's need.
@@ -171,7 +170,6 @@ When a component ships both a categraf and an exporter rule pack, **prefer categ
 - Imported rules **are not bound to any notify rule** by default (to avoid sending alerts by mistake). If binding is needed, after importing, prompt the user to associate it manually on the rule, or switch to Approach B to create rules one by one and pass `notify_rule_ids`.
 
 ---
-
 ## Approach B: hand-write a custom rule (when integrations has no matching rule)
 
 Use `create_alert_rule`. Supports all data source types: **Prometheus / Loki / Elasticsearch / OpenSearch / TDengine / ClickHouse / MySQL / PostgreSQL / Doris / VictoriaLogs / Host**.
@@ -424,7 +422,6 @@ If the user requests binding notify rules:
 If the user does not explicitly request it, **do not proactively associate notify rules**, to avoid sending alerts by mistake.
 
 ---
-
 ## Final step (common to both paths): output the result
 
 **Keep it short**. A one-sentence confirmation is enough:

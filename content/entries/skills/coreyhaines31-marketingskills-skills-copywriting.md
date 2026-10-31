@@ -110,7 +110,6 @@ Gather this context (ask if not provided):
 - What do visitors already know before arriving?
 
 ---
-
 ## Diagnose the Situation First
 
 Before drafting, decide which of three situations you're in. Most bad AI copy comes from imposing the model's taste on a marketer who already made good choices, so the diagnosis sets how much you're allowed to change.
@@ -149,7 +148,6 @@ Three passes, keep it. Two, sharpen the weak one. One or none, rewrite it from t
 *Diagnosis, the three-question gate, and decompose-and-lock adapted from Profound's `improved-copywriting` skill ([skills-marketing-library](https://github.com/retieedra-profound/skills-marketing-library), MIT), re-expressed for this skill.*
 
 ---
-
 ## Copywriting Principles
 
 ### Clarity Over Cleverness
@@ -180,7 +178,6 @@ A declined claim with an unlock path is an action item for the client;
 without one it's a dead end.
 
 ---
-
 ## Writing Style Rules
 
 ### Core Principles
@@ -204,7 +201,6 @@ without one it's a dead end.
 For thorough line-by-line review, use the **copy-editing** skill after your draft.
 
 ---
-
 ## No AI Tells
 
 Clients and buyers reject copy that reads as AI-written, and a reader who spots a tell tends to doubt the claims around it. Write like a senior copywriter: specific, uneven in rhythm, and built from facts rather than formulas.
@@ -233,7 +229,6 @@ Before handing over any draft, run the self-check in [references/ai-tells.md](ht
 Removing tells leaves copy clean but flat. For a full rewrite, build a writer first (who's writing, what they know cold, what they'd cut, what they think) and check for second-generation tells such as wisdom-shaped sentences and tidy closers. See [references/ai-tells.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/references/ai-tells.md#build-a-writer).
 
 ---
-
 ## Best Practices
 
 ### Be Direct
@@ -257,7 +252,6 @@ Analogies make abstract concepts concrete and memorable.
 Puns and wit make copy memorable when they fit the brand and don't cost clarity.
 
 ---
-
 ## Page Structure Framework
 
 ### Above the Fold
@@ -302,7 +296,6 @@ Puns and wit make copy memorable when they fit the brand and don't cost clarity.
 **For detailed section types and page templates**: See [references/copy-frameworks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/references/copy-frameworks.md)
 
 ---
-
 ## CTA Copy Guidelines
 
 **Weak CTAs (avoid):**
@@ -323,7 +316,6 @@ Examples:
 - "See Pricing for My Team"
 
 ---
-
 ## Page-Specific Guidance
 
 ### Homepage
@@ -352,7 +344,6 @@ Examples:
 - Still include a CTA
 
 ---
-
 ## Voice and Tone
 
 Before writing, establish:
@@ -373,7 +364,6 @@ Maintain consistency, but adjust intensity:
 - CTAs should be action-oriented
 
 ---
-
 ## Output Format
 
 For a point edit (Situation C), return only the changed lines with a one-line reason each. Skip the annotations and alternatives below unless asked.
@@ -401,7 +391,6 @@ For headlines and CTAs, provide 2-3 options:
 - Meta description
 
 ---
-
 ## Related Skills
 
 - **copy-editing**: For polishing existing copy (use after your draft)

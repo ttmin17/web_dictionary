@@ -18,13 +18,13 @@ source:
 signals:
   stars: 1809
   last_commit: 2026-09-19T22:50:58Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.2
-  trending_score: 3
-  rank_current: 58
-  velocity_source: snapshot_delta
+  stars_delta_7d: 31
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
     - 1806
+    - 1809
     - 1809
 language: en
 needs_keys: false

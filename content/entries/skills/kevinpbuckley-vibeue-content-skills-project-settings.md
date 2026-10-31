@@ -184,7 +184,6 @@ result = unreal.ProjectSettingsService.set_ini_array(
 (Registered-setting writes via the engine `ConfigSettingsToolset` return their own result — check it the same way.)
 
 ---
-
 ## Workflows
 
 ### Basic Project Info Setup
@@ -301,7 +300,6 @@ result = unreal.ProjectSettingsService.set_ini_value(
 ```
 
 ---
-
 ## Data Structures
 
 > **Python Naming Convention**: C++ types like `FProjectSettingResult` are exposed as `ProjectSettingResult` in Python (no `F` prefix).

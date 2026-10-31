@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 51
   stars_growth_pct: 1
   trending_score: 51.5
-  rank_current: 79
-  rank_delta: null
+  rank_current: 80
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5134
@@ -541,7 +540,6 @@ Tabularis started as an experiment: how far could AI-assisted development get in
 [Apache License 2.0](https://github.com/TabularisDB/tabularis/blob/main/LICENSE)
 
 ---
-
 <p align="center">
   Like tabularis? <a href="https://github.com/TabularisDB/tabularis">Star the repo</a> ⭐, it helps the project a lot.
 </p>

@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -261,7 +261,6 @@ python scripts/data_product_strategy_picker.py profile.json
 - [data_team_org_evolution.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/chief-data-officer-advisor/skills/chief-data-officer-advisor/references/data_team_org_evolution.md) — Stage-to-role map + centralize-vs-embed trigger
 
 ---
-
 **Version:** 1.0.0
 **Status:** Production Ready
 **Disclaimer:** Decisions touching training data rights, data productization, or M&A data diligence should involve qualified counsel. This skill surfaces decisions and tradeoffs — it does not replace legal review.

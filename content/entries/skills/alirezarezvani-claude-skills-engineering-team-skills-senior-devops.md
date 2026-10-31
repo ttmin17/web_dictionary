@@ -4,7 +4,8 @@ name: senior-devops
 tagline: Comprehensive DevOps skill for CI/CD, infrastructure automation,
   containerization, and cloud platforms (AWS, GCP, Azure). Includes pipeline
   setup, inf
-summary: "This skill provides three core capabilities through automated scripts:"
+summary: Scaffolds CI/CD pipeline configurations for GitHub Actions or CircleCI,
+  with stages for build, test, security scan, and deploy.
 categories:
   - coding-agents
 tags:
@@ -26,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -352,7 +353,6 @@ Use these companion skills for cloud-specific deep dives:
 > Start single-cloud. Add a second cloud only when there is a concrete business or compliance driver — not for theoretical redundancy.
 
 ---
-
 ## Cloud-Agnostic IaC
 
 ### Terraform / OpenTofu (Default Choice)
@@ -381,7 +381,6 @@ Choose Pulumi when the team strongly prefers TypeScript, Python, Go, or C# over 
 > **Rule of thumb:** Use Terraform/OpenTofu unless you are 100% committed to a single cloud AND the cloud-native tool offers a feature Terraform cannot replicate (e.g., AWS Service Catalog integration).
 
 ---
-
 ## Troubleshooting
 
 Check the comprehensive troubleshooting section in `references/deployment_strategies.md`.

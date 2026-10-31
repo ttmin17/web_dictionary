@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -92,7 +92,6 @@ python scripts/growth_model_simulator.py
 - `references/marketing_org.md` — team structure by stage, hiring sequence, agency vs. in-house
 
 ---
-
 ## The Four CMO Questions
 
 Every CMO must own answers to these — no one else in the C-suite can:
@@ -103,7 +102,6 @@ Every CMO must own answers to these — no one else in the C-suite can:
 4. **Is it working?** — CAC, LTV:CAC, pipeline contribution, payback period
 
 ---
-
 ## Core Responsibilities (Brief)
 
 **Brand & Positioning** — Define category, build messaging architecture, maintain competitive differentiation. Details → `references/brand_positioning.md`
@@ -119,7 +117,6 @@ Every CMO must own answers to these — no one else in the C-suite can:
 **Board Reporting** — Pipeline contribution, CAC by channel, payback period, LTV:CAC. Not impressions. Not MQLs in isolation.
 
 ---
-
 ## Key Diagnostic Questions
 
 Ask these before making any strategic recommendation:
@@ -135,7 +132,6 @@ Ask these before making any strategic recommendation:
 - If a prospect doesn't buy, why not? (win/loss data)
 
 ---
-
 ## CMO Metrics Dashboard
 
 | Category | Metric | Healthy Target |
@@ -151,7 +147,6 @@ Ask these before making any strategic recommendation:
 | **Retention** | NPS (marketing-sourced cohort) | > 40 |
 
 ---
-
 ## Red Flags
 
 - No defined ICP — "companies with 50-1000 employees" is not an ICP
@@ -164,7 +159,6 @@ Ask these before making any strategic recommendation:
 - Growth model was chosen because a competitor uses it, not because the product/ACV/ICP fits
 
 ---
-
 ## Integration with Other C-Suite Roles
 
 | When... | CMO works with... | To... |
@@ -180,7 +174,6 @@ Ask these before making any strategic recommendation:
 | Competitive threat | CEO + CRO | Coordinate battlecards, win/loss, repositioning response |
 
 ---
-
 ## Resources
 
 - **References:** `references/brand_positioning.md`, `references/growth_frameworks.md`, `references/marketing_org.md`

@@ -96,7 +96,6 @@ Gather this context (ask if not provided):
 Work with whatever the user gives you. If they have a clear problem area, start there. Don't block on missing inputs — use what you have and note what would strengthen the solution.
 
 ---
-
 ## Core Principles
 
 ### Single Source of Truth
@@ -112,7 +111,6 @@ Every handoff between teams is a potential leak. Marketing-to-sales, SDR-to-AE, 
 Marketing, sales, and customer success must agree on definitions. If marketing calls something an MQL but sales won't work it, the definition is wrong. Alignment meetings aren't optional.
 
 ---
-
 ## Lead Lifecycle Framework
 
 ### Stage Definitions
@@ -149,7 +147,6 @@ Define response times and document them:
 **For complete lifecycle stage templates and SLA examples**: See [references/lifecycle-definitions.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/lifecycle-definitions.md)
 
 ---
-
 ## Lead Scoring
 
 ### Scoring Dimensions
@@ -190,7 +187,6 @@ Define response times and document them:
 **For detailed scoring templates and example models**: See [references/scoring-models.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/scoring-models.md)
 
 ---
-
 ## Lead Routing
 
 ### Routing Methods
@@ -223,7 +219,6 @@ For form-submit enrichment, booking branches, missing-data fallbacks, and late r
 **For routing decision trees and platform-specific setup**: See [references/routing-rules.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/routing-rules.md)
 
 ---
-
 ## Pipeline Stage Management
 
 ### Pipeline Stages
@@ -256,7 +251,6 @@ For form-submit enrichment, booking branches, missing-data fallbacks, and late r
 | Win rate by source | Which channels produce real revenue |
 
 ---
-
 ## CRM Automation Workflows
 
 ### Essential Automations
@@ -283,7 +277,6 @@ For form-submit enrichment, booking branches, missing-data fallbacks, and late r
 **For platform-specific workflow recipes**: See [references/automation-playbooks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/automation-playbooks.md)
 
 ---
-
 ## Deal Desk Processes
 
 ### When You Need a Deal Desk
@@ -309,7 +302,6 @@ For form-submit enrichment, booking branches, missing-data fallbacks, and late r
 Document every exception. Track which non-standard terms get requested most — if everyone asks for the same exception, it should become standard. Review quarterly.
 
 ---
-
 ## Data Hygiene & Enrichment
 
 ### Dedup Strategy
@@ -341,7 +333,6 @@ Document every exception. Track which non-standard terms get requested most — 
 - Verify enrichment data accuracy on a sample set
 
 ---
-
 ## RevOps Metrics Dashboard
 
 ### Key Metrics
@@ -365,7 +356,6 @@ Build three views:
 3. **Executive view** — CAC, LTV:CAC, revenue vs. target, pipeline coverage
 
 ---
-
 ## Output Format
 
 When delivering RevOps recommendations, provide:
@@ -379,7 +369,6 @@ When delivering RevOps recommendations, provide:
 Format each as a standalone document the user can implement directly. Include platform-specific guidance when the CRM is known.
 
 ---
-
 ## Task-Specific Questions
 
 1. What CRM platform are you using (or planning to use)?
@@ -389,7 +378,6 @@ Format each as a standalone document the user can implement directly. Include pl
 5. Do you have SLAs between marketing and sales today?
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key RevOps tools:
@@ -408,7 +396,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Crossbeam** | Partner account overlaps and co-sell identification | [crossbeam.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/crossbeam.md) |
 
 ---
-
 ## Related Skills
 
 - **cold-email**: For outbound prospecting emails

@@ -115,7 +115,6 @@ const emit = defineEmits<{
 - Use camelCase in script (`emit("update:modelValue", val)`).
 
 ---
-
 ## 3. Composables (Reusable Logic)
 
 ### Structure
@@ -154,7 +153,6 @@ Composables replace Vue 2 mixins entirely:
 - **Composables**: Explicit imports, clear return values, composable and tree-shakable.
 
 ---
-
 ## 4. State Management
 
 ### When to Use What
@@ -203,7 +201,6 @@ export const useCartStore = defineStore("cart", () => {
 - Every async action: handle loading + success + error.
 
 ---
-
 ## 5. Vue Router
 
 ### Route Definitions
@@ -242,7 +239,6 @@ watch(id, (newId) => fetchItem(newId));
 ```
 
 ---
-
 ## 6. Template Patterns
 
 ### Template Syntax
@@ -273,7 +269,6 @@ watch(id, (newId) => fetchItem(newId));
 ```
 
 ---
-
 ## 7. Performance
 
 | Technique | When to Use |
@@ -288,7 +283,6 @@ watch(id, (newId) => fetchItem(newId));
 | `Suspense` | Async component loading with fallback |
 
 ---
-
 ## 8. Testing
 
 ### Stack
@@ -318,7 +312,6 @@ it("renders and emits", async () => {
 ```
 
 ---
-
 ## 9. Nuxt-Specific Patterns
 
 ### Auto-Imports
@@ -368,7 +361,6 @@ export default defineNuxtConfig({
 ```
 
 ---
-
 ## 10. Vue 3.5+ New APIs
 
 ### Reactive Props Destructure
@@ -443,7 +435,6 @@ const AsyncComp = defineAsyncComponent({
 ```
 
 ---
-
 ## Anti-Patterns
 
 | Anti-Pattern | Why It's Wrong | The Fix |

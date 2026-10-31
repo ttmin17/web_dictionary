@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -86,7 +86,6 @@ narrative, company story, internal communication, investor update, all-hands, bo
 Same fact. Four different narratives needed. The skill is maintaining truth while serving each audience's actual question.
 
 ---
-
 ## Framework
 
 ### Step 1: Build the Core Narrative
@@ -105,7 +104,6 @@ One paragraph that every other communication derives from. This is the source of
 The good version is usable. The bad version says nothing.
 
 ---
-
 ### Step 2: Audience Translation Matrix
 
 Take the core narrative and translate it for each audience. Same truth, different frame.
@@ -123,7 +121,6 @@ Take the core narrative and translate it for each audience. Same truth, differen
 - Investors and employees see each other. Board members talk to your team. Candidates google you.
 
 ---
-
 ### Step 3: Contradiction Detection
 
 Before any major communication, run the contradiction check:
@@ -142,7 +139,6 @@ Before any major communication, run the contradiction check:
 Correcting yourself before someone else catches it builds more trust than getting caught.
 
 ---
-
 ### Step 4: Audience-Specific Communication Cadence
 
 | Audience | Format | Frequency | Owner |
@@ -156,7 +152,6 @@ Correcting yourself before someone else catches it builds more trust than gettin
 | Partners | Quarterly business review | Quarterly | BD Lead |
 
 ---
-
 ### Step 5: All-Hands Structure and Cadence
 
 See `templates/all-hands-template.md` for the full template.
@@ -174,7 +169,6 @@ See `templates/all-hands-template.md` for the full template.
 - Questions deflected: "That's a great point, we should follow up on that" → never followed up
 
 ---
-
 ### Step 6: Crisis Communication
 
 When the narrative breaks — someone leaves publicly, a product fails, a security breach, a press article.
@@ -205,7 +199,6 @@ When the narrative breaks — someone leaves publicly, a product fails, a securi
 > "Here's what happened: [factual description]. Here's what we know right now: [known facts]. Here's what we don't know yet: [honest uncertainty]. Here's what we're doing: [specific actions]. Here's what you should do if you're asked about this: [specific guidance]. I'll update you by [specific time] with more information."
 
 ---
-
 ## Narrative Consistency Checklist
 
 Run before any major external communication:
@@ -218,7 +211,6 @@ Run before any major external communication:
 - [ ] Have we been accurate about our current state, or are we projecting an aspiration?
 
 ---
-
 ## Key Questions for Narrative
 
 - "Could a new employee explain to a friend why our company exists? What would they say?"

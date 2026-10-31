@@ -4,7 +4,8 @@ name: taskflow-inbox-triage
 tagline: Example TaskFlow authoring pattern for inbox triage. Use when messages
   need different treatment based on intent, with some routes notifying
   immediatel
-summary: "Triage inbox items with one owner flow:"
+summary: "- business → post to Slack and wait for reply - personal → notify the
+  owner now - everything else → keep for end-of-day summary"
 categories:
   - agent-frameworks
 tags:

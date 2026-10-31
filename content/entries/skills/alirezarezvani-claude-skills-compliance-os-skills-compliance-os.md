@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -275,6 +275,5 @@ python scripts/evidence_pool_generator.py program.json
 `assets/mock_audit_library.json` — 205 pre-built finding scenarios spanning 12 frameworks + 26 themes + 4 severity levels (34 critical, 88 major, 54 minor, 29 observation). Each scenario tags applicable frameworks; cross-reference `scripts/cross_framework_mapper.py` merged-controls catalogue to resolve framework-specific control IDs. Use as input to enrich `audit_simulator.py` mock audits, as a training resource for new internal auditors, or as the seed for finding-pattern detection across multi-framework programmes.
 
 ---
-
 **Version:** 1.2.0
 **Status:** Production Ready

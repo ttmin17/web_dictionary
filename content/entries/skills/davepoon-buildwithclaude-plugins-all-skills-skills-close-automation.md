@@ -268,5 +268,4 @@ Close data model:
 | Get note | CLOSE_GET_NOTE | note_id |
 | Delete call | CLOSE_DELETE_CALL | call_id |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

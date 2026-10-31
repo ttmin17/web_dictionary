@@ -63,7 +63,6 @@ skill:
 You are running a **complete uninstall** of the claude-ops plugin. This removes everything the plugin and `/ops:setup` created. Every deletion step requires user confirmation via `AskUserQuestion` — never delete silently.
 
 ---
-
 ## Step 1 — Confirm intent
 
 Use `AskUserQuestion`:
@@ -83,7 +82,6 @@ This will completely remove claude-ops and all its data:
 If cancelled, stop immediately.
 
 ---
-
 ## Step 2 — Detect what exists
 
 Scan for all claude-ops artifacts. Build a list of what's present:
@@ -112,7 +110,6 @@ grep -l 'telegram\|slack-mcp' ~/.claude.json 2>/dev/null
 Print a summary of what was found, then proceed to delete each category.
 
 ---
-
 ## Step 3 — Remove keychain credentials
 
 For each found keychain entry, ask via `AskUserQuestion`:
@@ -129,7 +126,6 @@ security delete-generic-password -s "<key-name>" 2>/dev/null
 ```
 
 ---
-
 ## Step 4 — Remove preferences and cache
 
 Ask via `AskUserQuestion`:
@@ -150,7 +146,6 @@ rm -rf "$CACHE_DIR"
 ```
 
 ---
-
 ## Step 5 — Clean shell profile
 
 For each shell profile file that contains `CLAUDE_PLUGIN_ROOT`:
@@ -169,7 +164,6 @@ sed -i '' '/CLAUDE_PLUGIN_ROOT/d' "<file>"
 ```
 
 ---
-
 ## Step 6 — Remove MCP registrations
 
 Check if `~/.claude.json` contains MCP server entries added by the plugin (telegram, slack-mcp). For each:
@@ -188,7 +182,6 @@ jq 'del(.mcpServers["<server-name>"])' ~/.claude.json > /tmp/claude-json-tmp && 
 ```
 
 ---
-
 ## Step 7 — Remove plugin from Claude Code settings
 
 The `/plugin uninstall` UI does not always clean up settings files. Directly remove all ops references from the JSON config files that Claude Code reads on startup.
@@ -275,7 +268,6 @@ echo "Removed marketplace, cache, and data directories"
 ```
 
 ---
-
 ## Step 8 — Final confirmation
 
 Print:

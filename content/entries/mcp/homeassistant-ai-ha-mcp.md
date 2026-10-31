@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 116
   stars_growth_pct: 2.3
   trending_score: 118.62
-  rank_current: 20
-  rank_delta: -4
+  rank_current: 24
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5050
@@ -85,11 +85,9 @@ launch:
 </div>
 
 ---
-
 ![Demo with Claude Desktop](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/docs/img/demo.webp)
 
 ---
-
 ## 🚀 Get Started
 
 The recommended way to run ha-mcp is the **HA-MCP Custom Component**. It installs into Home Assistant through HACS, runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect.
@@ -246,7 +244,6 @@ You're now connected to the demo environment! [Connect your own Home Assistant �
 Having issues? Check the **[FAQ & Troubleshooting](https://homeassistant-ai.github.io/ha-mcp/faq/)**
 
 ---
-
 ## 💬 What Can You Do With It?
 
 Just talk to Claude naturally. Here are some real examples:
@@ -262,7 +259,6 @@ Just talk to Claude naturally. Here are some real examples:
 Spend less time configuring, more time enjoying your smart home.
 
 ---
-
 ## ✨ Features
 
 | Category | Capabilities |
@@ -327,7 +323,6 @@ by default; a single full root parameter can explicitly request a device read.
 See [parameter reads, freshness, and examples](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/zwave-parameter-reads.md).
 
 ---
-
 ## 🆚 ha-mcp vs. Home Assistant's built-in MCP Server
 
 Home Assistant ships its own [MCP Server integration](https://www.home-assistant.io/integrations/mcp_server/). It is built on the **Assist** pipeline, so a connected MCP client can read and control the entities you have exposed to Assist and run the intents Assist understands — handy for voice-style control of already-exposed devices.
@@ -347,7 +342,6 @@ ha-mcp is a standalone server built for **configuring, building, and debugging**
 **Rule of thumb:** Use the built-in integration for voice-style control of devices you have already exposed; use ha-mcp when you want an AI assistant that can also build and maintain your Home Assistant setup.
 
 ---
-
 ## 🔌 Custom Component (ha_mcp_tools) — File & YAML Services
 
 The **HA-MCP Custom Component** also powers a set of privileged tools that standard Home Assistant APIs can't provide: file system access and YAML config editing. (The same component runs the full server in-process — that's the recommended install in the **Get Started** section at the top.) Its **File & YAML services entry** (**HA-MCP File & YAML Tools**) enables the tools below.
@@ -379,7 +373,6 @@ After installing, restart Home Assistant, then open **Settings** > **Devices & S
 To run the full ha-mcp server in-process through this same component, see the **Get Started** section at the top and the [full in-process server documentation →](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/in-process-server.md).
 
 ---
-
 ## 🧠 Better Results with Agent Skills
 
 This server gives your AI agent tools to control Home Assistant. For better configurations, pair it with [Home Assistant Agent Skills](https://github.com/homeassistant-ai/skills) — domain knowledge that teaches the agent Home Assistant best practices.
@@ -395,7 +388,6 @@ Skills from `homeassistant-ai/skills` are bundled and served as [MCP resources](
 Skills can still be installed manually for clients that prefer local skill files — see the [skills repo](https://github.com/homeassistant-ai/skills) for instructions.
 
 ---
-
 ## 🔍 Tool Discovery for AI Agents
 
 By default, the full tool catalog (~87 tools) is listed to the client through the standard MCP `tools/list` response. Clients with deferred / on-demand tool loading (claude.ai, Claude Desktop, Claude Code) handle that fine — tools are pulled into context only when needed, so idle context cost is near-zero.
@@ -443,7 +435,6 @@ Leave it off in clients with deferred tool loading (claude.ai, Claude Desktop, C
 For the HA app, the same option is documented in [`homeassistant-addon/DOCS.md`](https://github.com/homeassistant-ai/ha-mcp/blob/master/homeassistant-addon/DOCS.md#enable_tool_search) along with the in-app settings UI for fine-grained tool enable/disable/pin.
 
 ---
-
 ### Read-only HTTP connections
 
 Append `/readonly` to the server's HTTP MCP endpoint to restrict that connection
@@ -475,7 +466,6 @@ Want early access to new features and fixes? Dev releases (`.devN`) are publishe
 **[Dev Channel Documentation](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/dev-channel.md)** — Instructions for pip/uvx, Docker, and Home Assistant app.
 
 ---
-
 ## 🤝 Contributing
 
 For development setup, testing instructions, and contribution guidelines, see **[CONTRIBUTING.md](https://github.com/homeassistant-ai/ha-mcp/blob/master/CONTRIBUTING.md)**.
@@ -483,7 +473,6 @@ For development setup, testing instructions, and contribution guidelines, see **
 For comprehensive testing documentation, see **[tests/README.md](https://github.com/homeassistant-ai/ha-mcp/blob/master/tests/README.md)**.
 
 ---
-
 ## 🔒 Privacy
 
 Ha-mcp runs **locally** on your machine. Your smart home data stays on your network.
@@ -495,13 +484,11 @@ Ha-mcp runs **locally** on your machine. Your smart home data stays on your netw
 For full details, see our [Privacy Policy](https://github.com/homeassistant-ai/ha-mcp/blob/master/PRIVACY.md).
 
 ---
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/homeassistant-ai/ha-mcp/blob/master/LICENSE) file for details.
 
 ---
-
 ## 🙏 Acknowledgments
 
 - **[Home Assistant](https://home-assistant.io/)**: Amazing smart home platform (!)
@@ -570,14 +557,12 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - **[@pburtchaell](https://github.com/pburtchaell)** — Financial support via [GitHub Sponsors](https://github.com/sponsors/julienld). Thank you! ☕
 - **[@norpol](https://github.com/norpol)** — Built the [OpenAI Tunnel for HA-MCP](https://github.com/norpol/hass-codex-tunnel-mcp) companion integration, connecting ChatGPT to a firewalled Home Assistant MCP server (#1811).
 ---
-
 ## 💬 Community
 
 - **[GitHub Discussions](https://github.com/homeassistant-ai/ha-mcp/discussions)** — Ask questions, share ideas
 - **[Issue Tracker](https://github.com/homeassistant-ai/ha-mcp/issues)** — Report bugs, request features, or suggest tool behavior improvements. Bug reports need the report the `ha_report_issue` tool generates, or a reason why there is none; without either they are closed after 24 hours.
 
 ---
-
 ## Star History
 
 <picture>

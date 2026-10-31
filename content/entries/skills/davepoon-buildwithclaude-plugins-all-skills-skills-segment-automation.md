@@ -281,5 +281,4 @@ Segment recommends consistent event naming:
 | Update source | SEGMENT_UPDATE_SOURCE | sourceId |
 | Warehouses | SEGMENT_LIST_CONNECTED_WAREHOUSES_FROM_SOURCE | sourceId |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

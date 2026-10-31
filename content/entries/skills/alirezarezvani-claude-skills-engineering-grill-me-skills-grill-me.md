@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -112,6 +112,5 @@ Recommended answer: [your call + 1-sentence rationale]
 See [references/companion_tooling.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/grill-me/skills/grill-me/references/companion_tooling.md). Tools: extractor + generator + tracker. Agent: `cs-grill-master`. Command: `/cs-grill-me`.
 
 ---
-
 **Version:** 1.0.0
 **Derived:** Matt Pocock (MIT) + this repo's wrapper

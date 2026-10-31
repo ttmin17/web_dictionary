@@ -98,7 +98,6 @@ Before providing recommendations, understand:
    - What happens immediately after signup?
 
 ---
-
 ## Core Principles
 
 ### 1. Minimize Required Fields
@@ -129,7 +128,6 @@ Every field reduces conversion. For each field, ask:
 - No surprises (hidden requirements, unexpected steps)
 
 ---
-
 ## Field-by-Field Optimization
 
 ### Email Field
@@ -179,7 +177,6 @@ Every field reduces conversion. For each field, ask:
 - Use progressive disclosure (don't show all options at once)
 
 ---
-
 ## Single-Step vs. Multi-Step
 
 ### Single-Step Works When:
@@ -206,7 +203,6 @@ Every field reduces conversion. For each field, ask:
 3. Customization questions (optional)
 
 ---
-
 ## Trust and Friction Reduction
 
 ### At the Form Level
@@ -228,7 +224,6 @@ Every field reduces conversion. For each field, ask:
 - Help text: Only when needed, placed close to field
 
 ---
-
 ## Mobile Signup Optimization
 
 - Larger touch targets (44px+ height)
@@ -240,7 +235,6 @@ Every field reduces conversion. For each field, ask:
 - Test with actual devices
 
 ---
-
 ## Post-Submit Experience
 
 ### Success State
@@ -259,7 +253,6 @@ Every field reduces conversion. For each field, ask:
 - Clear re-engagement if verification stalls
 
 ---
-
 ## Measurement
 
 ### Key Metrics
@@ -277,7 +270,6 @@ Every field reduces conversion. For each field, ask:
 - Time between steps
 
 ---
-
 ## Output Format
 
 ### Audit Findings
@@ -300,7 +292,6 @@ Organized by:
 - Visual layout suggestions
 
 ---
-
 ## Common Signup Flow Patterns
 
 ### B2B SaaS Trial
@@ -324,7 +315,6 @@ Organized by:
 3. OR Social auth with single click
 
 ---
-
 ## Experiment Ideas
 
 ### Form Design Experiments
@@ -356,7 +346,6 @@ Organized by:
 - Mobile-optimized layout testing
 
 ---
-
 ### Copy & Messaging Experiments
 
 **Headlines & CTAs**
@@ -378,7 +367,6 @@ Organized by:
 - Include privacy assurance copy
 
 ---
-
 ### Trial & Commitment Experiments
 
 **Free Trial Variations**
@@ -394,7 +382,6 @@ Organized by:
 - Phone verification for high-value accounts
 
 ---
-
 ### Post-Submit Experiments
 
 - Clear next steps messaging after signup
@@ -403,7 +390,6 @@ Organized by:
 - Auto-login after signup vs. require login
 
 ---
-
 ## Task-Specific Questions
 
 1. What's your current signup completion rate?
@@ -413,7 +399,6 @@ Organized by:
 5. What happens immediately after signup?
 
 ---
-
 ## Enrichment and Sales-Assisted Routing
 
 If a signup needs enriched company data for a sales-assist handoff, use the [revops inbound-routing playbook](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/inbound-routing.md). Keep account creation separate from enrichment availability; a timeout or ambiguous company match must not become an implicit signup rejection.

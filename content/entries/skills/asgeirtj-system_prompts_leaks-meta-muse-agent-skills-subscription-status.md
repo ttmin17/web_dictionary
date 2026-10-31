@@ -4,7 +4,9 @@ name: subscription_status
 tagline: Answer questions about the user's Muse subscription, plan, usage,
   tokens, reset timing, or available plans and prices, or verify information
   that refe
-summary: "Run exactly one of these commands:"
+summary: "- subscription-status status for current subscription, usage, reset
+  timing, or credit availability. - subscription-status plans for the current
+  tier and available plans and prices. - subscription-status overview when..."
 categories:
   - cloud-infra
 tags:

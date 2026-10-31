@@ -79,7 +79,6 @@ skill:
 To create high-quality MCP (Model Context Protocol) servers that enable LLMs to effectively interact with external services, use this skill. An MCP server provides tools that allow LLMs to access external services and APIs. The quality of an MCP server is measured by how well it enables LLMs to accomplish real-world tasks using the tools provided.
 
 ---
-
 # Process
 
 ## 🚀 High-Level Workflow
@@ -183,7 +182,6 @@ Based on your research, create a detailed plan that includes:
 - Handle authentication and authorization errors
 
 ---
-
 ### Phase 2: Implementation
 
 Now that you have a comprehensive plan, begin implementation following language-specific best practices.
@@ -263,7 +261,6 @@ For each tool in the plan:
 - Build process configured (`npm run build`)
 
 ---
-
 ### Phase 3: Review and Refine
 
 After initial implementation:
@@ -306,7 +303,6 @@ To verify implementation quality, load the appropriate checklist from the langua
 - Node/TypeScript: see "Quality Checklist" in [⚡ TypeScript Guide](https://github.com/davepoon/buildwithclaude/blob/main/plugins/all-skills/skills/mcp-builder/reference/node_mcp_server.md)
 
 ---
-
 ### Phase 4: Create Evaluations
 
 After implementing your MCP server, create comprehensive evaluations to test its effectiveness.
@@ -351,7 +347,6 @@ Create an XML file with this structure:
 ```
 
 ---
-
 # Reference Files
 
 ## 📚 Documentation Library

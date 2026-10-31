@@ -193,7 +193,6 @@ export class DatabaseService
 ```
 
 ---
-
 ## Eventing System (`emitEvent` and `@OnEvent`)
 NitroStack includes an internal eventing system to decouple components. A service or tool can emit an event using `emitEvent`, and any injectable class (like a handler service or controller) can subscribe using the `@OnEvent` decorator.
 

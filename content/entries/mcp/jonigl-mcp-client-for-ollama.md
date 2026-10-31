@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 1
   stars_growth_pct: 0.1
   trending_score: 1
-  rank_current: 99
-  rank_delta: -15
+  rank_current: 104
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 827
@@ -70,7 +70,6 @@ launch:
 </p>
 
 ---
-
 # MCP Client for Ollama (ollmcp)
 
 ![Pepy Total Downloads](https://img.shields.io/pepy/dt/mcp-client-for-ollama?label=Downloads)

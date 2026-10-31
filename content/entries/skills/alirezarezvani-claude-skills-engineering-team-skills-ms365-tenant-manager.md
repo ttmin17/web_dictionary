@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -78,7 +78,6 @@ skill:
 Expert guidance and automation for Microsoft 365 Global Administrators managing tenant setup, user lifecycle, security policies, and organizational optimization.
 
 ---
-
 ## Quick Start
 
 ### Run a Security Audit
@@ -136,7 +135,6 @@ python3 scripts/powershell_generator.py --tenant-domain acme.com --task bulk-lic
 **Gate:** for user creation, run `--action validate` first and require every entry to report `"is_valid": true` before generating the creation script. Review every generated `.ps1` against the workflows below before running it in the tenant.
 
 ---
-
 ## Workflows
 
 ### Workflow 1: New Tenant Setup
@@ -199,7 +197,6 @@ Import-Csv .\employees.csv | ForEach-Object {
 **Validation:** Spot-check 3–5 accounts in the M365 admin portal; confirm licenses show "Active."
 
 ---
-
 ### Workflow 2: Security Hardening
 
 **Step 1: Run Security Audit**
@@ -244,7 +241,6 @@ Get-MgSecuritySecureScoreControlProfile | Sort-Object -Property ActionType |
 ```
 
 ---
-
 ### Workflow 3: User Offboarding
 
 **Step 1: Block Sign-in and Revoke Sessions**
@@ -290,7 +286,6 @@ Write-Host "Offboarding complete for $upn"
 **Validation:** Confirm in the M365 admin portal that the account shows "Blocked," has no active licenses, and the mailbox type is "Shared."
 
 ---
-
 ## Best Practices
 
 ### Tenant Setup
@@ -318,7 +313,6 @@ Write-Host "Offboarding complete for $upn"
 5. Test in a non-production tenant first
 
 ---
-
 ## Reference Guides
 
 **references/powershell-templates.md**
@@ -340,7 +334,6 @@ Write-Host "Offboarding complete for $upn"
 - DNS propagation problems
 
 ---
-
 ## Limitations
 
 | Constraint | Impact |

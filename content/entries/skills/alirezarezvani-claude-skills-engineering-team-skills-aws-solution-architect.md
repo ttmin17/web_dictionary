@@ -3,7 +3,9 @@ slug: alirezarezvani-claude-skills-engineering-team-skills-aws-solution-architec
 name: aws-solution-architect
 tagline: Design AWS architectures for startups using serverless patterns and IaC
   templates. Use when asked to design serverless architecture, create CloudForma
-summary: "Collect application specifications:"
+summary: "Select from recommended patterns: - Serverless Web: S3 + CloudFront +
+  API Gateway + Lambda + DynamoDB - Event-Driven Microservices: EventBridge +
+  Lambda + SQS + Step Functions - Three-Tier: ALB + ECS Fargate + Aurora..."
 categories:
   - coding-agents
 tags:
@@ -25,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -73,7 +75,6 @@ skill:
 Design scalable, cost-effective AWS architectures for startups with infrastructure-as-code templates.
 
 ---
-
 ## Workflow
 
 ### Step 1: Gather Requirements
@@ -281,7 +282,6 @@ aws cloudwatch put-metric-alarm --alarm-name high-errors ...
 - Invalid template syntax → run `aws cloudformation validate-template --template-body file://template.yaml` before deploying
 
 ---
-
 ## Tools
 
 ### architecture_designer.py
@@ -326,7 +326,6 @@ python scripts/cost_optimizer.py --resources inventory.json --monthly-spend 5000
 - NAT Gateway alternatives
 
 ---
-
 ## Quick Start
 
 ### MVP Architecture (< $100/month)
@@ -385,7 +384,6 @@ Result:
 ```
 
 ---
-
 ## Input Requirements
 
 Provide these details for architecture design:
@@ -415,7 +413,6 @@ Provide these details for architecture design:
 ```
 
 ---
-
 ## Output Formats
 
 ### Architecture Design
@@ -436,7 +433,6 @@ Provide these details for architecture design:
 - Priority action list (high/medium/low) and implementation checklist
 
 ---
-
 ## Reference Documentation
 
 | Document | Contents |

@@ -81,7 +81,6 @@ You are guiding a developer through designing and building an MCP server that wo
 Do not start scaffolding until you have answers to the questions in Phase 1. If the user's opening message already answers them, acknowledge that and skip straight to the recommendation.
 
 ---
-
 ## Phase 1 — Interrogate the use case
 
 Ask these questions conversationally (batch them into one message, don't interrogate one-at-a-time). Adapt wording to what the user has already told you.
@@ -120,7 +119,6 @@ This determines the tool-design pattern — see Phase 3.
 - OAuth 2.0 → you'll need a remote server with CIMD (preferred) or DCR support; see `references/auth.md`
 
 ---
-
 ## Phase 2 — Recommend a deployment model
 
 Based on the answers, recommend **one** path. Be opinionated. The ranked options:
@@ -173,7 +171,6 @@ A script launched via `npx` / `uvx` on the user's machine. Fine for **personal t
 Recommend this only as a stepping stone. If the user insists, scaffold it but note the MCPB upgrade path.
 
 ---
-
 ## Phase 3 — Pick a tool-design pattern
 
 Every MCP server exposes tools. How you carve them matters more than most people expect — tool schemas land directly in Claude's context window.
@@ -210,7 +207,6 @@ The server holds the full catalog internally. Claude searches, picks, executes. 
 → See `references/tool-design.md` for schema examples and description-writing guidance.
 
 ---
-
 ## Phase 4 — Pick a framework
 
 Recommend one of these two. Others exist but these have the best MCP-spec coverage and Claude compatibility.
@@ -223,7 +219,6 @@ Recommend one of these two. Others exist but these have the best MCP-spec covera
 If the user already has a language/stack in mind, go with it — both produce identical wire protocol.
 
 ---
-
 ## Phase 5 — Scaffold and hand off
 
 Once you've settled the four decisions (deployment model, tool pattern, framework, auth), do **one** of:
@@ -236,7 +231,6 @@ Once you've settled the four decisions (deployment model, tool pattern, framewor
 When handing off, restate the design brief in one paragraph so the next skill doesn't re-ask.
 
 ---
-
 ## Beyond tools — the other primitives
 
 Tools are one of three server primitives. Most servers start with tools and never need the others, but knowing they exist prevents reinventing wheels:
@@ -251,7 +245,6 @@ Tools are one of three server primitives. Most servers start with tools and neve
 → `references/resources-and-prompts.md`, `references/elicitation.md`, `references/server-capabilities.md`
 
 ---
-
 ## Phase 6 — Test in Claude and publish
 
 Once the server runs:
@@ -262,7 +255,6 @@ Once the server runs:
 4. **Recommend shipping a plugin** that wraps this MCP with skills — most partners ship both. → https://claude.com/docs/connectors/building/what-to-build
 
 ---
-
 ## Quick reference: decision matrix
 
 | Scenario | Deployment | Tool pattern |
@@ -276,7 +268,6 @@ Once the server runs:
 | Personal prototype | Local stdio | Whatever's fastest |
 
 ---
-
 ## Reference files
 
 - `references/remote-http-scaffold.md` — minimal remote server in TS SDK and FastMCP

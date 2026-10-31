@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -320,7 +320,6 @@ figure it out", the P99 day is a fire visible to the board.
 on capacity-margin discipline.
 
 ---
-
 **Walk these seven in order. One at a time. Write the answers down. The
 plan you submit is only as defensible as your answers to these seven
 questions.**

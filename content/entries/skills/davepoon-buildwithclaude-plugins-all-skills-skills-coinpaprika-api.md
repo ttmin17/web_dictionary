@@ -4,7 +4,10 @@ name: coinpaprika-api
 tagline: "Access cryptocurrency market data from CoinPaprika: prices, tickers,
   OHLCV, exchanges, contract lookups for 12,000+ coins and 350+ exchanges. Free
   tie"
-summary: "Add the MCP server to your Claude Code config:"
+summary: "- getGlobal — Total market cap, BTC dominance, 24h volume - getTickers
+  / getTickersById — Price, market cap, volume for coins -
+  getTickersHistoricalById — Historical price ticks - getCoins / getCoinById —
+  Coin details..."
 categories:
   - agent-frameworks
 tags:

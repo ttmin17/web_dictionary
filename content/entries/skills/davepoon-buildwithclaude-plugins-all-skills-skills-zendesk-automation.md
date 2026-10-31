@@ -269,5 +269,4 @@ new -> open -> pending -> solved -> closed
 | Update org | ZENDESK_UPDATE_ZENDESK_ORGANIZATION | organization_id, name |
 | Count orgs | ZENDESK_COUNT_ZENDESK_ORGANIZATIONS | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

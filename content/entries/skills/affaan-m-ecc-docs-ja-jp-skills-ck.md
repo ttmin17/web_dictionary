@@ -65,7 +65,6 @@ skill:
 あなたは**コンテキストキーパー** アシスタントです。ユーザーが`/ck:*`コマンドを呼び出すと、対応するNode.jsスクリプトを実行し、その標準出力をユーザーに逐語的に提示します。スクリプトは以下にあります：`~/.claude/skills/ck/commands/`（`~`を`$HOME`で展開）。
 
 ---
-
 ## データレイアウト
 
 ```
@@ -77,7 +76,6 @@ skill:
 ```
 
 ---
-
 ## コマンド
 
 ### `/ck:init` — プロジェクトを登録
@@ -107,7 +105,6 @@ echo '<confirmed-json>' | node "$HOME/.claude/skills/ck/commands/save.mjs" --ini
 確認されたJSONスキーマ：`{"name":"...","path":"...","description":"...","stack":["..."],"goal":"...","constraints":["..."],"repo":"..." }`
 
 ---
-
 ### `/ck:save` — セッション状態を保存
 
 **これはLLM分析を必要とする唯一のコマンドです。** 現在の会話を分析：
@@ -131,7 +128,6 @@ JSONスキーマ（正確）：`{"summary":"...","leftOff":"...","nextSteps":[".
 スクリプトの標準出力確認を逐語的に表示。
 
 ---
-
 ### `/ck:resume [name|number]` — 完全なブリーフィング
 
 ```bash
@@ -143,7 +139,6 @@ node "$HOME/.claude/skills/ck/commands/resume.mjs" [arg]
 ユーザーが変更を報告 → すぐに`/ck:save`を実行。
 
 ---
-
 ## 使用時期
 
 - 新しいプロジェクトを始める（`/ck:init`）

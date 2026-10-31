@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 96
   stars_growth_pct: 1.3
   trending_score: 97.24
-  rank_current: 22
-  rank_delta: -10
+  rank_current: 26
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7095
@@ -153,7 +153,6 @@ anytime. / Skill 每天自动检查一次 GitHub，有新版本会自动更新�
 也可以随时对 Codex 说"更新 Codex with ChatGPT"。
 
 ---
-
 *The sections below are in English. 以下详细内容为英文，中文完整版见
 [README.zh-CN.md](https://github.com/XiaoDuoYa/codex-with-chatgpt/blob/main/README.zh-CN.md)。*
 

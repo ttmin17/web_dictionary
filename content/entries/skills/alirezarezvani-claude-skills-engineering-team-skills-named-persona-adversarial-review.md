@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -218,5 +218,4 @@ Inherits all from `adversarial-reviewer`. Plus:
 - **Theory:** Edward de Bono, *Six Thinking Hats* (1985); Daniel Kahneman, *Thinking, Fast and Slow* (2011) — System-2 forcing via role switching
 
 ---
-
 **Attribution:** Concept contributed by [@YuhaoLin2005](https://github.com/YuhaoLin2005) (PR #866). Hardened for this repo: consolidated to one location, anti-fabrication/confidence discipline added, principles sourced in `references/`.

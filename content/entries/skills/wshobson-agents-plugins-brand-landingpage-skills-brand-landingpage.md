@@ -79,7 +79,6 @@ Scope: single-purpose landing pages and product marketing sites. Not full multi-
 Tone: technically direct -- the user understands APIs, environment variables, and HTML. Design and brand concepts are what need translating. Don't hide the toolchain; do explain why visual hierarchy matters.
 
 ---
-
 ## Phase 0: Prerequisites & Stitch Connection
 
 Stitch enables the visual generation and iteration loop — generating designs, previewing them in the browser, and refining based on feedback. The interactive design workflow is what makes this skill effective.
@@ -102,7 +101,6 @@ Aim to get the user to the interview without bothering them with installation te
 - **Fail fast, recover quietly.** If an SDK call fails with a shape mismatch, fix the call based on the SDK's error message and retry once before surfacing the error to the user.
 
 ---
-
 ## Reference Files
 
 Read these files at the indicated moments. Do not re-read them on every iteration.
@@ -114,7 +112,6 @@ Read these files at the indicated moments. Do not re-read them on every iteratio
 | `references/state-and-pitfalls.md` | At project start and before delivery (Phase 4) | metadata.json schema, state rules, common pitfalls, DEPLOY.md template |
 
 ---
-
 ## Workflow Overview
 
 ```
@@ -129,7 +126,6 @@ Stitch SDK       (3 parts)        (translate &        (generate -> show ->      
 All project state persists in `.stitch/metadata.json` (see `references/state-and-pitfalls.md` for schema). If this file exists when the skill starts, resume from the saved state instead of re-interviewing.
 
 ---
-
 ## Phase 1: Brand Interview
 
 Read `references/interview-framework.md` before starting this phase.
@@ -174,7 +170,6 @@ IF the user spontaneously attaches an image (logo, app screenshot, design inspir
 If the user asks why you can't embed their logo directly: "Stitch generates from text prompts, not image inputs. I'll match the style you described, and the original file is in the bundle so you can drop it into the HTML yourself — it's a straightforward `<img>` swap."
 
 ---
-
 ## Phase 2: Design System Creation
 
 Read `references/stitch-architecture.md` before starting this phase.
@@ -213,7 +208,6 @@ Map interview answers to Stitch design system parameters:
 6. **Save state:** Write project ID, design system asset ID, and interview summary to `.stitch/metadata.json`.
 
 ---
-
 ## Phase 3: Generate & Review Loop
 
 This is the core workflow. The loop runs until the user approves the design.
@@ -272,7 +266,6 @@ Save the HTML from each Stitch variant response as `desktop-vN-option-a.html`, `
 After desktop approval, offer: "Want me to generate a mobile layout too?" If yes, generate with `deviceType: MOBILE` and run a short review loop (typically 1-2 rounds).
 
 ---
-
 ## Phase 4: Delivery Bundle
 
 Read `references/state-and-pitfalls.md` for the DEPLOY.md template.
@@ -302,14 +295,12 @@ Read `references/state-and-pitfalls.md` for the DEPLOY.md template.
 7. Tell the user: "Bundle is ready at `{path}`. See `DEPLOY.md` for the deployment checklist."
 
 ---
-
 ## Stitch Documentation
 
 - Stitch SDK usage and installation documentation: `https://stitch-design.ai/docs/sdk/ai-sdk`
 - DESIGN.md documentation and examples: `https://stitch-design.ai/docs/design-md/overview`
 
 ---
-
 ## Resume & Error Recovery
 
 - **Session interrupted:** Check for `.stitch/metadata.json`. Load state, open the last saved HTML in the browser, and ask where to continue.

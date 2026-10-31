@@ -4,7 +4,9 @@ name: dependency-check
 tagline: Scan project dependencies for known vulnerabilities and CVEs. Use when
   auditing third-party packages, before releases, after `npm install`/lockfile
   ch
-summary: "Check dependencies for CVEs and outdated packages:"
+summary: "Auto-fix is opt-in and changes manifests/lockfiles: first show the
+  user what npm audit reports and which packages would move, get their go-ahead,
+  work on a clean git tree so the change is one revertable diff, then run..."
 categories:
   - agent-frameworks
 tags:

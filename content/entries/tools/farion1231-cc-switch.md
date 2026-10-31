@@ -30,7 +30,6 @@ signals:
   stars_growth_pct: 1.8
   trending_score: 2731.24
   rank_current: 4
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 146073
@@ -94,7 +93,6 @@ Try a **Kimi Code plan** ([中文站](https://www.kimi.com/code?aff=cc-switch) |
 **New user top-up bonus**: register and complete your first top-up via the API links above to receive 10% of the amount as bonus API credit, up to CNY ¥1,000.
 
 ---
-
 <table>
 <tr>
 <td width="180"><a href="https://www.packyapi.ai/register?aff=cc-switch"><img src="https://raw.githubusercontent.com/farion1231/cc-switch/main/assets/partners/logos/packycode.png" alt="PackyCode" width="150"></a></td>

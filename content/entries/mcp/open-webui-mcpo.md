@@ -27,8 +27,8 @@ signals:
   stars_delta_7d: 6
   stars_growth_pct: 0.1
   trending_score: 6.01
-  rank_current: 82
-  rank_delta: -14
+  rank_current: 87
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4392
@@ -329,5 +329,4 @@ Not sure where to start? Feel free to open an issue or ask a question—we’re 
 </a>
 
 ---
-
 ✨ Let's build the future of interoperable AI tooling together!

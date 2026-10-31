@@ -87,7 +87,6 @@ tool:
 </div>
 
 ---
-
 The [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) connects LLMs to tools and data. FastMCP is a full MCP application framework for servers, clients, and interactive apps. A server starts with ordinary Python:
 
 ```python

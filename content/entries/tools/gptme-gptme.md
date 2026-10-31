@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 7
   stars_growth_pct: 0.2
   trending_score: 7.01
-  rank_current: 124
-  rank_delta: null
+  rank_current: 125
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4456
@@ -52,14 +51,7 @@ tool:
   install_command: pip install gptme
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - gptme
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Your agent in your terminal, equipped with local tools: writes code, uses the terminal, browses the web. Make your own persistent autonomous agent on top!

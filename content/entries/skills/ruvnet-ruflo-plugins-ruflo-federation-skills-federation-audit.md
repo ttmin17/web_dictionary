@@ -25,13 +25,14 @@ source:
 signals:
   stars: 76729
   last_commit: 2026-10-19T06:30:38Z
-  stars_delta_7d: 2217
-  stars_growth_pct: 3
-  trending_score: 2282.96
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74048
     - 74512
+    - 76729
     - 76729
 language: en
 needs_keys: false

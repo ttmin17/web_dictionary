@@ -4,7 +4,8 @@ name: monitor-experiment
 tagline: Monitor running experiments, check progress, collect results. Use when
   user says "check results", "is it done", "monitor", or wants experiment
   output.
-summary: "Vast.ai instance (read sshhost, sshport from vast-instances.json):"
+summary: Modal apps auto-terminate when done — if it's not in the list, it
+  already finished. Check results via modal volume ls or local output.
 categories:
   - domain-research
 tags:

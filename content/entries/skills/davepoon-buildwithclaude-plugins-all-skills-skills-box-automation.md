@@ -290,5 +290,4 @@ Box tools use double underscore notation for nested objects:
 | Recent items | `BOX_LIST_RECENTLY_ACCESSED_ITEMS` | (none) |
 | Create zip download | `BOX_CREATE_ZIP_DOWNLOAD` | item IDs |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

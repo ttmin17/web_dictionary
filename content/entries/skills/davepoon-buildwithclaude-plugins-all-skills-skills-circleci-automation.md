@@ -233,5 +233,4 @@ Format: {vcs_type}/{org_name}/{repo_name}
 | Get job artifacts | CIRCLECI_GET_JOB_ARTIFACTS | project_slug, job_number |
 | Get test metadata | CIRCLECI_GET_TEST_METADATA | project_slug, job_number |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -265,7 +265,6 @@ python scripts/cs_coverage_calculator.py book.json
 - [cs_team_org_evolution.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/chief-customer-officer-advisor/skills/chief-customer-officer-advisor/references/cs_team_org_evolution.md) — Stage-to-role map + 6-role definition table (CSM ≠ Support ≠ AM ≠ IM ≠ CS Ops ≠ Customer Marketing) + AM-vs-CSM split decision + anti-patterns
 
 ---
-
 **Version:** 1.0.0
 **Status:** Production Ready
 **Disclaimer:** Retention benchmarks vary significantly by ACV, segment, and industry. This skill provides B2B SaaS-baseline guidance; consumer SaaS, marketplaces, and hardware all have materially different retention math.

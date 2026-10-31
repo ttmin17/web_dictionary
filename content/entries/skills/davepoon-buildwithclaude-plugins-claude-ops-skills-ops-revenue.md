@@ -3,7 +3,9 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-revenue
 name: ops-revenue
 tagline: Revenue and costs tracker. AWS spend via aws ce, credits tracker,
   project revenue stages. Shows burn rate, runway estimate, credits expiring.
-summary: "Before executing, load available context:"
+summary: "1. Preferences: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/prefer\
+  ences.json - timezone — display all timestamps correctly"
 categories:
   - agent-frameworks
 tags:
@@ -85,7 +87,6 @@ Before executing, load available context:
 | `aws ce list-savings-plans-purchase-recommendation --output json` | Savings plan recommendations | JSON |
 
 ---
-
 ## Phase 1 — Gather financial data in parallel
 
 ### AWS costs (current month)
@@ -151,7 +152,6 @@ curl -s -H "X-Shopify-Access-Token: $TOKEN" \
 Include Shopify GMV in the revenue pipeline table with source=shopify.
 
 ---
-
 ## Phase 2 — Render dashboard
 
 ```
@@ -213,7 +213,6 @@ AskUserQuestion call 2 (only if "More..."):
 ```
 
 ---
-
 ## Route by `$ARGUMENTS`
 
 | Argument | Action                       |
@@ -227,7 +226,6 @@ AskUserQuestion call 2 (only if "More..."):
 Use AskUserQuestion after the dashboard for next action.
 
 ---
-
 ## Native tool usage
 
 ### WebFetch — billing API fallback

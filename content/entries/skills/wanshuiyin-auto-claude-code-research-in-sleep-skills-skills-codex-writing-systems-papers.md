@@ -78,7 +78,6 @@ Structural guidance for **$ARGUMENTS**
 **Boundary**: paper-write handles the generation workflow (LaTeX output, DBLP verification, section-by-section drafting). This skill provides the **structural skeleton** — page budgets, paragraph roles, and writing patterns specific to systems venues.
 
 ---
-
 ## Page Allocation: 12-Page Systems Paper
 
 | Section | Pages | Key Content |
@@ -93,7 +92,6 @@ Structural guidance for **$ARGUMENTS**
 | S7 Conclusion | 0.5 | 3-sentence summary |
 
 ---
-
 ## Section Blueprints
 
 ### Abstract (5 sentences)
@@ -155,7 +153,6 @@ Group by methodology. For each group: what they do, limitation, how we differ.
 Three sentences: problem, solution, result. No new information.
 
 ---
-
 ## Writing Patterns
 
 ### Pattern 1: Gap Analysis
@@ -175,7 +172,6 @@ Numbered contributions in intro, each with §N cross-reference.
 Combine with other patterns for maximum impact.
 
 ---
-
 ## Conference Differences
 
 > Always verify against current CFP — rules change yearly.
@@ -191,7 +187,6 @@ Combine with other patterns for maximum impact.
 Based on 2025/2026 CFPs.
 
 ---
-
 ## Workflow
 
 ```text
@@ -211,7 +206,6 @@ Based on 2025/2026 CFPs.
 ```
 
 ---
-
 ## Quick Self-Check
 
 - [ ] Thesis follows "X is better for Y in Z"
@@ -224,7 +218,6 @@ Based on 2025/2026 CFPs.
 - [ ] All citations verified (delegate to /paper-write)
 
 ---
-
 ## Academic Integrity
 
 - Never fabricate observations, traces, or experimental results
@@ -233,7 +226,6 @@ Based on 2025/2026 CFPs.
 - This blueprint provides structural guidance, not copy-paste text
 
 ---
-
 ## Authoritative Sources
 
 1. Levin & Redell — "How (and How Not) to Write a Good Systems Paper" (USENIX)

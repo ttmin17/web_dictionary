@@ -31,7 +31,6 @@ signals:
   stars_growth_pct: 8
   trending_score: 205.14
   rank_current: 33
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2385

@@ -25,7 +25,7 @@ source:
 signals:
   stars: 4562
   last_commit: 2026-10-23T12:50:39Z
-  stars_delta_7d: 26
+  stars_delta_7d: 190
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -288,7 +288,6 @@ jobs.attrs["warnings"]  # {"bdjobs": ["job_type internship isn't supported, igno
 ```
 
 ---
-
 **Q: Why is Indeed giving unrelated roles?**  
 **A:** Indeed searches the description too.
 
@@ -304,12 +303,10 @@ search_term='"engineering intern" software summer (java OR python OR c++) 2025 -
 This searches the description/title and must include software, summer, 2025, one of the languages, engineering intern exactly, no tax, no marketing.
 
 ---
-
 **Q: No results when using "google"?**  
 **A:** Google Jobs is currently unavailable.
 
 ---
-
 **Q: Received a response code 429?**  
 **A:** The board blocked you for sending too many requests. All of the job board sites are aggressive with blocking. We recommend:
 
@@ -317,7 +314,6 @@ This searches the description/title and must include software, summer, 2025, one
 - Try using the proxies param to change your IP address.
 
 ---
-
 ## JobPost Schema
 
 ```plaintext

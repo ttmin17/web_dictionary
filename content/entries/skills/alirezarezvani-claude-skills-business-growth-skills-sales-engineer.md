@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -105,7 +105,6 @@ python scripts/rfp_response_analyzer.py assets/sample_rfp_data.json --format jso
 ```
 
 ---
-
 ### Phase 2: Solution Design
 
 **Objective:** Design a solution architecture that addresses customer requirements.
@@ -130,7 +129,6 @@ python -c "import json; d=json.load(open('phase2_competitive.json')); print('Dif
 **Validation checkpoint:** Confirm at least one strong differentiator exists per customer priority before proceeding to Phase 3. If no differentiators found, escalate to Product Team (see Integration Points).
 
 ---
-
 ### Phase 3: Demo Preparation & Delivery
 
 **Objective:** Deliver compelling technical demonstrations tailored to stakeholder priorities.
@@ -152,7 +150,6 @@ python -c "import json; rfp=json.load(open('phase1_rfp_results.json')); [print('
 ```
 
 ---
-
 ### Phase 4: POC & Evaluation
 
 **Objective:** Execute a structured proof-of-concept that validates the solution.
@@ -179,7 +176,6 @@ python -c "import json; p=json.load(open('phase4_poc_plan.json')); print('Go/No-
 **Validation checkpoint:** POC conversion requires scorecard score >60% across all evaluation dimensions (functionality, performance, integration, usability, support). If score <60%, document gaps and loop back to Phase 2 for solution redesign.
 
 ---
-
 ### Phase 5: Proposal & Closing
 
 **Objective:** Deliver a technical proposal that supports the commercial close.
@@ -196,7 +192,6 @@ python -c "import json; p=json.load(open('phase4_poc_plan.json')); print('Go/No-
 **Output:** Technical proposal, implementation timeline, risk mitigation plan.
 
 ---
-
 ## Python Automation Tools
 
 ### 1. RFP Response Analyzer
@@ -223,7 +218,6 @@ python scripts/rfp_response_analyzer.py --help
 **Input Format:** See `assets/sample_rfp_data.json` for the complete schema.
 
 ---
-
 ### 2. Competitive Matrix Builder
 
 **Script:** `scripts/competitive_matrix_builder.py`
@@ -241,7 +235,6 @@ python scripts/competitive_matrix_builder.py competitive_data.json --format json
 **Output Includes:** Feature comparison matrix, weighted competitive scores, differentiators, vulnerabilities, and win themes.
 
 ---
-
 ### 3. POC Planner
 
 **Script:** `scripts/poc_planner.py`
@@ -263,7 +256,6 @@ python scripts/poc_planner.py poc_data.json --format json  # JSON output
 **Output Includes:** Phased POC plan, resource allocation, success criteria, evaluation scorecard, risk register, and go/no-go recommendation framework.
 
 ---
-
 ## Reference Knowledge Bases
 
 | Reference | Description |
@@ -290,7 +282,6 @@ python scripts/poc_planner.py poc_data.json --format json  # JSON output
 - **Customer Success** - Hand off POC results and success criteria to CSM from `../customer-success-manager/`
 
 ---
-
 **Last Updated:** February 2026
 **Status:** Production-ready
 **Tools:** 3 Python automation scripts

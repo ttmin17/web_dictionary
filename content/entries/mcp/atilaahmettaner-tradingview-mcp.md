@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 55
   stars_growth_pct: 1.1
   trending_score: 55.6
-  rank_current: 35
-  rank_delta: -6
+  rank_current: 39
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4952
@@ -153,13 +153,11 @@ If you want an AI clicking around *your* TradingView Desktop — editing Pine Sc
 </a>
 
 ---
-
 ## 🎥 Framework Demo
 
 https://github-production-user-asset-6210df.s3.amazonaws.com/67838093/478689497-4a605d98-43e8-49a6-8d3a-559315f6c01d.mp4
 
 ---
-
 ## 🆕 What's New
 
 **Stability & Strategy Expansion (May 2026)**
@@ -174,13 +172,11 @@ https://github-production-user-asset-6210df.s3.amazonaws.com/67838093/478689497-
 - **Full trade log + equity curve** outputs (`include_trade_log=True`, `include_equity_curve=True`).
 
 ---
-
 ## 🏗️ Architecture
 
 ![tradingview-mcp Architecture](https://raw.githubusercontent.com/atilaahmettaner/tradingview-mcp/main/assets/architecture.png)
 
 ---
-
 ## ✨ Why tradingview-mcp?
 
 | Feature | `tradingview-mcp` | Traditional Setups | Bloomberg Terminal |
@@ -193,7 +189,6 @@ https://github-production-user-asset-6210df.s3.amazonaws.com/67838093/478689497-
 | **API Keys** | **None required** | Multiple (OpenAI, etc.) | N/A |
 
 ---
-
 > [!WARNING]
 > **Security notice: impersonating copies of this repository.** This project is **Python-only** and has **no official npm / Node.js package**. The only official sources are this repository (`atilaahmettaner/tradingview-mcp`), the PyPI package [`tradingview-mcp-server`](https://pypi.org/project/tradingview-mcp-server/), and the hosted version, TradingMCP, at [tradingmcp.ai](https://tradingmcp.ai/?utm_source=github&utm_medium=readme&utm_content=security_notice) (formerly pro.cryptosieve.com).
 >
@@ -297,7 +292,6 @@ TradingView launched its own MCP server in public beta on 16 Sep 2026. It is a g
 </details>
 
 ---
-
 ## 🛠️ Troubleshooting
 
 ### 🪟 Windows: `MCP error -32001: Request timed out` on first launch
@@ -340,7 +334,6 @@ After the install finishes, start Claude Desktop with the normal config and the 
 > _Credit: [@wyh4444](https://github.com/wyh4444) for the original report in [#24](https://github.com/atilaahmettaner/tradingview-mcp/issues/24)._
 
 ---
-
 ## ⚠️ Error Envelope Format
 
 Tools that have adopted the structured error format return either their normal payload **or** an error envelope:
@@ -372,7 +365,6 @@ else:
 Stable codes are defined in [`core/errors.py`](https://github.com/atilaahmettaner/tradingview-mcp/blob/main/src/tradingview_mcp/core/errors.py).
 
 ---
-
 ## 📱 Use via Telegram, WhatsApp & More (OpenClaw)
 
 Connect this server to **Telegram, WhatsApp, Discord** and 20+ messaging platforms using [OpenClaw](https://openclaw.ai) — a self-hosted AI gateway. **Tested & verified on Hetzner VPS (Ubuntu 24.04).**
@@ -467,7 +459,6 @@ compare all strategies for BTC-USD
 
 
 
-
 Unlike basic screeners, this framework deploys **specialized AI agents** that debate findings in real-time:
 
 1. **🛠️ Technical Analyst** — Bollinger Bands (±3 proprietary rating), RSI, MACD
@@ -477,7 +468,6 @@ Unlike basic screeners, this framework deploys **specialized AI agents** that de
 *Output: `STRONG BUY` / `BUY` / `HOLD` / `SELL` / `STRONG SELL` with confidence score*
 
 ---
-
 ## 🔧 All 39 MCP Tools
 
 ### 📊 Backtesting Engine
@@ -512,7 +502,6 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 ```
 
 ---
-
 ### 💰 Yahoo Finance — Real-Time Prices *(New in v0.6.0)*
 
 | Tool | Description |
@@ -523,7 +512,6 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 **Supports:** Stocks (AAPL, TSLA, NVDA), Crypto (BTC-USD, ETH-USD, SOL-USD), ETFs (SPY, QQQ, GLD), Indices (^GSPC, ^DJI, ^IXIC, ^VIX), FX (EURUSD=X), Turkish (THYAO.IS, SASA.IS)
 
 ---
-
 ### 🌍 Global Stock Screener — Common & Preferred Shares
 
 | Tool | Description |
@@ -532,7 +520,6 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | `stock_prices` | Direct price lookup for specific symbols (comma-separated `EXCHANGE:SYMBOL`, e.g. `NASDAQ:NVDA, KRX:005930`) — price, currency, daily % change, with unrecognized tickers named in `not_found`. |
 
 ---
-
 ### 🧠 AI Sentiment & Intelligence
 
 | Tool | Description |
@@ -542,7 +529,6 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | `combined_analysis` | **Power Tool**: TradingView technicals + Reddit sentiment + live news → confluence decision. Now backed by retry + 60s cache for resilience against transient screener errors. |
 
 ---
-
 ### 📈 Technical Analysis Core
 
 | Tool | Description |
@@ -557,7 +543,6 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | `get_multi_timeframe_analysis` | Weekly→Daily→4H→1H→15m alignment analysis |
 
 ---
-
 ### 🌍 Multi-Exchange Support
 
 | Exchange | Tools |
@@ -571,7 +556,6 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | **India & Indonesia** | NSE, BSE (NIFTY, BANKNIFTY, SENSEX), IDX (Jakarta Composite) |
 
 ---
-
 ## 💬 Example AI Conversations
 
 ```
@@ -595,7 +579,6 @@ AI: [combined_analysis] → BUY (Technical STRONG BUY + Bullish Reddit + Positiv
 ```
 
 ---
-
 ## 💖 Support the Project
 
 This framework is **free and open source**, built in spare time. If it saves you hours of research or helps you make better decisions, please consider sponsoring:
@@ -613,7 +596,6 @@ This framework is **free and open source**, built in spare time. If it saves you
 Every sponsor directly funds new features like Walk-Forward Backtesting, Twitter/X sentiment, and managed cloud hosting.
 
 ---
-
 ## 📋 Roadmap
 
 - [x] TradingView technical analysis (30+ indicators)
@@ -630,11 +612,9 @@ Every sponsor directly funds new features like Walk-Forward Backtesting, Twitter
 - [ ] Managed cloud hosting (no local setup)
 
 ---
-
 ## 📄 License
 
 MIT License — see [LICENSE](https://github.com/atilaahmettaner/tradingview-mcp/blob/main/LICENSE) for details.
 
 ---
-
 *Disclaimer: This tool is for educational and research purposes only. It does not constitute financial advice. Always do your own research before making investment decisions.*

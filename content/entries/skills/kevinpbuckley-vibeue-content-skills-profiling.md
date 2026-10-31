@@ -207,7 +207,6 @@ here is a category error; they will not move the number.
    trace. Call `start_trace()` first.
 
 ---
-
 ## Trace Control
 
 ### Start / stop a trace
@@ -237,7 +236,6 @@ print(json.loads(unreal.PerformanceService.get_trace_status()))  # active? which
 ```
 
 ---
-
 ## Annotations — Mark Regions and Bookmarks
 
 Use these **while a trace is active** to label interesting moments in the Unreal Insights timeline.
@@ -255,7 +253,6 @@ unreal.PerformanceService.region_end("loading_level")
 ```
 
 ---
-
 ## Reading a capture back — `analyse()`
 
 `analyse()` reads a finished trace and/or the log and returns a perf summary (frame stats, worst
@@ -281,7 +278,6 @@ summed. The backward-compatible `pso_hitches` field is the best supported count.
 Remember: `analyse()` is frame-time aggregates only — use `frame_timing()` for the CPU/GPU split.
 
 ---
-
 ## Standalone capture — representative readings
 
 The editor viewport (and even PIE) is not always representative of a packaged run. `start_standalone()`
@@ -314,7 +310,6 @@ counts above 33/50/100 ms, and separate cold-start/shader/PSO runs from warm-cac
 `ProfileGPU` or `stat dumpframe` separately because their instrumentation stalls contaminate traces.
 
 ---
-
 ## Recommended flow
 
 ```python
@@ -336,7 +331,6 @@ print(json.loads(unreal.PerformanceService.analyse("both")))
 ```
 
 ---
-
 ## Channel Reference
 
 `start_trace` / `start_standalone` accept a comma-separated `channels` string; empty uses the
@@ -373,7 +367,6 @@ default set (frame, cpu, gpu, log, …). Common channels:
 | Load / streaming | `frame,loadtime,object,log` |
 
 ---
-
 ## Opening Traces in Unreal Insights
 
 `analyse()` covers most needs from Python, but you can open a `.utrace` for the full timeline UI:

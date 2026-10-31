@@ -27,7 +27,6 @@ signals:
   stars_growth_pct: 1.2
   trending_score: 481.77
   rank_current: 19
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 39265
@@ -48,14 +47,7 @@ tool:
   install_command: pip install pageindex
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - pageindex
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG

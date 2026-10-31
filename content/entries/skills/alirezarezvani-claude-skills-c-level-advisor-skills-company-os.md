@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -220,7 +220,6 @@ Who gets what information, when, and how.
 **Default rule:** If you're deciding whether to share something internally, share it. The cost of under-communication always exceeds the cost of over-communication inside a company.
 
 ---
-
 ## Operating System Selection
 
 See `references/os-comparison.md` for full comparison. Quick guide:
@@ -234,7 +233,6 @@ See `references/os-comparison.md` for full comparison. Quick guide:
 | None of the above quite fit | Custom hybrid |
 
 ---
-
 ## Implementation Roadmap
 
 Don't implement everything at once. See `references/implementation-guide.md` for the full 90-day plan.
@@ -247,7 +245,6 @@ Don't implement everything at once. See `references/implementation-guide.md` for
 These three alone will improve coordination more than most companies achieve in a year.
 
 ---
-
 ## Common Failure Modes
 
 **Partial implementation:** "We do OKRs but skip the weekly check-in." Half an operating system is worse than none — it creates theater without accountability.
@@ -263,7 +260,6 @@ These three alone will improve coordination more than most companies achieve in 
 **Annual planning without quarterly review:** Setting annual goals and checking in at year-end. Quarterly is the minimum review cycle for any meaningful goal.
 
 ---
-
 ## Integration with C-Suite
 
 The company OS is the connective tissue. Every other role depends on it:
@@ -279,7 +275,6 @@ The company OS is the connective tissue. Every other role depends on it:
 | Strategic Alignment Engine | Validates that team rocks cascade from company rocks |
 
 ---
-
 ## Key Questions for the Operating System
 
 - "If I asked five different team leads what the company's top 3 priorities are this quarter, would they give the same answers?"

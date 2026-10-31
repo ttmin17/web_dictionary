@@ -2,7 +2,9 @@
 slug: thedotmack-claude-mem-openclaw
 name: openclaw
 tagline: Agent skill from thedotmack/claude-mem
-summary: "Run this one-liner to install everything automatically:"
+summary: The installer handles dependency checks (Bun, uv), plugin installation,
+  memory slot configuration, AI provider setup, worker startup, and optional
+  observation feed configuration — all interactively.
 categories:
   - databases-memory
 tags:
@@ -103,7 +105,6 @@ curl -fsSL https://install.cmem.ai/openclaw.sh | bash -s -- --upgrade
 After installation, skip to [Step 4: Restart the Gateway and Verify](#step-4-restart-the-gateway-and-verify) to confirm everything is working.
 
 ---
-
 ## Manual Setup
 
 The steps below are for manual installation if you prefer not to use the automated installer, or need to troubleshoot individual steps.
@@ -213,7 +214,6 @@ Add the `claude-mem` plugin to your OpenClaw gateway configuration:
 - **`workerPort`** (number, default: `37777`) — The port where the claude-mem worker service is listening. Only change this if you configured the worker to use a different port.
 
 ---
-
 ## Step 4: Restart the Gateway and Verify
 
 Restart your OpenClaw gateway so it picks up the new plugin configuration. After restart, check the gateway logs for:

@@ -4,7 +4,7 @@ name: deepxiv
 tagline: Search and progressively read open-access academic papers through
   DeepXiv. Use when the user wants layered paper access, section-level reading,
   trendi
-summary: "DeepXiv is the progressive-reading literature source:"
+summary: Use DeepXiv when you want to avoid loading full papers too early.
 categories:
   - domain-research
 tags:

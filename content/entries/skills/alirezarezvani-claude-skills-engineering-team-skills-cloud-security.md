@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -68,7 +68,6 @@ skill:
 Cloud security posture assessment skill for detecting IAM privilege escalation, public storage exposure, network configuration risks, and infrastructure-as-code misconfigurations. This is NOT incident response for active cloud compromise (see incident-response) or application vulnerability scanning (see security-pen-testing) — this is about systematic cloud configuration analysis to prevent exploitation.
 
 ---
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -83,7 +82,6 @@ Cloud security posture assessment skill for detecting IAM privilege escalation, 
 - [Cross-References](#cross-references)
 
 ---
-
 ## Overview
 
 ### What This Skill Does
@@ -104,7 +102,6 @@ This skill provides the methodology and tooling for **cloud security posture man
 Read access to IAM policy documents, S3 bucket configurations, and security group rules in JSON format. For continuous monitoring, integrate with cloud provider APIs (AWS Config, Azure Policy, GCP Security Command Center).
 
 ---
-
 ## Cloud Posture Check Tool
 
 The `cloud_posture_check.py` tool runs three types of checks: `iam` (privilege escalation), `s3` (public access), and `sg` (network exposure). It auto-detects the check type from the config file structure or accepts explicit `--check` flags.
@@ -142,7 +139,6 @@ aws iam get-policy-version --policy-arn arn:aws:iam::123456789012:policy/MyPolic
 | 2 | Critical findings | Remediate immediately — escalate to incident-response if active |
 
 ---
-
 ## IAM Policy Analysis
 
 IAM analysis detects privilege escalation paths, overprivileged grants, public principal exposure, and data exfiltration risk.
@@ -183,7 +179,6 @@ For every critical or high finding, the tool outputs a `least_privilege_suggesti
 - Separate dangerous action combinations into different roles with distinct trust policies
 
 ---
-
 ## S3 Exposure Assessment
 
 S3 assessment checks four dimensions: public access block configuration, bucket ACL, bucket policy principal exposure, and default encryption.
@@ -226,7 +221,6 @@ S3 assessment checks four dimensions: public access block configuration, bucket 
 All four public access block settings must be enabled at both the bucket level and the AWS account level. Account-level settings can be overridden by bucket-level settings if not both enforced.
 
 ---
-
 ## Security Group Analysis
 
 Security group analysis flags inbound rules that expose admin ports, database ports, or all traffic to internet CIDRs (0.0.0.0/0, ::/0).
@@ -255,7 +249,6 @@ Security group analysis flags inbound rules that expose admin ports, database po
 Use `--severity-modifier internet-facing` when the assessed resource is directly internet-accessible (load balancer, API gateway, public EC2). Use `--severity-modifier regulated-data` when the resource handles PCI, HIPAA, or GDPR-regulated data. Both modifiers bump each finding's severity by one level.
 
 ---
-
 ## IaC Security Review
 
 Infrastructure-as-code review catches configuration issues at definition time, before deployment.
@@ -300,7 +293,6 @@ resource "aws_iam_policy" "good_policy" {
 Full CSPM check reference: `references/cspm-checks.md`
 
 ---
-
 ## Cloud Provider Coverage Matrix
 
 | Check Type | AWS | Azure | GCP |
@@ -311,7 +303,6 @@ Full CSPM check reference: `references/cspm-checks.md`
 | IaC scanning | Full (Terraform, CloudFormation) | Partial (ARM templates, Bicep) | Partial (Deployment Manager) |
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Quick Posture Check (20 Minutes)
@@ -380,7 +371,6 @@ aws s3api get-bucket-policy --bucket "${BUCKET}" | jq '.Policy | fromjson' | \
 ```
 
 ---
-
 ## Anti-Patterns
 
 1. **Running IAM analysis without checking escalation combos** — Individual high-risk actions in isolation may appear low-risk. The danger is in combinations: `iam:PassRole` alone is not critical, but `iam:PassRole + lambda:CreateFunction` is a confirmed privilege escalation path. Always analyze the full statement, not individual actions.
@@ -392,7 +382,6 @@ aws s3api get-bucket-policy --bucket "${BUCKET}" | jq '.Policy | fromjson' | \
 7. **Not applying severity modifiers for regulated data workloads** — A high finding in a general-purpose S3 bucket is different from the same finding in a bucket containing PHI or cardholder data. Always use `--severity-modifier regulated-data` when assessing resources in regulated data environments.
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |

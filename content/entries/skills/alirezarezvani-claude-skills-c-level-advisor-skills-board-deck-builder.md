@@ -4,7 +4,8 @@ name: board-deck-builder
 tagline: Assembles comprehensive board and investor update decks by pulling
   perspectives from all C-suite roles. Use when preparing board meetings,
   investor up
-summary: "Ask for a board deck in natural language, naming cadence and stage:"
+summary: Provide available metrics. The builder fills gaps with explicit
+  placeholders — never invents numbers.
 categories:
   - coding-agents
 tags:
@@ -26,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -174,7 +175,6 @@ Pick metrics the board actually tracks. Swap out anything they've said they don'
 - Detailed headcount breakdown
 
 ---
-
 ## Narrative Framework
 
 Boards see 10+ decks per quarter. Yours needs a through-line.
@@ -190,7 +190,6 @@ This works for good news AND bad news. It's credible because it acknowledges rea
 **Opening frame:** Start with the one thing that matters most — the board should know the key message by slide 3, not slide 30.
 
 ---
-
 ## Delivering Bad News
 
 Never bury it. Boards find out eventually. Finding out late makes it worse.
@@ -209,7 +208,6 @@ Never bury it. Boards find out eventually. Finding out late makes it worse.
 - Don't show a revised forecast without showing your assumptions
 
 ---
-
 ## Common Board Deck Mistakes
 
 | Mistake | Fix |
@@ -224,7 +222,6 @@ Never bury it. Boards find out eventually. Finding out late makes it worse.
 | Designing for the reader, not the room | Decks are presented — they must work spoken aloud |
 
 ---
-
 ## Cadence Notes
 
 **Quarterly (standard):** Full deck, all sections, 20-30 slides. Sent 48 hours in advance.

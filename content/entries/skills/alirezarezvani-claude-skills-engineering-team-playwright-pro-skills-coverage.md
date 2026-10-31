@@ -3,7 +3,8 @@ slug: alirezarezvani-claude-skills-engineering-team-playwright-pro-skills-covera
 name: coverage
 tagline: Analyze test coverage gaps. Use when user says "test coverage", "what's
   not tested", "coverage gaps", "missing tests", "coverage report", or "what nee
-summary: "Use the Explore subagent to catalog:"
+summary: "Routes/Pages: - Scan route definitions (Next.js app/, React Router
+  config, Vue Router, etc.) - List all user-facing pages with their paths"
 categories:
   - coding-agents
 tags:
@@ -25,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

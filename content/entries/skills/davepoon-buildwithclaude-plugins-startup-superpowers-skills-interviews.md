@@ -4,7 +4,9 @@ name: interviews
 tagline: "Manages the founder's customer discovery interview lifecycle —
   drafting scripts tailored to a target segment, refining existing ones,
   managing script "
-summary: "This skill covers two phases:"
+summary: 1. Script management — drafting, refining, and managing the lifecycle
+  of reusable interview scripts. 2. Transcript analysis — after an interview has
+  happened, extracting statements, linking them to hypotheses, reviewi...
 categories:
   - agent-frameworks
 tags:
@@ -91,7 +93,6 @@ mkdir -p startup/interviews/transcripts
 ```
 
 ---
-
 ## When scripts already exist
 
 Load and understand them for context. Infer intent from the conversation — don't mechanically ask "what do you want to do?" If the founder is:
@@ -118,7 +119,6 @@ When adding or updating scripts, follow the file conventions:
 Read before writing, propose before saving, get confirmation.
 
 ---
-
 ## When no scripts exist
 
 Check prerequisites:
@@ -136,7 +136,6 @@ Check prerequisites:
 The reference file's instructions take over from this point.
 
 ---
-
 ## When a transcript arrives
 
 After the founder runs an interview, they may bring back a transcript, paste text into chat, or simply recount a conversation from memory. In any of these cases, the workflow is the same: save the source material, dispatch the `interview-analyst` subagent, then dispatch the `hypotheses-manager` subagent, surface recommendations to the founder, and route confirmed hypothesis changes through the `hypotheses` skill.

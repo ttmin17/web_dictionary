@@ -3,7 +3,10 @@ slug: davepoon-buildwithclaude-plugins-claude-ops-skills-ops-dash
 name: ops-dash
 tagline: Interactive pixel-art command center dashboard. Visual business HQ with
   instant hotkey navigation to all ops commands, live status indicators, fire al
-summary: "Before rendering, load available context:"
+summary: "1. Preferences: Read
+  ${CLAUDEPLUGINDATADIR:-$HOME/.claude/plugins/data/ops-ops-marketplace}/prefer\
+  ences.json - owner — personalize the dashboard header greeting - timezone —
+  display timestamps correctly in status indi..."
 categories:
   - agent-frameworks
 tags:
@@ -82,7 +85,6 @@ Before rendering, load available context:
 The bin script reads `preferences.json` and `daemon-health.json` internally. The skill reads these files separately to check for warnings before invoking the script.
 
 ---
-
 ## Agent Teams support
 
 If `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` is set, use **Agent Teams** when loading dashboard data in parallel. This enables:
@@ -142,7 +144,6 @@ The dashboard has already rendered above via the shell script. Your job is to **
 | `back`, `dash`, `home` | Re-render dashboard | Return to dash |
 
 ---
-
 ## C-suite report access (option e)
 
 When user selects `e`:
@@ -184,7 +185,6 @@ No C-suite reports yet. Run /ops:ops-yolo to generate one.
 ```
 
 ---
-
 ## Settings sub-menu (option f)
 
 When user selects `f`, read current preferences and present an interactive config editor.
@@ -238,7 +238,6 @@ jq --arg key "owner" --arg val "$NEW_VALUE" '.[$key] = $val' "$PREFS" > "${PREFS
 After each change, confirm success and return to the settings menu. User can keep making changes or press `b` to go back.
 
 ---
-
 ## Share sub-menu (option g)
 
 When user selects `g`, generate a shareable summary of their ops setup:
@@ -299,7 +298,6 @@ Try it: /plugin marketplace add ops-marketplace
 | Export | Write a `~/.claude-ops-setup.md` file with full (sanitized) setup guide for sharing with teammates |
 
 ---
-
 ## FAQ sub-menu (option h)
 
 When user selects `h`:
@@ -358,7 +356,6 @@ For changelog (c): read and display `${CLAUDE_PLUGIN_ROOT}/CHANGELOG.md`.
 After each FAQ answer, offer `b) Back to dashboard` or `h) Back to FAQ`.
 
 ---
-
 ## Return-to-dash loop
 
 After ANY skill completes and returns control, **re-render the dashboard** by running the bin script again and re-entering the routing loop. This creates the "app within an app" experience — the user always comes back to the command center.

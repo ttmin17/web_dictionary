@@ -100,7 +100,6 @@ Before providing recommendations, understand:
    - Page types where shown
 
 ---
-
 ## Core Principles
 
 ### 1. Timing Is Everything
@@ -120,7 +119,6 @@ Before providing recommendations, understand:
 - Don't ruin the experience
 
 ---
-
 ## Trigger Strategies
 
 ### Time-Based
@@ -159,7 +157,6 @@ Before providing recommendations, understand:
 - Best for: High-intent segments
 
 ---
-
 ## Popup Types
 
 ### Email Capture Popup
@@ -229,7 +226,6 @@ Before providing recommendations, understand:
 - Good for chat, support, secondary CTAs
 
 ---
-
 ## Design Best Practices
 
 ### Visual Hierarchy
@@ -264,7 +260,6 @@ Before providing recommendations, understand:
 - Optional—copy can work alone
 
 ---
-
 ## Copy Formulas
 
 ### Headlines
@@ -290,7 +285,6 @@ Before providing recommendations, understand:
 - Avoid manipulative: "No, I don't want to save money"
 
 ---
-
 ## Frequency and Rules
 
 ### Frequency Capping
@@ -312,7 +306,6 @@ Before providing recommendations, understand:
 - Match offer to page context
 
 ---
-
 ## Compliance and Accessibility
 
 ### GDPR/Privacy
@@ -335,7 +328,6 @@ Before providing recommendations, understand:
 - Avoid: Full-screen before content on mobile
 
 ---
-
 ## Measurement
 
 ### Key Metrics
@@ -360,7 +352,6 @@ Before providing recommendations, understand:
 - Click-triggered: Higher (10%+, self-selected)
 
 ---
-
 ## Output Format
 
 ### Popup Design
@@ -381,7 +372,6 @@ If recommending multiple popups:
 Ideas to A/B test with expected outcomes
 
 ---
-
 ## Common Popup Strategies
 
 ### E-commerce
@@ -405,7 +395,6 @@ Ideas to A/B test with expected outcomes
 3. Exit intent: Final capture attempt
 
 ---
-
 ## Experiment Ideas
 
 ### Placement & Format Experiments
@@ -428,7 +417,6 @@ Ideas to A/B test with expected outcomes
 - Test visibility without blocking content
 
 ---
-
 ### Trigger Experiments
 
 **Timing Triggers**
@@ -449,7 +437,6 @@ Ideas to A/B test with expected outcomes
 - Test in-content triggers vs. sidebar triggers
 
 ---
-
 ### Messaging & Content Experiments
 
 **Headlines & Copy**
@@ -471,7 +458,6 @@ Ideas to A/B test with expected outcomes
 - Include social proof in popup
 
 ---
-
 ### Personalization Experiments
 
 **Dynamic Content**
@@ -487,7 +473,6 @@ Ideas to A/B test with expected outcomes
 - Exclude already-converted visitors
 
 ---
-
 ### Frequency & Rules Experiments
 
 - Test frequency capping (once per session vs. once per week)
@@ -496,7 +481,6 @@ Ideas to A/B test with expected outcomes
 - Show escalating offers over multiple visits
 
 ---
-
 ## Task-Specific Questions
 
 1. What's the primary goal for this popup?
@@ -507,7 +491,6 @@ Ideas to A/B test with expected outcomes
 6. Mobile vs. desktop traffic split?
 
 ---
-
 ## Related Skills
 
 - **lead-magnets**: For planning lead magnets to promote via popups

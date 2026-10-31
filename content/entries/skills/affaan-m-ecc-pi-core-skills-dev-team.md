@@ -201,7 +201,6 @@ Format:
 <response>
 
 ---
-
 ### Synthesis
 <3-5 bullet summary of what all four roles agree on, and where tensions exist>
 ```

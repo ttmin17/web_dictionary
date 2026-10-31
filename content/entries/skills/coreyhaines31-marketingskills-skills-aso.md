@@ -166,7 +166,6 @@ but is often indistinguishable from it in scraped HTML. If you cannot confirm
 its presence, note this and recommend the user check App Store Connect.
 
 ---
-
 ## Phase 1.5 — Assess Brand Maturity
 
 Before scoring, classify the app into one of three tiers. This determines how
@@ -205,7 +204,6 @@ choice by a team that has data I don't?" If the app has 1M+ ratings and a
 dedicated ASO team, assume their choices are data-informed unless clearly wrong.
 
 ---
-
 ## Phase 2 — Score Each Dimension
 
 Score each dimension 0-10 using the criteria in `references/scoring-criteria.md`.
@@ -241,7 +239,6 @@ Reference files for platform specs and benchmarks:
 | 0-29   | F     | Listing needs a complete overhaul                         |
 
 ---
-
 ## Phase 3 — Competitor Comparison (Optional)
 
 If the user provides competitor URLs or asks for comparison:
@@ -255,7 +252,6 @@ If no competitors are specified, suggest the user provide 2-3 or offer to search
 for top apps in their category.
 
 ---
-
 ## Phase 4 — Generate Report
 
 Use the template in `references/report-template.md` to structure the output.
@@ -278,7 +274,6 @@ The report must include:
 - When suggesting keyword changes, explain WHY each keyword matters
 
 ---
-
 ## Platform-Specific Rules
 
 ### Apple App Store — Key Facts
@@ -328,7 +323,6 @@ The report must include:
 | IAP names             | Yes              | Yes                    |
 
 ---
-
 ## Common Issues Checklist
 
 Flag these if found. Items marked _(tier-dependent)_ should be evaluated against
@@ -360,7 +354,6 @@ the app's brand maturity tier — they may be deliberate choices for Dominant ap
 - [ ] Generic "What's New" text _(acceptable at weekly+ release cadence for Established/Dominant)_
 
 ---
-
 ## Task-Specific Questions
 
 1. What is the App Store or Google Play URL?
@@ -371,7 +364,6 @@ the app's brand maturity tier — they may be deliberate choices for Dominant ap
 6. Do you have access to App Store Connect or Google Play Console data?
 
 ---
-
 ## Related Skills
 
 - **cro**: For optimizing the conversion of web-based landing pages that drive app installs

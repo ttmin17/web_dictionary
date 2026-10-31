@@ -201,5 +201,4 @@ SELECT pg_reload_conf();
 - Skill: `backend-patterns` - Patrones de API y backend
 
 ---
-
 *Basado en Agent Skills de Supabase (crédito: equipo de Supabase) (Licencia MIT)*

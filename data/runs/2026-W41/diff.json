@@ -1,286 +1,13 @@
 {
   "week": "2026-W41",
-  "generated_at": "2026-10-31T14:49:45.885Z",
+  "generated_at": "2026-10-31T15:55:42.888Z",
   "added": [
     {
-      "slug": "google-gemini-gemini-cli-gemini-skills-agent-tui",
-      "name": "agent-tui",
-      "type": "agent_skill",
-      "stars": 107245,
-      "repo": "google-gemini/gemini-cli"
-    },
-    {
-      "slug": "koala73-worldmonitor",
-      "name": "worldmonitor",
-      "type": "agent_tool",
-      "stars": 87972,
-      "repo": "koala73/worldmonitor"
-    },
-    {
-      "slug": "d4vinci-scrapling",
-      "name": "Scrapling",
-      "type": "agent_tool",
-      "stars": 86124,
-      "repo": "D4Vinci/Scrapling"
-    },
-    {
-      "slug": "ruvnet-ruflo-agents-skills-agent-adaptive-coordinator",
-      "name": "agent-adaptive-coordinator",
-      "type": "agent_skill",
-      "stars": 74048,
-      "repo": "ruvnet/ruflo"
-    },
-    {
-      "slug": "upstash-context7-packages-opencode-skills-context7-mcp",
-      "name": "context7-mcp",
-      "type": "agent_skill",
-      "stars": 62764,
-      "repo": "upstash/context7"
-    },
-    {
-      "slug": "chromedevtools-chrome-devtools-mcp-skills-a11y-debugging",
-      "name": "a11y-debugging",
-      "type": "agent_skill",
-      "stars": 53072,
-      "repo": "ChromeDevTools/chrome-devtools-mcp"
-    },
-    {
-      "slug": "deusdata-codebase-memory-mcp",
-      "name": "codebase-memory-mcp",
+      "slug": "0xsteph-pentest-ai",
+      "name": "pentest-ai",
       "type": "mcp_server",
-      "stars": 45967,
-      "repo": "DeusData/codebase-memory-mcp"
-    },
-    {
-      "slug": "reactive-resume-reactive-resume",
-      "name": "reactive-resume",
-      "type": "agent_tool",
-      "stars": 43949,
-      "repo": "reactive-resume/reactive-resume"
-    },
-    {
-      "slug": "bytedance-ui-tars-desktop",
-      "name": "UI-TARS-desktop",
-      "type": "agent_tool",
-      "stars": 39208,
-      "repo": "bytedance/UI-TARS-desktop"
-    },
-    {
-      "slug": "github-github-mcp-server",
-      "name": "github-mcp-server",
-      "type": "mcp_server",
-      "stars": 33427,
-      "repo": "github/github-mcp-server"
-    },
-    {
-      "slug": "assafelovic-gpt-researcher",
-      "name": "gpt-researcher",
-      "type": "agent_tool",
-      "stars": 29938,
-      "repo": "assafelovic/gpt-researcher"
-    },
-    {
-      "slug": "pascalorg-editor",
-      "name": "editor",
-      "type": "agent_tool",
-      "stars": 24713,
-      "repo": "pascalorg/editor"
-    },
-    {
-      "slug": "modelcontextprotocol-python-sdk",
-      "name": "python-sdk",
-      "type": "agent_tool",
-      "stars": 24504,
-      "repo": "modelcontextprotocol/python-sdk"
-    },
-    {
-      "slug": "czlonkowski-n8n-mcp-data-skills-n8n-agents",
-      "name": "n8n-agents",
-      "type": "agent_skill",
-      "stars": 23049,
-      "repo": "czlonkowski/n8n-mcp"
-    },
-    {
-      "slug": "1panel-dev-maxkb",
-      "name": "MaxKB",
-      "type": "agent_tool",
-      "stars": 22912,
-      "repo": "1Panel-dev/MaxKB"
-    },
-    {
-      "slug": "modelscope-funasr",
-      "name": "FunASR",
-      "type": "mcp_server",
-      "stars": 20602,
-      "repo": "modelscope/FunASR"
-    },
-    {
-      "slug": "evil0ctal-douyin_tiktok_download_api",
-      "name": "Douyin_TikTok_Download_API",
-      "type": "mcp_server",
-      "stars": 20496,
-      "repo": "Evil0ctal/Douyin_TikTok_Download_API"
-    },
-    {
-      "slug": "nukeop-nuclear-agents-skills-creating-components",
-      "name": "creating-components",
-      "type": "agent_skill",
-      "stars": 18615,
-      "repo": "nukeop/nuclear"
-    },
-    {
-      "slug": "wanshuiyin-auto-claude-code-research-in-sleep-skills-ablation-planner",
-      "name": "ablation-planner",
-      "type": "agent_skill",
-      "stars": 17090,
-      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep"
-    },
-    {
-      "slug": "triggerdotdev-trigger-dev",
-      "name": "trigger.dev",
-      "type": "agent_tool",
-      "stars": 16493,
-      "repo": "triggerdotdev/trigger.dev"
-    },
-    {
-      "slug": "xpzouying-xiaohongshu-mcp-skills-post-to-xhs",
-      "name": "post-to-xhs",
-      "type": "agent_skill",
-      "stars": 16133,
-      "repo": "xpzouying/xiaohongshu-mcp"
-    },
-    {
-      "slug": "open-metadata-openmetadata-skills-code-review",
-      "name": "code-review",
-      "type": "agent_skill",
-      "stars": 15400,
-      "repo": "open-metadata/OpenMetadata"
-    },
-    {
-      "slug": "yusufkaraaslan-skill_seekers-distribution-claude-plugin-skills-skill-builder",
-      "name": "skill-builder",
-      "type": "agent_skill",
-      "stars": 15114,
-      "repo": "yusufkaraaslan/Skill_Seekers"
-    },
-    {
-      "slug": "joeanamier-xhs-downloader",
-      "name": "XHS-Downloader",
-      "type": "mcp_server",
-      "stars": 12930,
-      "repo": "JoeanAmier/XHS-Downloader"
-    },
-    {
-      "slug": "morluto-rea",
-      "name": "rea",
-      "type": "agent_tool",
-      "stars": 12895,
-      "repo": "morluto/rea"
-    },
-    {
-      "slug": "openbyteinc-quantdinger",
-      "name": "QuantDinger",
-      "type": "mcp_server",
-      "stars": 12519,
-      "repo": "OpenByteInc/QuantDinger"
-    },
-    {
-      "slug": "mrexodia-ida-pro-mcp-skills-idapython",
-      "name": "idapython",
-      "type": "agent_skill",
-      "stars": 12505,
-      "repo": "mrexodia/ida-pro-mcp"
-    },
-    {
-      "slug": "0x4m4-hexstrike-ai",
-      "name": "hexstrike-ai",
-      "type": "agent_tool",
-      "stars": 12494,
-      "repo": "0x4m4/hexstrike-ai"
-    },
-    {
-      "slug": "0xjacky-nginx-ui-claude-skills-release",
-      "name": "release",
-      "type": "agent_skill",
-      "stars": 11571,
-      "repo": "0xJacky/nginx-ui"
-    },
-    {
-      "slug": "xinnan-tech-xiaozhi-esp32-server",
-      "name": "xiaozhi-esp32-server",
-      "type": "mcp_server",
-      "stars": 10747,
-      "repo": "xinnan-tech/xiaozhi-esp32-server"
-    },
-    {
-      "slug": "mcp-use-mcp-use-libraries-typescript-packages-server-examples-skills-over-mcp-skills-purchasing",
-      "name": "purchasing",
-      "type": "agent_skill",
-      "stars": 10728,
-      "repo": "mcp-use/mcp-use"
-    },
-    {
-      "slug": "apify-apify-mcp-server-claude-skills-bug-triage",
-      "name": "bug-triage",
-      "type": "agent_skill",
-      "stars": 9987,
-      "repo": "apify/apify-mcp-server"
-    },
-    {
-      "slug": "awslabs-mcp-src-aurora-dsql-mcp-server-skills-amazon-aurora-dsql-skill",
-      "name": "amazon aurora dsql",
-      "type": "agent_skill",
-      "stars": 9761,
-      "repo": "awslabs/mcp"
-    },
-    {
-      "slug": "trailhq-graft-claude-skills-graft",
-      "name": "graft",
-      "type": "agent_skill",
-      "stars": 9672,
-      "repo": "trailhq/Graft"
-    },
-    {
-      "slug": "openstatushq-openstatus-apps-web-public-well-known-agent-skills-openstatus-api",
-      "name": "openstatus-api",
-      "type": "agent_skill",
-      "stars": 9175,
-      "repo": "openstatusHQ/openstatus"
-    },
-    {
-      "slug": "maximhq-bifrost-claude-skills-add-pricing-field",
-      "name": "add-pricing-field",
-      "type": "agent_skill",
-      "stars": 8605,
-      "repo": "maximhq/bifrost"
-    },
-    {
-      "slug": "firerpa-lamda",
-      "name": "lamda",
-      "type": "mcp_server",
-      "stars": 8544,
-      "repo": "firerpa/lamda"
-    },
-    {
-      "slug": "osaurus-ai-osaurus",
-      "name": "osaurus",
-      "type": "mcp_server",
-      "stars": 8026,
-      "repo": "osaurus-ai/osaurus"
-    },
-    {
-      "slug": "firecrawl-firecrawl-mcp-server-plugins-claude-firecrawl-search-skills-firecrawl-developer-index",
-      "name": "firecrawl-developer-index",
-      "type": "agent_skill",
-      "stars": 7566,
-      "repo": "firecrawl/firecrawl-mcp-server"
-    },
-    {
-      "slug": "devlikeapro-waha",
-      "name": "waha",
-      "type": "mcp_server",
-      "stars": 7562,
-      "repo": "devlikeapro/waha"
+      "stars": 1718,
+      "repo": "0xSteph/pentest-ai"
     },
     {
       "slug": "agentdeskai-browser-tools-mcp",
@@ -290,95 +17,32 @@
       "repo": "AgentDeskAI/browser-tools-mcp"
     },
     {
-      "slug": "zipstack-unstract-claude-skills-adapter-ops",
-      "name": "adapter-ops",
-      "type": "agent_skill",
-      "stars": 7275,
-      "repo": "Zipstack/unstract"
-    },
-    {
-      "slug": "minishlab-semble",
-      "name": "semble",
-      "type": "agent_tool",
-      "stars": 6187,
-      "repo": "MinishLab/semble"
-    },
-    {
-      "slug": "asciimoo-hister",
-      "name": "hister",
+      "slug": "ahujasid-ableton-mcp",
+      "name": "ableton-mcp",
       "type": "mcp_server",
-      "stars": 5931,
-      "repo": "asciimoo/hister"
+      "stars": 3148,
+      "repo": "ahujasid/ableton-mcp"
     },
     {
-      "slug": "lemonade-sdk-lemonade",
-      "name": "lemonade",
+      "slug": "ahujasid-mcp-for-blender",
+      "name": "mcp-for-blender",
       "type": "mcp_server",
-      "stars": 5839,
-      "repo": "lemonade-sdk/lemonade"
+      "stars": 30173,
+      "repo": "ahujasid/mcp-for-blender"
     },
     {
-      "slug": "jerbouma-financetoolkit",
-      "name": "FinanceToolkit",
+      "slug": "ai-ql-tuui",
+      "name": "tuui",
       "type": "mcp_server",
-      "stars": 5404,
-      "repo": "JerBouma/FinanceToolkit"
+      "stars": 1155,
+      "repo": "AI-QL/tuui"
     },
     {
-      "slug": "54yyyu-zotero-mcp-src-zotero_mcp-skills-zotero-cli",
-      "name": "zotero-cli",
-      "type": "agent_skill",
-      "stars": 5272,
-      "repo": "54yyyu/zotero-mcp"
-    },
-    {
-      "slug": "vitali87-code-graph-rag",
-      "name": "code-graph-rag",
-      "type": "agent_tool",
-      "stars": 5236,
-      "repo": "vitali87/code-graph-rag"
-    },
-    {
-      "slug": "tabularisdb-tabularis-claude-skills-gitnexus-gitnexus-cli",
-      "name": "gitnexus-cli",
-      "type": "agent_skill",
-      "stars": 5134,
-      "repo": "TabularisDB/tabularis"
-    },
-    {
-      "slug": "atilaahmettaner-tradingview-mcp-openclaw",
-      "name": "tradingview-mcp",
-      "type": "agent_skill",
-      "stars": 4952,
-      "repo": "atilaahmettaner/tradingview-mcp"
-    },
-    {
-      "slug": "bethington-ghidra-mcp",
-      "name": "ghidra-mcp",
+      "slug": "alexander-zuev-supabase-mcp-server",
+      "name": "supabase-mcp-server",
       "type": "mcp_server",
-      "stars": 4702,
-      "repo": "bethington/ghidra-mcp"
-    },
-    {
-      "slug": "u14app-deep-research",
-      "name": "deep-research",
-      "type": "mcp_server",
-      "stars": 4694,
-      "repo": "u14app/deep-research"
-    },
-    {
-      "slug": "ivanmurzak-unity-mcp-claude-skills-build-cli",
-      "name": "build-cli",
-      "type": "agent_skill",
-      "stars": 4397,
-      "repo": "IvanMurzak/Unity-MCP"
-    },
-    {
-      "slug": "open-webui-mcpo",
-      "name": "mcpo",
-      "type": "mcp_server",
-      "stars": 4392,
-      "repo": "open-webui/mcpo"
+      "stars": 831,
+      "repo": "alexander-zuev/supabase-mcp-server"
     },
     {
       "slug": "antvis-mcp-server-chart",
@@ -388,165 +52,18 @@
       "repo": "antvis/mcp-server-chart"
     },
     {
-      "slug": "microsoft-flint-chart-github-extensions-flint-chart-skills-flint-chart-author",
-      "name": "flint-chart-author",
-      "type": "agent_skill",
-      "stars": 4345,
-      "repo": "microsoft/flint-chart"
-    },
-    {
-      "slug": "dagucloud-dagu-skills-dagu",
-      "name": "dagu",
-      "type": "agent_skill",
-      "stars": 4292,
-      "repo": "dagucloud/dagu"
-    },
-    {
-      "slug": "haris-musa-excel-mcp-server",
-      "name": "excel-mcp-server",
+      "slug": "arben-adm-mcp-sequential-thinking",
+      "name": "mcp-sequential-thinking",
       "type": "mcp_server",
-      "stars": 4212,
-      "repo": "haris-musa/excel-mcp-server"
+      "stars": 952,
+      "repo": "arben-adm/mcp-sequential-thinking"
     },
     {
-      "slug": "irinabuht12-oss-google-ads-meta-ads-mcp",
-      "name": "google-ads-meta-ads-mcp",
+      "slug": "bethington-ghidra-mcp",
+      "name": "ghidra-mcp",
       "type": "mcp_server",
-      "stars": 4200,
-      "repo": "irinabuht12-oss/google-ads-meta-ads-mcp"
-    },
-    {
-      "slug": "txn2-kubefwd",
-      "name": "kubefwd",
-      "type": "mcp_server",
-      "stars": 4173,
-      "repo": "txn2/kubefwd"
-    },
-    {
-      "slug": "evalstate-fast-agent",
-      "name": "fast-agent",
-      "type": "agent_tool",
-      "stars": 3929,
-      "repo": "evalstate/fast-agent"
-    },
-    {
-      "slug": "yvgude-lean-ctx-rust-src-templates",
-      "name": "lean-ctx",
-      "type": "agent_skill",
-      "stars": 3866,
-      "repo": "yvgude/lean-ctx"
-    },
-    {
-      "slug": "pipeshub-ai-pipeshub-ai-claude-skills-release-changelog",
-      "name": "release-changelog",
-      "type": "agent_skill",
-      "stars": 3814,
-      "repo": "pipeshub-ai/pipeshub-ai"
-    },
-    {
-      "slug": "stickerdaniel-linkedin-mcp-server-agents-skills-1-triage-issues",
-      "name": "1-triage-issues",
-      "type": "agent_skill",
-      "stars": 3782,
-      "repo": "stickerdaniel/linkedin-mcp-server"
-    },
-    {
-      "slug": "modelcontextprotocol-java-sdk",
-      "name": "java-sdk",
-      "type": "mcp_server",
-      "stars": 3722,
-      "repo": "modelcontextprotocol/java-sdk"
-    },
-    {
-      "slug": "davepoon-buildwithclaude-plugins-agent-triforce-skills-code-health",
-      "name": "code-health",
-      "type": "agent_skill",
-      "stars": 3604,
-      "repo": "davepoon/buildwithclaude"
-    },
-    {
-      "slug": "huangjunsen0406-py-xiaozhi",
-      "name": "py-xiaozhi",
-      "type": "mcp_server",
-      "stars": 3492,
-      "repo": "huangjunsen0406/py-xiaozhi"
-    },
-    {
-      "slug": "taylorwilsdon-google_workspace_mcp-skills-managing-google-workspace",
-      "name": "managing-google-workspace",
-      "type": "agent_skill",
-      "stars": 3298,
-      "repo": "taylorwilsdon/google_workspace_mcp"
-    },
-    {
-      "slug": "neomjs-neo",
-      "name": "neo",
-      "type": "mcp_server",
-      "stars": 3285,
-      "repo": "neomjs/neo"
-    },
-    {
-      "slug": "xpf0000-flyenv-codex-skills-flyenv-module-boundaries",
-      "name": "flyenv-module-boundaries",
-      "type": "agent_skill",
-      "stars": 3265,
-      "repo": "xpf0000/FlyEnv"
-    },
-    {
-      "slug": "cortex-docs-cortex",
-      "name": "cortex",
-      "type": "mcp_server",
-      "stars": 3232,
-      "repo": "cortex-docs/cortex"
-    },
-    {
-      "slug": "silexlabs-silex",
-      "name": "Silex",
-      "type": "mcp_server",
-      "stars": 2997,
-      "repo": "silexlabs/Silex"
-    },
-    {
-      "slug": "zhizhuodemao-js-reverse-mcp",
-      "name": "js-reverse-mcp",
-      "type": "mcp_server",
-      "stars": 2904,
-      "repo": "zhizhuodemao/js-reverse-mcp"
-    },
-    {
-      "slug": "zinja-coder-jadx-ai-mcp",
-      "name": "jadx-ai-mcp",
-      "type": "mcp_server",
-      "stars": 2861,
-      "repo": "zinja-coder/jadx-ai-mcp"
-    },
-    {
-      "slug": "vexa-ai-vexa-clients-claude-plugin-skills-meetings",
-      "name": "vexa-meetings",
-      "type": "agent_skill",
-      "stars": 2858,
-      "repo": "Vexa-ai/vexa"
-    },
-    {
-      "slug": "opensolon-solon",
-      "name": "solon",
-      "type": "mcp_server",
-      "stars": 2794,
-      "repo": "opensolon/solon"
-    },
-    {
-      "slug": "sparfenyuk-mcp-proxy",
-      "name": "mcp-proxy",
-      "type": "mcp_server",
-      "stars": 2773,
-      "repo": "sparfenyuk/mcp-proxy"
-    },
-    {
-      "slug": "metatool-ai-metamcp",
-      "name": "metamcp",
-      "type": "mcp_server",
-      "stars": 2697,
-      "repo": "metatool-ai/metamcp"
+      "stars": 4702,
+      "repo": "bethington/ghidra-mcp"
     },
     {
       "slug": "brightdata-brightdata-mcp",
@@ -563,242 +80,11 @@
       "repo": "chrisryugj/korean-law-mcp"
     },
     {
-      "slug": "go-nunu-nunu",
-      "name": "nunu",
-      "type": "mcp_server",
-      "stars": 2607,
-      "repo": "go-nunu/nunu"
-    },
-    {
-      "slug": "samanhappy-mcphub-agents-skills-polish-release",
-      "name": "polish-release",
-      "type": "agent_skill",
-      "stars": 2500,
-      "repo": "samanhappy/mcphub"
-    },
-    {
-      "slug": "nitrocloudofficial-nitrostack-sample-apps-ai-scheduler-nitrostack-hackathon-agents-skills-auth-security",
-      "name": "nitrostack-auth-security",
-      "type": "agent_skill",
-      "stars": 2465,
-      "repo": "nitrocloudofficial/nitrostack"
-    },
-    {
-      "slug": "0xmassi-webclaw",
-      "name": "webclaw",
-      "type": "agent_tool",
-      "stars": 2371,
-      "repo": "0xMassi/webclaw"
-    },
-    {
-      "slug": "jnmetacode-agency-orchestrator-ao-skills-shortfilm-prompt",
-      "name": "shortfilm-prompt",
-      "type": "agent_skill",
-      "stars": 2330,
-      "repo": "jnMetaCode/agency-orchestrator"
-    },
-    {
-      "slug": "joooook-12306-mcp",
-      "name": "12306-mcp",
-      "type": "mcp_server",
-      "stars": 2288,
-      "repo": "Joooook/12306-mcp"
-    },
-    {
-      "slug": "amoylab-unla",
-      "name": "Unla",
-      "type": "mcp_server",
-      "stars": 2238,
-      "repo": "AmoyLab/Unla"
-    },
-    {
-      "slug": "777genius-agent-teams-ai",
-      "name": "agent-teams-ai",
-      "type": "mcp_server",
-      "stars": 2235,
-      "repo": "777genius/agent-teams-ai"
-    },
-    {
-      "slug": "vibheksoni-stealth-browser-mcp-skills-stealth-browser-mcp",
-      "name": "stealth-browser-mcp",
-      "type": "agent_skill",
-      "stars": 2212,
-      "repo": "vibheksoni/stealth-browser-mcp"
-    },
-    {
       "slug": "cyb3rmx-qu1cksc0pe",
       "name": "Qu1cksc0pe",
       "type": "mcp_server",
       "stars": 2065,
       "repo": "CYB3RMX/Qu1cksc0pe"
-    },
-    {
-      "slug": "doobidoo-mcp-memory-service-claude-skills-gitnexus-debugging",
-      "name": "gitnexus-debugging",
-      "type": "agent_skill",
-      "stars": 1993,
-      "repo": "doobidoo/mcp-memory-service"
-    },
-    {
-      "slug": "zzet-gortex",
-      "name": "gortex",
-      "type": "mcp_server",
-      "stars": 1869,
-      "repo": "zzet/gortex"
-    },
-    {
-      "slug": "korotovsky-slack-mcp-server",
-      "name": "slack-mcp-server",
-      "type": "mcp_server",
-      "stars": 1860,
-      "repo": "korotovsky/slack-mcp-server"
-    },
-    {
-      "slug": "openagentplatform-dive",
-      "name": "Dive",
-      "type": "mcp_server",
-      "stars": 1827,
-      "repo": "OpenAgentPlatform/Dive"
-    },
-    {
-      "slug": "mcp-brasil-mcp-brasil",
-      "name": "mcp-brasil",
-      "type": "mcp_server",
-      "stars": 1806,
-      "repo": "Mcp-Brasil/mcp-brasil"
-    },
-    {
-      "slug": "hkuds-nanobot",
-      "name": "nanobot",
-      "type": "agent_tool",
-      "stars": 48838,
-      "repo": "HKUDS/nanobot"
-    },
-    {
-      "slug": "ahujasid-mcp-for-blender",
-      "name": "mcp-for-blender",
-      "type": "mcp_server",
-      "stars": 30173,
-      "repo": "ahujasid/mcp-for-blender"
-    },
-    {
-      "slug": "prefecthq-fastmcp",
-      "name": "fastmcp",
-      "type": "agent_tool",
-      "stars": 27993,
-      "repo": "PrefectHQ/fastmcp"
-    },
-    {
-      "slug": "coplaydev-unity-mcp-claude-skills-blender-to-unity",
-      "name": "blender-to-unity",
-      "type": "agent_skill",
-      "stars": 14742,
-      "repo": "CoplayDev/unity-mcp"
-    },
-    {
-      "slug": "xiaoduoya-codex-with-chatgpt-skill",
-      "name": "codex-with-chatgpt",
-      "type": "agent_skill",
-      "stars": 7095,
-      "repo": "XiaoDuoYa/codex-with-chatgpt"
-    },
-    {
-      "slug": "grab-cursor-talk-to-figma-mcp",
-      "name": "cursor-talk-to-figma-mcp",
-      "type": "mcp_server",
-      "stars": 7047,
-      "repo": "grab/cursor-talk-to-figma-mcp"
-    },
-    {
-      "slug": "prest-prest-cursor-skills-prest-integration-tests",
-      "name": "prest-integration-tests",
-      "type": "agent_skill",
-      "stars": 4622,
-      "repo": "prest/prest"
-    },
-    {
-      "slug": "ibm-mcp-context-forge",
-      "name": "mcp-context-forge",
-      "type": "mcp_server",
-      "stars": 4582,
-      "repo": "IBM/mcp-context-forge"
-    },
-    {
-      "slug": "jub0t-concat-claude-skills-run-concat",
-      "name": "run-concat",
-      "type": "agent_skill",
-      "stars": 4202,
-      "repo": "jub0t/concat"
-    },
-    {
-      "slug": "ahujasid-ableton-mcp",
-      "name": "ableton-mcp",
-      "type": "mcp_server",
-      "stars": 3148,
-      "repo": "ahujasid/ableton-mcp"
-    },
-    {
-      "slug": "zcaceres-markdownify-mcp",
-      "name": "markdownify-mcp",
-      "type": "mcp_server",
-      "stars": 3001,
-      "repo": "zcaceres/markdownify-mcp"
-    },
-    {
-      "slug": "beenuar-aisoc",
-      "name": "AiSOC",
-      "type": "agent_tool",
-      "stars": 2387,
-      "repo": "beenuar/AiSOC"
-    },
-    {
-      "slug": "ibm-assetopsbench",
-      "name": "AssetOpsBench",
-      "type": "agent_tool",
-      "stars": 2330,
-      "repo": "IBM/AssetOpsBench"
-    },
-    {
-      "slug": "stacklok-toolhive-claude-skills-add-rule",
-      "name": "add-rule",
-      "type": "agent_skill",
-      "stars": 2242,
-      "repo": "stacklok/toolhive"
-    },
-    {
-      "slug": "can4hou6joeng4-boss-agent-cli",
-      "name": "boss-agent-cli",
-      "type": "agent_tool",
-      "stars": 2045,
-      "repo": "can4hou6joeng4/boss-agent-cli"
-    },
-    {
-      "slug": "0xsteph-pentest-ai",
-      "name": "pentest-ai",
-      "type": "mcp_server",
-      "stars": 1718,
-      "repo": "0xSteph/pentest-ai"
-    },
-    {
-      "slug": "openosint-openosint",
-      "name": "OpenOSINT",
-      "type": "mcp_server",
-      "stars": 1707,
-      "repo": "OpenOSINT/OpenOSINT"
-    },
-    {
-      "slug": "mukul975-cve-mcp-server",
-      "name": "cve-mcp-server",
-      "type": "mcp_server",
-      "stars": 1619,
-      "repo": "mukul975/cve-mcp-server"
-    },
-    {
-      "slug": "nicobailon-pi-mcp-adapter-skills-mcp-scripting",
-      "name": "mcp-scripting",
-      "type": "agent_skill",
-      "stars": 1578,
-      "repo": "nicobailon/pi-mcp-adapter"
     },
     {
       "slug": "designcomputer-mysql_mcp_server",
@@ -808,501 +94,18 @@
       "repo": "designcomputer/mysql_mcp_server"
     },
     {
-      "slug": "awslabs-cli-agent-orchestrator-agent-plugin-cao-contributor-skills-cao-plugin",
-      "name": "cao-plugin",
-      "type": "agent_skill",
-      "stars": 1394,
-      "repo": "awslabs/cli-agent-orchestrator"
-    },
-    {
-      "slug": "mcpjungle-mcpjungle",
-      "name": "MCPJungle",
+      "slug": "deusdata-codebase-memory-mcp",
+      "name": "codebase-memory-mcp",
       "type": "mcp_server",
-      "stars": 1292,
-      "repo": "mcpjungle/MCPJungle"
+      "stars": 45967,
+      "repo": "DeusData/codebase-memory-mcp"
     },
     {
-      "slug": "ling71671-open-reverselab",
-      "name": "open-reverselab",
+      "slug": "devlikeapro-waha",
+      "name": "waha",
       "type": "mcp_server",
-      "stars": 1228,
-      "repo": "LING71671/open-reverselab"
-    },
-    {
-      "slug": "ai-ql-tuui",
-      "name": "tuui",
-      "type": "mcp_server",
-      "stars": 1155,
-      "repo": "AI-QL/tuui"
-    },
-    {
-      "slug": "helpcode-ai-anythingmcp",
-      "name": "anythingmcp",
-      "type": "mcp_server",
-      "stars": 990,
-      "repo": "HelpCode-ai/anythingmcp"
-    },
-    {
-      "slug": "rath-team-openrath",
-      "name": "OpenRath",
-      "type": "agent_tool",
-      "stars": 960,
-      "repo": "Rath-Team/OpenRath"
-    },
-    {
-      "slug": "arben-adm-mcp-sequential-thinking",
-      "name": "mcp-sequential-thinking",
-      "type": "mcp_server",
-      "stars": 952,
-      "repo": "arben-adm/mcp-sequential-thinking"
-    },
-    {
-      "slug": "suekou-mcp-notion-server",
-      "name": "mcp-notion-server",
-      "type": "mcp_server",
-      "stars": 920,
-      "repo": "suekou/mcp-notion-server"
-    },
-    {
-      "slug": "codeabra-iai-personal-memory-engine",
-      "name": "iai-personal-memory-engine",
-      "type": "agent_tool",
-      "stars": 901,
-      "repo": "CodeAbra/iai-personal-memory-engine"
-    },
-    {
-      "slug": "riponcm-projectmem",
-      "name": "projectmem",
-      "type": "mcp_server",
-      "stars": 852,
-      "repo": "riponcm/projectmem"
-    },
-    {
-      "slug": "utensils-mcp-nixos",
-      "name": "mcp-nixos",
-      "type": "mcp_server",
-      "stars": 851,
-      "repo": "utensils/mcp-nixos"
-    },
-    {
-      "slug": "karanb192-reddit-mcp-buddy",
-      "name": "reddit-mcp-buddy",
-      "type": "mcp_server",
-      "stars": 846,
-      "repo": "karanb192/reddit-mcp-buddy"
-    },
-    {
-      "slug": "alexander-zuev-supabase-mcp-server",
-      "name": "supabase-mcp-server",
-      "type": "mcp_server",
-      "stars": 831,
-      "repo": "alexander-zuev/supabase-mcp-server"
-    },
-    {
-      "slug": "jonigl-mcp-client-for-ollama",
-      "name": "mcp-client-for-ollama",
-      "type": "mcp_server",
-      "stars": 827,
-      "repo": "jonigl/mcp-client-for-ollama"
-    },
-    {
-      "slug": "rahilp-second-brain-cloudflare",
-      "name": "second-brain-cloudflare",
-      "type": "mcp_server",
-      "stars": 803,
-      "repo": "rahilp/second-brain-cloudflare"
-    },
-    {
-      "slug": "zinja-coder-jadx-mcp-server",
-      "name": "jadx-mcp-server",
-      "type": "mcp_server",
-      "stars": 791,
-      "repo": "zinja-coder/jadx-mcp-server"
-    },
-    {
-      "slug": "dadbodgeoff-drift",
-      "name": "drift",
-      "type": "mcp_server",
-      "stars": 790,
-      "repo": "dadbodgeoff/drift"
-    },
-    {
-      "slug": "wshobson-maverick-mcp",
-      "name": "maverick-mcp",
-      "type": "mcp_server",
-      "stars": 701,
-      "repo": "wshobson/maverick-mcp"
-    },
-    {
-      "slug": "marc-shade-world-intel-mcp",
-      "name": "world-intel-mcp",
-      "type": "mcp_server",
-      "stars": 657,
-      "repo": "marc-shade/world-intel-mcp"
-    },
-    {
-      "slug": "affaan-m-ecc-agents-skills-agent-introspection-debugging",
-      "name": "agent-introspection-debugging",
-      "type": "agent_skill",
-      "stars": 274698,
-      "repo": "affaan-m/ECC"
-    },
-    {
-      "slug": "nousresearch-hermes-agent",
-      "name": "hermes-agent",
-      "type": "agent_tool",
-      "stars": 251859,
-      "repo": "NousResearch/hermes-agent"
-    },
-    {
-      "slug": "dietrichgebert-ponytail-openclaw-skills-ponytail-audit",
-      "name": "ponytail-audit",
-      "type": "agent_skill",
-      "stars": 157371,
-      "repo": "DietrichGebert/ponytail"
-    },
-    {
-      "slug": "nextlevelbuilder-ui-ux-pro-max-skill-claude-skills-banner-design",
-      "name": "banner-design",
-      "type": "agent_skill",
-      "stars": 133772,
-      "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
-    },
-    {
-      "slug": "graphify-labs-graphify",
-      "name": "graphify",
-      "type": "agent_tool",
-      "stars": 124586,
-      "repo": "Graphify-Labs/graphify"
-    },
-    {
-      "slug": "juliusbrussee-caveman-plugins-caveman-skills-cavecrew",
-      "name": "cavecrew",
-      "type": "agent_skill",
-      "stars": 110366,
-      "repo": "JuliusBrussee/caveman"
-    },
-    {
-      "slug": "addyosmani-agent-skills-skills-api-and-interface-design",
-      "name": "api-and-interface-design",
-      "type": "agent_skill",
-      "stars": 102528,
-      "repo": "addyosmani/agent-skills"
-    },
-    {
-      "slug": "thedotmack-claude-mem-claude-mem-cursor-skills-agent-cost-report",
-      "name": "Agent Cost Report",
-      "type": "agent_skill",
-      "stars": 97519,
-      "repo": "thedotmack/claude-mem"
-    },
-    {
-      "slug": "leonxlnx-taste-skill-skills-brandkit",
-      "name": "brandkit",
-      "type": "agent_skill",
-      "stars": 93423,
-      "repo": "Leonxlnx/taste-skill"
-    },
-    {
-      "slug": "panniantong-agent-reach",
-      "name": "Agent-Reach",
-      "type": "agent_tool",
-      "stars": 93055,
-      "repo": "Panniantong/Agent-Reach"
-    },
-    {
-      "slug": "stablyai-orca-skills-computer-use",
-      "name": "computer-use",
-      "type": "agent_skill",
-      "stars": 86961,
-      "repo": "stablyai/orca"
-    },
-    {
-      "slug": "egonex-ai-understand-anything-understand-anything-plugin-skills-understand-chat",
-      "name": "understand-chat",
-      "type": "agent_skill",
-      "stars": 85511,
-      "repo": "Egonex-AI/Understand-Anything"
-    },
-    {
-      "slug": "headroomlabs-ai-headroom",
-      "name": "headroom",
-      "type": "agent_tool",
-      "stars": 74574,
-      "repo": "headroomlabs-ai/headroom"
-    },
-    {
-      "slug": "diegosouzapw-omniroute",
-      "name": "OmniRoute",
-      "type": "agent_tool",
-      "stars": 73849,
-      "repo": "diegosouzapw/OmniRoute"
-    },
-    {
-      "slug": "career-ops-hq-career-ops-agents-skills-career-ops",
-      "name": "career-ops",
-      "type": "agent_skill",
-      "stars": 73692,
-      "repo": "career-ops-hq/career-ops"
-    },
-    {
-      "slug": "asgeirtj-system_prompts_leaks-anthropic-claude-code-skills-anthropic-skills-schedule",
-      "name": "schedule",
-      "type": "agent_skill",
-      "stars": 69069,
-      "repo": "asgeirtj/system_prompts_leaks"
-    },
-    {
-      "slug": "shanraisshan-claude-code-best-practice-claude-skills-agent-browser",
-      "name": "agent-browser",
-      "type": "agent_skill",
-      "stars": 67232,
-      "repo": "shanraisshan/claude-code-best-practice"
-    },
-    {
-      "slug": "mvanhorn-last30days-skill-skills-last30days",
-      "name": "last30days",
-      "type": "agent_skill",
-      "stars": 63673,
-      "repo": "mvanhorn/last30days-skill"
-    },
-    {
-      "slug": "blader-humanizer",
-      "name": "humanizer",
-      "type": "agent_skill",
-      "stars": 54590,
-      "repo": "blader/humanizer"
-    },
-    {
-      "slug": "cherryhq-cherry-studio-agents-skills-cherry-electron-dev",
-      "name": "cherry-electron-dev",
-      "type": "agent_skill",
-      "stars": 52419,
-      "repo": "CherryHQ/cherry-studio"
-    },
-    {
-      "slug": "zhayujie-cowagent-skills-image-generation",
-      "name": "image-generation",
-      "type": "agent_skill",
-      "stars": 47264,
-      "repo": "zhayujie/CowAgent"
-    },
-    {
-      "slug": "madslorentzen-ai-job-search-agents-skills-freehire-search",
-      "name": "freehire-search",
-      "type": "agent_skill",
-      "stars": 45190,
-      "repo": "MadsLorentzen/ai-job-search"
-    },
-    {
-      "slug": "cathrynlavery-diagram-design-skills-diagram-design",
-      "name": "diagram-design",
-      "type": "agent_skill",
-      "stars": 44654,
-      "repo": "cathrynlavery/diagram-design"
-    },
-    {
-      "slug": "wei-shaw-sub2api-skills-sub2api-admin",
-      "name": "sub2api-admin",
-      "type": "agent_skill",
-      "stars": 43398,
-      "repo": "Wei-Shaw/sub2api"
-    },
-    {
-      "slug": "herdrdev-herdr-agents-skills-herdr-pre-release-audit",
-      "name": "herdr-pre-release-audit",
-      "type": "agent_skill",
-      "stars": 42777,
-      "repo": "herdrdev/herdr"
-    },
-    {
-      "slug": "wshobson-agents-plugins-accessibility-compliance-skills-screen-reader-testing",
-      "name": "screen-reader-testing",
-      "type": "agent_skill",
-      "stars": 40271,
-      "repo": "wshobson/agents"
-    },
-    {
-      "slug": "yeachan-heo-oh-my-claudecode-skills-agent-doc-discipline",
-      "name": "agent-doc-discipline",
-      "type": "agent_skill",
-      "stars": 39649,
-      "repo": "Yeachan-Heo/oh-my-claudecode"
-    },
-    {
-      "slug": "anthropics-claude-plugins-official-external_plugins-discord-skills-access",
-      "name": "access",
-      "type": "agent_skill",
-      "stars": 37497,
-      "repo": "anthropics/claude-plugins-official"
-    },
-    {
-      "slug": "mukul975-anthropic-cybersecurity-skills-skills-abusing-dpapi-for-credential-access",
-      "name": "abusing-dpapi-for-credential-access",
-      "type": "agent_skill",
-      "stars": 33900,
-      "repo": "mukul975/Anthropic-Cybersecurity-Skills"
-    },
-    {
-      "slug": "iofficeai-aionui",
-      "name": "AionUi",
-      "type": "agent_tool",
-      "stars": 33357,
-      "repo": "iOfficeAI/AionUi"
-    },
-    {
-      "slug": "tirth8205-code-review-graph-skills-build-graph",
-      "name": "build-graph",
-      "type": "agent_skill",
-      "stars": 31955,
-      "repo": "tirth8205/code-review-graph"
-    },
-    {
-      "slug": "iofficeai-officecli",
-      "name": "officecli",
-      "type": "agent_skill",
-      "stars": 31654,
-      "repo": "iOfficeAI/OfficeCLI"
-    },
-    {
-      "slug": "nanocoai-nanoclaw-claude-skills-add-anydoc",
-      "name": "add-anydoc",
-      "type": "agent_skill",
-      "stars": 30890,
-      "repo": "nanocoai/nanoclaw"
-    },
-    {
-      "slug": "decolua-9router-skills-9router-chat",
-      "name": "9router-chat",
-      "type": "agent_skill",
-      "stars": 30411,
-      "repo": "decolua/9router"
-    },
-    {
-      "slug": "alirezarezvani-claude-skills-gemini-skills-readme",
-      "name": "README",
-      "type": "agent_skill",
-      "stars": 27812,
-      "repo": "alirezarezvani/claude-skills"
-    },
-    {
-      "slug": "gastownhall-beads-claude-skills-beads-docs",
-      "name": "beads-docs",
-      "type": "agent_skill",
-      "stars": 27707,
-      "repo": "gastownhall/beads"
-    },
-    {
-      "slug": "othmanadi-planning-with-files-agents-skills-planning-with-files",
-      "name": "planning-with-files",
-      "type": "agent_skill",
-      "stars": 27320,
-      "repo": "OthmanAdi/planning-with-files"
-    },
-    {
-      "slug": "titanwings-distilly",
-      "name": "distilly",
-      "type": "agent_skill",
-      "stars": 25376,
-      "repo": "titanwings/distilly"
-    },
-    {
-      "slug": "slopus-happy-agents-skills-agent-browser",
-      "name": "agent-browser",
-      "type": "agent_skill",
-      "stars": 24045,
-      "repo": "slopus/happy"
-    },
-    {
-      "slug": "steipete-codexbar-agents-skills-codexbar",
-      "name": "codexbar",
-      "type": "agent_skill",
-      "stars": 22274,
-      "repo": "steipete/CodexBar"
-    },
-    {
-      "slug": "kkkkhazix-khazix-skills-aihot",
-      "name": "aihot",
-      "type": "agent_skill",
-      "stars": 21220,
-      "repo": "KKKKhazix/khazix-skills"
-    },
-    {
-      "slug": "nvidia-skillspector",
-      "name": "SkillSpector",
-      "type": "agent_tool",
-      "stars": 19623,
-      "repo": "NVIDIA/SkillSpector"
-    },
-    {
-      "slug": "agricidaniel-claude-seo-extensions-ahrefs-skills-seo-ahrefs",
-      "name": "seo-ahrefs",
-      "type": "agent_skill",
-      "stars": 18470,
-      "repo": "AgriciDaniel/claude-seo"
-    },
-    {
-      "slug": "rowboatlabs-rowboat-skills-rowboat-spaces",
-      "name": "rowboat-spaces",
-      "type": "agent_skill",
-      "stars": 17997,
-      "repo": "rowboatlabs/rowboat"
-    },
-    {
-      "slug": "img2threejs-img2threejs",
-      "name": "img2threejs",
-      "type": "agent_skill",
-      "stars": 17639,
-      "repo": "img2threejs/img2threejs"
-    },
-    {
-      "slug": "xbtlin-ai-berkshire-codex-skills-bottleneck-hunter",
-      "name": "bottleneck-hunter",
-      "type": "agent_skill",
-      "stars": 16646,
-      "repo": "xbtlin/ai-berkshire"
-    },
-    {
-      "slug": "yishentu-claudian",
-      "name": "claudian",
-      "type": "agent_tool",
-      "stars": 15598,
-      "repo": "YishenTu/claudian"
-    },
-    {
-      "slug": "agricidaniel-claude-obsidian-skills-autoresearch",
-      "name": "autoresearch",
-      "type": "agent_skill",
-      "stars": 15392,
-      "repo": "AgriciDaniel/claude-obsidian"
-    },
-    {
-      "slug": "nanmicoder-cc-haha",
-      "name": "cc-haha",
-      "type": "agent_tool",
-      "stars": 14893,
-      "repo": "NanmiCoder/cc-haha"
-    },
-    {
-      "slug": "siteboon-claudecodeui-agents-skills-backend-module-standards",
-      "name": "backend-module-standards",
-      "type": "agent_skill",
-      "stars": 13966,
-      "repo": "siteboon/claudecodeui"
-    },
-    {
-      "slug": "orchestratorinc-agent-orchestrator-agents-skills-ao-desktop-dev",
-      "name": "ao-desktop-dev",
-      "type": "agent_skill",
-      "stars": 12863,
-      "repo": "OrchestratorInc/agent-orchestrator"
-    },
-    {
-      "slug": "jeffallan-claude-skills-skills-angular-architect",
-      "name": "angular-architect",
-      "type": "agent_skill",
-      "stars": 11759,
-      "repo": "Jeffallan/claude-skills"
+      "stars": 7562,
+      "repo": "devlikeapro/waha"
     },
     {
       "slug": "getagentseal-codeburn",
@@ -1312,235 +115,207 @@
       "repo": "getagentseal/codeburn"
     },
     {
-      "slug": "simonlin1212-a-stock-data",
-      "name": "a-stock-data",
-      "type": "agent_skill",
-      "stars": 10657,
-      "repo": "simonlin1212/a-stock-data"
+      "slug": "github-github-mcp-server",
+      "name": "github-mcp-server",
+      "type": "mcp_server",
+      "stars": 33427,
+      "repo": "github/github-mcp-server"
     },
     {
-      "slug": "omnigent-ai-omnigent",
-      "name": "omnigent",
-      "type": "agent_tool",
-      "stars": 10648,
-      "repo": "omnigent-ai/omnigent"
+      "slug": "grab-cursor-talk-to-figma-mcp",
+      "name": "cursor-talk-to-figma-mcp",
+      "type": "mcp_server",
+      "stars": 7047,
+      "repo": "grab/cursor-talk-to-figma-mcp"
     },
     {
-      "slug": "agricidaniel-claude-ads-ads",
-      "name": "ads",
-      "type": "agent_skill",
-      "stars": 9774,
-      "repo": "AgriciDaniel/claude-ads"
+      "slug": "haris-musa-excel-mcp-server",
+      "name": "excel-mcp-server",
+      "type": "mcp_server",
+      "stars": 4212,
+      "repo": "haris-musa/excel-mcp-server"
     },
     {
-      "slug": "backnotprop-plannotator-agents-skills-release",
-      "name": "release-plannotator",
-      "type": "agent_skill",
-      "stars": 9194,
-      "repo": "backnotprop/plannotator"
+      "slug": "helpcode-ai-anythingmcp",
+      "name": "anythingmcp",
+      "type": "mcp_server",
+      "stars": 990,
+      "repo": "HelpCode-ai/anythingmcp"
     },
     {
-      "slug": "revfactory-harness-skills-evolve",
-      "name": "evolve",
-      "type": "agent_skill",
-      "stars": 9131,
-      "repo": "revfactory/harness"
+      "slug": "ibm-mcp-context-forge",
+      "name": "mcp-context-forge",
+      "type": "mcp_server",
+      "stars": 4582,
+      "repo": "IBM/mcp-context-forge"
     },
     {
-      "slug": "genspark-ai-genoffice-skills-genoffice",
-      "name": "genoffice",
-      "type": "agent_skill",
-      "stars": 8842,
-      "repo": "genspark-ai/genoffice"
+      "slug": "irinabuht12-oss-google-ads-meta-ads-mcp",
+      "name": "google-ads-meta-ads-mcp",
+      "type": "mcp_server",
+      "stars": 4200,
+      "repo": "irinabuht12-oss/google-ads-meta-ads-mcp"
     },
     {
-      "slug": "harnessmd-munder-difflin-claude-skills-ian-xiaohei-illustrations",
-      "name": "ian-xiaohei-illustrations",
-      "type": "agent_skill",
-      "stars": 8550,
-      "repo": "HarnessMD/munder-difflin"
+      "slug": "jerbouma-financetoolkit",
+      "name": "FinanceToolkit",
+      "type": "mcp_server",
+      "stars": 5404,
+      "repo": "JerBouma/FinanceToolkit"
     },
     {
-      "slug": "jnmetacode-superpowers-zh-skills-brainstorming",
-      "name": "brainstorming",
-      "type": "agent_skill",
-      "stars": 8267,
-      "repo": "jnMetaCode/superpowers-zh"
+      "slug": "joeanamier-xhs-downloader",
+      "name": "XHS-Downloader",
+      "type": "mcp_server",
+      "stars": 12930,
+      "repo": "JoeanAmier/XHS-Downloader"
     },
     {
-      "slug": "zenstory-ai-oh-story-claudecode-skills-browser-cdp",
-      "name": "browser-cdp",
-      "type": "agent_skill",
-      "stars": 7340,
-      "repo": "zenstory-ai/oh-story-claudecode"
+      "slug": "jonigl-mcp-client-for-ollama",
+      "name": "mcp-client-for-ollama",
+      "type": "mcp_server",
+      "stars": 827,
+      "repo": "jonigl/mcp-client-for-ollama"
+    },
+    {
+      "slug": "joooook-12306-mcp",
+      "name": "12306-mcp",
+      "type": "mcp_server",
+      "stars": 2288,
+      "repo": "Joooook/12306-mcp"
+    },
+    {
+      "slug": "karanb192-reddit-mcp-buddy",
+      "name": "reddit-mcp-buddy",
+      "type": "mcp_server",
+      "stars": 846,
+      "repo": "karanb192/reddit-mcp-buddy"
     },
     {
       "slug": "kyegomez-swarms",
       "name": "swarms",
-      "type": "agent_skill",
+      "type": "mcp_server",
       "stars": 7233,
       "repo": "kyegomez/swarms"
     },
     {
-      "slug": "tw93-waza-plugins-waza-skills-check",
-      "name": "check",
-      "type": "agent_skill",
-      "stars": 7170,
-      "repo": "tw93/Waza"
+      "slug": "marc-shade-world-intel-mcp",
+      "name": "world-intel-mcp",
+      "type": "mcp_server",
+      "stars": 657,
+      "repo": "marc-shade/world-intel-mcp"
     },
     {
-      "slug": "htdt-godogen-asset-gen",
-      "name": "asset-gen",
-      "type": "agent_skill",
-      "stars": 7059,
-      "repo": "htdt/godogen"
+      "slug": "mcp-brasil-mcp-brasil",
+      "name": "mcp-brasil",
+      "type": "mcp_server",
+      "stars": 1806,
+      "repo": "Mcp-Brasil/mcp-brasil"
     },
     {
-      "slug": "q00-ouroboros-skills-auto",
-      "name": "auto",
-      "type": "agent_skill",
-      "stars": 6192,
-      "repo": "Q00/ouroboros"
+      "slug": "modelscope-funasr",
+      "name": "FunASR",
+      "type": "mcp_server",
+      "stars": 20602,
+      "repo": "modelscope/FunASR"
     },
     {
-      "slug": "guillaumemeyer-watermarks-remover-skills-clean-user-facing-text",
-      "name": "clean-user-facing-text",
-      "type": "agent_skill",
-      "stars": 23518,
-      "repo": "guillaumemeyer/watermarks-remover"
+      "slug": "mukul975-cve-mcp-server",
+      "name": "cve-mcp-server",
+      "type": "mcp_server",
+      "stars": 1619,
+      "repo": "mukul975/cve-mcp-server"
     },
     {
-      "slug": "0xnyk-council-of-high-intelligence",
-      "name": "council",
-      "type": "agent_skill",
-      "stars": 4550,
-      "repo": "0xNyk/council-of-high-intelligence"
+      "slug": "open-webui-mcpo",
+      "name": "mcpo",
+      "type": "mcp_server",
+      "stars": 4392,
+      "repo": "open-webui/mcpo"
     },
     {
-      "slug": "nexu-io-open-design-claude-skills-od-contribute",
-      "name": "od-contribute",
-      "type": "agent_skill",
-      "stars": 99839,
-      "repo": "nexu-io/open-design"
+      "slug": "openagentplatform-dive",
+      "name": "Dive",
+      "type": "mcp_server",
+      "stars": 1827,
+      "repo": "OpenAgentPlatform/Dive"
     },
     {
-      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review-delegate",
-      "name": "open-code-review-delegate",
-      "type": "agent_skill",
-      "stars": 44194,
-      "repo": "alibaba/open-code-review"
+      "slug": "openosint-openosint",
+      "name": "OpenOSINT",
+      "type": "mcp_server",
+      "stars": 1707,
+      "repo": "OpenOSINT/OpenOSINT"
     },
     {
-      "slug": "virgiliojr94-book-to-skill",
-      "name": "book-to-skill",
-      "type": "agent_skill",
-      "stars": 34049,
-      "repo": "virgiliojr94/book-to-skill"
+      "slug": "rahilp-second-brain-cloudflare",
+      "name": "second-brain-cloudflare",
+      "type": "mcp_server",
+      "stars": 803,
+      "repo": "rahilp/second-brain-cloudflare"
     },
     {
-      "slug": "feder-cr-invisible_dots-invisible_engine_dots-skills-invisible-playwright",
-      "name": "invisible-playwright",
-      "type": "agent_skill",
-      "stars": 31792,
-      "repo": "feder-cr/invisible_dots"
+      "slug": "riponcm-projectmem",
+      "name": "projectmem",
+      "type": "mcp_server",
+      "stars": 852,
+      "repo": "riponcm/projectmem"
     },
     {
-      "slug": "topoteretes-cognee-agents-skills-cognee-cli",
-      "name": "cognee-cli",
-      "type": "agent_skill",
-      "stars": 31540,
-      "repo": "topoteretes/cognee"
+      "slug": "sparfenyuk-mcp-proxy",
+      "name": "mcp-proxy",
+      "type": "mcp_server",
+      "stars": 2773,
+      "repo": "sparfenyuk/mcp-proxy"
     },
     {
-      "slug": "googleworkspace-cli-skills-gws-admin-reports",
-      "name": "gws-admin-reports",
-      "type": "agent_skill",
-      "stars": 31270,
-      "repo": "googleworkspace/cli"
+      "slug": "suekou-mcp-notion-server",
+      "name": "mcp-notion-server",
+      "type": "mcp_server",
+      "stars": 920,
+      "repo": "suekou/mcp-notion-server"
     },
     {
-      "slug": "phuryn-pm-skills-pm-ai-shipping-skills-code-review",
-      "name": "code-review",
-      "type": "agent_skill",
-      "stars": 26820,
-      "repo": "phuryn/pm-skills"
+      "slug": "txn2-kubefwd",
+      "name": "kubefwd",
+      "type": "mcp_server",
+      "stars": 4173,
+      "repo": "txn2/kubefwd"
     },
     {
-      "slug": "microsoft-skillopt-plugins-claude-code-skills-skillopt-sleep",
-      "name": "skillopt-sleep",
-      "type": "agent_skill",
-      "stars": 18098,
-      "repo": "microsoft/SkillOpt"
+      "slug": "utensils-mcp-nixos",
+      "name": "mcp-nixos",
+      "type": "mcp_server",
+      "stars": 851,
+      "repo": "utensils/mcp-nixos"
     },
     {
-      "slug": "eigent-ai-eigent-resources-example-skills-docx",
-      "name": "docx",
-      "type": "agent_skill",
-      "stars": 15467,
-      "repo": "eigent-ai/eigent"
+      "slug": "wshobson-maverick-mcp",
+      "name": "maverick-mcp",
+      "type": "mcp_server",
+      "stars": 701,
+      "repo": "wshobson/maverick-mcp"
     },
     {
-      "slug": "krillinai-opencreator-apps-daemon-runtime-opencreator-runtime",
-      "name": "opencreator-runtime",
-      "type": "agent_skill",
-      "stars": 12614,
-      "repo": "krillinai/OpenCreator"
+      "slug": "zcaceres-markdownify-mcp",
+      "name": "markdownify-mcp",
+      "type": "mcp_server",
+      "stars": 3001,
+      "repo": "zcaceres/markdownify-mcp"
     },
     {
-      "slug": "aden-hive-hive-claude-skills-browser-edge-cases",
-      "name": "browser-edge-cases",
-      "type": "agent_skill",
-      "stars": 11088,
-      "repo": "aden-hive/hive"
+      "slug": "zhizhuodemao-js-reverse-mcp",
+      "name": "js-reverse-mcp",
+      "type": "mcp_server",
+      "stars": 2904,
+      "repo": "zhizhuodemao/js-reverse-mcp"
     },
     {
-      "slug": "trailofbits-skills-plugins-agentic-actions-auditor-skills-agentic-actions-auditor",
-      "name": "agentic-actions-auditor",
-      "type": "agent_skill",
-      "stars": 7412,
-      "repo": "trailofbits/skills"
-    },
-    {
-      "slug": "thinkinaixyz-deepchat",
-      "name": "deepchat",
-      "type": "agent_tool",
-      "stars": 6356,
-      "repo": "ThinkInAIXYZ/deepchat"
-    },
-    {
-      "slug": "gosom-google-maps-scraper-skills-google-maps-scraper",
-      "name": "google-maps-scraper",
-      "type": "agent_skill",
-      "stars": 6309,
-      "repo": "gosom/google-maps-scraper"
-    },
-    {
-      "slug": "mvschwarz-openrig-agents-skills-developing-openrig",
-      "name": "developing-openrig",
-      "type": "agent_skill",
-      "stars": 5667,
-      "repo": "mvschwarz/openrig"
-    },
-    {
-      "slug": "dotnet-skills-agents-skills-authoring-github-workflows",
-      "name": "authoring-github-workflows",
-      "type": "agent_skill",
-      "stars": 5571,
-      "repo": "dotnet/skills"
-    },
-    {
-      "slug": "aipoch-open-science-resources-skills-alphafold2",
-      "name": "alphafold2",
-      "type": "agent_skill",
-      "stars": 5451,
-      "repo": "aipoch/open-science"
-    },
-    {
-      "slug": "eugeniughelbur-obsidian-second-brain",
-      "name": "obsidian-second-brain",
-      "type": "agent_skill",
-      "stars": 4690,
-      "repo": "eugeniughelbur/obsidian-second-brain"
+      "slug": "zinja-coder-jadx-mcp-server",
+      "name": "jadx-mcp-server",
+      "type": "mcp_server",
+      "stars": 791,
+      "repo": "zinja-coder/jadx-mcp-server"
     },
     {
       "slug": "0x0funky-agent-sprite-forge-skills-codeart2d",
@@ -1550,6 +325,230 @@
       "repo": "0x0funky/agent-sprite-forge"
     },
     {
+      "slug": "0xnyk-council-of-high-intelligence",
+      "name": "council-of-high-intelligence",
+      "type": "agent_skill",
+      "stars": 4550,
+      "repo": "0xNyk/council-of-high-intelligence"
+    },
+    {
+      "slug": "addyosmani-agent-skills-skills-api-and-interface-design",
+      "name": "api-and-interface-design",
+      "type": "agent_skill",
+      "stars": 102528,
+      "repo": "addyosmani/agent-skills"
+    },
+    {
+      "slug": "agricidaniel-claude-ads-ads",
+      "name": "ads",
+      "type": "agent_skill",
+      "stars": 9774,
+      "repo": "AgriciDaniel/claude-ads"
+    },
+    {
+      "slug": "agricidaniel-claude-obsidian-skills-autoresearch",
+      "name": "autoresearch",
+      "type": "agent_skill",
+      "stars": 15392,
+      "repo": "AgriciDaniel/claude-obsidian"
+    },
+    {
+      "slug": "agricidaniel-claude-seo-extensions-ahrefs-skills-seo-ahrefs",
+      "name": "seo-ahrefs",
+      "type": "agent_skill",
+      "stars": 18470,
+      "repo": "AgriciDaniel/claude-seo"
+    },
+    {
+      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review-delegate",
+      "name": "delegate",
+      "type": "agent_skill",
+      "stars": 44194,
+      "repo": "alibaba/open-code-review"
+    },
+    {
+      "slug": "anthropics-claude-plugins-official-external_plugins-discord-skills-access",
+      "name": "access",
+      "type": "agent_skill",
+      "stars": 37497,
+      "repo": "anthropics/claude-plugins-official"
+    },
+    {
+      "slug": "blader-humanizer",
+      "name": "humanizer",
+      "type": "agent_skill",
+      "stars": 54590,
+      "repo": "blader/humanizer"
+    },
+    {
+      "slug": "cathrynlavery-diagram-design-skills-diagram-design",
+      "name": "diagram-design",
+      "type": "agent_skill",
+      "stars": 44654,
+      "repo": "cathrynlavery/diagram-design"
+    },
+    {
+      "slug": "dagucloud-dagu-skills-dagu",
+      "name": "dagu",
+      "type": "agent_skill",
+      "stars": 4292,
+      "repo": "dagucloud/dagu"
+    },
+    {
+      "slug": "davepoon-buildwithclaude-plugins-agent-triforce-skills-code-health",
+      "name": "code-health",
+      "type": "agent_skill",
+      "stars": 3604,
+      "repo": "davepoon/buildwithclaude"
+    },
+    {
+      "slug": "decolua-9router-skills-9router-chat",
+      "name": "chat",
+      "type": "agent_skill",
+      "stars": 30411,
+      "repo": "decolua/9router"
+    },
+    {
+      "slug": "egonex-ai-understand-anything-understand-anything-plugin-skills-understand-chat",
+      "name": "understand-chat",
+      "type": "agent_skill",
+      "stars": 85511,
+      "repo": "Egonex-AI/Understand-Anything"
+    },
+    {
+      "slug": "eigent-ai-eigent-resources-example-skills-docx",
+      "name": "docx",
+      "type": "agent_skill",
+      "stars": 15467,
+      "repo": "eigent-ai/eigent"
+    },
+    {
+      "slug": "eugeniughelbur-obsidian-second-brain",
+      "name": "obsidian-second-brain",
+      "type": "agent_skill",
+      "stars": 4690,
+      "repo": "eugeniughelbur/obsidian-second-brain"
+    },
+    {
+      "slug": "feder-cr-invisible_dots-invisible_engine_dots-skills-invisible-playwright",
+      "name": "invisible-playwright",
+      "type": "agent_skill",
+      "stars": 31792,
+      "repo": "feder-cr/invisible_dots"
+    },
+    {
+      "slug": "genspark-ai-genoffice-skills-genoffice",
+      "name": "genoffice",
+      "type": "agent_skill",
+      "stars": 8842,
+      "repo": "genspark-ai/genoffice"
+    },
+    {
+      "slug": "googleworkspace-cli-skills-gws-admin-reports",
+      "name": "gws-admin-reports",
+      "type": "agent_skill",
+      "stars": 31270,
+      "repo": "googleworkspace/cli"
+    },
+    {
+      "slug": "gosom-google-maps-scraper-skills-google-maps-scraper",
+      "name": "google-maps-scraper",
+      "type": "agent_skill",
+      "stars": 6309,
+      "repo": "gosom/google-maps-scraper"
+    },
+    {
+      "slug": "guillaumemeyer-watermarks-remover-skills-clean-user-facing-text",
+      "name": "clean-user-facing-text",
+      "type": "agent_skill",
+      "stars": 23518,
+      "repo": "guillaumemeyer/watermarks-remover"
+    },
+    {
+      "slug": "htdt-godogen-asset-gen",
+      "name": "asset-gen",
+      "type": "agent_skill",
+      "stars": 7059,
+      "repo": "htdt/godogen"
+    },
+    {
+      "slug": "img2threejs-img2threejs",
+      "name": "img2threejs",
+      "type": "agent_skill",
+      "stars": 17639,
+      "repo": "img2threejs/img2threejs"
+    },
+    {
+      "slug": "iofficeai-officecli",
+      "name": "officecli",
+      "type": "agent_skill",
+      "stars": 31654,
+      "repo": "iOfficeAI/OfficeCLI"
+    },
+    {
+      "slug": "jeffallan-claude-skills-skills-angular-architect",
+      "name": "angular-architect",
+      "type": "agent_skill",
+      "stars": 11759,
+      "repo": "Jeffallan/claude-skills"
+    },
+    {
+      "slug": "jnmetacode-superpowers-zh-skills-brainstorming",
+      "name": "brainstorming",
+      "type": "agent_skill",
+      "stars": 8267,
+      "repo": "jnMetaCode/superpowers-zh"
+    },
+    {
+      "slug": "juliusbrussee-caveman-plugins-caveman-skills-cavecrew",
+      "name": "cavecrew",
+      "type": "agent_skill",
+      "stars": 110366,
+      "repo": "JuliusBrussee/caveman"
+    },
+    {
+      "slug": "kkkkhazix-khazix-skills-aihot",
+      "name": "aihot",
+      "type": "agent_skill",
+      "stars": 21220,
+      "repo": "KKKKhazix/khazix-skills"
+    },
+    {
+      "slug": "krillinai-opencreator-apps-daemon-runtime-opencreator-runtime",
+      "name": "runtime",
+      "type": "agent_skill",
+      "stars": 12614,
+      "repo": "krillinai/OpenCreator"
+    },
+    {
+      "slug": "leonxlnx-taste-skill-skills-brandkit",
+      "name": "brandkit",
+      "type": "agent_skill",
+      "stars": 93423,
+      "repo": "Leonxlnx/taste-skill"
+    },
+    {
+      "slug": "mcp-use-mcp-use-libraries-typescript-packages-server-examples-skills-over-mcp-skills-purchasing",
+      "name": "purchasing",
+      "type": "agent_skill",
+      "stars": 10728,
+      "repo": "mcp-use/mcp-use"
+    },
+    {
+      "slug": "microsoft-skillopt-plugins-claude-code-skills-skillopt-sleep",
+      "name": "sleep",
+      "type": "agent_skill",
+      "stars": 18098,
+      "repo": "microsoft/SkillOpt"
+    },
+    {
+      "slug": "mukul975-anthropic-cybersecurity-skills-skills-abusing-dpapi-for-credential-access",
+      "name": "abusing-dpapi-for-credential-access",
+      "type": "agent_skill",
+      "stars": 33900,
+      "repo": "mukul975/Anthropic-Cybersecurity-Skills"
+    },
+    {
       "slug": "muxuuu-serenity-skill",
       "name": "serenity-skill",
       "type": "agent_skill",
@@ -1557,25 +556,11 @@
       "repo": "muxuuu/serenity-skill"
     },
     {
-      "slug": "nvidia-skills-plugins-nvidia-skills-skills-nvidia-skill-finder",
-      "name": "nvidia-skill-finder",
+      "slug": "mvanhorn-last30days-skill-skills-last30days",
+      "name": "last30days",
       "type": "agent_skill",
-      "stars": 3536,
-      "repo": "NVIDIA/skills"
-    },
-    {
-      "slug": "ar9av-obsidian-wiki",
-      "name": "obsidian-wiki",
-      "type": "agent_tool",
-      "stars": 3529,
-      "repo": "Ar9av/obsidian-wiki"
-    },
-    {
-      "slug": "microsoft-skills-github-plugins-azure-cost-skills-cost-analysis",
-      "name": "cost-analysis",
-      "type": "agent_skill",
-      "stars": 3089,
-      "repo": "microsoft/skills"
+      "stars": 63673,
+      "repo": "mvanhorn/last30days-skill"
     },
     {
       "slug": "nateherkai-scroll-craft-plugins-nateherk-design-skills-scroll-craft",
@@ -1585,11 +570,130 @@
       "repo": "nateherkai/scroll-craft"
     },
     {
-      "slug": "jeremylongshore-tons-of-skills-marketplace-plugins-ai-agency-agency-os-skills-agency-os",
-      "name": "agency-os",
+      "slug": "nicobailon-pi-mcp-adapter-skills-mcp-scripting",
+      "name": "mcp-scripting",
       "type": "agent_skill",
-      "stars": 2820,
-      "repo": "jeremylongshore/tons-of-skills-marketplace"
+      "stars": 1578,
+      "repo": "nicobailon/pi-mcp-adapter"
+    },
+    {
+      "slug": "nvidia-skills-plugins-nvidia-skills-skills-nvidia-skill-finder",
+      "name": "nvidia-skill-finder",
+      "type": "agent_skill",
+      "stars": 3536,
+      "repo": "NVIDIA/skills"
+    },
+    {
+      "slug": "phuryn-pm-skills-pm-ai-shipping-skills-code-review",
+      "name": "code-review",
+      "type": "agent_skill",
+      "stars": 26820,
+      "repo": "phuryn/pm-skills"
+    },
+    {
+      "slug": "revfactory-harness-skills-evolve",
+      "name": "evolve",
+      "type": "agent_skill",
+      "stars": 9131,
+      "repo": "revfactory/harness"
+    },
+    {
+      "slug": "rowboatlabs-rowboat-skills-rowboat-spaces",
+      "name": "spaces",
+      "type": "agent_skill",
+      "stars": 17997,
+      "repo": "rowboatlabs/rowboat"
+    },
+    {
+      "slug": "simonlin1212-a-stock-data",
+      "name": "a-stock-data",
+      "type": "agent_skill",
+      "stars": 10657,
+      "repo": "simonlin1212/a-stock-data"
+    },
+    {
+      "slug": "stablyai-orca-skills-computer-use",
+      "name": "computer-use",
+      "type": "agent_skill",
+      "stars": 86961,
+      "repo": "stablyai/orca"
+    },
+    {
+      "slug": "thedotmack-claude-mem-claude-mem-cursor-skills-agent-cost-report",
+      "name": "Agent Cost Report",
+      "type": "agent_skill",
+      "stars": 97519,
+      "repo": "thedotmack/claude-mem"
+    },
+    {
+      "slug": "titanwings-distilly",
+      "name": "distilly",
+      "type": "agent_skill",
+      "stars": 25376,
+      "repo": "titanwings/distilly"
+    },
+    {
+      "slug": "trailofbits-skills-plugins-agentic-actions-auditor-skills-agentic-actions-auditor",
+      "name": "agentic-actions-auditor",
+      "type": "agent_skill",
+      "stars": 7412,
+      "repo": "trailofbits/skills"
+    },
+    {
+      "slug": "tw93-waza-plugins-waza-skills-check",
+      "name": "check",
+      "type": "agent_skill",
+      "stars": 7170,
+      "repo": "tw93/Waza"
+    },
+    {
+      "slug": "virgiliojr94-book-to-skill",
+      "name": "book-to-skill",
+      "type": "agent_skill",
+      "stars": 34049,
+      "repo": "virgiliojr94/book-to-skill"
+    },
+    {
+      "slug": "wanshuiyin-auto-claude-code-research-in-sleep-skills-ablation-planner",
+      "name": "ablation-planner",
+      "type": "agent_skill",
+      "stars": 17090,
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep"
+    },
+    {
+      "slug": "wei-shaw-sub2api-skills-sub2api-admin",
+      "name": "admin",
+      "type": "agent_skill",
+      "stars": 43398,
+      "repo": "Wei-Shaw/sub2api"
+    },
+    {
+      "slug": "wshobson-agents-plugins-accessibility-compliance-skills-screen-reader-testing",
+      "name": "screen-reader-testing",
+      "type": "agent_skill",
+      "stars": 40271,
+      "repo": "wshobson/agents"
+    },
+    {
+      "slug": "xbtlin-ai-berkshire-codex-skills-bottleneck-hunter",
+      "name": "bottleneck-hunter",
+      "type": "agent_skill",
+      "stars": 16646,
+      "repo": "xbtlin/ai-berkshire"
+    },
+    {
+      "slug": "xpzouying-xiaohongshu-mcp-skills-post-to-xhs",
+      "name": "post-to-xhs",
+      "type": "agent_skill",
+      "stars": 16133,
+      "repo": "xpzouying/xiaohongshu-mcp"
+    },
+    {
+      "slug": "yvgude-lean-ctx-rust-src-templates",
+      "name": "lean-ctx",
+      "type": "agent_skill",
+      "stars": 3866,
+      "repo": "yvgude/lean-ctx"
     },
     {
       "slug": "zenstory-ai-drama-skills-maintainers-skills-short-drama-knowhow",
@@ -1599,42 +703,182 @@
       "repo": "zenstory-ai/drama-skills"
     },
     {
-      "slug": "agricidaniel-claude-blog-brain-raw-sources-claude-blog-skill-skills-blog-analyze",
-      "name": "blog-analyze",
+      "slug": "zenstory-ai-oh-story-claudecode-skills-browser-cdp",
+      "name": "browser-cdp",
       "type": "agent_skill",
-      "stars": 2340,
-      "repo": "AgriciDaniel/claude-blog"
+      "stars": 7340,
+      "repo": "zenstory-ai/oh-story-claudecode"
     },
     {
-      "slug": "sahir619-fable-method-eval-scenarios-s14-trapped-skill-claude-skills-release-helper",
-      "name": "release-helper",
+      "slug": "zhayujie-cowagent-skills-image-generation",
+      "name": "image-generation",
       "type": "agent_skill",
-      "stars": 2296,
-      "repo": "Sahir619/fable-method"
+      "stars": 47264,
+      "repo": "zhayujie/CowAgent"
     },
     {
-      "slug": "kevinluosl-deepbot",
-      "name": "deepbot",
-      "type": "mcp_server",
-      "stars": 2239,
-      "repo": "kevinluosl/deepbot"
-    },
-    {
-      "slug": "0xsline-openchatcut",
-      "name": "OpenChatCut",
+      "slug": "0x4m4-hexstrike-ai",
+      "name": "hexstrike-ai",
       "type": "agent_tool",
-      "stars": 2170,
-      "repo": "0xsline/OpenChatCut"
+      "stars": 12494,
+      "repo": "0x4m4/hexstrike-ai"
+    },
+    {
+      "slug": "0xmassi-webclaw",
+      "name": "webclaw",
+      "type": "agent_tool",
+      "stars": 2371,
+      "repo": "0xMassi/webclaw"
+    },
+    {
+      "slug": "1panel-dev-maxkb",
+      "name": "MaxKB",
+      "type": "agent_tool",
+      "stars": 22912,
+      "repo": "1Panel-dev/MaxKB"
+    },
+    {
+      "slug": "777genius-agent-teams-ai",
+      "name": "agent-teams-ai",
+      "type": "agent_tool",
+      "stars": 2235,
+      "repo": "777genius/agent-teams-ai"
+    },
+    {
+      "slug": "beenuar-aisoc",
+      "name": "AiSOC",
+      "type": "agent_tool",
+      "stars": 2387,
+      "repo": "beenuar/AiSOC"
+    },
+    {
+      "slug": "bytedance-ui-tars-desktop",
+      "name": "UI-TARS-desktop",
+      "type": "agent_tool",
+      "stars": 39208,
+      "repo": "bytedance/UI-TARS-desktop"
+    },
+    {
+      "slug": "can4hou6joeng4-boss-agent-cli",
+      "name": "boss-agent-cli",
+      "type": "agent_tool",
+      "stars": 2045,
+      "repo": "can4hou6joeng4/boss-agent-cli"
+    },
+    {
+      "slug": "codeabra-iai-personal-memory-engine",
+      "name": "iai-personal-memory-engine",
+      "type": "agent_tool",
+      "stars": 901,
+      "repo": "CodeAbra/iai-personal-memory-engine"
+    },
+    {
+      "slug": "evil0ctal-douyin_tiktok_download_api",
+      "name": "Douyin_TikTok_Download_API",
+      "type": "agent_tool",
+      "stars": 20496,
+      "repo": "Evil0ctal/Douyin_TikTok_Download_API"
+    },
+    {
+      "slug": "firerpa-lamda",
+      "name": "lamda",
+      "type": "agent_tool",
+      "stars": 8544,
+      "repo": "firerpa/lamda"
+    },
+    {
+      "slug": "getagentseal-codeburn",
+      "name": "codeburn",
+      "type": "agent_tool",
+      "stars": 11350,
+      "repo": "getagentseal/codeburn"
+    },
+    {
+      "slug": "graphify-labs-graphify",
+      "name": "graphify",
+      "type": "agent_tool",
+      "stars": 124586,
+      "repo": "Graphify-Labs/graphify"
+    },
+    {
+      "slug": "headroomlabs-ai-headroom",
+      "name": "headroom",
+      "type": "agent_tool",
+      "stars": 74574,
+      "repo": "headroomlabs-ai/headroom"
+    },
+    {
+      "slug": "huangjunsen0406-py-xiaozhi",
+      "name": "py-xiaozhi",
+      "type": "agent_tool",
+      "stars": 3492,
+      "repo": "huangjunsen0406/py-xiaozhi"
+    },
+    {
+      "slug": "ibm-assetopsbench",
+      "name": "AssetOpsBench",
+      "type": "agent_tool",
+      "stars": 2330,
+      "repo": "IBM/AssetOpsBench"
+    },
+    {
+      "slug": "kyegomez-swarms",
+      "name": "swarms",
+      "type": "agent_tool",
+      "stars": 7233,
+      "repo": "kyegomez/swarms"
+    },
+    {
+      "slug": "lemonade-sdk-lemonade",
+      "name": "lemonade",
+      "type": "agent_tool",
+      "stars": 5839,
+      "repo": "lemonade-sdk/lemonade"
+    },
+    {
+      "slug": "mcpjungle-mcpjungle",
+      "name": "MCPJungle",
+      "type": "agent_tool",
+      "stars": 1292,
+      "repo": "mcpjungle/MCPJungle"
+    },
+    {
+      "slug": "minishlab-semble",
+      "name": "semble",
+      "type": "agent_tool",
+      "stars": 6187,
+      "repo": "MinishLab/semble"
+    },
+    {
+      "slug": "openbyteinc-quantdinger",
+      "name": "QuantDinger",
+      "type": "agent_tool",
+      "stars": 12519,
+      "repo": "OpenByteInc/QuantDinger"
+    },
+    {
+      "slug": "rath-team-openrath",
+      "name": "OpenRath",
+      "type": "agent_tool",
+      "stars": 960,
+      "repo": "Rath-Team/OpenRath"
+    },
+    {
+      "slug": "yishentu-claudian",
+      "name": "claudian",
+      "type": "agent_tool",
+      "stars": 15598,
+      "repo": "YishenTu/claudian"
     }
   ],
   "removed": [],
   "surging": [],
   "summary": {
     "week": "2026-W41",
-    "generated_at": "2026-10-31T14:49:45.885Z",
-    "added_count": 232,
+    "generated_at": "2026-10-31T15:55:42.888Z",
+    "added_count": 124,
     "removed_count": 0,
     "surging_count": 0,
-    "total_stars_gained": 82719
+    "total_stars_gained": 39423
   }
 }

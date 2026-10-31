@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -69,7 +69,6 @@ skill:
 Take any business assumption and break it before the market does. Revenue projections. Market size. Competitive moat. Hiring velocity. Customer retention.
 
 ---
-
 ## Why Most Assumptions Are Wrong
 
 Founders are optimists by nature. That's a feature — you need optimism to start something from nothing. But it becomes a liability when assumptions in business models get inflated by the same optimism that got you started.
@@ -81,7 +80,6 @@ When the whole team believes the $50M market is real, when every investor call g
 Stress testing isn't pessimism. It's calibration.
 
 ---
-
 ## The Stress-Test Methodology
 
 ### Step 1: Isolate the Assumption
@@ -159,7 +157,6 @@ For every high-risk assumption, there should be a hedge:
 - **Early warning hedge** — what's the leading indicator that would tell you it's breaking before it's too late to act?
 
 ---
-
 ## Stress Test Patterns by Assumption Type
 
 ### Revenue Projections
@@ -235,7 +232,6 @@ For every high-risk assumption, there should be a hedge:
 - Which of your customers have vendor relationships with your competitors?
 
 ---
-
 ## The Stress Test Output
 
 ```

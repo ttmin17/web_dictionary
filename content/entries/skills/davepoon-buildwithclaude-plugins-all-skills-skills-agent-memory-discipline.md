@@ -147,7 +147,6 @@ After a decision, correction, or failure: **did I save it, in one sentence, with
 When something changed: **did I close the old entry instead of deleting it?**
 
 ---
-
 ## Backends
 
 This skill assumes a memory tool exists. Any of these work:

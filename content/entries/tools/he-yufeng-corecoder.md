@@ -28,8 +28,7 @@ signals:
   stars_delta_7d: 24
   stars_growth_pct: 1.3
   trending_score: 24.31
-  rank_current: 95
-  rank_delta: null
+  rank_current: 96
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1847
@@ -50,14 +49,7 @@ tool:
   install_command: pip install corecoder
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - corecoder
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Minimal AI coding agent (~1,000 lines of Python) inspired by Claude Code. Works with any LLM. Think NanoGPT for coding agents. Formerly NanoCoder.

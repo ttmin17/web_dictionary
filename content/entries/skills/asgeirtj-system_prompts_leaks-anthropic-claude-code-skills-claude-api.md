@@ -130,7 +130,6 @@ Several common Claude API shapes changed in 2025-2026. If you recall a pattern f
 The `{lang}/` files in this skill are authoritative over recalled patterns.
 
 ---
-
 ## Subcommands
 
 If the User Request at the bottom of this prompt is a bare subcommand string (no prose), search every **Subcommands** table in this document - including any in sections appended below - and follow the matching Action column directly. This lets users invoke specific flows via `/claude-api <subcommand>`. If no table in the document matches, treat the request as normal prose.
@@ -147,7 +146,6 @@ If the User Request at the bottom of this prompt is a bare subcommand string (no
 | `hillclimb` | Iteratively improve the user's app against an existing eval. **Read `shared/evals/eval-hillclimb.md` immediately** and follow it: Step 0 (confirm a runnable eval exists - if not, route to `build-eval`), Step 1 (what to change / what's off-limits), Step 2 (budget + stopping condition from measured per-run cost), get the plan approved, then the read->propose->apply->run->record loop with on-disk state and a train/validation/test split. |
 
 ---
-
 ## Language Detection
 
 Before reading code examples, determine which language the user is working in (exception: for the `prompt-audit` subcommand, skip this section's ask steps - the audit is non-interactive and its inventory is language-agnostic; when no language is inferable, proceed without asking and state the assumption in the report):
@@ -189,7 +187,6 @@ Every SDK language above supports both the beta Tool Runner and Managed Agents (
 > **Managed Agents code examples**: see the reading guide in the `## Managed Agents (Beta)` section below.
 
 ---
-
 ## Which Surface Should I Use?
 
 > **Start simple.** Default to the simplest tier that meets your needs. Single API calls and workflows handle most use cases - only reach for agents when the task genuinely requires open-ended, model-driven exploration. "Simplest" means the least code you own: for a hosted, scheduled, or memory-backed agent, Managed Agents is usually the simplest option (no loop code, no state files, no scheduler), even though it's a bigger platform.
@@ -244,7 +241,6 @@ Before choosing the agent tier, check all four criteria:
 If the answer is "no" to any of these, stay at a simpler tier (single call or workflow).
 
 ---
-
 ## Architecture
 
 Everything goes through `POST /v1/messages`. Tools and output constraints are features of this single endpoint - not separate APIs.
@@ -258,7 +254,6 @@ Everything goes through `POST /v1/messages`. Tools and output constraints are fe
 **Supporting endpoints** - Batches (`POST /v1/messages/batches`), Files (`POST /v1/files`), Token Counting (`POST /v1/messages/count_tokens` - see `shared/token-counting.md`), and Models (`GET /v1/models`, `GET /v1/models/{id}` - live capability/context-window discovery) feed into or support Messages API requests.
 
 ---
-
 ## Current Models (cached: 2026-10-06)
 
 | Model             | Model ID            | Context        | Input $/1M | Output $/1M |
@@ -311,7 +306,6 @@ If any model strings above look unfamiliar, that just means they were released a
 **Live capability lookup:** The table above is cached. When the user asks "what's the context window for X", "does X support vision/thinking/effort", or "which models support Y", query the Models API (`client.models.retrieve(id)` / `client.models.list()`) - see `shared/models.md` for the field reference and capability-filter examples.
 
 ---
-
 ## Authentication (Quick Reference)
 
 **An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` -> `ANTHROPIC_AUTH_TOKEN` -> the `ANTHROPIC_PROFILE`-selected or active OAuth profile from `ant auth login` -> Workload Identity Federation env vars -> the default profile on disk. A bare `Anthropic()` / `new Anthropic()` / `anthropic.NewClient()` works after `ant auth login` with no env var set.
@@ -326,7 +320,6 @@ Only ask the user for a key if `ant auth status` reports no active credential so
 Full auth details (named profiles, scopes, the API-key-shadows-profile trap, refresh-token expiry): `shared/anthropic-cli.md`.
 
 ---
-
 ## Thinking & Effort (Quick Reference)
 
 Use adaptive thinking (`thinking: {type: "adaptive"}`) on every current model except Haiku 4.5, which still takes `budget_tokens` (table below) - Claude dynamically decides when and how much to think. Per-model rules:
@@ -353,7 +346,6 @@ Opus 4.8 keeps 4.7's request surface - see `shared/model-migration.md` -> Migrat
 - **When the user asks for "extended thinking", a "thinking budget", or `budget_tokens`:** always use Fable 5/5.1, Opus 5.5, 5, 4.8, 4.7, or 4.6 with `thinking: {type: "adaptive"}` - the fixed thinking-token-budget concept is deprecated and adaptive thinking replaces it. Do NOT use `budget_tokens` for new 4.6/4.7/4.8 code and do NOT switch to an older model just because the user mentions it. *Gradual-migration carve-out:* `budget_tokens` is still functional on Opus 4.6 and Sonnet 4.6 only, as a transitional escape hatch for existing code that needs a hard token ceiling before you've tuned `effort` - see `shared/model-migration.md` -> Transitional escape hatch. It is fully removed on Fable 5/5.1, Opus 5.5/5/4.7/4.8, Sonnet 5.5/5, and Haiku 5.5.
 
 ---
-
 ## Compaction (Quick Reference)
 
 **Beta, Fable 5/5.1, Opus 5.5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5.5, Sonnet 5, Sonnet 4.6, and Claude Haiku 5.5.** For long-running conversations that may exceed the 1M context window, enable server-side compaction. The API automatically summarizes earlier context when it approaches the trigger threshold (default: 150K tokens). Requires beta header `compact-2026-01-12`.
@@ -363,7 +355,6 @@ Opus 4.8 keeps 4.7's request surface - see `shared/model-migration.md` -> Migrat
 See `{lang}/claude-api/README.md` (Compaction section) for code examples. Full docs: the Compaction row in `shared/live-sources.md`.
 
 ---
-
 ## Prompt Caching (Quick Reference)
 
 **Prefix match.** Any byte change anywhere in the prefix invalidates everything after it. Render order is `tools` -> `system` -> `messages`. Keep stable content first (frozen system prompt, deterministic tool list), put volatile content (timestamps, per-request IDs, varying questions) after the last `cache_control` breakpoint.
@@ -377,7 +368,6 @@ See `{lang}/claude-api/README.md` (Compaction section) for code examples. Full d
 For placement patterns, architectural guidance, and the silent-invalidator audit checklist: read `shared/prompt-caching.md`. Language-specific syntax: `{lang}/claude-api/README.md` (Prompt Caching section).
 
 ---
-
 ## Fast Mode (Quick Reference)
 
 **Research preview, Claude Opus 5 / Claude Opus 5.5 / Opus 4.8 only** - Claude API and Managed Agents, not Bedrock / Google Cloud / Foundry. Opus 4.7 fast mode has been removed: `speed: "fast"` on 4.7 returns an error. Fast mode on Claude Opus 5 is priced at $10 / $50 per MTok; on Claude Opus 5.5, $8 / $40. Fast mode runs the same model at up to 2.5x higher output tokens per second, at premium pricing. Three things are required on every request: use the **beta** messages endpoint (`client.beta.messages....`), pass the beta flag `fast-mode-2026-02-01`, and set `speed: "fast"` as a top-level request parameter (not a header, not in `extra_body`).
@@ -405,7 +395,6 @@ client.beta.messages.create(
 **Priority Tier is not supported on every current model.** It is supported on Claude Fable 5, Opus 4.8, and the older current models, but Claude Opus 5.5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 5.5, Claude Fable 5.1, Claude Mythos 5.1, Claude Mythos 5, and Mythos Preview are excluded - a Priority Tier request naming one of them fails validation.
 
 ---
-
 ## Task Budgets (Quick Reference)
 
 **Beta, Claude Opus 5 / Claude Opus 5.5 / Fable 5 / Claude Fable 5.1 (confirm at launch) / Claude Sonnet 5.5 / Claude Haiku 5.5 / Opus 4.8 / 4.7 (not Claude Sonnet 5).** A task budget gives Claude a token ceiling for an agentic loop so it paces itself and finishes gracefully instead of being cut off - distinct from `max_tokens`, which is an enforced per-response ceiling the model is not aware of. Minimum `total`: 20,000. Set `task_budget` inside `output_config` on `client.beta.messages.stream(...)` with beta flag `task-budgets-2026-03-13` - use streaming so the large `max_tokens` doesn't hit HTTP timeouts (full details: `shared/model-migration.md` -> Task Budgets):
@@ -425,7 +414,6 @@ with client.beta.messages.stream(
 **Observing spend:** accumulate `response.usage.output_tokens` (plus the token count of the tool-result blocks you append) across loop iterations if you want to display progress. Leave `remaining` unset in the normal loop - the server tracks the countdown itself, and passing a client-computed `remaining` while also resending full history under-reports the budget. **Only pass `remaining`** when you compact or rewrite history between requests and the server can no longer derive prior spend.
 
 ---
-
 ## Provider Clients (Quick Reference)
 
 When targeting Claude on a third-party platform, use that platform's dedicated client class - not the first-party `Anthropic()` client with a `base_url` override. After construction the client exposes the same `messages.create` / `.stream` surface as the first-party SDK.

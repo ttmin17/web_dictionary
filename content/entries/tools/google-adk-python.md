@@ -29,7 +29,6 @@ signals:
   stars_growth_pct: 0.5
   trending_score: 101.47
   rank_current: 57
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 21907
@@ -50,14 +49,7 @@ tool:
   install_command: pip install google-adk
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - google-adk
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.

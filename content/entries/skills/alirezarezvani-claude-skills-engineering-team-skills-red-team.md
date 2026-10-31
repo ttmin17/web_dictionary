@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -69,7 +69,6 @@ skill:
 Red team engagement planning and attack path analysis skill for authorized offensive security simulations. This is NOT vulnerability scanning (see security-pen-testing) or incident response (see incident-response) — this is about structured adversary simulation to test detection, response, and control effectiveness.
 
 ---
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -85,7 +84,6 @@ Red team engagement planning and attack path analysis skill for authorized offen
 - [Cross-References](#cross-references)
 
 ---
-
 ## Overview
 
 ### What This Skill Does
@@ -106,7 +104,6 @@ This skill provides the methodology and tooling for **red team engagement planni
 **All red team activities described here require written authorization.** This includes a signed Rules of Engagement (RoE) document, defined scope, and explicit executive approval. The `engagement_planner.py` tool will not generate output without the `--authorized` flag. Unauthorized use of these techniques is illegal under the CFAA, Computer Misuse Act, and equivalent laws worldwide.
 
 ---
-
 ## Engagement Planner Tool
 
 The `engagement_planner.py` tool builds a scored, kill-chain-ordered attack plan from technique selection, access level, and crown jewel targets.
@@ -154,7 +151,6 @@ python3 scripts/engagement_planner.py --list-techniques
 | 2 | Scope violation — technique outside access-level constraints |
 
 ---
-
 ## Kill-Chain Phase Methodology
 
 The engagement planner organizes techniques into eight kill-chain phases and orders the execution plan accordingly.
@@ -180,7 +176,6 @@ The engagement planner organizes techniques into eight kill-chain phases and ord
 Each phase must be completed before advancing to the next unless the engagement scope specifies assumed breach (skip to a later phase). Do not skip persistence before attempting lateral movement — persistence ensures operational continuity if a single foothold is detected and removed.
 
 ---
-
 ## Technique Scoring and Prioritization
 
 Techniques are scored by effort (how hard to execute without detection) and prioritized in the engagement plan.
@@ -205,7 +200,6 @@ Lower effort score = easier to execute without triggering detection.
 | Ransomware deployment | 0.9 | persistence, lateral_movement | 2.7 | T1486 |
 
 ---
-
 ## Choke Point Analysis
 
 Choke points are techniques required by multiple paths to crown jewel assets. Detecting a choke point technique detects all attack paths that pass through it.
@@ -228,7 +222,6 @@ Prioritize detection rule development and monitoring density around choke point 
 Full methodology: `references/attack-path-methodology.md`
 
 ---
-
 ## OPSEC Risk Assessment
 
 OPSEC risk items identify actions that are likely to trigger detection or leave persistent artifacts.
@@ -252,7 +245,6 @@ OPSEC risk items identify actions that are likely to trigger detection or leave 
 5. Are cleanup artifacts defined for post-exercise removal?
 
 ---
-
 ## Crown Jewel Targeting
 
 Crown jewel assets are the high-value targets that define the success criteria of a red team engagement.
@@ -270,7 +262,6 @@ Crown jewel assets are the high-value targets that define the success criteria o
 Crown jewel definition is agreed upon in the RoE — engagement success is measured by whether red team reaches defined crown jewels, not by the number of vulnerabilities found.
 
 ---
-
 ## Attack Path Methodology
 
 Attack path analysis identifies all viable routes from the starting access level to each crown jewel.
@@ -299,7 +290,6 @@ external
 For the full scoring algorithm, choke point weighting, and effort-vs-impact matrix, see `references/attack-path-methodology.md`.
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Quick Engagement Scoping (30 Minutes)
@@ -373,7 +363,6 @@ done
 ```
 
 ---
-
 ## Anti-Patterns
 
 1. **Operating without written authorization** — Unauthorized red team activity against any system you don't own or have explicit permission to test is a criminal offense. The `--authorized` flag must reflect a real signed RoE, not just running the tool to bypass the check. Authorization must predate execution.
@@ -385,7 +374,6 @@ done
 7. **Treating path of least resistance as the only path** — Attackers adapt. Test multiple attack paths including higher-effort routes that may evade detection. Validating that the easiest path is detected is necessary but not sufficient.
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |

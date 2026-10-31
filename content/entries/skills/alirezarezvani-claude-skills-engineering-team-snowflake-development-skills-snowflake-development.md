@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -86,7 +86,6 @@ python scripts/snowflake_query_helper.py grant --role analyst_role --database an
 ```
 
 ---
-
 ## SQL Best Practices
 
 ### Naming and Style
@@ -128,7 +127,6 @@ WHEN NOT MATCHED THEN INSERT (id, name, updated_at) VALUES (s.id, s.name, CURREN
 > See `references/snowflake_sql_and_pipelines.md` for deeper SQL patterns and anti-patterns.
 
 ---
-
 ## Data Pipelines
 
 ### Choosing Your Approach
@@ -175,7 +173,6 @@ ALTER TASK process_events RESUME;
 > See `references/snowflake_sql_and_pipelines.md` for DT debugging queries and Snowpipe patterns.
 
 ---
-
 ## Cortex AI
 
 ### Function Reference
@@ -216,7 +213,6 @@ Agent specs use a JSON structure with top-level keys: `models`, `instructions`, 
 > See `references/cortex_ai_and_agents.md` for full agent spec examples and Cortex Search patterns.
 
 ---
-
 ## Snowpark Python
 
 ```python
@@ -268,7 +264,6 @@ session = Session.builder.configs({
 - Use masking policies for PII columns and row access policies for multi-tenant isolation.
 
 ---
-
 ## Proactive Triggers
 
 Surface these issues without being asked when you notice them in context:
@@ -280,7 +275,6 @@ Surface these issues without being asked when you notice them in context:
 - **Hardcoded credentials** in Snowpark code -- flag as a security risk.
 
 ---
-
 ## Common Errors
 
 | Error | Cause | Fix |
@@ -293,7 +287,6 @@ Surface these issues without being asked when you notice them in context:
 | TO_FILE error | Combined path as single argument | Split into two args: `TO_FILE('@stage', 'file.pdf')` |
 
 ---
-
 ## Practical Workflows
 
 ### Workflow 1: Build a Reporting Pipeline (30 min)
@@ -319,7 +312,6 @@ Surface these issues without being asked when you notice them in context:
 4. **Consult troubleshooting reference**: See `references/troubleshooting.md` for error-specific fixes
 
 ---
-
 ## Anti-Patterns
 
 | Anti-Pattern | Why It Fails | Better Approach |
@@ -335,7 +327,6 @@ Surface these issues without being asked when you notice them in context:
 | Double-quoted identifiers | Forces case-sensitive names across all queries | Use `snake_case` unquoted identifiers |
 
 ---
-
 ## Cross-References
 
 | Skill | Relationship |
@@ -347,7 +338,6 @@ Surface these issues without being asked when you notice them in context:
 | `engineering-team/senior-devops` | CI/CD for Snowflake deployments (Terraform, GitHub Actions) |
 
 ---
-
 ## Reference Documentation
 
 | Document | Contents |

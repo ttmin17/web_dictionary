@@ -30,7 +30,6 @@ signals:
   stars_growth_pct: 0.8
   trending_score: 673.32
   rank_current: 18
-  rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 83907
@@ -91,7 +90,6 @@ tool:
 </p>
 
 ---
-
 <p align="center">
  <a href="https://www.star-history.com/rtk-ai/rtk">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=rtk-ai/rtk&type=rank&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=rtk-ai/rtk&type=rank" /><img alt="Star History Rank" src="https://api.star-history.com/badge?repo=rtk-ai/rtk&type=rank" /></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=rtk-ai/rtk&type=trending&theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=rtk-ai/rtk&type=trending" /><img alt="GitHub Trending Repository of the Day" src="https://api.star-history.com/badge?repo=rtk-ai/rtk&type=trending" /></picture>

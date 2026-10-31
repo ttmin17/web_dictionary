@@ -4,7 +4,8 @@ name: extract
 tagline: Turn a proven pattern or debugging solution into a standalone reusable
   skill with SKILL.md, reference docs, and examples. Use when the user runs
   /si:e
-summary: "A learning qualifies for skill extraction when ANY of these are true:"
+summary: If found in auto-memory, use those entries as source material. If not,
+  use the user's description directly.
 categories:
   - coding-agents
 tags:
@@ -26,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -144,11 +145,9 @@ The agent creates:
 The generated SKILL.md must follow this format:
 
 ```markdown
----
-name: "skill-name"
+---name: "skill-name"
 description: "<one-line description>. Use when: <trigger conditions>."
 ---
-
 # <Skill Title>
 
 > One-line summary of what this skill solves.

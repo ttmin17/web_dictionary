@@ -292,5 +292,4 @@ Automate Supabase operations including database queries, table schema inspection
 | List storage buckets | `SUPABASE_LISTS_ALL_BUCKETS` | `ref` |
 | List DB branches | `SUPABASE_LIST_ALL_DATABASE_BRANCHES` | `ref` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

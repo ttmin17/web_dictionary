@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -73,7 +73,6 @@ skill:
 **Domain:** Security / DevOps / Configuration Management
 
 ---
-
 ## Overview
 
 Manage environment-variable hygiene and secrets safety across local development and production workflows. This skill focuses on practical auditing, drift awareness, and rotation readiness.
@@ -87,7 +86,6 @@ Manage environment-variable hygiene and secrets safety across local development 
 - Integration-ready outputs for CI checks
 
 ---
-
 ## When to Use
 
 - Before pushing commits that touched env/config files
@@ -96,7 +94,6 @@ Manage environment-variable hygiene and secrets safety across local development 
 - When validating that no obvious secrets are hardcoded
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -108,7 +105,6 @@ python3 scripts/env_auditor.py /path/to/repo --json
 ```
 
 ---
-
 ## Recommended Workflow
 
 1. Run `scripts/env_auditor.py` on the repository root.
@@ -118,14 +114,12 @@ python3 scripts/env_auditor.py /path/to/repo --json
 5. Add or tighten pre-commit/CI secret scanning gates.
 
 ---
-
 ## Reference Docs
 
 - `references/validation-detection-rotation.md`
 - `references/secret-patterns.md`
 
 ---
-
 ## Common Pitfalls
 
 - Committing real values in `.env.example`
@@ -141,7 +135,6 @@ python3 scripts/env_auditor.py /path/to/repo --json
 4. Re-test application paths immediately after credential rotation.
 
 ---
-
 ## Cloud Secret Store Integration
 
 Production applications should never read secrets from `.env` files or environment variables baked into container images. Use a dedicated secret store instead.
@@ -171,7 +164,6 @@ Production applications should never read secrets from `.env` files or environme
 > **Cross-reference:** See `engineering/secrets-vault-manager` for production vault infrastructure patterns, HA deployment, and disaster recovery procedures.
 
 ---
-
 ## Secret Rotation Workflow
 
 Stale secrets are a liability. Rotation ensures that even if a credential leaks, its useful lifetime is bounded.
@@ -209,7 +201,6 @@ When a secret is confirmed leaked:
 6. Review and tighten detection controls to prevent recurrence.
 
 ---
-
 ## CI/CD Secret Injection
 
 Secrets in CI/CD pipelines require careful handling to avoid exposure in logs, artifacts, or pull request contexts.
@@ -236,7 +227,6 @@ Secrets in CI/CD pipelines require careful handling to avoid exposure in logs, a
 - **Audit pipeline logs** periodically for accidental secret exposure that masking may have missed.
 
 ---
-
 ## Pre-Commit Secret Detection
 
 Catching secrets before they reach version control is the most cost-effective defense. Two leading tools cover this space.
@@ -286,7 +276,6 @@ repos:
 - Prefer tightening regex patterns over broadly ignoring files.
 
 ---
-
 ## Audit Logging
 
 Knowing who accessed which secret and when is critical for incident investigation and compliance.
@@ -309,7 +298,6 @@ Knowing who accessed which secret and when is critical for incident investigatio
 - Review audit logs quarterly as part of access recertification.
 
 ---
-
 ## Cross-References
 
 This skill covers env hygiene and secret detection. For deeper coverage of related domains, see:

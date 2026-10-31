@@ -517,5 +517,4 @@ npm test && npm run lint
 - Las pruebas detectan bugs antes de producción
 
 ---
-
 **Recuerda**: Las pruebas no son opcionales. Son la red de seguridad que permite refactorización con confianza, desarrollo rápido y confiabilidad en producción.

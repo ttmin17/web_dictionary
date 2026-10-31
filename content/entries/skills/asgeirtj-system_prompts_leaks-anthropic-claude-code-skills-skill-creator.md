@@ -4,7 +4,10 @@ name: creator
 tagline: Create new skills, modify and improve existing skills, and measure
   skill performance. Use when users want to create a skill from scratch, edit,
   or opt
-summary: "At a high level, the process of creating a skill goes like this:"
+summary: "- Decide what you want the skill to do and roughly how it should do it
+  - Write a draft of the skill - Create a few test prompts and run
+  claude-with-access-to-the-skill on them - Help the user evaluate the results
+  both..."
 categories:
   - cloud-infra
 tags:
@@ -108,7 +111,6 @@ So please pay attention to context cues to understand how to phrase your communi
 It's OK to briefly explain terms if you're in doubt, and feel free to clarify terms with a short definition if you're unsure if the user will get it.
 
 ---
-
 ## Creating a skill
 
 ### Capture Intent
@@ -377,7 +379,6 @@ kill $VIEWER_PID 2>/dev/null
 ```
 
 ---
-
 ## Improving the skill
 
 This is the heart of the loop. You've run the test cases, the user has reviewed the results, and now you need to make the skill better based on their feedback.
@@ -410,7 +411,6 @@ Keep going until:
 - You're not making meaningful progress
 
 ---
-
 ## Advanced: Blind comparison
 
 For situations where you want a more rigorous comparison between two versions of a skill (e.g., the user asks "is the new version actually better?"), there's a blind comparison system. Read `agents/comparator.md` and `agents/analyzer.md` for the details. The basic idea is: give two outputs to an independent agent without telling it which is which, and let it judge quality. Then analyze why the winner won.
@@ -418,7 +418,6 @@ For situations where you want a more rigorous comparison between two versions of
 This is optional, requires subagents, and most users won't need it. The human review loop is usually sufficient.
 
 ---
-
 ## Description Optimization
 
 The description field in SKILL.md frontmatter is the primary mechanism that determines whether Claude invokes a skill. After creating or improving a skill, offer to optimize the description for better triggering accuracy.
@@ -493,7 +492,6 @@ This means your eval queries should be substantive enough that Claude would actu
 Take `best_description` from the JSON output and update the skill's SKILL.md frontmatter. Show the user before/after and report the scores.
 
 ---
-
 ### Package and Present (only if a file-delivery tool is available)
 
 Check whether you have access to a tool that presents files to the user — `present_files`, or `SendUserFile` in Cowork remote. If you have neither, skip this step. If you do, package the skill and send the user the resulting `.skill` file with that tool:
@@ -505,7 +503,6 @@ python -m scripts.package_skill <path/to/skill-folder>
 The presented `.skill` (or bare `SKILL.md`) file card shows a **Save skill** button when the user's org allows skill creation; clicking it installs the skill into their profile.
 
 ---
-
 ## Claude.ai-specific instructions
 
 In Claude.ai, the core workflow is the same (draft → test → review → improve → repeat), but because Claude.ai doesn't have subagents, some mechanics change. Here's what to adapt:
@@ -530,7 +527,6 @@ In Claude.ai, the core workflow is the same (draft → test → review → impro
 - **If packaging manually, stage in `/tmp/` first**, then copy to the output directory -- direct writes may fail due to permissions.
 
 ---
-
 ## Cowork-Specific Instructions
 
 If you're in Cowork, the main things to know are:
@@ -544,7 +540,6 @@ If you're in Cowork, the main things to know are:
 - **Updating an existing skill**: The user might be asking you to update an existing skill, not create a new one. Follow the update guidance in the claude.ai section above.
 
 ---
-
 ## Reference files
 
 The agents/ directory contains instructions for specialized subagents. Read them when you need to spawn the relevant subagent.
@@ -557,7 +552,6 @@ The references/ directory has additional documentation:
 - `references/schemas.md` — File formats: test case folders, the older evals.json, grading.json, etc.
 
 ---
-
 Repeating one more time the core loop here for emphasis:
 
 - Figure out what the skill is about

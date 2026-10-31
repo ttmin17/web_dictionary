@@ -74,7 +74,6 @@ curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+
 ```
 
 ---
-
 ## Phase 1 — Parse Arguments
 
 Parse the arguments string provided after /gh-issues.
@@ -123,7 +122,6 @@ Derived values:
 - Otherwise, proceed normally through Phases 2-5 with cron-mode behavior active
 
 ---
-
 ## Phase 2 — Fetch Issues
 
 **Token Resolution:**
@@ -179,7 +177,6 @@ Error handling:
 Parse the JSON response. For each issue, extract: number, title, body, labels (array of label names), assignees, html_url.
 
 ---
-
 ## Phase 3 — Present & Confirm
 
 Display a markdown table of fetched issues:
@@ -215,7 +212,6 @@ Wait for user response before proceeding.
 Watch mode note: On the first poll, always confirm with the user (unless --yes is set). On subsequent polls, auto-process all new issues without re-confirming (the user already opted in). Still display the table so they can see what's being processed.
 
 ---
-
 ## Phase 4 — Pre-flight Checks
 
 Run these checks sequentially via exec:
@@ -337,7 +333,6 @@ Run these checks sequentially via exec:
    If all issues are skipped after this check, report and stop (or loop back if in watch mode).
 
 ---
-
 ## Phase 5 — Spawn Sub-agents (Parallel)
 
 **Cron mode (`--cron` is active):**
@@ -565,7 +560,6 @@ If a sub-agent exceeds 60 minutes, record it as:
 > "#{N} — Timed out (issue may be too complex for auto-fix)"
 
 ---
-
 ## Results Collection
 
 **If `--cron` is active:** Skip this section entirely — the orchestrator already exited after spawning in Phase 5.
@@ -613,7 +607,6 @@ Where PR_LIST includes only successfully opened PRs in format:
 Then proceed to Phase 6.
 
 ---
-
 ## Phase 6 — PR Review Handler
 
 This phase monitors open PRs (created by this skill or pre-existing `fix/issue-*` PRs) for review comments and spawns sub-agents to address them.
@@ -897,7 +890,6 @@ After all review sub-agents complete, present a summary:
 Add comment IDs from this batch to `ADDRESSED_COMMENTS` set to prevent re-processing.
 
 ---
-
 ## Watch Mode (if --watch is active)
 
 After presenting results from the current batch:

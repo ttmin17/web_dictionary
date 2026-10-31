@@ -247,5 +247,4 @@ Automate Microsoft Outlook operations through Composio's Outlook toolkit via Rub
 | Create contact | OUTLOOK_CREATE_CONTACT | givenName, emailAddresses |
 | Contact folders | OUTLOOK_GET_CONTACT_FOLDERS | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

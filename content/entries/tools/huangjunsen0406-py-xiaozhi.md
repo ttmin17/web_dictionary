@@ -29,8 +29,7 @@ signals:
   stars_delta_7d: 11
   stars_growth_pct: 0.3
   trending_score: 11.03
-  rank_current: 113
-  rank_delta: null
+  rank_current: 114
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3492
@@ -106,7 +105,6 @@ English | [简体中文](https://github.com/huangjunsen0406/py-xiaozhi/blob/main
 Thanks to GitDo.net for sponsoring this project! GitDo.net is an AI API aggregation platform — one API Key for **Claude, Gemini, GPT** and other major models. Direct connection, no proxy needed, stable and efficient. An ideal choice for enterprise-grade AI programming. **[Visit GitDo.net](https://gitdo.net/)**
 
 ---
-
 |                                                                     |                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [**Token能量站**](https://factory.pub/register?aff=3rXc)            | Thanks to Token能量站 (Factory.pub) for sponsoring this project! Providing API relay for **GPT, Grok, Claude** and other major models — stable, reliable, and affordable. **[Register here](https://factory.pub/register?aff=3rXc)**        |

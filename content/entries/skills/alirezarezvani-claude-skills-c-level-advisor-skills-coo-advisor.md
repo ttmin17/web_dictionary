@@ -4,10 +4,10 @@ name: coo-advisor
 tagline: Operations leadership for scaling companies. Process design, OKR
   execution, operational cadence, and scaling playbooks. Use when designing
   operations,
-summary: "Process Maturity Scale: | Level | Name | Signal |
-  |-------|------|--------| | 1 | Ad hoc | Different every time | | 2 | Defined
-  | Written but not followed | | 3 | Measured | KPIs tracked | | 4 | Managed |
-  Data-driven..."
+summary: "- \"What's the bottleneck? Not what's annoying — what limits
+  throughput.\" - \"How many manual steps? Which break at 3x volume?\" - \"Who's
+  the single point of failure?\" - \"Can every team articulate how their work
+  connects..."
 categories:
   - coding-agents
 tags:
@@ -29,7 +29,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

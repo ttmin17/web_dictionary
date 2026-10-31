@@ -28,8 +28,8 @@ signals:
   stars_delta_7d: 8
   stars_growth_pct: 0.3
   trending_score: 8.03
-  rank_current: 120
-  rank_delta: -75
+  rank_current: 121
+  rank_delta: -76
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2371
@@ -93,7 +93,6 @@ tool:
 </p>
 
 ---
-
 Most web scraping tools give your agent one of two bad outputs:
 
 - a blocked page, login wall, or empty app shell
@@ -118,7 +117,6 @@ You may use this domain in literature without prior coordination or asking for p
 Use it from the terminal, wire it into Claude/Cursor through MCP, call the hosted API from your app, or self-host the OSS server.
 
 ---
-
 ## Install
 
 ### Agent setup
@@ -221,7 +219,6 @@ for page in wc.crawl("https://quotes.toscrape.com", max_pages=10):
 See [python/README.md](https://github.com/0xMassi/webclaw/blob/main/python/README.md) for every function and option.
 
 ---
-
 ## Quick Start
 
 ### Scrape one page
@@ -535,7 +532,6 @@ webclaw https://example.com/pricing --diff-with pricing-old.json
 ```
 
 ---
-
 ## MCP Server
 
 webclaw ships with an MCP server for AI agents.
@@ -594,7 +590,6 @@ Extract the brand colors, fonts, and logos from this company website.
 ```
 
 ---
-
 ## Use as an agent skill
 
 Add webclaw to Claude Code, Cursor, Windsurf, and other MCP agents in one command:
@@ -610,7 +605,6 @@ to handle bot-protected and JavaScript-rendered pages.
 Find it on [skills.sh](https://www.skills.sh/0xMassi/webclaw-skill/webclaw).
 
 ---
-
 ## Tools
 
 | Tool | What it does | Local |
@@ -629,7 +623,6 @@ Find it on [skills.sh](https://www.skills.sh/0xMassi/webclaw-skill/webclaw).
 | `research` | Multi-source research workflow | Hosted API |
 
 ---
-
 ## SDKs
 
 ```bash
@@ -693,7 +686,6 @@ curl -X POST https://api.webclaw.io/v1/scrape \
 </details>
 
 ---
-
 ## Output Formats
 
 | Format | Use it when you need |
@@ -705,7 +697,6 @@ curl -X POST https://api.webclaw.io/v1/scrape \
 | `html` | Cleaned HTML for custom processing |
 
 ---
-
 ## Local First, Hosted When Needed
 
 The CLI and MCP server work locally without an account for the core extraction path.
@@ -726,7 +717,6 @@ webclaw https://example.com --cloud
 ```
 
 ---
-
 ## What You Can Build
 
 | Use case | Example |
@@ -754,7 +744,6 @@ webclaw/
 `webclaw-core` is pure extraction logic: no network I/O, small surface area, and usable independently from the fetching layer.
 
 ---
-
 ## Configuration
 
 | Variable | Description |
@@ -776,7 +765,6 @@ webclaw/
 | `WEBCLAW_MCP_TOKEN` | Bearer token `webclaw-mcp --http` requires from every client |
 
 ---
-
 ## Contributing
 
 The most useful contributions right now are practical and small:
@@ -808,7 +796,6 @@ CLI, MCP, SDK, or API:
 Please remove secrets, cookies, private tokens, and customer data from logs before posting.
 
 ---
-
 ## Strategic Partner
 
 <table>
@@ -841,7 +828,6 @@ Please remove secrets, cookies, private tokens, and customer data from logs befo
 </table>
 
 ---
-
 ## Infrastructure Partner
 
 <table>
@@ -866,7 +852,6 @@ Please remove secrets, cookies, private tokens, and customer data from logs befo
 </table>
 
 ---
-
 ## Studio Partners
 
 <table>
@@ -929,7 +914,6 @@ Please remove secrets, cookies, private tokens, and customer data from logs befo
 </table>
 
 ---
-
 ## Community Plugins
 
 Third-party plugins that integrate webclaw with AI agent platforms:
@@ -942,7 +926,6 @@ Third-party plugins that integrate webclaw with AI agent platforms:
 Built a webclaw integration? [Open a PR](https://github.com/0xMassi/webclaw/pulls) to add it here.
 
 ---
-
 ## Contributors
 
 Thanks to everyone improving webclaw through issues, examples, docs, bug reports, and pull requests.
@@ -952,7 +935,6 @@ Thanks to everyone improving webclaw through issues, examples, docs, bug reports
 </a>
 
 ---
-
 ## Star History
 
 <a href="https://github.com/0xMassi/webclaw/stargazers">
@@ -964,7 +946,6 @@ Thanks to everyone improving webclaw through issues, examples, docs, bug reports
 </a>
 
 ---
-
 ## License
 
 [AGPL-3.0-only](https://github.com/0xMassi/webclaw/blob/main/LICENSE)

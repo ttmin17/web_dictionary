@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -78,7 +78,6 @@ Structured founder interview that builds the company context file powering every
 cs:setup, cs:update, company context, founder interview, onboarding, company profile, c-suite setup, advisor setup
 
 ---
-
 ## Conversation Principles
 
 Be a conversation, not an interrogation. Ask one question at a time. Follow threads. Reflect back: "So the real issue sounds like X — is that right?" Watch for what they skip — that's where the real story lives. Never read a list of questions.
@@ -86,7 +85,6 @@ Be a conversation, not an interrogation. Ask one question at a time. Follow thre
 Open with: *"Tell me about the company in your own words — what are you building and why does it matter?"*
 
 ---
-
 ## 7 Interview Dimensions
 
 ### 1. Company Identity
@@ -123,7 +121,6 @@ Capture: 12-month target (specific), 36-month target (directional), exit vs buil
 Key probe: *"What does success look like for you personally — separate from the company?"*
 
 ---
-
 ## Output: company-context.md
 
 After the interview, generate `~/.claude/company-context.md` using `templates/company-context-template.md`.
@@ -133,7 +130,6 @@ Fill every section. Write `[not captured]` for unknowns — never leave blank. A
 Tell the founder: *"I've captured everything in your company context. Every advisor will use this to give specific, relevant advice. Run /cs-onboard update in 90 days to keep it current."*
 
 ---
-
 ## /cs-onboard update — Quarterly Refresh
 
 **Trigger:** Every 90 days or after a major change. Duration: ~15 minutes.
@@ -152,7 +148,6 @@ Walk each dimension with one "what changed?" question:
 Update the context file, refresh timestamp, reset to `fresh`.
 
 ---
-
 ## Context File Location
 
 `~/.claude/company-context.md` — single source of truth for all C-suite skills. Do not move it. Do not create duplicates.

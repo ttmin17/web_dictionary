@@ -106,8 +106,7 @@ Un sistema de aprendizaje avanzado que convierte tus sesiones de Claude Code en 
 Un instinto es un pequeño comportamiento aprendido:
 
 ```yaml
----
-id: prefer-functional-style
+---id: prefer-functional-style
 trigger: "when writing new functions"
 confidence: 0.7
 domain: "code-style"
@@ -116,7 +115,6 @@ scope: project
 project_id: "a1b2c3d4e5f6"
 project_name: "my-react-app"
 ---
-
 # Prefer Functional Style
 
 ## Action

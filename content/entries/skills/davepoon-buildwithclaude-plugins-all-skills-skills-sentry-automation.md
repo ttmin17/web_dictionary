@@ -288,5 +288,4 @@ Automate Sentry error tracking and monitoring operations through Composio's Sent
 | List releases | SENTRY_LIST_ORGANIZATION_RELEASES | organization_id_or_slug |
 | Update monitor | SENTRY_UPDATE_A_MONITOR | organization_id_or_slug, monitor_id_or_slug |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

@@ -191,7 +191,6 @@ euler = unreal.AnimSequenceService.quat_to_euler(some_quat)
 ```
 
 ---
-
 ## COMMON_MISTAKES
 
 ### Wrong: Applying rotations without space
@@ -306,7 +305,6 @@ for anim_info in anims[:10]:
 - `search_animations(name_pattern, search_path)` - Find by name pattern
 
 ---
-
 ## IMPORTANT: Asset Path Format
 
 **All `anim_path` parameters require the FULL asset path (package_name), NOT the folder path (package_path).**
@@ -332,7 +330,6 @@ if results:
 ```
 
 ---
-
 ## Sub-docs available
 
 Load these sibling docs for deeper coverage of specific topics:

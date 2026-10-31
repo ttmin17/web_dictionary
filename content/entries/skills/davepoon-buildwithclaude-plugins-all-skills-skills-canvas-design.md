@@ -155,7 +155,6 @@ Visual expression: Grid-based precision, bold photography or stark graphics, dra
 **The design philosophy should be 4-6 paragraphs long.** Fill it with poetic design philosophy that brings together the core vision. Avoid repeating the same points. Keep the design philosophy generic without mentioning the intention of the art, as if it can be used wherever. Output the design philosophy as a .md file.
 
 ---
-
 ## DEDUCING THE SUBTLE REFERENCE
 
 **CRITICAL STEP**: Before creating the canvas, identify the subtle conceptual thread from the original request.
@@ -166,7 +165,6 @@ The topic is a **subtle, niche reference embedded within the art itself** - not 
 This is **VERY IMPORTANT**: The reference must be refined so it enhances the work's depth without announcing itself. Think like a jazz musician quoting another song - only those who know will catch it, but everyone appreciates the music.
 
 ---
-
 ## CANVAS CREATION
 
 With both the philosophy and the conceptual framework established, express it on a canvas. Take a moment to gather thoughts and clear the mind. Use the design philosophy created and the instructions below to craft a masterpiece, embodying all aspects of the philosophy with expert craftsmanship.
@@ -186,7 +184,6 @@ To push boundaries, follow design instinct/intuition while using the philosophy 
 Output the final result as a single, downloadable .pdf or .png file, alongside the design philosophy used as a .md file.
 
 ---
-
 ## FINAL STEP
 
 **IMPORTANT**: The user ALREADY said "It isn't perfect enough. It must be pristine, a masterpiece if craftsmanship, as if it were about to be displayed in a museum."

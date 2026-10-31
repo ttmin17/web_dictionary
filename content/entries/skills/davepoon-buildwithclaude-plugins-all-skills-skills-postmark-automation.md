@@ -243,5 +243,4 @@ Automate Postmark transactional email operations through Composio's Postmark too
 | Get server config | POSTMARK_GET_SERVER | (none) |
 | Edit server config | POSTMARK_EDIT_SERVER | Name, TrackOpens, TrackLinks |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

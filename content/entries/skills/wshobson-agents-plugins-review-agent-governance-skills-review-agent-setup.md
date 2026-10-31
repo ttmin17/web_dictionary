@@ -4,7 +4,10 @@ name: review-agent-setup
 tagline: Configure human-in-the-loop gating for AI agent review actions in
   Claude Code. Use when setting up a project where an agent may post PR reviews,
   comme
-summary: "Install it in projects where a Claude Code agent:"
+summary: "- Reviews, comments on, or merges pull requests (gh pr review, gh pr
+  merge) - Triages issues (gh issue comment, gh issue close) - Publishes
+  releases (gh release create) - Modifies CI configuration
+  (.github/workflows/,..."
 categories:
   - coding-agents
 tags:

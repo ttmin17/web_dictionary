@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 53
   stars_growth_pct: 2.6
   trending_score: 54.37
-  rank_current: 76
-  rank_delta: null
+  rank_current: 77
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2051
@@ -52,14 +51,7 @@ tool:
   install_command: pip install waku-agent
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - waku-agent
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Waku Waku! Waku Agent is a local-first AI agent harness you actually own, including loop, memory, eval, all in code built to stay legible as it grows.

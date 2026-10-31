@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -78,7 +78,6 @@ skill:
 Complete toolkit for Security Operations including vulnerability management, compliance verification, secure coding practices, and security automation.
 
 ---
-
 ## Table of Contents
 
 - [Core Capabilities](#core-capabilities)
@@ -89,7 +88,6 @@ Complete toolkit for Security Operations including vulnerability management, com
 - [Best Practices](#best-practices)
 
 ---
-
 ## Core Capabilities
 
 ### 1. Security Scanner
@@ -167,7 +165,6 @@ python scripts/compliance_checker.py /path/to/project --json --output compliance
 - CI/CD security controls
 
 ---
-
 ## Workflows
 
 ### Workflow 1: Security Audit
@@ -302,7 +299,6 @@ PHASE 5: POST-INCIDENT (24-72 hours)
 ```
 
 ---
-
 ## Tool Reference
 
 ### security_scanner.py
@@ -342,7 +338,6 @@ PHASE 5: POST-INCIDENT (24-72 hours)
 **Exit Codes:** `0` = compliant (90%+ score) · `1` = non-compliant (50-69% score) · `2` = critical gaps (<50% score)
 
 ---
-
 ## Security Standards
 
 See `references/security_standards.md` for OWASP Top 10 full guidance, secure coding standards, authentication requirements, and API security controls.
@@ -382,7 +377,6 @@ See `references/security_standards.md` for OWASP Top 10 full guidance, secure co
 ```
 
 ---
-
 ## Compliance Frameworks
 
 See `references/compliance_requirements.md` for full control mappings. Run `compliance_checker.py` to verify the controls below:
@@ -409,7 +403,6 @@ See `references/compliance_requirements.md` for full control mappings. Run `comp
 - **Art 17/20**: Right to erasure and data portability
 
 ---
-
 ## Best Practices
 
 ### Secrets Management
@@ -482,7 +475,6 @@ app.use((req, res, next) => {
 ```
 
 ---
-
 ## OWASP Top 10 Quick-Check
 
 Rapid 15-minute assessment — run through each category and note pass/fail. For deep-dive testing, hand off to the **security-pen-testing** skill.
@@ -503,7 +495,6 @@ Rapid 15-minute assessment — run through each category and note pass/fail. For
 > **Deep dive needed?** Hand off to `security-pen-testing` for full OWASP Testing Guide coverage.
 
 ---
-
 ## Secret Scanning Tools
 
 Choose the right scanner for each stage of your workflow:
@@ -532,7 +523,6 @@ Choose the right scanner for each stage of your workflow:
 ```
 
 ---
-
 ## Supply Chain Security
 
 Protect against dependency and artifact tampering with SBOM generation, artifact signing, and SLSA compliance.
@@ -565,7 +555,6 @@ cosign verify ghcr.io/org/app:latest --certificate-identity=ci@org.com --certifi
 > **Cross-references:** `security-pen-testing` (vulnerability exploitation testing), `dependency-auditor` (license and CVE audit for dependencies).
 
 ---
-
 ## Reference Documentation
 
 | Document | Description |

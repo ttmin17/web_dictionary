@@ -4,7 +4,9 @@ name: optimize
 tagline: Turn a Caveman optimization observation into an operator-chosen
   candidate with a paired baseline evaluation. Use when asked to inspect or
   evaluate a C
-summary: "Require a logged-in Caveman CLI session and run:"
+summary: "Read only the reportonlyobservations array. Do not select from the
+  lifecycle data array. Preserve each server-provided title and observation
+  verbatim. Handle these exact repository-profile ids:"
 categories:
   - agent-frameworks
 tags:

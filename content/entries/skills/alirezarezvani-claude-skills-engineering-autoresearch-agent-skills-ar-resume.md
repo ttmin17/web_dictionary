@@ -4,7 +4,8 @@ name: ar-resume
 tagline: "Resume a paused experiment. Checkout the experiment branch, read
   results history, continue iterating. Use when the user runs /ar:ar-resume or
   asks to "
-summary: "If no experiment specified:"
+summary: Show status for each (active/paused/done based on results.tsv age). Let
+  user pick.
 categories:
   - coding-agents
 tags:
@@ -26,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

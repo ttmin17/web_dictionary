@@ -273,5 +273,4 @@ Many Canva operations are asynchronous:
 | List templates | CANVA_ACCESS_USER_SPECIFIC_BRAND_TEMPLATES_LIST | (none) |
 | Autofill template | CANVA_INITIATE_CANVA_DESIGN_AUTOFILL_JOB | brand_template_id, data |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

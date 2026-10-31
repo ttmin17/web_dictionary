@@ -92,7 +92,6 @@ splines into the project's `Saved/Terrain/` folder — no API key or chat config
 8. Water bodies use `ue5_rings`, waterways use `ue5_points`. Both are origin-centered.
 
 ---
-
 ## Test Prompts
 
 ```
@@ -112,7 +111,6 @@ Generate heightmap for Tokyo at 139.6917, 35.6895 with a satellite reference ima
 ```
 
 ---
-
 ## Step-by-Step Example (Mount Fuji)
 
 ### Step 1 — Preview elevation
@@ -220,7 +218,6 @@ result = unreal.LandscapeService.create_landscape(
 ```
 
 ---
-
 ## Parameters Reference
 
 ### generate_heightmap
@@ -249,7 +246,6 @@ result = unreal.LandscapeService.create_landscape(
 | `light-v10` / `dark-v10` | Minimal |
 
 ---
-
 ## UE5 Landscape Import Settings
 
 ### Valid Resolutions — Always Pass `resolution=N`
@@ -304,7 +300,6 @@ Derivation: pixel encoding is `pixel = elevation_m × heightScale × 64 / 100` a
 For Cities: Skylines, export as PNG and import via the standard heightmap importer (1081 default is fine there).
 
 ---
-
 ## Terrain Character Guide
 
 **⚠️ CRITICAL: The `suggested_height_scale` from `preview_elevation` maximizes detail, but also amplifies noise. You MUST adjust `blur_passes` based on the terrain character.**
@@ -340,7 +335,6 @@ If you get a terrain that looks jagged/spiky when the real place is smooth:
 3. Also check: Z scale should be `20000 / height_scale`, NOT an arbitrary value like 200
 
 ---
-
 ## Water Features Reference
 
 ### get_water_features
@@ -376,7 +370,6 @@ The **saved JSON file** contains the full data with:
 - **+X = East, +Y = North**, 1 meter = 100 UU
 
 ---
-
 ## Troubleshooting
 
 | Issue | Fix |

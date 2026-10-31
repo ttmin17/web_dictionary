@@ -111,7 +111,6 @@ cat ${OPS_DATA_DIR}/cache/projects_health.json
 ```
 
 ---
-
 ## Dashboard output
 
 Build the dashboard from `${OPS_DATA_DIR}/cache/projects_health.json` (fall back to `${OPS_DATA_DIR}/registry.json` if missing). Show:
@@ -154,7 +153,6 @@ Build the dashboard from `${OPS_DATA_DIR}/cache/projects_health.json` (fall back
 ### Columns per project: ALIAS | PHASE | STATUS | BRANCH | DIRTY | NEXT ACTION
 
 ---
-
 ## Project deep-dive
 
 If `$ARGUMENTS` contains a project alias, find it in the registry and show:
@@ -183,7 +181,6 @@ Actions:
 Present numbered actions and let the user pick by typing the number or action name.
 
 ---
-
 ## --sync flag
 
 If `--sync` or `--refresh` is passed, run the registry sync script first, then display the updated dashboard:
@@ -195,7 +192,6 @@ bash ${CLAUDE_PLUGIN_ROOT}/scripts/ops-gsd-registry-sync.sh 2>&1
 Show "Refreshing..." while running, then present the full updated dashboard.
 
 ---
-
 ## Error states
 
 - If `registry.json` is missing/empty: show a one-shot sync prompt
@@ -205,7 +201,6 @@ Show "Refreshing..." while running, then present the full updated dashboard.
 - If daemon health shows `action_needed`: surface that in a warning banner
 
 ---
-
 ## CLI reference (for manual use)
 
 | Command | What it does |

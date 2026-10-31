@@ -88,7 +88,6 @@ Before providing recommendations, understand:
 3. **Current State** - What happens after signup? Where do users drop off?
 
 ---
-
 ## Core Principles
 
 ### 1. Time-to-Value Is Everything
@@ -104,7 +103,6 @@ Interactive > Tutorial. Doing the thing > Learning about the thing.
 Show advancement. Celebrate completions. Make the path visible. (See onboarding psychology below for the mechanisms.)
 
 ---
-
 ## Onboarding Psychology
 
 The principles that make progress mechanics, checklists, and prompts actually work:
@@ -133,7 +131,6 @@ The components you assemble an onboarding experience from. Use the fewest that r
 | Empty states | Guided first-action opportunities, not dead ends (see below) |
 
 ---
-
 ## Defining Activation
 
 **Judge activation by lead→customer conversion + 90-day retention, not lead volume.** More signups mean nothing if they don't convert and stick.
@@ -165,7 +162,6 @@ Find early value actions associated with later retention, using a defined cohort
 - Activation by cohort/source
 
 ---
-
 ## Onboarding Flow Design
 
 ### Immediate Post-Signup (First 30 Seconds)
@@ -216,7 +212,6 @@ Empty states are onboarding opportunities, not dead ends.
 - Don't repeat for returning users
 
 ---
-
 ## Multi-Channel Onboarding
 
 ### Email + In-App Coordination
@@ -233,7 +228,6 @@ Empty states are onboarding opportunities, not dead ends.
 - Be personalized based on actions taken
 
 ---
-
 ## Handling Stalled Users
 
 ### Detection
@@ -246,7 +240,6 @@ Define "stalled" criteria (X days inactive, incomplete setup)
 3. **Human touch** - For high-value accounts, personal outreach
 
 ---
-
 ## Measurement
 
 ### Key Metrics
@@ -269,7 +262,6 @@ Signup → Step 1 → Step 2 → Activation → Retention
 Identify biggest drops and focus there.
 
 ---
-
 ## Output Format
 
 ### Onboarding Audit
@@ -284,7 +276,6 @@ For each issue: Finding → Impact → Recommendation → Priority
 - Metrics plan
 
 ---
-
 ## Common Patterns by Product Type
 
 | Product Type | Key Steps |
@@ -295,7 +286,6 @@ For each issue: Finding → Impact → Recommendation → Priority
 | Content Platform | Follow/customize → Consume → Create → Engage |
 
 ---
-
 ## Experiment Ideas
 
 When recommending experiments, consider tests for:
@@ -307,7 +297,6 @@ When recommending experiments, consider tests for:
 **For comprehensive experiment ideas**: See [references/experiments.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/onboarding/references/experiments.md)
 
 ---
-
 ## References
 
 - **[references/minimum-path-to-value.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/onboarding/references/minimum-path-to-value.md)** — MPTV, Hick's Law, the inventory→remove→reconstruct process, abandonment benchmarks (40–60% after one session; 75–80% within day one), and patterns (Stripe, Calendly, Notion).
@@ -315,7 +304,6 @@ When recommending experiments, consider tests for:
 - **[references/experiments.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/onboarding/references/experiments.md)** — comprehensive A/B test and experiment ideas.
 
 ---
-
 ## Task-Specific Questions
 
 1. Which early action predicts later retention, using what activation window and fully observed signup cohort?
@@ -325,7 +313,6 @@ When recommending experiments, consider tests for:
 5. Do you have cohort analysis on successful vs. churned users?
 
 ---
-
 ## Related Skills
 
 - **signup**: For optimizing the signup before onboarding

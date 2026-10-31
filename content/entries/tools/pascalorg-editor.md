@@ -275,7 +275,6 @@ useViewer.getState().setSelection({ levelId: 'level_123' })
 ```
 
 ---
-
 ## Core Concepts
 
 ### Nodes
@@ -311,7 +310,6 @@ Site
 Nodes are stored in a **flat dictionary** (`Record<id, Node>`), not a nested tree. Parent-child relationships are defined via `parentId` and `children` arrays.
 
 ---
-
 ### Scene State (Zustand Store)
 
 The scene is managed by a Zustand store in `@pascal-app/core`:
@@ -333,7 +331,6 @@ useScene.getState() = {
 - **Temporal** (Zundo) - Undo/redo with 50-step history
 
 ---
-
 ### Scene Registry
 
 The registry maps node IDs to their Three.js objects for fast lookup:
@@ -360,7 +357,6 @@ useRegistry(node.id, 'wall', ref)
 This allows systems to access 3D objects directly without traversing the scene graph.
 
 ---
-
 ### Node Renderers
 
 Renderers are React components that create Three.js objects for each node type:
@@ -399,7 +395,6 @@ const WallRenderer = ({ node }) => {
 ```
 
 ---
-
 ### Systems
 
 Systems are React components that run in the render loop (`useFrame`) to update geometry and transforms. They process **dirty nodes** marked by the store.
@@ -438,7 +433,6 @@ useFrame(() => {
 ```
 
 ---
-
 ### Dirty Nodes
 
 When a node changes, it's marked as **dirty** in `useScene.getState().dirtyNodes`. Systems check this set each frame and only recompute geometry for dirty nodes.
@@ -457,7 +451,6 @@ useScene.getState().dirtyNodes.add(wallId)
 ```
 
 ---
-
 ### Event Bus
 
 Inter-component communication uses a typed event emitter (mitt):
@@ -482,7 +475,6 @@ NodeEvent {
 ```
 
 ---
-
 ### Spatial Grid Manager
 
 Handles collision detection and placement validation:
@@ -496,7 +488,6 @@ spatialGridManager.getSlabElevationAt(levelId, x, z)
 Used by item placement tools to validate positions and calculate slab elevations.
 
 ---
-
 ## Editor Architecture
 
 The editor extends the viewer with:
@@ -527,7 +518,6 @@ Each depth level has its own selection strategy for hover/click behavior.
 - Custom camera controls with node focusing
 
 ---
-
 ## Data Flow
 
 ```
@@ -549,7 +539,6 @@ Clears dirty flag
 ```
 
 ---
-
 ## Building a Plugin
 
 The editor is extensible: a plugin ships node kinds (schema, 3D/2D rendering, placement tools, inspector parametrics) and left-rail panels through the same `Plugin` manifest the built-ins use — there is no separate internal API.
@@ -558,7 +547,6 @@ The editor is extensible: a plugin ships node kinds (schema, 3D/2D rendering, pl
 - **Worked example** — [`pascalorg/plugin-trees`](https://github.com/pascalorg/plugin-trees): a standalone plugin with procedural trees, flowers, grass, and a presets panel. Clone it as a starting point.
 
 ---
-
 ## Technology Stack
 
 - **React 19** + **Next.js 16**
@@ -572,7 +560,6 @@ The editor is extensible: a plugin ships node kinds (schema, 3D/2D rendering, pl
 - **Bun** (package manager)
 
 ---
-
 ## Getting Started
 
 ### Development
@@ -620,7 +607,6 @@ authentication, adding a package, the deploy key, recovering a partial run,
 publishing by hand and the follow-ups.
 
 ---
-
 ## Key Files
 
 | Path | Description |
@@ -635,7 +621,6 @@ publishing by hand and the follow-ups.
 | `apps/editor/store/` | Editor-specific state |
 
 ---
-
 ## Contributing
 
 Bug fixes, features, docs and ideas are all welcome. Start with [CONTRIBUTING.md](https://github.com/pascalorg/editor/blob/main/CONTRIBUTING.md) for setup, code style and the PR flow.
@@ -646,7 +631,6 @@ Bug fixes, features, docs and ideas are all welcome. Start with [CONTRIBUTING.md
 - Security problems go to [SECURITY.md](https://github.com/pascalorg/editor/blob/main/SECURITY.md), not a public issue
 
 ---
-
 ## Contributors
 
 <a href="https://github.com/Aymericr"><img src="https://avatars.githubusercontent.com/u/4444492?v=4" width="60" height="60" alt="Aymeric Rabot" style="border-radius:50%"></a>
@@ -654,5 +638,4 @@ Bug fixes, features, docs and ideas are all welcome. Start with [CONTRIBUTING.md
 <a href="https://github.com/sudhir9297"><img src="https://avatars.githubusercontent.com/sudhir9297?v=4" width="60" height="60" alt="Sudhir" style="border-radius:50%"></a>
 
 ---
-
 <a href="https://trendshift.io/repositories/23831" target="_blank"><img src="https://trendshift.io/api/badge/repositories/23831" alt="pascalorg/editor | Trendshift" width="250" height="55"/></a>

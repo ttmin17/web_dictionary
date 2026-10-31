@@ -4,8 +4,10 @@ name: code-review-graph
 tagline: Local-first code intelligence graph for MCP and CLI. Builds a
   persistent map of your codebase so AI coding tools read only what matters,
   with benchmar
-summary: A local code knowledge graph that gives AI coding tools precise review
-  context over MCP. English | 简体中文 | 日本語 | 한국어 | हिन्दी
+summary: AI coding tools often re-read large parts of a codebase to review a
+  change. code-review-graph builds a structural map of the code with
+  Tree-sitter, keeps it updated incrementally, and serves compact context over
+  MCP,...
 categories:
   - coding-agents
 tags:
@@ -118,7 +120,6 @@ AI coding tools often re-read large parts of a codebase to review a change. `cod
 </p>
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -252,7 +253,6 @@ jobs:
 See [docs/GITHUB_ACTION.md](https://github.com/tirth8205/code-review-graph/blob/staging/docs/GITHUB_ACTION.md) for inputs, risk levels and caching, or the workflow this repository runs on itself in [`.github/workflows/pr-review.yml`](https://github.com/tirth8205/code-review-graph/blob/staging/.github/workflows/pr-review.yml).
 
 ---
-
 ## Benchmarks
 
 <p align="center">
@@ -338,7 +338,6 @@ From the same 2026-08-02 clean-room build at the pinned SHAs above. Embedding co
 - **Precision vs recall.** Impact analysis is conservative. It flags files that might be affected, which means false positives in large dependency graphs.
 
 ---
-
 ## Features
 
 | Feature | Details |
@@ -376,7 +375,6 @@ From the same 2026-08-02 clean-room build at the pinned SHAs above. Embedding co
 | **Local storage** | One SQLite file in `.code-review-graph/`; no external database or cloud service |
 
 ---
-
 ## Usage
 
 <details>
@@ -673,7 +671,6 @@ The flag takes precedence over the variable. When neither is set, all tools are 
 </details>
 
 ---
-
 ## FAQ and comparisons
 
 Answers in [docs/FAQ.md](https://github.com/tirth8205/code-review-graph/blob/staging/docs/FAQ.md):

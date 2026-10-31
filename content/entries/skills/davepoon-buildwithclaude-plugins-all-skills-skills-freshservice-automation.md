@@ -269,5 +269,4 @@ Automate Freshservice IT Service Management operations through Composio's Freshs
 | Outbound email ticket | FRESHSERVICE_CREATE_TICKET_OUTBOUND_EMAIL | email, subject, description |
 | Service request | FRESHSERVICE_CREATE_SERVICE_REQUEST | item_display_id, email, quantity |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

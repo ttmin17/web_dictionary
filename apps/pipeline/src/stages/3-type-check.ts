@@ -289,16 +289,26 @@ export async function checkSingleCandidate(c: GateCheckedCandidate): Promise<Typ
     };
   }
 
-  // 4. Check for Agent Skills (Public SKILL.md files only - skip internal dev scripts)
-  const publicSkillPaths = paths.filter((p) => {
-    const isSkillMd = p.endsWith('/SKILL.md') || p === 'SKILL.md';
-    if (!isSkillMd) return false;
+  // 4. Check for Agent Skills (Public SKILL.md files only - skip internal dev scripts & translated doc duplicates)
+  const MAX_SKILLS_PER_REPO = 25;
+  const translatedDocRegex =
+    /(?:^|\/)(?:docs|i18n|locales|translations)\/(?:ja|ja-jp|zh|zh-cn|zh-tw|ko|es|fr|de|pt|pt-br|ru|ar|tr|vi|th|id|it|pl|uk|el)(?:\/|$)/i;
+  const publicSkillPaths = paths
+    .filter((p) => {
+      const isSkillMd = p.endsWith('/SKILL.md') || p === 'SKILL.md';
+      if (!isSkillMd) return false;
 
-    // Filter out internal hidden dot-directories like .claude/skills, .cursor/skills, .github, etc.
-    const parts = p.split('/');
-    const hasHiddenSegment = parts.some((part) => part.startsWith('.') && part !== '.');
-    return !hasHiddenSegment;
-  });
+      // Filter out internal hidden dot-directories like .claude/skills, .cursor/skills, .github, etc.
+      const parts = p.split('/');
+      const hasHiddenSegment = parts.some((part) => part.startsWith('.') && part !== '.');
+      if (hasHiddenSegment) return false;
+
+      // Filter out translated documentation copies (e.g. docs/ja-jp/skills/*/SKILL.md)
+      if (translatedDocRegex.test(p)) return false;
+
+      return true;
+    })
+    .slice(0, MAX_SKILLS_PER_REPO);
 
   if (publicSkillPaths.length > 0) {
     const subpaths = publicSkillPaths.map((p) => (p === 'SKILL.md' ? '' : p.replace(/\/SKILL\.md$/, '')));

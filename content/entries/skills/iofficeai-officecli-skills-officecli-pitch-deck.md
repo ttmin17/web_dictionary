@@ -344,7 +344,6 @@ Sub-labels ≥ 16pt (H4 floor). For 5 stats stacked, drop number size to 44pt; 6
 **Dark-background variant.** Change card fill from `F0F4F8` (light) to a lighter-dark shade like `1A2540` and bump body text to `FFFFFF` / `E8E8E8`. Palette variables (e.g. `$MUTED`) do NOT expand inside single-quoted heredocs — write the literal hex (`64748B`) in the JSON.
 
 ---
-
 ## Key-slide recipes (10 essentials)
 
 The 10 slides every pitch deck carries. Each recipe below gives: **visual outcome** (what the slide looks like from 3m away) + **runnable block** (≤ 18 lines) + **QA one-liner**. All recipes inherit pptx v2 palettes, grid math, type hierarchy, and `--prop tailEnd=triangle` on every connector. Recipes reference the Slide Patterns above: Cover reuses C.1; Problem / Why-Now reuse C.2; Traction / Financials reuse C.4; Feature / pillar slides reuse C.5b. `$FILE` is your deck file.

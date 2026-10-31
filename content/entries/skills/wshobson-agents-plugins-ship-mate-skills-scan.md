@@ -4,7 +4,9 @@ name: scan
 tagline: Scans the codebase to generate project-doc.md and AGENTS.md. Use when
   bootstrapping a new agent-driven repo, refreshing project documentation after
   ar
-summary: "Check whether the two optional enhancement plugins are available:"
+summary: "- understand-anything (Lum1104/Understand-Anything) — provides deeper
+  semantic code analysis - context-mode (mksglu/context-mode) — routes large
+  outputs through a sandbox to protect the context window"
 categories:
   - coding-agents
 tags:

@@ -286,5 +286,4 @@ Several Dropbox operations run asynchronously:
 | Copy file/folder | `DROPBOX_COPY_FILE_OR_FOLDER` | `from_path`, `to_path` |
 | Check batch status | `DROPBOX_CHECK_MOVE_BATCH` | `async_job_id` |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

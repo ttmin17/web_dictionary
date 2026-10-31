@@ -183,12 +183,10 @@ No frontmatter needed for basic commands.
 Add configuration using YAML frontmatter:
 
 ```markdown
----
-description: Review code for security issues
+---description: Review code for security issues
 allowed-tools: Read, Grep, Bash(git:*)
 model: sonnet
 ---
-
 Review this code for security vulnerabilities...
 ```
 
@@ -201,10 +199,8 @@ Review this code for security vulnerabilities...
 **Default:** First line of command prompt
 
 ```yaml
----
-description: Review pull request for code quality
----
-```
+---description: Review pull request for code quality
+---```
 
 **Best practice:** Clear, actionable description (under 60 characters)
 
@@ -215,10 +211,8 @@ description: Review pull request for code quality
 **Default:** Inherits from conversation
 
 ```yaml
----
-allowed-tools: Read, Write, Edit, Bash(git:*)
----
-```
+---allowed-tools: Read, Write, Edit, Bash(git:*)
+---```
 
 **Patterns:**
 
@@ -235,10 +229,8 @@ allowed-tools: Read, Write, Edit, Bash(git:*)
 **Default:** Inherits from conversation
 
 ```yaml
----
-model: haiku
----
-```
+---model: haiku
+---```
 
 **Use cases:**
 
@@ -253,10 +245,8 @@ model: haiku
 **Default:** None
 
 ```yaml
----
-argument-hint: [pr-number] [priority] [assignee]
----
-```
+---argument-hint: [pr-number] [priority] [assignee]
+---```
 
 **Benefits:**
 
@@ -271,10 +261,8 @@ argument-hint: [pr-number] [priority] [assignee]
 **Default:** false
 
 ```yaml
----
-disable-model-invocation: true
----
-```
+---disable-model-invocation: true
+---```
 
 **Use when:** Command should only be manually invoked
 
@@ -285,11 +273,9 @@ disable-model-invocation: true
 Capture all arguments as single string:
 
 ```markdown
----
-description: Fix issue by number
+---description: Fix issue by number
 argument-hint: [issue-number]
 ---
-
 Fix issue #$ARGUMENTS following our coding standards and best practices.
 ```
 
@@ -312,11 +298,9 @@ Fix issue #456 following our coding standards...
 Capture individual arguments with `$1`, `$2`, `$3`, etc.:
 
 ```markdown
----
-description: Review PR with priority and assignee
+---description: Review PR with priority and assignee
 argument-hint: [pr-number] [priority] [assignee]
 ---
-
 Review pull request #$1 with priority level $2.
 After review, assign to $3 for follow-up.
 ```
@@ -361,11 +345,9 @@ Deploy api to staging environment with options: --force --skip-tests
 Include file contents in command:
 
 ```markdown
----
-description: Review specific file
+---description: Review specific file
 argument-hint: [file-path]
 ---
-
 Review @$1 for:
 
 - Code quality
@@ -483,10 +465,8 @@ Organize commands in subdirectories:
 4. **Handle edge cases:** Consider missing or invalid arguments
 
 ```markdown
+---argument-hint: [pr-number]
 ---
-argument-hint: [pr-number]
----
-
 $IF($1,
 Review PR #$1,
 Please provide a PR number. Usage: /review-pr [number]
@@ -515,11 +495,9 @@ Please provide a PR number. Usage: /review-pr [number]
 4. **Version commands:** Note breaking changes
 
 ```markdown
----
-description: Deploy application to environment
+---description: Deploy application to environment
 argument-hint: [environment] [version]
 ---
-
 <!--
 Usage: /deploy [staging|production] [version]
 Requires: AWS credentials configured
@@ -534,11 +512,9 @@ Deploy application to $1 environment using version $2...
 ### Review Pattern
 
 ```markdown
----
-description: Review code changes
+---description: Review code changes
 allowed-tools: Read, Bash(git:*)
 ---
-
 Files changed: !`git diff --name-only`
 
 Review each file for:
@@ -554,12 +530,10 @@ Provide specific feedback for each file.
 ### Testing Pattern
 
 ```markdown
----
-description: Run tests for specific file
+---description: Run tests for specific file
 argument-hint: [test-file]
 allowed-tools: Bash(npm:*)
 ---
-
 Run tests: !`npm test $1`
 
 Analyze results and suggest fixes for failures.
@@ -568,11 +542,9 @@ Analyze results and suggest fixes for failures.
 ### Documentation Pattern
 
 ```markdown
----
-description: Generate documentation for file
+---description: Generate documentation for file
 argument-hint: [source-file]
 ---
-
 Generate comprehensive documentation for @$1 including:
 
 - Function/class descriptions
@@ -585,12 +557,10 @@ Generate comprehensive documentation for @$1 including:
 ### Workflow Pattern
 
 ```markdown
----
-description: Complete PR workflow
+---description: Complete PR workflow
 argument-hint: [pr-number]
 allowed-tools: Bash(gh:*), Read
 ---
-
 PR #$1 Workflow:
 
 1. Fetch PR: !`gh pr view $1`
@@ -644,11 +614,9 @@ Plugin commands have access to `${CLAUDE_PLUGIN_ROOT}`, an environment variable 
 **Basic usage:**
 
 ```markdown
----
-description: Analyze using plugin script
+---description: Analyze using plugin script
 allowed-tools: Bash(node:*)
 ---
-
 Run analysis: !`node ${CLAUDE_PLUGIN_ROOT}/scripts/analyze.js $1`
 
 Review results and report findings.
@@ -714,12 +682,10 @@ plugin-name/
 **Configuration-based pattern:**
 
 ```markdown
----
-description: Deploy using plugin configuration
+---description: Deploy using plugin configuration
 argument-hint: [environment]
 allowed-tools: Read, Bash(*)
 ---
-
 Load configuration: @${CLAUDE_PLUGIN_ROOT}/config/$1-deploy.json
 
 Deploy to $1 using configuration settings.
@@ -729,11 +695,9 @@ Monitor deployment and report status.
 **Template-based pattern:**
 
 ```markdown
----
-description: Generate docs from template
+---description: Generate docs from template
 argument-hint: [component]
 ---
-
 Template: @${CLAUDE_PLUGIN_ROOT}/templates/docs.md
 
 Generate documentation for $1 following template structure.
@@ -742,11 +706,9 @@ Generate documentation for $1 following template structure.
 **Multi-script pattern:**
 
 ```markdown
----
-description: Complete build workflow
+---description: Complete build workflow
 allowed-tools: Bash(*)
 ---
-
 Build: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/build.sh`
 Test: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/test.sh`
 Package: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/package.sh`
@@ -765,11 +727,9 @@ Commands can integrate with other plugin components for powerful workflows.
 Launch plugin agents for complex tasks:
 
 ```markdown
----
-description: Deep code review
+---description: Deep code review
 argument-hint: [file-path]
 ---
-
 Initiate comprehensive review of @$1 using the code-reviewer agent.
 
 The agent will analyze:
@@ -797,11 +757,9 @@ Agent uses plugin resources:
 Leverage plugin skills for specialized knowledge:
 
 ```markdown
----
-description: Document API with standards
+---description: Document API with standards
 argument-hint: [api-file]
 ---
-
 Document API in @$1 following plugin standards.
 
 Use the api-docs-standards skill to ensure:
@@ -837,12 +795,10 @@ See `references/plugin-features-reference.md` for examples of commands that coor
 Combine agents, skills, and scripts:
 
 ```markdown
----
-description: Comprehensive review workflow
+---description: Comprehensive review workflow
 argument-hint: [file]
 allowed-tools: Bash(node:*), Read
 ---
-
 Target: @$1
 
 Phase 1 - Static Analysis:
@@ -874,11 +830,9 @@ Commands should validate inputs and resources before processing.
 ### Argument Validation
 
 ```markdown
----
-description: Deploy with validation
+---description: Deploy with validation
 argument-hint: [environment]
 ---
-
 Validate environment: !`echo "$1" | grep -E "^(dev|staging|prod)$" || echo "INVALID"`
 
 If $1 is valid environment:
@@ -891,11 +845,9 @@ Show usage: /deploy [environment]
 ### File Existence Checks
 
 ```markdown
----
-description: Process configuration
+---description: Process configuration
 argument-hint: [config-file]
 ---
-
 Check file exists: !`test -f $1 && echo "EXISTS" || echo "MISSING"`
 
 If file exists:
@@ -909,11 +861,9 @@ Provide example configuration
 ### Plugin Resource Validation
 
 ```markdown
----
-description: Run plugin analyzer
+---description: Run plugin analyzer
 allowed-tools: Bash(test:*)
 ---
-
 Validate plugin setup:
 
 - Script: !`test -x ${CLAUDE_PLUGIN_ROOT}/bin/analyze && echo "✓" || echo "✗"`
@@ -926,11 +876,9 @@ Otherwise, report missing components.
 ### Error Handling
 
 ```markdown
----
-description: Build with error handling
+---description: Build with error handling
 allowed-tools: Bash(*)
 ---
-
 Execute build: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/build.sh 2>&1 || echo "BUILD_FAILED"`
 
 If build succeeded:
@@ -949,7 +897,6 @@ Provide troubleshooting steps
 - Handle edge cases gracefully
 
 ---
-
 For detailed frontmatter field specifications, see `references/frontmatter-reference.md`.
 For plugin-specific features and patterns, see `references/plugin-features-reference.md`.
 For command pattern examples, see `examples/` directory.

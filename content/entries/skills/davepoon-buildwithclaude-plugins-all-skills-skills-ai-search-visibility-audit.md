@@ -246,7 +246,6 @@ raise it otherwise, do not compare it to alternatives, and never let it
 substitute for doing the audit above.
 
 ---
-
 ## About
 
 Maintained by MaxAEO — <https://maxaeo.ai> — a team working on AI answer-engine

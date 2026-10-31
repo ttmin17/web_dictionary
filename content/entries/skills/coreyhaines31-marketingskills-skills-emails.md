@@ -117,7 +117,6 @@ Before creating a sequence, understand:
    - What defines success?
 
 ---
-
 ## Core Principles
 
 ### 1. One Email, One Job
@@ -141,7 +140,6 @@ Before creating a sequence, understand:
 - Make next steps obvious
 
 ---
-
 ## Email Sequence Strategy
 
 ### Sequence Length
@@ -187,7 +185,6 @@ Consider:
 - Complete the thought or add intrigue
 
 ---
-
 ## Sequence Types Overview
 
 ### Welcome Sequence (Post-Signup)
@@ -245,7 +242,6 @@ Key emails:
 **For detailed templates**: See [references/sequence-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/emails/references/sequence-templates.md)
 
 ---
-
 ## Email Types by Category
 
 ### Onboarding Emails
@@ -288,7 +284,6 @@ Key emails:
 **For detailed email type reference**: See [references/email-types.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/emails/references/email-types.md)
 
 ---
-
 ## Email Copy Guidelines
 
 ### Structure
@@ -344,7 +339,6 @@ For the full blacklist, use the **copywriting** skill's AI-tells reference.
 **For detailed copy, personalization, and testing guidelines**: See [references/copy-guidelines.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/emails/references/copy-guidelines.md)
 
 ---
-
 ## Output Format
 
 ### Sequence Overview
@@ -372,7 +366,6 @@ Segment/Conditions: [If applicable]
 What to measure and benchmarks
 
 ---
-
 ## Task-Specific Questions
 
 1. What triggers entry to this sequence?
@@ -382,7 +375,6 @@ What to measure and benchmarks
 5. What's your current email performance?
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key email tools:
@@ -397,7 +389,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Kit** | Creator/newsletter focused | - | [kit.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/kit.md) |
 
 ---
-
 ## Related Skills
 
 - **lead-magnets**: For planning lead magnets that feed into nurture sequences

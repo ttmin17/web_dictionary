@@ -24,11 +24,12 @@ source:
 signals:
   stars: 889
   last_commit: 2026-10-19T06:29:56Z
-  stars_delta_7d: 38
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  velocity_source: snapshot_delta
   sparkline_4w:
+    - 889
     - 889
 language: en
 needs_keys: false

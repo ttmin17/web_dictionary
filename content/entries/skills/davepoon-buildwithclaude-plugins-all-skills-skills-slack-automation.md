@@ -245,5 +245,4 @@ Most list endpoints use cursor-based pagination:
 | Channel history | `SLACK_FETCH_CONVERSATION_HISTORY` | `channel`, `oldest`, `latest` |
 | Workspace info | `SLACK_FETCH_TEAM_INFO` | (none) |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

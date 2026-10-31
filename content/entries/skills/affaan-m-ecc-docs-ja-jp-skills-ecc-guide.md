@@ -3,7 +3,9 @@ slug: affaan-m-ecc-docs-ja-jp-skills-ecc-guide
 name: guide
 tagline: ECC
   の現在のエージェント、スキル、コマンド、フック、ルール、インストールプロファイル、およびプロジェクトオンボーディングをガイドしています。ライブリポジトリサーフェスを読んでから回答するようユーザーをガイドします。
-summary: "Use this skill when the user:"
+summary: '- asks what ECC includes - wants help finding a skill, command, agent,
+  hook, rule, or install profile - is new to the repository and needs a guided
+  path - asks "how do I do X with ECC?" - asks which ECC components fit...'
 categories:
   - productivity-ops
 tags:

@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 34
   stars_growth_pct: 0.1
   trending_score: 34.04
-  rank_current: 87
-  rank_delta: null
+  rank_current: 88
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27509
@@ -52,14 +51,7 @@ tool:
   install_command: pip install agenticseek
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - agenticseek
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.

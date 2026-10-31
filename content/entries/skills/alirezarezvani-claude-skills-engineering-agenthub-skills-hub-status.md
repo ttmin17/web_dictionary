@@ -4,7 +4,7 @@ name: hub-status
 tagline: "Show DAG state, agent progress, and branch status for an AgentHub
   session. Use when the user runs /hub:hub-status or asks how the AgentHub
   agents are "
-summary: "3. Read recent board updates:"
+summary: "If all agents have posted results: - Suggest /hub:eval to rank results"
 categories:
   - coding-agents
 tags:
@@ -26,7 +26,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity

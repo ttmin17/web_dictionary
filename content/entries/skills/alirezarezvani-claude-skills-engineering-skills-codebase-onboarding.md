@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -72,7 +72,6 @@ skill:
 **Domain:** Documentation / Developer Experience
 
 ---
-
 ## Overview
 
 Analyze a codebase and generate onboarding documentation for engineers, tech leads, and contractors. This skill is optimized for fast fact-gathering and repeatable onboarding outputs.
@@ -86,7 +85,6 @@ Analyze a codebase and generate onboarding documentation for engineers, tech lea
 - Debugging and contribution checklist scaffolding
 
 ---
-
 ## When to Use
 
 - Onboarding a new team member or contractor
@@ -95,7 +93,6 @@ Analyze a codebase and generate onboarding documentation for engineers, tech lea
 - Creating a standardized onboarding packet for services
 
 ---
-
 ## Quick Start
 
 ```bash
@@ -110,7 +107,6 @@ python3 scripts/codebase_analyzer.py /path/to/repo --json
 ```
 
 ---
-
 ## Recommended Workflow
 
 1. Run `scripts/codebase_analyzer.py` against the target repository.
@@ -122,7 +118,6 @@ python3 scripts/codebase_analyzer.py /path/to/repo --json
    - Contractor: scoped ownership + integration boundaries
 
 ---
-
 ## Onboarding Document Template
 
 Detailed template and section examples live in:
@@ -130,7 +125,6 @@ Detailed template and section examples live in:
 - `references/output-format-templates.md`
 
 ---
-
 ## Common Pitfalls
 
 - Writing docs without validating setup commands on a clean environment

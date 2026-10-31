@@ -268,5 +268,4 @@ t5_ = Subreddit
 | List post flairs | REDDIT_LIST_SUBREDDIT_POST_FLAIRS | subreddit |
 | Get user flair | REDDIT_GET_USER_FLAIR | subreddit |
 
----
-*Powered by [Composio](https://composio.dev)*
+---*Powered by [Composio](https://composio.dev)*

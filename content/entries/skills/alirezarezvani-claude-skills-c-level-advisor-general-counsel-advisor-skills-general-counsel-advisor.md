@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -214,7 +214,6 @@ See `references/ip_and_regulatory.md` for sequencing.
 - [term_sheet_decoder.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/general-counsel-advisor/skills/general-counsel-advisor/references/term_sheet_decoder.md) — Term sheet glossary + founder-friendly defaults + pushback strategies
 
 ---
-
 **Version:** 1.0.0
 **Status:** Production Ready
 **Disclaimer:** Not legal advice. Always engage qualified counsel for binding decisions.

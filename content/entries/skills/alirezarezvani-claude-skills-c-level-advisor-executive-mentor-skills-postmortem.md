@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -68,7 +68,6 @@ skill:
 Not blame. Understanding. The failed deal, the missed quarter, the feature that flopped, the hire that didn't work out. What actually happened, why, and what changes as a result.
 
 ---
-
 ## Why Most Post-Mortems Fail
 
 They become one of two things:
@@ -82,7 +81,6 @@ A real post-mortem is neither. It's a rigorous investigation into a system failu
 **The purpose:** extract the maximum learning value from a failure so you can prevent recurrence and improve the system.
 
 ---
-
 ## The Framework
 
 ### Step 1: Define the Event Precisely
@@ -195,7 +193,6 @@ Set a verification date: "We'll review whether qualification criteria have been 
 Without this, post-mortems are theater.
 
 ---
-
 ## Post-Mortem Output Format
 
 ```
@@ -236,7 +233,6 @@ VERIFICATION DATE: [Date of check-in]
 ```
 
 ---
-
 ## The Tone of Good Post-Mortems
 
 Blame is cheap. Understanding is hard.

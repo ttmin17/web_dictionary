@@ -28,7 +28,7 @@ source:
 signals:
   stars: 8936
   last_commit: 2026-10-23T15:16:40Z
-  stars_delta_7d: 40
+  stars_delta_7d: 373
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -224,7 +224,6 @@ not waive third-party trademark, patent, or brand-guideline restrictions.
 **License**: This project is available under the terms of the [LICENSE](https://github.com/homarr-labs/dashboard-icons/blob/main/LICENSE) file.
 
 ---
-
 <p align="center">
   Made with ♥ by the <a href="https://github.com/homarr-labs">Homarr Labs</a> team and contributors
 </p>

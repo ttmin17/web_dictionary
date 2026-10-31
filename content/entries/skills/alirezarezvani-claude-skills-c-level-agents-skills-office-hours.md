@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -139,7 +139,6 @@ After the founder answers all six, this command produces a one-page brief:
 > [founder's verbatim answer]
 
 ---
-
 **Assessment** (one of):
 - 🟢 GREEN — ship the brief to /c-level-agents:boardroom
 - 🟡 YELLOW — sharpen Q[N] before proceeding
@@ -170,5 +169,4 @@ This is the YC `office hours` pattern adapted for Claude Code: the interrogation
 - `cs-chief-of-staff` triggers `/c-level-agents:office-hours` when intake is unclear
 
 ---
-
 **Version:** 1.0.0

@@ -403,7 +403,6 @@ wbp = unreal.AssetToolsHelpers.get_asset_tools().create_asset("WBP_Menu", "/Game
 For designing the widget afterwards (hierarchy, slots, bindings), load the **umg-widgets** skill.
 
 ---
-
 ## Workflows
 
 ### Search Pattern

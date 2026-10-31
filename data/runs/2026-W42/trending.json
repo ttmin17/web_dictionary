@@ -1,12 +1,12 @@
 {
   "week": "2026-W42",
-  "generated_at": "2026-10-31T14:49:46.230Z",
+  "generated_at": "2026-10-31T15:55:43.564Z",
   "summary": {
     "week": "2026-W42",
-    "generated_at": "2026-10-31T14:49:46.230Z",
-    "total_new_tools": 287,
-    "total_stars_gained": 92210,
-    "total_active_entries": 690
+    "generated_at": "2026-10-31T15:55:43.564Z",
+    "total_new_tools": 288,
+    "total_stars_gained": 99209,
+    "total_active_entries": 696
   },
   "top25_overall": [
     {
@@ -27,6 +27,8 @@
       ],
       "tagline": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph, UML class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
       "repo": "cathrynlavery/diagram-design",
+      "is_pack_primary": true,
+      "pack_slug": "cathrynlavery-diagram-design",
       "created_at": "2026-04-16T18:01:16Z",
       "pushed_at": "2026-10-13T14:57:55Z",
       "rank_current": 1,
@@ -34,7 +36,7 @@
     },
     {
       "slug": "dietrichgebert-ponytail-skills-ponytail-audit",
-      "name": "ponytail-audit",
+      "name": "audit",
       "type": "agent_skill",
       "categories": [
         "security-auth"
@@ -50,6 +52,8 @@
       ],
       "tagline": "Quality audit of a whole repo: bugs, security holes, what breaks under real load, risky code without tests, slow paths, and what to delete, merge or split. Ranked, each finding explained in plain English. One-shot report, changes nothing. Use for \"audit this codebase\", \"review the whole repo\", \"find bloat\", \"what can I delete\", /ponytail-audit.\n",
       "repo": "DietrichGebert/ponytail",
+      "is_pack_primary": true,
+      "pack_slug": "dietrichgebert-ponytail",
       "created_at": "2026-06-12T00:52:37Z",
       "pushed_at": "2026-10-13T01:46:28Z",
       "rank_current": 2,
@@ -57,7 +61,7 @@
     },
     {
       "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
-      "name": "orca-chat-visuals",
+      "name": "chat-visuals",
       "type": "agent_skill",
       "categories": [
         "coding-agents"
@@ -71,11 +75,13 @@
         86961,
         91386
       ],
-      "tagline": "Show a chart, diagram, table, report or mockup inline in this Orca chat as an HTML page. Use when a visual would help the user understand your answer. Only available when the ORCA_CHAT_VISUALS_DIR environment variable is set.",
+      "tagline": "Show a chart, diagram, table, report or mockup inline in this Orca chat as an HTML page. Use when a visual would help the user understand your answer. Only available when the ORCA_CHAT_SCRATCH_DIR environment variable is set.",
       "repo": "stablyai/orca",
+      "is_pack_primary": true,
+      "pack_slug": "stablyai-orca",
       "created_at": "2026-03-17T03:28:57Z",
       "pushed_at": "2026-10-13T16:24:00Z",
-      "rank_current": 7,
+      "rank_current": 3,
       "rank_delta": null
     },
     {
@@ -120,9 +126,11 @@
       ],
       "tagline": "Patrones de diseño REST API incluyendo nomenclatura de recursos, códigos de estado, paginación, filtrado, respuestas de error, versionado y rate limiting para APIs de producción.",
       "repo": "affaan-m/ECC",
+      "is_pack_primary": true,
+      "pack_slug": "affaan-m-ecc",
       "created_at": "2026-01-18T00:51:51Z",
       "pushed_at": "2026-10-12T14:45:46Z",
-      "rank_current": 12,
+      "rank_current": 4,
       "rank_delta": null
     },
     {
@@ -143,9 +151,11 @@
       ],
       "tagline": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
       "repo": "addyosmani/agent-skills",
+      "is_pack_primary": true,
+      "pack_slug": "addyosmani-agent-skills",
       "created_at": "2026-02-15T20:20:26Z",
       "pushed_at": "2026-10-10T08:28:49Z",
-      "rank_current": 17,
+      "rank_current": 5,
       "rank_delta": null
     },
     {
@@ -166,14 +176,16 @@
       ],
       "tagline": "Believable agent cost report for any period, default the last 7 full days PT, not counting today. Measured tokens from Claude Code transcripts priced at OpenRouter list prices (ESTIMATED), measured provider spend when a sanctioned source exists, note-taker cost separate, Timing-style HTML/PDF plus report.json, line-items.csv, evidence.json.",
       "repo": "thedotmack/claude-mem",
+      "is_pack_primary": true,
+      "pack_slug": "thedotmack-claude-mem",
       "created_at": "2025-08-31T20:50:03Z",
       "pushed_at": "2026-10-13T07:33:53Z",
-      "rank_current": 22,
+      "rank_current": 6,
       "rank_delta": null
     },
     {
-      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review",
-      "name": "open-code-review",
+      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review-delegate",
+      "name": "delegate",
       "type": "agent_skill",
       "categories": [
         "coding-agents"
@@ -187,11 +199,13 @@
         44194,
         46827
       ],
-      "tagline": "Performs AI-powered code review on Git changes using the `ocr` CLI from alibaba/open-code-review. Use when the user asks to review code, review a pull request, review staged/unstaged changes, review a commit, or compare branches for code quality issues. Produces line-level review comments and can automatically apply fixes when requested. With appropriate review rules, can detect various types of issues including bugs, security vulnerabilities, performance problems, and code quality concerns.\n",
+      "tagline": "Agent skill from alibaba/open-code-review",
       "repo": "alibaba/open-code-review",
+      "is_pack_primary": true,
+      "pack_slug": "alibaba-open-code-review",
       "created_at": "2026-05-18T02:16:36Z",
       "pushed_at": "2026-10-13T13:47:09Z",
-      "rank_current": 27,
+      "rank_current": 8,
       "rank_delta": null
     },
     {
@@ -210,7 +224,7 @@
         73849,
         76033
       ],
-      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 359 providers (150+ free), 1200+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by hundreds of contributors",
+      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Work",
       "repo": "diegosouzapw/OmniRoute",
       "is_pack_primary": true,
       "created_at": "2026-02-13T12:38:31Z",
@@ -234,11 +248,13 @@
         5667,
         7377
       ],
-      "tagline": "Use when designing, building, operating, or diagnosing an ongoing application whose live backend or control loop includes OpenRig agents, including applications with a Markdown, YAML, or JSON agent control plane or a thin surface over specialist agent roles.",
+      "tagline": "Agent skill from mvschwarz/openrig",
       "repo": "mvschwarz/openrig",
+      "is_pack_primary": true,
+      "pack_slug": "mvschwarz-openrig",
       "created_at": "2026-04-01T06:22:40Z",
       "pushed_at": "2026-10-13T16:24:21Z",
-      "rank_current": 31,
+      "rank_current": 11,
       "rank_delta": null
     },
     {
@@ -246,7 +262,7 @@
       "name": "brandkit",
       "type": "agent_skill",
       "categories": [
-        "media-creative"
+        "coding-agents"
       ],
       "stars": 95459,
       "stars_delta_7d": 2036,
@@ -257,11 +273,13 @@
         93423,
         95459
       ],
-      "tagline": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+      "tagline": "Moved to github.com/Leonxlnx/imagegen-skills. Runs only when called by name.",
       "repo": "Leonxlnx/taste-skill",
+      "is_pack_primary": true,
+      "pack_slug": "leonxlnx-taste-skill",
       "created_at": "2026-02-19T21:44:05Z",
       "pushed_at": "2026-10-13T15:01:01Z",
-      "rank_current": 36,
+      "rank_current": 12,
       "rank_delta": null
     },
     {
@@ -282,9 +300,11 @@
       ],
       "tagline": "Rewrite AI-sounding text so it reads like the writer without changing what it says.\nUse when editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line\nclosers, staged openers, forced triads, dashes everywhere, inflated claims, sales\nlanguage, stock AI words, bold labels, or filler. Based on Wikipedia's \"Signs of AI writing.\"\n",
       "repo": "blader/humanizer",
+      "is_pack_primary": true,
+      "pack_slug": "blader-humanizer",
       "created_at": "2026-01-18T05:30:15Z",
       "pushed_at": "2026-09-28T05:55:12Z",
-      "rank_current": 41,
+      "rank_current": 13,
       "rank_delta": null
     },
     {
@@ -305,9 +325,11 @@
       ],
       "tagline": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage.",
       "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "is_pack_primary": true,
+      "pack_slug": "nextlevelbuilder-ui-ux-pro-max-skill",
       "created_at": "2025-11-30T11:36:31Z",
       "pushed_at": "2026-10-12T11:08:03Z",
-      "rank_current": 42,
+      "rank_current": 14,
       "rank_delta": null
     },
     {
@@ -326,7 +348,7 @@
         124586,
         126101
       ],
-      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, ",
       "repo": "Graphify-Labs/graphify",
       "is_pack_primary": true,
       "created_at": "2026-04-03T15:49:07Z",
@@ -339,7 +361,7 @@
       "name": "hermes-agent",
       "type": "agent_tool",
       "categories": [
-        "domain-research"
+        "other"
       ],
       "stars": 253381,
       "stars_delta_7d": 1522,
@@ -374,7 +396,7 @@
         86124,
         87256
       ],
-      "tagline": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "tagline": "🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDce",
       "repo": "D4Vinci/Scrapling",
       "is_pack_primary": true,
       "created_at": "2024-10-13T20:29:53Z",
@@ -398,11 +420,13 @@
         99839,
         100908
       ],
-      "tagline": "Phase 1 sample plugin synthesizing a SKILL.md frontmatter for backwards-compat tests.",
+      "tagline": "Agent skill from nexu-io/open-design",
       "repo": "nexu-io/open-design",
+      "is_pack_primary": true,
+      "pack_slug": "nexu-io-open-design",
       "created_at": "2026-04-28T04:25:20Z",
       "pushed_at": "2026-10-13T16:25:04Z",
-      "rank_current": 47,
+      "rank_current": 15,
       "rank_delta": null
     },
     {
@@ -421,7 +445,7 @@
         9987,
         10958
       ],
-      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
+      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thou",
       "repo": "apify/apify-mcp-server",
       "is_pack_primary": true,
       "created_at": "2025-01-02T15:43:09Z",
@@ -434,7 +458,7 @@
       "name": "cavecrew",
       "type": "agent_skill",
       "categories": [
-        "agent-frameworks"
+        "other"
       ],
       "stars": 111405,
       "stars_delta_7d": 1039,
@@ -447,9 +471,11 @@
       ],
       "tagline": "When to delegate to `cavecrew-investigator` (locate code), `cavecrew-builder` (1-2 file edit) or `cavecrew-reviewer` (diff review) instead of working inline or using `Explore`. Their output is compressed, so main context lasts longer.\n",
       "repo": "JuliusBrussee/caveman",
+      "is_pack_primary": true,
+      "pack_slug": "juliusbrussee-caveman",
       "created_at": "2026-04-04T10:03:00Z",
       "pushed_at": "2026-10-13T16:22:44Z",
-      "rank_current": 52,
+      "rank_current": 16,
       "rank_delta": null
     },
     {
@@ -457,7 +483,7 @@
       "name": "herdr",
       "type": "agent_skill",
       "categories": [
-        "coding-agents"
+        "agent-frameworks"
       ],
       "stars": 43772,
       "stars_delta_7d": 995,
@@ -470,9 +496,11 @@
       ],
       "tagline": "Control Herdr, a terminal multiplexer for coding agents. Use only when the user explicitly mentions Herdr or asks to use Herdr to inspect or control panes, tabs, workspaces, commands, or another agent. Do not use merely because a task could benefit from a background terminal, delegation, or parallel work. Requires HERDR_ENV=1.",
       "repo": "herdrdev/herdr",
+      "is_pack_primary": true,
+      "pack_slug": "herdrdev-herdr",
       "created_at": "2026-03-27T17:54:33Z",
       "pushed_at": "2026-10-13T16:00:58Z",
-      "rank_current": 57,
+      "rank_current": 17,
       "rank_delta": null
     },
     {
@@ -491,7 +519,7 @@
         4702,
         5559
       ],
-      "tagline": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch operations, Ghidra Server integration, and Docker deployment.",
+      "tagline": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch ",
       "repo": "bethington/ghidra-mcp",
       "is_pack_primary": true,
       "created_at": "2025-08-30T06:40:03Z",
@@ -504,7 +532,7 @@
       "name": "genoffice",
       "type": "agent_skill",
       "categories": [
-        "media-creative"
+        "coding-agents"
       ],
       "stars": 9558,
       "stars_delta_7d": 716,
@@ -515,11 +543,13 @@
         8842,
         9558
       ],
-      "tagline": "Create, convert, read and edit Office documents locally with GenOffice's command line. Build a new presentation (pptx) from a brief through a checked outline, per-page spec and render pipeline, a new spreadsheet (xlsx) from CSV or JSON data with formulas, a new Word document (docx) from Markdown or HTML, or a PDF; convert between pdf, docx, xlsx, pptx, md, html and csv; read the structure and text of an existing file (including the user's own docx / xlsx / pptx as source material) and apply structured edits to it. Use whenever the user asks for a slide deck, presentation, spreadsheet, workbook, report, Word document or any real Office file, a format conversion, a rewrite of part of an existing document, or wants the result opened in the GenOffice editor. Documents are processed locally; only search, image and media send the query or the referenced file to the provider configured in GenOffice.",
+      "tagline": "Agent skill from genspark-ai/genoffice",
       "repo": "genspark-ai/genoffice",
+      "is_pack_primary": true,
+      "pack_slug": "genspark-ai-genoffice",
       "created_at": "2026-07-31T09:40:58Z",
       "pushed_at": "2026-10-13T15:10:17Z",
-      "rank_current": 58,
+      "rank_current": 18,
       "rank_delta": null
     },
     {
@@ -527,7 +557,7 @@
       "name": "book-to-skill",
       "type": "agent_skill",
       "categories": [
-        "media-creative"
+        "other"
       ],
       "stars": 34751,
       "stars_delta_7d": 702,
@@ -538,11 +568,13 @@
         34049,
         34751
       ],
-      "tagline": "Converts books and documents (PDF, EPUB, DOCX, HTML, Markdown, plain text, RTF, MOBI/AZW with Calibre) into structured agent skills, extracting frameworks, mental models, principles, techniques, and anti-patterns. Use when the user wants to study a document through GitHub Copilot CLI, Amp, Claude Code, Hermes Agent, OpenCode, or OpenClaw, apply an author's frameworks while working, or build a reusable knowledge base from a file.",
+      "tagline": "Agent skill from virgiliojr94/book-to-skill",
       "repo": "virgiliojr94/book-to-skill",
+      "is_pack_primary": true,
+      "pack_slug": "virgiliojr94-book-to-skill",
       "created_at": "2026-05-01T02:09:39Z",
       "pushed_at": "2026-10-12T00:30:58Z",
-      "rank_current": 59,
+      "rank_current": 19,
       "rank_delta": null
     },
     {
@@ -561,11 +593,13 @@
         31540,
         32175
       ],
-      "tagline": "Use to briefly explain small code diffs.",
+      "tagline": "Agent skill from topoteretes/cognee",
       "repo": "topoteretes/cognee",
+      "is_pack_primary": true,
+      "pack_slug": "topoteretes-cognee",
       "created_at": "2023-08-16T16:16:33Z",
       "pushed_at": "2026-10-13T16:25:20Z",
-      "rank_current": 60,
+      "rank_current": 20,
       "rank_delta": null
     },
     {
@@ -586,9 +620,11 @@
       ],
       "tagline": "Use when you need to ask questions about a codebase or understand code using a knowledge graph",
       "repo": "Egonex-AI/Understand-Anything",
+      "is_pack_primary": true,
+      "pack_slug": "egonex-ai-understand-anything",
       "created_at": "2026-03-15T02:30:51Z",
       "pushed_at": "2026-10-12T10:24:59Z",
-      "rank_current": 63,
+      "rank_current": 21,
       "rank_delta": null
     }
   ],
@@ -631,7 +667,7 @@
         9987,
         10958
       ],
-      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
+      "tagline": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thou",
       "repo": "apify/apify-mcp-server",
       "is_pack_primary": true,
       "created_at": "2025-01-02T15:43:09Z",
@@ -655,7 +691,7 @@
         4702,
         5559
       ],
-      "tagline": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch operations, Ghidra Server integration, and Docker deployment.",
+      "tagline": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch ",
       "repo": "bethington/ghidra-mcp",
       "is_pack_primary": true,
       "created_at": "2025-08-30T06:40:03Z",
@@ -679,7 +715,7 @@
         4200,
         4710
       ],
-      "tagline": "Google Ads MCP server + Meta Ads MCP (Facebook Ads MCP) + Google Analytics MCP (GA4) + Search Console in one hosted remote MCP for Claude, ChatGPT, Cursor & n8n: OAuth login, no API keys, approval-gated writes, 7-day free trial. By Ryze AI.",
+      "tagline": "Google Ads MCP server + Meta Ads MCP (Facebook Ads MCP) + Google Analytics MCP (GA4) + Search Console in one hosted remote MCP for Claude, ChatGPT, Cu",
       "repo": "irinabuht12-oss/google-ads-meta-ads-mcp",
       "is_pack_primary": true,
       "created_at": "2026-04-06T04:41:14Z",
@@ -703,7 +739,7 @@
         45967,
         46502
       ],
-      "tagline": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+      "tagline": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent graph, with CBM Lens, MCP tools, agent int",
       "repo": "DeusData/codebase-memory-mcp",
       "is_pack_primary": true,
       "created_at": "2026-02-24T22:01:00Z",
@@ -740,7 +776,7 @@
       "name": "world-intel-mcp",
       "type": "mcp_server",
       "categories": [
-        "security-auth"
+        "other"
       ],
       "stars": 941,
       "stars_delta_7d": 284,
@@ -751,7 +787,7 @@
         657,
         941
       ],
-      "tagline": "139-tool MCP server for real-time global intelligence from free public APIs: markets, SEC filings, conflict, military, aircraft-cohort early warning, refugee and migration flows, cyber, climate, news, and 30+ domains. Cited AI situation briefs, geofences with change detection, live SSE dashboard. MIT, no paid API keys.",
+      "tagline": "160-tool MCP server for real-time global intelligence from free public APIs: markets, liquidity, prediction markets, SEC filings, conflict, military, ",
       "repo": "marc-shade/world-intel-mcp",
       "is_pack_primary": true,
       "created_at": "2025-11-29T16:49:53Z",
@@ -764,7 +800,7 @@
       "name": "chrome-devtools-mcp",
       "type": "mcp_server",
       "categories": [
-        "browser-web"
+        "coding-agents"
       ],
       "stars": 53450,
       "stars_delta_7d": 378,
@@ -812,7 +848,7 @@
       "name": "codex-with-chatgpt",
       "type": "mcp_server",
       "categories": [
-        "security-auth"
+        "agent-frameworks"
       ],
       "stars": 7345,
       "stars_delta_7d": 250,
@@ -836,7 +872,7 @@
       "name": "context7",
       "type": "mcp_server",
       "categories": [
-        "coding-agents"
+        "other"
       ],
       "stars": 62986,
       "stars_delta_7d": 222,
@@ -847,7 +883,7 @@
         62764,
         62986
       ],
-      "tagline": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
+      "tagline": "Context7 Platform -- Up-to-date docs for AI agents",
       "repo": "upstash/context7",
       "is_pack_primary": true,
       "created_at": "2025-03-26T23:40:39Z",
@@ -875,6 +911,8 @@
       ],
       "tagline": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph, UML class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
       "repo": "cathrynlavery/diagram-design",
+      "is_pack_primary": true,
+      "pack_slug": "cathrynlavery-diagram-design",
       "created_at": "2026-04-16T18:01:16Z",
       "pushed_at": "2026-10-13T14:57:55Z",
       "rank_current": 1,
@@ -882,7 +920,7 @@
     },
     {
       "slug": "dietrichgebert-ponytail-skills-ponytail-audit",
-      "name": "ponytail-audit",
+      "name": "audit",
       "type": "agent_skill",
       "categories": [
         "security-auth"
@@ -898,6 +936,8 @@
       ],
       "tagline": "Quality audit of a whole repo: bugs, security holes, what breaks under real load, risky code without tests, slow paths, and what to delete, merge or split. Ranked, each finding explained in plain English. One-shot report, changes nothing. Use for \"audit this codebase\", \"review the whole repo\", \"find bloat\", \"what can I delete\", /ponytail-audit.\n",
       "repo": "DietrichGebert/ponytail",
+      "is_pack_primary": true,
+      "pack_slug": "dietrichgebert-ponytail",
       "created_at": "2026-06-12T00:52:37Z",
       "pushed_at": "2026-10-13T01:46:28Z",
       "rank_current": 2,
@@ -905,7 +945,7 @@
     },
     {
       "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
-      "name": "orca-chat-visuals",
+      "name": "chat-visuals",
       "type": "agent_skill",
       "categories": [
         "coding-agents"
@@ -919,11 +959,13 @@
         86961,
         91386
       ],
-      "tagline": "Show a chart, diagram, table, report or mockup inline in this Orca chat as an HTML page. Use when a visual would help the user understand your answer. Only available when the ORCA_CHAT_VISUALS_DIR environment variable is set.",
+      "tagline": "Show a chart, diagram, table, report or mockup inline in this Orca chat as an HTML page. Use when a visual would help the user understand your answer. Only available when the ORCA_CHAT_SCRATCH_DIR environment variable is set.",
       "repo": "stablyai/orca",
+      "is_pack_primary": true,
+      "pack_slug": "stablyai-orca",
       "created_at": "2026-03-17T03:28:57Z",
       "pushed_at": "2026-10-13T16:24:00Z",
-      "rank_current": 7,
+      "rank_current": 3,
       "rank_delta": null
     },
     {
@@ -944,9 +986,11 @@
       ],
       "tagline": "Patrones de diseño REST API incluyendo nomenclatura de recursos, códigos de estado, paginación, filtrado, respuestas de error, versionado y rate limiting para APIs de producción.",
       "repo": "affaan-m/ECC",
+      "is_pack_primary": true,
+      "pack_slug": "affaan-m-ecc",
       "created_at": "2026-01-18T00:51:51Z",
       "pushed_at": "2026-10-12T14:45:46Z",
-      "rank_current": 12,
+      "rank_current": 4,
       "rank_delta": null
     },
     {
@@ -967,9 +1011,11 @@
       ],
       "tagline": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
       "repo": "addyosmani/agent-skills",
+      "is_pack_primary": true,
+      "pack_slug": "addyosmani-agent-skills",
       "created_at": "2026-02-15T20:20:26Z",
       "pushed_at": "2026-10-10T08:28:49Z",
-      "rank_current": 17,
+      "rank_current": 5,
       "rank_delta": null
     },
     {
@@ -990,14 +1036,16 @@
       ],
       "tagline": "Believable agent cost report for any period, default the last 7 full days PT, not counting today. Measured tokens from Claude Code transcripts priced at OpenRouter list prices (ESTIMATED), measured provider spend when a sanctioned source exists, note-taker cost separate, Timing-style HTML/PDF plus report.json, line-items.csv, evidence.json.",
       "repo": "thedotmack/claude-mem",
+      "is_pack_primary": true,
+      "pack_slug": "thedotmack-claude-mem",
       "created_at": "2025-08-31T20:50:03Z",
       "pushed_at": "2026-10-13T07:33:53Z",
-      "rank_current": 22,
+      "rank_current": 6,
       "rank_delta": null
     },
     {
-      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review",
-      "name": "open-code-review",
+      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review-delegate",
+      "name": "delegate",
       "type": "agent_skill",
       "categories": [
         "coding-agents"
@@ -1011,11 +1059,13 @@
         44194,
         46827
       ],
-      "tagline": "Performs AI-powered code review on Git changes using the `ocr` CLI from alibaba/open-code-review. Use when the user asks to review code, review a pull request, review staged/unstaged changes, review a commit, or compare branches for code quality issues. Produces line-level review comments and can automatically apply fixes when requested. With appropriate review rules, can detect various types of issues including bugs, security vulnerabilities, performance problems, and code quality concerns.\n",
+      "tagline": "Agent skill from alibaba/open-code-review",
       "repo": "alibaba/open-code-review",
+      "is_pack_primary": true,
+      "pack_slug": "alibaba-open-code-review",
       "created_at": "2026-05-18T02:16:36Z",
       "pushed_at": "2026-10-13T13:47:09Z",
-      "rank_current": 27,
+      "rank_current": 8,
       "rank_delta": null
     },
     {
@@ -1034,11 +1084,13 @@
         5667,
         7377
       ],
-      "tagline": "Use when designing, building, operating, or diagnosing an ongoing application whose live backend or control loop includes OpenRig agents, including applications with a Markdown, YAML, or JSON agent control plane or a thin surface over specialist agent roles.",
+      "tagline": "Agent skill from mvschwarz/openrig",
       "repo": "mvschwarz/openrig",
+      "is_pack_primary": true,
+      "pack_slug": "mvschwarz-openrig",
       "created_at": "2026-04-01T06:22:40Z",
       "pushed_at": "2026-10-13T16:24:21Z",
-      "rank_current": 31,
+      "rank_current": 11,
       "rank_delta": null
     },
     {
@@ -1046,7 +1098,7 @@
       "name": "brandkit",
       "type": "agent_skill",
       "categories": [
-        "media-creative"
+        "coding-agents"
       ],
       "stars": 95459,
       "stars_delta_7d": 2036,
@@ -1057,11 +1109,13 @@
         93423,
         95459
       ],
-      "tagline": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+      "tagline": "Moved to github.com/Leonxlnx/imagegen-skills. Runs only when called by name.",
       "repo": "Leonxlnx/taste-skill",
+      "is_pack_primary": true,
+      "pack_slug": "leonxlnx-taste-skill",
       "created_at": "2026-02-19T21:44:05Z",
       "pushed_at": "2026-10-13T15:01:01Z",
-      "rank_current": 36,
+      "rank_current": 12,
       "rank_delta": null
     },
     {
@@ -1082,9 +1136,11 @@
       ],
       "tagline": "Rewrite AI-sounding text so it reads like the writer without changing what it says.\nUse when editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line\nclosers, staged openers, forced triads, dashes everywhere, inflated claims, sales\nlanguage, stock AI words, bold labels, or filler. Based on Wikipedia's \"Signs of AI writing.\"\n",
       "repo": "blader/humanizer",
+      "is_pack_primary": true,
+      "pack_slug": "blader-humanizer",
       "created_at": "2026-01-18T05:30:15Z",
       "pushed_at": "2026-09-28T05:55:12Z",
-      "rank_current": 41,
+      "rank_current": 13,
       "rank_delta": null
     }
   ],
@@ -1129,7 +1185,7 @@
         73849,
         76033
       ],
-      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 359 providers (150+ free), 1200+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by hundreds of contributors",
+      "tagline": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Work",
       "repo": "diegosouzapw/OmniRoute",
       "is_pack_primary": true,
       "created_at": "2026-02-13T12:38:31Z",
@@ -1153,7 +1209,7 @@
         124586,
         126101
       ],
-      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "tagline": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, ",
       "repo": "Graphify-Labs/graphify",
       "is_pack_primary": true,
       "created_at": "2026-04-03T15:49:07Z",
@@ -1166,7 +1222,7 @@
       "name": "hermes-agent",
       "type": "agent_tool",
       "categories": [
-        "domain-research"
+        "other"
       ],
       "stars": 253381,
       "stars_delta_7d": 1522,
@@ -1201,7 +1257,7 @@
         86124,
         87256
       ],
-      "tagline": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "tagline": "🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDce",
       "repo": "D4Vinci/Scrapling",
       "is_pack_primary": true,
       "created_at": "2024-10-13T20:29:53Z",
@@ -1214,7 +1270,7 @@
       "name": "headroom",
       "type": "agent_tool",
       "categories": [
-        "agent-frameworks"
+        "databases-memory"
       ],
       "stars": 75189,
       "stars_delta_7d": 615,
@@ -1225,7 +1281,7 @@
         74574,
         75189
       ],
-      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same a",
       "repo": "headroomlabs-ai/headroom",
       "is_pack_primary": true,
       "created_at": "2026-01-07T19:58:51Z",
@@ -1249,7 +1305,7 @@
         19623,
         20114
       ],
-      "tagline": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
+      "tagline": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chai",
       "repo": "NVIDIA/SkillSpector",
       "is_pack_primary": true,
       "created_at": "2026-03-21T00:28:43Z",
@@ -1273,7 +1329,7 @@
         87972,
         88374
       ],
-      "tagline": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "tagline": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational aw",
       "repo": "koala73/worldmonitor",
       "is_pack_primary": true,
       "created_at": "2026-01-08T17:26:06Z",
@@ -1297,7 +1353,7 @@
         43949,
         44233
       ],
-      "tagline": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
+      "tagline": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out to",
       "repo": "reactive-resume/reactive-resume",
       "is_pack_primary": true,
       "created_at": "2020-03-25T14:08:22Z",
@@ -1310,7 +1366,7 @@
       "name": "hexstrike-ai",
       "type": "agent_tool",
       "categories": [
-        "security-auth"
+        "other"
       ],
       "stars": 12751,
       "stars_delta_7d": 257,
@@ -1321,7 +1377,7 @@
         12494,
         12751
       ],
-      "tagline": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
+      "tagline": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for autom",
       "repo": "0x4m4/hexstrike-ai",
       "is_pack_primary": true,
       "created_at": "2025-07-10T17:53:18Z",

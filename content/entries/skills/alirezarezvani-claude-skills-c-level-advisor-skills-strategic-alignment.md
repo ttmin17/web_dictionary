@@ -27,7 +27,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -193,7 +193,6 @@ If department heads are rewarded for local metrics that conflict with company go
 After fixing, prevent recurrence. See `references/alignment-playbook.md` for quarterly cadence.
 
 ---
-
 ## Alignment Score
 
 A quick health check. Score each area 0–10:
@@ -216,7 +215,6 @@ A quick health check. Score each area 0–10:
 | < 20 | Strategic drift. Treat as crisis. |
 
 ---
-
 ## Key Questions for Alignment
 
 - "Ask your newest team member: what is the most important thing the company is trying to achieve right now?"

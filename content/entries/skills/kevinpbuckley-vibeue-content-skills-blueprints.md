@@ -504,7 +504,6 @@ A return-valued interface function is materialised as a graph on the implementer
 `list_graphs()` as `Interface (<InterfaceClass>)`.
 
 ---
-
 ## Task Index
 
 | Task | Workflow | Sample script (run via `execute_python_code`) |

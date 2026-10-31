@@ -237,7 +237,6 @@ gh repo create "{github_org}/{github_repo}" --public --source=. --push --descrip
 ```
 
 ---
-
 ### /opensource verify PROJECT
 
 サニタイザーを独立して実行する。パスを解決: PROJECTに`/`が含まれる場合、パスとして扱う。それ以外の場合は`$HOME/opensource-staging/PROJECT`、`$HOME/PROJECT`、現在のディレクトリを確認する。
@@ -250,7 +249,6 @@ Agent(
 ```
 
 ---
-
 ### /opensource package PROJECT
 
 パッケージャーを独立して実行する。「ライセンス？」と「説明？」を尋ねてから:
@@ -263,7 +261,6 @@ Agent(
 ```
 
 ---
-
 ### /opensource list
 
 ```bash
@@ -273,7 +270,6 @@ ls -d $HOME/opensource-staging/*/
 FORK_REPORT.md、SANITIZATION_REPORT.md、CLAUDE.mdの存在でパイプラインの進捗を各プロジェクトと共に表示する。
 
 ---
-
 ### /opensource status PROJECT
 
 ```bash

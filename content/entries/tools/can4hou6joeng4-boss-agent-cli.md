@@ -3,7 +3,9 @@ slug: can4hou6joeng4-boss-agent-cli
 name: boss-agent-cli
 tagline: 🤖 Local-assist BOSS Zhipin CLI for AI agents — search, welfare
   filtering, shortlist, JSON-envelope output; low-risk & compliant by default.
-summary: 🤖 面向真人与 AI Agent 的招聘平台 CLI —— 纯终端向导 · 福利筛选 · 双角色工作流 · JSON 信封。
+summary: boss-agent-cli 把职位发现、福利筛选、本地简历与 AI、投递沟通、招聘者候选人处理和可恢复采集统一到一个 CLI。真人直接运行
+  boss 进入纯终端向导；Agent 使用 JSON、schema、MCP 或 Python API 调用同一套 workflow 与状态。boss
+  schema 始终是能力真源。
 categories:
   - browser-web
 tags:
@@ -27,8 +29,8 @@ signals:
   stars_delta_7d: 39
   stars_growth_pct: 1.9
   trending_score: 39.72
-  rank_current: 84
-  rank_delta: -48
+  rank_current: 85
+  rank_delta: -49
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2045

@@ -62,14 +62,12 @@ skill:
   pack_slug: davepoon-buildwithclaude
 ---
 
----
-name: deal-sourcing-signals
+---name: deal-sourcing-signals
 description: Scan a company or sector for deal-sourcing signals across 6 dimensions. Triggered by: "/venture-capital-intelligence:deal-sourcing-signals", "scan signals for X", "what signals is X showing", "deal sourcing scan", "hiring signals for X", "is X raising soon", "monitor this company", "company signal scan", "sourcing brief for X", "what is X up to", "is X growing", "track this company", "deal signal report for X", "is this company fundraising", "what are the momentum signals for X", "find signals on X", "is X worth tracking". Claude Code only. Requires Python 3.x. Uses web search for live signal data.
 category: business-finance
 platform: claude-code
 requires: python3
 ---
-
 # Venture Capital Intelligence — Deal Sourcing Signals Agent
 
 You are a deal sourcing analyst at a top VC firm. You systematically scan companies for 6 types of signals that indicate investment readiness, growth momentum, or competitive threats.
@@ -79,7 +77,6 @@ You are a deal sourcing analyst at a top VC firm. You systematically scan compan
 **Pipeline:** Claude web searches → Claude classifies signals → Python scores → Claude writes sourcing brief → Python formats
 
 ---
-
 ## STEP 1 — DEFINE SCAN TARGET
 
 Ask for or extract:
@@ -89,7 +86,6 @@ Ask for or extract:
 - Geographic focus
 
 ---
-
 ## STEP 2 — CLAUDE: RUN TARGETED WEB SEARCHES
 
 Execute 6 searches — one per signal type:
@@ -113,7 +109,6 @@ Look for: market growth announcements, category-defining acquisitions, competito
 Look for: tech stack clues from job postings, GitHub activity, API announcements, developer tools adoption
 
 ---
-
 ## STEP 3 — CLAUDE: EXTRACT AND CLASSIFY RAW SIGNALS
 
 For each search, extract up to 5 specific signals found. Save to `${CLAUDE_PLUGIN_ROOT}/skills/deal-sourcing-signals/output/raw_signals.json`:
@@ -147,7 +142,6 @@ For each search, extract up to 5 specific signals found. Save to `${CLAUDE_PLUGI
 **Sentiment:** POSITIVE · NEGATIVE · NEUTRAL
 
 ---
-
 ## STEP 4 — PYTHON: SCORE SIGNALS AND COMPUTE DEAL SCORE
 
 Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/deal-sourcing-signals/scripts/signal_scorer.py"`
@@ -158,7 +152,6 @@ Computes:
 - Investment readiness: MONITOR / ENGAGE / MOVE FAST
 
 ---
-
 ## STEP 5 — CLAUDE: WRITE SOURCING BRIEF
 
 Using the signal data, write a 200-word sourcing brief:
@@ -168,13 +161,11 @@ Using the signal data, write a 200-word sourcing brief:
 - **Watch items**: signals to monitor over next 30–90 days
 
 ---
-
 ## STEP 6 — PYTHON: FORMAT FINAL REPORT
 
 Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/deal-sourcing-signals/scripts/sourcing_formatter.py"`
 
 ---
-
 ## SIGNAL INTERPRETATION GUIDE
 
 ```

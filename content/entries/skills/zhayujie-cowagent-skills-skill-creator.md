@@ -355,28 +355,24 @@ Write the YAML frontmatter with `name`, `description`, and optional `metadata`:
 If your skill needs a single API key, declare it in `requires.env`:
 
 ```yaml
----
-name: my-search
+---name: my-search
 description: Search using MyAPI
 metadata:
   requires:
     bins: ["curl"]
     env: ["MYAPI_KEY"]
----
-```
+---```
 
 If your skill supports multiple API key providers (e.g., OpenAI or LinkAI), use `requires.anyEnv`:
 
 ```yaml
----
-name: my-vision
+---name: my-vision
 description: Analyze images using Vision API
 metadata:
   requires:
     bins: ["curl"]
     anyEnv: ["OPENAI_API_KEY", "LINKAI_API_KEY"]
----
-```
+---```
 
 **Auto-enable rule**: Skills are automatically enabled when required environment variables are set, and automatically disabled when missing. No manual configuration needed.
 

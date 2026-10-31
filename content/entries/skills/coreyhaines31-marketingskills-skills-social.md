@@ -116,7 +116,6 @@ Gather this context (ask if not provided):
 - Can you create video content?
 
 ---
-
 ## Platform Quick Reference
 
 | Platform | Best For | Frequency | Key Format |
@@ -134,7 +133,6 @@ Gather this context (ask if not provided):
 **For X (Twitter) ranking mechanics** — the For You feed signals from xAI's open-sourced algorithm, and the 10 posting rules they imply: See [references/x-algorithm.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/social/references/x-algorithm.md). Use it whenever the task involves posting on X.
 
 ---
-
 ## Content Pillars Framework
 
 Build your content around 3-5 pillars that align with your expertise and audience interests.
@@ -159,7 +157,6 @@ For each pillar, ask:
 5. What aligns with business goals?
 
 ---
-
 ## Hook Formulas
 
 The first line determines whether anyone reads the rest.
@@ -209,7 +206,6 @@ Keep fragments and lists of three to one per post. For the full blacklist, use t
 **For carousels** (Instagram carousels, LinkedIn document posts): See [references/carousel-frameworks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/social/references/carousel-frameworks.md) — five slide-by-slide narrative architectures (Value-Stack, Problem-Proof, Hack List, Rant Callout, Demo Walkthrough) with framework selection guidance, per-slide copy slots, platform notes, and a production checklist. Pick the framework before writing slides.
 
 ---
-
 ## Content Repurposing System
 
 Turn one piece of content into many. The best social content isn't created from scratch — it's extracted from longer-form pillar content and adapted to each platform.
@@ -281,7 +277,6 @@ Extract "content atoms" — self-contained moments from any long-form content th
 6. **Update and reshare** (evergreen content can repeat every 3-6 months)
 
 ---
-
 ## Content Calendar Structure
 
 ### Weekly Planning Template
@@ -304,7 +299,6 @@ Extract "content atoms" — self-contained moments from any long-form content th
 6. Leave room for real-time engagement
 
 ---
-
 ## Engagement Strategy
 
 ### Daily Engagement Routine (30 min)
@@ -331,7 +325,6 @@ Extract "content atoms" — self-contained moments from any long-form content th
 - Eventually collaborate (podcasts, co-created content)
 
 ---
-
 ## Analytics & Optimization
 
 ### Metrics That Matter
@@ -365,7 +358,6 @@ Extract "content atoms" — self-contained moments from any long-form content th
 - Test video/visual content
 
 ---
-
 ## Content Ideas by Situation
 
 ### When You're Starting Out
@@ -381,7 +373,6 @@ Extract "content atoms" — self-contained moments from any long-form content th
 - Share a failure or lesson learned
 
 ---
-
 ## Scheduling Best Practices
 
 ### When to Schedule vs. Post Live
@@ -417,7 +408,6 @@ work:
    performance" step instead of guessing.
 
 ---
-
 ## Reverse Engineering Viral Content
 
 Instead of guessing, analyze what's working for top creators in your niche:
@@ -432,7 +422,6 @@ Instead of guessing, analyze what's working for top creators in your niche:
 **For the complete framework**: See [references/reverse-engineering.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/social/references/reverse-engineering.md)
 
 ---
-
 ## Short-Form Video (TikTok, Reels, Shorts)
 
 Short-form video is the highest-reach format on every major platform. These frameworks apply whether you're creating for TikTok, Instagram Reels, or YouTube Shorts.
@@ -513,7 +502,6 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 **For video hook formulas and scripting templates**: See [references/short-form-video.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/social/references/short-form-video.md)
 
 ---
-
 ## Task-Specific Questions
 
 1. What platform(s) are you focusing on?
@@ -524,7 +512,6 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 6. Are you building personal brand, company brand, or both?
 
 ---
-
 ## Related Skills
 
 - **copywriting**: For longer-form content that feeds social

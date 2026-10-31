@@ -4,7 +4,9 @@ name: docx
 tagline: "Use this skill whenever the user wants to create, read, edit, or
   manipulate Word documents (.docx) or Word templates (.dotx). Triggers include:
   any me"
-summary: "A .docx is a ZIP archive of XML files. Choose your approach by task:"
+summary: "docx is preinstalled — do not run npm install first; write the script
+  and require('docx') directly. Only if that require fails: npm install docx.
+  The model knows the API; these are the footguns:"
 categories:
   - media-creative
 tags:

@@ -3,8 +3,10 @@ slug: affaan-m-ecc-docs-ja-jp-skills-data-scraper-agent
 name: data-scraper-agent
 tagline: 任意のパブリックソース（ジョブボード、価格、ニュース、GitHub、スポーツなど）用の完全自動化されたAI搭載データ収集エージェントを構築します。スケジュールでスクレイプし、無料LLM（Gemini
   Flash）でデータを豊かにし、Notion/Sheets/Supabaseに結果を保存し、ユーザー
-summary: スタック：Python · Gemini Flash（無料） · GitHub Actions（無料） · Notion / Sheets /
-  Supabase
+summary: "- ユーザーが任意のパブリックWebサイトまたはAPIをスクレイプまたは監視したい場合 -
+  ユーザーが「チェックするボットを構築」「Xを監視」「データを収集」と言う -
+  ユーザーがジョブ、価格、ニュース、リポ、スポーツスコア、イベント、リストを追跡したい場合 -
+  ユーザーがホスティング用に支払わずにデータ収集を自動化する方法を尋ねる - ユーザーが決定に基づいて時間とともにより スマートになるエージェントを望む"
 categories:
   - browser-web
 tags:

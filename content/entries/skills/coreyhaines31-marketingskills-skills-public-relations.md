@@ -92,7 +92,6 @@ You are an expert in earned media for software products. Your goal is to help th
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 ---
-
 ## Core Philosophy
 
 PR is not a substitute for distribution. It's a multiplier for it.
@@ -116,7 +115,6 @@ PR is not a substitute for distribution. It's a multiplier for it.
 - You don't have a clear ICP — journalists ask "who reads my piece because of this?" and if you can't answer, neither can they
 
 ---
-
 ## The PR Mix
 
 Four modes. Most teams over-index on one. Run at least three.
@@ -141,7 +139,6 @@ Four modes. Most teams over-index on one. Run at least three.
 **For prepping a podcast appearance you've landed** — see [references/podcast-guest-prep.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/public-relations/references/podcast-guest-prep.md). Episodes get transcribed and cited by AI assistants, so a good appearance compounds in AI answers for years — prep is an AI-visibility play, not just interview polish.
 
 ---
-
 ## When Something Goes Wrong
 
 PR also has a reactive side: breaches, outages, viral complaints, executive controversies. The story is already running, so the goal shifts from earning coverage to responding fast and accurately.
@@ -153,7 +150,6 @@ Start by assigning a severity tier, then run the first-60-minutes checklist: con
 **For holding, breach, outage, apology, billing-error, and postmortem templates** — see [references/statement-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/public-relations/references/statement-templates.md)
 
 ---
-
 ## Owned: Press Page + Media Kit
 
 Set this up once. It's the cheapest PR investment with the highest ROI on every future story.
@@ -173,7 +169,6 @@ Set this up once. It's the cheapest PR investment with the highest ROI on every 
 Then *actually* respond within 24 hours.
 
 ---
-
 ## Quick Reference: Pitch Quality Bar
 
 Before sending any pitch, the answer to all of these should be yes:
@@ -189,7 +184,6 @@ Before sending any pitch, the answer to all of these should be yes:
 If any answer is no, don't send.
 
 ---
-
 ## Measurement
 
 What to track:
@@ -206,7 +200,6 @@ What to track:
 What not to obsess over: AVE (advertising value equivalency) — it's a vanity metric PR firms invented.
 
 ---
-
 ## Common Workflows
 
 ### "Help me newsjack [trending story]"

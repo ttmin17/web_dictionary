@@ -4,8 +4,10 @@ name: image-generation
 tagline: Generate or edit images from text prompts. Use when the user asks to
   create, draw, design, or edit an image, illustration, photo, icon, poster, or
   any
-summary: "Supported models (passed via model only when the user asks for a
-  specific one):"
+summary: "- OpenAI — gpt-image-2.5-flare (recommended default: best
+  quality/latency trade-off), gpt-image-2.5-sunburst (highest editing
+  precision), gpt-image-2, gpt-image-1 - Gemini Nano Banana — nano-banana-2,
+  nano-banana-pro,..."
 categories:
   - agent-frameworks
 tags:

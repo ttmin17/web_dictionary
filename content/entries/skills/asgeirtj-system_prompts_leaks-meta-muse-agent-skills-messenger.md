@@ -4,7 +4,10 @@ name: messenger_read
 tagline: "Work with the user's Messenger account: read call history; read and
   search contacts; read, search, and summarize conversations; send, react to,
   unsend"
-summary: "Messenger on Muse has two separate features:"
+summary: "- Use Companion only when the user explicitly asks to work with their
+  personal account. It sends as the user, not as Muse. - Never target the
+  Messenger side chat with hatchmessengercli send, whether by --cid, --to,
+  or..."
 categories:
   - cloud-infra
 tags:

@@ -90,7 +90,6 @@ Patterns for managing distributed transactions and long-running business process
 - Monitoring setup: state machine metrics, stuck saga detection, DLQ recovery
 
 ---
-
 ## When to Use This Skill
 
 - Coordinating multi-service transactions without distributed locks
@@ -101,7 +100,6 @@ Patterns for managing distributed transactions and long-running business process
 - Replacing fragile two-phase commit with async compensation
 
 ---
-
 ## Detailed section: Core Concepts
 
 Moved to `references/details.md`.
@@ -130,7 +128,6 @@ Moved to `references/details.md`.
 - **Don't use a global timeout** — Each step has different latency characteristics
 
 ---
-
 ## Troubleshooting
 
 ### Saga stuck in COMPENSATING state
@@ -167,7 +164,6 @@ A step like `create_shipment` might take up to 15 minutes during peak load but y
 When two steps both complete before a failure is detected, compensation must run in strict reverse order or you leave data in an inconsistent state. Verify that `_compensate()` iterates from `current_step - 1` down to `0`, and add an integration test that deliberately fails at each step index to confirm correct rollback order.
 
 ---
-
 ## Advanced Patterns
 
 The `references/` directory contains production-grade implementations not needed for most sagas:
@@ -175,7 +171,6 @@ The `references/` directory contains production-grade implementations not needed
 - **`references/advanced-patterns.md`** — Full `SagaOrchestrator` abstract base class, `TimeoutSagaOrchestrator` with per-step deadlines, detailed bank transfer compensating transaction chain, Prometheus instrumentation, stuck saga PromQL alerts, and DLQ recovery worker.
 
 ---
-
 ## Related Skills
 
 - `cqrs-implementation` — Pair sagas with CQRS for read-model updates after each step completes

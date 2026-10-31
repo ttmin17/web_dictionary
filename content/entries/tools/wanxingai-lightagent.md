@@ -30,8 +30,7 @@ signals:
   stars_delta_7d: 3
   stars_growth_pct: 0.2
   trending_score: 3.01
-  rank_current: 130
-  rank_delta: null
+  rank_current: 131
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1235
@@ -52,14 +51,7 @@ tool:
   install_command: pip install LightAgent
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - LightAgent
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 LightAgent: Lightweight Python framework for OpenAI-compatible agents with tools, memory, guardrails, tracing, lifecycle hooks, multi-agent collaboration, and workflows.

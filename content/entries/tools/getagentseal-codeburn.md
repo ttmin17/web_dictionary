@@ -25,18 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 11511
-  last_commit: 2026-10-17T15:32:55Z
-  stars_delta_7d: 85
-  stars_growth_pct: 0.7
-  trending_score: 85.63
-  rank_current: 25
-  rank_delta: null
+  stars: 11578
+  last_commit: 2026-10-26T02:59:49Z
+  stars_delta_7d: 67
+  stars_growth_pct: 0.6
+  trending_score: 67.39
+  rank_current: 69
+  rank_delta: -44
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11350
     - 11426
     - 11511
+    - 11578
 language: en
 needs_keys: false
 prerequisites:
@@ -53,15 +54,7 @@ tool:
   install_command: npx codeburn
   runtime: node
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: npx
-    args:
-      - -y
-      - codeburn
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 Free, local tool to track AI coding token usage and cost across 37 tools and agents (Claude Code, Cursor, Codex, Gemini and more), by model, project, and task. npx codeburn

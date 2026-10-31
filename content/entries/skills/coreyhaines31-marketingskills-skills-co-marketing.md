@@ -82,7 +82,6 @@ If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or 
 - Structuring co-marketing agreements
 
 ---
-
 ## Partner Identification Framework
 
 ### 1. Audience Overlap Analysis
@@ -139,7 +138,6 @@ Rate potential partners (1-5) on:
 - Job postings mentioning your tool + others
 
 ---
-
 ## Partnership Types
 
 Co-marketing is one of **five partnership types**. Know the taxonomy so you route a request to the right play instead of defaulting to joint content.
@@ -159,7 +157,6 @@ Standout moves: **integrations** as a decision factor (83% of enterprise buyers)
 For the full taxonomy — build patterns, economics, examples, and how to choose where to start — see **[references/partnership-types.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/co-marketing/references/partnership-types.md)**. (Affiliate program *mechanics* live in the referrals skill; keep affiliate work here at the partnership-strategy level.)
 
 ---
-
 ## Co-Marketing Campaign Types
 
 ### Content Partnerships
@@ -202,7 +199,6 @@ For the full taxonomy — build patterns, economics, examples, and how to choose
 | **Joint AMA or Twitter Space** | Low | Thought leadership |
 
 ---
-
 ## Brainstorming Partner Campaigns
 
 When brainstorming with a specific partner, consider:
@@ -239,7 +235,6 @@ Ask these to generate ideas:
 - "What data do we both have that would make a compelling story?"
 
 ---
-
 ## Approaching Potential Partners
 
 ### Cold Outreach Template
@@ -269,7 +264,6 @@ Would you be open to a quick call to explore?
 5. **Clear ask** (what you want from them, what you'll provide)
 
 ---
-
 ## Structuring the Partnership
 
 ### Key Questions to Align On
@@ -293,7 +287,6 @@ Would you be open to a quick call to explore?
 8. **Metrics sharing**: What data you'll share post-campaign
 
 ---
-
 ## Measuring Co-Marketing Success
 
 ### Quantitative Metrics
@@ -313,7 +306,6 @@ Would you be open to a quick call to explore?
 - Relationship strengthened for future campaigns
 
 ---
-
 ## Co-Marketing Checklist
 
 ### Partner Identification
@@ -339,7 +331,6 @@ Would you be open to a quick call to explore?
 - [ ] Discuss future collaboration opportunities
 
 ---
-
 ## Task-Specific Questions
 
 1. Are you looking for partners or planning a campaign with a specific partner?
@@ -350,7 +341,6 @@ Would you be open to a quick call to explore?
 6. What's your timeline and budget for co-marketing?
 
 ---
-
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key tools for co-marketing:
@@ -362,7 +352,6 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **PartnerStack** | Partner and affiliate program management | [partnerstack.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/partnerstack.md) |
 
 ---
-
 ## Related Skills
 
 - **referrals** — For customer referral and affiliate programs (customers referring customers)

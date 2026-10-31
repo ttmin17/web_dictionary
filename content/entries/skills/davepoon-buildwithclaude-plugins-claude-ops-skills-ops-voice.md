@@ -67,13 +67,11 @@ Voice interface commands. All API calls via curl — no SDK dependencies.
 **Credential resolution order:** userConfig → env vars → Doppler MCP tools (`mcp__doppler__*`) → Doppler CLI fallback (`doppler secrets get <KEY> --plain`) → password manager
 
 ---
-
 ## Sub-commands
 
 Parse `$ARGUMENTS` for the command keyword, then execute:
 
 ---
-
 ### `call [phone] [prompt]` — Bland AI phone call
 
 **Requires:** `bland_ai_api_key` in userConfig or `BLAND_AI_API_KEY` env or Doppler.
@@ -116,7 +114,6 @@ fi
 **Output:** Call ID, live status, transcript when complete.
 
 ---
-
 ### `tts [text] [--voice voice_id] [--out file.mp3]` — ElevenLabs text-to-speech
 
 **Requires:** `elevenlabs_api_key` in userConfig or `ELEVENLABS_API_KEY` env or Doppler.
@@ -147,7 +144,6 @@ command -v afplay &>/dev/null && afplay "$OUT_FILE" &
 **Output:** Audio file path. Auto-plays on macOS via `afplay`.
 
 ---
-
 ### `transcribe [file_path]` — Groq Whisper transcription
 
 **Requires:** `groq_api_key` in userConfig or `GROQ_API_KEY` env or Doppler.
@@ -174,7 +170,6 @@ echo "$TRANSCRIPT"
 **Output:** Transcript text printed to stdout.
 
 ---
-
 ### `setup` — Configure voice API keys
 
 **Before asking for anything**, auto-scan ALL sources in a single background batch:
@@ -214,7 +209,6 @@ Present all findings. Only prompt for keys NOT found in any source. Then validat
 Report: `[service] ✓ connected` or `[service] ✗ invalid key — [error]`
 
 ---
-
 ## Execution
 
 1. Resolve the sub-command from `$ARGUMENTS` (first word: call / tts / transcribe / setup)

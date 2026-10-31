@@ -28,7 +28,7 @@ source:
 signals:
   stars: 28730
   last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 523
+  stars_delta_7d: 1198
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -74,7 +74,6 @@ The orchestration layer between founder and C-suite. Reads the question, routes 
 chief of staff, orchestrator, routing, c-suite coordinator, board meeting, multi-agent, advisor coordination, decision log, synthesis
 
 ---
-
 ## Session Protocol (Every Interaction)
 
 1. Load company context via context-engine skill
@@ -84,7 +83,6 @@ chief of staff, orchestrator, routing, c-suite coordinator, board meeting, multi
 5. Log decision if reached
 
 ---
-
 ## Invocation Syntax
 
 ```
@@ -107,7 +105,6 @@ Examples:
 If loop detected: return to founder with "The advisors are deadlocked. Here's where they disagree: [summary]."
 
 ---
-
 ## Decision Complexity Scoring
 
 | Score | Signal | Action |
@@ -119,7 +116,6 @@ If loop detected: return to founder with "The advisors are deadlocked. Here's wh
 **+1 for each:** affects 2+ functions, irreversible, expected disagreement between roles, direct team impact, compliance dimension.
 
 ---
-
 ## Routing Matrix (Summary)
 
 Full rules in `references/routing-matrix.md`.
@@ -143,7 +139,6 @@ Full rules in `references/routing-matrix.md`.
 | Eng delivery, DORA metrics, eng hiring, team structure | VPE | CTO |
 
 ---
-
 ## Board Meeting Protocol
 
 **Trigger:** Score ≥ 4, or multi-function irreversible decision.
@@ -163,7 +158,6 @@ Agenda: [2–3 specific questions]
 **Rules:** Max 5 roles. Each role one turn, no back-and-forth. Chief of Staff synthesizes. Conflicts surfaced, not resolved — founder decides.
 
 ---
-
 ## Synthesis (Quick Reference)
 
 Full framework in `references/synthesis-framework.md`.
@@ -190,7 +184,6 @@ Full framework in `references/synthesis-framework.md`.
 ```
 
 ---
-
 ## Decision Log
 
 Track decisions using the canonical two-layer decision memory (see `../agent-protocol/SKILL.md` → "Decision Memory (Canonical Layout)"):
@@ -212,7 +205,6 @@ At session start: scan `~/.claude/decisions/approved/` — if a review date has 
 Migration: a legacy single-file log at `~/.claude/decision-log.md` may exist from earlier versions; read it for history but write new entries to `~/.claude/decisions/`.
 
 ---
-
 ## Quality Standards
 
 Before delivering ANY output to the founder:
@@ -228,7 +220,6 @@ Before delivering ANY output to the founder:
 - [ ] Max 5 bullets per section — overflow to reference
 
 ---
-
 ## Ecosystem Awareness
 
 The Chief of Staff routes to **33 skills total**:

@@ -129,7 +129,6 @@ Verify any other name with `get_available_keys("thumb")` (substring filter) inst
 **Modifiers:** `Negate`, `DeadZone`, `Scalar`, `SwizzleAxis` (also: `Smooth`, `SmoothDelta`, `ScaleByDeltaTime` — use `get_available_modifier_types()` for the full set)
 
 ---
-
 ## Workflows
 
 ### Create Input Action

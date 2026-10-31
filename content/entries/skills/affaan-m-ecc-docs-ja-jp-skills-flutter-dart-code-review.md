@@ -64,7 +64,6 @@ skill:
 Flutter/Dartアプリケーションをレビューするための包括的なライブラリに依存しないチェックリスト。これらの原則は、どの状態管理ソリューション、ルーティングライブラリ、またはDIフレームワークを使用していても適用されます。
 
 ---
-
 ## 1. 全般的なプロジェクトの健全性
 
 - [ ] プロジェクトは一貫したフォルダー構造に従っている（フィーチャーファーストまたはレイヤーファースト）
@@ -77,7 +76,6 @@ Flutter/Dartアプリケーションをレビューするための包括的な�
 - [ ] プラットフォーム固有のコードが抽象化の背後に分離されている
 
 ---
-
 ## 2. Dart言語の落とし穴
 
 - [ ] **暗黙的なdynamic**: 型アノテーションの欠如が`dynamic`につながる — `strict-casts`、`strict-inference`、`strict-raw-types`を有効にする
@@ -98,7 +96,6 @@ Flutter/Dartアプリケーションをレビューするための包括的な�
 - [ ] **本番コードでの`print()`**: `dart:developer`の`log()`またはプロジェクトのロギングパッケージを使用; `print()`はログレベルがなくフィルタリングできない
 
 ---
-
 ## 3. ウィジェットのベストプラクティス
 
 ### ウィジェットの分解:
@@ -132,7 +129,6 @@ Flutter/Dartアプリケーションをレビューするための包括的な�
 - [ ] `setState()`が可能な限り小さいサブツリーに限定されている
 
 ---
-
 ## 4. 状態管理（ライブラリに依存しない）
 
 これらの原則はすべてのFlutter状態管理ソリューション（BLoC、Riverpod、Provider、GetX、MobX、Signals、ValueNotifier など）に適用されます。
@@ -213,7 +209,6 @@ class UserError extends UserState {
 - [ ] フィーチャースコープの状態がフィーチャーがアクティブでなくなったときに適切に廃棄される
 
 ---
-
 ## 5. パフォーマンス
 
 ### 不要な再構築:
@@ -245,7 +240,6 @@ class UserError extends UserState {
 - [ ] 組み込み次元ウィジェット（`IntrinsicHeight`、`IntrinsicWidth`）を控えめに使用（追加のレイアウトパス）
 
 ---
-
 ## 6. テスト
 
 ### テストの種類と期待値:
@@ -273,7 +267,6 @@ class UserError extends UserState {
 - [ ] テストがCIで実行され、失敗がマージをブロックする
 
 ---
-
 ## 7. アクセシビリティ
 
 ### セマンティックウィジェット:
@@ -298,7 +291,6 @@ class UserError extends UserState {
 - [ ] ユーザーがデータを入力している間にコンテキストが予期せず変わらない
 
 ---
-
 ## 8. プラットフォーム固有の考慮事項
 
 ### iOS/Androidの違い:
@@ -315,7 +307,6 @@ class UserError extends UserState {
 - [ ] Web固有: マウス/キーボードインタラクションがサポートされ、ホバー状態が存在する
 
 ---
-
 ## 9. セキュリティ
 
 ### 安全なストレージ:
@@ -341,7 +332,6 @@ class UserError extends UserState {
 - [ ] 機密データがログや出力に記録されない
 
 ---
-
 ## 10. パッケージ/依存関係のレビュー
 
 ### pub.devパッケージの評価:
@@ -366,7 +356,6 @@ class UserError extends UserState {
 - [ ] すべてのサブパッケージがルートの`analysis_options.yaml`を共有または継承する
 
 ---
-
 ## 11. ナビゲーションとルーティング
 
 ### 一般原則（任意のルーティングソリューションに適用）:
@@ -380,7 +369,6 @@ class UserError extends UserState {
 - [ ] すべてのプラットフォームでバック動作が正しい
 
 ---
-
 ## 12. エラー処理
 
 ### フレームワークエラー処理:
@@ -403,7 +391,6 @@ class UserError extends UserState {
 - [ ] 生の例外（ネットワーク、パース）がUIに到達する前にユーザーフレンドリーでローカライズされたメッセージにマッピングされる — 生の例外文字列をユーザーに表示しない
 
 ---
-
 ## 13. 国際化（l10n）
 
 ### セットアップ:
@@ -424,7 +411,6 @@ class UserError extends UserState {
 - [ ] ローカライズされたテキストに文字列連結がない — パラメーター化されたメッセージを使用
 
 ---
-
 ## 14. 依存性注入
 
 ### 原則（任意のDIアプローチに適用）:
@@ -436,7 +422,6 @@ class UserError extends UserState {
 - [ ] サービスロケーターの呼び出し（使用する場合）がビジネスロジック全体に散らばっていない
 
 ---
-
 ## 15. 静的解析
 
 ### 設定:
@@ -460,7 +445,6 @@ class UserError extends UserState {
 - [ ] `always_use_package_imports` — 一貫したインポートスタイル
 
 ---
-
 ## 状態管理クイックリファレンス
 
 以下の表は普遍的な原則を人気のソリューションでの実装にマッピングしています。プロジェクトが使用するソリューションにレビュールールを適応させるために使用してください。
@@ -475,7 +459,6 @@ class UserError extends UserState {
 | テスト | `blocTest()` | `ProviderContainer` | `ChangeNotifier`を直接 | テストで`Get.put` | ストアを直接 | signalを直接 | ウィジェットテスト |
 
 ---
-
 ## ソース
 
 - [Effective Dart: Style](https://dart.dev/effective-dart/style)

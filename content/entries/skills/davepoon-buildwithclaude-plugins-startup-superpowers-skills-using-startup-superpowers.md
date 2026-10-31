@@ -118,10 +118,8 @@ At a few high-value milestones, offer the founder an optional, anonymous feedbac
 **The ledger.** Invite state lives in `startup/.superpowers/feedback.md`, created lazily on the first invite:
 
 ```markdown
----
-opted_out: false
----
-# Feedback invites (managed by Startup Superpowers — safe to delete)
+---opted_out: false
+---# Feedback invites (managed by Startup Superpowers — safe to delete)
 
 - competitors-done — invited 2026-05-31
 ```

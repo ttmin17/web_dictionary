@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 229
   stars_growth_pct: 5.9
   trending_score: 242.51
-  rank_current: 9
-  rank_delta: 24
+  rank_current: 10
+  rank_delta: 23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3850
@@ -74,7 +74,6 @@ launch:
 </p>
 
 ---
-
 **Hyperresearch turns Claude Code into a deep research agent, and it's #1 on the DRACO deep research benchmark, ahead of Claude Research, ChatGPT, Gemini and Perplexity. It runs in OpenAI Codex too.** A tier-adaptive 16-step pipeline takes one prompt and produces an adversarially-audited report with full source provenance. Every source it reads lands in a persistent, searchable vault, so each session starts smarter than the last.
 
 <p align="center">
@@ -195,7 +194,6 @@ What is different on Codex:
 - **A Stop hook guards the pipeline.** `hyperresearch run stop-gate` blocks the session from ending while the newest run is mid-pipeline, so Codex cannot quietly answer inline and stop. Codex runs a project's hooks only after you trust them.
 
 ---
-
 ## The 16-step research pipeline
 
 The entry skill is a thin router. It pins down the canonical research query, then invokes one step skill per phase via Claude Code's `Skill` tool (on Codex, it reads one step file per phase from `.hyperresearch/codex/steps/`). Each step's procedure loads into context only when that step actually runs. That's what stops a long pipeline from quietly dropping steps as its context rots.
@@ -290,7 +288,6 @@ Models are profile config, not hardcode. The table shows the shipped defaults, a
 | `hyperresearch-browser-fetcher` | Sonnet | Drains the escalation queue by driving your real Chrome (Claude-in-Chrome) |
 
 ---
-
 ## The vault: persistent, searchable, compounding
 
 Most deep research harnesses are one-shot: report out, everything else discarded. Hyperresearch keeps what it reads. Every fetched source lands in a SQLite-indexed vault that future sessions search before they fetch.
@@ -339,7 +336,6 @@ hyperresearch watch                   # auto-sync while you edit in your own edi
 ```
 
 ---
-
 ## Use the vault outside Claude Code
 
 **An MCP server.** `pip install hyperresearch[mcp]`, then `hyperresearch mcp` speaks stdio, so Claude Desktop, Cursor, or anything else that speaks MCP can work the same vault. Thirteen tools: `search_notes`, `read_note`, `read_many`, `list_notes`, `get_backlinks`, `get_hubs`, `vault_status`, `lint_vault`, `check_source`, `list_sources`, `fetch_url`, `create_note`, `update_note`.
@@ -347,7 +343,6 @@ hyperresearch watch                   # auto-sync while you edit in your own edi
 **A local web UI.** `hyperresearch serve --open` starts a stdlib HTTP server on port 8080 with note browsing, tag pages, search, and an interactive link graph. No build step and no JavaScript dependencies.
 
 ---
-
 ## Source ranking: quality is persistent, not vibes
 
 Every source accumulates a composite `quality_score` built from source-type tier, fetch-time utility, citation authority (from OpenAlex / Semantic Scholar, including **retraction flags**), and vault PageRank centrality:
@@ -363,7 +358,6 @@ hyperresearch claims search "q" -j         # Query extracted claims across all s
 Retracted sources are floored to near-zero quality, and a ship-time retraction sweep re-checks every cited DOI fresh, so a retraction published yesterday is caught today. Even on vault sources reused from old runs.
 
 ---
-
 ## Runs: resumable, budgeted, verified
 
 Every run owns an isolated workspace (`research/runs/<vault_tag>/`) and a manifest. Concurrent runs never collide, and a crashed run resumes exactly where it stopped:
@@ -378,7 +372,6 @@ hyperresearch run verify <tag> -j    # Ship gate: headings, length, citation den
 `run init --budget 50` caps estimated API-equivalent spend; crossing the cap blocks the run rather than letting it quietly balloon. And before any report ships, the verification battery runs: **quote-integrity** (every quoted span must exist verbatim in a vault note), **retracted-citations** (citing a retracted source unacknowledged blocks the ship), **numeric-consistency** (numbers untraceable to evidence get flagged), plus the cite-check step's per-citation binding audit.
 
 ---
-
 ## What's structurally enforced
 
 - **Verbatim prompt as gospel.** `scaffold-prompt` lint blocks if the scaffold doesn't open with the user's exact prompt
@@ -392,7 +385,6 @@ hyperresearch run verify <tag> -j    # Ship gate: headings, length, citation den
 - **Fetched text is data, never instructions.** Web-fetched bodies are served inside an `<untrusted-source>` fence on both `note show` and `search`, so a page telling the agent to ignore its instructions is read as content
 
 ---
-
 ## The web is hostile input
 
 A research agent reads hundreds of pages it did not choose, and any one of them can contain text addressed to the agent rather than to you.
@@ -402,7 +394,6 @@ Every body fetched from the web is served wrapped in `<untrusted-source url="...
 Resolved URLs from third-party APIs get the same treatment. An open-access location arrives inside someone else's JSON, so it's checked for scheme, embedded credentials, and publicly-routable resolution before anything fetches it.
 
 ---
-
 ## Web providers
 
 The `[web] provider` setting in `.hyperresearch/config.toml` picks how pages are fetched and, for the providers that support it, how the web is searched. All are optional extras except the default.
@@ -423,7 +414,6 @@ provider = "crawl4ai"
 Every fetch lane verifies TLS certificates by default: `builtin`, the PDF downloads, and crawl4ai's headless browser. A bad certificate fails the fetch with `CertVerificationError`; nothing retries it unverified. For a cert-broken site you trust, set the opt-out for the lane that refused it under `[fetch]`: `browser_verify_tls = false` for crawl4ai's headless browser, `pdf_verify_tls = false` for PDFs. The builtin provider has no opt-out. The visible-window browser used with a login profile (`--visible`, and the LinkedIn / Twitter-style domains) still accepts bad certificates, because some of the walled sites it exists for serve broken chains.
 
 ---
-
 ## Authenticated crawling + the browser lane
 
 Fetch from LinkedIn, Twitter, paywalled sites or anything you can log into:
@@ -437,7 +427,6 @@ LinkedIn, Twitter, Facebook, Instagram, and TikTok automatically use a visible b
 **Blocked fetches escalate instead of dying.** When headless crawling hits a login wall or bot wall mid-run, the URL queues as an escalation (`hyperresearch escalation list -j`). If you have the [Claude-in-Chrome](https://claude.com/chrome) extension, the browser-fetcher agent drains the queue by driving your real, logged-in Chrome. Hard boundary: **CAPTCHAs, 2FA, and logins are never solved automatically.** They're consolidated into one message and handed to you.
 
 ---
-
 ## Scholarly discovery: eight sources, one query, one deduplicated list
 
 For any topic with a research literature, search the scholarly sources BEFORE web search. They return citation-ranked canonical works; web search returns derivative commentary. That advice used to be delivered as a list of URL templates the agent was trusted to assemble by hand — no retry, no rate limiting, no dedup, no tests. It is now a real client layer:
@@ -470,7 +459,6 @@ Setting `HYPERRESEARCH_CONTACT_EMAIL` also puts you in the OpenAlex and Crossref
 After the scholarly sweep, run web searches for context, news, non-academic angles, and at least one adversarial search ("criticism of X", "limitations of X").
 
 ---
-
 ## Open-access full text: read this before you cite
 
 A paywalled paper otherwise enters the vault as an abstract, and the pipeline then reasons over ~1,500 characters while citing the work as though the paper had been read. To close that, when a fetch lands a thin page carrying a DOI, hyperresearch asks [Unpaywall](https://unpaywall.org/), [Europe PMC](https://europepmc.org/) and [CORE](https://core.ac.uk/), in that order, for a legal open-access copy and stores **that** text in the note body instead. Unpaywall needs a contact address and Europe PMC covers biomedicine only; CORE is the broad net that catches everything else, and it hosts the text directly rather than pointing at a repository that may 403.
@@ -511,7 +499,6 @@ Publishers block their own open-access PDFs often enough that one attempt isn't 
 **Recovery never fails a fetch and never lowers quality.** A candidate has to clear two bars to be accepted: more text than you already had, *and* enough text to clear `oa_min_full_text_chars`. That second bar is what stops a repository record page — title, authors, a 200-word summary — from passing for full text just by being marginally longer than the publisher's abstract. If no candidate clears both, you keep the abstract and no `oa` block appears. Rescue only ever turns a failed fetch into a note, never the reverse: when a blocked source has no open-access copy, the command fails exactly as it always did.
 
 ---
-
 ## What it doesn't do
 
 - It doesn't replace your judgment on which sources matter. The agent picks, you steer.
@@ -520,20 +507,17 @@ Publishers block their own open-access PDFs often enough that one attempt isn't 
 - The lint gate catches **structural** failures (missing scaffold, broken provenance, unresolved CRITICALs). It cannot guarantee factual accuracy, that's still your call.
 
 ---
-
 ## Requirements
 
 - Python 3.11+
 - [Claude Code](https://claude.com/claude-code), or the [OpenAI Codex CLI](https://github.com/openai/codex)
 
 ---
-
 ## License
 
 [MIT](https://github.com/jordan-gibbs/hyperresearch/blob/main/LICENSE)
 
 ---
-
 ## Star History
 
 <a href="https://www.star-history.com/?repos=jordan-gibbs%2Fhyperresearch&type=date&legend=top-left">

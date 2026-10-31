@@ -74,7 +74,6 @@ MCPB is a local MCP server **packaged with its runtime**. The user installs one 
 **Use MCPB when the server must run on the user's machine** — reading local files, driving a desktop app, talking to localhost services, OS-level APIs. If your server only hits cloud APIs, you almost certainly want a remote HTTP server instead (see `build-mcp-server`). Don't pay the MCPB packaging tax for something that could be a URL.
 
 ---
-
 ## What an MCPB bundle contains
 
 ```
@@ -89,7 +88,6 @@ my-server.mcpb              (zip archive)
 The host reads `manifest.json`, launches `server.mcp_config.command` as a **stdio** MCP server, and pipes messages. From your code's perspective it's identical to a local stdio server — the only difference is packaging.
 
 ---
-
 ## Manifest
 
 ```json
@@ -134,7 +132,6 @@ The host reads `manifest.json`, launches `server.mcp_config.command` as a **stdi
 **`user_config`** — install-time settings surfaced in the host's UI. `type: "directory"` renders a native folder picker. `sensitive: true` stores in OS keychain. See `references/manifest-schema.md` for all fields.
 
 ---
-
 ## Server code: same as local stdio
 
 The server itself is a standard stdio MCP server. Nothing MCPB-specific in the tool logic.
@@ -188,7 +185,6 @@ await server.connect(transport);
 Before hardcoding `ROOT` from a config env var, check if the host supports `roots/list` — the spec-native way to get user-approved directories. See `references/local-security.md` for the pattern.
 
 ---
-
 ## Build pipeline
 
 ### Node
@@ -212,7 +208,6 @@ npx @anthropic-ai/mcpb pack
 Vendor dependencies into a subdirectory and prepend it to `sys.path` in your entry script. Native extensions (numpy, etc.) must be built for each target platform — avoid native deps if you can.
 
 ---
-
 ## MCPB has no sandbox — security is on you
 
 Unlike mobile app stores, MCPB does NOT enforce permissions. The manifest has no `permissions` block — the server runs with full user privileges. `references/local-security.md` is mandatory reading, not optional. Every path must be validated, every spawn must be allowlisted, because nothing stops you at the platform level.
@@ -222,7 +217,6 @@ If you came here expecting filesystem/network scoping from the manifest: it does
 If your server's only job is hitting a cloud API, stop — that's a remote server wearing an MCPB costume. The user gains nothing from running it locally, and you're taking on local-security burden for no reason.
 
 ---
-
 ## MCPB + UI widgets
 
 MCPB servers can serve UI resources exactly like remote MCP apps — the widget mechanism is transport-agnostic. A local file picker that browses the actual disk, a dialog that controls a native app, etc.
@@ -230,7 +224,6 @@ MCPB servers can serve UI resources exactly like remote MCP apps — the widget 
 Widget authoring is covered in the **`build-mcp-app`** skill; it works the same here. The only difference is where the server runs.
 
 ---
-
 ## Testing
 
 ```bash
@@ -253,7 +246,6 @@ npx @anthropic-ai/mcpb sign dist/local-files.mcpb
 Test on a machine **without** your dev toolchain before shipping. "Works on my machine" failures in MCPB almost always trace to a dependency that wasn't actually bundled.
 
 ---
-
 ## Reference files
 
 - `references/manifest-schema.md` — full `manifest.json` field reference
