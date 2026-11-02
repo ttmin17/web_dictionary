@@ -1,8 +1,11 @@
 ---
 slug: microsoft-agent-framework-python-scripts-sample_validation-skills-foundry-config-setup
 name: foundry-config-setup
-tagline: Agent skill from microsoft/agent-framework
-summary: Agent skill from microsoft/agent-framework
+tagline: Resolve missing setup caused by a hardcoded Foundry project endpoint or
+  model in a sample. Use when a sample fails because it uses a placeholder/hardc
+summary: "Some samples (notably those under 01-get-started) hardcode the Foundry
+  project endpoint and model directly in the FoundryChatClient constructor using
+  placeholder values, for example:"
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: microsoft/agent-framework
@@ -22,15 +25,16 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 14317
-  last_commit: 2026-10-25T14:38:45Z
-  stars_delta_7d: 117
-  stars_growth_pct: 0.8
-  trending_score: 117.96
+  stars: 14492
+  last_commit: 2026-11-02T05:12:39Z
+  stars_delta_7d: 175
+  stars_growth_pct: 1.2
+  trending_score: 177.14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 14200
     - 14317
+    - 14492
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +42,16 @@ readme_source:
   repo: microsoft/agent-framework
   path: python/scripts/sample_validation/skills/foundry-config-setup/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:50.912Z
+  fetched_at: 2026-11-02T09:07:20.938Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: foundry-config-setup
-  description: Agent skill from microsoft/agent-framework
+  description: Resolve missing setup caused by a hardcoded Foundry project
+    endpoint or model in a sample. Use when a sample fails because it uses a
+    placeholder/hardcoded project_endpoint (for example
+    "https://your-project.services.ai.azure.com") or a hardcoded model instead
+    of reading them from the environment.
   folder_path: python/scripts/sample_validation/skills/foundry-config-setup
   extra_files: []
   pack_total_skills: 12
@@ -55,4 +63,45 @@ skill:
   pack_slug: microsoft-agent-framework
 ---
 
-Agent skill from microsoft/agent-framework
+## Usage
+
+Some samples (notably those under `01-get-started`) hardcode the Foundry
+project endpoint and model directly in the `FoundryChatClient` constructor
+using placeholder values, for example:
+
+```python
+client = FoundryChatClient(
+    project_endpoint="https://your-project.services.ai.azure.com",
+    model="gpt-4o",
+    credential=AzureCliCredential(),
+)
+```
+
+These placeholder values are not real and the sample cannot run as written.
+The validation environment provides the real values through environment
+variables, so the sample must read them from the environment instead.
+
+When you detect a hardcoded/placeholder `project_endpoint` (or `model`) that
+is causing the sample to fail with missing or invalid setup:
+
+1. Replace the hardcoded `project_endpoint` value with a read from the
+   `FOUNDRY_PROJECT_ENDPOINT` environment variable.
+2. Replace the hardcoded `model` value with a read from the `FOUNDRY_MODEL`
+   environment variable.
+3. Ensure `import os` is present at the top of the file.
+
+The corrected constructor should look like:
+
+```python
+import os
+
+client = FoundryChatClient(
+    project_endpoint=os.environ["FOUNDRY_PROJECT_ENDPOINT"],
+    model=os.environ["FOUNDRY_MODEL"],
+    credential=AzureCliCredential(),
+)
+```
+
+These samples are intentionally written with hardcoded placeholders, so this
+is expected setup—not a defect in the sample. After applying the change,
+re-run the sample and report the result as a `success` if it now runs.

@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-board-prep
 name: board-prep
-tagline: Board meeting preparation for the adversarial scenario, not the
-  friendly one. Forces numbers-cold mastery, anticipates hard questions, builds
-  a narrat
+tagline: Use before a board meeting, investor update or fundraising pitch where
+  the numbers will be challenged. Drills numbers cold, anticipates the hard
+  quest
 summary: Prepare for the adversarial version of your board, not the friendly
   one. Every hard question they'll ask. Every number you need cold. The
   narrative that acknowledges weakness without losing the room.
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,20 +43,18 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: c-level-advisor/executive-mentor/skills/board-prep/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.237Z
+  fetched_at: 2026-11-02T09:06:18.455Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: board-prep
-  description: Board meeting preparation for the adversarial scenario, not the
-    friendly one. Forces numbers-cold mastery, anticipates hard questions,
-    builds a narrative that acknowledges weakness without losing the room. Use
-    when preparing for a board meeting, an investor update, fundraising
-    presentation, or any high-stakes adversarial review where every number must
-    live in your head not just on a slide.
+  description: Use before a board meeting, investor update or fundraising pitch
+    where the numbers will be challenged. Drills numbers cold, anticipates the
+    hard questions and builds a narrative that admits weakness without losing
+    the room.
   folder_path: c-level-advisor/executive-mentor/skills/board-prep
   extra_files: []
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -65,12 +63,13 @@ skill:
   pack_slug: alirezarezvani-claude-skills
 ---
 
-# /em:board-prep — Board Meeting Preparation
-**Command:** `/em:board-prep <agenda>`
+# /executive-mentor:board-prep — Board Meeting Preparation
+**Command:** `/executive-mentor:board-prep <agenda>`
 
 Prepare for the adversarial version of your board, not the friendly one. Every hard question they'll ask. Every number you need cold. The narrative that acknowledges weakness without losing the room.
 
 ---
+
 ## The Reality of Board Meetings
 
 Your board members have seen 50+ companies. They've watched founders flinch at their own numbers, spin bad news as "learning opportunities," and present sanitized decks that hide what's actually happening.
@@ -80,6 +79,7 @@ They know when you're not being straight with them. The question isn't whether t
 The best board meetings aren't the ones where everything looks good. They're the ones where the CEO demonstrates they see reality clearly, have a plan, and can execute under pressure.
 
 ---
+
 ## The Preparation Framework
 
 ### Phase 1: Numbers Cold
@@ -173,6 +173,7 @@ Not all board members want the same thing from a meeting.
 - **The independent** — watching governance, team dynamics, and your judgment
 
 ---
+
 ## Pre-Meeting Checklist
 
 **48 hours before:**
@@ -189,6 +190,7 @@ Not all board members want the same thing from a meeting.
 - [ ] Follow-up action template ready
 
 ---
+
 ## During the Meeting
 
 **What the board is watching:**
@@ -201,6 +203,7 @@ Not all board members want the same thing from a meeting.
 **The single best thing you can do:** Name the hard thing before they do. "I want to address the revenue miss directly. Here's what happened, here's what I should have caught earlier, here's what changes."
 
 ---
+
 ## After the Meeting
 
 Within 24 hours:

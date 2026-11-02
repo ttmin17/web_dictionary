@@ -1,8 +1,10 @@
 ---
 slug: googleworkspace-cli-skills-gws-keep
 name: gws-keep
-tagline: Agent skill from googleworkspace/cli
-summary: Agent skill from googleworkspace/cli
+tagline: Manage Google Keep notes.
+summary: "- download — Gets an attachment. To download attachment media via REST
+  requires the alt=media query parameter. Returns a 400 bad request error if
+  attachment media is not available in the requested MIME type."
 categories:
   - productivity-ops
 tags:
@@ -11,10 +13,10 @@ tags:
   - automation
   - cli
 status: active
-quality_percentile: 54
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: googleworkspace/cli
@@ -22,17 +24,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 31663
-  last_commit: 2026-10-06T20:23:04Z
-  stars_delta_7d: 0
+  stars: 32055
+  last_commit: 2026-10-30T16:06:54Z
+  stars_delta_7d: 890
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
-    - 31270
     - 31448
     - 31663
-    - 31663
+    - 32055
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +41,15 @@ readme_source:
   repo: googleworkspace/cli
   path: skills/gws-keep/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.390Z
+  fetched_at: 2026-11-02T09:06:42.261Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: gws-keep
-  description: Agent skill from googleworkspace/cli
+  description: Manage Google Keep notes.
   folder_path: skills/gws-keep
   extra_files: []
-  pack_total_skills: 95
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +58,37 @@ skill:
   pack_slug: googleworkspace-cli
 ---
 
-Agent skill from googleworkspace/cli
+# keep (v1)
+> **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
+
+```bash
+gws keep <resource> <method> [flags]
+```
+
+## API Resources
+
+### media
+
+  - `download` — Gets an attachment. To download attachment media via REST requires the alt=media query parameter. Returns a 400 bad request error if attachment media is not available in the requested MIME type.
+
+### notes
+
+  - `create` — Creates a new note.
+  - `delete` — Deletes a note. Caller must have the `OWNER` role on the note to delete. Deleting a note removes the resource immediately and cannot be undone. Any collaborators will lose access to the note.
+  - `get` — Gets a note.
+  - `list` — Lists notes. Every list call returns a page of results with `page_size` as the upper bound of returned items. A `page_size` of zero allows the server to choose the upper bound. The ListNotesResponse contains at most `page_size` entries. If there are more things left to list, it provides a `next_page_token` value. (Page tokens are opaque values.) To get the next page of results, copy the result's `next_page_token` into the next request's `page_token`.
+  - `permissions` — Operations on the 'permissions' resource
+
+## Discovering Commands
+
+Before calling any API method, inspect it:
+
+```bash
+# Browse resources and methods
+gws keep --help
+
+# Inspect a method's required params, types, and defaults
+gws schema keep.<resource>.<method>
+```
+
+Use `gws schema` output to build your `--params` and `--json` flags.

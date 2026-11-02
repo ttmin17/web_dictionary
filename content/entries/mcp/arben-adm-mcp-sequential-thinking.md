@@ -15,10 +15,10 @@ tags:
   - sqlite
   - working-notes
 status: active
-quality_percentile: 54
+quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2025-01-09T22:47:33
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: arben-adm/mcp-sequential-thinking
@@ -27,16 +27,16 @@ source:
 signals:
   stars: 959
   last_commit: 2026-10-23T22:41:55Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.4
-  trending_score: 4.02
-  rank_current: 94
-  rank_delta: -5
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 111
+  rank_delta: -22
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 952
     - 955
     - 955
+    - 959
     - 959
 language: en
 needs_keys: false
@@ -47,7 +47,7 @@ readme_source:
   repo: arben-adm/mcp-sequential-thinking
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:38:48.290Z
+  fetched_at: 2026-11-02T09:05:57.311Z
   truncated: false
 type: mcp_server
 launch:

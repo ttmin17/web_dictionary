@@ -1,8 +1,12 @@
 ---
 slug: agricidaniel-claude-ads-skills-ads-amazon
 name: ads-amazon
-tagline: Agent skill from AgriciDaniel/claude-ads
-summary: Agent skill from AgriciDaniel/claude-ads
+tagline: Audit Amazon Ads profiles, regions, Sponsored Products, Sponsored
+  Brands, Sponsored Display, DSP, portfolios, targeting, search terms, retail
+  readines
+summary: 1. Read the main ads operating contract and thinking framework. 2.
+  Collect objective, conversion definition, account and campaign age, geography,
+  date window, timezone, currency, spend, targets, and available data sou...
 categories:
   - productivity-ops
 tags:
@@ -11,10 +15,10 @@ tags:
   - claude-code
   - claude-code-skill
 status: active
-quality_percentile: 77
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-ads
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10425
-  last_commit: 2026-10-17T01:35:42Z
-  stars_delta_7d: 301
-  stars_growth_pct: 3
-  trending_score: 309.95
+  stars: 10660
+  last_commit: 2026-11-01T21:08:14Z
+  stars_delta_7d: 235
+  stars_growth_pct: 2.3
+  trending_score: 240.3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9774
     - 9953
     - 10124
     - 10425
+    - 10660
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +44,19 @@ readme_source:
   repo: AgriciDaniel/claude-ads
   path: skills/ads-amazon/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:51.734Z
+  fetched_at: 2026-11-02T09:06:30.004Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ads-amazon
-  description: Agent skill from AgriciDaniel/claude-ads
+  description: Audit Amazon Ads profiles, regions, Sponsored Products, Sponsored
+    Brands, Sponsored Display, DSP, portfolios, targeting, search terms, retail
+    readiness, creative, budgets, ACOS, TACOS, reporting, and policy. Use for
+    Amazon Ads, sponsored ads, Amazon PPC, ACOS, TACOS, ASIN advertising, Amazon
+    DSP, or retail-media optimization.
   folder_path: skills/ads-amazon
   extra_files: []
-  pack_total_skills: 34
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -63,7 +71,7 @@ skill:
 1. Read the main `ads` operating contract and thinking framework.
 2. Collect objective, conversion definition, account and campaign age, geography,
    date window, timezone, currency, spend, targets, and available data sources.
-3. Read `ads/references/amazon-audit.md` and only the relevant shared measurement,
+3. Read `ads/references/amazon-audit.md` (resolve it from the plugin root, the directory that holds `ads/` and `skills/`, or from the skills directory in a standalone install) and only the relevant shared measurement,
    benchmark, creative, automation, policy, and scoring references.
 4. Normalize inputs and retain lineage to each export, screenshot, API result, or
    manual value.

@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27651
-  last_commit: 2026-10-24T17:24:38Z
-  stars_delta_7d: 129
-  stars_growth_pct: 0.5
-  trending_score: 129.6
-  rank_current: 72
-  rank_delta: -5
+  stars: 27822
+  last_commit: 2026-10-30T20:57:42Z
+  stars_delta_7d: 171
+  stars_growth_pct: 0.6
+  trending_score: 172.06
+  rank_current: 71
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 27320
     - 27430
     - 27522
     - 27651
+    - 27822
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-ar/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:42:27.103Z
+  fetched_at: 2026-11-02T09:06:19.481Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,6 +62,7 @@ skill:
     العمل الذي يحتاج إلى 5 استدعاءات أدوات أو أكثر.
   folder_path: skills/i18n/planning-with-files-ar
   extra_files:
+    - plan-inventory.md
     - scripts/attest-plan.ps1
     - scripts/attest-plan.sh
     - scripts/check-complete.ps1
@@ -71,7 +72,6 @@ skill:
     - scripts/init-session.sh
     - scripts/inject-plan.py
     - scripts/inject-plan.sh
-    - scripts/ledger-append.ps1
   pack_total_skills: 6
   is_pack_primary: true
   clients:
@@ -285,6 +285,9 @@ if فشل العملية:
 - `scripts/session-catchup.py`: فحص صريح لبيانات الجلسة المحلية أو إعادة تشغيل محدودة منها
 
 ### عرض الخطط المحفوظة
+
+
+للحصول على مسارات الملفات وحالتها بصيغة منظّمة للوكلاء، أضف `--json` (في PowerShell: `-Json`) إلى أمر القائمة. راجع المخطط وطريقة إسناد المهمة لوكيل آخر في [plan-inventory.md](https://github.com/OthmanAdi/planning-with-files/blob/master/skills/i18n/planning-with-files-ar/plan-inventory.md). هذا الاستعلام اختياري ولا يعمل عند تفعيل المهارة بصورة عادية.
 
 للعثور على مهمة قبل استئنافها، شغّل `sh "<skill-dir>/scripts/set-active-plan.sh" --list` أو، في Windows PowerShell، `& "<skill-dir>/scripts/set-active-plan.ps1" -List`. استبدل `<skill-dir>` بمسار تثبيت هذه المهارة، وأبقِ دليل العمل الحالي عند جذر المشروع.
 

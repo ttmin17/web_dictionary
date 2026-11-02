@@ -1,8 +1,11 @@
 ---
 slug: nvidia-skills-skills-bionemo-kermt-infer
-name: bionemo-kermt-infer
-tagline: Agent skill from NVIDIA/skills
-summary: Agent skill from NVIDIA/skills
+name: kermt-infer
+tagline: Run predictions with a finetuned KERMT checkpoint on a SMILES-only CSV.
+  The skill validates that the input ckpt has task FFN heads (refuses pretrain c
+summary: Set SKILLDIR to the absolute path of this installed skill directory.
+  Export KERMTREPO as the absolute path to the KERMT checkout used for model
+  execution. The bundled container helper mounts that checkout at /workspac...
 categories:
   - databases-memory
 tags:
@@ -11,10 +14,10 @@ tags:
   - ai-agents
   - claude-code
 status: active
-quality_percentile: 57
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: NVIDIA/skills
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3735
-  last_commit: 2026-10-26T00:12:40Z
-  stars_delta_7d: 93
-  stars_growth_pct: 2.6
-  trending_score: 95.37
+  stars: 3817
+  last_commit: 2026-10-30T18:10:11Z
+  stars_delta_7d: 82
+  stars_growth_pct: 2.2
+  trending_score: 83.8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3536
     - 3581
     - 3642
     - 3735
+    - 3817
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +43,16 @@ readme_source:
   repo: NVIDIA/skills
   path: skills/bionemo-kermt-infer/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:25.669Z
+  fetched_at: 2026-11-02T09:06:50.104Z
   truncated: false
 type: agent_skill
 skill:
-  skill_name: bionemo-kermt-infer
-  description: Agent skill from NVIDIA/skills
+  skill_name: kermt-infer
+  description: Run predictions with a finetuned KERMT checkpoint on a SMILES-only
+    CSV. The skill validates that the input ckpt has task FFN heads (refuses
+    pretrain ckpts with a redirect to kermt-finetune), validates the CSV,
+    prepares the data (clean + rdkit_2d features), then launches main.py predict
+    inside the kermt container (blocking, minutes-scale).
   folder_path: skills/bionemo-kermt-infer
   extra_files:
     - BENCHMARK.md
@@ -58,7 +65,7 @@ skill:
     - scripts/prepare_data.py
     - scripts/run_inference.py
     - skill-card.md
-  pack_total_skills: 416
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -67,4 +74,135 @@ skill:
   pack_slug: nvidia-skills
 ---
 
-Agent skill from NVIDIA/skills
+# kermt-infer
+Run predictions with a finetuned KERMT checkpoint on a SMILES-only CSV. The
+skill is the workflow orchestrator: validate ckpt, validate CSV, prepare data,
+launch the runner blocking, return the predictions CSV.
+
+## Skill and runtime paths
+
+Set `SKILL_DIR` to the absolute path of this installed skill directory. Export
+`KERMT_REPO` as the absolute path to the KERMT checkout used for model
+execution. The bundled container helper mounts that checkout at
+`/workspace` and this skill at `/skill` (read-only). Commands inside
+the container use `/skill/scripts/`; defaults are bundled in `config/`.
+
+## Hardware requirements
+
+- **GPUs**: 1 (single-GPU). Multi-GPU inference is not currently supported.
+- **VRAM**: ≥ 4 GB for the default `batch_size 32`.
+- **Disk**: a few hundred MB per run (cleaned CSV + features + predictions).
+- **Driver / CUDA**: any host supporting CUDA 12.6 (the kermt image base).
+
+## Inputs
+
+Required:
+
+- `--ckpt <path>` — finetuned checkpoint (must have task FFN heads). The
+  validator refuses pretrain ckpts with a redirect to `kermt-finetune`.
+- `--csv <path>` — SMILES-only CSV. First column is `smiles`; other columns
+  are ignored.
+
+Optional:
+
+- `--batch-size N` — override the configured default (32).
+- `--seed N` — random seed for inference (deterministic featurization paths).
+- `--gpus 0` — single GPU id (default 0). Multi-GPU rejected.
+- `--from-prepare <dir>` — skip the prepare step and reuse an existing
+  `prepare_data.json` in `<dir>`.
+
+## Workflow
+
+Let `$KERMT_REPO` be the path to your kermt repo checkout, and assume
+`kermt-setup` has built `kermt:latest`.
+
+1. **Pre-flight: ensure container + system probe.**
+   ```
+   "$SKILL_DIR/scripts/kermt_container.sh" check_system
+   ```
+   Refuse to proceed on `ok: false`.
+
+2. **Compute run directory.**
+   ```
+   RUN_DIR=$KERMT_REPO/runs/infer_$(date -u +%Y-%m-%dT%H-%M-%SZ)
+   ```
+
+3. **Validate the checkpoint.**
+   ```
+   "$SKILL_DIR/scripts/kermt_container.sh" run --ckpt <user-ckpt> -- \
+       "python /skill/scripts/check_checkpoint.py --mode inference --ckpt /ckpt"
+   ```
+   Parse the JSON. Abort on `ok: false`. The validator rejects pretrain ckpts
+   (`has_task_ffn: false`) with a redirect to `kermt-finetune`.
+
+4. **Validate the data.**
+   ```
+   "$SKILL_DIR/scripts/kermt_container.sh" run --data <user-csv> -- \
+       "python /skill/scripts/check_data.py --mode inference --csv /data/<basename>"
+   ```
+   Abort on `ok: false`.
+
+5. **Prepare the data.**
+   ```
+   "$SKILL_DIR/scripts/kermt_container.sh" run --data <user-csv> --run-dir $RUN_DIR -- \
+       "python /skill/scripts/prepare_data.py --mode inference \\
+            --csv /data/<basename> --out /runs/data"
+   ```
+   Outputs land at `$RUN_DIR/data/prepare_data.json` with `clean_csv` +
+   `clean_npz` paths (rdkit_2d_normalized features).
+
+6. **Launch the runner (blocking).**
+   ```
+   "$SKILL_DIR/scripts/kermt_container.sh" run \\
+       --ckpt <user-ckpt> --run-dir $RUN_DIR -- \\
+       "python /skill/scripts/run_inference.py \\
+            --ckpt /ckpt \\
+            --prepare-manifest /runs/data/prepare_data.json \\
+            --out /runs \\
+            [--gpus 0 --batch-size N --seed N]"
+   ```
+   Returns the predictions CSV path on success.
+
+7. **Report to the user.** Output a short summary:
+   - Predictions: `$RUN_DIR/out/predictions.csv` (smiles + per-target columns)
+   - Manifest: `$RUN_DIR/run.json` (cmd_replay + image digest + applied args)
+   - Log: `$RUN_DIR/logs/inference.log`
+   - Row count: <N> molecules predicted across <K> targets
+
+## Hard rules
+
+- **Never modify the user's ckpt.** The runner symlinks the ckpt into a
+  unique `<out>/ckpt_link/` subdir so `main.py predict --checkpoint_dir`
+  picks it up; the source file stays untouched.
+- **Arch comes from the ckpt, never from CLI/defaults.** The runner records
+  the validator's arch block in `run.json` but does not pass arch flags into
+  `main.py predict` — predict reads them from the loaded ckpt's saved_args.
+- **Single-GPU only.** Multi-GPU inference is not currently supported.
+- **Echo applied defaults.** The `args_applied` field of `run.json` records
+  every flag's value + source (user / default-config). Surface a short
+  summary of any default-filled flag.
+
+## Common errors
+
+- `inference requires a finetuned ckpt with task FFN heads` → ckpt is a
+  pretrain ckpt; use `kermt-finetune` first.
+- `prepare_data manifest reports ok=False` → check the manifest `errors` for
+  the failed step (typically clean_smiles or save_features).
+- `could not convert string to float: '<value>'` from save_features or main.py
+  predict → input CSV has a non-numeric passthrough column (e.g. a 'split'
+  label). The prep step now strips the CSV to SMILES-only at inference; if
+  this error still surfaces, the CSV is being read by a runner that bypassed
+  prepare_data. Re-run via the skill, not `main.py` directly.
+- `--gpus '0,1' is single-GPU only` → pass a single id.
+
+## Replayability
+
+The `run.json` `cmd_replay` field is a single-line command that re-runs the
+inference with the same inputs. To replay inside the kermt container:
+
+```bash
+$(jq -r .cmd_replay $RUN_DIR/run.json)
+```
+
+If `ok_to_replay: false` (dirty kermt repo worktree at launch time), pin
+the commit via `repo.commit` and `git checkout` it first.

@@ -1,8 +1,11 @@
 ---
 slug: gentleman-programming-gentle-ai-internal-assets-skills-chained-pr
 name: chained-pr
-tagline: Agent skill from Gentleman-Programming/gentle-ai
-summary: Agent skill from Gentleman-Programming/gentle-ai
+tagline: "Trigger: PRs over 400 lines, stacked PRs, review slices. Split
+  oversized changes into chained PRs that protect review focus."
+summary: Load this skill when a planned PR may exceed 400 changed lines, an ODD
+  feature's forecast or running authored changed-line count from work-unit
+  commits exceeds about 400, or the user asks for chained/stacked PRs, revi...
 categories:
   - coding-agents
 tags:
@@ -11,10 +14,10 @@ tags:
   - ai-coding
   - claude-code
 status: active
-quality_percentile: 89
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -22,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8020
-  last_commit: 2026-10-26T04:03:33Z
-  stars_delta_7d: 171
-  stars_growth_pct: 2.2
-  trending_score: 174.73
+  stars: 8181
+  last_commit: 2026-11-02T02:09:02Z
+  stars_delta_7d: 161
+  stars_growth_pct: 2
+  trending_score: 164.23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7736
     - 7849
     - 8020
+    - 8181
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +43,13 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/chained-pr/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:56.082Z
+  fetched_at: 2026-11-02T09:06:38.259Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: chained-pr
-  description: Agent skill from Gentleman-Programming/gentle-ai
+  description: "Trigger: PRs over 400 lines, stacked PRs, review slices. Split
+    oversized changes into chained PRs that protect review focus."
   folder_path: internal/assets/skills/chained-pr
   extra_files:
     - references/chaining-details.md

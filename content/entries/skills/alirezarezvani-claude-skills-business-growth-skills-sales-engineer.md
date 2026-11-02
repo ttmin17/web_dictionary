@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-growth-skills-sales-engineer
 name: sales-engineer
-tagline: Analyzes RFP/RFI responses for coverage gaps, builds competitive
-  feature comparison matrices, and plans proof-of-concept (POC) engagements for
-  pre-sal
+tagline: "Use for pre-sales work: RFP coverage gaps, competitive feature
+  matrices or planning and scoring a proof of concept. Runs
+  rfp_response_analyzer.py, com"
 summary: "Objective: Understand customer requirements, technical environment,
   and business drivers."
 categories:
@@ -17,7 +17,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,20 +42,14 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-growth/skills/sales-engineer/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.235Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: sales-engineer
-  description: Analyzes RFP/RFI responses for coverage gaps, builds competitive
-    feature comparison matrices, and plans proof-of-concept (POC) engagements
-    for pre-sales engineering. Use when responding to RFPs, bids, or proposal
-    requests; comparing product features against competitors; planning or
-    scoring a customer POC or sales demo; preparing a technical proposal; or
-    performing win/loss competitor analysis. Handles tasks described as 'RFP
-    response', 'bid response', 'proposal response', 'competitor comparison',
-    'feature matrix', 'POC planning', 'sales demo prep', or 'pre-sales
-    engineering'.
+  description: "Use for pre-sales work: RFP coverage gaps, competitive feature
+    matrices or planning and scoring a proof of concept. Runs
+    rfp_response_analyzer.py, competitive_matrix_builder.py and poc_planner.py."
   folder_path: business-growth/skills/sales-engineer
   extra_files:
     - assets/demo_script_template.md
@@ -68,7 +62,7 @@ skill:
     - references/rfp-response-guide.md
     - scripts/competitive_matrix_builder.py
     - scripts/poc_planner.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -105,6 +99,7 @@ python scripts/rfp_response_analyzer.py assets/sample_rfp_data.json --format jso
 ```
 
 ---
+
 ### Phase 2: Solution Design
 
 **Objective:** Design a solution architecture that addresses customer requirements.
@@ -129,6 +124,7 @@ python -c "import json; d=json.load(open('phase2_competitive.json')); print('Dif
 **Validation checkpoint:** Confirm at least one strong differentiator exists per customer priority before proceeding to Phase 3. If no differentiators found, escalate to Product Team (see Integration Points).
 
 ---
+
 ### Phase 3: Demo Preparation & Delivery
 
 **Objective:** Deliver compelling technical demonstrations tailored to stakeholder priorities.
@@ -150,6 +146,7 @@ python -c "import json; rfp=json.load(open('phase1_rfp_results.json')); [print('
 ```
 
 ---
+
 ### Phase 4: POC & Evaluation
 
 **Objective:** Execute a structured proof-of-concept that validates the solution.
@@ -176,6 +173,7 @@ python -c "import json; p=json.load(open('phase4_poc_plan.json')); print('Go/No-
 **Validation checkpoint:** POC conversion requires scorecard score >60% across all evaluation dimensions (functionality, performance, integration, usability, support). If score <60%, document gaps and loop back to Phase 2 for solution redesign.
 
 ---
+
 ### Phase 5: Proposal & Closing
 
 **Objective:** Deliver a technical proposal that supports the commercial close.
@@ -192,6 +190,7 @@ python -c "import json; p=json.load(open('phase4_poc_plan.json')); print('Go/No-
 **Output:** Technical proposal, implementation timeline, risk mitigation plan.
 
 ---
+
 ## Python Automation Tools
 
 ### 1. RFP Response Analyzer
@@ -218,6 +217,7 @@ python scripts/rfp_response_analyzer.py --help
 **Input Format:** See `assets/sample_rfp_data.json` for the complete schema.
 
 ---
+
 ### 2. Competitive Matrix Builder
 
 **Script:** `scripts/competitive_matrix_builder.py`
@@ -235,6 +235,7 @@ python scripts/competitive_matrix_builder.py competitive_data.json --format json
 **Output Includes:** Feature comparison matrix, weighted competitive scores, differentiators, vulnerabilities, and win themes.
 
 ---
+
 ### 3. POC Planner
 
 **Script:** `scripts/poc_planner.py`
@@ -256,6 +257,7 @@ python scripts/poc_planner.py poc_data.json --format json  # JSON output
 **Output Includes:** Phased POC plan, resource allocation, success criteria, evaluation scorecard, risk register, and go/no-go recommendation framework.
 
 ---
+
 ## Reference Knowledge Bases
 
 | Reference | Description |
@@ -282,6 +284,7 @@ python scripts/poc_planner.py poc_data.json --format json  # JSON output
 - **Customer Success** - Hand off POC results and success criteria to CSM from `../customer-success-manager/`
 
 ---
+
 **Last Updated:** February 2026
 **Status:** Production-ready
 **Tools:** 3 Python automation scripts

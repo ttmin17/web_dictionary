@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/aso/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.287Z
+  fetched_at: 2026-11-02T09:06:13.821Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
     - references/google-play-specs.md
     - references/report-template.md
     - references/scoring-criteria.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -166,6 +167,7 @@ but is often indistinguishable from it in scraped HTML. If you cannot confirm
 its presence, note this and recommend the user check App Store Connect.
 
 ---
+
 ## Phase 1.5 — Assess Brand Maturity
 
 Before scoring, classify the app into one of three tiers. This determines how
@@ -204,6 +206,7 @@ choice by a team that has data I don't?" If the app has 1M+ ratings and a
 dedicated ASO team, assume their choices are data-informed unless clearly wrong.
 
 ---
+
 ## Phase 2 — Score Each Dimension
 
 Score each dimension 0-10 using the criteria in `references/scoring-criteria.md`.
@@ -239,6 +242,7 @@ Reference files for platform specs and benchmarks:
 | 0-29   | F     | Listing needs a complete overhaul                         |
 
 ---
+
 ## Phase 3 — Competitor Comparison (Optional)
 
 If the user provides competitor URLs or asks for comparison:
@@ -252,6 +256,7 @@ If no competitors are specified, suggest the user provide 2-3 or offer to search
 for top apps in their category.
 
 ---
+
 ## Phase 4 — Generate Report
 
 Use the template in `references/report-template.md` to structure the output.
@@ -274,6 +279,7 @@ The report must include:
 - When suggesting keyword changes, explain WHY each keyword matters
 
 ---
+
 ## Platform-Specific Rules
 
 ### Apple App Store — Key Facts
@@ -323,6 +329,7 @@ The report must include:
 | IAP names             | Yes              | Yes                    |
 
 ---
+
 ## Common Issues Checklist
 
 Flag these if found. Items marked _(tier-dependent)_ should be evaluated against
@@ -354,6 +361,7 @@ the app's brand maturity tier — they may be deliberate choices for Dominant ap
 - [ ] Generic "What's New" text _(acceptable at weekly+ release cadence for Established/Dominant)_
 
 ---
+
 ## Task-Specific Questions
 
 1. What is the App Store or Google Play URL?
@@ -364,6 +372,7 @@ the app's brand maturity tier — they may be deliberate choices for Dominant ap
 6. Do you have access to App Store Connect or Google Play Console data?
 
 ---
+
 ## Related Skills
 
 - **cro**: For optimizing the conversion of web-based landing pages that drive app installs

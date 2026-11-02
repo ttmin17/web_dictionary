@@ -13,25 +13,27 @@ tags:
   - mcp-gateway
   - mcp-registry
 status: active
-quality_percentile: 68
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mcpjungle/MCPJungle
   official_vendor: false
   license: MPL-2.0
 signals:
-  stars: 1310
-  last_commit: 2026-10-25T23:05:24Z
-  stars_delta_7d: 56
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 1433
+  last_commit: 2026-10-30T18:52:17Z
+  stars_delta_7d: 123
+  stars_growth_pct: 9.4
+  trending_score: 134.55
+  rank_current: 49
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 1292
     - 1310
+    - 1433
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +42,7 @@ readme_source:
   repo: mcpjungle/MCPJungle
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:13.432Z
+  fetched_at: 2026-11-02T09:05:52.795Z
   truncated: false
 type: agent_tool
 tool:
@@ -184,6 +186,7 @@ You now have a working MCP setup with a single unified endpoint!
 Next, explore the complete documentation at [docs.mcpjungle.com](https://docs.mcpjungle.com/) and the [public roadmap](https://docs.mcpjungle.com/roadmap).
 
 ---
+
 <details>
 <summary>Legacy README reference</summary>
 

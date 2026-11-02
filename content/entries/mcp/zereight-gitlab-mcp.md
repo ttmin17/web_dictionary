@@ -12,26 +12,28 @@ tags:
   - devtools
   - gitlab
 status: active
-quality_percentile: 87
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: zereight/gitlab-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2065
-  last_commit: 2026-10-26T03:36:47Z
-  stars_delta_7d: 16
-  stars_growth_pct: 0.8
-  trending_score: 16.12
+  stars: 2080
+  last_commit: 2026-11-02T06:01:12Z
+  stars_delta_7d: 15
+  stars_growth_pct: 0.7
+  trending_score: 15.11
   rank_current: 69
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2049
     - 2065
+    - 2080
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +42,7 @@ readme_source:
   repo: zereight/gitlab-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:02.920Z
+  fetched_at: 2026-11-02T09:05:48.842Z
   truncated: true
 type: mcp_server
 launch:
@@ -58,7 +60,7 @@ launch:
 
 📖 **[Documentation →](https://zereight.github.io/gitlab-mcp/)** · [llms.txt](https://github.com/zereight/gitlab-mcp/blob/main/llms.txt) · [llms-full.txt](https://github.com/zereight/gitlab-mcp/blob/main/llms-full.txt)
 
-**Default: 40 tools** (38 `core` + `discover_tools` + `help`). 278 tools exist in total (275 in toolsets + `execute_graphql` + `discover_tools` + `help`). Start lean; call `discover_tools` to activate more for this session.
+**Default: 40 tools** (38 `core` + `discover_tools` + `help`). 288 tools exist in total (285 in toolsets + `execute_graphql` + `discover_tools` + `help`). Start lean; call `discover_tools` to activate more for this session.
 
 Install the `zereight-mcp-gitlab` binary first with `npm install -g @zereight/mcp-gitlab`, or Homebrew `brew tap zereight/gitlab-mcp https://github.com/zereight/gitlab-mcp` and `brew install zereight/gitlab-mcp/zereight-mcp-gitlab`. Official MCP Registry listing: [`io.github.zereight/gitlab-mcp`](https://registry.modelcontextprotocol.io/?q=io.github.zereight%2Fgitlab-mcp). One-liner: `npx -y @zereight/mcp-gitlab@latest`.
 
@@ -190,7 +192,7 @@ Supports PAT, OAuth, read-only mode, dynamic API URLs, and remote authorization 
 
 ### Why use this GitLab MCP?
 
-- **Default 40 tools (38 `core` + `discover_tools` + `help`); 278 total** — start lean; call `discover_tools` to activate more without CQRS-style grouping
+- **Default 40 tools (38 `core` + `discover_tools` + `help`); 288 total** — start lean; call `discover_tools` to activate more without CQRS-style grouping
 - **MR 2-step review** — `list_merge_request_changed_files` → batched `get_merge_request_file_diff`
 - **Agent Skill built in** — workflow guidance in `skills/gitlab-mcp/`
 - **Flexible auth** — Personal Access Token, local OAuth2 browser flow, MCP OAuth proxy, and per-request remote authorization
@@ -204,7 +206,7 @@ Supports PAT, OAuth, read-only mode, dynamic API URLs, and remote authorization 
 |                | @zereight/mcp-gitlab                                              | GitLab MCP A (community CQRS-style)          | GitLab official MCP server                                                                                                                       |
 | -------------- | ----------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Best for**   | AI agent workflows                                                | Enterprise multi-instance / grouped tools    | Built into GitLab, no separate install                                                                                                           |
-| **Tool model** | 278 tools: 275 in toolsets + `execute_graphql` + `discover_tools` + `help` | ~50–60 grouped `browse_*` / `manage_*` tools | Toolsets chosen with an HTTP header                                                                                                              |
+| **Tool model** | 288 tools: 285 in toolsets + `execute_graphql` + `discover_tools` + `help` | ~50–60 grouped `browse_*` / `manage_*` tools | Toolsets chosen with an HTTP header                                                                                                              |
 | **MR review**  | 2-step batched diff                                               | Varies                                       | `get_merge_request` with diffs                                                                                                                   |
 | **Node.js**    | >=20.0.0                                                          | Often >=24                                   | Node.js 20+ for stdio via `mcp-remote`                                                                                                           |
 | **License**    | MIT                                                               | Varies                                       | Part of GitLab                                                                                                                                   |
@@ -304,7 +306,7 @@ The store path is pinned by your lock file; update it with `nix flake update git
 
 The examples use `zereight-mcp-gitlab`, a less collision-prone alias for the legacy `mcp-gitlab` binary. If your MCP client cannot find it, use the absolute path from `which zereight-mcp-gitlab`.
 
-No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.10`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. To try a fix merged to `main` before the next stable release, use `npx -y @zereight/mcp-gitlab@next`, a pre-release build that is not meant for production. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
+No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.18`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. To try a fix merged to `main` before the next stable release, use `npx -y @zereight/mcp-gitlab@next`, a pre-release build that is not meant for production. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
 
 #### Claude Desktop one-click install (MCP Bundle)
 
@@ -348,6 +350,7 @@ Some MCP clients (like GitHub Copilot CLI) have issues with environment variable
 - `--compact-results=true` - Truncate oversized MCP tool replies and attach a CLI command for the full payload (replaces `GITLAB_MCP_COMPACT_RESULTS`; default off)
 - `--compact-result-chars` - Character threshold for compacting (replaces `GITLAB_MCP_COMPACT_RESULT_CHARS`; default `4000`)
 - `--compact-tools` - Comma-separated tool names to compact when oversized, without turning global compact on (replaces `GITLAB_MCP_COMPACT_TOOLS`)
+- `--list-summary-default=true` - `list_*` tools and `mr_discussions` treat an omitted `summary` argument as `true`; `summary: false` still returns the full JSON (replaces `GITLAB_MCP_LIST_SUMMARY_DEFAULT`; default off)
 - `--tool-profile` - `full` (default) or `slim`. `slim` drops draft notes, emoji reactions, labels, CI catalog tools, and `create_group` from the initial list. Ignored when `GITLAB_TOOLSETS` is set (replaces `GITLAB_TOOL_PROFILE`)
 
 If you already set `GITLAB_TOOLSETS` or `--toolsets`, append `wiki`, `milestones`, or `pipelines` to that list instead of replacing it. If you already set `GITLAB_TOOLS` or `--tools`, append `validate_ci_lint` and `validate_project_ci_lint` to that list instead of replacing it. An explicit list replaces the default `core` toolset; it does not merge.
@@ -640,6 +643,10 @@ For callback proxy mode details, see [GitLab MCP OAuth Callback Proxy](https://g
 
 Tune these with [`MAX_SESSIONS`](https://github.com/zereight/gitlab-mcp/blob/main/docs/configuration/environment-variables.md#max_sessions), `MAX_REQUESTS_PER_MINUTE`, and `SESSION_TIMEOUT_SECONDS`.
 
+#### Streamable HTTP session timeout
+
+Streamable HTTP sessions use the same `SESSION_TIMEOUT_SECONDS` idle timeout in every mode, including a server-side token without `REMOTE_AUTHORIZATION` or `GITLAB_MCP_OAUTH`: a session with no `POST /mcp` request for that long is closed, and its next request gets `404` so the client re-initializes. An open `GET /mcp` stream pauses the timer until the stream closes or the next `POST /mcp` arrives, so a client with a stream open still expires `SESSION_TIMEOUT_SECONDS` after its last `POST`.
+
 ### Remote Authorization Setup (Multi-User Support)
 
 When using `REMOTE_AUTHORIZATION=true`, the MCP server can support multiple users, each with their own GitLab token passed via HTTP headers. This is useful for:
@@ -698,9 +705,9 @@ The token is stored per session (identified by `mcp-session-id` header) and reus
 - Remote authorization **only works with Streamable HTTP transport**
 - Each session is isolated - tokens from one session cannot access another session's data
   Tokens are automatically cleaned up when sessions close
-- **Session timeout:** Auth tokens expire after `SESSION_TIMEOUT_SECONDS` (default 1 hour) of inactivity. After timeout, the client must send auth headers again. The transport session remains active.
+- **Session timeout:** Auth tokens expire after `SESSION_TIMEOUT_SECONDS` (default 1 hour) of inactivity. After timeout the session is closed and its next request gets `404`, so the client re-initializes with its auth headers.
 - Each request resets the timeout timer for that session
-- **Rate limiting:** `/mcp` requests are limited to `MAX_REQUESTS_PER_MINUTE` per client IP, and per MCP session when using OAuth or remote authorization (default 60). See [environment-variables.md](https://github.com/zereight/gitlab-mcp/blob/main/docs/configuration/environment-variables.md#max_requests_per_minute).
+- **Rate limiting:** `/mcp` requests are limited to `MAX_REQUESTS_PER_MINUTE` per client IP, and per MCP session when using OAuth or remote authorization (default 60). The per-IP limit uses a fixed 60-second window, counts per server process, and also covers `GET /mcp`; stateless mode skips the per-session limit. See [environment-variables.md](https://github.com/zereight/gitlab-mcp/blob/main/docs/configuration/environment-variables.md#max_requests_per_minute).
 - **Capacity limit:** Server accepts up to `MAX_SESSIONS` concurrent sessions (default 1000)
 
 ### MCP OAuth Setup (Claude.ai Native OAuth)
@@ -780,7 +787,7 @@ No `headers` field is needed — Claude.ai obtains the token via OAuth automatic
 | `GITLAB_API_URL`                            | Yes      | Your GitLab instance API URL (e.g. `https://gitlab.com/api/v4`). Do not embed credentials (`user:pass@`) in the URL; they are ignored. A comma in a password must be written as `%2C`.                              |
 | `STREAMABLE_HTTP`                           | Yes      | Must be `true` (SSE is not supported)                                                                                                                                                                               |
 | `GITLAB_OAUTH_SCOPES`                       | No       | Comma-separated GitLab scopes to request (e.g. `api,read_user`). Defaults to `api` (or `read_api` when the effective permission mode is `readonly`). The pre-registered application must be configured with at least these scopes. |
-| `OAUTH_REGISTER_RATE_LIMIT_PER_HOUR`        | No       | Per-IP rolling limit for Dynamic Client Registration (`POST /register`). Default `20`/hour; range `1`–`1000`. Raise when clients (e.g. multiple IDE windows) hit registration throttling. Not a GitLab API limit. |
+| `OAUTH_REGISTER_RATE_LIMIT_PER_HOUR`        | No       | Per-IP limit (fixed 1-hour window) for Dynamic Client Registration (`POST /register`). Default `20`/hour; range `1`–`1000`. Raise when clients (e.g. multiple IDE windows) hit registration throttling. Not a GitLab API limit. |
 | `OAUTH_DISABLE_REFRESH_TOKEN`               | No       | Set `true` to drop `refresh_token` from `/token` responses and reject the refresh grant with `invalid_grant`, so users re-authorize in the browser when the GitLab access token expires. Default `false`. In callback proxy mode, MCP clients that follow this server's flow never receive a GitLab refresh token (in passthrough the client can get one from GitLab directly). This is a re-authorization policy for standard MCP clients, not a security boundary. Refresh tokens issued before enabling stay valid until revoked in GitLab under **User Settings → Applications → Authorized applications → Revoke**. |
 | `MCP_DANGEROUSLY_ALLOW_INSECURE_ISSUER_URL` | No       | Set `true` for local HTTP dev only                                                                                                                                                                                  |
 

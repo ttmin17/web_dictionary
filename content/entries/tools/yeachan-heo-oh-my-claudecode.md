@@ -14,26 +14,26 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Yeachan-Heo/oh-my-claudecode
   official_vendor: false
   license: MIT
 signals:
-  stars: 40270
-  last_commit: 2026-10-26T07:08:08Z
-  stars_delta_7d: 215
-  stars_growth_pct: 0.5
-  trending_score: 216.15
-  rank_current: 32
-  rank_delta: -19
+  stars: 40506
+  last_commit: 2026-11-02T08:39:41Z
+  stars_delta_7d: 236
+  stars_growth_pct: 0.6
+  trending_score: 237.38
+  rank_current: 33
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 39649
     - 39864
     - 40055
     - 40270
+    - 40506
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Yeachan-Heo/oh-my-claudecode
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:42:26.477Z
+  fetched_at: 2026-11-02T09:06:14.842Z
   truncated: false
 type: agent_tool
 tool:
@@ -84,6 +84,7 @@ _Don't learn Claude Code. Just use OMC._
 [Get Started](#quick-start) • [Documentation](https://yeachan-heo.github.io/oh-my-claudecode-website) • [CLI Reference](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#cli-reference) • [Workflows](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#workflows) • [Migration Guide](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/MIGRATION.md) • [Discord](https://discord.gg/wSyUQYfhAw)
 
 ---
+
 ## Core Maintainers
 
 | Role           | Name        | GitHub                                         |
@@ -343,6 +344,7 @@ If you experience issues after updating, clear the old plugin cache:
 </p>
 
 ---
+
 ## Why oh-my-claudecode?
 
 - **Zero configuration required** - Works out of the box with intelligent defaults
@@ -355,6 +357,7 @@ If you experience issues after updating, clear the old plugin cache:
 - **Real-time visibility** - HUD statusline shows what's happening under the hood
 
 ---
+
 ## Features
 
 ### Orchestration Modes
@@ -409,11 +412,13 @@ Learn once, reuse forever. OMC extracts hard-won debugging knowledge into portab
 
 ```yaml
 # .omc/skills/fix-proxy-crash.md
----name: Fix Proxy Crash
+---
+name: Fix Proxy Crash
 description: aiohttp proxy crashes on ClientDisconnectedError
 triggers: ["proxy", "aiohttp", "disconnected"]
 source: extracted
----Wrap handler at server.py:42 in try/except ClientDisconnectedError...
+---
+Wrap handler at server.py:42 in try/except ClientDisconnectedError...
 ```
 
 **Manage skills:** `/skill list | add | remove | edit | search`
@@ -448,6 +453,7 @@ cd ../repo-B && omc ultragoal create-goals --auto-plan-id --brief "..."
 See [Multi-repo workspaces in REFERENCE.md](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/REFERENCE.md#multi-repo-workspaces-with-omc-workspace) for resolution order, `OMC_STATE_DIR`, and workspace identifier options.
 
 ---
+
 ## In-session shortcuts
 
 These shortcuts run **inside a Claude Code / OMC session**, not as terminal CLI commands. For shell commands, use the `omc ...` forms shown above. Team mode is explicit: use `/team ...` in-session or `omc team ...` from your shell rather than expecting a bare `team` keyword trigger.
@@ -648,6 +654,7 @@ Forward Claude Code session events to an [OpenClaw](https://openclaw.ai/) gatewa
 See `scripts/openclaw-gateway-demo.mjs` for a reference gateway that relays OpenClaw payloads to a custom HTTPS automation endpoint.
 
 ---
+
 ## Documentation
 
 - **[Full Reference](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/REFERENCE.md)** - Complete feature documentation
@@ -663,6 +670,7 @@ See `scripts/openclaw-gateway-demo.mjs` for a reference gateway that relays Open
 - **[Security Guide](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/SECURITY.md)** - Enterprise deployment and hardening
 
 ---
+
 ## Requirements
 
 - [Claude Code](https://docs.anthropic.com/claude-code) CLI
@@ -699,11 +707,13 @@ OMC can optionally orchestrate external AI providers for cross-validation and de
 **Cost:** 3 Pro plans (Claude + Antigravity/Gemini + ChatGPT) cover everything for ~$60/month.
 
 ---
+
 ## License
 
 MIT
 
 ---
+
 <div align="center">
 
 **Inspired by:** [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) • [claude-hud](https://github.com/ryanjoachim/claude-hud) • [Superpowers](https://github.com/obra/superpowers) • [everything-claude-code](https://github.com/affaan-m/everything-claude-code) • [Ouroboros](https://github.com/Q00/ouroboros)
@@ -718,15 +728,15 @@ MIT
 Top personal non-fork, non-archived repos from all-time OMC contributors (100+ GitHub stars).
 
 - [@Yeachan-Heo](https://github.com/Yeachan-Heo) — [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) (⭐ 40k)
-- [@junhoyeo](https://github.com/junhoyeo) — [tokscale](https://github.com/junhoyeo/tokscale) (⭐ 5.7k)
-- [@psmux](https://github.com/psmux) — [psmux](https://github.com/psmux/psmux) (⭐ 3.7k)
-- [@devswha](https://github.com/devswha) — [ovis](https://github.com/devswha/ovis) (⭐ 1.5k)
-- [@MeroZemory](https://github.com/MeroZemory) — [ida-multi-mcp](https://github.com/MeroZemory/ida-multi-mcp) (⭐ 463)
-- [@GeiserX](https://github.com/GeiserX) — [awesome-spain](https://github.com/GeiserX/awesome-spain) (⭐ 361)
+- [@junhoyeo](https://github.com/junhoyeo) — [tokscale](https://github.com/junhoyeo/tokscale) (⭐ 5.8k)
+- [@psmux](https://github.com/psmux) — [psmux](https://github.com/psmux/psmux) (⭐ 3.8k)
+- [@devswha](https://github.com/devswha) — [ovis](https://github.com/devswha/ovis) (⭐ 1.6k)
+- [@MeroZemory](https://github.com/MeroZemory) — [ida-multi-mcp](https://github.com/MeroZemory/ida-multi-mcp) (⭐ 467)
+- [@GeiserX](https://github.com/GeiserX) — [awesome-spain](https://github.com/GeiserX/awesome-spain) (⭐ 362)
 - [@BowTiedSwan](https://github.com/BowTiedSwan) — [buildflow](https://github.com/BowTiedSwan/buildflow) (⭐ 296)
 - [@J-Pster](https://github.com/J-Pster) — [Psters_AI_Workflow](https://github.com/J-Pster/Psters_AI_Workflow) (⭐ 289)
-- [@alohays](https://github.com/alohays) — [awesome-visual-representation-learning-with-transformers](https://github.com/alohays/awesome-visual-representation-learning-with-transformers) (⭐ 272)
-- [@HaD0Yun](https://github.com/HaD0Yun) — [Doyunha-Gopeak](https://github.com/HaD0Yun/Doyunha-Gopeak) (⭐ 269)
+- [@alohays](https://github.com/alohays) — [awesome-visual-representation-learning-with-transformers](https://github.com/alohays/awesome-visual-representation-learning-with-transformers) (⭐ 271)
+- [@HaD0Yun](https://github.com/HaD0Yun) — [Doyunha-Gopeak](https://github.com/HaD0Yun/Doyunha-Gopeak) (⭐ 270)
 - [@changeroa](https://github.com/changeroa) — [StyleGallery](https://github.com/changeroa/StyleGallery) (⭐ 265)
 - [@jcwleo](https://github.com/jcwleo) — [random-network-distillation-pytorch](https://github.com/jcwleo/random-network-distillation-pytorch) (⭐ 264)
 - [@HwangTaehyun](https://github.com/HwangTaehyun) — [github-repository-contribution-stats](https://github.com/HwangTaehyun/github-repository-contribution-stats) (⭐ 241)

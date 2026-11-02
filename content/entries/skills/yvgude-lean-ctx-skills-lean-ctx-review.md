@@ -18,7 +18,7 @@ status: active
 quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: yvgude/lean-ctx
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3901
-  last_commit: 2026-10-26T05:30:24Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.3
-  trending_score: 13.04
+  stars: 3924
+  last_commit: 2026-11-02T07:15:04Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.6
+  trending_score: 23.14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3866
     - 3875
     - 3888
     - 3901
+    - 3924
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: yvgude/lean-ctx
   path: skills/lean-ctx-review/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.943Z
+  fetched_at: 2026-11-02T09:05:36.548Z
   truncated: false
 type: agent_skill
 skill:

@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-procurement-optimizer
 name: procurement-optimizer
-tagline: Use when running an annual SaaS audit, doing category-level spend
-  review, or rationalizing the supplier base — when the user needs a spend
-  audit, spen
+tagline: Use for a SaaS audit, category spend review or supplier consolidation.
+  Categorizes spend with spend_categorizer.py, finds slow purchasing with
+  purchas
 summary: "A typical mid-stage company has: - Software spend up 40% YoY with no
   single owner who can name the top growth categories. - 3 monitoring tools, 2
   expense platforms, 4 email-marketing tools — duplicate-function cluster..."
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,20 +43,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/procurement-optimizer/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.236Z
+  fetched_at: 2026-11-02T09:06:18.454Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: procurement-optimizer
-  description: Use when running an annual SaaS audit, doing category-level spend
-    review, or rationalizing the supplier base — when the user needs a spend
-    audit, spend categorization (UNSPSC-aligned with Pareto breakdown and
-    industry profiles), purchasing-cycle analysis (bottleneck categories per
-    Goldratt's Theory of Constraints), or risk-balanced supplier consolidation
-    that refuses single-source recommendations for tier-1 categories without a
-    documented break-glass plan. Triggers on "spend audit", "SaaS audit", "spend
-    categorization", "supplier rationalization", "supplier consolidation",
-    "category strategy", "duplicate SaaS", "renewal cluster".
+  description: Use for a SaaS audit, category spend review or supplier
+    consolidation. Categorizes spend with spend_categorizer.py, finds slow
+    purchasing with purchasing_cycle_analyzer.py and sizes consolidation with
+    supplier_consolidation.py.
   folder_path: business-operations/skills/procurement-optimizer
   extra_files:
     - assets/spend_intake_template.md
@@ -66,7 +61,7 @@ skill:
     - scripts/purchasing_cycle_analyzer.py
     - scripts/spend_categorizer.py
     - scripts/supplier_consolidation.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

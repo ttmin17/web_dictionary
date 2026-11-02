@@ -9,15 +9,15 @@ summary: "Based on the datasource type the user needs, read the corresponding
 categories:
   - cloud-infra
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/query-datasource/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.895Z
+  fetched_at: 2026-11-02T09:05:33.720Z
   truncated: false
 type: agent_skill
 skill:
@@ -89,6 +90,7 @@ Based on the datasource type the user needs, read the corresponding file under t
 - [datasources/victorialogs.md](https://github.com/ccfos/nightingale/blob/main/aiagent/skill/embedded/builtin/query-datasource/datasources/victorialogs.md) - VictoriaLogs log queries (LogsQL)
 
 ---
+
 ## Prerequisites
 
 The user needs to provide:
@@ -99,6 +101,7 @@ The user needs to provide:
 If the user has not provided the above information, use the AskUserQuestion tool to ask.
 
 ---
+
 ## Execution Steps
 
 ### Step 1: Log in to obtain a Token
@@ -135,6 +138,7 @@ Based on the datasource's `plugin_type`, read the corresponding `datasources/*.m
 Present the query result to the user as a readable Markdown table or list.
 
 ---
+
 ## Datasource Type Quick Reference
 
 | plugin_type | Datasource | Query Language | Use Case | Reference File |
@@ -151,6 +155,7 @@ Present the query result to the user as a readable Markdown table or list.
 | `victorialogs` | VictoriaLogs | LogsQL | Log query | [victorialogs.md](https://github.com/ccfos/nightingale/blob/main/aiagent/skill/embedded/builtin/query-datasource/datasources/victorialogs.md) |
 
 ---
+
 ## Generic Proxy API
 
 All datasources can access their native APIs through the generic proxy:
@@ -166,6 +171,7 @@ For example:
 - Loki: `/api/n9e/proxy/3/loki/api/v1/labels`
 
 ---
+
 ## Generic Time-Series Query API
 
 All datasources (except Prometheus) can use the unified time-series query endpoint:
@@ -203,6 +209,7 @@ Content-Type: application/json
 The exact structure of the query object varies by datasource type; see each datasource file for details.
 
 ---
+
 ## Generic Metadata API for SQL-type Datasources
 
 ClickHouse, MySQL, PostgreSQL, and Doris share the following metadata query endpoints:
@@ -222,6 +229,7 @@ POST /api/n9e/tdengine-columns
 ```
 
 ---
+
 ## Key Considerations
 
 1. **Query the datasource list first to get the ID**: All queries require a `datasource_id`; obtain it first via `POST /api/n9e/datasource/list`

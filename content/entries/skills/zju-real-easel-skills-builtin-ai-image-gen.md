@@ -1,8 +1,11 @@
 ---
 slug: zju-real-easel-skills-builtin-ai-image-gen
 name: ai-image-gen
-tagline: Agent skill from ZJU-REAL/Easel
-summary: Agent skill from ZJU-REAL/Easel
+tagline: 通用 AI 生图：文生图 / 图生图 / 图像变体。当用户说 AI 生图、AI 画图、文生图、图生图、生成图片、生成配图、图像生成、AI
+  出图、AI 作图、换图、改图、图像编辑、给我画一张、生成一张图 时使用。支持 OpenAI 兼容 API 与 apimart 异步 API，用户自备 API
+  ke
+summary: 调用共享脚本 skills/shared/scripts/aiimage.py（纯标准库，无第三方依赖）。 本 SKILL
+  不索要、不回显、不写入、不提交任何真实 API key —— key 只存在于用户自己的 .env。
 categories:
   - productivity-ops
 tags:
@@ -11,10 +14,10 @@ tags:
   - content-generation
   - openclaw
 status: active
-quality_percentile: 89
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -22,35 +25,38 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4090
-  last_commit: 2026-10-25T06:24:22Z
-  stars_delta_7d: 246
-  stars_growth_pct: 6.4
-  trending_score: 261.74
-  rank_current: 53
-  rank_delta: -12
+  stars: 4323
+  last_commit: 2026-11-02T08:18:55Z
+  stars_delta_7d: 233
+  stars_growth_pct: 5.7
+  trending_score: 246.27
+  rank_current: 56
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3567
     - 3844
     - 4090
-language: en
+    - 4323
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/ai-image-gen/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:08.721Z
+  fetched_at: 2026-11-02T09:06:38.012Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ai-image-gen
-  description: Agent skill from ZJU-REAL/Easel
+  description: 通用 AI 生图：文生图 / 图生图 / 图像变体。当用户说 AI 生图、AI
+    画图、文生图、图生图、生成图片、生成配图、图像生成、AI 出图、AI 作图、换图、改图、图像编辑、给我画一张、生成一张图 时使用。支持 OpenAI
+    兼容 API 与 apimart 异步 API，用户自备 API key。
   folder_path: skills/builtin/ai-image-gen
   extra_files:
     - EASEL-META.md
-  pack_total_skills: 115
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code

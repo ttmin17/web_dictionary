@@ -1,8 +1,12 @@
 ---
 slug: harnessmd-munder-difflin-resources-skills-md-hive-sync
 name: md-hive-sync
-tagline: Agent skill from HarnessMD/munder-difflin
-summary: Agent skill from HarnessMD/munder-difflin
+tagline: |-
+  Munder Difflin hive sync — runs the start-of-task hive protocol steps:
+  reads memory.md, checks inbox/ for new messages, and reminds you to record
+  dura
+summary: 1. Read memory — Read $AGENTDIR/memory.md for durable context from
+  prior sessions.
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: HarnessMD/munder-difflin
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 9069
-  last_commit: 2026-10-26T07:19:02Z
-  stars_delta_7d: 173
-  stars_growth_pct: 1.9
-  trending_score: 176.36
+  stars: 9291
+  last_commit: 2026-11-02T07:51:59Z
+  stars_delta_7d: 222
+  stars_growth_pct: 2.4
+  trending_score: 227.43
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8550
     - 8726
     - 8896
     - 9069
+    - 9291
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,19 @@ readme_source:
   repo: HarnessMD/munder-difflin
   path: resources/skills/md-hive-sync/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:55.399Z
+  fetched_at: 2026-11-02T09:06:33.047Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: md-hive-sync
-  description: Agent skill from HarnessMD/munder-difflin
+  description: |
+    Munder Difflin hive sync — runs the start-of-task hive protocol steps:
+    reads memory.md, checks inbox/ for new messages, and reminds you to record
+    durable facts in memory.md and write coordination files before ending.
+    Use when asked to "sync with the hive", "check my inbox", "hive status",
+    or "hive sync".
+    Proactively suggest at the start of a new task if you haven't checked your
+    hive inbox in this conversation. (munder-difflin)
   folder_path: resources/skills/md-hive-sync
   extra_files: []
   pack_total_skills: 17
@@ -57,4 +68,18 @@ skill:
   pack_slug: harnessmd-munder-difflin
 ---
 
-Agent skill from HarnessMD/munder-difflin
+## Hive Sync
+
+Run the mandatory hive start-of-task steps:
+
+1. **Read memory** — `Read $AGENT_DIR/memory.md` for durable context from prior sessions.
+
+2. **Check inbox** — list and read all files in `$AGENT_DIR/inbox/` that are NOT in `inbox/.done/`. For each message:
+   - Act on the message.
+   - Move the handled file into `$AGENT_DIR/inbox/.done/` with `mv`.
+
+3. **Report** — summarize what you found in memory and any new inbox messages. Note any tasks assigned to you or information relevant to the current session.
+
+4. **End-of-task reminder** — before closing this conversation, append durable facts, decisions, and outcomes to `$AGENT_DIR/memory.md` so future-you remembers.
+
+Run `echo $AGENT_DIR` if the variable is not set to locate your agent directory under the hive root.

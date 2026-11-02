@@ -1,9 +1,9 @@
 ---
 slug: d4vinci-scrapling
 name: Scrapling
-tagline: "🕷️ A Web Scraping framework that handles everything from a single
-  request to a full-scale crawl! Don't be shy, join here:
-  https://discord.gg/EMgGbDce"
+tagline: "🕷️ The BEST Web Scraping framework that handles everything from a
+  single request to a full-scale crawl! Don't be shy, join here:
+  https://discord.gg/E"
 summary: Effortless Web Scraping for the Modern Web
 categories:
   - browser-web
@@ -13,29 +13,29 @@ tags:
   - crawler
   - crawling
 status: active
-quality_percentile: 91
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: D4Vinci/Scrapling
   official_vendor: false
   license: BSD-3-Clause
 signals:
-  stars: 89757
-  last_commit: 2026-10-22T20:43:49Z
-  stars_delta_7d: 1209
-  stars_growth_pct: 1.4
-  trending_score: 1225.51
-  rank_current: 13
-  rank_delta: -7
+  stars: 92012
+  last_commit: 2026-11-01T18:00:03Z
+  stars_delta_7d: 2255
+  stars_growth_pct: 2.5
+  trending_score: 2311.65
+  rank_current: 11
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86124
     - 87256
     - 88548
     - 89757
+    - 92012
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: D4Vinci/Scrapling
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:35:59.883Z
+  fetched_at: 2026-11-02T09:05:22.714Z
   truncated: false
 type: agent_tool
 tool:
@@ -245,12 +245,12 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
   </tr>
   <tr>
     <td width="200">
-      <a href="https://proxylane.dev/?utm_source=scrapling&utm_medium=partnership&utm_campaign=scrapling_platinum_202609&utm_content=github_readme" target="_blank" title="28M+ clean residential IPs for browser automation. No Blocks. No CAPTCHAs. Pay-as-you-Go.">
+      <a href="https://proxylane.dev/scrapling?utm_source=scrapling&utm_medium=affiliate&utm_campaign=scrapling_platinum_202609&utm_content=github_readme" target="_blank" title="90% fewer CAPTCHAs on your Scrapling runs.">
         <img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/proxylane.png">
       </a>
     </td>
     <td>
-    <a href="https://proxylane.dev/?utm_source=scrapling&utm_medium=partnership&utm_campaign=scrapling_platinum_202609&utm_content=github_readme" target="_blank">ProxyLane</a>: Reduce blocks and CAPTCHAs by 90%. 28M Premium Residential IPs for Heavy Web Scraping. 195 countries. City/ISP/ZIP targeting. Sticky/rotating sessions. Non-expiring traffic from $2/GB. Code <strong>SCRAPEANDTAKE</strong>: <em>25% off</em>.
+    <a href="https://proxylane.dev/scrapling?utm_source=scrapling&utm_medium=affiliate&utm_campaign=scrapling_platinum_202609&utm_content=github_readme" target="_blank">ProxyLane</a>: 90% fewer CAPTCHAs on your Scrapling runs. 28M real P2P residential devices, 98.7% clean IPs, 195 countries. City/ISP/ZIP targeting, sticky/rotating sessions, traffic never expires. Try 350 MB for $1.95. Code <strong>SCRAPEANDTAKE</strong>: <em>25% off</em>.
     </td>
   </tr>
   <tr>
@@ -261,6 +261,26 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
     </td>
     <td>
     <a href="https://www.lundproxy.com?utm_source=github&utm_medium=sponsorship&utm_campaign=scrapling&utm_content=text" target="_blank">LundProxy</a>: Stop paying per GB. Unlimited residential traffic, 100M+ IPs, 190+ countries. Pay by bandwidth. Request a free 50 Mbps residential proxies trial.
+    </td>
+  </tr>
+  <tr>
+    <td width="200">
+      <a href="https://resolvr.com/?ref=scrapling" target="_blank" title="Captcha and Browser challenges, solved on real devices loading the page.">
+        <img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/resolvr.jpg">
+      </a>
+    </td>
+    <td>
+    <a href="https://resolvr.com/?ref=scrapling" target="_blank">Resolvr</a>: Scraping at scale means CAPTCHAs at scale. Resolvr solves reCAPTCHA and Cloudflare challenges on real devices through one API. Free beta access is available now.
+    </td>
+  </tr>
+  <tr>
+    <td width="200">
+      <a href="https://nonecap.com/solutions/scrapling/?ref=scrapling" target="_blank" title="hCaptcha solver as an API.">
+        <img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/Nonecap.png">
+      </a>
+    </td>
+    <td>
+    hCaptcha in your Scrapling runs? <a href="https://nonecap.com/solutions/scrapling/?ref=scrapling" target="_blank">NoneCap</a> returns valid hCaptcha tokens, Enterprise sitekeys included, through one API. 1,300 free credits on signup.
     </td>
   </tr>
   <tr>
@@ -289,6 +309,7 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
 <a href="https://proxyempire.io/?ref=scrapling&utm_source=github&utm_medium=paid_referral&utm_campaign=open_source_sponsorship&utm_content=scrapling" target="_blank" title="Collect The Data Your Project Needs with the Best Residential Proxies"><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/ProxyEmpire.png"></a>
 <a href="https://www.webshare.io/?referral_code=48r2m2cd5uz1" target="_blank" title="The Most Reliable Proxy with Unparalleled Performance"><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/webshare.png"></a>
 <a href="https://proxiware.com/?ref=scrapling" target="_blank" title="Collect Any Data. At Any Scale."><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/proxiware.png"></a>
+<a href="https://singaporemobileproxy.com/?utm_source=scrapling&utm_medium=sponsor&utm_campaign=paid_test_q4" target="_blank" title="Dedicated 4G/5G mobile proxies on real Singapore SIMs"><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/SingaporeMobileProxy.png"></a>
 
 
 <!-- /sponsors -->
@@ -296,6 +317,7 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
 <i><sub>Do you want to show your ad here? Click [here](https://github.com/sponsors/D4Vinci) and choose the tier that suits you!</sub></i>
 
 ---
+
 ## Key Features
 
 ### Spiders - A Full Crawling Framework
@@ -656,4 +678,5 @@ This work is licensed under the BSD-3-Clause License.
 This project includes code adapted from:
 - Parsel (BSD License)-Used for [translator](https://github.com/D4Vinci/Scrapling/blob/main/scrapling/core/translator.py) submodule
 
----<div align="center"><small>Designed & crafted with ❤️ by Karim Shoair.</small></div><br>
+---
+<div align="center"><small>Designed & crafted with ❤️ by Karim Shoair.</small></div><br>

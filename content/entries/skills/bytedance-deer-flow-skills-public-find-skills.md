@@ -1,8 +1,12 @@
 ---
 slug: bytedance-deer-flow-skills-public-find-skills
 name: find-skills
-tagline: Agent skill from bytedance/deer-flow
-summary: Agent skill from bytedance/deer-flow
+tagline: Helps users discover and install agent skills when they ask questions
+  like "how do I do X", "find a skill for X", "is there a skill that can...", or
+  e
+summary: '- Asks "how do I do X" where X might be a common task with an existing
+  skill - Says "find a skill for X" or "is there a skill for X" - Asks "can you
+  do X" where X is a specialized capability - Expresses interest in ex...'
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: bytedance/deer-flow
@@ -22,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 84431
-  last_commit: 2026-10-26T07:13:01Z
-  stars_delta_7d: 328
-  stars_growth_pct: 0.4
-  trending_score: 329.28
+  stars: 84868
+  last_commit: 2026-11-02T07:56:17Z
+  stars_delta_7d: 437
+  stars_growth_pct: 0.5
+  trending_score: 439.26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 84103
     - 84431
+    - 84868
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,16 +43,20 @@ readme_source:
   repo: bytedance/deer-flow
   path: skills/public/find-skills/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:36.112Z
+  fetched_at: 2026-11-02T09:06:57.913Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: find-skills
-  description: Agent skill from bytedance/deer-flow
+  description: Helps users discover and install agent skills when they ask
+    questions like "how do I do X", "find a skill for X", "is there a skill that
+    can...", or express interest in extending capabilities. This skill should be
+    used when the user is looking for functionality that might exist as an
+    installable skill.
   folder_path: skills/public/find-skills
   extra_files:
     - scripts/install-skill.sh
-  pack_total_skills: 29
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -56,4 +65,135 @@ skill:
   pack_slug: bytedance-deer-flow
 ---
 
-Agent skill from bytedance/deer-flow
+# Find Skills
+This skill helps you discover and install skills from the open agent skills ecosystem.
+
+## When to Use This Skill
+
+Use this skill when the user:
+
+- Asks "how do I do X" where X might be a common task with an existing skill
+- Says "find a skill for X" or "is there a skill for X"
+- Asks "can you do X" where X is a specialized capability
+- Expresses interest in extending agent capabilities
+- Wants to search for tools, templates, or workflows
+- Mentions they wish they had help with a specific domain (design, testing, deployment, etc.)
+
+## What is the Skills CLI?
+
+The Skills CLI (`npx skills`) is the package manager for the open agent skills ecosystem. Skills are modular packages that extend agent capabilities with specialized knowledge, workflows, and tools.
+
+**Key commands:**
+
+- `npx skills find [query]` - Search for skills interactively or by keyword
+- `npx skills check` - Check for skill updates
+- `npx skills update` - Update all installed skills
+
+**Browse skills at:** https://skills.sh/
+
+## How to Help Users Find Skills
+
+### Step 1: Understand What They Need
+
+When a user asks for help with something, identify:
+
+1. The domain (e.g., React, testing, design, deployment)
+2. The specific task (e.g., writing tests, creating animations, reviewing PRs)
+3. Whether this is a common enough task that a skill likely exists
+
+### Step 2: Search for Skills
+
+Run the find command with a relevant query:
+
+```bash
+npx skills find [query]
+```
+
+For example:
+
+- User asks "how do I make my React app faster?" → `npx skills find react performance`
+- User asks "can you help me with PR reviews?" → `npx skills find pr review`
+- User asks "I need to create a changelog" → `npx skills find changelog`
+
+The command will return results like:
+
+```
+Install with bash /path/to/skill/scripts/install-skill.sh vercel-labs/agent-skills@vercel-react-best-practices
+
+vercel-labs/agent-skills@vercel-react-best-practices
+└ https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices
+```
+
+### Step 3: Present Options to the User
+
+When you find relevant skills, present them to the user with:
+
+1. The skill name and what it does
+2. The install command they can run
+3. A link to learn more at skills.sh
+
+Example response:
+
+```
+I found a skill that might help! The "vercel-react-best-practices" skill provides
+React and Next.js performance optimization guidelines from Vercel Engineering.
+
+To install it:
+bash /path/to/skill/scripts/install-skill.sh vercel-labs/agent-skills@vercel-react-best-practices
+
+Learn more: https://skills.sh/vercel-labs/agent-skills/vercel-react-best-practices
+```
+
+### Step 4: Install the Skill
+
+If the user wants to proceed, use the `install-skill.sh` script to install the skill and automatically link it to the project:
+
+```bash
+bash /path/to/skill/scripts/install-skill.sh <owner/repo@skill-name>
+```
+
+For example, if the user wants to install `vercel-react-best-practices`:
+
+```bash
+bash /path/to/skill/scripts/install-skill.sh vercel-labs/agent-skills@vercel-react-best-practices
+```
+
+The script will install the skill globally to `skills/custom/`
+
+## Common Skill Categories
+
+When searching, consider these common categories:
+
+| Category        | Example Queries                          |
+| --------------- | ---------------------------------------- |
+| Web Development | react, nextjs, typescript, css, tailwind |
+| Testing         | testing, jest, playwright, e2e           |
+| DevOps          | deploy, docker, kubernetes, ci-cd        |
+| Documentation   | docs, readme, changelog, api-docs        |
+| Code Quality    | review, lint, refactor, best-practices   |
+| Design          | ui, ux, design-system, accessibility     |
+| Productivity    | workflow, automation, git                |
+
+## Tips for Effective Searches
+
+1. **Use specific keywords**: "react testing" is better than just "testing"
+2. **Try alternative terms**: If "deploy" doesn't work, try "deployment" or "ci-cd"
+3. **Check popular sources**: Many skills come from `vercel-labs/agent-skills` or `ComposioHQ/awesome-claude-skills`
+
+## When No Skills Are Found
+
+If no relevant skills exist:
+
+1. Acknowledge that no existing skill was found
+2. Offer to help with the task directly using your general capabilities
+3. Suggest the user could create their own skill with `npx skills init`
+
+Example:
+
+```
+I searched for skills related to "xyz" but didn't find any matches.
+I can still help you with this task directly! Would you like me to proceed?
+
+If this is something you do often, you could create your own skill:
+npx skills init my-xyz-skill
+```

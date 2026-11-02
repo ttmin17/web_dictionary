@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,18 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
-  rank_current: 25
-  rank_delta: -4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
+  rank_current: 24
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +47,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ab-testing/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.285Z
+  fetched_at: 2026-11-02T09:06:13.819Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +68,7 @@ skill:
     - evals/evals.json
     - references/sample-size-guide.md
     - references/test-templates.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code
@@ -91,6 +92,7 @@ Before designing a test, understand:
 3. **Constraints** - Technical complexity? Timeline? Tools available?
 
 ---
+
 ## Core Principles
 
 ### 1. Start with a Hypothesis
@@ -113,6 +115,7 @@ Before designing a test, understand:
 - Guardrail metrics to prevent harm
 
 ---
+
 ## Hypothesis Framework
 
 ### Structure
@@ -132,6 +135,7 @@ We'll know this is true when [metrics].
 **Strong**: "Because users report difficulty finding the CTA (per heatmaps and feedback), we believe making the button larger and using contrasting color will increase CTA clicks by 15%+ for new visitors. We'll measure click-through rate from page view to signup start."
 
 ---
+
 ## Test Types
 
 | Type | Description | Traffic Needed |
@@ -142,16 +146,19 @@ We'll know this is true when [metrics].
 | Split URL | Different URLs for variants | Moderate |
 
 ---
+
 ## Sample Size
 
 ### Quick Reference
 
 | Baseline | 10% Lift | 20% Lift | 50% Lift |
 |----------|----------|----------|----------|
-| 1% | 150k/variant | 39k/variant | 6k/variant |
-| 3% | 47k/variant | 12k/variant | 2k/variant |
-| 5% | 27k/variant | 7k/variant | 1.2k/variant |
-| 10% | 12k/variant | 3k/variant | 550/variant |
+| 1% | 160k/variant | 43k/variant | 7.7k/variant |
+| 3% | 53k/variant | 14k/variant | 2.5k/variant |
+| 5% | 31k/variant | 8.2k/variant | 1.5k/variant |
+| 10% | 15k/variant | 3.8k/variant | 690/variant |
+
+Per variant, for 95% confidence (two-sided) and 80% power. Lift is relative (3% → 3.6% is a 20% lift).
 
 **Calculators:**
 - [Evan Miller's](https://www.evanmiller.org/ab-testing/sample-size.html)
@@ -160,6 +167,7 @@ We'll know this is true when [metrics].
 **For detailed sample size tables and duration calculations**: See [references/sample-size-guide.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/references/sample-size-guide.md)
 
 ---
+
 ## Metrics Selection
 
 ### Primary Metric
@@ -180,7 +188,11 @@ We'll know this is true when [metrics].
 - **Secondary**: Time on page, plan distribution
 - **Guardrail**: Support tickets, refund rate
 
+### Opt-In Elements: Measure the Exposed Group
+When a change only reaches visitors who interact with it (a hero video, a calculator, a chat widget), a test on overall conversion is underpowered: if 10% of visitors click play, the other 90% add noise and no signal. Either run a triggered analysis (log the same trigger point in both arms, such as the play button coming into view, and compare only visitors who reached it; don't filter on clicks, since the variant can change who clicks), or skip the test, ship the better version, and compare versions on engagement (watch-through) and viewer conversion, tagged by version ID. The second is a directional comparison, not a controlled test.
+
 ---
+
 ## Designing Variants
 
 ### What to Vary
@@ -198,6 +210,7 @@ We'll know this is true when [metrics].
 - True to the hypothesis
 
 ---
+
 ## Traffic Allocation
 
 | Approach | Split | When to Use |
@@ -211,6 +224,7 @@ We'll know this is true when [metrics].
 - Balanced exposure across time of day/week
 
 ---
+
 ## Implementation
 
 ### Client-Side
@@ -224,6 +238,7 @@ We'll know this is true when [metrics].
 - Tools: PostHog, LaunchDarkly, Split
 
 ---
+
 ## Running the Test
 
 ### Pre-Launch Checklist
@@ -250,6 +265,7 @@ We'll know this is true when [metrics].
 Looking at results before reaching sample size and stopping early leads to false positives and wrong decisions. Pre-commit to sample size and trust the process.
 
 ---
+
 ## Analyzing Results
 
 ### Statistical Significance
@@ -279,6 +295,7 @@ These distinctions follow the [American Statistical Association's p-value statem
 | Mixed signals | Check data quality and planned metrics; label unplanned segment findings exploratory and confirm them in a new test |
 
 ---
+
 ## Documentation
 
 Document every test with:
@@ -290,6 +307,7 @@ Document every test with:
 **For templates**: See [references/test-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/references/test-templates.md)
 
 ---
+
 ## Growth Experimentation Program
 
 Individual tests are valuable. A continuous experimentation program is a compounding asset. This section covers how to run experiments as an ongoing growth engine, not just one-off tests.
@@ -376,6 +394,7 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 **Quarterly**: Audit the playbook. Which patterns have been applied broadly? Which winning patterns haven't been scaled yet? What areas of the funnel are under-tested?
 
 ---
+
 ## Common Mistakes
 
 ### Test Design
@@ -394,6 +413,7 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 - Over-interpreting inconclusive results
 
 ---
+
 ## Task-Specific Questions
 
 1. What's your current conversion rate?
@@ -404,6 +424,7 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 6. Have you tested this area before?
 
 ---
+
 ## Related Skills
 
 - **cro**: For generating test ideas based on CRO principles

@@ -1,8 +1,12 @@
 ---
 slug: zenstory-ai-drama-skills-skills-short-drama-image-prompts
 name: short-drama-image-prompts
-tagline: Agent skill from zenstory-ai/drama-skills
-summary: Agent skill from zenstory-ai/drama-skills
+tagline: 为短剧人物、造型、地点、道具和状态编写或修改可直接复制的图片提示词
+  Markdown。用户提到角色设定图、三视图、参考图、场景板、道具图、风格帧、Look
+  Development、状态变体或局部编辑提示词时使用；不生成图片，也不调用供应商。
+summary: "每项使用 ## IMG-... · 中文名，写一行不加粗的 - 参考：。无外部参考时写 - 参考：无外部参考； 有真实图片时使用
+  REF-（顺序：）· 《》（用途：；控制：；不得控制：）。 多张用 ； 连接，顺序从 1 连续编号；正文标题固定为 ### 可复制提示词，每个非空正文行以
+  > 开头。 REF-... 指向当前项目中的真实图片；下游分镜的 PLAN-... 挂图计划不能证明本条图片提示词已有参考输入。"
 categories:
   - media-creative
 tags:
@@ -11,10 +15,10 @@ tags:
   - ai-video
   - aigc
 status: active
-quality_percentile: 76
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -22,30 +26,32 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3360
-  last_commit: 2026-10-20T19:23:14Z
-  stars_delta_7d: 307
-  stars_growth_pct: 10.1
-  trending_score: 337.87
+  stars: 3650
+  last_commit: 2026-11-02T08:30:37Z
+  stars_delta_7d: 290
+  stars_growth_pct: 8.6
+  trending_score: 315.03
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2574
     - 2825
     - 3053
     - 3360
-language: en
+    - 3650
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: zenstory-ai/drama-skills
   path: skills/short-drama-image-prompts/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:26.649Z
+  fetched_at: 2026-11-02T09:06:48.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: short-drama-image-prompts
-  description: Agent skill from zenstory-ai/drama-skills
+  description: 为短剧人物、造型、地点、道具和状态编写或修改可直接复制的图片提示词
+    Markdown。用户提到角色设定图、三视图、参考图、场景板、道具图、风格帧、Look
+    Development、状态变体或局部编辑提示词时使用；不生成图片，也不调用供应商。
   folder_path: skills/short-drama-image-prompts
   extra_files:
     - agents/openai.yaml
@@ -70,7 +76,12 @@ skill:
 # 短剧资产图片提示词
 把视觉事实写成可复用、可修改、可直接复制的角色板、场景板、道具板或状态图提示词，统一保存到
 `剧集/<EP>/图片提示词.md`。每项用 `IMG-...` 标题，正文放在 `### 可复制提示词` 引用块。
-`IMG-...` 只是该提示词条目的稳定 ID，不声明图片已生成或可用；实际图片只能来自创作者已提供的输入，或经确认后的生产结果。
+`IMG-...` 是提示词条目的稳定 ID；实际图片须由创作者提供，或来自经确认的生产结果。
+
+每项使用 `## IMG-... · 中文名`，写一行不加粗的 `- 参考：`。无外部参考时写 `- 参考：无外部参考`；
+有真实图片时使用 `REF-<slot>（顺序：<n>）· <项目相对路径>《<中文名称>》（用途：<用途>；控制：<范围>；不得控制：<范围>）`。
+多张用 `；` 连接，顺序从 1 连续编号；正文标题固定为 `### 可复制提示词`，每个非空正文行以 `>` 开头。
+`REF-...` 指向当前项目中的真实图片；下游分镜的 `PLAN-...` 挂图计划不能证明本条图片提示词已有参考输入。
 
 ## Quick Start
 
@@ -94,7 +105,7 @@ skill:
 1. 锁定这一张图要固定的身份、状态、空间或比较变量。
 2. 只读所需资产事实、视觉方向、负面约束和已提供参考图。
 3. 按“主体与身份锚点 → 当前变体 → 构图/视角 → 光色/材质 → 背景边界 → 禁止项”写正文。
-4. 每张参考只控制身份、造型、地理、构图或风格中的明确部分，并在 `REF-...` 槽位里写出封闭词表中的 `用途`。
+4. 每张参考只控制已声明的范围，并在 `REF-...` 槽位里写出封闭词表中的 `用途`；具体范围见[通用配方](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-image-prompts/references/common-recipe.md)。
 5. 检查身份与变体、文字政策、视角和光线是否冲突。
 6. 用户要全部资产就完成全部，资产组只是内部批次。
 
@@ -128,8 +139,4 @@ skill:
 每个点名对象都有明确用途、可复制正文、参考边界和禁止项，且相互不矛盾，即完成。本次请求同时
 修改图片提示词与分镜时，当轮刷新受影响镜头的「图片提示词项」，不另建对账产物。实际生成必须
 转 `$short-drama-produce`，展示精确任务并取得显式确认；本技能不调用外部服务。
-五份创作文档齐备后，可转 `$short-drama` 对跨文档结构做一次机械核对；内容质量仍由创作者审查。
-
-## 安装维护
-
-只有安装、升级或排障时运行 `python3 scripts/selftest.py`。
+写完本阶段文档后，可转 `$short-drama` 做局部机械核对（只核对已有文档）；五份齐备后再做完整核对。内容质量仍由创作者审查。

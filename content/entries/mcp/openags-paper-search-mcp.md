@@ -14,28 +14,29 @@ tags:
   - arxiv-papers
   - paper-search
 status: active
-quality_percentile: 37
+quality_percentile: 33
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: openags/paper-search-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2918
+  stars: 2973
   last_commit: 2026-10-02T06:16:38Z
   stars_delta_7d: 55
   stars_growth_pct: 1.9
-  trending_score: 56.06
-  rank_current: 38
-  rank_delta: -16
+  trending_score: 56.04
+  rank_current: 33
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2817
     - 2863
     - 2918
+    - 2973
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: openags/paper-search-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:58.938Z
+  fetched_at: 2026-11-02T09:05:40.479Z
   truncated: false
 type: mcp_server
 launch:
@@ -64,6 +65,7 @@ A Model Context Protocol (MCP) server for searching and downloading academic pap
 [![smithery badge](https://smithery.ai/badge/@openags/paper-search-mcp)](https://smithery.ai/server/@openags/paper-search-mcp)
 
 ---
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -90,6 +92,7 @@ A Model Context Protocol (MCP) server for searching and downloading academic pap
 - [TODO](#todo)
 
 ---
+
 ## Overview
 
 `paper-search-mcp` is a Python-based tool for searching and downloading academic papers from various platforms. It provides tools for searching papers, downloading PDFs, and extracting text, making it ideal for researchers and AI-driven workflows. It can be used as an MCP server (for Claude Desktop and other MCP clients) or as a Claude Code skill with a CLI interface.
@@ -102,6 +105,7 @@ A Model Context Protocol (MCP) server for searching and downloading academic pap
 - **Source Transparency**: Different sources have different strengths. The MCP should make those tradeoffs explicit instead of pretending every source supports full-text retrieval.
 
 ---
+
 ## MCP Authorization Compatibility
 
 The bundled MCP server supports `stdio` (the default), `sse`, and `streamable-http`. Network transports bind to `127.0.0.1` by default. Optional OAuth protected-resource mode adds standard discovery, JWT bearer-token validation and required scopes to both HTTP transports, using an external authorization server.
@@ -109,6 +113,7 @@ The bundled MCP server supports `stdio` (the default), `sse`, and `streamable-ht
 Enable it with `--auth oauth` or `PAPER_SEARCH_MCP_AUTH=oauth` and the explicit issuer/JWKS/resource/audience/scope configuration in [OAuth protected-resource setup](https://github.com/openags/paper-search-mcp/blob/main/docs/OAUTH_PROTECTED_RESOURCE.md). Invalid or incomplete HTTP auth settings fail startup. stdio remains independent of HTTP authentication. Local HTTP without OAuth configuration remains open; do not publish that listener directly. A protected remote deployment still needs TLS, rate limits and filesystem isolation. This feature does not host login/accounts or replace the external issuer's OAuth flow; live identity-provider interoperability must be validated for your deployment.
 
 ---
+
 ## Features
 
 - **Two-Layer Architecture**:
@@ -178,6 +183,7 @@ This matrix reflects **verified live-integration results** from functional and e
 > ✅ = reliable in live tests.  ⚠️ = works but subject to upstream instability or access restrictions.  ❌ = not supported.  🔑 = key required.  🚧 = skeleton only.
 
 ---
+
 ## Credential & API Key Requirements
 
 All keys are **optional** unless noted. Configure them in `~/.config/paper-search-mcp/.env` (preferred) or as shell exports.
@@ -197,6 +203,7 @@ All keys are **optional** unless noted. Configure them in `~/.config/paper-searc
 All variables follow the `PAPER_SEARCH_MCP_<NAME>` prefix scheme. Legacy names without the prefix (e.g. `CORE_API_KEY`, `UNPAYWALL_EMAIL`) are still supported for backward compatibility.
 
 ---
+
 ## Known Upstream Limitations
 
 Some search failures are caused by external provider instability, not by bugs in this project:
@@ -302,11 +309,13 @@ Sci-Hub support can remain available as an optional connector for users who expl
 - Open-access and publisher-permitted sources should be tried first whenever possible.
 
 ---
+
 ## Installation
 
 Choose the method that best fits your workflow. All methods support the same [optional API keys](#credential--api-key-requirements).
 
 ---
+
 ### Claude Code (Skill) — recommended for Claude Code users
 
 Install as a Claude Code skill instead of an MCP server. This gives Claude automatic access to paper search when you mention finding papers, academic literature, etc. — no MCP configuration needed.
@@ -461,12 +470,14 @@ A reusable builder is also available: `python scripts/build_skill_zip.py --outpu
 This only packages the instructions; it does not bundle Python dependencies, install `paper-search`, or configure an MCP connection. The bundled skill expects a runtime that can execute the CLI and reach the academic services. Upload acceptance and execution in Claude web or another runtime have **not been validated by this project**. Check that runtime's current metadata, package-installation, network-access, and code-execution requirements before adapting the skill. If you want to use an MCP client instead, follow the MCP installation methods below; uploading a skill ZIP does not start or connect an external MCP server.
 
 ---
+
 > **MCP Server Config file locations** (for methods below)
 > - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 > - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 > - **Linux**: `~/.config/Claude/claude_desktop_config.json`
 
 ---
+
 ### Method 1 — Smithery (one-command, recommended for Claude Desktop)
 
 ```bash
@@ -476,6 +487,7 @@ npx -y @smithery/cli install @openags/paper-search-mcp --client claude
 Smithery automatically writes the correct config block for you. No manual JSON editing needed.
 
 ---
+
 ### Method 2 — `uvx` (no install, always latest)
 
 `uvx` runs the package directly from PyPI without a permanent install. Requires [uv](https://docs.astral.sh/uv/getting-started/installation/).
@@ -509,6 +521,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ---
+
 ### Method 3 — `uv` (persistent install)
 
 ```bash
@@ -537,6 +550,7 @@ uv tool install paper-search-mcp
 ```
 
 ---
+
 ### Method 4 — `pip` (standard Python install)
 
 ```bash
@@ -567,6 +581,7 @@ pip install paper-search-mcp
 > If `python` is not on your PATH, replace it with the full path (e.g. `/usr/bin/python3` or `C:\Python311\python.exe`). Run `which python3` / `where python` to find it.
 
 ---
+
 ### Method 5 — `npx` (via Smithery CLI, no local Python needed)
 
 ```bash
@@ -592,6 +607,7 @@ npx -y @smithery/cli run @openags/paper-search-mcp
 ```
 
 ---
+
 ### Method 6 — Docker
 
 ```bash
@@ -624,6 +640,7 @@ docker run --rm -i \
 ```
 
 ---
+
 ### Method 7 — Clone & run from source (development / recommended for macOS local)
 
 This is the most reliable method on macOS — no wrapper scripts, no `realpath` issues.
@@ -696,6 +713,7 @@ uv pip install -e ".[dev]"
 ```
 
 ---
+
 ### DeepSeek Harness (DSH)
 
 Paper search is available inside [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`) as a profile bundle: it boots the MCP server and registers all its tools in any dsh profile as `mcp__paper-search__*`. The bundle only mounts a composition row — the MCP server itself is untouched.
@@ -730,6 +748,7 @@ Removing the bundle reconciles its row out of the composition. It does not delet
 If you already run paper-search-mcp through your own `@deepseek-ai/dsh-mcp-client` row, remove that row (or give one of the two a distinct `serverName`) before adding the bundle — duplicate `serverName`s fail at load. The bundle package version tracks this checkout's Python project version; `dsh/README.md` documents alternate launchers (`uv tool run`, `python -m`, `npx`), environment forwarding, and development.
 
 ---
+
 ### Environment Variables (`.env` file)
 
 Instead of putting keys directly in the JSON config you can store them in the user config file (auto-loaded on startup):
@@ -755,6 +774,7 @@ To use a custom path: `export PAPER_SEARCH_MCP_ENV_FILE=/absolute/path/to/.env`
 > Legacy variable names without the `PAPER_SEARCH_MCP_` prefix (e.g. `CORE_API_KEY`, `UNPAYWALL_EMAIL`) are still supported for backward compatibility.
 
 ---
+
 ### Optional local search cache
 
 [Opt-in SQLite search caching](https://github.com/openags/paper-search-mcp/blob/main/docs/SEARCH_CACHE.md) adds TTL, size limits,
@@ -785,6 +805,7 @@ We welcome contributions! Here's how to get started:
    Push changes and create a PR on GitHub.
 
 ---
+
 ## Demo
 
 <img src="https://raw.githubusercontent.com/openags/paper-search-mcp/main/docs\images\demo.png" alt="Demo" width="800">
@@ -842,16 +863,19 @@ We welcome contributions! Here's how to get started:
 - [ ] Scopus
 
 ---
+
 ## Star History
 
 [![Star History Chart](https://star-history.dera.page/svg?repos=openags/paper-search-mcp&type=Date)](https://star-history.dera.page/#openags/paper-search-mcp&Date)
 
 ---
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
+
 Happy researching with `paper-search-mcp`! If you encounter issues, open a GitHub issue.
 
 ### Explicit institutional metadata connectors

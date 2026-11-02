@@ -11,25 +11,28 @@ tags:
   - dht
   - metasearch
 status: active
-quality_percentile: 68
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: deedy5/ddgs
   official_vendor: false
   license: MIT
 signals:
-  stars: 3031
+  stars: 3047
   last_commit: 2026-10-23T21:16:26Z
-  stars_delta_7d: 127
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 16
+  stars_growth_pct: 0.5
+  trending_score: 16.08
+  rank_current: 112
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 3017
     - 3031
+    - 3047
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +41,7 @@ readme_source:
   repo: deedy5/ddgs
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:00.886Z
+  fetched_at: 2026-11-02T09:05:40.469Z
   truncated: false
 type: agent_tool
 tool:

@@ -15,29 +15,29 @@ tags:
   - chinese
   - emotion-recognition
 status: active
-quality_percentile: 74
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2022-11-24T02:28:11
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: modelscope/FunASR
   official_vendor: false
   license: MIT
 signals:
-  stars: 20817
-  last_commit: 2026-10-22T17:56:34Z
-  stars_delta_7d: 69
-  stars_growth_pct: 0.3
-  trending_score: 69.23
-  rank_current: 32
-  rank_delta: -14
+  stars: 20912
+  last_commit: 2026-11-02T08:58:26Z
+  stars_delta_7d: 95
+  stars_growth_pct: 0.5
+  trending_score: 95.43
+  rank_current: 23
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 20602
     - 20677
     - 20748
     - 20817
+    - 20912
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: modelscope/FunASR
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:25.879Z
+  fetched_at: 2026-11-02T09:05:26.538Z
   truncated: false
 type: mcp_server
 launch:
@@ -83,6 +83,7 @@ launch:
 </p>
 
 ---
+
 ## Quick Start
 
 ### Native Transformers
@@ -181,7 +182,7 @@ results = model.generate(["audio1.wav", "audio2.wav"], language="auto")
 >
 > **Use with AI agents:** [MCP Server](https://github.com/modelscope/FunASR/blob/main/examples/mcp_server/) for Claude/Cursor · [OpenAI API](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/) for LangChain/Dify/AutoGen
 >
-> **Use with voice agents:** [OpenClaw realtime plugin](https://github.com/modelscope/FunASR/blob/main/integrations/openclaw/) for self-hosted Talk and Voice Call transcription · [Hugging Face speech-to-speech with SenseVoice](https://github.com/modelscope/FunASR/blob/main/docs/community_projects.md#speech-to-speech) (merged source checkout; not in v1.0.0)
+> **Use with voice agents:** [OpenClaw realtime plugin](https://github.com/modelscope/FunASR/blob/main/integrations/openclaw/#compatibility) (experimental; requires an unmerged upstream SDK patch) · [Hugging Face speech-to-speech with SenseVoice](https://github.com/modelscope/FunASR/blob/main/docs/community_projects.md#speech-to-speech) (merged source checkout; not in v1.0.0)
 
 ### Why FunASR?
 
@@ -205,6 +206,7 @@ and hardware before choosing a runtime.
 Trying FunASR for the first time? Use the [Colab quickstart](https://github.com/modelscope/FunASR/blob/main/examples/colab/) before setting up a local environment. Choosing a first model? Start with the [model selection guide](https://github.com/modelscope/FunASR/blob/main/docs/model_selection.md). Planning a switch from Whisper or a cloud ASR provider? Use the [migration guide](https://github.com/modelscope/FunASR/blob/main/docs/migration_from_whisper.md) and [benchmark example](https://github.com/modelscope/FunASR/blob/main/examples/migration/) to test representative audio, map features, and roll out safely.
 
 ---
+
 ## Installation
 
 ```bash
@@ -222,6 +224,7 @@ Requirements: Python ≥ 3.8. Install PyTorch + torchaudio first ([pytorch.org](
 </details>
 
 ---
+
 ## Model Zoo
 
 This list includes third-party models. **OpenMOSS** publishes MOSS-Transcribe-Diarize;
@@ -247,6 +250,7 @@ known-person identification. Model licenses are separate from the toolkit's MIT 
 | emotion2vec+large | Emotion recognition | — | 300M | [⭐](https://modelscope.cn/models/iic/emotion2vec_plus_large/summary) [🤗](https://huggingface.co/emotion2vec/emotion2vec_plus_large) |
 
 ---
+
 ## Usage
 
 > [Python tutorial](https://github.com/modelscope/FunASR/blob/main/docs/tutorial/README.md) · [SDK parameters and outputs](https://github.com/modelscope/FunASR/blob/main/docs/python_api.md) · [Training](https://github.com/modelscope/FunASR/blob/main/docs/training.md) · [Model registration](https://github.com/modelscope/FunASR/blob/main/docs/model_registration.md)
@@ -311,6 +315,7 @@ funasr *.wav --output-format srt --output-dir ./output
 Available models: `sensevoice` (default), `paraformer`, `paraformer-en`, `fun-asr-nano`
 
 ---
+
 ## Deploy
 
 Start a local SenseVoice CPU service from a fresh directory in a POSIX shell with
@@ -397,6 +402,7 @@ inference on physical Blackwell hardware.
 [OpenAI API example →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/) · [Gradio demo →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/GRADIO.md) · [Client recipes →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/CLIENTS.md) · [JavaScript/TypeScript recipes →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/JAVASCRIPT.md) · [Kubernetes template →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/kubernetes/) · [Workflow recipes →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/WORKFLOWS.md) · [Postman collection →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/POSTMAN.md) · [OpenAPI spec →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/OPENAPI.md) · [Security guide →](https://github.com/modelscope/FunASR/blob/main/examples/openai_api/SECURITY.md) · [Deployment matrix →](https://github.com/modelscope/FunASR/blob/main/docs/deployment_matrix.md) · [Deployment docs →](https://github.com/modelscope/FunASR/blob/main/runtime/readme.md) · [Agent integration →](https://modelscope.github.io/FunASR/agent.html)
 
 ---
+
 ## Benchmark
 
 The [historical benchmark report](https://modelscope.github.io/FunASR/benchmark.html)
@@ -411,15 +417,21 @@ scope, and CER/WER. Offline throughput is not streaming latency. The
 recordings with the same evaluation scope.
 
 ---
+
 ## What's new
 
 - **MOSS-Transcribe-Diarize** brings long-form ASR, timestamps, and anonymous speaker labels to FunASR services, Docker, Kubernetes, vLLM/SGLang workflows, and FunClip. [Deploy MOSS ->](https://github.com/modelscope/FunASR/blob/main/docs/moss_transcribe_diarize.md)
-- **FunASR 1.4.16** preserves explicit VAD, punctuation, and speaker-model device placement across inference calls, and adds tested native Transformers adoption guides. Install with `python -m pip install -U "funasr==1.4.16"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.16)
+- **FunASR 1.4.20** preserves the original optional speaker dependency failure in a chained `ImportError` when `spk_model` is requested, while ASR-only construction remains available. [Fix #3819](https://github.com/modelscope/FunASR/pull/3819). Install with `python -m pip install -U "funasr==1.4.20"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.20)
+  **FunASR 1.4.19** handles empty-token Paraformer batches, enforces `max_speakers` for automatic clustering, and adds validated JSON-object `--hf_overrides` support to realtime WebSocket serving. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.19)
+  Previous release **FunASR 1.4.18** fixes cross-script hotword misreplacement, filtered-token timestamp alignment, and Chinese VAD sentence/speaker drift. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.18)
+  **Earlier release: FunASR 1.4.17** adds explicit PCM16 input and improves timestamp, hotword, speaker-sample-rate, and long-segment streaming handling. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.17)
+  **Earlier release: FunASR 1.4.16** preserves explicit VAD, punctuation, and speaker-model device placement across inference calls, and adds tested native Transformers adoption guides. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.16)
 - **Native Transformers:** Released **5.17.0** supports Fun-ASR-Nano with the official `-hf` checkpoint, CPU examples and a notebook. [Get started ->](https://github.com/modelscope/FunASR/blob/main/docs/transformers_native.md)
 
 > See [GitHub Releases](https://github.com/modelscope/FunASR/releases) for the complete changelog and downloadable assets.
 
 ---
+
 ## Community
 
 Start with [troubleshooting](https://github.com/modelscope/FunASR/blob/main/docs/troubleshooting.md) before reporting a problem.

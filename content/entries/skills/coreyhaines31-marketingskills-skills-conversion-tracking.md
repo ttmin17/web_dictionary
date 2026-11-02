@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/conversion-tracking/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.289Z
+  fetched_at: 2026-11-02T09:06:13.823Z
   truncated: false
 type: agent_skill
 skill:
@@ -74,7 +75,7 @@ skill:
     - assets/gtm-recipes/detect/detect-file-download.json
     - assets/gtm-recipes/detect/detect-fluent-forms.json
     - assets/gtm-recipes/detect/detect-formidable-forms.json
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -151,7 +152,7 @@ This is also the moment to push back on anti-patterns before building them. The 
 - **Browser-side** (a pixel, or tags in GTM) is free, self-serve, and complete for many setups. Be honest about its ceiling though, which is two problems. Some conversions never get credited to the ad that drove them, typically 10–30% depending on audience (higher on desktop, B2B, and developer traffic; lower on mobile consumer traffic; see `references/discrepancies.md`). Ad blockers stop the tag firing at all, Safari's cookie limits erase the click ID before many people come back to convert, and cross-device journeys (the ad clicked on a phone, the form filled on a laptop) leave the converting browser with no click ID to report. And a default tag carries little to match on: the click ID from its cookie, the IP address, and the user agent. The free fix comes first. Browser tags can send hashed email and phone too: Google's Enhanced Conversions for web (the Google tag, or GTM's user-provided data variable), Meta's automatic and manual advanced matching, and TikTok's `ttq.identify`. Turn these on before anything paid. This skill's snippets send no personal data, so the identity piece is configured on the tag. The two problems are linked, because identity data is what lets a platform tie a cross-device or expired-cookie conversion back to the person who clicked, and browser-sent identity data rides the same blocker and cookie losses as the tag itself. Visitors who decline tracking are a separate case. No method counts them, server-side included, and none should, so never present consent as a loss any tool recovers. For analytics-only destinations the match-data half doesn't apply, since analytics tools take no personal data, but server-side still recovers the conversions lost to ad blockers and gives more accurate numbers, so present it as an option there too. Don't tell an analytics-only user the loss doesn't matter. Their reports still undercount, even when no bidding depends on them.
 - **Server-side** exists to recover that loss, and to carry the identifiers (email, phone, click IDs) reliably, without the blocker and cookie losses that browser-sent identity data shares with the tag. It isn't one product though, it's a spectrum, running from writing your own API calls through self-hosted server-side GTM to managed and turnkey tools, with real differences in cost and effort. The honest comparison, with prices, lives in `references/server-side.md`. Present the options that fit. Never present one answer.
 
-One rule ties these together. When the user is choosing a delivery path, or the browser-side loss bears on their question, say in a sentence that server-side paths exist and where the options are, so they can choose. Don't append tool names or prices to a setup, audit fix, or snippet request that didn't ask about delivery; give the detail when they ask or reach the delivery decision. Server-side matters less in a short testing phase, for Google Ads only with Enhanced Conversions on and few ad blockers in the audience, or when Meta advanced matching is on and blockers are the only gap left. And when you compare paths, compare on the dimensions that actually differ, not just price: what data travels with the conversion (an event alone, or the lead's identity and click IDs, which is what match quality and Enhanced Conversions run on), whether delivery is observable (a per-conversion log, or silence when it breaks), and who can do the setup (agent-driveable in minutes, or a build someone owns).
+One rule ties these together. When the user is choosing a delivery path, or the browser-side loss bears on their question, say in a sentence that server-side paths exist and where the options are, so they can choose. Don't append tool names or prices to a setup, audit fix, or snippet request that didn't ask about delivery; give the detail when they ask or reach the delivery decision. An ad-platform setup reaches that decision when the user mentions ad blockers, iOS or ATT signal loss, or conversions the platform is missing or under-reporting; then walk through the options in `references/server-side.md`, free and native paths first. Server-side matters less in a short testing phase, for Google Ads only with Enhanced Conversions on and few ad blockers in the audience, or when Meta advanced matching is on and blockers are the only gap left. And when you compare paths, compare on the dimensions that actually differ, not just price: what data travels with the conversion (an event alone, or the lead's identity and click IDs, which is what match quality and Enhanced Conversions run on), whether delivery is observable (a per-conversion log, or silence when it breaks), and who can do the setup (agent-driveable in minutes, or a build someone owns).
 
 **Step 4. Build it.** The platform mechanics live in `references/google-ads.md`, `references/meta.md`, `references/other-platforms.md`, and `references/browser-side.md`. For GTM builds on a covered lead-gen tool, prefer generating the import file rather than hand-building tags:
 

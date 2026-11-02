@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-c-level-advisor-chief-data-officer-advisor-skills-chief-data-officer-advisor
 name: chief-data-officer-advisor
-tagline: "Chief Data Officer advisory for startups: AI training data rights and
-  consent provenance, data product strategy (warehouse vs lakehouse vs mesh,
-  build"
+tagline: "Use for data strategy decisions: training models on customer data,
+  warehouse vs lakehouse vs mesh, valuing data for a raise or M&A, or data
+  hiring ord"
 summary: 1. Can we train our model on this data? — origin × consent × use-case
   matrix 2. Warehouse, lakehouse, or mesh — and what do we build vs buy? —
   stage-driven architecture 3. What is our customer data worth? — strategic...
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,20 +43,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: c-level-advisor/chief-data-officer-advisor/skills/chief-data-officer-advisor/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.237Z
+  fetched_at: 2026-11-02T09:06:18.455Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: chief-data-officer-advisor
-  description: "Chief Data Officer advisory for startups: AI training data rights
-    and consent provenance, data product strategy (warehouse vs lakehouse vs
-    mesh, build-vs-buy), B2B customer-data-as-asset valuation and M&A readiness,
-    data team org evolution. Use when deciding whether to train models on
-    customer data, choosing data architecture, valuing data for fundraising or
-    M&A, sequencing data hires, or when user mentions CDO, chief data officer,
-    data strategy, data mesh, lakehouse, training data, data product, data
-    monetization, or customer data asset. NOT a tactical data engineering skill
-    — strategic decisions only."
+  description: "Use for data strategy decisions: training models on customer data,
+    warehouse vs lakehouse vs mesh, valuing data for a raise or M&A, or data
+    hiring order. Runs ai_training_data_audit.py,
+    data_product_strategy_picker.py and data_asset_valuator.py."
   folder_path: c-level-advisor/chief-data-officer-advisor/skills/chief-data-officer-advisor
   extra_files:
     - references/ai_training_data_rights.md
@@ -66,7 +61,7 @@ skill:
     - scripts/ai_training_data_audit.py
     - scripts/data_asset_valuator.py
     - scripts/data_product_strategy_picker.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -261,6 +256,7 @@ python scripts/data_product_strategy_picker.py profile.json
 - [data_team_org_evolution.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/chief-data-officer-advisor/skills/chief-data-officer-advisor/references/data_team_org_evolution.md) — Stage-to-role map + centralize-vs-embed trigger
 
 ---
+
 **Version:** 1.0.0
 **Status:** Production Ready
 **Disclaimer:** Decisions touching training data rights, data productization, or M&A data diligence should involve qualified counsel. This skill surfaces decisions and tradeoffs — it does not replace legal review.

@@ -14,10 +14,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 67
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 106220
-  last_commit: 2026-10-26T07:33:33Z
-  stars_delta_7d: 9043
-  stars_growth_pct: 9.3
-  trending_score: 9884.51
+  stars: 112992
+  last_commit: 2026-11-02T09:03:00Z
+  stars_delta_7d: 6772
+  stars_growth_pct: 6.4
+  trending_score: 7203.75
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86961
     - 91386
     - 97177
     - 106220
+    - 112992
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: stablyai/orca
   path: skills/orca-emulator-android/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:09.714Z
+  fetched_at: 2026-11-02T09:06:03.762Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +56,7 @@ skill:
     simulator use the iOS emulator skill; build the APK with Gradle first."
   folder_path: skills/orca-emulator-android
   extra_files: []
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: false
   clients:
     - claude-code

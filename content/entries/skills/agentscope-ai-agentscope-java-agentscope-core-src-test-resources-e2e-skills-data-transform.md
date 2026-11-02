@@ -1,8 +1,11 @@
 ---
 slug: agentscope-ai-agentscope-java-agentscope-core-src-test-resources-e2e-skills-data-transform
 name: data-transform
-tagline: Agent skill from agentscope-ai/agentscope-java
-summary: Agent skill from agentscope-ai/agentscope-java
+tagline: Use this skill when the task involves converting or reformatting
+  structured data between file formats such as CSV, JSON, XML, or YAML. Suitable
+  for ta
+summary: "- scripts/csvtojson.py — Convert a CSV file to JSON array format -
+  scripts/jsontocsv.py — Flatten a JSON array into a CSV file"
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: agentscope-ai/agentscope-java
@@ -22,15 +25,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6121
-  last_commit: 2026-10-26T06:15:51Z
-  stars_delta_7d: 83
-  stars_growth_pct: 1.4
-  trending_score: 84.14
+  stars: 6214
+  last_commit: 2026-11-02T08:27:45Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.5
+  trending_score: 94.41
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6038
     - 6121
+    - 6214
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +42,16 @@ readme_source:
   repo: agentscope-ai/agentscope-java
   path: agentscope-core/src/test/resources/e2e-skills/data-transform/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:52.810Z
+  fetched_at: 2026-11-02T09:07:24.989Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: data-transform
-  description: Agent skill from agentscope-ai/agentscope-java
+  description: Use this skill when the task involves converting or reformatting
+    structured data between file formats such as CSV, JSON, XML, or YAML.
+    Suitable for tasks like "convert this CSV to JSON", "reformat my data file",
+    or "change the file format of this dataset". Do NOT use for statistical
+    analysis, aggregation, or report generation.
   folder_path: agentscope-core/src/test/resources/e2e-skills/data-transform
   extra_files:
     - scripts/csv_to_json.py
@@ -57,4 +65,17 @@ skill:
   pack_slug: agentscope-ai-agentscope-java
 ---
 
-Agent skill from agentscope-ai/agentscope-java
+# Data Transform Skill
+Converts structured data files between formats (CSV ↔ JSON ↔ XML ↔ YAML).
+
+## Available Scripts
+
+- `scripts/csv_to_json.py` — Convert a CSV file to JSON array format
+- `scripts/json_to_csv.py` — Flatten a JSON array into a CSV file
+
+## Usage
+
+```
+python3 scripts/csv_to_json.py --input data.csv --output data.json
+python3 scripts/json_to_csv.py --input data.json --output data.csv
+```

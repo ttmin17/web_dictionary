@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27651
-  last_commit: 2026-10-24T17:24:38Z
-  stars_delta_7d: 129
-  stars_growth_pct: 0.5
-  trending_score: 129.6
+  stars: 27822
+  last_commit: 2026-10-30T20:57:42Z
+  stars_delta_7d: 171
+  stars_growth_pct: 0.6
+  trending_score: 172.06
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 27320
     - 27430
     - 27522
     - 27651
+    - 27822
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-de/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:42:27.103Z
+  fetched_at: 2026-11-02T09:06:19.481Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,6 +62,7 @@ skill:
     Arbeit mit mehr als 5 Tool-Aufrufen.
   folder_path: skills/i18n/planning-with-files-de
   extra_files:
+    - plan-inventory.md
     - scripts/attest-plan.ps1
     - scripts/attest-plan.sh
     - scripts/check-complete.ps1
@@ -71,7 +72,6 @@ skill:
     - scripts/init-session.sh
     - scripts/inject-plan.py
     - scripts/inject-plan.sh
-    - scripts/ledger-append.ps1
   pack_total_skills: 6
   is_pack_primary: false
   clients:
@@ -284,6 +284,9 @@ Automatisierungshilfsskripte:
 - `scripts/session-catchup.py`: Auf ausdrückliche Anforderung Metadaten oder begrenzte Auszüge desselben Projekts prüfen
 
 ### Gespeicherte Pläne auflisten
+
+
+Für Agenten: Ergänze beim Auflisten `--json` (PowerShell: `-Json`), um Dateipfade, Phasenstatus und Auswahlgrenzen strukturiert zu erhalten. Das Schema und eine kurze Übergabe an weitere Agenten stehen in [plan-inventory.md](https://github.com/OthmanAdi/planning-with-files/blob/master/skills/i18n/planning-with-files-de/plan-inventory.md). Diese optionale Abfrage läuft beim normalen Aktivieren des Skills nicht.
 
 Um eine Aufgabe vor dem Fortsetzen zu finden, führe `sh "<skill-dir>/scripts/set-active-plan.sh" --list` aus, unter Windows PowerShell `& "<skill-dir>/scripts/set-active-plan.ps1" -List`. Ersetze `<skill-dir>` durch das Installationsverzeichnis dieses Skills und bleibe im Projektstamm als aktuellem Arbeitsverzeichnis.
 

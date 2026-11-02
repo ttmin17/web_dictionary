@@ -16,7 +16,7 @@ status: active
 quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: duty1g/x64dbg-mcp-server
@@ -24,18 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2608
+  stars: 2733
   last_commit: 2026-10-12T08:49:17Z
-  stars_delta_7d: 45
-  stars_growth_pct: 1.8
-  trending_score: 45.79
-  rank_current: 101
-  rank_delta: -30
+  stars_delta_7d: 125
+  stars_growth_pct: 4.8
+  trending_score: 130.99
+  rank_current: 79
+  rank_delta: 22
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2484
     - 2563
     - 2608
+    - 2733
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: duty1g/x64dbg-mcp-server
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:37:58.778Z
+  fetched_at: 2026-11-02T09:05:40.493Z
   truncated: false
 type: agent_skill
 skill:
@@ -80,6 +81,7 @@ You are controlling x64dbg through MCP tools.
 Treat every assumption about debugger state as stale until verified by a tool response.
 
 ---
+
 ## Rule 1: Always Know Your State
 
 **Before every action**, call `GetDebugState`. No exceptions.
@@ -95,6 +97,7 @@ Every tool response may also include `[event:*]` lines — queued debugger event
 If the user says "paused", "hit breakpoint", "stopped", or "debugger is paused" — immediately call `GetDebugState` to see where you are. Do not guess.
 
 ---
+
 ## Rule 2: Never Assume State Between Calls
 
 MCP is request/response. Between your tool calls, anything can happen — breakpoints can hit, exceptions can fire, the user can interact with the debugger. Every time you are about to act, verify first.
@@ -110,6 +113,7 @@ GetDebugState → SetBreakpoint → run → GetDebugState → Disassemble
 ```
 
 ---
+
 ## Rule 3: Core Workflows
 
 ### Load and analyze a binary
@@ -188,6 +192,7 @@ WaitForEvent (timeoutMs: 120000)  — keep watching
 ```
 
 ---
+
 ## Rule 4: All 84 Tools Reference
 
 Every tool response includes a `[state]` line showing current debugger status and any `[event:*]` lines with queued events. You always know where you are.
@@ -313,6 +318,7 @@ Every tool response includes a `[state]` line showing current debugger status an
 | `ResumeThread` | `threadId` | Resume a suspended thread |
 
 ---
+
 ## Rule 5: Common Mistakes
 
 | Mistake | Fix |
@@ -329,6 +335,7 @@ Every tool response includes a `[state]` line showing current debugger status an
 | Go idle while user interacts with GUI | Call `WaitForEvent` with longer timeout (60-120s) to watch for events |
 
 ---
+
 ## Rule 6: Expression Evaluation
 
 Use `EvalExpression` to resolve anything:
@@ -338,6 +345,7 @@ Use `EvalExpression` to resolve anything:
 - Labels: any label set with `CommentOrLabelAtAddress`
 
 ---
+
 ## Rule 7: Explain What You See
 
 When analyzing code, always tell the user:
@@ -349,6 +357,7 @@ When analyzing code, always tell the user:
 Reference concrete addresses and module names — never say "the current function" without saying which one.
 
 ---
+
 ## Rule 8: Debugging GUI / Message Loop Apps
 
 When the target is RUNNING in a message loop (waiting for user input, showing a dialog, sitting at a UI screen), `run` will time out because no breakpoint is being hit. Do NOT fall back to static file analysis — use the debugger properly.

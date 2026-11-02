@@ -13,28 +13,26 @@ tags:
   - claude-ai
   - code-intelligence
 status: active
-quality_percentile: 47
+quality_percentile: 44
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: bgauryy/octocode
   official_vendor: false
   license: MIT
 signals:
-  stars: 950
-  last_commit: 2026-10-17T10:41:30Z
-  stars_delta_7d: 0
+  stars: 956
+  last_commit: 2026-11-01T13:56:47Z
+  stars_delta_7d: 13
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 148
-  rank_delta: -100
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
     - 950
     - 950
-    - 950
+    - 956
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +41,7 @@ readme_source:
   repo: bgauryy/octocode
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:33:54.150Z
+  fetched_at: 2026-11-02T09:05:57.305Z
   truncated: false
 type: agent_tool
 tool:
@@ -72,6 +70,7 @@ tool:
 Octocode researches **your local code and external code alike** (GitHub repositories, PRs, npm) with one toolset: ripgrep + AST search, trees, precise reads, and LSP. Use it as a **CLI** or **MCP server**, backed by a **Rust engine** for fast, token-efficient results across single files or mega-repos.
 
 ---
+
 ## Table of contents
 
 - [Quick start](#quick-start)
@@ -91,6 +90,7 @@ Octocode researches **your local code and external code alike** (GitHub reposito
 - [Agent workflows](#agent-workflows)
 
 ---
+
 ## Quick start
 
 **Prerequisites:** Node.js 20.12+
@@ -142,6 +142,7 @@ claude mcp add-json octocode --scope user '{"command":"npx","type":"stdio","args
 **Any other client:** `npx octocode install`
 
 ---
+
 ### Use it as an MCP server
 
 Add to your MCP client config (or use a one-click install above):
@@ -188,6 +189,7 @@ results:
 Learn more at **[octocode.ai](https://octocode.ai)**.
 
 ---
+
 ## Why Octocode
 
 Agents code better from evidence than from guesses. Octocode researches **two worlds with one flow**, your **local code** and **external code** on GitHub and npm, and hands back compact, citable context before an agent changes, reviews, or explains code. *Code is truth; context is the map.*
@@ -214,6 +216,7 @@ Most tools do one slice (web search, or grep your repository) and hand back a fi
 | **Agent workflows** | Same engine through MCP, CLI, and Agent Skills. |
 
 ---
+
 ## Built for research (benchmarks)
 
 A blind, head-to-head test on **research-oriented flows rather than plain lookups** (multi-hop traces,
@@ -230,6 +233,7 @@ than `gh`+Headroom, and ~3.2× fewer than `gh`+RTK** in the local-build headline
 ▶ **[Open the interactive report](https://raw.githack.com/bgauryy/octocode/main/packages/octocode-benchmark/results/index.html)** · **[run it / method](https://github.com/bgauryy/octocode/tree/main/packages/octocode-benchmark/skills/octocode-benchmark)** · [questions](https://github.com/bgauryy/octocode/tree/main/packages/octocode-benchmark/compare/github-questions) · [all reports](https://github.com/bgauryy/octocode/tree/main/packages/octocode-benchmark/results)
 
 ---
+
 ## Tools
 
 **17 tools in the full catalog.** How many register depends on the surface and the
@@ -296,6 +300,7 @@ Flags: [Configuration](https://github.com/bgauryy/octocode/blob/main/docs/CONFIG
 Full schemas, fields, and examples for every tool live in [`docs/OCTOCODE_TOOLS.md`](https://github.com/bgauryy/octocode/blob/main/docs/OCTOCODE_TOOLS.md) (linked under [Documentation](#documentation)).
 
 ---
+
 ## MCP
 
 The MCP server exposes the Octocode tool catalog directly to your AI assistant over stdio.
@@ -321,6 +326,7 @@ Add to your MCP client config, using `octocode-mcp`:
 Add a GitHub token and options under `env` - see [Authentication](#authentication-methods) and [Configuration](#configuration).
 
 ---
+
 ## CLI
 
 Same research engine, no MCP client needed. Local paths route to local tools; `owner/repo[/path]` routes to GitHub. Authenticate once with `npx octocode auth login` (see [Authentication](#authentication-methods)); run `npx octocode --help` for full usage.
@@ -346,6 +352,7 @@ Same research engine, no MCP client needed. Local paths route to local tools; `o
 Full syntax, flags, and exit codes: [Octocode CLI guide](https://github.com/bgauryy/octocode/blob/main/packages/octocode/docs/OCTOCODE_CLI.md)
 
 ---
+
 ## Configuration
 
 Everything is optional; Octocode runs on sensible defaults. Settings resolve from three sources, in priority order:
@@ -398,6 +405,7 @@ Most-used settings (both CLI and MCP unless noted):
 Per-project overrides and custom LSP servers live in a workspace `.octocode/` folder. For the full `.octocoderc` schema, a ready-to-copy example, clone-cache tuning, GitHub Enterprise setup, and precedence details, see the [Configuration Reference](https://github.com/bgauryy/octocode/blob/main/docs/CONFIGURATION.md).
 
 ---
+
 ## Authentication methods
 
 GitHub-backed tools require authentication. Any one method is enough. Full details: [Authentication Setup](https://github.com/bgauryy/octocode/blob/main/docs/CONFIGURATION.md).
@@ -428,6 +436,7 @@ Create a token at [github.com/settings/tokens](https://github.com/settings/token
 **Note:** Never commit tokens to version control. Use environment variables or secure secret management.
 
 ---
+
 ## Security
 
 **Every byte to the model is scanned and redacted first.** All content passes through the Rust engine's secret scanner on the way *in* and *out*, so secrets never reach the model. That covers local files, GitHub and npm responses, errors, and tool output. The behavior is identical under MCP and the CLI.
@@ -443,6 +452,7 @@ Create a token at [github.com/settings/tokens](https://github.com/settings/token
 **Full security model, pipeline, and threat coverage: [SECURITY.md](https://github.com/bgauryy/octocode/blob/main/docs/SECURITY.md).** Related: [Configuration and authentication](https://github.com/bgauryy/octocode/blob/main/docs/CONFIGURATION.md) · [Credentials](https://github.com/bgauryy/octocode/blob/main/docs/CONFIGURATION.md#github-token)
 
 ---
+
 ## Language support
 
 Four code-intelligence axes; three are native to the Rust engine and need no external tooling:
@@ -459,6 +469,7 @@ and minify capability lives in the
 **[Full format support matrix](https://github.com/bgauryy/octocode/blob/main/packages/octocode-engine/docs/LSP_SERVER_LIFECYCLE.md#full-format-support-matrix)**.
 
 ---
+
 ## Skills
 
 > [Agent Skills](https://agentskills.io/what-are-skills) are a lightweight, open format for extending AI agent capabilities.
@@ -503,6 +514,7 @@ npx octocode skill help
 **Web automation workflow:** `octocode-scraping` performs the safe static pass first (fetch/crawl/extract → local corpus → graph v2). When the graph exposes dynamic actions or static output is blocked/thin, `octocode-chrome-devtools` validates live actionability, cookies/storage, network/HAR bodies, screenshots, or auth-gated state; discovered URLs/data/artifacts can be fed back into the scraping corpus for continued proof.
 
 ---
+
 ## Architecture
 
 A yarn-workspaces monorepo. The **MCP server** and the **CLI** are thin front-ends over one shared TypeScript tool core, which delegates every CPU-heavy path to a single **Rust engine** (compiled through [napi-rs](https://napi.rs) to prebuilt `.node` binaries). One tool catalog, one security layer, one response shaper, reached two ways.
@@ -548,6 +560,7 @@ client → sanitize inputs (Rust) → run tool (GitHub / FS / LSP) → sanitize 
 `packages/octocode-benchmark` (private, not published) holds benchmark methodology, evals, and run artifacts - see [Documentation](#documentation).
 
 ---
+
 ## Documentation
 
 Website: **[octocode.ai](https://octocode.ai)** · Product docs: **[github.com/bgauryy/octocode/tree/main/docs](https://github.com/bgauryy/octocode/tree/main/docs)**. This section is the canonical documentation index; benchmark methodology, evals, and run artifacts live in [`packages/octocode-benchmark`](https://github.com/bgauryy/octocode/tree/main/packages/octocode-benchmark).
@@ -564,6 +577,7 @@ Website: **[octocode.ai](https://octocode.ai)** · Product docs: **[github.com/b
 | Shared internals | [Token priority order](https://github.com/bgauryy/octocode/blob/main/docs/CONFIGURATION.md#github-token) · [Session persistence](https://github.com/bgauryy/octocode/blob/main/docs/OCTOCODE_MCP.md#session-persistence) |
 
 ---
+
 ## Troubleshooting
 
 **Node.js or environment issues?**
@@ -579,6 +593,7 @@ npx node-doctor
 - **Native engine errors:** Octocode uses a prebuilt Rust engine. If it fails to load on Linux, ensure your system has `glibc` or `musl` compatibility. On macOS/Windows, ensure you are on a supported architecture (x64 or arm64).
 
 ---
+
 ## Agent workflows
 
 ### Recommended dev mode: Pi + Octocode

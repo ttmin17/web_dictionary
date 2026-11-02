@@ -18,24 +18,25 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: lemonade-sdk/lemonade
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5999
-  last_commit: 2026-10-26T04:52:33Z
-  stars_delta_7d: 69
-  stars_growth_pct: 1.2
-  trending_score: 69.8
-  rank_current: 65
+  stars: 6039
+  last_commit: 2026-11-02T08:38:38Z
+  stars_delta_7d: 40
+  stars_growth_pct: 0.7
+  trending_score: 40.27
+  rank_current: 90
+  rank_delta: -25
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5839
     - 5930
     - 5999
+    - 6039
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: lemonade-sdk/lemonade
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:58.005Z
+  fetched_at: 2026-11-02T09:05:35.064Z
   truncated: false
 type: agent_tool
 tool:
@@ -355,7 +356,7 @@ Lemonade supports multiple inference engines for LLM, speech, TTS, and image gen
       <td>Windows, Linux</td>
     </tr>
     <tr>
-      <td rowspan="6"><strong>Image generation</strong></td>
+      <td rowspan="7"><strong>Image generation</strong></td>
       <td rowspan="5"><code>sd-cpp</code></td>
       <td><code>metal</code></td>
       <td>Apple Silicon GPU</td>
@@ -382,10 +383,15 @@ Lemonade supports multiple inference engines for LLM, speech, TTS, and image gen
       <td>Windows, Linux</td>
     </tr>
     <tr>
-      <td rowspan="1"><code>thenoise</code></td>
+      <td rowspan="2"><code>thenoise</code></td>
       <td><code>rocm</code></td>
       <td>Supported AMD ROCm families</td>
       <td>Windows, Linux</td>
+    </tr>
+    <tr>
+      <td><code>cuda</code>†</td>
+      <td>NVIDIA GPUs</td>
+      <td>Linux</td>
     </tr>
     <tr>
       <td rowspan="3"><strong>3D generation</strong></td>

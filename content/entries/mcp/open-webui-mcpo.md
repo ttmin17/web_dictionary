@@ -11,30 +11,30 @@ tags:
   - mcp-to-openapi
   - open-webui
   - openapi
-status: active
+status: slowing
 quality_percentile: 6
 selection_reason: quality_percentile
 first_seen: 2025-03-30T10:03:03
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: open-webui/mcpo
   official_vendor: false
   license: MIT
 signals:
-  stars: 4411
+  stars: 4414
   last_commit: 2026-05-17T20:40:30Z
-  stars_delta_7d: 6
+  stars_delta_7d: 3
   stars_growth_pct: 0.1
-  trending_score: 6.01
-  rank_current: 87
-  rank_delta: -19
+  trending_score: 3
+  rank_current: 99
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4392
     - 4399
     - 4405
     - 4411
+    - 4414
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: open-webui/mcpo
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.056Z
+  fetched_at: 2026-11-02T09:05:36.251Z
   truncated: false
 type: mcp_server
 launch:
@@ -329,4 +329,5 @@ Not sure where to start? Feel free to open an issue or ask a question—we’re 
 </a>
 
 ---
+
 ✨ Let's build the future of interoperable AI tooling together!

@@ -11,15 +11,15 @@ summary: "Prefer reusing the rules in integrations: the rules under
 categories:
   - cloud-infra
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/create-alert-rule/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.892Z
+  fetched_at: 2026-11-02T09:05:33.717Z
   truncated: false
 type: agent_skill
 skill:
@@ -123,6 +124,7 @@ When a component ships both a categraf and an exporter rule pack, **prefer categ
    c. When there are multiple candidates and none is the default, **do not blindly take the first one**; list them in your reply and ask the user to confirm
 
 ---
+
 ## Approach A: reuse validated rules in integrations (as needed: single / batch / whole pack)
 
 `import_alert_rule_template` imports rules from the rule pack under `integrations/<component>/alerts/` (each rule's severity, duration, evaluation interval, appended tags, annotations, and effective time window are all preserved), binds the rules to the data source you select, and uniformly switches them to the enabled state. **How many rules are imported is controlled by the `names` parameter**, driven by the user's need.
@@ -170,6 +172,7 @@ When a component ships both a categraf and an exporter rule pack, **prefer categ
 - Imported rules **are not bound to any notify rule** by default (to avoid sending alerts by mistake). If binding is needed, after importing, prompt the user to associate it manually on the rule, or switch to Approach B to create rules one by one and pass `notify_rule_ids`.
 
 ---
+
 ## Approach B: hand-write a custom rule (when integrations has no matching rule)
 
 Use `create_alert_rule`. Supports all data source types: **Prometheus / Loki / Elasticsearch / OpenSearch / TDengine / ClickHouse / MySQL / PostgreSQL / Doris / VictoriaLogs / Host**.
@@ -422,6 +425,7 @@ If the user requests binding notify rules:
 If the user does not explicitly request it, **do not proactively associate notify rules**, to avoid sending alerts by mistake.
 
 ---
+
 ## Final step (common to both paths): output the result
 
 **Keep it short**. A one-sentence confirmation is enough:

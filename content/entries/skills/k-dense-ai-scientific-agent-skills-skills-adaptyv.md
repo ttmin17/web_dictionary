@@ -1,8 +1,12 @@
 ---
 slug: k-dense-ai-scientific-agent-skills-skills-adaptyv
 name: adaptyv
-tagline: Agent skill from K-Dense-AI/scientific-agent-skills
-summary: Agent skill from K-Dense-AI/scientific-agent-skills
+tagline: Uses the Adaptyv Bio Foundry API and Python SDK to design protein
+  characterization experiments, estimate costs, submit sequences, monitor
+  laboratory p
+summary: "Reviewed against the deployed OpenAPI schema (info.version: 0.0.2) and
+  official SDK 0.1.0 at commit cdf207819ed5a58e0c127453626d2bce125c8064. The
+  schema version alone does not identify all changes. See the endpoint re..."
 categories:
   - domain-research
 tags:
@@ -11,10 +15,10 @@ tags:
   - bioinformatics
   - chemoinformatics
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: K-Dense-AI/scientific-agent-skills
@@ -22,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 54638
-  last_commit: 2026-10-19T09:33:57Z
-  stars_delta_7d: 1906
-  stars_growth_pct: 3.6
-  trending_score: 1974.89
+  stars: 55754
+  last_commit: 2026-10-26T09:36:15Z
+  stars_delta_7d: 1116
+  stars_growth_pct: 2
+  trending_score: 1138.79
   velocity_source: snapshot_delta
   sparkline_4w:
     - 48703
     - 52732
     - 54638
+    - 55754
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,16 +44,21 @@ readme_source:
   repo: K-Dense-AI/scientific-agent-skills
   path: skills/adaptyv/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:21.745Z
+  fetched_at: 2026-11-02T09:06:42.519Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: adaptyv
-  description: Agent skill from K-Dense-AI/scientific-agent-skills
+  description: Uses the Adaptyv Bio Foundry API and Python SDK to design protein
+    characterization experiments, estimate costs, submit sequences, monitor
+    laboratory progress, and retrieve results. Applies to Adaptyv Foundry, its
+    target catalog, binding screening and affinity assays, thermostability,
+    expression, fluorescence, epitope binning, and enzyme activity workflows,
+    including code using adaptyv or FoundryClient.
   folder_path: skills/adaptyv
   extra_files:
     - references/api-endpoints.md
-  pack_total_skills: 177
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

@@ -1,8 +1,9 @@
 ---
 slug: dreammis-social-auto-upload-skills-bilibili-upload
 name: bilibili-upload
-tagline: Agent skill from dreammis/social-auto-upload
-summary: Agent skill from dreammis/social-auto-upload
+tagline: 当 agent 需要通过已安装的 `sau` CLI 完成 Bilibili 登录、账号校验或视频上传时使用这个 skill。优先使用
+  `sau bilibili ...`，程序会自动准备 `biliup`，不要求用户手动安装。
+summary: 不要一开始就让用户自己找 biliup 或手动下载 release。 程序会在运行时自动检查、自动下载、自动更新 biliup。
 categories:
   - other
 tags:
@@ -11,10 +12,10 @@ tags:
   - douyin
   - tiktok
 status: active
-quality_percentile: 70
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: dreammis/social-auto-upload
@@ -22,27 +23,29 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 15815
+  stars: 16015
   last_commit: 2026-10-22T18:42:22Z
-  stars_delta_7d: 654
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 200
+  stars_growth_pct: 1.3
+  trending_score: 202.53
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 15815
-language: en
+    - 16015
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: dreammis/social-auto-upload
   path: skills/bilibili-upload/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:10.102Z
+  fetched_at: 2026-11-02T09:06:45.042Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: bilibili-upload
-  description: Agent skill from dreammis/social-auto-upload
+  description: 当 agent 需要通过已安装的 `sau` CLI 完成 Bilibili 登录、账号校验或视频上传时使用这个 skill。优先使用
+    `sau bilibili ...`，程序会自动准备 `biliup`，不要求用户手动安装。
   folder_path: skills/bilibili-upload
   extra_files:
     - references/cli-contract.md
@@ -60,4 +63,45 @@ skill:
   pack_slug: dreammis-social-auto-upload
 ---
 
-Agent skill from dreammis/social-auto-upload
+# Bilibili 上传 Skill
+优先把 `sau` 作为主接口。
+
+不要一开始就让用户自己找 `biliup` 或手动下载 release。
+程序会在运行时自动检查、自动下载、自动更新 `biliup`。
+
+## 功能概览
+
+| 功能 | 命令入口 | 说明 |
+| --- | --- | --- |
+| 登录 | `sau bilibili login --account <name>` | 需要用户自己在本地真实终端里执行，用于生成或刷新登录信息 |
+| 校验 | `sau bilibili check --account <name>` | 检查指定账号当前是否有效 |
+| 视频上传 | `sau bilibili upload-video ...` | 上传一条 Bilibili 视频 |
+
+## 默认工作流
+
+1. 先确认 `references/runtime-requirements.md`
+2. 再确认 `references/cli-contract.md`
+3. 执行匹配的 `sau bilibili ...` 命令
+4. 如果命令失败，再看 `references/troubleshooting.md`
+
+## 命令选择建议
+
+- 用户没有登录信息，先让用户自己在本地终端执行 `login`
+- 用户只想确认账号状态，先用 `check`
+- 用户要发视频，用 `upload-video`
+
+## 执行前检查
+
+- 优先确认当前环境能运行 `sau`
+- 如果 `sau` 不在 PATH 中，可以用仓库里的 `sau_cli.py`
+- 不要要求用户手动下载 `biliup`
+- 第一次运行 Bilibili 命令时，程序可能会自动联网准备 `biliup`
+- 对 agent 来说，不要在非交互环境里硬跑 `sau bilibili login`
+- 正确做法是让用户自己在本地终端执行 `sau bilibili login --account <name>`
+- 如果终端里的二维码显示不完整，提醒用户直接打开当前目录下的 `qrcode.png` 扫码
+
+## 参考文档
+
+- 运行前提：`references/runtime-requirements.md`
+- CLI 契约：`references/cli-contract.md`
+- 故障排查：`references/troubleshooting.md`

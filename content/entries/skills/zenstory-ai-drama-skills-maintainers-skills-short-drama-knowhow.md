@@ -1,8 +1,12 @@
 ---
 slug: zenstory-ai-drama-skills-maintainers-skills-short-drama-knowhow
 name: short-drama-knowhow
-tagline: Agent skill from zenstory-ai/drama-skills
-summary: Agent skill from zenstory-ai/drama-skills
+tagline: 维护者专用的短剧 know-how
+  学习、验证与生命周期治理。仅在维护者明确要求从其当前会话提供的授权只读文本源学习完整短剧项目链，并把私有观察逐步转成去标识、去复刻、经盲测与独立审查的公共
+  reference、rubric 或 synthetic fixture 候选时使用；不用于普通创作、公开运
+summary: 只在维护者主动调用本 skill，且当前会话已经提供授权的只读访问时读取非公开来源。
+  把连接细节、凭据、源名称和私有卡片留在维护者指定的隔离工作区；不得写入本 skill、
+  公开技能树、公共候选或评测夹具。没有授权或无法确认只读时停止来源读取，只能用合成材料演练流程。
 categories:
   - media-creative
 tags:
@@ -11,10 +15,10 @@ tags:
   - ai-video
   - aigc
 status: active
-quality_percentile: 76
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-07-16T16:11:19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -22,32 +26,34 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3360
-  last_commit: 2026-10-20T19:23:14Z
-  stars_delta_7d: 307
-  stars_growth_pct: 10.1
-  trending_score: 337.87
-  rank_current: 44
-  rank_delta: 0
+  stars: 3650
+  last_commit: 2026-11-02T08:30:37Z
+  stars_delta_7d: 290
+  stars_growth_pct: 8.6
+  trending_score: 315.03
+  rank_current: 50
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2574
     - 2825
     - 3053
     - 3360
-language: en
+    - 3650
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: zenstory-ai/drama-skills
   path: maintainers/skills/short-drama-knowhow/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:26.649Z
+  fetched_at: 2026-11-02T09:06:48.356Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: short-drama-knowhow
-  description: Agent skill from zenstory-ai/drama-skills
+  description: 维护者专用的短剧 know-how
+    学习、验证与生命周期治理。仅在维护者明确要求从其当前会话提供的授权只读文本源学习完整短剧项目链，并把私有观察逐步转成去标识、去复刻、经盲测与独立审查的公共
+    reference、rubric 或 synthetic fixture 候选时使用；不用于普通创作、公开运行时取数、媒体生成或粗略数据分析。
   folder_path: maintainers/skills/short-drama-knowhow
   extra_files:
     - agents/openai.yaml
@@ -66,8 +72,8 @@ skill:
 ---
 
 # 短剧 Know-how 学习
-把学习过程当作编剧、漫剧工作室与编导共同参与的定性研究，而不是词频挖掘。
-先理解完整项目如何把戏剧意图传递到可执行的文本制作规格，再决定哪些知识可迁移。
+通过定性阅读，理解编剧、漫剧工作室与编导怎样把戏剧意图传递到可执行的文本制作规格，
+再判断哪些知识可迁移。
 
 ## 开始前锁定边界
 
@@ -111,13 +117,13 @@ skill:
 以及镜头/提示词怎样保留而不是改写剧作意图。完整阅读后才写卡，不用批量关键词命中代替阅读。
 卡片字段与合成例子见 [cards-and-coverage.md](https://github.com/zenstory-ai/drama-skills/blob/main/maintainers/skills/short-drama-knowhow/references/cards-and-coverage.md)。
 
-### 4. 写私有 observation / decision cards
+### 4. 写私有观察卡与决策卡
 
-先写 observation card，严格区分直接观察、agent 解释与未知；再写 decision card，记录是否形成候选、
+先写观察卡（observation card），分清直接观察、agent 解释与未知；再写决策卡（decision card），记录是否形成候选、
 为什么缩小适用范围、有哪些替代解释。每张卡用不泄漏内容的稳定内部引用绑定同一项目链，
 但私有卡片永不进入公共技能包。
 
-### 5. 构建题材 × 机制 coverage matrix
+### 5. 构建题材 × 机制覆盖矩阵
 
 用“题材/受众承诺”作为一轴，用“期待建立、冲突升级、信息释放、关系转向、反转兑现、集尾牵引、
 表演动作、镜头承接、连续性”等机制作为另一轴；提示词研究再叠加制作形态/视觉语言、场景功能、
@@ -131,34 +137,34 @@ skill:
 这项机制可能解决这个问题；出现这些信号时应换法或不用”。详细判别见
 [synthesis-and-promotion.md](https://github.com/zenstory-ai/drama-skills/blob/main/maintainers/skills/short-drama-knowhow/references/synthesis-and-promotion.md)。
 
-### 7. 去标识与 de-copy
+### 7. 去标识与去复刻（de-copy）
 
 删除或抽象源名称、人物名、专有设定、原句、罕见组合、精确数值、路径、地址、标识符和连接信息。
 把表层桥段拆成“观众状态 → 戏剧问题 → 可选机制 → 可观察效果 → 失败边界”，再用全新的题材、人物关系、
 场景和措辞重建例子。若只有复述原内容才能表达，就不进入公共候选。
 
-### 8. 形成公共 reference / rubric / synthetic fixture proposal
+### 8. 形成公共候选包
 
-每个候选包同时提出：简洁 reference 改动、能定位证据与失败模式的 rubric、完全合成且与任何来源不近似的
-fixture，以及预期受益任务和潜在副作用。proposal 先留在维护者 staging 区，不直接改 public suite。
+每个候选包包含参考资料（reference）改动、能定位证据与失败模式的审查标准（rubric）、完全合成且与任何来源
+不近似的测试材料（synthetic fixture），以及预期受益任务和潜在副作用。候选先留在维护者暂存区，不直接改公共技能。
 公共候选不得要求运行时访问非公开来源，不得声称文本能证明真实媒体效果。
 
-### 9. 做 fresh-agent blind forward eval
+### 9. 用全新上下文进行盲测（fresh-agent blind forward eval）
 
 让没有读取私有卡片、原始项目和预期答案的 fresh agent，仅用公共基线或匿名候选之一完成同一组合成任务。
 盲评其剧作判断、题材适配、制作可执行性、变体能力和是否机械套模板。执行
 [blind-forward-eval.md](https://github.com/zenstory-ai/drama-skills/blob/main/maintainers/skills/short-drama-knowhow/references/blind-forward-eval.md)；不要把候选作者的结论泄漏进 prompt。
 
-### 10. 交给 independent reviewer
+### 10. 交给独立审查者（independent reviewer）
 
 由未参与本轮摘取、合成或候选写作的 reviewer 复查证据充分性、反例、适用边界、去标识、de-copy、
 盲测设计与公共运行边界。候选作者不得自审放行；有未解决的泄漏、近似复刻、机械化或证据断层即退回。
 
-### 11. promotion / retire
+### 11. 晋升与退休（promotion / retire）
 
-只有候选通过 fresh-agent blind forward eval 和 independent reviewer，且 reference、rubric、synthetic fixture
-彼此一致，才能由维护者把最小改动 promotion 到公共资料。保留不含私密内容的决策记录与回滚说明。
-后续反例证明候选过宽、盲测无增益或诱发模板化时，缩窄、替换或 retire；不要靠沉默删除掩盖知识变化。
+候选通过全新上下文盲测与独立审查，且参考资料、审查标准和合成测试材料彼此一致后，维护者才能把最小改动
+晋升到公共资料，并保留去标识的决策与回滚记录。后续反例证明候选过宽、盲测无增益或诱发模板化时，
+缩窄、替换或退休，并记录知识变化。
 
 ## 按需读取
 

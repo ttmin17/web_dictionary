@@ -15,10 +15,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 788
-  last_commit: 2026-10-24T02:30:54Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.9
-  trending_score: 7.06
+  stars: 804
+  last_commit: 2026-11-01T01:15:39Z
+  stars_delta_7d: 16
+  stars_growth_pct: 2
+  trending_score: 16.32
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
     - 788
+    - 804
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/animsequence/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:38:54.121Z
+  fetched_at: 2026-11-02T09:06:01.687Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,7 +63,7 @@ skill:
     - patterns.md
     - scripts/inspect_sequence.txt
     - workflows.md
-  pack_total_skills: 39
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -191,6 +192,7 @@ euler = unreal.AnimSequenceService.quat_to_euler(some_quat)
 ```
 
 ---
+
 ## COMMON_MISTAKES
 
 ### Wrong: Applying rotations without space
@@ -305,6 +307,7 @@ for anim_info in anims[:10]:
 - `search_animations(name_pattern, search_path)` - Find by name pattern
 
 ---
+
 ## IMPORTANT: Asset Path Format
 
 **All `anim_path` parameters require the FULL asset path (package_name), NOT the folder path (package_path).**
@@ -330,6 +333,7 @@ if results:
 ```
 
 ---
+
 ## Sub-docs available
 
 Load these sibling docs for deeper coverage of specific topics:

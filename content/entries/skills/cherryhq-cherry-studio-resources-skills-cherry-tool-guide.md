@@ -7,17 +7,17 @@ summary: This file is a router. It carries only the global rules and the intent
   → tool → reference table. Each reference holds that domain's prerequisites,
   sequencing, conditional availability, output interpretation, recovery,...
 categories:
-  - coding-agents
+  - productivity-ops
 tags:
   - agent-skills
-  - ai-agent
-  - claude-code
-  - codex
+  - agent-workspace
+  - agentic-workspace
+  - ai-agents
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 52987
-  last_commit: 2026-10-26T07:25:22Z
-  stars_delta_7d: 251
-  stars_growth_pct: 0.5
-  trending_score: 252.19
+  stars: 53181
+  last_commit: 2026-11-02T08:58:57Z
+  stars_delta_7d: 194
+  stars_growth_pct: 0.4
+  trending_score: 194.71
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 52419
     - 52597
     - 52736
     - 52987
+    - 53181
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/skills/cherry-tool-guide/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:04.015Z
+  fetched_at: 2026-11-02T09:06:41.638Z
   truncated: false
 type: agent_skill
 skill:
@@ -109,7 +109,7 @@ parameter names, enums, and required fields. Read it before every call.
   the session's approval mode. Call them only once the user's intent is clear; if approval is
   declined, stop and report — do not retry the same effect through another route.
 - **Intent still gates auto-approved effects.** Memory writes, schedule changes,
-  notifications, and agent/channel configuration may execute without an approval card.
+  notifications, Session renames, and agent/channel configuration may execute without an approval card.
   Do not call them merely because they are available; first make sure the user requested
   the effect or it is necessary to complete an already-approved task.
 
@@ -128,6 +128,7 @@ parameter names, enums, and required fields. Read it before every call.
 | Schedule a recurring / future task | `mcp__cherry-tools__cron` (Cherry scheduling only) | [autonomy.md](https://github.com/CherryHQ/cherry-studio/blob/main/resources/skills/cherry-tool-guide/references/autonomy.md) |
 | Proactively message the user or send a file | `mcp__cherry-tools__notify` (needs configured recipients) | [autonomy.md](https://github.com/CherryHQ/cherry-studio/blob/main/resources/skills/cherry-tool-guide/references/autonomy.md) |
 | Inspect / connect / repair IM channels, rename agent | `mcp__cherry-tools__config` | [autonomy.md](https://github.com/CherryHQ/cherry-studio/blob/main/resources/skills/cherry-tool-guide/references/autonomy.md) |
+| Rename the current or another Agent Session | `mcp__cherry-tools__session_rename` | [sessions.md](https://github.com/CherryHQ/cherry-studio/blob/main/resources/skills/cherry-tool-guide/references/sessions.md) |
 | Find, create, message, or inspect work across Agent Sessions | `mcp__cherry-tools__session_list` / `session_search` / `session_create` / `session_send` / `session_deliveries` | [sessions.md](https://github.com/CherryHQ/cherry-studio/blob/main/resources/skills/cherry-tool-guide/references/sessions.md) |
 | Generate an image | `mcp__cherry-tools__generate_image` (needs a painting model) | [outputs.md](https://github.com/CherryHQ/cherry-studio/blob/main/resources/skills/cherry-tool-guide/references/outputs.md) |
 | Declare final deliverable file(s) | `mcp__cherry-tools__report_artifacts` | [outputs.md](https://github.com/CherryHQ/cherry-studio/blob/main/resources/skills/cherry-tool-guide/references/outputs.md) |

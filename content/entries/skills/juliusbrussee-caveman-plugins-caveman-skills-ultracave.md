@@ -13,10 +13,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 59
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: JuliusBrussee/caveman
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 115110
-  last_commit: 2026-10-25T09:24:33Z
-  stars_delta_7d: 1582
-  stars_growth_pct: 1.4
-  trending_score: 1604.04
+  stars: 116795
+  last_commit: 2026-11-02T07:45:06Z
+  stars_delta_7d: 1685
+  stars_growth_pct: 1.5
+  trending_score: 1709.67
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 110366
     - 111405
     - 113528
     - 115110
+    - 116795
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: JuliusBrussee/caveman
   path: plugins/caveman/skills/ultracave/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:11.955Z
+  fetched_at: 2026-11-02T09:06:05.502Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,7 +53,7 @@ skill:
     until "stop caveman" or "normal mode".
   folder_path: plugins/caveman/skills/ultracave
   extra_files: []
-  pack_total_skills: 22
+  pack_total_skills: 20
   is_pack_primary: false
   clients:
     - claude-code

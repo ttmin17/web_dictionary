@@ -16,29 +16,29 @@ tags:
   - claude-code
   - code-review
 status: active
-quality_percentile: 86
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: tirth8205/code-review-graph
   official_vendor: false
   license: MIT
 signals:
-  stars: 32385
-  last_commit: 2026-10-16T11:20:26Z
-  stars_delta_7d: 130
-  stars_growth_pct: 0.4
-  trending_score: 130.52
-  rank_current: 53
-  rank_delta: -34
+  stars: 32556
+  last_commit: 2026-10-29T10:34:29Z
+  stars_delta_7d: 171
+  stars_growth_pct: 0.5
+  trending_score: 171.9
+  rank_current: 45
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 31955
     - 32111
     - 32255
     - 32385
+    - 32556
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: tirth8205/code-review-graph
   path: README.md
   branch: staging
-  fetched_at: 2026-10-26T07:42:26.535Z
+  fetched_at: 2026-11-02T09:06:14.836Z
   truncated: false
 type: agent_tool
 tool:
@@ -120,6 +120,7 @@ AI coding tools often re-read large parts of a codebase to review a change. `cod
 </p>
 
 ---
+
 ## Quick Start
 
 ```bash
@@ -253,6 +254,7 @@ jobs:
 See [docs/GITHUB_ACTION.md](https://github.com/tirth8205/code-review-graph/blob/staging/docs/GITHUB_ACTION.md) for inputs, risk levels and caching, or the workflow this repository runs on itself in [`.github/workflows/pr-review.yml`](https://github.com/tirth8205/code-review-graph/blob/staging/.github/workflows/pr-review.yml).
 
 ---
+
 ## Benchmarks
 
 <p align="center">
@@ -338,6 +340,7 @@ From the same 2026-08-02 clean-room build at the pinned SHAs above. Embedding co
 - **Precision vs recall.** Impact analysis is conservative. It flags files that might be affected, which means false positives in large dependency graphs.
 
 ---
+
 ## Features
 
 | Feature | Details |
@@ -375,6 +378,7 @@ From the same 2026-08-02 clean-room build at the pinned SHAs above. Embedding co
 | **Local storage** | One SQLite file in `.code-review-graph/`; no external database or cloud service |
 
 ---
+
 ## Usage
 
 <details>
@@ -671,6 +675,7 @@ The flag takes precedence over the variable. When neither is set, all tools are 
 </details>
 
 ---
+
 ## FAQ and comparisons
 
 Answers in [docs/FAQ.md](https://github.com/tirth8205/code-review-graph/blob/staging/docs/FAQ.md):

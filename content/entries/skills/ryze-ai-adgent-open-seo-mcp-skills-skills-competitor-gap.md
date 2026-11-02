@@ -19,7 +19,7 @@ status: active
 quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Ryze-AI-Adgent/open-seo-mcp-skills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7305
-  last_commit: 2026-10-23T09:50:40Z
-  stars_delta_7d: 1227
-  stars_growth_pct: 20.2
-  trending_score: 1474.7
+  stars: 8643
+  last_commit: 2026-10-27T08:57:55Z
+  stars_delta_7d: 1338
+  stars_growth_pct: 18.3
+  trending_score: 1583.07
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5240
     - 6078
     - 7305
+    - 8643
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: Ryze-AI-Adgent/open-seo-mcp-skills
   path: skills/competitor-gap/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:58.912Z
+  fetched_at: 2026-11-02T09:05:34.936Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +68,7 @@ skill:
 # Competitor Gap
 ## Requires
 
-The free Ryze MCP connector (`https://connector.get-ryze.ai/mcp`). Claude Code: `claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp`. claude.ai / Desktop / Cursor: add it as a custom connector with the same URL. Setup: https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp
+The free Ryze MCP connector (`https://connector.get-ryze.ai/mcp`). Claude Code: `claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp`. claude.ai / Desktop / Cursor: add it as a custom connector with the same URL. Setup: https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp?utm_source=github&utm_content=open-seo-mcp-skills
 
 Their rankings are estimates (DataForSEO), yours are real (GSC). Diff them.
 

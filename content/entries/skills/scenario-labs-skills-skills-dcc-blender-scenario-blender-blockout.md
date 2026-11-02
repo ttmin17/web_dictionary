@@ -16,10 +16,10 @@ tags:
   - ai-agents
   - ai-art
 status: active
-quality_percentile: 59
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1139
-  last_commit: 2026-10-25T22:41:37Z
-  stars_delta_7d: 83
-  stars_growth_pct: 7.9
-  trending_score: 89.52
+  stars: 1476
+  last_commit: 2026-11-02T07:44:52Z
+  stars_delta_7d: 337
+  stars_growth_pct: 29.6
+  trending_score: 436.71
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
     - 1139
+    - 1476
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/blender/scenario-blender-blockout/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:38:47.916Z
+  fetched_at: 2026-11-02T09:05:56.527Z
   truncated: false
 type: agent_skill
 skill:
@@ -74,7 +75,7 @@ skill:
     - scripts/bx_blockout.py
     - scripts/bx_kits.py
     - scripts/examples/ex1_watchmaker.py
-  pack_total_skills: 166
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -91,9 +92,10 @@ faces, wardrobe, extras, sound). So the blockout has full authority over motion 
 over look. Ambiguity ruins the pass; crudeness does not: a bent lamppost comes back as a snake,
 loose limb blocks as extra people, an unmarked car driving backward. Fix identity in geometry first,
 in prompt text second, and judge the result on a synced side-by-side of playblast and video, never
-in the viewport alone. If a sibling skill named here is missing from your available skills, ask the
-user to install it (`npx skills add scenario-labs/skills --skill <name>`); unattended, proceed from
-tool schemas and flag the gap.
+in the viewport alone. If a sibling skill named here is missing from your available skills, load it
+with `skill_get` (Scenario MCP) or ask the user to install it
+(https://github.com/scenario-labs/skills#install); unattended, proceed from tool schemas and flag
+the gap.
 
 **REQUIRED BACKGROUND:** scenario-blender-expert (execution channel, review loop, 5.2 API changes).
 Video generation: `scenario-blender` (the plugin's quote, generate and place flow), the `scenario`
@@ -138,16 +140,18 @@ Before any call, write down:
   gait to copy; one without limbs lets it invent body and motion. Default heroes to colored
   capsules, featured (two or three signature features: goggles, a hood, a held lantern) when
   characters must stay apart or carry the story's object; a rigged gray mannequin only when the
-  blockout must own limb motion. Tell the user the style chosen, what it costs in control, and that
-  the others can be A/B tested on a short window.
-- **Identity colors**: hero red, then blue, green, yellow, purple, cyan.
+  blockout must own limb motion. Tell the user the style chosen, its cost in control, and that the
+  others can be A/B tested on a short window.
+- **Identity colors**: a hero takes the brief's color ("yellow raincoat": yellow) as the nearest
+  `B.PALETTE` color, else the next free one: red, blue, green, yellow, purple, cyan. Two heroes in
+  one color, or black, white, gray, brown: [contract](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/contract.md).
 - **Deliberate gaps** the video model fills, and **acceptance tests** the brief states: they become
   mandatory audits.
 
 Decide what the brief leaves open and record the decision; do not stop to ask. Spending is the
-exception: Scenario prices are shown and approved by the user (section 3). With a reference image:
-list its masses, block them at plausible scale, match camera height and lens, `render_still` from
-the camera, compare, adjust until the composition matches, and only then animate.
+exception: the user approves every Scenario price (section 6). With a reference image: list its
+masses, block them at plausible scale, match camera height and lens, `render_still` from the camera,
+compare, adjust until the composition matches, and only then animate.
 
 ## 2. Output contract
 
@@ -159,13 +163,13 @@ Four deliverables: the scene, a locked camera timeline, the playblast, the hand-
   (`B.make_scene`) and touch nothing existing; every object must trace to one of your stages.
 - **Scale.** Meters, Z up, ground at z = 0, figure roots at the feet. The model keeps every mass
   where it is at its size, mistakes included. Nothing familiar for scale: add a `REF_` figure.
-- **Color separates masses and names identities.** One saturated color per hero (`B.PALETTE`, hero
-  red), the set in one `K.scheme` (category hues by default, identity grays, or material colors),
-  extras in mid grays, one light, a dark world. `B.paint` and the kits set object color and
-  materials; a kit carries several colors, so Solid view needs color type Material
-  (`B.solid_view()`'s default and the playblast's). An all-gray playblast has lost identity. Recolor
-  a kit through its arguments: its materials are shared per color. Grid or checker texture only
-  where the camera travels and depth must read, declared "replace, never inherit" in the sheet.
+- **Color separates masses and names identities.** One saturated color per hero (`B.PALETTE`), the
+  set in one `K.scheme` (category hues by default, identity grays, or material colors), extras in
+  mid grays, one light, a dark world. `B.paint` and the kits set object color and materials; a kit
+  carries several colors, so Solid view needs color type Material (`B.solid_view()`'s default and
+  the playblast's). An all-gray playblast has lost identity. Recolor a kit through its arguments:
+  its materials are shared per color. Grid or checker texture only where the camera travels and
+  depth must read, declared "replace, never inherit" in the sheet.
 - **Timeline.** `B.lock_format` before any geometry: integer fps, frames 1 to fps x seconds,
   1920x1080 (2520x1080 for 21:9) at 100 %. One camera per shot, bound to a `CUT_` marker on its
   first frame (`B.bind_cuts`), hard cuts, zero transition frames.
@@ -204,9 +208,9 @@ to resume a backup. The 120 s limit is plugin-only.
 
 ## 4. Build order
 
-Back up after every stage; a reset is recovered from the last backup
-([contract](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/contract.md)). Every call or stage script starts with
-`B.guard(expected_file=..., scene=...)`: queued calls land in whatever file is open.
+A reset is recovered from the last backup ([contract](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/contract.md)). Every call or stage
+script starts with `B.guard(expected_file=..., scene=...)`: queued calls land in whatever file is
+open.
 
 0. **Probe**, read-only: `scene_summary`, `datablocks_summary` (headless: `bpy.data`). Other work
    present: new scene.
@@ -262,11 +266,13 @@ older `blender` on PATH refuses the file. With no shell, the same call through `
 blocks Blender while it renders: keep it to short clips, and after a timeout look for the file
 before running it again. Add camera stills at each shot's start, middle and end.
 
-**Hand-off sheet**, built from the scene ([template](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md)): color legend tied to
-reference images, `K.cast()` rows, the cut list from `B.cut_list()` with exact times, which entities
-are blocked and which exist only in words, every artifact with its timecode, each motion state in
-words ("creeps", "stands still"), and tie-break clauses ("if text and video disagree about motion,
-the video wins").
+**Hand-off sheet**, built from the scene ([template](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md)):
+
+- color legend tied to reference images and garments;
+- `K.cast()` rows, the cut list from `B.cut_list()` with exact times;
+- which entities are blocked and which exist only in words;
+- every artifact with its timecode, each motion state in words ("creeps", "stands still");
+- tie-break clauses ("if text and video disagree about motion, the video wins").
 
 **Video pass**, always through Scenario, after the user approves the exact price. Unattended, stop
 at the quote (`estimate_cost` or `dry_run`), report it, and skip local uploads that need the user's
@@ -276,8 +282,8 @@ file choice:
   `force_solid` false (it turns everything one gray), a timeline length the model accepts, then
   `list_models`, `model_schema`, `render_form` (`configure` with `parameters`
   `{"duration": <clip seconds>}`, `prepare`, `inspect`), `estimate_cost`, `generate`, `wait_for_job`
-  and the result application, step by step in [handoff](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md) Route 1. The capture
-  is a silent 1280x720 clip.
+  and the result application, steps in [handoff](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/handoff.md) Route 1. The capture is a
+  silent 1280x720 clip.
 - **Hosted Scenario MCP**, for the full-resolution playblast: upload the playblast as the `scenario`
   skill shows, discover a model that takes a reference video, `model_schema_get`, `model_run` with
   `dry_run` first, `jobs_wait`, `asset_download`.

@@ -1,13 +1,11 @@
 ---
 slug: stablyai-orca-skills-orchestration
 name: orchestration
-tagline: "Coordinate supervised Orca workers: threaded messages, blocking
-  ask/reply, task dispatch, worker_done/escalation waits, task DAGs, decision
-  gates, coo"
-summary: "Engage Orca orchestration whenever you need structured multi-agent
-  coordination: threaded messages, blocking ask/reply flows, task dispatch,
-  workerdone/escalation waits, task DAGs, decision gates, coordinator loops,
-  o..."
+tagline: Run work in separate Orca worker agents and get their results back. Use
+  when the user asks for Orca workers or supervision (monitor, task DAGs, ask/re
+summary: "Use Orca orchestration to run work in separate Orca worker agents and
+  get their results back: when the user asks for Orca workers or supervision
+  (monitor, task DAGs, ask/reply, decision gates), or when the work needs..."
 categories:
   - agent-frameworks
 tags:
@@ -16,10 +14,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 67
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -27,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 106220
-  last_commit: 2026-10-26T07:33:33Z
-  stars_delta_7d: 9043
-  stars_growth_pct: 9.3
-  trending_score: 9884.51
+  stars: 112992
+  last_commit: 2026-11-02T09:03:00Z
+  stars_delta_7d: 6772
+  stars_growth_pct: 6.4
+  trending_score: 7203.75
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86961
     - 91386
     - 97177
     - 106220
+    - 112992
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,22 +43,26 @@ readme_source:
   repo: stablyai/orca
   path: skills/orchestration/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:09.714Z
+  fetched_at: 2026-11-02T09:06:03.762Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: orchestration
-  description: 'Coordinate supervised Orca workers: threaded messages, blocking
-    ask/reply, task dispatch, worker_done/escalation waits, task DAGs, decision
-    gates, coordinator loops, and decomposing work across agents. Use `orca-cli`
-    for full ownership handoffs — "hand off", "handoff", "handover", "give this
-    to another agent", "another worktree" — unless asked to supervise, monitor,
-    or coordinate a DAG, and for terminal control, lightweight terminal prompts,
-    shell commands, Orca worktree management, and reading or waiting on
-    terminals.'
+  description: 'Run work in separate Orca worker agents and get their results
+    back. Use when the user asks for Orca workers or supervision (monitor, task
+    DAGs, ask/reply, decision gates), or when the work needs something your own
+    subagents cannot give: a different agent (such as Codex from Claude) or its
+    own Orca workspace. "Have Codex (or Claude) review this and report back"
+    means an Orca worker of that agent, even when you have your own model
+    subagents. Also use when you are a dispatched worker (a prompt with Task and
+    Dispatch IDs: ask, worker_done). Otherwise prefer your own subagents,
+    including for long or parallel work. Use `orca-cli` to hand work off with
+    nothing expected back ("hand off", "handover", "give this to another agent",
+    "another worktree"), and for terminal control, shell commands, worktree
+    management, and reading or waiting on terminals.'
   folder_path: skills/orchestration
   extra_files: []
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: false
   clients:
     - claude-code
@@ -74,14 +76,17 @@ This file is a discovery stub, not the usage guide. The full, version-matched Or
 orchestration reference is served by the `orca` binary itself — kept out of this file on
 purpose so it can never drift from the binary that will actually run your commands.
 
-Engage Orca orchestration whenever you need structured multi-agent coordination: threaded
-messages, blocking ask/reply flows, task dispatch, worker_done/escalation waits, task DAGs,
-decision gates, coordinator loops, or decomposing work across agents. Use the orca-cli skill
-instead for full ownership handoffs ("hand off", "handoff", "handover", "give this to
-another agent", "another worktree") when the user did not ask to supervise, monitor, wait
-for results, or coordinate a DAG — and for ordinary terminal control, shell commands,
-worktree management, and the built-in browser. Coordination requires real Orca runtime
-state; never substitute a non-Orca subagent tool.
+Use Orca orchestration to run work in separate Orca worker agents and get their results
+back: when the user asks for Orca workers or supervision (monitor, task DAGs, ask/reply,
+decision gates), or when the work needs something your own subagents cannot give, such as a
+different agent or its own Orca workspace. "Have Codex (or Claude) review this and report
+back" means an Orca worker of that agent, even when you have your own model subagents. Use
+it as well when you are a dispatched worker sending `ask` questions or `worker_done`. Otherwise prefer your own subagents,
+including for long or parallel work. Use the orca-cli skill instead to hand work off with
+nothing expected back ("hand off", "handoff", "handover", "give this to another agent",
+"another worktree"), and for ordinary terminal control, shell commands, worktree management,
+and the built-in browser. Coordination requires real Orca runtime state; never substitute a
+non-Orca subagent tool when the user asked for Orca orchestration.
 
 ## Resolve the CLI for this session
 
@@ -109,16 +114,16 @@ ORCA skills get orchestration
 ```
 
 That prints the compact, version-matched guide for the exact binary that will handle your
-next commands. It covers the normal local coordinator loop. For a conditional action gate
-such as remote placement, uncertain release recovery, or expanded DAG work, load only the
-reference that gate names with
+next commands. It covers the normal local coordinator loop and dispatched-worker
+obligations. For a conditional action gate such as remote placement, uncertain release
+recovery, or expanded DAG work, load only the reference that gate names with
 `ORCA skills get orchestration --reference references/<file>.md`
 (`--references` lists the names). If that binary rejects `--reference`, run
 `ORCA skills get orchestration --full` and read the named bundled reference before acting.
 
-Prefer `--json`. Use the selected executable's `--help` for commands or flags the guide does
-not cover. If a command reports that Orca is not running, start it with `ORCA open --json`
-and retry. If it fails with `runtime_access_denied`, your sandbox blocked the connection:
-re-run it with escalated permissions, and do not run `ORCA open` or restart Orca. If
-`skills get` is unknown, explain that updating Orca restores the guide; use `--help` for
-read-only discovery and do not guess unsupported commands.
+Use the selected executable's `--help` for commands or flags the guide does not cover. If a
+command reports that Orca is not running, start it with `ORCA open --json` and retry. If it
+fails with `runtime_access_denied`, your sandbox blocked the connection: re-run it with
+escalated permissions, and do not run `ORCA open` or restart Orca. If `skills get` is unknown,
+explain that updating Orca restores the guide; use `--help` for read-only discovery and do not
+guess unsupported commands.

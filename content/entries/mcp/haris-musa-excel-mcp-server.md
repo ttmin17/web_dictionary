@@ -14,29 +14,29 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 79
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2025-02-12T06:39:48
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: haris-musa/excel-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 4264
-  last_commit: 2026-10-21T07:10:53Z
-  stars_delta_7d: 16
-  stars_growth_pct: 0.4
-  trending_score: 16.06
-  rank_current: 70
-  rank_delta: -17
+  stars: 4271
+  last_commit: 2026-10-31T19:30:43Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.2
+  trending_score: 7.01
+  rank_current: 85
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4212
     - 4235
     - 4248
     - 4264
+    - 4271
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: haris-musa/excel-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.694Z
+  fetched_at: 2026-11-02T09:05:36.238Z
   truncated: false
 type: mcp_server
 launch:
@@ -128,7 +128,8 @@ Excel**, and runs on Windows, macOS and Linux.
 
 **Macros (opt-in)**
 - Read the VBA code in `.xlsm` files. Writing VBA is off unless you start the server with
-  `--allow-vba-write`; the server never runs macros
+  `--allow-vba-write`, which also decides whether `create_workbook` and `import_workbook` may
+  make `.xlsm`/`.xltm` files; the server never runs macros
 
 **Safe by design**
 - Optional folder confinement, a formula safety check, read-only mode, localhost-only HTTP by
@@ -347,8 +348,9 @@ next call can refer to it. Charts and images are selected by name, as listed by 
 
 With `--allow-vba-write` (or `EXCEL_MCP_ALLOW_VBA_WRITE=1`) the server can set the code of
 standard, class, workbook and sheet modules in `.xlsm` and `.xltm` files, delete standard and
-class modules, and create new `.xlsm`/`.xltm` workbooks. The server only stores the code; it
-never runs it, and Excel asks before enabling macros. Digitally signed VBA projects are
+class modules, and create or import `.xlsm`/`.xltm` workbooks (without the option both are
+refused, and `import_workbook` removes macros from uploads to `.xlsx`/`.xltx`). The server only
+stores the code; it never runs it, and Excel asks before enabling macros. Digitally signed VBA projects are
 refused, since any change would invalidate the signature.
 
 > **Warning:** macro code runs with your user's rights once you enable macros in Excel. A

@@ -18,26 +18,26 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: firecrawl/firecrawl-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 7686
-  last_commit: 2026-10-25T20:53:04Z
-  stars_delta_7d: 51
-  stars_growth_pct: 0.7
-  trending_score: 51.34
-  rank_current: 41
-  rank_delta: -16
+  stars: 7749
+  last_commit: 2026-11-02T02:43:31Z
+  stars_delta_7d: 63
+  stars_growth_pct: 0.8
+  trending_score: 63.52
+  rank_current: 32
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7566
     - 7593
     - 7635
     - 7686
+    - 7749
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: firecrawl/firecrawl-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.078Z
+  fetched_at: 2026-11-02T09:05:35.079Z
   truncated: true
 type: mcp_server
 launch:
@@ -232,6 +232,24 @@ env HTTP_STREAMABLE_SERVER=true FIRECRAWL_API_KEY=fc-YOUR_API_KEY npx -y firecra
 
 Use the url: http://localhost:3000/mcp
 
+In this mode the server only answers requests addressed to `localhost`, `127.0.0.1` or `[::1]` (on any port), plus the address in `HOST` when it isn't `0.0.0.0` or `::`. A request whose `Host` header names another host, or whose `Origin` header names another site, gets `403`, and CORS headers echo an allowed origin instead of `*`. `GET` and `HEAD` requests to `/health` are answered whatever the host, so health checks keep working, and the server logs a line naming `FIRECRAWL_MCP_ALLOWED_HOSTS` for every request it refuses. This stops web pages you visit from calling the local server through DNS rebinding or cross-origin requests and using its `FIRECRAWL_API_KEY`.
+
+To reach the server under another name or address, such as a hostname behind a reverse proxy or a LAN IP, list it in `FIRECRAWL_MCP_ALLOWED_HOSTS` (comma-separated; ports are ignored). The same list decides which browser origins may call the server. A reverse proxy on the same machine can keep the default bind address:
+
+```bash
+env HTTP_STREAMABLE_SERVER=true FIRECRAWL_API_KEY=fc-YOUR_API_KEY \
+  FIRECRAWL_MCP_ALLOWED_HOSTS=mcp.home.lan npx -y firecrawl-mcp
+```
+
+Clients on other machines also need the server to listen on a non-loopback address, so set `HOST` too. Every client that can reach the port is then served with the server's `FIRECRAWL_API_KEY`, so do this only on a network you trust:
+
+```bash
+env HTTP_STREAMABLE_SERVER=true FIRECRAWL_API_KEY=fc-YOUR_API_KEY HOST=0.0.0.0 \
+  FIRECRAWL_MCP_ALLOWED_HOSTS=192.168.1.20 npx -y firecrawl-mcp
+```
+
+`FIRECRAWL_MCP_ALLOWED_HOSTS=*` turns the check off and restores the wildcard CORS header. Only do that when something in front of the server checks hosts and origins itself.
+
 ### Running with Docker
 
 The `ghcr.io/firecrawl/firecrawl-mcp-server` image runs the same server as `npx -y firecrawl-mcp`. Every build from `main` is tagged `latest`, `v<package version>` and `sha-<commit sha>`. `v<package version>` moves to the newest build of that version, so pin `sha-<commit sha>` (or a digest) when you need a fixed image.
@@ -265,7 +283,7 @@ docker run --rm -p 127.0.0.1:3000:3000 \
   ghcr.io/firecrawl/firecrawl-mcp-server:latest
 ```
 
-The image sets `HOST=0.0.0.0` and `PORT=3000`; override `PORT` (and the `-p` mapping) to listen elsewhere. The server uses the container's `FIRECRAWL_API_KEY` for requests that don't send their own credential, so the example publishes the port on `127.0.0.1` only; don't expose it more widely unless clients must supply their own key. Set `FIRECRAWL_API_URL` to use a self-hosted Firecrawl API. The container runs as the unprivileged `node` user.
+The image sets `HOST=0.0.0.0` and `PORT=3000`; override `PORT` (and the `-p` mapping) to listen elsewhere. The server uses the container's `FIRECRAWL_API_KEY` for requests that don't send their own credential, so the example publishes the port on `127.0.0.1` only; don't expose it more widely unless clients must supply their own key. Set `FIRECRAWL_API_URL` to use a self-hosted Firecrawl API. The container runs as the unprivileged `node` user. The server answers only `localhost`, `127.0.0.1` and `[::1]` in the `Host` and `Origin` headers, so the `-p 127.0.0.1:3000:3000` mapping works as is; to reach it under another name, set `-e FIRECRAWL_MCP_ALLOWED_HOSTS=<host>` (see [Streamable HTTP local mode](#running-with-streamable-http-local-mode)).
 
 ### Running on VS Code
 
@@ -338,6 +356,13 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
 - `FIRECRAWL_INTEGRATION` (Optional): Integration tag for apps that launch this server, such as an editor extension
   - Sent as the `integration` field of scrape, batch scrape, crawl, map, search, extract, agent, parse, interact and feedback requests
   - Use a value that starts with `_`, for example `_zed`
+
+#### Local HTTP mode
+
+- `FIRECRAWL_MCP_ALLOWED_HOSTS` (Optional): Extra host names or addresses the server answers with `HTTP_STREAMABLE_SERVER=true` or `SSE_LOCAL=true`, comma-separated
+  - `localhost`, `127.0.0.1`, `[::1]` and a non-wildcard `HOST` are always allowed; ports are ignored
+  - Requests whose `Host` or `Origin` header names any other host get `403`, except `GET` and `HEAD` requests to `/health`
+  - `*` turns the check off; not used with `CLOUD_SERVICE=true`, which answers every host
 
 #### MCP OAuth (Bearer access tokens)
 
@@ -598,7 +623,7 @@ For scientific papers, see [Research Tools](#12-research-tools-firecrawl_researc
 
 **Returns:**
 
-- Array of search results (with optional scraped content), plus an `id` field. Pass that `id` to `firecrawl_search_feedback` after you've used the results to refund 1 credit (search costs 2) and improve search quality.
+- Search results grouped by source (`data.web`, `data.images`, `data.news`), with optional scraped content, plus an `id` field. Every result carries a `source` and a 1-indexed `position`, numbered from 1 within its own group — copy the pair straight into `firecrawl_search_feedback`'s `valuableResults` rather than counting array elements. Pass that `id` to `firecrawl_search_feedback` after you've used the results to refund 1 credit (search costs 2) and improve search quality.
 
 **Prompt Example:**
 
@@ -612,7 +637,7 @@ Sends structured feedback on a previous `firecrawl_search` result. The first fee
 
 **Opt out:** set `FIRECRAWL_NO_SEARCH_FEEDBACK=1` (or `FIRECRAWL_DISABLE_SEARCH_FEEDBACK=1`) in the environment when starting the MCP server. The `firecrawl_search_feedback` tool will not be registered, so agents can't call it. Team admins can also disable feedback server-side; in that case the tool is registered but always returns `feedbackErrorCode: "TEAM_OPTED_OUT"`.
 
-**Most important field:** `missingContent`. It's an array of specific pieces of content the agent expected to find but did not. One entry per missing topic; these aggregate across teams and tell us what to index next.
+**Most important field:** `missingContent`. It's an array of specific pieces of content the agent expected to find but did not. One entry per missing topic; these aggregate across teams and tell us what to index next. For useful results, use `valuableResults` with the `source`/`position` pair stamped on each result — results are grouped and each group is numbered from 1 independently, so both are required. List **every** useful result (unlisted results are treated as not useful), and reserve `valuableSources` for useful URLs that were not among the returned results.
 
 **Daily refund cap (per team, per UTC day, default 100 credits).** Once a team's `creditsRefundedToday` reaches `dailyRefundCap`, further submissions still record feedback but no longer refund credits. The response sets `dailyCapReached: true`. Agents should stop calling this tool for the rest of the UTC day when they see that flag.
 
@@ -624,10 +649,15 @@ Sends structured feedback on a previous `firecrawl_search` result. The first fee
   "arguments": {
     "searchId": "0193f6c5-1234-7890-abcd-1234567890ab",
     "rating": "good",
+    "valuableResults": [
+      { "source": "web", "position": 1 },
+      { "source": "web", "position": 3 },
+      { "source": "news", "position": 2, "reason": "Broke the pricing change." }
+    ],
     "valuableSources": [
       {
-        "url": "https://docs.firecrawl.dev/features/search",
-        "reason": "Most up-to-date description of /search."
+        "url": "https://docs.firecrawl.dev/pricing",
+        "reason": "Not in the results; found via a result's pricing link. Answered the question."
       }
     ],
     "missingContent": [
@@ -1257,131 +1287,5 @@ The tool requires an authenticated Firecrawl account and is read-only.
 
 - `firecrawl_credit_usage` defaults to `{ "view": "current" }` and returns `remainingCredits`, `planCredits`, `billingPeriodStart`, and `billingPeriodEnd`. Remaining credits can exceed plan credits when the team has top-ups or grants.
 - Pass `{ "view": "historical" }` for calendar-month periods containing `startDate`, `endDate`, and `creditsUsed`. Passing `{ "byApiKey": true }` also selects the historical view and splits periods by API key; each row then includes `apiKey`. Passing `{ "byEndpoint": true }` instead splits periods by the endpoint that used the credits (scrape, search, crawl, map, agent, ...); each row then includes `endpoint`. Pass `{ "bin": "day" }` for one period per UTC day instead of per calendar month. Do not combine `byApiKey` with `byEndpoint`, or any of these with `{ "view": "current" }`. The latest period's `endDate` can be null. If the Firecrawl API does not offer the endpoint split or daily periods yet, the result carries a `notice` and monthly figures.
-
-## Programmatic use (unstable)
-
-The package also exposes a library entry point for embedding the server in another runtime. It is **unstable**: the API, its options and its types may change in any release, including minor and patch releases, so pin an exact version.
-
-```sh
-npm install --save-exact firecrawl-mcp zod
-```
-
-The example defines tool parameters with `zod`, so the embedding project installs it as its own dependency.
-
-```js
-import { createFirecrawlMcpServer } from 'firecrawl-mcp/server';
-import { z } from 'zod';
-
-const server = createFirecrawlMcpServer({
-  transport: 'httpStream',
-  apiKey: process.env.FIRECRAWL_API_KEY,
-  unstable_hooks: {
-    registerExtraTools: (registrar) => {
-      registrar.addTool({
-        name: 'my_tool',
-        description: 'An extra tool served next to the Firecrawl tools.',
-        parameters: z.object({ text: z.string() }),
-        execute: async ({ text }) => text,
-      });
-    },
-  },
-});
-
-await server.start({
-  transportType: 'httpStream',
-  httpStream: { port: 3000, host: '127.0.0.1', endpoint: '/mcp', stateless: true },
-});
-// MCP endpoint: http://127.0.0.1:3000/mcp
-```
-
-Set `host` explicitly. Without it the server listens on `localhost`, which Node binds to a single address (often only `::1`), so requests to `127.0.0.1` are refused. Use `0.0.0.0` or `::` to accept connections from other machines only behind network access controls or an `unstable_hooks.authenticate` check: without one, every caller that can reach the port is served with the configured `apiKey`.
-
-Options mirror the CLI's environment variables: `apiUrl`, `apiKey`, `transport`, `logging`, `safeMode`, `fileAccess` (`local` or `upload`), `requireCredential`, `searchFeedback` and `endpointFeedback`. `unstable_hooks` accepts:
-
-| Hook | Purpose |
-|---|---|
-| `authenticate(request)` | Resolve the session for a request; throw a `Response` to reject it. |
-| `wrapTool(tool)` | Decorate every registered tool. |
-| `onToolResult(event)` | Observe the start and outcome of each tool call. |
-| `instructions` | Server instructions, or a function choosing from the defaults. |
-| `registerExtraTools(registrar, context)` | Add tools after the built-in ones. |
-| `outboundRequest(session)` | Credential and extra headers for each Firecrawl API request. |
-| `beforeKeylessRequest(session, origin)` | Refuse a keyless request by throwing. |
-| `toolFilter(name)` | Leave built-in tools out of the instance. |
-| `configureHttp(app)` | Add HTTP routes. |
-| `oauth.protectedResource` | Serve OAuth protected-resource metadata. |
-
-FastMCP is bundled inside the package, so use the types exported from `firecrawl-mcp/server` (`Session`, `ToolDefinition`, `ToolRegistrar`, `FirecrawlMcpServerHooks` and others) rather than importing `fastmcp` yourself.
-
-The entry point also exports the helpers the built-in tools use, such as `recoveryPayload`, `normalizeHeader`, `requestOrigin`, `isRuntimeUserAgent`, `initializeClientSlug`, `searchToolBaseFields`, `searchOutputSchema` and `structuredCompact`, so extra tools and hooks can match the built-in behaviour. They are unstable as well.
-
-## Logging System
-
-The server includes comprehensive logging:
-
-- Operation status and progress
-- Performance metrics
-- Rate limit tracking
-- Error conditions
-
-Example log messages:
-
-```
-[INFO] Firecrawl MCP Server initialized successfully
-[INFO] Starting scrape for URL: https://example.com
-[ERROR] Rate limit exceeded
-```
-
-## Error Handling
-
-The server provides robust error handling:
-
-- API rate-limit errors surfaced to the MCP client
-- Detailed error messages
-- Network resilience
-
-Example error response:
-
-```json
-{
-  "content": [
-    {
-      "type": "text",
-      "text": "Error: Rate limit exceeded"
-    }
-  ],
-  "isError": true
-}
-```
-
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Build
-npm run build
-
-# Run tests
-npm test
-```
-
-### Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Run tests: `npm test`
-4. Submit a pull request
-
-### Thanks to contributors
-
-Thanks to [@vrknetha](https://github.com/vrknetha), [@cawstudios](https://caw.tech) for the initial implementation!
-
-Thanks to MCP.so and Klavis AI for hosting and [@gstarwd](https://github.com/gstarwd), [@xiangkaiz](https://github.com/xiangkaiz) and [@zihaolin96](https://github.com/zihaolin96) for integrating our server.
-
-## License
-
-MIT License - see LICENSE file for details
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/firecrawl/firecrawl-mcp-server)).*

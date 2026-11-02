@@ -1,8 +1,12 @@
 ---
 slug: kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp
-name: amp
-tagline: Agent skill from kungfu-systems/kungfu
-summary: Agent skill from kungfu-systems/kungfu
+name: agent-onboarding
+tagline: Discover the exact Kungfu Project, WorkConsole, WorkRef, Skill catalog,
+  and Core Work state admitted to this Amp process.
+summary: "- KUNGFUAGENTCONSOLEENVELOPE identifies the exact Project,
+  WorkConsole, SessionAttempt, runtime Profile, and optional WorkRef. -
+  KUNGFUSKILLCONTEXT advertises the compact Skill catalog. Load full Skill
+  instructions on..."
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: kungfu-systems/kungfu
@@ -22,16 +26,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4533
-  last_commit: 2026-10-25T18:10:07Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0
-  trending_score: 2
-  rank_current: 134
+  stars: 4539
+  last_commit: 2026-10-31T06:41:20Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6.01
+  rank_current: 132
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4531
     - 4533
+    - 4539
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,15 +45,16 @@ readme_source:
   repo: kungfu-systems/kungfu
   path: framework/core/src/python/kungfu/agent/skills/amp/SKILL.md
   branch: dev/v4/v4.0
-  fetched_at: 2026-10-26T07:45:51.502Z
+  fetched_at: 2026-11-02T09:07:22.130Z
   truncated: false
 type: agent_skill
 skill:
-  skill_name: amp
-  description: Agent skill from kungfu-systems/kungfu
+  skill_name: agent-onboarding
+  description: Discover the exact Kungfu Project, WorkConsole, WorkRef, Skill
+    catalog, and Core Work state admitted to this Amp process.
   folder_path: framework/core/src/python/kungfu/agent/skills/amp
   extra_files: []
-  pack_total_skills: 7
+  pack_total_skills: 4
   is_pack_primary: true
   clients:
     - claude-code
@@ -56,4 +63,66 @@ skill:
   pack_slug: kungfu-systems-kungfu
 ---
 
-Agent skill from kungfu-systems/kungfu
+# Kungfu Agent Onboarding
+When `KUNGFU_AGENT_ENVIRONMENT=native-interactive`, use the in-process
+environment envelopes before acting:
+
+- `KUNGFU_AGENT_CONSOLE_ENVELOPE` identifies the exact Project, WorkConsole,
+  SessionAttempt, runtime Profile, and optional WorkRef.
+- `KUNGFU_SKILL_CONTEXT` advertises the compact Skill catalog. Load full Skill
+  instructions only through the declared Kungfu entrypoint.
+- `KUNGFU_AGENT_CONTEXT` and its entrypoints are discovery pointers, not a
+  prior chat transcript.
+- `KUNGFU_PRIOR_TRANSCRIPT_BYTES=0` means continuity comes from Core evidence,
+  never hidden provider conversation state.
+
+Confirm current facts with read-only commands when needed:
+
+```sh
+"$KUNGFU_CLI_BIN" agent console current --json
+"$KUNGFU_CLI_BIN" agent bootstrap-status --json
+"$KUNGFU_CLI_BIN" agent capabilities --json
+"$KUNGFU_CLI_BIN" skill catalog --json
+"$KUNGFU_CLI_BIN" work status --workspace <path> --initiative-id <id> --assignment-id <id>
+"$KUNGFU_CLI_BIN" agent session list --json
+```
+
+A bare `kungfu run amp` launch is intentionally Work-unbound so many terminal
+windows can start in the same Project. As soon as you choose or accept one
+Assignment, and before editing files or invoking a Work mutation, run:
+
+```sh
+"$KUNGFU_CLI_BIN" agent console bind-work --initiative-id <id> --assignment-id <id> --json
+```
+
+Keep the provider UI available when bootstrap is pending or degraded, but do
+not create, bind, or mutate Work until `kungfu agent bootstrap-status --json` reports
+`state: verified`.
+
+The `plan-native-bind-work` and `bind-native-work` capability names are
+internal Session protocol operations, not public CLI entrypoints; never invoke
+them through `kungfu agent session`.
+
+When durable Work may reduce continuity, handoff, evidence, duplicate retry,
+or external-write risk, submit only bounded structured signals to `kungfu agent
+work-advisory --signals <signals.json> --json`. Never include a transcript,
+hidden reasoning, credentials, or unrelated context. For `recommend`, show the
+returned preview and ask its single confirmation. Only after confirmation use
+the returned existing `kungfu.work.capture`, `kungfu.work.admit`, and
+`kungfu.agent.console.bind-work` path, cite its receipts, and continue the
+original task. Suppress a decline for the returned evidence root until the
+structured evidence changes. Advice grants no external authority.
+
+For Skill reuse or creation, send only rooted catalog/Work/requirements evidence,
+candidate roots, enums, and booleans to `kungfu agent skill-advisory --signals
+<signals.json> --json`. Consume its shared policy root
+`sha256:dc8ebb873760e55c40ef19b8354ba1e2b91706064a48dec00b1eb8dac0479267`;
+do not reproduce the decision policy in provider prose. The result is read-only.
+
+Do not continue unless it returns `status: bound`. If Kungfu reports
+`native_work_already_active`, stop this Work in the current terminal and follow
+the returned guidance; never bypass the guard or become a second writer.
+
+Do not infer Work completion from terminal output or process exit. Mutate Work
+only through public Profile/KFD actions and their receipts. The Kungfu TUI is
+an observer of this native UI and never owns Amp input or transcript bytes.

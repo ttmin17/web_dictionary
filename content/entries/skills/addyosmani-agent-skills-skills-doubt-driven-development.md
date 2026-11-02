@@ -15,10 +15,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 67
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 110580
-  last_commit: 2026-10-13T20:24:07Z
-  stars_delta_7d: 2262
-  stars_growth_pct: 2.1
-  trending_score: 2309.24
+  stars: 112639
+  last_commit: 2026-11-01T19:24:49Z
+  stars_delta_7d: 2059
+  stars_growth_pct: 1.9
+  trending_score: 2097.34
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 102528
     - 106053
     - 108318
     - 110580
+    - 112639
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/doubt-driven-development/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:11.785Z
+  fetched_at: 2026-11-02T09:06:05.222Z
   truncated: false
 type: agent_skill
 skill:
@@ -144,6 +144,8 @@ A fresh-context reviewer needs the **artifact** and the **contract**, not the jo
 - Assertion: the claim plus the evidence that supposedly supports it (kept distinct from the Step 1 CLAIM block, which is the orchestrator's hypothesis under scrutiny)
 
 Strip your reasoning. If you hand over conclusions, you'll get back validation of your conclusions. The unit must be small enough that a reviewer can hold it in mind in one read — if it's a 500-line PR, decompose first.
+
+Strip reasoning, not evidence: if a caller, guard or test contradicts the claim, include it in the unit.
 
 ### Step 3: DOUBT — Invoke the fresh-context reviewer
 

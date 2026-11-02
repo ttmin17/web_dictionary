@@ -10,15 +10,15 @@ summary: You are the in-app AI assistant for n9e, running inside the n9e process
 categories:
   - cloud-infra
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/alert-subscribe-copilot/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.891Z
+  fetched_at: 2026-11-02T09:05:33.716Z
   truncated: false
 type: agent_skill
 skill:
@@ -83,11 +84,13 @@ A subscription rule filters alert events by condition, **clones** a copy, and fo
 | `http-api.md` | HTTP API paths (for A2A / external agents), tryrun validation endpoint | Only for external A2A scenarios or when providing the user with curl commands |
 
 ---
+
 ## Prerequisites
 
 You are the in-app AI assistant for n9e, running inside the n9e process and already authenticated as the current user. **Operate directly via the built-in tools — do not log in, do not call HTTP APIs, and do not use http_fetch against your own endpoints** (the HTTP flow in `http-api.md` is for external A2A agents).
 
 ---
+
 ## Mental model
 
 - **Subscription happens at the notification stage** (`alert/dispatch/dispatch.go:handleSubs`): the original event still travels its own notification path as usual; each matching subscription **clones a copy** of the event, rewrites it per the subscription config, and then runs it through the notification chain again. A subscription is **additive** — it does not intercept and does not replace the original notification.
@@ -129,6 +132,7 @@ Key points (full field table and new vs. old version differences are in `referen
 - `datasource_ids` empty array = all datasources; `cluster` is fixed at `"0"`.
 
 ---
+
 ## Workflow one: creating
 
 1. **Determine the business group** (management ownership): use `list_busi_groups` to get the `group_id`. If the user named a business group, or the front end already popped up a business group form, use its ID directly without asking again.

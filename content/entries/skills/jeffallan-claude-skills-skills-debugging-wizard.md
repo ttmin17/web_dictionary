@@ -1,8 +1,12 @@
 ---
 slug: jeffallan-claude-skills-skills-debugging-wizard
 name: debugging-wizard
-tagline: Agent skill from Jeffallan/claude-skills
-summary: Agent skill from Jeffallan/claude-skills
+tagline: Parses error messages, traces execution flow through stack traces,
+  correlates log entries to identify failure points, and applies systematic
+  hypothesi
+summary: 1. Reproduce - Establish consistent reproduction steps 2. Isolate -
+  Narrow down to smallest failing case 3. Hypothesize and test - Form testable
+  theories, verify/disprove each one 4. Fix - Implement and verify solutio...
 categories:
   - other
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Jeffallan/claude-skills
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 12062
-  last_commit: 2026-10-26T03:10:49Z
-  stars_delta_7d: 125
-  stars_growth_pct: 1
-  trending_score: 126.31
+  stars: 12172
+  last_commit: 2026-10-30T18:00:19Z
+  stars_delta_7d: 110
+  stars_growth_pct: 0.9
+  trending_score: 111
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11759
     - 11852
     - 11937
     - 12062
+    - 12172
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,17 @@ readme_source:
   repo: Jeffallan/claude-skills
   path: skills/debugging-wizard/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.114Z
+  fetched_at: 2026-11-02T09:06:30.104Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: debugging-wizard
-  description: Agent skill from Jeffallan/claude-skills
+  description: Parses error messages, traces execution flow through stack traces,
+    correlates log entries to identify failure points, and applies systematic
+    hypothesis-driven methodology to isolate and resolve bugs. Use when
+    investigating errors, analyzing stack traces, finding root causes of
+    unexpected behavior, troubleshooting crashes, or performing log analysis,
+    error investigation, or root cause analysis.
   folder_path: skills/debugging-wizard
   extra_files:
     - references/common-patterns.md
@@ -53,7 +62,7 @@ skill:
     - references/quick-fixes.md
     - references/strategies.md
     - references/systematic-debugging.md
-  pack_total_skills: 67
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -62,4 +71,96 @@ skill:
   pack_slug: jeffallan-claude-skills
 ---
 
-Agent skill from Jeffallan/claude-skills
+# Debugging Wizard
+Expert debugger applying systematic methodology to isolate and resolve issues in any codebase.
+
+## Core Workflow
+
+1. **Reproduce** - Establish consistent reproduction steps
+2. **Isolate** - Narrow down to smallest failing case
+3. **Hypothesize and test** - Form testable theories, verify/disprove each one
+4. **Fix** - Implement and verify solution
+5. **Prevent** - Add tests/safeguards against regression
+
+## Reference Guide
+
+Load detailed guidance based on context:
+
+<!-- Systematic Debugging row adapted from obra/superpowers by Jesse Vincent (@obra), MIT License -->
+
+| Topic | Reference | Load When |
+|-------|-----------|-----------|
+| Debugging Tools | `references/debugging-tools.md` | Setting up debuggers by language |
+| Common Patterns | `references/common-patterns.md` | Recognizing bug patterns |
+| Strategies | `references/strategies.md` | Binary search, git bisect, time travel |
+| Quick Fixes | `references/quick-fixes.md` | Common error solutions |
+| Systematic Debugging | `references/systematic-debugging.md` | Complex bugs, multiple failed fixes, root cause analysis |
+
+## Constraints
+
+### MUST DO
+- Reproduce the issue first
+- Gather complete error messages and stack traces
+- Test one hypothesis at a time
+- Document findings for future reference
+- Add regression tests after fixing
+- Remove all debug code before committing
+
+### MUST NOT DO
+- Guess without testing
+- Make multiple changes at once
+- Skip reproduction steps
+- Assume you know the cause
+- Debug in production without safeguards
+- Leave console.log/debugger statements in code
+
+## Common Debugging Commands
+
+**Python (pdb)**
+```bash
+python -m pdb script.py          # launch debugger
+# inside pdb:
+# b 42          — set breakpoint at line 42
+# n             — step over
+# s             — step into
+# p some_var    — print variable
+# bt            — print full traceback
+```
+
+**JavaScript (Node.js)**
+```bash
+node --inspect-brk script.js     # pause at first line, attach Chrome DevTools
+# In Chrome: open chrome://inspect → click "inspect"
+# Sources panel: add breakpoints, watch expressions, step through
+```
+
+**Git bisect (regression hunting)**
+```bash
+git bisect start
+git bisect bad                   # current commit is broken
+git bisect good v1.2.0           # last known good tag/commit
+# Git checks out midpoint — test, then:
+git bisect good   # or: git bisect bad
+# Repeat until git identifies the first bad commit
+git bisect reset
+```
+
+**Go (delve)**
+```bash
+dlv debug ./cmd/server           # build & attach
+# (dlv) break main.go:55
+# (dlv) continue
+# (dlv) print myVar
+```
+
+## Output Templates
+
+When debugging, provide:
+1. **Root Cause**: What specifically caused the issue
+2. **Evidence**: Stack trace, logs, or test that proves it
+3. **Fix**: Code change that resolves it
+4. **Prevention**: Test or safeguard to prevent recurrence
+
+Maintained by [@jeffallan](https://github.com/jeffallan), Principal Consultant at [Synergetic Solutions](https://synergetic.solutions)
+
+[Documentation](https://jeffallan.github.io/claude-skills/skills/quality/debugging-wizard/)

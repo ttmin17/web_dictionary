@@ -1,8 +1,12 @@
 ---
 slug: mvschwarz-openrig-packages-daemon-assets-plugins-openrig-core-skills-agent-operated-software
 name: agent-operated-software
-tagline: Agent skill from mvschwarz/openrig
-summary: Agent skill from mvschwarz/openrig
+tagline: Use when designing, building, operating, or diagnosing an ongoing
+  application whose live backend or control loop includes OpenRig agents,
+  including ap
+summary: "- AI-enabled software: application code owns the control loop and
+  calls a model as one capability. - Agent-Operated Workflow: an agent owns one
+  bounded procedure with a start and stop condition; see agent-operated-wor..."
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -22,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8198
-  last_commit: 2026-10-26T07:30:13Z
-  stars_delta_7d: 367
-  stars_growth_pct: 4.7
-  trending_score: 384.2
-  rank_current: 39
-  rank_delta: -11
+  stars: 8550
+  last_commit: 2026-11-02T08:44:58Z
+  stars_delta_7d: 352
+  stars_growth_pct: 4.3
+  trending_score: 367.11
+  rank_current: 47
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5667
     - 7377
     - 7831
     - 8198
+    - 8550
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,15 +46,18 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/agent-operated-software/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.582Z
+  fetched_at: 2026-11-02T09:06:34.145Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: agent-operated-software
-  description: Agent skill from mvschwarz/openrig
+  description: Use when designing, building, operating, or diagnosing an ongoing
+    application whose live backend or control loop includes OpenRig agents,
+    including applications with a Markdown, YAML, or JSON agent control plane or
+    a thin surface over specialist agent roles.
   folder_path: packages/daemon/assets/plugins/openrig-core/skills/agent-operated-software
   extra_files: []
-  pack_total_skills: 54
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code

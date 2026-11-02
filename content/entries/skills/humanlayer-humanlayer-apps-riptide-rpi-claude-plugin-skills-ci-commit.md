@@ -1,8 +1,10 @@
 ---
 slug: humanlayer-humanlayer-apps-riptide-rpi-claude-plugin-skills-ci-commit
 name: ci-commit
-tagline: Agent skill from humanlayer/humanlayer
-summary: Agent skill from humanlayer/humanlayer
+tagline: Only use when the user explicitly invokes this skill by name.
+summary: "1. Think about what changed: - Review the conversation history and
+  understand what was accomplished - Run git status to see current changes - Run
+  git diff to understand the modifications - Consider whether changes sho..."
 categories:
   - other
 tags:
@@ -14,7 +16,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: humanlayer/humanlayer
@@ -22,14 +24,15 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12528
-  last_commit: 2026-10-26T01:07:13Z
-  stars_delta_7d: 539
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 12750
+  last_commit: 2026-10-31T16:19:01Z
+  stars_delta_7d: 222
+  stars_growth_pct: 1.8
+  trending_score: 225.93
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 12528
+    - 12750
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,19 +40,47 @@ readme_source:
   repo: humanlayer/humanlayer
   path: apps/riptide-rpi-claude-plugin/skills/ci-commit/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:52.198Z
+  fetched_at: 2026-11-02T09:06:26.167Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ci-commit
-  description: Agent skill from humanlayer/humanlayer
+  description: Only use when the user explicitly invokes this skill by name.
   folder_path: apps/riptide-rpi-claude-plugin/skills/ci-commit
   extra_files: []
-  pack_total_skills: 27
+  pack_total_skills: 22
   is_pack_primary: false
   clients:
     - claude-code
   pack_slug: humanlayer-humanlayer
 ---
 
-Agent skill from humanlayer/humanlayer
+# Commit Changes
+You are tasked with creating git commits for the changes made during this session.
+
+## Process:
+
+1. **Think about what changed:**
+   - Review the conversation history and understand what was accomplished
+   - Run `git status` to see current changes
+   - Run `git diff` to understand the modifications
+   - Consider whether changes should be one commit or multiple logical commits
+
+2. **Plan your commit(s):**
+   - Identify which files belong together
+   - Draft clear, descriptive commit messages
+   - Use imperative mood in commit messages
+   - Focus on why the changes were made, not just what
+
+3. **Execute upon confirmation:**
+   - Use `git add` with specific files (never use `-A` or `.`)
+   - Never commit the `rpi/` directory or anything inside it!
+   - Never commit dummy files, test scripts, or other files which you created or which appear to have been created but which were not part of your changes or directly caused by them (e.g. generated code)
+   - Create commits with your planned messages until all of your changes are committed with `git commit -m`
+
+## Remember:
+- You have the full context of what was done in this session
+- Group related changes together
+- Keep commits focused and atomic when possible
+- The user trusts your judgment - they asked you to commit
+- **IMPORTANT**: - never stop and ask for feedback from the user.

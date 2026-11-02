@@ -1,8 +1,12 @@
 ---
 slug: krillinai-opencreator-skills-krillinai-cover
 name: krillinai-cover
-tagline: Agent skill from krillinai/OpenCreator
-summary: Agent skill from krillinai/OpenCreator
+tagline: Use when generating a cover image with the KrillinAI CLI from a
+  complete image prompt, including validating image-provider configuration and
+  inspectin
+summary: The prompt must already contain the desired title text, language,
+  composition, visual style, and any useful source-video context. The current
+  CLI does not expose a reference-image argument and does not automatically s...
 categories:
   - media-creative
 tags:
@@ -11,10 +15,10 @@ tags:
   - deskop-app
   - dubbing
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: krillinai/OpenCreator
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13936
-  last_commit: 2026-10-26T01:28:37Z
-  stars_delta_7d: 235
-  stars_growth_pct: 1.7
-  trending_score: 239.03
+  stars: 14088
+  last_commit: 2026-11-02T05:56:31Z
+  stars_delta_7d: 152
+  stars_growth_pct: 1.1
+  trending_score: 153.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12614
     - 12884
     - 13701
     - 13936
+    - 14088
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,14 @@ readme_source:
   repo: krillinai/OpenCreator
   path: skills/krillinai-cover/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:44:49.730Z
+  fetched_at: 2026-11-02T09:06:44.739Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: krillinai-cover
-  description: Agent skill from krillinai/OpenCreator
+  description: Use when generating a cover image with the KrillinAI CLI from a
+    complete image prompt, including validating image-provider configuration and
+    inspecting the generated image and saved prompt.
   folder_path: skills/krillinai-cover
   extra_files: []
   pack_total_skills: 9
@@ -57,4 +63,41 @@ skill:
   pack_slug: krillinai-opencreator
 ---
 
-Agent skill from krillinai/OpenCreator
+# KrillinAI Cover
+Use this skill for the implemented `cover` command. Read `skills/krillinai-cli/references/cli-contract.md` first for binary location, execution working directory, configuration, and JSON behavior.
+
+## Command
+
+```bash
+(cd "$KRILLINAI_CWD" && "$KRILLINAI_CLI" cover \
+  --workdir "$WORKDIR" \
+  --prompt "$COVER_PROMPT" \
+  --size 1536x1024)
+```
+
+The prompt must already contain the desired title text, language, composition, visual style, and any useful source-video context. The current CLI does not expose a reference-image argument and does not automatically send `origin_cover.jpg` to the image model.
+
+## Inputs
+
+- `--workdir`: an existing or new task directory.
+- `--prompt`: required final prompt sent to the configured image model.
+- `--size`: optional image size; the default is `1024x1024`.
+- `[image]` configuration in `<execution-cwd>/config/config.toml`.
+
+## Outputs
+
+- `generated_cover.png`
+- `cover_prompt.final.txt`
+- `krillinai_manifest.json`
+
+## Dry Run
+
+`cover --dry-run` validates the command and writes a manifest, but it does not call the image model or create `generated_cover.png`.
+
+## Verification
+
+- Require terminal JSON with `"ok": true`.
+- Read output paths from the terminal response or manifest.
+- Confirm `generated_cover.png` is non-empty and decodable as an image.
+- Confirm `cover_prompt.final.txt` exactly records the submitted prompt.
+- If provider configuration is missing or generation fails, report the returned error rather than treating the manifest alone as success.

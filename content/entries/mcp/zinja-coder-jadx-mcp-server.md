@@ -13,29 +13,29 @@ tags:
   - application-security
   - llm
 status: active
-quality_percentile: 45
+quality_percentile: 41
 selection_reason: quality_percentile
 first_seen: 2025-04-08T11:30:57
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: zinja-coder/jadx-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 811
+  stars: 825
   last_commit: 2026-10-19T00:23:17Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.7
-  trending_score: 6.04
-  rank_current: 86
-  rank_delta: -16
+  stars_delta_7d: 14
+  stars_growth_pct: 1.7
+  trending_score: 14.24
+  rank_current: 71
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 791
     - 800
     - 805
     - 811
+    - 825
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: zinja-coder/jadx-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.553Z
+  fetched_at: 2026-11-02T09:05:57.600Z
   truncated: false
 type: mcp_server
 launch:
@@ -237,6 +237,7 @@ Thanks to these wonderful people for their contributions ⭐
 #### Download now: https://github.com/zinja-coder/jadx-ai-mcp/releases
 
 ---
+
 ## 🤖 What is JADX-MCP-SERVER?
 
 **JADX MCP Server** is a standalone Python server that interacts with a modified version of `jadx-gui` (see: [jadx-ai-mcp](https://github.com/zinja-coder/jadx-ai-mcp)) via MCP (Model Context Protocol). It lets LLMs communicate with the decompiled Android app context live.
@@ -289,6 +290,7 @@ It is combination of two tools:
 2. JADX MCP SERVER
 
 ---
+
 # Zin MCP Suite
  - **[APKTool-MCP-Server](https://github.com/zinja-coder/apktool-mcp-server)**
  - **[JAD-AI-MCP-Plugin](https://github.com/zinja-coder/jadx-ai-mcp)**
@@ -331,6 +333,7 @@ raw dump. Stripping never changes line numbers, so `with_line_numbers=True` and
 - `xrefs_to_method()` : Find all references to a method (includes override-related methods, supports pagination)
 - `xrefs_to_field()` : Find all references to a field (returns methods that access the field, supports pagination)
 ---
+
 #### Note: Tested on Claude Desktop. Support for other LLMs might be tested in future.
 
 ## 🗒️ Sample Prompts
@@ -398,6 +401,7 @@ raw dump. Stripping never changes line numbers, so `with_line_numbers=True` and
 
 
 ---
+
 ## 🛠️ Getting Started
 
 [READ HERE](https://github.com/zinja-coder/jadx-ai-mcp?tab=readme-ov-file#%EF%B8%8F-getting-started)
@@ -578,6 +582,7 @@ The developers of `jadx-ai-mcp` and `jadx_mcp_server` shall not be held liable f
 Use responsibly. Respect intellectual property. Follow ethical hacking practices.
 
 ---
+
 ## 🙌 Contribute or Support
 
 - Found it useful? Give it a ⭐️
@@ -585,4 +590,5 @@ Use responsibly. Respect intellectual property. Follow ethical hacking practices
 - Built something on top? DM me or mention me — I’ll add it to the README!
 
 ---
+
 Built with ❤️ for the reverse engineering and AI communities.

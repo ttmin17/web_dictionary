@@ -17,26 +17,26 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: open-metadata/OpenMetadata
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15581
-  last_commit: 2026-10-26T07:30:21Z
-  stars_delta_7d: 70
+  stars: 15655
+  last_commit: 2026-11-02T08:58:32Z
+  stars_delta_7d: 74
   stars_growth_pct: 0.5
-  trending_score: 70.32
-  rank_current: 31
-  rank_delta: -11
+  trending_score: 74.35
+  rank_current: 28
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15400
     - 15460
     - 15511
     - 15581
+    - 15655
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: open-metadata/OpenMetadata
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:53.826Z
+  fetched_at: 2026-11-02T09:05:30.424Z
   truncated: false
 type: mcp_server
 launch:
@@ -82,6 +82,7 @@ OpenMetadata provides the context AI needs to know:
 - what conversations, decisions, assumptions, and memory nuggets have already been captured about it
 
 ---
+
 ## Why OpenMetadata for AI?
 
 AI systems need more than data access. They need governed context, business meaning, trust signals, lineage, usage, ownership, standards, and organizational memory.
@@ -111,6 +112,7 @@ With OpenMetadata, users and AI agents can answer:
 - What decisions, assumptions, incidents, or conversations have already been captured about this asset?
 
 ---
+
 ## The Context OpenMetadata Connects
 
 OpenMetadata collects and connects the context AI needs to reason safely over enterprise data.
@@ -126,6 +128,7 @@ OpenMetadata collects and connects the context AI needs to reason safely over en
 | **Standards and interoperability** | DCAT, DPROD, PROV-O, OpenLineage, ODCS, RDF/OWL, JSON-LD, SHACL, JSON Schema, APIs, events, and metadata schemas | Helps context move across tools, agents, catalogs, contracts, and knowledge graphs |
 
 ---
+
 ## Architecture: Context + Memory Graph
 
 ![How OpenMetadata Works](https://raw.githubusercontent.com/open-metadata/OpenMetadata/main/docs/assets/open-context-layer-architecture.png)
@@ -142,6 +145,7 @@ OpenMetadata is built around an open, schema-first metadata graph.
 Memory is part of the architecture, not a side channel. It lets engineers use APIs, SDKs, MCP, or AI workflows to preserve conversational context and convert tribal knowledge into reusable organizational knowledge.
 
 ---
+
 ## Context Graph, Semantics, and Memory
 
 ![OpenMetadata Context Graph](https://raw.githubusercontent.com/open-metadata/OpenMetadata/main/docs/assets/open-context-layer-graph.png)
@@ -173,6 +177,7 @@ Memory              ──attachedTo──────────> Table / Colu
 This graph gives AI systems the relationships, meaning, memory, and governance they need to reason across the data estate.
 
 ---
+
 ## Memories: Organizational Context for Humans and Agents
 
 ![Memory Primitives](https://raw.githubusercontent.com/open-metadata/OpenMetadata/main/docs/assets/memory-primitives.png)
@@ -194,6 +199,7 @@ Use memories to preserve:
 Memories unlock tribal knowledge by making it reusable, governed, searchable, and available to every human, assistant, and agent that touches your data.
 
 ---
+
 ## MCP, Semantic Search, APIs, AI SDK, and Memory
 
 OpenMetadata makes context actionable through AI- and developer-friendly interfaces.
@@ -234,6 +240,7 @@ OpenMetadata exposes APIs, SDKs, events, and webhooks so teams can ingest, updat
 Developers can use the AI SDK to build custom AI applications that use OpenMetadata context and memory programmatically.
 
 ---
+
 ## Use It From Code
 
 Two packages, depending on what you're building.
@@ -298,6 +305,7 @@ Works with LangChain and OpenAI function calling out of the box.
 - **REST API:** https://docs.open-metadata.org/latest/main-concepts/metadata-standard/apis
 
 ---
+
 ## What You Can Build
 
 ### AI Data Discovery
@@ -322,6 +330,7 @@ Use AI workflows to create tests, summarize failures, identify root causes, pres
 Connect coding agents to OpenMetadata so they understand schemas, owners, lineage, business definitions, quality expectations, contracts, and memory before generating SQL, dbt models, documentation, tests, migration plans, or impact analysis.
 
 ---
+
 ## Open Standards and Interoperability
 
 OpenMetadata is built on open metadata standards.
@@ -350,6 +359,7 @@ OpenMetadata supports and aligns with the standards that matter for AI context a
 These standards make OpenMetadata a foundation for interoperable semantic metadata, linked data, data products, data contracts, lineage, provenance, and enterprise knowledge graphs.
 
 ---
+
 ## Core Platform Capabilities
 
 | Capability | Includes |
@@ -364,6 +374,7 @@ These standards make OpenMetadata a foundation for interoperable semantic metada
 | **Extensibility and Automation** | 130+ connectors, APIs, SDKs, webhooks, events, applications, ingestion framework, custom connectors, custom properties, MCP tools, AI SDK workflows |
 
 ---
+
 ## Quickstart
 
 1. **Try OpenMetadata**: [OpenMetadata Sandbox](https://sandbox.open-metadata.org)
@@ -377,6 +388,7 @@ These standards make OpenMetadata a foundation for interoperable semantic metada
 9. **Build AI Applications** using OpenMetadata APIs, SDKs, MCP tools, events, and AI SDK workflows.
 
 ---
+
 ## Documentation and Community
 
 - Documentation: [docs.open-metadata.org](https://docs.open-metadata.org/)
@@ -388,6 +400,7 @@ These standards make OpenMetadata a foundation for interoperable semantic metada
 - Blog: [blog.open-metadata.org](https://blog.open-metadata.org/)
 
 ---
+
 ## Open Source and Enterprise AI
 
 OpenMetadata is the open-source foundation for AI context, metadata, organizational memory, semantics, governance, quality, lineage, data contracts, open standards, APIs, MCP, and AI SDK workflows.
@@ -398,17 +411,21 @@ For managed enterprise capabilities, AI agents, automation, AI Studio, enterpris
 - [Collate AI](https://www.getcollate.io/collate-ai)
 
 ---
+
 ## Contributing
 
 We welcome contributions from the community. You can help improve metadata schemas and standards, add connectors, improve ingestion workflows, enhance MCP tools, improve semantic search, add memory workflows, add documentation, fix bugs, and improve the user experience.
 
-See the contribution guide in this repository to get started.
+See [CONTRIBUTING.md](https://github.com/open-metadata/OpenMetadata/blob/main/CONTRIBUTING.md) to get started. Python contributors should follow
+the checkout's [locked local Python environment guide](https://github.com/open-metadata/OpenMetadata/blob/main/DEVELOPER.md#locked-local-python-environments)
+for profile selection, installation and test commands.
 
 - [How To Contribute](https://docs.open-metadata.org/latest/developers/contribute)
 - [Development Environment Setup](https://docs.open-metadata.org/latest/developers/contribute/development-environment-setup)
 - [Build Code & Run Tests](https://docs.open-metadata.org/latest/developers/contribute/build-code-and-run-tests)
 
 ---
+
 ## License
 
 OpenMetadata is released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).

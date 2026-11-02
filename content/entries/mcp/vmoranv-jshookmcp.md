@@ -12,28 +12,29 @@ tags:
   - browser-automation
   - chrome-devtools-protocol
 status: active
-quality_percentile: 93
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: vmoranv/jshookmcp
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2062
-  last_commit: 2026-10-25T09:21:53Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.2
-  trending_score: 5.01
-  rank_current: 91
-  rank_delta: -43
+  stars: 2095
+  last_commit: 2026-11-02T07:28:42Z
+  stars_delta_7d: 33
+  stars_growth_pct: 1.6
+  trending_score: 33.53
+  rank_current: 48
+  rank_delta: 38
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2041
     - 2057
     - 2062
+    - 2095
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: vmoranv/jshookmcp
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:38:02.882Z
+  fetched_at: 2026-11-02T09:05:40.669Z
   truncated: false
 type: mcp_server
 launch:
@@ -120,6 +121,7 @@ English · [中文](https://github.com/vmoranv/jshookmcp/blob/master/README.zh.m
 </p>
 
 ---
+
 </div>
 
 ## What makes jshook different
@@ -133,6 +135,7 @@ Most MCP servers for JS analysis expose a handful of hand-rolled tools or wrap a
 - **Dynamic extensibility.** Hot-reload plugins, declarative workflows, and auto-discovery keep the server growing without a redeploy.
 
 ---
+
 ## Capability overview
 
 A scan of what's in the box. Each row links to the detailed [Capability overview](#capability-overview) below.
@@ -154,6 +157,7 @@ A scan of what's in the box. Each row links to the detailed [Capability overview
 | **Pluggable extension registry** | Hot-reload plugins · declarative workflows · auto-discovered domains |
 
 ---
+
 ## Use cases
 
 | Scenario | What you do | Domains involved |
@@ -169,6 +173,7 @@ A scan of what's in the box. Each row links to the detailed [Capability overview
 | Hook a function in a live process | `frida_spawn` → `frida_attach_interceptor` → `frida_run_script` → `frida_enumerate_functions` | `binary-instrument` |
 
 ---
+
 ## Quick start
 
 No global install needed — add to your MCP client config and you're ready.
@@ -228,6 +233,7 @@ Switch `MCP_TOOL_PROFILE` to `workflow` once you start chaining composite script
 when you need every tool. `coverage_report` shows the active set on demand.
 
 ---
+
 ## Highlights
 
 - **Profile ladder.** Start in `search` (~3K tokens of metadata); promote to `workflow` when chaining composite scripts; escalate to `full` only when every tool is actually needed. `coverage_report` shows what's active on demand.
@@ -239,6 +245,7 @@ when you need every tool. `coverage_report` shows the active set on demand.
 - **Plugins and workflows.** Drop a directory, get a domain. Write a YAML pipeline, run it as one tool. The registry self-discovers.
 
 ---
+
 ## Transport and deployment
 
 The server supports two transports out of the box.
@@ -255,6 +262,7 @@ and tool activations across reconnects.
 For production deployments see the [Security and Production guide](https://vmoranv.github.io/jshookmcp/operations/security-and-production.html).
 
 ---
+
 ## Recent runtime notes
 
 - HTTP transport now multiplexes independent MCP sessions and restores runtime state after reconnects.
@@ -262,12 +270,13 @@ For production deployments see the [Security and Production guide](https://vmora
 - Browser CAPTCHA solving is now explicit-input driven: pass `taskKind`, `siteKey`, `imageBase64`, `callbackName`, and `responseSelector` as needed. Built-in widget/page signature probing is intentionally not used.
 
 ---
+
 ## Registry snapshot
 
 The built-in surface below is generated from the runtime registry and checked in CI.
 
 <!-- metadata-sync:start -->
-- Package version: `0.4.2`
+- Package version: `0.4.3`
 - Built-in tools: `735`
 - Domains: `adb-bridge`, `binary-instrument`, `browser`, `canvas`, `coordination`, `core`, `cross-domain`, `dart-inspector`, `debugger`, `encoding`, `exploit-dev`, `extension-registry`, `graphql`, `instrumentation`, `maintenance`, `memory`, `mojo-ipc`, `native-bridge`, `native-emulator`, `network`, `platform`, `process`, `protocol-analysis`, `proxy`, `session`, `sourcemap`, `streaming`, `syscall-hook`, `tasks`, `tls-inspector`, `trace`, `transform`, `v8-inspector`, `wasm`, `webgpu`, `workflow`
 - Note: this snapshot is generated from the runtime registry; do not edit the counts by hand.
@@ -276,6 +285,7 @@ The built-in surface below is generated from the runtime registry and checked in
 > **[View the complete Tool Reference ↗](https://vmoranv.github.io/jshookmcp/reference/)**
 
 ---
+
 ## Architecture
 
 - **Runtime registry** — domains auto-discovered via `manifest.ts`; add a domain by creating one file.
@@ -288,6 +298,7 @@ The built-in surface below is generated from the runtime registry and checked in
 See the [Architecture guide](https://vmoranv.github.io/jshookmcp/guide/best-practices.html) and [Configuration reference](https://vmoranv.github.io/jshookmcp/guide/configuration.html) for the canonical details.
 
 ---
+
 ## Build from source
 
 Requirements: Node.js 22.22.2+, pnpm 10.x.
@@ -307,6 +318,7 @@ Native helpers are bundled via `pnpm build`; on first run the server may downloa
 runtimes (ONNX, Z3, Binaryen, Camoufox, Playwright) depending on the profile.
 
 ---
+
 ## Project stats
 
 <div align="center">
@@ -324,6 +336,7 @@ runtimes (ONNX, Z3, Binaryen, Camoufox, Playwright) depending on the profile.
 </div>
 
 ---
+
 ## License
 
 [AGPLv3](https://github.com/vmoranv/jshookmcp/blob/master/LICENSE).

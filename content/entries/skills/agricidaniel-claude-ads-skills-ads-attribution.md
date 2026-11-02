@@ -1,8 +1,12 @@
 ---
 slug: agricidaniel-claude-ads-skills-ads-attribution
 name: ads-attribution
-tagline: Agent skill from AgriciDaniel/claude-ads
-summary: Agent skill from AgriciDaniel/claude-ads
+tagline: Audit cross-platform attribution, conversion definitions, reporting
+  windows, GA4, AdServices and AdAttributionKit, MMPs, browser and server
+  events, of
+summary: Do not assume one platform is ground truth, add incompatible reports
+  together, or recommend an attribution model without the operator's decision
+  context.
 categories:
   - productivity-ops
 tags:
@@ -11,10 +15,10 @@ tags:
   - claude-code
   - claude-code-skill
 status: active
-quality_percentile: 77
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-ads
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10425
-  last_commit: 2026-10-17T01:35:42Z
-  stars_delta_7d: 301
-  stars_growth_pct: 3
-  trending_score: 309.95
+  stars: 10660
+  last_commit: 2026-11-01T21:08:14Z
+  stars_delta_7d: 235
+  stars_growth_pct: 2.3
+  trending_score: 240.3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9774
     - 9953
     - 10124
     - 10425
+    - 10660
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +44,21 @@ readme_source:
   repo: AgriciDaniel/claude-ads
   path: skills/ads-attribution/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:51.734Z
+  fetched_at: 2026-11-02T09:06:30.005Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ads-attribution
-  description: Agent skill from AgriciDaniel/claude-ads
+  description: Audit cross-platform attribution, conversion definitions, reporting
+    windows, GA4, AdServices and AdAttributionKit, MMPs, browser and server
+    events, offline conversions, and platform reconciliation. Use for
+    attribution audit, attribution models, conversion windows, requests to add
+    or total Meta and Google conversions, incompatible reporting-window
+    aggregation, GA4 attribution, MMP review, AppsFlyer, Adjust, Branch,
+    Singular, or cross-platform discrepancies.
   folder_path: skills/ads-attribution
   extra_files: []
-  pack_total_skills: 34
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

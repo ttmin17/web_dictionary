@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/competitors/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.288Z
+  fetched_at: 2026-11-02T09:06:13.822Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +68,7 @@ skill:
     - evals/evals.json
     - references/content-architecture.md
     - references/templates.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -108,6 +109,7 @@ Before creating competitor pages, understand:
    - Brand positioning
 
 ---
+
 ## Core Principles
 
 ### 1. Honesty Builds Trust
@@ -142,6 +144,7 @@ Comparison pages are public claims about another company. Every one should survi
 - **Separate fact from interpretation.** Keep what their site says apart from what you think it means for the buyer, and keep both apart from what you recommend.
 
 ---
+
 ## Page Formats
 
 ### Format 1: [Competitor] Alternative (Singular)
@@ -162,6 +165,7 @@ Comparison pages are public claims about another company. Every one should survi
 7. CTA
 
 ---
+
 ### Format 2: [Competitor] Alternatives (Plural)
 
 **Search intent**: User is researching options, earlier in journey
@@ -184,6 +188,7 @@ Comparison pages are public claims about another company. Every one should survi
 **AI-answer expectations by stage**: these pages often earn *citations* in AI answers, but whether AI *recommends* your brand from them depends on offsite consensus (reviews, forums, analysts) — for emerging brands, a self-ranked list can surface the competitors in the AI answer while you get only the citation. Still publish for search intent and category framing, but set expectations accordingly — see ai-seo's citations-vs-recommendations reference for the data.
 
 ---
+
 ### Format 3: You vs [Competitor]
 
 **Search intent**: User is directly comparing you to a specific competitor
@@ -203,6 +208,7 @@ Comparison pages are public claims about another company. Every one should survi
 8. CTA
 
 ---
+
 ### Format 4: [Competitor A] vs [Competitor B]
 
 **Search intent**: User comparing two competitors (not you directly)
@@ -220,6 +226,7 @@ Comparison pages are public claims about another company. Every one should survi
 **Why this works**: Captures search traffic for competitor terms, positions you as knowledgeable.
 
 ---
+
 ## Essential Sections
 
 ### TL;DR Summary
@@ -243,6 +250,7 @@ Cover what transfers, what needs reconfiguration, support offered, and quotes fr
 **For detailed templates**: See [references/templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/competitors/references/templates.md)
 
 ---
+
 ## Content Architecture
 
 ### Centralized Competitor Data
@@ -258,6 +266,7 @@ Create a single source of truth for each competitor with:
 **For data structure and examples**: See [references/content-architecture.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/competitors/references/content-architecture.md)
 
 ---
+
 ## Research Process
 
 ### Deep Competitor Research
@@ -293,6 +302,7 @@ When asked to check existing competitive content for stale or risky claims, audi
 Apply the Evidence Discipline rules above to every claim, including those in internal sales assets. Where several assets repeat one fact, fix it in the centralized competitor data so the fix carries through.
 
 ---
+
 ## SEO Considerations
 
 ### Keyword Targeting
@@ -313,6 +323,7 @@ Apply the Evidence Discipline rules above to every claim, including those in int
 Consider FAQ schema for common questions like "What is the best alternative to [Competitor]?"
 
 ---
+
 ## Output Format
 
 ### Competitor Data File
@@ -328,6 +339,7 @@ Recommended pages to create with priority order based on search volume.
 Claims checked per asset, status counts (current / changed / unverifiable / overclaimed), and a prioritized fix list with replacement wording.
 
 ---
+
 ## Task-Specific Questions
 
 1. What are common reasons people switch to you?
@@ -336,6 +348,7 @@ Claims checked per asset, status counts (current / changed / unverifiable / over
 4. Do you offer migration support?
 
 ---
+
 ## Related Skills
 
 - **programmatic-seo**: For building competitor pages at scale

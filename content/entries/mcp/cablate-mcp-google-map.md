@@ -3,8 +3,9 @@ slug: cablate-mcp-google-map
 name: mcp-google-map
 tagline: 18 Google Maps tools and 3 Agent Skills for place search, routes,
   travel planning, and local SEO—via MCP or standalone CLI.
-summary: 18 Google Maps tools and 3 Agent Skills for place search, routes,
-  travel planning, and local SEO—via MCP or standalone CLI.
+summary: "@cablate/mcp-google-map turns Google Maps Platform into 18 read-only
+  agent tools and three focused Skills. An agent can find real places, verify
+  routes, compare options, build practical itineraries, or audit local sea..."
 categories:
   - domain-research
 tags:
@@ -13,28 +14,29 @@ tags:
   - codex-plugin
   - geocoding
 status: active
-quality_percentile: 57
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: cablate/mcp-google-map
   official_vendor: false
   license: MIT
 signals:
-  stars: 484
+  stars: 487
   last_commit: 2026-10-22T07:11:22Z
-  stars_delta_7d: 11
-  stars_growth_pct: 2.3
-  trending_score: 11.26
-  rank_current: 76
-  rank_delta: 2
+  stars_delta_7d: 3
+  stars_growth_pct: 0.6
+  trending_score: 3.02
+  rank_current: 97
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 471
     - 473
     - 484
+    - 487
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +45,7 @@ readme_source:
   repo: cablate/mcp-google-map
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.772Z
+  fetched_at: 2026-11-02T09:06:34.310Z
   truncated: false
 type: mcp_server
 launch:
@@ -109,7 +111,7 @@ These are data and planning tools, not guarantees of safety, accessibility, open
 | **MCP stdio** | Claude Desktop, Cursor, VS Code, and other local MCP clients | The client starts a local MCP process |
 | **Streamable HTTP** | Multi-session, containerized, LAN, or remote access | A self-hosted server exposes `/mcp` |
 
-All options require Node.js 18+ and a Google Maps Platform API key. Live calls may be billable. Enable the APIs needed by your selected tools; common place and route workflows require **Places API (New)**, **Routes API**, and often **Geocoding API**.
+All options require Node.js 22+ and a Google Maps Platform API key. Live calls may be billable. Enable the APIs needed by your selected tools; common place and route workflows require **Places API (New)**, **Routes API**, and often **Geocoding API**.
 
 ## Start with Codex—no MCP required
 

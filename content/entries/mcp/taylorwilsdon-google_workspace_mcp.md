@@ -18,25 +18,26 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: taylorwilsdon/google_workspace_mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3413
-  last_commit: 2026-10-25T22:24:01Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.2
-  trending_score: 42.52
-  rank_current: 41
-  rank_delta: -14
+  stars: 3459
+  last_commit: 2026-10-30T21:39:34Z
+  stars_delta_7d: 46
+  stars_growth_pct: 1.3
+  trending_score: 46.62
+  rank_current: 39
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3332
     - 3371
     - 3413
+    - 3459
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: taylorwilsdon/google_workspace_mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:00.893Z
+  fetched_at: 2026-11-02T09:05:36.693Z
   truncated: false
 type: mcp_server
 launch:
@@ -96,12 +97,16 @@ By leveraging native OAuth 2.1, stateless deployment capability and external aut
 </a>
 </div>
 
----**See it in action:**
+---
+
+**See it in action:**
 <div align="center">
   <video width="400" src="https://github.com/user-attachments/assets/a342ebb4-1319-4060-a974-39d202329710"></video>
 </div>
 
----## What It Does
+---
+
+## What It Does
 
 Workspace MCP connects AI assistants to all twelve major Google Workspace services - 120+ tools behind a single MCP server, with OAuth 2.1 multi-user auth, three progressive tool tiers, read-only mode, a full CLI, and stateless container deployment. It runs locally over stdio for legacy clients and remotely over streamable HTTP with full implementation of the latest MCP spec.
 
@@ -317,6 +322,7 @@ Production tuning is all environment variables; the names below link to their re
 - **Google API requests:** [`WORKSPACE_MCP_GOOGLE_API_WORKERS`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_GOOGLE_API_WORKERS), [`WORKSPACE_MCP_GOOGLE_API_TIMEOUT_SECONDS`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_GOOGLE_API_TIMEOUT_SECONDS)
 - **External OAuth token validation:** [`WORKSPACE_MCP_TOKEN_VALIDATION_WORKERS`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_TOKEN_VALIDATION_WORKERS), [`WORKSPACE_MCP_TOKEN_VALIDATION_CACHE_TTL`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_TOKEN_VALIDATION_CACHE_TTL)
 - **Memory ceilings:** [`WORKSPACE_MCP_MAX_FILE_BYTES`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_MAX_FILE_BYTES), [`WORKSPACE_MCP_STATELESS_INLINE_MAX_BYTES`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_STATELESS_INLINE_MAX_BYTES), [`WORKSPACE_MCP_MAX_OFFICE_XML_BYTES`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_MAX_OFFICE_XML_BYTES)
+- **Text returned per call:** `get_drive_file_content` returns long content a page at a time by default, so a long file does not fill the model's context. `WORKSPACE_MCP_MAX_CONTENT_CHARS` sets the page size (default `40000`; `0` returns whole content by default). Each page ends with a note giving the `offset` to read on from. This is only the default: a client can always pass `full_content=true` to get the whole file in one call. Text being read page by page is kept in memory for ten minutes so later pages are not downloaded again, within `WORKSPACE_MCP_PAGED_CONTENT_CACHE_BYTES` per process (default `33554432`, 32 MiB; `0` keeps nothing).
 - **Sessions and health probes:** [`WORKSPACE_MCP_SESSION_IDLE_TIMEOUT`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_SESSION_IDLE_TIMEOUT), [`WORKSPACE_MCP_READINESS_TIMEOUT_SECONDS`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_READINESS_TIMEOUT_SECONDS)
 - **DNS-rebinding protection:** `WORKSPACE_MCP_ALLOWED_HOSTS`, a comma-separated list of hostnames without ports (for example `workspace-mcp,10.0.0.5`). When set, requests whose `Host` is not loopback, listed, or the host of `WORKSPACE_EXTERNAL_URL` or an allowed origin get `403`, so include every name clients and health probes use. Unset, any `Host` is accepted.
 - **Hosted servers without access to the caller's disk:** [`WORKSPACE_MCP_DISABLE_LOCAL_FILES`](https://workspacemcp.com/docs/deployment?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=deploy-env-vars#WORKSPACE_MCP_DISABLE_LOCAL_FILES)
@@ -351,5 +357,7 @@ Single-file service modules live in `g<service>/`, tools are registered with `@s
 
 MIT - see [`LICENSE`](https://github.com/taylorwilsdon/google_workspace_mcp/blob/main/LICENSE). The license is 21 lines and says what it means.
 
----Validations:
+---
+
+Validations:
 [![MCP Badge](https://lobehub.com/badge/mcp/taylorwilsdon-google_workspace_mcp)](https://lobehub.com/mcp/taylorwilsdon-google_workspace_mcp)

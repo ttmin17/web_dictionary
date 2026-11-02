@@ -16,26 +16,26 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: evalstate/fast-agent
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3949
-  last_commit: 2026-10-26T02:39:26Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.2
-  trending_score: 7.01
-  rank_current: 126
-  rank_delta: -84
+  stars: 3954
+  last_commit: 2026-11-02T08:33:54Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.1
+  trending_score: 5.01
+  rank_current: 135
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3929
     - 3932
     - 3942
     - 3949
+    - 3954
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: evalstate/fast-agent
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.698Z
+  fetched_at: 2026-11-02T09:05:36.278Z
   truncated: false
 type: agent_tool
 tool:

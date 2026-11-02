@@ -15,29 +15,29 @@ tags:
   - ai-agents
   - autogen
 status: active
-quality_percentile: 87
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: doobidoo/mcp-memory-service
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2046
-  last_commit: 2026-10-26T04:42:53Z
-  stars_delta_7d: 25
-  stars_growth_pct: 1.2
-  trending_score: 25.31
-  rank_current: 56
-  rank_delta: 7
+  stars: 2060
+  last_commit: 2026-11-02T08:41:21Z
+  stars_delta_7d: 14
+  stars_growth_pct: 0.7
+  trending_score: 14.1
+  rank_current: 72
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1993
     - 2012
     - 2021
     - 2046
+    - 2060
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: doobidoo/mcp-memory-service
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:02.870Z
+  fetched_at: 2026-11-02T09:05:48.804Z
   truncated: false
 type: mcp_server
 launch:
@@ -69,6 +69,7 @@ context in 5ms — without cloud lock-in or API costs.
 **Works with LangGraph · CrewAI · AutoGen · any HTTP client · Claude Desktop · OpenCode**
 
 ---
+
 [![Website](https://img.shields.io/badge/Website-mcpmemory.services-00e5ff?logo=cloudflare&logoColor=white)](https://mcpmemory.services)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PyPI version](https://img.shields.io/pypi/v/mcp-memory-service?color=blue&logo=pypi&logoColor=white)](https://pypi.org/project/mcp-memory-service/)
@@ -78,7 +79,10 @@ context in 5ms — without cloud lock-in or API costs.
 [![OAuth 2.0](https://img.shields.io/badge/Auth-OAuth%202.0%20%2B%20DCR-green)](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/oauth-setup.md)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/doobidoo/mcp-memory-service)
 
+Getting started: [English](https://mcpmemory.services/) · [Deutsch](https://mcpmemory.services/de/) · [Español](https://mcpmemory.services/es/) · [日本語](https://mcpmemory.services/ja/) · [简体中文](https://mcpmemory.services/zh-cn/)
+
 ---
+
 <div align="center">
   <video src="https://mcpmemory.services/assets/videos/knowledge-graph-3d.mp4" poster="https://mcpmemory.services/assets/images/knowledge-graph-3d-poster.png" width="820" autoplay loop muted playsinline controls>
     <a href="https://mcpmemory.services/"><img src="https://mcpmemory.services/assets/images/knowledge-graph-3d.png" alt="3D knowledge graph — memories as a glowing, interactive galaxy" width="820"></a>
@@ -87,6 +91,7 @@ context in 5ms — without cloud lock-in or API costs.
 </div>
 
 ---
+
 ## Why Agents Need This
 
 Your AI assistant forgets everything when you start a new chat. You spend 10 minutes re-explaining your architecture. **Again.** MCP Memory Service captures project context, architecture decisions, and code patterns automatically — new sessions start with everything already known.
@@ -108,6 +113,7 @@ Your AI assistant forgets everything when you start a new chat. You spend 10 min
 - **Embeddings run locally via ONNX** — memory never leaves your infrastructure
 
 ---
+
 ## 🚀 Get Started in 60 Seconds
 
 > Not sure which setup fits? The **[Setup Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/setup-guide.md)** walks you to the right path in under a minute.
@@ -234,6 +240,7 @@ For long-lived services, prefer Docker Milvus or Zilliz Cloud over Milvus Lite �
 </details>
 
 ---
+
 ## ⚡ Works With Your Favorite AI Tools
 
 - **Agent frameworks (REST):** LangGraph · CrewAI · AutoGen · OpenClaw/Nanobot · any HTTP client
@@ -245,6 +252,7 @@ Full list, plus clients without OAuth such as Home Assistant:
 **[docs/integrations.md](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/integrations.md)**
 
 ---
+
 ## ✨ Features
 
 ### Store and retrieve context
@@ -311,6 +319,7 @@ How it compares to Mem0, Zep and the MCP-native alternatives, benchmark results,
 deployments people run in production: **[mcpmemory.services](https://mcpmemory.services)**
 
 ---
+
 ## 🛠️ Configuration Highlights
 
 ```bash
@@ -333,6 +342,7 @@ Backends, embedding models, quality scoring and every environment variable:
 **[Configuration Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/mastery/configuration-guide.md)**
 
 ---
+
 ## 📚 Documentation
 
 - **[Setup Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/setup-guide.md)** – Decision tree and step-by-step paths
@@ -351,6 +361,7 @@ Also listed on [Glama](https://glama.ai/mcp/servers/doobidoo/mcp-memory-service)
 [Spark](https://spark.entire.vc/mcps/vb-mcp-memory-service).
 
 ---
+
 ## 📦 Releases
 
 Every release, with upgrade notes:
@@ -359,6 +370,7 @@ Every release, with upgrade notes:
 [archived history](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/archive/CHANGELOG-HISTORIC.md)
 
 ---
+
 ## 🤝 Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](https://github.com/doobidoo/mcp-memory-service/blob/main/CONTRIBUTING.md) for guidelines
@@ -380,6 +392,7 @@ pytest tests/      # Run test suite
 ```
 
 ---
+
 ## Supporting the Project
 
 MCP Memory Service is maintained by one person. If it saves you or your company time,

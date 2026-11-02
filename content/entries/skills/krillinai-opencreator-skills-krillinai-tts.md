@@ -1,8 +1,11 @@
 ---
 slug: krillinai-opencreator-skills-krillinai-tts
 name: krillinai-tts
-tagline: Agent skill from krillinai/OpenCreator
-summary: Agent skill from krillinai/OpenCreator
+tagline: Use when generating target-language dubbing with KrillinAI CLI from SRT
+  subtitles, including TTS audio creation and optional dubbed video generation.
+summary: "- --input-srt is required. Usually use targetlanguagesrt.srt. -
+  --video is optional but needed when generating videowithtts.mp4. - TTS
+  provider must be configured in /config/config.toml."
 categories:
   - media-creative
 tags:
@@ -11,10 +14,10 @@ tags:
   - deskop-app
   - dubbing
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: krillinai/OpenCreator
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13936
-  last_commit: 2026-10-26T01:28:37Z
-  stars_delta_7d: 235
-  stars_growth_pct: 1.7
-  trending_score: 239.03
+  stars: 14088
+  last_commit: 2026-11-02T05:56:31Z
+  stars_delta_7d: 152
+  stars_growth_pct: 1.1
+  trending_score: 153.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12614
     - 12884
     - 13701
     - 13936
+    - 14088
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +43,14 @@ readme_source:
   repo: krillinai/OpenCreator
   path: skills/krillinai-tts/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:44:49.730Z
+  fetched_at: 2026-11-02T09:06:44.739Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: krillinai-tts
-  description: Agent skill from krillinai/OpenCreator
+  description: Use when generating target-language dubbing with KrillinAI CLI from
+    SRT subtitles, including TTS audio creation and optional dubbed video
+    generation.
   folder_path: skills/krillinai-tts
   extra_files: []
   pack_total_skills: 9
@@ -57,4 +62,47 @@ skill:
   pack_slug: krillinai-opencreator
 ---
 
-Agent skill from krillinai/OpenCreator
+# KrillinAI TTS
+Use this skill for the `tts` stage. Read `skills/krillinai-cli/references/cli-contract.md` first for binary location, execution working directory, configuration, and JSON behavior.
+
+## Command
+
+```bash
+(cd "$KRILLINAI_CWD" && "$KRILLINAI_CLI" tts \
+  --workdir "$WORKDIR" \
+  --input-srt "$WORKDIR/target_language_srt.srt" \
+  --line-mode target-only \
+  --video "$WORKDIR/origin_video.mp4")
+```
+
+## Inputs
+
+- `--input-srt` is required. Usually use `target_language_srt.srt`.
+- `--video` is optional but needed when generating `video_with_tts.mp4`.
+- TTS provider must be configured in `<execution-cwd>/config/config.toml`.
+
+## Important Flags
+
+| Flag | Use |
+|---|---|
+| `--input-srt` | SRT to synthesize |
+| `--line-mode target-only` | Use target-language lines only |
+| `--line-mode bilingual-target-top` | Bilingual mode with target on top |
+| `--line-mode bilingual-target-bottom` | Bilingual mode with target on bottom |
+| `--voice` | Provider-specific voice |
+| `--voice-clone-source` | Voice clone source audio URL/path when supported |
+| `--dry-run` | Validate command shape |
+
+## Outputs
+
+Read paths from manifest:
+
+- `tts_final_audio.wav`
+- `video_with_tts.mp4` when a video input is available
+
+## Verification
+
+- Require terminal JSON with `"ok": true`.
+- Confirm `tts_final_audio.wav` exists and has non-zero size.
+- If `video_with_tts.mp4` is produced, inspect duration and audio stream with `ffprobe`.
+- For JSON/error contract, read `skills/krillinai-cli/references/cli-contract.md`.

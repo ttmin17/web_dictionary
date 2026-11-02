@@ -13,29 +13,29 @@ tags:
   - database
   - llm
 status: active
-quality_percentile: 28
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2024-12-03T20:53:52
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: designcomputer/mysql_mcp_server
   official_vendor: false
   license: MIT
 signals:
-  stars: 1403
-  last_commit: 2026-08-02T13:36:20Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.3
-  trending_score: 4.01
-  rank_current: 92
-  rank_delta: -13
+  stars: 1405
+  last_commit: 2026-10-28T19:14:33Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.1
+  trending_score: 2
+  rank_current: 102
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1398
     - 1397
     - 1399
     - 1403
+    - 1405
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: designcomputer/mysql_mcp_server
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:13.320Z
+  fetched_at: 2026-11-02T09:05:56.700Z
   truncated: false
 type: mcp_server
 launch:
@@ -64,7 +64,7 @@ A Model Context Protocol (MCP) implementation that enables secure interaction wi
 
 ## Deployment options
 - **Hosted** — [Fronteir AI](https://fronteir.ai/mcp/designcomputer-mysql-mcp-server) runs the server for you; no local setup required.
-- **Local** — [Smithery](https://smithery.ai/server/designcomputer/mysql-mcp-server) installs and runs the server on your own machine.
+- **Local** — install from PyPI and run the server on your own machine (see [Installation](#installation)).
 
 ## Features
 - List available MySQL tables as resources
@@ -82,12 +82,6 @@ A Model Context Protocol (MCP) implementation that enables secure interaction wi
 ### Manual Installation
 ```bash
 pip install mysql-mcp-server
-```
-
-### Installing via Smithery
-To install MySQL MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/designcomputer/mysql-mcp-server):
-```bash
-npx -y @smithery/cli install designcomputer/mysql-mcp-server --client claude
 ```
 
 ### Installing via Claude Code CLI

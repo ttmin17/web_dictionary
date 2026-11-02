@@ -2,7 +2,7 @@
 slug: thinkinaixyz-deepchat
 name: deepchat
 tagline: 🐬DeepChat - A smart assistant that connects powerful AI to your personal world
-summary: 🐬DeepChat - A smart assistant that connects powerful AI to your personal world
+summary: DeepChat - Open-Source Local-First AI Agent Desktop Client
 categories:
   - agent-frameworks
 tags:
@@ -14,26 +14,26 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ThinkInAIXYZ/deepchat
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6371
-  last_commit: 2026-10-26T07:26:53Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0
-  trending_score: 1
-  rank_current: 138
-  rank_delta: -98
+  stars: 6384
+  last_commit: 2026-11-02T07:45:19Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.2
+  trending_score: 13.03
+  rank_current: 118
+  rank_delta: 19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6356
     - 6359
     - 6370
     - 6371
+    - 6384
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: ThinkInAIXYZ/deepchat
   path: README.md
   branch: dev
-  fetched_at: 2026-10-26T07:44:48.755Z
+  fetched_at: 2026-11-02T09:06:46.888Z
   truncated: false
 type: agent_tool
 tool:
@@ -156,11 +156,11 @@ DeepChat's sessions and agent processes follow the Tape.systems philosophy: keep
 <table align="center">
   <tr>
     <td align="center" style="padding: 10px;">
-      <img src='https://github.com/user-attachments/assets/6e932a65-78e0-4d2e-9654-ccc010f78bf7' alt="DeepChat Light Mode" width="400"/>
+      <img src='https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/assets/screenshots/main-light.png' alt="DeepChat main interface in light mode" width="400"/>
       <br/>
     </td>
     <td align="center" style="padding: 10px;">
-      <img src='https://github.com/user-attachments/assets/ea6ccf60-32af-4bc1-91cc-e72703bdc1ff' alt="DeepChat Dark Mode" width="400"/>
+      <img src='https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/assets/screenshots/main-dark.png' alt="DeepChat main interface in dark mode" width="400"/>
       <br/>
     </td>
   </tr>
@@ -521,6 +521,28 @@ Common commands include `/start`, `/help`, `/pair`, `/new`, `/sessions`, `/use`,
     <td>
       <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/opper.svg" width="50" height="50" alt="Opper Icon"><br/>
       <a href="https://opper.ai/">Opper</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/aistupidlevel.svg" width="50" height="50" alt="AI Stupid Level Icon"><br/>
+      <a href="https://aistupidlevel.info/">AI Stupid Level</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/runcrate.svg" width="50" height="50" alt="Runcrate Icon"><br/>
+      <a href="https://www.runcrate.ai/?utm_source=deepchat">Runcrate</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/cloudgpu.svg" width="50" height="50" alt="CloudGPU Icon"><br/>
+      <a href="https://cloudgpu.app/?utm_source=deepchat">CloudGPU</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/cheapaimodel.svg" width="50" height="50" alt="cheapaimodel Icon"><br/>
+      <a href="https://cheapaimodel.ai/?utm_source=deepchat">cheapaimodel</a>
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/obscurify.svg" width="50" height="50" alt="Obscurify.ai Icon"><br/>
+      <a href="https://obscurify.ai/?utm_source=deepchat">Obscurify.ai</a>
     </td>
   </tr>
 

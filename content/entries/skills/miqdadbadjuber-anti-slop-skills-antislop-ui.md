@@ -1,8 +1,13 @@
 ---
 slug: miqdadbadjuber-anti-slop-skills-antislop-ui
 name: antislop-ui
-tagline: Agent skill from miqdadbadjuber/anti-slop
-summary: Agent skill from miqdadbadjuber/anti-slop
+tagline: "UI and visual skill for antislop. Use when building or editing any
+  interface: color, layout, components, motion, and page performance. Load with
+  the c"
+summary: "- Load together with antislop.md whenever the task is UI or visual
+  work. The core holds the mechanism (the purpose test, the three tiers, the
+  Delivery Gate); this skill holds UI-specific depth. - Every entry has the
+  s..."
 categories:
   - coding-agents
 tags:
@@ -11,10 +16,10 @@ tags:
   - ai-agents
   - ai-coding-agent
 status: active
-quality_percentile: 52
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: miqdadbadjuber/anti-slop
@@ -22,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7198
-  last_commit: 2026-10-25T22:54:19Z
-  stars_delta_7d: 727
-  stars_growth_pct: 11.2
-  trending_score: 808.68
+  stars: 7964
+  last_commit: 2026-11-01T12:06:35Z
+  stars_delta_7d: 766
+  stars_growth_pct: 10.6
+  trending_score: 847.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5989
     - 6471
     - 7198
+    - 7964
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,14 +45,19 @@ readme_source:
   repo: miqdadbadjuber/anti-slop
   path: skills/antislop-ui/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:49.066Z
+  fetched_at: 2026-11-02T09:06:35.112Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: antislop-ui
-  description: Agent skill from miqdadbadjuber/anti-slop
+  description: "UI and visual skill for antislop. Use when building or editing any
+    interface: color, layout, components, motion, and page performance. Load
+    with the core."
   folder_path: skills/antislop-ui
-  extra_files: []
+  extra_files:
+    - LICENSE-web-quality-skills
+    - references/CORE-WEB-VITALS.md
+    - references/WEB-BASELINE.md
   pack_total_skills: 6
   is_pack_primary: false
   clients:
@@ -342,6 +353,38 @@ The patterns above are landing-page shapes. These are the app-side equivalents: 
 - **Why:** a page where everything animates has no focal point. Motion becomes wallpaper.
 - **Fix:** choreograph motion to a purpose and to the MOTION dial (R-19). Not everything moves. The hero speaks, the supporting elements stay calm. Claimed "cinematic" pages must actually move; claimed "static" pages must not.
 
+## Performance
+
+A page that looks finished but shifts under the thumb or shows its main image last was built for the screenshot, not for use. R-40 gates what the code shows; the LCP, INP, and CLS thresholds are field data and live in [references/CORE-WEB-VITALS.md](https://github.com/miqdadbadjuber/anti-slop/blob/main/skills/antislop-ui/references/CORE-WEB-VITALS.md), read when a real measurement exists. Never report a number that was not measured (R-36).
+
+### Unsized Media That Shifts the Layout
+
+- **Tell:** `<img>`, `<video>`, ``, ads, or embeds with no `width`/`height` or `aspect-ratio`; a banner or late font that pushes content down.
+- **Why:** the page jumps while people read or tap, and they hit the wrong control (R-40).
+- **Fix:** give every media element intrinsic dimensions or `aspect-ratio`, reserve space for anything that loads late, and overlay banners instead of inserting them above content.
+
+### Hero Image Loaded Like Any Other Image
+
+- **Tell:** the largest above-the-fold image is `loading="lazy"`, set as a CSS background, or injected by JavaScript.
+- **Why:** the browser discovers the most important pixel last, and the first impression is an empty box (R-40).
+- **Fix:** an `<img>` in the HTML with `fetchpriority="high"`, never lazy; lazy-load only what is below the fold.
+
+### Render-Blocking Third-Party Script
+
+- **Tell:** synchronous analytics, chat, or tag-manager scripts in `<head>`.
+- **Why:** nothing paints until someone else's server answers, which on a phone on a slow network is the whole first impression (R-40).
+- **Fix:** `defer`/`async`, or load on interaction.
+
+## Page Basics
+
+Optional page-level checks. Not a gate.
+
+### Web Baseline Checklist
+
+- **Tell:** a page shipped with no doctype, mixed `http://` content, a secret in client code, or an unpinned third-party script.
+- **Why:** none of it shows in a screenshot, so it is the first thing skipped, and each one is expensive to find after launch.
+- **Fix:** run the checklist in [references/WEB-BASELINE.md](https://github.com/miqdadbadjuber/anti-slop/blob/main/skills/antislop-ui/references/WEB-BASELINE.md) when the task asks for a production-ready page or a web-quality review.
+
 ## UI Skill Checklist
 
 Run these alongside the core Delivery Gate when the task is UI work. All answers must be **yes**:
@@ -361,3 +404,4 @@ Run these alongside the core Delivery Gate when the task is UI work. All answers
 - [ ] Do empty form fields and table cells stay empty or carry honest placeholders (Your Name, email@example.com) instead of fake-looking data (John Doe, johndoe@example.com)? (R-23, R-38)
 - [ ] Do the empty, loading, and error states name the cause and the next action instead of saying "No data"? (R-27)
 - [ ] Does the page hold up at every breakpoint, theme, and state, and pass keyboard-only use? (R-03, R-34, C-4)
+- [ ] Is every media element sized, the hero image in the HTML with `fetchpriority="high"` and not lazy, no third-party script blocking render, and every reported metric actually measured? (R-40, R-36)

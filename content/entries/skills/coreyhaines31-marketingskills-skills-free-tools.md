@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/free-tools/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.291Z
+  fetched_at: 2026-11-02T09:06:13.824Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
     - evals/evals.json
     - references/tool-benchmarks.md
     - references/tool-types.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -89,6 +90,7 @@ Before designing a tool strategy, understand:
 3. **Resources** - Technical capacity to build? Ongoing maintenance bandwidth? Budget for promotion?
 
 ---
+
 ## Core Principles
 
 **"Your product is my marketing opportunity."** Bezos said "your margin is my opportunity." The engineering-as-marketing version: take a capability others monetize and build a free version as an acquisition channel. Unsplash gave away the stock photos Getty sold — and Getty acquired it. See [references/tool-benchmarks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/free-tools/references/tool-benchmarks.md) for sourced cases and measurement limits.
@@ -112,6 +114,7 @@ Before designing a tool strategy, understand:
 - Lead value × expected leads > build cost + maintenance
 
 ---
+
 ## Tool Types Overview
 
 | Type | Examples | Best For |
@@ -128,6 +131,7 @@ Before designing a tool strategy, understand:
 **For sourced case examples (Unsplash, HubSpot Website Grader, Buffer, Shopify) and evidence requirements**: See [references/tool-benchmarks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/free-tools/references/tool-benchmarks.md)
 
 ---
+
 ## Ideation Framework
 
 ### Start with Pain Points
@@ -148,6 +152,7 @@ Before designing a tool strategy, understand:
 - **Build feasibility**: How complex? Can you scope an MVP?
 
 ---
+
 ## Lead Capture Strategy
 
 ### Gating Options
@@ -166,6 +171,7 @@ Before designing a tool strategy, understand:
 - Optional: Segment by asking one qualifying question
 
 ---
+
 ## SEO Considerations
 
 ### Keyword Strategy
@@ -180,6 +186,7 @@ Free tools attract links because:
 - Shareable (social amplification)
 
 ---
+
 ## Build vs. Buy
 
 ### Build Custom
@@ -193,6 +200,7 @@ When: Speed to market, limited dev resources, testing concept
 When: Something good exists, white-label available, not core differentiator
 
 ---
+
 ## MVP Scope
 
 ### Minimum Viable Tool
@@ -204,6 +212,7 @@ When: Something good exists, white-label available, not core differentiator
 Account creation, saving results, advanced features, perfect design, every edge case
 
 ---
+
 ## Evaluation Scorecard
 
 Rate each factor 1-5:
@@ -222,6 +231,7 @@ Rate each factor 1-5:
 **25+**: Strong candidate | **15-24**: Promising | **<15**: Reconsider
 
 ---
+
 ## Task-Specific Questions
 
 1. What existing tools does your audience use for workarounds?
@@ -230,6 +240,7 @@ Rate each factor 1-5:
 4. What's the timeline and budget?
 
 ---
+
 ## Common Pitfalls
 
 - **Over-engineering** — Shipping a bloated tool before validating demand. Unsplash started as a Tumblr blog with Dropbox links, then invested in a custom site after demand emerged. Scope to one useful job and test it with your audience.

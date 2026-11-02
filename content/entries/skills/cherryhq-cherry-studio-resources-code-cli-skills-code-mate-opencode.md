@@ -7,17 +7,17 @@ summary: 1. Set the Bash working directory to the exact project the user named
   and set a finite timeout, normally 10 minutes. 2. Check availability with
   command -v opencode. If it is missing, stop and ask the user to install O...
 categories:
-  - coding-agents
+  - productivity-ops
 tags:
   - agent-skills
-  - ai-agent
-  - claude-code
-  - codex
+  - agent-workspace
+  - agentic-workspace
+  - ai-agents
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 52987
-  last_commit: 2026-10-26T07:25:22Z
-  stars_delta_7d: 251
-  stars_growth_pct: 0.5
-  trending_score: 252.19
+  stars: 53181
+  last_commit: 2026-11-02T08:58:57Z
+  stars_delta_7d: 194
+  stars_growth_pct: 0.4
+  trending_score: 194.71
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 52419
     - 52597
     - 52736
     - 52987
+    - 53181
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/code-cli-skills/code-mate-opencode/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:04.015Z
+  fetched_at: 2026-11-02T09:06:41.638Z
   truncated: false
 type: agent_skill
 skill:

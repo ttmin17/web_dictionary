@@ -16,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 96
+quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: affaan-m/ECC
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 289072
-  last_commit: 2026-10-26T04:56:56Z
-  stars_delta_7d: 5578
-  stars_growth_pct: 2
-  trending_score: 5687.75
+  stars: 295040
+  last_commit: 2026-11-02T04:56:08Z
+  stars_delta_7d: 5968
+  stars_growth_pct: 2.1
+  trending_score: 6091.21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 274698
     - 278380
     - 283494
     - 289072
+    - 295040
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: affaan-m/ECC
   path: pi/core/skills/agent-security-hardening/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:08.026Z
+  fetched_at: 2026-11-02T09:06:05.416Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,7 +58,7 @@ skill:
     offensive testing.
   folder_path: pi/core/skills/agent-security-hardening
   extra_files: []
-  pack_total_skills: 312
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

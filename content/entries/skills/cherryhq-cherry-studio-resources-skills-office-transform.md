@@ -8,17 +8,17 @@ summary: 1. The source file is read-only. Every result is a new file; both
   Never work around this with ad-hoc shell edits to the original. 2. Anchors
   ar...
 categories:
-  - coding-agents
+  - productivity-ops
 tags:
   - agent-skills
-  - ai-agent
-  - claude-code
-  - codex
+  - agent-workspace
+  - agentic-workspace
+  - ai-agents
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 52987
-  last_commit: 2026-10-26T07:25:22Z
-  stars_delta_7d: 251
-  stars_growth_pct: 0.5
-  trending_score: 252.19
+  stars: 53181
+  last_commit: 2026-11-02T08:58:57Z
+  stars_delta_7d: 194
+  stars_growth_pct: 0.4
+  trending_score: 194.71
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 52419
     - 52597
     - 52736
     - 52987
+    - 53181
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/skills/office-transform/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:04.016Z
+  fetched_at: 2026-11-02T09:06:41.639Z
   truncated: false
 type: agent_skill
 skill:
@@ -101,6 +101,10 @@ Chat surfaces may hand you a fenced `selection-ref` block:
 ```
 
 The `anchor` object is exactly what the scripts take via `--anchor`.
+
+A block may also carry `comment`: what the user wants done at that location, in their own words.
+Treat it as the user's instruction for that anchor. It is not part of the anchor, so never pass it
+to a script.
 
 **Freshness check.** `fileStamp.mtimeMs` is milliseconds since the Unix epoch, floored to
 whole milliseconds. Do not compare it to `stat`'s default output: `stat -f %m` (macOS) and

@@ -1,8 +1,11 @@
 ---
 slug: microsoft-sico-labs-agentstream-exgentic-misc-skills-add-benchmark
 name: add-benchmark
-tagline: Agent skill from microsoft/Sico
-summary: Agent skill from microsoft/Sico
+tagline: Use when adding or updating a benchmark adapter in the Exgentic
+  repository. Follow the repository benchmark principles, keep the benchmark
+  contract pr
+summary: "Start with: - docs/adding-benchmarks.md -
+  src/exgentic/core/benchmark.py - src/exgentic/interfaces/registry.py"
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +14,10 @@ tags:
   - agent-management
   - agent-platform
 status: active
-quality_percentile: 61
+quality_percentile: 60
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: microsoft/Sico
@@ -22,15 +25,16 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 282
-  last_commit: 2026-10-24T01:40:19Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 284
+  last_commit: 2026-10-31T01:31:52Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.7
+  trending_score: 2.01
   velocity_source: snapshot_delta
   sparkline_4w:
     - 283
     - 282
+    - 284
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +42,17 @@ readme_source:
   repo: microsoft/Sico
   path: labs/AgentStream/exgentic/misc/skills/add-benchmark/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:53.390Z
+  fetched_at: 2026-11-02T09:07:25.466Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: add-benchmark
-  description: Agent skill from microsoft/Sico
+  description: Use when adding or updating a benchmark adapter in the Exgentic
+    repository. Follow the repository benchmark principles, keep the benchmark
+    contract protocol-agnostic, prefer the thinnest possible wrapper that makes
+    the benchmark accessible to any Exgentic agent, reuse external harness
+    assets and scoring where possible, and validate the adapter with
+    representative smoke tests before finishing.
   folder_path: labs/AgentStream/exgentic/misc/skills/add-benchmark
   extra_files: []
   pack_total_skills: 3
@@ -55,4 +64,59 @@ skill:
   pack_slug: microsoft-sico
 ---
 
-Agent skill from microsoft/Sico
+# Add Benchmark
+Use this skill when working on benchmark adapters in the Exgentic repository.
+
+## First read
+
+Start with:
+- `docs/adding-benchmarks.md`
+- `src/exgentic/core/benchmark.py`
+- `src/exgentic/interfaces/registry.py`
+
+Then inspect the most relevant existing adapters:
+- `src/exgentic/benchmarks/tau2/tau2_benchmark.py`
+- `src/exgentic/benchmarks/bfcl/bfcl_benchmark.py`
+
+## Workflow
+
+1. Define the benchmark contract before writing code.
+   Decide the real `task`, the agent-relevant `context`, the semantic `actions`, the finish condition, and the scoring boundary.
+
+2. Keep the agent-facing contract protocol-agnostic.
+   Do not define the benchmark in terms of one provider's chat or tool-calling format.
+
+3. Prefer the thinnest possible wrapper.
+   Make the benchmark accessible to any Exgentic agent with the minimum translation surface necessary. Do not add extra abstraction, copied logic, or runtime machinery unless it is needed to preserve benchmark meaning.
+
+4. Decide the source-of-truth boundary.
+   Reuse external benchmark assets, setup, and scoring where possible, but do not let an external harness dictate the wrong runtime contract for Exgentic.
+
+5. Implement runtime, setup, and registration separately.
+   Prefer a benchmark module, a `setup.sh`, and a registry entry with clear responsibilities.
+
+6. Validate the adapter as a benchmark, not just as code.
+   Check task listing, subset listing, happy-path scoring, failure-path scoring, and error semantics.
+
+## Non-negotiable rules
+
+- `task` must be the actual task.
+- `context` must include only what the agent should know.
+- subset names and internal metadata stay out of `context`.
+- Prefer the thinnest wrapper that preserves the benchmark's meaning.
+- Actions should describe semantic operations, not protocol artifacts.
+- Use `finish` only when it is part of the benchmark contract.
+- If outputs are not real execution results, say so plainly in the benchmark contract.
+- Keep success, unsuccessful completion, unfinished runs, and errors distinct.
+
+## Validation
+
+Before finishing, run at least:
+- `python -m py_compile` on changed benchmark files
+- `pre-commit run --files ...`
+- `git diff --check`
+
+Also run benchmark-specific smoke tests that prove:
+- one passing case works
+- one failing case is represented correctly
+- one real error is surfaced as an error

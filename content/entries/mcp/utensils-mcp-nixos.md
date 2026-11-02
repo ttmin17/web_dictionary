@@ -12,29 +12,29 @@ tags:
   - ai-tools
   - anthropic
 status: active
-quality_percentile: 37
+quality_percentile: 33
 selection_reason: quality_percentile
 first_seen: 2025-03-20T05:05:00
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: utensils/mcp-nixos
   official_vendor: false
   license: MIT
 signals:
-  stars: 864
+  stars: 871
   last_commit: 2026-10-26T00:11:46Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.2
-  trending_score: 2
-  rank_current: 102
-  rank_delta: -40
+  stars_delta_7d: 7
+  stars_growth_pct: 0.8
+  trending_score: 7.06
+  rank_current: 82
+  rank_delta: 15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 851
     - 853
     - 862
     - 864
+    - 871
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: utensils/mcp-nixos
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.238Z
+  fetched_at: 2026-11-02T09:05:57.268Z
   truncated: false
 type: mcp_server
 launch:
@@ -434,4 +434,5 @@ mypy mcp_nixos/      # Type check
 MIT - Because sharing is caring.
 
 ---
+
 *Created by James Brink. Maintained by mass̶o̶c̶h̶i̶s̶t̶s̶ enthusiasts who enjoy Nix.*

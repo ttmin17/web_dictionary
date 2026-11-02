@@ -16,10 +16,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 67
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 110580
-  last_commit: 2026-10-13T20:24:07Z
-  stars_delta_7d: 2262
-  stars_growth_pct: 2.1
-  trending_score: 2309.24
+  stars: 112639
+  last_commit: 2026-11-01T19:24:49Z
+  stars_delta_7d: 2059
+  stars_growth_pct: 1.9
+  trending_score: 2097.34
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 102528
     - 106053
     - 108318
     - 110580
+    - 112639
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/context-engineering/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:11.784Z
+  fetched_at: 2026-11-02T09:06:05.221Z
   truncated: false
 type: agent_skill
 skill:
@@ -110,7 +110,7 @@ Create a rules file that persists across sessions. This is the highest-leverage 
 ## Commands
 - Build: `npm run build`
 - Test: `npm test`
-- Lint: `npm run lint --fix`
+- Lint: `npm run lint -- --fix`
 - Dev: `npm run dev`
 - Type check: `npx tsc --noEmit`
 
@@ -259,7 +259,7 @@ Load only the relevant section when working on a specific area.
 
 The context window is not a filing cabinet — it's a working desk. As a session runs, conversation history, tool output, and exploration accumulate. Most of it becomes deadweight. Budget proactively: waiting until the window is full causes abrupt quality drops; managing regularly keeps the agent coherent through long tasks.
 
-**Start trimming at 75% capacity, not 100%.** By the time the window is genuinely full, the model's attention is already fragmented across too many signals. The 75% threshold gives room to compress gracefully rather than cut desperately mid-task.
+**Compact well before the host's limit; the threshold varies by host.** By the time the window is genuinely full, the model's attention is already fragmented across too many signals. The margin gives room to compress gracefully rather than cut desperately mid-task.
 
 ### What to cut first
 
@@ -381,7 +381,7 @@ This catches wrong directions before you've built on them. It's a 30-second inve
 | Missing examples | Agent invents a new style instead of following yours | Include one example of the pattern to follow |
 | Implicit knowledge | Agent doesn't know project-specific rules | Write it down in rules files — if it's not written, it doesn't exist |
 | Silent confusion | Agent guesses when it should ask | Surface ambiguity explicitly using the confusion management patterns above |
-| Context cliff | Waiting until the window is full before managing it — attention fragments and output quality drops abruptly at the limit | Start trimming at 75% capacity; compress rather than cut |
+| Context cliff | Waiting until the window is full before managing it — attention fragments and output quality drops abruptly at the limit | Compact well before the host's limit; compress rather than cut |
 
 ## Common Rationalizations
 

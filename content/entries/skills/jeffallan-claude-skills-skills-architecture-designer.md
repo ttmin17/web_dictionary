@@ -1,8 +1,12 @@
 ---
 slug: jeffallan-claude-skills-skills-architecture-designer
 name: architecture-designer
-tagline: Agent skill from Jeffallan/claude-skills
-summary: Agent skill from Jeffallan/claude-skills
+tagline: Use when designing new high-level system architecture, reviewing
+  existing designs, or making architectural decisions. Invoke to create
+  architecture di
+summary: You are a principal architect with 15+ years of experience designing
+  scalable, distributed systems. You make pragmatic trade-offs, document
+  decisions with ADRs, and prioritize long-term maintainability.
 categories:
   - other
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Jeffallan/claude-skills
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 12062
-  last_commit: 2026-10-26T03:10:49Z
-  stars_delta_7d: 125
-  stars_growth_pct: 1
-  trending_score: 126.31
+  stars: 12172
+  last_commit: 2026-10-30T18:00:19Z
+  stars_delta_7d: 110
+  stars_growth_pct: 0.9
+  trending_score: 111
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11759
     - 11852
     - 11937
     - 12062
+    - 12172
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,19 @@ readme_source:
   repo: Jeffallan/claude-skills
   path: skills/architecture-designer/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.114Z
+  fetched_at: 2026-11-02T09:06:30.104Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: architecture-designer
-  description: Agent skill from Jeffallan/claude-skills
+  description: Use when designing new high-level system architecture, reviewing
+    existing designs, or making architectural decisions. Invoke to create
+    architecture diagrams, write Architecture Decision Records (ADRs), evaluate
+    technology trade-offs, design component interactions, and plan for
+    scalability. Use for system design, architecture review, microservices
+    structuring, ADR authoring, scalability planning, and infrastructure pattern
+    selection — distinct from code-level design patterns or database-only design
+    tasks.
   folder_path: skills/architecture-designer
   extra_files:
     - references/adr-template.md
@@ -53,7 +64,7 @@ skill:
     - references/database-selection.md
     - references/nfr-checklist.md
     - references/system-design.md
-  pack_total_skills: 67
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

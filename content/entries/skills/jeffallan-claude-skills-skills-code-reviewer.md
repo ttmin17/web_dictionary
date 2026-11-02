@@ -1,8 +1,12 @@
 ---
 slug: jeffallan-claude-skills-skills-code-reviewer
 name: code-reviewer
-tagline: Agent skill from Jeffallan/claude-skills
-summary: Agent skill from Jeffallan/claude-skills
+tagline: Analyzes code diffs and files to identify bugs, security
+  vulnerabilities (SQL injection, XSS, insecure deserialization), code smells,
+  N+1 queries, nam
+summary: "- Reviewing pull requests - Conducting code quality audits -
+  Identifying refactoring opportunities - Checking for security vulnerabilities
+  - Validating architectural decisions"
 categories:
   - other
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Jeffallan/claude-skills
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 12062
-  last_commit: 2026-10-26T03:10:49Z
-  stars_delta_7d: 125
-  stars_growth_pct: 1
-  trending_score: 126.31
+  stars: 12172
+  last_commit: 2026-10-30T18:00:19Z
+  stars_delta_7d: 110
+  stars_growth_pct: 0.9
+  trending_score: 111
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11759
     - 11852
     - 11937
     - 12062
+    - 12172
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,21 @@ readme_source:
   repo: Jeffallan/claude-skills
   path: skills/code-reviewer/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.114Z
+  fetched_at: 2026-11-02T09:06:30.104Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: code-reviewer
-  description: Agent skill from Jeffallan/claude-skills
+  description: Analyzes code diffs and files to identify bugs, security
+    vulnerabilities (SQL injection, XSS, insecure deserialization), code smells,
+    N+1 queries, naming issues, and architectural concerns, then produces a
+    structured review report with prioritized, actionable feedback. Use when
+    reviewing pull requests, conducting code quality audits, identifying
+    refactoring opportunities, or checking for security issues. Invoke for PR
+    reviews, code quality checks, refactoring suggestions, review code, code
+    quality. Complements specialized skills (security-reviewer, test-master) by
+    providing broad-scope review across correctness, performance,
+    maintainability, and test coverage in a single pass.
   folder_path: skills/code-reviewer
   extra_files:
     - references/common-issues.md
@@ -54,7 +67,7 @@ skill:
     - references/report-template.md
     - references/review-checklist.md
     - references/spec-compliance-review.md
-  pack_total_skills: 67
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -63,4 +76,109 @@ skill:
   pack_slug: jeffallan-claude-skills
 ---
 
-Agent skill from Jeffallan/claude-skills
+# Code Reviewer
+Senior engineer conducting thorough, constructive code reviews that improve quality and share knowledge.
+
+## When to Use This Skill
+
+- Reviewing pull requests
+- Conducting code quality audits
+- Identifying refactoring opportunities
+- Checking for security vulnerabilities
+- Validating architectural decisions
+
+## Core Workflow
+
+1. **Context** — Read PR description, understand the problem being solved. **Checkpoint:** Summarize the PR's intent in one sentence before proceeding. If you cannot, ask the author to clarify.
+2. **Structure** — Review architecture and design decisions. Ask: Does this follow existing patterns in the codebase? Are new abstractions justified?
+3. **Details** — Check code quality, security, and performance. Apply the checks in the Reference Guide below. Ask: Are there N+1 queries, hardcoded secrets, or injection risks?
+4. **Tests** — Validate test coverage and quality. Ask: Are edge cases covered? Do tests assert behavior, not implementation?
+5. **Feedback** — Produce a categorized report using the Output Template. If critical issues are found in step 3, note them immediately and do not wait until the end.
+
+> **Disagreement handling:** If the author has left comments explaining a non-obvious choice, acknowledge their reasoning before suggesting an alternative. Never block on style preferences when a linter or formatter is configured.
+
+## Reference Guide
+
+Load detailed guidance based on context:
+
+<!-- Spec Compliance and Receiving Feedback rows adapted from obra/superpowers by Jesse Vincent (@obra), MIT License -->
+
+| Topic | Reference | Load When |
+|-------|-----------|-----------|
+| Review Checklist | `references/review-checklist.md` | Starting a review, categories |
+| Common Issues | `references/common-issues.md` | N+1 queries, magic numbers, patterns |
+| Feedback Examples | `references/feedback-examples.md` | Writing good feedback |
+| Report Template | `references/report-template.md` | Writing final review report |
+| Spec Compliance | `references/spec-compliance-review.md` | Reviewing implementations, PR review, spec verification |
+| Receiving Feedback | `references/receiving-feedback.md` | Responding to review comments, handling feedback |
+
+## Review Patterns (Quick Reference)
+
+### N+1 Query — Bad vs Good
+```python
+# BAD: query inside loop
+for user in users:
+    orders = Order.objects.filter(user=user)  # N+1
+
+# GOOD: prefetch in bulk
+users = User.objects.prefetch_related('orders').all()
+```
+
+### Magic Number — Bad vs Good
+```python
+# BAD
+if status == 3:
+    ...
+
+# GOOD
+ORDER_STATUS_SHIPPED = 3
+if status == ORDER_STATUS_SHIPPED:
+    ...
+```
+
+### Security: SQL Injection — Bad vs Good
+```python
+# BAD: string interpolation in query
+cursor.execute(f"SELECT * FROM users WHERE id = {user_id}")
+
+# GOOD: parameterized query
+cursor.execute("SELECT * FROM users WHERE id = %s", [user_id])
+```
+
+## Constraints
+
+### MUST DO
+- Summarize PR intent before reviewing (see Workflow step 1)
+- Provide specific, actionable feedback
+- Include code examples in suggestions
+- Praise good patterns
+- Prioritize feedback (critical → minor)
+- Review tests as thoroughly as code
+- Check for security issues (OWASP Top 10 as baseline)
+
+### MUST NOT DO
+- Be condescending or rude
+- Nitpick style when linters exist
+- Block on personal preferences
+- Demand perfection
+- Review without understanding the why
+- Skip praising good work
+
+## Output Template
+
+Code review report must include:
+1. **Summary** — One-sentence intent recap + overall assessment
+2. **Critical issues** — Must fix before merge (bugs, security, data loss)
+3. **Major issues** — Should fix (performance, design, maintainability)
+4. **Minor issues** — Nice to have (naming, readability)
+5. **Positive feedback** — Specific patterns done well
+6. **Questions for author** — Clarifications needed
+7. **Verdict** — Approve / Request Changes / Comment
+
+## Knowledge Reference
+
+SOLID, DRY, KISS, YAGNI, design patterns, OWASP Top 10, language idioms, testing patterns
+
+Maintained by [@jeffallan](https://github.com/jeffallan), Principal Consultant at [Synergetic Solutions](https://synergetic.solutions)
+
+[Documentation](https://jeffallan.github.io/claude-skills/skills/quality/code-reviewer/)

@@ -16,26 +16,26 @@ status: active
 quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-05-06T08:04:52
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: CodeAbra/iai-personal-memory-engine
   official_vendor: false
   license: MIT
 signals:
-  stars: 915
-  last_commit: 2026-10-23T21:21:59Z
+  stars: 918
+  last_commit: 2026-11-02T06:32:47Z
   stars_delta_7d: 3
   stars_growth_pct: 0.3
   trending_score: 3.01
-  rank_current: 133
-  rank_delta: -87
+  rank_current: 137
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 901
     - 906
     - 912
     - 915
+    - 918
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: CodeAbra/iai-personal-memory-engine
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.217Z
+  fetched_at: 2026-11-02T09:05:57.259Z
   truncated: false
 type: agent_tool
 tool:
@@ -102,6 +102,7 @@ tool:
 </p>
 
 ---
+
 ## What it is
 
 A local server that speaks the MCP protocol and gives Claude, and any other
@@ -128,6 +129,7 @@ the same subscription your CLI already uses (on by default;
 download of the embedding model.
 
 ---
+
 ## Quick start
 
 ### Claude Code
@@ -188,6 +190,7 @@ native engine, run `iai-mcp migrate-to-lilli` — `iai-mcp doctor` prints the ex
 command, and the [technical reference](https://github.com/CodeAbra/iai-personal-memory-engine/blob/main/docs/REFERENCE.md) documents the full flow.
 
 ---
+
 ## What happens after installation
 
 | Event | Action |
@@ -203,6 +206,7 @@ The background process is called the `daemon` in the CLI. The MCP wrapper and
 unavailable.
 
 ---
+
 ## How it works
 
 ### Memory model
@@ -237,6 +241,7 @@ off. No Anthropic API key is required.
 | **Native engine** | Rust embedder and graph kernels |
 
 ---
+
 ## Dashboard and CLI
 
 ```bash
@@ -257,6 +262,7 @@ configuration files, and directories. Full formats and administrative commands
 are listed in [`docs/REFERENCE.md`](https://github.com/CodeAbra/iai-personal-memory-engine/blob/main/docs/REFERENCE.md).
 
 ---
+
 ## Benchmarks
 
 Every harness ships in `bench/`; methodology and reproduce commands are in
@@ -280,6 +286,7 @@ apply to explicit `memory_recall`, whose default response budget is 1,500
 tokens.
 
 ---
+
 ## MCP tools
 
 ```text
@@ -298,6 +305,7 @@ claim against memory; capture and correction; reinforcement and consolidation;
 behavioural-profile control; and store introspection.
 
 ---
+
 ## Compatibility
 
 | Host | Ambient behaviour |
@@ -312,6 +320,7 @@ behavioural-profile control; and store introspection.
 | **Claude Desktop** | MCP tools; plain Chat does not expose Claude Code-style ambient hooks |
 
 ---
+
 ## Privacy and limitations
 
 - Records are encrypted at rest with AES-256-GCM. The store and key live under
@@ -351,6 +360,7 @@ iai-mcp self-update
 ```
 
 ---
+
 ## About the name
 
 **IAI — Independent Autistic Intelligence** describes the memory design.
@@ -366,6 +376,7 @@ iai-mcp self-update
 machine, used by the assistant they already have.
 
 ---
+
 ## Documentation
 
 - [`docs/REFERENCE.md`](https://github.com/CodeAbra/iai-personal-memory-engine/blob/main/docs/REFERENCE.md) — technical and operational reference

@@ -13,7 +13,7 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2025-08-03T09:08:45
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: xpzouying/xiaohongshu-mcp
@@ -21,19 +21,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16571
-  last_commit: 2026-10-26T04:47:24Z
-  stars_delta_7d: 202
-  stars_growth_pct: 1.2
-  trending_score: 204.49
-  rank_current: 61
-  rank_delta: 4
+  stars: 16738
+  last_commit: 2026-11-02T04:35:32Z
+  stars_delta_7d: 167
+  stars_growth_pct: 1
+  trending_score: 168.68
+  rank_current: 72
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 16133
     - 16257
     - 16369
     - 16571
+    - 16738
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: xpzouying/xiaohongshu-mcp
   path: skills/post-to-xhs/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:53.708Z
+  fetched_at: 2026-11-02T09:05:30.345Z
   truncated: false
 type: agent_skill
 skill:

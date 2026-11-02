@@ -14,26 +14,28 @@ tags:
   - copilot
   - cursor
 status: active
-quality_percentile: 60
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: CoderGamester/mcp-unity
   official_vendor: false
   license: MIT
 signals:
-  stars: 1996
+  stars: 2011
   last_commit: 2026-10-11T12:20:40Z
-  stars_delta_7d: 60
-  stars_growth_pct: 3.1
-  trending_score: 61.86
-  rank_current: 73
+  stars_delta_7d: 15
+  stars_growth_pct: 0.8
+  trending_score: 15.11
+  rank_current: 113
+  rank_delta: -41
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1936
     - 1996
+    - 2011
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +44,7 @@ readme_source:
   repo: CoderGamester/mcp-unity
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:10.478Z
+  fetched_at: 2026-11-02T09:05:48.839Z
   truncated: false
 type: agent_tool
 tool:

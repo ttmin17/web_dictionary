@@ -1,8 +1,13 @@
 ---
 slug: eigent-ai-eigent-resources-example-skills-skill-creator
 name: creator
-tagline: Agent skill from eigent-ai/eigent
-summary: Agent skill from eigent-ai/eigent
+tagline: Guide for creating effective skills. Use when creating a new skill or
+  updating an existing skill that extends agent capabilities with specialized
+  know
+summary: Skills are modular, self-contained packages that extend agent
+  capabilities by providing specialized knowledge, workflows, and tools. Think
+  of them as "onboarding guides" for specific domains or tasks—they transform
+  a...
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +16,10 @@ tags:
   - agentic-ai
   - agentic-workflow
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: eigent-ai/eigent
@@ -22,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15663
-  last_commit: 2026-10-25T23:52:55Z
-  stars_delta_7d: 64
-  stars_growth_pct: 0.4
-  trending_score: 64.26
+  stars: 15716
+  last_commit: 2026-11-01T07:09:54Z
+  stars_delta_7d: 53
+  stars_growth_pct: 0.3
+  trending_score: 53.18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15467
     - 15514
     - 15599
     - 15663
+    - 15716
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +45,14 @@ readme_source:
   repo: eigent-ai/eigent
   path: resources/example-skills/skill-creator/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.977Z
+  fetched_at: 2026-11-02T09:06:43.495Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: creator
-  description: Agent skill from eigent-ai/eigent
+  description: Guide for creating effective skills. Use when creating a new skill
+    or updating an existing skill that extends agent capabilities with
+    specialized knowledge, workflows, or tool integrations.
   folder_path: resources/example-skills/skill-creator
   extra_files:
     - LICENSE.txt

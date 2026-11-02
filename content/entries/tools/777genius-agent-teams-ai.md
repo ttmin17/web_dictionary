@@ -15,27 +15,28 @@ tags:
   - agent-to-agent
   - ai-agents
 status: active
-quality_percentile: 68
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: 777genius/agent-teams-ai
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2332
-  last_commit: 2026-10-26T02:33:59Z
-  stars_delta_7d: 54
+  stars: 2387
+  last_commit: 2026-11-01T23:34:36Z
+  stars_delta_7d: 55
   stars_growth_pct: 2.4
-  trending_score: 55.28
-  rank_current: 76
+  trending_score: 56.3
+  rank_current: 80
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2235
     - 2278
     - 2332
+    - 2387
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: 777genius/agent-teams-ai
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:02.894Z
+  fetched_at: 2026-11-02T09:05:40.692Z
   truncated: false
 type: agent_tool
 tool:
@@ -68,7 +69,7 @@ tool:
   <a href="https://discord.gg/qtqSZSyuEc"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Fv10%2Finvites%2FqtqSZSyuEc%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&label=Discord&logo=discord&logoColor=white&color=5865F2&style=flat-square&suffix=%20members" alt="Discord" /></a>&nbsp;
   <a href="https://trendshift.io/repositories/24276?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-24276" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/24276" alt="777genius%2Fagent-teams-ai | Trendshift" width="125" height="26"/></a>
   <a href="https://agentteams.live/"><img src="https://img.shields.io/badge/site-agentteams.live-8B5CF6?style=flat-square&logo=googlechrome&logoColor=white" alt="AgentTeams" /></a>&nbsp;
-  <a href="https://github.com/777genius/agent-teams-ai/actions/workflows/ci.yml"><img src="https://github.com/777genius/agent-teams-ai/actions/workflows/ci.yml/badge.svg" alt="CI Status" /></a>&nbsp;
+  <a href="https://github.com/777genius/agent-teams-ai/actions/workflows/ci.yml?query=branch%3Amain"><img src="https://github.com/777genius/agent-teams-ai/actions/workflows/ci.yml/badge.svg?branch=main&amp;event=push" alt="CI Status (main)" /></a>&nbsp;
 </p>
 
 <p align="center">
@@ -330,6 +331,18 @@ An orchestration layer for AI agent teams across Codex/Claude/OpenCode/Cursor/Gr
 
 </details>
 
+## Why not just use Claude Code with pre-configured agents?
+
+We're seeing an interesting trend. First, AI agents started communicating with each other (something Claude and Codex didn't support before). Then we started seeing messenger-style AI assistants like Grok Bot, Meta Muse and OpenAI Dots, where you can create a team (or even multiple teams, as in Grok) and communicate with agents just like in a regular messenger. This is a much more natural and familiar way for people to interact with AI (like with humans).
+
+For the general audience, that might be enough. But people often need to build many/large/complex  projects, and that's where bigger teams of agents become necessary, each with their own roles and responsibilities.
+
+And when you have a lot of teammates, you need a good way to organize and manage them. That's exactly where Agent Teams comes in. You can see everything clearly in a visual interface, understand what's happening across your teams, and easily interact with individual agents.
+
+Sure, you can set up something similar with regular Claude, but keeping track of everything without a proper frontend is difficult, and we are targeting precisely this multi-agent use case.
+
+For us, it's not just about running multi-agent systems. It's about having full visibility into who's doing what, keeping everything organized, and making it easy to interact with your agents.
+
 ## Comparison
 
 | Feature                             | Agent Teams                                                                                             | Gas Town                                                             | Paperclip                                                              | Cursor                                                         | Claude Code CLI                                              | OpenRig |
@@ -375,6 +388,7 @@ Existing product evidence was checked on August 27, 2026. OpenRig was checked on
 </details>
 
 ---
+
 ## Quick start
 
 1. **Download** the app for your platform (see [Installation](#installation))
@@ -385,6 +399,7 @@ Existing product evidence was checked on August 27, 2026. OpenRig was checked on
 The desktop app is the main product. The web version is currently in active development.
 
 ---
+
 ## FAQ
 
 <details>
@@ -430,6 +445,7 @@ Some RDP (Remote Desktop Protocol) sessions expose virtual GPU drivers that can 
 </details>
 
 ---
+
 ## Roadmap (new)
 
 - [ ] Launching 24/7 autonomous teams in the cloud with current UI (in progress)
@@ -465,7 +481,7 @@ Electron 40, React 19, TypeScript 5, Tailwind CSS 3, Zustand 4. The desktop app 
 
 <br />
 
-**Prerequisites:** Node.js 26.11.1 Current (recommended for source builds) or Node.js 24.16.0 LTS, pnpm 11.22.0
+**Prerequisites:** Node.js 26.12.1 Current (recommended for source builds) or Node.js 24.22.1 LTS, pnpm 11.22.0
 
 On macOS, official Node.js 24 prebuilt binaries require macOS 13.5+.
 Node.js 26 does not bundle Corepack; install the pinned pnpm version separately if `pnpm` is unavailable.
@@ -568,7 +584,8 @@ local packaging.
 
 </details>
 
----<!--
+---
+<!--
 ## Ideas
 
 - [ ] Planning mode to organize agent plans before execution
@@ -592,6 +609,7 @@ local packaging.
       ...
 -->
 ---
+
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/777genius/agent-teams-ai/blob/main/.github/CONTRIBUTING.md) for development guidelines. Please read our [Code of Conduct](https://github.com/777genius/agent-teams-ai/blob/main/.github/CODE_OF_CONDUCT.md).

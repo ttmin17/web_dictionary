@@ -1,8 +1,10 @@
 ---
 slug: zju-real-easel-skills-builtin-audio-mix
 name: audio-mix
-tagline: Agent skill from ZJU-REAL/Easel
-summary: Agent skill from ZJU-REAL/Easel
+tagline: 音频混合 / 混音：把旁白口播 + 背景音乐 + 音效混成一轨，BGM 自动循环补足并可闪避（旁白说话时自动压低 BGM
+  保证人声清晰）。当用户说 混音、音频混合、旁白加背景音乐、配音加BGM、人声和音乐混一起、加音效、音频叠加、BGM
+  压低、闪避、ducking、把配音和bgm合起来 时使用。基于
+summary: （三者至少给一个。最典型："旁白 + BGM"。）
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - content-generation
   - openclaw
 status: active
-quality_percentile: 89
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -22,32 +24,37 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4090
-  last_commit: 2026-10-25T06:24:22Z
-  stars_delta_7d: 246
-  stars_growth_pct: 6.4
-  trending_score: 261.74
+  stars: 4323
+  last_commit: 2026-11-02T08:18:55Z
+  stars_delta_7d: 233
+  stars_growth_pct: 5.7
+  trending_score: 246.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3567
     - 3844
     - 4090
-language: en
+    - 4323
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/audio-mix/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:08.721Z
+  fetched_at: 2026-11-02T09:06:38.012Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: audio-mix
-  description: Agent skill from ZJU-REAL/Easel
+  description: 音频混合 / 混音：把旁白口播 + 背景音乐 + 音效混成一轨，BGM 自动循环补足并可闪避（旁白说话时自动压低 BGM
+    保证人声清晰）。当用户说 混音、音频混合、旁白加背景音乐、配音加BGM、人声和音乐混一起、加音效、音频叠加、BGM
+    压低、闪避、ducking、把配音和bgm合起来 时使用。基于 shared/scripts/audio_mix.py。与 audio-editing
+    concat 区别：concat 是前后顺序拼接，本 SKILL 是同时叠加混音；与 video-editing bgm 区别：那个给视频配乐，本
+    SKILL 输出纯音频。
   folder_path: skills/builtin/audio-mix
   extra_files: []
-  pack_total_skills: 115
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -56,4 +63,64 @@ skill:
   pack_slug: zju-real-easel
 ---
 
-Agent skill from ZJU-REAL/Easel
+# 音频混合（旁白 + BGM + 音效）
+> 把多条音频**同时叠加**混成一轨，核心能力是**闪避（ducking）**——旁白说话时自动压低
+> 背景音乐，人声清晰、音乐不抢。全部走 `skills/shared/scripts/audio_mix.py`，
+> **不要手拼 amix/sidechaincompress**。
+
+> 前后顺序拼接（一段接一段）见 **audio-editing** `concat`；给视频配乐见 **video-editing** `bgm`；
+> 降噪见 **audio-denoise**。
+
+## 输入
+
+| 字段 | 必填 | 说明 |
+|------|------|------|
+| 旁白 | 否 | 口播/配音主轨（给了则输出时长跟它走，并触发闪避） |
+| BGM | 否 | 背景音乐（自动循环补足到旁白长度） |
+| 音效 | 否 | 一个或多个音效，可指定各自出现时间点 |
+
+（三者至少给一个。最典型："旁白 + BGM"。）
+
+## 输出（`outputs/主题名/`）
+
+- 混音后的单轨音频（mp3/wav/m4a，按输出后缀）
+- 报告：轨数、实际写出文件的时长、是否闪避
+
+## 执行步骤
+
+脚本路径（相对项目根）：`skills/shared/scripts/audio_mix.py`（`mix -h` 看参数）。
+
+```bash
+# 旁白 + BGM（默认自动闪避，BGM 循环补足到旁白长度）
+python skills/shared/scripts/audio_mix.py mix \
+  --voice narration.mp3 --bgm music.mp3 --bgm-volume 0.25 \
+  -o outputs/主题名/final.mp3
+
+# 关闭闪避（纯叠加）
+python skills/shared/scripts/audio_mix.py mix --voice v.mp3 --bgm m.mp3 --no-duck -o out.mp3
+
+# 旁白 + 定时音效（第 3.5s 一个叮，第 8s 一个 whoosh）
+python skills/shared/scripts/audio_mix.py mix --voice v.mp3 \
+  --sfx ding.wav --sfx-at 3.5 --sfx whoosh.wav --sfx-at 8 -o out.mp3
+```
+
+## 调参
+
+- **人声被音乐盖住**：调低 `--bgm-volume`（默认 0.25）或确认闪避已开（默认开）。
+- **闪避太猛/音乐一顿一顿**：`--no-duck` 后手动压低 `--bgm-volume`。
+- **BGM 比旁白短**：默认自动循环；不想循环用 `--bgm-loop-off`。
+- **音效太响/太轻**：`--sfx-volume`（默认 0.9）。
+- **需要配音结束后继续播放 BGM**：用 `--duration` 指定目标时长，循环 BGM 会继续播放并在末尾淡出。
+
+## 规则
+
+1. 默认目标时长取旁白与定时音效的最晚结束时间（只有 BGM 时取其原长）；`--duration` 可覆盖。BGM 自动循环/裁切对齐，末尾淡出只作用于 BGM 和音效，旁白不被淡出；不循环 BGM 或仅旁白不会自动补静音，报告以实际产物时长为准。
+2. 旁白 + BGM 默认开启闪避（人声优先）；不需要时显式 `--no-duck`。
+3. `--sfx` 与 `--sfx-at` 数量一致（或不给 --sfx-at 全部默认 0s）。
+4. 混音不做响度归一（保留相对音量）；需统一响度先用 audio-editing `normalize`。
+5. 产物统一进 `outputs/主题名/`。
+
+## 参考来源
+
+闪避用 ffmpeg `sidechaincompress`（以人声为控制信号压缩 BGM），是播客/口播视频保证人声清晰的
+标准做法；多轨叠加用 `amix`。把 sidechain 接线与循环对齐封装成确定性脚本。

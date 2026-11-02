@@ -10,15 +10,15 @@ summary: This skill focuses on writing/modifying the tasktpl.script field
 categories:
   - productivity-ops
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/modify-task-tpl/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.894Z
+  fetched_at: 2026-11-02T09:05:33.718Z
   truncated: false
 type: agent_skill
 skill:
@@ -75,6 +76,7 @@ Nightingale alert self-healing is the **ibex subsystem**: when an alert rule's `
 This skill focuses on **writing/modifying the `task_tpl.script` field itself**—it does not cover creating alert rules, configuring recipients, or editing notification templates.
 
 ---
+
 ## 1. Scope: First Determine Which Layer the User Is Changing
 
 The Nightingale alert pipeline has four layers, and each goes through a different skill:
@@ -89,6 +91,7 @@ The Nightingale alert pipeline has four layers, and each goes through a differen
 **Judgment criteria**: the user's wording contains "script/shell/bash/python/jq/parse/execute/timeout"—this skill; contains "PromQL/threshold/trigger condition"—alert rule; contains "template/body/field rendering"—message template; contains "URL/Webhook/signature"—notification channel.
 
 ---
+
 ## 2. Data Model (What the User Can Fill In, Which Fields Nightingale Actually Uses)
 
 ### `TaskTpl` (`models/task_tpl.go:17-35`)
@@ -127,6 +130,7 @@ These validations run before saving or dispatching; violations are rejected outr
 - `script == ""` → error "script is required"
 
 ---
+
 ## 3. ⚠️ The Truth About stdin (the Easiest Pitfall, **Must Read**)
 
 ### 3.1 stdin Is a Flat JSON of `map[string]string`, **Not a `$event` Object**
@@ -244,6 +248,7 @@ func main() {
 ```
 
 ---
+
 ## 4. ⚠️ The Truth About `is_recovered` (**Don't Hard-Code Dead Code**)
 
 **ibex self-healing does not fire on recovery events**—`alert/sender/ibex.go:39-42`:
@@ -269,6 +274,7 @@ func (c *IbexCallBacker) CallBack(ctx CallBackContext) {
 A core pain point is "I also want it to trigger on recovery", and the common idea of "adding an is_recovered check" is actually a non-solution—fundamentally you need an architectural change to ibex so it accepts recovery events, or the user must switch to the callback channel.
 
 ---
+
 ## 5. timeout / batch / tolerance / pause —— Semantics of the Numeric Fields
 
 ### 5.1 timeout (seconds)
@@ -304,6 +310,7 @@ A core pain point is "I also want it to trigger on recovery", and the common ide
 - **pause**: pause between batches (e.g. `00:00-08:00,17:00-23:59` means pause during these time ranges). Basically not used for self-healing—an alert can fire at any time, so you can't use pause to restrict working hours. **If you really want to restrict working hours**, do it in the alert_rule's `enable_in_bg` / `enable_stime` fields, or use the notify_rule's time window.
 
 ---
+
 ## 6. Dangerous Command List (Must Be Avoided or Guarded When Generating)
 
 ### 6.1 Blacklist (**Refuse to Generate Outright**, Even If the User Explicitly Asks)
@@ -362,6 +369,7 @@ df -h /var/log
 ```
 
 ---
+
 ## 7. Built-in Scenario Library (For When "I Can't Think of a Good Scenario" Hits)
 
 Each scenario gives: typical alert rule name → script skeleton → suggested timeout → risk points.
@@ -726,6 +734,7 @@ echo "BGREWRITEAOF triggered, NOT auto-restarting redis; please scale up maxmemo
 ```
 
 ---
+
 ## 8. Debugging and Troubleshooting
 
 ### 8.1 "Script Stays Running Forever"
@@ -771,6 +780,7 @@ WHERE id = 12345;
 Task history is **designed to be non-deletable**—don't teach users to delete it; tell them this is an audit requirement.
 
 ---
+
 ## 9. Output Style
 
 When the user asks "help me write a self-healing script for X", follow this routine:

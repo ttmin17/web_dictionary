@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/community-marketing/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.288Z
+  fetched_at: 2026-11-02T09:06:13.822Z
   truncated: false
 type: agent_skill
 skill:
@@ -61,7 +62,7 @@ skill:
   extra_files:
     - evals/evals.json
     - references/community-models.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -89,6 +90,7 @@ Understand the situation (ask if not provided):
 Work with whatever context is available. If key details are missing, make reasonable assumptions and flag them.
 
 ---
+
 ## Community Strategy Principles
 
 ### Build around a shared identity, not just a product
@@ -125,6 +127,7 @@ Members join → get value → engage → create content/help others
 Design for the flywheel from day one. Every decision should ask: *Does this accelerate the loop or slow it down?*
 
 ---
+
 ## Playbooks by Goal
 
 ### Launching a Community from Zero
@@ -159,17 +162,19 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 4. **Monitor sentiment weekly** — Look for patterns in complaints or confusion before they become churn signals
 
 ---
+
 ## Community Models & Scaling Phases
 
 Before picking tactics, pick the **shape** of the community and match your effort to its stage. See **`references/community-models.md`** for:
 
-- **The 5 community models** — Support-Driven (GreenPal), Product-Development (Ydata), Education/Enablement (LiveAgent), Founder-Led (Bento, Postaga) — each with a "best when…" fit test tied to a primary goal.
+- **The 4 community models** (plus the common blend) — Support-Driven (GreenPal), Product-Development (Ydata), Education/Enablement (LiveAgent), Founder-Led (Bento, Postaga) — each with a "best when…" fit test tied to a primary goal.
 - **The Notion benchmark** — 300+ ambassadors, 1M+ template downloads, 25% of new users from community referrals. The north star for community-led growth at scale.
 - **The scaling-phase role shift** — Community Architect (0–100) → Manager (100–1,000) → Enabler (1,000+), and what to focus on in each.
 
 Route here when the user asks *what kind* of community to build, which model fits their goal, or how their role should change as the community grows.
 
 ---
+
 ## Platform Selection Guide
 
 | Platform | Best For | Watch Out For |
@@ -182,6 +187,7 @@ Route here when the user asks *what kind* of community to build, which model fit
 | Forum (Discourse) | Long-form technical communities; SEO-rich | Slower velocity; higher effort to post |
 
 ---
+
 ## Community Health Metrics
 
 Track these signals weekly:
@@ -199,6 +205,7 @@ Track these signals weekly:
 - New members stop posting after their intro message
 
 ---
+
 ## Output Formats
 
 Depending on what the user needs, produce one of:
@@ -213,6 +220,7 @@ Depending on what the user needs, produce one of:
 Always be specific. Generic advice ("be consistent," "provide value") is not useful. Give the user something they can act on today.
 
 ---
+
 ## Task-Specific Questions
 
 1. What platform are you building on (or considering)?
@@ -223,6 +231,7 @@ Always be specific. Generic advice ("be consistent," "provide value") is not use
 6. How much time can you dedicate to community management weekly?
 
 ---
+
 ## Related Skills
 
 - **referrals**: For structured referral and ambassador incentive programs

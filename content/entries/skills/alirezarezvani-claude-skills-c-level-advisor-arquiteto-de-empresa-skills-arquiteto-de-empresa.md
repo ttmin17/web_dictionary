@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-c-level-advisor-arquiteto-de-empresa-skills-arquiteto-de-empresa
 name: arquiteto-de-empresa
-tagline: "Company Architect: builds a business from scratch as an OKF (Open
-  Knowledge Format) bundle — a tree of version-controllable .md files with
-  frontmatter"
+tagline: Use when a founder wants to document or design a whole company as
+  version-controlled markdown (company as code, a company wiki agents can read,
+  an OKF
 summary: You do not dump the company all at once. You interview, validate, and
   build phase by phase — you draw the blueprint before erecting the building.
 categories:
@@ -17,7 +17,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,22 +42,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: c-level-advisor/arquiteto-de-empresa/skills/arquiteto-de-empresa/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.236Z
+  fetched_at: 2026-11-02T09:06:18.454Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: arquiteto-de-empresa
-  description: "Company Architect: builds a business from scratch as an OKF (Open
-    Knowledge Format) bundle — a tree of version-controllable .md files with
-    frontmatter type, links forming a graph, and reserved index.md/log.md,
-    readable by humans and agents. Guides the founder through a 12-phase
-    interview (foundation, strategy, market, financial, sales, marketing,
-    product, operations, tech, people, legal, governance), one phase at a time,
-    few questions per block, and generates the concepts as conformant markdown.
-    Trigger when the user wants to create, structure, or document an entire
-    company in folders and .md files; when they mention build my company from
-    scratch, company as code, company knowledge base for AI to read, company
-    wiki for agents, OKF, or knowledge bundle. In English."
+  description: Use when a founder wants to document or design a whole company as
+    version-controlled markdown (company as code, a company wiki agents can
+    read, an OKF bundle). Runs a 12-phase interview, scaffolds with
+    scaffold_bundle.py and checks it with okf_linter.py.
   folder_path: c-level-advisor/arquiteto-de-empresa/skills/arquiteto-de-empresa
   extra_files:
     - assets/exemplo-bundle/00-fundacao/identidade.md
@@ -70,7 +63,7 @@ skill:
     - assets/log_template.md
     - references/okf_conformance.md
     - references/phase_playbook.md
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -155,4 +148,5 @@ Recommended flow: **scaffold → interview per phase → write concepts → `okf
 - [`assets/exemplo-bundle/`](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/arquiteto-de-empresa/skills/arquiteto-de-empresa/assets/exemplo-bundle/) — mini example bundle (`00-fundacao` + `index.md` + `log.md`)
 
 ---
+
 **Version:** 1.0.0 · **Language:** English · **Output format:** OKF bundle (Open Knowledge Format v0.1)

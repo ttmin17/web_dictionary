@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-growth-skills-business-growth-skills
 name: business-growth-skills
-tagline: "Router/index for the 4 business & growth skills bundled in this
-  plugin: customer-success-manager (health scoring, churn risk, expansion),
-  sales-engine"
+tagline: Use when a growth request needs routing between
+  customer-success-manager, sales-engineer, revenue-operations and
+  contract-and-proposal-writer.
 summary: Match the request, then load business-growth/skills//SKILL.md. If
   multiple rows match, ask one clarifying question first.
 categories:
@@ -17,7 +17,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,21 +42,17 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-growth/skills/business-growth-skills/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.234Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: business-growth-skills
-  description: "Router/index for the 4 business & growth skills bundled in this
-    plugin: customer-success-manager (health scoring, churn risk, expansion),
-    sales-engineer (RFP analysis, competitive matrices, PoC planning),
-    revenue-operations (pipeline, forecast accuracy, GTM efficiency), and
-    contract-and-proposal-writer. Use when a growth/revenue request doesn't
-    obviously match one skill and you need to pick the right one (e.g., 'which
-    accounts are at risk', 'should we bid on this RFP')."
+  description: Use when a growth request needs routing between
+    customer-success-manager, sales-engineer, revenue-operations and
+    contract-and-proposal-writer.
   folder_path: business-growth/skills/business-growth-skills
   extra_files: []
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

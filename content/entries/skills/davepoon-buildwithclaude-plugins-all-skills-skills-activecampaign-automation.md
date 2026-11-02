@@ -13,10 +13,10 @@ tags:
   - claude-code-commands
   - claude-skills
 status: active
-quality_percentile: 93
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: davepoon/buildwithclaude
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3678
-  last_commit: 2026-10-26T00:07:50Z
+  stars: 3706
+  last_commit: 2026-11-02T07:07:59Z
   stars_delta_7d: 28
   stars_growth_pct: 0.8
   trending_score: 28.21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3604
     - 3631
     - 3650
     - 3678
+    - 3706
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: davepoon/buildwithclaude
   path: plugins/all-skills/skills/activecampaign-automation/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:37:58.577Z
+  fetched_at: 2026-11-02T09:05:40.329Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,7 +52,7 @@ skill:
     search tools first for current schemas."
   folder_path: plugins/all-skills/skills/activecampaign-automation
   extra_files: []
-  pack_total_skills: 408
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -265,4 +265,5 @@ Automate ActiveCampaign CRM and marketing automation operations through Composio
 | Add to automation | ACTIVE_CAMPAIGN_ADD_CONTACT_TO_AUTOMATION | contact_email, automation_id |
 | Create task | ACTIVE_CAMPAIGN_CREATE_CONTACT_TASK | relid, duedate, dealTasktype, title |
 
----*Powered by [Composio](https://composio.dev)*
+---
+*Powered by [Composio](https://composio.dev)*

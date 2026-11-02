@@ -14,28 +14,29 @@ tags:
   - claude
   - cli
 status: active
-quality_percentile: 50
+quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: apify/mcpc
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1073
-  last_commit: 2026-10-21T18:59:27Z
-  stars_delta_7d: 17
-  stars_growth_pct: 1.6
-  trending_score: 17.27
-  rank_current: 68
-  rank_delta: -34
+  stars: 1081
+  last_commit: 2026-10-31T00:06:22Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.7
+  trending_score: 8.06
+  rank_current: 80
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1026
     - 1056
     - 1073
+    - 1081
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: apify/mcpc
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:23.894Z
+  fetched_at: 2026-11-02T09:05:56.750Z
   truncated: true
 type: mcp_server
 launch:

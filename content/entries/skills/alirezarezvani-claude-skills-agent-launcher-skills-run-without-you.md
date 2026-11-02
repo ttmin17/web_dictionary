@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-agent-launcher-skills-run-without-you
 name: run-without-you
-tagline: Phase 4 of building a Claude Managed Agent — make it run without you.
-  Turn a graded agent into a recurring scheduled deployment (POSIX-cron), an
-  event
+tagline: Use when a graded managed agent should run on a schedule, on an event
+  trigger or on demand ('run it every morning'). Validates cron with
+  cron_validato
 summary: See ../../references/loops-and-workflows.md.
 categories:
   - coding-agents
@@ -16,7 +16,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -24,16 +24,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,31 +41,21 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: agent-launcher/skills/run-without-you/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.234Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: run-without-you
-  description: Phase 4 of building a Claude Managed Agent — make it run without
-    you. Turn a graded agent into a recurring scheduled deployment (POSIX-cron),
-    an event-driven curl trigger, or confirmed on-demand use, then finalize the
-    versioned roadmap. Use when the user says "run it every morning", "put it on
-    a schedule", "nightly", "weekly", "automate this", "make it recurring", or
-    when the orchestrator routes phase=run-without-you. deployment_builder.py
-    builds the POST /v1/deployments payload (initial_events must include
-    user.message; optionally nests a user.define_outcome so each firing
-    self-grades); cron_validator.py validates the 5-field cron + IANA timezone
-    and prints the wall-clock DST note; next_directions_writer.py writes
-    NEXT-DIRECTIONS.md. No tool makes API calls — the deployment is created via
-    BYOK curl. Distinct from grade-iterate (the in-session loop) and wrap-up
-    (closeout).
+  description: Use when a graded managed agent should run on a schedule, on an
+    event trigger or on demand ('run it every morning'). Validates cron with
+    cron_validator.py and builds the deployment with deployment_builder.py.
   folder_path: agent-launcher/skills/run-without-you
   extra_files:
     - README.md
     - scripts/cron_validator.py
     - scripts/deployment_builder.py
     - scripts/next_directions_writer.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

@@ -14,29 +14,29 @@ tags:
   - model-context-protocol
   - reddit
 status: active
-quality_percentile: 53
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2025-09-14T05:52:29
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: karanb192/reddit-mcp-buddy
   official_vendor: false
   license: MIT
 signals:
-  stars: 865
-  last_commit: 2026-10-25T16:04:02Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.7
-  trending_score: 6.04
-  rank_current: 84
-  rank_delta: -17
+  stars: 870
+  last_commit: 2026-11-02T08:09:10Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.6
+  trending_score: 5.03
+  rank_current: 94
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 846
     - 853
     - 859
     - 865
+    - 870
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: karanb192/reddit-mcp-buddy
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.308Z
+  fetched_at: 2026-11-02T09:05:57.275Z
   truncated: false
 type: mcp_server
 launch:
@@ -258,7 +258,18 @@ Without credentials, `browse_subreddit` can use public RSS feeds and `reddit_exp
 
 ### Web apps with OAuth consent
 
-An approved web app can authenticate a user without their Reddit password. Complete Reddit's [authorization-code flow](https://github.com/reddit-archive/reddit/wiki/OAuth2#authorization) with your registered redirect URI, a random `state` value that your callback verifies, and `duration=permanent` to obtain a refresh token. Request `identity`, `read`, and `history` for the read-only tools; Reddit documents each endpoint's required scope in its [API reference](https://www.reddit.com/dev/api).
+An approved web app can authenticate a user without their Reddit password. `--oauth` runs Reddit's [authorization-code flow](https://github.com/reddit-archive/reddit/wiki/OAuth2#authorization) once and prints a refresh token.
+
+1. **Register the redirect URI.** On [Reddit app preferences](https://www.reddit.com/prefs/apps), the web app's redirect URI must be a loopback address with a port, such as `http://localhost:8080`.
+2. **Run the consent command** on the machine where your browser is signed in to Reddit:
+
+   ```bash
+   npx -y reddit-mcp-buddy --oauth
+   ```
+
+   It prompts for the web app's client ID and secret, or reads `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` from the environment. It requests `identity`, `read`, and `history`, which the read-only tools need. Add `--write` to also request `submit` and `flair` for [posting](#posting-v120). Pass `--redirect-uri http://localhost:<port>` if you registered a different port.
+3. **Open the printed link and click Allow.** Reddit redirects back to a temporary local server that only listens on your machine. It checks the random `state` value, exchanges the one-time code, and confirms the account with `/api/v1/me`. It waits up to 5 minutes and never posts.
+4. **Copy the token into your config.** It prints `REDDIT_REFRESH_TOKEN=...`. To keep it off the screen, add `--out ~/reddit-token.env`, a path outside any repository. If that file already exists, the command stops before asking for consent. If writing fails after consent, it prints the token instead. On macOS and Linux the file is readable only by you.
 
 Set these variables in the server's environment:
 
@@ -330,7 +341,7 @@ Add `REDDIT_BUDDY_WRITE` next to your existing credentials:
 
 Claude Desktop extension users: flip the **Enable posting tools** toggle in the extension settings instead. It maps to the same `REDDIT_BUDDY_WRITE` variable.
 
-Alternatively, replace `REDDIT_PASSWORD` with `REDDIT_REFRESH_TOKEN` from the web-app consent flow above. Posting requires the granted scopes `identity`, `read`, `submit`, and `flair`. Add `history` if you also use `user_analysis`. `REDDIT_USERNAME` is optional with a refresh token; when provided, it must match the account returned by Reddit.
+Alternatively, replace `REDDIT_PASSWORD` with `REDDIT_REFRESH_TOKEN` from the [web-app consent flow](#web-apps-with-oauth-consent); `npx -y reddit-mcp-buddy --oauth --write` requests the posting scopes. Posting requires the granted scopes `identity`, `read`, `submit`, and `flair`. Add `history` if you also use `user_analysis`. `REDDIT_USERNAME` is optional with a refresh token; when provided, it must match the account returned by Reddit.
 
 Credentials must come from environment variables (or extension config fields, which become environment variables). The interactive `--auth` file setup does not enable posting. Startup verifies the account through Reddit and checks granted scopes. If any requirement is missing, the server logs the reason and keeps posting tools disabled.
 
@@ -738,15 +749,12 @@ npm run test:rate-limit:anon  # Test anonymous mode (10 rpm)
 npm run test:rate-limit:app   # Test app-only mode (60 rpm)
 npm run test:rate-limit:auth  # Test authenticated mode (100 rpm)
 
-# Lint
-npm run lint
-
 # Type check
 npm run typecheck
 ```
 
 ### Requirements
-- Node.js >= 18.0.0
+- Node.js >= 20.0.0
 - npm or yarn
 - TypeScript 5.5+
 
@@ -796,6 +804,7 @@ curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=reddit-mcp-b
 MIT - Use it however you want!
 
 ---
+
 Made with ❤️ for the MCP community. No venture capital, no tracking, just a good MCP server.
 
 Built by [Karan Bansal](https://karanbansal.in) (Head of AI at ArmorCode). I write about Claude Code, MCP, and production agentic AI at [karanbansal.in/blog](https://karanbansal.in/blog/).

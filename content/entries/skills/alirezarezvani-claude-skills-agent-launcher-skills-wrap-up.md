@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-agent-launcher-skills-wrap-up
 name: wrap-up
-tagline: Close out a launched Claude Managed Agent — recap every primitive the
-  founder now owns, regenerate the single-file overview page, and suggest the
-  next
+tagline: Use when closing out a launched managed agent ('wrap up', 'what do I
+  own now'). Inventories primitives with primitives_inventory.py, regenerates
+  the o
 summary: 1. Inventory what they own. Tables agent / environment / session /
   memory / outcome / deployment and the phases completed. 2. Regenerate the
   overview page. Self-contained agent-overview.html (inline CSS, theme-aware,...
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,28 +43,22 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: agent-launcher/skills/wrap-up/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.234Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: wrap-up
-  description: Close out a launched Claude Managed Agent — recap every primitive
-    the founder now owns, regenerate the single-file overview page, and suggest
-    the next 1-2 upgrades. Use when the user says "wrap up", "close this out",
-    "what do I own now", "give me the summary", "recap the agent", or when the
-    orchestrator routes phase=wrap-up. primitives_inventory.py tables everything
-    owned (agent, environment, session, memory, outcome, deployment);
-    overview_page.py regenerates a self-contained
-    ./my-agent/agent-overview.html; upgrade_suggester.py ranks the next moves
-    from recorded deferrals plus standing hardening steps. Companion to
-    run-without-you; the last stop before phase=done.
+  description: Use when closing out a launched managed agent ('wrap up', 'what do
+    I own now'). Inventories primitives with primitives_inventory.py,
+    regenerates the overview with overview_page.py and suggests next upgrades
+    with upgrade_suggester.py.
   folder_path: agent-launcher/skills/wrap-up
   extra_files:
     - README.md
     - scripts/overview_page.py
     - scripts/primitives_inventory.py
     - scripts/upgrade_suggester.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

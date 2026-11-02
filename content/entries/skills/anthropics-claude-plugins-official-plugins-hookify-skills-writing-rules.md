@@ -13,10 +13,10 @@ tags:
   - claude-code
   - skills
 status: active
-quality_percentile: 98
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -24,17 +24,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 44625
-  last_commit: 2026-10-25T07:34:42Z
-  stars_delta_7d: 1711
-  stars_growth_pct: 4
-  trending_score: 1779.22
+  stars: 45763
+  last_commit: 2026-11-02T07:29:13Z
+  stars_delta_7d: 1138
+  stars_growth_pct: 2.6
+  trending_score: 1167.02
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 37497
     - 37789
     - 42914
     - 44625
+    - 45763
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: plugins/hookify/skills/writing-rules/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:05.837Z
+  fetched_at: 2026-11-02T09:06:14.500Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,7 +52,7 @@ skill:
     needs guidance on hookify rule syntax and patterns.
   folder_path: plugins/hookify/skills/writing-rules
   extra_files: []
-  pack_total_skills: 29
+  pack_total_skills: 21
   is_pack_primary: false
   clients:
     - claude-code
@@ -71,11 +71,13 @@ Hookify rules are markdown files with YAML frontmatter that define patterns to w
 ### Basic Structure
 
 ```markdown
----name: rule-identifier
+---
+name: rule-identifier
 enabled: true
 event: bash|file|stop|prompt|all
 pattern: regex-pattern-here
 ---
+
 Message to show Claude when this rule triggers.
 Can include markdown formatting, warnings, suggestions, etc.
 ```
@@ -120,7 +122,8 @@ pattern: rm\s+-rf
 For complex rules with multiple conditions:
 
 ```markdown
----name: warn-env-file-edits
+---
+name: warn-env-file-edits
 enabled: true
 event: file
 conditions:
@@ -131,6 +134,7 @@ conditions:
     operator: contains
     pattern: API_KEY
 ---
+
 You're adding an API key to a .env file. Ensure this file is in .gitignore!
 ```
 
@@ -183,9 +187,11 @@ You're adding console.log to production code.
 Match Bash command patterns:
 
 ```markdown
----event: bash
+---
+event: bash
 pattern: sudo\s+|rm\s+-rf|chmod\s+777
 ---
+
 Dangerous command detected!
 ```
 
@@ -199,15 +205,18 @@ Dangerous command detected!
 Match Edit/Write/MultiEdit operations:
 
 ```markdown
----event: file
+---
+event: file
 pattern: console\.log\(|eval\(|innerHTML\s*=
 ---
+
 Potentially problematic code pattern detected!
 ```
 
 **Match on different fields:**
 ```markdown
----event: file
+---
+event: file
 conditions:
   - field: file_path
     operator: regex_match
@@ -216,6 +225,7 @@ conditions:
     operator: regex_match
     pattern: console\.log\(
 ---
+
 Console.log in TypeScript file!
 ```
 
@@ -230,9 +240,11 @@ Console.log in TypeScript file!
 Match when agent wants to stop (completion checks):
 
 ```markdown
----event: stop
+---
+event: stop
 pattern: .*
 ---
+
 Before stopping, verify:
 - [ ] Tests were run
 - [ ] Build succeeded
@@ -249,12 +261,14 @@ Before stopping, verify:
 Match user prompt content (advanced):
 
 ```markdown
----event: prompt
+---
+event: prompt
 conditions:
   - field: user_prompt
     operator: contains
     pattern: deploy to production
 ---
+
 Production deployment checklist:
 - [ ] Tests passing?
 - [ ] Reviewed by team?
@@ -372,17 +386,20 @@ See `${CLAUDE_PLUGIN_ROOT}/examples/` for complete examples:
 
 **Minimum viable rule:**
 ```markdown
----name: my-rule
+---
+name: my-rule
 enabled: true
 event: bash
 pattern: dangerous_command
 ---
+
 Warning message here
 ```
 
 **Rule with conditions:**
 ```markdown
----name: my-rule
+---
+name: my-rule
 enabled: true
 event: file
 conditions:
@@ -393,6 +410,7 @@ conditions:
     operator: contains
     pattern: any
 ---
+
 Warning message
 ```
 

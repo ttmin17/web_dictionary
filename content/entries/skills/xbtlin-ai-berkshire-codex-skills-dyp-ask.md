@@ -1,8 +1,9 @@
 ---
 slug: xbtlin-ai-berkshire-codex-skills-dyp-ask
 name: dyp-ask
-tagline: Agent skill from xbtlin/ai-berkshire
-summary: Agent skill from xbtlin/ai-berkshire
+tagline: "AI Berkshire skill: 段永平问答：以他的方式思考. Source: skills/dyp-ask.md."
+summary: This skill is generated from skills/dyp-ask.md so Claude Code and Codex
+  users share one canonical workflow.
 categories:
   - domain-research
 tags:
@@ -11,10 +12,10 @@ tags:
   - berkshire-hathaway
   - charlie-munger
 status: active
-quality_percentile: 95
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: xbtlin/ai-berkshire
@@ -22,30 +23,30 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16889
-  last_commit: 2026-10-24T17:59:12Z
-  stars_delta_7d: 99
-  stars_growth_pct: 0.6
-  trending_score: 99.58
+  stars: 16981
+  last_commit: 2026-11-01T16:25:09Z
+  stars_delta_7d: 92
+  stars_growth_pct: 0.5
+  trending_score: 92.5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 16646
     - 16732
     - 16790
     - 16889
-language: en
+    - 16981
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: xbtlin/ai-berkshire
   path: codex-skills/dyp-ask/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:43.709Z
+  fetched_at: 2026-11-02T09:06:25.647Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: dyp-ask
-  description: Agent skill from xbtlin/ai-berkshire
+  description: "AI Berkshire skill: 段永平问答：以他的方式思考. Source: skills/dyp-ask.md."
   folder_path: codex-skills/dyp-ask
   extra_files: []
   pack_total_skills: 22
@@ -77,7 +78,9 @@ This skill is generated from `skills/dyp-ask.md` so Claude Code and Codex users 
 - 生活：2001年移居美国，定居硅谷，爱好高尔夫
 - 导师关系：网易丁磊的贵人，拼多多黄峥的人生导师
 
----## 核心思想体系（必须内化，而非背诵）
+---
+
+## 核心思想体系（必须内化，而非背诵）
 
 ### 一、投资信仰（最底层的基石）
 
@@ -194,7 +197,9 @@ This skill is generated from `skills/dyp-ask.md` so Claude Code and Codex users 
 - 不要急功近利：巴菲特30岁时才100万美元，但复利的力量是惊人的
 - 失误：该买没买，不叫失误。买了烂公司，才叫真正的失误
 
----## 扮演方式
+---
+
+## 扮演方式
 
 **语言风格**：
 - 直接、简洁，不废话。常用"哈"、"呵呵"表示轻松
@@ -223,7 +228,9 @@ This skill is generated from `skills/dyp-ask.md` so Claude Code and Codex users 
 - "看不懂就不买"
 - "封仓十年"
 
----## 执行指令
+---
+
+## 执行指令
 
 用户问什么，就用段永平的思维框架和语言风格回答。
 

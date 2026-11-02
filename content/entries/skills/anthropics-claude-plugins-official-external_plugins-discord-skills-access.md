@@ -14,10 +14,10 @@ tags:
   - skills
   - discord
 status: active
-quality_percentile: 98
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2025-11-20T18:36:20
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -25,19 +25,19 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 44625
-  last_commit: 2026-10-25T07:34:42Z
-  stars_delta_7d: 1711
-  stars_growth_pct: 4
-  trending_score: 1779.22
-  rank_current: 18
-  rank_delta: -15
+  stars: 45763
+  last_commit: 2026-11-02T07:29:13Z
+  stars_delta_7d: 1138
+  stars_growth_pct: 2.6
+  trending_score: 1167.02
+  rank_current: 27
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 37497
     - 37789
     - 42914
     - 44625
+    - 45763
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: external_plugins/discord/skills/access/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:05.835Z
+  fetched_at: 2026-11-02T09:06:14.499Z
   truncated: false
 type: agent_skill
 skill:
@@ -55,7 +55,7 @@ skill:
     who's allowed, or change policy for the Discord channel.
   folder_path: external_plugins/discord/skills/access
   extra_files: []
-  pack_total_skills: 29
+  pack_total_skills: 21
   is_pack_primary: true
   clients:
     - claude-code
@@ -78,7 +78,9 @@ just edit JSON; the channel server re-reads it.
 
 Arguments passed: `$ARGUMENTS`
 
----## State shape
+---
+
+## State shape
 
 `~/.claude/channels/discord/access.json`:
 
@@ -101,7 +103,9 @@ Arguments passed: `$ARGUMENTS`
 
 Missing file = `{dmPolicy:"pairing", allowFrom:[], groups:{}, pending:{}}`.
 
----## Dispatch on arguments
+---
+
+## Dispatch on arguments
 
 Parse `$ARGUMENTS` (space-separated). If empty or unrecognized, show status.
 
@@ -168,7 +172,9 @@ Delivery/UX config. Supported keys: `ackReaction`, `replyToMode`,
 
 Read, set the key, write, confirm.
 
----## Implementation notes
+---
+
+## Implementation notes
 
 - **Always** Read the file before Write — the channel server may have added
   pending entries. Don't clobber.

@@ -16,7 +16,7 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
@@ -24,15 +24,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1947
-  last_commit: 2026-10-26T07:13:28Z
-  stars_delta_7d: 14
+  stars: 1960
+  last_commit: 2026-11-02T08:44:46Z
+  stars_delta_7d: 13
   stars_growth_pct: 0.7
-  trending_score: 14.1
+  trending_score: 13.09
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1933
     - 1947
+    - 1960
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
   path: skills/deployment/vss-deploy-detection-tracking-2d/SKILL.md
   branch: develop
-  fetched_at: 2026-10-26T07:38:16.959Z
+  fetched_at: 2026-11-02T09:05:52.635Z
   truncated: false
 type: agent_skill
 skill:
@@ -122,6 +123,7 @@ Unified skill for the **Real Time Video Intelligence CV (RTVI-CV)** microservice
 > **Hardware**: x86/aarch64 dGPU (T4, A100, L40, H100, B200, RTX), SBSA (Spark, Grace-Hopper), Jetson (Thor, Orin, Xavier)
 
 ---
+
 ## Action routing — pick once per invocation
 
 | User intent (sample phrasing) | Flow | Load this reference |
@@ -136,6 +138,7 @@ Unified skill for the **Real Time Video Intelligence CV (RTVI-CV)** microservice
 If intent is genuinely ambiguous (e.g., the user says just "I want to use rtvi-cv"), ask one `AskQuestion`: deploy a new instance, or call an already-running one?
 
 ---
+
 ## What lives where
 
 ```
@@ -153,6 +156,7 @@ For the full per-file inventory and what each reference covers, see
 All scripts are invoked from the skill root via `$SKILL_DIR/scripts/<name>` — paths inside the deploy reference doc are preserved verbatim and resolve correctly when the agent runs from skill root.
 
 ---
+
 ## Available Scripts
 
 Helpers live in `scripts/` and are invoked from the skill root by name —
@@ -186,6 +190,7 @@ For the full inventory of helpers (cache, GPU checks, setup) browse
 5. **For DEPLOY**, the reference doc enforces its own startup contract: one-line acknowledgement → planning-tool call (`TodoWrite` array of 5 todos, OR 5 successive `TaskCreate` calls on newer Claude Code) → Step 1 question. Do not narrate, do not pre-flight, and never print "loading TodoWrite/TaskCreate" or any deferred-tool resolution prose — the planning tool is loaded silently.
 
 ---
+
 ## Output contract — DEPLOY flow
 
 When running the DEPLOY / TEARDOWN / DEBUG flow, the agent MUST honour

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/directory-submissions/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.291Z
+  fetched_at: 2026-11-02T09:06:13.824Z
   truncated: false
 type: agent_skill
 skill:
@@ -68,7 +69,7 @@ skill:
     - references/directory-list.md
     - references/positioning-variations.md
     - references/submission-tracker-template.csv
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -86,6 +87,7 @@ You are an expert in directory-driven distribution for software products. Your g
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 ---
+
 ## Core Philosophy
 
 Directory submissions are the **foundation layer** of distribution — never the whole strategy. They do three things well:
@@ -99,6 +101,7 @@ But directories alone will not generate meaningful leads. They exist to pass lin
 The full directory catalog lives in `references/directory-list.md`. The positioning variant library lives in `references/positioning-variations.md`. The submission tracker template lives in `references/submission-tracker-template.csv`.
 
 ---
+
 ## The Three Hard Rules
 
 ### Rule 1: Foundation before submission
@@ -120,7 +123,7 @@ Directories are the *source* of link equity. You need *destinations* that can co
 - 1 "best of" blog post you wrote yourself about your own category, including honest coverage of competitors.
 
 ### Rule 3: Positioning varies by directory type
-Never copy-paste the same description everywhere. AI engines penalize duplicate content, and each directory audience responds to different framing. See `references/positioning-variations.md` for the full variant library. Short version:
+Never copy-paste the same description everywhere. Identical copy gives AI engines and readers no new signal across sources, and each directory audience responds to different framing. See `references/positioning-variations.md` for the full variant library. Short version:
 
 | Surface | Lead with | Why |
 |---|---|---|
@@ -133,6 +136,7 @@ Never copy-paste the same description everywhere. AI engines penalize duplicate 
 | B2B review sites | **ROI + use case** | Buyers want outcomes and case studies. |
 
 ---
+
 ## Workflow
 
 ### Step 1: Readiness assessment (Phase 0)
@@ -217,6 +221,7 @@ Fetch the listing's HTML with `curl -fsSL https://directory.com/your-listing`, o
 4. Save the listing URL, checked destination, observed attributes, timestamp, and any access limitation in the tracker notes. Recheck after a directory changes its template or submission tier.
 
 ---
+
 ## Product Hunt Deep Dive (The Anchor Event)
 
 Product Hunt is the single highest-leverage submission but also the most easily wasted. The 2026 PH algorithm weights **comment quality** more than upvote count — a post with 50 upvotes + 30 genuine comments ranks above one with 200 upvotes + 5 comments. **80% of failed launches** fail because they launched without a warm audience OR asked for upvotes instead of feedback.
@@ -247,9 +252,10 @@ Product Hunt is the single highest-leverage submission but also the most easily 
 - Only submit to Show HN if you have a *technical* angle to share (architecture, DSL, novel approach). A generic "we launched a SaaS" post will get flagged to death.
 
 ---
+
 ## Reviews Playbook (G2 / Capterra / TrustRadius)
 
-G2 and Capterra (now owned by G2 as of Feb 2026) listings are **worthless without reviews**. 10 reviews is the magic threshold for Grid appearance. Run the 10-in-30 protocol during launch month.
+G2 and Capterra (G2 agreed to buy Capterra, GetApp, and Software Advice from Gartner; announced Jan 2026) listings are **worthless without reviews**. 10 reviews is the magic threshold for Grid appearance. Run the 10-in-30 protocol during launch month.
 
 ### The 10-in-30 protocol
 
@@ -268,15 +274,16 @@ G2 and Capterra (now owned by G2 as of Feb 2026) listings are **worthless withou
 ### Badges and paid plans
 
 - **"Users Love Us" badge** is still free: requires 20 reviews at 4.0+ average.
-- **Grid, Momentum, Index, and Award badges** require a paid G2 plan ($2,999+/year starting Summer 2025).
+- **Grid, Momentum, Index, and Award badges** require a paid G2 plan (check G2's current pricing).
 - **Do not spend on paid G2 in year one.** The free listing + Users Love Us badge is sufficient.
 
 ### Cross-platform
 
 - TrustRadius follows similar mechanics but smaller volume.
-- Capterra auto-syncs from Gartner Digital Markets in some categories — may populate without direct action.
+- Capterra, GetApp, and Software Advice sync listings with each other in some categories, so one may populate without direct action.
 
 ---
+
 ## Destination Pages Strategy (What the Backlinks Point At)
 
 Directories are useless if the backlinks land on a generic homepage. Build these destination pages *before* submitting:
@@ -317,6 +324,7 @@ Write honest roundups of your own category: `/blog/best-[category]-tools-2026`. 
 Every integration = one landing page at `/integrations/[partner]`. Follows the Zapier playbook: Zapier gets **~2.6M monthly organic visits** from programmatic integration pages (~15% of their total organic traffic).
 
 ---
+
 ## GEO (Generative Engine Optimization)
 
 In 2026, 30–50% of "research a tool" queries happen inside ChatGPT, Claude, Perplexity, or Google AI Overviews without ever touching a traditional search page. Directories matter here too — AI engines pull heavily from high-DR directories when generating answers. But the *destination pages* also need to be GEO-optimized.
@@ -338,6 +346,7 @@ In 2026, 30–50% of "research a tool" queries happen inside ChatGPT, Claude, Pe
 Manually check monthly: ask ChatGPT, Claude, and Perplexity "what are the best [category] tools?" and log where the product appears. Free GEO tracking tools (GeoTracker, llmrefs) automate this.
 
 ---
+
 ## Community & Ongoing Distribution
 
 Directories are one-shot. Community is ongoing. Both feed the same funnel.
@@ -381,6 +390,7 @@ Build-in-public threads on architecture, revenue, decisions. Technical deep-dive
 Every substantial technical post = dofollow backlink + dev audience reach. Cross-post with canonical URL back to main blog.
 
 ---
+
 ## KPIs & Tracking
 
 Track weekly. If a number isn't moving, investigate — don't just submit more directories.
@@ -401,6 +411,7 @@ Track weekly. If a number isn't moving, investigate — don't just submit more d
 One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, submitted to ~35 directories (MCP registries, GitHub lists, indie launch sites), went from DR 4 to 26 in about 40 days, and from 8 to 33 referring domains in about 3 weeks. That's a single anecdote, but it suggests the Day 30 targets are reachable for a focused campaign.
 
 ---
+
 ## What NOT to Do
 
 1. **Don't pay for directory submission services** ($60–$200 packages). The whole point is these are free. It's an afternoon of copy-paste.
@@ -411,12 +422,13 @@ One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, su
 6. **Don't ask for upvotes on Product Hunt.** The 2026 algorithm penalizes it. Ask for **feedback**.
 7. **Don't amend old directory listings every week.** Submit once, check quarterly.
 8. **Don't submit before the destination page exists.** Link equity needs a destination.
-9. **Don't duplicate descriptions across directories.** AI engines penalize duplicate content.
+9. **Don't duplicate descriptions across directories.** Identical copy adds no new signal across sources.
 10. **Don't lie on comparison pages.** AI engines cross-reference and de-rank lies.
 11. **Don't over-index on launch-day spike.** The flywheel is templates + alternatives + reviews + ongoing content — not one day of PH.
 12. **Don't forget Crunchbase, LinkedIn company page, and Wikidata.** These feed AI training corpora and matter for GEO.
 
 ---
+
 ## Task-Specific Questions
 
 1. **What are you launching?** (Category changes tier mix — AI vs traditional SaaS vs no-code vs dev tool.)
@@ -430,6 +442,7 @@ One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, su
 9. **Current DR and referring domain count?** (Baseline for measuring the compounding effect.)
 
 ---
+
 ## Output Format
 
 When the user asks for a directory plan, return:
@@ -447,6 +460,7 @@ When the user asks for a directory plan, return:
 Keep the plan actionable. Every item should be something the user can do today.
 
 ---
+
 ## Related Skills
 
 - **launch** — broader launch moment, ORB framework, five-phase approach

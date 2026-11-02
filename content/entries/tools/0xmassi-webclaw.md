@@ -13,29 +13,29 @@ tags:
   - apify-alternative
   - cli
 status: active
-quality_percentile: 68
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-03-10T17:50:15
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: 0xMassi/webclaw
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2390
-  last_commit: 2026-10-23T16:03:58Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.3
-  trending_score: 8.03
-  rank_current: 121
-  rank_delta: -76
+  stars: 2421
+  last_commit: 2026-10-30T14:53:05Z
+  stars_delta_7d: 31
+  stars_growth_pct: 1.3
+  trending_score: 31.4
+  rank_current: 95
+  rank_delta: 25
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2371
     - 2375
     - 2382
     - 2390
+    - 2421
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: 0xMassi/webclaw
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:02.878Z
+  fetched_at: 2026-11-02T09:05:40.684Z
   truncated: false
 type: agent_tool
 tool:
@@ -93,6 +93,7 @@ tool:
 </p>
 
 ---
+
 Most web scraping tools give your agent one of two bad outputs:
 
 - a blocked page, login wall, or empty app shell
@@ -117,6 +118,7 @@ You may use this domain in literature without prior coordination or asking for p
 Use it from the terminal, wire it into Claude/Cursor through MCP, call the hosted API from your app, or self-host the OSS server.
 
 ---
+
 ## Install
 
 ### Agent setup
@@ -219,6 +221,7 @@ for page in wc.crawl("https://quotes.toscrape.com", max_pages=10):
 See [python/README.md](https://github.com/0xMassi/webclaw/blob/main/python/README.md) for every function and option.
 
 ---
+
 ## Quick Start
 
 ### Scrape one page
@@ -532,6 +535,7 @@ webclaw https://example.com/pricing --diff-with pricing-old.json
 ```
 
 ---
+
 ## MCP Server
 
 webclaw ships with an MCP server for AI agents.
@@ -590,6 +594,7 @@ Extract the brand colors, fonts, and logos from this company website.
 ```
 
 ---
+
 ## Use as an agent skill
 
 Add webclaw to Claude Code, Cursor, Windsurf, and other MCP agents in one command:
@@ -605,6 +610,7 @@ to handle bot-protected and JavaScript-rendered pages.
 Find it on [skills.sh](https://www.skills.sh/0xMassi/webclaw-skill/webclaw).
 
 ---
+
 ## Tools
 
 | Tool | What it does | Local |
@@ -623,6 +629,7 @@ Find it on [skills.sh](https://www.skills.sh/0xMassi/webclaw-skill/webclaw).
 | `research` | Multi-source research workflow | Hosted API |
 
 ---
+
 ## SDKs
 
 ```bash
@@ -686,6 +693,7 @@ curl -X POST https://api.webclaw.io/v1/scrape \
 </details>
 
 ---
+
 ## Output Formats
 
 | Format | Use it when you need |
@@ -697,6 +705,7 @@ curl -X POST https://api.webclaw.io/v1/scrape \
 | `html` | Cleaned HTML for custom processing |
 
 ---
+
 ## Local First, Hosted When Needed
 
 The CLI and MCP server work locally without an account for the core extraction path.
@@ -717,6 +726,7 @@ webclaw https://example.com --cloud
 ```
 
 ---
+
 ## What You Can Build
 
 | Use case | Example |
@@ -744,6 +754,7 @@ webclaw/
 `webclaw-core` is pure extraction logic: no network I/O, small surface area, and usable independently from the fetching layer.
 
 ---
+
 ## Configuration
 
 | Variable | Description |
@@ -765,6 +776,7 @@ webclaw/
 | `WEBCLAW_MCP_TOKEN` | Bearer token `webclaw-mcp --http` requires from every client |
 
 ---
+
 ## Contributing
 
 The most useful contributions right now are practical and small:
@@ -796,6 +808,7 @@ CLI, MCP, SDK, or API:
 Please remove secrets, cookies, private tokens, and customer data from logs before posting.
 
 ---
+
 ## Strategic Partner
 
 <table>
@@ -828,6 +841,7 @@ Please remove secrets, cookies, private tokens, and customer data from logs befo
 </table>
 
 ---
+
 ## Infrastructure Partner
 
 <table>
@@ -852,18 +866,19 @@ Please remove secrets, cookies, private tokens, and customer data from logs befo
 </table>
 
 ---
+
 ## Studio Partners
 
 <table>
   <tr>
     <td width="340" align="center">
-      <a href="https://go.nodemaven.com/webclawGHsept">
-        <img src="https://raw.githubusercontent.com/0xMassi/webclaw/main/assets/sponsors/nodemaven-banner-20260923.png" alt="NodeMaven" width="300" />
+      <a href="https://go.nodemaven.com/webclawreadmeoctober">
+        <img src="https://raw.githubusercontent.com/0xMassi/webclaw/main/assets/sponsors/nodemaven-banner-20261026.png" alt="NodeMaven" width="300" />
       </a>
     </td>
     <td>
-      <p><a href="https://go.nodemaven.com/webclawGHsept"><strong>NodeMaven</strong></a>: The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market.</p>
-      <p><a href="https://go.nodemaven.com/webclawGHsept"><strong>Why NodeMaven?</strong></a></p>
+      <p><a href="https://go.nodemaven.com/webclawreadmeoctober"><strong>NodeMaven</strong></a>: The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market.</p>
+      <p><a href="https://go.nodemaven.com/webclawreadmeoctober"><strong>Why NodeMaven?</strong></a></p>
       <ul>
         <li>ZIP targeting</li>
         <li>99.9% uptime</li>
@@ -914,6 +929,7 @@ Please remove secrets, cookies, private tokens, and customer data from logs befo
 </table>
 
 ---
+
 ## Community Plugins
 
 Third-party plugins that integrate webclaw with AI agent platforms:
@@ -926,6 +942,7 @@ Third-party plugins that integrate webclaw with AI agent platforms:
 Built a webclaw integration? [Open a PR](https://github.com/0xMassi/webclaw/pulls) to add it here.
 
 ---
+
 ## Contributors
 
 Thanks to everyone improving webclaw through issues, examples, docs, bug reports, and pull requests.
@@ -935,6 +952,7 @@ Thanks to everyone improving webclaw through issues, examples, docs, bug reports
 </a>
 
 ---
+
 ## Star History
 
 <a href="https://github.com/0xMassi/webclaw/stargazers">
@@ -946,6 +964,7 @@ Thanks to everyone improving webclaw through issues, examples, docs, bug reports
 </a>
 
 ---
+
 ## License
 
 [AGPL-3.0-only](https://github.com/0xMassi/webclaw/blob/main/LICENSE)

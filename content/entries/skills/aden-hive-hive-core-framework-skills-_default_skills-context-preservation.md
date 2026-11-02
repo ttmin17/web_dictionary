@@ -1,8 +1,10 @@
 ---
 slug: aden-hive-hive-core-framework-skills-_default_skills-context-preservation
-name: context-preservation
-tagline: Agent skill from aden-hive/hive
-summary: Agent skill from aden-hive/hive
+name: hive.context-preservation
+tagline: Proactively extract critical values from tool results into working
+  notes before automatic context pruning destroys them.
+summary: You operate under a finite context window. Older tool results WILL be
+  pruned. Extract what you need while it's still in context.
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +13,10 @@ tags:
   - anthropic
   - automation
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: aden-hive/hive
@@ -22,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11122
-  last_commit: 2026-10-26T07:23:23Z
-  stars_delta_7d: 14
+  stars: 11131
+  last_commit: 2026-10-26T11:58:57Z
+  stars_delta_7d: 9
   stars_growth_pct: 0.1
-  trending_score: 14.02
+  trending_score: 9.01
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11088
     - 11099
     - 11108
     - 11122
+    - 11131
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +42,13 @@ readme_source:
   repo: aden-hive/hive
   path: core/framework/skills/_default_skills/context-preservation/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:50.192Z
+  fetched_at: 2026-11-02T09:06:45.645Z
   truncated: false
 type: agent_skill
 skill:
-  skill_name: context-preservation
-  description: Agent skill from aden-hive/hive
+  skill_name: hive.context-preservation
+  description: Proactively extract critical values from tool results into working
+    notes before automatic context pruning destroys them.
   folder_path: core/framework/skills/_default_skills/context-preservation
   extra_files: []
   pack_total_skills: 20

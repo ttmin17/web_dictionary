@@ -1,20 +1,23 @@
 ---
 slug: samugit83-redamon-skills-add-partial-recon
 name: add-partial-recon
-tagline: Agent skill from samugit83/redamon
-summary: Agent skill from samugit83/redamon
+tagline: "Adding partial-recon support for a tool: running a single pipeline
+  phase on demand from the workflow graph, reading its inputs from the existing
+  Neo4j"
+summary: "- Making an existing recon tool runnable as a single on-demand phase
+  from the graph."
 categories:
   - agent-frameworks
 tags:
   - agentic-ai
+  - ai-penetration-testing
   - ai-pentesting
-  - attack-surface-management
   - autonomous-agents
 status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -22,15 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3214
-  last_commit: 2026-10-22T17:21:18Z
-  stars_delta_7d: 62
-  stars_growth_pct: 2
-  trending_score: 63.22
+  stars: 3264
+  last_commit: 2026-11-01T16:47:54Z
+  stars_delta_7d: 50
+  stars_growth_pct: 1.6
+  trending_score: 50.78
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
+    - 3264
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +42,19 @@ readme_source:
   repo: samugit83/redamon
   path: skills/add-partial-recon/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:45:48.612Z
+  fetched_at: 2026-11-02T09:07:16.751Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: add-partial-recon
-  description: Agent skill from samugit83/redamon
+  description: >
+    Adding partial-recon support for a tool: running a single pipeline phase on
+    demand from the workflow graph, reading its inputs from the existing Neo4j
+    graph and merging results back. The input-node map decides the modal UI, and
+    some input types must never be manually entered. Trigger: adding a tool to
+    partial recon; a new recon/partial_recon_modules/*.py; editing
+    SECTION_INPUT_MAP in nodeMapping.ts; wiring the partial-recon modal or a
+    single-phase re-run.
   folder_path: skills/add-partial-recon
   extra_files: []
   pack_total_skills: 16
@@ -55,4 +66,81 @@ skill:
   pack_slug: samugit83-redamon
 ---
 
-Agent skill from samugit83/redamon
+## When to Use
+
+- Making an existing recon tool runnable as a single on-demand phase from the graph.
+
+For adding the tool to the full pipeline, use `recon-tool-integration`. For the
+graph write itself, use `graph-db-writes`. This skill is the partial-recon path:
+graph-sourced inputs, the modal, and the single-phase re-run.
+
+---
+
+## Critical Rules
+
+- **NEVER let partial-recon results create duplicate nodes.** Partial runs merge
+  into the **existing** graph and must dedup via `MERGE` on the tenant triple -
+  see `graph-db-writes`. Partial and full share the same graph.
+- **NEVER expose a graph-only input type as a manual textarea.** `SECTION_INPUT_MAP`
+  in [nodeMapping.ts](https://github.com/samugit83/redamon/blob/master/skills/add-partial-recon/../../webapp/src/components/projects/ProjectForm/nodeMapping.ts)
+  lists what the tool reads from the graph, but only the types that make sense for
+  manual entry get a user field. Types like `Port` and `Endpoint` come from the
+  graph only and must not be hand-entered.
+- **ALWAYS wire the shared entry so it works in BOTH the full pipeline AND partial
+  recon.** Partial recon is spawned as a **separate** container from the full
+  pipeline (`recon_orchestrator/container_manager.py`); hook the shared entry
+  function once so both inherit (see `recon-ai-enrichment` for the same rule).
+- **ALWAYS mirror the reference impl matching your tool's input shape**, not an
+  arbitrary one: Naabu (`Subdomain` + `IP`), Masscan (`IP` only), Nmap
+  (`IP` + `Port`), Katana (`URL`). The input-node shape drives the whole wiring.
+- **ALWAYS read the run's roots through `scope_roots(config)`, NEVER
+  `config["domain"]`.** A Domain-batch run covers every root in
+  `config["domains"]`; `config["domain"]` is only the first, so a tool reading it
+  silently skips the rest. [test_partial_scope_guard.py](https://github.com/samugit83/redamon/blob/master/skills/add-partial-recon/../../recon/tests/test_partial_scope_guard.py)
+  fails the gate on a direct read. Pass `domain_groups=config.get("domain_groups")`
+  (built from the container's `SCOPE_GROUPS`) to the graph builders so each root
+  keeps its group's scope: an EXACT group, a single-domain prefix list included,
+  scans only its listed hosts. Attach each typed host to the org Domain of its
+  scan root, `attach_org(root_for_host(host, roots))`: the graph has one Domain
+  per registrable domain, never one per scan root.
+- **NEVER re-implement the typed-input scope check in a module.** The orchestrator
+  and `_prepare_scope` (`filter_partial_user_input`) already dropped every typed
+  host, URL host, over-wide CIDR and out-of-scope attach target, and a typed URL's
+  host joins the writer's scope only through `_scope_partial_urls`. The run is
+  also refused before your module runs while the graph holds an older scope
+  model's Domain (`_legacy_graph_refusal`, fails closed).
+- **ALWAYS loop an API that takes one domain per call through `run_per_root`**,
+  never a bare `for`. It fails only the root that raised or called `sys.exit`,
+  retries a rate-limited root once, and returns the `{root: status}` the run report
+  and exit code read. Mirror Urlscan (a 429 returns `STATUS_RATE_LIMITED`) or Shodan.
+- **A writer attaches a host through `attach_for_host(host, recon_data)`**
+  (`graph_db/mixins/recon/scope.py`): the scope is the longest scan root among
+  `attach_roots(recon_data)` (every project root, from `all_project_roots`, so a
+  host found under another group's root joins it instead of becoming an
+  `ExternalDomain`), and the Domain is that root's org (`org_for_scan_root`). A
+  partial run's recon dicts carry no `scope_groups`; `_prepare_scope` sets the
+  run's default (`set_project_scope` -> `set_run_scope_groups`), and a dict's own
+  `scope_groups` always wins.
+
+---
+
+## Input-node shape -> reference impl
+
+| Tool reads | User enters | Mirror |
+| --- | --- | --- |
+| Subdomain + IP | Subdomain + IP (two textareas) | Naabu |
+| IP only | IP (one textarea) | Masscan |
+| IP + Port | IP (Port from graph) | Nmap |
+| BaseURL | URL (maps to a BaseURL node) | Katana |
+
+## Commands
+
+```bash
+# recon/*.py is spawned fresh per job (volume-mounted) - no rebuild
+./redamon.sh test unit                    # recon + root-recon sections
+```
+
+## Resources
+
+- [docs/readmes/coding_agent_prompts/PROMPT.ADD_PARTIAL_RECON.md](https://github.com/samugit83/redamon/blob/master/skills/add-partial-recon/../../docs/readmes/coding_agent_prompts/PROMPT.ADD_PARTIAL_RECON.md) - full walkthrough, modal UI, input validation, reference impls
+- Related skills: `recon-tool-integration`, `graph-db-writes`, `recon-ai-enrichment`

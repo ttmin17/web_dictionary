@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27651
-  last_commit: 2026-10-24T17:24:38Z
-  stars_delta_7d: 129
-  stars_growth_pct: 0.5
-  trending_score: 129.6
+  stars: 27822
+  last_commit: 2026-10-30T20:57:42Z
+  stars_delta_7d: 171
+  stars_growth_pct: 0.6
+  trending_score: 172.06
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 27320
     - 27430
     - 27522
     - 27651
+    - 27822
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/planning-with-files/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:42:27.104Z
+  fetched_at: 2026-11-02T09:06:19.482Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,6 +62,7 @@ skill:
   extra_files:
     - evals/planning-with-files.eval.yaml
     - examples.md
+    - plan-inventory.md
     - reference.md
     - scripts/attest-plan.ps1
     - scripts/attest-plan.sh
@@ -69,7 +70,6 @@ skill:
     - scripts/check-complete.sh
     - scripts/gate-stop.sh
     - scripts/init-session.ps1
-    - scripts/init-session.sh
   pack_total_skills: 6
   is_pack_primary: false
   clients:
@@ -294,6 +294,8 @@ Helper scripts for automation:
 - `scripts/plan-doctor.sh` — One-pass self-check for the mechanisms that fail silently (v3.6.0): plan resolution, hook injection, canonicalizer path shape, attestation state, install surfaces, per-fire hook latency. Run it whenever hooks seem quiet or after installing on a new machine. See `/plan-doctor` command.
 
 ### List saved plans
+
+For agent-readable paths and state, add `--json` (PowerShell: `-Json`) to the listing command. This optional read-only mode includes root files, selection uncertainty and bounded paging. See [the inventory schema and worker handoff](https://github.com/OthmanAdi/planning-with-files/blob/master/skills/planning-with-files/plan-inventory.md). It never runs during ordinary activation.
 
 To find a task before resuming it, run `sh "<skill-dir>/scripts/set-active-plan.sh" --list` or, in Windows PowerShell, `& "<skill-dir>/scripts/set-active-plan.ps1" -List`. Replace `<skill-dir>` with this installed skill directory and keep your current directory at the project root.
 

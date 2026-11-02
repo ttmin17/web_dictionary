@@ -1,8 +1,11 @@
 ---
 slug: phuryn-pm-skills-pm-execution-skills-test-scenarios
 name: test-scenarios
-tagline: Agent skill from phuryn/pm-skills
-summary: Agent skill from phuryn/pm-skills
+tagline: Create comprehensive test scenarios from user stories with test
+  objectives, starting conditions, user roles, step-by-step actions, and
+  expected outcom
+summary: "Use when: Writing QA test cases, creating test plans, defining
+  acceptance test scenarios, or validating user story implementations."
 categories:
   - productivity-ops
 tags:
@@ -11,10 +14,10 @@ tags:
   - agentic-skills
   - claude-code-marketplace
 status: active
-quality_percentile: 64
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: phuryn/pm-skills
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27381
-  last_commit: 2026-10-16T12:28:37Z
-  stars_delta_7d: 189
-  stars_growth_pct: 0.7
-  trending_score: 190.31
+  stars: 27614
+  last_commit: 2026-10-29T19:09:57Z
+  stars_delta_7d: 233
+  stars_growth_pct: 0.9
+  trending_score: 234.98
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 26820
     - 26957
     - 27192
     - 27381
+    - 27614
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +43,18 @@ readme_source:
   repo: phuryn/pm-skills
   path: pm-execution/skills/test-scenarios/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:13.734Z
+  fetched_at: 2026-11-02T09:06:41.829Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: test-scenarios
-  description: Agent skill from phuryn/pm-skills
+  description: Create comprehensive test scenarios from user stories with test
+    objectives, starting conditions, user roles, step-by-step actions, and
+    expected outcomes. Use when writing QA test cases, creating test plans,
+    defining acceptance tests, or preparing for feature validation.
   folder_path: pm-execution/skills/test-scenarios
   extra_files: []
-  pack_total_skills: 69
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +63,84 @@ skill:
   pack_slug: phuryn-pm-skills
 ---
 
-Agent skill from phuryn/pm-skills
+# Test Scenarios
+Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step test actions, and expected outcomes.
+
+**Use when:** Writing QA test cases, creating test plans, defining acceptance test scenarios, or validating user story implementations.
+
+**Arguments:**
+- `$PRODUCT`: The product or system name
+- `$USER_STORY`: The user story to test (title and acceptance criteria)
+- `$CONTEXT`: Additional testing context or constraints
+
+## Step-by-Step Process
+
+1. **Review the user story** and acceptance criteria
+2. **Define test objectives** - What specific behavior to validate
+3. **Establish starting conditions** - System state, data setup, configurations
+4. **Identify user roles** - Who performs the test actions
+5. **Create test steps** - Break down interactions step-by-step
+6. **Define expected outcomes** - Observable results after each step
+7. **Consider edge cases** - Invalid inputs, boundary conditions
+8. **Output detailed test scenarios** - Ready for QA execution
+
+## Scenario Template
+
+**Test Scenario:** [Clear scenario name]
+
+**Test Objective:** [What this test validates]
+
+**Starting Conditions:**
+- [System state required]
+- [Data or configuration needed]
+- [User setup or permissions]
+
+**User Role:** [Who performs the test]
+
+**Test Steps:**
+1. [First action and its expected result]
+2. [Second action and observable outcome]
+3. [Third action and system behavior]
+4. [Completion action and final state]
+
+**Expected Outcomes:**
+- [Observable result 1]
+- [Observable result 2]
+- [Observable result 3]
+
+## Example Test Scenario
+
+**Test Scenario:** View Recently Viewed Products on Product Page
+
+**Test Objective:** Verify that the 'Recently viewed' section displays correctly and excludes the current product.
+
+**Starting Conditions:**
+- User is logged in or has browser history enabled
+- User has viewed at least 2 products in the current session
+- User is now on a product page different from previously viewed items
+
+**User Role:** Online Shopper
+
+**Test Steps:**
+1. Navigate to any product page → Section should appear at bottom with previously viewed items
+2. Scroll to bottom of page → "Recently viewed" section is visible with product cards
+3. Verify product thumbnails → Images, titles, and prices are displayed correctly
+4. Check current product → Current product is NOT in the recently viewed list
+5. Click on a product card → User navigates to the corresponding product page
+
+**Expected Outcomes:**
+- Recently viewed section appears only after viewing at least 1 prior product
+- Section displays 4-8 product cards with complete information
+- Current product is excluded from the list
+- Each card shows "Viewed X minutes/hours ago" timestamp
+- Clicking cards navigates to correct product pages
+- Performance: Section loads within 2 seconds
+
+## Output Deliverables
+
+- Comprehensive test scenarios for each acceptance criterion
+- Clear test objectives aligned with user story intent
+- Detailed step-by-step test actions
+- Observable expected outcomes after each step
+- Edge case and error scenario coverage
+- Ready for QA team execution and documentation

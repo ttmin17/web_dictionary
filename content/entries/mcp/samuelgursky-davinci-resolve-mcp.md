@@ -13,28 +13,29 @@ tags:
   - blackmagicdesign
   - davinci-resolve
 status: active
-quality_percentile: 61
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: samuelgursky/davinci-resolve-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3774
-  last_commit: 2026-10-23T11:24:58Z
-  stars_delta_7d: 143
-  stars_growth_pct: 3.9
-  trending_score: 148.63
-  rank_current: 17
-  rank_delta: -6
+  stars: 3894
+  last_commit: 2026-11-02T03:57:02Z
+  stars_delta_7d: 120
+  stars_growth_pct: 3.2
+  trending_score: 123.82
+  rank_current: 18
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3520
     - 3631
     - 3774
+    - 3894
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: samuelgursky/davinci-resolve-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:00.866Z
+  fetched_at: 2026-11-02T09:05:36.695Z
   truncated: false
 type: mcp_server
 launch:
@@ -59,7 +60,7 @@ launch:
 # DaVinci Resolve MCP Server
 English | [简体中文](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.zh-CN.md)
 
-[![Version](https://img.shields.io/badge/version-4.15.3-blue.svg)](https://github.com/samuelgursky/davinci-resolve-mcp/releases)
+[![Version](https://img.shields.io/badge/version-4.18.4-blue.svg)](https://github.com/samuelgursky/davinci-resolve-mcp/releases)
 [![npm](https://img.shields.io/npm/v/davinci-resolve-mcp.svg?label=npm&color=CB3837)](https://www.npmjs.com/package/davinci-resolve-mcp)
 [![API Coverage](https://img.shields.io/badge/API%20Coverage-100%25-brightgreen.svg)](https://raw.githubusercontent.com/samuelgursky/davinci-resolve-mcp/main/docs/reference/api-coverage.md)
 [![Tools](https://img.shields.io/badge/MCP%20Tools-37%20(390%20full)-blue.svg)](#server-modes)

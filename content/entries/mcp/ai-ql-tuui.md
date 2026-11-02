@@ -14,11 +14,11 @@ tags:
   - ai-playground
   - anthropic
   - claude
-status: active
-quality_percentile: 4
+status: slowing
+quality_percentile: 3
 selection_reason: quality_percentile
 first_seen: 2025-04-01T15:09:38
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AI-QL/tuui
@@ -30,12 +30,12 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 113
-  rank_delta: -33
+  rank_current: 110
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1155
     - 1157
+    - 1159
     - 1159
     - 1159
 language: en
@@ -46,7 +46,7 @@ readme_source:
   repo: AI-QL/tuui
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:23.855Z
+  fetched_at: 2026-11-02T09:05:56.766Z
   truncated: false
 type: mcp_server
 launch:

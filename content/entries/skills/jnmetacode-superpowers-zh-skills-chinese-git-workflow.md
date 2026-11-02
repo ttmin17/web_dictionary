@@ -1,8 +1,10 @@
 ---
 slug: jnmetacode-superpowers-zh-skills-chinese-git-workflow
 name: chinese-git-workflow
-tagline: Agent skill from jnMetaCode/superpowers-zh
-summary: Agent skill from jnMetaCode/superpowers-zh
+tagline: 国内 Git 平台配置参考——Gitee、Coding.net、极狐 GitLab、CNB 的 SSH/HTTPS/凭据/CI
+  接入差异与镜像同步配置。仅在用户显式 /chinese-git-workflow 时调用，不要根据上下文自动触发。
+summary: 国内团队用 Git 经常踩的坑：GitHub 访问不稳定、CI/CD 方案照搬国外水土不服、commit message
+  中英混杂没有规范。本技能提供一套完整适配国内平台和团队习惯的 Git 工作流。
 categories:
   - coding-agents
 tags:
@@ -14,7 +16,7 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: jnMetaCode/superpowers-zh
@@ -22,30 +24,31 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8385
-  last_commit: 2026-10-20T13:33:25Z
-  stars_delta_7d: 41
-  stars_growth_pct: 0.5
-  trending_score: 41.2
+  stars: 8443
+  last_commit: 2026-10-26T15:07:56Z
+  stars_delta_7d: 58
+  stars_growth_pct: 0.7
+  trending_score: 58.4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8267
     - 8305
     - 8344
     - 8385
-language: en
+    - 8443
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: jnMetaCode/superpowers-zh
   path: skills/chinese-git-workflow/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:55.664Z
+  fetched_at: 2026-11-02T09:06:33.369Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: chinese-git-workflow
-  description: Agent skill from jnMetaCode/superpowers-zh
+  description: 国内 Git 平台配置参考——Gitee、Coding.net、极狐 GitLab、CNB 的 SSH/HTTPS/凭据/CI
+    接入差异与镜像同步配置。仅在用户显式 /chinese-git-workflow 时调用，不要根据上下文自动触发。
   folder_path: skills/chinese-git-workflow
   extra_files: []
   pack_total_skills: 21

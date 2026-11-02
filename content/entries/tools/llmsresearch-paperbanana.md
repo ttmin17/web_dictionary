@@ -16,28 +16,29 @@ tags:
   - agentic-ai
   - arxiv
 status: active
-quality_percentile: 54
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: llmsresearch/paperbanana
   official_vendor: false
   license: MIT
 signals:
-  stars: 2419
+  stars: 2448
   last_commit: 2026-09-17T15:36:41Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.5
-  trending_score: 13.07
-  rank_current: 109
-  rank_delta: -66
+  stars_delta_7d: 29
+  stars_growth_pct: 1.2
+  trending_score: 29.35
+  rank_current: 98
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2397
     - 2406
     - 2419
+    - 2448
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: llmsresearch/paperbanana
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:58.971Z
+  fetched_at: 2026-11-02T09:05:40.787Z
   truncated: false
 type: agent_tool
 tool:
@@ -96,6 +97,7 @@ tool:
 </p>
 
 ---
+
 > **Disclaimer**: This is an **unofficial, community-driven open-source implementation** of the paper
 > *"PaperBanana: Automating Academic Illustration for AI Scientists"* by Dawei Zhu, Rui Meng, Yale Song,
 > Xiyu Wei, Sujian Li, Tomas Pfister, and Jinsung Yoon ([arXiv:2601.23265](https://arxiv.org/abs/2601.23265)).
@@ -135,6 +137,7 @@ Check out Atlas Cloud's new coding plan promotion for more budget-friendly API a
 [https://www.atlascloud.ai/console/coding-plan](https://www.atlascloud.ai/console/coding-plan?utm_source=github&utm_medium=link&utm_campaign=paperbanana)
 
 ---
+
 ## Quick Start
 
 > **Try it in your browser:** the
@@ -233,6 +236,7 @@ paperbanana studio
 Open the URL shown in the terminal (default `http://127.0.0.1:7860/`). The Studio exposes the same workflows as the CLI: methodology diagrams, statistical plots, comparative evaluation, continuing a prior run, batch manifests (methodology or **plot** batch via the Batch tab), and a simple browser for `run_*` / `batch_*` output folders. Use `--host`, `--port`, `--config`, and `--output-dir` as needed.
 
 ---
+
 ## How It Works
 
 PaperBanana implements a multi-agent pipeline with up to 7 specialized agents:
@@ -296,6 +300,7 @@ Recommended Atlas image models for `ATLASCLOUD_IMAGE_MODEL`:
 - `qwen/qwen-image`
 
 ---
+
 ## CLI Reference
 
 ### `paperbanana generate` -- Methodology Diagrams
@@ -688,6 +693,7 @@ the mirror tracks their 2026-03-22 revision. The set is cached under
 commands can also fetch it on first use via `--auto-download-data`.
 
 ---
+
 ## Python API
 
 ```python
@@ -735,6 +741,7 @@ result = asyncio.run(pipeline.continue_run(
 See `examples/generate_diagram.py` and `examples/generate_plot.py` for complete working examples.
 
 ---
+
 ## MCP Server
 
 PaperBanana includes an MCP server for use with Claude Code, Cursor, or any MCP-compatible client. Add the following config to use it via `uvx` without a local clone:
@@ -761,6 +768,7 @@ The repo also ships with 3 Claude Code skills:
 See [`mcp_server/README.md`](https://github.com/llmsresearch/paperbanana/blob/main/mcp_server/README.md) for full setup details (Claude Code, Cursor, local development).
 
 ---
+
 ## Overleaf Integration (GitHub Action)
 
 Keep your paper's methodology figure in sync with the text — automatically. PaperBanana ships a GitHub Action that pairs with Overleaf's built-in GitHub sync: push your `.tex` changes, the action extracts the methodology section, generates the figure, and commits back the image plus a ready-to-`\input` LaTeX snippet. Pull in Overleaf and it's in your file tree.
@@ -778,6 +786,7 @@ Keep your paper's methodology figure in sync with the text — automatically. Pa
 See [`integrations/github-action/README.md`](https://github.com/llmsresearch/paperbanana/blob/main/integrations/github-action/README.md) for the full workflow, all inputs, and cost-control options.
 
 ---
+
 ## Configuration
 
 Default settings are in `configs/config.yaml`. Override via CLI flags or a custom YAML:
@@ -841,6 +850,7 @@ GOOGLE_IMAGE_MODEL=gemini-3-pro-image-preview  # override Gemini image model
 ```
 
 ---
+
 ## Project Structure
 
 ```

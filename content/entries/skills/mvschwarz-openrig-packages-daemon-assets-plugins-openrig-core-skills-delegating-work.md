@@ -1,8 +1,13 @@
 ---
 slug: mvschwarz-openrig-packages-daemon-assets-plugins-openrig-core-skills-delegating-work
 name: delegating-work
-tagline: Agent skill from mvschwarz/openrig
-summary: Agent skill from mvschwarz/openrig
+tagline: Use when you have a task and must decide WHO does it — yourself, a
+  spawned subagent, or another agent in the topology that already holds the
+  context —
+summary: "- A lot to read in → route to a real agent in the topology that
+  already holds it. This is what the role structure is FOR — reviewers, QA,
+  implementers who have been on a project over time. An agent that already
+  unders..."
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +19,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -22,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8198
-  last_commit: 2026-10-26T07:30:13Z
-  stars_delta_7d: 367
-  stars_growth_pct: 4.7
-  trending_score: 384.2
+  stars: 8550
+  last_commit: 2026-11-02T08:44:58Z
+  stars_delta_7d: 352
+  stars_growth_pct: 4.3
+  trending_score: 367.11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5667
     - 7377
     - 7831
     - 8198
+    - 8550
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +45,24 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/delegating-work/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.582Z
+  fetched_at: 2026-11-02T09:06:34.146Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: delegating-work
-  description: Agent skill from mvschwarz/openrig
+  description: "Use when you have a task and must decide WHO does it — yourself, a
+    spawned subagent, or another agent in the topology that already holds the
+    context — or how to brief the agent you hand it to, which depends on the
+    model it runs. The rule: how much would a blank slate have to read in to do
+    this correctly? A lot → route to a context-holding agent; a little →
+    subagent; unsure → a real agent or yourself. NOT the mechanics of fanning
+    out (that's dispatching-parallel-agents / subagent-driven-development) —
+    this is the who/whether decision, and the failure mode that makes teams
+    abandon subagents. Also use it to decide how far to trust a delegated
+    result."
   folder_path: packages/daemon/assets/plugins/openrig-core/skills/delegating-work
   extra_files: []
-  pack_total_skills: 54
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -86,11 +100,31 @@ Before delegating to a blank slate, ask: **would a wrong-but-plausible answer he
 ## It generalizes
 This is really **"route work to whoever holds the context,"** with subagents as the option for work that needs none. The audience is **every agent** — implementers and QA seats make this call as much as orchestrators do.
 
+## Check what kind of agent you're handing it to
+How to brief another agent depends on the model it runs, so check before you hand over anything open-ended.
+`rig ps --nodes --json` shows the model each seat's spec declares (`model`; `null` if none is declared). A declared
+model can differ from the one running, so if it's null, or you aren't sure, ask the seat which model it's running.
+
+- **Goal-oriented models** are built to take a goal and find the route themselves. Today that's Claude Opus 5.5 or
+  newer and any Fable model, and Codex models at the Sol level or above from GPT-5.6 on (GPT-5.6-Sol, GPT-6-Sol,
+  GPT-6.1-Sol, GPT-6-Astra). Give them the goal, why it matters, what good looks like, the requirements and the
+  context, then let them work. Spell out the route only where those details really matter.
+- **Every other model, and any model you can't identify,** does its best work on smaller, simpler pieces with clear
+  steps, clear boundaries and a result you can check. Split open-ended work before you hand it over, or keep the
+  open-ended part yourself.
+
+Describe the task, not the agent: don't tell a model which group it's in, or call it weaker. A model can take a
+label like that literally and work down to it. A newer model in a family above (a later Opus, Fable, or Codex Sol or
+Astra) belongs with the goal-oriented group. A model the lines above can't place, such as a new family or an unfamiliar
+tier, starts in the second group until you know where it sits; its maker's own description (frontier or workhorse,
+versus balanced, fast or affordable) is a good first signal.
+
 ## Hand over intent, not instructions
-Whoever does the work, give them the goal, why it matters, the context you hold and where to find more, then let
-them decide how. When you have the requester's own words, pass them on instead of compressing them into a list of
-steps. A capable agent with the goal builds better than one painting inside a narrow spec, which gets exactly what
-was written and not what was wanted. Keep exact instructions for the few things that must be exact, and say why.
+Whoever does the work, give them the goal, why it matters, the context you hold and where to find more. When you have
+the requester's own words, pass them on instead of compressing them into a list of steps. A goal-oriented model builds
+better from that than from a narrow spec, which gets exactly what was written and not what was wanted, so let it
+decide how; don't pre-do its research or fence what it may conclude. For other models, add the steps and boundaries
+the work needs, a piece at a time. Keep exact instructions for the few things that must be exact, and say why.
 
 ## Once you've decided
 - Decided on subagents for 2+ independent tasks → `dispatching-parallel-agents` (the fan-out mechanics).

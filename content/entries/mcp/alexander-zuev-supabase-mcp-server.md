@@ -15,29 +15,29 @@ tags:
   - supabase
   - windsurf
 status: active
-quality_percentile: 15
+quality_percentile: 13
 selection_reason: quality_percentile
 first_seen: 2025-02-15T08:54:29
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alexander-zuev/supabase-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 833
+  stars: 835
   last_commit: 2026-08-21T20:27:19Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 115
-  rank_delta: -34
+  stars_delta_7d: 2
+  stars_growth_pct: 0.2
+  trending_score: 2
+  rank_current: 103
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 831
-    - 831
     - 833
     - 833
+    - 835
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: alexander-zuev/supabase-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.249Z
+  fetched_at: 2026-11-02T09:05:57.596Z
   truncated: false
 type: mcp_server
 launch:
@@ -629,4 +629,5 @@ For a more detailed roadmap, please see this [discussion](https://github.com/ale
 [![Star History Chart](https://api.star-history.com/svg?repos=alexander-zuev/supabase-mcp-server&type=Date)](https://star-history.com/#alexander-zuev/supabase-mcp-server&Date)
 
 ---
+
 Enjoy! ☺️

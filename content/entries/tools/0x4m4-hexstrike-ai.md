@@ -13,30 +13,30 @@ tags:
   - ai-agents
   - ai-cybersecurity
   - ai-hacking
-status: active
-quality_percentile: 55
+status: slowing
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2025-07-10T17:53:18
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: 0x4m4/hexstrike-ai
   official_vendor: false
   license: MIT
 signals:
-  stars: 13097
+  stars: 13283
   last_commit: 2026-08-03T14:33:09Z
-  stars_delta_7d: 173
-  stars_growth_pct: 1.3
-  trending_score: 175.32
-  rank_current: 40
-  rank_delta: -26
+  stars_delta_7d: 186
+  stars_growth_pct: 1.4
+  trending_score: 188.64
+  rank_current: 42
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12494
     - 12751
     - 12924
     - 13097
+    - 13283
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: 0x4m4/hexstrike-ai
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:36:53.821Z
+  fetched_at: 2026-11-02T09:05:30.425Z
   truncated: false
 type: agent_tool
 tool:
@@ -82,6 +82,7 @@ tool:
 </div>
 
 ---
+
 <div align="center">
 
 ## Follow Our Social Accounts
@@ -101,6 +102,7 @@ tool:
 </div>
 
 ---
+
 ## Architecture Overview
 
 HexStrike AI MCP v6.0 features a multi-agent architecture with autonomous AI agents, intelligent decision-making, and vulnerability intelligence.
@@ -166,6 +168,7 @@ graph TD
 5. **Advanced Reporting** - Visual output with vulnerability cards and risk analysis
 
 ---
+
 ## Installation
 
 ### Quick Setup to Run the hexstrike MCPs Server
@@ -269,6 +272,7 @@ curl -X POST http://localhost:8888/api/intelligence/analyze-target \
 ```
 
 ---
+
 ## AI Client Integration Setup
 
 ### Claude Desktop Integration or Cursor
@@ -313,6 +317,7 @@ Configure VS Code settings in `.vscode/settings.json`:
 ```
 
 ---
+
 ## Features
 
 ### Security Tools Arsenal
@@ -553,6 +558,7 @@ Configure VS Code settings in `.vscode/settings.json`:
 - **Modern Visual Engine** - Real-time dashboards and progress tracking
 
 ---
+
 ## API Reference
 
 ### Core System Endpoints
@@ -608,6 +614,7 @@ Configure VS Code settings in `.vscode/settings.json`:
 | **Dashboard** | `GET /api/processes/dashboard` | Live monitoring dashboard |
 
 ---
+
 ## Usage Examples
 When writing your prompt, you generally can't start with just a simple "i want you to penetration test site X.com" as the LLM's are generally setup with some level of ethics. You therefore need to begin with describing your role and the relation to the site/task you have. For example you may start by telling the LLM how you are a security researcher, and the site is owned by you, or your company. You then also need to say you would like it to specifically use the hexstrike-ai MCP tools.
 So a complete example might be:
@@ -636,6 +643,7 @@ AI Agent: "Thank you for clarifying ownership and intent. To proceed with a pene
 - **Bug Bounty Success**: 15+ high-impact vulnerabilities discovered in testing
 
 ---
+
 ## HexStrike AI v7.0 - Release Coming Soon!
 
 ### Key Improvements & New Features
@@ -652,6 +660,7 @@ AI Agent: "Thank you for clarifying ownership and intent. To proceed with a pene
 
 
 ---
+
 ## Troubleshooting
 
 ### Common Issues
@@ -689,6 +698,7 @@ python3 hexstrike_mcp.py --debug
 ```
 
 ---
+
 ## Security Considerations
 
 ⚠️ **Important Security Notes**:
@@ -711,6 +721,7 @@ python3 hexstrike_mcp.py --debug
 - ❌ **Data Theft** - No unauthorized data access or exfiltration
 
 ---
+
 ## Contributing
 
 We welcome contributions from the cybersecurity and AI community!
@@ -742,16 +753,19 @@ python3 hexstrike_server.py --port 8888 --debug
 - **🧪 Testing Frameworks** - Automated testing for AI agent interactions
 
 ---
+
 ## License
 
 MIT License - see LICENSE file for details.
 
 ---
+
 ## Author
 
 **m0x4m4** - [www.0x4m4.com](https://www.0x4m4.com) | [HexStrike](https://www.hexstrike.com)
 
 ---
+
 ## Owned & Developed By
 
 <p align="center">
@@ -771,6 +785,7 @@ MIT License - see LICENSE file for details.
 </p>
 
 ---
+
 ## Official Sponsor
 
 <p align="center">
@@ -794,6 +809,7 @@ MIT License - see LICENSE file for details.
 </p>
 
 ---
+
 <div align="center">
 
 ## 🌟 **Star History**
@@ -814,6 +830,7 @@ MIT License - see LICENSE file for details.
 **[⭐ Star this repository](https://github.com/0x4m4/hexstrike-ai)** • **[🍴 Fork and contribute](https://github.com/0x4m4/hexstrike-ai/fork)** • **[📖 Read the docs](https://github.com/0x4m4/hexstrike-ai/blob/master/docs/)**
 
 ---
+
 **Made with ❤️ by the cybersecurity community for AI-powered security automation**
 
 *HexStrike AI v6.0 - Where artificial intelligence meets cybersecurity excellence*

@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-capacity-planner
 name: capacity-planner
-tagline: Use when an ops leader (Director of CX, Head of Support, VP Ops, Head
-  of BizOps, Head of IT ops, Head of Finance ops) is sizing ops capacity,
-  building
+tagline: Use when sizing an ops or support team, building a headcount plan or
+  checking utilization risk. Models queues with Erlang C in capacity_modeler.py,
+  an
 summary: You are an ops leader sized 15 → 35 with no idea how the 35-person org
   will actually behave at peak load. Or you are at 88% utilization and SLA is
   starting to slip. Or you have a hiring budget approved and need to seq...
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,21 +43,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/capacity-planner/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.235Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: capacity-planner
-  description: Use when an ops leader (Director of CX, Head of Support, VP Ops,
-    Head of BizOps, Head of IT ops, Head of Finance ops) is sizing ops capacity,
-    building a headcount plan, modeling utilization risk, planning Q3 capacity
-    or annual support capacity, or designing CS coverage — and needs Erlang-C
-    queueing math, P90 demand sizing, shrinkage-adjusted FTE, manager-trigger
-    thresholds, and a quarterly hiring sequence with ramp + attrition. Apply
-    when sustained team utilization is above 80% or when the team is growing
-    more than 50% in 12 months. Run before committing the headcount budget. This
-    is NOT engineering capacity (see vpe-advisor for DORA + cycle time) and NOT
-    strategic 3-year workforce planning (see chro-advisor).
+  description: Use when sizing an ops or support team, building a headcount plan
+    or checking utilization risk. Models queues with Erlang C in
+    capacity_modeler.py, analyzes utilization with utilization_analyzer.py and
+    orders hires with hiring_sequencer.py.
   folder_path: business-operations/skills/capacity-planner
   extra_files:
     - assets/capacity_brief_template.md
@@ -67,7 +61,7 @@ skill:
     - scripts/capacity_modeler.py
     - scripts/hiring_sequencer.py
     - scripts/utilization_analyzer.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -320,6 +314,7 @@ figure it out", the P99 day is a fire visible to the board.
 on capacity-margin discipline.
 
 ---
+
 **Walk these seven in order. One at a time. Write the answers down. The
 plan you submit is only as defensible as your answers to these seven
 questions.**

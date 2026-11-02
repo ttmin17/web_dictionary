@@ -15,28 +15,29 @@ tags:
   - claude-code
   - claude-plugin
 status: active
-quality_percentile: 67
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: artokun/comfyui-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 863
-  last_commit: 2026-10-25T07:16:17Z
+  stars: 886
+  last_commit: 2026-10-26T17:51:03Z
   stars_delta_7d: 23
   stars_growth_pct: 2.7
-  trending_score: 23.63
-  rank_current: 57
-  rank_delta: -15
+  trending_score: 23.61
+  rank_current: 60
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 819
     - 840
     - 863
+    - 886
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: artokun/comfyui-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.278Z
+  fetched_at: 2026-11-02T09:05:57.252Z
   truncated: false
 type: mcp_server
 launch:
@@ -99,6 +100,7 @@ The plugin ships skills that grow with every release: model-specific generation 
 **Full documentation: [comfyui-mcp.artokun.io/docs](https://comfyui-mcp.artokun.io/docs)**
 
 ---
+
 ## Quick Start
 
 **1. Install ComfyUI** (if you haven't already): [ComfyUI Desktop](https://www.comfy.org/download) or [from source](https://github.com/comfyanonymous/ComfyUI)
@@ -164,6 +166,7 @@ for the full walkthrough and headless usage.
 > local. OAuth (Comfy's browser sign-in flow) is a planned follow-up.
 
 ---
+
 ## Claude Code Plugin
 
 This package also ships as a Claude Code plugin that adds slash commands, skills, agents, and hooks on top of the MCP tools.
@@ -228,6 +231,7 @@ This package also ships as a Claude Code plugin that adds slash commands, skills
 | `monitor-progress.mjs` | **Progress monitor** — connects to ComfyUI's WebSocket for real-time step progress (e.g., `step 5/14 (36%)`). Run as a background Bash task after enqueuing workflows. Reports completion with output filenames, errors with node details. Replaces polling `queue` (action:"status") in a loop. |
 
 ---
+
 ## Panel agent (Claude · ChatGPT · Gemini · any local/hosted LLM)
 
 Beyond the headless MCP server, this package ships the panel orchestrator that
@@ -312,6 +316,7 @@ New tools that give every backend the same expertise and a cost guardrail:
 | `panel_strip_workflow` / `panel_slice_workflow` | (panel tools) De-virtualize a tangled graph (Get/Set buses, Reroutes, subgraphs, bypass → real connections) or carve one rgthree-toggled pipeline out of a monolith — by `pack`, server-side `path`, or inline graph; for understanding/rebuilding expert workflows without hand-tracing |
 
 ---
+
 ## MCP Tools
 
 38 tools across workflow execution, generation, iteration, composition, models, and more:
@@ -449,6 +454,7 @@ npm run generations:stats
 ```
 
 ---
+
 ## Examples
 
 ### Generate an image
@@ -610,6 +616,7 @@ Generates a skill file documenting every node, its inputs/outputs, and usage pat
 ```
 
 ---
+
 ## Configuration
 
 The server auto-detects your ComfyUI installation and port. Override with environment variables if needed.
@@ -771,6 +778,7 @@ COMFYUI_AUTH_HEADER=X-API-Key COMFYUI_AUTH_TOKEN=your-token \
 Set `COMFYUI_PATH` to skip detection and use an explicit path.
 
 ---
+
 ## How It Works
 
 The server communicates with ComfyUI through its REST API and WebSocket interface:
@@ -783,6 +791,7 @@ The server communicates with ComfyUI through its REST API and WebSocket interfac
 All communication with the MCP client (Claude Code) happens over stdio using the [Model Context Protocol](https://modelcontextprotocol.io). Logs go to stderr so they never mix into the protocol stream.
 
 ---
+
 ## Development
 
 ### Prerequisites
@@ -915,6 +924,7 @@ plugin/
 ```
 
 ---
+
 ## Troubleshooting
 
 **"ComfyUI not detected on ports 8188, 8000"**
@@ -939,6 +949,7 @@ Use `clear_vram` to free GPU memory before running large workflows. The VRAM wat
 Use `/comfy:install <pack>` to install missing node packs from the registry. The debug command detects missing packs and suggests them.
 
 ---
+
 ## Contributing
 
 Contributions are welcome. See [CONTRIBUTING.md](https://github.com/artokun/comfyui-mcp/blob/main/CONTRIBUTING.md) for the dev setup, project
@@ -948,6 +959,7 @@ Quick version: fork → branch (`feat/my-feature`) → make changes (make sure `
 `npm test` pass; run `npm run docs:gen` if you touched tools) → open a PR.
 
 ---
+
 ## Maintainer
 
 Built and maintained by [**@artokun**](https://github.com/artokun), a regular contributor across the Comfy-Org ecosystem:
@@ -958,11 +970,13 @@ Built and maintained by [**@artokun**](https://github.com/artokun), a regular co
 If you're at Comfy-Org (or hiring around the ComfyUI ecosystem), I'd love to chat. Email me at **[art.longbottom.jr@gmail.com](mailto:art.longbottom.jr@gmail.com)**.
 
 ---
+
 ## License
 
 MIT. See [LICENSE](https://github.com/artokun/comfyui-mcp/blob/main/LICENSE) for details.
 
 ---
+
 ## Changelog
 
 See [CHANGELOG.md](https://github.com/artokun/comfyui-mcp/blob/main/CHANGELOG.md) for the full, structured release history.

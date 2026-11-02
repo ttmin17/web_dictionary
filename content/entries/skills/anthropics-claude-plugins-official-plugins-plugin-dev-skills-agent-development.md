@@ -12,10 +12,10 @@ tags:
   - claude-code
   - skills
 status: active
-quality_percentile: 98
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -23,17 +23,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 44625
-  last_commit: 2026-10-25T07:34:42Z
-  stars_delta_7d: 1711
-  stars_growth_pct: 4
-  trending_score: 1779.22
+  stars: 45763
+  last_commit: 2026-11-02T07:29:13Z
+  stars_delta_7d: 1138
+  stars_growth_pct: 2.6
+  trending_score: 1167.02
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 37497
     - 37789
     - 42914
     - 44625
+    - 45763
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: plugins/plugin-dev/skills/agent-development/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:05.842Z
+  fetched_at: 2026-11-02T09:06:14.504Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,7 +59,7 @@ skill:
     - references/system-prompt-design.md
     - references/triggering-examples.md
     - scripts/validate-agent.sh
-  pack_total_skills: 29
+  pack_total_skills: 21
   is_pack_primary: false
   clients:
     - claude-code
@@ -85,12 +85,14 @@ Agents are autonomous subprocesses that handle complex, multi-step tasks indepen
 ### Complete Format
 
 ```markdown
----name: agent-identifier
+---
+name: agent-identifier
 description: Use this agent when [triggering conditions]. Typical triggers include [scenario 1 in prose], [scenario 2 in prose], and [scenario 3 in prose]. See "When to invoke" in the agent body for worked scenarios.
 model: inherit
 color: blue
 tools: ["Read", "Write", "Grep"]
 ---
+
 You are [agent role description]...
 
 ## When to invoke
@@ -371,11 +373,13 @@ Ensure system prompt is complete:
 ### Minimal Agent
 
 ```markdown
----name: simple-agent
+---
+name: simple-agent
 description: Use this agent when [condition]. Typical triggers include [trigger 1] and [trigger 2]. See "When to invoke" in the agent body.
 model: inherit
 color: blue
 ---
+
 You are an agent that [does X].
 
 ## When to invoke

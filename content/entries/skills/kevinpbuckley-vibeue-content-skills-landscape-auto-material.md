@@ -16,10 +16,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 788
-  last_commit: 2026-10-24T02:30:54Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.9
-  trending_score: 7.06
+  stars: 804
+  last_commit: 2026-11-01T01:15:39Z
+  stars_delta_7d: 16
+  stars_growth_pct: 2
+  trending_score: 16.32
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
     - 788
+    - 804
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/landscape-auto-material/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:38:54.124Z
+  fetched_at: 2026-11-02T09:06:01.690Z
   truncated: false
 type: agent_skill
 skill:
@@ -64,7 +65,7 @@ skill:
     - reference-example.md
     - rvt-setup.md
     - workflows.md
-  pack_total_skills: 39
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -179,6 +180,7 @@ unreal.MaterialNodeService.add_function_input(func_path, "Roughness", "Scalar", 
 ```
 
 ---
+
 ## Sub-docs available
 
 Read these sibling files directly (the engine AgentSkillToolset `GetSkills` is the loader; this `SKILL.md` is the index, the deeper docs live alongside it):
@@ -194,6 +196,7 @@ Read these sibling files directly (the engine AgentSkillToolset `GetSkills` is t
 | `rvt-setup.md` | RVT material types, sizing guidelines, inspection code, common RVT issues with causes/fixes |
 
 ---
+
 ## Common Mistakes
 
 ### 1. Forgetting `bUsedWithVirtualTexturing`
@@ -230,6 +233,7 @@ If a landscape is switched to a different master/instance family, existing Layer
 RVT asset assignment alone is not enough. Ensure each landscape has an RVT volume covering its bounds; recreate volume per landscape after major transform/scale changes.
 
 ---
+
 ## Related Skills
 
 | Task | Skills to Load |

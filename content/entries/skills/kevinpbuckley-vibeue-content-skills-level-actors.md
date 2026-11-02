@@ -14,10 +14,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 788
-  last_commit: 2026-10-24T02:30:54Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.9
-  trending_score: 7.06
+  stars: 804
+  last_commit: 2026-11-01T01:15:39Z
+  stars_delta_7d: 16
+  stars_growth_pct: 2
+  trending_score: 16.32
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
     - 788
+    - 804
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/level-actors/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:38:54.125Z
+  fetched_at: 2026-11-02T09:06:01.691Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,7 +55,7 @@ skill:
   folder_path: Content/Skills/level-actors
   extra_files:
     - scripts/manipulate_actors.txt
-  pack_total_skills: 39
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -126,6 +127,7 @@ subsys.new_level_from_template("/Game/Maps/MyLevel", "/Engine/Maps/Templates/Tem
 **Template names:** `Template_Default` = Basic, `OpenWorld`, `TimeOfDay_Default`, `VR-Basic`
 
 ---
+
 ### �🚫 DEPRECATED: `unreal.EditorLevelLibrary`
 
 **DO NOT use `unreal.EditorLevelLibrary`.** The entire Editor Scripting Utilities Plugin is deprecated in UE 5.7+. Use `unreal.EditorActorSubsystem` via `unreal.get_editor_subsystem()` for all level actor operations.
@@ -273,6 +275,7 @@ level_subsys.editor_invalidate_viewports()
 ```
 
 ---
+
 ## Workflows
 
 ### Create Level from Template
@@ -318,6 +321,7 @@ print(f"Created from template: {result}")
 ```
 
 ---
+
 ### Save the Current Level (Save / Save As)
 
 **Getting the editor world** — it lives on `UnrealEditorSubsystem`, NOT `LevelEditorSubsystem`, NOT the deprecated `EditorLevelLibrary`:
@@ -350,6 +354,7 @@ print(f"Saved: {ok}")
 To also make the saved level the editor startup map, load the `project-settings` skill and set `maps` / `EditorStartupMap` with the full asset path (`/Game/Maps/MyLevel.MyLevel`).
 
 ---
+
 ### Spawn Built-in Actor
 
 ```python
@@ -577,6 +582,7 @@ view = actor_service.calculate_actor_view("MyActor", unreal.ViewDirection.RIGHT,
 > ⚠️ **Do NOT switch to `set_viewport_camera` with manual coordinates to get a "better angle".** Manual positions almost always miss the subject and point at sky or empty space. If the view isn't wide enough, **increase the padding** or switch to `TOP`. There is no need for a diagonal camera — `TOP` and `FRONT` with adequate padding cover every screenshot use case.
 
 ---
+
 ### Transform Locking & Constraints
 
 #### 🔒 Location Locking (Per-Actor, Native UE5)

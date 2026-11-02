@@ -1,8 +1,11 @@
 ---
 slug: 0xnyk-council-of-high-intelligence
-name: council-of-high-intelligence
-tagline: Agent skill from 0xNyk/council-of-high-intelligence
-summary: Agent skill from 0xNyk/council-of-high-intelligence
+name: council
+tagline: Convene the Council of High Intelligence — multi-persona deliberation
+  with historical thinkers for deeper analysis of complex problems.
+summary: "Flag priority: --quick / --duo set the mode. --full / --triad /
+  --members / --profile set the panel. --models overrides auto-routing.
+  --no-auto-route, --dry-route, and --chairman are additive."
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-03-02T08:47:09
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: 0xNyk/council-of-high-intelligence
@@ -22,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4708
-  last_commit: 2026-10-26T05:31:39Z
-  stars_delta_7d: 36
-  stars_growth_pct: 0.8
-  trending_score: 36.28
-  rank_current: 108
-  rank_delta: -25
+  stars: 4738
+  last_commit: 2026-11-02T05:20:53Z
+  stars_delta_7d: 30
+  stars_growth_pct: 0.6
+  trending_score: 30.19
+  rank_current: 113
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4550
     - 4622
     - 4672
     - 4708
+    - 4738
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +45,14 @@ readme_source:
   repo: 0xNyk/council-of-high-intelligence
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.789Z
+  fetched_at: 2026-11-02T09:06:34.481Z
   truncated: false
 type: agent_skill
 skill:
-  skill_name: council-of-high-intelligence
-  description: Agent skill from 0xNyk/council-of-high-intelligence
+  skill_name: council
+  description: Convene the Council of High Intelligence — multi-persona
+    deliberation with historical thinkers for deeper analysis of complex
+    problems.
   folder_path: .
   extra_files:
     - .claude-plugin/marketplace.json
@@ -60,7 +65,7 @@ skill:
     - .github/PULL_REQUEST_TEMPLATE.md
     - .github/workflows/lint.yml
     - .github/workflows/release.yml
-  pack_total_skills: 2
+  pack_total_skills: 1
   is_pack_primary: true
   clients:
     - claude-code
@@ -132,7 +137,9 @@ This skill is distributed two ways, so council assets live in one of two roots. 
 
 Every later reference to a `~/.claude/...` council path means "the resolved asset root" — substitute the plugin paths when running from a marketplace install.
 
----## The 18 Council Members
+---
+
+## The 18 Council Members
 
 | Agent | Figure | Domain | Model | Polarity |
 |-------|--------|--------|-------|----------|
@@ -245,7 +252,9 @@ All 18 members with the domain triads above.
 - `launch-strategy` → Sun Tzu + Torvalds + Machiavelli (optional substitute)
 - `stability` → Ada + Feynman + Aurelius
 
----## Coordinator Execution Sequence
+---
+
+## Coordinator Execution Sequence
 
 Follow these steps in order. Do NOT skip steps or merge rounds.
 
@@ -647,7 +656,9 @@ Best-effort fields (write `~unknown` if not available):
 
 This block is intentionally not a sub-section of the verdict — it's session telemetry appended below a separator. Reasoning: keeps it cheap to grep, future-easy to redirect to a log file, and avoids polluting the auditable decision artifact with infra noise. Phase 2 (benchmarking harness) and Phase 3 (cost/quality sweet spots) build on this same schema once 5–10 real sessions have been collected.
 
----## Quick Mode Sequence (`--quick`)
+---
+
+## Quick Mode Sequence (`--quick`)
 
 Fast 2-round deliberation for simpler questions. No cross-examination.
 
@@ -720,7 +731,9 @@ no option.
 
 Dispatch synthesis to the Chairman selected via STEP 1.7 (auto-selected per `--chairman` / config / detected-providers; if no Chairman selection was performed for `--quick`, perform the same algorithm now). Use the Quick Verdict template below. Same fallback rule as STEP 7.
 
----## Duo Mode Sequence (`--duo`)
+---
+
+## Duo Mode Sequence (`--duo`)
 
 Two-member dialectic for rapid opposing perspectives.
 
@@ -786,7 +799,9 @@ Final statement. 50 words maximum. State your position. No new arguments.
 
 Dispatch synthesis to the Chairman selected via STEP 1.7. In duo mode the Chairman must NOT be either of the two duo members (hard constraint — Chairman audits, not participates). Use the Duo Verdict template below. Same fallback rule as STEP 7.
 
----## Output Templates
+---
+
+## Output Templates
 
 ### Council Verdict (Full Mode)
 
@@ -849,7 +864,9 @@ If no seat carried 1.5× (ambiguous match), say so. If split, show both options 
 ### Follow-Up
 After acting on this verdict, revisit: Was this verdict useful? Was the recommended action taken? What happened? {This section is a prompt for the user, not filled by the council.}
 
----### Session Metadata
+---
+
+### Session Metadata
 ```
 schema_version: 1
 mode: full | quick | duo | triad
@@ -909,7 +926,9 @@ fallbacks_triggered: <list of "member→provider/model" entries, or "none">
 ### Follow-Up
 After acting on this verdict, revisit: Was this useful? What happened?
 
----### Session Metadata
+---
+
+### Session Metadata
 ```
 schema_version: 1
 mode: quick
@@ -964,7 +983,9 @@ fallbacks_triggered: <list or "none">
 ### Follow-Up
 After deciding, revisit: Which perspective proved more useful? What happened?
 
----### Session Metadata
+---
+
+### Session Metadata
 ```
 schema_version: 1
 mode: duo
@@ -981,7 +1002,9 @@ fallbacks_triggered: <list or "none">
 ```
 ```
 
----## Example Usage
+---
+
+## Example Usage
 
 **Full mode:**
 `/council --triad strategy Should we open-source our agent framework?`

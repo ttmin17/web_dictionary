@@ -1,8 +1,10 @@
 ---
 slug: zju-real-easel-skills-builtin-ai-video-gen
 name: ai-video-gen
-tagline: Agent skill from ZJU-REAL/Easel
-summary: Agent skill from ZJU-REAL/Easel
+tagline: AI 视频生成：文生视频 / 图生视频 / 数字人首帧驱动。通过可插拔 provider（通义万相 Wan / 火山 Seedance /
+  快手可灵 / OpenAI 兼容）异步生成视频，用户自备 API key。当用户说 AI 视频生成、文生视频、图生视频、AI 生成视频、AI
+  短视频、让图片动起
+summary: 先选 provider 并在 .env 填对应 key，然后 check 离线校验：
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - content-generation
   - openclaw
 status: active
-quality_percentile: 89
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -22,33 +24,38 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4090
-  last_commit: 2026-10-25T06:24:22Z
-  stars_delta_7d: 246
-  stars_growth_pct: 6.4
-  trending_score: 261.74
+  stars: 4323
+  last_commit: 2026-11-02T08:18:55Z
+  stars_delta_7d: 233
+  stars_growth_pct: 5.7
+  trending_score: 246.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3567
     - 3844
     - 4090
-language: en
+    - 4323
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/ai-video-gen/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:08.721Z
+  fetched_at: 2026-11-02T09:06:38.012Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ai-video-gen
-  description: Agent skill from ZJU-REAL/Easel
+  description: AI 视频生成：文生视频 / 图生视频 / 数字人首帧驱动。通过可插拔 provider（通义万相 Wan / 火山 Seedance
+    / 快手可灵 / OpenAI 兼容）异步生成视频，用户自备 API key。当用户说 AI 视频生成、文生视频、图生视频、AI 生成视频、AI
+    短视频、让图片动起来、数字人视频、生成一段视频 时使用。与
+    video-strategy（选型/策略）、video-editing（剪辑处理）、clipify（切片）区别：本 SKILL 是从 0 用 AI
+    生成新视频。
   folder_path: skills/builtin/ai-video-gen
   extra_files:
     - EASEL-META.md
-  pack_total_skills: 115
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

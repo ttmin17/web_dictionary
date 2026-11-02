@@ -1,8 +1,11 @@
 ---
 slug: nexu-io-open-design-design-templates-gamified-app
 name: gamified-app
-tagline: Agent skill from nexu-io/open-design
-summary: Agent skill from nexu-io/open-design
+tagline: |-
+  A multi-frame gamified mobile-app prototype — three phone frames on a dark
+  showcase stage. Frame 1: cover / poster, Frame 2: today's quests with XP
+  ri
+summary: One sentence before the artifact, nothing after.
 categories:
   - media-creative
 tags:
@@ -11,10 +14,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 104025
-  last_commit: 2026-10-26T07:31:43Z
-  stars_delta_7d: 1726
-  stars_growth_pct: 1.7
-  trending_score: 1755.12
+  stars: 105423
+  last_commit: 2026-11-02T05:06:45Z
+  stars_delta_7d: 1398
+  stars_growth_pct: 1.3
+  trending_score: 1416.79
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99839
     - 100908
     - 102299
     - 104025
+    - 105423
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,16 +43,22 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/gamified-app/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.575Z
+  fetched_at: 2026-11-02T09:06:41.705Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: gamified-app
-  description: Agent skill from nexu-io/open-design
+  description: |
+    A multi-frame gamified mobile-app prototype — three phone frames on a dark
+    showcase stage. Frame 1: cover / poster, Frame 2: today's quests with XP
+    ribbons and a level bar, Frame 3: quest detail. Vivid quest tiles, level
+    ribbon, bottom tab bar. Use when the brief asks for a "gamified app",
+    "habit tracker", "RPG-style life app", "level-up app", "daily quests",
+    "XP / streak app", or "ELI5-style explainer app".
   folder_path: design-templates/gamified-app
   extra_files:
     - example.html
-  pack_total_skills: 401
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -58,4 +67,75 @@ skill:
   pack_slug: nexu-io-open-design
 ---
 
-Agent skill from nexu-io/open-design
+# Gamified App Skill
+Produce a multi-screen mobile prototype on a single dark showcase page.
+Three phone frames side-by-side, each one its own moment in the journey.
+
+## Workflow
+
+1. **Read the active DESIGN.md** (injected above). For gamified apps, lean
+   on bold display type for headlines and a brighter, broader palette than
+   most products — quests look like quests because the colors do.
+2. **Pick the brand + value prop** from the brief. Generate real quest
+   names (e.g. "Body — 20-min strength: pushups & planks", "Read — Four
+   Thousand Weeks", "Listen — Huberman Lab · Sleep Architecture",
+   "Nourish — Cook a high-protein lunch", "Mind — 10-min focus
+   meditation", "Watch — The Bear · S3 E4").
+3. **Stage** — full-bleed dark page (near-black `#0e0d0c` or DS dark token)
+   with a soft top spotlight gradient. Above the phones, a small caption
+   row: "HI-FI PROTOTYPE · IPHONE" left, brand wordmark right, both in mono.
+4. **Phones** — three 360×780 phone frames in a horizontal row (wraps to
+   stack on narrow viewports). Each phone:
+   - 12px black bezel, 44px corner radius, dynamic-island notch.
+   - Status bar (time / signal / battery).
+   - Phone-specific content (below).
+   - Bottom tab bar with 5 icons (Today, Library, Stats, ⊕ central CTA,
+     Profile). Active tab in accent.
+5. **Phone 1 — cover poster (sales/value prop)**:
+   - Status bar.
+   - HI-FI PROTOTYPE · IPHONE eyebrow.
+   - Big display headline ("Daily quests for becoming a better human."),
+     accent on "becoming".
+   - 1–2 sentence body in muted serif/sans.
+   - Mono tip line ("Tap quests to open detail. Toggle [theme] in the
+     toolbar to switch theme & layout.")
+   - Subtle scrolling teaser of the next screen at the bottom edge.
+6. **Phone 2 — today's quests dashboard** (the hero screen):
+   - Greeting "Good morning, Sam" + small XP-bell ringing.
+   - Level ribbon — "LV 14 · Level 14 · 1648 / 2480 XP" with a progress
+     bar inside a glassmorphic ribbon.
+   - Sub-line: "8 quests waiting · earn 430 XP today".
+   - 3×2 grid of quest tiles. Each tile: rounded corner, pastel accent
+     color, glyph chip in top-left, title, mini-meta line, "+NN XP" pill
+     in bottom-right.
+   - Bottom tab bar.
+7. **Phone 3 — quest detail**:
+   - Back arrow + screen title ("Quest").
+   - Hero block with the quest's accent color, big serif quest title
+     ("Body — strength"), short narrative body, "REWARD +90 XP" stamp.
+   - Steps checklist (3–4 micro-tasks, one done, two pending).
+   - Big primary CTA "Start quest" pill at the bottom in accent.
+8. **Write** a single HTML document:
+   - `<!doctype html>` through `</html>`, CSS inline.
+   - All in CSS — no images. Use `linear-gradient` and inline SVG glyphs
+     for tile chips and tab icons.
+   - `data-od-id` on stage, each phone, each frame's regions.
+9. **Self-check**:
+   - Three frames, each with a distinct purpose. Not three copies of the
+     same screen.
+   - Tile colors don't overpower — each quest tile uses a different pastel
+     against the same neutral surface.
+   - Reads as gamified and adult — playful, not childish.
+
+## Output contract
+
+Emit between `<artifact>` tags:
+
+```
+<artifact identifier="game-slug" type="text/html" title="Mobile — App Name">
+<!doctype html>
+<html>...</html>
+</artifact>
+```
+
+One sentence before the artifact, nothing after.

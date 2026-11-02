@@ -11,29 +11,29 @@ tags:
   - embeddings
   - model-context-protocol
 status: active
-quality_percentile: 68
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-04-06T14:56:45
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: MinishLab/semble
   official_vendor: false
   license: MIT
 signals:
-  stars: 6295
-  last_commit: 2026-10-25T08:32:10Z
-  stars_delta_7d: 64
-  stars_growth_pct: 1
-  trending_score: 64.66
-  rank_current: 71
-  rank_delta: -38
+  stars: 6345
+  last_commit: 2026-10-29T07:59:20Z
+  stars_delta_7d: 50
+  stars_growth_pct: 0.8
+  trending_score: 50.4
+  rank_current: 85
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6187
     - 6199
     - 6231
     - 6295
+    - 6345
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: MinishLab/semble
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.944Z
+  fetched_at: 2026-11-02T09:05:35.087Z
   truncated: false
 type: agent_tool
 tool:
@@ -310,7 +310,7 @@ Semble runs as an MCP server so agents can search any codebase directly as a nat
 | `search` | Search a codebase with a natural-language or code query. Pass `repo` as a local path or an https:// git URL (or a list of them to search several repos together) and `content` as `code`, `docs`, `config`, or `all` (default: `code`). |
 | `find_related` | Given a file path and line number, return chunks semantically similar to the code at that location. |
 
-For per-agent setup instructions, see the [installation docs](https://github.com/MinishLab/semble/blob/main/docs/installation.md#mcp-server).
+For per-agent setup instructions, see the [installation docs](https://github.com/MinishLab/semble/blob/main/docs/installation.md#mcp-server). To share one server across agent sessions, run `semble --http`; see [Shared server (HTTP)](https://github.com/MinishLab/semble/blob/main/docs/installation.md#shared-server-http).
 
 
 ## Benchmarks

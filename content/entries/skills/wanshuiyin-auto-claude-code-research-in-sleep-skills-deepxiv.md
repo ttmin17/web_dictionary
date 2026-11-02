@@ -13,10 +13,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 91
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 18088
-  last_commit: 2026-10-24T15:48:19Z
-  stars_delta_7d: 395
-  stars_growth_pct: 2.2
-  trending_score: 403.82
+  stars: 18475
+  last_commit: 2026-11-01T05:01:47Z
+  stars_delta_7d: 387
+  stars_growth_pct: 2.1
+  trending_score: 395.28
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17090
     - 17411
     - 17693
     - 18088
+    - 18475
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/deepxiv/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:53.542Z
+  fetched_at: 2026-11-02T09:05:30.192Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,7 +52,7 @@ skill:
     reading, trending papers, or DeepXiv-backed literature retrieval.
   folder_path: skills/deepxiv
   extra_files: []
-  pack_total_skills: 87
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -103,7 +103,14 @@ DeepXiv is optional. If the CLI is not installed, tell the user:
 pip install deepxiv-sdk
 ```
 
-On first use, `deepxiv` auto-registers a free token and stores it in `~/.env`.
+Authentication is handled by the third-party `deepxiv-sdk` CLI using
+`DEEPXIV_TOKEN`. In [SDK 1.2.2](https://pypi.org/project/deepxiv-sdk/1.2.2/),
+a command that needs a token auto-registers one if none is configured and saves
+it to `~/.env`. With `python-dotenv` installed, the CLI also loads `~/.env` and
+the current project's `.env` on startup. Providing `DEEPXIV_TOKEN` in the CLI's
+environment skips automatic registration and token saving, but does not disable
+that file loading. This skill does not need to read those files or display tokens;
+leave authentication to the CLI.
 
 ## Workflow
 

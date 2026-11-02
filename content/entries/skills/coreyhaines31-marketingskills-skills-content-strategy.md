@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/content-strategy/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.289Z
+  fetched_at: 2026-11-02T09:06:13.822Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
     - evals/evals.json
     - references/content-distribution.md
     - references/headless-cms.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -104,6 +105,7 @@ Gather this context (ask if not provided):
 - What content gaps exist in your market?
 
 ---
+
 ## Treat Content Like a Product
 
 Every piece is its own launch. Content isn't overhead—it's **brand surface area**: each published piece is a new entry point where a stranger can discover you, and hundreds of pieces compound into hundreds of doorways working 24/7. Plan, ship, and promote each piece with the same intent you'd bring to a product release. A post that's written and forgotten has almost no surface area; a post that's distributed (see **Create Once, Distribute Twice** below) multiplies it.
@@ -141,6 +143,7 @@ Every piece of content must be searchable, shareable, or both. Prioritize in tha
 - Share vulnerable, honest experiences others can learn from
 
 ---
+
 ## Content Types
 
 ### Searchable Content Types
@@ -212,6 +215,7 @@ To get those assets in front of the people who link, and to point their authorit
 For programmatic content at scale, see **programmatic-seo** skill.
 
 ---
+
 ## Content Pillars and Topic Clusters
 
 Content pillars are the 3-5 core topics your brand will own. Each pillar spawns a cluster of related content.
@@ -252,6 +256,7 @@ Good pillars should:
 - Be broad enough for many subtopics
 
 ---
+
 ## Keyword Research by Buyer Stage
 
 Map topics to the buyer's journey using proven keyword modifiers:
@@ -289,6 +294,7 @@ Example: If support tickets show implementation struggles:
 - "How to Use [Feature]"
 
 ---
+
 ## Content Ideation Sources
 
 ### 1. Keyword Data
@@ -367,6 +373,7 @@ Extract from customer-facing teams:
 - Feature requests and underlying problems
 
 ---
+
 ## Prioritizing Content Ideas
 
 Score each idea on four factors:
@@ -398,12 +405,13 @@ Score each idea on four factors:
 
 | Idea | Customer Impact (40%) | Content-Market Fit (30%) | Search Potential (20%) | Resources (10%) | Total |
 |------|----------------------|-------------------------|----------------------|-----------------|-------|
-| Topic A | 8 | 9 | 7 | 6 | 8.0 |
+| Topic A | 8 | 9 | 7 | 6 | 7.9 |
 | Topic B | 6 | 7 | 9 | 8 | 7.1 |
 
 Score 1-10 per factor, multiply by the weight, sum for the total. Rank the list; make the top-scoring pieces first.
 
 ---
+
 ## Calendar Split: 60/30/10
 
 Balance the editorial calendar so search compounds while shareable pieces keep you visible:
@@ -415,6 +423,7 @@ Balance the editorial calendar so search compounds while shareable pieces keep y
 This is a starting ratio, not a rule. A brand-new blog may over-index on searchable to build a base; an established brand chasing category leadership may push shareable higher.
 
 ---
+
 ## Per-Format Execution Discipline
 
 Treating content like a product means each format has a production standard, not just a topic:
@@ -426,6 +435,7 @@ Treating content like a product means each format has a production standard, not
 - **Email** — one idea per send; the subject line is the title—write several and pick. For sequences and lifecycle, see **emails**.
 
 ---
+
 ## Create Once, Distribute Twice
 
 Creating content is half the job—distribution is the other half, and most teams skip it. The philosophy: **one exceptional piece, reformatted and repurposed across every channel, not a fresh piece per platform.** Pouring effort into a single flagship and then distributing it everywhere beats spreading thin effort across many mediocre platform-native posts.
@@ -448,6 +458,7 @@ ORB mechanics live in the **launch** skill (channel-type playbook) and content a
 For the full distribution spine—the Content Distribution Flywheel, platform half-lives, and the atomization checklist—see the reference below.
 
 ---
+
 ## Output Format
 
 When creating a content strategy, provide:
@@ -469,6 +480,7 @@ For each recommended piece:
 Visual or structured representation of how content interconnects.
 
 ---
+
 ## Task-Specific Questions
 
 1. What patterns emerge from your last 10 customer conversations?
@@ -478,12 +490,14 @@ Visual or structured representation of how content interconnects.
 5. Which existing content drives the most conversions, and why?
 
 ---
+
 ## References
 
 - **[Content Distribution Spine](https://github.com/coreyhaines31/marketingskills/blob/main/skills/content-strategy/references/content-distribution.md)**: Create Once Distribute Twice, ORB as a funnel, the ownership paradox, platform half-lives, the Content Distribution Flywheel, and the per-flagship atomization checklist
 - **[Headless CMS Guide](https://github.com/coreyhaines31/marketingskills/blob/main/skills/content-strategy/references/headless-cms.md)**: CMS selection, content modeling for marketing, editorial workflows, platform comparison (Sanity, Contentful, Strapi)
 
 ---
+
 ## Related Skills
 
 - **copywriting**: For writing individual content pieces

@@ -1,8 +1,11 @@
 ---
 slug: agentscope-ai-agentscope-java-agentscope-examples-agents-agentscope-codingagent-src-main-resources-workspace-templates-skills-apply-patch
 name: apply-patch
-tagline: Agent skill from agentscope-ai/agentscope-java
-summary: Agent skill from agentscope-ai/agentscope-java
+tagline: Apply multi-file or tricky edits atomically with git apply instead of
+  many fragile edit_file calls. Use when changing several files at once or when
+  ed
+summary: "1. Write the unified diff to a file in the sandbox (use writefile or a
+  heredoc via execute):"
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: agentscope-ai/agentscope-java
@@ -22,15 +25,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6121
-  last_commit: 2026-10-26T06:15:51Z
-  stars_delta_7d: 83
-  stars_growth_pct: 1.4
-  trending_score: 84.14
+  stars: 6214
+  last_commit: 2026-11-02T08:27:45Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.5
+  trending_score: 94.41
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6038
     - 6121
+    - 6214
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +42,14 @@ readme_source:
   repo: agentscope-ai/agentscope-java
   path: agentscope-examples/agents/agentscope-codingagent/src/main/resources/workspace-templates/skills/apply-patch/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:52.810Z
+  fetched_at: 2026-11-02T09:07:24.989Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: apply-patch
-  description: Agent skill from agentscope-ai/agentscope-java
+  description: Apply multi-file or tricky edits atomically with git apply instead
+    of many fragile edit_file calls. Use when changing several files at once or
+    when edit_file fails to match.
   folder_path: agentscope-examples/agents/agentscope-codingagent/src/main/resources/workspace-templates/skills/apply-patch
   extra_files: []
   pack_total_skills: 19
@@ -55,4 +61,33 @@ skill:
   pack_slug: agentscope-ai-agentscope-java
 ---
 
-Agent skill from agentscope-ai/agentscope-java
+# Apply Patch
+The built-in `edit_file` does an exact string match on a single file and has no fuzzy
+tolerance. For multi-file changes, or when `edit_file` keeps failing to find the string,
+construct a unified diff and apply it atomically with git.
+
+## Procedure
+
+1. Write the unified diff to a file in the sandbox (use `write_file` or a heredoc via `execute`):
+
+   ```
+   diff --git a/path/to/file b/path/to/file
+   --- a/path/to/file
+   +++ b/path/to/file
+   @@ -10,7 +10,7 @@ context line
+   -old line
+   +new line
+   ```
+
+2. Validate before applying: `git apply --check changes.patch`
+3. Apply: `git apply changes.patch` (use `-p0` if paths are not `a/`...`b/`...).
+4. If `git apply` rejects the hunk, the surrounding context is stale — `read_file` the exact
+   lines again, regenerate the diff with correct context, and retry.
+
+## When to prefer this
+
+- Editing 3+ files for one logical change (atomic, all-or-nothing).
+- Repetitive or whitespace-sensitive edits where `edit_file` exact-match struggles.
+- Re-applying a patch produced elsewhere (e.g. from a PR or `git diff`).
+
+Always run the verify-changes skill afterwards.

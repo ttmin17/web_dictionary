@@ -13,29 +13,29 @@ tags:
   - futures
   - market-data
 status: active
-quality_percentile: 87
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: atilaahmettaner/tradingview-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5138
-  last_commit: 2026-10-25T17:42:13Z
-  stars_delta_7d: 55
-  stars_growth_pct: 1.1
-  trending_score: 55.6
-  rank_current: 39
-  rank_delta: -10
+  stars: 5190
+  last_commit: 2026-10-29T14:24:40Z
+  stars_delta_7d: 52
+  stars_growth_pct: 1
+  trending_score: 52.53
+  rank_current: 36
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4952
     - 5047
     - 5083
     - 5138
+    - 5190
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: atilaahmettaner/tradingview-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.084Z
+  fetched_at: 2026-11-02T09:05:35.336Z
   truncated: false
 type: mcp_server
 launch:
@@ -71,7 +71,15 @@ Backtesting + live sentiment + Yahoo Finance + 39 technical-analysis tools — t
 
 **Don't want to install anything?** [TradingMCP](https://tradingmcp.ai/?utm_source=github&utm_medium=readme&utm_content=top_cta), the hosted version of this server, gives you all 39 tools in your AI app. In Claude, Cursor or Grok, add `https://mcp.tradingmcp.ai/mcp` as a connector and sign in: no key to paste. ChatGPT, Copilot and other MCP clients connect with a private link. From $9/mo with a 14-day money-back guarantee; self-hosting stays free.
 
-**[Morning market brief in one prompt](https://tradingmcp.ai/?utm_source=github&utm_medium=readme&utm_content=brief):** ask "give me this morning's market brief" and get global indices, futures, the Bitcoin pulse and the hosted Markets panel in one answer. Charts are drawn right in the chat (demo below). In Grok Bot, [add the Market Brief bot](https://x.ai/bot/7KuzDNTqOKomzcZirrvdz) to get one every weekday morning.
+<p align="center">
+  <a href="https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=TradingMCP&connectorUrl=https%3A%2F%2Fmcp.tradingmcp.ai%2Fmcp"><img src="https://img.shields.io/badge/Add_to-Claude-D97757?style=for-the-badge&logo=claude&logoColor=white" alt="Add TradingMCP to Claude" height="32"></a>
+  &nbsp;
+  <a href="https://tradingmcp.ai/connect?utm_source=github&utm_medium=readme&utm_content=add_to_cursor#cursor"><img src="https://img.shields.io/badge/Add_to-Cursor-1d1e1b?style=for-the-badge&logo=cursor&logoColor=white" alt="Add TradingMCP to Cursor" height="32"></a>
+  <br>
+  <sub>One click opens Claude's connector dialog with TradingMCP filled in; sign in with the email you subscribe with. Other apps: <a href="https://tradingmcp.ai/connect?utm_source=github&utm_medium=readme&utm_content=connect_other">tradingmcp.ai/connect</a></sub>
+</p>
+
+**[Morning market brief in one prompt](https://tradingmcp.ai/?utm_source=github&utm_medium=readme&utm_content=brief):** ask "give me this morning's market brief" and get global indices, futures, the Bitcoin pulse and the hosted Markets panel in one answer. Charts are drawn right in the chat (demo below). In Grok Bot, [add the Market Brief bot](https://x.ai/bot/7KuzDNTqOKomzcZirrvdz) to get one on weekday mornings.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/atilaahmettaner/tradingview-mcp/main/.github/assets/tradingview-mcp-demo.gif" width="820" alt="TradingView MCP in an AI chat: ask for the top gainers on Binance and get ranked, real-time results — one of 39 tools" />
@@ -153,11 +161,13 @@ If you want an AI clicking around *your* TradingView Desktop — editing Pine Sc
 </a>
 
 ---
+
 ## 🎥 Framework Demo
 
 https://github-production-user-asset-6210df.s3.amazonaws.com/67838093/478689497-4a605d98-43e8-49a6-8d3a-559315f6c01d.mp4
 
 ---
+
 ## 🆕 What's New
 
 **Stability & Strategy Expansion (May 2026)**
@@ -172,11 +182,13 @@ https://github-production-user-asset-6210df.s3.amazonaws.com/67838093/478689497-
 - **Full trade log + equity curve** outputs (`include_trade_log=True`, `include_equity_curve=True`).
 
 ---
+
 ## 🏗️ Architecture
 
 ![tradingview-mcp Architecture](https://raw.githubusercontent.com/atilaahmettaner/tradingview-mcp/main/assets/architecture.png)
 
 ---
+
 ## ✨ Why tradingview-mcp?
 
 | Feature | `tradingview-mcp` | Traditional Setups | Bloomberg Terminal |
@@ -189,6 +201,7 @@ https://github-production-user-asset-6210df.s3.amazonaws.com/67838093/478689497-
 | **API Keys** | **None required** | Multiple (OpenAI, etc.) | N/A |
 
 ---
+
 > [!WARNING]
 > **Security notice: impersonating copies of this repository.** This project is **Python-only** and has **no official npm / Node.js package**. The only official sources are this repository (`atilaahmettaner/tradingview-mcp`), the PyPI package [`tradingview-mcp-server`](https://pypi.org/project/tradingview-mcp-server/), and the hosted version, TradingMCP, at [tradingmcp.ai](https://tradingmcp.ai/?utm_source=github&utm_medium=readme&utm_content=security_notice) (formerly pro.cryptosieve.com).
 >
@@ -292,6 +305,7 @@ TradingView launched its own MCP server in public beta on 16 Sep 2026. It is a g
 </details>
 
 ---
+
 ## 🛠️ Troubleshooting
 
 ### 🪟 Windows: `MCP error -32001: Request timed out` on first launch
@@ -334,6 +348,7 @@ After the install finishes, start Claude Desktop with the normal config and the 
 > _Credit: [@wyh4444](https://github.com/wyh4444) for the original report in [#24](https://github.com/atilaahmettaner/tradingview-mcp/issues/24)._
 
 ---
+
 ## ⚠️ Error Envelope Format
 
 Tools that have adopted the structured error format return either their normal payload **or** an error envelope:
@@ -365,6 +380,7 @@ else:
 Stable codes are defined in [`core/errors.py`](https://github.com/atilaahmettaner/tradingview-mcp/blob/main/src/tradingview_mcp/core/errors.py).
 
 ---
+
 ## 📱 Use via Telegram, WhatsApp & More (OpenClaw)
 
 Connect this server to **Telegram, WhatsApp, Discord** and 20+ messaging platforms using [OpenClaw](https://openclaw.ai) — a self-hosted AI gateway. **Tested & verified on Hetzner VPS (Ubuntu 24.04).**
@@ -459,6 +475,7 @@ compare all strategies for BTC-USD
 
 
 
+
 Unlike basic screeners, this framework deploys **specialized AI agents** that debate findings in real-time:
 
 1. **🛠️ Technical Analyst** — Bollinger Bands (±3 proprietary rating), RSI, MACD
@@ -468,6 +485,7 @@ Unlike basic screeners, this framework deploys **specialized AI agents** that de
 *Output: `STRONG BUY` / `BUY` / `HOLD` / `SELL` / `STRONG SELL` with confidence score*
 
 ---
+
 ## 🔧 All 39 MCP Tools
 
 ### 📊 Backtesting Engine
@@ -502,6 +520,7 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 ```
 
 ---
+
 ### 💰 Yahoo Finance — Real-Time Prices *(New in v0.6.0)*
 
 | Tool | Description |
@@ -512,6 +531,7 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 **Supports:** Stocks (AAPL, TSLA, NVDA), Crypto (BTC-USD, ETH-USD, SOL-USD), ETFs (SPY, QQQ, GLD), Indices (^GSPC, ^DJI, ^IXIC, ^VIX), FX (EURUSD=X), Turkish (THYAO.IS, SASA.IS)
 
 ---
+
 ### 🌍 Global Stock Screener — Common & Preferred Shares
 
 | Tool | Description |
@@ -520,6 +540,7 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | `stock_prices` | Direct price lookup for specific symbols (comma-separated `EXCHANGE:SYMBOL`, e.g. `NASDAQ:NVDA, KRX:005930`) — price, currency, daily % change, with unrecognized tickers named in `not_found`. |
 
 ---
+
 ### 🧠 AI Sentiment & Intelligence
 
 | Tool | Description |
@@ -529,6 +550,7 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | `combined_analysis` | **Power Tool**: TradingView technicals + Reddit sentiment + live news → confluence decision. Now backed by retry + 60s cache for resilience against transient screener errors. |
 
 ---
+
 ### 📈 Technical Analysis Core
 
 | Tool | Description |
@@ -543,6 +565,7 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | `get_multi_timeframe_analysis` | Weekly→Daily→4H→1H→15m alignment analysis |
 
 ---
+
 ### 🌍 Multi-Exchange Support
 
 | Exchange | Tools |
@@ -556,6 +579,7 @@ Example prompt: "Compare all 9 strategies on MSFT for 2 years"
 | **India & Indonesia** | NSE, BSE (NIFTY, BANKNIFTY, SENSEX), IDX (Jakarta Composite) |
 
 ---
+
 ## 💬 Example AI Conversations
 
 ```
@@ -579,6 +603,7 @@ AI: [combined_analysis] → BUY (Technical STRONG BUY + Bullish Reddit + Positiv
 ```
 
 ---
+
 ## 💖 Support the Project
 
 This framework is **free and open source**, built in spare time. If it saves you hours of research or helps you make better decisions, please consider sponsoring:
@@ -596,6 +621,7 @@ This framework is **free and open source**, built in spare time. If it saves you
 Every sponsor directly funds new features like Walk-Forward Backtesting, Twitter/X sentiment, and managed cloud hosting.
 
 ---
+
 ## 📋 Roadmap
 
 - [x] TradingView technical analysis (30+ indicators)
@@ -612,9 +638,11 @@ Every sponsor directly funds new features like Walk-Forward Backtesting, Twitter
 - [ ] Managed cloud hosting (no local setup)
 
 ---
+
 ## 📄 License
 
 MIT License — see [LICENSE](https://github.com/atilaahmettaner/tradingview-mcp/blob/main/LICENSE) for details.
 
 ---
+
 *Disclaimer: This tool is for educational and research purposes only. It does not constitute financial advice. Always do your own research before making investment decisions.*

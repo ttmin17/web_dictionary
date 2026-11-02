@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-vendor-management
 name: vendor-management
-tagline: Use when reviewing, scoring, or auditing third-party SaaS / vendor
-  relationships — running a vendor scorecard with industry tuning, tracking SLA
-  compl
+tagline: "Use when scoring or auditing vendors: scorecards, SLA compliance and
+  service credits, third-party risk tier or a tier-1 vendor review. Runs
+  vendor_sco"
 summary: A typical mid-stage company carries 80-200 SaaS subscriptions and
   dozens of operational vendors. Most of them are reviewed only at renewal —
   which is too late. This skill enables quarterly or rolling vendor
@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -27,16 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,19 +44,14 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/vendor-management/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.236Z
+  fetched_at: 2026-11-02T09:06:18.454Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: vendor-management
-  description: Use when reviewing, scoring, or auditing third-party SaaS / vendor
-    relationships — running a vendor scorecard with industry tuning, tracking
-    SLA compliance with credit-claim flags, classifying third-party risk across
-    4 risk vectors, preparing a tier-1 vendor review, or auditing the SaaS
-    portfolio. Forks context so large vendor catalogs (50-500 line items) and
-    SLA logs don't pollute the parent thread. Triggers on "vendor SLA", "vendor
-    scorecard", "third-party risk", "TPRM", "vendor review", "supplier
-    performance", "vendor health check", "renewal review".
+  description: "Use when scoring or auditing vendors: scorecards, SLA compliance
+    and service credits, third-party risk tier or a tier-1 vendor review. Runs
+    vendor_scorer.py, sla_compliance_tracker.py and vendor_risk_classifier.py."
   folder_path: business-operations/skills/vendor-management
   extra_files:
     - assets/vendor_catalog_template.md
@@ -66,7 +61,7 @@ skill:
     - scripts/sla_compliance_tracker.py
     - scripts/vendor_risk_classifier.py
     - scripts/vendor_scorer.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

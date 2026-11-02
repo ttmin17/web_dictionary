@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-knowledge-ops
 name: knowledge-ops
-tagline: Use when a Head of Ops, Knowledge Manager, or TPM-Internal needs to
-  author, validate, or clean up company SOPs and internal runbooks (procurement
-  inta
+tagline: Use when writing, checking or cleaning up SOPs and runbooks. Generates
+  them with sop_generator.py, checks 5W2H completeness and links with
+  runbook_val
 summary: "An ops organization three years in accumulates a sprawl: 600 Notion
   pages, 200 Confluence runbooks, three Obsidian vaults, a Drive/SOPs/ folder,
   and a Slack #ops-questions channel that exists because nobody can find t..."
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,24 +43,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/knowledge-ops/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.236Z
+  fetched_at: 2026-11-02T09:06:18.454Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: knowledge-ops
-  description: Use when a Head of Ops, Knowledge Manager, or TPM-Internal needs to
-    author, validate, or clean up company SOPs and internal runbooks
-    (procurement intake, vendor offboarding, incident-comms cascade, employee
-    onboarding) — including 5W2H completeness checks
-    (Who-What-When-Where-Why-How-HowMuch), cross-link and orphan-page validation
-    across a sprawling Notion/Confluence/Obsidian wiki, KB ingestion + hygiene
-    reporting, and runbook step verification (named owner, expected duration,
-    observable success signal, rollback path, escalation contact). Pairs
-    Ishikawa's 5W2H method, Gawande's *The Checklist Manifesto*, ISO 9001, ITIL
-    v4, and Google SRE Workbook runbook discipline with deterministic
-    stdlib-only Python tools that score completeness, detect anti-patterns, and
-    emit prioritized cleanup lists (e.g., "validate this runbook before it goes
-    into rotation", "audit our Confluence wiki for stale and orphaned SOPs").
+  description: Use when writing, checking or cleaning up SOPs and runbooks.
+    Generates them with sop_generator.py, checks 5W2H completeness and links
+    with runbook_validator.py and ingests an existing knowledge base with
+    kb_ingester.py.
   folder_path: business-operations/skills/knowledge-ops
   extra_files:
     - assets/runbook_template.md
@@ -71,7 +62,7 @@ skill:
     - scripts/kb_ingester.py
     - scripts/runbook_validator.py
     - scripts/sop_generator.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

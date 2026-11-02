@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/emails/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.291Z
+  fetched_at: 2026-11-02T09:06:13.824Z
   truncated: false
 type: agent_skill
 skill:
@@ -64,7 +65,7 @@ skill:
     - references/copy-guidelines.md
     - references/email-types.md
     - references/sequence-templates.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -117,6 +118,7 @@ Before creating a sequence, understand:
    - What defines success?
 
 ---
+
 ## Core Principles
 
 ### 1. One Email, One Job
@@ -140,6 +142,7 @@ Before creating a sequence, understand:
 - Make next steps obvious
 
 ---
+
 ## Email Sequence Strategy
 
 ### Sequence Length
@@ -185,6 +188,7 @@ Consider:
 - Complete the thought or add intrigue
 
 ---
+
 ## Sequence Types Overview
 
 ### Welcome Sequence (Post-Signup)
@@ -242,6 +246,7 @@ Key emails:
 **For detailed templates**: See [references/sequence-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/emails/references/sequence-templates.md)
 
 ---
+
 ## Email Types by Category
 
 ### Onboarding Emails
@@ -284,6 +289,7 @@ Key emails:
 **For detailed email type reference**: See [references/email-types.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/emails/references/email-types.md)
 
 ---
+
 ## Email Copy Guidelines
 
 ### Structure
@@ -339,6 +345,7 @@ For the full blacklist, use the **copywriting** skill's AI-tells reference.
 **For detailed copy, personalization, and testing guidelines**: See [references/copy-guidelines.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/emails/references/copy-guidelines.md)
 
 ---
+
 ## Output Format
 
 ### Sequence Overview
@@ -366,6 +373,7 @@ Segment/Conditions: [If applicable]
 What to measure and benchmarks
 
 ---
+
 ## Task-Specific Questions
 
 1. What triggers entry to this sequence?
@@ -375,6 +383,7 @@ What to measure and benchmarks
 5. What's your current email performance?
 
 ---
+
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key email tools:
@@ -389,6 +398,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Kit** | Creator/newsletter focused | - | [kit.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/kit.md) |
 
 ---
+
 ## Related Skills
 
 - **lead-magnets**: For planning lead magnets that feed into nurture sequences

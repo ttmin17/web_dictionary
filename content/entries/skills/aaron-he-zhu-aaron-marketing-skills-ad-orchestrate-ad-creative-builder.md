@@ -1,8 +1,12 @@
 ---
 slug: aaron-he-zhu-aaron-marketing-skills-ad-orchestrate-ad-creative-builder
 name: ad-creative-builder
-tagline: Agent skill from aaron-he-zhu/aaron-marketing-skills
-summary: Agent skill from aaron-he-zhu/aaron-marketing-skills
+tagline: Use when the user asks to "write ad copy", "generate RSA headlines", or
+  "build ad creative at volume"; produces ad units — RSA headlines/descriptions,
+summary: "Expected output: a ready-to-import creative set (RSA
+  headlines/descriptions, hooks, angle matrix) with a per-unit message-match
+  note to the destination URL, plus the standard handoff summary for
+  memory/ad/ad-creative-..."
 categories:
   - productivity-ops
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: aaron-he-zhu/aaron-marketing-skills
@@ -22,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3014
-  last_commit: 2026-10-26T02:50:09Z
+  stars: 3048
+  last_commit: 2026-11-02T03:58:19Z
   stars_delta_7d: 34
   stars_growth_pct: 1.1
-  trending_score: 34.39
+  trending_score: 34.38
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2930
     - 2980
     - 3014
+    - 3048
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,17 +44,22 @@ readme_source:
   repo: aaron-he-zhu/aaron-marketing-skills
   path: ad/orchestrate/ad-creative-builder/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:34.031Z
+  fetched_at: 2026-11-02T09:06:53.855Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ad-creative-builder
-  description: Agent skill from aaron-he-zhu/aaron-marketing-skills
+  description: Use when the user asks to "write ad copy", "generate RSA
+    headlines", or "build ad creative at volume"; produces ad units — RSA
+    headlines/descriptions, hooks, and an angle matrix — message-matched to the
+    destination landing page. Not for scoring an ad account — use
+    ad-account-auditor; not for the post-click page — use landing-optimizer; not
+    for organic articles — use content-writer. 广告创意/广告文案/RSA标题
   folder_path: ad/orchestrate/ad-creative-builder
   extra_files:
     - references/ad-format-specs.md
     - references/angle-matrix.md
-  pack_total_skills: 120
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

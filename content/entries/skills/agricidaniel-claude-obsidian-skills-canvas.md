@@ -1,8 +1,11 @@
 ---
 slug: agricidaniel-claude-obsidian-skills-canvas
 name: canvas
-tagline: Agent skill from AgriciDaniel/claude-obsidian
-summary: Agent skill from AgriciDaniel/claude-obsidian
+tagline: Create, inspect, and update Obsidian JSON Canvas boards with text,
+  file, link, group, and edge nodes. Use for canvas status, canvas lists, visual
+  maps
+summary: "Resolve the installed product root from this skill's own location, not
+  from the vault or current working directory:"
 categories:
   - productivity-ops
 tags:
@@ -11,10 +14,10 @@ tags:
   - ai-second-brain
   - claude-code
 status: active
-quality_percentile: 78
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-obsidian
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 15827
+  stars: 16065
   last_commit: 2026-10-25T22:24:31Z
-  stars_delta_7d: 193
-  stars_growth_pct: 1.2
-  trending_score: 195.38
+  stars_delta_7d: 238
+  stars_growth_pct: 1.5
+  trending_score: 241.58
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15392
     - 15504
     - 15634
     - 15827
+    - 16065
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +43,16 @@ readme_source:
   repo: AgriciDaniel/claude-obsidian
   path: skills/canvas/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:43.248Z
+  fetched_at: 2026-11-02T09:06:24.414Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: canvas
-  description: Agent skill from AgriciDaniel/claude-obsidian
+  description: Create, inspect, and update Obsidian JSON Canvas boards with text,
+    file, link, group, and edge nodes. Use for canvas status, canvas lists,
+    visual maps, zones, spatial layouts, adding vault notes or media to a
+    .canvas file, and requests such as create canvas, add to canvas, or put this
+    on the canvas.
   folder_path: skills/canvas
   extra_files:
     - references/canvas-spec.md
@@ -89,11 +96,17 @@ syntax skill is available.
 - Resolve the user vault before reading. Never derive it from plugin files.
 - Store boards under `wiki/canvases/`; use `wiki/canvases/main.canvas` only as
   the default when the user did not name a board.
-- Treat `wiki/canvases/index.md` as an optional catalog. Update it only when a
-  canvas is created, renamed, or removed.
+- Treat `wiki/canvases/_index.md` as an optional catalog. Add a new board to it
+  in the same transaction when a catalog exists. Node or edge edits inside an
+  existing board do not require a catalog change.
+- The transaction engine supports file creation and replacement only. A board
+  file cannot be deleted or renamed through this skill. Explain that boundary
+  for a file-removal or file-rename request and return a separate cleanup plan;
+  do not substitute host file tools or silently turn a rename into a copy.
 - Use vault-relative paths in `file` and `background`; reject absolute paths,
   `..` traversal, home shortcuts, and paths that escape through symlinks.
-- Reference only files already inside the vault. If an optional capture or
+- Reference only files already inside the vault or created in the same reviewed
+  transaction. If an optional capture or
   media capability is detected, compose with it and consume its returned
   vault-relative path. Do not assume a particular plugin, command, or session
   log, and do not download or copy assets in this skill.
@@ -182,6 +195,7 @@ python3 "$CORE" transaction apply BUNDLE --vault VAULT \
   --approved-plan-sha256 "$APPROVAL_SHA256"
 ```
 
-For removals, replacements, renames, or other destructive changes, obtain
-explicit consent after presenting the preview. Report the operation ID, exact
+For destructive edits within a board, including node or edge removal, obtain
+explicit consent after presenting the preview. These edits replace the board
+file through the transaction engine. Report the operation ID, exact
 changed paths, board name, node IDs, and final positions. Do not commit Git.

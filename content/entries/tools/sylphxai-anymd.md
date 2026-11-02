@@ -15,28 +15,29 @@ tags:
   - document-conversion
   - docx
 status: active
-quality_percentile: 49
+quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: SylphxAI/anymd
   official_vendor: false
   license: MIT
 signals:
-  stars: 1054
-  last_commit: 2026-10-25T22:31:05Z
-  stars_delta_7d: 10
-  stars_growth_pct: 1
-  trending_score: 10.1
-  rank_current: 115
-  rank_delta: -68
+  stars: 1059
+  last_commit: 2026-11-02T06:10:18Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.5
+  trending_score: 5.02
+  rank_current: 133
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1038
     - 1044
     - 1054
+    - 1059
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: SylphxAI/anymd
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:23.816Z
+  fetched_at: 2026-11-02T09:05:56.744Z
   truncated: false
 type: agent_tool
 tool:
@@ -195,7 +196,11 @@ npm install -g @sylphx/anymd     # or run it once with: npx -y @sylphx/anymd <fi
 
 Python wheels carry the same prebuilt binary and are on PyPI as `anymd` from the first release after publication.
 
-Windows: `winget install Sylphx.anymd`. macOS and Linux: `brew install sylphxai/tap/anymd`. Scoop: `scoop bucket add sylphx https://github.com/SylphxAI/scoop-bucket && scoop install anymd`.
+Use npm on Windows, macOS and Linux. On macOS and Linux, Homebrew is also available:
+
+```bash
+brew install sylphxai/tap/anymd
+```
 
 Docker (amd64 and arm64):
 
@@ -263,11 +268,13 @@ anymd exposes four tools.
 A `read` answer looks like this:
 
 ```markdown
----source: papers/attention.pdf
+---
+source: papers/attention.pdf
 title: Attention Is All You Need
 pages: 15
 showing: pages 1-9
 ---
+
 <!-- page 1 -->
 
 # Attention Is All You Need
@@ -333,7 +340,7 @@ For PDFs, anymd reads glyph positions rather than text runs. Glyphs are grouped 
 
 ## anymd Pro
 
-The anymd core is free and open source (MIT), and nothing that was free has moved to Pro. **anymd Pro** (US$29 once, from 8.4.0) adds exactly two things for agents that must show their evidence: video timelines with exact, hashed frames (`inspect` `video_timeline` and `render_frame`, and the `timeline` option of `read` and `outline`) and cite-check, which verifies a quote at a page and location in a PDF. Licences are checked offline; no account. Pro funds anymd's development. [Buy anymd Pro](https://buy.sylphx.com/buy/anymd) for instant delivery after payment: copy your licence token from the checkout confirmation page, or retrieve it through the emailed licence link. Buy from the terminal: `anymd pro buy` opens the checkout in your browser and turns the payment into a licence token on this machine, so there is nothing to copy. [See anymd Pro](https://sylphxai.github.io/anymd/pro).
+The anymd core is free and open source (MIT), and nothing that was free has moved to Pro. **anymd Pro** (current one-time price, from 8.4.0) adds exactly two things for agents that must show their evidence: video timelines with exact, hashed frames (`inspect` `video_timeline` and `render_frame`, and the `timeline` option of `read` and `outline`) and cite-check, which verifies a quote at a page and location in a PDF. Licences are checked offline; no account. Pro funds anymd's development. [Buy anymd Pro](https://sylphxai.github.io/anymd/pricing) for instant delivery after payment: copy your licence token from the checkout confirmation page, or [recover it](https://sylphxai.github.io/anymd/recover) through the product's recovery page. Buy from the terminal: `anymd pro buy` opens the checkout in your browser and turns the payment into a licence token on this machine, so there is nothing to copy. [See anymd Pro](https://sylphxai.github.io/anymd/pro).
 
 ## Local and hosted
 

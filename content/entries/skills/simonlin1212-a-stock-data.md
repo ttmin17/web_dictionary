@@ -1,8 +1,10 @@
 ---
 slug: simonlin1212-a-stock-data
 name: a-stock-data
-tagline: Agent skill from simonlin1212/a-stock-data
-summary: Agent skill from simonlin1212/a-stock-data
+tagline: 当任务需要写代码实际获取A股及相关市场数据时使用——行情/K线/逐笔(腾讯日周月前后复权+分钟线+当日逐笔、通达信官网全市场盘后包、百度)、研报(东财+新浪+同花顺+iwencai)、信号(热点/北向/龙虎榜/解禁/行业/板块资金流)、资金面(融资融券/大宗/股东户数/分红/资金流/ETF份额)、新
+summary: 十五层数据架构，87 个能力端点（82 主端点 + 5 备胎）、34 个来源。V3.10 新增的 2 个入口于 2026-09-22
+  实测，V3.9 新增的 25 个入口于 2026-09-20
+  实测；旧端点的验证日期见各章节。覆盖主板/创业板/科创板/ST，北交所覆盖依端点而异；已有备胎的数据可按「备用源速查」降级。
 categories:
   - domain-research
 tags:
@@ -11,10 +13,10 @@ tags:
   - ai-skill
   - china-stocks
 status: active
-quality_percentile: 89
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-05-11T01:08:15
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: simonlin1212/a-stock-data
@@ -22,35 +24,34 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11139
-  last_commit: 2026-10-23T13:56:57Z
-  stars_delta_7d: 193
-  stars_growth_pct: 1.8
-  trending_score: 196.4
-  rank_current: 62
-  rank_delta: 4
+  stars: 11397
+  last_commit: 2026-10-30T11:58:11Z
+  stars_delta_7d: 258
+  stars_growth_pct: 2.3
+  trending_score: 263.98
+  rank_current: 53
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10657
     - 10843
     - 10946
     - 11139
-language: en
+    - 11397
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: simonlin1212/a-stock-data
   path: SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:49.332Z
-  truncated: false
+  fetched_at: 2026-11-02T09:06:26.404Z
+  truncated: true
 type: agent_skill
 skill:
   skill_name: a-stock-data
-  description: Agent skill from simonlin1212/a-stock-data
+  description: 当任务需要写代码实际获取A股及相关市场数据时使用——行情/K线/逐笔(腾讯日周月前后复权+分钟线+当日逐笔、通达信官网全市场盘后包、百度)、研报(东财+新浪+同花顺+iwencai)、信号(热点/北向/龙虎榜/解禁/行业/板块资金流)、资金面(融资融券/大宗/股东户数/分红/资金流/ETF份额)、新闻(财联社/东财/华尔街见闻/新闻联播)、财务三表/F10/估值历史/ST名单、公告(巨潮)、打板(涨停池/连板/炸板率/监控池/异动)、ETF期权、舆情互动(互动易/上证e互动/热榜)、筹码分布、复权因子、申万行业变迁、宏观与利率(社融/PMI/中债收益率曲线/回购定盘利率/LPR/全球宏观日历)、指数成分/权重/估值/交易日历、期货与大宗商品(五家期货交易所日行情/商品与股指期权/持仓排名/期货日K含大商所/实时期货/A50/上海金)、事件驱动(业绩预告/机构调研/增减持/回购/股权质押/新股申购)、可转债等真实数据。十五层·87端点(含5备胎)·34个来源·内嵌全部可运行代码，自包含零外部文件；优先用腾讯/交易所官方等不封IP源，东财接口已内置限流防封，主源被封可查「备用源速查」降级。仅在需要调用数据接口取数时使用：A股概念解释、投资观点讨论、策略问答等无需取数的话题不要加载本skill。
   folder_path: .
   extra_files:
-    - .github/FUNDING.yml
     - .gitignore
     - CHANGELOG.md
     - LICENSE
@@ -60,6 +61,7 @@ skill:
     - assets/bmc-qr.png
     - assets/bmc-sponsor.png
     - docs/source-integration-v3.8.0.md
+    - docs/source-integration-v3.9.0.md
   pack_total_skills: 1
   is_pack_primary: true
   clients:
@@ -73,9 +75,13 @@ skill:
 > 
 > 作者：Simon 林 · X [@linsizhen](https://x.com/linsizhen) · 邮箱：simonlin0423@gmail.com
 
-# A股全栈数据工具包 V3.10.2
+# A股全栈数据工具包 V3.10.3
 
 十五层数据架构，87 个能力端点（82 主端点 + 5 备胎）、34 个来源。V3.10 新增的 2 个入口于 2026-09-22 实测，V3.9 新增的 25 个入口于 2026-09-20 实测；旧端点的验证日期见各章节。覆盖主板/创业板/科创板/ST，北交所覆盖依端点而异；已有备胎的数据可按「备用源速查」降级。
+
+> **V3.10.3（上证e互动时间列修复，2026-10-23）：** 入口数、来源数不变，返回的数据也不变。§10.3 `sse_e_interaction()`：
+> 站点 1 天内的回复时间写成「昨天 18:22」，原来只认绝对时间，遇到就整页抛 `RuntimeError`；现在相对 / 绝对写法都换算成
+> `YYYY-MM-DD HH:MM`（相对时间按北京时间），认不出仍然报错。
 
 > **V3.10.2（PE 消化年数修正，2026-10-11 · #58）：** 入口数、来源数不变。`full_valuation()` 的 `digest_years`：
 > 前向 PE 高于 30x 而下一年预测缺失或盈利不增长、或当年 EPS 缺失 / 不为正时，原来返回 `0`（像是已经消化完），现在返回 `None`；其余情况不变。
@@ -450,7 +456,9 @@ ETF期权层 (V3.3 新增)
 
 > 注：`em_get` / `EM_SESSION` / `EM_MIN_INTERVAL` 是所有东财代码块共用的前置定义，使用任一东财端点前需先执行「共用 helper」代码块。
 
----## When to Activate
+---
+
+## When to Activate
 
 - 用户需要**指数成分、指数权重、指数 PE / 股息率、官方交易日历、沪深官方两融或北交所行情备份**（V3.8）。
 - 用户要看**商品期货 / 期权 / 持仓排名 / A50 / 黄金现货**，或**业绩预告 / 机构调研 / 增减持 / 回购 / 股权质押 / 新股申购 / 可转债**，
@@ -482,7 +490,9 @@ ETF期权层 (V3.3 新增)
 - 用户要做产业链调研 / 批量横向对比
 - 关键词：估值、一致预期、机构预测、市盈率、PEG、市值、研报、产业链、行业研究、K线、盘口、公告、新闻、**强势股、题材、热点、概念归因、北向资金、沪股通、深股通、概念板块、资金流向、主力、龙虎榜、席位、营业部、全市场龙虎榜、净买入、解禁、限售、行业对比、行业轮动、融资融券、两融、大宗交易、股东户数、筹码集中、分红、派息、送股、指数、ETF、涨停、打板、连板、炸板、跌停、涨停原因、封板、晋级率、ETF期权、希腊字母、隐含波动率、互动易、投资者关系、热榜、人气榜、市场热度、期货、商品期权、股指期权、持仓排名、A50、黄金、上海金、业绩预告、机构调研、增减持、回购、股权质押、新股申购、打新、可转债、转股溢价率、国债收益率、收益率曲线、回购利率、FR007、LPR、宏观日历、ETF份额、ST、新闻联播、上证e互动、聚宽、回测**
 
----## Prerequisites
+---
+
+## Prerequisites
 
 ```bash
 pip install mootdx requests pandas stockstats numpy baostock xlrd openpyxl
@@ -1106,7 +1116,9 @@ def _em_day(value):
 ```
 <!-- v39-helpers:end -->
 
----## Layer 1: 行情层（实时，不封IP）
+---
+
+## Layer 1: 行情层（实时，不封IP）
 
 > **V3.10.0 起本层重排：能用的在前，2026-09 起失效的 mootdx 行情命令移到最后（§1.7，留档）。**
 > 旧编号 → 新编号：1.2→1.1 腾讯实时、1.5→1.2 腾讯 K 线、1.6→1.3 通达信盘后包、1.3→1.5 百度、1.4→1.6 新浪复权因子、1.1→1.7 mootdx；
@@ -1285,32 +1297,5 @@ _TENCENT_HOST_COOLDOWN = 120          # 某入口失败后暂停使用的秒数
 _tencent_host_down_until = {}
 _TENCENT_MINUTES = ("m1", "m5", "m15", "m30", "m60")
 _TENCENT_SPAN_DAYS = {"day": 700, "week": 3650, "month": 18250}   # 每段 < 640 根
-
-
-def _tencent_kline_call(path, param):
-    """按顺序尝试三个入口；空响应或异常视为该入口被限流，冷却后换下一个。返回 (data, 实际成功的入口)。"""
-    errors = []
-    for host in TENCENT_KLINE_HOSTS:
-        if _tencent_host_down_until.get(host, 0) > time.time():
-            continue
-        try:
-            response = _v39_http(host + path, params={"param": param},
-                                 headers={"Referer": "https://gu.qq.com/"}, timeout=(8, 20))
-            payload = _v39_json(response) if response.text.strip() else {}
-        except RuntimeError as exc:
-            errors.append(f"{host}: {type(exc.__cause__ or exc).__name__}")
-            _tencent_host_down_until[host] = time.time() + _TENCENT_HOST_COOLDOWN
-            continue
-        if not isinstance(payload, dict):    # 顶层变成数组 / 字符串：当作这个入口坏了，换下一个
-            errors.append(f"{host}: 顶层是 {type(payload).__name__}，不是对象")
-            _tencent_host_down_until[host] = time.time() + _TENCENT_HOST_COOLDOWN
-            continue
-        if payload.get("msg") == "param error":
-            raise ValueError(f"腾讯 K 线参数错误（区间过长或代码不存在）: {param}")
-        if isinstance(payload.get("data"), dict) and payload["data"]:
-            return payload["data"], host
-        errors.append(f"{host}: 空响应")
-        _tencent_host_down_until[host] = time.time() + _TENCENT_HOST_COOLDOWN
-    raise RuntimeError("腾讯 K 线三个入口均不可用（可能被限流，稍后重试）: " + "; ".join(errors))
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/simonlin1212/a-stock-data)).*

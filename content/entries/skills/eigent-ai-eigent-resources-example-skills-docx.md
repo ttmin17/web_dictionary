@@ -1,8 +1,10 @@
 ---
 slug: eigent-ai-eigent-resources-example-skills-docx
 name: docx
-tagline: Agent skill from eigent-ai/eigent
-summary: Agent skill from eigent-ai/eigent
+tagline: 'Use this skill whenever the user wants to create, read, edit, or
+  manipulate Word documents (.docx files). Triggers include: any mention of
+  "Word doc",'
+summary: A .docx file is a ZIP archive containing XML files.
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +13,10 @@ tags:
   - agentic-ai
   - agentic-workflow
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2025-07-29T15:56:02
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: eigent-ai/eigent
@@ -22,19 +24,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15663
-  last_commit: 2026-10-25T23:52:55Z
-  stars_delta_7d: 64
-  stars_growth_pct: 0.4
-  trending_score: 64.26
-  rank_current: 93
-  rank_delta: -23
+  stars: 15716
+  last_commit: 2026-11-01T07:09:54Z
+  stars_delta_7d: 53
+  stars_growth_pct: 0.3
+  trending_score: 53.18
+  rank_current: 102
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15467
     - 15514
     - 15599
     - 15663
+    - 15716
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +44,22 @@ readme_source:
   repo: eigent-ai/eigent
   path: resources/example-skills/docx/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.977Z
+  fetched_at: 2026-11-02T09:06:43.495Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: docx
-  description: Agent skill from eigent-ai/eigent
+  description: 'Use this skill whenever the user wants to create, read, edit, or
+    manipulate Word documents (.docx files). Triggers include: any mention of
+    "Word doc", "word document", ".docx", or requests to produce professional
+    documents with formatting like tables of contents, headings, page numbers,
+    or letterheads. Also use when extracting or reorganizing content from .docx
+    files, inserting or replacing images in documents, performing
+    find-and-replace in Word files, working with tracked changes or comments, or
+    converting content into a polished Word document. If the user asks for a
+    "report", "memo", "letter", "template", or similar deliverable as a Word or
+    .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs,
+    or general coding tasks unrelated to document generation.'
   folder_path: resources/example-skills/docx
   extra_files:
     - LICENSE.txt
@@ -115,7 +127,9 @@ To produce a clean document with all tracked changes accepted (requires LibreOff
 python scripts/accept_changes.py input.docx output.docx
 ```
 
----## Creating New Documents
+---
+
+## Creating New Documents
 
 Generate .docx files with JavaScript, then validate. Install: `npm install -g docx`
 
@@ -346,7 +360,9 @@ sections: [{
 - **Override built-in styles** - use exact IDs: "Heading1", "Heading2", etc.
 - **Include `outlineLevel`** - required for TOC (0 for H1, 1 for H2, etc.)
 
----## Editing Existing Documents
+---
+
+## Editing Existing Documents
 
 **Follow all 3 steps in order.**
 
@@ -402,7 +418,9 @@ Validates with auto-repair, condenses XML, and creates DOCX. Use `--validate fal
 - **Replace entire `<w:r>` elements**: When adding tracked changes, replace the whole `<w:r>...</w:r>` block with `<w:del>...<w:ins>...` as siblings. Don't inject tracked change tags inside a run.
 - **Preserve `<w:rPr>` formatting**: Copy the original run's `<w:rPr>` block into your tracked change runs to maintain bold, font size, etc.
 
----## XML Reference
+---
+
+## XML Reference
 
 ### Schema Compliance
 
@@ -529,7 +547,9 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 </w:drawing>
 ```
 
----## Dependencies
+---
+
+## Dependencies
 
 - **pandoc**: Text extraction
 - **docx**: `npm install -g docx` (new documents)

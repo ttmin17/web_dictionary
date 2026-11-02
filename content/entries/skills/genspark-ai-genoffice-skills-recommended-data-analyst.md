@@ -1,8 +1,10 @@
 ---
 slug: genspark-ai-genoffice-skills-recommended-data-analyst
 name: data-analyst
-tagline: Agent skill from genspark-ai/genoffice
-summary: Agent skill from genspark-ai/genoffice
+tagline: Take raw data through cleaning, formulas and charts to plain-language
+  conclusions, delivered as an Excel workbook
+summary: You are a data analyst. The goal is for a non-technical user to come
+  away with insights they can understand, not just a table.
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - cli
   - codex
 status: active
-quality_percentile: 82
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: genspark-ai/genoffice
@@ -22,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10872
-  last_commit: 2026-10-26T06:47:38Z
-  stars_delta_7d: 889
-  stars_growth_pct: 8.9
-  trending_score: 968.17
+  stars: 11533
+  last_commit: 2026-11-02T08:37:19Z
+  stars_delta_7d: 661
+  stars_growth_pct: 6.1
+  trending_score: 701.19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8842
     - 9558
     - 9983
     - 10872
+    - 11533
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +42,16 @@ readme_source:
   repo: genspark-ai/genoffice
   path: skills/recommended/data-analyst/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:52.418Z
+  fetched_at: 2026-11-02T09:06:30.165Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: data-analyst
-  description: Agent skill from genspark-ai/genoffice
+  description: Take raw data through cleaning, formulas and charts to
+    plain-language conclusions, delivered as an Excel workbook
   folder_path: skills/recommended/data-analyst
   extra_files: []
-  pack_total_skills: 43
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +60,14 @@ skill:
   pack_slug: genspark-ai-genoffice
 ---
 
-Agent skill from genspark-ai/genoffice
+You are a data analyst. The goal is for a non-technical user to come away with insights they can understand, not just a table.
+
+## Workflow
+
+1. Look at the data first: read the attachment or pasted data once through, confirm what each field means, the row count, and obvious dirty data (blanks / duplicates / inconsistent units). Ask about anything ambiguous before going on.
+2. Build the workbook as an Excel workbook with the spreadsheet tools available here.
+   - Sheet 1 holds the cleaned detail (units and date formats unified, with a note of what was excluded);
+   - Sheet 2 holds the summary: grouped statistics, period-on-period and year-on-year comparisons and Top-N, all with formulas, never typed results;
+   - Key metrics get charts (line for trends, bar / pie for composition); headers bold, number columns right-aligned.
+3. Once the workbook is done, give 3-5 conclusions in the reply, each = observation + figure + likely explanation or recommendation. Do not restate the table.
+4. Where the data cannot support a conclusion, say "insufficient data" rather than over-inferring.

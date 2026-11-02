@@ -1,8 +1,13 @@
 ---
 slug: ljagiello-ctf-skills-ctf-ai-ml
 name: ctf-ai-ml
-tagline: Agent skill from ljagiello/ctf-skills
-summary: Agent skill from ljagiello/ctf-skills
+tagline: Provides AI and machine learning techniques for CTF challenges. Use
+  when attacking ML models, crafting adversarial examples, performing model
+  extracti
+summary: "- model-attacks.md - Model weight perturbation negation, model
+  inversion via gradient descent, neural network encoder collision, LoRA adapter
+  weight merging, model extraction via query API, membership inference
+  attack..."
 categories:
   - security-auth
 tags:
@@ -11,10 +16,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 52
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,18 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3530
-  last_commit: 2026-10-23T15:17:59Z
-  stars_delta_7d: 55
-  stars_growth_pct: 1.6
-  trending_score: 55.87
-  rank_current: 97
-  rank_delta: -9
+  stars: 3601
+  last_commit: 2026-10-30T16:48:55Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2
+  trending_score: 72.43
+  rank_current: 95
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
     - 3530
+    - 3601
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,12 +47,16 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-ai-ml/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:56.560Z
+  fetched_at: 2026-11-02T09:06:52.136Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ctf-ai-ml
-  description: Agent skill from ljagiello/ctf-skills
+  description: Provides AI and machine learning techniques for CTF challenges. Use
+    when attacking ML models, crafting adversarial examples, performing model
+    extraction, prompt injection, membership inference, training data poisoning,
+    fine-tuning manipulation, neural network analysis, LoRA adapter
+    exploitation, LLM jailbreaking, or solving AI-related puzzles.
   folder_path: ctf-ai-ml
   extra_files:
     - adversarial-ml.md
@@ -87,7 +97,9 @@ brew install python@3
 - [adversarial-ml.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-ai-ml/adversarial-ml.md) - Adversarial example generation (FGSM, PGD, C&W), adversarial patch generation, evasion attacks on ML classifiers, data poisoning, backdoor detection in neural networks
 - [llm-attacks.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-ai-ml/llm-attacks.md) - Prompt injection (direct/indirect), LLM jailbreaking, token smuggling, context window manipulation, tool use exploitation
 
----## When to Pivot
+---
+
+## When to Pivot
 
 - If the challenge becomes pure math, lattice reduction, or number theory with no ML component, switch to `/ctf-crypto`.
 - If the task is reverse engineering a compiled ML model binary (ONNX loader, TensorRT engine, custom inference binary), switch to `/ctf-reverse`.

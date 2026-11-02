@@ -18,7 +18,7 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1947
-  last_commit: 2026-10-26T07:13:28Z
-  stars_delta_7d: 14
+  stars: 1960
+  last_commit: 2026-11-02T08:44:46Z
+  stars_delta_7d: 13
   stars_growth_pct: 0.7
-  trending_score: 14.1
+  trending_score: 13.09
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1933
     - 1947
+    - 1960
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
   path: skills/operations/vss-generate-video-report/SKILL.md
   branch: develop
-  fetched_at: 2026-10-26T07:38:16.961Z
+  fetched_at: 2026-11-02T09:05:52.636Z
   truncated: false
 type: agent_skill
 skill:
@@ -92,6 +93,7 @@ Generate a video analysis report by routing to one of three backends — **never
 If the request is ambiguous (e.g. "report on `<sensor>`" with no time range and no incident wording), default to **Mode A**. Ask only when the request names a sensor and a time range **and** carries neither incident / alert wording (→ Mode B) nor SOP / compliance wording (→ Mode C). Never run any mode's probe or gate until the mode is settled. See **Examples** below for the request phrasings that route to each mode.
 
 ---
+
 ## Instructions
 
 Select the report mode by request intent before any probes. Modes B/C report
@@ -131,6 +133,7 @@ Output contract for evaluators:
 - Mode C empty-range output MUST be exactly one plain-text line, no heading, table, or template: `No SOP messages found for sensor <sensor_id> in range <start_time> to <end_time>.` `get_sop_report` signals an empty range as the tool result `{"error": "No VisionLLM messages found for the given filters."}` — that result, and only that, renders this line (see `references/report-types/sop-compliance.md` Step 3). A failed `tools/call`, a non-200 status, an empty body or one with no JSON-RPC response for the request (neither SSE `data:` events nor plain JSON), a JSON-RPC `error` envelope, `result.isError: true`, or any other error text is a failure: surface it per *Error Handling* and never render this line for it.
 
 ---
+
 ## Examples
 
 - "Generate a report for this video" / "report on `<sensor-id>`" → **Mode A**
@@ -142,6 +145,7 @@ Output contract for evaluators:
 - "Generate an SOP compliance report for `<sensor>` from `<t1>` to `<t2>`" / "compliance report on `<sensor>` last hour" / "SOP status report for `<sensor>`" → **Mode C**
 
 ---
+
 ## Negative Triggers
 
 Do **not** use this skill when the request is one of the following:
@@ -155,6 +159,7 @@ Do **not** use this skill when the request is one of the following:
 Never route reports through VSS-agent `POST /generate`.
 
 ---
+
 ## Runtime prerequisites
 
 The `vss` CLI on `PATH`. The OpenClaw and Hermes harness images ship it; anywhere else, install it from the same checkout as this skill so the CLI and the skill match: `uv tool install <checkout>/libs/vss/cli`.
@@ -272,6 +277,7 @@ esac
 If required services are missing: on Docker Compose, and only when the user wants a local deployment, hand off to `/vss-build-vision-ai` (typically the stock Base workflow for Mode A path A1, or a read-only analytics composition for Mode B) — it deploys Compose profiles only; on Kubernetes report the missing public route (`/vst`, `/rtvi-vlm`, `/video-analytics-api`, `/va-mcp`, `/lvs` under `VSS_PUBLIC_URL`) to the deployment owner (`vss-build-vision-ai`, `deployment_resolution.md`) instead. Mode C hands off to `/vss-build-vision-ai` to compose the SOP profile for the SOP tools. **Always** confirm deploy with the user first.
 
 ---
+
 ## VLM selection when unclear
 
 If VLM/deployment choice is unclear and no default selection has been made, ask the user what VLM to use with these options:
@@ -300,6 +306,7 @@ esac
 ```
 
 ---
+
 ## HITL prompt mode (runtime-first, harness fallback)
 
 Resolve HITL mode for **Mode A only** in this order:
@@ -327,6 +334,7 @@ Guardrails (required):
   `HITL mode not set; defaulting to off. Set HITL_ENABLED=true to enable HITL.`
 
 ---
+
 ## Clip URLs: VLM input vs browser report link
 
 VST may return clip URLs using an agent-internal host:port (Compose
@@ -434,6 +442,7 @@ hosts, download the clip and send inline bytes (same remote-VLM rule as
 `/vss-ask-video`).
 
 ---
+
 ## Report types
 
 Each report type's numbered steps live in its own file under `references/report-types/` — the *Steps* column of the mode table at the top of this file. Read only the file for the mode chosen in *Instructions* step 1, via `$SKILL_DIR/references/report-types/<file>`. Every file follows the same skeleton: a short header (trigger phrases → prerequisite gate → inputs → template → output contract → failure modes, each a pointer to this file or to the step that owns it) followed by the numbered steps; the fill step of each file names its template under `references/report-templates/`.
@@ -449,6 +458,7 @@ Adding a report type — touch points, in order:
 Mode letters are stable aliases (other skills reference them); files are named by report type.
 
 ---
+
 ## Error Handling
 
 - If a probe, `curl`, VLM call, or `/vss-query-analytics` request fails, stop the workflow and report the failing endpoint, HTTP status or command error, and the next useful recovery step (exception: the `Clip is N s (120 s or longer)` exit of A1 Step 1 / Step 3 is the Long-video hand-off, not a failure). Do not fabricate a report from partial or missing data.
@@ -458,6 +468,7 @@ Mode letters are stable aliases (other skills reference them); files are named b
 - For Mode C, the tool result `{"error": "No VisionLLM messages found for the given filters."}` means zero messages for the range/scope: render only the Mode C empty-range line from the *Output contract* (`references/report-types/sop-compliance.md` Step 3). Inspect the raw `tools/call` response before extracting `.result.content[0].text`: a non-200 status, an empty body or one with no JSON-RPC response for the request (neither SSE `data:` events nor plain JSON), a JSON-RPC `error` envelope, `result.isError: true`, or any other error text is a failure — do NOT render that line; report the failing call, the raw response, and the next recovery step.
 
 ---
+
 ## Cross-Reference
 
 - **`/vss-manage-video-io-storage`** — sensor list, timelines, and clip URL for Mode A Step 1 (`references/report-types/video-analysis.md`).

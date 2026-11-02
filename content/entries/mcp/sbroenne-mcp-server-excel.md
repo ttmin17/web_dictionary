@@ -2,7 +2,7 @@
 slug: sbroenne-mcp-server-excel
 name: mcp-server-excel
 tagline: Automate real Microsoft Excel with AI via MCP Server or CLI — Power
-  Query, DAX, VBA, PivotTables, charts, and 412 operations.
+  Query, DAX, VBA, PivotTables, and charts.
 summary: Automate real Microsoft Excel with AI. Excel MCP Server lets GitHub
   Copilot, Claude, ChatGPT, and other agents control Excel through
   natural-language requests—using either MCP or a token-efficient CLI.
@@ -17,25 +17,26 @@ status: active
 quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: sbroenne/mcp-server-excel
   official_vendor: false
   license: MIT
 signals:
-  stars: 834
-  last_commit: 2026-10-25T17:35:44Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.7
-  trending_score: 6.04
-  rank_current: 85
-  rank_delta: -28
+  stars: 841
+  last_commit: 2026-11-01T11:34:55Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.8
+  trending_score: 7.06
+  rank_current: 83
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 817
     - 828
     - 834
+    - 841
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: sbroenne/mcp-server-excel
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.211Z
+  fetched_at: 2026-11-02T09:05:57.585Z
   truncated: false
 type: mcp_server
 launch:
@@ -69,7 +70,7 @@ its official COM API. It can refresh Power Query, recalculate formulas, evaluate
 DAX, run VBA and Python `=PY()`, and preserve PivotTables, charts, macros, the
 Data Model, and workbook formatting.
 
-**63 MCP tools across 33 feature areas, with 425 operations**, cover end-to-end Excel automation.
+**63 MCP tools across 33 feature areas, with 433 operations**, cover end-to-end Excel automation.
 
 > [!IMPORTANT]
 > Requires **Windows**, **Microsoft Excel 2016 or later**, and an interactive
@@ -93,8 +94,8 @@ copilot plugin install excel-mcp@awesome-copilot
 copilot plugin install excel-cli@awesome-copilot
 ```
 
-Close open Excel workbooks before starting; ExcelMcp requires exclusive access
-while automating them.
+For a workbook already open in Excel, use discovery and attachment to keep
+working in that workbook. Excel determines whether newly opened files are read-only.
 
 ## What You Can Automate
 
@@ -107,7 +108,7 @@ while automating them.
 - **[Automation & advanced](https://excelmcpserver.dev/features/automation-advanced/):**
   VBA, Python in Excel, Goal Seek, scenarios, data tables, windows, and XML Maps.
 
-Explore the [capabilities behind all 425 operations](https://excelmcpserver.dev/features/).
+Explore the [capabilities behind all 433 operations](https://excelmcpserver.dev/features/).
 Current command details come from CLI help or the MCP tool descriptions.
 
 ## See It in Action
@@ -136,8 +137,9 @@ technical. Coding agents can use either one.
 | **MCP Server** | Any MCP-compatible client | Tool discovery and persistent sessions |
 | **CLI (`excelcli`)** | Agents that can run terminal commands | Built-in help without loading MCP tool definitions, usually with fewer AI tokens |
 
-The MCP Server calls the ExcelMcp service in-process. The CLI uses a background
-daemon so workbook sessions persist across commands.
+Both entry points run Excel commands in separate worker processes, so a blocked
+Excel operation does not block their basic controls. The CLI also keeps a
+background service running so workbook sessions persist across commands.
 
 ```text
 AI assistant or script

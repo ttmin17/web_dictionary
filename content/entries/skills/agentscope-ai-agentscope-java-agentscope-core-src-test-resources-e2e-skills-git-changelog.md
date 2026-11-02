@@ -1,8 +1,11 @@
 ---
 slug: agentscope-ai-agentscope-java-agentscope-core-src-test-resources-e2e-skills-git-changelog
 name: git-changelog
-tagline: Agent skill from agentscope-ai/agentscope-java
-summary: Agent skill from agentscope-ai/agentscope-java
+tagline: Use this skill when the task involves generating a changelog, release
+  notes, or commit summary from a Git repository's history. Suitable for tasks
+  lik
+summary: "- scripts/generatechangelog.py — Read git log between two refs and
+  produce a grouped Markdown changelog (features, fixes, chores)"
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: agentscope-ai/agentscope-java
@@ -22,15 +25,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6121
-  last_commit: 2026-10-26T06:15:51Z
-  stars_delta_7d: 83
-  stars_growth_pct: 1.4
-  trending_score: 84.14
+  stars: 6214
+  last_commit: 2026-11-02T08:27:45Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.5
+  trending_score: 94.41
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6038
     - 6121
+    - 6214
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +42,16 @@ readme_source:
   repo: agentscope-ai/agentscope-java
   path: agentscope-core/src/test/resources/e2e-skills/git-changelog/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:52.810Z
+  fetched_at: 2026-11-02T09:07:24.989Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: git-changelog
-  description: Agent skill from agentscope-ai/agentscope-java
+  description: Use this skill when the task involves generating a changelog,
+    release notes, or commit summary from a Git repository's history. Suitable
+    for tasks like "generate a changelog for v2.0", "summarize what changed
+    since last release", or "create release notes from git commits". Requires
+    access to a Git repository.
   folder_path: agentscope-core/src/test/resources/e2e-skills/git-changelog
   extra_files:
     - scripts/generate_changelog.py
@@ -56,4 +64,16 @@ skill:
   pack_slug: agentscope-ai-agentscope-java
 ---
 
-Agent skill from agentscope-ai/agentscope-java
+# Git Changelog Skill
+Generates formatted changelogs and release notes from Git commit history.
+
+## Available Scripts
+
+- `scripts/generate_changelog.py` — Read git log between two refs and produce a grouped Markdown changelog (features, fixes, chores)
+
+## Usage
+
+```
+python3 scripts/generate_changelog.py --from v1.0.0 --to HEAD --output CHANGELOG.md
+python3 scripts/generate_changelog.py --from v1.0.0 --to v2.0.0
+```

@@ -14,29 +14,29 @@ tags:
   - chrome-devtools
   - debugging
 status: active
-quality_percentile: 84
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ChromeDevTools/chrome-devtools-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 54164
-  last_commit: 2026-10-26T05:27:10Z
-  stars_delta_7d: 349
-  stars_growth_pct: 0.6
-  trending_score: 351.26
-  rank_current: 7
+  stars: 54641
+  last_commit: 2026-11-02T05:22:22Z
+  stars_delta_7d: 477
+  stars_growth_pct: 0.9
+  trending_score: 481.2
+  rank_current: 8
   rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 53072
     - 53450
     - 53815
     - 54164
+    - 54641
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: ChromeDevTools/chrome-devtools-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:35:59.897Z
+  fetched_at: 2026-11-02T09:05:22.710Z
   truncated: false
 type: mcp_server
 launch:

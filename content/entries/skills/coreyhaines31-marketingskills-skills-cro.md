@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/cro/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.290Z
+  fetched_at: 2026-11-02T09:06:13.823Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
     - evals/evals.json
     - references/experiments.md
     - references/form.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -96,6 +97,7 @@ Before providing recommendations, identify:
 3. **Traffic Context**: Where are visitors coming from? (organic, paid, email, social)
 
 ---
+
 ## CRO Analysis Framework
 
 Analyze the page across these dimensions, in order of impact:
@@ -177,6 +179,7 @@ Analyze the page across these dimensions, in order of impact:
 - Long load times
 
 ---
+
 ## Output Format
 
 Structure your recommendations as:
@@ -194,6 +197,7 @@ Hypotheses worth A/B testing rather than assuming.
 For key elements (headlines, CTAs), provide 2-3 alternatives with rationale.
 
 ---
+
 ## Page-Specific Frameworks
 
 ### Homepage CRO
@@ -221,6 +225,7 @@ For key elements (headlines, CTAs), provide 2-3 alternatives with rationale.
 - Inline CTAs at natural stopping points
 
 ---
+
 ## Experiment Ideas
 
 When recommending experiments, consider tests for:
@@ -233,6 +238,7 @@ When recommending experiments, consider tests for:
 **For comprehensive experiment ideas by page type**: See [references/experiments.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/cro/references/experiments.md)
 
 ---
+
 ## Task-Specific Questions
 
 1. What's your current conversion rate and goal?
@@ -242,6 +248,7 @@ When recommending experiments, consider tests for:
 5. What have you already tried?
 
 ---
+
 ## Related Skills
 
 - **signup**: If the issue is in the signup process itself
@@ -250,6 +257,7 @@ When recommending experiments, consider tests for:
 - **ab-testing**: To properly test recommended changes
 
 ---
+
 ## Form Optimization
 
 When enrichment controls the next step after a lead form, use the [revops inbound-routing playbook](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/inbound-routing.md): preserve valid submissions, bound the lookup wait, and provide a useful fallback when qualification is unknown.

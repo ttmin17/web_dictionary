@@ -16,7 +16,7 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2025-12-18T02:26:18
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Wei-Shaw/sub2api
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: LGPL-3.0
 signals:
-  stars: 44843
-  last_commit: 2026-10-26T03:15:19Z
-  stars_delta_7d: 505
-  stars_growth_pct: 1.1
-  trending_score: 510.75
-  rank_current: 36
-  rank_delta: -6
+  stars: 45280
+  last_commit: 2026-11-02T08:35:29Z
+  stars_delta_7d: 437
+  stars_growth_pct: 1
+  trending_score: 441.26
+  rank_current: 39
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 43398
     - 43887
     - 44338
     - 44843
+    - 45280
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: Wei-Shaw/sub2api
   path: skills/sub2api-admin/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:01.133Z
+  fetched_at: 2026-11-02T09:06:10.377Z
   truncated: false
 type: agent_skill
 skill:

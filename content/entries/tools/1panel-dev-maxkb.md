@@ -14,29 +14,29 @@ tags:
   - deepseek-r1
   - knowledgebase
 status: active
-quality_percentile: 83
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2023-09-14T02:05:12
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: 1Panel-dev/MaxKB
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 23036
-  last_commit: 2026-10-26T07:12:43Z
-  stars_delta_7d: 41
+  stars: 23093
+  last_commit: 2026-11-02T08:46:02Z
+  stars_delta_7d: 57
   stars_growth_pct: 0.2
-  trending_score: 41.07
-  rank_current: 84
-  rank_delta: -49
+  trending_score: 57.14
+  rank_current: 79
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 22912
     - 22967
     - 22995
     - 23036
+    - 23093
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: 1Panel-dev/MaxKB
   path: README.md
   branch: v2
-  fetched_at: 2026-10-26T07:36:25.801Z
+  fetched_at: 2026-11-02T09:05:26.583Z
   truncated: false
 type: agent_tool
 tool:

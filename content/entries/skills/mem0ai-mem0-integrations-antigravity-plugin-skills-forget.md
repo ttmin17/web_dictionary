@@ -1,8 +1,11 @@
 ---
 slug: mem0ai-mem0-integrations-antigravity-plugin-skills-forget
 name: forget
-tagline: Agent skill from mem0ai/mem0
-summary: Agent skill from mem0ai/mem0
+tagline: Delete the Mem0 memories stored for this repository and this user. Use
+  when the user asks to forget, clear, wipe, or delete memories.
+summary: If the user also asked to delete the repository's shared project
+  memory, add --include-project-memory and say that this removes it for every
+  teammate.
 categories:
   - databases-memory
 tags:
@@ -11,10 +14,10 @@ tags:
   - agents
   - ai-agents
 status: active
-quality_percentile: 76
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mem0ai/mem0
@@ -22,16 +25,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 67824
-  last_commit: 2026-10-23T18:38:28Z
-  stars_delta_7d: 403
+  stars: 68264
+  last_commit: 2026-10-30T21:36:23Z
+  stars_delta_7d: 440
   stars_growth_pct: 0.6
-  trending_score: 405.41
-  rank_current: 37
+  trending_score: 442.85
+  rank_current: 38
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 67421
     - 67824
+    - 68264
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,15 +44,16 @@ readme_source:
   repo: mem0ai/mem0
   path: integrations/antigravity-plugin/skills/forget/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:38.168Z
+  fetched_at: 2026-11-02T09:06:57.661Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: forget
-  description: Agent skill from mem0ai/mem0
+  description: Delete the Mem0 memories stored for this repository and this user.
+    Use when the user asks to forget, clear, wipe, or delete memories.
   folder_path: integrations/antigravity-plugin/skills/forget
   extra_files: []
-  pack_total_skills: 16
+  pack_total_skills: 6
   is_pack_primary: true
   clients:
     - antigravity
@@ -57,4 +63,22 @@ skill:
   pack_slug: mem0ai-mem0
 ---
 
-Agent skill from mem0ai/mem0
+# Forget this repository's memories
+This permanently deletes remote memories. Before running anything, tell the
+user exactly what will be deleted: their own memories for this repository
+only. The repository's project memory is shared by everyone who works in it,
+so it stays unless the user explicitly asks to delete that too.
+
+After the user confirms, run:
+
+```bash
+python3 "${ANTIGRAVITY_PLUGIN_ROOT}/core/memory_cli.py" --harness "antigravity"  forget --remote --yes
+```
+
+If the user also asked to delete the repository's shared project memory, add
+`--include-project-memory` and say that this removes it for every teammate.
+
+Report what the command output says was deleted. If the user only wants local
+data cleared (evidence log, pending queue), run the same command without
+`--remote`. Never pass `--yes` before the user has confirmed in this
+conversation.

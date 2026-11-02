@@ -1,8 +1,13 @@
 ---
 slug: nexu-io-open-design-design-templates-docs-page
 name: docs-page
-tagline: Agent skill from nexu-io/open-design
-summary: Agent skill from nexu-io/open-design
+tagline: |-
+  A documentation page — inline-start nav, scrollable article body,
+  inline-end table of contents. Use when the brief mentions "docs",
+  "documentation", "
+summary: 1. Read the active DESIGN.md (injected above). Use the body type token
+  for prose; the mono token for code; respect line-height and max-width rules.
+  2. Pick a topic from the brief — the page should look like real docs,...
 categories:
   - media-creative
 tags:
@@ -11,10 +16,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 104025
-  last_commit: 2026-10-26T07:31:43Z
-  stars_delta_7d: 1726
-  stars_growth_pct: 1.7
-  trending_score: 1755.12
+  stars: 105423
+  last_commit: 2026-11-02T05:06:45Z
+  stars_delta_7d: 1398
+  stars_growth_pct: 1.3
+  trending_score: 1416.79
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99839
     - 100908
     - 102299
     - 104025
+    - 105423
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,16 +45,19 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/docs-page/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.575Z
+  fetched_at: 2026-11-02T09:06:41.704Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: docs-page
-  description: Agent skill from nexu-io/open-design
+  description: |
+    A documentation page — inline-start nav, scrollable article body,
+    inline-end table of contents. Use when the brief mentions "docs",
+    "documentation", "guide", "API reference", or "tutorial".
   folder_path: design-templates/docs-page
   extra_files:
     - example.html
-  pack_total_skills: 401
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -58,4 +66,55 @@ skill:
   pack_slug: nexu-io-open-design
 ---
 
-Agent skill from nexu-io/open-design
+# Docs Page Skill
+Produce a single, three-column documentation page in one HTML file.
+
+## Workflow
+
+1. **Read the active DESIGN.md** (injected above). Use the body type token for
+   prose; the mono token for code; respect line-height and max-width rules.
+2. **Pick a topic** from the brief — the page should look like real docs, not
+   a generic wireframe. Concrete API names, command examples, plausible
+   parameters.
+3. **Lay out** three regions, expressed on the inline axis so the
+   layout flips correctly under `dir="rtl"`:
+   - **Inline-start nav** (240–280px, sticky): grouped link list, current
+     page bolded with an `inline-start`-edge accent stripe. 3–5 groups
+     of 4–8 links.
+   - **Article body** (max-width ~720px, centered in the middle column):
+     H1, lede paragraph, H2 sections, code blocks, callout boxes (note /
+     warning), inline links, lists.
+   - **Inline-end TOC** (200–240px, sticky): "On this page" with the
+     H2/H3 anchors, current section highlighted as the user scrolls.
+4. **Write** a single HTML document:
+   - `<!doctype html>` through `</html>`, all CSS inline.
+   - CSS Grid for the three columns; sticky positioning for the rails.
+   - Code blocks: monospace token, soft surface fill, copy-button affordance
+     (visual only — no JS needed).
+   - Anchor IDs on every H2/H3 so the TOC links work.
+   - `data-od-id` on the nav, article, and TOC.
+5. **Prose**: write at least 350 words of believable docs. Include at least
+   one shell command, one code snippet (5–15 lines), one callout, one table.
+6. **Self-check**:
+   - Body text wraps at the DS line-length sweet spot (60–75 chars).
+   - Code uses the DS mono token, not generic `monospace`.
+   - Accent is restrained — used for active nav item, links, one callout
+     border. Not on body text.
+   - Page is readable at 1280w and collapses gracefully below 900w (TOC drops
+     out, nav becomes a top drawer).
+   - Use logical CSS (`margin-inline-start`, `border-inline-start`,
+     `inset-inline-end`, `text-align: start`) on the rails and accent
+     stripe so the layout flips correctly under `dir="rtl"`.
+
+## Output contract
+
+Emit between `<artifact>` tags:
+
+```
+<artifact identifier="docs-slug" type="text/html" title="Docs — Page Title">
+<!doctype html>
+<html>...</html>
+</artifact>
+```
+
+One sentence before the artifact, nothing after.

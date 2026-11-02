@@ -17,26 +17,26 @@ status: active
 quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2020-10-20T08:49:48
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: devlikeapro/waha
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 7685
-  last_commit: 2026-10-22T10:49:15Z
-  stars_delta_7d: 56
-  stars_growth_pct: 0.7
-  trending_score: 56.41
-  rank_current: 37
-  rank_delta: -11
+  stars: 7725
+  last_commit: 2026-10-28T09:40:49Z
+  stars_delta_7d: 40
+  stars_growth_pct: 0.5
+  trending_score: 40.21
+  rank_current: 42
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7562
     - 7587
     - 7629
     - 7685
+    - 7725
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: devlikeapro/waha
   path: README.md
   branch: core
-  fetched_at: 2026-10-26T07:36:57.975Z
+  fetched_at: 2026-11-02T09:05:35.080Z
   truncated: false
 type: mcp_server
 launch:
@@ -112,14 +112,8 @@ Assuming you have installed [Docker](https://docs.docker.com/get-docker/), let's
 docker pull devlikeapro/waha
 ```
 
-
-```bash
-docker login -u devlikeapro -p {KEY}
-docker pull devlikeapro/waha-plus
-docker logout
-```
-
-Read more about how to get `PASSWORD` for [**➕ WAHA Plus**](https://waha.devlike.pro/docs/how-to/waha-plus/)
+Looking for **WAHA Plus**? It's now part of the main `devlikeapro/waha` image - all Plus features are included.
+Read more: [WAHA 2026.6 - Plus is now Core](https://waha.devlike.pro/blog/waha-2026-6/)
 
 ### 2. Run WhatsApp HTTP API
 
@@ -157,7 +151,7 @@ The example payload:
 ```
 
 
-By using the request with `name` values you can start multiple session (WhatsApp accounts) inside the single docker container in Plus
+By using the request with different `name` values you can start multiple sessions (WhatsApp accounts) inside the single docker container.
 
 
 ### 4. Get and scan QR

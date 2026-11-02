@@ -13,10 +13,10 @@ tags:
   - claude-code
   - skills
 status: active
-quality_percentile: 98
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -24,17 +24,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 44625
-  last_commit: 2026-10-25T07:34:42Z
-  stars_delta_7d: 1711
-  stars_growth_pct: 4
-  trending_score: 1779.22
+  stars: 45763
+  last_commit: 2026-11-02T07:29:13Z
+  stars_delta_7d: 1138
+  stars_growth_pct: 2.6
+  trending_score: 1167.02
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 37497
     - 37789
     - 42914
     - 44625
+    - 45763
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: plugins/mcp-server-dev/skills/build-mcp-app/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:05.841Z
+  fetched_at: 2026-11-02T09:06:14.503Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,7 +62,7 @@ skill:
     - references/iframe-sandbox.md
     - references/payload-budgeting.md
     - references/widget-templates.md
-  pack_total_skills: 29
+  pack_total_skills: 21
   is_pack_primary: false
   clients:
     - claude-code
@@ -91,6 +91,7 @@ The UI layer is **additive**. Under the hood it's still tools, resources, and th
 - Directory submission requires OAuth or **authless** (`none`) — static bearer is private-deploy only and blocks listing — plus tool `annotations` and 3–5 PNG screenshots; see `references/directory-checklist.md`.
 
 ---
+
 ## When a widget beats plain text
 
 Don't add UI for its own sake — most tools are fine returning text or JSON. Add a widget when one of these is true:
@@ -106,6 +107,7 @@ Don't add UI for its own sake — most tools are fine returning text or JSON. Ad
 If none apply, skip the widget. Text is faster to build and faster for the user.
 
 ---
+
 ## Widgets vs Elicitation — route correctly
 
 Before building a widget, check if **elicitation** covers it. Elicitation is spec-native, zero UI code, works in any compliant host.
@@ -123,6 +125,7 @@ Before building a widget, check if **elicitation** covers it. Elicitation is spe
 If elicitation covers it, use it. See `../build-mcp-server/references/elicitation.md`.
 
 ---
+
 ## Architecture: two deployment shapes
 
 ### Remote MCP app (most common)
@@ -151,6 +154,7 @@ Same widget mechanism, but the server runs locally inside an MCPB bundle. Use th
 For MCPB packaging mechanics, defer to the **`build-mcpb`** skill. Everything below applies to both shapes.
 
 ---
+
 ## How widgets attach to tools
 
 A widget-enabled tool has **two separate registrations**:
@@ -199,6 +203,7 @@ registerAppResource(
 The URI scheme `ui://` is convention. The mime type MUST be `RESOURCE_MIME_TYPE` (`"text/html;profile=mcp-app"`) — this is how the host knows to render it as an interactive iframe, not just display the source.
 
 ---
+
 ## Widget runtime — the `App` class
 
 Inside the iframe, your script talks to the host via the `App` class from `@modelcontextprotocol/ext-apps`. This is a **persistent bidirectional connection** — the widget stays alive as long as the conversation is active, receiving new tool results and sending user actions.
@@ -233,6 +238,7 @@ The `/*__EXT_APPS_BUNDLE__*/` placeholder gets replaced by the server at startup
 Keep widgets **small and single-purpose**. A picker picks. A chart displays. Don't build a whole sub-app inside the iframe — split it into multiple tools with focused widgets.
 
 ---
+
 ## Scaffold: minimal picker widget
 
 **Install:**
@@ -312,6 +318,7 @@ For local-only widget apps (driving a desktop app, reading local files), swap th
 See `references/widget-templates.md` for more widget shapes.
 
 ---
+
 ## Design notes that save you a rewrite
 
 **One widget per tool.** Resist the urge to build one mega-widget that does everything. One tool → one focused widget → one clear result shape. Claude reasons about these far better.
@@ -331,6 +338,7 @@ See `references/widget-templates.md` for more widget shapes.
 **Follow host theme.** `app.getHostContext()?.theme` (after `connect()`) plus `app.onhostcontextchanged` for live updates. Toggle a `.dark` class on `<html>`, keep colors in CSS custom props with a `:root.dark {}` override block, set `color-scheme`. Disable `mix-blend-mode: multiply` in dark — it makes images vanish.
 
 ---
+
 ## Testing
 
 **Claude Desktop** — current builds still require the `command`/`args` config shape (no native `"type": "http"`). Wrap with `mcp-remote` and force `http-only` transport so the SSE probe doesn't swallow widget-capability negotiation:
@@ -386,6 +394,7 @@ Open `http://localhost:3000/widget-preview?payload={"rows":[...]}` in a normal b
 **CSP debugging** — open the iframe's own devtools console. CSP violations are the #1 reason widgets silently fail (blank rectangle, no error in the main console). See `references/iframe-sandbox.md`.
 
 ---
+
 ## Reference files
 
 - `references/iframe-sandbox.md` — CSP/sandbox constraints, the bundle-inlining pattern, image handling, host theming

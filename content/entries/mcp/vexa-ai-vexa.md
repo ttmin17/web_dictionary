@@ -17,26 +17,26 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Vexa-ai/vexa
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2907
-  last_commit: 2026-10-26T07:29:26Z
-  stars_delta_7d: 18
-  stars_growth_pct: 0.6
-  trending_score: 18.11
-  rank_current: 67
-  rank_delta: -6
+  stars: 2938
+  last_commit: 2026-11-02T08:53:39Z
+  stars_delta_7d: 31
+  stars_growth_pct: 1.1
+  trending_score: 31.33
+  rank_current: 51
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2858
     - 2879
     - 2889
     - 2907
+    - 2938
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Vexa-ai/vexa
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:58.927Z
+  fetched_at: 2026-11-02T09:05:40.504Z
   truncated: false
 type: mcp_server
 launch:
@@ -80,6 +80,7 @@ Sandboxed knowledge agents are self-hosted only — [self-host Vexa](#-quickstar
 </div>
 
 ---
+
 **[Connect your agent](https://vexa.ai/connect?utm_source=github&utm_medium=readme)**
 · **[Get an API key](https://vexa.ai/start?utm_source=github&utm_medium=readme)**
 · **[Talk to the founder](https://cal.com/dmitrygrankin/web)**
@@ -108,6 +109,7 @@ No one else has all three:
 > read the stream, ignore the agent lane entirely.
 
 ---
+
 ## ⚡ Quickstart
 
 **Just want a bot in a meeting?** Use the hosted service — no install. Sign in at
@@ -189,6 +191,7 @@ agent reply streams as Server-Sent Events — `message-delta` frames carry the t
 anything it recorded into your workspace.
 
 ---
+
 ## 🧩 How it works
 
 One gateway, two domains — **Meetings** (capture) and **Agents** (work the knowledge) — both running on
@@ -204,6 +207,7 @@ machinery already proven by thousands of meeting bots is exactly what runs your 
 inside your network.
 
 ---
+
 ## ⚙️ The agentic runtime
 
 A CLI coding agent is just a process on Linux. The **runtime** makes that a multi-tenant,
@@ -228,6 +232,7 @@ Same control plane, same worker — only how the container is created changes. O
 Kubernetes/OpenShift cluster, inside your walls.
 
 ---
+
 ## 🧠 Agents & your workspace
 
 Capture is the front door; **agents** make the knowledge compound. Every meeting compiles into
@@ -258,6 +263,7 @@ work: connect your calendar (ICS) and planned meetings appear with attendees —
 > [Status](#️-status--roadmap).
 
 ---
+
 ## 🖥️ The Terminal: AI-augmented meetings
 
 0.12 ships a **new Terminal UI** built to put the backend's scale — thousands of bots and
@@ -281,6 +287,7 @@ agents — to work on your actual week. It opens on your meetings: coming up, li
   human and AI participants on the same files.
 
 ---
+
 ## 📖 How-to recipes
 
 Each is a complete path to one outcome over the [Agent API](#-api-reference). Full guides at
@@ -326,6 +333,7 @@ curl -X POST "$API_BASE/agent/events" -H "X-API-Key: $API_KEY" -H "Content-Type:
 > intelligence and it is your agent. See [Status](#️-status--roadmap).
 
 ---
+
 ## 🚀 Deployment options
 
 Two ways to run Vexa, one codebase:
@@ -351,6 +359,7 @@ Settings → Models enforces per-user/global credential resolution. K8s backend 
 honestly in [Status](#️-status--roadmap).
 
 ---
+
 ## 🏠 Deploy & configure
 
 `make all` brings up the full stack via Docker Compose on one Linux host — each service in its own
@@ -376,6 +385,7 @@ container, bound to loopback:
   production; full guide in the [docs](https://docs.vexa.ai).
 
 ---
+
 ## 🆚 How Vexa is different
 
 The crowded "AI second brain / self-hosted knowledge base" space is full of excellent tools for
@@ -406,6 +416,7 @@ it to third parties as a hosted or managed service) and the local-notetaker tool
 honestly, trade-offs and all, in [How Vexa compares](https://docs.vexa.ai/comparison).
 
 ---
+
 ## 🏦 For regulated enterprises
 
 For banks, healthcare, government, and anyone in a regulated industry, the meeting-AI question
@@ -449,6 +460,7 @@ Full review page: [Security & compliance](https://docs.vexa.ai/security-complian
 > Regulated banks and Fortune-500s run Vexa fully air-gapped on their own OpenShift and local LLMs today.
 
 ---
+
 ## 📡 API reference
 
 Two APIs behind the gateway, authenticated with `X-API-Key`. Base URL: `http://localhost:18056`
@@ -485,6 +497,7 @@ at `/mcp` for agent clients ([docs](https://docs.vexa.ai/vexa-mcp)). Full refere
 > feed, agent chat, routines, and events are live.
 
 ---
+
 ## 🗺️ Status & roadmap
 
 Honest state of the **0.12** line (mirrors the [status page](https://docs.vexa.ai/roadmap/status) — never aspirational):
@@ -511,6 +524,7 @@ Honest state of the **0.12** line (mirrors the [status page](https://docs.vexa.a
 ✅ Production · 🟡 In progress · 🔵 Planned
 
 ---
+
 ## 🤝 Community & contributing
 
 - **Docs** — [docs.vexa.ai](https://docs.vexa.ai)
@@ -529,6 +543,7 @@ Vexa is built in the open. If you self-host it, extend it, or run it air-gapped 
 we'd love to hear about it.
 
 ---
+
 ## 📄 License
 
 [Apache-2.0](https://github.com/Vexa-ai/vexa/blob/main/LICENSE). Own it, run it, fork it, ship it. It's an investment, not a rental.

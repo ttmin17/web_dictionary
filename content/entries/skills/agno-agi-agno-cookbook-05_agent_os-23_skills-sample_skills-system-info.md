@@ -1,8 +1,11 @@
 ---
 slug: agno-agi-agno-cookbook-05_agent_os-23_skills-sample_skills-system-info
 name: system-info
-tagline: Agent skill from agno-agi/agno
-summary: Agent skill from agno-agi/agno
+tagline: Inspect the host operating system, Python runtime, and local files
+summary: "- getsysteminfo.py returns the hostname, operating system,
+  architecture, Python version and executable, processor, and current UTC time.
+  - listdirectory.py lists the direct children of a directory. It accepts one
+  opti..."
 categories:
   - cloud-infra
 tags:
@@ -11,10 +14,10 @@ tags:
   - developer-tools
   - python
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: agno-agi/agno
@@ -22,15 +25,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 42891
-  last_commit: 2026-10-26T07:00:05Z
-  stars_delta_7d: 86
-  stars_growth_pct: 0.2
-  trending_score: 86.17
+  stars: 43011
+  last_commit: 2026-11-02T08:04:25Z
+  stars_delta_7d: 120
+  stars_growth_pct: 0.3
+  trending_score: 120.34
   velocity_source: snapshot_delta
   sparkline_4w:
     - 42805
     - 42891
+    - 43011
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +42,12 @@ readme_source:
   repo: agno-agi/agno
   path: cookbook/05_agent_os/23_skills/sample_skills/system-info/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:38.694Z
+  fetched_at: 2026-11-02T09:06:54.901Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: system-info
-  description: Agent skill from agno-agi/agno
+  description: Inspect the host operating system, Python runtime, and local files
   folder_path: cookbook/05_agent_os/23_skills/sample_skills/system-info
   extra_files:
     - scripts/get_system_info.py
@@ -57,4 +61,41 @@ skill:
   pack_slug: agno-agi-agno
 ---
 
-Agent skill from agno-agi/agno
+# System Info Skill
+Use this skill when the user asks about the host running the AgentOS process or
+needs a directory inventory from that host.
+
+## Available scripts
+
+- `get_system_info.py` returns the hostname, operating system, architecture,
+  Python version and executable, processor, and current UTC time.
+- `list_directory.py` lists the direct children of a directory. It accepts one
+  optional path argument and defaults to the skill directory.
+
+## Execution
+
+Load these instructions before choosing a script. Execute a script through the
+skill tool and inspect its structured result:
+
+```python
+get_skill_script(
+    skill_name="system-info",
+    script_path="get_system_info.py",
+    execute=True,
+)
+```
+
+To list a directory:
+
+```python
+get_skill_script(
+    skill_name="system-info",
+    script_path="list_directory.py",
+    execute=True,
+    args=["."],
+)
+```
+
+Only use data parsed from `stdout` when `returncode` is `0`. If execution
+returns a nonzero code, report `stderr` or the JSON error instead of inferring
+the result.

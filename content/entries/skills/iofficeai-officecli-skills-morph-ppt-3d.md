@@ -14,10 +14,10 @@ tags:
   - codex
   - docx
 status: active
-quality_percentile: 66
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: iOfficeAI/OfficeCLI
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32477
-  last_commit: 2026-10-26T07:13:11Z
-  stars_delta_7d: 318
-  stars_growth_pct: 1
-  trending_score: 321.14
+  stars: 32933
+  last_commit: 2026-10-30T06:48:51Z
+  stars_delta_7d: 456
+  stars_growth_pct: 1.4
+  trending_score: 462.4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 31654
     - 31942
     - 32159
     - 32477
+    - 32933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: iOfficeAI/OfficeCLI
   path: skills/morph-ppt-3d/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:28.187Z
+  fetched_at: 2026-11-02T09:06:16.499Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,6 +67,7 @@ This skill **extends** `morph-ppt`. All morph-ppt rules (naming, ghosting, desig
 This file covers **3D-specific additions** and an **enriched design system** combining morph-ppt aesthetics with concrete color palettes, font pairings, and layout quality guardrails.
 
 ---
+
 ## Setup
 
 If `officecli` is missing:
@@ -81,6 +82,7 @@ Verify with `officecli --version` (open a new terminal if PATH hasn't picked up)
 - User wants a `.pptx` with a `.glb` 3D model and Morph transitions.
 
 ---
+
 ## 3D Model Compatibility Gate (before generation)
 
 1. Only `.glb` is supported. If user provides `.fbx` / `.obj` / `.blend` / `.usdz` / `.gltf`, ask them to convert to `.glb` first (e.g. via Blender export).
@@ -88,6 +90,7 @@ Verify with `officecli --version` (open a new terminal if PATH hasn't picked up)
 3. All files (`.glb`, `.pptx`, build script) must be in the same working directory.
 
 ---
+
 ## Model Discovery Flow (when user has no model)
 
 When the user gives a topic but no `.glb` file, **proactively help them find a matching model** instead of just listing websites.
@@ -269,6 +272,7 @@ If user chooses B, proceed with Step 6 (self-service guidance).
 Always remind before confirming download: "Please check the model license before downloading. CC0 / CC BY = free to use; CC BY-NC = non-commercial only."
 
 ---
+
 ## Visual Design System (4.0 enrichment)
 
 morph-ppt provides the base design rules. This section adds **concrete palettes, font pairings, and layout quality rules** from PPT Creator to give the AI more variety and stronger guardrails.
@@ -341,6 +345,7 @@ officecli add deck.pptx '/slide[N]' --type notes --prop text="..."
 Text-only slides are only allowed for: quotes, code examples, pure tables.
 
 ---
+
 ## 3D Model Insertion Rules
 
 ### Add model fresh on every slide — NEVER clone
@@ -393,6 +398,7 @@ officecli add deck.pptx '/slide[2]' --type 3dmodel \
 - Never use `raw-set` on any 3D transform parameter
 
 ---
+
 ## Model-Content Layout
 
 ### Core Principle: Model IS the Subject
@@ -506,6 +512,7 @@ Bleed does NOT work for:
 **For character/animal models (like fox, duck, avocado):** keep the full model visible on all slides. Use size changes (L→M→S) for rhythm instead of bleed cropping. Use `rotx` for angle variety instead.
 
 ---
+
 ## Camera Language
 
 Three tools work together: **roty** (orbit), **rotx** (tilt), **width/height** (zoom).
@@ -552,6 +559,7 @@ Match the shot to what the slide talks about:
 | 7     | Establishing         | 320  | 5    | L 20×17  | C       |
 
 ---
+
 ## Workflow Integration with morph-ppt
 
 ### Phase 2 additions (Planning)
@@ -600,6 +608,7 @@ After standard morph verification, additionally check:
 - No two consecutive slides use the same layout pattern
 
 ---
+
 ## File Placement Rule
 
 All files must be in the same working directory.

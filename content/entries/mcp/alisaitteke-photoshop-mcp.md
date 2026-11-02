@@ -16,21 +16,24 @@ status: active
 quality_percentile: 44
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alisaitteke/photoshop-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 737
-  last_commit: 2026-10-24T23:44:40Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 787
+  last_commit: 2026-11-01T04:01:37Z
+  stars_delta_7d: 50
+  stars_growth_pct: 6.8
+  trending_score: 53.39
+  rank_current: 34
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 737
+    - 787
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: alisaitteke/photoshop-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:38:48.504Z
+  fetched_at: 2026-11-02T09:05:57.599Z
   truncated: false
 type: mcp_server
 launch:

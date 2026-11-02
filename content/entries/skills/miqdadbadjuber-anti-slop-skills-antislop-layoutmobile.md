@@ -1,8 +1,13 @@
 ---
 slug: miqdadbadjuber-anti-slop-skills-antislop-layoutmobile
 name: antislop-layoutmobile
-tagline: Agent skill from miqdadbadjuber/anti-slop
-summary: Agent skill from miqdadbadjuber/anti-slop
+tagline: "Mobile layout skill for antislop. Use for layouts that reflow across
+  screen sizes, phone to desktop: grids, overflow, tap targets. Load with the
+  core."
+summary: "- Load together with antislop.md whenever the task is mobile or
+  responsive layout work. The core holds the mechanism (the purpose test, the
+  three tiers, the Delivery Gate); this skill holds mobile-layout depth. -
+  Ever..."
 categories:
   - coding-agents
 tags:
@@ -11,10 +16,10 @@ tags:
   - ai-agents
   - ai-coding-agent
 status: active
-quality_percentile: 52
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: miqdadbadjuber/anti-slop
@@ -22,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7198
-  last_commit: 2026-10-25T22:54:19Z
-  stars_delta_7d: 727
-  stars_growth_pct: 11.2
-  trending_score: 808.68
+  stars: 7964
+  last_commit: 2026-11-01T12:06:35Z
+  stars_delta_7d: 766
+  stars_growth_pct: 10.6
+  trending_score: 847.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5989
     - 6471
     - 7198
+    - 7964
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +45,14 @@ readme_source:
   repo: miqdadbadjuber/anti-slop
   path: skills/antislop-layoutmobile/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:49.066Z
+  fetched_at: 2026-11-02T09:06:35.111Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: antislop-layoutmobile
-  description: Agent skill from miqdadbadjuber/anti-slop
+  description: "Mobile layout skill for antislop. Use for layouts that reflow
+    across screen sizes, phone to desktop: grids, overflow, tap targets. Load
+    with the core."
   folder_path: skills/antislop-layoutmobile
   extra_files: []
   pack_total_skills: 6

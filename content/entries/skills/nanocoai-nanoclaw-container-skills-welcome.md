@@ -18,7 +18,7 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nanocoai/nanoclaw
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 31016
-  last_commit: 2026-10-26T07:00:33Z
-  stars_delta_7d: 50
+  stars: 31070
+  last_commit: 2026-11-02T06:38:17Z
+  stars_delta_7d: 54
   stars_growth_pct: 0.2
-  trending_score: 50.08
+  trending_score: 54.09
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30890
     - 30935
     - 30966
     - 31016
+    - 31070
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: nanocoai/nanoclaw
   path: container/skills/welcome/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:26.843Z
+  fetched_at: 2026-11-02T09:06:15.252Z
   truncated: false
 type: agent_skill
 skill:
@@ -86,6 +86,7 @@ exactly as written.
 **If they want to jump in:** just go.
 
 ---
+
 ## Capabilities to reveal (in order)
 
 Reveal these one at a time, in this sequence. Each should be 2–4 sentences max.
@@ -115,6 +116,7 @@ You can produce real deliverables — reports, PDFs, charts, generated images �
 You can add new tools and MCP servers to yourself if a capability isn't built in. You can extend your own toolkit when the task requires it.
 
 ---
+
 ## Trust & Control — always include these
 
 After the capabilities tour (or woven in naturally), cover these two points. Frame them positively — users stay in control.
@@ -126,11 +128,13 @@ Sensitive actions — installing packages, adding MCP servers — require the us
 The user owns who can talk to you. Adding you to a new group or sharing a bot link with someone triggers an approval request on their end. Nobody interacts with you without their say-so.
 
 ---
+
 ## How to interact — always mention this
 
 There are no special commands. Users just talk naturally. If they want something done, they say so. That's it.
 
 ---
+
 ## Shape memory to the user's world (agent-internal, not part of the tour)
 
 From the first conversation onward, pay attention to the parts of the user's world that
@@ -149,11 +153,13 @@ recurring domains become clear. Behavioral role and persona instructions
 belong in `instructions.prepend.md`.
 
 ---
+
 ## Wrapping up
 
 After the tour, finish with an open invitation. Ask if they want help with something specific. Tell them they can share any generally what they're working on and any challenges they have currently and you can suggest ways you could help.
 
 ---
+
 ## Tone
 
 Warm, confident, inviting. Make the user feel like they just unlocked something powerful. Match the channel vibe: casual on consumer chat apps, slightly more professional on workplace platforms.

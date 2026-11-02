@@ -12,26 +12,26 @@ status: active
 quality_percentile: 100
 selection_reason: official_vendor
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: modelcontextprotocol/python-sdk
   official_vendor: true
   license: MIT
 signals:
-  stars: 24667
-  last_commit: 2026-10-25T13:05:36Z
-  stars_delta_7d: 52
-  stars_growth_pct: 0.2
-  trending_score: 52.11
-  rank_current: 79
-  rank_delta: -50
+  stars: 24736
+  last_commit: 2026-11-01T16:26:38Z
+  stars_delta_7d: 69
+  stars_growth_pct: 0.3
+  trending_score: 69.19
+  rank_current: 74
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 24504
     - 24564
     - 24615
     - 24667
+    - 24736
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +40,7 @@ readme_source:
   repo: modelcontextprotocol/python-sdk
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:25.739Z
+  fetched_at: 2026-11-02T09:05:26.510Z
   truncated: false
 type: agent_tool
 tool:

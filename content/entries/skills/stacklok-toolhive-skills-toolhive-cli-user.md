@@ -15,10 +15,10 @@ tags:
   - golang
   - kubernetes
 status: active
-quality_percentile: 79
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: stacklok/toolhive
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2311
-  last_commit: 2026-10-24T22:17:33Z
-  stars_delta_7d: 16
-  stars_growth_pct: 0.7
-  trending_score: 16.11
-  rank_current: 117
-  rank_delta: -18
+  stars: 2319
+  last_commit: 2026-11-01T20:04:51Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.3
+  trending_score: 8.03
+  rank_current: 131
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2242
     - 2279
     - 2295
     - 2311
+    - 2319
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: stacklok/toolhive
   path: skills/toolhive-cli-user/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:38:10.370Z
+  fetched_at: 2026-11-02T09:05:48.860Z
   truncated: false
 type: agent_skill
 skill:
@@ -83,12 +83,12 @@ Verify: `thv version`
 ## Quick Start
 
 ```bash
-thv run filesystem      # Run server from registry
+thv run fetch      # Run server from registry
 thv list                # List running servers
-thv status filesystem   # Detailed server info
-thv logs filesystem     # View logs
-thv stop filesystem     # Stop server
-thv rm filesystem       # Remove server
+thv status fetch   # Detailed server info
+thv logs fetch     # View logs
+thv stop fetch     # Stop server
+thv rm fetch       # Remove server
 ```
 
 ## Running MCP Servers
@@ -96,7 +96,7 @@ thv rm filesystem       # Remove server
 Five input methods: registry name, container image, protocol scheme (`uvx://`, `npx://`, `go://`), exported config (`--from-config`), or remote URL.
 
 ```bash
-thv run filesystem                                          # Registry
+thv run fetch                                          # Registry
 thv run ghcr.io/github/github-mcp-server:latest -- <args>   # Container image
 thv run uvx://mcp-server-git                                # Python (uvx)
 thv run npx://@modelcontextprotocol/server-filesystem       # Node.js (npx)
@@ -117,23 +117,23 @@ thv list --format json            # JSON output
 thv list --format mcpservers      # MCP client config format
 thv list --group production       # Filter by group
 
-thv status filesystem             # Detailed server info (URL, port, transport, uptime)
-thv status filesystem --format json
+thv status fetch             # Detailed server info (URL, port, transport, uptime)
+thv status fetch --format json
 
-thv stop filesystem github        # Stop specific servers
+thv stop fetch github        # Stop specific servers
 thv stop --all                    # Stop all
 
-thv start filesystem              # Resume stopped server
+thv start fetch              # Resume stopped server
 thv start --all                   # Start all stopped servers
 thv start --group development     # Start all in group
-thv restart filesystem            # Alias for start (backward compat)
+thv restart fetch            # Alias for start (backward compat)
 
-thv rm filesystem github          # Remove servers
+thv rm fetch github          # Remove servers
 thv rm --all                      # Remove all
 
-thv logs filesystem               # Container logs
-thv logs filesystem --follow      # Real-time
-thv logs filesystem --proxy       # Proxy logs
+thv logs fetch               # Container logs
+thv logs fetch --follow      # Real-time
+thv logs fetch --proxy       # Proxy logs
 thv logs prune                    # Clean orphaned logs
 ```
 
@@ -222,7 +222,7 @@ thv run myserver --isolate-network    # Block all outbound except allowlisted ho
 **Volume mounts** for filesystem access:
 
 ```bash
-thv run filesystem -v /home/user/projects:/workspace:ro    # Read-only mount
+thv run <server> -v /home/user/projects:/workspace:ro    # Read-only mount
 ```
 
 **.thvignore** hides sensitive files from volume mounts using gitignore-style patterns. Place `.thvignore` in mounted directories or globally at `~/.config/toolhive/thvignore`. Disable global patterns with `--ignore-globally=false`.
@@ -301,11 +301,11 @@ For command details, trust boundaries, and publishing, see [COMMANDS.md](https:/
 ## Debugging
 
 ```bash
-thv inspector filesystem                        # MCP Inspector UI
-thv mcp list tools --server filesystem
-thv mcp list resources --server filesystem
-thv mcp list prompts --server filesystem
-thv mcp call read_file --server filesystem --args '{"path":"/etc/hosts"}'  # Invoke a tool
+thv inspector fetch                        # MCP Inspector UI
+thv mcp list tools --server fetch
+thv mcp list resources --server fetch
+thv mcp list prompts --server fetch
+thv mcp call fetch --server fetch --args '{"url":"https://example.com"}'  # Invoke a tool
 thv runtime check                               # Verify container runtime
 ```
 

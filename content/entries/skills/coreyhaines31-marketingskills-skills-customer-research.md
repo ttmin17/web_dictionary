@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/customer-research/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.290Z
+  fetched_at: 2026-11-02T09:06:13.823Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +68,7 @@ skill:
     - evals/evals.json
     - references/interviews-and-surveys.md
     - references/source-guides.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -87,6 +88,7 @@ You are an expert customer researcher. Your goal is to help uncover what custome
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context to skip questions already answered.
 
 ---
+
 ## Three Modes of Research
 
 ### Mode 1: Analyze Existing Assets
@@ -101,6 +103,7 @@ No signal exists yet, or you need answers only the customer can give. You run in
 Most engagements combine modes. Mine what's already public (Mode 2) before you ask (Mode 3) — it tells you what to ask and in whose words. Establish which mode(s) apply before proceeding.
 
 ---
+
 ## Mode 1: Analyzing Existing Research Assets
 
 ### Asset Types
@@ -183,6 +186,7 @@ Label every insight with a confidence level before presenting it:
 **Minimum viable sample**: Don't build personas or draw messaging conclusions from fewer than 5 independent data points per segment.
 
 ---
+
 ## Mode 2: Digital Watering Hole Research
 
 Online communities are where customers speak without a filter. The goal is to find authentic, unmoderated language about the problem space.
@@ -239,6 +243,7 @@ After gathering from multiple sources, synthesize into:
 ```
 
 ---
+
 ## Mode 3: Interviews & Surveys (Primary Research)
 
 When there's no signal yet — or you need answers only the customer can give — go ask. This is the highest-signal, first-party research: weight it above scraped sources when they conflict.
@@ -256,6 +261,7 @@ When there's no signal yet — or you need answers only the customer can give �
 Analyze whatever you gather back through the Mode 1 extraction framework and confidence guardrails above.
 
 ---
+
 ## Persona Generation
 
 ### When there are no reviews yet
@@ -270,7 +276,7 @@ Early-stage products (or new categories) lack first-party review data. Don't inv
 Personas built this way are provisional: tag each with its proxy source, and replace proxy evidence with first-party evidence as real reviews arrive.
 
 
-Personas should be built from research, not invented. Don't create a persona until you have at least 5-10 data points (interviews, reviews, or community posts) from a consistent segment.
+Personas should be built from research, not invented. Don't create a persona until you have at least 5 independent data points (10 is better) (interviews, reviews, or community posts) from a consistent segment.
 
 ### Persona Structure
 
@@ -327,6 +333,7 @@ Words and phrases they actually use (sourced from research):
 - **Revisit quarterly** — personas decay as your market and product evolve
 
 ---
+
 ## Deliverable Formats
 
 Depending on what the user needs, offer:
@@ -341,6 +348,7 @@ Depending on what the user needs, offer:
 Ask the user which deliverable(s) they need before generating output.
 
 ---
+
 ## Questions to Ask Before Proceeding
 
 If context is unclear:
@@ -354,6 +362,7 @@ If context is unclear:
 Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 
 ---
+
 ## Related Skills
 
 | When to hand off | Skill |

@@ -13,29 +13,29 @@ tags:
   - anthropic
   - anti-bot-bypass
 status: active
-quality_percentile: 61
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: vibheksoni/stealth-browser-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3281
-  last_commit: 2026-10-24T06:02:59Z
-  stars_delta_7d: 281
-  stars_growth_pct: 9.4
-  trending_score: 307.32
-  rank_current: 9
-  rank_delta: -7
+  stars: 3314
+  last_commit: 2026-10-26T21:06:32Z
+  stars_delta_7d: 33
+  stars_growth_pct: 1
+  trending_score: 33.33
+  rank_current: 50
+  rank_delta: -42
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2212
     - 2223
     - 3000
     - 3281
+    - 3314
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: vibheksoni/stealth-browser-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:37:00.858Z
+  fetched_at: 2026-11-02T09:05:36.772Z
   truncated: false
 type: mcp_server
 launch:
@@ -77,11 +77,12 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 </div>
 
 ---
+
 ## Sponsors
 
-<a href="https://go.nodemaven.com/stealthbrowsermcpreadmesept"><img src="https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/media/nodemaven-sponsor.png" alt="NodeMaven" width="100%"></a>
+<a href="https://go.nodemaven.com/stealthbrowsermcpreadmeoct"><img src="https://raw.githubusercontent.com/vibheksoni/stealth-browser-mcp/master/media/nodemaven-sponsor.png" alt="NodeMaven" width="100%"></a>
 
-[NodeMaven](https://go.nodemaven.com/stealthbrowsermcpreadmesept) — The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market.
+[NodeMaven](https://go.nodemaven.com/stealthbrowsermcpreadmeoct) — The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market.
 
 **Why NodeMaven?**
 
@@ -96,11 +97,12 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 - `STEALTHMCP35` — 35% off to Mobile and Residential Proxies
 - `STEALTHMCP40` — 40% off to ISP (Static) Proxies
 
-[Get started with NodeMaven](https://go.nodemaven.com/stealthbrowsermcpreadmesept)
+[Get started with NodeMaven](https://go.nodemaven.com/stealthbrowsermcpreadmeoct)
 
 > Sponsored placement. NodeMaven is a paid sponsor of this project.
 
 ---
+
 ## Table of Contents
 
 - [Sponsors](#sponsors)
@@ -122,6 +124,7 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 - [License](#license)
 
 ---
+
 ## Demo
 
 <div align="center">
@@ -135,6 +138,7 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 *Stealth Browser MCP passing a Cloudflare challenge, cloning UI elements, and inspecting network traffic through AI chat commands.*
 
 ---
+
 ## Features
 
 - **Anti-bot resistance** - Has passed Cloudflare and Queue-It style challenges in testing; results vary by site, region, browser version, and detector version.
@@ -150,6 +154,7 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 - **Clean MCP integration** - Works through standard MCP clients without custom brokers.
 
 ---
+
 ## Quickstart
 
 ### 1. Install
@@ -280,6 +285,7 @@ Restart your MCP client and ask your agent:
 > Use stealth-browser to navigate to https://example.com and take a screenshot.
 
 ---
+
 ## Agent Skill
 
 This repo includes an agent skill at `skills/stealth-browser-mcp` for clients that support Codex-style skills. It teaches agents the recommended tool order, state checks, pre-document CDP script usage, network debugging flow, and browser cleanup rules.
@@ -287,6 +293,7 @@ This repo includes an agent skill at `skills/stealth-browser-mcp` for clients th
 Use the skill when an LLM struggles to choose the right MCP tool or forgets to verify browser state after actions. If your client does not load repo-local skills automatically, add or symlink `skills/stealth-browser-mcp` into your client skills directory.
 
 ---
+
 ## Trust Model
 
 This server exposes powerful local browser-control primitives: CDP execution, page JavaScript execution, cookie/storage access, network interception, dynamic hooks, header mutation, navigation, and file uploads from allowlisted local paths.
@@ -294,6 +301,7 @@ This server exposes powerful local browser-control primitives: CDP execution, pa
 Treat the MCP client or agent as the security principal. The recommended deployment is local `stdio` transport with a trusted desktop MCP client. If you use HTTP transport, set `STEALTH_BROWSER_MCP_AUTH_TOKEN` and do not expose unauthenticated HTTP outside trusted local or private networks.
 
 ---
+
 ## Modular Architecture
 
 Choose exactly what functionality you need. Run the full 101-tool suite or strip it down to the 21-tool core.
@@ -334,6 +342,7 @@ Use `--debug` or set `STEALTH_BROWSER_DEBUG=1` to enable verbose server diagnost
 | `dynamic-hooks` | 10 | AI-assisted network hooks |
 
 ---
+
 ## Server Configuration
 
 These are environment variables for the MCP server process. Set them in your shell, service manager, Docker environment, or MCP client `env` block.
@@ -401,6 +410,7 @@ client = Client(
 - `spawn_browser(idle_timeout_seconds=0)` disables idle reaping for that one instance.
 
 ---
+
 ## Toolbox
 
 <details>
@@ -595,6 +605,7 @@ client = Client(
 </details>
 
 ---
+
 ## Stealth vs Playwright MCP
 
 Detection results are point-in-time and depend on site policy, region, browser version, IP reputation, and detector version. See [STEALTH_TESTS.md](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/STEALTH_TESTS.md) for weekly automated results from the benchmark in `benchmarks/stealth/`, which runs on Linux, Windows, and macOS in GitHub Actions, plus the earlier manual snapshot.
@@ -612,6 +623,7 @@ Detection results are point-in-time and depend on site policy, region, browser v
 | Total tools | 101 customizable tools | About 20 |
 
 ---
+
 ## Troubleshooting
 
 **No compatible browser found**
@@ -629,6 +641,9 @@ Run with `--sandbox=false` only if your environment requires it, or ensure the e
 **Orphan Chromium processes or `uc_*` temp profiles accumulate**
 The server reaps idle browser instances automatically and performs startup cleanup of tracked orphan browser processes plus stale `uc_*` temp profiles. Set `BROWSER_IDLE_TIMEOUT=0` only if you want fully manual browser lifetime management.
 
+**macOS disk fills up with `code_sign_clone` folders**
+Older versions let Chrome copy its app bundle into `com.google.Chrome.code_sign_clone` at every launch, and the copy stayed behind when an instance crashed or was killed. The server now launches Chrome with `MacAppCodeSignClone` turned off, so no new copies are made. To remove copies left by older versions, quit Chrome and run `rm -rf /private/var/folders/*/*/X/com.google.Chrome.code_sign_clone` (use `com.microsoft.edgemac.code_sign_clone` for Edge).
+
 **Too many tools cluttering the AI chat**
 Use `--minimal` for 20 core tools, `--xpool-safe` for xpool-compatible operation, or selectively disable sections:
 
@@ -644,6 +659,7 @@ pip install -r requirements.txt
 ```
 
 ---
+
 ## Examples
 
 - **Market research** - Extract pricing and features from competitors, then output a comparison table.
@@ -655,6 +671,7 @@ pip install -r requirements.txt
 All driven from a single AI agent conversation.
 
 ---
+
 ## Showcase
 
 <div align="center">
@@ -666,11 +683,13 @@ All driven from a single AI agent conversation.
 [View the recreation](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/demo/augment-hero-recreation.html) | [Full walkthrough](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/demo/augment-hero-clone.md)
 
 ---
+
 ## Roadmap
 
 See the live plan in [ROADMAP.md](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/ROADMAP.md). Contributions welcome.
 
 ---
+
 ## Contributing
 
 Read [CONTRIBUTING.md](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/CONTRIBUTING.md) and open a PR. First-time contributors welcome.
@@ -678,6 +697,7 @@ Read [CONTRIBUTING.md](https://github.com/vibheksoni/stealth-browser-mcp/blob/ma
 If this project saves you time, star the repo. It helps more than you think.
 
 ---
+
 ## Support
 
 If this tool saved you time or made you money, consider supporting development:
@@ -685,6 +705,7 @@ If this tool saved you time or made you money, consider supporting development:
 - [Buy me a coffee](https://buymeacoffee.com/vibheksoni)
 
 ---
+
 ## License
 
 MIT - see [LICENSE](https://github.com/vibheksoni/stealth-browser-mcp/blob/master/LICENSE).

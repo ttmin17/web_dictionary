@@ -14,29 +14,29 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-04-06T04:41:14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 6011
-  last_commit: 2026-10-23T09:50:41Z
-  stars_delta_7d: 764
-  stars_growth_pct: 14.6
-  trending_score: 875.24
-  rank_current: 2
-  rank_delta: 2
+  stars: 6824
+  last_commit: 2026-10-27T08:57:57Z
+  stars_delta_7d: 813
+  stars_growth_pct: 13.5
+  trending_score: 922.96
+  rank_current: 4
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4200
     - 4710
     - 5247
     - 6011
+    - 6824
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.973Z
+  fetched_at: 2026-11-02T09:05:35.098Z
   truncated: false
 type: mcp_server
 launch:
@@ -76,7 +76,7 @@ Skip the setup: use the hosted Ryze MCP (no developer token, no Google Cloud pro
 ## Product pages
 
 - **[Google Ads MCP](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/google-ads-mcp/README.md)**: tools, prompts, install per client, comparison ([product page](https://www.get-ryze.ai/google-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp))
-- **[Google Analytics MCP server](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/google-analytics-mcp/README.md)**: GA4 reports, realtime, AI-referral traffic from ChatGPT, Claude, Gemini and Perplexity ([product page](https://www.get-ryze.ai/google-analytics-mcp))
+- **[Google Analytics MCP server](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/google-analytics-mcp/README.md)**: GA4 reports, realtime, AI-referral traffic from ChatGPT, Claude, Gemini and Perplexity ([product page](https://www.get-ryze.ai/google-analytics-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp))
 - **[Meta Ads MCP](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/meta-ads-mcp/README.md)**: Facebook and Instagram Ads tools, prompts, install per client ([product page](https://www.get-ryze.ai/meta-ads-mcp?utm_source=github&utm_content=google-ads-meta-ads-mcp))
 - Agent-readable index: [llms.txt](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/llms.txt)
 
@@ -139,6 +139,7 @@ You can run this server next to the official ones; they do not conflict. Use the
 **Which tools are included?** 150+ Google Ads tools, 80+ Meta Ads tools, 20+ GA4 tools. The full list is in [All Available Tools](#all-available-tools); per-platform pages: [Google Ads MCP](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/google-ads-mcp/README.md) and [Meta Ads MCP](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/meta-ads-mcp/README.md).
 
 ---
+
 ## Why This Exists
 
 Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with its own dashboard, API, and workflow. Existing MCP servers only cover **one platform at a time**, forcing you to install and configure multiple tools.
@@ -153,6 +154,7 @@ Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with 
 | No analytics integration | GA4 built-in for data-driven decisions |
 
 ---
+
 ## Works With
 
 | AI Assistant | Status | Setup Guide |
@@ -168,6 +170,7 @@ Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with 
 | Cline | **Supported** | [Setup Guide](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/docs/SETUP_CURSOR.md#cline) |
 
 ---
+
 ## Features
 
 ### Google Ads (150+ tools)
@@ -215,6 +218,7 @@ Marketers and agencies juggle Google Ads, Meta Ads, and GA4 daily — each with 
 - Cross-platform budget allocation recommendations
 
 ---
+
 ## Quick start: Google Ads MCP, Meta Ads MCP and Google Analytics MCP setup
 
 ### Claude Desktop and claude.ai (Recommended)
@@ -273,6 +277,7 @@ claude mcp add google-meta-ads-ga4 --transport http https://connector.get-ryze.a
 ```
 
 ---
+
 ## Example Prompts
 
 ### Google Ads
@@ -317,6 +322,7 @@ claude mcp add google-meta-ads-ga4 --transport http https://connector.get-ryze.a
 ```
 
 ---
+
 ## Architecture
 
 ```
@@ -337,6 +343,7 @@ claude mcp add google-meta-ads-ga4 --transport http https://connector.get-ryze.a
 Your AI assistant communicates with this MCP server using the [Model Context Protocol](https://modelcontextprotocol.io). The server handles authentication and routes requests to the appropriate Google Ads, Meta Ads, or GA4 API.
 
 ---
+
 ## All Available Tools
 
 <details>
@@ -591,6 +598,7 @@ Your AI assistant communicates with this MCP server using the [Model Context Pro
 </details>
 
 ---
+
 ## Security & Privacy
 
 - **OAuth 2.1 with PKCE** — Industry-standard authentication
@@ -600,6 +608,7 @@ Your AI assistant communicates with this MCP server using the [Model Context Pro
 - **Scoped access** — Request only the permissions you need
 
 ---
+
 ## FAQ
 
 <details>
@@ -639,6 +648,7 @@ The server respects Google and Meta API rate limits automatically. For high-volu
 </details>
 
 ---
+
 ## Contributing
 
 Contributions are welcome! Please see our [issue templates](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/.github/ISSUE_TEMPLATE/) to report bugs or request features.
@@ -650,16 +660,19 @@ Contributions are welcome! Please see our [issue templates](https://github.com/i
 5. Open a Pull Request
 
 ---
+
 ## Star History
 
 If this project helps you manage ads more efficiently, please give it a star! It helps others discover it.
 
 ---
+
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp/blob/main/LICENSE) file for details.
 
 ---
+
 <p align="center">
   <strong>Google Ads MCP</strong> · <strong>Meta Ads MCP</strong> · <strong>Facebook Ads MCP</strong> · <strong>GA4 MCP</strong> · <strong>Model Context Protocol</strong>
   <br>

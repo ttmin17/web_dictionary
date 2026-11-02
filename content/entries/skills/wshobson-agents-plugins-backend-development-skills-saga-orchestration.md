@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - anthropic
 status: active
-quality_percentile: 93
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: wshobson/agents
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 41725
-  last_commit: 2026-10-26T01:08:14Z
-  stars_delta_7d: 673
-  stars_growth_pct: 1.6
-  trending_score: 684.03
+  stars: 42095
+  last_commit: 2026-11-02T01:08:47Z
+  stars_delta_7d: 370
+  stars_growth_pct: 0.9
+  trending_score: 373.28
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 40271
     - 40590
     - 41052
     - 41725
+    - 42095
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: wshobson/agents
   path: plugins/backend-development/skills/saga-orchestration/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:26.191Z
+  fetched_at: 2026-11-02T09:06:18.053Z
   truncated: false
 type: agent_skill
 skill:
@@ -61,7 +61,7 @@ skill:
   extra_files:
     - references/advanced-patterns.md
     - references/details.md
-  pack_total_skills: 185
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -90,6 +90,7 @@ Patterns for managing distributed transactions and long-running business process
 - Monitoring setup: state machine metrics, stuck saga detection, DLQ recovery
 
 ---
+
 ## When to Use This Skill
 
 - Coordinating multi-service transactions without distributed locks
@@ -100,6 +101,7 @@ Patterns for managing distributed transactions and long-running business process
 - Replacing fragile two-phase commit with async compensation
 
 ---
+
 ## Detailed section: Core Concepts
 
 Moved to `references/details.md`.
@@ -128,6 +130,7 @@ Moved to `references/details.md`.
 - **Don't use a global timeout** — Each step has different latency characteristics
 
 ---
+
 ## Troubleshooting
 
 ### Saga stuck in COMPENSATING state
@@ -164,6 +167,7 @@ A step like `create_shipment` might take up to 15 minutes during peak load but y
 When two steps both complete before a failure is detected, compensation must run in strict reverse order or you leave data in an inconsistent state. Verify that `_compensate()` iterates from `current_step - 1` down to `0`, and add an integration test that deliberately fails at each step index to confirm correct rollback order.
 
 ---
+
 ## Advanced Patterns
 
 The `references/` directory contains production-grade implementations not needed for most sagas:
@@ -171,6 +175,7 @@ The `references/` directory contains production-grade implementations not needed
 - **`references/advanced-patterns.md`** — Full `SagaOrchestrator` abstract base class, `TimeoutSagaOrchestrator` with per-step deadlines, detailed bank transfer compensating transaction chain, Prometheus instrumentation, stuck saga PromQL alerts, and DLQ recovery worker.
 
 ---
+
 ## Related Skills
 
 - `cqrs-implementation` — Pair sagas with CQRS for read-model updates after each step completes

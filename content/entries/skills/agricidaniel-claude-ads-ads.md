@@ -1,8 +1,13 @@
 ---
 slug: agricidaniel-claude-ads-ads
 name: ads
-tagline: Agent skill from AgriciDaniel/claude-ads
-summary: Agent skill from AgriciDaniel/claude-ads
+tagline: Operate professional paid advertising across Google, Meta, YouTube,
+  LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat, and
+  X. Us
+summary: 1. Establish the operator's objective, business model, active
+  platforms, geography, budget, conversion definition, data window, and account
+  authority. 2. Classify supplied pages, exports, screenshots, API responses,
+  a...
 categories:
   - productivity-ops
 tags:
@@ -11,10 +16,10 @@ tags:
   - claude-code
   - claude-code-skill
 status: active
-quality_percentile: 77
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-02-11T13:01:49
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-ads
@@ -22,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10425
-  last_commit: 2026-10-17T01:35:42Z
-  stars_delta_7d: 301
-  stars_growth_pct: 3
-  trending_score: 309.95
-  rank_current: 49
-  rank_delta: 3
+  stars: 10660
+  last_commit: 2026-11-01T21:08:14Z
+  stars_delta_7d: 235
+  stars_growth_pct: 2.3
+  trending_score: 240.3
+  rank_current: 58
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9774
     - 9953
     - 10124
     - 10425
+    - 10660
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +47,20 @@ readme_source:
   repo: AgriciDaniel/claude-ads
   path: ads/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:51.734Z
+  fetched_at: 2026-11-02T09:06:30.004Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ads
-  description: Agent skill from AgriciDaniel/claude-ads
+  description: Operate professional paid advertising across Google, Meta, YouTube,
+    LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat, and
+    X. Use for account intake, source-grounded audits, strategy, budget and
+    measurement planning, creative production, experiments, reporting,
+    monitoring, and explicitly approved campaign changes. Also trigger on PPC,
+    paid social, retail media, attribution, tracking, landing pages,
+    cross-platform conversion totals, negative keywords or search terms,
+    beta-feature scoring, stale platform claims, API-token or credential setup,
+    campaign deletion, and safe Claude Ads installation or uninstall.
   folder_path: ads
   extra_files:
     - agents/openai.yaml
@@ -60,7 +73,7 @@ skill:
     - references/budget-allocation.md
     - references/compliance-requirements.md
     - references/compliance.md
-  pack_total_skills: 34
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code
@@ -112,34 +125,53 @@ diagnosis or mutation unsafe.
 
 ## Command routing
 
-| Intent | Route |
-| --- | --- |
-| Set up a client, brand, account, or guardrails | `/ads setup` |
-| Full or scoped account review | `/ads audit [all|platform|scope]` |
-| Campaign, channel, budget, competitor, or measurement plan | `/ads plan` |
-| Copy, image, video, or product-photo production | `/ads create` |
-| Draft or execute a campaign launch | `/ads launch [--draft|--apply]` |
-| Pacing, performance, fatigue, tracking, or policy monitoring | `/ads monitor` |
-| Draft or execute optimizations | `/ads optimize [--draft|--apply]` |
-| Hypothesis, power, duration, setup, or readout | `/ads experiment` |
-| Render a prior run | `/ads report` |
-| Refresh platform knowledge and evidence | `/ads research refresh` |
-| Validate repository or run integrity | `/ads validate` |
-| Install, update, or uninstall Claude Ads safely | `/ads setup` for install; `/ads validate` for uninstall |
-| Inspect maturity, capabilities, or the next blocker | `/ads status`, `/ads next` |
+Every `/ads <subcommand>` maps to one skill directory. Load that skill, not a
+neighbor, and give each request exactly one owner.
 
-Natural-language requests route to the same workflows. Existing shortcuts remain
-valid when their meaning is unambiguous:
+| Command | Skill | Owns |
+| --- | --- | --- |
+| `/ads setup` | `ads-setup` | Client, account, data-source, KPI, credential-reference, and guardrail profile; safe install |
+| `/ads dna` | `ads-dna` | Brand and offer profile extracted from an authorized website (the only owner of "brand DNA") |
+| `/ads audit [all\|platform\|scope]` | `ads-audit` | Full or scoped multi-platform account review |
+| `/ads google`, `meta`, `youtube`, `linkedin`, `tiktok`, `microsoft`, `apple`, `amazon`, `reddit`, `pinterest`, `snapchat`, `x` | `ads-<platform>` | Read-only single-platform audit |
+| `/ads attribution` | `ads-attribution` | Conversion definitions, windows, GA4, MMP reconciliation |
+| `/ads tracking` | `ads-server-side-tracking` | Server-side tagging, platform conversion APIs (CAPI, Events API), deduplication, event data quality |
+| `/ads creative` | `ads-creative` | Creative audit, including fatigue and format coverage |
+| `/ads landing` | `ads-landing` | Landing-page audit through the guarded fetcher |
+| `/ads plan` | `ads-plan` | Campaign, channel, and measurement strategy |
+| `/ads budget` | `ads-budget` | Budget allocation, bidding, and pacing |
+| `/ads math` | `ads-math` | CPA, ROAS, MER, LTV:CAC, break-even, and budget forecast calculations |
+| `/ads competitor` | `ads-competitor` | Competitor ad intelligence from transparent sources |
+| `/ads create` | `ads-create` | Campaign concepts, messaging, copy, and creative briefs (concepts and copy only) |
+| `/ads generate` | `ads-generate` | Image assets from a validated brief through a configured provider |
+| `/ads photoshoot` | `ads-photoshoot` | Product-photo variants from an authorized source image |
+| `/ads launch [--draft\|--apply]` | `ads-launch` | Draft or execute a campaign launch |
+| `/ads monitor` | `ads-monitor` | Pacing, performance, fatigue, tracking, and policy monitoring |
+| `/ads optimize [--draft\|--apply]` | `ads-optimize` | Draft or execute optimizations |
+| `/ads experiment`, `/ads test` | `ads-test` | Hypothesis, power, duration, setup, and readout |
+| `/ads report` | `ads-report` | Render a prior run |
+| `/ads research refresh` | `ads-research` | Platform knowledge and evidence refresh, including stale-claim handling |
+| `/ads validate`, `/ads status`, `/ads next` | `ads-validate` | Repository and run integrity, maturity, capabilities, next blocker, uninstall safety |
 
-- `/ads google`, `meta`, `youtube`, `linkedin`, `tiktok`, `microsoft`,
-  `apple`, `amazon`, `reddit`, `pinterest`, `snapchat`, `x` -> platform audit.
-- `/ads attribution`, `tracking`, `creative`, `landing` -> scoped audit.
-- `/ads budget`, `competitor`, `math` -> scoped plan or financial model.
-- `/ads test` -> experiment; `/ads dna` -> setup; `/ads generate` and
-  `/ads photoshoot` -> create.
-- A stale or expired platform claim -> research refresh, then validation.
-- Credential or token storage -> setup; install safety -> setup; uninstall safety
-  and ownership checks -> validate.
+Natural-language requests route to the same skills. No skill renders video: video
+work ends at concepts and briefs in `ads-create`. Related routing rules:
+
+- A stale or expired platform claim -> `ads-research` (reverify or demote), then
+  `ads-validate` for the integrity check.
+- Credential or token storage and install safety -> `ads-setup`; uninstall safety
+  and ownership checks -> `ads-validate`.
+- A request to change an account -> `ads-optimize` or `ads-launch`; the platform
+  and audit skills stay read-only.
+
+The optional `ads-cockpit` companion (`/ads-cockpit`) is a user-requested local
+workbench. Its matching core CLI remains available without the mod. Do not
+install, enable, or publish Cockpit metadata unless the user asks for Cockpit
+or the run already has a Cockpit index. In that case publish only declared
+canonical artifacts, at actual workflow boundaries, through the validated
+`claude_ads_core.cockpit.publish` helper. Read `control-plane/COCKPIT.md` from
+the bound policy root; older runs without the required index need an explicit
+producer update. The companion does not replace audit orchestration, promote
+evidence, or authorize account changes.
 
 ## Platform contract
 
@@ -206,12 +238,15 @@ Every task packet specifies:
 - Privacy classification and mutation authority.
 - Output schema and verification criteria.
 
-Every worker returns one result object with:
+Every audit worker returns one `audit-worker-result` v1 object with schema
+version, status, one canonical platform ID, string-array scope, canonical Finding
+v1 objects, contradictions, missing inputs, stale sources, and recovery hints.
+Finding severity remains registry-owned; workers emit structured evidence,
+confidence, observation, diagnosis, and a string recommendation.
 
-- `status`: `ok`, `needs_input`, `blocked`, or `failed`.
-- Findings with control ID, applicability, result, severity, confidence,
-  observations, evidence references, and recommendation.
-- Contradictions, missing inputs, stale sources, and recovery hints.
+Agents inherit the model selected by the host runtime. Do not pin a model in
+agent frontmatter. Override host selection only when the user explicitly requests
+it and the runtime supports that override.
 
 Retry one transient tool failure. Do not retry authentication, authorization,
 schema, policy, or validation failures without changed input. A failed required
@@ -330,7 +365,7 @@ These examples are response contracts, not suggestions:
 
 ## Prompt discipline
 
-Apply the Fable-derived design rules through original domain prompts:
+Apply these prompt design rules to every domain prompt:
 
 - Put ordered checks before capabilities.
 - Match effort to risk and complexity.
@@ -365,7 +400,7 @@ never hardcode `~/.claude`. Load only what the request needs:
 - `references/scoring-system.md`: scoring behavior and coverage semantics.
 - `references/benchmarks.md`: contextual benchmarks.
 - `references/conversion-tracking.md`: measurement foundations.
-- `references/compliance.md` and `compliance-requirements.md`: policy and regulation.
+- `references/compliance.md` and `references/compliance-requirements.md`: policy and regulation.
 - `references/mcp-integration.md`: integration and approval boundaries.
 - `references/additional-platforms.md`: evidence gates for channels outside the
   twelve-platform product contract; load only for adjacent-channel planning.

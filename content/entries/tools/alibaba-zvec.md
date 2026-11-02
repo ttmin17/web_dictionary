@@ -2,7 +2,10 @@
 slug: alibaba-zvec
 name: zvec
 tagline: A lightweight, lightning-fast, in-process vector database
-summary: A lightweight, lightning-fast, in-process vector database
+summary: Zvec is an open-source, in-process vector database — lightweight,
+  lightning-fast, and designed to embed directly into applications.
+  Battle-tested within Alibaba Group, it delivers production-grade, low-latency
+  and sca...
 categories:
   - databases-memory
 tags:
@@ -11,26 +14,28 @@ tags:
   - embedded
   - faiss
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alibaba/zvec
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16151
-  last_commit: 2026-10-26T03:18:04Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.04
-  rank_current: 95
+  stars: 16174
+  last_commit: 2026-11-02T07:21:41Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.1
+  trending_score: 23.03
+  rank_current: 103
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16126
     - 16151
+    - 16174
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +44,7 @@ readme_source:
   repo: alibaba/zvec
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:44:08.883Z
+  fetched_at: 2026-11-02T09:06:42.796Z
   truncated: false
 type: agent_tool
 tool:
@@ -50,4 +55,151 @@ tool:
   has_mcp_support: false
 ---
 
-A lightweight, lightning-fast, in-process vector database
+<p align="right">
+  English | <a href="https://github.com/alibaba/zvec/blob/main/README_CN.md">中文</a>
+</p>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://zvec.oss-cn-hongkong.aliyuncs.com/logo/github_log_2.svg" />
+    <img src="https://zvec.oss-cn-hongkong.aliyuncs.com/logo/github_logo_1.svg" width="400" alt="zvec logo" />
+  </picture>
+</div>
+
+<p align="center">
+  <a href="https://codecov.io/github/alibaba/zvec"><img src="https://codecov.io/github/alibaba/zvec/graph/badge.svg?token=O81CT45B66" alt="Code Coverage"/></a>
+  <a href="https://github.com/alibaba/zvec/actions/workflows/01-ci-pipeline.yml"><img src="https://github.com/alibaba/zvec/actions/workflows/01-ci-pipeline.yml/badge.svg?branch=main" alt="Main"/></a>
+  <a href="https://github.com/alibaba/zvec/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"/></a>
+  <a href="https://github.com/alibaba/zvec/releases/latest"><img src="https://img.shields.io/github/v/release/alibaba/zvec?label=release" alt="Latest Release"/></a>
+</p>
+
+<p align="center">
+  <a href="https://trendshift.io/repositories/20830" target="_blank"><img src="https://trendshift.io/api/badge/repositories/20830" alt="alibaba%2Fzvec | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</p>
+
+<p align="center">
+  <a href="https://zvec.org/en/docs/db/quickstart/">🚀 <strong>Quickstart</strong> </a> |
+  <a href="https://zvec.org/en/">🏠 <strong>Home</strong> </a> |
+  <a href="https://zvec.org/en/docs/db/">📚 <strong>Docs</strong> </a> |
+  <a href="https://zvec.org/en/docs/db/benchmarks/">📊 <strong>Benchmarks</strong> </a> |
+  <a href="https://deepwiki.com/alibaba/zvec">🔎 <strong>DeepWiki</strong> </a> |
+  <a href="https://discord.gg/rKddFBBu9z">🎮 <strong>Discord</strong> </a> |
+  <a href="https://x.com/ZvecAI">🐦 <strong>X (Twitter)</strong> </a>
+</p>
+
+**Zvec** is an open-source, in-process vector database — lightweight, lightning-fast, and designed to embed directly into applications. Battle-tested within Alibaba Group, it delivers production-grade, low-latency and scalable similarity search with minimal setup.
+
+> [!Important]
+> 🚀 **v0.8.0**
+>
+> - **Broader platform support**: Added **Intel Mac** and **Windows ARM64** builds, wheels, and SDKs; extended **DiskANN to Windows, Android, and iOS**, and **RaBitQ to Windows x86_64**.
+> - **Chinese FTS ready to use**: Embedded the default **Jieba dictionary and HMM model**, so Chinese tokenization needs no separate dictionary files or path configuration.
+> - **Lower index build costs**: Reduced peak memory during **IVF / DiskANN** builds and merges, and accelerated **HNSW RaBitQ** construction through vector reuse and batched lookups. Build and nested training tasks now enforce configured thread limits more strictly.
+> - **Faster distance computation**: Extensively refactored quantizers and distance calculations to benefit multiple
+    quantization types and metrics, with major improvements to **INT4 kernels** and **Linux ARM64** performance.
+> - **Faster search**: Added faster **Uniform quantizers** and optimized **Vamana** graph layout and prefetching. Uniform quantization avoids per-point score reconstruction, though a shared min/max range can increase quantization error and reduce recall.
+> - **Bug fixes and improvements**: Added more flexible **UTF-8 document IDs** up to 1,024 bytes; fixed concurrent reads during segment switches, index rebuilding with deleted rows, and correctness issues in **LIKE** and floating-point range filters.
+>
+> 👉 [Read the Release Notes](https://github.com/alibaba/zvec/releases/tag/v0.8.0)
+
+[^query-performance]: Measured on GIST 1M with L2 distance, INT8 quantization, and HNSW on a 16-core Linux ARM64 system.
+
+## 💫 Features
+
+- **Blazing Fast**: Searches billions of vectors in milliseconds.
+- **Simple, Just Works**: [Install](#-installation) and start searching in seconds. Pure local, no servers, no config, no fuss.
+- **Dense + Sparse Vectors**: Support dense and sparse embeddings, multi-vector queries, and a rich selection of [vector index types](https://zvec.org/en/docs/db/concepts/vector-index/#vector-index-types) that scale from memory to disk.
+- **Full-Text Search (FTS)**: Native keyword-based full-text search — query string fields with natural-language or structured expressions.
+- **Hybrid Search**: Fuse vector similarity, full-text search, and structured filters in a single query for precise results.
+- **Durable Storage**: Write-ahead logging (WAL) guarantees persistence — data is never lost, even on process crash or power failure.
+- **Concurrent Access**: Multiple processes can read the same collection simultaneously; writes are single-process exclusive.
+- **Runs Anywhere**: As an in-process library, Zvec runs wherever your code runs — notebooks, servers, CLI tools, or even edge devices.
+
+## 📦 Installation
+
+Zvec offers official SDKs across multiple languages:
+
+| SDK | Install / Dependency | Source |
+| --- | --- | --- |
+| [Python](https://pypi.org/project/zvec/) | `pip install zvec` | [Source](https://github.com/alibaba/zvec/tree/main/python/zvec) |
+| [Node.js](https://www.npmjs.com/package/@zvec/zvec) | `npm install @zvec/zvec` | [Source](https://github.com/zvec-ai/zvec-node) |
+| [Go](https://pkg.go.dev/github.com/zvec-ai/zvec-go) | [Installation guide](https://github.com/zvec-ai/zvec-go#installation) | [Source](https://github.com/zvec-ai/zvec-go) |
+| [Rust](https://crates.io/crates/zvec-rust) | `cargo add zvec-rust` | [Source](https://github.com/zvec-ai/zvec-rust) |
+| [Java](https://central.sonatype.com/artifact/org.zvec/zvec-java) | `org.zvec:zvec-java` (Maven) | [Source](https://github.com/zvec-ai/zvec-java) |
+| [Dart / Flutter](https://pub.dev/packages/zvec) | `flutter pub add zvec` | [Source](https://github.com/zvec-ai/zvec-dart) |
+
+Python requires 64-bit Python 3.10–3.14; Java requires Java 8+.
+
+Searching code or documents? Try **[zvec-grep](https://github.com/zvec-ai/zvec-grep)** (`zg`) — a local-first search CLI that unifies ripgrep, BM25, and vector search, built for humans and AI agents.
+
+Prefer a visual tool? Try **[Zvec Studio](https://github.com/zvec-ai/zvec-studio)** to browse data and debug queries — no code required.
+
+### ✅ Cross-Platform Support
+
+**Linux · macOS · Windows · Android · iOS**
+
+Zvec supports all major platforms — from servers and desktops to mobile devices.<br>
+For more details, please see the [platform support documentation](https://zvec.org/en/docs/db/platforms/).
+
+### 🛠️ Building from Source
+
+If you prefer to build Zvec from source, please check the [Building from Source](https://zvec.org/en/docs/db/build/) guide.
+
+## ⚡ One-Minute Python Example
+
+```python
+import zvec
+
+# Define collection schema
+schema = zvec.CollectionSchema(
+    name="example",
+    vectors=zvec.VectorSchema("embedding", zvec.DataType.VECTOR_FP32, 4),
+)
+
+# Create collection
+collection = zvec.create_and_open(path="./zvec_example", schema=schema)
+
+# Insert documents
+collection.insert([
+    zvec.Doc(id="doc_1", vectors={"embedding": [0.1, 0.2, 0.3, 0.4]}),
+    zvec.Doc(id="doc_2", vectors={"embedding": [0.2, 0.3, 0.4, 0.1]}),
+])
+
+# Search by vector similarity
+results = collection.query(
+    zvec.Query(field_name="embedding", vector=[0.4, 0.3, 0.3, 0.1]),
+    topk=10
+)
+
+# Results: list of {'id': str, 'score': float, ...}, sorted by relevance
+print(results)
+```
+
+## 📈 Performance at Scale
+
+Zvec delivers exceptional speed and efficiency, making it ideal for demanding production workloads.
+
+<img src="https://zvec.oss-cn-hongkong.aliyuncs.com/qps_10M.svg" width="800" alt="Zvec Performance Benchmarks" />
+
+For detailed benchmark methodology, configurations, and complete results, please see our [Benchmarks documentation](https://zvec.org/en/docs/db/benchmarks/).
+
+## 🤝 Join Our Community
+
+<div align="center">
+
+<div align="center">
+
+| 💬 DingTalk | 📱 WeChat | 🎮 Discord | X (Twitter) |
+| :---: | :---: | :---: | :---: |
+| <img src="https://zvec.oss-cn-hongkong.aliyuncs.com/qrcode/dingding.png" width="150" alt="DingTalk QR Code"/> | <img src="https://zvec.oss-cn-hongkong.aliyuncs.com/qrcode/wechat.png?v3" width="150" alt="WeChat QR Code"/> | [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/rKddFBBu9z) | [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/ZvecAI)](https://raw.githubusercontent.com/alibaba/zvec/main/<https://x.com/ZvecAI>) |
+| Scan to join | Scan to join | Click to join | Click to follow |
+
+</div>
+
+</div>
+
+## ❤️ Contributing
+
+We welcome and appreciate contributions from the community! Whether you're fixing a bug, adding a feature, or improving documentation, your help makes Zvec better for everyone.
+
+Check out our [Contributing Guide](https://github.com/alibaba/zvec/blob/main/CONTRIBUTING.md) to get started!

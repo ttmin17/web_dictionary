@@ -4,10 +4,9 @@ name: omnigent
 tagline: "Omnigent is an open-source AI agent framework and meta-harness:
   orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses
   without"
-summary: "Omnigent is an open-source AI agent framework and meta-harness:
-  orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses
-  without rewriting, enforce policies and sandboxing, and collaborate in real
-  time from any device."
+summary: "Omnigent is an open-source meta-harness that gives you a common
+  orchestration layer over Claude Code, Codex, Cursor, OpenCode, Hermes, Pi, and
+  the agents you write yourself: swap or combine harnesses without rewriting..."
 categories:
   - agent-frameworks
 tags:
@@ -19,26 +18,26 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: omnigent-ai/omnigent
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11052
-  last_commit: 2026-10-26T07:29:32Z
-  stars_delta_7d: 164
-  stars_growth_pct: 1.5
-  trending_score: 166.47
-  rank_current: 42
-  rank_delta: -20
+  stars: 11167
+  last_commit: 2026-11-02T08:57:56Z
+  stars_delta_7d: 115
+  stars_growth_pct: 1
+  trending_score: 116.2
+  rank_current: 58
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10648
     - 10781
     - 10888
     - 11052
+    - 11167
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +46,7 @@ readme_source:
   repo: omnigent-ai/omnigent
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:43:49.394Z
+  fetched_at: 2026-11-02T09:06:26.385Z
   truncated: false
 type: agent_tool
 tool:
@@ -86,7 +85,9 @@ Omnigent is an open-source **meta-harness** that gives you a common orchestratio
   <img src="https://raw.githubusercontent.com/omnigent-ai/omnigent/main/docs/images/omnigent-desktop.png" alt="The Omnigent desktop app: starting a new session, with pinned and project-grouped sessions in the sidebar" width="720" />
 </p>
 
----## Why Omnigent?
+---
+
+## Why Omnigent?
 
 Omnigent lets you:
 
@@ -123,7 +124,9 @@ Omnigent lets you:
   before risky actions, cap spend, or limit which tools an agent reaches.
   They apply to the whole server, one agent, or a single chat.
 
----## Quick start
+---
+
+## Quick start
 
 ### 1. Install
 
@@ -133,19 +136,25 @@ One command installs Omnigent and everything it needs:
 curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh
 ```
 
+The installer includes Databricks support and installs the Databricks CLI
+alongside Omnigent, or reuses an existing CLI that supports workspace login.
+Pass `--no-databricks` to omit them.
+
 <details>
 <summary>Optional integrations and extras</summary>
 
 Need an optional integration? Pass one or more extras to the installer:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh -s -- --extra databricks
 curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh -s -- --extra modal,e2b
 ```
 
+The Antigravity SDK extra conflicts with Databricks dependencies. Install it
+with `--no-databricks --extra antigravity`.
+
 Available user-facing extras include:
 
-- **Model providers:** `databricks`, `bedrock`, `vertex`
+- **Model providers:** `databricks` (included by default), `bedrock`, `vertex`
 - **Sandbox providers:** `modal`, `daytona`, `blaxel`, `boxlite`, `microsandbox`,
   `cwsandbox`, `e2b`, `openshell`, `kubernetes`
 - **SDK harnesses:** `antigravity`, `copilot`, `cursor`, `agents-sdk`
@@ -226,11 +235,12 @@ uv tool install -q --python 3.12 git+https://github.com/omnigent-ai/omnigent.git
   missing `bwrap` binary makes those terminals fail to start
   (`apt install bubblewrap`; the installer offers to install it for you). macOS
   uses the built-in `seatbelt` sandbox and needs nothing extra.
-- **Databricks** (optional). To use a Databricks workspace as your model
-  provider, install Omnigent with the `databricks` extra:
-  `uv tool install "omnigent[databricks]"` — or pass it to the bootstrap
-  installer with `... | sh -s -- --extra databricks`. Signing in to the
-  workspace also uses the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/install).
+- **Databricks.** The bootstrap installer includes the `databricks` extra
+  and the Databricks CLI. If installing with uv directly, use
+  `uv tool install "omnigent[databricks]"` and install the
+  [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/install)
+  separately. Sign in to a workspace-hosted server with
+  `omnigent login <workspace-url>/omnigent`.
 
 </details>
 
@@ -357,6 +367,31 @@ omnigent copilot                     # GitHub Copilot (SDK harness, via `omnigen
 `omnigent agy` requires agy 1.1.13 or newer. When `GEMINI_API_KEY` is set,
 direct Gemini API authentication takes precedence over agy's saved OAuth login.
 
+To configure native agy credentials, run `omni setup` →
+**Antigravity** → **Configure native agy API key / gateway** → **Add a credential**
+and choose the option matching your connection:
+
+- **Gemini — API key** for a Google AI Studio key.
+- **Gemini API gateway — URL + key** for an external gateway implementing native
+  Gemini requests and `x-goog-api-key` authentication. Supply its API root, such
+  as `https://gateway.example/gemini`, without `/v1beta` or a model operation.
+- **Databricks — profile** for a Databricks workspace with native Gemini API
+  access. Omnigent manages profile authentication and model-name mapping; no
+  workspace URL or token needs to be pasted into the gateway form.
+
+OpenAI Responses and Chat Completions endpoints are **not supported by native
+agy**, even when they serve Gemini models. A separate protocol adapter would be
+required. The first Gemini credential becomes the default; select **Make default
+for Gemini** when switching, then start a fresh `omni agy` session.
+
+See the [native agy gateway guide](https://github.com/omnigent-ai/omnigent/blob/main/docs/native-agy-gateways.md) for compatibility
+requirements, model and authentication behavior, troubleshooting, and smoke
+steps. These settings configure native agy; the Antigravity Python SDK retains
+its separate key/Vertex setup.
+`omnigent opencode` requires OpenCode 2.0.x (`npm i -g @opencode/cli@2.0.32`).
+Its free models need no sign-in; run `opencode auth login` to add your own
+providers. See the [OpenCode harness guide](https://github.com/omnigent-ai/omnigent/blob/main/docs/opencode-native.md).
+
 Using OpenClaw? See the [OpenClaw integration guide](https://github.com/omnigent-ai/omnigent/blob/main/docs/openclaw.md) to import
 its coding agents or drive a live OpenClaw Gateway session over ACP.
 
@@ -436,10 +471,26 @@ Open the server URL it prints, hit **New Chat**, pick your machine, and go.
 Check status with `omnigent server status`; stop everything with
 `omnigent stop`.
 
+Integrations can open the new-chat composer with text already filled in using
+`/?prompt=Explain%20this%20code`. Build links with
+`URLSearchParams` to preserve newlines, Unicode, and characters such as `&` and
+`+`. For a deployment under `/tools/omnigent`, use
+`/tools/omnigent/?prompt=Explain%20this%20code`.
+
+The text is an editable draft: the user chooses a host and agent and presses
+Send to start the session. The prompt parameter is removed from the current URL
+after loading, while other query parameters and the fragment are retained.
+
 To suppress the automatic browser tab, use `omni host --no-open` or set
 `OMNIGENT_HOST_NO_OPEN=1` in your shell. Both also apply to `omni host
 --background` and `omni start`. Sign-in may still open a browser; use
 `--non-interactive` in scripts to fail if sign-in is required.
+
+To open it in the Omnigent desktop app instead, use `--open-in-desktop` or set
+`OMNIGENT_HOST_OPEN_IN_DESKTOP=1`; it falls back to the browser if the app is
+not installed, too old to accept the request, or does not respond within five
+seconds. URLs with base paths or query/fragment selectors stay in the browser
+to preserve their destination.
 
 A session can also start itself: the **Automations** page runs an agent on a
 recurring schedule. See the [automations guide](https://github.com/omnigent-ai/omnigent/blob/main/docs/AUTOMATIONS.md)
@@ -479,6 +530,12 @@ session_title_instructions: |
 
 Server operators can set the same key in the YAML passed to
 `omnigent server --config`.
+
+Claude Code sessions generate titles with the `haiku` model alias. If that
+model answers the message instead of returning a title, set
+`OMNIGENT_BACKGROUND_TITLE_CLAUDE_MODEL` to another Claude model alias, such as
+`sonnet`, in the environment of the `omnigent` or `omnigent host` process that
+runs the session.
 
 </details>
 
@@ -648,7 +705,9 @@ checked first. Spend caps and access limits ship as builtins.
 
 See the [policy guide](https://github.com/omnigent-ai/omnigent/blob/main/docs/POLICIES.md) for the full catalog and trust model.
 
----## Write your own agent
+---
+
+## Write your own agent
 
 For centrally managed remote tools, reusable account connections, and a gateway
 with session policies around built-in or external backends, see the
@@ -701,7 +760,9 @@ The same file can declare sub-agents and reviewers. For a fuller example, see
 Polly at [`examples/polly/`](https://github.com/omnigent-ai/omnigent/tree/main/examples/polly/), and the
 [Agent YAML spec](https://github.com/omnigent-ai/omnigent/blob/main/docs/AGENT_YAML_SPEC.md) for the full schema.
 
----## Telemetry
+---
+
+## Telemetry
 
 Omnigent collects anonymized usage data (telemetry) by default. This data
 contains no sensitive or personally identifiable information. If you're using
@@ -710,7 +771,9 @@ service agreement to determine any data collection that may impact your use of
 the service. To opt out, follow our instructions in
 [Usage Telemetry](https://omnigent.ai/docs/deploy/telemetry).
 
----## Contributing
+---
+
+## Contributing
 
 Contributions are welcome. See [CONTRIBUTING.md](https://github.com/omnigent-ai/omnigent/blob/main/CONTRIBUTING.md) for how to set up your environment, run the checks, and open a pull request.
 

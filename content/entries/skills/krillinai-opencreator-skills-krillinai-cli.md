@@ -1,8 +1,10 @@
 ---
 slug: krillinai-opencreator-skills-krillinai-cli
 name: krillinai-cli
-tagline: Agent skill from krillinai/OpenCreator
-summary: Agent skill from krillinai/OpenCreator
+tagline: Use when an agent needs to build or operate the embedded KrillinAI CLI,
+  choose a supported command, or interpret its JSON, manifest, subtitle, dubbing
+summary: "For the current machine, locate the CLI without assuming a platform or
+  architecture:"
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - deskop-app
   - dubbing
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: krillinai/OpenCreator
@@ -22,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13936
-  last_commit: 2026-10-26T01:28:37Z
-  stars_delta_7d: 235
-  stars_growth_pct: 1.7
-  trending_score: 239.03
+  stars: 14088
+  last_commit: 2026-11-02T05:56:31Z
+  stars_delta_7d: 152
+  stars_growth_pct: 1.1
+  trending_score: 153.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12614
     - 12884
     - 13701
     - 13936
+    - 14088
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +42,14 @@ readme_source:
   repo: krillinai/OpenCreator
   path: skills/krillinai-cli/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:44:49.730Z
+  fetched_at: 2026-11-02T09:06:44.739Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: krillinai-cli
-  description: Agent skill from krillinai/OpenCreator
+  description: Use when an agent needs to build or operate the embedded KrillinAI
+    CLI, choose a supported command, or interpret its JSON, manifest, subtitle,
+    dubbing, render, cover, speech, and voice outputs.
   folder_path: skills/krillinai-cli
   extra_files:
     - references/cli-contract.md

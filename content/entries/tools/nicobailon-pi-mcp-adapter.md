@@ -14,26 +14,26 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nicobailon/pi-mcp-adapter
   official_vendor: false
   license: MIT
 signals:
-  stars: 1617
-  last_commit: 2026-10-26T06:24:34Z
+  stars: 1637
+  last_commit: 2026-10-29T13:58:26Z
   stars_delta_7d: 20
-  stars_growth_pct: 1.3
+  stars_growth_pct: 1.2
   trending_score: 20.25
-  rank_current: 100
-  rank_delta: 9
+  rank_current: 107
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1578
     - 1591
     - 1597
     - 1617
+    - 1637
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: nicobailon/pi-mcp-adapter
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:13.507Z
+  fetched_at: 2026-11-02T09:05:52.798Z
   truncated: false
 type: agent_tool
 tool:

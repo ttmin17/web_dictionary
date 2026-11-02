@@ -15,10 +15,10 @@ tags:
   - agentic-workflow
   - agents
 status: active
-quality_percentile: 80
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ruvnet/ruflo
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 79343
-  last_commit: 2026-10-26T06:36:48Z
-  stars_delta_7d: 2614
-  stars_growth_pct: 3.4
-  trending_score: 2703.05
+  stars: 80579
+  last_commit: 2026-11-02T06:38:36Z
+  stars_delta_7d: 1236
+  stars_growth_pct: 1.6
+  trending_score: 1255.25
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 74048
     - 74512
     - 76729
     - 79343
+    - 80579
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: ruvnet/ruflo
   path: plugins/ruflo-adr/skills/adr-reindex/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:25.541Z
+  fetched_at: 2026-11-02T09:05:26.356Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,7 +54,7 @@ skill:
     (scripts/reindex.mjs). Use when adr-index alone leaves stale rows behind.
   folder_path: plugins/ruflo-adr/skills/adr-reindex
   extra_files: []
-  pack_total_skills: 167
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

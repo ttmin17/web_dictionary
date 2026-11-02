@@ -15,10 +15,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 788
-  last_commit: 2026-10-24T02:30:54Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.9
-  trending_score: 7.06
+  stars: 804
+  last_commit: 2026-11-01T01:15:39Z
+  stars_delta_7d: 16
+  stars_growth_pct: 2
+  trending_score: 16.32
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
     - 788
+    - 804
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/materials/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:38:54.125Z
+  fetched_at: 2026-11-02T09:06:01.691Z
   truncated: false
 type: agent_skill
 skill:
@@ -64,7 +65,7 @@ skill:
     - scripts/export_graph.txt
     - scripts/material_graph_batch.txt
     - workflows.md
-  pack_total_skills: 39
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -83,6 +84,28 @@ For gray/default surfaces after mesh reimport, use the asset-management skill's
 LOD-section mapping helper before changing the shader or buying new textures.
 
 ## Critical Rules
+
+### Material information over MCP: use `GetMaterialInfoResult`
+
+Call `VibeUE.MaterialService.GetMaterialInfoResult` with only `materialPath`.
+UE 5.8's native ToolsetRegistry serializes the direct return value, not output-reference
+parameters: legacy `GetMaterialInfo` can return `returnValue: true` without `outInfo`.
+The new operation returns `returnValue` containing `bSuccess`, `info`, and `errorMessage`.
+Check `bSuccess` before reading `info`; failure returns an error and default-empty details.
+Parameter results cover scalar, vector and texture parameters (not static switches). Scalar and
+vector values are rounded to three decimals; `defaultValue` is the inherited value excluding this
+instance's override, and `bIsOverridden` reports only this instance. Layer association and index
+are not returned, so equal parameter names in different layers cannot be distinguished.
+Expression and texture-sample counts are populated only for base materials; the texture count
+counts only parameter sample nodes, not all texture samples. Only the first shading model is reported.
+`Summarize` and `GetPropertyInfo` also use output references; they are not MCP substitutes.
+The existing C++/Blueprint/Python `get_material_info` signature is unchanged, but its instance
+properties and parameter details now report effective values, inherited defaults and local overrides.
+`ListParameters` returns the corrected parameter details too. In Python,
+`get_material_info_result(path)` returns `.success`, `.info`, and `.error_message`.
+
+Regression: run `Automation RunTests VibeUE.Materials.GetMaterialInfo` in the Editor console.
+One test creates an unsaved in-memory `/Game` package; the tests do not save assets.
 
 ### 🚨 Connecting Function Call Inputs: Use Bare Names, Not Display Names
 
@@ -369,6 +392,7 @@ Common material property internal names: `TwoSided`, `BlendMode`, `ShadingModel`
 `MaterialDomain`, `OpacityMaskClipValue`, `bUsedWithStaticLighting`, `DitheredLODTransition`.
 
 ---
+
 ## Task Index
 
 | Task | Workflow | Sample script |

@@ -1,8 +1,11 @@
 ---
 slug: alibaba-open-code-review-plugins-open-code-review-skills-open-code-review
 name: open-code-review
-tagline: Agent skill from alibaba/open-code-review
-summary: Agent skill from alibaba/open-code-review
+tagline: Performs AI-powered code review on Git changes using the `ocr` CLI from
+  alibaba/open-code-review. Use when the user asks to review code, review a pull
+summary: A skill for invoking open-code-review (ocr) — an open-source AI code
+  review CLI that reads Git diffs and generates structured, line-level review
+  comments.
 categories:
   - coding-agents
 tags:
@@ -11,10 +14,10 @@ tags:
   - code-review-assistant
   - harness
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alibaba/open-code-review
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 48292
-  last_commit: 2026-10-22T04:24:26Z
-  stars_delta_7d: 673
-  stars_growth_pct: 1.4
-  trending_score: 682.51
+  stars: 49270
+  last_commit: 2026-11-01T20:39:07Z
+  stars_delta_7d: 978
+  stars_growth_pct: 2
+  trending_score: 997.81
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 44194
     - 46827
     - 47619
     - 48292
+    - 49270
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +43,19 @@ readme_source:
   repo: alibaba/open-code-review
   path: plugins/open-code-review/skills/open-code-review/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:09.149Z
+  fetched_at: 2026-11-02T09:06:38.887Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: open-code-review
-  description: Agent skill from alibaba/open-code-review
+  description: >
+    Performs AI-powered code review on Git changes using the `ocr` CLI from
+    alibaba/open-code-review. Use when the user asks to review code, review a
+    pull request, review staged/unstaged changes, review a commit, or compare
+    branches for code quality issues. Produces line-level review comments and
+    can automatically apply fixes when requested. With appropriate review rules,
+    can detect various types of issues including bugs, security vulnerabilities,
+    performance problems, and code quality concerns.
   folder_path: plugins/open-code-review/skills/open-code-review
   extra_files: []
   pack_total_skills: 2

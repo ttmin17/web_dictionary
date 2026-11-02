@@ -1,8 +1,13 @@
 ---
 slug: nexu-io-open-design-design-templates-eng-runbook
 name: eng-runbook
-tagline: Agent skill from nexu-io/open-design
-summary: Agent skill from nexu-io/open-design
+tagline: |-
+  An engineering runbook — service overview, alerts table, dashboards
+  links, common procedures with copy-pasteable commands, on-call rotation,
+  and an in
+summary: "1. Read DESIGN.md. 2. Identify the service from the brief. 3. Layout:
+  - Header: service name, owner team, severity tier, version. - Service summary
+  paragraph + dependency list. - Alerts table: alert name / severity /..."
 categories:
   - media-creative
 tags:
@@ -11,10 +16,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 104025
-  last_commit: 2026-10-26T07:31:43Z
-  stars_delta_7d: 1726
-  stars_growth_pct: 1.7
-  trending_score: 1755.12
+  stars: 105423
+  last_commit: 2026-11-02T05:06:45Z
+  stars_delta_7d: 1398
+  stars_growth_pct: 1.3
+  trending_score: 1416.79
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99839
     - 100908
     - 102299
     - 104025
+    - 105423
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,16 +45,20 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/eng-runbook/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.575Z
+  fetched_at: 2026-11-02T09:06:41.705Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: eng-runbook
-  description: Agent skill from nexu-io/open-design
+  description: |
+    An engineering runbook — service overview, alerts table, dashboards
+    links, common procedures with copy-pasteable commands, on-call rotation,
+    and an incident-response checklist. Use when the brief mentions
+    "runbook", "ops doc", "on-call guide", "SRE doc", or "运维手册".
   folder_path: design-templates/eng-runbook
   extra_files:
     - example.html
-  pack_total_skills: 401
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -58,4 +67,26 @@ skill:
   pack_slug: nexu-io-open-design
 ---
 
-Agent skill from nexu-io/open-design
+# Engineering Runbook Skill
+Produce a single-page engineering runbook.
+
+## Workflow
+
+1. Read DESIGN.md.
+2. Identify the service from the brief.
+3. Layout:
+   - Header: service name, owner team, severity tier, version.
+   - Service summary paragraph + dependency list.
+   - Alerts table: alert name / severity / what it means / first response.
+   - Dashboards & links list.
+   - Common procedures block (3–4) with code blocks (deploy, rollback, rotate keys).
+   - On-call rotation table (week / primary / secondary / backup).
+   - Incident response checklist (5 numbered steps).
+4. One inline `<style>`, semantic HTML, monospace for code blocks.
+
+## Output contract
+
+```
+<artifact identifier="runbook-name" type="text/html" title="Service Runbook">
+<!doctype html>...</artifact>
+```

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: pipeshub-ai/pipeshub-ai
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3850
-  last_commit: 2026-10-26T06:57:53Z
-  stars_delta_7d: 12
-  stars_growth_pct: 0.3
-  trending_score: 12.04
+  stars: 3898
+  last_commit: 2026-11-02T08:51:45Z
+  stars_delta_7d: 48
+  stars_growth_pct: 1.2
+  trending_score: 48.6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3814
     - 3830
     - 3838
     - 3850
+    - 3898
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: pipeshub-ai/pipeshub-ai
   path: backend/python/app/agents/agent_loop/skills/builtin_packs/pdf/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:37:00.721Z
+  fetched_at: 2026-11-02T09:05:37.829Z
   truncated: false
 type: agent_skill
 skill:

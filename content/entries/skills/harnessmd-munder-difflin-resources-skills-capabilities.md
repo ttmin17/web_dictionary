@@ -1,8 +1,14 @@
 ---
 slug: harnessmd-munder-difflin-resources-skills-capabilities
 name: capabilities
-tagline: Agent skill from HarnessMD/munder-difflin
-summary: Agent skill from HarnessMD/munder-difflin
+tagline: |-
+  Your capability catalog — read this at boot. Lists the temporal date-range
+  skills and the external integrations (reached via the loopback broker)
+  avai
+summary: "- AGENTID, AGENTNAME — your identity in the hive. - AGENTDIR — your
+  private workspace (identity.md, memory.md, inbox/, outbox/, and
+  .claude/skills/). Your bundled skills live under $AGENTDIR/.claude/skills/. -
+  HIVEROO..."
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +20,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: HarnessMD/munder-difflin
@@ -22,19 +28,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 9069
-  last_commit: 2026-10-26T07:19:02Z
-  stars_delta_7d: 173
-  stars_growth_pct: 1.9
-  trending_score: 176.36
-  rank_current: 65
-  rank_delta: -12
+  stars: 9291
+  last_commit: 2026-11-02T07:51:59Z
+  stars_delta_7d: 222
+  stars_growth_pct: 2.4
+  trending_score: 227.43
+  rank_current: 61
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8550
     - 8726
     - 8896
     - 9069
+    - 9291
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +48,22 @@ readme_source:
   repo: HarnessMD/munder-difflin
   path: resources/skills/capabilities/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:55.399Z
+  fetched_at: 2026-11-02T09:06:33.047Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: capabilities
-  description: Agent skill from HarnessMD/munder-difflin
+  description: >
+    Your capability catalog — read this at boot. Lists the temporal date-range
+
+    skills and the external integrations (reached via the loopback broker)
+
+    available to you as a spawned worker, and exactly how to call each.
+    Read-only.
+
+    Consult it whenever you're unsure what tools/integrations you have or how to
+
+    invoke them.
   folder_path: resources/skills/capabilities
   extra_files: []
   pack_total_skills: 17

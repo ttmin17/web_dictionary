@@ -1,8 +1,12 @@
 ---
 slug: trailofbits-skills-plugins-audit-context-building-skills-audit-context-building
 name: audit-context-building
-tagline: Agent skill from trailofbits/skills
-summary: Agent skill from trailofbits/skills
+tagline: Understand a codebase before looking for bugs in it - what each
+  function assumes, what it guarantees, and what it depends on elsewhere. Use
+  when start
+summary: At the start of an audit, a threat model, or an architecture review,
+  when the code is unfamiliar. Also when an earlier pass produced findings
+  nobody could judge, because no one had mapped out how the system fits toget...
 categories:
   - security-auth
 tags:
@@ -10,10 +14,10 @@ tags:
   - research
   - security
 status: active
-quality_percentile: 57
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: trailofbits/skills
@@ -21,17 +25,17 @@ source:
   official_vendor: false
   license: CC-BY-SA-4.0
 signals:
-  stars: 7804
-  last_commit: 2026-10-24T01:53:03Z
-  stars_delta_7d: 164
-  stars_growth_pct: 2.1
-  trending_score: 167.52
+  stars: 7945
+  last_commit: 2026-10-28T19:41:17Z
+  stars_delta_7d: 141
+  stars_growth_pct: 1.8
+  trending_score: 143.55
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7412
     - 7507
     - 7640
     - 7804
+    - 7945
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +43,15 @@ readme_source:
   repo: trailofbits/skills
   path: plugins/audit-context-building/skills/audit-context-building/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:55.636Z
+  fetched_at: 2026-11-02T09:06:46.583Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: audit-context-building
-  description: Agent skill from trailofbits/skills
+  description: Understand a codebase before looking for bugs in it - what each
+    function assumes, what it guarantees, and what it depends on elsewhere. Use
+    when starting an audit, threat model, or architecture review on unfamiliar
+    code, and before any vulnerability-hunting pass.
   folder_path: plugins/audit-context-building/skills/audit-context-building
   extra_files:
     - agents/openai.yaml
@@ -52,7 +59,7 @@ skill:
     - resources/ANALYSIS_FORMAT.md
     - resources/DOMAIN_NOTES.md
     - resources/FUNCTION_MICRO_ANALYSIS_EXAMPLE.md
-  pack_total_skills: 97
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

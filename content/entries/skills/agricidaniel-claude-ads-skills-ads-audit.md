@@ -1,8 +1,12 @@
 ---
 slug: agricidaniel-claude-ads-skills-ads-audit
 name: ads-audit
-tagline: Agent skill from AgriciDaniel/claude-ads
-summary: Agent skill from AgriciDaniel/claude-ads
+tagline: "Run a source-grounded paid-advertising audit for one or more of
+  Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit,
+  Pinterest, "
+summary: 1. Read the main ads operating contract and thinking framework. 2.
+  Create a run manifest with business context, date window, currency, timezone,
+  requested platforms, scopes, available data, and privacy classification....
 categories:
   - productivity-ops
 tags:
@@ -11,10 +15,10 @@ tags:
   - claude-code
   - claude-code-skill
 status: active
-quality_percentile: 77
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-ads
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10425
-  last_commit: 2026-10-17T01:35:42Z
-  stars_delta_7d: 301
-  stars_growth_pct: 3
-  trending_score: 309.95
+  stars: 10660
+  last_commit: 2026-11-01T21:08:14Z
+  stars_delta_7d: 235
+  stars_growth_pct: 2.3
+  trending_score: 240.3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9774
     - 9953
     - 10124
     - 10425
+    - 10660
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +44,20 @@ readme_source:
   repo: AgriciDaniel/claude-ads
   path: skills/ads-audit/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:51.734Z
+  fetched_at: 2026-11-02T09:06:30.005Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ads-audit
-  description: Agent skill from AgriciDaniel/claude-ads
+  description: Run a source-grounded paid-advertising audit for one or more of
+    Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit,
+    Pinterest, Snapchat, and X. Use for full ad checks, account health reviews,
+    paid-media diagnostics, partial audits after authentication or worker
+    failure, missing-platform weighting, beta-feature eligibility and scoring,
+    spend audits, tracking audits, or prioritized opportunities and risks.
   folder_path: skills/ads-audit
   extra_files: []
-  pack_total_skills: 34
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -106,34 +115,43 @@ Add cross-platform workers only when their inputs exist:
 - Budget, pacing, and financial viability.
 - Platform policy, privacy, and regulation.
 
-## Required finding fields
+## Required worker result
 
-Each worker returns conclusions, not files:
+Each platform or cross-platform worker handles one canonical platform per task and
+returns exactly one `audit-worker-result` v1 object. Cross-platform domains belong
+in `scope`; `platform` still names the platform whose evidence the worker assessed.
 
 ```json
 {
+  "schema_version": "1.0.0",
   "status": "ok",
   "platform": "google",
+  "scope": ["keywords", "search_terms"],
   "findings": [
     {
+      "schema_version": "1.0.0",
       "control_id": "G-EXAMPLE",
-      "result": "pass|fail|unknown|not_applicable",
-      "severity": "critical|high|medium|info",
-      "confidence": "high|medium|low|none",
-      "source_classification": "evidence_based|practitioner|contested|folklore",
-      "observation": "What the supplied data demonstrates",
-      "evidence_refs": ["input:...", "source:..."],
-      "recommendation": "Decision-complete next action or null"
+      "status": "unknown",
+      "evidence": [{"kind": "account_export", "ref": "input:keywords"}],
+      "confidence": "low",
+      "source_classification": "evidence_based",
+      "observation": "The supplied export does not distinguish positive and negative criteria.",
+      "diagnosis": "Keyword inventory completeness cannot be established.",
+      "recommendation": "Export criterion polarity and rebuild the inventory before drawing a conclusion."
     }
   ],
   "contradictions": [],
-  "missing_inputs": [],
-  "recovery_hints": []
+  "missing_inputs": ["criterion polarity"],
+  "stale_sources": [],
+  "recovery_hints": ["Provide an export containing the negative field."]
 }
 ```
 
-Validate against the repository schema rather than relying on this illustrative
-fragment when the installed schema is available.
+Every envelope field is required. Validate against the installed
+`audit-worker-result` v1 schema. Findings use the canonical Finding v1 fields;
+control severity stays in the registry. Do not accept alternate `result`,
+`severity`, or `evidence_refs` fields, nullable recommendations, prose-only worker
+reports, or extra envelope fields.
 
 ## Completeness rules
 

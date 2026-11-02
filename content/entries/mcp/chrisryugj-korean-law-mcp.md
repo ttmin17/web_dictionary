@@ -13,29 +13,29 @@ tags:
   - claude
   - claude-desktop
 status: active
-quality_percentile: 95
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2025-12-19T11:03:22
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: chrisryugj/korean-law-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2787
-  last_commit: 2026-10-26T04:17:28Z
-  stars_delta_7d: 48
-  stars_growth_pct: 1.8
-  trending_score: 48.84
-  rank_current: 42
-  rank_delta: -18
+  stars: 2826
+  last_commit: 2026-11-01T09:19:03Z
+  stars_delta_7d: 39
+  stars_growth_pct: 1.4
+  trending_score: 39.55
+  rank_current: 44
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2647
     - 2697
     - 2739
     - 2787
+    - 2826
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: chrisryugj/korean-law-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:58.905Z
+  fetched_at: 2026-11-02T09:05:40.460Z
   truncated: false
 type: mcp_server
 launch:
@@ -91,15 +91,23 @@ VS Code·Cursor는 버튼 한 번으로 연결됩니다(키 없이 공용 한도
 
 | Claude에 연결하기 | ChatGPT에 연결하기 |
 |:---:|:---:|
-| [![Claude에 법령MCP 연결하기](https://raw.githubusercontent.com/chrisryugj/korean-law-mcp/main/docs/video-claude.jpg)](https://youtu.be/KaUKLOH7290) | [![GPT에 법령MCP 연결하기](https://raw.githubusercontent.com/chrisryugj/korean-law-mcp/main/docs/video-gpt.jpg)](https://youtu.be/RzoU_6v9sgo) |
+| [![Claude에 법령MCP 연결하기](https://raw.githubusercontent.com/chrisryugj/korean-law-mcp/main/docs/video-claude.jpg)](https://youtu.be/KaUKLOH7290) | [![GPT에 법령MCP 연결하기](https://raw.githubusercontent.com/chrisryugj/korean-law-mcp/main/docs/video-gpt.jpg)](https://youtu.be/-qMk-ajW-GQ) |
 
 ---
+
 ## 최근 업데이트
 
-현재 버전 **v4.15.14**. 수치는 모두 [CHANGELOG](https://github.com/chrisryugj/korean-law-mcp/blob/main/CHANGELOG.md)의 실측 기록에서 옮김.
+현재 버전 **v4.15.21**. 수치는 모두 [CHANGELOG](https://github.com/chrisryugj/korean-law-mcp/blob/main/CHANGELOG.md)의 실측 기록에서 옮김.
 
 | 버전 | 주요 변경 | 변화 |
 |------|-----------|------|
+| 4.15.21 | 대비표: 쉼표 붙은 후단 삭제 `<후단 삭제>` · 번호만 밀린 호·목 "(현행 제2호와 같음)" · 현행보다 긴 "(현행과 같음)" 범위는 현행 끝까지로(#181) | 재현 테스트 3건 |
+| 4.15.20 | 대비표 개정안 칸: 개정 부분이 마침표 바로 앞에서 끝나고 단서·후단이 신설되면 마침표가 「-」로 바뀌던 것(#180) | 건축법 제79조⑤ 재현 테스트 |
+| 4.15.19 | 대비표 한글(.hwpx) 본문 왼쪽 정렬 — 줄표가 넘어간 짧은 줄이 벌어지던 것 | 한글 화면 확인 |
+| 4.15.18 | `legal_analysis` 설명·제목에 「신구조문대비표」 낱말(claude.ai 도구 검색 0건 수정) | 검색 낱말 게이트 테스트 |
+| 4.15.17 | 대비표를 노출 도구 `legal_analysis(mode="amendment_table")`로(시연에서 숨은 도구를 안 찾음), 채팅 표 밑줄은 굵은 글씨 | 노출 도구 10개 유지 |
+| 4.15.16 | 신·구조문대비표 작성 `amendment_table`(execute_tool): 개정 조문 → 현행 자동 대조, 밑줄·`----`·`(생  략)`·`<신  설>`, 로컬 실행은 한글(.hwpx) 저장 | 처음 보는 100개 법령 433조문, 공식 대비표와 완전 일치 **67.7%**(구조 불일치 3.9%) |
+| 4.15.15 | 별표 파서 kordoc 4.24.25(PDF 표 행·단위 표기 줄 수정 등), `@hono/node-server` 2.1.5 | `npm audit` 1건 → **0건**, 실제 별표 3건 출력 동일 |
 | 4.15.14 | 보안: 의존성 취약점 정리 — 하위 kordoc 4.24.8(zod 4), zod 4.6.7, 개발 도구·하위 의존성 수정판 | `npm audit` 10건 → **0건** |
 | 4.15.13 | Claude Code 플러그인이 로컬 npx 대신 공개 서버(`mcp.gomdori.app/law`)에 연결, 키는 선택 | 설치 없음 |
 | 4.15.12 | 도구 사이 안내(예: 여러 법령 감시는 `search_law_bulk`)를 도구 설명에서 서버 안내문(`instructions`)으로 옮김 | 같은 질문 4개에서 고르는 도구 동일 |
@@ -114,6 +122,7 @@ VS Code·Cursor는 버튼 한 번으로 연결됩니다(키 없이 공용 한도
 - **v3.4.0**: 판례·헌재·행심 응답 토큰 평균 74% 감축
 
 ---
+
 ## 왜 만들었나
 
 대한민국에는 **1,600개 이상의 현행 법률**, **10,000개 이상의 행정규칙**, 그리고 대법원·헌법재판소·조세심판원·관세청까지 이어지는 방대한 판례 체계가 있습니다. 이 모든 게 [법제처](https://www.law.go.kr)라는 하나의 사이트에 있지만, 개발자 경험은 최악입니다.
@@ -121,6 +130,7 @@ VS Code·Cursor는 버튼 한 번으로 연결됩니다(키 없이 공용 한도
 이 프로젝트는 그 전체 법령 시스템을 **10개 도구**로 감싸서, AI 어시스턴트나 스크립트에서 바로 호출할 수 있게 만듭니다. 법제처를 수백 번 수동 검색하다 지친 공무원이 만들었습니다.
 
 ---
+
 ## 설치 및 사용법
 
 공식 MCP 레지스트리 등재: [`io.github.chrisryugj/korean-law-mcp`](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.chrisryugj/korean-law-mcp)
@@ -354,6 +364,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 ```
 
 ---
+
 ## 사용 예시
 
 ### 기본 조회
@@ -423,9 +434,11 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 | 판례명·본문검색 병행 | `search_decisions(domain="precedent", options={search:"both"})` |
 | 긴 행정규칙의 일부만 | `get_admin_rule`의 `jo:"제9-5조"`·`chapter:"제9장"`·`keyword:"해외직접투자"`·`page:2` |
 | 법령 여러 건 변경 감시 | `execute_tool(tool_name="search_law_bulk")`: 법령명 배열 + `previous={법령ID: 직전 MST}`이면 MST가 바뀐 법령만 반환 |
+| 개정안 신·구조문대비표 | `legal_analysis(mode="amendment_table")`: 법령명 + 개정 조문 전문 → 현행 자동 대조(바뀐 곳 밑줄, 같은 부분 `----`, `(생  략)`·`<신  설>`). 조례는 `currentText`, 로컬 실행은 `outputPath`로 한글(.hwpx) 저장 |
 | 판례 전문(축약 해제) | `get_decision_text(..., full=true)` |
 
 ---
+
 ## 도구 구조 (10개)
 
 노출 도구는 10개. `chain_*` 8개는 `legal_research`의 `task`로, 분석 기능 4개는 `legal_analysis`의 `mode`로 통합. 나머지 전문 도구는 `discover_tools` → `execute_tool`로 접근하며, 기존 도구명 직접 호출도 하위호환으로 동작.
@@ -468,6 +481,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 전체 도구 상세는 [docs/API.md](https://github.com/chrisryugj/korean-law-mcp/blob/main/docs/API.md) 참조.
 
 ---
+
 ## 주요 특징
 
 - **42개 API → 10개 도구**: 법령, 판례, 행정규칙, 자치법규, 헌재결정, 조세심판, 관세해석, 국세청 해석례, 조약, 학칙/공단/공공기관 규정, 법령용어
@@ -483,6 +497,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 - **원격 엔드포인트**: 설치 없이 `https://mcp.gomdori.app/law`로 바로 사용 (구 `korean-law-mcp.fly.dev/mcp`도 하위호환 유지)
 
 ---
+
 ## HTTP·실행 경계 설정
 
 - HTTP 기본 바인딩은 `MCP_HTTP_HOST=127.0.0.1`, 프록시 신뢰 기본값은 `TRUST_PROXY=false`입니다. 외부 바인딩은 `MCP_AUTH_TOKEN`을 설정해야 하며, 의도적으로 공개할 때만 `MCP_ALLOW_UNAUTHENTICATED_REMOTE=1`을 명시합니다. 프록시 뒤에서는 `TRUST_PROXY=1`처럼 정확한 hop 수를 설정하세요.
@@ -497,6 +512,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 - publish 전 `build/`를 삭제하고 실제 pack 파일과 exports를 검증합니다. `kordoc`는 별표 PDF/HWP 파싱에 실제 사용되므로 유지하고, 필요한 pure-JS `pdfjs-dist@4.10.38`만 일반 의존성으로 고정합니다. 플러그인·문서·Docker 설치는 `--omit=optional --ignore-scripts`로 OCR/ML/native 선택 의존성을 제외합니다. CI·게시 workflow는 개발 도구의 optional binding을 설치하되 script는 끈 상태로 검증한 뒤, production graph로 prune하고 PDF 별표 smoke test를 실행합니다. transitive scanner 경고는 실제 도달 가능한 서버 경로와 구분해 평가합니다.
 
 ---
+
 ## 문서
 
 - [docs/API.md](https://github.com/chrisryugj/korean-law-mcp/blob/main/docs/API.md) — 도구 레퍼런스
@@ -507,7 +523,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 ## 자주 묻는 질문
 
 **Q. Claude·ChatGPT에서 한국 법령·판례를 검색하려면?**
-이 MCP 서버를 연결합니다. Claude.ai는 커넥터 주소 `https://mcp.gomdori.app/law?oc=본인키` 하나면 되고, Claude Desktop·Cursor·Windsurf·Zed는 [설치 및 사용법](#설치-및-사용법), ChatGPT는 [연결 영상](https://youtu.be/RzoU_6v9sgo)을 따르세요.
+이 MCP 서버를 연결합니다. Claude.ai는 커넥터 주소 `https://mcp.gomdori.app/law?oc=본인키` 하나면 되고, Claude Desktop·Cursor·Windsurf·Zed는 [설치 및 사용법](#설치-및-사용법), ChatGPT는 [연결 영상](https://youtu.be/-qMk-ajW-GQ)을 따르세요.
 
 **Q. 무료인가요?**
 MIT 라이선스 오픈소스입니다. 필요한 법제처 Open API 인증키도 무료로 발급됩니다([0단계](#0단계-api-키-발급-무료-1분)).
@@ -546,4 +562,5 @@ API 인증키(`LAW_OC`)는 법제처에서 **각자 발급**받아야 하며, �
 제3자 구현 참조 및 데이터 출처 고지는 [NOTICE](https://github.com/chrisryugj/korean-law-mcp/blob/main/NOTICE)를 참조하세요.
 
 ---
+
 <sub>Made by 류주임 @ 광진구청 AI동호회 AI.Do</sub>

@@ -12,29 +12,29 @@ tags:
   - n8n
   - workflows
 status: active
-quality_percentile: 97
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: czlonkowski/n8n-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 23138
-  last_commit: 2026-10-25T07:35:36Z
-  stars_delta_7d: 36
+  stars: 23191
+  last_commit: 2026-10-27T19:07:26Z
+  stars_delta_7d: 53
   stars_growth_pct: 0.2
-  trending_score: 36.06
-  rank_current: 50
-  rank_delta: -27
+  trending_score: 53.12
+  rank_current: 35
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 23049
     - 23058
     - 23102
     - 23138
+    - 23191
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: czlonkowski/n8n-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:25.904Z
+  fetched_at: 2026-11-02T09:05:26.539Z
   truncated: false
 type: mcp_server
 launch:
@@ -513,11 +513,13 @@ See [CONTRIBUTING.md](https://github.com/czlonkowski/n8n-mcp/blob/main/CONTRIBUT
 See [Acknowledgments](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/ACKNOWLEDGMENTS.md) for credits and template attribution.
 
 ---
+
 <div align="center">
   <strong>Built with care for the n8n community</strong>
 </div>
 
 ---
+
 > 💼 **Need it built for you?**
 >
 > Work with [AiAdvisors — n8n automation audits, builds, and operations](https://aiadvisors.pl/en), run by the author of n8n-mcp and n8n-skills.

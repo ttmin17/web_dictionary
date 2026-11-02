@@ -1,8 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-business-operations-skills
 name: business-operations-skills
-tagline: Use when running, diagnosing, or designing internal business operations
-  — process documentation, vendor SLAs, capacity planning, internal comms, SOP/r
+tagline: "Use when an internal operations request needs routing (process,
+  vendors, capacity, internal comms, SOPs, procurement): 'where's the
+  bottleneck', 'vend"
 summary: The orchestrator classifies the inquiry by signals detected in the
   prompt. Two-signal threshold for confident routing; one-signal triggers a
   clarifying question.
@@ -17,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,24 +43,17 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/business-operations-skills/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.235Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: business-operations-skills
-  description: Use when running, diagnosing, or designing internal business
-    operations — process documentation, vendor SLAs, capacity planning, internal
-    comms, SOP/runbook authoring, procurement spend. Triggers on "BizOps
-    review", "where's the bottleneck", "vendor health", "internal SOP",
-    "all-hands deck", "spend categorization", "capacity for Q3", "process
-    mapping". Forks context to route to one of six BizOps sub-skills
-    (process-mapper, vendor-management, capacity-planner, internal-comms,
-    knowledge-ops, procurement-optimizer) and returns a digest. Distinct from
-    business-growth (external sales motion) and c-level-advisor (strategic, not
-    operational).
+  description: "Use when an internal operations request needs routing (process,
+    vendors, capacity, internal comms, SOPs, procurement): 'where's the
+    bottleneck', 'vendor health'. Lists the BizOps skills and routes to one."
   folder_path: business-operations/skills/business-operations-skills
   extra_files: []
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

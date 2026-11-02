@@ -5,33 +5,35 @@ tagline: Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop
   app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
 summary: Draw and edit draw.io diagrams by chatting with an AI.
 categories:
-  - media-creative
+  - agent-frameworks
 tags:
   - architecture-diagram
   - claude-code
+  - deepseek-harness
   - diagram-generator
-  - diagrams
 status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: DayuanJiang/next-ai-draw-io
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 36413
-  last_commit: 2026-10-26T02:28:20Z
-  stars_delta_7d: 95
-  stars_growth_pct: 0.3
-  trending_score: 95.25
-  rank_current: 27
+  stars: 36566
+  last_commit: 2026-11-01T13:06:18Z
+  stars_delta_7d: 153
+  stars_growth_pct: 0.4
+  trending_score: 153.64
+  rank_current: 13
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 36318
     - 36413
+    - 36566
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +42,7 @@ readme_source:
   repo: DayuanJiang/next-ai-draw-io
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:35:59.895Z
+  fetched_at: 2026-11-02T09:05:22.842Z
   truncated: false
 type: mcp_server
 launch:

@@ -1,8 +1,10 @@
 ---
 slug: phuryn-pm-skills-pm-data-analytics-skills-cohort-analysis
 name: cohort-analysis
-tagline: Agent skill from phuryn/pm-skills
-summary: Agent skill from phuryn/pm-skills
+tagline: Perform cohort analysis on user engagement data — retention curves,
+  feature adoption trends, and segment-level insights. Use when analyzing user
+  reten
+summary: "Example 1: Upload CSV Data"
 categories:
   - productivity-ops
 tags:
@@ -11,10 +13,10 @@ tags:
   - agentic-skills
   - claude-code-marketplace
 status: active
-quality_percentile: 64
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: phuryn/pm-skills
@@ -22,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27381
-  last_commit: 2026-10-16T12:28:37Z
-  stars_delta_7d: 189
-  stars_growth_pct: 0.7
-  trending_score: 190.31
+  stars: 27614
+  last_commit: 2026-10-29T19:09:57Z
+  stars_delta_7d: 233
+  stars_growth_pct: 0.9
+  trending_score: 234.98
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 26820
     - 26957
     - 27192
     - 27381
+    - 27614
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +42,18 @@ readme_source:
   repo: phuryn/pm-skills
   path: pm-data-analytics/skills/cohort-analysis/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:13.734Z
+  fetched_at: 2026-11-02T09:06:41.829Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: cohort-analysis
-  description: Agent skill from phuryn/pm-skills
+  description: Perform cohort analysis on user engagement data — retention curves,
+    feature adoption trends, and segment-level insights. Use when analyzing user
+    retention by cohort, studying feature adoption over time, investigating
+    churn patterns, or identifying engagement trends.
   folder_path: pm-data-analytics/skills/cohort-analysis
   extra_files: []
-  pack_total_skills: 69
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -158,7 +163,9 @@ You'll receive:
 - **Analysis Scripts** (if requested): Python code for reproducible analysis
 - **Next Steps**: Prioritized actions based on findings
 
----### Further Reading
+---
+
+### Further Reading
 
 - [Cohort Analysis 101: How to Reduce Churn and Make Better Product Decisions](https://www.productcompass.pm/p/cohort-analysis)
 - [The Product Analytics Playbook: AARRR, HEART, Cohorts & Funnels for PMs](https://www.productcompass.pm/p/the-product-analytics-playbook-aarrr)

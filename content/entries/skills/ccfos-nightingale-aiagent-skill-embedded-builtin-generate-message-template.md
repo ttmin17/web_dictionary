@@ -9,15 +9,15 @@ summary: This skill focuses on writing/modifying the template fragment itself,
 categories:
   - cloud-infra
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/generate-message-template/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.893Z
+  fetched_at: 2026-11-02T09:05:33.717Z
   truncated: false
 type: agent_skill
 skill:
@@ -68,6 +69,7 @@ Nightingale message templates use Go `text/template` / `html/template` syntax (e
 This skill focuses on **writing/modifying the template fragment itself**, and does not cover creating notification rules or channel configuration.
 
 ---
+
 ## Render Context
 
 The `renderData` passed in when the backend executes:
@@ -89,6 +91,7 @@ The `renderData` passed in when the backend executes:
 So inside the template you can directly use `$event.xxx`, `$labels.agent_hostname`, and `$value`.
 
 ---
+
 ## Available `$event` Fields (`*AlertCurEvent`)
 
 ### Common Fields
@@ -131,6 +134,7 @@ So inside the template you can directly use `$event.xxx`, `$labels.agent_hostnam
 > User objects are commonly used in DingTalk/Feishu/Lark templates to build @-mentions; see the `ats` family of helpers below.
 
 ---
+
 ## Available Helper Functions (`tplx.TemplateFuncMap`)
 
 ### Time
@@ -183,6 +187,7 @@ So inside the template you can directly use `$event.xxx`, `$labels.agent_hostnam
 - `mapDifference <a> <b>` — set difference
 
 ---
+
 ## Syntax Differences Across Channels (`notify_channel_ident`)
 
 A message template is bound to a specific channel; the channel ident determines the text engine and escaping behavior:
@@ -196,6 +201,7 @@ A message template is bound to a specific channel; the channel ident determines 
 > Important: `html/template` automatically escapes `<` `>` `&`. **Where you don't want escaping, use `{{unescaped "…"}}` or `{{safeHtml .X}}`**, otherwise DingTalk will render a literal `&lt;`.
 
 ---
+
 ## Template Writing Workflow
 
 1. **Confirm the channel ident**: when the user says "DingTalk" it is `dingtalk`, "Feishu card" is `feishucard`, "email" is `email`. Different channels differ significantly in style.
@@ -215,6 +221,7 @@ A message template is bound to a specific channel; the channel ident determines 
 6. **Output**: wrap the template body in a markdown ``` ```gotemplate ``` code block, and at the end provide a **variable/function explanation** with each non-trivial variable/function on its own line.
 
 ---
+
 ## Output Format
 
 When replying to the user:
@@ -229,13 +236,15 @@ When replying to the user:
 The language follows the user's input (use Chinese if the input is Chinese).
 
 ---
+
 ## Built-in Reference Templates (Starting Points for Customization)
 
 ### DingTalk markdown (full version)
 
 ```gotemplate
 #### {{if $event.IsRecovered}}<font color="#008800">💚{{$event.RuleName}}</font>{{else}}<font color="#FF0000">💔{{$event.RuleName}}</font>{{end}}
----{{$duration := sub now.Unix $event.FirstTriggerTime}}{{if $event.IsRecovered}}{{$duration = sub $event.LastEvalTime $event.FirstTriggerTime}}{{end}}
+---
+{{$duration := sub now.Unix $event.FirstTriggerTime}}{{if $event.IsRecovered}}{{$duration = sub $event.LastEvalTime $event.FirstTriggerTime}}{{end}}
 - **Alert Level**: S{{$event.Severity}}
 {{- if $event.RuleNote}}
 - **Rule Note**: {{$event.RuleNote}}
@@ -287,6 +296,7 @@ Severity/State: S{{$event.Severity}} {{if $event.IsRecovered}}Recovered{{else}}T
 ```
 
 ---
+
 ## Typical Customization Scenarios
 
 ### 1) "Add the hostname to the DingTalk template"
@@ -409,7 +419,8 @@ DingTalk/email use `<font color>`, Feishu cards use the `template` field to fill
 ```gotemplate
 {{range $i, $e := .events}}
 {{- if $i}}
----{{end -}}
+---
+{{end -}}
 - Rule: {{$e.RuleName}}
 - Target: {{$e.TargetIdent}}
 - Trigger Value: {{$e.TriggerValue}}
@@ -420,6 +431,7 @@ DingTalk/email use `<font color>`, Feishu cards use the `template` field to fill
 > In the default scenario one notification has exactly one event, and the template renders with `$event = index .events 0`. When one notification aggregates multiple events (subscription aggregation, batch send) you must `range .events` to expand them.
 
 ---
+
 ## Key Considerations
 
 1. **`html/template` HTML-escapes**. Tags such as `<font>` and `<at>` in DingTalk/Feishu/Lark **must be wrapped in `unescaped` or placed in content where Go template recognizes them itself**. Email uses `text/template` and is not subject to this.
@@ -432,6 +444,7 @@ DingTalk/email use `<font color>`, Feishu cards use the `template` field to fill
 8. **Use `.domain` for links**: don't hardcode `http://localhost:17000`, otherwise switching environments breaks it.
 
 ---
+
 ## Common Mistakes
 
 - ❌ `{{$event.TriggerValue | printf "%.2f"}}` — for `printf`, the first argument is the format, and `TriggerValue` is a string.

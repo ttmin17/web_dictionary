@@ -13,10 +13,10 @@ tags:
   - claude-code
   - skills
 status: active
-quality_percentile: 98
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -24,17 +24,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 44625
-  last_commit: 2026-10-25T07:34:42Z
-  stars_delta_7d: 1711
-  stars_growth_pct: 4
-  trending_score: 1779.22
+  stars: 45763
+  last_commit: 2026-11-02T07:29:13Z
+  stars_delta_7d: 1138
+  stars_growth_pct: 2.6
+  trending_score: 1167.02
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 37497
     - 37789
     - 42914
     - 44625
+    - 45763
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: plugins/math-olympiad/skills/math-olympiad/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:05.837Z
+  fetched_at: 2026-11-02T09:06:14.500Z
   truncated: false
 type: agent_skill
 skill:
@@ -69,7 +69,7 @@ skill:
     - references/verifier_patterns.md
     - scripts/check_latex.sh
     - scripts/compile_pdf.sh
-  pack_total_skills: 29
+  pack_total_skills: 21
   is_pack_primary: false
   clients:
     - claude-code
@@ -93,12 +93,14 @@ skill:
    abstain.
 
 ---
+
 **Tool policy**: Solvers and verifiers use THINKING ONLY in the tight-budget
 workflow. Competition math is reasoning. Computation is for deep mode (§6c), and
 even then bounded — a recurrence that's doubly-exponential can't be computed
 past n~30, work mod 2^m instead.
 
 ---
+
 ## When to use which approach
 
 | Problem                                              | Approach                                                                       | Verification              |
@@ -126,6 +128,7 @@ mechanical: collect the per-problem outputs, fill in LaTeX sections, compile
 once. | "Simplify this proof" | Skip to presentation (step 8) | — |
 
 ---
+
 ## The Workflow
 
 ### 1. Interpretation check (30 seconds, catches 50/63 of one class of errors)
@@ -416,6 +419,7 @@ Output: LaTeX-formatted proof. If `pdflatex` is available
 `scripts/compile_pdf.sh`.
 
 ---
+
 ## Model tier defaults
 
 Read `references/model_tier_defaults.md` for full details. Summary:
@@ -430,6 +434,7 @@ Weaker models: more parallel attempts, faster abstention. Stronger models:
 deeper verification, more presentation effort.
 
 ---
+
 ## For numeric-answer problems (AIME-style)
 
 Skip the proof machinery. Run 5-7 solvers with varied approaches, take majority
@@ -437,6 +442,7 @@ vote on the numeric answer. If no majority: verify the top 2 candidates by
 substitution.
 
 ---
+
 ## Key references
 
 - `references/verifier_patterns.md` — the 12 adversarial checks
@@ -445,6 +451,7 @@ substitution.
 - `references/model_tier_defaults.md` — per-model configuration
 
 ---
+
 ## What makes this different from generic verify-and-refine
 
 1. **Dual context isolation**: verifier is blind to (a) the solver's thinking

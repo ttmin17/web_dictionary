@@ -2,8 +2,8 @@
 slug: stablyai-orca-skills-orca-cli
 name: cli
 tagline: Operate Orca-managed worktrees, folder contexts, terminals, repos,
-  automations, artifacts, skill sharing, worktree comments, and Orca's embedded
-  brows
+  automations, worktree comments, and Orca's embedded browser through the `orca`
+  CLI.
 summary: "- If the ORCACLICOMMAND environment variable is set, use its value.
   Orca exports this for managed WSL sessions. - Otherwise, in a dev checkout
   whose session exposes ORCADEVREPOROOT, use orca-dev. - Otherwise, on Linux..."
@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 67
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 106220
-  last_commit: 2026-10-26T07:33:33Z
-  stars_delta_7d: 9043
-  stars_growth_pct: 9.3
-  trending_score: 9884.51
+  stars: 112992
+  last_commit: 2026-11-02T09:03:00Z
+  stars_delta_7d: 6772
+  stars_growth_pct: 6.4
+  trending_score: 7203.75
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86961
     - 91386
     - 97177
     - 106220
+    - 112992
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,23 +44,22 @@ readme_source:
   repo: stablyai/orca
   path: skills/orca-cli/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:09.714Z
+  fetched_at: 2026-11-02T09:06:03.762Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: cli
   description: Operate Orca-managed worktrees, folder contexts, terminals, repos,
-    automations, artifacts, skill sharing, worktree comments, and Orca's
-    embedded browser through the `orca` CLI. Use when the user says "$orca-cli",
-    "Orca worktree", "child worktree", "spawn codex/claude in a worktree",
-    "read/wait/send Orca terminal", "handoff" / "handover" / "give this to
-    another agent", "Orca browser", "orca artifacts", or "share skills". Prefer
-    it over raw git worktree, ad hoc PTYs, or Computer Use when Orca state is
-    involved. Use Computer Use only when a visible window needs GUI control that
-    a CLI, filesystem, or API cannot do.
+    automations, worktree comments, and Orca's embedded browser through the
+    `orca` CLI. Use when the user says "$orca-cli", "Orca worktree", "child
+    worktree", "spawn codex/claude in a worktree", "read/wait/send Orca
+    terminal", "handoff" / "handover" / "give this to another agent", or "Orca
+    browser". Prefer it over raw git worktree, ad hoc PTYs, or Computer Use when
+    Orca state is involved. Use Computer Use only when a visible window needs
+    GUI control that a CLI, filesystem, or API cannot do.
   folder_path: skills/orca-cli
   extra_files: []
-  pack_total_skills: 11
+  pack_total_skills: 12
   is_pack_primary: false
   clients:
     - claude-code

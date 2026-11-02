@@ -1,8 +1,10 @@
 ---
 slug: nexu-io-open-design-apps-daemon-tests-fixtures-plugin-fixtures-sample-plugin
 name: sample-plugin
-tagline: Agent skill from nexu-io/open-design
-summary: Agent skill from nexu-io/open-design
+tagline: Phase 1 sample plugin synthesizing a SKILL.md frontmatter for
+  backwards-compat tests.
+summary: 1. Acknowledge the user's brief via the discovery question form atom.
+  2. Use TodoWrite to plan the brief. 3. Emit the brief as a deck artifact.
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,19 +24,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 104025
-  last_commit: 2026-10-26T07:31:43Z
-  stars_delta_7d: 1726
-  stars_growth_pct: 1.7
-  trending_score: 1755.12
-  rank_current: 19
-  rank_delta: -3
+  stars: 105423
+  last_commit: 2026-11-02T05:06:45Z
+  stars_delta_7d: 1398
+  stars_growth_pct: 1.3
+  trending_score: 1416.79
+  rank_current: 23
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99839
     - 100908
     - 102299
     - 104025
+    - 105423
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,16 +44,17 @@ readme_source:
   repo: nexu-io/open-design
   path: apps/daemon/tests/fixtures/plugin-fixtures/sample-plugin/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.575Z
+  fetched_at: 2026-11-02T09:06:41.704Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: sample-plugin
-  description: Agent skill from nexu-io/open-design
+  description: Phase 1 sample plugin synthesizing a SKILL.md frontmatter for
+    backwards-compat tests.
   folder_path: apps/daemon/tests/fixtures/plugin-fixtures/sample-plugin
   extra_files:
     - open-design.json
-  pack_total_skills: 401
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code

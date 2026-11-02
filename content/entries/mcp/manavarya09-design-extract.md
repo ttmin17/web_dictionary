@@ -13,28 +13,29 @@ tags:
   - claude-code-plugin
   - cli
 status: active
-quality_percentile: 50
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Manavarya09/design-extract
   official_vendor: false
   license: MIT
 signals:
-  stars: 4377
-  last_commit: 2026-10-23T11:31:15Z
-  stars_delta_7d: 118
-  stars_growth_pct: 2.8
-  trending_score: 121.27
-  rank_current: 22
-  rank_delta: 14
+  stars: 4458
+  last_commit: 2026-10-31T20:16:41Z
+  stars_delta_7d: 81
+  stars_growth_pct: 1.9
+  trending_score: 82.5
+  rank_current: 25
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4229
     - 4259
     - 4377
+    - 4458
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: Manavarya09/design-extract
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.671Z
+  fetched_at: 2026-11-02T09:05:36.244Z
   truncated: false
 type: mcp_server
 launch:
@@ -104,6 +105,7 @@ launch:
 </p>
 
 ---
+
 **designlang** points a headless browser at any URL and reads the design system off the live DOM. One command emits 17+ files — DTCG tokens, Tailwind config, shadcn theme, Figma variables, motion tokens, typed component anatomy, brand voice, page-intent labels, and a paste-ready prompt pack for v0 / Lovable / Cursor / Claude Artifacts.
 
 It also goes where extractors don't: **layout patterns**, **responsive behavior across 4 breakpoints**, **hover / focus / active states**, **WCAG contrast scoring**, **multi-page consistency**, **drift checks against a live source-of-truth**, **visual-diffs**, and a **shareable graded report card**.

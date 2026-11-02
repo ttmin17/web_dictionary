@@ -3,9 +3,8 @@ slug: nitrocloudofficial-nitrostack-sample-apps-rampd-ai-onboarding-offboarding-
 name: middleware-pipeline
 tagline: Best practices for implementing and applying Guards, Interceptors,
   Middleware, Pipes, and Exception Filters in the NitroStack SDK.
-summary: "--- ## 1. Guards (Guard and @UseGuards) Guards determine if a request
-  should be processed by a tool handler based on authentication, authorization,
-  or other conditions."
+summary: Best practices for implementing and applying Guards, Interceptors,
+  Middleware, Pipes, and Exception Filters in the NitroStack SDK.
 categories:
   - agent-frameworks
 tags:
@@ -14,10 +13,10 @@ tags:
   - chatgpt-apps
   - claude
 status: active
-quality_percentile: 99
+quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nitrocloudofficial/nitrostack
@@ -25,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2528
+  stars: 2569
   last_commit: 2026-10-19T12:56:19Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars_delta_7d: 41
+  stars_growth_pct: 1.6
+  trending_score: 41.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2465
     - 2462
     - 2536
     - 2528
+    - 2569
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +42,7 @@ readme_source:
   repo: nitrocloudofficial/nitrostack
   path: sample-apps/Rampd-AI-Onboarding-Offboarding-Orchestrator/skills/middleware-pipeline/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:38:02.722Z
+  fetched_at: 2026-11-02T09:05:44.571Z
   truncated: false
 type: agent_skill
 skill:
@@ -65,6 +64,7 @@ skill:
 Use this skill when implementing request validation, authorization checks, response mapping, logging, error handling, or performance tracking on NitroStack tool methods.
 
 ---
+
 ## 1. Guards (`Guard` and `@UseGuards`)
 Guards determine if a request should be processed by a tool handler based on authentication, authorization, or other conditions.
 
@@ -109,6 +109,7 @@ export class AdminTools {
 ```
 
 ---
+
 ## 2. Interceptors (`InterceptorInterface` and `@UseInterceptors`)
 Interceptors can transform/intercept input arguments or mapped output from a tool method execution.
 
@@ -141,6 +142,7 @@ export class TimingInterceptor implements InterceptorInterface {
 ```
 
 ---
+
 ## 3. Exception Filters (`ExceptionFilterInterface` and `@UseFilters`)
 Exception filters catch any errors thrown within guards, interceptors, or the tool handlers themselves, mapping them into user-friendly JSON payloads.
 
@@ -190,6 +192,7 @@ export class LoggingTools {
 ```
 
 ---
+
 ## 4. Middleware (`MiddlewareInterface`, `@Middleware` and `@UseMiddleware`)
 Middleware executes before the request reaches the tool handler, and can wrap the handler execution by invoking `next()`.
 
@@ -241,6 +244,7 @@ export class StationTools {
 ```
 
 ---
+
 ## 5. Pipes (`PipeInterface`, `@Pipe` and `@UsePipes`)
 Pipes are used to transform or validate input arguments before they reach the tool handler method.
 

@@ -13,29 +13,29 @@ tags:
   - development-environment
   - docker-alternative
 status: active
-quality_percentile: 79
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: xpf0000/FlyEnv
   official_vendor: false
   license: BSD-3-Clause
 signals:
-  stars: 3313
-  last_commit: 2026-10-26T02:34:46Z
-  stars_delta_7d: 21
-  stars_growth_pct: 0.6
-  trending_score: 21.13
-  rank_current: 63
-  rank_delta: -12
+  stars: 3326
+  last_commit: 2026-11-02T06:41:01Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.4
+  trending_score: 13.05
+  rank_current: 73
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3265
     - 3278
     - 3292
     - 3313
+    - 3326
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: xpf0000/FlyEnv
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:37:00.873Z
+  fetched_at: 2026-11-02T09:05:36.709Z
   truncated: false
 type: mcp_server
 launch:
@@ -82,6 +82,7 @@ launch:
 </div>
 
 ---
+
 ## Why FlyEnv?
 
 FlyEnv brings the local development tools you normally manage separately into one native desktop workspace.
@@ -96,6 +97,7 @@ FlyEnv brings the local development tools you normally manage separately into on
 > If XAMPP, MAMP, Laragon, or Laravel Herd already make sense to you, FlyEnv solves a similar local-development problem — but across a broader stack.
 
 ---
+
 ## Coming from XAMPP, MAMP, Laragon, or Laravel Herd?
 
 | If you are familiar with... | FlyEnv may fit when you need... |
@@ -108,6 +110,7 @@ FlyEnv brings the local development tools you normally manage separately into on
 Docker and FlyEnv solve overlapping but different problems. Use Docker when containerized reproducibility or production parity is the goal; use FlyEnv when you want a native local development workspace with less setup overhead.
 
 ---
+
 ## What Can You Run?
 
 FlyEnv can manage complete local project stacks, not just one runtime.
@@ -122,6 +125,7 @@ FlyEnv can manage complete local project stacks, not just one runtime.
 **[Browse FlyEnv demos →](https://flyenv.com/demos)**
 
 ---
+
 ## Core Capabilities
 
 ### Local stack management
@@ -155,12 +159,13 @@ FlyEnv can manage complete local project stacks, not just one runtime.
 ![FlyEnv MCP and AI CLI workflow](https://raw.githubusercontent.com/xpf0000/FlyEnv/master/flyenv-mcp.jpeg)
 
 ---
+
 ## Installation
 
 ### Windows
 
-- **Installer:** [FlyEnv-Setup-4.20.1.exe](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-Setup-4.20.1.exe)
-- **Portable:** [FlyEnv-Portable-4.20.1.exe](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-Portable-4.20.1.exe)
+- **Installer:** [FlyEnv-Setup-4.20.2.exe](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-Setup-4.20.2.exe)
+- **Portable:** [FlyEnv-Portable-4.20.2.exe](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-Portable-4.20.2.exe)
 
 ### macOS
 
@@ -168,19 +173,20 @@ FlyEnv can manage complete local project stacks, not just one runtime.
 brew install flyenv
 ```
 
-- [FlyEnv-4.20.1.dmg (Intel)](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-4.20.1.dmg)
-- [FlyEnv-4.20.1-arm64.dmg (Apple Silicon)](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-4.20.1-arm64.dmg)
+- [FlyEnv-4.20.2.dmg (Intel)](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-4.20.2.dmg)
+- [FlyEnv-4.20.2-arm64.dmg (Apple Silicon)](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-4.20.2-arm64.dmg)
 
 ### Linux
 
-- [x86_64 `.deb`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-4.20.1-x64.deb)
-- [ARM64 `.deb`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-4.20.1-arm64.deb)
-- [x86_64 `.rpm`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-4.20.1-x64.rpm)
-- [ARM64 `.rpm`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.1/FlyEnv-4.20.1-arm64.rpm)
+- [x86_64 `.deb`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-4.20.2-x64.deb)
+- [ARM64 `.deb`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-4.20.2-arm64.deb)
+- [x86_64 `.rpm`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-4.20.2-x64.rpm)
+- [ARM64 `.rpm`](https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-4.20.2-arm64.rpm)
 
 For the latest packages, see **[GitHub Releases](https://github.com/xpf0000/FlyEnv/releases)**.
 
 ---
+
 ## Interface Preview
 
 <table>
@@ -195,6 +201,7 @@ For the latest packages, see **[GitHub Releases](https://github.com/xpf0000/FlyE
 </table>
 
 ---
+
 ## Open Source & Build Transparency
 
 FlyEnv is open source under the **BSD 3-Clause License**.
@@ -204,6 +211,7 @@ Installation packages are built through **[GitHub Actions](https://github.com/xp
 Free Windows code signing is provided by [SignPath.io](https://signpath.io), with the certificate provided by the [SignPath Foundation](https://signpath.org).
 
 ---
+
 ## Development & Contribution
 
 ```bash
@@ -216,6 +224,7 @@ yarn run dev
 See the [Development Guide](https://github.com/xpf0000/FlyEnv/blob/master/DEV.md).
 
 ---
+
 ## Community & Support
 
 - Website: https://flyenv.com

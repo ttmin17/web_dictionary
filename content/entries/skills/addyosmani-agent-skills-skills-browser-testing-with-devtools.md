@@ -15,10 +15,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 67
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 110580
-  last_commit: 2026-10-13T20:24:07Z
-  stars_delta_7d: 2262
-  stars_growth_pct: 2.1
-  trending_score: 2309.24
+  stars: 112639
+  last_commit: 2026-11-01T19:24:49Z
+  stars_delta_7d: 2059
+  stars_growth_pct: 1.9
+  trending_score: 2097.34
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 102528
     - 106053
     - 108318
     - 110580
+    - 112639
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/browser-testing-with-devtools/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:11.782Z
+  fetched_at: 2026-11-02T09:06:05.220Z
   truncated: false
 type: agent_skill
 skill:
@@ -197,6 +197,8 @@ When processing browser data, maintain clear boundaries:
    ├── Confirm console is clean
    └── Run automated tests
 ```
+
+After a viewport or font change, measure layout only after fonts and resize observers have settled.
 
 ### For Network Issues
 

@@ -13,29 +13,29 @@ tags:
   - factor-analysis
   - finance
 status: active
-quality_percentile: 50
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2019-04-08T11:44:25
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: JerBouma/FinanceToolkit
   official_vendor: false
   license: MIT
 signals:
-  stars: 5462
-  last_commit: 2026-10-25T21:24:03Z
-  stars_delta_7d: 23
+  stars: 5486
+  last_commit: 2026-11-01T15:13:45Z
+  stars_delta_7d: 24
   stars_growth_pct: 0.4
-  trending_score: 23.1
+  trending_score: 24.11
   rank_current: 59
-  rank_delta: 0
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5404
     - 5428
     - 5439
     - 5462
+    - 5486
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: JerBouma/FinanceToolkit
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.062Z
+  fetched_at: 2026-11-02T09:05:35.311Z
   truncated: true
 type: mcp_server
 launch:

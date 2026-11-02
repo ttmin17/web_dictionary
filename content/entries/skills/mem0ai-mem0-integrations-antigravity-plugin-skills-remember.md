@@ -1,8 +1,12 @@
 ---
 slug: mem0ai-mem0-integrations-antigravity-plugin-skills-remember
 name: remember
-tagline: Agent skill from mem0ai/mem0
-summary: Agent skill from mem0ai/mem0
+tagline: Acknowledge a "remember this" request and make sure it is captured
+  well. Use when the user explicitly asks to remember, note, or save something
+  for fu
+summary: 1. Restate the fact clearly and completely in your reply, in one or two
+  sentences, including any names, values, or paths it depends on. Your visible
+  reply is what memory extraction reads, so a precise restatement is w...
 categories:
   - databases-memory
 tags:
@@ -11,10 +15,10 @@ tags:
   - agents
   - ai-agents
 status: active
-quality_percentile: 76
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mem0ai/mem0
@@ -22,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 67824
-  last_commit: 2026-10-23T18:38:28Z
-  stars_delta_7d: 403
+  stars: 68264
+  last_commit: 2026-10-30T21:36:23Z
+  stars_delta_7d: 440
   stars_growth_pct: 0.6
-  trending_score: 405.41
+  trending_score: 442.85
   velocity_source: snapshot_delta
   sparkline_4w:
     - 67421
     - 67824
+    - 68264
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,15 +43,17 @@ readme_source:
   repo: mem0ai/mem0
   path: integrations/antigravity-plugin/skills/remember/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:38.168Z
+  fetched_at: 2026-11-02T09:06:57.661Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: remember
-  description: Agent skill from mem0ai/mem0
+  description: Acknowledge a "remember this" request and make sure it is captured
+    well. Use when the user explicitly asks to remember, note, or save something
+    for future sessions.
   folder_path: integrations/antigravity-plugin/skills/remember
   extra_files: []
-  pack_total_skills: 16
+  pack_total_skills: 6
   is_pack_primary: false
   clients:
     - antigravity
@@ -56,4 +63,17 @@ skill:
   pack_slug: mem0ai-mem0
 ---
 
-Agent skill from mem0ai/mem0
+# Remember something for future sessions
+Mem0 creates memories from the session automatically — there is no separate
+write command. When the user asks to remember something:
+
+1. Restate the fact clearly and completely in your reply, in one or two
+   sentences, including any names, values, or paths it depends on. Your visible
+   reply is what memory extraction reads, so a precise restatement is what gets
+   remembered.
+2. Tell the user it will be saved with this session's memories when the session
+   ends or compacts, and that it will surface in future sessions in this
+   repository (they can check later with /mem0:search).
+
+Do not invent a storage confirmation or a memory ID — creation happens in the
+background after the session.

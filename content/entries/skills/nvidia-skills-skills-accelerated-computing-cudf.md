@@ -1,8 +1,13 @@
 ---
 slug: nvidia-skills-skills-accelerated-computing-cudf
 name: accelerated-computing-cudf
-tagline: Agent skill from NVIDIA/skills
-summary: Agent skill from NVIDIA/skills
+tagline: Official NVIDIA-authored guidance for NVIDIA cuDF GPU DataFrames,
+  pandas acceleration, dask-cuDF, ETL, joins, groupby, CSV/Parquet I/O, nullable
+  seman
+summary: "- Development release tracked by this skill: 26.12 (VERSION:
+  26.12.00). Use the selected installed release for deployment requirements. -
+  Read dependencies.yaml for the support matrix (pyversion group for Python
+  versi..."
 categories:
   - databases-memory
 tags:
@@ -11,10 +16,10 @@ tags:
   - ai-agents
   - claude-code
 status: active
-quality_percentile: 57
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: NVIDIA/skills
@@ -22,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3735
-  last_commit: 2026-10-26T00:12:40Z
-  stars_delta_7d: 93
-  stars_growth_pct: 2.6
-  trending_score: 95.37
+  stars: 3817
+  last_commit: 2026-10-30T18:10:11Z
+  stars_delta_7d: 82
+  stars_growth_pct: 2.2
+  trending_score: 83.8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3536
     - 3581
     - 3642
     - 3735
+    - 3817
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +45,14 @@ readme_source:
   repo: NVIDIA/skills
   path: skills/accelerated-computing-cudf/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:25.668Z
+  fetched_at: 2026-11-02T09:06:50.100Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: accelerated-computing-cudf
-  description: Agent skill from NVIDIA/skills
+  description: Official NVIDIA-authored guidance for NVIDIA cuDF GPU DataFrames,
+    pandas acceleration, dask-cuDF, ETL, joins, groupby, CSV/Parquet I/O,
+    nullable semantics, and multi-GPU DataFrame workloads.
   folder_path: skills/accelerated-computing-cudf
   extra_files:
     - BENCHMARK.md
@@ -58,7 +65,7 @@ skill:
     - evals/files/cudf-groupby-agg/code/groupby_analysis.py
     - evals/files/cudf-multi-join/code/generate_data.py
     - evals/files/cudf-multi-join/code/multi_join.py
-  pack_total_skills: 416
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -71,7 +78,7 @@ skill:
 ## Compatibility
 
 - Development release tracked by this skill: 26.12 (`VERSION`: `26.12.00`). Use the selected installed release for deployment requirements.
-- Current package metadata targets Python 3.11-3.14 and pandas `>=3.0.0,<3.1.0`. The dependency matrix uses CUDA 12.9 and 13.3; libcudf requires CUDA Toolkit 12.2+ to build. Match cuDF, pylibcudf, libcudf, and RMM release versions, and match pip wheel suffixes (`-cu12` / `-cu13`) to the CUDA major version.
+- Read `dependencies.yaml` for the support matrix (`py_version` group for Python versions, `cuda_version` for CUDA versions). Match cuDF, pylibcudf, libcudf, and RMM release versions, and match pip wheel suffixes (`-cu12` / `-cu13`) to the CUDA major version.
 - Requires a supported NVIDIA GPU and compatible driver. Check the [installation requirements](https://docs.nvidia.com/datascience/install/#system-req) for the selected release and CUDA version.
 - For another checkout or installed release, check `VERSION`, `dependencies.yaml`, `python/cudf/pyproject.toml`, and `cudf.__version__` before choosing versions or relying on an API.
 

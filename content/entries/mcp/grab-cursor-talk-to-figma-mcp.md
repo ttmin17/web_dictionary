@@ -12,30 +12,30 @@ tags:
   - agentic-ai
   - ai-agents
   - automation
-status: active
-quality_percentile: 32
+status: slowing
+quality_percentile: 28
 selection_reason: quality_percentile
 first_seen: 2025-03-16T16:45:37
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: grab/cursor-talk-to-figma-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 7069
+  stars: 7075
   last_commit: 2026-07-26T07:14:26Z
-  stars_delta_7d: 8
+  stars_delta_7d: 6
   stars_growth_pct: 0.1
-  trending_score: 8.01
-  rank_current: 81
-  rank_delta: -23
+  trending_score: 6.01
+  rank_current: 90
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7047
     - 7050
     - 7061
     - 7069
+    - 7075
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: grab/cursor-talk-to-figma-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:03.286Z
+  fetched_at: 2026-11-02T09:05:44.764Z
   truncated: false
 type: mcp_server
 launch:

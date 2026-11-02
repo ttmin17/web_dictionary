@@ -18,7 +18,7 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mcp-use/mcp-use
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10814
-  last_commit: 2026-10-22T00:22:30Z
-  stars_delta_7d: 29
-  stars_growth_pct: 0.3
-  trending_score: 29.08
+  stars: 10837
+  last_commit: 2026-10-30T22:29:57Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.2
+  trending_score: 23.05
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10728
     - 10753
     - 10785
     - 10814
+    - 10837
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mcp-use/mcp-use
   path: skills/chatgpt-app-builder/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.658Z
+  fetched_at: 2026-11-02T09:05:34.623Z
   truncated: false
 type: agent_skill
 skill:
@@ -81,7 +81,7 @@ Treat the installed `mcp-use` package, its exported types, generated declaration
 2. Scaffold a new stable project with `create-mcp-use-app@latest` and the appropriate template. Match the package version or dist-tag when working on beta, canary, or an existing versioned project.
 3. Read only the references needed for the task:
    - [Server](https://github.com/mcp-use/mcp-use/blob/main/skills/chatgpt-app-builder/references/server.md) for tools, resources, prompts, MCP middleware, request context, and result envelopes.
-   - [Views](https://github.com/mcp-use/mcp-use/blob/main/skills/chatgpt-app-builder/references/views.md) for interactive MCP Apps, React hooks, model context, host capabilities, assets, and CSP.
+   - [Views](https://github.com/mcp-use/mcp-use/blob/main/skills/chatgpt-app-builder/references/views.md) for interactive MCP Apps, React hooks, model context, host capabilities, assets, CSP, and endpoint/UI domain handling.
    - [Authentication](https://github.com/mcp-use/mcp-use/blob/main/skills/chatgpt-app-builder/references/auth.md) for OAuth providers, verified identity, scopes, permissions, and authorization.
    - [Skills over MCP](https://github.com/mcp-use/mcp-use/blob/main/skills/chatgpt-app-builder/references/skills-over-mcp.md) when a server should ship reusable workflows alongside its tools.
    - [Advanced features](https://github.com/mcp-use/mcp-use/blob/main/skills/chatgpt-app-builder/references/advanced-features.md) for OpenAPI, proxying, notifications, subscriptions, and elicitation.

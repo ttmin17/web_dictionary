@@ -13,10 +13,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 91
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 18088
-  last_commit: 2026-10-24T15:48:19Z
-  stars_delta_7d: 395
-  stars_growth_pct: 2.2
-  trending_score: 403.82
+  stars: 18475
+  last_commit: 2026-11-01T05:01:47Z
+  stars_delta_7d: 387
+  stars_growth_pct: 2.1
+  trending_score: 395.28
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17090
     - 17411
     - 17693
     - 18088
+    - 18475
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/auto-paper-improvement-loop/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:53.537Z
+  fetched_at: 2026-11-02T09:05:30.188Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,7 +53,7 @@ skill:
     generated paper.
   folder_path: skills/auto-paper-improvement-loop
   extra_files: []
-  pack_total_skills: 87
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -71,7 +71,8 @@ skill:
 > own first-call/reply contract. Save the route and actual returned identity;
 > unavailable selections are `REVIEW_UNAVAILABLE`. Classify acceptance from actual
 > families/completion/scope. Forward invocation reviewer/model/effort overrides
-> to reviewer-bearing children. Generation workers are unchanged.
+> to reviewer-bearing children. Writer selection is separate; follow the
+> writing-worker guidance below when drafting or revising prose.
 
 
 > 🔒 **Do not wrap this skill in `/loop`, `/schedule`, or `CronCreate`.** It
@@ -391,6 +392,8 @@ Reply "go" to implement all fixes, give custom instructions, "skip 2" to skip sp
 Parse user response same as `/auto-review-loop`: approve / custom instructions / skip / stop.
 
 ### Step 3: Implement Round 1 Fixes
+
+Follow the Launch Mindset and Optional Writing Worker guidance in `../shared-references/writing-principles.md`. For prose fixes, continue the configured writer with `worker_reply` (or start it with `worker`) under any active edit-whitelist constraints; otherwise revise directly. Pass the accepted fixes, source facts, and target files. Root checks technical accuracy while preserving strong prose; existing reviews, audits, and recompilation still apply.
 
 Parse the review and implement fixes by severity:
 

@@ -1,8 +1,13 @@
 ---
 slug: aaron-he-zhu-aaron-marketing-skills-ad-activate-ad-account-auditor
 name: ad-account-auditor
-tagline: Agent skill from aaron-he-zhu/aaron-marketing-skills
-summary: Agent skill from aaron-he-zhu/aaron-marketing-skills
+tagline: Use when auditing a paid ad account for incremental contribution,
+  wasted spend, or measurement integrity before scaling; runs a typed 20-item
+  ROAS pro
+summary: "- Before launching, materially increasing spend, or changing a risky
+  bid/targeting strategy. - When tracking, attribution inflation, unsafe
+  placements, claims, or wasted spend are in doubt. - When the user requests
+  a..."
 categories:
   - productivity-ops
 tags:
@@ -14,7 +19,7 @@ status: active
 quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: aaron-he-zhu/aaron-marketing-skills
@@ -22,18 +27,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3014
-  last_commit: 2026-10-26T02:50:09Z
+  stars: 3048
+  last_commit: 2026-11-02T03:58:19Z
   stars_delta_7d: 34
   stars_growth_pct: 1.1
-  trending_score: 34.39
-  rank_current: 109
-  rank_delta: -27
+  trending_score: 34.38
+  rank_current: 112
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2930
     - 2980
     - 3014
+    - 3048
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,16 +47,20 @@ readme_source:
   repo: aaron-he-zhu/aaron-marketing-skills
   path: ad/activate/ad-account-auditor/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:34.031Z
+  fetched_at: 2026-11-02T09:06:53.854Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ad-account-auditor
-  description: Agent skill from aaron-he-zhu/aaron-marketing-skills
+  description: Use when auditing a paid ad account for incremental contribution,
+    wasted spend, or measurement integrity before scaling; runs a typed 20-item
+    ROAS profile with verified vetoes and a SHIP/FIX/BLOCK/UNDECIDED gate on own
+    exported data. Not for campaign structure design — use campaign-architect;
+    not for creative production — use ad-creative-builder. 付费广告账户审计/ROAS评分
   folder_path: ad/activate/ad-account-auditor
   extra_files:
     - references/auditor-runtime.md
-  pack_total_skills: 120
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code
@@ -106,7 +116,17 @@ For a pre-launch account-audit request, use the narrow route `conversion-signal-
 
 ### Runtime and Setup
 
-Read `../../../references/auditor-runbook.md`, `scoring-semantics.md`, `roas-benchmark.md`, and the ROAS catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/activate/ad-account-auditor/../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
+<!-- GENERATED:BEGIN auditor-shared:activation -->
+Read the declared root runtime sources and selected framework/catalog entry.
+Standalone installs use the bundled immutable `references/auditor-runtime.md`;
+never fetch mutable `main` or guess missing policy. Before deterministic calls,
+follow `runtime-invocation.md` and resolve
+`AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`.
+Require the scorer, validator and typed catalogs. If unavailable, collect the
+selected profile's typed observations and Unknowns, but return
+`score_state: NOT_SCORED` / `score_confidence: not_scored` without a gate verdict
+or persistent artifact. Record the bound schema, runbook and catalog versions.
+<!-- GENERATED:END auditor-shared:activation -->
 
 Declare profile (`direct-response|prospecting|incremental-profit`), target, currency, attribution window, conversion lag, business constraint, goal, and observation date. If any required context is missing, return `NEEDS_INPUT/UNDECIDED`.
 
@@ -144,7 +164,11 @@ Lead with business impact and evidence. On trace request, qualify `ROAS-R1/R2/O1
 
 ## Report and Verdict
 
-Begin with the auditor-runbook's exact typed conversation header. Never replace `status`, `verdict`, or `score_state` with prose; list each explicitly missing qualified item as ``ID: `unknown``` before findings.
+<!-- GENERATED:BEGIN auditor-shared:result-header -->
+Begin with the auditor-runbook's exact typed conversation header. Never replace
+`status`, `verdict`, or `score_state` with prose; list each explicitly missing
+qualified item as ``ID: `unknown``` before findings.
+<!-- GENERATED:END auditor-shared:result-header -->
 
 Show verdict, profile/context, score or coverage/interval, confidence, R/O/A/S detail, reconciliation table, verified critical controls, Unknown evidence, and prioritized fix/owner/rerun condition. The scorer owns status/verdict and the 59 ceiling.
 

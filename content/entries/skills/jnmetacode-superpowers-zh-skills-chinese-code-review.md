@@ -1,8 +1,10 @@
 ---
 slug: jnmetacode-superpowers-zh-skills-chinese-code-review
 name: chinese-code-review
-tagline: Agent skill from jnMetaCode/superpowers-zh
-summary: Agent skill from jnMetaCode/superpowers-zh
+tagline: 中文 review 沟通参考——话术模板、分级标注（必须修复/建议修改/仅供参考）、国内团队常见反模式应对。仅在用户显式
+  /chinese-code-review 时调用，不要根据上下文自动触发。
+summary: 国内团队做 Code Review
+  常遇到两个极端：要么过度客气导致关键问题被放过，要么照搬西方直白风格让同事下不来台。本技能帮你找到平衡点——既不回避问题，又让人愿意接受反馈。
 categories:
   - coding-agents
 tags:
@@ -14,7 +16,7 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: jnMetaCode/superpowers-zh
@@ -22,30 +24,31 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8385
-  last_commit: 2026-10-20T13:33:25Z
-  stars_delta_7d: 41
-  stars_growth_pct: 0.5
-  trending_score: 41.2
+  stars: 8443
+  last_commit: 2026-10-26T15:07:56Z
+  stars_delta_7d: 58
+  stars_growth_pct: 0.7
+  trending_score: 58.4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8267
     - 8305
     - 8344
     - 8385
-language: en
+    - 8443
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: jnMetaCode/superpowers-zh
   path: skills/chinese-code-review/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:55.664Z
+  fetched_at: 2026-11-02T09:06:33.369Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: chinese-code-review
-  description: Agent skill from jnMetaCode/superpowers-zh
+  description: 中文 review 沟通参考——话术模板、分级标注（必须修复/建议修改/仅供参考）、国内团队常见反模式应对。仅在用户显式
+    /chinese-code-review 时调用，不要根据上下文自动触发。
   folder_path: skills/chinese-code-review
   extra_files: []
   pack_total_skills: 21
@@ -106,7 +109,7 @@ skill:
 原因：攻击者可以通过 name 参数注入 `'; DROP TABLE users; --`。
 
 建议：使用参数化查询：
-  db.query('SELECT * FROM users WHERE name = $1', [name])
+  db.query('SELECT * FROM users WHERE name = ?', [name])
 
 参考：https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 ```

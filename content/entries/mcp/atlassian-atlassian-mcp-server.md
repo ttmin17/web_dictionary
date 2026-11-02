@@ -18,25 +18,26 @@ status: active
 quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: atlassian/atlassian-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1121
-  last_commit: 2026-10-22T18:17:58Z
-  stars_delta_7d: 15
-  stars_growth_pct: 1.4
-  trending_score: 15.2
-  rank_current: 71
-  rank_delta: -24
+  stars: 1140
+  last_commit: 2026-10-29T18:23:30Z
+  stars_delta_7d: 19
+  stars_growth_pct: 1.7
+  trending_score: 19.32
+  rank_current: 63
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1090
     - 1106
     - 1121
+    - 1140
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: atlassian/atlassian-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:23.767Z
+  fetched_at: 2026-11-02T09:05:56.688Z
   truncated: false
 type: mcp_server
 launch:
@@ -101,6 +102,7 @@ launch:
 </p>
 
 ---
+
 The **official Atlassian MCP Server** is a cloud-based bridge between your Atlassian Cloud site and compatible external tools. Once configured, it enables those tools to interact with **Jira, Confluence, Jira Service Management, Bitbucket, Compass, Loom, and Atlassian platform data (Projects, Goals, Teams, Focus, Talent, and the Teamwork Graph)** in real time. Authentication uses **OAuth 2.1** or **API tokens**, so every action respects the user's existing access controls.
 
 With the Atlassian MCP Server, you can:
@@ -197,6 +199,7 @@ Or add the server manually with your client's own command:
 * [Disclaimer](#disclaimer)
 
 ---
+
 ## Supported clients
 
 The Atlassian MCP Server works with a growing list of MCP-compatible clients:
@@ -221,6 +224,7 @@ The Atlassian MCP Server also supports any **local MCP-compatible client** that 
 > For the current, canonical list of supported clients and step-by-step setup, see [Getting started with the Atlassian MCP Server](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/). You can also refer to your client's own MCP documentation or built-in assistant.
 
 ---
+
 ## Plugin packaging and compatibility
 
 This repository publishes the same MCP server and skills in several package formats so clients can use their native discovery and installation flows:
@@ -243,6 +247,7 @@ Both `mcp.json` and `.mcp.json` are intentional. Agent Plugins requires the root
 The root package can be imported by clients that implement Agent Plugins, including Kiro Powers. Client-specific manifests remain available and are not replaced by the portable package.
 
 ---
+
 ## Supported products and tools
 
 Tools are organized by product and intent (read, write, search, delete, or manage). Organization admins grant or revoke access at the permission-group level, and each tool inherits the access of its parent group.
@@ -275,6 +280,7 @@ Product-specific conditions:
 > For the complete, current tool reference, including the required scope for each permission group, see [Supported tools](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/supported-tools/).
 
 ---
+
 ## How the server exposes tools
 
 Rather than sending every tool definition to the AI client at connection time, the Atlassian MCP Server exposes a small set of the most-used tools and lets the client discover the rest on demand. Tools marked **Primary** are visible directly to agents.
@@ -293,6 +299,7 @@ https://mcp.atlassian.com/v2/mcp?tools=all
 ```
 
 ---
+
 ## Before you start
 
 Check that your environment meets these requirements before you set up the server.
@@ -317,6 +324,7 @@ If your organization admin has disabled authentication via API token, MCP client
 * A modern browser for completing OAuth login, or API token credentials for headless authentication
 
 ---
+
 ## Data and security
 
 The server enforces several security controls:
@@ -332,6 +340,7 @@ For a deeper overview of the security model and admin controls, see:
 * [Control Atlassian MCP Server settings](https://support.atlassian.com/security-and-access-policies/docs/control-atlassian-rovo-mcp-server-settings/)
 
 ---
+
 ## How it works
 
 ### Architecture and communication
@@ -373,6 +382,7 @@ Two mechanisms are supported:
 * **Admin setting reference:** [Control Atlassian MCP Server settings: Configure authentication](https://support.atlassian.com/security-and-access-policies/docs/control-atlassian-rovo-mcp-server-settings/#Configure-authentication)
 
 ---
+
 ## Example workflows
 
 Once connected, you can run tasks like these from your client.
@@ -415,6 +425,7 @@ Once connected, you can run tasks like these from your client.
 > Actual capabilities vary depending on your permission level and client platform.
 
 ---
+
 ## Tips and tricks
 
 ### Set default CloudId, Jira project, and Confluence space
@@ -438,6 +449,7 @@ If you're using a desktop client like Claude, you can create or reuse skills for
 For [Cursor](https://cursor.com/marketplace/atlassian), skills are part of the marketplace plugin.
 
 ---
+
 ## Admin notes: managing access
 
 If you're an admin preparing your organization to use the Atlassian MCP Server, review the points below. For more detailed admin guidance, see:
@@ -471,6 +483,7 @@ If you're an admin preparing your organization to use the Atlassian MCP Server, 
   Successful sign-in does not guarantee that tool calls will pass IP restrictions. A 403 can also indicate insufficient scopes, app permissions, or another access policy. Confirm the denial reason before changing an IP allowlist.
 
 ---
+
 ## Security
 
 Model Context Protocol (MCP) lets AI agents connect to tools and Atlassian data using your account's permissions, which creates powerful workflows but also structural risks. Any MCP client or server you enable (for example, IDE plugins, desktop apps, hosted MCP servers, or "one-click" integrations) can cause an AI agent to perform actions on your behalf.
@@ -480,6 +493,7 @@ Large language models (LLMs) are vulnerable to [prompt injection](https://owasp.
 To reduce risk, only use trusted MCP clients and servers, carefully review which tools and data each agent can access, and apply least privilege (scoped tokens, minimal project/workspace access). For any high-impact or destructive action, require human confirmation and monitor audit logs for unusual activity. We strongly recommend reviewing Atlassian's guidance on MCP risks at [MCP Clients: Understanding the potential security risks](https://www.atlassian.com/blog/artificial-intelligence/mcp-risk-awareness).
 
 ---
+
 ## Support and feedback
 
 We use your feedback to improve the Atlassian MCP Server. If you hit a bug or limitation, or have a suggestion:
@@ -489,6 +503,7 @@ We use your feedback to improve the Atlassian MCP Server. If you hit a bug or li
 * Go to our [Ecosystem Developer Portal](https://ecosystem.atlassian.net/servicedesk/customer/portal/14/user/login?destination=portal%2F14) if you are building an app and found a bug or issue, or have suggestions.
 
 ---
+
 ## Disclaimer
 
 MCP clients can perform actions across Atlassian products with your existing permissions. Use least privilege, review high-impact changes before confirming, and monitor audit logs for unusual activity.

@@ -16,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27651
-  last_commit: 2026-10-24T17:24:38Z
-  stars_delta_7d: 129
-  stars_growth_pct: 0.5
-  trending_score: 129.6
+  stars: 27822
+  last_commit: 2026-10-30T20:57:42Z
+  stars_delta_7d: 171
+  stars_growth_pct: 0.6
+  trending_score: 172.06
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 27320
     - 27430
     - 27522
     - 27651
+    - 27822
 language: zh
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-zh/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:42:27.103Z
+  fetched_at: 2026-11-02T09:06:19.481Z
   truncated: false
 type: agent_skill
 skill:
@@ -57,6 +57,7 @@ skill:
     次以上工具调用的工作。触发词：任务规划、项目计划、制定计划、分解任务、多步骤规划、进度跟踪、文件规划、帮我规划、拆解项目
   folder_path: skills/i18n/planning-with-files-zh
   extra_files:
+    - plan-inventory.md
     - scripts/attest-plan.ps1
     - scripts/attest-plan.sh
     - scripts/check-complete.ps1
@@ -66,7 +67,6 @@ skill:
     - scripts/init-session.sh
     - scripts/inject-plan.py
     - scripts/inject-plan.sh
-    - scripts/ledger-append.ps1
   pack_total_skills: 6
   is_pack_primary: false
   clients:
@@ -280,6 +280,9 @@ if 操作失败:
 - `scripts/session-catchup.py`：显式查看同项目会话元数据或有限摘录；无参数运行不会访问会话存储
 
 ### 列出已保存的计划
+
+
+为代理提供结构化路径和状态时，在列表命令后添加 `--json`（PowerShell：`-Json`）。字段说明和代理任务交接示例见 [plan-inventory.md](https://github.com/OthmanAdi/planning-with-files/blob/master/skills/i18n/planning-with-files-zh/plan-inventory.md)。此查询是可选操作，正常启用技能时不会自动运行。
 
 恢复任务前，可运行 `sh "<skill-dir>/scripts/set-active-plan.sh" --list` 查找计划；在 Windows PowerShell 中运行 `& "<skill-dir>/scripts/set-active-plan.ps1" -List`。将 `<skill-dir>` 替换为此技能的安装目录，并将当前工作目录保持在项目根目录。
 

@@ -1,8 +1,12 @@
 ---
 slug: cocoindex-io-cocoindex-dev-agent-skills-target-connector
 name: target-connector
-tagline: Agent skill from cocoindex-io/cocoindex
-summary: Agent skill from cocoindex-io/cocoindex
+tagline: "This skill should be used when creating a new target connector for
+  CocoIndex to integrate with external systems. It provides guidance on
+  implementing "
+summary: A target connector connects CocoIndex's declarative target state system
+  to external systems. It handles synchronization by determining what changed
+  and applying changes to the external system.
 categories:
   - databases-memory
 tags:
@@ -11,10 +15,10 @@ tags:
   - change-data-capture
   - codebase-intelligence
 status: active
-quality_percentile: 62
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: cocoindex-io/cocoindex
@@ -22,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11754
-  last_commit: 2026-10-25T03:23:01Z
-  stars_delta_7d: 34
-  stars_growth_pct: 0.3
-  trending_score: 34.1
+  stars: 11811
+  last_commit: 2026-11-02T01:17:58Z
+  stars_delta_7d: 57
+  stars_growth_pct: 0.5
+  trending_score: 57.28
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11720
     - 11754
+    - 11811
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,17 +43,21 @@ readme_source:
   repo: cocoindex-io/cocoindex
   path: dev/agent-skills/target-connector/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:40.049Z
+  fetched_at: 2026-11-02T09:07:02.416Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: target-connector
-  description: Agent skill from cocoindex-io/cocoindex
+  description: This skill should be used when creating a new target connector for
+    CocoIndex to integrate with external systems. It provides guidance on
+    implementing TargetHandler, TargetActionSink, and related types for
+    declarative target state synchronization with change detection and automatic
+    cleanup.
   folder_path: dev/agent-skills/target-connector
   extra_files:
     - attachments.md
     - input_safety.md
-  pack_total_skills: 4
+  pack_total_skills: 5
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +66,462 @@ skill:
   pack_slug: cocoindex-io-cocoindex
 ---
 
-Agent skill from cocoindex-io/cocoindex
+# Target Connector
+## Overview
+
+A target connector connects CocoIndex's declarative target state system to external systems. It handles synchronization by determining what changed and applying changes to the external system.
+
+## When to Use
+
+Use this skill when creating a new target connector for any external system (databases, file systems, cloud storage, APIs, etc.).
+
+## Key Data Types
+
+### What You Implement
+
+| Type | Purpose |
+| ---- | ------- |
+| `TargetHandler` | Implements `reconcile()` — compares desired state with previous tracking records. Optionally implements `attachment(att_type)` for auxiliary child states. |
+| `TargetActionSink` | Executes actions against the external system |
+| Tracking Record | Persisted state for change detection (typically a frozen dataclass) |
+| Action | Describes what operation to perform on the external system |
+
+### What CocoIndex Provides
+
+| Type | Purpose |
+| ---- | ------- |
+| `TargetStateProvider` | Factory that creates `TargetState` objects from your handler |
+| `TargetState` | Wrapper that holds the key and spec |
+| `register_root_target_states_provider()` | Registers a root handler and returns a provider |
+| `declare_target_state()` | Declares a leaf target state for reconciliation |
+| `declare_target_state_with_child()` | Declares a target state and returns a child provider |
+
+## Implementation Workflow
+
+### Root Target States
+
+1. **Define types**: Key, Spec, TrackingRecord, Action
+2. **Implement TargetHandler**: The `reconcile()` method must be non-blocking and free of side effects
+3. **Create TargetActionSink**: Use `TargetActionSink.from_fn()` or `from_async_fn()`. The callback receives `context_provider: ContextProvider` as its first positional argument, followed by `actions`, and returns `None`. A container target's sink also passes `child_handler=` (see below)
+4. **Register provider**: Call `register_root_target_states_provider(name, handler)`
+5. **Create user-facing API**: Wrap the provider in a user-friendly class
+
+### Non-Root (Child) Target States
+
+For targets nested inside another target (e.g., files inside a directory):
+
+1. Build the parent's sink with `TargetActionSink.from_fn(apply, child_handler=...)` / `from_async_fn(...)`. `apply(context_provider, actions)` only applies the actions (DDL). `child_handler(context_provider, action) -> ChildHandler` is sync and side-effect free and builds the child handler from the action alone (connections via `context_provider`). CocoIndex calls it for each created/updated container — never a delete — before `apply` in an update and in place of `apply` in a preview, so the two modes cannot disagree
+2. Call `declare_target_state_with_child(parent_ts)` to get an unresolved child provider
+3. CocoIndex resolves the child provider with the handler `child_handler` returned
+4. A child whose identity the external system assigns on creation (a server-side id): the container's `apply` records `key → id` in a connector-level map, and the child handler's sink reads it by the container's key at apply time — the factory never needs it
+5. Declare the child handler type as the third argument of the container handler's `reconcile()` return type, `coco.TargetReconcileOutput[Action, TrackingRecord, ChildHandler]` (or subclass `coco.TargetHandler[Spec, TrackingRecord, ChildHandler]` explicitly); it types the provider chain
+
+`from_fn_with_children()` / `from_async_fn_with_children()` (child slots), `coco.ChildTargetDef` and sinks that return an index-aligned list of child handlers are deprecated (they still run, with a `DeprecationWarning`, and cannot be previewed); never use them in new connectors. `coco.TargetActionSink` takes one type argument; a second one is deprecated and ignored.
+
+### Child Invalidation
+
+For container targets, set `child_invalidation` in `TargetReconcileOutput` when a container change affects its children:
+
+| Value | When to Use | Effect on Children |
+| ----- | ----------- | ------------------ |
+| `None` (default) | No impact on children (e.g., only new columns added) | Normal change detection |
+| `"destructive"` | Container rebuilt from scratch (e.g., table dropped and recreated due to primary key change or table type switch) | All previous tracking records ignored; children treated as new and re-declared |
+| `"lossy"` | Data loss possible but container not fully rebuilt (e.g., column removed or type changed) | All children get `prev_may_be_missing=True`, forcing upsert even if content appears unchanged |
+
+**Pattern for two-level (table/row) connectors using `statediff.diff_composite`:**
+
+```python
+# After computing main_action and column_actions via statediff.diff_composite:
+child_invalidation: Literal["destructive", "lossy"] | None = None
+if main_action == "replace":
+    # Table dropped and recreated — all rows are destroyed.
+    child_invalidation = "destructive"
+elif main_action is None and any(a != "insert" for a in column_actions.values()):
+    # Column changes other than adding new columns may lose existing row data.
+    child_invalidation = "lossy"
+
+return coco.TargetReconcileOutput(
+    action=_TableAction(...),
+    sink=self._sink,
+    tracking_record=_TableTrackingRecord(...),
+    child_invalidation=child_invalidation,
+)
+```
+
+For connectors without column-level diffs (e.g., a collection that is either intact or fully replaced), only `"destructive"` applies:
+
+```python
+child_invalidation: Literal["destructive"] | None = (
+    "destructive" if main_action == "replace" else None
+)
+```
+
+## TargetHandler Protocol
+
+```python
+class TargetHandler(Protocol[ValueT, TrackingRecordT, OptChildHandlerT]):
+    def reconcile(
+        self,
+        key: StableKey,
+        desired_target_state: ValueT | NonExistenceType,
+        prev_possible_records: Collection[TrackingRecordT],
+        prev_may_be_missing: bool,
+        /,
+    ) -> TargetReconcileOutput[Any, TrackingRecordT, OptChildHandlerT] | None:
+        ...
+
+    # Optional: override to support attachment types
+    def attachment(self, att_type: str) -> TargetHandler | None:
+        return None
+```
+
+**Parameters:**
+
+- `key`: `StableKey` — a union of `None | bool | int | str | bytes | uuid.UUID | Symbol | tuple[StableKey, ...]`
+- `desired_target_state`: What the user declared, or `NON_EXISTENCE` if no longer declared
+- `prev_possible_records`: Tracking records from previous runs (may have multiple)
+- `prev_may_be_missing`: If `True`, the target state might not exist in the external system
+
+**Returns:**
+
+- `TargetReconcileOutput(action, sink, tracking_record, child_invalidation=None)` if an action is needed (generic params: `[ActionT, TrackingRecordT, OptChildHandlerT]`; the third declares the child handler type a container's sink's `child_handler` factory returns, `None` for leaf targets)
+- `None` if no changes are required
+
+The optional `child_invalidation` field is only relevant for container targets — see [Child Invalidation](#child-invalidation).
+
+**Important:** The `reconcile()` method must be non-blocking and free of side effects. It should only compare states and return an action — actual I/O happens in the sink. CocoIndex may call `reconcile()` more than once for the same target state when it retries a commit internally; only the output of the committed attempt is applied.
+
+## Best Practices
+
+### Use `ContextKey` for External Resource Identity
+
+When a target connector manages state in an external resource (database, object store, etc.), use a `ContextKey` string as part of the target state key — not connection parameters like host, port, or credentials.
+
+**Why:** Target state keys must be stable across runs for correct reconciliation. CocoIndex uses keys to match current declarations with previously tracked states. If the key is stable, previously tracked states are associated with the current target, so CocoIndex can correctly reconcile — e.g., deleting rows that are no longer declared. If the key changes (because a connection parameter changed), CocoIndex cannot associate previous tracked states with the current target, and treats the target as being in a cleared state — losing the ability to clean up old data.
+
+**Pattern:**
+
+```python
+# User creates a stable logical name for the resource
+db = coco.ContextKey[asyncpg.Pool](https://github.com/cocoindex-io/cocoindex/blob/main/dev/agent-skills/target-connector/my_pg)
+
+# Target connector uses db.key (the string "my_pg") in the target state key
+class _TableKey(NamedTuple):
+    db_key: str           # Stable — from ContextKey.key
+    schema_name: str | None
+    table_name: str
+
+key = _TableKey(db_key=db.key, ...)
+
+# At action time, resolve the live connection from context_provider
+pool = context_provider.get(key.db_key, asyncpg.Pool)
+```
+
+This decouples target identity from transient connection details — changing a password, switching replicas, or rotating credentials won't invalidate tracked states.
+
+**Resolve connections at action time, never at declare time.** Target states outlive the code that declared them: when a declaration disappears or an app is dropped, CocoIndex generates delete actions in a run where the mount/declare code never executes — only the persisted key and the current environment's `ContextProvider` are available then. Don't capture a live connection at declare time; resolve in the sink, then pass the typed connection down to child handlers directly (store `_pool: asyncpg.Pool`, not the key string).
+
+**Reference:** See `_TableKey` in `python/cocoindex/connectors/postgres/_target.py` and `python/cocoindex/connectors/surrealdb/_target.py`.
+
+### Idempotent Actions
+
+Actions should be idempotent:
+
+```python
+# Good
+path.mkdir(parents=True, exist_ok=True)
+path.unlink(missing_ok=True)
+await conn.execute("INSERT ... ON CONFLICT DO UPDATE ...")
+
+# Bad
+path.mkdir()  # Fails if exists
+await conn.execute("INSERT ...")  # Fails on duplicate key
+```
+
+### Handle Multiple Previous States
+
+Due to interrupted updates, `prev_possible_records` may contain multiple records:
+
+```python
+if not prev_may_be_missing and all(
+    prev.fingerprint == target_fp for prev in prev_possible_records
+):
+    return None  # Safe to skip
+```
+
+### Fingerprinting for Change Detection
+
+Use the `connectorkits.fingerprint` utilities for content-based change detection:
+
+```python
+from cocoindex.connectorkits.fingerprint import fingerprint_bytes, fingerprint_str, fingerprint_object
+
+# For raw bytes
+fp = fingerprint_bytes(content)
+
+# For strings
+fp = fingerprint_str(text)
+
+# For arbitrary objects (uses memo key mechanism)
+fp = fingerprint_object(obj)
+```
+
+When the tracking record is exactly `fingerprint_object(desired_target_state)` (the usual row handler), set `tracks_value_fingerprint = True` on the handler class. The engine then skips `reconcile()` for unchanged plain-data values. Keep the comparison in `reconcile()` — it still runs for values that aren't plain data. Don't set it when the record is a fingerprint of a derived value or is wrapped in another type.
+
+### Shared Action Sinks
+
+Create module-level shared sinks when all handler instances use the same action logic. The callback must accept `context_provider: ContextProvider` as its first positional argument:
+
+```python
+def _apply_actions(context_provider: ContextProvider, actions: Sequence[MyAction]) -> None:
+    for action in actions:
+        conn = context_provider.get(action.key.db_key, ConnType)
+        ...
+
+_shared_sink = coco.TargetActionSink.from_fn(_apply_actions)
+```
+
+Sink identity is **value-based**: sinks whose callbacks are of the same type and
+compare equal share one batching identity, meaning their actions are batched and
+applied together (and a batch is the natural transaction boundary for
+transactional stores). For a sink scoped to an external resource — e.g. one sink
+per database so all of that database's writes share a transaction — make the
+callback a frozen dataclass keyed by the resource and construct it on the fly in
+`reconcile()`; no module-level sink registry is needed.
+
+Such a sink can serve a container level and its leaf level at once (table DDL
+and row writes on one connection). Pass a `child_handler`; it only ever sees the
+container actions, and
+`TargetActionSink[ActionT]` is contravariant in the action type, so one
+`TargetActionSink[_TableAction | _RowAction]` is accepted by both handlers'
+`TargetReconcileOutput`s without casts. The `child_handler` is part of the sink's
+identity too, so key it by value the same way — a bound method of a callback
+built per `reconcile()` is a new object each time (bound methods compare equal
+only when bound to the *same* instance), which would give every call its own
+sink — and build the sink for both levels in one place, so the table handler
+and the row handler pass the same factory:
+
+```python
+@dataclasses.dataclass(frozen=True)
+class _DbSink:
+    db_key: str
+
+    async def __call__(
+        self,
+        context_provider: ContextProvider,
+        actions: Sequence[_TableAction | _RowAction],
+        /,
+    ) -> None:
+        conn = context_provider.get(self.db_key, ConnType)
+        for action in actions:
+            if isinstance(action, _TableAction):
+                ...  # DDL
+            else:
+                ...  # row write
+
+
+@dataclasses.dataclass(frozen=True)
+class _DbRowHandlerFactory:
+    db_key: str
+
+    def __call__(
+        self, context_provider: ContextProvider, action: _TableAction, /
+    ) -> _RowHandler:
+        # Only container creates/updates reach the factory.
+        return _RowHandler(context_provider.get(self.db_key, ConnType), action.key)
+
+
+def _db_sink(db_key: str) -> coco.TargetActionSink[_TableAction | _RowAction]:
+    # Used by both the table and the row handler's reconcile(): equal callbacks
+    # and equal factories yield the same sink identity.
+    return coco.TargetActionSink.from_async_fn(
+        _DbSink(db_key), child_handler=_DbRowHandlerFactory(db_key)
+    )
+```
+
+A value-keyed callback must have two properties, and the framework enforces
+both:
+
+- **Type-safe equality.** Identity is keyed by the callback's exact type as
+  well as `==`, so a callback only ever shares identity with instances of its
+  own class. Without this, a class with a permissive `__eq__` would silently
+  route another connector's actions to its `__call__`.
+- **Weak-referenceable.** An idle sink identity (no live sink object, no
+  pending actions) is released automatically, so per-resource sinks do not
+  accumulate for the process lifetime. That relies on referencing the
+  canonical callback only weakly, so `from_fn`/`from_async_fn` raise
+  `TypeError` for a callback that does not support weak references.
+
+A `tuple`/`NamedTuple` fails both (it compares equal to any same-shaped tuple
+and cannot be weakly referenced) and is rejected. The frozen dataclass above is
+the recommended shape; if you add `slots=True` to it, also pass
+`weakref_slot=True`.
+
+A batch can hold the actions of several processing components that finished
+around the same time. Merging is only an optimization: if the sink raises, the
+engine retries the same actions in smaller batches split along component
+boundaries (never inside one component's actions), so only the component(s)
+whose actions actually fail end up failing — the others' actions are
+re-applied and committed normally. The sink needs no special handling for
+this, but it may see an action from a failed batch again, which idempotent
+actions (see above) already tolerate.
+
+### Input Safety
+
+When building queries from user-provided names (table, column, index) or values (record IDs, keys), you must guard against injection and ensure correctness. See [input_safety.md](https://github.com/cocoindex-io/cocoindex/blob/main/dev/agent-skills/target-connector/input_safety.md) for patterns on identifier validation, parameterized queries, and value escaping.
+
+## Completion Checklist
+
+After implementing the connector code, complete these additional steps:
+
+### 1. Optional Dependencies
+
+If the connector requires third-party packages, update `pyproject.toml`:
+
+```toml
+[project.optional-dependencies]
+# Add new optional dependency group
+myconnector = ["some-package>=1.0.0"]
+
+# Add to the 'all' group
+all = [
+    # ... existing deps ...
+    "some-package>=1.0.0",
+]
+
+[[tool.mypy.overrides]]
+# Add to mypy ignore list if package lacks type stubs
+module = [
+    # ... existing modules ...
+    "some_package",
+    "some_package.*",
+]
+ignore_missing_imports = true
+```
+
+### 2. Documentation
+
+Create connector documentation at `docs/docs/connectors/<connector_name>.md`:
+
+- Follow the structure of existing connector docs (e.g., `postgres.md`, `sqlite.md`)
+- Include: connection setup, target state APIs, schema definition, type mappings, examples
+- Add a note about optional dependencies if applicable
+
+Update `docs/sidebars.ts` to include the new connector:
+
+```typescript
+{
+  type: 'category',
+  label: 'Connectors',
+  items: [
+    // ... existing connectors ...
+    'connectors/<connector_name>',  // Add in alphabetical order
+  ],
+},
+```
+
+### 3. Tests
+
+Create tests at `python/tests/connectors/test_<connector_name>_target.py`:
+
+**Test structure:**
+
+```python
+import pytest
+import cocoindex as coco
+from tests import common
+
+# Check for optional dependency availability
+try:
+    import optional_package
+    HAS_OPTIONAL = True
+except ImportError:
+    HAS_OPTIONAL = False
+
+requires_optional = pytest.mark.skipif(
+    not HAS_OPTIONAL, reason="optional-package is not installed"
+)
+
+coco_env = common.create_test_env(__file__)
+```
+
+**Required test cases:**
+
+| Category | Test Cases |
+| -------- | ---------- |
+| Basic CRUD | Create target, insert data, update data, delete data |
+| Schema | Different column types, schema with extra columns |
+| Lifecycle | Drop/cleanup when target no longer declared |
+| Optimization | No-op when data unchanged |
+| Multiple targets | Multiple tables/directories in same connection |
+| User-managed | `managed_by="user"` mode if supported |
+| Optional features | Vector support, special types (skip if dependency missing) |
+
+**Test pattern:**
+
+```python
+DB_KEY = coco.ContextKey[connector.ConnectionType](https://github.com/cocoindex-io/cocoindex/blob/main/dev/agent-skills/target-connector/test_db)
+
+def test_insert_and_update(connector_fixture: tuple[Connection, Path]) -> None:
+    conn, _ = connector_fixture
+    source_rows: list[RowType] = []
+
+    coco_env.context_provider.provide(DB_KEY, conn)
+
+    async def declare_target() -> None:
+        table = await coco.use_mount(
+            coco.component_subpath("setup", "table"),
+            connector.declare_table_target,
+            DB_KEY,
+            "test_table",
+            await connector.TableSchema.from_class(RowType, primary_key=["id"]),
+        )
+        for row in source_rows:
+            table.declare_row(row=row)
+
+    app = coco.App(
+        coco.AppConfig(name="test_insert", environment=coco_env),
+        declare_target,
+    )
+
+    # Insert
+    source_rows.append(RowType(id="1", name="Alice"))
+    app.update()
+    assert read_data(conn, "test_table") == [{"id": "1", "name": "Alice"}]
+
+    # Update
+    source_rows[0] = RowType(id="1", name="Alice Updated")
+    app.update()
+    assert read_data(conn, "test_table") == [{"id": "1", "name": "Alice Updated"}]
+```
+
+**Optional feature tests:**
+
+```python
+@requires_optional
+def test_vector_support(connector_with_vec: tuple[Connection, Path]) -> None:
+    """Tests that require optional dependencies should be skipped when unavailable."""
+    # ... test vector functionality ...
+```
+
+**Reference implementations:**
+
+- `python/tests/connectors/test_sqlite_target.py` - SQLite tests with vector support
+- Rust SDK target connectors live under `rust/sdk/cocoindex/src/connectors/`; see
+  `sqlite.rs`, `postgres.rs`, and `doris.rs` there for relational connector patterns. A Rust
+  container sink is built with `TargetActionSink::from_async_fn_with_child_handler`, the
+  counterpart of Python's `child_handler=` (see `table_sink` in `postgres.rs`).
+
+## Attachment Providers
+
+For targets with auxiliary child states (e.g., indexes on a database table), see [attachments.md](https://github.com/cocoindex-io/cocoindex/blob/main/dev/agent-skills/target-connector/attachments.md) for the full reference on implementing attachment providers.
+
+## Resources
+
+For complete implementation details and examples, see:
+
+- `docs/docs/advanced_topics/custom_target_connector.md` - Full documentation
+- `python/cocoindex/connectors/localfs/_target.py` - File system target connector (sync API, nested directory targets)
+- `python/cocoindex/connectors/sqlite/_target.py` - SQLite target connector (sync API, two-level table/row targets, vector support)
+- `python/cocoindex/connectors/postgres/_target.py` - PostgreSQL target connector (async API, two-level table/row targets, vector support, attachment providers)
+- `python/cocoindex/connectors/doris/_target.py` - Doris target connector (async API, two-level table/row targets, Stream Load bulk inserts)

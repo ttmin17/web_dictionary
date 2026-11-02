@@ -14,29 +14,29 @@ tags:
   - downloader
   - fastapi
 status: active
-quality_percentile: 69
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2023-08-16T11:03:36
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: JoeanAmier/XHS-Downloader
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 13112
-  last_commit: 2026-10-23T01:44:14Z
-  stars_delta_7d: 64
-  stars_growth_pct: 0.5
-  trending_score: 64.31
-  rank_current: 34
-  rank_delta: -13
+  stars: 13193
+  last_commit: 2026-10-31T12:35:50Z
+  stars_delta_7d: 81
+  stars_growth_pct: 0.6
+  trending_score: 81.5
+  rank_current: 27
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12930
     - 13000
     - 13048
     - 13112
+    - 13193
 language: zh
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: JoeanAmier/XHS-Downloader
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:36:53.923Z
+  fetched_at: 2026-11-02T09:05:30.347Z
   truncated: false
 type: mcp_server
 launch:
@@ -663,6 +663,7 @@ async def example():
 本指南将引导您通过 Fork 本仓库并执行 GitHub Actions 自动完成基于最新源码的程序构建和打包！
 
 ---
+
 ## 使用步骤
 
 ### 1. Fork 本仓库
@@ -671,6 +672,7 @@ async def example():
 2. 您的 Fork 仓库地址将类似于：`https://github.com/your-username/this-repo`
 
 ---
+
 ### 2. 启用 GitHub Actions
 
 1. 前往您 Fork 的仓库页面
@@ -680,6 +682,7 @@ async def example():
 5. 在 **Actions permissions** 下，选择 **Allow all actions and reusable workflows** 选项，点击 **Save** 按钮
 
 ---
+
 ### 3. 手动触发打包流程
 
 1. 在您 Fork 的仓库中，点击顶部的 **Actions** 选项卡
@@ -689,12 +692,14 @@ async def example():
     - 点击 **Run workflow**
 
 ---
+
 ### 4. 查看打包进度
 
 1. 在 **Actions** 页面中，您可以看到触发的工作流运行记录
 2. 点击运行记录，查看详细的日志以了解打包进度和状态
 
 ---
+
 ### 5. 下载打包结果
 
 1. 打包完成后，进入对应的运行记录页面
@@ -702,6 +707,7 @@ async def example():
 3. 点击下载并保存到本地，即可获得打包好的程序
 
 ---
+
 ## 注意事项
 
 1. **资源使用**：
@@ -715,6 +721,7 @@ async def example():
     - 如果主仓库更新了代码或工作流，建议您定期同步 Fork 仓库以获取最新功能和修复
 
 ---
+
 ## Actions 常见问题
 
 ### Q1: 为什么我无法触发工作流？

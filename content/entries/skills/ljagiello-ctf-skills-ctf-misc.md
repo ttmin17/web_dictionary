@@ -1,8 +1,11 @@
 ---
 slug: ljagiello-ctf-skills-ctf-misc
 name: ctf-misc
-tagline: Agent skill from ljagiello/ctf-skills
-summary: Agent skill from ljagiello/ctf-skills
+tagline: Provides miscellaneous CTF challenge techniques for problems that do
+  not cleanly fit the main categories. Use for encoding puzzles, pyjails, bash
+  jail
+summary: "Manual install: - SageMath — Linux: apt install sagemath, macOS: brew
+  install --cask sage"
 categories:
   - security-auth
 tags:
@@ -11,10 +14,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 52
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3530
-  last_commit: 2026-10-23T15:17:59Z
-  stars_delta_7d: 55
-  stars_growth_pct: 1.6
-  trending_score: 55.87
+  stars: 3601
+  last_commit: 2026-10-30T16:48:55Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2
+  trending_score: 72.43
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
     - 3530
+    - 3601
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +43,19 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-misc/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:56.560Z
+  fetched_at: 2026-11-02T09:06:52.138Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ctf-misc
-  description: Agent skill from ljagiello/ctf-skills
+  description: Provides miscellaneous CTF challenge techniques for problems that
+    do not cleanly fit the main categories. Use for encoding puzzles, pyjails,
+    bash jails, RF/SDR, DNS oddities, unicode tricks, esoteric languages, QR or
+    audio puzzles, constraint solving, game theory, unusual sandbox escapes, and
+    hybrid logic puzzles. Prefer a more specific skill first when the challenge
+    is mainly web, pwn, reverse, forensics, malware, OSINT, or crypto. Treat
+    this as the fallback skill for genuine cross-category or edge-case
+    challenges, not the default starting point.
   folder_path: ctf-misc
   extra_files:
     - audio.md
@@ -73,7 +84,7 @@ Quick reference for miscellaneous CTF challenges. Each technique has a one-liner
 
 **Python packages (all platforms):**
 ```bash
-pip install "pwntools==4.15.0" "segno==1.6.2" z3-solver Pillow numpy requests dnslib
+pip install "pwntools==4.15.0" "segno==1.6.6" z3-solver Pillow numpy requests dnslib
 ```
 
 **Linux (apt):**
@@ -95,6 +106,7 @@ brew install ffmpeg qrencode
 - [bashjails.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/bashjails.md) - Bash jail/restricted shell escape techniques, HISTFILE file read trick, bash -v verbose mode, ctypes.sh direct C library calls
 - [encodings.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/encodings.md) - Encodings, QR codes, esolangs, UTF-16 tricks, BCD encoding, multi-layer auto-decoding, indexed directory QR reassembly, multi-stage URL encoding chains
 - [encodings-advanced.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/encodings-advanced.md) - Verilog/HDL, Gray code cyclic encoding, RTF custom tag extraction, SMS PDU decoding, multi-encoding sequential solvers, UTF-9, pixel binary encoding, hexadecimal Sudoku + QR assembly, TOPKEK, MaxiCode
+- [audio.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/audio.md) - Audio steganography and signal analysis: Morse code extraction from audio channels with auto-detection, spectrogram analysis, SSTV decoding, amplitude envelope timing classification
 - [rf-sdr.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/rf-sdr.md) - RF/SDR/IQ signal processing (QAM-16, carrier recovery, timing sync)
 - [dns.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/dns.md) - DNS exploitation (ECS spoofing, NSEC walking, IXFR, rebinding, tunneling)
 - [games-and-vms.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/games-and-vms.md) - WASM patching, Roblox place file reversing, PyInstaller, marshal analysis, Python env RCE, Z3 (including boolean logic gate network SAT solving), K8s RBAC, floating-point precision exploitation, custom assembly language sandbox escape via Python MRO chain
@@ -104,7 +116,9 @@ brew install ffmpeg qrencode
 - [linux-privesc.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/linux-privesc.md) - Sudo wildcard parameter injection (fnmatch), crafted pcap for sudoers.d, monit confcheck process injection, Apache -d override, backup cronjob SUID, PostgreSQL COPY TO PROGRAM RCE, PostgreSQL backup credential extraction, NFS share exploitation, SSH Unix socket tunneling, PaperCut Print Deploy privesc, Squid proxy pivoting, Zabbix admin password reset via MySQL, WinSSHTerm credential decryption
 - [ctfd-navigation.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/ctfd-navigation.md) - CTFd platform API navigation without browser: detection, token auth, challenge listing, file download, flag submission, scoreboard, hints, notifications, Python client class
 
----## When to Pivot
+---
+
+## When to Pivot
 
 - If the puzzle is actually centered on cryptography or number theory, switch to `/ctf-crypto`.
 - If the challenge is a real binary exploit instead of a jail, toy VM, or encoding problem, switch to `/ctf-pwn` or `/ctf-reverse`.
@@ -227,9 +241,24 @@ See [encodings.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/en
 ## Audio Challenges
 
 ```bash
-sox audio.wav -n spectrogram  # Visual data
-qsstv                          # SSTV decoder
+# Spectrogram (hidden text/images in frequency domain)
+sox audio.wav -n spectrogram -o spec.png
+sox audio.wav -n spectrogram -o spec.png -x 2048 -y 1025  # higher resolution
+
+# Channel inspection (identify stereo vs mono, sample rate, bit depth)
+python3 -c "import wave; w=wave.open('audio.wav'); print(f'channels={w.getnchannels()}, rate={w.getframerate()}, width={w.getsampwidth()}')"
+
+# SSTV (Slow Scan TV decoder)
+qsstv                          # GUI - play audio + use pulseaudio loopback
 ```
+
+**Morse code extraction:** WAV file with Morse beeps hidden on one audio channel. Separate stereo interleaved channels (L=even idx, R=odd idx), auto-detect the Morse channel by peak-to-mean envelope ratio (beep channel = high ratio from alternating loud/silent), compute RMS envelope (50ms window), threshold to segment beeps, classify by duration: dots (~100–150ms) vs dashes (~250–350ms), then use gap timing (short gaps = intra-character, long gaps = inter-character) to group into Morse characters. Full auto-detection extraction script in [audio.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/audio.md#morse-code-in-audio-channel).
+
+**DTMF (phone keypad tones):** Dual-tone multi-frequency signaling decodes to digits, then map to letters via multi-tap keypad. See [encodings-advanced.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/encodings-advanced.md#dtmf-audio-with-multi-tap-phone-keypad-decoding-h4ckc0n-2017).
+
+**Music note steganography:** Note pairs encode nibbles via scale-degree mapping. See [encodings-advanced.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/encodings-advanced.md#music-note-interval-steganography-defcamp-2017).
+
+See [audio.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/audio.md) for full audio analysis techniques.
 
 ## RF / SDR / IQ Signal Processing
 
@@ -330,7 +359,9 @@ new_data = sha.extend(b'extension', b'original_message', len_secret, known_hash_
 
 Flags hidden in Discord metadata (roles, animated emoji, embeds). Invoke `/ctf-osint` for Discord API enumeration technique and code (see social-media.md in ctf-osint).
 
----## SUID Binary Exploitation (0xFun 2026)
+---
+
+## SUID Binary Exploitation (0xFun 2026)
 
 ```bash
 # Find SUID binaries
@@ -343,7 +374,9 @@ find / -perm -4000 2>/dev/null
 
 **Reference:** https://gtfobins.github.io/
 
----## Linux Privilege Escalation Quick Checks
+---
+
+## Linux Privilege Escalation Quick Checks
 
 ```bash
 # GECOS field passwords
@@ -398,7 +431,9 @@ Root cronjob copying directories preserves SUID bit but changes ownership to roo
 
 Root process runs scripts from user-owned directory. Modify `server-command`, trigger via Mobility Print API refresh. See [linux-privesc.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/linux-privesc.md#papercut-print-deploy-privilege-escalation-bamboo-htb).
 
----## CTFd Platform Navigation (No Browser)
+---
+
+## CTFd Platform Navigation (No Browser)
 
 Detect CTFd (`curl -s "$CTF_URL/api/v1/" | head -5`) and interact via API. **Ask the user for their API token** (CTFd Settings > Access Tokens) — it is not provided by default. Then use `Authorization: Token $CTF_TOKEN` header for all requests.
 
@@ -410,7 +445,9 @@ curl -s -X POST -H "Authorization: Token $CTF_TOKEN" -H "Content-Type: applicati
 
 See [ctfd-navigation.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-misc/ctfd-navigation.md) for full workflow, Python client class, session login, hints, notifications, file download, and troubleshooting.
 
----## Useful One-Liners
+---
+
+## Useful One-Liners
 
 ```bash
 grep -rn "flag{" .

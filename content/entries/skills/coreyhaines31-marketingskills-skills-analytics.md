@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/analytics/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.286Z
+  fetched_at: 2026-11-02T09:06:13.820Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +68,7 @@ skill:
     - references/event-library.md
     - references/ga4-implementation.md
     - references/gtm-implementation.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -91,6 +92,7 @@ Before implementing tracking, understand:
 3. **Technical Context** - What's the tech stack? Any privacy/compliance requirements?
 
 ---
+
 ## Core Principles
 
 ### 1. Track for Decisions, Not Data
@@ -141,6 +143,7 @@ Before implementing tracking, understand:
   Name which stated goal each option serves and what it trades away.
 
 ---
+
 ## Tracking Plan Framework
 
 ### Structure
@@ -162,6 +165,7 @@ Event Name | Category | Properties | Trigger | Notes
 **For comprehensive event lists**: See [references/event-library.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/analytics/references/event-library.md)
 
 ---
+
 ## Event Naming Conventions
 
 ### Recommended Format: Object-Action
@@ -183,6 +187,7 @@ checkout_payment_completed
 - Keep provider-defined names when using automatic or recommended events (e.g. GA4 `click`, `view_search_results`, `purchase`). Map internal business names explicitly; naming a custom event does not make the provider collect it automatically.
 
 ---
+
 ## Essential Events
 
 ### Marketing Site
@@ -206,6 +211,7 @@ checkout_payment_completed
 **For full event library by business type**: See [references/event-library.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/analytics/references/event-library.md)
 
 ---
+
 ## Event Properties
 
 ### Standard Properties
@@ -224,6 +230,7 @@ checkout_payment_completed
 - Avoid PII in properties
 
 ---
+
 ## GA4 Implementation
 
 ### Quick Setup
@@ -234,10 +241,12 @@ checkout_payment_completed
 4. Configure custom events
 5. Mark conversions in Admin
 
-### Custom Event Example
+### Event Example
 
 ```javascript
-gtag('event', 'signup_completed', {
+// GA4's recommended sign_up event, not a custom name, so it feeds built-in reports.
+// Your tracking plan can still call this signup_completed; map the name explicitly.
+gtag('event', 'sign_up', {
   'method': 'email',
   'plan': 'free'
 });
@@ -246,6 +255,7 @@ gtag('event', 'signup_completed', {
 **For detailed GA4 implementation**: See [references/ga4-implementation.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/analytics/references/ga4-implementation.md)
 
 ---
+
 ## Google Tag Manager
 
 ### Container Structure
@@ -269,6 +279,7 @@ dataLayer.push({
 **For detailed GTM implementation**: See [references/gtm-implementation.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/analytics/references/gtm-implementation.md)
 
 ---
+
 ## UTM Parameter Strategy
 
 ### Standard Parameters
@@ -317,6 +328,7 @@ You can't tag links that ChatGPT, Claude, Perplexity, Gemini, or Copilot put in 
 - For measuring the full effect (exposure, delayed visits, and longer attribution windows), see **ai-seo**. For reconciling it with other sources, see **attribution**.
 
 ---
+
 ## Debugging and Validation
 
 ### Testing Tools
@@ -345,6 +357,7 @@ You can't tag links that ChatGPT, Claude, Perplexity, Gemini, or Copilot put in 
 | Duplicate events | Multiple containers, trigger firing twice |
 
 ---
+
 ## Privacy and Compliance
 
 ### Considerations
@@ -360,6 +373,7 @@ You can't tag links that ChatGPT, Claude, Perplexity, Gemini, or Copilot put in 
 - Integrate with consent management platform
 
 ---
+
 ## Output Format
 
 ### Tracking Plan Document
@@ -391,6 +405,7 @@ You can't tag links that ChatGPT, Claude, Perplexity, Gemini, or Copilot put in 
 ```
 
 ---
+
 ## Task-Specific Questions
 
 1. What tools are you using (GA4, Mixpanel, etc.)?
@@ -401,6 +416,7 @@ You can't tag links that ChatGPT, Claude, Perplexity, Gemini, or Copilot put in 
 6. What's already tracked?
 
 ---
+
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key analytics tools:
@@ -414,6 +430,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Segment** | Customer data platform, routing | - | [segment.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/segment.md) |
 
 ---
+
 ## Related Skills
 
 - **ab-testing**: For experiment tracking

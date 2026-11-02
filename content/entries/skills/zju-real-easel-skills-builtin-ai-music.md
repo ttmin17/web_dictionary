@@ -1,8 +1,9 @@
 ---
 slug: zju-real-easel-skills-builtin-ai-music
 name: ai-music
-tagline: Agent skill from ZJU-REAL/Easel
-summary: Agent skill from ZJU-REAL/Easel
+tagline: AI 音乐 / BGM 生成：给短视频、社媒内容生成原创背景音乐 / 配乐 / 纯音乐。通过可插拔 provider（阿里 DashScope
+  / Suno 类第三方 API）文生音乐，异步提交→轮询→下载，产物可再裁剪/归一化或加到视频。当用户说“AI 音乐”“AI 配乐”“生成 BGM”“背景音
+summary: 边界：本 SKILL 只做背景音乐 / 配乐。要人声口播 / 旁白 / 朗读用 tts-voiceover。
 categories:
   - media-creative
 tags:
@@ -11,10 +12,10 @@ tags:
   - content-generation
   - openclaw
 status: active
-quality_percentile: 89
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -22,33 +23,37 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4090
-  last_commit: 2026-10-25T06:24:22Z
-  stars_delta_7d: 246
-  stars_growth_pct: 6.4
-  trending_score: 261.74
+  stars: 4323
+  last_commit: 2026-11-02T08:18:55Z
+  stars_delta_7d: 233
+  stars_growth_pct: 5.7
+  trending_score: 246.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3567
     - 3844
     - 4090
-language: en
+    - 4323
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/ai-music/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:08.721Z
+  fetched_at: 2026-11-02T09:06:38.012Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ai-music
-  description: Agent skill from ZJU-REAL/Easel
+  description: AI 音乐 / BGM 生成：给短视频、社媒内容生成原创背景音乐 / 配乐 / 纯音乐。通过可插拔 provider（阿里
+    DashScope / Suno 类第三方 API）文生音乐，异步提交→轮询→下载，产物可再裁剪/归一化或加到视频。当用户说“AI 音乐”“AI
+    配乐”“生成 BGM”“背景音乐”“原创音乐”“AI 作曲”“纯音乐”“给视频配乐”“做首曲子”时使用。与 tts-voiceover
+    的区别：tts-voiceover 生成人声口播/旁白，ai-music 生成背景音乐/配乐（无人声或带演唱）。
   folder_path: skills/builtin/ai-music
   extra_files:
     - EASEL-META.md
-  pack_total_skills: 115
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -164,4 +169,4 @@ python skills/shared/scripts/video_ops.py bgm -i clip.mp4 -o clip_bgm.mp4 \
 3. **不重造能力** — 裁剪 / 归一化 / 加视频 BGM 复用 `audio_ops.py` / `video_ops.py`。
 4. **provider 可插拔** — 换服务商只改 `--provider` + env，SKILL 流程不变。
 5. **与 tts-voiceover 分工** — 背景音乐/配乐找 ai-music，人声配音找 tts-voiceover。
-   两者可组合：ai-music 出 BGM + tts-voiceover 出旁白 → `video_ops.py bgm` 混音。
+   两者可组合：音频文件内的人声+BGM 用 `audio_mix.py mix`；给视频加 BGM/旁白才用 `video_ops.py bgm`（旁白短于视频时加 `--music-loop-off`）。

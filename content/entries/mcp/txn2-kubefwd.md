@@ -14,29 +14,29 @@ tags:
   - devops
   - devops-tools
 status: active
-quality_percentile: 42
+quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2018-08-05T22:05:58
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: txn2/kubefwd
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4177
-  last_commit: 2026-10-24T17:11:57Z
-  stars_delta_7d: 0
+  stars: 4178
+  last_commit: 2026-11-01T16:52:32Z
+  stars_delta_7d: 1
   stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 107
-  rank_delta: -25
+  trending_score: 1
+  rank_current: 104
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4173
     - 4176
     - 4177
     - 4177
+    - 4178
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: txn2/kubefwd
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:36:59.658Z
+  fetched_at: 2026-11-02T09:05:36.250Z
   truncated: false
 type: mcp_server
 launch:
@@ -201,4 +201,5 @@ We welcome contributions for bug fixes, tests, and documentation. Feature develo
 [Apache License 2.0](https://github.com/txn2/kubefwd/blob/master/LICENSE)
 
 ---
+
 Open source by [Craig Johnston](https://twitter.com/cjimti), sponsored by [Deasil Works, Inc.](https://deasil.works/)

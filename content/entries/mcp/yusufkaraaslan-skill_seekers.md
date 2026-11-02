@@ -14,28 +14,29 @@ tags:
   - automation
   - claude-ai
 status: active
-quality_percentile: 80
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: yusufkaraaslan/Skill_Seekers
   official_vendor: false
   license: MIT
 signals:
-  stars: 15223
+  stars: 15264
   last_commit: 2026-09-30T18:49:17Z
-  stars_delta_7d: 43
+  stars_delta_7d: 41
   stars_growth_pct: 0.3
-  trending_score: 43.12
-  rank_current: 40
-  rank_delta: -12
+  trending_score: 41.11
+  rank_current: 41
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15141
     - 15180
     - 15223
+    - 15264
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: yusufkaraaslan/Skill_Seekers
   path: README.md
   branch: development
-  fetched_at: 2026-10-26T07:36:53.875Z
+  fetched_at: 2026-11-02T09:05:30.358Z
   truncated: false
 type: mcp_server
 launch:
@@ -92,7 +93,9 @@ English | [简体中文](https://github.com/yusufkaraaslan/Skill_Seekers/blob/de
 
 **[Become a sponsor](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/SPONSORSHIP.md)** · [GitHub Sponsors](https://github.com/sponsors/yusufkaraaslan)
 
----## 🚀 Quick Start
+---
+
+## 🚀 Quick Start
 
 ```bash
 # 1. Install
@@ -156,7 +159,9 @@ skill-seekers create --chat-export-path ./slack-export --name team-chat  # Slack
 
 See the [Scraping Guide](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/user-guide/02-scraping.md) for every source type and its options.
 
----## 📦 Installation
+---
+
+## 📦 Installation
 
 ```bash
 pip install skill-seekers              # Core: scraping, GitHub, PDF, packaging
@@ -193,7 +198,9 @@ pip install skill-seekers[all]         # Everything
 
 **Prerequisites:** Python 3.10+, Git. New here? → **[Bulletproof Quick Start](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/getting-started/BULLETPROOF_QUICKSTART.md)** 🎯
 
----## 📚 Documentation
+---
+
+## 📚 Documentation
 
 | I want to... | Read this |
 |--------------|-----------|
@@ -213,7 +220,9 @@ pip install skill-seekers[all]         # Everything
 
 **Complete documentation index:** [docs/README.md](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/README.md)
 
----## 🎯 What you get
+---
+
+## 🎯 What you get
 
 | Use case | Output | Powers |
 |----------|--------|--------|
@@ -246,7 +255,9 @@ See the [Feature Matrix](https://github.com/yusufkaraaslan/Skill_Seekers/blob/de
 - 🌐 **One prep, every target** — export to 22 targets without re-scraping
 - ✅ **Battle-tested** — 3,900+ tests, 68 workflow presets, production-ready
 
----## ✨ Key capabilities
+---
+
+## ✨ Key capabilities
 
 <details>
 <summary><b>Documentation scraping</b> — SPA discovery, llms.txt, smart categorization</summary>
@@ -310,7 +321,9 @@ Quality scoring with a gate (`skill-seekers quality output/react/ --threshold 7`
 → [Large Documentation](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/reference/LARGE_DOCUMENTATION.md) · [Code Quality](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/reference/CODE_QUALITY.md)
 </details>
 
----## 🔌 MCP Integration (40 tools)
+---
+
+## 🔌 MCP Integration (40 tools)
 
 Skill Seekers ships an MCP server for Claude Code, Cursor, Windsurf, VS Code + Cline, and IntelliJ IDEA.
 
@@ -326,7 +339,9 @@ Then just ask your assistant: *"Package and upload the React skill."*
 
 → [MCP Setup](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/guides/MCP_SETUP.md) · [MCP Reference](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/reference/MCP_REFERENCE.md) · [HTTP Transport](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/guides/HTTP_TRANSPORT.md)
 
----## 🤖 Installing to AI agents
+---
+
+## 🤖 Installing to AI agents
 
 Skills install automatically into **19 AI coding agents**:
 
@@ -369,7 +384,9 @@ No API key? Package it and upload `output/react.zip` manually at [claude.ai/skil
 
 → [Upload Guide](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/guides/UPLOAD_GUIDE.md)
 
----## ⚙️ How it works
+---
+
+## ⚙️ How it works
 
 ```mermaid
 graph LR
@@ -407,7 +424,9 @@ graph LR
 
 → [UML Architecture](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/UML_ARCHITECTURE.md) · [API Reference](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/reference/API_REFERENCE.md) · [Skill Architecture](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/reference/SKILL_ARCHITECTURE.md)
 
----## 🆕 New in v3.9.0
+---
+
+## 🆕 New in v3.9.0
 
 - **HTML parser fallback for broken markup** (#96) — severely malformed pages no longer scrape as empty; well-formed pages are byte-identical.
 - **Transient-failure retries** — the doc scraper (#97) and MCP `fetch_config` (#92) now retry connection blips and 5xx with backoff; 4xx still fails fast.
@@ -418,7 +437,9 @@ graph LR
 
 Full history: **[CHANGELOG.md](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/CHANGELOG.md)**
 
----## 📈 Performance
+---
+
+## 📈 Performance
 
 | Documentation size | Time | Output |
 |---|---|---|
@@ -427,7 +448,9 @@ Full history: **[CHANGELOG.md](https://github.com/yusufkaraaslan/Skill_Seekers/b
 | Large (500–2,000 pages) | 30–60 min | ~40 MB |
 | Huge (10K–40K+ pages) | Use `stream` | See [Large Documentation](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/reference/LARGE_DOCUMENTATION.md) |
 
----## 🐛 Troubleshooting
+---
+
+## 🐛 Troubleshooting
 
 ```bash
 skill-seekers doctor          # diagnose installation & environment
@@ -437,7 +460,9 @@ skill-seekers sync-config     # detect config drift
 
 Common issues and fixes: **[Troubleshooting Guide](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/user-guide/06-troubleshooting.md)** · [TROUBLESHOOTING.md](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/docs/TROUBLESHOOTING.md)
 
----## 🤝 Contributing
+---
+
+## 🤝 Contributing
 
 Contributions are welcome — see **[CONTRIBUTING.md](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/CONTRIBUTING.md)**.
 
@@ -445,7 +470,9 @@ Contributions are welcome — see **[CONTRIBUTING.md](https://github.com/yusufka
 - 💬 **[Discussions](https://github.com/yusufkaraaslan/Skill_Seekers/discussions)** — questions and ideas
 - 🐛 **[Issues](https://github.com/yusufkaraaslan/Skill_Seekers/issues)** — bugs and feature requests
 
----## 📝 License
+---
+
+## 📝 License
 
 MIT — see [LICENSE](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/LICENSE).
 
@@ -453,7 +480,9 @@ MIT — see [LICENSE](https://github.com/yusufkaraaslan/Skill_Seekers/blob/devel
 
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/yusufkaraaslan-skill-seekers-badge.png)](https://mseep.ai/app/yusufkaraaslan-skill-seekers)
 
----## 🌐 Ecosystem
+---
+
+## 🌐 Ecosystem
 
 Skill Seekers is a multi-repo project:
 

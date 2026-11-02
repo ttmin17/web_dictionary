@@ -14,10 +14,10 @@ tags:
   - ai-agents
   - ai-art
 status: active
-quality_percentile: 59
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1139
-  last_commit: 2026-10-25T22:41:37Z
-  stars_delta_7d: 83
-  stars_growth_pct: 7.9
-  trending_score: 89.52
+  stars: 1476
+  last_commit: 2026-11-02T07:44:52Z
+  stars_delta_7d: 337
+  stars_growth_pct: 29.6
+  trending_score: 436.71
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
     - 1139
+    - 1476
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/maya/scenario-maya-pipeline-scripting/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:38:47.927Z
+  fetched_at: 2026-11-02T09:05:56.535Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,7 +63,7 @@ skill:
     - references/procedures.md
     - references/sources.md
     - scripts/mx_pipeline.py
-  pack_total_skills: 166
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -76,8 +77,9 @@ Expert pipeline work is contracts plus proof: every file that leaves Maya goes t
 names, explicit export settings and a re-import check, and no batch trusts one Maya process with two
 hundred files. The pipeline TD never types what can be generated, never trusts a default, and
 verifies by reading the output back. If a sibling skill named here is missing from your available
-skills, ask the user to install it (`npx skills add scenario-labs/skills --skill <name>`);
-unattended, proceed from tool schemas and flag the gap.
+skills, load it with `skill_get` (Scenario MCP) or ask the user to install it
+(https://github.com/scenario-labs/skills#install); unattended, proceed from tool schemas and flag
+the gap.
 
 **REQUIRED BACKGROUND:** scenario-maya-expert (execution channel, review loop, 2027 version traps).
 

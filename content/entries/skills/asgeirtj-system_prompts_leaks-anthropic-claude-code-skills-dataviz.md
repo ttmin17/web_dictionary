@@ -14,10 +14,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 86
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -25,15 +25,16 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 70224
-  last_commit: 2026-10-25T19:55:03Z
-  stars_delta_7d: 344
-  stars_growth_pct: 0.5
-  trending_score: 345.69
+  stars: 70623
+  last_commit: 2026-11-02T07:02:10Z
+  stars_delta_7d: 399
+  stars_growth_pct: 0.6
+  trending_score: 401.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
     - 70224
+    - 70623
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/dataviz/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:00.810Z
+  fetched_at: 2026-11-02T09:06:14.073Z
   truncated: false
 type: agent_skill
 skill:
@@ -78,7 +79,7 @@ skill:
     - references/palette.md
     - scripts/validate_palette.js
     - scripts/validate_palette.py
-  pack_total_skills: 217
+  pack_total_skills: 24
   is_pack_primary: false
   clients:
     - claude-code
@@ -98,7 +99,7 @@ the method consumes them unchanged. A **validated default palette** is the
 reference instance, fully specified in `references/palette.md`. To target your
 brand, read that file's structure and substitute its values - touch nothing else.
 
-> The single most important habit: **the color part is computable, so compute it.**
+> The single most important habit: **the color part is computable, so compute it.**  
 > Never eyeball whether a palette is colorblind-safe - run `scripts/validate_palette.js`.
 
 ## The procedure - do these in order
@@ -158,6 +159,7 @@ of what goes wrong. If your chart matches an entry, it's wrong.
   obligates visible labels or a table view - it is not dismissable.
 - **Thin marks; a legend always present for >= 2 series (none for one), with
   selective direct labels (never a number on every point); recessive grid/axes.**
+  One exception, legend kept: the tall segmented bar (*Figures* in `references/marks-and-anatomy.md`).
 - **Text wears text tokens, never the series color** - values, labels, and legends
   stay in primary/secondary/muted ink; a colored mark beside them carries identity.
 - **Status colors are reserved** (good/warning/serious/critical) and never reused

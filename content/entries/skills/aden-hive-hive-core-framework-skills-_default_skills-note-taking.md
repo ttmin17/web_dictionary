@@ -1,8 +1,11 @@
 ---
 slug: aden-hive-hive-core-framework-skills-_default_skills-note-taking
-name: note-taking
-tagline: Agent skill from aden-hive/hive
-summary: Agent skill from aden-hive/hive
+name: hive.note-taking
+tagline: Maintain a free-form scratchpad of decisions, extracted values, and
+  open questions so context pruning doesn't lose anything you still need.
+summary: Maintain free-form working notes in shared buffer key workingnotes for
+  data that you need to remember but that isn't captured by the colony task
+  queue.
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +14,10 @@ tags:
   - anthropic
   - automation
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: aden-hive/hive
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11122
-  last_commit: 2026-10-26T07:23:23Z
-  stars_delta_7d: 14
+  stars: 11131
+  last_commit: 2026-10-26T11:58:57Z
+  stars_delta_7d: 9
   stars_growth_pct: 0.1
-  trending_score: 14.02
+  trending_score: 9.01
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11088
     - 11099
     - 11108
     - 11122
+    - 11131
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +43,13 @@ readme_source:
   repo: aden-hive/hive
   path: core/framework/skills/_default_skills/note-taking/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:50.192Z
+  fetched_at: 2026-11-02T09:06:45.645Z
   truncated: false
 type: agent_skill
 skill:
-  skill_name: note-taking
-  description: Agent skill from aden-hive/hive
+  skill_name: hive.note-taking
+  description: Maintain a free-form scratchpad of decisions, extracted values, and
+    open questions so context pruning doesn't lose anything you still need.
   folder_path: core/framework/skills/_default_skills/note-taking
   extra_files: []
   pack_total_skills: 20
@@ -57,4 +61,23 @@ skill:
   pack_slug: aden-hive-hive
 ---
 
-Agent skill from aden-hive/hive
+## Operational Protocol: Structured Note-Taking
+
+Maintain free-form working notes in shared buffer key `_working_notes` for data that *you* need to remember but that isn't captured by the colony task queue.
+
+**Do not duplicate the queue in here.** Per-task goal, ordered steps, and SOP gates live in `progress.db` — use `hive.colony-progress-tracker` for those. These notes are for things the DB schema doesn't cover.
+
+Update at these checkpoints:
+
+- After receiving new information that changes how you plan to approach the current step
+- Before any tool call that will produce substantial output you'll need to reference later
+- When you make a non-obvious decision whose *why* would be lost if the tool call history gets pruned
+
+Structure:
+
+### Key Decisions — decisions made and WHY
+### Working Data — intermediate results, extracted values (URLs, IDs, key snippets — not full pages)
+### Open Questions — uncertainties you plan to verify
+### Blockers — anything preventing progress that isn't already captured in `tasks.last_error`
+
+Update incrementally — do not rewrite from scratch each time.

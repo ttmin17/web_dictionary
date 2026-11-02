@@ -1,8 +1,11 @@
 ---
 slug: agricidaniel-claude-obsidian-skills-obsidian-markdown
 name: obsidian-markdown
-tagline: Agent skill from AgriciDaniel/claude-obsidian
-summary: Agent skill from AgriciDaniel/claude-obsidian
+tagline: "Explain, draft, or validate Obsidian Flavored Markdown syntax:
+  properties, wikilinks, embeds, callouts, tags, comments, highlights, block
+  references, "
+summary: "Resolve the installed product root from this skill's own location, not
+  from the vault or current working directory:"
 categories:
   - productivity-ops
 tags:
@@ -11,10 +14,10 @@ tags:
   - ai-second-brain
   - claude-code
 status: active
-quality_percentile: 78
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-obsidian
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 15827
+  stars: 16065
   last_commit: 2026-10-25T22:24:31Z
-  stars_delta_7d: 193
-  stars_growth_pct: 1.2
-  trending_score: 195.38
+  stars_delta_7d: 238
+  stars_growth_pct: 1.5
+  trending_score: 241.58
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15392
     - 15504
     - 15634
     - 15827
+    - 16065
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +43,16 @@ readme_source:
   repo: AgriciDaniel/claude-obsidian
   path: skills/obsidian-markdown/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:43.248Z
+  fetched_at: 2026-11-02T09:06:24.414Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: obsidian-markdown
-  description: Agent skill from AgriciDaniel/claude-obsidian
+  description: "Explain, draft, or validate Obsidian Flavored Markdown syntax:
+    properties, wikilinks, embeds, callouts, tags, comments, highlights, block
+    references, math, and Mermaid. Use when the user explicitly requests
+    Obsidian note formatting or syntax help, not for general Markdown or broad
+    vault operations."
   folder_path: skills/obsidian-markdown
   extra_files: []
   pack_total_skills: 16
@@ -98,7 +105,8 @@ Never write a note directly.
 Use flat YAML properties and `YYYY-MM-DD` dates. Quote wikilinks inside YAML.
 
 ```yaml
----type: concept
+---
+type: concept
 title: "Contextual Retrieval"
 created: 2026-07-11
 updated: 2026-07-11
@@ -112,11 +120,14 @@ related:
   - "[[Retrieval]]"
 sources:
   - "[[Anthropic Contextual Retrieval]]"
----```
+---
+```
 
 Do not nest objects in generated wiki properties. Use block lists rather than
-inline YAML arrays. Quote numeric-only tag values, for example `- "2026"`, so
-YAML parsers preserve them as tags instead of numbers. Keep unknown existing
+inline YAML arrays. A numeric-only tag is invalid in Obsidian even when quoted as a YAML string.
+Use `year/2026` or `y2026`, or store a number in a `year` property. Tags need
+at least one non-numeric character; valid Unicode tags remain supported. See
+[Tags](https://obsidian.md/help/tags), checked 2026-10-17. Keep unknown existing
 properties unless the requested edit changes them.
 
 ## Wikilinks and embeds

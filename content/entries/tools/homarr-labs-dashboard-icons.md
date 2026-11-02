@@ -16,24 +16,27 @@ tags:
   - codex
   - dashboard
 status: active
-quality_percentile: 87
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: homarr-labs/dashboard-icons
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8936
-  last_commit: 2026-10-23T15:16:40Z
-  stars_delta_7d: 373
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 8990
+  last_commit: 2026-10-26T14:25:41Z
+  stars_delta_7d: 54
+  stars_growth_pct: 0.6
+  trending_score: 54.33
+  rank_current: 83
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 8936
+    - 8990
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +45,7 @@ readme_source:
   repo: homarr-labs/dashboard-icons
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.032Z
+  fetched_at: 2026-11-02T09:05:33.875Z
   truncated: false
 type: agent_tool
 tool:
@@ -224,6 +227,7 @@ not waive third-party trademark, patent, or brand-guideline restrictions.
 **License**: This project is available under the terms of the [LICENSE](https://github.com/homarr-labs/dashboard-icons/blob/main/LICENSE) file.
 
 ---
+
 <p align="center">
   Made with ♥ by the <a href="https://github.com/homarr-labs">Homarr Labs</a> team and contributors
 </p>

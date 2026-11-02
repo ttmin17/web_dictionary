@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-process-mapper
 name: process-mapper
-tagline: Use when a BizOps lead, COO, or process-improvement owner needs to
-  document an end-to-end business process (procurement, employee onboarding,
-  incident
+tagline: Use when documenting an end-to-end business process (procurement,
+  onboarding, handoffs) and finding where work waits. Maps it with
+  process_documenter.
 summary: 1. Implicit process — the steps exist only in tribal knowledge, so
   handoffs drop and onboarding takes weeks. 2. Invisible waiting — most of the
   elapsed time on any business process is queue / wait / approval time, not...
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,22 +43,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/process-mapper/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.236Z
+  fetched_at: 2026-11-02T09:06:18.454Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: process-mapper
-  description: Use when a BizOps lead, COO, or process-improvement owner needs to
-    document an end-to-end business process (procurement, employee onboarding,
-    incident handoff, customer-onboarding, claims adjudication) in BPMN-style
-    notation, measure cycle times by stage, surface where work spends most of
-    its time waiting vs. being worked, and quantify the gap between processing
-    time and total elapsed time. Pairs Lean / Six Sigma / Theory-of-Constraints
-    canon with deterministic stdlib-only Python tools to produce a process map,
-    a ranked bottleneck list (with severity + root-cause hypothesis), and a
-    cycle-time analysis (P50, P90, value-add ratio, Little's-Law throughput).
-    Distinct from sales-pipeline, system-reliability (SLO), and strategic-OKR
-    work — this is tactical process documentation for internal operations.
+  description: Use when documenting an end-to-end business process (procurement,
+    onboarding, handoffs) and finding where work waits. Maps it with
+    process_documenter.py, measures stages with cycle_time_analyzer.py and finds
+    bottlenecks with bottleneck_detector.py.
   folder_path: business-operations/skills/process-mapper
   extra_files:
     - assets/process_template.md
@@ -68,7 +61,7 @@ skill:
     - scripts/bottleneck_detector.py
     - scripts/cycle_time_analyzer.py
     - scripts/process_documenter.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

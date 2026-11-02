@@ -1,8 +1,8 @@
 ---
 slug: zenstory-ai-drama-skills-skills-short-drama-edit
 name: short-drama-edit
-tagline: Agent skill from zenstory-ai/drama-skills
-summary: Agent skill from zenstory-ai/drama-skills
+tagline: 将已生成的短剧镜头剪成成片，记录入出点、镜序、声音、字幕与交付规格。用于套剪、加字幕、统一响度、调整节奏或导出精修素材；需要补素材或修改故事时转回对应创作阶段。
+summary: 根据实际素材选择可用片段，按剧本与分镜核对叙事。素材与意图不一致时，记录取舍和缺口。
 categories:
   - media-creative
 tags:
@@ -11,10 +11,10 @@ tags:
   - ai-video
   - aigc
 status: active
-quality_percentile: 76
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -22,30 +22,30 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3360
-  last_commit: 2026-10-20T19:23:14Z
-  stars_delta_7d: 307
-  stars_growth_pct: 10.1
-  trending_score: 337.87
+  stars: 3650
+  last_commit: 2026-11-02T08:30:37Z
+  stars_delta_7d: 290
+  stars_growth_pct: 8.6
+  trending_score: 315.03
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2574
     - 2825
     - 3053
     - 3360
-language: en
+    - 3650
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: zenstory-ai/drama-skills
   path: skills/short-drama-edit/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:26.649Z
+  fetched_at: 2026-11-02T09:06:48.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: short-drama-edit
-  description: Agent skill from zenstory-ai/drama-skills
+  description: 将已生成的短剧镜头剪成成片，记录入出点、镜序、声音、字幕与交付规格。用于套剪、加字幕、统一响度、调整节奏或导出精修素材；需要补素材或修改故事时转回对应创作阶段。
   folder_path: skills/short-drama-edit
   extra_files:
     - agents/openai.yaml
@@ -84,7 +84,7 @@ skill:
 
 进入条件是**素材已经存在且可读**：`剧集/<EP>/制作成果/` 里有本次要用的视频文件；
 静态漫剧是已接受的关键帧和配音文件。
-提示词写完、job 确认过、adapter 返回成功，都不等于素材可用；本阶段只认当前能打开的文件字节。
+先确认本次素材文件可打开，不能仅凭提示词、生产确认或 adapter 成功回执开始剪辑。
 
 素材不全时可以先剪已有连续段落；用户要求完整成片时，将这一版标为片段并列出缺口。
 在「未采用镜头」说明缺文件、质量不可用或叙事取舍。
@@ -103,8 +103,8 @@ skill:
 1. **逐段看完整素材，先标可用带，再谈剪辑。** 每个文件从头到尾看一遍，写下它实际能用的时间
    区间，以及区间之外发生了什么（起势静止、结尾漂移、发白、动作回弹、多余的重复表演）。
    这一步的产出是事实，不是决定。做法见 [生成素材的可用带](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-edit/references/generated-footage.md)。
-2. **有台词的镜先定位发声区间。** 保留完整字音和所需停顿。内置工具同步切画面与声音；
-   需要在连续对白上换画面时，使用外部剪辑工具分开处理。
+2. **有台词的镜先定位发声区间。** 保留完整字音和所需停顿。视频自带声音随画面同步裁切；
+   独立配音文件可用 `配音` 行跨切点播放，分离或替换原视频音轨则先用外部工具处理。
 3. **在可用区间内选叙事入出点。** 按动作、反应或停顿的需要选择入点，出点取信息完成之后、缺陷
    开始之前。逐段写清入点理由和出点理由。做法见 [入出点与镜序](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-edit/references/cut-craft.md)。
 4. **排镜序并检查相邻关系。** 检查动作、空间、揭示与声音是否连贯；重复信息没有新增作用时再删。
@@ -115,8 +115,7 @@ skill:
 7. **写字幕、画面文字与音效。** 字幕的每一个字都取自 `剧本.md` 的台词原文，不取自转写结果；
    标点照抄剧本，字不能改。转写只用来定位时间。画面留白给后期的 `[画面文字]` 写成 `画面文字` 行，
    需要落在画面文字出现时的提示音写成 `音效` 行。
-8. **写出 `剪辑单.md`，再渲染。** 先有文档后有成片：文档是可审查、可修订、可复现的那一份，
-   成片是它的产物。
+8. **写出 `剪辑单.md`，再渲染。** 取舍、时间与后期处理先落进文档，成片按这份记录生成。
 9. **按可测项验收成片，再交付。** 见 [交付与验收](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-edit/references/delivery-verify.md)。
 
 ## 剪辑单要求
@@ -132,8 +131,7 @@ skill:
     有静帧时交付规格必须写 `画幅与帧率`。
   - `- 入点：<秒>` / `- 出点：<秒>` / `- 时长：<秒>`——三者必须自洽，`出点 - 入点 == 时长`。
     全部用秒，保留两位小数，不写时间码，不写帧号。
-  - `- 取舍：入点=<理由>；出点=<理由>`——理由写画面上发生了什么，不写「节奏需要」。
-    理由应能对应实际素材与本镜叙事需要。
+  - `- 取舍：入点=<理由>；出点=<理由>`——说明画面上的具体变化及其叙事作用，不只写「节奏需要」。
   - `- 声音：<本段声音怎么处理>`——记录保留原声或外部处理。此行不驱动内置 render 的混音。
   - `- 画面：<接镜校正>`、`- 画面：无` 或 `- 画面：不校`——校正是「亮度 <数>」「饱和 <数>」「色温 <数>」
     三项的任意组合，用 `；` 分隔，写了就替代这一段的自动接镜；`无` 表示不另写校正；`不校` 表示连自动接镜
@@ -150,7 +148,7 @@ skill:
 
     | 样式 | 各项的位置 |
     |---|---|
-    | `卡片` | 每项一行：第一个词是名称，最后一个词是数值，中间的词是单位（`主号 粉丝 2｜小号 1`） |
+    | `卡片` | 每项一行：第一个词是名称，最后一个词是数值，中间的词是单位（`本月 订单 128｜退货 3`） |
     | `系统面板` | 第一项是状态行，逐字打出；其余是奖励行 |
     | `任务面板` | 标题、目标（逐字打出）；其后写成 `<数> / <数>` 的一项是进度，其余是奖励标签 |
     | `角标` | 各项连成一行标签 |
@@ -176,8 +174,8 @@ skill:
   有静帧段时也可写 `SHOT-...`；哪些镜头要有下落见 [静帧段](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-edit/references/still-cuts.md#每一镜的下落)。
 - 同一个 `MOTION-...` 可以拆成多个 `CUT-...`（同一段素材的两处分别使用），也可以整段不用。
   不能凭空出现没有素材来源的 `CUT-...`。
-- 一段素材被用两次时，两个 `CUT-...` 的区间不得重叠：同一批帧在成片里出现两次是重复镜头，
-  不是复用。确需重复出现（闪回、强调）时写明它是有意重复，并说明第二次为什么仍然成立。
+- 同一视频被用两次时，两个 `CUT-...` 的源时间区间不得重叠。确需重复出现（闪回、强调）时，
+  写明重复的意图及第二次的作用；同一静帧可以用于多个 `CUT-...`。
 
 ## 边界
 
@@ -201,14 +199,14 @@ python3 <本技能目录>/scripts/edit_tool.py verify <剧集/EP001> --project-r
 ```
 
 `check` 只核对不渲染：素材是否比剪辑单新（重出之后字幕、画面文字与音效时间必须重测）、区间自洽、
-来源 ID 解析与每一镜的下落、文件存在、区间不越过素材时长、同源区间不重叠、字幕文字能在 `剧本.md` 里找到、
+来源 ID 解析与每一镜的下落、文件存在、区间不越过素材时长、同源区间不重叠、字幕去标点与空白后能在 `剧本.md` 里找到、
 画面文字能在 `[画面文字]` 行里找到、「接续」之前确有倒计时、音效文件存在且落在本段内、
 字幕与配音在整条片里不越过结尾、互不重叠。
 其中「区间不越过素材时长」需要 `ffprobe`，配音的两项需要 `ffmpeg`；缺哪个就报哪几项「未测」并说明原因，
 不静默跳过。
-`render` 按剪辑单切段、静帧按运镜出画、同场景自动接镜、拼接、混入音效与配音、烧字幕与画面文字、统一响度，
+`render` 按剪辑单切段、静帧按运镜出画、同场景自动接镜、拼接、混入音效、配音与环境声、烧字幕与画面文字、统一响度，
 输出 `剧集/<EP>/制作成果/成片/`。
-`verify` 只测量已经渲染出来的成片并回报数字，另列出画面文字、音效与配音在成片里的起止秒、切点亮度变化和疑似坏帧，
+`verify` 只测量已经渲染出来的成片并回报数字，另列出画面文字、音效与配音在成片里的起止秒、切点亮度变化、切点音量变化和疑似坏帧，
 供抽帧和回听；不改文件、不给质量结论。
 
 字幕默认由带 libass 的 ffmpeg 烧录。`--subtitles remotion` 换成一条排版可调的
@@ -218,9 +216,8 @@ python3 <本技能目录>/scripts/edit_tool.py verify <剧集/EP001> --project-r
 走 ffmpeg 的字幕压在画面文字之上。取舍见 [声音、字幕与音乐](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-edit/references/sound-and-subtitles.md)，
 装法见 [Remotion 叠层](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-edit/assets/remotion/README.md)。
 
-`render` 保留切好的中间文件。它只切段、静帧出画与运镜、硬拼接、混入 `音效` 与 `配音` 行、统一字幕样式、画面文字、
-接镜校正（写明的与同场景自动的）和整片响度，不执行 `声音` 行中的混音方案，也不按交付规格自动缩放或改帧率。
-需要混音、逐镜字幕避让、转场或画幅转换时用外部工具完成并记录，验收实际交付文件。
+`render` 保留中间文件；`声音` 行只记录方案，不驱动处理，也不会按交付规格自动转换视频的画幅或帧率。
+需要额外混音、逐镜字幕避让、转场或视频规格转换时，用外部工具完成并记录，再验收实际交付文件。
 
 ## 按需知识
 
@@ -243,8 +240,10 @@ python3 <本技能目录>/scripts/edit_tool.py verify <剧集/EP001> --project-r
 ## 完成
 
 每个 `CUT-...` 都绑定真实素材与自洽区间，台词在成片里完整可听，字幕逐字等于剧本原文，
-剪辑点没有可听的音床硬切，成片响度落在交付目标上，未采用镜头都写明理由并区分了缺文件与缺质量，
-即完成。目标时长与实际时长的差、以及仍然值得再剪一版的地方，写在末尾报告里交给创作者判断。
+剪辑点没有可听的音床硬切，成片的实测响度与真峰写进末尾报告，且落在交付容差内，或超出容差的结果已报给
+创作者且获接受，未采用镜头都写明理由并区分了缺文件与缺质量，即完成。默认容差和创作者接受后的写法见
+[声音、字幕与音乐](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-edit/references/sound-and-subtitles.md)的「响度」。目标时长与实际时长的差、以及仍然值得
+再剪一版的地方，写在末尾报告里交给创作者判断。
 
 ## 安装维护
 

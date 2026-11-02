@@ -1,8 +1,11 @@
 ---
 slug: pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-review-agent
 name: review-agent
-tagline: Agent skill from pacifio/atlas
-summary: Agent skill from pacifio/atlas
+tagline: Perform a read-only, defect-first review of a specified code change and
+  return every actionable finding. Use when another agent delegates review of un
+summary: 1. Read the applicable AGENTS.md instructions. 2. Inspect the complete
+  diff for the requested target and enough surrounding code to understand each
+  changed path. 3. Identify concrete regressions introduced by the chan...
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: pacifio/atlas
@@ -22,16 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9543
-  last_commit: 2026-10-26T07:24:31Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 9561
+  last_commit: 2026-11-02T05:01:45Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.2
+  trending_score: 18.03
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9593
     - 9622
     - 9543
+    - 9561
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +43,15 @@ readme_source:
   repo: pacifio/atlas
   path: vendor/atlas-engine/skills/src/assets/samples/review-agent/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.543Z
+  fetched_at: 2026-11-02T09:06:31.061Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: review-agent
-  description: Agent skill from pacifio/atlas
+  description: Perform a read-only, defect-first review of a specified code change
+    and return every actionable finding. Use when another agent delegates review
+    of uncommitted changes, a base-branch diff, a commit, or custom review
+    instructions.
   folder_path: vendor/atlas-engine/skills/src/assets/samples/review-agent
   extra_files:
     - agents/openai.yaml

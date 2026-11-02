@@ -3,7 +3,8 @@ slug: ahujasid-mcp-for-blender
 name: mcp-for-blender
 tagline: Community plugin to control Blender 3D with any LLM of your choice. Not
   affiliated with the official Blender Foundation.
-summary: Connect Blender to any LLM
+summary: formerly blender-mcp — the PyPI package is now mcp-for-blender.
+  Existing setups keep working; no config change is required. Read more
 categories:
   - media-creative
 tags:
@@ -12,29 +13,29 @@ tags:
   - blender-addon
   - blender-mcp
 status: active
-quality_percentile: 90
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2025-03-07T09:58:58
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ahujasid/mcp-for-blender
   official_vendor: false
   license: MIT
 signals:
-  stars: 32370
-  last_commit: 2026-10-24T04:50:20Z
-  stars_delta_7d: 762
-  stars_growth_pct: 2.4
-  trending_score: 780.37
-  rank_current: 3
-  rank_delta: 0
+  stars: 33038
+  last_commit: 2026-10-29T09:13:34Z
+  stars_delta_7d: 668
+  stars_growth_pct: 2.1
+  trending_score: 681.79
+  rank_current: 5
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30173
     - 30632
     - 31608
     - 32370
+    - 33038
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: ahujasid/mcp-for-blender
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:03.300Z
+  fetched_at: 2026-11-02T09:05:44.871Z
   truncated: false
 type: mcp_server
 launch:
@@ -58,9 +59,7 @@ launch:
 
 <div align="center">
 
-# MCP for Blender
-
-**Connect Blender to any LLM**
+<img src="https://raw.githubusercontent.com/ahujasid/mcp-for-blender/main/assets/logo-banner.svg" alt="MCP for Blender — Connect Blender to any LLM" width="480" />
 
 *formerly `blender-mcp` — the PyPI package is now [`mcp-for-blender`](https://pypi.org/project/mcp-for-blender/).*
 *Existing setups keep working; no config change is required. [Read more](https://github.com/ahujasid/mcp-for-blender/issues/366)*
@@ -76,7 +75,7 @@ Prompt-assisted 3D modeling, scene creation, and manipulation — driven by AI.
 [![PyPI Version](https://img.shields.io/pypi/v/mcp-for-blender?color=blue)](https://pypi.org/project/mcp-for-blender/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/ahujasid/mcp-for-blender/main/LICENSE)
 
-<a href="https://trendshift.io/repositories/14834?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-14834" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/14834" alt="ahujasid%2Fblender-mcp | Trendshift" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/14834?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-14834" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/14834" alt="ahujasid%2Fblender-mcp | Trendshift" width="250" height="55"/></a> <a href="https://trendshift.io/repositories/14834?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-14834" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/14834/daily?language=Python" alt="ahujasid%2Fmcp-for-blender | Trendshift" width="250" height="55"/></a>
 
 <br />
 
@@ -90,6 +89,7 @@ Prompt-assisted 3D modeling, scene creation, and manipulation — driven by AI.
 </div>
 
 ---
+
 ## Quickstart
 
 > **Note:** the PyPI package `blender-mcp` is now **`mcp-for-blender`**. Existing setups
@@ -205,6 +205,7 @@ The addon starts its server when Blender opens. To check, press `N` in the 3D vi
 > **Note:** Only run **one** instance of the MCP server (either Cursor or Claude Desktop), not both.
 
 ---
+
 ## Table of Contents
 
 - [Quickstart](#quickstart)
@@ -244,6 +245,7 @@ The addon starts its server when Blender opens. To check, press `N` in the 3D vi
 - [Star History](#star-history)
 
 ---
+
 ## Features
 
 | | |
@@ -267,6 +269,7 @@ The system consists of two main components:
 2. **MCP Server** (`src/blender_mcp/server.py`) — a Python server that implements the Model Context Protocol and connects to the Blender addon
 
 ---
+
 ## Installation
 
 ### Automatic setup
@@ -468,6 +471,7 @@ Each instance needs its own port set in the Blender addon panel to match.
 By default, the AI can run any Python code in Blender. Set `BLENDER_MCP_SAFE_MODE=1` to check every script before it runs and block risky code — things like reading or writing files directly, running other programs, accessing the network, or installing code that keeps running after the script ends. Normal Blender work (modeling, materials, rendering, saving, import/export) still works. Blocked scripts are sent back to the AI with the reason, so it can try again with a corrected version.
 
 ---
+
 ## MCP Client Setup
 
 ### Claude for Desktop
@@ -630,6 +634,7 @@ env = { BLENDER_HOST = "localhost", BLENDER_PORT = "9876" }
 ```
 
 ---
+
 ## Installing the Blender Addon
 
 > `uvx mcp-for-blender setup` (see [Quickstart](#quickstart)) does all of this, including enabling the addon. The steps below are for doing it by hand.
@@ -677,6 +682,7 @@ If a client is still set up with the old `blender-mcp` package name, `update` sa
 > **Note:** the MCP server never modifies your Blender addon files on its own. When it starts, it checks whether the installed addon is behind the bundled copy and logs how to update; `update` and `install-addon` are what actually write. Trajectory capture still works on older loaded addons via an `execute_code` fallback.
 
 ---
+
 ## Usage
 
 ### Starting the Connection
@@ -721,6 +727,14 @@ Which Tencent Cloud service the addon must call depends on where your account li
 International credentials sent to the mainland endpoint fail with `AuthFailure.SignatureFailure` or
 `ResourceUnavailable`, so tick the toggle when your SecretId/SecretKey come from tencentcloud.com.
 The toggle sits under **Tencent Hunyuan 3D → Official API** in the sidebar.
+
+#### Tripo
+
+[Tripo](https://www.tripo3d.ai/) generates textured 3D models from a text prompt or a reference image.
+It runs through [Premium](#premium) with no key, or on your own Tripo API key.
+Through Premium, text uses your default quality and an image counts as one high-quality generation.
+[Get a Tripo API key](https://developers.tripo3d.ai/en/keys).
+Tick **Tripo** under **AI Model Generation** in the sidebar, choose a **Model**, and paste the key.
 
 #### Meshy
 
@@ -813,6 +827,7 @@ Here are some examples of what you can ask Claude to do:
 | *"Get information about the current scene, and make a threejs sketch from it"* | [Watch](https://www.youtube.com/watch?v=jxbNI5L7AH8) |
 | *"Generate a 3D model of a garden gnome through Hyper3D"* | |
 | *"Generate a wooden rocking chair with Meshy"* | |
+| *"Generate a ceramic teapot with Tripo"* | |
 | *"Fill this room with low-poly furniture from Poly Pizza"* | |
 | *"Make this car red and metallic"* | |
 | *"Create a sphere and place it above the cube"* | |
@@ -820,6 +835,7 @@ Here are some examples of what you can ask Claude to do:
 | *"Point the camera at the scene, and make it isometric"* | |
 
 ---
+
 ## Persistent API Credentials
 
 MCP for Blender supports persistent credentials via Blender Add-on Preferences:
@@ -834,6 +850,7 @@ You can store these values there so they survive Blender restarts:
 - Hunyuan3D SecretId / SecretKey
 - Hunyuan3D API URL
 - Meshy API Key
+- Tripo API Key
 
 For headless setups or CI, credentials can also be injected by environment variables:
 
@@ -846,8 +863,10 @@ For headless setups or CI, credentials can also be injected by environment varia
 | `BLENDERMCP_HUNYUAN3D_SECRET_KEY` |
 | `BLENDERMCP_HUNYUAN3D_API_URL` |
 | `BLENDERMCP_MESHY_API_KEY` |
+| `BLENDERMCP_TRIPO_API_KEY` |
 
 ---
+
 ## Troubleshooting
 
 | Problem | Fix |
@@ -911,6 +930,7 @@ Telemetry data is not linked to your name or account. It may be used to improve 
 Full detail on what is collected, and the license you grant by opting in, is in [TERMS_AND_CONDITIONS.md](https://github.com/ahujasid/mcp-for-blender/blob/main/TERMS_AND_CONDITIONS.md).
 
 ---
+
 ## Feedback
 
 We are actively looking for feedback on MCP for Blender. If you have thoughts, share them [here](https://bit.ly/blender-mcp-form).
@@ -930,6 +950,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This is a third-party integration and not made by Blender. Made by [Siddharth](https://x.com/sidahuj).
 
 ---
+
 ## Star History
 
 <a href="https://star-history.com/#ahujasid/blender-mcp&Date">

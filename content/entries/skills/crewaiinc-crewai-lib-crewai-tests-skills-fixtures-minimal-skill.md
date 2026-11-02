@@ -1,8 +1,8 @@
 ---
 slug: crewaiinc-crewai-lib-crewai-tests-skills-fixtures-minimal-skill
 name: minimal-skill
-tagline: Agent skill from crewAIInc/crewAI
-summary: Agent skill from crewAIInc/crewAI
+tagline: A minimal skill with only required fields.
+summary: A minimal skill with only required fields.
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +11,10 @@ tags:
   - aiagentframework
   - llms
 status: active
-quality_percentile: 85
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: crewAIInc/crewAI
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 60109
-  last_commit: 2026-10-26T07:30:48Z
-  stars_delta_7d: 253
-  stars_growth_pct: 0.4
-  trending_score: 254.07
+  stars: 60411
+  last_commit: 2026-11-02T06:37:07Z
+  stars_delta_7d: 302
+  stars_growth_pct: 0.5
+  trending_score: 303.52
   velocity_source: snapshot_delta
   sparkline_4w:
     - 59856
     - 60109
+    - 60411
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +39,12 @@ readme_source:
   repo: crewAIInc/crewAI
   path: lib/crewai/tests/skills/fixtures/minimal-skill/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:34.399Z
+  fetched_at: 2026-11-02T09:06:54.321Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: minimal-skill
-  description: Agent skill from crewAIInc/crewAI
+  description: A minimal skill with only required fields.
   folder_path: lib/crewai/tests/skills/fixtures/minimal-skill
   extra_files: []
   pack_total_skills: 3

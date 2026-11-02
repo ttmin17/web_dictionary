@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/image/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.291Z
+  fetched_at: 2026-11-02T09:06:13.824Z
   truncated: false
 type: agent_skill
 skill:
@@ -65,7 +66,7 @@ skill:
   extra_files:
     - evals/evals.json
     - references/ai-image-prompting.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -100,6 +101,7 @@ Gather this context (ask if not provided):
 - Do you need the image optimized for web performance?
 
 ---
+
 ## Choosing Your Approach
 
 Pick the right tool for the job:
@@ -107,12 +109,13 @@ Pick the right tool for the job:
 | Approach | Best For | Tools | When to Use |
 |----------|----------|-------|-------------|
 | **AI Generation** | Original images from text prompts | Gemini/Nano Banana, Flux, Ideogram | Blog heroes, social graphics, lifestyle scenes |
-| **AI Editing** | Modify existing images | Gemini, Flux Flex | Background removal, style changes, variations |
+| **AI Editing** | Modify existing images | Gemini, FLUX.2 [flex] | Background removal, style changes, variations |
 | **Design Tools** | Templated, brand-consistent assets | Canva, Figma | Profile banners, social templates, presentations |
 | **Screenshot + Overlay** | Product UI showcases | Browser screenshot + code overlay | Product mockups, feature announcements |
 | **Stock Photography** | Generic business/lifestyle scenes | Unsplash, Pexels | When speed matters more than uniqueness |
 
 ---
+
 ## AI Image Generation
 
 Generate original images from text prompts. The fastest way to create unique marketing visuals.
@@ -122,7 +125,7 @@ Generate original images from text prompts. The fastest way to create unique mar
 | Model | Best For | Text in Images | API | Cost |
 |-------|----------|:-:|-----|------|
 | **Gemini Image** (Google, "Nano Banana" / Nano Banana Pro) | All-around, editing, multi-image reference, text rendering | Good | [Gemini API](https://ai.google.dev/gemini-api/docs/image-generation) | Check [pricing](https://ai.google.dev/gemini-api/docs/pricing) |
-| **Flux** (Black Forest Labs — Pro 1.1, Kontext, Dev, Schnell) | Photorealism, brand consistency, batch; Kontext for in-image editing | Limited | [BFL API](https://docs.bfl.ai/), Replicate, fal.ai | Check [pricing](https://docs.bfl.ai/quick_start/pricing) |
+| **Flux** (Black Forest Labs — FLUX 3 Image; FLUX.2 [pro], [flex], [dev], [klein]; FLUX.1 Kontext is the previous generation) | Photorealism, brand consistency, batch; multi-reference editing | Limited | [BFL API](https://docs.bfl.ai/), Replicate, fal.ai | Check [pricing](https://docs.bfl.ai/quick_start/pricing) |
 | **Ideogram 3.0** | Typography, branded graphics, accurate text rendering | Best | [Ideogram API](https://developer.ideogram.ai/) | Check [pricing](https://about.ideogram.ai/api-pricing) |
 | **ChatGPT Images 2.0 / GPT Image** (OpenAI) | General purpose, ChatGPT integration, native editing | Good | [OpenAI API](https://platform.openai.com/docs/guides/image-generation) | Check [pricing](https://platform.openai.com/docs/pricing) |
 | **Midjourney v7** | Artistic, high-aesthetic, art-directed visuals | Improved | No official API; Discord + Web | Subscription-based |
@@ -143,7 +146,7 @@ Need product/brand consistency across many images?
 └── No ↓
 
 Need to edit an existing image (in-place)?
-├── Yes → Gemini (native editing), Flux Kontext, ChatGPT Images
+├── Yes → Gemini (native editing), FLUX.2 [flex], ChatGPT Images
 └── No ↓
 
 Need vector / illustrative brand assets?
@@ -151,11 +154,11 @@ Need vector / illustrative brand assets?
 └── No ↓
 
 Need highest visual quality / art direction?
-├── Yes → Flux Pro 1.1, Midjourney v7
+├── Yes → FLUX 3 Image or FLUX.2 [pro], Midjourney v7
 └── No ↓
 
 Need volume at low cost?
-└── Flux Schnell, Gemini Flash, Stable Diffusion (self-hosted)
+└── FLUX.2 [klein], Gemini Flash, Stable Diffusion (self-hosted)
 ```
 
 ### Prompting Basics
@@ -177,6 +180,7 @@ clean commercial photography style, 16:9 aspect ratio, 4K
 For detailed prompting guides per model, see [references/ai-image-prompting.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/image/references/ai-image-prompting.md).
 
 ---
+
 ## Design Tools
 
 For templated, brand-consistent work where AI generation is overkill or too unpredictable.
@@ -211,6 +215,7 @@ Best for teams with design systems or pixel-perfect needs.
 | Abstract/creative visual | No | Yes |
 
 ---
+
 ## Marketing Image Workflows
 
 ### Blog & Article Hero Images
@@ -300,6 +305,7 @@ Logos, icons, and illustrations. AI generation has limits here.
 | Social icons | No | Yes | Use platform-provided assets |
 
 ---
+
 ## Image Optimization
 
 Every image on your site affects page speed, which affects SEO and conversions.
@@ -341,6 +347,7 @@ curl -s https://yoursite.com | grep -oP 'src="[^"]+\.(jpg|png|webp)"' | head -20
 ```
 
 ---
+
 ## OG & Social Preview Images
 
 The image that appears when your URL is shared on social media, Slack, Discord, etc.
@@ -366,10 +373,11 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 **Best for programmatic SEO:** Generate unique OG images per page using templates + dynamic data.
 
 ---
+
 ## Common Mistakes
 
 1. **Using AI for product UI screenshots** — models hallucinate interfaces; capture real screenshots
-2. **Skipping image optimization** — unoptimized images are the #1 page speed killer
+2. **Skipping image optimization** — unoptimized images are a common cause of slow pages, and the hero image is often the LCP element
 3. **No OG image** — shared links look broken without a preview image
 4. **Wrong aspect ratio** — always check platform specs before generating
 5. **Text-heavy images without Ideogram** — most AI models butcher text; use Ideogram or add text in post
@@ -378,6 +386,7 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 8. **Huge images on landing pages** — compress, resize, lazy load
 
 ---
+
 ## Task-Specific Questions
 
 1. What type of image do you need? (Blog hero, social graphic, mockup, banner, brand asset)
@@ -388,6 +397,7 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 6. Does this need to be optimized for web performance?
 
 ---
+
 ## Related Skills
 
 - **ad-creative**: For paid ad image creative, platform-specific ad specs, and scaled ad production

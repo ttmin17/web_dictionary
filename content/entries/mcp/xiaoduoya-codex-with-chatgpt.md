@@ -14,29 +14,29 @@ tags:
   - codex
   - model-context-protocol
 status: active
-quality_percentile: 73
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: XiaoDuoYa/codex-with-chatgpt
   official_vendor: false
   license: MIT
 signals:
-  stars: 7553
+  stars: 7634
   last_commit: 2026-10-01T05:19:24Z
-  stars_delta_7d: 96
-  stars_growth_pct: 1.3
-  trending_score: 97.24
+  stars_delta_7d: 81
+  stars_growth_pct: 1.1
+  trending_score: 81.87
   rank_current: 26
-  rank_delta: -14
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7095
     - 7345
     - 7457
     - 7553
+    - 7634
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: XiaoDuoYa/codex-with-chatgpt
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:03.316Z
+  fetched_at: 2026-11-02T09:05:44.738Z
   truncated: false
 type: mcp_server
 launch:
@@ -153,6 +153,7 @@ anytime. / Skill 每天自动检查一次 GitHub，有新版本会自动更新�
 也可以随时对 Codex 说"更新 Codex with ChatGPT"。
 
 ---
+
 *The sections below are in English. 以下详细内容为英文，中文完整版见
 [README.zh-CN.md](https://github.com/XiaoDuoYa/codex-with-chatgpt/blob/main/README.zh-CN.md)。*
 

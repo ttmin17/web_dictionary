@@ -12,29 +12,29 @@ tags:
   - monitoring
   - monitoring-as-code
 status: active
-quality_percentile: 87
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: openstatusHQ/openstatus
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 9232
-  last_commit: 2026-10-26T07:14:58Z
-  stars_delta_7d: 37
-  stars_growth_pct: 0.4
-  trending_score: 37.15
-  rank_current: 48
-  rank_delta: -2
+  stars: 9242
+  last_commit: 2026-11-01T10:20:44Z
+  stars_delta_7d: 10
+  stars_growth_pct: 0.1
+  trending_score: 10.01
+  rank_current: 79
+  rank_delta: -35
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9175
     - 9178
     - 9195
     - 9232
+    - 9242
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: openstatusHQ/openstatus
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.044Z
+  fetched_at: 2026-11-02T09:05:33.873Z
   truncated: false
 type: mcp_server
 launch:

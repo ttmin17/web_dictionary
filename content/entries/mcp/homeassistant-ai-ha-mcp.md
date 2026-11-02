@@ -13,28 +13,29 @@ tags:
   - home-assistant
   - home-automation
 status: active
-quality_percentile: 68
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: homeassistant-ai/ha-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5249
-  last_commit: 2026-10-26T07:04:42Z
-  stars_delta_7d: 116
-  stars_growth_pct: 2.3
-  trending_score: 118.62
-  rank_current: 24
-  rank_delta: -8
+  stars: 5399
+  last_commit: 2026-11-02T08:10:04Z
+  stars_delta_7d: 150
+  stars_growth_pct: 2.9
+  trending_score: 154.29
+  rank_current: 12
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5050
     - 5133
     - 5249
+    - 5399
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: homeassistant-ai/ha-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:38:10.482Z
+  fetched_at: 2026-11-02T09:05:44.717Z
   truncated: false
 type: mcp_server
 launch:
@@ -85,14 +86,16 @@ launch:
 </div>
 
 ---
+
 ![Demo with Claude Desktop](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/docs/img/demo.webp)
 
 ---
+
 ## 🚀 Get Started
 
-The recommended way to run ha-mcp is the **HA-MCP Custom Component**. It installs into Home Assistant through HACS, runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect.
+The recommended way to run ha-mcp is the **HA-MCP Custom Component**. It installs into Home Assistant through HACS (the built-in Marketplace on Home Assistant 2026.11+), runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect.
 
-**Add it to Home Assistant via HACS (the preferred install):**
+**Add it to Home Assistant via HACS or, on Home Assistant 2026.11+, the Marketplace (the preferred install):**
 
 [![Add HA-MCP to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=homeassistant-ai&repository=ha-mcp&category=integration)
 
@@ -100,7 +103,8 @@ The recommended way to run ha-mcp is the **HA-MCP Custom Component**. It install
 
 > The setup below is for version 9.0.0 (October 28, 2026) and later; earlier versions show a shorter setup form without the administrator account step.
 
-1. Install the **HA-MCP Custom Component** from HACS — click the badge above, or in HACS open **Integrations → ⋮ → Custom repositories**, add `https://github.com/homeassistant-ai/ha-mcp` (category: **Integration**), then **Download**.
+1. Install the **HA-MCP Custom Component**. On **Home Assistant 2026.10 or older**, from HACS — click the badge above, or in HACS open **Integrations → ⋮ → Custom repositories**, add `https://github.com/homeassistant-ai/ha-mcp` (category: **Integration**), then **Download**.
+   On **Home Assistant 2026.11 or newer**, HACS is built in as the **Marketplace**: open **Settings → Marketplace** and accept its first-run warning, then **Connect GitHub** (a device sign-in). Adding a custom repository needs it, and until HA-MCP is in the Marketplace catalog it is also what makes the Marketplace check HA-MCP for updates in the background; without it, **Refresh information** on HA-MCP's Marketplace page checks by hand. Then click the badge above, or open the **Add from link** tab and add `https://github.com/homeassistant-ai/ha-mcp` as an **Integration**, and **Install**.
    Already installed from the earlier `homeassistant-ai/ha-mcp-integration` repository? It keeps receiving the same releases; nothing to change.
 2. **Restart Home Assistant.**
 3. Decide which administrator account the server acts as. Either create a long-lived access token on your own account (your profile → **Security** → **Long-lived access tokens** → **Create token**; it works from anywhere if it leaks, and the server's changes show under your name), or, safer, create an account just for HA-MCP under **Settings → People → Add person** with **Allow login**, **Local access only** and **Administrator** on. Never use your own login for the second option.
@@ -114,7 +118,7 @@ The recommended way to run ha-mcp is the **HA-MCP Custom Component**. It install
 - **Local only?** Leave remote access disabled at setup (or turn off **Remote access via webhook** in the entry options) — no webhook is registered at all, while the direct port and sidebar panel keep working.
 - **Settings panel:** while the server runs, an admin-only **HA-MCP** panel appears in the Home Assistant sidebar for managing tools, feature flags, backups, and themes.
 - **Optional authentication:** set **Authentication mode** to `ha_auth` to require a Home Assistant account sign-in instead of using the secret URL as the credential.
-- **Manual install (no HACS):** copy `custom_components/ha_mcp_tools/` from this repository into your Home Assistant `config/custom_components/` directory, then restart and add the integration as above.
+- **Manual install (no HACS or Marketplace):** copy `custom_components/ha_mcp_tools/` from this repository into your Home Assistant `config/custom_components/` directory, then restart and add the integration as above.
 
 The component's second entry type, the **File & YAML services entry** (**HA-MCP File & YAML Tools**), is only needed if you enable ha-mcp's opt-in file and YAML editing tools (feature flags, off by default) — skip it otherwise; you can add it later at any time. It works with any server type (in-process, app, Docker, or stdio).
 
@@ -244,6 +248,7 @@ You're now connected to the demo environment! [Connect your own Home Assistant �
 Having issues? Check the **[FAQ & Troubleshooting](https://homeassistant-ai.github.io/ha-mcp/faq/)**
 
 ---
+
 ## 💬 What Can You Do With It?
 
 Just talk to Claude naturally. Here are some real examples:
@@ -259,6 +264,7 @@ Just talk to Claude naturally. Here are some real examples:
 Spend less time configuring, more time enjoying your smart home.
 
 ---
+
 ## ✨ Features
 
 | Category | Capabilities |
@@ -323,6 +329,7 @@ by default; a single full root parameter can explicitly request a device read.
 See [parameter reads, freshness, and examples](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/zwave-parameter-reads.md).
 
 ---
+
 ## 🆚 ha-mcp vs. Home Assistant's built-in MCP Server
 
 Home Assistant ships its own [MCP Server integration](https://www.home-assistant.io/integrations/mcp_server/). It is built on the **Assist** pipeline, so a connected MCP client can read and control the entities you have exposed to Assist and run the intents Assist understands — handy for voice-style control of already-exposed devices.
@@ -342,6 +349,7 @@ ha-mcp is a standalone server built for **configuring, building, and debugging**
 **Rule of thumb:** Use the built-in integration for voice-style control of devices you have already exposed; use ha-mcp when you want an AI assistant that can also build and maintain your Home Assistant setup.
 
 ---
+
 ## 🔌 Custom Component (ha_mcp_tools) — File & YAML Services
 
 The **HA-MCP Custom Component** also powers a set of privileged tools that standard Home Assistant APIs can't provide: file system access and YAML config editing. (The same component runs the full server in-process — that's the recommended install in the **Get Started** section at the top.) Its **File & YAML services entry** (**HA-MCP File & YAML Tools**) enables the tools below.
@@ -366,13 +374,14 @@ Install the **HA-MCP File & YAML Tools** entry from the same **HA-MCP Custom Com
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=homeassistant-ai&repository=ha-mcp&category=integration)
 
-To add manually: open **HACS** > **Integrations** > three-dot menu > **Custom repositories** > add `https://github.com/homeassistant-ai/ha-mcp` (category: Integration) > **Download**. Or copy `custom_components/ha_mcp_tools/` from this repository into your HA `config/custom_components/` directory.
+To add manually on Home Assistant 2026.10 or older: open **HACS** > **Integrations** > three-dot menu > **Custom repositories** > add `https://github.com/homeassistant-ai/ha-mcp` (category: Integration) > **Download**. On 2026.11 or newer: in **Marketplace**, accept the first-run warning and **Connect GitHub**, then **Add from link** > `https://github.com/homeassistant-ai/ha-mcp` as an **Integration** > **Install**. Or copy `custom_components/ha_mcp_tools/` from this repository into your HA `config/custom_components/` directory.
 
 After installing, restart Home Assistant, then open **Settings** > **Devices & Services** > **Add Integration**, search for **HA-MCP Custom Component**, and add the **HA-MCP File & YAML Tools** entry.
 
 To run the full ha-mcp server in-process through this same component, see the **Get Started** section at the top and the [full in-process server documentation →](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/in-process-server.md).
 
 ---
+
 ## 🧠 Better Results with Agent Skills
 
 This server gives your AI agent tools to control Home Assistant. For better configurations, pair it with [Home Assistant Agent Skills](https://github.com/homeassistant-ai/skills) — domain knowledge that teaches the agent Home Assistant best practices.
@@ -388,6 +397,7 @@ Skills from `homeassistant-ai/skills` are bundled and served as [MCP resources](
 Skills can still be installed manually for clients that prefer local skill files — see the [skills repo](https://github.com/homeassistant-ai/skills) for instructions.
 
 ---
+
 ## 🔍 Tool Discovery for AI Agents
 
 By default, the full tool catalog (~87 tools) is listed to the client through the standard MCP `tools/list` response. Clients with deferred / on-demand tool loading (claude.ai, Claude Desktop, Claude Code) handle that fine — tools are pulled into context only when needed, so idle context cost is near-zero.
@@ -435,6 +445,7 @@ Leave it off in clients with deferred tool loading (claude.ai, Claude Desktop, C
 For the HA app, the same option is documented in [`homeassistant-addon/DOCS.md`](https://github.com/homeassistant-ai/ha-mcp/blob/master/homeassistant-addon/DOCS.md#enable_tool_search) along with the in-app settings UI for fine-grained tool enable/disable/pin.
 
 ---
+
 ### Read-only HTTP connections
 
 Append `/readonly` to the server's HTTP MCP endpoint to restrict that connection
@@ -466,6 +477,7 @@ Want early access to new features and fixes? Dev releases (`.devN`) are publishe
 **[Dev Channel Documentation](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/dev-channel.md)** — Instructions for pip/uvx, Docker, and Home Assistant app.
 
 ---
+
 ## 🤝 Contributing
 
 For development setup, testing instructions, and contribution guidelines, see **[CONTRIBUTING.md](https://github.com/homeassistant-ai/ha-mcp/blob/master/CONTRIBUTING.md)**.
@@ -473,6 +485,7 @@ For development setup, testing instructions, and contribution guidelines, see **
 For comprehensive testing documentation, see **[tests/README.md](https://github.com/homeassistant-ai/ha-mcp/blob/master/tests/README.md)**.
 
 ---
+
 ## 🔒 Privacy
 
 Ha-mcp runs **locally** on your machine. Your smart home data stays on your network.
@@ -484,11 +497,13 @@ Ha-mcp runs **locally** on your machine. Your smart home data stays on your netw
 For full details, see our [Privacy Policy](https://github.com/homeassistant-ai/ha-mcp/blob/master/PRIVACY.md).
 
 ---
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/homeassistant-ai/ha-mcp/blob/master/LICENSE) file for details.
 
 ---
+
 ## 🙏 Acknowledgments
 
 - **[Home Assistant](https://home-assistant.io/)**: Amazing smart home platform (!)
@@ -557,12 +572,14 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - **[@pburtchaell](https://github.com/pburtchaell)** — Financial support via [GitHub Sponsors](https://github.com/sponsors/julienld). Thank you! ☕
 - **[@norpol](https://github.com/norpol)** — Built the [OpenAI Tunnel for HA-MCP](https://github.com/norpol/hass-codex-tunnel-mcp) companion integration, connecting ChatGPT to a firewalled Home Assistant MCP server (#1811).
 ---
+
 ## 💬 Community
 
 - **[GitHub Discussions](https://github.com/homeassistant-ai/ha-mcp/discussions)** — Ask questions, share ideas
 - **[Issue Tracker](https://github.com/homeassistant-ai/ha-mcp/issues)** — Report bugs, request features, or suggest tool behavior improvements. Bug reports need the report the `ha_report_issue` tool generates, or a reason why there is none; without either they are closed after 24 hours.
 
 ---
+
 ## Star History
 
 <picture>

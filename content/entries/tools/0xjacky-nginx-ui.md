@@ -14,24 +14,25 @@ status: active
 quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: 0xJacky/nginx-ui
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 11667
-  last_commit: 2026-10-26T06:02:22Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.2
-  trending_score: 23.05
-  rank_current: 97
+  stars: 11727
+  last_commit: 2026-11-02T06:04:43Z
+  stars_delta_7d: 60
+  stars_growth_pct: 0.5
+  trending_score: 60.31
+  rank_current: 77
+  rank_delta: 19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11571
     - 11644
     - 11667
+    - 11727
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +41,7 @@ readme_source:
   repo: 0xJacky/nginx-ui
   path: README.md
   branch: dev
-  fetched_at: 2026-10-26T07:36:57.037Z
+  fetched_at: 2026-11-02T09:05:33.891Z
   truncated: false
 type: agent_tool
 tool:

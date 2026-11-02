@@ -13,29 +13,29 @@ tags:
   - ai-agent
   - chat
 status: active
-quality_percentile: 71
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: iOfficeAI/AionUi
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 33774
+  stars: 33985
   last_commit: 2026-10-23T14:21:51Z
-  stars_delta_7d: 148
-  stars_growth_pct: 0.4
-  trending_score: 148.65
-  rank_current: 46
-  rank_delta: -26
+  stars_delta_7d: 211
+  stars_growth_pct: 0.6
+  trending_score: 212.32
+  rank_current: 35
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 33357
     - 33490
     - 33626
     - 33774
+    - 33985
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: iOfficeAI/AionUi
   path: readme.md
   branch: main
-  fetched_at: 2026-10-26T07:42:26.536Z
+  fetched_at: 2026-11-02T09:06:14.929Z
   truncated: false
 type: agent_tool
 tool:
@@ -82,6 +82,7 @@ tool:
 </p>
 
 ---
+
 <p align="center">
   <strong>A free, open-source, Cowork app with AI Agents</strong><br>
   <em>Built-in Agent | Zero Setup | Any API Key | Multi-Agents | Remote Access | Cross-Platform | 24/7 Automation</em>
@@ -102,6 +103,7 @@ tool:
 </p>
 
 ---
+
 <p align="center">
   <a href="https://x.com/AionUi/status/2079493379914961069" target="_blank">
     <img src="https://raw.githubusercontent.com/iOfficeAI/AionUi/main/resources/kimi/contributor-bonus-black-blue.jpg" alt="AionUi × Kimi Contributor Bonus" width="600">
@@ -121,6 +123,7 @@ tool:
 </p>
 
 ---
+
 ## 📋 Quick Navigation
 
 <p align="center">
@@ -133,6 +136,7 @@ tool:
 </p>
 
 ---
+
 ## Cowork — AI Agents That Work Alongside You
 
 **AionUi is more than a chat client.** It's a Cowork platform where AI agents work alongside you on your computer — reading files, writing code, browsing the web, and automating tasks. You see everything the agent does, and you're always in control.
@@ -151,6 +155,7 @@ tool:
 </p>
 
 ---
+
 ## Built-in Agent — Install & Go, Zero Configuration
 
 AionUi ships with a complete AI agent engine. Unlike tools that require you to install CLI agents separately, **AionUi works the moment you install it**.
@@ -218,6 +223,7 @@ The three assistant types map to file workflows, and the final outputs are direc
 </table>
 
 ---
+
 ## Multi-Agent Mode — Already Have CLI Agents? Bring Them In
 
 If you already use Claude Code, Codex, Hermes Agent, or OpenClaw, AionUi auto-detects them and lets you Cowork with all of them — alongside the built-in agent.
@@ -260,6 +266,7 @@ Run multiple AI agents as an organized team: a **Leader** agent receives your in
 </details>
 
 ---
+
 ## Any API Key, Full Cowork Agent Power
 
 Other AI apps give you a chatbox with your API key. **AionUi gives you a full Cowork agent.**
@@ -297,6 +304,7 @@ AionUi also supports [NewAPI](https://github.com/QuantumNous/new-api) gateway se
 </details>
 
 ---
+
 ## Extensible Assistants & Skills
 
 _Extensible assistant system with 21 built-in professional assistants and a three-tier skill system. Create and manage your own assistants and skills._
@@ -345,6 +353,7 @@ AionUi includes **21 professional assistants** with predefined capabilities, ext
 </details>
 
 ---
+
 ## Cowork from Anywhere
 
 _Your 24/7 AI assistant — access AionUi from any device, anywhere._
@@ -417,6 +426,7 @@ _Set it up once, the AI agent runs automatically on schedule — truly 24/7 unat
 </details>
 
 ---
+
 ### **Preview Panel — Instantly View AI-Generated Results**
 
 _10+ formats: PDF, Word, Excel, PPT, code, Markdown, images, HTML, Diff — view everything without switching apps._
@@ -445,6 +455,7 @@ _10+ formats: PDF, Word, Excel, PPT, code, Markdown, images, HTML, Diff — view
 </details>
 
 ---
+
 ### **Smart File Management — Automated File Operations**
 
 _Batch renaming, automatic organization, smart classification, file merging — the Cowork agent handles it for you._
@@ -472,6 +483,7 @@ _Batch renaming, automatic organization, smart classification, file merging — 
 </details>
 
 ---
+
 ### **Excel Data Processing — AI-Powered Analysis**
 
 _Deeply analyze Excel data, automatically beautify reports, and generate insights — all powered by AI agents._
@@ -500,6 +512,7 @@ _Deeply analyze Excel data, automatically beautify reports, and generate insight
 </details>
 
 ---
+
 ### **AI Image Generation & Editing**
 
 _Intelligent image generation, editing, and recognition, powered by Gemini_
@@ -523,6 +536,7 @@ _Intelligent image generation, editing, and recognition, powered by Gemini_
 > [Image generation model configuration guide](https://github.com/iOfficeAI/AionUi/wiki/AionUi-Image-Generation-Tool-Model-Configuration-Guide)
 
 ---
+
 ### **Document Generation — PPT, Word, Markdown**
 
 _Automatically generate professional documents — presentations, reports, and more — with AI agents._
@@ -561,6 +575,7 @@ _Customize with your own CSS code, make your interface match your preferences_
 - ✅ **Fully Customizable** — Freely customize interface colors, styles, layout through CSS code, create your exclusive experience
 
 ---
+
 ### **Multi-Task Parallel Processing**
 
 _Open multiple conversations, tasks don't get mixed up, independent memory, double efficiency_
@@ -574,6 +589,7 @@ _Open multiple conversations, tasks don't get mixed up, independent memory, doub
 - ✅ **Smart Management** — Easy switching between conversations with visual indicators
 
 ---
+
 ## 🤔 Why Choose AionUi Over Claude Cowork?
 
 <details>
@@ -601,6 +617,7 @@ Deep AI Office Scenario Support:
 </details>
 
 ---
+
 ## Quick Q&A
 
 <details>
@@ -629,6 +646,7 @@ A: All data is stored locally in a SQLite database. Nothing is uploaded to any s
 </details>
 
 ---
+
 ## See How People Use AionUi
 
 <p align="center">
@@ -666,6 +684,7 @@ A: All data is stored locally in a SQLite database. Nothing is uploaded to any s
 > **Made a video about AionUi?** [Let us know on X](https://x.com/AionUi) and we'll feature it here!
 
 ---
+
 ## 🚀 Quick Start
 
 ### System Requirements
@@ -727,6 +746,7 @@ brew install aionui
 </details>
 
 ---
+
 ## 💬 Community & Support
 
 **Your ideas matter!** We value every suggestion and feedback.
@@ -758,11 +778,13 @@ Please read [CONTRIBUTING.md](https://github.com/iOfficeAI/AionUi/blob/main/CONT
 AionUi local development uses two repositories: AionUi for the Electron frontend and AionCore for the local backend. See the [Development Guide](https://github.com/iOfficeAI/AionUi/blob/main/docs/contributing/development.md) for the full macOS, Linux, and Windows setup.
 
 ---
+
 ## License
 
 This project is licensed under [Apache-2.0](https://github.com/iOfficeAI/AionUi/blob/main/LICENSE).
 
 ---
+
 ## Contributors
 
 <p align="center">

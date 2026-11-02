@@ -1,8 +1,10 @@
 ---
 slug: agentscope-ai-agentscope-java-agentscope-examples-agents-agentscope-paw-src-main-resources-templates-research-assistant-skills-synthesize-report
 name: synthesize-report
-tagline: Agent skill from agentscope-ai/agentscope-java
-summary: Agent skill from agentscope-ai/agentscope-java
+tagline: Produces a citation-grounded summary across one or more workspace
+  source files for summaries, briefings, literature reviews, or comparisons.
+summary: The user asks for a summary, briefing, literature review, or comparison
+  and the material is reachable via listfiles / readfile / grepfiles.
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +16,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: agentscope-ai/agentscope-java
@@ -22,15 +24,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6121
-  last_commit: 2026-10-26T06:15:51Z
-  stars_delta_7d: 83
-  stars_growth_pct: 1.4
-  trending_score: 84.14
+  stars: 6214
+  last_commit: 2026-11-02T08:27:45Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.5
+  trending_score: 94.41
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6038
     - 6121
+    - 6214
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +41,13 @@ readme_source:
   repo: agentscope-ai/agentscope-java
   path: agentscope-examples/agents/agentscope-paw/src/main/resources/templates/research-assistant/skills/synthesize-report/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:52.810Z
+  fetched_at: 2026-11-02T09:07:24.989Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: synthesize-report
-  description: Agent skill from agentscope-ai/agentscope-java
+  description: Produces a citation-grounded summary across one or more workspace
+    source files for summaries, briefings, literature reviews, or comparisons.
   folder_path: agentscope-examples/agents/agentscope-paw/src/main/resources/templates/research-assistant/skills/synthesize-report
   extra_files: []
   pack_total_skills: 19
@@ -55,4 +59,32 @@ skill:
   pack_slug: agentscope-ai-agentscope-java
 ---
 
-Agent skill from agentscope-ai/agentscope-java
+# Synthesize a report from sources
+A playbook for producing a citation-grounded summary across one or more source
+files in the workspace.
+
+## When to use
+
+The user asks for a summary, briefing, literature review, or comparison and the
+material is reachable via `list_files` / `read_file` / `grep_files`.
+
+## Steps
+
+1. **Inventory.** Run `list_files` on the user-specified directory (or the whole
+   workspace) and pick the files most likely to contain the answer.
+2. **Skim.** Read each candidate file once. Note the headings and any obvious
+   claim sentences.
+3. **Extract.** For every claim worth keeping, capture:
+   - the claim in one sentence,
+   - the shortest supporting quote (≤ 25 words), and
+   - the file path.
+4. **Group.** Cluster claims by topic, not by source file.
+5. **Compose.** Use the template in `AGENTS.md` to write the report. Prefer
+   bulleted lists; reserve prose for the introduction and conclusion.
+6. **Self-check.** Re-read the draft and remove any sentence that is not
+   supported by a citation.
+
+## Output
+
+Markdown report following the `AGENTS.md` template. End with a `## Sources`
+section listing every cited file with a one-line gloss.

@@ -1,8 +1,13 @@
 ---
 slug: jeffallan-claude-skills-skills-atlassian-mcp
 name: atlassian-mcp
-tagline: Agent skill from Jeffallan/claude-skills
-summary: Agent skill from Jeffallan/claude-skills
+tagline: Integrates with Atlassian products to manage project tracking and
+  documentation via MCP protocol. Use when querying Jira issues with JQL
+  filters, crea
+summary: "- Querying Jira issues with JQL filters - Searching or creating
+  Confluence pages - Automating sprint workflows and backlog management -
+  Setting up MCP server authentication (OAuth/API tokens) - Syncing meeting
+  notes t..."
 categories:
   - other
 tags:
@@ -14,7 +19,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Jeffallan/claude-skills
@@ -22,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 12062
-  last_commit: 2026-10-26T03:10:49Z
-  stars_delta_7d: 125
-  stars_growth_pct: 1
-  trending_score: 126.31
+  stars: 12172
+  last_commit: 2026-10-30T18:00:19Z
+  stars_delta_7d: 110
+  stars_growth_pct: 0.9
+  trending_score: 111
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11759
     - 11852
     - 11937
     - 12062
+    - 12172
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +45,17 @@ readme_source:
   repo: Jeffallan/claude-skills
   path: skills/atlassian-mcp/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.114Z
+  fetched_at: 2026-11-02T09:06:30.104Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: atlassian-mcp
-  description: Agent skill from Jeffallan/claude-skills
+  description: Integrates with Atlassian products to manage project tracking and
+    documentation via MCP protocol. Use when querying Jira issues with JQL
+    filters, creating and updating tickets with custom fields, searching or
+    editing Confluence pages with CQL, managing sprints and backlogs, setting up
+    MCP server authentication, syncing documentation, or debugging Atlassian API
+    integrations.
   folder_path: skills/atlassian-mcp
   extra_files:
     - references/authentication-patterns.md
@@ -53,7 +63,7 @@ skill:
     - references/confluence-operations.md
     - references/jira-queries.md
     - references/mcp-server-setup.md
-  pack_total_skills: 67
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -119,25 +129,29 @@ space = "ENG" AND type = page AND text ~ "deployment runbook"
 ```
 
 ### Minimal MCP Server Configuration
+Atlassian Cloud: connect to the hosted Atlassian Rovo MCP Server, then run `/mcp` to sign in with OAuth.
+```bash
+claude mcp add --transport http atlassian https://mcp.atlassian.com/v2/mcp
+```
+
+Server/Data Center: run the community `mcp-atlassian` server (sooperset) with personal access tokens.
 ```json
 {
   "mcpServers": {
     "atlassian": {
-      "command": "npx",
-      "args": ["-y", "@sooperset/mcp-atlassian"],
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
       "env": {
-        "JIRA_URL": "https://your-domain.atlassian.net",
-        "JIRA_EMAIL": "user@example.com",
-        "JIRA_API_TOKEN": "${JIRA_API_TOKEN}",
-        "CONFLUENCE_URL": "https://your-domain.atlassian.net/wiki",
-        "CONFLUENCE_EMAIL": "user@example.com",
-        "CONFLUENCE_API_TOKEN": "${CONFLUENCE_API_TOKEN}"
+        "JIRA_URL": "https://jira.internal.example.com",
+        "JIRA_PERSONAL_TOKEN": "${JIRA_PERSONAL_TOKEN}",
+        "CONFLUENCE_URL": "https://confluence.internal.example.com",
+        "CONFLUENCE_PERSONAL_TOKEN": "${CONFLUENCE_PERSONAL_TOKEN}"
       }
     }
   }
 }
 ```
-> **Note:** Always load `JIRA_API_TOKEN` and `CONFLUENCE_API_TOKEN` from environment variables or a secrets manager — never hardcode credentials.
+> **Note:** Always load tokens from environment variables or a secrets manager; never hardcode credentials. Tool names differ between servers, see `references/mcp-server-setup.md`.
 
 ## Constraints
 

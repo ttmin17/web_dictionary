@@ -1,8 +1,10 @@
 ---
 slug: jnmetacode-superpowers-zh-skills-chinese-commit-conventions
 name: chinese-commit-conventions
-tagline: Agent skill from jnMetaCode/superpowers-zh
-summary: Agent skill from jnMetaCode/superpowers-zh
+tagline: "中文 commit 与 changelog 配置参考——Conventional Commits
+  中文适配、commitlint/husky/commitizen 中文模板、conventional-changelog 中文配置。仅在用户显式
+  /chinese-commit-conventions "
+summary: 基于 Conventional Commits 1.0.0 规范，针对中文团队的实际使用习惯进行适配。
 categories:
   - coding-agents
 tags:
@@ -14,7 +16,7 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: jnMetaCode/superpowers-zh
@@ -22,30 +24,32 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8385
-  last_commit: 2026-10-20T13:33:25Z
-  stars_delta_7d: 41
-  stars_growth_pct: 0.5
-  trending_score: 41.2
+  stars: 8443
+  last_commit: 2026-10-26T15:07:56Z
+  stars_delta_7d: 58
+  stars_growth_pct: 0.7
+  trending_score: 58.4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8267
     - 8305
     - 8344
     - 8385
-language: en
+    - 8443
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: jnMetaCode/superpowers-zh
   path: skills/chinese-commit-conventions/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:55.664Z
+  fetched_at: 2026-11-02T09:06:33.369Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: chinese-commit-conventions
-  description: Agent skill from jnMetaCode/superpowers-zh
+  description: 中文 commit 与 changelog 配置参考——Conventional Commits
+    中文适配、commitlint/husky/commitizen 中文模板、conventional-changelog 中文配置。仅在用户显式
+    /chinese-commit-conventions 时调用，不要根据上下文自动触发。
   folder_path: skills/chinese-commit-conventions
   extra_files: []
   pack_total_skills: 21
@@ -334,7 +338,7 @@ npx husky init
 
 ```bash
 # .husky/commit-msg
-npx --no -- commitlint --edit "$1"
+npx --no -- commitlint --edit "${1}"
 ```
 
 ### 配置 pre-commit 钩子

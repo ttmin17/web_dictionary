@@ -1,8 +1,11 @@
 ---
 slug: gentleman-programming-gentle-ai-internal-assets-skills-skill-improver
 name: improver
-tagline: Agent skill from Gentleman-Programming/gentle-ai
-summary: Agent skill from Gentleman-Programming/gentle-ai
+tagline: "Trigger: improve skills, audit skills, refactor skills, skill quality.
+  Audit and upgrade existing LLM-first skills."
+summary: Use this skill when asked to audit, refactor, normalize, or improve
+  existing SKILL.md files. Use skill-creator instead when creating a brand-new
+  skill from a reusable pattern.
 categories:
   - coding-agents
 tags:
@@ -11,10 +14,10 @@ tags:
   - ai-coding
   - claude-code
 status: active
-quality_percentile: 89
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -22,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8020
-  last_commit: 2026-10-26T04:03:33Z
-  stars_delta_7d: 171
-  stars_growth_pct: 2.2
-  trending_score: 174.73
+  stars: 8181
+  last_commit: 2026-11-02T02:09:02Z
+  stars_delta_7d: 161
+  stars_growth_pct: 2
+  trending_score: 164.23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7736
     - 7849
     - 8020
+    - 8181
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +43,13 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/skill-improver/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:56.082Z
+  fetched_at: 2026-11-02T09:06:38.260Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: improver
-  description: Agent skill from Gentleman-Programming/gentle-ai
+  description: "Trigger: improve skills, audit skills, refactor skills, skill
+    quality. Audit and upgrade existing LLM-first skills."
   folder_path: internal/assets/skills/skill-improver
   extra_files:
     - references/skill-style-guide.md
@@ -57,4 +62,48 @@ skill:
   pack_slug: gentleman-programming-gentle-ai
 ---
 
-Agent skill from Gentleman-Programming/gentle-ai
+## Activation Contract
+
+Use this skill when asked to audit, refactor, normalize, or improve existing `SKILL.md` files. Use `skill-creator` instead when creating a brand-new skill from a reusable pattern.
+
+## Hard Rules
+
+- Treat `docs/skill-style-guide.md` as the normative style contract when it exists.
+- For installed global skills, use `references/skill-style-guide.md` as the bundled local copy when `docs/skill-style-guide.md` is unavailable.
+- Treat `SKILL.md` as the source of truth; preserve author intent, critical rules, activation semantics, and output requirements.
+- Use `.atl/skill-registry.md` as an index of skill names, triggers, scopes, and exact paths; do not expect generated summaries.
+- Default to audit-only. Modify files only when the user explicitly asks to apply improvements.
+- Never delete meaningful content silently; move long explanation, examples, templates, or schemas into local `references/` or `assets/`.
+- Do not invent triggers, policies, or domain rules. Mark ambiguous cases for human review.
+
+## Decision Gates
+
+| Situation | Action |
+| --- | --- |
+| Missing or invalid frontmatter | Fix `name`, quoted one-line `description`, `license`, and `metadata` |
+| Skill reads like tutorial docs | Convert to runtime instructions and move background to `references/` |
+| Body exceeds budget | Preserve rules, move examples/background to supporting files |
+| Branching logic hidden in prose | Convert to a compact decision table |
+| Rules conflict or intent is unclear | Report the issue; do not rewrite that rule automatically |
+
+## Execution Steps
+
+1. Read `docs/skill-style-guide.md`; if unavailable, read `references/skill-style-guide.md`; if neither exists, enforce the core LLM-first structure: frontmatter, Activation Contract, Hard Rules, Decision Gates, Execution Steps, Output Contract, References.
+2. Read `.atl/skill-registry.md`; use listed paths to select skills. If missing, scan known skill directories for `*/SKILL.md`.
+3. For each selected skill, audit metadata, trigger clarity, section order, body budget, actionability, decision gates, output contract, and local references.
+4. Return an audit report grouped by skill with severity and exact proposed changes.
+5. In apply mode, edit only safe issues, preserve content, create supporting files when needed, then rerun or request `gentle-ai skill-registry refresh`.
+
+## Output Contract
+
+Return:
+- Skills audited and paths used.
+- Issues found, grouped by severity.
+- Files changed, if apply mode was requested.
+- Registry refresh recommendation when skill metadata or paths changed.
+- Ambiguities that need human review.
+
+## References
+
+- `docs/skill-style-guide.md` — normative LLM-first skill style guide for this repo.
+- `references/skill-style-guide.md` — bundled local copy for installed global skills when the repo doc is unavailable.

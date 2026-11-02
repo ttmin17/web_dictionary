@@ -15,28 +15,29 @@ tags:
   - document-parser
   - docx
 status: active
-quality_percentile: 90
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: chrisryugj/kordoc
   official_vendor: false
   license: MIT
 signals:
-  stars: 2771
-  last_commit: 2026-10-26T07:06:29Z
-  stars_delta_7d: 183
-  stars_growth_pct: 7.1
-  trending_score: 195.94
-  rank_current: 35
-  rank_delta: -19
+  stars: 2887
+  last_commit: 2026-11-02T08:55:12Z
+  stars_delta_7d: 116
+  stars_growth_pct: 4.2
+  trending_score: 120.86
+  rank_current: 55
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2435
     - 2588
     - 2771
+    - 2887
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: chrisryugj/kordoc
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:58.921Z
+  fetched_at: 2026-11-02T09:05:40.472Z
   truncated: false
 type: agent_tool
 tool:
@@ -104,7 +105,7 @@ CLI는 설치 없이 `npx kordoc`으로 실행할 수 있습니다. PDF·OCR 의
 npx -y kordoc setup
 ```
 
-Claude Desktop·Claude Code·Cursor·Codex 등 설치된 클라이언트에 MCP를 등록합니다. 공식 MCP 레지스트리에도 [`io.github.chrisryugj/kordoc`](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.chrisryugj/kordoc)으로 등재돼 있습니다. 클라이언트를 재시작하면 파싱·비교·생성·검수·렌더 등 **18개 도구**를 사용할 수 있습니다.
+Claude Desktop·Claude Code·Cursor·Codex 등 설치된 클라이언트에 MCP를 등록합니다. 공식 MCP 레지스트리에도 [`io.github.chrisryugj/kordoc`](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.chrisryugj/kordoc)으로 등재돼 있습니다. 클라이언트를 재시작하면 파싱·비교·생성·검수·렌더 등 **22개 도구**를 사용할 수 있습니다.
 
 VS Code·Cursor는 버튼 한 번으로 등록됩니다.
 
@@ -129,6 +130,10 @@ npx kordoc *.pdf --jobs 4 -d ./결과
 npx kordoc 문서.pdf --format json --pages 1-3
 npx kordoc 스캔본.pdf --ocr -o 스캔본.md
 npx kordoc generate 보고서.md --preset 보고서 -o 보고서.hwpx
+npx kordoc to-hwpx 문서.hwp -o 문서.hwpx
+npx kordoc to-hwpx ./옛문서   # 폴더째(하위 폴더까지) — 각 파일 옆에 .hwpx, 이미 있으면 건너뜀
+npx kordoc pack build 보고서1.hwpx 보고서2.hwpx 보고서3.hwpx --name 광양시 -o 광양시.kpack   # 기관팩 (docs/agency-pack.md)
+npx kordoc generate 새보고서.md --pack 광양시.kpack -o 새보고서.hwpx
 npx kordoc fill --template gian -j 값.json -o 기안문.hwpx
 npx kordoc lint 보고서.hwpx --gate --preset 보고서
 ```
@@ -162,6 +167,8 @@ await writeFile("보고서.hwpx", Buffer.from(hwpx))
 | 읽기 | 문서 → Markdown·IR·쪽별 본문·RAG 청크, 로컬 OCR |
 | 비교·편집 | 블록·셀 단위 비교, HWPX·HWP 서식 보존 패치, 견본 서식 그대로 새 내용 쓰기 |
 | 작성 | Markdown → HWPX, 공문서 프리셋·부서 서식 견본(`--template`), 표·수식·차트 |
+| 변환 | HWP → HWPX — HWP 5.x 는 서식 그대로(글꼴·문단 모양·표·그림·도형·수식·머리말·각주·차트) |
+| 기관팩 | 우리 기관 문서 몇 건으로 서식 묶음(`.kpack`)을 만들어 그 서식대로 새 문서 — [기관팩](https://github.com/chrisryugj/kordoc/blob/main/docs/agency-pack.md) |
 | 양식 | 필드·누름틀 채우기, 표준 기안문 2종, 도장 날인 |
 | 검수 | 표기법·공공언어, 구성·AI 문체 게이트, 예산 산출근거 검산, 열린 문서 블록 단위 검수(`lint-blocks`) |
 | 보기·보안 | HWPX·HWP 미리보기·영역 추출, 개인정보 마스킹 |
@@ -170,35 +177,37 @@ await writeFile("보고서.hwpx", Buffer.from(hwpx))
 
 ## 검증 결과
 
-**4.22.14 · 2026-10-19 검증**(렌더 배치·PDF 글·표·OCR 은 4.24.9 · 2026-10-26). 고정 코퍼스와 참조 기준으로 측정한 결과입니다.
+**4.22.14 · 2026-10-19 검증**(렌더 배치·별표는 4.24.24 · 2026-10-30, PDF 글은 4.24.36 · 2026-11-01, PDF 표는 4.24.35 · 2026-11-01, OCR 은 4.24.32 · 2026-11-01, HWP → HWPX 변환은 4.24.29 · 2026-10-31). 고정 코퍼스와 참조 기준으로 측정한 결과입니다.
 
 | 대상 | 규모 | 결과 |
 | --- | --- | --- |
 | HWPX | 2,424문서 · 10,342표 | 표 구조 일치 **10,342/10,342 · 100%** |
 | HWP 5.x ↔ HWPX | 1,130쌍 · 4,315표 | 짝 문서의 표 구조 일치 **100%** |
-| PDF 글 | 744쌍 | 글자 재현율 **99.881%** · 정확도 **99.676%** · 읽기 순서 **99.309%** · 어절 F1 **99.064%** |
+| HWP 5.x → HWPX 변환 | 한글 저장 짝 264쌍 (속성 대조 232쌍) | 속성 일치 **99.21%** · 완전 일치 **69/232** · 글 **264/264** · 한글 화면 대조 80문서 |
+| PDF 글 | 744쌍 | 글자 재현율 **99.885%** · 정확도 **99.682%** · 읽기 순서 **99.360%** · 어절 F1 **99.103%** |
 | PDF 표 | 708쌍 · 2,331표 | 표 탐지 **99.83%** · 구조 일치 **98.24%** · 칸 F1 **0.9919** |
 | HWPX 재조판 | 다중줄 25,187문단 (12개 폴더) | 모든 줄 시작 일치 **24,941/25,187 · 99.02%** |
 | PDF 중첩표 (텍스트층) | 29문서 · 101표 | 구조·칸 내용 **101/101 · 100%** |
-| 법령 별표 | 272건 · 346표 | HWP **346/346**, PDF **342/346 · 98.84%** |
+| 법령 별표 | 272건 · 346표 | HWP **346/346**, PDF **343/346 · 99.13%** |
 | PDF 전체 | 1,911문서 중 1,729건 채점 | 글 커버리지 **99.80%** |
-| OCR | 53문서 · 102쪽 · 67표 | CER **0.0313** · 글자 재현율 **99.06%** · 표 구조 일치 **25/67** |
+| OCR | 53문서 · 102쪽 · 66표 | CER **0.0239** · 글자 재현율 **99.32%** · 표 구조 일치 **34/66** |
+| KoOCR-Bench v2.0c (외부) | 공개 877쪽 (표·글·손글씨·순서) | 종합 기본값 **0.807** · `ocrRec: "auto"` **0.828** (4.24.37) |
 | opendataloader-bench | PDF 200문서 | 종합 기본값 **0.964** · OCR 끔 **0.939** |
-| HWPX 렌더 배치 (4.24.8) | 한컴 PDF 짝 · 글 조각 90,906 · 그림 4,107 | 글 위치(±1.5pt) **87,620 · 96.4%** · 그림 위치(±2pt) **4,019 · 97.9%** |
+| HWPX 렌더 배치 | 한컴 PDF 짝 1,565문서(쪽 수 일치 1,508) · 글 조각 111,480 · 그림 4,300 | 글 위치(±1.5pt) **106,904 · 95.9%** · 그림 위치(±2pt) **4,213 · 98.0%** |
 
 표 구조 점수와 셀 내용·화면 재현은 별도 지표입니다. 중첩표 100%는 위 101표에 한정하며 전체 PDF·조판의 완전 일치를 뜻하지 않습니다. 채점 범위·제외 기준·옵션별 수치·재현 방법은 [벤치마크 상세](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md)에 있습니다.
 
 ## 최근 업데이트
 
-최신 배포: **[4.24.9](https://github.com/chrisryugj/kordoc/releases/tag/v4.24.9)** · 2026-10-26
+최신 배포: **[4.24.37](https://github.com/chrisryugj/kordoc/releases/tag/v4.24.37)** · 2026-11-02
 
 | 버전 | 주요 변경 | 수치 변화 |
 | --- | --- | --- |
-| 4.24.9 | 견본 서식·patch 행 추가 표의 행마다 이중선 · OCR: 통째로 빠진 줄 머리 ○ · PDF: 쪽을 넘는 표가 다음 쪽 첫 행을 삼키던 것 | OCR CER 0.0314 → **0.0313** · 흐린 입력 OCR CER 0.0638 → **0.0635** · PDF 표 구조 98.20% → **98.24%** |
-| 4.24.8 | 보안: 알려진 의존성 취약점 6건 → 0건(zod 4, MCP SDK 하위 의존성), 출시·CI 에 `npm audit` 게이트 · OCR: 숫자로 읽은 줄 머리 고리 글머리, 다음 글자와 맞닿은 「 · PDF: 머리 칸에만 클립을 건 통계표 | `npm audit` 6 → **0** · OCR CER 0.0327 → **0.0314** · 흐린 입력 OCR CER 0.0663 → **0.0638** · PDF 글 순서 99.307% → **99.309%** |
-| 4.24.7 | 견본 생성: 목차 상자를 요약 상자로 쓰지 않음, 부호 문단 아래 들여 쓴 목록 단계 · HWPML: 묶음·고정폭 빈칸과 강제 줄바꿈 · OCR: 줄 끝 배경 무늬, 머리행에 붙은 숫자 열, 붙임표·줄표 길이 | OCR CER 0.0332 → **0.0327** · 글자 재현율 99.02% → **99.04%** |
-| 4.24.6 | OCR: 예산 사업명세서의 목·내역 하위 행, 칸마다 갈린 색 머리 띠, 칸 안 위아래 두 줄 뒤집힘 · PDF: 쪽 바깥 넉 자 세로 탭 · 렌더: 쪽 번호 새로 시작 · HWPX: 들여 써 저장한 XML 의 공백 | OCR CER 0.0409 → **0.0332** · OCR 표 구조 24 → **25/67** · 렌더 글 위치 87,509 → **87,620** · PDF 글 순서 99.302% → **99.307%** |
-| 4.24.5 | PDF: 분수 막대 수식 복원, 고정폭 글줄의 가짜 무괘선 표, 덧찍은 목차 쪽 번호 · OCR: 선 없이 쌓은 하위 행, 색 머리 띠 안 흰 구분선, 글의 밑줄 표지 · HWPX·HWP: 표 아래 캡션 차례 | PDF 글 순서 99.247% → **99.302%** · 별표 수식 7 → **11/11** · OCR 표 구조 21 → **24/67** |
+| 4.24.37 | OCR 표: 통계표 묶음 안 빈칸 열·괘선 없는 본문 행 펼치기·행 합침 아래 행 가르기·이웃 칸 값 몰림·음영 머리 띠와 칠한 첫 열 경계 · 머리 행 있는 표를 차트로 풀던 것 · 시험지 문항 상자 풀기 · `ocrRec: "auto"`(손글씨 쪽만 손글씨 모델) | KoOCR-Bench v2.0c 공개 877쪽 종합 0.742 → **0.807**(`ocrRec: "auto"` **0.828**) · 자체 벤치 문서별 그대로 |
+| 4.24.36 | PDF 띄어쓰기(한컴 PDF): 자간 줄인 글의 낱말 공백 되살림 · 공백 글리프 위에 덧찍은 쉼표("55만원,") · 날짜 "2026. 8. 28." 공백 유지 · 줄 끝에서 갈린 연도 "20⏎25년" | PDF 글 어절 F1 99.076 → **99.103%** · 그 밖 지표 그대로 |
+| 4.24.35 | PDF: 자간 줄인 수치의 같은 숫자 둘("129.9") 지키기 · 글자마다 찍은 첨자 줄을 본문에 붙이기 · 수 가운데서 꺾인 줄("1,2⏎96억"·"(4.1⏎6.~5.16.)")과 칸 소수 잇기 · 표지 책등 외기둥 세로 글 | PDF 표 칸 완전 일치 0.99264 → **0.99267** · 칸 내용 0.98902 → **0.98905** · PDF 글 순서 99.359 → **99.360%** · 어절 F1 99.073 → **99.076%** · 그 밖 지표 그대로 |
+| 4.24.34 | to-hwpx: 파일 여러 개·폴더 일괄 변환(하위 폴더, 이미 있는 .hwpx 건너뜀) · PDF: 기호 글꼴 작은 네모로 찍고 공백으로 적은 "·" 글머리 되살림 · 글자 단위로 나눈 줄 머리 어미("는데"·"졌다")·겹조사 잇기 | PDF 표 칸 완전 일치 0.99221 → **0.99264** · 칸 내용 0.98896 → **0.98902** · PDF 글 재현율 99.883 → **99.885%** · 순서 99.356 → **99.359%** · 어절 F1 99.071 → **99.073%** · 그 밖 지표 그대로 |
+| 4.24.33 | PDF 표: 모아찍기 쪽 넘김에서 오른쪽 쪽 머리 상자로 넘어간 칸 글을 앞 칸에 잇기 · 칸을 한 겹 더 깐 1×1 클립(통계표 숫자 칸)을 중첩 표 대신 칸 글로 | PDF 표 칸 내용 일치 0.98794 → **0.98896** · 칸 완전 일치 0.99153 → **0.99221** · 그 밖 벤치 지표 그대로 |
 
 이전 버전과 상세 내용은 [변경 이력](https://github.com/chrisryugj/kordoc/blob/main/CHANGELOG.md)에 있습니다.
 

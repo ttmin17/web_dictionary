@@ -1,8 +1,13 @@
 ---
 slug: jeffallan-claude-skills-skills-angular-architect
 name: angular-architect
-tagline: Agent skill from Jeffallan/claude-skills
-summary: Agent skill from Jeffallan/claude-skills
+tagline: "Generates Angular 17+ standalone components, configures advanced
+  routing with lazy loading and guards, implements NgRx state management,
+  applies RxJS "
+summary: 1. Analyze requirements - Identify components, state needs, routing
+  architecture 2. Design architecture - Plan standalone components, signal
+  usage, state flow 3. Implement features - Build components with OnPush
+  strat...
 categories:
   - other
 tags:
@@ -14,7 +19,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2025-10-20T20:27:22
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Jeffallan/claude-skills
@@ -22,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 12062
-  last_commit: 2026-10-26T03:10:49Z
-  stars_delta_7d: 125
-  stars_growth_pct: 1
-  trending_score: 126.31
-  rank_current: 74
-  rank_delta: -5
+  stars: 12172
+  last_commit: 2026-10-30T18:00:19Z
+  stars_delta_7d: 110
+  stars_growth_pct: 0.9
+  trending_score: 111
+  rank_current: 83
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11759
     - 11852
     - 11937
     - 12062
+    - 12172
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +47,17 @@ readme_source:
   repo: Jeffallan/claude-skills
   path: skills/angular-architect/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.114Z
+  fetched_at: 2026-11-02T09:06:30.103Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: angular-architect
-  description: Agent skill from Jeffallan/claude-skills
+  description: Generates Angular 17+ standalone components, configures advanced
+    routing with lazy loading and guards, implements NgRx state management,
+    applies RxJS patterns, and optimizes bundle performance. Use when building
+    Angular 17+ applications with standalone components or signals, setting up
+    NgRx stores, establishing RxJS reactive patterns, performance tuning, or
+    writing Angular tests for enterprise apps.
   folder_path: skills/angular-architect
   extra_files:
     - references/components.md
@@ -55,7 +65,7 @@ skill:
     - references/routing.md
     - references/rxjs.md
     - references/testing.md
-  pack_total_skills: 67
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code

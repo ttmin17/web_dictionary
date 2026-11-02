@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-agent-launcher-skills-agent-launcher-orchestrator
 name: agent-launcher-orchestrator
-tagline: 'Use when a user wants to build, launch, grade, or schedule a Claude
-  Managed Agent (CMA) in their own Anthropic account — "build me an agent",
-  "launch '
+tagline: Use when someone wants to build, launch, grade or schedule a Claude
+  Managed Agent in their own Anthropic account ('build me an agent', 'run this
+  night
 summary: Inspired by Anthropic's launch-your-agent reference skill (Apache-2.0).
   This is an independent re-implementation; CMA semantics come from
   ../../references/cma-primitives.md.
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  rank_current: 42
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,32 +45,22 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: agent-launcher/skills/agent-launcher-orchestrator/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.234Z
+  fetched_at: 2026-11-02T09:06:18.452Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: agent-launcher-orchestrator
-  description: Use when a user wants to build, launch, grade, or schedule a Claude
-    Managed Agent (CMA) in their own Anthropic account — "build me an agent",
-    "launch this as a managed agent", "run this on a schedule", "grade my agent
-    against a rubric", "set up a nightly worker". Reads the per-session goal
-    (./my-agent/goal.json), routes deterministically to one of five phase
-    sub-skills (interview → stage-launch → grade-iterate → run-without-you →
-    wrap-up) via goal_router.py, and compiles the goal+phase into an execution
-    shape (single-pass workflow / bounded grade→iterate loop / recurring cron
-    deployment loop) via loop_compiler.py. Forks context so heavy intake (build
-    sheets, payloads, eval cases) stays out of the parent thread. All launches
-    are emitted as BYOK curl the user runs with their own key; no tool makes API
-    calls. Inspired by anthropics/launch-your-agent (Apache-2.0). Distinct from
-    engineering/agent-harness (generic domain loop) and
-    engineering/write-a-skill (authors Claude Code skills, not CMAs).
+  description: Use when someone wants to build, launch, grade or schedule a Claude
+    Managed Agent in their own Anthropic account ('build me an agent', 'run this
+    nightly'). Reads the session goal, routes with goal_router.py and compiles
+    the loop with loop_compiler.py.
   folder_path: agent-launcher/skills/agent-launcher-orchestrator
   extra_files:
     - README.md
     - scripts/goal_router.py
     - scripts/goal_state.py
     - scripts/loop_compiler.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code

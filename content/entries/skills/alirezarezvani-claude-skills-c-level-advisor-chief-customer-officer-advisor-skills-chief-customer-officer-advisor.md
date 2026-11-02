@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-c-level-advisor-chief-customer-officer-advisor-skills-chief-customer-officer-advisor
 name: chief-customer-officer-advisor
-tagline: "Chief Customer Officer advisory for startups: retention decomposition
-  (gross retention vs NRR honesty, churn root-cause taxonomy), customer
-  segmentati"
+tagline: Use for retention strategy, customer segmentation or CS team sizing
+  decisions (GRR vs NRR, churn causes, pooled vs named CSMs). Runs
+  retention_decompo
 summary: 1. What's our retention architecture — and is gross retention vs NRR
   honest? — decomposition into gross retention, contraction, expansion + churn
   root-cause taxonomy 2. How do we segment customers for differential inv...
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,19 +43,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: c-level-advisor/chief-customer-officer-advisor/skills/chief-customer-officer-advisor/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.237Z
+  fetched_at: 2026-11-02T09:06:18.455Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: chief-customer-officer-advisor
-  description: "Chief Customer Officer advisory for startups: retention
-    decomposition (gross retention vs NRR honesty, churn root-cause taxonomy),
-    customer segmentation strategy (differential investment across tiers + ICP
-    fit scoring), CS team coverage model (pooled vs named CSM thresholds + ratio
-    math), and CS team org evolution (CS vs Support vs AM distinctions). Use
-    when designing retention strategy, segmenting customers for differential
-    investment, sizing CS team, or sequencing CS hires. Strategic only — does
-    not duplicate engineering/business-growth tactical skills."
+  description: Use for retention strategy, customer segmentation or CS team sizing
+    decisions (GRR vs NRR, churn causes, pooled vs named CSMs). Runs
+    retention_decomposition_analyzer.py, customer_segmentation_designer.py and
+    cs_coverage_calculator.py.
   folder_path: c-level-advisor/chief-customer-officer-advisor/skills/chief-customer-officer-advisor
   extra_files:
     - references/cs_coverage_model.md
@@ -65,7 +61,7 @@ skill:
     - scripts/cs_coverage_calculator.py
     - scripts/customer_segmentation_designer.py
     - scripts/retention_decomposition_analyzer.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -265,6 +261,7 @@ python scripts/cs_coverage_calculator.py book.json
 - [cs_team_org_evolution.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/chief-customer-officer-advisor/skills/chief-customer-officer-advisor/references/cs_team_org_evolution.md) — Stage-to-role map + 6-role definition table (CSM ≠ Support ≠ AM ≠ IM ≠ CS Ops ≠ Customer Marketing) + AM-vs-CSM split decision + anti-patterns
 
 ---
+
 **Version:** 1.0.0
 **Status:** Production Ready
 **Disclaimer:** Retention benchmarks vary significantly by ACV, segment, and industry. This skill provides B2B SaaS-baseline guidance; consumer SaaS, marketplaces, and hardware all have materially different retention math.

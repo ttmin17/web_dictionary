@@ -16,23 +16,25 @@ status: active
 quality_percentile: 100
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: jeecgboot/JeecgBoot
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 48284
-  last_commit: 2026-10-24T09:42:32Z
-  stars_delta_7d: 36
-  stars_growth_pct: 0.1
-  trending_score: 36.03
-  rank_current: 86
+  stars: 48363
+  last_commit: 2026-11-02T01:31:30Z
+  stars_delta_7d: 79
+  stars_growth_pct: 0.2
+  trending_score: 79.13
+  rank_current: 65
+  rank_delta: 20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 48248
     - 48284
+    - 48363
 language: zh
 needs_keys: false
 prerequisites:
@@ -41,7 +43,7 @@ readme_source:
   repo: jeecgboot/JeecgBoot
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:42:01.165Z
+  fetched_at: 2026-11-02T09:06:10.423Z
   truncated: false
 type: agent_tool
 tool:

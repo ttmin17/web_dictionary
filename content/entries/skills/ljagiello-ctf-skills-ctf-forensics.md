@@ -1,8 +1,12 @@
 ---
 slug: ljagiello-ctf-skills-ctf-forensics
 name: ctf-forensics
-tagline: Agent skill from ljagiello/ctf-skills
-summary: Agent skill from ljagiello/ctf-skills
+tagline: Provides digital forensics and signal analysis techniques for CTF
+  challenges. Use when analyzing disk images, memory dumps, event logs, network
+  captur
+summary: "- 3d-printing.md - 3D printing forensics (PrusaSlicer binary G-code,
+  QOIF, heatshrink) - windows.md - Windows forensics (registry, SAM, event logs,
+  recycle bin, NTFS alternate data streams, USN journal, PowerShell his..."
 categories:
   - security-auth
 tags:
@@ -11,10 +15,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 52
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3530
-  last_commit: 2026-10-23T15:17:59Z
-  stars_delta_7d: 55
-  stars_growth_pct: 1.6
-  trending_score: 55.87
+  stars: 3601
+  last_commit: 2026-10-30T16:48:55Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2
+  trending_score: 72.43
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
     - 3530
+    - 3601
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +44,17 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-forensics/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:56.560Z
+  fetched_at: 2026-11-02T09:06:52.137Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ctf-forensics
-  description: Agent skill from ljagiello/ctf-skills
+  description: Provides digital forensics and signal analysis techniques for CTF
+    challenges. Use when analyzing disk images, memory dumps, event logs,
+    network captures, cryptocurrency transactions, steganography, PDF analysis,
+    Windows registry, Volatility, PCAP, Docker images, coredumps, side-channel
+    power traces, DTMF audio spectrograms, packet timing analysis, CD audio disc
+    images, or recovering deleted files and credentials.
   folder_path: ctf-forensics
   extra_files:
     - 3d-printing.md
@@ -73,7 +83,7 @@ Quick reference for forensics CTF challenges. Each technique has a one-liner her
 
 **Python packages (all platforms):**
 ```bash
-pip install volatility3 Pillow numpy matplotlib
+pip install volatility3 Pillow numpy matplotlib scipy librosa scikit-learn opencv-python-headless pymongo impacket brotli exrex stegano heatshrink2
 ```
 
 **Linux (apt):**
@@ -110,7 +120,9 @@ gem install zsteg
 - [linux-forensics.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/linux-forensics.md) - Linux/app forensics (log analysis, Docker image forensics, attack chains, browser credentials, Firefox history, TFTP, TLS weak RSA, USB audio, Git directory recovery, KeePass v4 cracking, Git reflog/fsck squash recovery, browser artifact analysis (Chrome/Chromium/Firefox history, cookies, downloads, local storage, session restore), corrupted git blob repair via byte brute-force, VBA macro Excel cell data to ELF binary extraction, Python in-memory source recovery via pyrasite)
 - [signals-and-hardware.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/signals-and-hardware.md) - Hardware signal decoding with decode code (VGA frame parsing, HDMI TMDS symbol decode, DisplayPort 8b/10b + LFSR descrambler), Voyager Golden Record audio, Saleae Logic 2 UART decode, Flipper Zero .sub files, side-channel power analysis (DPA), keyboard acoustic side-channel, CD audio disc image steganography (CIRC de-interleaving + spiral rendering), caps-lock LED Morse code from video, Linux input_event keylogger dump parsing, serial UART from WAV audio, USB MIDI Launchpad grid reconstruction
 
----## When to Pivot
+---
+
+## When to Pivot
 
 - If you recover an encrypted blob and the hard part becomes RSA, AES, or lattice work, switch to `/ctf-crypto`.
 - If the evidence really points to malware staging, beacon config extraction, or packed samples, switch to `/ctf-malware`.
@@ -293,14 +305,15 @@ See [windows.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics
 **Pattern (Backchimney):** Malware uses WMI event subscriptions for persistence (MITRE T1546.003).
 
 ```bash
-python PyWMIPersistenceFinder.py OBJECTS.DATA
+# Tool: https://github.com/davidpany/WMI_Forensics (run against a copy of OBJECTS.DATA)
+python WMI_Forensics/PyWMIPersistenceFinder.py OBJECTS.DATA
 ```
 
 - Look for FilterToConsumerBindings with CommandLineEventConsumer
 - Base64-encoded PowerShell in consumer commands
 - Event filters triggered on system events (logon, timer)
 
-See [windows.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/windows.md) for WMI repository analysis details.
+See [windows.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/windows.md#anti-forensics-detection-checklist) for the WMI repository (OBJECTS.DATA) location and related anti-forensics artifacts.
 
 ## Network Forensics Quick Reference
 
@@ -390,8 +403,8 @@ See [linux-forensics.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-f
 - **VBA macro cell data to binary:** Excel cells with numeric values; VBA `CByte((val-78)/3)` transforms to ELF bytes. Reimplement in Python, never run the macro. See [linux-forensics.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/linux-forensics.md#vba-macro-forensics---excel-cell-data-to-elf-binary-sharif-ctf-2016).
 - **RGB parity steganography:** Sum R+G+B per pixel; even=white, odd=black renders hidden binary bitmap. See [stego-image.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/stego-image.md#rgb-parity-steganography-break-in-2016).
 - **Hidden PDF objects:** Unreferenced content stream objects not in `/Kids` array. Add to `/Kids`, increment `/Count`, re-render. See [network-advanced.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/network-advanced.md#unreferenced-pdf-objects-with-hidden-pages-sharifctf-7-2016).
-- **Arnold's Cat Map descrambling:** Periodic chaotic transform on square images; iterate forward map until original reappears. Period divides `3*N`. See [stego-advanced-2.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/stego-advanced-2.md#arnolds-cat-map-image-descrambling-nuit-du-hack-2017).
-- **Python in-memory source recovery:** Attach `pyrasite-shell` to running Python process, decompile `func_code` objects with `uncompyle6` (Python <=3.8) or `pycdc` (Python 3.9+), dump `globals()` for secrets. See [linux-forensics.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/linux-forensics.md#python-in-memory-source-recovery-via-pyrasite-insomnihack-2017).
+- **Arnold's Cat Map descrambling:** Periodic chaotic transform on square images; iterate forward map until original reappears. Period is the matrix order in `GL(2, Z_N)`. See [stego-advanced-2.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/stego-advanced-2.md#arnolds-cat-map-image-descrambling-nuit-du-hack-2017).
+- **Python in-memory source recovery:** Attach `pyrasite-shell` to running Python process, decompile `__code__` objects with `uncompyle6.main.decompile` (Python <=3.8) or `pycdc` (Python 3.9+), dump `globals()` for secrets. See [linux-forensics.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/linux-forensics.md#python-in-memory-source-recovery-via-pyrasite-insomnihack-2017).
 - **HFS+ resource fork recovery:** Hidden data in HFS+ Resource Forks invisible to `binwalk`/`foremost`; use HFSExplorer + 010 Editor HFS template to extract extent records. See [disk-advanced.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/disk-advanced.md#hfs-resource-fork-hidden-binary-recovery-confidence-ctf-2017).
 - **Serial UART from WAV audio:** Square wave in audio encodes UART serial data; determine baud rate, parse start/stop bits, decode LSB-first byte frames. See [signals-and-hardware.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/signals-and-hardware.md#serial-uart-data-decoding-from-wav-audio-easyctf-2017).
 - **High-resolution SSTV demodulation:** Standard SSTV decoders fail on high-sample-rate recordings; use manual FM demodulation via `arccos` + differentiation. See [stego-advanced-2.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-forensics/stego-advanced-2.md#high-resolution-sstv-custom-fm-demodulation-plaidctf-2017).

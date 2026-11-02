@@ -1,8 +1,10 @@
 ---
 slug: gentleman-programming-gentle-ai-internal-assets-skills-skill-registry
 name: registry
-tagline: Agent skill from Gentleman-Programming/gentle-ai
-summary: Agent skill from Gentleman-Programming/gentle-ai
+tagline: "Trigger: update skills, skill registry, actualizar skills, after skill
+  changes. Index available skills by trigger and path."
+summary: Use this skill after installing, removing, creating, moving, or
+  renaming skills, or when a delegator needs a fresh skill index.
 categories:
   - coding-agents
 tags:
@@ -11,10 +13,10 @@ tags:
   - ai-coding
   - claude-code
 status: active
-quality_percentile: 89
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -22,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8020
-  last_commit: 2026-10-26T04:03:33Z
-  stars_delta_7d: 171
-  stars_growth_pct: 2.2
-  trending_score: 174.73
+  stars: 8181
+  last_commit: 2026-11-02T02:09:02Z
+  stars_delta_7d: 161
+  stars_growth_pct: 2
+  trending_score: 164.23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7736
     - 7849
     - 8020
+    - 8181
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +42,13 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/skill-registry/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:56.082Z
+  fetched_at: 2026-11-02T09:06:38.260Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: registry
-  description: Agent skill from Gentleman-Programming/gentle-ai
+  description: "Trigger: update skills, skill registry, actualizar skills, after
+    skill changes. Index available skills by trigger and path."
   folder_path: internal/assets/skills/skill-registry
   extra_files: []
   pack_total_skills: 18
@@ -56,4 +60,46 @@ skill:
   pack_slug: gentleman-programming-gentle-ai
 ---
 
-Agent skill from Gentleman-Programming/gentle-ai
+## Activation Contract
+
+Use this skill after installing, removing, creating, moving, or renaming skills, or when a delegator needs a fresh skill index.
+
+## Hard Rules
+
+- The registry is an index, not a compiler or summary. `SKILL.md` remains the source of truth.
+- Do not generate or inject compact rules by default; preserve author intent by passing exact skill paths to subagents.
+- Always write `.atl/skill-registry.md`, whether or not Engram is available.
+- Save the registry to Engram as `topic_key: skill-registry` when available, with `capture_prompt: false`.
+- Generate the registry with `gentle-ai skill-registry refresh --cwd <project>`: it owns the scan order, deduplication, and the skills it never indexes. Scan by hand only when that command is unavailable.
+- When scanning by hand, skip `_shared` and `skill-registry`; deduplicate by skill name, preferring project-level skills over user-level skills.
+- Add `.atl/` to `.gitignore` when possible unless explicitly disabled.
+
+## Decision Gates
+
+| Situation | Action |
+| --- | --- |
+| Same skill exists globally and in project | Keep the project-level skill |
+| Same skill exists in multiple global locations | Keep the first source in scan order |
+| No skills found | Write an empty registry so agents stop searching blindly |
+| Agent will delegate work | Select matching registry rows and pass their `SKILL.md` paths |
+
+## Execution Steps
+
+1. Run `gentle-ai skill-registry refresh --cwd <project>` (add `--force` after skill changes); it writes `.atl/skill-registry.md`. If it reports the refresh was skipped (not a project), stop: there is no registry to persist. If it succeeds, go to step 4. If it fails, report the error instead of scanning by hand.
+2. Only if the command is unavailable: scan all known user and project skill directories for `*/SKILL.md`, reading frontmatter only as needed to extract `name` and `description` trigger text.
+3. Render `.atl/skill-registry.md` with scanned sources, registry contract, skill name, trigger/description, scope, and exact path.
+4. Persist to Engram when available using `title: skill-registry`, `topic_key: skill-registry`, `type: config`, and `capture_prompt: false`.
+5. Return the registry path, skill count, cache status, and whether Engram was updated.
+
+## Output Contract
+
+Return:
+- Project name and `.atl/skill-registry.md` path.
+- Number of indexed skills.
+- Whether the cache was hit or regenerated.
+- Any skipped or duplicate skills when relevant.
+
+## References
+
+- `docs/skill-style-guide.md` — how skills should be authored before indexing.
+- `skills/_shared/skill-resolver.md` — how delegators use the index.

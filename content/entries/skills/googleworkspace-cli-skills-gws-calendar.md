@@ -1,8 +1,10 @@
 ---
 slug: googleworkspace-cli-skills-gws-calendar
 name: gws-calendar
-tagline: Agent skill from googleworkspace/cli
-summary: Agent skill from googleworkspace/cli
+tagline: "Google Calendar: Manage calendars and events."
+summary: "- delete — Deletes an access control rule. - get — Returns an access
+  control rule. - insert — Creates an access control rule. - list — Returns the
+  rules in the access control list for the calendar. - patch — Updates a..."
 categories:
   - productivity-ops
 tags:
@@ -11,10 +13,10 @@ tags:
   - automation
   - cli
 status: active
-quality_percentile: 54
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: googleworkspace/cli
@@ -22,17 +24,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 31663
-  last_commit: 2026-10-06T20:23:04Z
-  stars_delta_7d: 0
+  stars: 32055
+  last_commit: 2026-10-30T16:06:54Z
+  stars_delta_7d: 890
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
-    - 31270
     - 31448
     - 31663
-    - 31663
+    - 32055
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +41,15 @@ readme_source:
   repo: googleworkspace/cli
   path: skills/gws-calendar/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.390Z
+  fetched_at: 2026-11-02T09:06:42.260Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: gws-calendar
-  description: Agent skill from googleworkspace/cli
+  description: "Google Calendar: Manage calendars and events."
   folder_path: skills/gws-calendar
   extra_files: []
-  pack_total_skills: 95
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

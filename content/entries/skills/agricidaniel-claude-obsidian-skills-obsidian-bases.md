@@ -1,8 +1,12 @@
 ---
 slug: agricidaniel-claude-obsidian-skills-obsidian-bases
 name: obsidian-bases
-tagline: Agent skill from AgriciDaniel/claude-obsidian
-summary: Agent skill from AgriciDaniel/claude-obsidian
+tagline: "Explain, draft, and validate Obsidian Bases .base files with filters,
+  formulas, properties, summaries, and table, card, list, or version-gated
+  kanban "
+summary: Answer design and syntax questions read-only. For a requested .base
+  edit, resolve the user vault and use one inspected transaction; never write
+  the file directly.
 categories:
   - productivity-ops
 tags:
@@ -11,10 +15,10 @@ tags:
   - ai-second-brain
   - claude-code
 status: active
-quality_percentile: 78
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-obsidian
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 15827
+  stars: 16065
   last_commit: 2026-10-25T22:24:31Z
-  stars_delta_7d: 193
-  stars_growth_pct: 1.2
-  trending_score: 195.38
+  stars_delta_7d: 238
+  stars_growth_pct: 1.5
+  trending_score: 241.58
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15392
     - 15504
     - 15634
     - 15827
+    - 16065
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,16 @@ readme_source:
   repo: AgriciDaniel/claude-obsidian
   path: skills/obsidian-bases/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:43.248Z
+  fetched_at: 2026-11-02T09:06:24.414Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: obsidian-bases
-  description: Agent skill from AgriciDaniel/claude-obsidian
+  description: Explain, draft, and validate Obsidian Bases .base files with
+    filters, formulas, properties, summaries, and table, card, list, or
+    version-gated kanban views. Use for Obsidian Bases, database-like vault
+    views, dynamic tables, reading lists, task trackers, filters, formulas,
+    summaries, and .base file edits.
   folder_path: skills/obsidian-bases
   extra_files: []
   pack_total_skills: 16
@@ -102,8 +110,17 @@ selected vault's `wiki/` directory.
    python3 "$CORE" transaction apply "$BUNDLE" --vault "$VAULT" \
      --approved-plan-sha256 "$APPROVAL_SHA256"
    ```
-8. Ask the user to render the Base in Obsidian when application-level behavior
-   cannot be verified locally.
+8. Record static validation separately from native Obsidian rendering. Follow
+   [the conformance procedure](https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/obsidian-bases/../../docs/native-conformance.md) when application
+   behavior cannot be verified locally. Never label unobserved output as tested.
+
+## Version boundary
+
+Checked 2026-10-17 against [official view documentation](https://obsidian.md/help/bases/views).
+Table and cards require 1.9+, list requires 1.10+, and native kanban requires
+1.14+. Map requires the Maps plugin. These are documented minimum versions,
+not versions exercised by this package's offline tests. On an older app, keep
+an ordinary table fallback. Preserve unknown existing view fields.
 
 ## Compact schema
 
@@ -117,14 +134,11 @@ filters:
     - 'status != "archived"'
 
 formulas:
-  age_days: '((now() - file.ctime) / 86400000).round(0)'
   status_label: 'if(status == "mature", "Ready", "Review")'
 
 properties:
   status:
     displayName: "Status"
-  formula.age_days:
-    displayName: "Age (days)"
 
 views:
   - type: table
@@ -134,7 +148,7 @@ views:
       - type
       - status
       - updated
-      - formula.age_days
+      - formula.status_label
 ```
 
 Global filters apply to every view. A view may also define its own `filters`.
@@ -157,20 +171,44 @@ computed properties as `formula.<name>`.
 
 - Quote expressions that contain operators, colons, or nested string quotes.
 - Guard nullable properties with `if()`.
-- Subtracting two dates returns a millisecond number. Divide by `86400000`
-  before rounding when a whole-day count is intended.
+- Date subtraction has conflicting current source descriptions. Treat the
+  examples in the date section below as unverified compatibility candidates,
+  and test the user's supported app versions before relying on the output.
 - Define every `formula.<name>` before referencing it in a view or property
   display configuration.
 - Do not transplant Dataview-only keys such as `from` or `where` into a Base.
 - Do not invent properties absent from the selected notes without explaining
   that the resulting column will be empty.
 
+## Date arithmetic needs native evidence
+
+The [Help syntax](https://obsidian.md/help/bases/syntax) checked 2026-10-17
+still describes date differences in milliseconds. The official
+[1.9.3 changelog](https://obsidian.md/changelog/2025-06-26-desktop-v1.9.3/)
+describes a Duration, and the pinned upstream skill also uses a Duration field.
+The recorded excerpts of the
+[API types at the reviewed commit](https://github.com/obsidianmd/obsidian-api/blob/9abd9605ce081383674aae1ed111c456edde0688/obsidian.d.ts)
+do not include a Duration definition, so they are not cited for either reading.
+No native app observation in this update resolves that disagreement.
+
+These retained millisecond expressions are candidates for an isolated test,
+not a compatibility guarantee:
+
 ```yaml
 formulas:
+  age_days: '((now() - file.ctime) / 86400000).round(0)'
   days_until: 'if(due_date, ((date(due_date) - today()) / 86400000).round(0), "")'
 ```
 
-Table, cards, and list views are common:
+Compare direct subtraction/division, the Duration day field, and explicit
+`number(date)` subtraction using one-day, multi-month, negative, and missing
+values. Record app version, timezone, expression, actual value/type, and errors
+using [native-conformance.md](https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/obsidian-bases/../../docs/native-conformance.md). Do not rewrite
+existing formulas or assert that any candidate is correct before that check.
+
+## Additional views
+
+Cards and list examples:
 
 ```yaml
 views:
@@ -186,6 +224,38 @@ views:
       - file.name
       - status
 ```
+
+For Obsidian 1.14+, group a kanban by an existing writable note property:
+
+```yaml
+filters:
+  and:
+    - file.inFolder("wiki")
+    - 'file.ext == "md"'
+views:
+  - type: kanban
+    name: "Page status"
+    groupBy:
+      property: note.status
+      direction: ASC
+    groupOrder:
+      - seed
+      - developing
+      - mature
+      - evergreen
+      - null
+    order:
+      - file.name
+      - status
+```
+
+`groupOrder` lists visible groups in display order. An absent `groupOrder`
+shows all groups using the `groupBy` sort; an empty list hides every group.
+`null` includes pages without the grouped value. Adding an empty group does not
+create a note. Native card moves can change a note property, and grouping by
+`file.folder` can move files; agents must still use reviewed transactions for
+vault mutations. A formula or other read-only file property is unsuitable for
+an editable status board. See [Kanban view](https://obsidian.md/help/bases/views/kanban).
 
 Embed a Base or one named view in a Markdown note:
 

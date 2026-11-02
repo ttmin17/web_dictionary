@@ -15,10 +15,10 @@ tags:
   - ai-workflows
   - airflow-alternative
 status: active
-quality_percentile: 79
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2022-04-22T13:00:42
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: dagucloud/dagu
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 4445
-  last_commit: 2026-10-26T07:09:17Z
-  stars_delta_7d: 62
-  stars_growth_pct: 1.4
-  trending_score: 62.88
-  rank_current: 95
-  rank_delta: -9
+  stars: 4530
+  last_commit: 2026-11-02T09:01:39Z
+  stars_delta_7d: 85
+  stars_growth_pct: 1.9
+  trending_score: 86.63
+  rank_current: 91
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4292
     - 4341
     - 4383
     - 4445
+    - 4530
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: dagucloud/dagu
   path: skills/dagu/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.045Z
+  fetched_at: 2026-11-02T09:05:35.312Z
   truncated: false
 type: agent_skill
 skill:
@@ -100,6 +100,8 @@ Load only the reference file that matches the task.
 - Prefer scoped Dagu references for named values: `${consts.NAME}`, `${params.NAME}`, and `${env.NAME}`. Avoid unscoped braced names in examples unless the example is intentionally showing shell syntax.
 - Declare portable external CLI dependencies in top-level `tools` using aqua shorthand when the binary version affects reproducibility, for example `tools: ["jqlang/jq@jq-1.7.1"]`. Append `#sha256:<64 hex>` to also pin the downloaded artifact content for the run platform, for example `jqlang/jq@jq-1.7.1#sha256:<hex>`.
 - For remote actions, put `tools` in the referenced action DAG file, not in `dagu-action.yaml`; caller DAG tools are not inherited across the action boundary.
+- For worker-local aqua registries, set `tools.registry.type: local` and `tools.registry.path` to a path absolute for the worker's OS. The worker captures a regular file of at most 16 MiB and installs from that snapshot, hashing its contents into the toolset cache key.
+- Each distinct local registry content hash retains a full private package set and aqua-proxy on every worker, with no automatic cache pruning. Use package digests to pin downloaded bytes even when a registry or asset URL changes.
 - Declare step-level `dependencies` when a run needs files from the DAG working directory. Use literal working-directory-relative paths or glob patterns; do not use value references.
 - Use remote action packages (`dagu-action.yaml`) when reusable logic needs helper files, its own DAG, versioning, or an input/output schema contract.
 
@@ -123,7 +125,7 @@ Load only the reference file that matches the task.
 - `params:` values arrive as strings. The `params:` field supports JSON schema-like types and validation, check for schema to see how to specify types and validation rules.
 - Single-line `run:` values are command-form entries. Array-form `run:` entries run one by one. Multi-line `run:` values are scripts. Dagu does not split pipes, redirects, `&&`, or `;` into separate commands; those stay with the selected shell.
 - Do not assume `bash` for `run:` steps. If a script depends on a specific interpreter, add a shebang such as `#!/bin/sh` or `#!/usr/bin/env bash` only after checking that shell exists on the target host or container. Otherwise keep the script portable or set `with.shell:` explicitly.
-- `parallel:` currently requires `action: dag.run` to a child DAG.
+- `parallel:` currently requires `action: dag.run` or `action: dag.enqueue` to a child DAG.
 - Sub-DAGs do not inherit parent env vars; pass what you need via `params:`.
 - For arbitrary text inside shell steps, prefer `printenv VAR_NAME` or `action: template.render` over Dagu interpolation such as `${env.VAR_NAME}`.
 - `harness.run` supports built-in provider adapters (`aider`, `amp`, `claude`, `cline`, `codex`, `copilot`, `cursor`, `deepseek`, `droid`, `gemini`, `goose`, `kilo`, `kiro`, `opencode`, `pi`, `qwen`) and custom top-level `harnesses:` entries. Built-in OpenCode uses managed sessions on long-lived Dagu hosts by default; containers and unsupported options use the CLI path. It can use top-level `container:` or step-level `container:`.
@@ -137,6 +139,7 @@ Load only the reference file that matches the task.
 - In remote action examples, prefer `dag: workflow.yaml` for the action DAG filename. The `dag` field accepts any safe relative file path, but `workflow.yaml` avoids confusing the executable DAG with the `dagu-action.yaml` manifest.
 - Object-form `output:` with `decode: json` or `decode: yaml` can act as lightweight runtime validation. Malformed data or an unresolved `select:` path fails the step, so normal `retry_policy` applies.
 - Use DAG-level `shell` and `shell_args` only when every inherited `run:` step should use the same shell invocation. Use step-level `with.shell` and `with.shell_args` for a single step.
+- A DAG-level `watch:` block (`path`, optional `pattern` such as `*.pdf`, optional `interval`, 10s by default) starts one run for each file that arrives in a folder, with the file's path as `${WATCH_FILE}` and its name as `${WATCH_NAME}`. A file counts as arrived once its size and time hold still between two readings; files already in the folder when the watch starts are left alone, and a file runs again only when it is replaced. Prefer it to a schedule that polls a folder. A file's name is chosen by whoever put it in the folder, so in a `run:` step read `WATCH_FILE` and `WATCH_NAME` with `printenv` or through `action: template.render` rather than interpolating `${WATCH_NAME}` into the command.
 - Use `dagu schema dag` to check the full list of available fields and their shapes.
 - Use `dagu example` to see different DAG patterns and how to express them in YAML.
 

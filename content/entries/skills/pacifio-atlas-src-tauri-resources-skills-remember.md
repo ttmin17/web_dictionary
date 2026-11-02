@@ -1,8 +1,11 @@
 ---
 slug: pacifio-atlas-src-tauri-resources-skills-remember
 name: remember
-tagline: Agent skill from pacifio/atlas
-summary: Agent skill from pacifio/atlas
+tagline: "Save the decisions, facts, dead ends and architecture this
+  conversation established to Atlas's shared memory, so other agents and future
+  sessions can "
+summary: "Use the memoryremember tool from the atlasmemory MCP server, one call
+  per item, with kind set to:"
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: pacifio/atlas
@@ -22,16 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9543
-  last_commit: 2026-10-26T07:24:31Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 9561
+  last_commit: 2026-11-02T05:01:45Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.2
+  trending_score: 18.03
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9593
     - 9622
     - 9543
+    - 9561
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +43,14 @@ readme_source:
   repo: pacifio/atlas
   path: src-tauri/resources/skills/remember/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.543Z
+  fetched_at: 2026-11-02T09:06:31.061Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: remember
-  description: Agent skill from pacifio/atlas
+  description: Save the decisions, facts, dead ends and architecture this
+    conversation established to Atlas's shared memory, so other agents and
+    future sessions can build on them.
   folder_path: src-tauri/resources/skills/remember
   extra_files: []
   pack_total_skills: 6

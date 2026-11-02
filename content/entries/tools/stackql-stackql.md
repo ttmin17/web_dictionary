@@ -14,26 +14,28 @@ tags:
   - cloud
   - cloud-automation
 status: active
-quality_percentile: 50
+quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: stackql/stackql
   official_vendor: false
   license: MIT
 signals:
-  stars: 1068
-  last_commit: 2026-10-25T22:54:07Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 146
+  stars: 1075
+  last_commit: 2026-11-02T08:14:10Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.7
+  trending_score: 7.05
+  rank_current: 126
+  rank_delta: 13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1069
     - 1068
+    - 1075
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +44,7 @@ readme_source:
   repo: stackql/stackql
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:23.805Z
+  fetched_at: 2026-11-02T09:05:56.711Z
   truncated: false
 type: agent_tool
 tool:
@@ -370,6 +372,9 @@ docker pull stackql/stackql
 </details>
 
 ## Usage
+
+Caller authentication and permissions: [configuration](https://github.com/stackql/stackql/blob/main/docs/access_management.md) and
+[four tested walkthroughs](https://github.com/stackql/stackql/blob/main/docs/examples/access-management/README.md).
 
 StackQL can be used via the interactive REPL shell, or via the `exec` command or ran as a server using the [Postgres wire protocol](https://www.postgresql.org/docs/current/protocol.html).  
 

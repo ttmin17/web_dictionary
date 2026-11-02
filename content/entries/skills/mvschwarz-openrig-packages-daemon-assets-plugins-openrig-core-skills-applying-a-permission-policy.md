@@ -1,8 +1,12 @@
 ---
 slug: mvschwarz-openrig-packages-daemon-assets-plugins-openrig-core-skills-applying-a-permission-policy
 name: applying-a-permission-policy
-tagline: Agent skill from mvschwarz/openrig
-summary: Agent skill from mvschwarz/openrig
+tagline: Use before launching a team during agent-guided setup, or when a user
+  asks to configure OpenRig command permissions, reduce repeated native approval
+  p
+summary: Reuse an existing explicit choice for these harnesses and this scope
+  from the user's onboarding context; do not ask again. Existing rules are
+  configuration, not evidence of consent to expand their scope. Preserve them...
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8198
-  last_commit: 2026-10-26T07:30:13Z
-  stars_delta_7d: 367
-  stars_growth_pct: 4.7
-  trending_score: 384.2
+  stars: 8550
+  last_commit: 2026-11-02T08:44:58Z
+  stars_delta_7d: 352
+  stars_growth_pct: 4.3
+  trending_score: 367.11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5667
     - 7377
     - 7831
     - 8198
+    - 8550
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +44,17 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/applying-a-permission-policy/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.582Z
+  fetched_at: 2026-11-02T09:06:34.145Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: applying-a-permission-policy
-  description: Agent skill from mvschwarz/openrig
+  description: Use before launching a team during agent-guided setup, or when a
+    user asks to configure OpenRig command permissions, reduce repeated native
+    approval prompts, or apply a selected rig/seat permission policy.
   folder_path: packages/daemon/assets/plugins/openrig-core/skills/applying-a-permission-policy
   extra_files: []
-  pack_total_skills: 54
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-internal-comms
 name: internal-comms
-tagline: Use when a Head of People Ops, BizOps lead, or Internal Communications
-  owner needs to draft and sequence an internal-only change-management
-  communicat
+tagline: Use when announcing a reorg, tool rollout, policy change, leadership
+  change, layoff or acquisition internally. Builds the announcement with
+  change_ann
 summary: 1. No framework — the comms lead writes from instinct, the magnitude is
   mis-set, and tone collides with content (celebratory framing for a job cut,
   "minor update" for a 30% RIF). 2. No touchpoint sequencing — one Slac...
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,23 +43,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/internal-comms/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.235Z
+  fetched_at: 2026-11-02T09:06:18.454Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: internal-comms
-  description: Use when a Head of People Ops, BizOps lead, or Internal
-    Communications owner needs to draft and sequence an internal-only
-    change-management communication — a re-org announcement, a tool rollout, a
-    policy change, a leadership transition, a layoff, an acquisition close, or
-    an internal product launch — and the audience is employees (not customers).
-    Pairs Prosci ADKAR and Kotter's 8-step change model with deterministic
-    stdlib-only Python tools to produce a sequenced touchpoint calendar, a
-    Kotter-compliant primary announcement, an audience-segmented FAQ, and
-    manager cascade talking points; industry-tuned via --profile {tech-startup,
-    scaleup, enterprise, public-company, non-profit}. Triggers on "all-hands
-    announcement", "change comms", "rollout comms", "re-org announcement",
-    "manager talking points", "layoff comms".
+  description: Use when announcing a reorg, tool rollout, policy change,
+    leadership change, layoff or acquisition internally. Builds the announcement
+    with change_announcement_builder.py and sequences it with
+    comms_calendar_builder.py.
   folder_path: business-operations/skills/internal-comms
   extra_files:
     - assets/comms_brief_template.md
@@ -69,7 +61,7 @@ skill:
     - scripts/change_announcement_builder.py
     - scripts/comms_calendar_builder.py
     - scripts/comms_template_filler.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

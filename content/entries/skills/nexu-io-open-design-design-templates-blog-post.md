@@ -1,8 +1,13 @@
 ---
 slug: nexu-io-open-design-design-templates-blog-post
 name: blog-post
-tagline: Agent skill from nexu-io/open-design
-summary: Agent skill from nexu-io/open-design
+tagline: |-
+  A long-form article / blog post — masthead, hero image placeholder,
+  article body with figures and pull quotes, author byline, related posts.
+  Use when 
+summary: 1. Read the active DESIGN.md (injected above). Lean into the typography
+  tokens — long-form is 70% type, 20% image, 10% chrome. 2. Pick the topic from
+  the brief and write a real article — at least 600 words across 4–6...
 categories:
   - media-creative
 tags:
@@ -11,10 +16,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 104025
-  last_commit: 2026-10-26T07:31:43Z
-  stars_delta_7d: 1726
-  stars_growth_pct: 1.7
-  trending_score: 1755.12
+  stars: 105423
+  last_commit: 2026-11-02T05:06:45Z
+  stars_delta_7d: 1398
+  stars_growth_pct: 1.3
+  trending_score: 1416.79
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99839
     - 100908
     - 102299
     - 104025
+    - 105423
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,16 +45,20 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/blog-post/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.575Z
+  fetched_at: 2026-11-02T09:06:41.704Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: blog-post
-  description: Agent skill from nexu-io/open-design
+  description: |
+    A long-form article / blog post — masthead, hero image placeholder,
+    article body with figures and pull quotes, author byline, related posts.
+    Use when the brief asks for "blog", "article", "post", "essay", or
+    "case study".
   folder_path: design-templates/blog-post
   extra_files:
     - example.html
-  pack_total_skills: 401
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

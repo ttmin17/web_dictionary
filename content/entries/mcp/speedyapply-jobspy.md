@@ -13,24 +13,27 @@ tags:
   - cli
   - glassdoor
 status: active
-quality_percentile: 87
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: speedyapply/JobSpy
   official_vendor: false
   license: MIT
 signals:
-  stars: 4562
-  last_commit: 2026-10-23T12:50:39Z
-  stars_delta_7d: 190
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 4613
+  last_commit: 2026-10-27T15:30:44Z
+  stars_delta_7d: 51
+  stars_growth_pct: 1.1
+  trending_score: 51.57
+  rank_current: 37
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 4562
+    - 4613
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +43,7 @@ readme_source:
   repo: speedyapply/JobSpy
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.074Z
+  fetched_at: 2026-11-02T09:05:35.312Z
   truncated: false
 type: mcp_server
 launch:
@@ -288,6 +291,7 @@ jobs.attrs["warnings"]  # {"bdjobs": ["job_type internship isn't supported, igno
 ```
 
 ---
+
 **Q: Why is Indeed giving unrelated roles?**  
 **A:** Indeed searches the description too.
 
@@ -303,10 +307,12 @@ search_term='"engineering intern" software summer (java OR python OR c++) 2025 -
 This searches the description/title and must include software, summer, 2025, one of the languages, engineering intern exactly, no tax, no marketing.
 
 ---
+
 **Q: No results when using "google"?**  
 **A:** Google Jobs is currently unavailable.
 
 ---
+
 **Q: Received a response code 429?**  
 **A:** The board blocked you for sending too many requests. All of the job board sites are aggressive with blocking. We recommend:
 
@@ -314,6 +320,7 @@ This searches the description/title and must include software, summer, 2025, one
 - Try using the proxies param to change your IP address.
 
 ---
+
 ## JobPost Schema
 
 ```plaintext

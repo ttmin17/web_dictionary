@@ -1,8 +1,8 @@
 ---
 slug: googleworkspace-cli-skills-gws-gmail-reply
 name: gws-gmail-reply
-tagline: Agent skill from googleworkspace/cli
-summary: Agent skill from googleworkspace/cli
+tagline: "Gmail: Reply to a message (handles threading automatically)."
+summary: Reply to a message (handles threading automatically)
 categories:
   - productivity-ops
 tags:
@@ -11,10 +11,10 @@ tags:
   - automation
   - cli
 status: active
-quality_percentile: 54
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: googleworkspace/cli
@@ -22,17 +22,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 31663
-  last_commit: 2026-10-06T20:23:04Z
-  stars_delta_7d: 0
+  stars: 32055
+  last_commit: 2026-10-30T16:06:54Z
+  stars_delta_7d: 890
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
-    - 31270
     - 31448
     - 31663
-    - 31663
+    - 32055
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +39,15 @@ readme_source:
   repo: googleworkspace/cli
   path: skills/gws-gmail-reply/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.390Z
+  fetched_at: 2026-11-02T09:06:42.261Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: gws-gmail-reply
-  description: Agent skill from googleworkspace/cli
+  description: "Gmail: Reply to a message (handles threading automatically)."
   folder_path: skills/gws-gmail-reply
   extra_files: []
-  pack_total_skills: 95
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +56,55 @@ skill:
   pack_slug: googleworkspace-cli
 ---
 
-Agent skill from googleworkspace/cli
+# gmail +reply
+> **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
+
+Reply to a message (handles threading automatically)
+
+## Usage
+
+```bash
+gws gmail +reply --message-id <ID> --body <TEXT>
+```
+
+## Flags
+
+| Flag | Required | Default | Description |
+|------|----------|---------|-------------|
+| `--message-id` | ✓ | — | Gmail message ID to reply to |
+| `--body` | ✓ | — | Reply body (plain text, or HTML with --html) |
+| `--from` | — | — | Sender address (for send-as/alias; omit to use account default) |
+| `--to` | — | — | Additional To email address(es), comma-separated |
+| `--attach` | — | — | Attach a file (can be specified multiple times) |
+| `--cc` | — | — | CC email address(es), comma-separated |
+| `--bcc` | — | — | BCC email address(es), comma-separated |
+| `--html` | — | — | Treat --body as HTML content (default is plain text) |
+| `--dry-run` | — | — | Show the request that would be sent without executing it |
+| `--draft` | — | — | Save as draft instead of sending |
+
+## Examples
+
+```bash
+gws gmail +reply --message-id 18f1a2b3c4d --body 'Thanks, got it!'
+gws gmail +reply --message-id 18f1a2b3c4d --body 'Looping in Carol' --cc carol@example.com
+gws gmail +reply --message-id 18f1a2b3c4d --body 'Adding Dave' --to dave@example.com
+gws gmail +reply --message-id 18f1a2b3c4d --body '<b>Bold reply</b>' --html
+gws gmail +reply --message-id 18f1a2b3c4d --body 'Updated version' -a updated.docx
+gws gmail +reply --message-id 18f1a2b3c4d --body 'Draft reply' --draft
+```
+
+## Tips
+
+- Automatically sets In-Reply-To, References, and threadId headers.
+- Quotes the original message in the reply body.
+- --to adds extra recipients to the To field.
+- Use -a/--attach to add file attachments. Can be specified multiple times.
+- With --html, the quoted block uses Gmail's gmail_quote CSS classes and preserves HTML formatting. Use fragment tags (<p>, <b>, <a>, etc.) — no <html>/<body> wrapper needed.
+- With --html, inline images in the quoted message are preserved via cid: references.
+- Use --draft to save the reply as a draft instead of sending it immediately.
+- For reply-all, use +reply-all instead.
+
+## See Also
+
+- [gws-shared](https://github.com/googleworkspace/cli/blob/main/skills/gws-gmail-reply/../gws-shared/SKILL.md) — Global flags and auth
+- [gws-gmail](https://github.com/googleworkspace/cli/blob/main/skills/gws-gmail-reply/../gws-gmail/SKILL.md) — All send, read, and manage email commands

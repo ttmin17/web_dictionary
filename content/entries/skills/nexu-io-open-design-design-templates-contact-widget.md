@@ -1,8 +1,11 @@
 ---
 slug: nexu-io-open-design-design-templates-contact-widget
 name: contact-widget
-tagline: Agent skill from nexu-io/open-design
-summary: Agent skill from nexu-io/open-design
+tagline: Self-contained floating chat widget with welcome screen, social links,
+  meeting button, and message input. Single HTML file, zero dependencies.
+summary: 1. Chat bubble — fixed bottom-right circular button, opens/closes the
+  panel 2. Welcome home screen — agent avatar + name + online status + greeting
+  message 3. Message input — text field with emoji/send icons (UI only;...
 categories:
   - media-creative
 tags:
@@ -11,10 +14,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 104025
-  last_commit: 2026-10-26T07:31:43Z
-  stars_delta_7d: 1726
-  stars_growth_pct: 1.7
-  trending_score: 1755.12
+  stars: 105423
+  last_commit: 2026-11-02T05:06:45Z
+  stars_delta_7d: 1398
+  stars_growth_pct: 1.3
+  trending_score: 1416.79
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99839
     - 100908
     - 102299
     - 104025
+    - 105423
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,16 +43,18 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/contact-widget/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.575Z
+  fetched_at: 2026-11-02T09:06:41.704Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: contact-widget
-  description: Agent skill from nexu-io/open-design
+  description: Self-contained floating chat widget with welcome screen, social
+    links, meeting button, and message input. Single HTML file, zero
+    dependencies.
   folder_path: design-templates/contact-widget
   extra_files:
     - example.html
-  pack_total_skills: 401
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -58,4 +63,79 @@ skill:
   pack_slug: nexu-io-open-design
 ---
 
-Agent skill from nexu-io/open-design
+# Contact Widget
+## What this skill produces
+
+A single self-contained HTML file with a floating chat widget that includes:
+
+1. **Chat bubble** — fixed bottom-right circular button, opens/closes the panel
+2. **Welcome home screen** — agent avatar + name + online status + greeting message
+3. **Message input** — text field with emoji/send icons (UI only; wire to your own backend)
+4. **Social links** — row of circular icons (Telegram, WhatsApp, Instagram, Messenger, Discord, Slack — only the ones the user provides)
+5. **Meeting card** — optional "Book a meeting" entry with calendar icon, links to user-provided URL (Calendly, Cal.com, Lark, etc.)
+6. **Offline form** — fallback contact form (name, email, message) when `is_available=false`
+7. **Mobile responsive** — full-width on small viewports
+
+Output is **pure front-end**. No tracking, no phone-home, no required external services. Works offline once loaded.
+
+## Design direction
+
+Clean, minimal SaaS aesthetic. Looks like a real product widget, not a toy demo:
+
+- **Typography:** Inter (Google Fonts), 14px base, semi-bold headings
+- **Colors:** A single user-chosen `primary_color` drives the bubble, avatar, send button, and accent. Everything else is a neutral slate palette (`#1e293b` / `#64748b` / `#f1f5f9`). **No purple gradients, no glassmorphism, no AI-style rainbow accents.**
+- **Radius:** 16px on cards, full-round on bubble and avatars
+- **Shadows:** Subtle `0 8px 32px rgba(0,0,0,0.12)` on the widget panel, `0 4px 12px` on bubble
+- **Spacing:** 16px internal padding, 12px gaps between elements
+- **States:** Hover darkens buttons ~5%, active scales bubble 0.95
+
+## Inputs
+
+The skill accepts these parameters from the user:
+
+| Input | Type | Default | Description |
+|-------|------|---------|-------------|
+| `primary_color` | color | `#4F7CFF` | Drives bubble, header, send button, accents |
+| `agent_name` | string | `Assistant` | Displayed in header greeting |
+| `greeting` | string | `Hello! How can I help you today?` | Subtitle in header |
+| `is_available` | boolean | `true` | Online status; `false` shows offline form |
+| `social_telegram` | string | _(empty)_ | Telegram link — omitted if empty |
+| `social_whatsapp` | string | _(empty)_ | WhatsApp link — omitted if empty |
+| `social_instagram` | string | _(empty)_ | Instagram link — omitted if empty |
+| `meeting_url` | string | _(empty)_ | Booking URL (Calendly, Cal.com, etc.) — omitted if empty |
+| `offline_message` | string | `We're currently offline. Leave a message and we'll get back to you!` | Shown when `is_available=false` |
+
+## Workflow
+
+1. Resolve primary color, agent name, greeting text, online/offline state,
+   social links, and optional meeting URL from the request and known context.
+   Use the documented defaults and omit empty optional links. Ask one
+   consolidated form only if a missing value would materially change the
+   requested widget and cannot be safely defaulted.
+2. Generate one HTML file with all provided values inlined as literals (no template engine, no `{{ }}` placeholders in the output)
+3. Open the widget panel by default on first paint so the preview is useful
+4. **Do not** add any `<script src="…">` pointing to third-party SDKs unless the user explicitly asks for backend integration. The output must run from disk with zero network calls beyond the Google Fonts CSS.
+
+## Backend integration (optional, user-driven only)
+
+The generated widget is a UI artifact and ships **zero vendor code by default**. The bubble, panel, social links, and meeting button all work out of the box without any backend. Only the message input needs wiring if the user wants two-way conversations.
+
+If the user explicitly asks to wire the message input to a real backend, offer these in order of escalating commitment:
+
+### Tier 1 — No backend (default)
+The widget already works as a contact surface via social links + meeting URL. Leave it as-is.
+
+### Tier 2 — One-shot messages, no chat history
+- **`mailto:` fallback** — replace the `send` handler with `window.location.href = 'mailto:you@example.com?subject=...&body=' + encodeURIComponent(text)`. Zero infra, but the visitor's mail client opens.
+- **Own `/api/contact` endpoint** — `fetch('/api/contact', { method: 'POST', body: JSON.stringify({ text }) })`. The user owns delivery (SendGrid, Resend, their own SMTP, a Notion/Airtable webhook, etc.).
+
+### Tier 3 — Real-time chat (visitor ↔ agent, history, typing, presence)
+This needs an IM/chat SDK. Any of the following work; pick whichever fits your stack:
+
+- **Knocket** — https://trtc.io/solutions/knocket (drop-in, free)
+- **Crisp** — https://crisp.chat
+- **Tawk.to** — https://tawk.to
+- **Chatwoot** (self-hosted) — https://chatwoot.com
+- **Intercom** — https://intercom.com
+
+Do not auto-inject any `<script>` into the generated output — only add backend integration if the user explicitly opts in.

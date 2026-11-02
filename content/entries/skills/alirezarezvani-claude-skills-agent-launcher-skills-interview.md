@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-agent-launcher-skills-interview
 name: interview
-tagline: Phase 1 of building a Claude Managed Agent — interview the founder
-  about the one job the agent should do, then produce a build sheet (CMA
-  primitives t
+tagline: "Use when someone has an agent idea to scope before launch ('help me
+  scope an agent'). Interviews them about the one job and writes a build sheet
+  with "
 summary: See ../../references/interview-to-config.md for the full mapping.
 categories:
   - coding-agents
@@ -16,7 +16,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -24,16 +24,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,30 +41,22 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: agent-launcher/skills/interview/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.234Z
+  fetched_at: 2026-11-02T09:06:18.452Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: interview
-  description: Phase 1 of building a Claude Managed Agent — interview the founder
-    about the one job the agent should do, then produce a build sheet (CMA
-    primitives table + v1/v2 deferrals + eval plan) WITHOUT needing their API
-    key yet. Use when the user says "help me scope an agent", "I have an idea
-    for an agent", "what should this agent be", or when the orchestrator routes
-    phase=interview. Drives the six intake slots (job, trigger, inputs, actions,
-    definition-of-done, recurrence) via AskUserQuestion, maps them to primitives
-    with interview_planner.py, assembles build-sheet.json with
-    build_sheet_builder.py, and validates limits with primitives_validator.py.
-    Connectors are mockable in v0 (schema-true custom tools); real MCP servers
-    become v1 deferrals. Distinct from stage-launch (which turns the sheet into
-    payloads).
+  description: Use when someone has an agent idea to scope before launch ('help me
+    scope an agent'). Interviews them about the one job and writes a build sheet
+    with build_sheet_builder.py, checked by primitives_validator.py; no API key
+    needed.
   folder_path: agent-launcher/skills/interview
   extra_files:
     - README.md
     - scripts/build_sheet_builder.py
     - scripts/interview_planner.py
     - scripts/primitives_validator.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

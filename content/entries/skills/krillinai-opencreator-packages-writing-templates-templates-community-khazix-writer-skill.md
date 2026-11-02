@@ -2,7 +2,9 @@
 slug: krillinai-opencreator-packages-writing-templates-templates-community-khazix-writer-skill
 name: skill
 tagline: Agent skill from krillinai/OpenCreator
-summary: Agent skill from krillinai/OpenCreator
+summary: "- 对新事物保持真实好奇，从「这件事哪里有意思」出发，而不是从宏大结论出发。 -
+  讲人话，允许明确表达判断和不确定性，避免滴水不漏但没有温度的报告腔。 - 真诚优先。产品有缺点就写缺点，不懂就承认不懂，不用不存在的细节增强戏剧性。 -
+  观点必须是作者真的相信并愿意表达的，不能为了流量强行制造立场。"
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - deskop-app
   - dubbing
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: krillinai/OpenCreator
@@ -22,25 +24,25 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13936
-  last_commit: 2026-10-26T01:28:37Z
-  stars_delta_7d: 235
-  stars_growth_pct: 1.7
-  trending_score: 239.03
+  stars: 14088
+  last_commit: 2026-11-02T05:56:31Z
+  stars_delta_7d: 152
+  stars_growth_pct: 1.1
+  trending_score: 153.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12614
     - 12884
     - 13701
     - 13936
-language: en
+    - 14088
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: krillinai/OpenCreator
   path: packages/writing-templates/templates/community/khazix-writer/skill/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:44:49.730Z
+  fetched_at: 2026-11-02T09:06:44.739Z
   truncated: false
 type: agent_skill
 skill:

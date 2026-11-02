@@ -11,15 +11,15 @@ summary: 'The user must provide: - n9e address: e.g. http://: -
 categories:
   - cloud-infra
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/query-alert-events/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.895Z
+  fetched_at: 2026-11-02T09:05:33.720Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,6 +68,7 @@ skill:
 Query and view alert events on the Nightingale monitoring platform. Supports querying current active alerts (not yet recovered), historical alerts (recovered/not recovered), and retrieving the detailed information of a single alert.
 
 ---
+
 ## Prerequisites
 
 The user must provide:
@@ -77,6 +79,7 @@ The user must provide:
 If the user has not provided the information above, use the AskUserQuestion tool to ask.
 
 ---
+
 ## Execution Steps
 
 ### Step 1: Log in to obtain a Token
@@ -140,6 +143,7 @@ Authorization: Bearer <token>
 Present the query results to the user in a readable Markdown table or list, including the key information: alert name, severity, trigger time, duration, trigger value, tags, etc.
 
 ---
+
 ## Query Parameter Reference
 
 ### Active alerts query parameters (alert-cur-events/list)
@@ -202,6 +206,7 @@ There are two ways to specify a time range (choose one):
 - When only `stime` is passed, `etime` is automatically set to the current time + 24 hours
 
 ---
+
 ## Response Data Structure
 
 ### List response
@@ -268,6 +273,7 @@ Historical alert events add the following on top of active alerts:
 | 1 | Recovered |
 
 ---
+
 ## Auxiliary Query APIs
 
 ### Get available event tag keys
@@ -303,6 +309,7 @@ Authorization: Bearer <token>
 ```
 
 ---
+
 ## Common Query Examples
 
 ### Example 1: View all active alerts
@@ -354,6 +361,7 @@ GET /api/n9e/alert-cur-event/12345
 ```
 
 ---
+
 ## Key Considerations
 
 1. **Active alerts vs. historical alerts**: active alerts include only the alerts currently not recovered; historical alerts include both recovered and not-recovered alerts

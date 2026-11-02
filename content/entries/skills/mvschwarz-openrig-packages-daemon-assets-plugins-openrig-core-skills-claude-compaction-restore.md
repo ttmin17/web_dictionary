@@ -1,8 +1,12 @@
 ---
 slug: mvschwarz-openrig-packages-daemon-assets-plugins-openrig-core-skills-claude-compaction-restore
 name: compaction-restore
-tagline: Agent skill from mvschwarz/openrig
-summary: Agent skill from mvschwarz/openrig
+tagline: Use when a Claude Code session is about to compact, has just compacted,
+  reached its context limit, resumed after /compact, or must rebuild its working
+summary: "This skill keeps that picture alive across compactions. Before
+  compacting, you write a restore map: a short summary plus the connections
+  between things that already exist on disk. After compacting, you re-enter the
+  wo..."
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8198
-  last_commit: 2026-10-26T07:30:13Z
-  stars_delta_7d: 367
-  stars_growth_pct: 4.7
-  trending_score: 384.2
+  stars: 8550
+  last_commit: 2026-11-02T08:44:58Z
+  stars_delta_7d: 352
+  stars_growth_pct: 4.3
+  trending_score: 367.11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5667
     - 7377
     - 7831
     - 8198
+    - 8550
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,15 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/claude-compaction-restore/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.582Z
+  fetched_at: 2026-11-02T09:06:34.146Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: compaction-restore
-  description: Agent skill from mvschwarz/openrig
+  description: Use when a Claude Code session is about to compact, has just
+    compacted, reached its context limit, resumed after /compact, or must
+    rebuild its working picture of a long-running seat from its own restore map,
+    its JSONL transcript and the files it touched.
   folder_path: packages/daemon/assets/plugins/openrig-core/skills/claude-compaction-restore
   extra_files:
     - reference/SKILL-v1.md
@@ -53,7 +60,7 @@ skill:
     - scripts/restore-from-jsonl.mjs
     - templates/compact-instruction.md
     - templates/post-compact-restore-instruction.md
-  pack_total_skills: 54
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -209,8 +216,8 @@ not establish completed restoration. The earlier acknowledgement-only boundary
 is not a restore request.
 
 1. **Check for a hold first.** Read the restore request, the per-seat instruction file
-   (`<OPENRIG_HOME>/compaction/post-compact-extra/<session>.md`, named by your full session such as
-   `dev-impl@my-rig.md`) when it exists, the newest row or message from whoever routes your work, and any hold
+   (`<OPENRIG_HOME>/compaction/post-compact-extra/<session>.md`, named after your full session, such as
+   `dev-impl@my-rig` with `.md` added) when it exists, the newest row or message from whoever routes your work, and any hold
    from the authority above them. A hold, a release order or an operator's own restore map overrides the default
    order below. Before any write, also run `rig whoami --json` and `rig queue whoami`.
 2. **Name your class and state its read budget** before reading (see "Two restore classes"), with a
@@ -269,12 +276,19 @@ The audit message asks for a read-depth table and tells you not to conserve toke
 
 The next restore map links this note, which keeps the chain unbroken.
 
+## Then resume
+
+Resume the outcome selected by the user's current instructions, standing duties and assigned work. Use existing
+task records, decisions and your recap to recover the next useful action, remaining constraints and evidence
+already earned. Check uncertain effects before replaying work. Available skills and historical suggestions do not
+by themselves widen scope or create required stages. Use authorized skills, subagents, peer help and useful tests
+within your remit without another permission request. Route a missing decision to its existing owner and continue
+unaffected work.
+
 ## Guardrails
 
 - Compaction is survival, not housekeeping. Compact only when a seat is genuinely near its limit, never to
   "lean" a seat or prepare a starter image; a compacted seat can sound confident while missing the context it needs.
-- Continue from the map and the files, not from the summary's "next step" alone: a hold placed after the
-  summary was written still binds.
 - Do not launch a fresh session in place of restoring.
 - An honest `PARTIAL` with its reason is a correct outcome. Claiming coverage you did not reach is the
   failure.

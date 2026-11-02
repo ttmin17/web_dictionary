@@ -13,29 +13,29 @@ tags:
   - llms
   - python
 status: active
-quality_percentile: 91
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: assafelovic/gpt-researcher
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 30295
+  stars: 30426
   last_commit: 2026-10-10T22:03:53Z
-  stars_delta_7d: 132
+  stars_delta_7d: 131
   stars_growth_pct: 0.4
-  trending_score: 132.58
+  trending_score: 131.57
   rank_current: 51
-  rank_delta: -27
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 29938
     - 30074
     - 30163
     - 30295
+    - 30426
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: assafelovic/gpt-researcher
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:25.789Z
+  fetched_at: 2026-11-02T09:05:26.500Z
   truncated: false
 type: agent_tool
 tool:
@@ -423,6 +423,7 @@ Our view on unbiased research claims:
 3. In research, people also tend towards biases as most have already opinions on the topics they research about. This tool scrapes many opinions and will evenly explain diverse views that a biased person would never have read.
 
 ---
+
 <p align="center">
 <a href="https://star-history.com/#assafelovic/gpt-researcher">
   <picture>

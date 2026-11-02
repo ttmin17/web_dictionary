@@ -1,8 +1,12 @@
 ---
 slug: aaron-he-zhu-aaron-marketing-skills-ad-activate-placement-exclusion-manager
 name: placement-exclusion-manager
-tagline: Agent skill from aaron-he-zhu/aaron-marketing-skills
-summary: Agent skill from aaron-he-zhu/aaron-marketing-skills
+tagline: Use when the user asks to "build my brand-safety exclusion lists", "set
+  placement / topic / content exclusions before launch", "add network and audien
+summary: "Expected output: a placement/network exclusion list (sites, apps,
+  channels, network opt-outs), a content-suitability & sensitive-topic block
+  list, a reference to the audience exclusion set consumed from
+  audience-segme..."
 categories:
   - productivity-ops
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: aaron-he-zhu/aaron-marketing-skills
@@ -22,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3014
-  last_commit: 2026-10-26T02:50:09Z
+  stars: 3048
+  last_commit: 2026-11-02T03:58:19Z
   stars_delta_7d: 34
   stars_growth_pct: 1.1
-  trending_score: 34.39
+  trending_score: 34.38
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2930
     - 2980
     - 3014
+    - 3048
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,15 +44,23 @@ readme_source:
   repo: aaron-he-zhu/aaron-marketing-skills
   path: ad/activate/placement-exclusion-manager/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:34.031Z
+  fetched_at: 2026-11-02T09:06:53.855Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: placement-exclusion-manager
-  description: Agent skill from aaron-he-zhu/aaron-marketing-skills
+  description: Use when the user asks to "build my brand-safety exclusion lists",
+    "set placement / topic / content exclusions before launch", "add network and
+    audience exclusions", or "prep the A1 brand-safety evidence for the
+    auditor"; produces a placement/network exclusion list, a content-suitability
+    & sensitive-topic block list, an audience/negative-audience exclusion set,
+    and a packaged A1 brand/placement-safety evidence file for the gate. Not for
+    building the audiences you target — use audience-segment-builder; not for
+    computing the RQS or issuing the A1 verdict — use ad-account-auditor.
+    品牌安全/排除位置/否定受众列表
   folder_path: ad/activate/placement-exclusion-manager
   extra_files: []
-  pack_total_skills: 120
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

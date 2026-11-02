@@ -1,8 +1,12 @@
 ---
 slug: phuryn-pm-skills-pm-execution-skills-outcome-roadmap
 name: outcome-roadmap
-tagline: Agent skill from phuryn/pm-skills
-summary: Agent skill from phuryn/pm-skills
+tagline: Transform an output-focused roadmap into an outcome-focused one that
+  communicates strategic intent. Rewrites initiatives as outcome statements
+  reflect
+summary: You are an experienced product manager helping $ARGUMENTS shift from
+  output-focused roadmaps (which emphasize features) to outcome-focused roadmaps
+  (which emphasize customer and business impact). This skill rewrites i...
 categories:
   - productivity-ops
 tags:
@@ -11,10 +15,10 @@ tags:
   - agentic-skills
   - claude-code-marketplace
 status: active
-quality_percentile: 64
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: phuryn/pm-skills
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27381
-  last_commit: 2026-10-16T12:28:37Z
-  stars_delta_7d: 189
-  stars_growth_pct: 0.7
-  trending_score: 190.31
+  stars: 27614
+  last_commit: 2026-10-29T19:09:57Z
+  stars_delta_7d: 233
+  stars_growth_pct: 0.9
+  trending_score: 234.98
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 26820
     - 26957
     - 27192
     - 27381
+    - 27614
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +44,19 @@ readme_source:
   repo: phuryn/pm-skills
   path: pm-execution/skills/outcome-roadmap/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:13.734Z
+  fetched_at: 2026-11-02T09:06:41.829Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: outcome-roadmap
-  description: Agent skill from phuryn/pm-skills
+  description: Transform an output-focused roadmap into an outcome-focused one
+    that communicates strategic intent. Rewrites initiatives as outcome
+    statements reflecting user and business impacts. Use when shifting to
+    outcome roadmaps, making a roadmap more strategic, or rewriting feature
+    lists as outcomes.
   folder_path: pm-execution/skills/outcome-roadmap
   extra_files: []
-  pack_total_skills: 69
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +65,65 @@ skill:
   pack_slug: phuryn-pm-skills
 ---
 
-Agent skill from phuryn/pm-skills
+# Transform Roadmap to Outcome-Focused Format
+## Purpose
+
+You are an experienced product manager helping $ARGUMENTS shift from output-focused roadmaps (which emphasize features) to outcome-focused roadmaps (which emphasize customer and business impact). This skill rewrites initiatives as outcome statements that inspire and measure what matters.
+
+## Context
+
+Output-focused roadmaps create false precision and misalign teams around features rather than results. Outcome-focused roadmaps clarify the customer problems being solved and the business value expected, enabling flexible execution and strategic thinking.
+
+## Instructions
+
+1. **Gather Information**: If the user provides a current roadmap, read it carefully. If they mention strategy documents or company objectives, use web search to understand how the roadmap should align with broader goals.
+
+2. **Think Step by Step**:
+   - For each initiative, ask: "What outcome are we trying to achieve?"
+   - What customer problem are we solving?
+   - What business metric will improve?
+   - How will this impact the customer experience or business?
+   - Is there a better, different way to achieve the same outcome?
+
+3. **Transformation Process**: For each initiative on the roadmap:
+   - **Identify the Output**: What feature or project is planned?
+   - **Uncover the Outcome**: Why are we building it? What changes for customers or business?
+   - **Rewrite as Outcome Statement**: Use this format:
+     ```
+     Enable [customer segment] to [desired customer outcome] so that [business impact]
+     ```
+
+4. **Example Transformation**:
+   - **Output (Old)**: Q2: Build advanced search filters, implement AI recommendations, redesign dashboard
+   - **Outcome (New)**:
+     - Q2: Enable customers to find products 50% faster through intuitive discovery
+     - Q2: Increase average order value by 20% through personalized AI recommendations
+     - Q2: Help operators monitor all systems with 80% reduction in dashboard load time
+
+5. **Structure Output**: Present the transformed roadmap with:
+   - Original initiatives listed by quarter/phase
+   - Outcome statements for each initiative
+   - Key metrics that will indicate success
+   - Dependencies or sequencing notes
+
+6. **Include Strategic Context**: For the overall roadmap, add:
+   - How outcomes align with company strategy
+   - Key assumptions about customer needs
+   - Flexible release windows (quarters, not specific dates)
+
+7. **Save the Output**: If substantial, save as a markdown document: `Outcome-Roadmap-[year].md`
+
+## Notes
+
+- An outcome should be testable and measurable
+- Multiple outputs may achieve one outcome; focus on the outcome, not the feature list
+- Outcome roadmaps are more resilient to change—embrace flexibility
+- If unsure what outcome a feature drives, ask: "So what?" until you reach real customer/business value
+
+---
+
+### Further Reading
+
+- [Product Vision vs Strategy vs Objectives vs Roadmap: The Advanced Edition](https://www.productcompass.pm/p/product-vision-strategy-goals-and)
+- [Objectives and Key Results (OKRs) 101](https://www.productcompass.pm/p/okrs-101-advanced-techniques)
+- [Business Outcomes vs Product Outcomes vs Customer Outcomes](https://www.productcompass.pm/p/business-outcomes-vs-product-outcomes)

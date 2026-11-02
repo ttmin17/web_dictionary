@@ -1,8 +1,8 @@
 ---
 slug: googleworkspace-cli-skills-gws-drive-upload
 name: gws-drive-upload
-tagline: Agent skill from googleworkspace/cli
-summary: Agent skill from googleworkspace/cli
+tagline: "Google Drive: Upload a file with automatic metadata."
+summary: Upload a file with automatic metadata
 categories:
   - productivity-ops
 tags:
@@ -11,10 +11,10 @@ tags:
   - automation
   - cli
 status: active
-quality_percentile: 54
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: googleworkspace/cli
@@ -22,17 +22,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 31663
-  last_commit: 2026-10-06T20:23:04Z
-  stars_delta_7d: 0
+  stars: 32055
+  last_commit: 2026-10-30T16:06:54Z
+  stars_delta_7d: 890
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
-    - 31270
     - 31448
     - 31663
-    - 31663
+    - 32055
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +39,15 @@ readme_source:
   repo: googleworkspace/cli
   path: skills/gws-drive-upload/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.390Z
+  fetched_at: 2026-11-02T09:06:42.260Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: gws-drive-upload
-  description: Agent skill from googleworkspace/cli
+  description: "Google Drive: Upload a file with automatic metadata."
   folder_path: skills/gws-drive-upload
   extra_files: []
-  pack_total_skills: 95
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +56,42 @@ skill:
   pack_slug: googleworkspace-cli
 ---
 
-Agent skill from googleworkspace/cli
+# drive +upload
+> **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
+
+Upload a file with automatic metadata
+
+## Usage
+
+```bash
+gws drive +upload <file>
+```
+
+## Flags
+
+| Flag | Required | Default | Description |
+|------|----------|---------|-------------|
+| `<file>` | ✓ | — | Path to file to upload |
+| `--parent` | — | — | Parent folder ID |
+| `--name` | — | — | Target filename (defaults to source filename) |
+
+## Examples
+
+```bash
+gws drive +upload ./report.pdf
+gws drive +upload ./report.pdf --parent FOLDER_ID
+gws drive +upload ./data.csv --name 'Sales Data.csv'
+```
+
+## Tips
+
+- MIME type is detected automatically.
+- Filename is inferred from the local path unless --name is given.
+
+> [!CAUTION]
+> This is a **write** command — confirm with the user before executing.
+
+## See Also
+
+- [gws-shared](https://github.com/googleworkspace/cli/blob/main/skills/gws-drive-upload/../gws-shared/SKILL.md) — Global flags and auth
+- [gws-drive](https://github.com/googleworkspace/cli/blob/main/skills/gws-drive-upload/../gws-drive/SKILL.md) — All manage files, folders, and shared drives commands

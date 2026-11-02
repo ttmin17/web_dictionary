@@ -11,29 +11,29 @@ tags:
   - llms
   - mcp-clients
 status: active
-quality_percentile: 90
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: PrefectHQ/fastmcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 28202
-  last_commit: 2026-10-26T07:30:13Z
+  stars: 28272
+  last_commit: 2026-11-02T08:42:55Z
   stars_delta_7d: 70
   stars_growth_pct: 0.2
   trending_score: 70.17
-  rank_current: 63
-  rank_delta: -36
+  rank_current: 73
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 27993
     - 28063
     - 28132
     - 28202
+    - 28272
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: PrefectHQ/fastmcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:03.299Z
+  fetched_at: 2026-11-02T09:05:44.734Z
   truncated: false
 type: agent_tool
 tool:
@@ -87,6 +87,7 @@ tool:
 </div>
 
 ---
+
 The [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) connects LLMs to tools and data. FastMCP is a full MCP application framework for servers, clients, and interactive apps. A server starts with ordinary Python:
 
 ```python
@@ -143,15 +144,17 @@ FastMCP has three pillars:
 
 Ready to build? Start with the [installation guide](https://gofastmcp.com/getting-started/installation) or jump straight to the [quickstart](https://gofastmcp.com/getting-started/quickstart).
 
-## Scale MCP with Horizon
+<a id="scale-mcp-with-horizon"></a>
 
-FastMCP handles the MCP application layer. **[Prefect Horizon](https://www.prefect.io/horizon?utm_source=github&utm_medium=readme&utm_campaign=readme_horizon&utm_content=readme_body)** is the enterprise MCP gateway for scaling servers and tools across teams, with centralized governance over how they are deployed, discovered, secured, and used.
+## Scale MCP with FastMCP Gateway
 
-FastMCP and Horizon are built by the same team at [Prefect](https://www.prefect.io/).
+FastMCP handles the MCP application layer. **[FastMCP Gateway](https://www.prefect.io/horizon?utm_source=github&utm_medium=readme&utm_campaign=readme_horizon&utm_content=readme_body)** is the enterprise MCP gateway for scaling servers and tools across teams, with centralized governance over how they are deployed, discovered, secured, and used.
+
+FastMCP and FastMCP Gateway are built by the same team at [Prefect](https://www.prefect.io/).
 
 Deploy FastMCP servers from GitHub with branch previews and instant rollback. Create a private registry of every MCP your company uses. Secure access with SSO and tool-level RBAC. Get audit logs, observability, and governance across your MCP stack. Remix approved tools into purpose-built endpoints for teams and agents.
 
-Start with FastMCP. [Scale with Horizon →](https://www.prefect.io/horizon?utm_source=github&utm_medium=readme&utm_campaign=readme_horizon&utm_content=readme_cta)
+Start with FastMCP. [Scale with FastMCP Gateway →](https://www.prefect.io/horizon?utm_source=github&utm_medium=readme&utm_campaign=readme_horizon&utm_content=readme_cta)
 
 ## Installation
 

@@ -1,8 +1,11 @@
 ---
 slug: humanlayer-humanlayer-apps-riptide-humanlayer-claude-plugin-skills-orchestrate
 name: orchestrate
-tagline: Agent skill from humanlayer/humanlayer
-summary: Agent skill from humanlayer/humanlayer
+tagline: Toolbox for driving HumanLayer from the CLI - log in, pick a host,
+  launch tasks in their own worktrees, launch sessions, list tasks and their
+  PRs, and
+summary: Find the job, read its reference, run the commands, and report the
+  result in a line or two.
 categories:
   - other
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: humanlayer/humanlayer
@@ -22,14 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12528
-  last_commit: 2026-10-26T01:07:13Z
-  stars_delta_7d: 539
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 12750
+  last_commit: 2026-10-31T16:19:01Z
+  stars_delta_7d: 222
+  stars_growth_pct: 1.8
+  trending_score: 225.93
+  rank_current: 62
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 12528
+    - 12750
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,12 +43,14 @@ readme_source:
   repo: humanlayer/humanlayer
   path: apps/riptide-humanlayer-claude-plugin/skills/orchestrate/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:52.198Z
+  fetched_at: 2026-11-02T09:06:26.165Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: orchestrate
-  description: Agent skill from humanlayer/humanlayer
+  description: Toolbox for driving HumanLayer from the CLI - log in, pick a host,
+    launch tasks in their own worktrees, launch sessions, list tasks and their
+    PRs, and copy, move, or upload task artifacts.
   folder_path: apps/riptide-humanlayer-claude-plugin/skills/orchestrate
   extra_files:
     - references/auto-advance.md
@@ -53,11 +61,30 @@ skill:
     - references/login.md
     - references/managing-artifacts-and-files.md
     - references/task-prs.md
-  pack_total_skills: 27
+  pack_total_skills: 22
   is_pack_primary: true
   clients:
     - claude-code
   pack_slug: humanlayer-humanlayer
 ---
 
-Agent skill from humanlayer/humanlayer
+Find the job, read its reference, run the commands, and report the result in a line or two.
+
+| Job | Reference |
+| --- | --- |
+| Log in | [login.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/login.md) |
+| Find a host | [hosts.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/hosts.md) |
+| Launch a task | [launch-task.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/launch-task.md) |
+| Turn auto-advance between phases on or off | [auto-advance.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/auto-advance.md) |
+| Launch a session | [launch-session.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/launch-session.md) |
+| List tasks and statuses | [list-tasks.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/list-tasks.md) |
+| Find a task's PR | [task-prs.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/task-prs.md) |
+| Upload, copy, move, or delete artifacts | [managing-artifacts-and-files.md](https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-humanlayer-claude-plugin/skills/orchestrate/references/managing-artifacts-and-files.md) |
+
+Rules:
+
+- Every task gets its own worktree. Use an existing folder only when the user asks.
+- Use one environment flag everywhere: none for production, `--beta`, or `--dev`. The references use `--dev`.
+- On `Not logged in`, follow login.md and retry.
+- Save large results to a file before reading them with `jq`.
+- On an unknown command or flag, run `humanlayer --dev api <group> <command> --help`.

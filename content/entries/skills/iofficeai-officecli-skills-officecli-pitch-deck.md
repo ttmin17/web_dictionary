@@ -14,10 +14,10 @@ tags:
   - codex
   - docx
 status: active
-quality_percentile: 66
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: iOfficeAI/OfficeCLI
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32477
-  last_commit: 2026-10-26T07:13:11Z
-  stars_delta_7d: 318
-  stars_growth_pct: 1
-  trending_score: 321.14
+  stars: 32933
+  last_commit: 2026-10-30T06:48:51Z
+  stars_delta_7d: 456
+  stars_growth_pct: 1.4
+  trending_score: 462.4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 31654
     - 31942
     - 32159
     - 32477
+    - 32933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: iOfficeAI/OfficeCLI
   path: skills/officecli-pitch-deck/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:28.196Z
+  fetched_at: 2026-11-02T09:06:16.505Z
   truncated: true
 type: agent_skill
 skill:
@@ -344,6 +344,7 @@ Sub-labels ≥ 16pt (H4 floor). For 5 stats stacked, drop number size to 44pt; 6
 **Dark-background variant.** Change card fill from `F0F4F8` (light) to a lighter-dark shade like `1A2540` and bump body text to `FFFFFF` / `E8E8E8`. Palette variables (e.g. `$MUTED`) do NOT expand inside single-quoted heredocs — write the literal hex (`64748B`) in the JSON.
 
 ---
+
 ## Key-slide recipes (10 essentials)
 
 The 10 slides every pitch deck carries. Each recipe below gives: **visual outcome** (what the slide looks like from 3m away) + **runnable block** (≤ 18 lines) + **QA one-liner**. All recipes inherit pptx v2 palettes, grid math, type hierarchy, and `--prop tailEnd=triangle` on every connector. Recipes reference the Slide Patterns above: Cover reuses C.1; Problem / Why-Now reuse C.2; Traction / Financials reuse C.4; Feature / pillar slides reuse C.5b. `$FILE` is your deck file.

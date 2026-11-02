@@ -1,8 +1,8 @@
 ---
 slug: topoteretes-cognee-examples-demos-feedback-skill_feedback_loop-skills-pr-comment-evaluator
 name: pr-comment-evaluator
-tagline: Agent skill from topoteretes/cognee
-summary: Agent skill from topoteretes/cognee
+tagline: Use to judge whether a PR review comment sounds polite.
+summary: Use to judge whether a PR review comment sounds polite.
 categories:
   - databases-memory
 tags:
@@ -11,10 +11,10 @@ tags:
   - ai-agents
   - ai-memory
 status: active
-quality_percentile: 71
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: topoteretes/cognee
@@ -22,17 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32759
-  last_commit: 2026-10-23T23:13:45Z
-  stars_delta_7d: 244
-  stars_growth_pct: 0.8
-  trending_score: 245.83
+  stars: 32995
+  last_commit: 2026-11-02T07:53:50Z
+  stars_delta_7d: 236
+  stars_growth_pct: 0.7
+  trending_score: 237.7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 31540
     - 32175
     - 32515
     - 32759
+    - 32995
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +40,12 @@ readme_source:
   repo: topoteretes/cognee
   path: examples/demos/feedback/skill_feedback_loop/skills/pr-comment-evaluator/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:09.062Z
+  fetched_at: 2026-11-02T09:06:38.747Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: pr-comment-evaluator
-  description: Agent skill from topoteretes/cognee
+  description: Use to judge whether a PR review comment sounds polite.
   folder_path: examples/demos/feedback/skill_feedback_loop/skills/pr-comment-evaluator
   extra_files: []
   pack_total_skills: 3

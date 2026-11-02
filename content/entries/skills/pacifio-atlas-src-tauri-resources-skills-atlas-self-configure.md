@@ -1,8 +1,10 @@
 ---
 slug: pacifio-atlas-src-tauri-resources-skills-atlas-self-configure
 name: self-configure
-tagline: Agent skill from pacifio/atlas
-summary: Agent skill from pacifio/atlas
+tagline: Inspect and safely update Atlas user preferences through Atlas's config.toml.
+summary: The same path on every platform. If $XDGCONFIGHOME is set to an
+  absolute path, it's $XDGCONFIGHOME/atlas/config.toml instead — check that
+  variable before assuming.
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +16,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: pacifio/atlas
@@ -22,18 +24,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9543
-  last_commit: 2026-10-26T07:24:31Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 156
-  rank_delta: -62
+  stars: 9561
+  last_commit: 2026-11-02T05:01:45Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.2
+  trending_score: 18.03
+  rank_current: 120
+  rank_delta: 17
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9593
     - 9622
     - 9543
+    - 9561
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,12 +44,12 @@ readme_source:
   repo: pacifio/atlas
   path: src-tauri/resources/skills/atlas-self-configure/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.543Z
+  fetched_at: 2026-11-02T09:06:31.061Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: self-configure
-  description: Agent skill from pacifio/atlas
+  description: Inspect and safely update Atlas user preferences through Atlas's config.toml.
   folder_path: src-tauri/resources/skills/atlas-self-configure
   extra_files: []
   pack_total_skills: 6
@@ -81,6 +84,23 @@ step 6 below), so a direct edit is a first-class way in — not a workaround.
 If the file does not exist yet, Atlas hasn't created it (a fresh install
 before first launch, or the user deleted it). Do not create one speculatively
 — report that to the user instead of guessing at defaults.
+
+## One project only: the project's own config.toml
+
+A project can override a few keys for itself in a `config.toml` inside the
+project's `.atlas/` directory. Use it only when the user asks for a change in
+*this project* rather than everywhere. Its header says what it is; the rules:
+
+- It holds only the keys the project changes. The allowed keys are the ones
+  whose comment in the global file says a project can override it. Atlas
+  ignores any other key there.
+- Some of those a project can only turn **off** (the comment says "never
+  on"). If the user wants one on for a single project while it's off
+  everywhere else, say that Atlas won't honour it and stop.
+- Delete a key's line to go back to the global value.
+- The same care applies as below: read first, explain, change only your
+  lines, write atomically. It may not exist yet; unlike the global file,
+  creating it is fine — start it with `schemaVersion = 1` and `[settings]`.
 
 ## The schema is in the file
 
@@ -152,8 +172,8 @@ way out.
 - The user's shell profile (`~/.zshrc` and similar).
 - Atlas's own binary, packages, or update mechanism. "Self-configure" means
   preferences only, never self-update.
-- Session history, transcripts, or any per-project `.atlas/` state — none of
-  that is a "setting."
+- Session history, transcripts, or any other per-project `.atlas/` state —
+  none of that is a "setting". Only `.atlas/config.toml` is.
 
 If a request needs any of the above, say so plainly and stop — it's out of
 scope for this skill, not something to work around.

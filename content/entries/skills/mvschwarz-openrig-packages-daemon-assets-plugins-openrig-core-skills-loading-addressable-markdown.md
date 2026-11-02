@@ -1,8 +1,11 @@
 ---
 slug: mvschwarz-openrig-packages-daemon-assets-plugins-openrig-core-skills-loading-addressable-markdown
 name: loading-addressable-markdown
-tagline: Agent skill from mvschwarz/openrig
-summary: Agent skill from mvschwarz/openrig
+tagline: Use when a mission, slice, dashboard, or task references Markdown as
+  path#h2-slug or path#h2-slug/h3-slug outside the OpenRig context-pack library.
+summary: Load exactly one addressed Markdown section from any filesystem tree.
+  The resolver mirrors OpenRig's shipped H2/H3 grammar without requiring the
+  file to live in the context library.
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8198
-  last_commit: 2026-10-26T07:30:13Z
-  stars_delta_7d: 367
-  stars_growth_pct: 4.7
-  trending_score: 384.2
+  stars: 8550
+  last_commit: 2026-11-02T08:44:58Z
+  stars_delta_7d: 352
+  stars_growth_pct: 4.3
+  trending_score: 367.11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5667
     - 7377
     - 7831
     - 8198
+    - 8550
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,16 +43,18 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/loading-addressable-markdown/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.582Z
+  fetched_at: 2026-11-02T09:06:34.146Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: loading-addressable-markdown
-  description: Agent skill from mvschwarz/openrig
+  description: Use when a mission, slice, dashboard, or task references Markdown
+    as path#h2-slug or path#h2-slug/h3-slug outside the OpenRig context-pack
+    library.
   folder_path: packages/daemon/assets/plugins/openrig-core/skills/loading-addressable-markdown
   extra_files:
     - scripts/resolve-markdown.mjs
-  pack_total_skills: 54
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -58,4 +63,31 @@ skill:
   pack_slug: mvschwarz-openrig
 ---
 
-Agent skill from mvschwarz/openrig
+# Loading Addressable Markdown
+## Overview
+
+Load exactly one addressed Markdown section from any filesystem tree. The resolver mirrors OpenRig's shipped H2/H3 grammar without requiring the file to live in the context library.
+
+## Use
+
+Run the bundled script. Relative file references resolve from `--root`; without it they resolve from the current directory.
+
+```bash
+node ~/.agents/skills/loading-addressable-markdown/scripts/resolve-markdown.mjs \
+  --root /path/to/mission \
+  'slices/09-source-cleanup/SPEC.md#proposal'
+```
+
+The accepted forms are:
+
+- `file.md` — whole file
+- `file.md#h2-slug` — full H2 span, including child sections
+- `file.md#h2-slug/h3-slug` — full H3 span
+
+Slugs are lowercase; Markdown emphasis/code markers are removed; each other non-alphanumeric run becomes `-`. Duplicate or missing paths fail loudly. Headings inside fenced code blocks are ignored.
+
+## Common mistakes
+
+- Do not use `rig context get` for an arbitrary filesystem path; that command resolves context-library refs.
+- Do not hand-slice headings with `sed` or line numbers; the bundled resolver owns span and fence behavior.
+- Quote addresses in shell commands.

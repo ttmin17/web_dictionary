@@ -16,10 +16,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 67
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 110580
-  last_commit: 2026-10-13T20:24:07Z
-  stars_delta_7d: 2262
-  stars_growth_pct: 2.1
-  trending_score: 2309.24
+  stars: 112639
+  last_commit: 2026-11-01T19:24:49Z
+  stars_delta_7d: 2059
+  stars_growth_pct: 1.9
+  trending_score: 2097.34
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 102528
     - 106053
     - 108318
     - 110580
+    - 112639
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/frontend-ui-engineering/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:11.785Z
+  fetched_at: 2026-11-02T09:06:05.222Z
   truncated: false
 type: agent_skill
 skill:
@@ -141,7 +141,7 @@ export function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
 ```tsx
 // Container: handles data
 export function TaskListContainer() {
-  const { tasks, isLoading, error, refetch } = useTasks();
+  const { tasks, isLoading, error, refetch, toggleTask, deleteTask } = useTasks();
 
   if (isLoading) return <TaskListSkeleton />;
   if (error) return <ErrorState message="Failed to load tasks" retry={refetch} />;
@@ -151,7 +151,7 @@ export function TaskListContainer() {
 }
 
 // Presentation: handles rendering
-export function TaskList({ tasks }: { tasks: Task[] }) {
+export function TaskList({ tasks, onToggle, onDelete }: { tasks: Task[] } & Pick<TaskItemProps, 'onToggle' | 'onDelete'>) {
   return (
     <ul role="list" className="divide-y">
       {tasks.map(task => <TaskItem key={task.id} task={task} />)}
@@ -294,7 +294,7 @@ function Dialog({ isOpen, onClose }: DialogProps) {
 
 ```tsx
 // Don't show blank screens
-function TaskList({ tasks }: { tasks: Task[] }) {
+function TaskList({ tasks, onCreateTask }: { tasks: Task[]; onCreateTask: () => void }) {
   if (tasks.length === 0) {
     return (
       <div role="status" className="text-center py-12">
@@ -332,7 +332,7 @@ Test at these breakpoints: 320px, 768px, 1024px, 1440px.
 // Skeleton loading (not spinners for content)
 function TaskListSkeleton() {
   return (
-    <div className="space-y-3" aria-busy="true" aria-label="Loading tasks">
+    <div className="space-y-3" role="status" aria-busy="true" aria-label="Loading tasks">
       {Array.from({ length: 3 }).map((_, i) => (
         <div key={i} className="h-12 bg-muted animate-pulse rounded" />
       ))}

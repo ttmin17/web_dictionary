@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ai-seo/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.286Z
+  fetched_at: 2026-11-02T09:06:13.820Z
   truncated: false
 type: agent_skill
 skill:
@@ -74,7 +75,7 @@ skill:
     - references/content-types.md
     - references/format-volatility.md
     - references/linkedin-ai-citations.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -92,7 +93,7 @@ Start with this skill's core workflow. Open a reference when the user's question
 
 | User questions | Local reference |
 |---|---|
-| Why can an agent not read our site? Are bot access, discovery files, or HTML blocking it? | [Agent readiness](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/agent-readiness.md) |
+| Why can an agent not read our site? Are bot access, discovery files, or HTML blocking it? Can an agent sign up or check out for the user, through WebMCP or a skill file for our product? | [Agent readiness](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/agent-readiness.md) |
 | AI barely shows up in referrals. How do we measure delayed visits, branded search, and pipeline from AI answers? | [AI attribution](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/ai-attribution.md) |
 | Is AI saying something wrong about our price, features, or limits? How do we find and fix the source? | [Answer accuracy](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/answer-accuracy.md) |
 | Which vendor does Claude Code or Cursor pick when a user says "deploy this"? How do we become the tool an agent installs mid-task? | [Agent defaults](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/agent-defaults.md) |
@@ -103,7 +104,7 @@ Start with this skill's core workflow. Open a reference when the user's question
 | Should we publish LinkedIn posts, articles, or company-page content? What makes that content discoverable and citable? | [LinkedIn citations](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/linkedin-ai-citations.md) |
 | How do we run AEO in other languages and countries? Is ChatGPT Shopping worth it for our product? | [Multilingual and commerce](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/multilingual-and-commerce.md) |
 | What belongs in an OKF bundle? Is it an established AI-search requirement or an emerging experiment? | [Open Knowledge Format](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/okf.md) |
-| Which prompts should we track, how often, and how do we test multi-turn buying conversations? | [Prompt portfolio](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/prompt-portfolio.md) |
+| Which prompts should we track, how often, which topics are we losing, and how do we test multi-turn buying conversations? | [Prompt portfolio](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/prompt-portfolio.md) |
 | Where should we start for a particular AI engine? Which search and training crawlers should we distinguish? | [Platform ranking factors](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/platform-ranking-factors.md) |
 | Why does AI describe our positioning incorrectly? How can third-party consensus reinforce a specific use case? | [Positioning and consensus](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/positioning-and-consensus.md) |
 | How should a video's title, captions, chapters, or description support citations? What should we check before publishing? | [YouTube citations](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/youtube-ai-citations.md) |
@@ -139,6 +140,7 @@ Gather this context (ask if not provided):
 - Do you have Wikipedia coverage or a presence on review sites?
 
 ---
+
 ## How AI Search Works
 
 ### The AI Search Landscape
@@ -204,6 +206,7 @@ Google's own example: a user asking "how to fix lawns" triggers fan-out queries 
 ChatGPT fans out too — and you can extract its *literal* background queries for your niche via DevTools (method in [references/format-volatility.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/format-volatility.md)). Post-5.6, ChatGPT's fan-outs shifted away from "best/vs/top" modifiers toward `site:` and "official" searches — use the extraction to see where your category's fan-outs stand today.
 
 ---
+
 ## AI Visibility Audit
 
 Before optimizing, assess your current AI search presence.
@@ -262,9 +265,10 @@ Audit AI user agents by purpose. Search-discovery, user-triggered retrieval, mod
 - **Potential model training:** `GPTBot`, `ClaudeBot`, and `meta-externalagent`
 - **Google product control:** `Google-Extended` controls certain Gemini training and grounding uses of content Google already crawls; it does not affect Google Search inclusion or ranking
 
-Check each relevant user-agent group and any WAF or CDN rules separately. A publisher can allow search discovery while disallowing model-development crawlers; do not infer that blocking a training crawler necessarily blocks citations. See [references/platform-ranking-factors.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/platform-ranking-factors.md) for the full robots.txt configuration.
+Default to one wildcard (`User-agent: *`) rule that allows agents, and add named groups only for deliberate exceptions such as a training opt-out; an allowlist of named crawlers silently excludes agent search APIs that run their own crawlers, and a named group replaces the `*` rules for that bot. Check each relevant user-agent group and any WAF or CDN rules separately. A publisher can allow search discovery while disallowing model-development crawlers; do not infer that blocking a training crawler necessarily blocks citations. See [references/platform-ranking-factors.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/platform-ranking-factors.md) for the full robots.txt configuration.
 
 ---
+
 ## Optimization Strategy
 
 ### The Three Pillars
@@ -372,7 +376,7 @@ AI systems cite your own site and the places that talk about you, in proportions
 
 AI agents aren't just answering questions — they're becoming buyers. When an AI agent evaluates tools on behalf of a user, it needs structured, parseable information. If your pricing is locked in a JavaScript-rendered page or a "contact sales" wall, agents will skip you and recommend competitors whose information they can actually read.
 
-**Audit this layer first**: [references/agent-readiness.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/agent-readiness.md) — the access/discovery/parseability checklist, free scoring tools (`npx is-agentic`, Frase's checker), Markdown content negotiation + `Link` headers, `llms-full.txt`, and the emerging agent-*actionable* layer (WebMCP).
+**Audit this layer first**: [references/agent-readiness.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/agent-readiness.md) — the access/discovery/parseability checklist, free scoring tools (`npx is-agentic`, Frase's checker), Markdown content negotiation + `Link` headers, `llms-full.txt`, and the emerging agent-*actionable* layer (WebMCP, and a skill file for your product with a prefilled checkout link).
 
 Add these machine-readable files to your site root:
 
@@ -435,6 +439,7 @@ Structured data helps AI systems understand your content. Key schemas:
 No well-documented study isolates a schema lift on AI citations, so treat schema as context that helps engines parse your pages and expect no fixed lift from it. **Google's note**: structured data is "not required for generative AI search" but is recommended for overall SEO strategy. For implementation, use the **schema** skill.
 
 ---
+
 ## Agentic Experiences
 
 Beyond AI search engines summarizing content, autonomous agents are starting to access sites directly — clicking, reading, comparing, even buying on behalf of users. Google's guide flags this as an emerging category to plan for.
@@ -460,6 +465,7 @@ For ecom and local business specifically, Google highlights:
 - **Business Agent** for conversational customer engagement (where applicable)
 
 ---
+
 ## Content Types That Get Cited Most
 
 Not all content is equally citable — and the format mix is **volatile**. The long-standing baseline had comparison articles (~33%) and listicles (~10%) among the top citation earners, but **ChatGPT 5.6 (Aug 2026) demoted the exploited formats: listicle citations fell −50.5% and comparison-page citations −32.1%, while `site:` and "official" retrieval surged** — a shift toward primary sources and owned pages. Format strategy is now per-platform (comparisons still work on Google AIO/Gemini/Perplexity). See [references/format-volatility.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/format-volatility.md) for the shift data, the per-platform format table, LinkedIn's citation numbers, and the ChatGPT fan-out extraction diagnostic.
@@ -471,6 +477,7 @@ Not all content is equally citable — and the format mix is **volatile**. The l
 **Citation ≠ recommendation.** Getting cited means your content was useful to consult; getting *recommended* — onto the buyer's actual shortlist — is governed by web-wide consensus (reviews, forums, analysts, press) and is largely independent of your own content. Self-promotional "best [category]" listicles can even backfire for emerging brands: in one 100-query B2B study, 69% of the AI Overview citations that self-promotional listicles earned came in answers that recommended competitors instead of the publishing brand. See [references/citations-vs-recommendations.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/citations-vs-recommendations.md) for the visibility ladder (retrieved → cited → mentioned → recommended), stage-dependent buyer's-guide strategy, what earns recommendations, and the attribution blind spot.
 
 ---
+
 ## Monitoring AI Visibility
 
 ### What to Track
@@ -509,6 +516,7 @@ AI answers are **non-deterministic** — one run is an anecdote, not a measureme
 Google's guide is explicit: **there is no AI-specific Search Console reporting**. AI Overviews and AI Mode use core Search ranking, so the standard Search Console reports (Performance, Coverage, Core Web Vitals) are still what you measure with for Google. The third-party tools above are the only way to see cross-platform AI citation behavior.
 
 ---
+
 ## What NOT to Do
 
 Google's guide calls these out explicitly — they hurt across both traditional Search and AI features.
@@ -522,11 +530,13 @@ Google's guide calls these out explicitly — they hurt across both traditional 
 7. **Skip E-E-A-T fundamentals**. Author identity, first-hand experience, expertise signals, transparent sourcing — Google's guide leans heavily on these for AI features.
 
 ---
+
 ## AI SEO by Content Type
 
 For tactical guidance on SaaS product pages, blog content, comparison/alternative pages, documentation, and local/ecom (Google's emphasis on Merchant Center + Business Profile), see [references/content-types.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/references/content-types.md).
 
 ---
+
 ## Common Mistakes
 
 - **Ignoring AI search entirely** — AI Overviews appear on roughly half of tracked queries in many industries (BrightEdge, Feb 2026), and assistant usage keeps growing
@@ -543,6 +553,7 @@ For tactical guidance on SaaS product pages, blog content, comparison/alternativ
 - **Forgetting to monitor** — You can't improve what you don't measure. Check AI visibility monthly at minimum
 
 ---
+
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
@@ -555,6 +566,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | `ga4` | Referral traffic from AI sources |
 
 ---
+
 ## Related Skills
 
 - **seo-audit**: For traditional technical and on-page SEO audits; **link-building** for earning links and mentions on the third-party pages AI engines cite

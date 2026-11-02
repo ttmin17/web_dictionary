@@ -14,29 +14,29 @@ tags:
   - elf
   - exe
 status: active
-quality_percentile: 33
+quality_percentile: 31
 selection_reason: quality_percentile
 first_seen: 2019-10-18T13:41:28
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: CYB3RMX/Qu1cksc0pe
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 2086
+  stars: 2098
   last_commit: 2026-09-18T12:45:23Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.1
-  trending_score: 2
-  rank_current: 101
-  rank_delta: -49
+  stars_delta_7d: 12
+  stars_growth_pct: 0.6
+  trending_score: 12.07
+  rank_current: 75
+  rank_delta: 21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2065
     - 2071
     - 2084
     - 2086
+    - 2098
 language: en
 needs_keys: true
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: CYB3RMX/Qu1cksc0pe
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:38:02.867Z
+  fetched_at: 2026-11-02T09:05:40.722Z
   truncated: false
 type: mcp_server
 launch:

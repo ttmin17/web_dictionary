@@ -13,10 +13,10 @@ tags:
   - database-gui
   - desktop-app
 status: active
-quality_percentile: 72
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Syngnat/GoNavi
@@ -24,18 +24,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2083
-  last_commit: 2026-10-26T07:30:13Z
-  stars_delta_7d: 9
-  stars_growth_pct: 0.4
-  trending_score: 9.04
-  rank_current: 128
-  rank_delta: -20
+  stars: 2088
+  last_commit: 2026-11-02T08:52:27Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.2
+  trending_score: 5.01
+  rank_current: 133
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2067
     - 2074
     - 2083
+    - 2088
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: Syngnat/GoNavi
   path: examples/plugins/skills/skills/read-only-investigation/SKILL.md
   branch: dev
-  fetched_at: 2026-10-26T07:38:13.187Z
+  fetched_at: 2026-11-02T09:05:48.916Z
   truncated: false
 type: agent_skill
 skill:

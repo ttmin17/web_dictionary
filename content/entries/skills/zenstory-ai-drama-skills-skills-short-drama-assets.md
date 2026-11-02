@@ -1,8 +1,9 @@
 ---
 slug: zenstory-ai-drama-skills-skills-short-drama-assets
 name: short-drama-assets
-tagline: Agent skill from zenstory-ai/drama-skills
-summary: Agent skill from zenstory-ai/drama-skills
+tagline: 从短剧剧本拆出人物/造型、地点/视图、道具/状态和跨场连续性，写成创作者可读的视觉设定。用户说“拆角色/场景/道具”“做资产设定”“判断复用还是新变体”“更新造型/道具状态”，或拿现成剧本直接做视觉资产准备时使用；不写图片提示词，不生成媒体。
+summary: "- 身份：换一个就不再是同一个人、地或物； - 变体：身份不变，但服装、伤势、时段、天气、开合或持有状态改变； -
+  镜头瞬态：姿势、视线、左右手、站位和相机角度，由分镜拥有； - 故事语义：知识、目标、关系和情绪由写作/开发拥有，只引用可见后果。"
 categories:
   - media-creative
 tags:
@@ -11,10 +12,10 @@ tags:
   - ai-video
   - aigc
 status: active
-quality_percentile: 76
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -22,30 +23,30 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3360
-  last_commit: 2026-10-20T19:23:14Z
-  stars_delta_7d: 307
-  stars_growth_pct: 10.1
-  trending_score: 337.87
+  stars: 3650
+  last_commit: 2026-11-02T08:30:37Z
+  stars_delta_7d: 290
+  stars_growth_pct: 8.6
+  trending_score: 315.03
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2574
     - 2825
     - 3053
     - 3360
-language: en
+    - 3650
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: zenstory-ai/drama-skills
   path: skills/short-drama-assets/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:26.649Z
+  fetched_at: 2026-11-02T09:06:48.356Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: short-drama-assets
-  description: Agent skill from zenstory-ai/drama-skills
+  description: 从短剧剧本拆出人物/造型、地点/视图、道具/状态和跨场连续性，写成创作者可读的视觉设定。用户说“拆角色/场景/道具”“做资产设定”“判断复用还是新变体”“更新造型/道具状态”，或拿现成剧本直接做视觉资产准备时使用；不写图片提示词，不生成媒体。
   folder_path: skills/short-drama-assets
   extra_files:
     - agents/openai.yaml
@@ -68,8 +69,8 @@ skill:
 ---
 
 # 短剧资产拆解
-把剧本文字变成可复用、可持续的视觉事实，统一写入 `剧集/<EP>/视觉设定.md`。不要把每次出场都
-变成新资产，也不要抢写剧本语义、镜头走位或生成提示词。
+从剧本提取可复用、可持续的视觉事实，统一写入 `剧集/<EP>/视觉设定.md`；每次出场先判断身份
+与状态，剧本语义、镜头走位和生成提示词由各负责技能处理。
 
 ## Quick Start
 
@@ -88,12 +89,12 @@ skill:
 
 ## 工作流
 
-1. 只读当前范围的剧本和已决定的视觉方向；视觉方向还没有时代锚点时，先按原著事实定时代。
+1. 只读当前范围的剧本和已决定的视觉方向；视觉方向还没有时代锚点时，按已提供的原著或剧本事实判断，证据不足则标为待决定。
 2. 逐场找实体、可见描述、状态变化和含混指代，先不创建资产。
 3. 对每项决定新建、复用、增加变体或标记未决；含混指代不猜。
 4. 写最小可识别设定：统一使用 `识别锚点`、本集状态和变化原因；会持续限制后续动作的身体—物件—空间关系写进有生效范围的状态，不当成一次姿势略过。
-5. 检查造型/伤势、持物/所有权、道具状态、地点时段/天气/光态与跨集 outgoing。
-6. 给跨镜出现且观众看得出不一致的可见事实写一条连续性锁，其余保持识别锚点即可。
+5. 检查造型/伤势、持物/所有权、道具状态、地点时段/天气/光态与跨集结束状态。
+6. 给跨镜出现且观众看得出不一致的可见事实写一条连续性锁，其余保持识别锚点即可。此时还没有分镜，镜头范围写 `入画`，锁写在它所属的条目下（服装写在 `造型` 条目下），分镜写完后自动按「视觉依据」生效，见 [连续性锁](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-lock.md)。
 7. 项目提示词语言不是中文时，给每个人物条目写一行 `画面代称：<正文里的拼写>`；正文从不点名它就写 `画面代称：无`。地点和道具按需。
 8. 整集请求自动处理完整集，末端一次回报关键身份决定和未决指代。
 
@@ -107,10 +108,10 @@ skill:
 - 多集状态写清生效与持续范围；镜头内瞬态留给分镜。
 - 已确认且持续限制动作空间的关系（身体依托、固定、负重、占位或与功能物件的接触）不是普通镜头姿势：可独立识别的物件仍建资产，关系写进状态并交给分镜逐镜投影；只有剧本明确改变时才结束。
 - 连续性锁只锁不随剧情改变的可见事实；锁面用提示词语言写成最小名词短语，会变的部分留给状态。
-- 「画面代称」把提示词正文里的名字对回本条目：分镜的机械核对靠它判断关键帧里点名的人是谁。条目自身的中文名称
-  始终算一个代称，所以中文正文通常不必写这一行；提示词正文语言不是中文时，人物条目必须给出结论——写出正文使用的
-  拼写，或在正文从不点名它时写 `画面代称：无`。同一个名字全集只用一个拼写，大小写也一致（`AST-10` 的同一条要求跨语言同样成立）；
-  多个写法用 `、` 分隔。名字与常用词同形（`道具「手机」` 撞上「手机店」）时也写 `画面代称：无`，让核对不按名字找它。
+- 「画面代称」把提示词正文里的名字对回本条目，供机械核对关键帧里点名的人物、地点或道具。未声明时，检查器使用条目名称；
+  显式声明后只匹配列出的代称，混合语言正文要把实际使用的中文名与其他语言拼写一并列出。提示词正文语言不是中文时，
+  人物条目必须给出结论：列出正文使用的拼写，或在正文从不点名时写 `画面代称：无`。同一个名字全集只用一个拼写，
+  大小写也一致；多个写法用 `、` 分隔。名字与常用词同形（`道具「手机」` 撞上「手机店」）时也写 `画面代称：无`，让核对不按名字找它。
 
 ## 按需知识
 
@@ -132,8 +133,4 @@ skill:
 
 所有明确出场都已复用、新建、变体化或标为真实未决；需要保持的视觉事实与状态变化已写入唯一
 视觉设定文档，即完成。图片提示词、分镜、审查和生产不自动开始。
-五份创作文档齐备后，可转 `$short-drama` 对跨文档结构做一次机械核对；内容质量仍由创作者审查。
-
-## 安装维护
-
-只有安装、升级或排障时运行 `python3 scripts/selftest.py`。
+写完本阶段文档后，可转 `$short-drama` 做局部机械核对（只核对已有文档）；五份齐备后再做完整核对。内容质量仍由创作者审查。

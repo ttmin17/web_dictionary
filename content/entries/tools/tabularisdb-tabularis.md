@@ -2,11 +2,11 @@
 slug: tabularisdb-tabularis
 name: tabularis
 tagline: "Open-source desktop SQL workspace with 3 built-in database drivers and
-  24 shipped driver plugins, including SQL Server, DuckDB, ClickHouse and Redis.
+  26 shipped driver plugins, including SQL Server, DuckDB, ClickHouse and Redis.
   "
 summary: Tabularis is an open-source desktop SQL workspace with 3 built-in
-  database drivers and 24 shipped plugins, including DuckDB, ClickHouse, Redis
-  and Firestore. Its built-in MCP server lets Claude, Cursor and Devin (form...
+  database drivers and 26 shipped driver plugins, including DuckDB, ClickHouse,
+  Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devi...
 categories:
   - databases-memory
 tags:
@@ -15,27 +15,28 @@ tags:
   - cross-platform
   - database-client
 status: active
-quality_percentile: 73
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: TabularisDB/tabularis
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5287
-  last_commit: 2026-10-24T08:05:42Z
-  stars_delta_7d: 51
-  stars_growth_pct: 1
-  trending_score: 51.5
-  rank_current: 80
+  stars: 5361
+  last_commit: 2026-11-01T13:39:13Z
+  stars_delta_7d: 74
+  stars_growth_pct: 1.4
+  trending_score: 75.04
+  rank_current: 68
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5134
     - 5236
     - 5287
+    - 5361
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: TabularisDB/tabularis
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.078Z
+  fetched_at: 2026-11-02T09:05:35.302Z
   truncated: false
 type: agent_tool
 tool:
@@ -63,7 +64,7 @@ tool:
 
 # Tabularis
 
-Tabularis is an open-source desktop SQL workspace with 3 built-in database drivers and 24 shipped plugins, including DuckDB, ClickHouse, Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devin (formerly Windsurf) read your schema and run queries in the same app you already use.
+Tabularis is an open-source desktop SQL workspace with 3 built-in database drivers and 26 shipped driver plugins, including DuckDB, ClickHouse, Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devin (formerly Windsurf) read your schema and run queries in the same app you already use.
 
 <p align="center">
   <b><a href="https://tabularis.dev">Website</a></b> ·
@@ -77,7 +78,7 @@ Tabularis is an open-source desktop SQL workspace with 3 built-in database drive
 <p align="center">
   <img src="https://img.shields.io/github/release/TabularisDB/tabularis.svg?style=flat" alt="Release" />
   <img src="https://img.shields.io/github/stars/TabularisDB/tabularis?style=flat" alt="Stars" />
-  <img src="https://img.shields.io/github/downloads/TabularisDB/tabularis/total.svg?style=flat" alt="Downloads" />
+  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FTabularisDB%2Ftabularis%2Fdownload-stats%2Fdownloads.json&amp;style=flat" alt="Downloads" />
   <img src="https://github.com/TabularisDB/tabularis/workflows/Release/badge.svg" alt="Build & Release" />
   <a href="https://discord.com/invite/K2hmhfHRSt"><img src="https://img.shields.io/discord/1502944695808950282?color=5865F2&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://gitster.dev/repo/TabularisDB/tabularis"><img src="https://gitster.dev/api/repositories/badge/cmlko1jr60005ne4yh7i7oy3e" alt="Gitster" /></a>
@@ -124,13 +125,13 @@ sudo snap install tabularis       # Linux
 
 Or grab an installer directly:
 
-- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_x64-setup.exe)
+- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_x64-setup.exe)
 
-- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_x64.dmg)
+- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_x64.dmg)
 
-- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis_0.29.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.29.0/tabularis-0.29.0-1.x86_64.rpm)
+- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis-0.30.0-1.x86_64.rpm)
 
-The app UI is available in English, Italian, Spanish, Chinese (Simplified), French, German, Japanese, Russian, Korean, Tagalog and Portuguese (Brazilian).
+The app UI is available in English, Italian, Spanish, Chinese (Simplified), French, German, Japanese, Russian, Korean, Tagalog, Portuguese (Brazilian) and Vietnamese.
 
 > [!TIP]
 > **Discord:** [Join our Discord server](https://discord.com/invite/K2hmhfHRSt) to talk with the maintainers, share feedback, and get help from the community.
@@ -181,7 +182,7 @@ The app UI is available in English, Italian, Spanish, Chinese (Simplified), Fren
 | Plugins in **any language** (JSON-RPC over stdio)                  |                ✅                |      Java/Eclipse plugins      | JavaScript plugins |          ❌           |
 | AI text-to-SQL with **local models** (Ollama)                      |                ✅                |    Cloud-based AI assistant    |         ❌         |          ❌           |
 | Visual EXPLAIN with interactive plan graphs                        |                ✅                |               ✅               |         ❌         |          ❌           |
-| Databases out of the box                                           | 3 built-in + 24 official plugins |              100+              |        20+         |          ~10          |
+| Databases out of the box                                           | 3 built-in + 26 driver plugins |              100+              |        20+         |          ~10          |
 
 > [!NOTE]
 > Comparison as of June 2026; features in other tools may have changed since. If you need dozens of drivers, use DBeaver. Tabularis focuses on doing a few databases well.
@@ -194,6 +195,7 @@ PostgreSQL, MySQL/MariaDB and SQLite ship built in. Everything else is a plugin.
 
 | Database                 | Plugin                                                                                          | Database       | Plugin                                                                                          |
 | ------------------------ | ----------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------- |
+| Google BigQuery          | [tabularis-bigquery-plugin](https://github.com/TabularisDB/tabularis-bigquery-plugin)           | CockroachDB    | [tabularis-cockroachdb-plugin](https://github.com/TabularisDB/tabularis-cockroachdb-plugin)     |
 | ClickHouse               | [tabularis-clickhouse-plugin](https://github.com/TabularisDB/tabularis-clickhouse-plugin)       | LibSQL / Turso | [tabularis-libsql-plugin](https://github.com/TabularisDB/tabularis-libsql-plugin)               |
 | Cloudflare D1            | [tabularis_cloudflare_d1_plugin](https://github.com/josejorge/tabularis_cloudflare_d1_plugin)   | MongoDB        | [tabularis-mongodb-plugin](https://github.com/danielnuld/tabularis-mongodb-plugin)              |
 | Cloudflare D1 (HTTP API) | [cloudflare-tabularis](https://github.com/GabrielMalava/cloudflare-tabularis)                   | MongoDB Atlas  | [tabularis-mongodb-plugin](https://github.com/TabularisDB/tabularis-mongodb-plugin)             |
@@ -211,10 +213,9 @@ PostgreSQL, MySQL/MariaDB and SQLite ship built in. Everything else is a plugin.
 
 | Status      | Databases                                                                    |
 | ----------- | ---------------------------------------------------------------------------- |
-| In progress | Amazon Redshift, Google BigQuery, Meilisearch                                |
-| Scoped      | CockroachDB, TiDB                                                            |
-| Coming soon | Snowflake                                                                    |
-| Open        | Etcd, Firebird, SQL Anywhere, SurrealDB                                      |
+| In progress | Amazon Redshift, Etcd, Meilisearch, Snowflake, SQL Anywhere                                |
+| Scoped      | TiDB                                                            |
+| Open        | Firebird, SurrealDB                                      |
 
 > [!NOTE]
 > **Shipped** drivers are installable from the [plugin registry](https://tabularis.dev/plugins). Everything else is on the [bounty board](https://tabularis.dev/plugins/bounties): claim one, sponsor one, or [request a database](https://github.com/TabularisDB/tabularis/discussions).
@@ -515,17 +516,20 @@ Contributions are welcome, see [CONTRIBUTING.md](https://github.com/TabularisDB/
 
 ## Sponsors and supporters
 
-- <a href="https://www.serversmtp.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/turbosmtp_compact.png" height="28" alt="turboSMTP" /></a> **[turboSMTP](https://www.serversmtp.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Professional SMTP relay — your emails delivered straight to the inbox, never to spam
-- <a href="https://www.kilo.ai/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/kilocode_compact.png" height="28" alt="Kilo Code" /></a> **[Kilo Code](https://www.kilo.ai/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Open source AI coding agent — build, ship, and iterate faster with 500+ models
+- <a href="https://www.serversmtp.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/turbosmtp_compact.png" height="28" alt="turboSMTP" /></a> **[turboSMTP](https://www.serversmtp.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Professional SMTP relay that delivers your emails straight to the inbox, never to spam
+- <a href="https://www.kilo.ai/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/kilocode_compact.png" height="28" alt="Kilo Code" /></a> **[Kilo Code](https://www.kilo.ai/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Open source AI coding agent to build, ship, and iterate faster with 500+ models
 - <a href="https://openai.com/codex/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/openai_compact.png" height="28" alt="OpenAI" /></a> **[OpenAI](https://openai.com/codex/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Supporting Tabularis through the Codex for Open Source program.
+- <a href="https://claude.com/programs/startups?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/anthropic_compact.png" height="28" alt="Anthropic" /></a> **[Anthropic](https://claude.com/programs/startups?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Supporting Tabularis through the Claude for Startups program.
+- <a href="https://neon.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/neon_compact.svg" height="28" alt="Neon" /></a> **[Neon](https://neon.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Managed Postgres with database branching, supporting Tabularis through the Neon Open Source Program.
+- <a href="https://www.blacksmith.sh/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/blacksmith_compact.svg" height="28" alt="Blacksmith" /></a> **[Blacksmith](https://www.blacksmith.sh/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Faster, cheaper GitHub Actions runners, powering the CI behind Tabularis.
 - <a href="https://m.do.co/c/f6ab3d158275?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/digitalocean_compact.png" height="28" alt="DigitalOcean" /></a> **[DigitalOcean](https://m.do.co/c/f6ab3d158275?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Simple, predictable cloud infrastructure for developers and growing teams.
-- <a href="https://vercel.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/vercel_compact.svg" height="28" alt="Vercel" /></a> **[Vercel](https://vercel.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — The platform for the modern web — ship, preview, and scale frontend apps with zero config.
+- <a href="https://vercel.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/vercel_compact.svg" height="28" alt="Vercel" /></a> **[Vercel](https://vercel.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — The platform for the modern web: ship, preview, and scale frontend apps with zero config.
 - <a href="https://usero.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/usero_compact.png" height="28" alt="Usero" /></a> **[Usero](https://usero.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Feedback becomes code. Automatically.
 - <a href="https://devglobe.app/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/devglobe_compact.png" height="28" alt="DevGlobe" /></a> **[DevGlobe](https://devglobe.app/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Connect your IDE, show up on the globe, and showcase your projects to a community of builders.
-- <a href="https://tolgee.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/tolgee_compact.svg" height="28" alt="Tolgee" /></a> **[Tolgee](https://tolgee.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Open-source localization platform — translate your app in context, without the spreadsheet chaos.
-- <a href="https://1password.com/developers?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/1password_compact.png" height="28" alt="1Password" /></a> **[1Password](https://1password.com/developers?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — The password and secrets manager developers trust — free for open-source projects.
-- <a href="https://www.jetbrains.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/jetbrains_compact.png" height="28" alt="JetBrains" /></a> **[JetBrains](https://www.jetbrains.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Professional developer tools — IntelliJ IDEA, WebStorm, DataGrip and the rest of the All Products Pack.
-- <a href="https://signpath.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/signpath_compact.png" height="28" alt="SignPath" /></a> **[SignPath](https://signpath.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Code signing for open source — signed Windows releases without the certificate bill.
+- <a href="https://tolgee.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/tolgee_compact.svg" height="28" alt="Tolgee" /></a> **[Tolgee](https://tolgee.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Open-source localization platform to translate your app in context, without the spreadsheet chaos.
+- <a href="https://1password.com/developers?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/1password_compact.png" height="28" alt="1Password" /></a> **[1Password](https://1password.com/developers?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — The password and secrets manager developers trust, free for open-source projects.
+- <a href="https://www.jetbrains.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/jetbrains_compact.png" height="28" alt="JetBrains" /></a> **[JetBrains](https://www.jetbrains.com/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Professional developer tools: IntelliJ IDEA, WebStorm, DataGrip and the rest of the All Products Pack.
+- <a href="https://signpath.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor" target="_blank"><img src="https://tabularis.dev/img/logos/sponsors/signpath_compact.png" height="28" alt="SignPath" /></a> **[SignPath](https://signpath.io/?utm_source=tabularis&utm_medium=referral&utm_campaign=sponsor)** — Code signing for open source: signed Windows releases without the certificate bill.
 
 _[Become a sponsor →](https://tabularis.dev/sponsors)_
 
@@ -540,6 +544,7 @@ Tabularis started as an experiment: how far could AI-assisted development get in
 [Apache License 2.0](https://github.com/TabularisDB/tabularis/blob/main/LICENSE)
 
 ---
+
 <p align="center">
   Like tabularis? <a href="https://github.com/TabularisDB/tabularis">Star the repo</a> ⭐, it helps the project a lot.
 </p>

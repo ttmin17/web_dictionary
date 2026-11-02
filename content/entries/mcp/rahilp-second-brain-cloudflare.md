@@ -14,29 +14,29 @@ tags:
   - claude-ai
   - claude-code
 status: active
-quality_percentile: 49
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-05-09T23:10:58
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: rahilp/second-brain-cloudflare
   official_vendor: false
   license: MIT
 signals:
-  stars: 826
-  last_commit: 2026-10-14T11:53:04Z
-  stars_delta_7d: 12
-  stars_growth_pct: 1.5
-  trending_score: 12.18
-  rank_current: 75
-  rank_delta: -21
+  stars: 843
+  last_commit: 2026-10-30T11:16:05Z
+  stars_delta_7d: 17
+  stars_growth_pct: 2.1
+  trending_score: 17.35
+  rank_current: 66
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 803
     - 802
     - 814
     - 826
+    - 843
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: rahilp/second-brain-cloudflare
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.497Z
+  fetched_at: 2026-11-02T09:05:57.597Z
   truncated: false
 type: mcp_server
 launch:
@@ -76,11 +76,13 @@ Claude, ChatGPT, Cursor, Codex, and the other AI tools you use do not naturally 
 Second Brain gives those tools one persistent memory system. It runs in your own Cloudflare account, stays under your control, and retrieves the right context by meaning rather than exact wording.
 
 ---
+
 The desktop app is the easiest way to start. It builds your Second Brain and connects your AI tools in about two minutes—no terminal or Cloudflare setup required.
 
 ### [Download for Mac or Windows](https://github.com/rahilp/second-brain-cloudflare/blob/main/releases/latest)
 
 ---
+
 [Deploy to Cloudflare](https://deploy.workers.cloudflare.com/?url=https://github.com/rahilp/second-brain-cloudflare) · [Read the documentation](https://github.com/rahilp/second-brain-cloudflare/blob/main/wiki)
 
 

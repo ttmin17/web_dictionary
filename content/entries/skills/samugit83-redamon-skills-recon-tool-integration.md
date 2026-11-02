@@ -1,20 +1,22 @@
 ---
 slug: samugit83-redamon-skills-recon-tool-integration
 name: recon-tool-integration
-tagline: Agent skill from samugit83/redamon
-summary: Agent skill from samugit83/redamon
+tagline: "Adding a new tool to the recon pipeline: the enrichment-module
+  contract and its isolated wrapper (the actual fan-out and test call path),
+  graph comple"
+summary: "- Adding a brand-new scanning/enrichment tool to the scan pipeline."
 categories:
   - agent-frameworks
 tags:
   - agentic-ai
+  - ai-penetration-testing
   - ai-pentesting
-  - attack-surface-management
   - autonomous-agents
 status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -22,15 +24,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3214
-  last_commit: 2026-10-22T17:21:18Z
-  stars_delta_7d: 62
-  stars_growth_pct: 2
-  trending_score: 63.22
+  stars: 3264
+  last_commit: 2026-11-01T16:47:54Z
+  stars_delta_7d: 50
+  stars_growth_pct: 1.6
+  trending_score: 50.78
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
+    - 3264
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,12 +41,20 @@ readme_source:
   repo: samugit83/redamon
   path: skills/recon-tool-integration/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:45:48.612Z
+  fetched_at: 2026-11-02T09:07:16.752Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: recon-tool-integration
-  description: Agent skill from samugit83/redamon
+  description: >
+    Adding a new tool to the recon pipeline: the enrichment-module contract and
+    its isolated wrapper (the actual fan-out and test call path), graph
+    completeness, and the preset catalog that silently strips unknown settings.
+    Miss the isolated wrapper and the tool never runs in parallel; miss the
+    catalog and AI presets drop its config. Trigger: adding a tool to the recon
+    pipeline; a new recon/*.py or recon/main_recon_modules/*.py enrichment
+    module; editing the execution groups in recon/main.py or the IMAGES array in
+    recon/entrypoint.sh.
   folder_path: skills/recon-tool-integration
   extra_files: []
   pack_total_skills: 16
@@ -55,4 +66,147 @@ skill:
   pack_slug: samugit83-redamon
 ---
 
-Agent skill from samugit83/redamon
+## When to Use
+
+- Adding a brand-new scanning/enrichment tool to the scan pipeline.
+
+For adding AI decision-making to an *existing* tool, use `recon-ai-enrichment`.
+For the graph write, use `graph-db-writes`. For the settings, use
+`project-settings-cascade`. This skill is the module + pipeline wiring.
+
+---
+
+## Critical Rules
+
+- **NEVER ship the enrichment module without its `_isolated` wrapper.**
+  `run_<tool>_enrichment_isolated()` is the **actual call path** for the GROUP 3b
+  parallel fan-out AND for every unit test; the plain `run_<tool>_enrichment()`
+  alone is never fan-out-safe. Reference: `run_censys_enrichment_isolated()` in
+  [recon/main_recon_modules/censys_enrich.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main_recon_modules/censys_enrich.py).
+- **NEVER vary the top-level result key.** The module writes
+  `combined_result["<tool>"]` and the wrapper returns `snapshot.get("<tool>", {})`
+  with the **same** identifier used everywhere else in the pipeline
+  (`snapshot.get("censys", {})` in [censys_enrich.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main_recon_modules/censys_enrich.py)).
+- **NEVER let a wrapper drop a second top-level key its module writes.** The
+  copy is thrown away, so a key the wrapper does not hand back never reaches the
+  graph: `run_vuln_scan` also writes the CVE lookup's `technology_cves`, and its
+  domain-mode CVE chain was lost this way. Such a wrapper returns a
+  `TopLevelKeys` ([isolated_result.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/helpers/isolated_result.py))
+  holding every key by name, and the fan-out merges it through
+  `_merge_isolated_result` in [main.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main.py). The type is the
+  declaration: never tell a multi-key answer from a payload by its key names,
+  because a payload is a dict too. Reference: `run_vuln_scan_isolated()` in
+  [vuln_scan.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main_recon_modules/vuln_scan.py).
+- **NEVER collect a field and not write it to the graph.** Every field in the
+  output dict must land on a node/relationship or it is silent data loss - see
+  `graph-db-writes`.
+- **NEVER add a tool setting without updating BOTH preset layers.** Add it to the
+  Zod [recon-preset-schema.ts](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../webapp/src/lib/recon-preset-schema.ts) and to
+  `RECON_PARAMETER_CATALOG`, both in
+  [recon-preset-schema.ts](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../webapp/src/lib/recon-preset-schema.ts) (the generate
+  route only imports the catalog).
+  Miss the Zod schema and AI-generated presets **silently strip** the setting;
+  miss the catalog and the preset LLM never knows the tool exists.
+- **ALWAYS prefix every `print()` log** `[symbol][ToolName]` (`[*]` progress,
+  `[+]` success, `[-]` skipped, `[!]` error). Recon stdout is tailed into the SSE
+  recon drawer; a bare `print()` is invisibly formatted.
+- **ALWAYS place a fan-out tool behind the deep-copy `_isolated` wrapper** and in
+  the correct execution group in [recon/main.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main.py); never
+  parallelize across a dependency boundary (a tool needing live URLs cannot run
+  before GROUP 4).
+- **ALWAYS route a new external call through
+  [recon/helpers/circuit_breaker.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/helpers/circuit_breaker.py).** An
+  API endpoint goes through a `Breaker` (`guarded_call`, or a `provider:endpoint`
+  breaker with `record(classify_http(...))`); its keys go through a `KeyPool`, not
+  a raw main-key read. A loop over scan hosts (HTTP or a Docker tool) gates each
+  host with `host_health.allow(url)` / `scope.skip_if_down(url)` and records the
+  outcome with `host_alive` / `host_failed` — any HTTP response is life, only a
+  connection failure counts. Never log a key or a response body: breaker messages
+  carry the provider, endpoint and a refused key's 1-based rotation position only.
+- **ALWAYS declare what the tool cut to the coverage accumulator.** Open a
+  `scope = circuit_breaker.scope((), label="Tool", unit="host(s)")` at the tool's
+  start and call `scope.finish("<phase>", sources=[...], host_source="<graph
+  source>", payload=result)` at its end — so the end-of-run prune KEEPS a paused
+  source's or a skipped host's prior findings instead of deleting them as "gone",
+  and the run shows `partial — N sources skipped`. `host_source` must equal the
+  `source` value the tool writes to the graph. A tool whose findings carry no host
+  field passes `host_field=False` (the skip is reported at the source level).
+- **A new tool setting FAILS THE BUILD until it is in the registry.** Every
+  parameter is described once in
+  [recon_settings/registry.yaml](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon_settings/registry.yaml),
+  and a test walking `Prisma.ProjectScalarFieldEnum` fails until every column
+  has an entry. Draft it with
+  `python3 tooling/scripts/extract_recon_registry.py`, EDIT IT, then
+  `python3 recon_settings/build.py`.
+- **Tuning is OPEN and controlled at the point of use, not by being refused.**
+  A rate is capped to the engagement ceiling at scan start; a wordlist path
+  outside the project's own directories is dropped. A container image is a
+  closed `values:` list and an out-of-set value is REFUSED at the write, because
+  accepting one and replacing it at scan start made `get_recon_settings` echo an
+  image the scan would never run.
+- **Two things stay closed, and only two.** The engagement SCOPE
+  (`mcp: create_only`, set once by `create_project`) and the engagement RECORD
+  (`mcp: never`, `deny_reason: engagement-record` - the client, the contacts,
+  the dates, the document). The engagement's LIMITS are ordinary `mcp: settable`
+  fields in the `engagement_limits` group: they are reachable from the form and
+  from MCP alike, and what makes them safe is that each is enforced at scan
+  start whatever the setting says. See
+  [README.MCP.SERVER.md](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../docs/readmes/README.MCP.SERVER.md).
+- **A settable field with no form input fails `parity.test.ts`, and so does a
+  form input with no classification.** Neither door may reach something the
+  other cannot. `form_section` is joined from the tool's own entry, so a field
+  lands beside its tool automatically.
+- **A new `rps` field with `traffic: active` and no `roe_capped: true` fails the
+  build.** That gap is how three rate limits shipped reachable over MCP and
+  outside the ceiling.
+
+---
+
+## Enrichment-module contract (copy target)
+
+```python
+def run_censys_enrichment(combined_result: dict, settings: dict) -> dict:
+    ...                                              # mutate in place
+    combined_result["censys"] = censys_data          # top-level key == tool id, everywhere
+    return combined_result
+
+def run_censys_enrichment_isolated(combined_result: dict, settings: dict) -> dict:
+    """Thread-safe: does not mutate combined_result. The fan-out + test call path."""
+    import copy
+    snapshot = copy.deepcopy(combined_result)
+    run_censys_enrichment(snapshot, settings)
+    return snapshot.get("censys", {})                 # returns only this tool's payload
+```
+
+From [recon/main_recon_modules/censys_enrich.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main_recon_modules/censys_enrich.py).
+
+A module that writes **more than one** top-level key hands every one back, by name:
+
+```python
+from recon.helpers.isolated_result import TopLevelKeys
+
+def run_vuln_scan_isolated(combined_result: dict, settings: dict) -> TopLevelKeys:
+    snapshot = copy.deepcopy(combined_result)
+    run_vuln_scan(snapshot, output_file=None, settings=settings)
+    result = TopLevelKeys(vuln_scan=snapshot.get("vuln_scan", {}))
+    if "technology_cves" in snapshot:                 # only when the CVE lookup ran
+        result["technology_cves"] = snapshot["technology_cves"]
+    return result                                     # the fan-out merges each key
+```
+
+From [recon/main_recon_modules/vuln_scan.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main_recon_modules/vuln_scan.py),
+merged by `_merge_isolated_result` in [recon/main.py](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../recon/main.py) before the
+tool's graph update is queued (the update snapshots `combined_result` at queue time).
+
+## Commands
+
+```bash
+docker compose build recon                            # if you added a Docker-based tool (recon/entrypoint.sh IMAGES)
+docker compose exec webapp npx prisma db push         # for new settings (NEVER prisma migrate)
+./redamon.sh test unit                                # recon + root-recon sections
+```
+
+## Resources
+
+- [docs/readmes/coding_agent_prompts/PROMPT.ADD_RECON_TOOL.md](https://github.com/samugit83/redamon/blob/master/skills/recon-tool-integration/../../docs/readmes/coding_agent_prompts/PROMPT.ADD_RECON_TOOL.md) - the full ~15-subsystem checklist (graph, report, workflow view, presets, tooltips)
+- Related skills: `graph-db-writes`, `project-settings-cascade`, `recon-ai-enrichment`

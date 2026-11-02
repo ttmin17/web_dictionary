@@ -18,26 +18,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: vitali87/code-graph-rag
   official_vendor: false
   license: MIT
 signals:
-  stars: 5284
-  last_commit: 2026-10-26T03:07:00Z
-  stars_delta_7d: 18
-  stars_growth_pct: 0.3
-  trending_score: 18.06
-  rank_current: 104
-  rank_delta: -67
+  stars: 5307
+  last_commit: 2026-11-02T08:35:38Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.4
+  trending_score: 23.1
+  rank_current: 102
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5236
     - 5249
     - 5266
     - 5284
+    - 5307
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: vitali87/code-graph-rag
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.052Z
+  fetched_at: 2026-11-02T09:05:35.303Z
   truncated: false
 type: agent_tool
 tool:
@@ -127,11 +127,10 @@ Code-Graph-RAG parses a multi-language codebase with Tree-sitter, sharpened by c
 ## Latest News 🔥
 
 <!-- SECTION:latest_news -->
-- **Security Enhancements**: Incorporates an OSS Scanner build image and threat model.
-- **Data Export**: Ensures all node properties within the graph are exported.
-- **SQL Fixes**: Addresses several SQL-related issues including grammar errors and dead-code roots.
-- **Rust Fixes**: Improves indexing of methods and handling of types in Rust code.
-- **Build Fixes**: Repairs build issues related to eMudhra root certificates and distrusted components.
+- **Quiet Mode Enhancement**: The `--quiet` flag for the CLI now suppresses the scanning line for dead code and duplicates, providing a cleaner output.
+- **Context Budget Fix**: The system now correctly handles cases where a target doesn't fit within the allocated budget, preventing unexpected behaviour.
+- **Code Quality**: Changes have been made to report decorator and modifier changes that affect method calls and to ensure submodule grammars are loaded correctly.
+- **CGR Prune Feature**: A new `cgr prune` functionality has been added to remove projects where the root no longer exists.
 <!-- /SECTION:latest_news -->
 
 See [NEWS.md](https://github.com/vitali87/code-graph-rag/blob/main/NEWS.md) for the full history.
@@ -299,6 +298,10 @@ Please see [CONTRIBUTING.md](https://github.com/vitali87/code-graph-rag/blob/mai
 For issues or questions, check the [Troubleshooting](https://github.com/vitali87/code-graph-rag/blob/main/docs/advanced/troubleshooting.md) guide first, then open an issue.
 
 If cgr is useful to you, please consider pledging support on [GitHub Sponsors](https://github.com/sponsors/vitali87). cgr links the page under `cgr --version` and, in a terminal, after most commands finish; set `CGR_SPONSOR_PLEDGE=false` to hide that line.
+
+## Accessibility
+
+[ACCESSIBILITY.md](https://github.com/vitali87/code-graph-rag/blob/main/ACCESSIBILITY.md) describes what cgr and its documentation support for people using assistive technology or alternative settings, the known limitations and their workarounds, and how to report a barrier.
 
 ## License
 

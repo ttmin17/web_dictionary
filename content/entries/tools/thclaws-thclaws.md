@@ -12,26 +12,28 @@ tags:
   - ai-agent
   - anthropic
 status: active
-quality_percentile: 67
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: thClaws/thClaws
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1243
-  last_commit: 2026-10-25T08:22:12Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.2
-  trending_score: 2
-  rank_current: 136
+  stars: 1251
+  last_commit: 2026-11-01T22:44:14Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.6
+  trending_score: 8.05
+  rank_current: 125
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1241
     - 1243
+    - 1251
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +42,7 @@ readme_source:
   repo: thClaws/thClaws
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:23.816Z
+  fetched_at: 2026-11-02T09:05:56.712Z
   truncated: false
 type: agent_tool
 tool:
@@ -73,6 +75,7 @@ A native-Rust AI agent workspace that codes, automates, remembers, and coordinat
 </div>
 
 ---
+
 ## 🆕 New in v0.126.0 — many agents, one workspace
 
 **A workspace is no longer one agent. It is a shelf of them.** Keep your coding agent, a research agent, and a book-writing agent side by side in the same project, and switch between them from a rail on the left without losing anything — each one keeps its own conversation, scroll position, and half-typed message while you are away.
@@ -99,6 +102,7 @@ A native-Rust AI agent workspace that codes, automates, remembers, and coordinat
 Full list of changes: [CHANGELOG.md](https://github.com/thClaws/thClaws/blob/main/CHANGELOG.md)
 
 ---
+
 ## See it work
 
 Three tabs, one binary — captured from a live thClaws session looking at its own source.
@@ -112,6 +116,7 @@ Three tabs, one binary — captured from a live thClaws session looking at its o
 </div>
 
 ---
+
 ## Highlights
 
 ### 🎨 Media Studio — generate images & video, built in
@@ -162,6 +167,7 @@ things most likely to matter to you:
   gateway for people who don't want to hold provider keys.
 
 ---
+
 ## Hacking in public
 
 thClaws started in April 2026. Since then it has shipped **100+ public releases**, drawn **30+ contributors**, and lands roughly a release a week — the current release is **v0.121.0**. It's developed by a small team at **ThaiGPT Co., Ltd.** — and a meaningful chunk of the codebase comes from outside contributors who heard about it and stayed.
@@ -171,6 +177,7 @@ We're aiming for **v1.0 = "the multi-platform agent"**: the same agent loop on y
 > Built in Thailand. Meant for the world.
 
 ---
+
 ## Four surfaces, one engine
 
 The same `Agent` loop, `Session`, and `ToolRegistry` back every UX:
@@ -181,6 +188,7 @@ The same `Agent` loop, `Session`, and `ToolRegistry` back every UX:
 - **Webapp** (`thclaws --serve --port 7878`) — same engine over WebSocket/HTTP, plus a drop-in API surface so other tools can drive the agent: **OpenAI-compatible** at `/v1/chat/completions` and **Anthropic-compatible** at `/v1/messages`. Point the openai or anthropic SDK at it, or set `ANTHROPIC_BASE_URL`. SSH-tunnel for "Claude Code anywhere" without opening a port.
 
 ---
+
 ## Features
 
 Everything's in one binary. Pick the surface that fits the task, swap the provider, drop in a skill, glue in an MCP server, then walk away while a scheduled job or background agent finishes the work.
@@ -209,6 +217,7 @@ Everything's in one binary. Pick the surface that fits the task, swap the provid
 - **Shell escape** — prefix any REPL line with `!` to run a shell command directly. No tokens, no approval prompt, no agent round-trip (`! git status`, `! ls`).
 
 ---
+
 ## Contribute
 
 **We'd love your help.** thClaws is built in the open by a small team and 30+ contributors so far. Reviews are typically fast, the codebase is approachable, and there's plenty of room to make a real dent.
@@ -283,6 +292,7 @@ A huge thank you to the people who've shaped thClaws so far:
 </a>
 
 ---
+
 ## Installation
 
 ### Build from source
@@ -322,6 +332,7 @@ sudo dnf install wayland libsoup3 webkit2gtk4.1
 </details>
 
 ---
+
 ## Quick start
 
 ```sh
@@ -362,6 +373,7 @@ thclaws --serve --port 7878   # then ssh -L 7878:localhost:7878 user@remote
 ```
 
 ---
+
 ## Configuration
 
 Settings are read in this precedence (higher wins):
@@ -383,6 +395,7 @@ Open-standard files honored directly:
 API keys are **never stored in config files** — only the OS keychain (default) or `.env`.
 
 ---
+
 ## Enterprise
 
 The same open-source binary becomes a managed client when it finds a
@@ -413,6 +426,7 @@ infrastructure, deployment templates and support.
 Commercial enquiries: [enterprise@thaigpt.com](mailto:enterprise@thaigpt.com)
 
 ---
+
 ## Community
 
 - 💬 **[GitHub Discussions](https://github.com/thClaws/thClaws/discussions)** — questions, ideas, show-and-tell. The best place to start.
@@ -420,11 +434,13 @@ Commercial enquiries: [enterprise@thaigpt.com](mailto:enterprise@thaigpt.com)
 - ✉️ **Email** — for security disclosures or commercial inquiries: [jimmy@thaigpt.com](mailto:jimmy@thaigpt.com) (see also [SECURITY.md](https://github.com/thClaws/thClaws/blob/main/SECURITY.md)).
 
 ---
+
 ## Supporters
 
 In 2026 a mini fundraiser — selling of the e-book *Building thClaws* — helped fund this project. A huge thank-you to the **155 founding supporters** who backed it early: see the [**Supporters wall →**](https://github.com/thClaws/thClaws/blob/main/SUPPORTERS.md). 🦞🙏
 
 ---
+
 ## Documentation
 
 - **Official site** — [thclaws.ai](https://thclaws.ai)
@@ -439,6 +455,7 @@ In 2026 a mini fundraiser — selling of the e-book *Building thClaws* — helpe
 For books, training, and commercial deployment, see [agentic-press.com](https://agentic-press.com).
 
 ---
+
 ## License
 
 Dual-licensed under either:
@@ -449,6 +466,7 @@ Dual-licensed under either:
 at your option. Contributions are accepted under the same dual license — you keep your copyright; we just need permission to ship it.
 
 ---
+
 ## About
 
 thClaws is developed by **ThaiGPT Co., Ltd.** and published under a dual MIT/Apache-2.0 license. The client is free and open source forever. Enterprise Edition, hosting, and support are commercial offerings — see [agentic-press.com](https://agentic-press.com) or contact [jimmy@thaigpt.com](mailto:jimmy@thaigpt.com).

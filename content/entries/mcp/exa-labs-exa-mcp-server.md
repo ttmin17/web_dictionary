@@ -12,28 +12,29 @@ tags:
   - crawling
   - model-context-protocol
 status: active
-quality_percentile: 54
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: exa-labs/exa-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 5169
-  last_commit: 2026-10-19T19:23:37Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0.6
-  trending_score: 31.19
-  rank_current: 51
-  rank_delta: -8
+  stars: 5208
+  last_commit: 2026-11-02T01:26:06Z
+  stars_delta_7d: 39
+  stars_growth_pct: 0.8
+  trending_score: 39.29
+  rank_current: 45
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5118
     - 5138
     - 5169
+    - 5208
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: exa-labs/exa-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:59.082Z
+  fetched_at: 2026-11-02T09:05:35.318Z
   truncated: false
 type: mcp_server
 launch:
@@ -169,7 +170,7 @@ Exa Agent requires authentication (OAuth or an [API key](https://dashboard.exa.a
 
 ## Agent Skills
 
-Skills live in [`skills/`](https://github.com/exa-labs/exa-mcp-server/blob/main/skills/) and load with Agent Plugin / Claude plugin installs.
+Skills live in [`skills/`](https://github.com/exa-labs/exa-mcp-server/blob/main/skills/) and load with Agent Plugin installs. The Claude plugin in [`plugins/exa/`](https://github.com/exa-labs/exa-mcp-server/blob/main/plugins/exa/) ships a copy of them; `npm test` fails when the copy drifts. Each package version bump on `main` publishes `plugins/exa/` to the root of the [`claude-plugin`](https://github.com/exa-labs/exa-mcp-server/tree/claude-plugin) branch, which Claude's plugin directory reads. To publish a plugin-only change between releases, run the `Publish Claude plugin` workflow manually.
 
 | Skill | Path | Use when |
 | --- | --- | --- |

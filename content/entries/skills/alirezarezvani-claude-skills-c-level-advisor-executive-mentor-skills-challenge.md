@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-c-level-advisor-executive-mentor-skills-challenge
 name: challenge
-tagline: Pre-mortem plan analysis. Imagine the plan failed 12 months from now
-  and work backwards to find the weaknesses. Surfaces assumptions, dependencies,
-  an
+tagline: "Use before committing serious resources to a plan, or when feedback
+  has been suspiciously positive. Runs a pre-mortem: assume it failed in 12
+  months a"
 summary: Systematically finds weaknesses in any plan before reality does. Not to
   kill the plan — to make it survive contact with reality.
 categories:
@@ -17,7 +17,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,20 +42,18 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: c-level-advisor/executive-mentor/skills/challenge/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.237Z
+  fetched_at: 2026-11-02T09:06:18.455Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: challenge
-  description: Pre-mortem plan analysis. Imagine the plan failed 12 months from
-    now and work backwards to find the weaknesses. Surfaces assumptions,
-    dependencies, and execution risks before committing resources. Use when
-    before significant resource commitment, before presenting to a board or
-    investors, when feedback has been one-sidedly positive, or when there is
-    pressure to move fast and figure it out later.
+  description: "Use before committing serious resources to a plan, or when
+    feedback has been suspiciously positive. Runs a pre-mortem: assume it failed
+    in 12 months and work back to the assumptions, dependencies and execution
+    risks."
   folder_path: c-level-advisor/executive-mentor/skills/challenge
   extra_files: []
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -64,12 +62,13 @@ skill:
   pack_slug: alirezarezvani-claude-skills
 ---
 
-# /em:challenge — Pre-Mortem Plan Analysis
-**Command:** `/em:challenge <plan>`
+# /executive-mentor:challenge — Pre-Mortem Plan Analysis
+**Command:** `/executive-mentor:challenge <plan>`
 
 Systematically finds weaknesses in any plan before reality does. Not to kill the plan — to make it survive contact with reality.
 
 ---
+
 ## The Core Idea
 
 Most plans fail for predictable reasons. Not bad luck — bad assumptions. Overestimated demand. Underestimated complexity. Dependencies nobody questioned. Timing that made sense in a spreadsheet but not in the real world.
@@ -79,6 +78,7 @@ The pre-mortem technique: **imagine it's 12 months from now and this plan failed
 That's not pessimism. It's how you build something that doesn't collapse.
 
 ---
+
 ## When to Run a Challenge
 
 - Before committing significant resources to a plan
@@ -89,6 +89,7 @@ That's not pessimism. It's how you build something that doesn't collapse.
 - When you feel excited about the plan (excitement is a signal to scrutinize harder)
 
 ---
+
 ## The Challenge Framework
 
 ### Step 1: Extract Core Assumptions
@@ -154,6 +155,7 @@ For each critical vulnerability: if this assumption turns out to be wrong at mon
 The less reversible, the more rigorously you need to validate before committing.
 
 ---
+
 ## Output Format
 
 **Challenge Report: [Plan Name]**
@@ -190,6 +192,7 @@ HARDENING ACTIONS
 ```
 
 ---
+
 ## Challenge Patterns by Plan Type
 
 ### Product Roadmap
@@ -217,6 +220,7 @@ HARDENING ACTIONS
 - What assumptions break if you raise 50% of the target amount?
 
 ---
+
 ## The Hardest Questions
 
 These are the ones people skip:
@@ -227,8 +231,9 @@ These are the ones people skip:
 - "What would an enemy of this plan attack first?"
 
 ---
+
 ## Deliverable
 
-The output of `/em:challenge` is not permission to stop. It's a vulnerability map. Now you can make conscious decisions: validate the risky assumptions, hedge the critical ones, or accept the bets you're making knowingly.
+The output of `/executive-mentor:challenge` is not permission to stop. It's a vulnerability map. Now you can make conscious decisions: validate the risky assumptions, hedge the critical ones, or accept the bets you're making knowingly.
 
 Unknown risks are dangerous. Known risks are manageable.

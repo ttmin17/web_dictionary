@@ -4,9 +4,7 @@ name: tons-of-skills-marketplace
 tagline: Model-agnostic agent-skills platform with a harness-free canonical
   layer, verified adapters, and the ccpi package manager. Explore at
   tonsofskills.com
-summary: Model-agnostic agent-skills platform with a harness-free canonical
-  layer, verified adapters, and the ccpi package manager. Explore at
-  tonsofskills.com.
+summary: Intent Solutions is a Claude Partner Network Select Services Partner.
 categories:
   - cloud-infra
 tags:
@@ -15,29 +13,29 @@ tags:
   - anthropic
   - automation
 status: active
-quality_percentile: 85
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: jeremylongshore/tons-of-skills-marketplace
   official_vendor: false
   license: MIT
 signals:
-  stars: 2872
-  last_commit: 2026-10-26T07:20:10Z
-  stars_delta_7d: 21
-  stars_growth_pct: 0.7
-  trending_score: 21.15
-  rank_current: 62
-  rank_delta: -13
+  stars: 2890
+  last_commit: 2026-11-02T06:26:09Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.6
+  trending_score: 18.11
+  rank_current: 65
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2820
     - 2835
     - 2851
     - 2872
+    - 2890
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +44,7 @@ readme_source:
   repo: jeremylongshore/tons-of-skills-marketplace
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:45:25.840Z
+  fetched_at: 2026-11-02T09:06:50.271Z
   truncated: false
 type: mcp_server
 launch:
@@ -72,8 +70,8 @@ Intent Solutions is a Claude Partner Network Select Services Partner.
 
 [![Release](https://img.shields.io/badge/release-v4.33.0-green)](https://github.com/jeremylongshore/tons-of-skills-marketplace/releases/latest)
 [![CLI](https://img.shields.io/badge/CLI-ccpi-blueviolet?logo=npm)](https://www.npmjs.com/package/@intentsolutionsio/ccpi)
-[![Plugins](https://img.shields.io/badge/plugins-434-blue)](https://tonsofskills.com/explore)
-[![Skills](https://img.shields.io/badge/skills-2900-green)](https://tonsofskills.com/skills)
+[![Plugins](https://img.shields.io/badge/plugins-428-blue)](https://tonsofskills.com/explore)
+[![Skills](https://img.shields.io/badge/skills-2713-green)](https://tonsofskills.com/skills)
 [![GitHub Stars](https://img.shields.io/github/stars/jeremylongshore/tons-of-skills-marketplace?style=social)](https://github.com/jeremylongshore/tons-of-skills-marketplace)
 [![skills.sh](https://skills.sh/b/jeremylongshore/tons-of-skills-marketplace)](https://skills.sh/jeremylongshore/tons-of-skills-marketplace)
 [![Sponsor: Kobiton](https://img.shields.io/badge/Sponsor-kobiton.com-0487D9)](https://kobiton.com)
@@ -122,8 +120,8 @@ Every number below names the cohort it counts and the command that reproduces it
 
 | Count | Cohort                                 | Reproduce with                                                                                                          |
 | ----: | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-|   434 | catalog plugins (catalog-entry cohort) | `node scripts/generate-readme-toc.mjs` over `marketplace.extended.json`                                                 |
-| 2,900 | marketplace-visible skills (distinct)  | `node -e "import('./scripts/corpus-resolver.mjs').then(m=>console.log(m.resolveCorpus('marketplace-visible').length))"` |
+|   428 | catalog plugins (catalog-entry cohort) | `node scripts/generate-readme-toc.mjs` over `marketplace.extended.json`                                                 |
+| 2,713 | marketplace-visible skills (distinct)  | `node -e "import('./scripts/corpus-resolver.mjs').then(m=>console.log(m.resolveCorpus('marketplace-visible').length))"` |
 |   352 | agent definitions in plugins           | `git ls-files 'plugins/**' \| grep '/agents/.*\.md'`                                                                    |
 |    19 | plugin categories                      | `ls -d plugins/*/`                                                                                                      |
 
@@ -133,32 +131,32 @@ Every number below names the cohort it counts and the command that reproduces it
 
 ### 📦 Live npm Downloads
 
-Across **386 published packages** in the [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
+Across **379 published packages** in the [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window        | All packages | Established (>30d) |
 | ------------- | -----------: | -----------------: |
-| Last 24 hours |          943 |                943 |
-| Last 7 days   |        3,970 |              3,970 |
-| Last 30 days  |       15,212 |             15,212 |
+| Last 24 hours |          320 |                320 |
+| Last 7 days   |        8,621 |              8,621 |
+| Last 30 days  |       16,496 |             16,496 |
 
 <sub>"Established" excludes packages first published within the last 30 days, so a bulk-publish event doesn't dominate the headline.</sub>
 
 **Top 10 by last 30 days:**
 
-| #   | Package                                                                                                                | Last 30d |
-| --- | ---------------------------------------------------------------------------------------------------------------------- | -------: |
-| 1   | [`@intentsolutionsio/claude-pack`](https://www.npmjs.com/package/@intentsolutionsio/claude-pack)                       |      541 |
-| 2   | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack)               |      458 |
-| 3   | [`@intentsolutionsio/groq-pack`](https://www.npmjs.com/package/@intentsolutionsio/groq-pack)                           |      335 |
-| 4   | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack)               |      329 |
-| 5   | [`@intentsolutionsio/shopify-pack`](https://www.npmjs.com/package/@intentsolutionsio/shopify-pack)                     |      276 |
-| 6   | [`@intentsolutionsio/neural-network-builder`](https://www.npmjs.com/package/@intentsolutionsio/neural-network-builder) |      249 |
-| 7   | [`@intentsolutionsio/supabase-pack`](https://www.npmjs.com/package/@intentsolutionsio/supabase-pack)                   |      245 |
-| 8   | [`@intentsolutionsio/anthropic-pack`](https://www.npmjs.com/package/@intentsolutionsio/anthropic-pack)                 |      227 |
-| 9   | [`@intentsolutionsio/clickhouse-pack`](https://www.npmjs.com/package/@intentsolutionsio/clickhouse-pack)               |      213 |
-| 10  | [`@intentsolutionsio/klingai-pack`](https://www.npmjs.com/package/@intentsolutionsio/klingai-pack)                     |      184 |
+| #   | Package                                                                                                                  | Last 30d |
+| --- | ------------------------------------------------------------------------------------------------------------------------ | -------: |
+| 1   | [`@intentsolutionsio/jeremy-vertex-engine`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-vertex-engine)       |    1,094 |
+| 2   | [`@intentsolutionsio/claude-pack`](https://www.npmjs.com/package/@intentsolutionsio/claude-pack)                         |    1,085 |
+| 3   | [`@intentsolutionsio/jeremy-adk-orchestrator`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-adk-orchestrator) |    1,076 |
+| 4   | [`@intentsolutionsio/jeremy-vertex-validator`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-vertex-validator) |    1,037 |
+| 5   | [`@intentsolutionsio/jeremy-vertex-ai`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-vertex-ai)               |      960 |
+| 6   | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack)                 |      369 |
+| 7   | [`@intentsolutionsio/groq-pack`](https://www.npmjs.com/package/@intentsolutionsio/groq-pack)                             |      267 |
+| 8   | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack)                 |      262 |
+| 9   | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) |      217 |
+| 10  | [`@intentsolutionsio/granola-pack`](https://www.npmjs.com/package/@intentsolutionsio/granola-pack)                       |      155 |
 
-<sub>Last refreshed 2026-10-10T01:36:11.465Z.</sub>
+<sub>Last refreshed 2026-10-30T06:22:52.519Z.</sub>
 
 <!-- NPM-STATS:END -->
 
@@ -194,8 +192,8 @@ The 19 categories below link into the live marketplace. Plugin counts are the ca
 | 📦  | [Packages](https://tonsofskills.com/plugins#packages)               |       5 |
 | ⚡  | [Performance](https://tonsofskills.com/plugins#performance)         |      25 |
 | ✅  | [Productivity](https://tonsofskills.com/plugins#productivity)       |      28 |
-| 🎁  | [SaaS Skill Packs](https://tonsofskills.com/plugins#saas-packs)     |     103 |
-| 🔐  | [Security](https://tonsofskills.com/plugins#security)               |      27 |
+| 🎁  | [SaaS Skill Packs](https://tonsofskills.com/plugins#saas-packs)     |      96 |
+| 🔐  | [Security](https://tonsofskills.com/plugins#security)               |      28 |
 | ✨  | [Skill Enhancers](https://tonsofskills.com/plugins#skill-enhancers) |      10 |
 | 🧪  | [Testing](https://tonsofskills.com/plugins#testing)                 |      28 |
 | 📁  | [Analytics](https://tonsofskills.com/plugins#analytics)             |       1 |

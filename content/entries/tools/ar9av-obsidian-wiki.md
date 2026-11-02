@@ -3,8 +3,7 @@ slug: ar9av-obsidian-wiki
 name: obsidian-wiki
 tagline: Framework for AI agents to build and maintain a digital brain through
   Obsidian wiki | Memory System for Agents
-summary: Framework for AI agents to build and maintain a digital brain through
-  Obsidian wiki | Memory System for Agents
+summary: A digital brain you grow with your AI agent.
 categories:
   - databases-memory
 tags:
@@ -13,29 +12,29 @@ tags:
   - brain
   - claude-code
 status: active
-quality_percentile: 70
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Ar9av/obsidian-wiki
   official_vendor: false
   license: MIT
 signals:
-  stars: 3621
-  last_commit: 2026-10-21T04:14:42Z
-  stars_delta_7d: 31
+  stars: 3654
+  last_commit: 2026-11-01T09:10:34Z
+  stars_delta_7d: 33
   stars_growth_pct: 0.9
-  trending_score: 31.27
-  rank_current: 90
-  rank_delta: -58
+  trending_score: 33.3
+  rank_current: 94
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3529
     - 3558
     - 3590
     - 3621
+    - 3654
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +43,7 @@ readme_source:
   repo: Ar9av/obsidian-wiki
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:44:55.827Z
+  fetched_at: 2026-11-02T09:06:46.737Z
   truncated: false
 type: agent_tool
 tool:
@@ -90,7 +89,9 @@ tool:
   English | <a href="https://github.com/Ar9av/obsidian-wiki/blob/main/README_TW.md">繁體中文</a>
 </p>
 
----You solve a hard problem on a Tuesday. Three months later, in a different repo, you solve it again from scratch — because the answer lived in a chat log you'll never find.
+---
+
+You solve a hard problem on a Tuesday. Three months later, in a different repo, you solve it again from scratch — because the answer lived in a chat log you'll never find.
 
 This fixes that. Point it at a folder, tell your agent what to remember, and it compiles what you learn into interconnected markdown you own. The pattern comes from Andrej Karpathy's [LLM Wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f): compile knowledge once and keep it current, instead of asking an LLM the same questions forever or re-running RAG every time.
 
@@ -129,6 +130,12 @@ Plugin skills are namespaced (`/obsidian-wiki:wiki-ingest`), and the plugin ship
 Other paths — `git clone`, Claude Code plugin, Skills CLI, multiple vaults → **[Installation](https://github.com/Ar9av/obsidian-wiki/blob/main/docs/installation.md)**
 
 ## What you actually do
+
+<p align="center">
+  <img width="760" alt="The loop: feed it, it compiles into linked pages, ask it, keep it honest; every session starts from what the last one left behind" src="https://raw.githubusercontent.com/Ar9av/obsidian-wiki/main/assets/loop.svg" />
+</p>
+
+**Start with three.** `/wiki-setup` once, `/wiki-capture` to save what you just worked out, `/wiki-query` to get it back. Everything below is there when you need it.
 
 **Feed it.** Anything text-shaped: docs, PDFs, chat exports, meeting transcripts, screenshots, URLs.
 
@@ -214,6 +221,13 @@ More → **[Memory Surface](https://github.com/Ar9av/obsidian-wiki/blob/main/doc
 - **It's yours.** Plain markdown in a folder. Push it to a private repo, open it in Obsidian, grep it, delete it. No service, no lock-in, nothing leaves your machine.
 - **It carries context across sessions.** An owner profile, open threads, and a running snapshot get injected at session start, so you don't re-explain yourself.
 - **Works where you already work.** One `.skills/` directory, symlinked into every agent you use.
+
+**What it isn't**
+
+- **Not a transcript recorder.** Nothing is saved unless you or a skill decides it's worth keeping. The end-of-session hook only suggests a capture.
+- **Not a sync service or a backup.** It's a folder. Put it in git or your own sync.
+- **Not an oracle.** Pages are as good as their sources. Inferred claims are marked, and lint flags pages drifting into guesswork.
+- **Not a file converter.** Your agent reads text, PDFs, and images itself. Audio and video are skipped, and Office files depend on your agent. [What each input actually gets](https://github.com/Ar9av/obsidian-wiki/blob/main/docs/architecture.md#what-each-input-actually-gets)
 
 More → **[Architecture](https://github.com/Ar9av/obsidian-wiki/blob/main/docs/architecture.md)**
 

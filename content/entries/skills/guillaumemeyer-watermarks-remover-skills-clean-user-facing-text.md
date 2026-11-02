@@ -1,8 +1,13 @@
 ---
 slug: guillaumemeyer-watermarks-remover-skills-clean-user-facing-text
 name: clean-user-facing-text
-tagline: Agent skill from guillaumemeyer/watermarks-remover
-summary: Agent skill from guillaumemeyer/watermarks-remover
+tagline: Clean and finalize authorized natural-language text intended for
+  readers by auditing suspicious invisible Unicode and rewriting prose while
+  preserving
+summary: "1. Identify the prose that readers will see. 2. Protect non-prose
+  spans: - fenced and inline code - commands, paths, URLs, identifiers, API
+  names, and exact values - formulas, citations, and text the user asks to
+  quot..."
 categories:
   - other
 tags:
@@ -11,10 +16,10 @@ tags:
   - chatgpt
   - claude
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-08-11T16:32:38
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: guillaumemeyer/watermarks-remover
@@ -22,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 24919
-  last_commit: 2026-10-25T01:36:36Z
-  stars_delta_7d: 524
-  stars_growth_pct: 2.1
-  trending_score: 535.26
-  rank_current: 35
-  rank_delta: -3
+  stars: 25939
+  last_commit: 2026-11-01T13:33:56Z
+  stars_delta_7d: 1020
+  stars_growth_pct: 4.1
+  trending_score: 1061.75
+  rank_current: 29
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 23518
     - 23994
     - 24395
     - 24919
+    - 25939
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +47,20 @@ readme_source:
   repo: guillaumemeyer/watermarks-remover
   path: skills/clean-user-facing-text/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.715Z
+  fetched_at: 2026-11-02T09:06:34.451Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: clean-user-facing-text
-  description: Agent skill from guillaumemeyer/watermarks-remover
+  description: Clean and finalize authorized natural-language text intended for
+    readers by auditing suspicious invisible Unicode and rewriting prose while
+    preserving facts, meaning, and the writer's voice. Use when the user asks to
+    clean, humanize, polish, or finalize articles, manuscripts, reports,
+    documentation, emails, product copy, UI text, Markdown, or HTML prose, or
+    when a project rule or instruction file explicitly requires this workflow.
+    Don't use for code-only tasks or undisclosed authorship evasion; leave code,
+    commands, identifiers, paths, APIs, formulas, citations, required
+    disclosures, and verbatim quotations unchanged.
   folder_path: skills/clean-user-facing-text
   extra_files:
     - references/detectors.md

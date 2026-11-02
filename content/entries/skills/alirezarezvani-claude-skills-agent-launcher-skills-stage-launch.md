@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-agent-launcher-skills-stage-launch
 name: stage-launch
-tagline: Phase 2 of building a Claude Managed Agent — turn a validated build
-  sheet into exact API payloads and a resumable BYOK curl launch script, then
-  launch
+tagline: Use when a managed-agent build sheet is ready to launch ('launch it',
+  'deploy the agent'). Generates and validates API payloads with
+  payload_generator
 summary: 1. Generate payloads. Agent toolset → alwaysallow; every MCP toolset →
   alwaysask (baked into the agent payload's permissionpolicies). 2. Write the
   launch script. launch.sh creates environment → agent → session → kicko...
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,29 +43,22 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: agent-launcher/skills/stage-launch/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.234Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: stage-launch
-  description: Phase 2 of building a Claude Managed Agent — turn a validated build
-    sheet into exact API payloads and a resumable BYOK curl launch script, then
-    launch (environment → agent → session → kickoff) using the founder's OWN
-    Anthropic key. Use when the user says "launch it", "deploy the agent",
-    "create the agent now", or when the orchestrator routes phase=stage-launch.
-    payload_generator.py emits the four ordered payloads;
-    launch_script_writer.py writes launch.sh that reads $ANTHROPIC_API_KEY at
-    runtime and never embeds it; payload_validator.py runs a pre-launch check
-    including an API-key-leak scan. No tool in this skill makes network calls —
-    the user runs launch.sh themselves. Distinct from interview (planning) and
-    grade-iterate (the outcome loop).
+  description: Use when a managed-agent build sheet is ready to launch ('launch
+    it', 'deploy the agent'). Generates and validates API payloads with
+    payload_generator.py and payload_validator.py and writes a resumable curl
+    script with launch_script_writer.py that uses the user's own key.
   folder_path: agent-launcher/skills/stage-launch
   extra_files:
     - README.md
     - scripts/launch_script_writer.py
     - scripts/payload_generator.py
     - scripts/payload_validator.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

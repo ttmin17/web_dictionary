@@ -1,8 +1,11 @@
 ---
 slug: nvidia-skills-skills-amc-run-sample-calibration
 name: amc-run-sample-calibration
-tagline: Agent skill from NVIDIA/skills
-summary: Agent skill from NVIDIA/skills
+tagline: Run end-to-end calibration on the shipped sample dataset
+  (sdg_08_2_sample_data_010926.zip) against a running AMC microservice. Use when
+  user says 'tes
+summary: "Activate this skill when the user wants to sanity-check a running AMC
+  stack with the bundled sample dataset. Typical prompts:"
 categories:
   - databases-memory
 tags:
@@ -11,10 +14,10 @@ tags:
   - ai-agents
   - claude-code
 status: active
-quality_percentile: 57
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: NVIDIA/skills
@@ -22,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3735
-  last_commit: 2026-10-26T00:12:40Z
-  stars_delta_7d: 93
-  stars_growth_pct: 2.6
-  trending_score: 95.37
+  stars: 3817
+  last_commit: 2026-10-30T18:10:11Z
+  stars_delta_7d: 82
+  stars_growth_pct: 2.2
+  trending_score: 83.8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3536
     - 3581
     - 3642
     - 3735
+    - 3817
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +43,15 @@ readme_source:
   repo: NVIDIA/skills
   path: skills/amc-run-sample-calibration/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:25.669Z
+  fetched_at: 2026-11-02T09:06:50.101Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: amc-run-sample-calibration
-  description: Agent skill from NVIDIA/skills
+  description: Run end-to-end calibration on the shipped sample dataset
+    (sdg_08_2_sample_data_010926.zip) against a running AMC microservice. Use
+    when user says 'test sample dataset', 'run sample calibration', 'verify AMC
+    install', or 'launch and test'.
   folder_path: skills/amc-run-sample-calibration
   extra_files:
     - BENCHMARK.md
@@ -53,7 +59,7 @@ skill:
     - scripts/run_sample_calibration.py
     - skill-card.md
     - skill.oms.sig
-  pack_total_skills: 416
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

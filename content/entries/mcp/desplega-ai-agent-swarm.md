@@ -1,0 +1,206 @@
+---
+slug: desplega-ai-agent-swarm
+name: agent-swarm
+tagline: Your Company Agentic Operating System
+summary: Agent Swarm is the open-source, self-hosted AI company operating system
+  built by Desplega Labs.
+categories:
+  - agent-frameworks
+tags:
+  - agent-coordination
+  - agent-infrastructure
+  - agent-runtime
+  - agent-swarm
+status: active
+quality_percentile: 32
+selection_reason: quality_percentile
+first_seen: 2026-11-02
+last_updated: 2026-11-02T09:07:29.758Z
+source:
+  kind: github_repo
+  repo: desplega-ai/agent-swarm
+  official_vendor: false
+  license: MIT
+signals:
+  stars: 982
+  last_commit: 2026-11-02T08:37:15Z
+  stars_delta_7d: 22
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 982
+language: en
+needs_keys: false
+prerequisites:
+  - Network access (HTTP MCP server)
+readme_source:
+  repo: desplega-ai/agent-swarm
+  path: README.md
+  branch: main
+  fetched_at: 2026-11-02T09:07:10.255Z
+  truncated: false
+type: mcp_server
+launch:
+  transport: http
+  args: []
+  env_vars: []
+  confidence: none
+---
+
+<p align="center"><b><a href="https://swar.am">Agent Swarm</a> is the open-source, self-hosted AI company operating system built by <a href="https://desplega.sh">Desplega Labs</a>.</b></p>
+<!-- It is not OpenAI Swarm, OpenAI's experimental educational library, replaced by the OpenAI Agents SDK. -->
+
+> [!TIP]
+> **This repo evolves every single day.** [Watch now →](https://github.com/desplega-ai/agent-swarm/subscription)
+<p align="center"><video src="https://github.com/user-attachments/assets/837f385f-403a-4ea7-bd52-8388368a03a3" controls muted playsinline width="720"></video></p>
+<p align="center"><sub>▸ <a href="https://github.com/desplega-ai/agent-swarm/blob/main/assets/agent-swarm-every-team.mp4">every team, one swarm</a> · <a href="https://github.com/desplega-ai/agent-swarm/blob/main/assets/agent-swarm.mp4">daily evolution</a> · <a href="https://github.com/desplega-ai/agent-swarm/blob/main/assets/video-source">Making of</a></sub></p>
+<p align="center"><a href="https://agent-swarm.dev"><img src="https://img.shields.io/badge/Website-agent--swarm.dev-000?style=for-the-badge" alt="Website"></a> <a href="https://docs.agent-swarm.dev"><img src="https://img.shields.io/badge/Docs-docs.agent--swarm.dev-amber?style=for-the-badge" alt="Docs"></a> <a href="https://app.agent-swarm.dev"><img src="https://img.shields.io/badge/Dashboard-app.agent--swarm.dev-blue?style=for-the-badge" alt="Dashboard"></a> <a href="https://discord.gg/KZgfyyDVZa"><img src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord"></a> <a href="https://x.com/agent__swarm"><img src="https://img.shields.io/badge/𝕏-@agent____swarm-000?style=for-the-badge&logo=x&logoColor=white" alt="Follow on X"></a> <a href="https://www.linkedin.com/company/desplega-labs/"><img src="https://img.shields.io/badge/LinkedIn-Desplega%20Labs-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Desplega Labs on LinkedIn"></a> <a href="https://www.youtube.com/@desplega-labs/videos"><img src="https://img.shields.io/badge/YouTube-Desplega%20Labs-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Desplega Labs on YouTube"></a></p>
+
+agent-swarm.dev is an open-source operating system for AI work. A lead agent delegates goals to workers such as Claude Code or Codex. Isolated containers, shared memory, tools, schedules, and review gates preserve work across sessions.
+
+## What you get
+
+- A lead agent that receives work from Slack, repositories, issue trackers, email, or the API
+- [Schema-validated task results](https://github.com/desplega-ai/agent-swarm/blob/main/MCP.md#send-task) for callers that need structured JSON output
+- [Deferred tasks](https://github.com/desplega-ai/agent-swarm/blob/main/MCP.md#defer-task) that wake when all or any watched tasks reach an outcome, or a deadline arrives
+- [Inline tool-result images](https://docs.agent-swarm.dev/docs/ui#tool-result-images) in task logs, with previews that open at full size
+- [Dashboard file attachments](https://docs.agent-swarm.dev/docs/ui#file-attachments) by paste, drag-and-drop, or file picker
+- Workers in isolated Docker containers with development environments
+- Memory and identity that persist across sessions, with citation ratings and self-rating hints enabled by default
+- Workflows, schedules, scripts, and apps for recurring work
+- [Extensions](https://docs.agent-swarm.dev/docs/guides/extensions) for trusted TypeScript hooks, installed as agent-owned inert drafts and activated by a trusted lead, operator, or dashboard user
+- [Realtime rooms](https://github.com/desplega-ai/agent-swarm/blob/main/runbooks/realtime-rooms.md) for shared page state, presence, and live channels
+- Your choice of harness and models: Claude Code, Codex, pi, opencode, [Cursor](https://docs.agent-swarm.dev/docs/guides/provider-auth/cursor), Amp, [Grok](https://docs.agent-swarm.dev/docs/guides/provider-auth/grok), [fx](https://docs.agent-swarm.dev/docs/guides/provider-auth/fx), Devin, or ACP agents
+
+```mermaid
+flowchart LR
+    subgraph IN["Tasks come in"]
+        direction TB
+        S["Slack"]
+        G["GitHub / GitLab"]
+        E["Email"]
+        A["API / CLI"]
+    end
+
+    LEAD(["Lead Agent<br/>plans &amp; delegates"])
+
+    subgraph WORKERS["Workers in Docker"]
+        direction TB
+        W1["Worker"]
+        W2["Worker"]
+        W3["Worker"]
+    end
+
+    subgraph BRAIN["Persistent brain"]
+        direction TB
+        MEM["Memory<br/>(vector search)"]
+        ID["Identity<br/>(SOUL, CLAUDE.md)"]
+    end
+
+    subgraph OUT["Work ships"]
+        direction TB
+        PR["Pull Requests"]
+        REPLY["Slack replies"]
+        EMAIL["Email replies"]
+    end
+
+    IN --> LEAD --> WORKERS
+    WORKERS -->|reads context| BRAIN
+    WORKERS -->|writes learnings| BRAIN
+    WORKERS --> OUT
+```
+
+## Quick Start
+
+Give your coding agent the operator skill for Docker Compose or Kubernetes:
+
+```bash
+npx skills add desplega-ai/agent-swarm
+```
+
+Or install it as a plugin in your harness:
+
+| Harness | Command |
+|---|---|
+| Claude Code | `/plugin marketplace add desplega-ai/agent-swarm` then `/plugin install agent-swarm@agent-swarm` |
+| Codex | `codex plugin marketplace add desplega-ai/agent-swarm && codex plugin add agent-swarm@agent-swarm` (or use `npx skills` above) |
+| Cursor | `/add-plugin desplega-ai/agent-swarm` |
+| Gemini CLI | `gemini extensions install https://github.com/desplega-ai/agent-swarm` |
+| Antigravity / Factory Droid | `droid plugin marketplace add https://github.com/desplega-ai/agent-swarm` then `droid plugin install agent-swarm@agent-swarm` |
+| OpenCode, pi, Devin, Kimi, others | `npx skills add desplega-ai/agent-swarm` |
+
+The plugin's [privacy](https://www.agent-swarm.dev/privacy) and
+[terms](https://www.agent-swarm.dev/terms) links describe the Agent Swarm website and
+Cloud service. The self-hosted software remains covered by the [MIT License](https://github.com/desplega-ai/agent-swarm/blob/main/LICENSE).
+
+Or self-host. [`docker-compose.example.yml`](https://github.com/desplega-ai/agent-swarm/blob/main/docker-compose.example.yml) is the reference deployment: deploy every agent in it by default (1 lead and 11 workers on the official templates), and remove agents only when you have a reason to.
+
+Plan for at least 4 vCPU, 8 GB RAM and 40 GB of free disk, and prune old Docker images after upgrades. See [Host requirements & disk cleanup](https://docs.agent-swarm.dev/docs/guides/host-requirements).
+
+The one-shot installer checks Docker and Compose v2, installs Bun when missing, runs `agent-swarm onboard --yes --preset full` (every official template; it runs one coder where the example runs two), and prints the dashboard `/setup` link:
+
+```bash
+curl -fsSL https://agent-swarm.dev/install.sh | bash
+```
+
+The raw GitHub URL (`https://raw.githubusercontent.com/desplega-ai/agent-swarm/main/install.sh`) serves the same script. The API is public through a tunnel by default, protected by the API key. Add `bash -s -- --no-tunnel` to keep it local.
+
+No server yet? Deploy the Railway template in one click:
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/agent-swarm)
+
+Or [deploy one](https://docs.agent-swarm.dev/docs/guides/one-click-deploy) on any VPS: paste [`deploy/cloud-init.yaml`](https://github.com/desplega-ai/agent-swarm/blob/main/deploy/cloud-init.yaml) as the user data of a new 4 vCPU / 8 GB Ubuntu server (Hetzner, DigitalOcean, Lightsail, Vultr). It installs Docker and Caddy, serves the API over HTTPS on `<ip>.sslip.io` or your domain, and shows the `/setup` link to root at login. To look first, [try it for an hour on E2B](https://docs.agent-swarm.dev/docs/guides/one-click-deploy#try-it-for-an-hour-on-e2b); that trial deletes its data when the sandboxes stop.
+
+Or use the examples directly:
+
+```bash
+git clone https://github.com/desplega-ai/agent-swarm.git && cd agent-swarm
+cp .env.docker.example .env  # Set API_KEY and the credential for your HARNESS_PROVIDER.
+openssl rand -base64 32 > encryption_key
+chmod 600 .env encryption_key
+docker compose -f docker-compose.example.yml --env-file .env up -d
+```
+
+Agent ID variables are optional. Each container generates a UUID on first boot and keeps it in its personal volume, so identity survives restarts. Pin `*_AGENT_ID` in `.env` only to keep an existing identity or to survive removing volumes.
+
+Read the [Compose checklist](https://github.com/desplega-ai/agent-swarm/blob/main/skills/agent-swarm/references/compose.md) before starting. API: http://localhost:3013, with `/docs` and `/openapi.json`.
+Next, open the [dashboard](https://app.agent-swarm.dev) and connect it to your API with `API_KEY`. A new install lands on `/setup`, a guided first run that covers providers, agents, memory, integrations, and a first task.
+Kubernetes: [install the OCI Helm chart](https://github.com/desplega-ai/agent-swarm/blob/main/charts/agent-swarm/README.md).
+
+## Integrations
+
+Slack · GitHub · GitLab · Azure DevOps · Linear · Jira · AgentMail · WhatsApp (Kapso) · Telegram, Teams and Discord ([Chat SDK](https://docs.agent-swarm.dev/docs/integrations/chat-sdk)) · Composio · Sentry · Devin · [Serply search](https://docs.agent-swarm.dev/docs/integrations/serply). [Integration guides](https://docs.agent-swarm.dev/docs/integrations).
+
+AgentMail archives verified inbound deliveries before acknowledging them and retains the archive for 30 days, including mail excluded from task routing. See the [contact inbox triage runbook](https://github.com/desplega-ai/agent-swarm/blob/main/runbooks/contact-inbox-triage.md) for retention, coverage limits, and rollout instructions.
+
+## Learn more
+
+- [Getting started](https://docs.agent-swarm.dev/docs/getting-started) · [Architecture](https://docs.agent-swarm.dev/docs/architecture/overview) · [Playbooks](https://docs.agent-swarm.dev/docs/playbooks) · [CLI](https://docs.agent-swarm.dev/docs/reference/cli) · [API reference](https://docs.agent-swarm.dev/docs/api-reference)
+- [Orchestration patterns](https://github.com/desplega-ai/agent-swarm/blob/main/docs/orchestration-patterns.md) — Five patterns for delegating, fanning out, gating on humans, retrying, and persisting multi-step agent work
+- [Agent templates](https://templates.agent-swarm.dev)
+- [Public ranking](https://docs.agent-swarm.dev/docs/reference/telemetry#public-ranking): opt in with **Get ranked** (Settings → Configuration → Branding) to rank your install by tokens used on [agent-swarm.dev/ranking](https://agent-swarm.dev/ranking). It shows at the next hourly refresh. Token totals are public and exact; telemetry, the organization name and website must be set.
+- Help: [contact@desplega.sh](mailto:contact@desplega.sh) · [Discord](https://discord.gg/KZgfyyDVZa)
+
+## Contributing
+
+Read [CONTRIBUTING.md](https://github.com/desplega-ai/agent-swarm/blob/main/CONTRIBUTING.md), fork the repository, create a branch, and open a PR. Discuss ideas on [Discord](https://discord.gg/KZgfyyDVZa).
+> Are you an agent? Run `npx skills add desplega-ai/agent-swarm` or read the [operator skill](https://github.com/desplega-ai/agent-swarm/blob/main/skills/agent-swarm/SKILL.md).
+
+## Star History
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://api.desplega.agent-swarm.dev/p/e3473addceb348c0bed6cb93bd5aa532" /> <source media="(prefers-color-scheme: light)" srcset="https://api.desplega.agent-swarm.dev/p/4b5cdc17c45e4a63845fb0a71ed9609c" /> <img alt="Star History Chart" src="https://api.desplega.agent-swarm.dev/p/4b5cdc17c45e4a63845fb0a71ed9609c" /></picture>
+
+## License
+
+[MIT](https://github.com/desplega-ai/agent-swarm/blob/main/LICENSE) · 2025-2026 [desplega.sh](https://desplega.sh)
+
+### Feature defaults
+
+Fresh deployments enable Slack thread renderer v2, queued Slack steering to the lead,
+task steering, multi-runtime workers, RBAC, and task-tool preloading. Hybrid memory
+search and graph expansion are also enabled. Explicit environment/config overrides
+remain supported; see the [environment reference](https://docs.agent-swarm.dev/docs/reference/environment-variables).
+When upgrading older workers, keep `MULTI_RUNTIME_ENABLED=false` until they support
+runtime identities. Slack delegation rendering remains opt-in, and database retention
+continues to default to dry-run.

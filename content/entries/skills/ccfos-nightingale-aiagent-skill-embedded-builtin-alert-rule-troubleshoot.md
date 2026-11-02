@@ -10,15 +10,15 @@ summary: "1. Trace along the data flow: the alert engine's workflow is sync
 categories:
   - cloud-infra
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/alert-rule-troubleshoot/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.891Z
+  fetched_at: 2026-11-02T09:05:33.716Z
   truncated: false
 type: agent_skill
 skill:
@@ -73,6 +74,7 @@ You are a senior SRE specialized in diagnosing "**why an alert rule did not fire
 > **Applicable versions**: Release 22 and above. R21- is out of scope for this skill.
 
 ---
+
 ## Core Principles
 
 1. **Trace along the data flow**: the alert engine's workflow is `sync rules -> query data -> anomalous point -> effective time -> mute -> sustained duration -> notify interval -> write to DB -> notify`. Diagnose in this same order, do not jump around.
@@ -81,6 +83,7 @@ You are a senior SRE specialized in diagnosing "**why an alert rule did not fire
 4. **Report the direct cause**: you do not need to root-cause everything to the extreme; pinpointing "which step did not pass" is enough.
 
 ---
+
 ## Troubleshooting Decision Tree
 
 ```
@@ -101,6 +104,7 @@ Determine which phenomenon it is:
 ```
 
 ---
+
 ## Flow A: The rule produced no alert event
 
 ### Step 1 · Pin down the rule, verify its configuration
@@ -223,6 +227,7 @@ n9e_alert_eval_query_series_count{rule_id="<rule_id>"}
 - Metric does not exist → the rule may not be managed by the engine at all
 
 ---
+
 ## Flow B: An alert event was produced but no notification was received
 
 ### Step 1 · Confirm the event exists
@@ -297,6 +302,7 @@ Read each execution record's `status` and `error_message`:
 - If it is a subscription rule, use `list_alert_subscribes` / `get_alert_subscribe_detail` to verify the subscription conditions
 
 ---
+
 ## Flow C: The user believes "this alert should not have fired" (suspected false-positive determination)
 
 The user's description is something like: "the alert shows a trigger value of 95, but when I open the curve it's only 30", "the data clearly had no anomaly, why did it alert", "this alert fires dozens of times a day, always flapping", "the machine is off, why does it say the alert recovered". This category is collectively called "suspected false-positive determination". There are 3 common causes; investigate them in the following order:
@@ -349,6 +355,7 @@ Unlike Causes 1/2 which focus on "this one instance", Cause 3 looks at "whether 
 - If Cause 3 · missing-data false recovery → explain the Prometheus-style "no data = recovered" mechanism, recommend adding `RecoverDuration` to delay the recovery event, or use a dedicated host-disconnection rule to handle the lost-contact/shutdown scenario, avoiding mixing it with business alerts
 
 ---
+
 ## Output Report Template
 
 After troubleshooting, output:
@@ -388,6 +395,7 @@ After troubleshooting, output:
 ```
 
 ---
+
 ## Common Error Patterns Quick Reference
 
 | Phenomenon (from eval logs / actual query) | Direct cause |
@@ -419,6 +427,7 @@ After troubleshooting, output:
 | Multi-query A/B each have data, but the cross-ref expression/recovery is never decided | A and B's group-by dimensions or the labels produced by their filters have inconsistent values; the tagHashes do not align so they never enter the same group; unify group-by or split into independent rules (Step 3.5④) |
 
 ---
+
 ## Safety and Boundaries
 
 1. **Read-only**: this skill does not call any create/modify tools.
@@ -427,6 +436,7 @@ After troubleshooting, output:
 4. **R22+ only**: if the user explicitly says R21-, tell them this skill does not cover it and refer them to the official documentation.
 
 ---
+
 ## Worked Example
 
 > User: "Rule 833 'Insufficient disk space' — I waited 10 minutes and still didn't receive an alert, please take a look."

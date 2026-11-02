@@ -14,27 +14,28 @@ tags:
   - embodied-ai
   - esp32
 status: active
-quality_percentile: 79
+quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: huangjunsen0406/py-xiaozhi
   official_vendor: false
   license: MIT
 signals:
-  stars: 3528
-  last_commit: 2026-09-11T02:20:50Z
+  stars: 3539
+  last_commit: 2026-10-31T15:29:40Z
   stars_delta_7d: 11
   stars_growth_pct: 0.3
   trending_score: 11.03
-  rank_current: 114
+  rank_current: 120
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3492
     - 3517
     - 3528
+    - 3539
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: huangjunsen0406/py-xiaozhi
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:00.845Z
+  fetched_at: 2026-11-02T09:05:36.731Z
   truncated: false
 type: agent_tool
 tool:
@@ -56,9 +57,9 @@ tool:
     transport: stdio
     command: uvx
     args:
-      - py-xiaozhi
+      - --from
     env_vars: []
-    confidence: manifest
+    confidence: readme
 ---
 
 # py-xiaozhi
@@ -105,6 +106,7 @@ English | [简体中文](https://github.com/huangjunsen0406/py-xiaozhi/blob/main
 Thanks to GitDo.net for sponsoring this project! GitDo.net is an AI API aggregation platform — one API Key for **Claude, Gemini, GPT** and other major models. Direct connection, no proxy needed, stable and efficient. An ideal choice for enterprise-grade AI programming. **[Visit GitDo.net](https://gitdo.net/)**
 
 ---
+
 |                                                                     |                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [**Token能量站**](https://factory.pub/register?aff=3rXc)            | Thanks to Token能量站 (Factory.pub) for sponsoring this project! Providing API relay for **GPT, Grok, Claude** and other major models — stable, reliable, and affordable. **[Register here](https://factory.pub/register?aff=3rXc)**        |
@@ -265,6 +267,38 @@ python main.py --mode cli
 python main.py --protocol websocket  # WebSocket (default)
 python main.py --protocol mqtt       # MQTT protocol
 ```
+
+### Entry points and verification
+
+Source checkouts, installed wheels and frozen builds share `src.cli.main(argv=None)`.
+Importing the launcher does not parse arguments, initialize configuration/logging,
+or load Qt/audio. `--help` and invalid arguments exit before runtime initialization.
+
+```bash
+# Installed command (GUI still needs the gui extra)
+xiaozhi --mode cli
+# Equivalent module entry point
+python -m src --mode cli
+
+# Full regression suite, including Qt model tests without a display
+uv run --extra gui --extra tui python -m pytest -q -W error::RuntimeWarning
+
+# Build sdist, then build the wheel from that sdist
+uvx --from build pyproject-build
+# Install the wheel into a temporary venv outside the checkout and verify it
+python scripts/check_wheel.py dist/*.whl
+```
+
+The wheel contains assets, wake-word models and the supplied native libraries under
+`src/_resources`; source and PyInstaller layouts keep their existing resource paths.
+FFmpeg is resolved from the system PATH for wheel installs. The wheel check installs
+only `platformdirs` alongside the wheel to verify entry points and resources; it does
+not exercise audio hardware, GUI rendering or the full runtime dependency set.
+
+PRs and branch pushes run Python tests on 3.10/3.12 and installed-wheel checks on
+Linux, macOS and Windows. Lint gates critical syntax/undefined-name rules across the
+project and all configured rules for the new entry-point/verification code. Existing
+style warnings elsewhere remain a separate cleanup task.
 
 ### Core Development Patterns
 

@@ -2,7 +2,10 @@
 slug: pacifio-atlas-vendor-atlas-engine-skills-src-assets-samples-plugin-creator
 name: plugin-creator
 tagline: Agent skill from pacifio/atlas
-summary: Agent skill from pacifio/atlas
+summary: "--- name: plugin-creator description: Create and scaffold plugin
+  directories for Atlas Agent with a required .atlasengine-plugin/plugin.json,
+  optional plugin folders/files, valid manifest defaults, and
+  personal-market..."
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +17,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: pacifio/atlas
@@ -22,16 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9543
-  last_commit: 2026-10-26T07:24:31Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 9561
+  last_commit: 2026-11-02T05:01:45Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.2
+  trending_score: 18.03
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9593
     - 9622
     - 9543
+    - 9561
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +43,7 @@ readme_source:
   repo: pacifio/atlas
   path: vendor/atlas-engine/skills/src/assets/samples/plugin-creator/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:54.543Z
+  fetched_at: 2026-11-02T09:06:31.061Z
   truncated: false
 type: agent_skill
 skill:
@@ -66,9 +70,12 @@ skill:
 ---
 
 <!-- Modified by Atlas from upstream OpenAI Codex (Apache-2.0). See CONTEXT.md. -->
----name: plugin-creator
+---
+name: plugin-creator
 description: Create and scaffold plugin directories for Atlas Agent with a required `.atlas_engine-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Atlas Agent needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.
----# Plugin Creator
+---
+
+# Plugin Creator
 
 ## Quick Start
 

@@ -14,27 +14,28 @@ tags:
   - document-ai
   - generative-ai
 status: active
-quality_percentile: 69
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Zipstack/unstract
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 7298
-  last_commit: 2026-10-26T07:27:35Z
-  stars_delta_7d: 15
-  stars_growth_pct: 0.2
-  trending_score: 15.03
-  rank_current: 107
+  stars: 7396
+  last_commit: 2026-11-02T08:54:10Z
+  stars_delta_7d: 98
+  stars_growth_pct: 1.3
+  trending_score: 99.32
+  rank_current: 60
+  rank_delta: 46
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7275
     - 7283
     - 7298
+    - 7396
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: Zipstack/unstract
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.948Z
+  fetched_at: 2026-11-02T09:05:35.073Z
   truncated: false
 type: agent_tool
 tool:
@@ -51,14 +52,7 @@ tool:
   install_command: pip install unstract
   runtime: python
   execution_mode: local
-  has_mcp_support: true
-  mcp_launch:
-    transport: stdio
-    command: uvx
-    args:
-      - unstract
-    env_vars: []
-    confidence: manifest
+  has_mcp_support: false
 ---
 
 <div align="center">
@@ -75,7 +69,7 @@ tool:
     <a href="https://status.unstract.com"><img src="https://img.shields.io/badge/uptime-status-brightgreen" alt="Uptime Status"></a>
     <a href="https://hub.docker.com/u/unstract"><img src="https://img.shields.io/docker/pulls/unstract/backend" alt="Docker Pulls"></a>
     <a href="https://deepwiki.com/Zipstack/unstract"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-    <a href="https://cla-assistant.io/Zipstack/unstract"><img src="https://cla-assistant.io/readme/badge/Zipstack/unstract" alt="CLA assistant"></a>
+    <a href="https://gist.github.com/arun-venkataswamy/0dec44b8e5155c43461caf62c38ddac3"><img src="https://img.shields.io/badge/CLA-required-blue" alt="CLA required"></a>
   </p>
   <p>
     <img src="https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2FZipstack%2Funstract%2Frefs%2Fheads%2Fmain%2Fpyproject.toml" alt="Python Version from PEP 621 TOML">
@@ -337,6 +331,7 @@ Unstract integrates Posthog to track minimal usage analytics. Disable by setting
 Unstract is released under the [AGPL-3.0 License](https://github.com/Zipstack/unstract/blob/main/LICENSE).
 
 ---
+
 <div align="center">
   <p>Built with ❤️ by <a href="https://zipstack.com">Zipstack</a></p>
   <p>

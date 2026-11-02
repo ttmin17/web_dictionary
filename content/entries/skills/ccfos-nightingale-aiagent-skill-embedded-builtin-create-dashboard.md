@@ -10,15 +10,15 @@ summary: "When the same component often has both categraf and exporter
 categories:
   - cloud-infra
 tags:
+  - aiops
   - alerting
   - alertmanager
   - clickhouse
-  - golang
 status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13390
-  last_commit: 2026-10-22T09:22:55Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.2
-  trending_score: 25.05
+  stars: 13426
+  last_commit: 2026-11-01T13:19:24Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.3
+  trending_score: 36.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
+    - 13426
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/create-dashboard/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:36:56.892Z
+  fetched_at: 2026-11-02T09:05:33.717Z
   truncated: false
 type: agent_skill
 skill:
@@ -86,6 +87,7 @@ When the same component often has both categraf and exporter templates, **prefer
    c. If there are multiple candidates and none is the default, **do not blindly take the first one**; list them in your reply and let the user confirm
 
 ---
+
 ## Path A: Import an integration template (preferred)
 
 `import_dashboard_template` reads the complete template under `integrations/` (preserving layout, thresholds, units, overrides, and value mappings in full), and automatically rewrites the template's datasource binding onto the Prometheus datasource you chose.
@@ -120,6 +122,7 @@ When the same component often has both categraf and exporter templates, **prefer
 - When it returns `Name duplicate`, **do not** call `list_dashboards`; just change the name (add a `-v2`, `-AI`, or timestamp suffix) and retry
 
 ---
+
 ## Path B: Custom creation (when there is no template)
 
 Use `create_dashboard`. **You only need to provide the panel title, type, and PromQL**; the tool automatically generates the full configuration (layout, datasource variables, styling, units, etc., are all handled automatically).
@@ -203,6 +206,7 @@ Panels are arranged automatically from left to right and top to bottom, with sam
 - When it returns `Name duplicate`, just change the name and retry; do not call `list_dashboards`
 
 ---
+
 ## Step 3 (common to both paths): Output the result
 
 **Keep it short**. A one-sentence confirmation is enough, for example:

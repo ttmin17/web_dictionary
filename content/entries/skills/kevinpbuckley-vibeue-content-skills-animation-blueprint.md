@@ -16,10 +16,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -27,18 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 788
-  last_commit: 2026-10-24T02:30:54Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.9
-  trending_score: 7.06
-  rank_current: 129
-  rank_delta: -40
+  stars: 804
+  last_commit: 2026-11-01T01:15:39Z
+  stars_delta_7d: 16
+  stars_growth_pct: 2
+  trending_score: 16.32
+  rank_current: 122
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
     - 788
+    - 804
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +47,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/animation-blueprint/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:38:54.120Z
+  fetched_at: 2026-11-02T09:06:01.687Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,7 +60,7 @@ skill:
   folder_path: Content/Skills/animation-blueprint
   extra_files:
     - scripts/build_state_machine.txt
-  pack_total_skills: 39
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code
@@ -157,6 +158,7 @@ unreal.AnimGraphService.open_anim_state(path, "state controller", "in air loop")
 ```
 
 ---
+
 ## Workflows
 
 ### Create Animation Blueprint
@@ -282,6 +284,7 @@ idle_transitions = unreal.AnimGraphService.get_state_transitions(abp_path, machi
 ```
 
 ---
+
 ## Authoring State Machines (build / edit)
 
 ### ⭐ Fastest path: declarative `build_state_machine`
@@ -364,6 +367,7 @@ Treat any `errors` as a build failure. The most common error is an **inert trans
 (a transition with no rule) — fix it with one of the `set_transition_rule_*` calls.
 
 ---
+
 ### Find Used Animation Sequences
 
 ```python
@@ -391,6 +395,7 @@ unreal.AnimGraphService.focus_node(abp_path, node_id)
 ```
 
 ---
+
 ## Data Structures
 
 > **Python Naming Convention**: C++ types like `FAnimStateMachineInfo` are exposed as `AnimStateMachineInfo` in Python (no `F` prefix).
@@ -444,6 +449,7 @@ Returned by `validate_state_machine()`.
 | `warnings` | [string] | Non-blocking issues (unreachable states, states with no animation) |
 
 ---
+
 ## Driving bones directly — skeletal controls, no state machine
 
 Not every AnimBP is a state machine. A spinning rotor, a windmill sail, a turret yaw, a rudder that

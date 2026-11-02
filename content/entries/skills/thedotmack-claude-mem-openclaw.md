@@ -16,7 +16,7 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 103202
-  last_commit: 2026-10-25T21:00:05Z
-  stars_delta_7d: 1527
-  stars_growth_pct: 1.5
-  trending_score: 1549.93
+  stars: 109995
+  last_commit: 2026-11-02T08:57:22Z
+  stars_delta_7d: 6793
+  stars_growth_pct: 6.6
+  trending_score: 7240.13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 97519
     - 100334
     - 101675
     - 103202
+    - 109995
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: openclaw/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:14.400Z
+  fetched_at: 2026-11-02T09:06:10.113Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,15 +52,15 @@ skill:
   extra_files:
     - .gitignore
     - .npmignore
-    - Dockerfile.e2e
-    - TESTING.md
-    - e2e-verify.sh
     - install.sh
     - openclaw.plugin.json
     - package.json
     - skills/agent-cost-report/.gitignore
     - skills/agent-cost-report/CHECKSUMS.txt
-  pack_total_skills: 33
+    - skills/agent-cost-report/SKILL.md
+    - skills/agent-cost-report/scripts/acr.py
+    - skills/agent-cost-report/scripts/acr/__init__.py
+  pack_total_skills: 17
   is_pack_primary: false
   clients:
     - claude-code
@@ -105,6 +105,7 @@ curl -fsSL https://install.cmem.ai/openclaw.sh | bash -s -- --upgrade
 After installation, skip to [Step 4: Restart the Gateway and Verify](#step-4-restart-the-gateway-and-verify) to confirm everything is working.
 
 ---
+
 ## Manual Setup
 
 The steps below are for manual installation if you prefer not to use the automated installer, or need to troubleshoot individual steps.
@@ -214,6 +215,7 @@ Add the `claude-mem` plugin to your OpenClaw gateway configuration:
 - **`workerPort`** (number, default: `37777`) — The port where the claude-mem worker service is listening. Only change this if you configured the worker to use a different port.
 
 ---
+
 ## Step 4: Restart the Gateway and Verify
 
 Restart your OpenClaw gateway so it picks up the new plugin configuration. After restart, check the gateway logs for:

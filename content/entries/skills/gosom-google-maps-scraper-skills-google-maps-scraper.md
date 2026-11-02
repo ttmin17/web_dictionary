@@ -1,8 +1,12 @@
 ---
 slug: gosom-google-maps-scraper-skills-google-maps-scraper
 name: google-maps-scraper
-tagline: Agent skill from gosom/google-maps-scraper
-summary: Agent skill from gosom/google-maps-scraper
+tagline: Find businesses, leads, emails, reviews, ratings, and contact details
+  from Google Maps. Use for requests such as "find dentists in Berlin", "scrape
+  Go
+summary: Resolve the directory containing this file as SKILLDIR. Run bundled
+  scripts from that directory; do not assume the current directory is the
+  repository checkout.
 categories:
   - browser-web
 tags:
@@ -11,10 +15,10 @@ tags:
   - codex-skills
   - distributed-scraper
 status: active
-quality_percentile: 76
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2023-04-22T14:35:13
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: gosom/google-maps-scraper
@@ -22,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6859
+  stars: 7171
   last_commit: 2026-10-21T10:24:36Z
-  stars_delta_7d: 287
-  stars_growth_pct: 4.4
-  trending_score: 299.53
-  rank_current: 50
-  rank_delta: 4
+  stars_delta_7d: 312
+  stars_growth_pct: 4.5
+  trending_score: 326.19
+  rank_current: 49
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6309
     - 6406
     - 6572
     - 6859
+    - 7171
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +46,17 @@ readme_source:
   repo: gosom/google-maps-scraper
   path: skills/google-maps-scraper/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.731Z
+  fetched_at: 2026-11-02T09:06:42.663Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: google-maps-scraper
-  description: Agent skill from gosom/google-maps-scraper
+  description: >
+    Find businesses, leads, emails, reviews, ratings, and contact details from
+    Google Maps. Use for requests such as "find dentists in Berlin", "scrape
+    Google Maps", "get local business leads", or "collect Google Maps reviews".
+    Runs the open-source scraper locally with Docker and guides nontechnical
+    users through setup, monitoring, and results.
   folder_path: skills/google-maps-scraper
   extra_files:
     - references/advanced-coverage.md

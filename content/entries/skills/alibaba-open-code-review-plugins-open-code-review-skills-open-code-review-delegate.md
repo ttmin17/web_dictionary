@@ -1,8 +1,12 @@
 ---
 slug: alibaba-open-code-review-plugins-open-code-review-skills-open-code-review-delegate
 name: delegate
-tagline: Agent skill from alibaba/open-code-review
-summary: Agent skill from alibaba/open-code-review
+tagline: Delegation mode for open-code-review (OCR). Instead of OCR calling an
+  LLM endpoint, this skill instructs the host agent to perform the code review
+  its
+summary: A skill for performing AI code review where OCR provides deterministic
+  engineering (file filtering, rule resolution) and the host agent performs the
+  actual review using its own intelligence and tools.
 categories:
   - coding-agents
 tags:
@@ -11,10 +15,10 @@ tags:
   - code-review-assistant
   - harness
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-05-18T02:16:36
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alibaba/open-code-review
@@ -22,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 48292
-  last_commit: 2026-10-22T04:24:26Z
-  stars_delta_7d: 673
-  stars_growth_pct: 1.4
-  trending_score: 682.51
-  rank_current: 34
-  rank_delta: -11
+  stars: 49270
+  last_commit: 2026-11-01T20:39:07Z
+  stars_delta_7d: 978
+  stars_growth_pct: 2
+  trending_score: 997.81
+  rank_current: 30
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 44194
     - 46827
     - 47619
     - 48292
+    - 49270
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +46,17 @@ readme_source:
   repo: alibaba/open-code-review
   path: plugins/open-code-review/skills/open-code-review-delegate/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:09.149Z
+  fetched_at: 2026-11-02T09:06:38.886Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: delegate
-  description: Agent skill from alibaba/open-code-review
+  description: >
+    Delegation mode for open-code-review (OCR). Instead of OCR calling an LLM
+    endpoint, this skill instructs the host agent to perform the code review
+    itself, using OCR only for deterministic engineering: file selection and
+    rule resolution. Use when the host agent should drive the review with its
+    own LLM capabilities.
   folder_path: plugins/open-code-review/skills/open-code-review-delegate
   extra_files: []
   pack_total_skills: 2

@@ -4,9 +4,7 @@ name: codeburn
 tagline: "Free, local tool to track AI coding token usage and cost across 37
   tools and agents (Claude Code, Cursor, Codex, Gemini and more), by model,
   project, "
-summary: Free, local tool to track AI coding token usage and cost across 37
-  tools and agents (Claude Code, Cursor, Codex, Gemini and more), by model,
-  project, and task. npx codeburn
+summary: See where your AI spend goes.
 categories:
   - coding-agents
 tags:
@@ -15,29 +13,29 @@ tags:
   - cli
   - codex
 status: active
-quality_percentile: 65
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-04-13T22:11:53
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: getagentseal/codeburn
   official_vendor: false
   license: MIT
 signals:
-  stars: 11578
-  last_commit: 2026-10-26T02:59:49Z
-  stars_delta_7d: 67
+  stars: 11650
+  last_commit: 2026-11-01T16:19:19Z
+  stars_delta_7d: 72
   stars_growth_pct: 0.6
-  trending_score: 67.39
-  rank_current: 69
-  rank_delta: -44
+  trending_score: 72.45
+  rank_current: 29
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11350
     - 11426
     - 11511
     - 11578
+    - 11650
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +44,7 @@ readme_source:
   repo: getagentseal/codeburn
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:43:49.373Z
+  fetched_at: 2026-11-02T09:06:26.311Z
   truncated: false
 type: mcp_server
 launch:
@@ -209,6 +207,14 @@ Setup for all three platforms, including WSL, is in [Menu bar and tray](https://
 
 ## Inside your agent
 
+In Claude Code, install the plugin. It sets up the MCP server below and adds `/codeburn:cost`, which summarizes today's spend:
+
+```
+/plugin install codeburn --marketplace getagentseal/codeburn
+```
+
+Or register only the MCP server:
+
 ```bash
 claude mcp add codeburn -- npx -y codeburn mcp
 ```
@@ -284,6 +290,8 @@ CodeBurn reads files that are already on your disk. There is no account, no API 
 Your prompts, your code and your project names stay on your computer. CodeBurn does not sit between you and your agent, so if it stopped working tomorrow your tools would not notice.
 
 Prices come from [LiteLLM](https://github.com/BerriAI/litellm) and refresh once a day.
+
+Everything that does leave your machine is listed in [Privacy](https://codeburn.app/docs/privacy).
 
 ## Built in the open
 

@@ -1,8 +1,12 @@
 ---
 slug: ljagiello-ctf-skills-ctf-crypto
 name: ctf-crypto
-tagline: Agent skill from ljagiello/ctf-skills
-summary: Agent skill from ljagiello/ctf-skills
+tagline: Provides cryptography attack techniques for CTF challenges. Use when
+  attacking encryption, hashing, signatures, ZKP, PRNG, or mathematical crypto
+  prob
+summary: "Manual install: - SageMath (optional — only for legacy Sage fallback
+  snippets (collapsed sections)) — Linux: apt install sagemath, macOS: brew
+  install --cask sage - RsaCtfTool — git clone https://github.com/RsaCtfTool..."
 categories:
   - security-auth
 tags:
@@ -11,10 +15,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 52
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -22,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3530
-  last_commit: 2026-10-23T15:17:59Z
-  stars_delta_7d: 55
-  stars_growth_pct: 1.6
-  trending_score: 55.87
+  stars: 3601
+  last_commit: 2026-10-30T16:48:55Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2
+  trending_score: 72.43
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3437
     - 3475
     - 3530
+    - 3601
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +44,16 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-crypto/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:56.560Z
+  fetched_at: 2026-11-02T09:06:52.136Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ctf-crypto
-  description: Agent skill from ljagiello/ctf-skills
+  description: Provides cryptography attack techniques for CTF challenges. Use
+    when attacking encryption, hashing, signatures, ZKP, PRNG, or mathematical
+    crypto problems involving RSA, AES, ECC, lattices, LWE, CVP, number theory,
+    Coppersmith, Pollard, Wiener, padding oracle, GCM, key derivation, or
+    stream/block cipher weaknesses.
   folder_path: ctf-crypto
   extra_files:
     - advanced-math.md
@@ -117,7 +126,9 @@ brew install hashcat
 - [exotic-crypto.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-crypto/exotic-crypto.md) - Exotic algebraic structures (braid group DH / Alexander polynomial, monotone function inversion, tropical semiring residuation, Paillier cryptosystem, Hamming code helical interleaving, ElGamal universal re-encryption, FPE Feistel brute-force, icosahedral symmetry group cipher, Goldwasser-Micali replication oracle)
 - [exotic-crypto-2.md](https://github.com/ljagiello/ctf-skills/blob/main/ctf-crypto/exotic-crypto-2.md) - Exotic algebraic structures (Part 2, 2017+): BB-84 QKD MITM, ElGamal trivial DLP (B=p-1), Paillier LSB oracle via homomorphic doubling, differential privacy noise cancellation, homomorphic encryption bit-extraction, ElGamal over matrices via Jordan normal form, OSS signature forgery via Pollard, Cayley-Purser decryption without private key, BIP39 partial mnemonic checksum brute force, Asmuth-Bloom CRT threshold recovery, Rabin with polynomial primes, LCG period detection, Vandermonde polynomial coefficient recovery
 
----## When to Pivot
+---
+
+## When to Pivot
 
 - If the real blocker is understanding a binary, obfuscated client, or weird VM, switch to `/ctf-reverse`.
 - If the challenge is mostly packet carving, disk recovery, or stego extraction before any decryption starts, switch to `/ctf-forensics`.

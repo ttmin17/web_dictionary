@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/copywriting/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.290Z
+  fetched_at: 2026-11-02T09:06:13.823Z
   truncated: false
 type: agent_skill
 skill:
@@ -69,7 +70,7 @@ skill:
     - references/ai-tells.md
     - references/copy-frameworks.md
     - references/natural-transitions.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -110,6 +111,7 @@ Gather this context (ask if not provided):
 - What do visitors already know before arriving?
 
 ---
+
 ## Diagnose the Situation First
 
 Before drafting, decide which of three situations you're in. Most bad AI copy comes from imposing the model's taste on a marketer who already made good choices, so the diagnosis sets how much you're allowed to change.
@@ -148,10 +150,11 @@ Three passes, keep it. Two, sharpen the weak one. One or none, rewrite it from t
 *Diagnosis, the three-question gate, and decompose-and-lock adapted from Profound's `improved-copywriting` skill ([skills-marketing-library](https://github.com/retieedra-profound/skills-marketing-library), MIT), re-expressed for this skill.*
 
 ---
+
 ## Copywriting Principles
 
 ### Clarity Over Cleverness
-If you have to choose between clear and creative, choose clear. Clarity also converts. Clearer positioning and copy is associated with +81% conversions, a 38% shorter sales cycle, 28% lower CAC, and 175% more referrals. When a reader has to decode your line, you've lost them.
+If you have to choose between clear and creative, choose clear. Clarity also converts. Founding Marketing (Ch. 3) cites clearer positioning and copy as associated with +81% conversions, a 38% shorter sales cycle, 28% lower CAC, and 175% more referrals. When a reader has to decode your line, you've lost them.
 
 **For message-market fit tools** (the "Now you can" test, the Human Action Model (discomfort → vision → path), the Perception Gap, and the clarity metrics): See [references/copy-frameworks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/references/copy-frameworks.md#clarity--message-market-fit)
 
@@ -178,6 +181,7 @@ A declined claim with an unlock path is an action item for the client;
 without one it's a dead end.
 
 ---
+
 ## Writing Style Rules
 
 ### Core Principles
@@ -201,6 +205,7 @@ without one it's a dead end.
 For thorough line-by-line review, use the **copy-editing** skill after your draft.
 
 ---
+
 ## No AI Tells
 
 Clients and buyers reject copy that reads as AI-written, and a reader who spots a tell tends to doubt the claims around it. Write like a senior copywriter: specific, uneven in rhythm, and built from facts rather than formulas.
@@ -229,6 +234,7 @@ Before handing over any draft, run the self-check in [references/ai-tells.md](ht
 Removing tells leaves copy clean but flat. For a full rewrite, build a writer first (who's writing, what they know cold, what they'd cut, what they think) and check for second-generation tells such as wisdom-shaped sentences and tidy closers. See [references/ai-tells.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/references/ai-tells.md#build-a-writer).
 
 ---
+
 ## Best Practices
 
 ### Be Direct
@@ -252,6 +258,7 @@ Analogies make abstract concepts concrete and memorable.
 Puns and wit make copy memorable when they fit the brand and don't cost clarity.
 
 ---
+
 ## Page Structure Framework
 
 ### Above the Fold
@@ -296,6 +303,7 @@ Puns and wit make copy memorable when they fit the brand and don't cost clarity.
 **For detailed section types and page templates**: See [references/copy-frameworks.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/references/copy-frameworks.md)
 
 ---
+
 ## CTA Copy Guidelines
 
 **Weak CTAs (avoid):**
@@ -316,6 +324,7 @@ Examples:
 - "See Pricing for My Team"
 
 ---
+
 ## Page-Specific Guidance
 
 ### Homepage
@@ -344,6 +353,7 @@ Examples:
 - Still include a CTA
 
 ---
+
 ## Voice and Tone
 
 Before writing, establish:
@@ -364,6 +374,7 @@ Maintain consistency, but adjust intensity:
 - CTAs should be action-oriented
 
 ---
+
 ## Output Format
 
 For a point edit (Situation C), return only the changed lines with a one-line reason each. Skip the annotations and alternatives below unless asked.
@@ -391,6 +402,7 @@ For headlines and CTAs, provide 2-3 options:
 - Meta description
 
 ---
+
 ## Related Skills
 
 - **copy-editing**: For polishing existing copy (use after your draft)

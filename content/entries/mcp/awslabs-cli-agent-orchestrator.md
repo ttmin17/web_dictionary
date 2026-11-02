@@ -14,29 +14,29 @@ tags:
   - ai-coding-assistant
   - antigravity
 status: active
-quality_percentile: 86
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: awslabs/cli-agent-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1473
-  last_commit: 2026-10-26T06:54:46Z
-  stars_delta_7d: 22
-  stars_growth_pct: 1.5
-  trending_score: 22.33
-  rank_current: 60
-  rank_delta: -29
+  stars: 1501
+  last_commit: 2026-11-02T08:54:15Z
+  stars_delta_7d: 28
+  stars_growth_pct: 1.9
+  trending_score: 28.53
+  rank_current: 55
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1394
     - 1418
     - 1451
     - 1473
+    - 1501
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: awslabs/cli-agent-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:13.375Z
+  fetched_at: 2026-11-02T09:05:52.820Z
   truncated: false
 type: mcp_server
 launch:
@@ -103,7 +103,7 @@ See [CODEBASE.md](https://github.com/awslabs/cli-agent-orchestrator/blob/main/CO
 
 Install:
 
-- Python 3.10 or later
+- Python 3.11 or later
 - tmux 3.3 or later
 - [uv](https://docs.astral.sh/uv/)
 - At least one supported provider CLI, authenticated before you launch CAO:
@@ -201,6 +201,9 @@ provider override while keeping the same sequence.
   parallel AI-DLC intents across repositories and isolated worktrees.
 - [Cross-zone robot transport](https://github.com/awslabs/cli-agent-orchestrator/blob/main/examples/robotics/cross-zone-transport/README.md):
   coordinate simulated transport, measured custody handoffs, and independent checks.
+- [Hierarchical robot factory](https://github.com/awslabs/cli-agent-orchestrator/blob/main/examples/robotics/hierarchical-factory/README.md):
+  a supervisor and three team-manager agents run nine Open Duck Mini robots on a
+  simulated make, assemble, and ship line, and balance its bottleneck.
 - [Self-hosted decision model](https://github.com/awslabs/cli-agent-orchestrator/blob/main/examples/decision-model-host/README.md): run the open
   JevK5-4B decision model locally or on AWS (CDK), behind a loopback-only `/v1/systemone` API.
 - [Tool restrictions](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/tool-restrictions.md): roles, allowlists, and

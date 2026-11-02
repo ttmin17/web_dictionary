@@ -1,8 +1,12 @@
 ---
 slug: guillaumemeyer-watermarks-remover-skills-remove-ai-marks
 name: remove-ai-marks
-tagline: Agent skill from guillaumemeyer/watermarks-remover
-summary: Agent skill from guillaumemeyer/watermarks-remover
+tagline: "Remove multi-vendor AI provenance marks: invisible Unicode (Layer A),
+  statistical text watermarks via rewrite (Layer B, always offer), and
+  C2PA/EXIF/X"
+summary: "- references/mark-classes.md — Unicode / sampling / C2PA / containers
+  - references/vendor-notes.md — Claude, Gemini/SynthID, OpenAI, open-LLM -
+  references/removal-matrix.md — which layer when - references/ethics.md —..."
 categories:
   - other
 tags:
@@ -11,10 +15,10 @@ tags:
   - chatgpt
   - claude
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: guillaumemeyer/watermarks-remover
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 24919
-  last_commit: 2026-10-25T01:36:36Z
-  stars_delta_7d: 524
-  stars_growth_pct: 2.1
-  trending_score: 535.26
+  stars: 25939
+  last_commit: 2026-11-01T13:33:56Z
+  stars_delta_7d: 1020
+  stars_growth_pct: 4.1
+  trending_score: 1061.75
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 23518
     - 23994
     - 24395
     - 24919
+    - 25939
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,20 @@ readme_source:
   repo: guillaumemeyer/watermarks-remover
   path: skills/remove-ai-marks/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:00.715Z
+  fetched_at: 2026-11-02T09:06:34.451Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: remove-ai-marks
-  description: Agent skill from guillaumemeyer/watermarks-remover
+  description: >
+    Remove multi-vendor AI provenance marks: invisible Unicode (Layer A),
+    statistical text watermarks via rewrite (Layer B, always offer), and
+    C2PA/EXIF/XMP/container metadata on
+    PNG/JPEG/WebP/SVG/PDF/DOCX/ODT/HTML/MD/TEX. Covers Claude,
+    Gemini/SynthID-class, OpenAI provenance, and open-LLM sampling marks. Use
+    when the user asks to strip watermarks, remove C2PA/Content Credentials,
+    clean AI metadata, remove invisible Unicode, anti-detect clean AI output, or
+    runs /remove-ai-marks (aliases: /remove-claude-marks).
   folder_path: skills/remove-ai-marks
   extra_files:
     - references/ethics.md
@@ -299,7 +311,8 @@ sentence boundaries and length; and replace both content words and function
 words where meaning allows. Preserve all facts, numbers, names, and technical
 identifiers. Do not add or remove claims. Output only the rewritten text.
 
----{TEXT}
+---
+{TEXT}
 ```
 
 **Humanize (write like a human):**
@@ -311,7 +324,8 @@ filler with concrete natural phrasing, and use plain, varied wording. Preserve
 all facts, numbers, names, and technical identifiers. Do not add or remove
 claims. Output only the rewritten text.
 
----{TEXT}
+---
+{TEXT}
 ```
 
 **Code (comments / docstrings / identifiers):**
@@ -323,7 +337,8 @@ parameters, and private helper names to semantically equivalent names. Preserve
 program behavior, public API names, and all values that affect output. Output
 only the rewritten code.
 
----{TEXT}
+---
+{TEXT}
 ```
 
 **Back-translate (two steps):**

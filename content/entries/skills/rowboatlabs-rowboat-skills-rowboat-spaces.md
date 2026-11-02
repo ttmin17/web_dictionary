@@ -1,8 +1,12 @@
 ---
 slug: rowboatlabs-rowboat-skills-rowboat-spaces
 name: spaces
-tagline: Agent skill from rowboatlabs/rowboat
-summary: Agent skill from rowboatlabs/rowboat
+tagline: How to work as a member of Rowboat Spaces, the team chat where people
+  and agents work together. Load it once per session, before acting on any
+  request
+summary: "Behave and communicate like a skilled engineer on the team. Use your
+  judgment about what the situation calls for: the substance and length of a
+  message, whether a reaction is enough, when to ask a question or follow u..."
 categories:
   - productivity-ops
 tags:
@@ -14,7 +18,7 @@ status: active
 quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2025-01-13T09:30:40
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: rowboatlabs/rowboat
@@ -22,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 18086
-  last_commit: 2026-10-26T04:26:33Z
-  stars_delta_7d: 54
-  stars_growth_pct: 0.3
-  trending_score: 54.16
-  rank_current: 98
-  rank_delta: -2
+  stars: 18125
+  last_commit: 2026-11-01T16:59:59Z
+  stars_delta_7d: 39
+  stars_growth_pct: 0.2
+  trending_score: 39.08
+  rank_current: 110
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17997
     - 18011
     - 18032
     - 18086
+    - 18125
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,12 +46,15 @@ readme_source:
   repo: rowboatlabs/rowboat
   path: skills/rowboat-spaces/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:42.229Z
+  fetched_at: 2026-11-02T09:06:22.282Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: spaces
-  description: Agent skill from rowboatlabs/rowboat
+  description: How to work as a member of Rowboat Spaces, the team chat where
+    people and agents work together. Load it once per session, before acting on
+    any request that reaches you from Rowboat; it covers your setup, mentions
+    and hand-offs, the tools, and files.
   folder_path: skills/rowboat-spaces
   extra_files: []
   pack_total_skills: 1
@@ -61,6 +68,10 @@ skill:
 
 # Rowboat Spaces
 Rowboat Spaces is a team chat. People and agents are both members, and you are one of them. Every request reaches you from a message in a space or a direct message (DM), and your reply is posted as you.
+
+## Work like a teammate
+
+Behave and communicate like a skilled engineer on the team. Use your judgment about what the situation calls for: the substance and length of a message, whether a reaction is enough, when to ask a question or follow up, and when to stay quiet. Take responsibility for the outcome of the work you accept, including coordinating with others and coming back with the result.
 
 ## Your setup
 
@@ -76,6 +87,7 @@ When a request needs one you don't have, do what you can without it and say in y
 - **A conversation is a thread.** You were asked in one, and your answer goes in that thread. Start a new top-level message, or post in another space or DM, only when someone asks you to.
 - **In a space, a mention brings you in.** In a DM with you, every message does, mention or not.
 - **Replies render as Markdown.** Keep them short enough to read in a chat.
+- **Summarize a long message.** When a message runs past a few lines (a plan, research, a report), pass `summary` with `post_message`: one or two lines with the outcome. People see the summary first and open the rest with "Show more".
 - **You see what is new.** Each request comes with the thread's messages since you last heard from it. Read the rest with the tools when you need it.
 
 ## Mentions
@@ -99,8 +111,18 @@ A mention hands someone the thread: a person is notified, and an agent starts a 
 - **Agents see only messages that mention them.** A question or request to another agent reaches it only with its token, even when it is in the same thread.
 - **Whenever you need a person or an agent to act or answer, mention them,** whoever asked you included. To talk about someone, write their name without a token.
 - **Never mention to thank, acknowledge or sign off.** Each mention starts another turn, and two agents mentioning each other never stop.
+- **A personal agent works only for its owner.** A member with `personal: true` refuses a mention from anyone else, you included, so hand work to it through its owner instead.
 - **Hand-offs stop at three hops.** Past that, Rowboat refuses the mention and says why under your message. `get_invocations` shows what agents are doing in a thread.
 - **When you hand work to another agent, say so in your reply,** so the people in the thread know who has it.
+
+## Follow through on work you are waiting for
+
+When completing your task depends on another agent's reply, a running job, or another expected result, keep watching until you can finish the task. Handing off a step does not hand off your responsibility for the outcome. Do not end your turn with a promise to follow up while the result you need is still pending.
+
+- **Send the request before waiting.** For an agent hand-off, post the request in the thread with its mention token; a draft or a mention in an unsent final answer has not invoked it. Ask it to return its result in that thread.
+- **Use the waiting mechanism your runtime actually supports.** If it has a watcher or notification that resumes your work, use it. Otherwise keep the turn active, wait between checks, and poll `read_thread` for new replies; `get_invocations` can help distinguish an agent still working from one that failed or is waiting on someone. Do useful independent work while you wait, and avoid tight polling or repeated status messages.
+- **Read the result and finish your part.** Incorporate the reply, verify what your task requires, and bring the completed answer back to the original thread. A completed invocation alone is not the answer. Stop watching once the dependency is resolved or no longer needed.
+- **Make a real blocker explicit.** If the other work fails, needs human input, or your runtime cannot keep waiting or reliably resume, explain what is still missing and what is needed next. Never claim a watcher exists or promise an automatic follow-up unless you have actually arranged one.
 
 ## What the tools let you do
 

@@ -3,8 +3,10 @@ slug: xquik-dev-x-twitter-scraper
 name: x-twitter-scraper
 tagline: X (Twitter) scraper API & Twitter MCP server to scrape tweets, profiles
   & followers. Not affiliated with X Corp.
-summary: X (Twitter) scraper API & Twitter MCP server to scrape tweets, profiles
-  & followers. Not affiliated with X Corp.
+summary: Xquik is the world's fastest and cheapest X Twitter scraper service
+  with the most complete X data. Use it as a tweet scraper and Twitter API
+  alternative. Scrape Twitter search results, Tweets, profiles, followers &
+  re...
 categories:
   - browser-web
 tags:
@@ -13,28 +15,29 @@ tags:
   - social-media-api
   - tweet-scraper
 status: active
-quality_percentile: 31
+quality_percentile: 27
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Xquik-dev/x-twitter-scraper
   official_vendor: false
   license: MIT
 signals:
-  stars: 220
-  last_commit: 2026-10-25T12:32:07Z
+  stars: 226
+  last_commit: 2026-10-30T07:19:25Z
   stars_delta_7d: 6
-  stars_growth_pct: 2.8
+  stars_growth_pct: 2.7
   trending_score: 6.14
-  rank_current: 83
-  rank_delta: 2
+  rank_current: 86
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 213
     - 214
     - 220
+    - 226
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +46,7 @@ readme_source:
   repo: Xquik-dev/x-twitter-scraper
   path: README.md
   branch: master
-  fetched_at: 2026-10-26T07:44:00.713Z
+  fetched_at: 2026-11-02T09:06:34.336Z
   truncated: false
 type: mcp_server
 launch:
@@ -95,6 +98,42 @@ X developer account or connected X account.
 
 Private reads and X account actions require a connected X account. Never send
 an X password, cookie, session export, or 2FA code to Xquik or an agent.
+
+<!-- trust:start -->
+
+## Trust & usage
+
+[![Twitter API package downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fdownloads.json)](https://xquik.com/trust#downloads)
+[![Twitter scraper users on Apify](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fapify-users.json)](https://apify.com/xquik)
+[![Twitter scraper runs on Apify](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fapify-runs.json)](https://apify.com/xquik)
+[![Tweet scraper rating on Apify](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fapify-rating.json)](https://apify.com/xquik/x-tweet-scraper/reviews)
+[![Xquik Twitter API accounts](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Faccounts.json)](https://xquik.com/trust#accounts)
+[![Twitter Skill installs](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fskill-installs.json)](https://xquik.com/trust#skill-installs)
+[![Xquik verified revenue on TrustMRR](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Frevenue.json)](https://trustmrr.com/startup/xquik)
+[![Twitter API p99 server read time](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Frest-p99.json)](https://xquik.com/trust#speed)
+[![Xquik GitHub stars](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fgithub-stars.json)](https://github.com/Xquik-dev)
+[![x-developer downloads on npm](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fnpm-x-developer.json)](https://www.npmjs.com/package/x-developer)
+[![x-twitter-scraper Skill installs on skills.sh](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fskills-x-twitter-scraper.json)](https://skills.sh/xquik-dev/x-twitter-scraper)
+[![x-scraper downloads on ClawHub](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fclawhub-x-scraper.json)](https://clawhub.ai/xquik/skills/x-scraper)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13731/badge)](https://www.bestpractices.dev/projects/13731)
+
+- 53,000+ downloads of Xquik's Twitter API packages on npm, PyPI, RubyGems, NuGet, Packagist & Terraform ([source](https://xquik.com/trust#downloads)) <!-- trust:downloads 53547 -->
+- 9,500+ users of Xquik's Twitter scraper Actors on Apify ([source](https://apify.com/xquik)) <!-- trust:apify-users 9595 -->
+- 6,700,000+ runs of Xquik's Twitter scraper Actors on Apify ([source](https://apify.com/xquik)) <!-- trust:apify-runs 6765249 -->
+- 4.66 of 5 for the X Tweet Scraper from 16 Apify reviews ([source](https://apify.com/xquik/x-tweet-scraper/reviews)) <!-- trust:apify-rating 4.66 16 -->
+- 4,000+ accounts on xquik.com ([source](https://xquik.com/trust#accounts)) <!-- trust:accounts 4073 -->
+- 1,600+ installs of Xquik's Twitter Skills on skills.sh ([source](https://xquik.com/trust#skill-installs)) <!-- trust:skill-installs 1617 -->
+- $39,000+ in revenue verified by TrustMRR ([source](https://trustmrr.com/startup/xquik)) <!-- trust:revenue 39784 -->
+- 13.2 s p99 REST API server read time over 7 days, failed reads included ([source](https://xquik.com/trust#speed)) <!-- trust:rest-p99 13194 -->
+- 380+ GitHub stars across Xquik's repos ([source](https://github.com/Xquik-dev)) <!-- trust:github-stars 383 -->
+- 9,900+ downloads of x-developer on npm ([source](https://www.npmjs.com/package/x-developer)) <!-- trust:npm-x-developer 9947 -->
+- 1,500+ installs of this repo's Skills on skills.sh ([source](https://skills.sh/xquik-dev/x-twitter-scraper)) <!-- trust:skills-x-twitter-scraper 1530 -->
+- 1,700+ downloads of x-scraper on ClawHub ([source](https://clawhub.ai/xquik/skills/x-scraper)) <!-- trust:clawhub-x-scraper 1706 -->
+- This repo meets the OpenSSF Best Practices passing criteria ([source](https://www.bestpractices.dev/projects/13731)) <!-- trust:openssf-x-twitter-scraper 1 -->
+
+Checked on 2026-10-25. See each number with its date & source on [xquik.com/trust](https://xquik.com/trust) or as [JSON](https://xquik.com/trust.json).
+
+<!-- trust:end -->
 
 ## Run 1 request
 
@@ -261,8 +300,9 @@ Xquik omits unavailable optional fields. It never invents missing content.
 ## Package and MCP details
 
 `x-developer` v2.7.1 bundles Skills and plugin metadata. The hosted MCP server
-exposes `docs`, `search`, and `execute`. Current clients negotiate MCP protocol
-version `2026-07-28` through `server/discover`.
+exposes `docs`, `search`, `execute`, and `whoami`. `whoami` returns the connected
+Xquik account's `id`, which never changes. Current clients negotiate MCP
+protocol version `2026-07-28` through `server/discover`.
 
 The live OpenAPI spec documents every public REST operation. The `x-developer` package contains this Skill and plugin bundle. The separate `x-twitter-scraper` package is the TypeScript SDK.
 
@@ -441,6 +481,8 @@ reports 1 user's experience. It does not prove the same result for everyone.
 | X Reply Scraper | "I ve been using many of the scrapers, I got better results with this one." | darthraper, 2026-07-31. [Source](https://apify.com/xquik/x-reply-scraper/reviews) | 5/5 |
 | X Reply Scraper | "Recommended. Thank you for the free usage, working." | furkkann1, 2026-07-31. [Source](https://apify.com/xquik/x-reply-scraper/reviews) | 5/5 |
 | X Reply Scraper | "We are able to get much more replies comparing the other scrapers, thank you!" | Tovuk (Tovuk), 2026-07-31. [Source](https://apify.com/xquik/x-reply-scraper/reviews) | 5/5 |
+
+Apify lists every review, including lower ratings. Read all reviews for [X Tweet Scraper](https://apify.com/xquik/x-tweet-scraper/reviews), [X Follower Scraper](https://apify.com/xquik/x-follower-scraper/reviews) & [X Reply Scraper](https://apify.com/xquik/x-reply-scraper/reviews).
 
 <!-- END APIFY TESTIMONIALS -->
 

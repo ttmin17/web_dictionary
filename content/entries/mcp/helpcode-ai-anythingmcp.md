@@ -1,41 +1,41 @@
 ---
 slug: helpcode-ai-anythingmcp
 name: anythingmcp
-tagline: "MCP gateway for AI agents: turn any REST/OpenAPI, GraphQL, SOAP or SQL
-  API into MCP tools. 547 ready-made connectors (SAP, ERP, e-commerce) with
-  RBAC,"
-summary: "AnythingMCP: self-hosted MCP gateway"
+tagline: "Self-hosted MCP gateway and company brain for AI agents: connect
+  Claude, ChatGPT and Copilot to your ERP, APIs, databases and file servers,
+  with compa"
+summary: "AnythingMCP: the open-source MCP gateway that becomes your company brain"
 categories:
   - agent-frameworks
 tags:
-  - agents
-  - ai-agents
-  - ai-gateway
-  - api-gateway
+  - ai-memory
+  - claude
+  - code-execution
+  - company-brain
 status: active
-quality_percentile: 53
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-02-28T12:01:26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: HelpCode-ai/anythingmcp
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 746
-  last_commit: 2026-10-26T07:33:24Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 116
-  rank_delta: -76
+  stars: 771
+  last_commit: 2026-11-02T09:00:20Z
+  stars_delta_7d: 25
+  stars_growth_pct: 3.4
+  trending_score: 25.84
+  rank_current: 58
+  rank_delta: 51
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 990
     - 736
     - 760
     - 746
+    - 771
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: HelpCode-ai/anythingmcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:48.555Z
+  fetched_at: 2026-11-02T09:05:57.598Z
   truncated: false
 type: mcp_server
 launch:
@@ -56,10 +56,10 @@ launch:
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HelpCode-ai/anythingmcp/badges/banner.png" alt="AnythingMCP turns ERP, e-commerce, REST, SOAP and SQL systems into MCP tools for Claude and ChatGPT: 547 connectors, 25 of them with no API key." width="100%" />
+  <img src="https://raw.githubusercontent.com/HelpCode-ai/anythingmcp/badges/banner.png" alt="AnythingMCP connects Claude, ChatGPT, Copilot and Gemini to ERP, e-commerce, REST, SOAP and SQL systems and to your file servers: 691 connectors, plus company memory, skills and file search." width="100%" />
 </p>
 
-<h1 align="center">AnythingMCP: self-hosted MCP gateway</h1>
+<h1 align="center">AnythingMCP: the open-source MCP gateway that becomes your company brain</h1>
 
 <p align="center">
   <a href="https://www.star-history.com/helpcode-ai/anythingmcp">
@@ -75,8 +75,9 @@ launch:
 </p>
 
 <p align="center">
-  <strong>AnythingMCP is an open-source, self-hosted MCP gateway that turns any REST/OpenAPI, SOAP, GraphQL, OData or SQL system into MCP tools for Claude, ChatGPT and Copilot, without writing an MCP server.</strong><br/>
-  It ships 547 ready connectors, among them SAP, Etsy, weclapp and Amazon Seller, and 26 of them need no API key.
+  <strong>AnythingMCP is an open-source, self-hosted MCP gateway that connects Claude, ChatGPT, Copilot and Gemini to the software your company runs and to the documents on your file servers, without writing an MCP server.</strong><br/>
+  On top of the gateway it keeps your company brain: a knowledge graph of how your systems connect, AI skills and company memory, shared by every AI client and limited by each user's role.<br/>
+  691 ready connectors with 12,000+ tools, among them SAP, Odoo, weclapp and Amazon Seller; 34 need no API key.
 </p>
 
 <p align="center">
@@ -88,6 +89,10 @@ launch:
 </p>
 
 <p align="center">
+  <strong>16,000+ workspaces on AnythingMCP Cloud</strong> · <strong>1.5M+ AI tool calls a month</strong> · <strong>listed in the official Claude directory</strong>
+</p>
+
+<p align="center">
   <a href="https://cloud.anythingmcp.com/login?mode=register"><strong>Try the Cloud free for 7 days</strong></a> · <a href="https://claude.ai/directory/anythingmcp">Add to Claude</a> · <a href="#run-it-yourself">Run it yourself</a> · <a href="https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/guides.md">Docs</a> · <a href="https://anythingmcp.com/guides">Connector guides</a> · <a href="https://github.com/HelpCode-ai/anythingmcp/discussions">Discussions</a>
 </p>
 
@@ -96,6 +101,26 @@ launch:
 https://github.com/user-attachments/assets/cc8c9ef3-11cf-4eab-aa4d-98472dc554b3
 
 ---
+
+## What your AI gets
+
+A gateway forwards calls. A company brain also knows where your documents are, how your systems connect and what your company has already decided. AnythingMCP gives every AI client both, through one MCP endpoint:
+
+| | What it does | Edition |
+|---|---|---|
+| **Every system, one endpoint** | 691 catalog connectors, or your own REST/OpenAPI, SOAP, GraphQL, OData, SQL, IMAP/SMTP or MCP source. Tools register at runtime. [Connectors](#connect-any-api-soap-service-or-database) | All |
+| **File Search** | Indexes SFTP, FTP/FTPS, WebDAV (Nextcloud, NAS), S3 or a network share: every PDF page, Excel rows with their column names, Word, PowerPoint, Outlook mails with attachments. The AI answers with file, page and date. [File Search](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/file-search.md) | Cloud, paid licence |
+| **File Share** | Temporary download links for files from your folders, or for files the AI writes (a CSV export, a report), internal or public, with expiry and revoke. [File Share](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/file-search.md) | Cloud, paid licence |
+| **Company memory** | Facts and preferences saved from one AI client and found again in any other: said once in Claude, used by Copilot. Personal and company scopes, with folders and role limits. [Memory](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/memory.md) | Enterprise |
+| **AI skills** | The procedures your agents follow, written by hand or learned from real requests and fixed errors, approved by an admin. [AI skills](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/knowledge-graph.md#ai-skills) | All |
+| **Knowledge graph** | How your systems connect, so the agent links a customer in one system to their orders in another without being told. [Knowledge Graph](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/knowledge-graph.md) | All |
+| **Code Mode** | One short program that calls several tools in an isolated sandbox with no secrets and no network, so a five-step lookup becomes one call. [Code Mode](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/code-mode.md) | All; write access Enterprise |
+| **Governance** | Roles and per-tool permissions, response mapping that drops fields before they reach the model, an audit log of every call. SSO and SCIM from your directory. [Security](#security-and-governance) | All; SSO/SCIM Enterprise |
+
+The self-hosted Community edition is free for up to 3 active users. Paid licences and the 30-day trial are under **Settings → License**; for Enterprise, write to [info@helpcode.ai](mailto:info@helpcode.ai) or see [anythingmcp.com/enterprise](https://anythingmcp.com/enterprise).
+
+---
+
 ## Run it yourself
 
 Requires Docker 24+ and `openssl`; on macOS, start Docker Desktop first. No clone needed:
@@ -121,7 +146,7 @@ The quickstart binds to `127.0.0.1` on purpose, because nothing in front of it t
 
 <br/>
 
-[**AnythingMCP Cloud**](https://cloud.anythingmcp.com) is the same AGPL code, operated by us in **Frankfurt, Germany**, with a 7-day free trial. Start there to try it on your own APIs, and move it in-house when you want the credentials to stop travelling; the connectors are the same either way. DPA/AVV on request via [info@helpcode.ai](mailto:info@helpcode.ai). SSO and SCIM are self-hosted only.
+[**AnythingMCP Cloud**](https://cloud.anythingmcp.com) is the same AGPL code, operated by us in **Frankfurt, Germany**, with a 7-day free trial. Start there to try it on your own APIs, and move it in-house when you want the credentials to stop travelling; the connectors are the same either way. DPA/AVV on request via [info@helpcode.ai](mailto:info@helpcode.ai). SSO and SCIM are self-hosted only, with an Enterprise licence.
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/8-X4WD?referralCode=k30bPV&utm_medium=integration&utm_source=template&utm_campaign=generic)
 &nbsp;
@@ -130,6 +155,7 @@ The quickstart binds to `127.0.0.1` on purpose, because nothing in front of it t
 </details>
 
 ---
+
 ## How it works
 
 1. **Add a connector.** Install an **adapter** from the catalog (a ready JSON definition for SAP, Odoo, DHL and the rest), or point AnythingMCP at your own OpenAPI spec, WSDL, GraphQL endpoint, Postman collection or database. Once configured in your workspace it is a **connector**, and each of its operations is an MCP tool.
@@ -137,6 +163,7 @@ The quickstart binds to `127.0.0.1` on purpose, because nothing in front of it t
 3. **Hand one URL to your AI client.** An **MCP server** is the endpoint you add to Claude, ChatGPT, Copilot, Gemini or Cursor. It exposes the connectors you assign to it, and nothing else.
 
 ---
+
 ## Connect any API, SOAP service or database
 
 Most companies have no MCP servers yet. They have a REST API, an ERP, a SOAP service from 2009 and a database. Each of them becomes a set of MCP tools:
@@ -149,14 +176,16 @@ Most companies have no MCP servers yet. They have a REST API, an ERP, a SOAP ser
 | **GraphQL** | Introspection turns queries and mutations into tools, or you define the operations yourself | [GraphQL](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/graphql.md) · [guide](https://anythingmcp.com/guides/graphql-to-mcp) |
 | **OData** (SAP Gateway included) | Reads each service's `$metadata`, so the model sees entity sets, keys and SAP's business labels; V2 and V4 | [OData](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/odata.md) · [guide](https://anythingmcp.com/guides/odata-to-mcp) |
 | **SQL and MongoDB** | PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, SAP HANA, SQLite and MongoDB: schema, example and query tools, read-only by default | [Database](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/database.md) · [SAP HANA](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/sap-hana.md) · [guide](https://anythingmcp.com/guides/database-to-mcp) · [demo: sql-to-mcp](https://github.com/HelpCode-ai/sql-to-mcp) |
+| **Email (IMAP/SMTP)** | Any mailbox (IONOS, Strato, GMX, T-Online, Gmail with an app password, your own mail server): list folders, search, read with attachments, flag, move, save drafts and send | [Email](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/email.md) |
 | **Another MCP server** | Discover its tools and serve them next to your own, behind the same auth and audit | [MCP bridge](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/mcp-bridge.md) |
 
 Tools register at runtime, without a restart. Per-connector `{{VAR}}` values are interpolated on the server and never shown to the AI.
 
 ---
+
 ## Connector catalog
 
-547 adapters, exposing 2,400+ tools. Every one has a setup guide on [anythingmcp.com/guides](https://anythingmcp.com/guides), in seven languages.
+691 adapters, exposing 12,000+ tools. Every one has a setup guide on [anythingmcp.com/guides](https://anythingmcp.com/guides), in seven languages.
 
 | Category | Examples |
 |---|---|
@@ -234,15 +263,16 @@ Tools register at runtime, without a restart. Per-connector `{{VAR}}` values are
 **An adapter is a single JSON file.** That is why the catalog is this size, and why adding one is a reasonable first contribution. Missing yours? [Request it](https://github.com/HelpCode-ai/anythingmcp/issues/new?template=adapter_request.yml) (we prioritise by 👍) or [build it](https://github.com/HelpCode-ai/anythingmcp/blob/main/.github/CONTRIBUTING.md). Your ERP isn't listed, or it's a custom build? Connect its REST API, its SOAP services or its SQL database directly, read-only.
 
 ---
+
 ## Security and governance
 
-Everything runs on your infrastructure, so you decide what leaves it. OAuth2, RBAC, SSO and SCIM are in the self-hosted build, not held back for a paid tier.
+Everything runs on your infrastructure, so you decide what leaves it. OAuth2, roles, per-tool permissions, response mapping and the audit log are in every edition; SSO and SCIM need an Enterprise licence (a 30-day trial is built in).
 
 - **Response mapping.** Each tool declares exactly which fields reach the model: drop a customer's IBAN or an employee's salary, or name the fields to keep. The editor shows the before/after on a real response; a shipped adapter goes from 12,172 B to 1,072 B (−91%), so you also stop paying for those fields in the context window. A broken mapping returns the raw response by default; set `"fallbackToRaw": false` on tools whose fields must never travel, and the call fails instead.
 - **Read-only where it matters.** Every tool carries MCP annotations (`readOnlyHint`, `destructiveHint`), derived from the operation and overridable per tool. Role-based tool whitelisting lets you publish an MCP server that can only read, which is how most people should start with an ERP. Database query tools run a single SELECT and block writes and stacked statements.
 - **Every auth scheme you will meet.** OAuth2 (PKCE and Client Credentials), Bearer, API key, Basic, HMAC request signing, [LOGIN_TOKEN](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/login-token-auth.md) and OAuth 1.0a. Credentials are encrypted at rest with AES-256-GCM.
 - **Audit log.** Every tool call is recorded with input, output, duration and status in your own database, including the full upstream response the model never saw.
-- **[SSO](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/sso.md) and [SCIM](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/scim-entra-setup.md).** Entra ID, Google, Okta, Auth0 or any OIDC provider. Roles sync from your directory groups on every sign-in; disable someone in the directory and their workspace access and MCP API keys go with it.
+- **[SSO](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/sso.md) and [SCIM](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/scim-entra-setup.md)** (Enterprise). Entra ID, Google, Okta, Auth0 or any OIDC provider. Roles sync from your directory groups on every sign-in; disable someone in the directory and their workspace access and MCP API keys go with it.
 
 ```json
 {
@@ -258,6 +288,7 @@ Everything runs on your infrastructure, so you decide what leaves it. OAuth2, RB
 [Response mapping reference](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/tool-definition.md#3-response-mapping-optional)
 
 ---
+
 ## Use it from Claude, ChatGPT, Copilot and Gemini
 
 The same MCP server works in every client that speaks MCP, so you build a connector once:
@@ -268,21 +299,27 @@ The same MCP server works in every client that speaks MCP, so you build a connec
 - **Copilot, Gemini, Cursor** and other MCP clients: [client setup guides](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/guides.md).
 
 ---
-## Knowledge Graph and AI skills
+
+## Company brain: knowledge graph, AI skills and memory
 
 Forwarding calls leaves the hard part to the agent: knowing which tool to call next, and what your business means by "open order". AnythingMCP learns both and hands them back as context, not as extra tool calls.
 
 - **Knowledge Graph.** A per-workspace map of entities (customers, orders, products) and how they relate across connectors, built from tool definitions and real calls, and editable by hand. It stores field names and relationships, never values. Each server exposes it through a `kg_how_to_obtain` tool, so the agent can ask how to get from a Shopware order to a DHL tracking number.
-- **AI skills.** Recurring usage turned into small rules ("today's revenue includes order statuses 2, 3 and 4") that you apply, edit or dismiss, and that are composed into the server's instructions.
+- **AI skills.** Recurring usage turned into small rules ("today's revenue includes order statuses 2, 3 and 4") and step-by-step procedures, written by hand or learned from real requests and fixed errors, versioned, and approved by an admin before they are composed into the server's instructions.
+- **Company memory** (Enterprise). AI clients save facts, preferences and notes with `memory_save` and find them again with `memory_search`, in any client connected to the workspace. *My memory* stays private to one user; *company memory* ("STAMMKUNDE means a customer with a framework agreement") is for everyone, in folders limited by role. It is served as information written by people, never as instructions. [Memory guide](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/memory.md)
+
+Change the assistant, keep the brain: Copilot today, Claude tomorrow, an n8n agent tonight all find the same graph, skills and memory.
 
 The AI passes are off by default and use your own OpenAI, OpenRouter or Anthropic key; the graph, the editor and the MCP tool work without one. [Knowledge Graph guide](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/knowledge-graph.md)
 
 ---
+
 ## Where it fits
 
 Most MCP gateways federate and secure MCP servers you already have. AnythingMCP starts one step earlier: it creates the MCP servers from the APIs, ERPs and databases you already run, then serves, scopes and audits them behind one endpoint. If your tools are already MCP servers and all you need is federation, a pure gateway may be enough. Side-by-side comparisons: [anythingmcp.com/vs](https://anythingmcp.com/vs).
 
 ---
+
 ## FAQ
 
 ### What is an MCP gateway?
@@ -300,10 +337,23 @@ Yes. AnythingMCP parses the WSDL, turns each operation into a tool and builds th
 ### Can Claude query my SQL Server, Oracle or PostgreSQL database safely?
 Query tools are read-only by default. On top of that, use a database user with SELECT rights only, prefer static queries where the model supplies just the parameters, and whitelist the tools per role. Response mapping drops the columns that must not reach the model, and every query lands in your audit log.
 
+### How do I let Claude or ChatGPT search the documents on our file server?
+Add a **File Search** connector and point it at the folder over SFTP, FTP/FTPS, WebDAV (Nextcloud, ownCloud, Synology or QNAP NAS), S3 or a mounted network share. AnythingMCP indexes PDFs page by page, Excel rows with their column names, Word, PowerPoint and Outlook mails, keeps the index in sync, and gives every AI client `search`, `find`, `grep` and `read` tools that answer with file, page and date. Folder permissions per role are available on Enterprise. [File Search docs](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/connectors/file-search.md)
+
+### Can ChatGPT, Claude and Copilot share the same company memory?
+Yes. With workspace memory (Enterprise), anything saved from one AI client is found by the others, because the memory lives in AnythingMCP, not in the client. Personal items stay private to their author; company items are shared within folder and role limits. [Memory docs](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/memory.md)
+
+### What is a company brain for AI agents?
+The knowledge an AI needs beyond tool access: where your documents are, how your systems link (the knowledge graph), how your company works (AI skills) and what it has decided (company memory). AnythingMCP keeps all of it in your own instance and serves it to every MCP client within each user's role.
+
+### Can an AI agent run code against my tools safely?
+With Code Mode, a short JavaScript program calls several tools in one step. It runs in a separate code-runner container with no filesystem, network, environment or secrets; it can only call the tools the user may already use, and every inner call is governed and audited like a direct one. It is off until an operator enables it. [Code Mode docs](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/code-mode.md)
+
 ### How do I connect Shopware, WooCommerce or Amazon Seller Central to Claude?
 Install the [e-commerce adapter](#e-commerce--marketplace-connectors) for your shop or marketplace and authorise it. WooCommerce comes with 49 tools, Amazon Seller Central uses the official Selling Partner API, and the Shopware 6 adapter reads the storefront catalog through the Store API.
 
 ---
+
 ## Community and support
 
 **In production at [KOCH Freiburg GmbH](https://www.kochfreiburg.de/)**, where it connects AI assistants to 15+ internal systems: ERP, CRM, SOAP services and on-prem databases. [helpcode.ai](https://helpcode.ai) extracted it from that system and open-sourced it, because an adapter catalog grows faster as a community than as a product.
@@ -313,6 +363,7 @@ Install the [e-commerce adapter](#e-commerce--marketplace-connectors) for your s
 - 👥 **Adopters:** [who runs AnythingMCP in production](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/ADOPTERS.md), and how to add yourself
 - 🔐 **Security:** please do not open a public issue; follow the [security policy](https://github.com/HelpCode-ai/anythingmcp/blob/main/.github/SECURITY.md)
 - 🤖 **For AI agents and crawlers:** [anythingmcp.com/llms.txt](https://anythingmcp.com/llms.txt)
+- 🤖 **Repository documentation for AI agents:** [llms.txt](https://github.com/HelpCode-ai/anythingmcp/blob/main/llms.txt) · [Full text](https://github.com/HelpCode-ai/anythingmcp/blob/main/llms-full.txt)
 - 🏢 Built by [helpcode.ai](https://helpcode.ai) in Freiburg, Germany. AI-assisted development, human-reviewed: [AUTHORS.md](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/AUTHORS.md) says which parts and how.
 
 ## Contributing
@@ -321,4 +372,4 @@ Read the [Contributing guide](https://github.com/HelpCode-ai/anythingmcp/blob/ma
 
 ## License
 
-**Open source** under the [GNU Affero General Public License v3](https://github.com/HelpCode-ai/anythingmcp/blob/main/LICENSE) (AGPL-3.0-only). Commercial use inside your own company is included and always was; the copyleft obligation only starts if you modify AnythingMCP and offer the modified version to others over a network. Cloud-operator code under `ee/` is separately licensed and is not required for self-hosting; see the [License FAQ](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/license-faq.md).
+**Open source** under the [GNU Affero General Public License v3](https://github.com/HelpCode-ai/anythingmcp/blob/main/LICENSE) (AGPL-3.0-only). Commercial use inside your own company is included and always was; the copyleft obligation only starts if you modify AnythingMCP and offer the modified version to others over a network. Code under `ee/` (Cloud operations, the File Search sync engine, edition licensing) is under the AnythingMCP Commercial License and is not required to run the gateway; see the [License FAQ](https://github.com/HelpCode-ai/anythingmcp/blob/main/docs/license-faq.md).

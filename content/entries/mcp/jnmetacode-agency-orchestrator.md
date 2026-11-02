@@ -13,29 +13,29 @@ tags:
   - ai-agents
   - autogen-alternative
 status: active
-quality_percentile: 54
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: jnMetaCode/agency-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2405
+  stars: 2432
   last_commit: 2026-10-22T06:14:05Z
-  stars_delta_7d: 23
-  stars_growth_pct: 1
-  trending_score: 23.22
-  rank_current: 58
-  rank_delta: -19
+  stars_delta_7d: 27
+  stars_growth_pct: 1.1
+  trending_score: 27.3
+  rank_current: 56
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2330
     - 2356
     - 2382
     - 2405
+    - 2432
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: jnMetaCode/agency-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:02.930Z
+  fetched_at: 2026-11-02T09:05:40.716Z
   truncated: false
 type: mcp_server
 launch:
@@ -81,6 +81,7 @@ launch:
 </p>
 
 ---
+
 ## ❤️ 赞助商 &nbsp;<sub>🙏 想出现在这里？联系 **jnMetaCode@qq.com** 赞助</sub>
 
 <table>
@@ -99,6 +100,7 @@ launch:
 </table>
 
 ---
+
 ## 网页 Studio（图形界面）
 
 不想敲命令行？本地跑一条 `ao web`，浏览器里勾选专家、运行工作流、查看产物、实时介入——全程图形界面，全中英双语。
@@ -143,6 +145,7 @@ launch:
 > 英文界面同样完整 → 见 [English README](https://github.com/jnMetaCode/agency-orchestrator/blob/main/README.en.md)。
 
 ---
+
 ## 一句话出结果
 
 也可以纯命令行——一条命令，一句话出结果：
@@ -190,6 +193,7 @@ ao compose "设计一个 SaaS 产品的定价策略" --run                   # �
 每个场景自动匹配不同的 AI 角色组合。
 
 ---
+
 ## 为什么需要 Agency Orchestrator
 
 跟一个 AI 聊天，它给你一个视角。但做任何决策，你需要产品的视角、技术的视角、财务的视角、营销的视角……

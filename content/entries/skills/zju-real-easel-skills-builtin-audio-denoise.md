@@ -1,8 +1,10 @@
 ---
 slug: zju-real-easel-skills-builtin-audio-denoise
 name: audio-denoise
-tagline: Agent skill from ZJU-REAL/Easel
-summary: Agent skill from ZJU-REAL/Easel
+tagline: 音频降噪：去除录音中的背景噪声、电流声、风噪、嗡嗡声，基于 ffmpeg 滤镜链（afftdn/highpass/lowpass）。
+  当用户说"降噪""去噪""去杂音""消除背景噪声""电流声""风噪""录音有杂音""音频降噪"时使用。 和 audio-editing
+  的区别：audio-editi
+summary: 支持格式：wav, mp3, flac, aac, m4a, mp4, mkv, mov。
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - content-generation
   - openclaw
 status: active
-quality_percentile: 89
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -22,33 +24,36 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4090
-  last_commit: 2026-10-25T06:24:22Z
-  stars_delta_7d: 246
-  stars_growth_pct: 6.4
-  trending_score: 261.74
+  stars: 4323
+  last_commit: 2026-11-02T08:18:55Z
+  stars_delta_7d: 233
+  stars_growth_pct: 5.7
+  trending_score: 246.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3567
     - 3844
     - 4090
-language: en
+    - 4323
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/audio-denoise/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:08.721Z
+  fetched_at: 2026-11-02T09:06:38.012Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: audio-denoise
-  description: Agent skill from ZJU-REAL/Easel
+  description: 音频降噪：去除录音中的背景噪声、电流声、风噪、嗡嗡声，基于 ffmpeg 滤镜链（afftdn/highpass/lowpass）。
+    当用户说"降噪""去噪""去杂音""消除背景噪声""电流声""风噪""录音有杂音""音频降噪"时使用。 和 audio-editing
+    的区别：audio-editing 做剪辑/转码/音量等通用音频操作（内置 denoise 兜底），本 SKILL 专做降噪调参。
   folder_path: skills/builtin/audio-denoise
   extra_files:
     - EASEL-META.md
-  pack_total_skills: 115
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

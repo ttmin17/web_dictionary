@@ -1,8 +1,9 @@
 ---
 slug: voltagent-voltagent-examples-with-workspace-workspace-skills-data-analysis
-name: data-analysis
-tagline: Agent skill from VoltAgent/voltagent
-summary: Agent skill from VoltAgent/voltagent
+name: Workspace Data Analyst
+tagline: Analyze CSV files in the workspace and summarize insights.
+summary: 1. Load the file and inspect headers. 2. Summarize totals, averages,
+  and outliers. 3. Provide a short insight summary and recommended next steps.
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +12,10 @@ tags:
   - ai-agents-framework
   - aiagentframework
 status: active
-quality_percentile: 85
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: VoltAgent/voltagent
@@ -22,16 +23,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10870
+  stars: 10914
   last_commit: 2026-10-15T17:38:41Z
-  stars_delta_7d: 38
+  stars_delta_7d: 44
   stars_growth_pct: 0.4
-  trending_score: 38.13
-  rank_current: 106
+  trending_score: 44.18
+  rank_current: 107
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10832
     - 10870
+    - 10914
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +42,12 @@ readme_source:
   repo: VoltAgent/voltagent
   path: examples/with-workspace/workspace/skills/data-analysis/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:39.959Z
+  fetched_at: 2026-11-02T09:07:01.652Z
   truncated: false
 type: agent_skill
 skill:
-  skill_name: data-analysis
-  description: Agent skill from VoltAgent/voltagent
+  skill_name: Workspace Data Analyst
+  description: Analyze CSV files in the workspace and summarize insights.
   folder_path: examples/with-workspace/workspace/skills/data-analysis
   extra_files:
     - assets/sample.csv
@@ -58,4 +61,8 @@ skill:
   pack_slug: voltagent-voltagent
 ---
 
-Agent skill from VoltAgent/voltagent
+When analyzing CSV data:
+
+1. Load the file and inspect headers.
+2. Summarize totals, averages, and outliers.
+3. Provide a short insight summary and recommended next steps.

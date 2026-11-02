@@ -13,29 +13,29 @@ tags:
   - computer-use
   - cowork
 status: active
-quality_percentile: 83
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2025-01-19T09:04:43
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: bytedance/UI-TARS-desktop
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 39392
+  stars: 39515
   last_commit: 2026-10-09T01:29:53Z
-  stars_delta_7d: 70
-  stars_growth_pct: 0.2
-  trending_score: 70.12
-  rank_current: 64
-  rank_delta: -36
+  stars_delta_7d: 123
+  stars_growth_pct: 0.3
+  trending_score: 123.38
+  rank_current: 54
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 39208
     - 39261
     - 39322
     - 39392
+    - 39515
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: bytedance/UI-TARS-desktop
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:35:59.971Z
+  fetched_at: 2026-11-02T09:05:22.928Z
   truncated: false
 type: agent_tool
 tool:

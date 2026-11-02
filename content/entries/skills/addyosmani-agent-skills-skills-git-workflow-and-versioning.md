@@ -14,10 +14,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 67
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 110580
-  last_commit: 2026-10-13T20:24:07Z
-  stars_delta_7d: 2262
-  stars_growth_pct: 2.1
-  trending_score: 2309.24
+  stars: 112639
+  last_commit: 2026-11-01T19:24:49Z
+  stars_delta_7d: 2059
+  stars_growth_pct: 1.9
+  trending_score: 2097.34
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 102528
     - 106053
     - 108318
     - 110580
+    - 112639
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/git-workflow-and-versioning/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:11.785Z
+  fetched_at: 2026-11-02T09:06:05.222Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,7 +53,10 @@ skill:
     work in a messy working tree into clean atomic commits, opening or reviewing
     a pull request (PR), pushing to a remote, or when you need to organize work
     across multiple parallel streams. Use when cutting a release, choosing a
-    semantic version bump, tagging, or writing a changelog.
+    semantic version bump, tagging, or writing a changelog. Use when asked to
+    write a commit message or a changelog entry for a change, or to split a
+    change into commits, even when the diff is pasted inline and the message
+    seems easy to write from it.
   folder_path: skills/git-workflow-and-versioning
   extra_files: []
   pack_total_skills: 25
@@ -277,8 +280,8 @@ Before every commit:
 # 1. Check what you're about to commit
 git diff --staged
 
-# 2. Ensure no secrets
-git diff --staged | grep -i "password\|secret\|api_key\|token"
+# 2. Ensure no secrets (lists matching file names only — any output means review them)
+git diff --staged -i -G'password|secret|api_key|token' --name-only
 
 # 3. Run tests
 npm test

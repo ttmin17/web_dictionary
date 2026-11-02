@@ -12,28 +12,29 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 54
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: ArcadeAI/arcade-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 1059
-  last_commit: 2026-10-23T22:30:00Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.5
-  trending_score: 5.02
-  rank_current: 90
-  rank_delta: -18
+  stars: 1071
+  last_commit: 2026-10-30T00:24:41Z
+  stars_delta_7d: 12
+  stars_growth_pct: 1.1
+  trending_score: 12.14
+  rank_current: 74
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1049
     - 1054
     - 1059
+    - 1071
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: ArcadeAI/arcade-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:23.801Z
+  fetched_at: 2026-11-02T09:05:56.759Z
   truncated: false
 type: mcp_server
 launch:
@@ -87,6 +88,20 @@ Use it when you need MCP tools that aren't already in the prebuilt catalog: inte
 - Vendor-neutral. Any MCP client, any LLM, any agent framework (LangChain, Mastra, Pydantic AI, CrewAI, Google ADK, OpenAI Agents).
 - `arcade evals` for testing tool-call accuracy against real LLMs.
 - `arcade deploy` for one-command hosting on Arcade Cloud.
+
+## Stateless tool elicitation
+
+MCP 2026-07-28 HTTP connections support form and URL elicitation through `tools/call`.
+Ordinary resource and prompt operations remain available; elicitation through those
+operations is deferred.
+
+Set `ARCADE_WORKER_SECRET` to the same value of at least 32 UTF-8 bytes on every
+replica that can resume a tool. Without it, continuations are process-local and
+cannot survive a restart. Short configured keys disable elicitation state signing;
+ordinary tool calls remain available. Startup logs report both configurations.
+
+Retries replay the tool. Keep input-request ordering deterministic and make side
+effects before each input request idempotent.
 
 ## Authorized tool calling
 

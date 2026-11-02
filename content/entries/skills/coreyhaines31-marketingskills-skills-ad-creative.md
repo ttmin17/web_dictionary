@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ad-creative/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.285Z
+  fetched_at: 2026-11-02T09:06:13.819Z
   truncated: false
 type: agent_skill
 skill:
@@ -75,7 +76,7 @@ skill:
     - references/imessage-video-ads.md
     - references/meta-creative-formats.md
     - references/motion-video-ads.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -123,6 +124,7 @@ Gather this context (ask if not provided):
 - Any mandatory elements? (Brand name, trademark symbols, disclaimers)
 
 ---
+
 ## How This Skill Works
 
 This skill supports four modes:
@@ -148,6 +150,7 @@ For **text-led static headlines**, select treatments by the reader's awareness s
 For deciding **which ads are worth making before making them**: synthesize three signal sources (account performance, customer language, external organic) into evidence-ranked concepts, branch the creative mix on account state (exploration vs. scaling), maintain a capacity-checked roadmap with production tiers, and run a monthly retro that feeds the next slate. The full system lives in [references/creative-roadmap.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/creative-roadmap.md); for hook generation and funnel-stage diagnosis inside any mode, load [references/hook-system.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/hook-system.md).
 
 ---
+
 ## Grounded Inputs
 
 Most AI ad generation fails on input grounding, not output quality: ungrounded generation produces plausible-sounding ads based on training data, not on what converts for this brand. For scaled production (Mode 3), maintain a durable inputs corpus:
@@ -173,6 +176,7 @@ outputs/         Dated batch folders (outputs/YYYY-MM-DD/)
 - Inputs decay: refresh `inputs/winning-ads/` as new ads scale; refresh `inputs/reviews/` and `inputs/comments/` monthly
 
 ---
+
 ## Platform Specs
 
 Platforms reject or truncate creative that exceeds these limits, so verify every piece of copy fits before delivering.
@@ -227,13 +231,14 @@ Platforms reject or truncate creative that exceeds these limits, so verify every
 For detailed specs and format variations, see [references/platform-specs.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/platform-specs.md).
 
 ---
+
 ## Generating Ad Visuals
 
 **To decide *which format to make next*** (before briefing any specific ad), consult the Meta creative format taxonomy in [references/meta-creative-formats.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/meta-creative-formats.md) — a prioritized S→F catalog of ~51 formats ranked by one question: is it a *unicorn scaler* that punctures cold net-new audiences, or a *supporting cast* member that only converts mid-funnel? Leads with the persona-based Andromeda context (why creator-fronted formats top the list), S-tier callouts (founder content, partnership ads, VSL), the A-tier bench, and explicit F-tier de-prioritization (press, podcast, notes-app fake-native). Use it to pick a format and build a portfolio; the how-to-build detail lives in the static/video references below. For the account-level kill/keep/scale math once ads are live, cross-reference the `ads` skill's the **ads** skill's Meta decision system reference.
 
 **For static ad structure**, use the template library in [references/static-ad-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/static-ad-templates.md) — layout frameworks (Us vs. Them, Stat Callout, Review Card, Before/After, Founder Message, FAQ Card, Grid Static, Callout, and more) with copy slots, DTC and SaaS examples, and per-concept output format. Each template carries a **tier (S–F)** and **funnel role** (unicorn cold-scaler vs. mid-funnel supporting cast) so you reach for the right one first. Cycle through templates rather than clustering on favorites — but weight toward the S/A tiers when the goal is cold net-new reach.
 
-**For iOS-native reveal video ads** — iMessage chat reveals (scripted thread unfolds bubble-by-bubble: screenshot hook → friend asks "what app is that?" → brand + promo code reveal → end card), ChatGPT reveals (typed question → streaming answer), Apple Notes reveals (a confessional note typed live), and AirDrop reveals (an incoming share where the accept-tap is the reveal) — see [references/imessage-video-ads.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/imessage-video-ads.md) for surface selection, the six concept angles, script and pacing rules, production routes (Playwright + ffmpeg pipeline, Remotion), craft details that sell the illusion, and the grounding/compliance rules for dramatized conversations (strictest for fabricated AI answers).
+**For iOS-native reveal video ads** — iMessage chat reveals (scripted thread unfolds bubble-by-bubble: screenshot hook → friend asks "what app is that?" → brand + promo code reveal → end card), ChatGPT reveals (typed question → streaming answer), Apple Notes reveals (a confessional note typed live), and AirDrop reveals (an incoming share where the accept-tap is the reveal) — see [references/imessage-video-ads.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/imessage-video-ads.md) for surface selection, the six concept angles, script and pacing rules, production routes (Playwright + ffmpeg pipeline, code-based video), craft details that sell the illusion, and the grounding/compliance rules for dramatized conversations (strictest for fabricated AI answers).
 
 **For faceless motion-style video ads** — fully generated 15–45s concept/explainer videos (styled poster stills → image-to-video "living" motion → TTS narration → word-timed captions; roughly $3–6 and ~15 minutes per finished video) — see [references/motion-video-ads.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/motion-video-ads.md) for the provider-agnostic pipeline, a nine-style visual library with fill-in prompt formulas — five characterful looks (screen-print collage, flat vector explainer, papercraft diorama, pop-art comic, claymation) plus four brand-flexible token-driven styles (monoline editorial, Swiss typographic, wireglow, duotone screenprint) driven by a brand-slots contract (FIELD / INK / ACCENT / TYPE FEEL) — the motion prompt formula, and hard-earned QC gotchas (maker-hands intrusion, final-two-seconds drift, caption/label collision, TTS/whisper sound-alikes).
 
@@ -244,17 +249,18 @@ For image and video generation tools, see [references/generative-tools.md](https
 - **Image generation** — Nano Banana Pro (Gemini), Flux, Ideogram for static ad images
 - **Video generation** — Veo, Kling, Runway, Seedance, Higgsfield for video ads
 - **Voice & audio** — ElevenLabs, OpenAI TTS, Cartesia for voiceovers, cloning, multilingual
-- **Code-based video** — Remotion for templated, data-driven video at scale
+- **Code-based video** — Remotion or Hyperframes for templated, data-driven video at scale
 - **Platform image specs** — Correct dimensions for every ad placement
 - **Cost comparison** — Pricing for 100+ ad variations across tools
 
-**Recommended workflow for scaled production:**
+**Workflow for scaled production:**
 1. Generate hero creative with AI tools (exploratory, high-quality)
-2. Build Remotion templates based on winning patterns
-3. Batch produce variations with Remotion using data feeds
-4. Iterate — AI for new angles, Remotion for scale
+2. Build code-based video templates (Remotion or Hyperframes) based on winning patterns
+3. Batch produce variations from data feeds
+4. Iterate — AI for new angles, templates for scale
 
 ---
+
 ## Generating Ad Copy
 
 ### Step 1: Define Your Angles
@@ -291,6 +297,7 @@ Before delivering, check every piece of creative against the platform's characte
 Present creative in a structured format that maps to the ad platform's upload requirements.
 
 ---
+
 ## Iterating from Performance Data
 
 When the user provides performance data, follow this process:
@@ -335,6 +342,7 @@ Track what was learned and what's being tested:
 ```
 
 ---
+
 ## Writing Quality Standards
 
 ### Headlines That Click
@@ -395,6 +403,7 @@ Descriptions should complement headlines, not repeat them. Use descriptions to:
 - Add urgency when genuine ("Limited to first 500 signups")
 
 ---
+
 ## Output Formats
 
 ### Standard Output
@@ -460,6 +469,7 @@ When iterating, include a summary:
 ```
 
 ---
+
 ## Batch Generation Workflow
 
 For large-scale creative production (Anthropic's growth team generates 100+ variations per cycle):
@@ -481,6 +491,7 @@ For large-scale creative production (Anthropic's growth team generates 100+ vari
 - Ensure headline/description combinations make sense together
 
 ---
+
 ## Common Mistakes
 
 - **Writing headlines that only work together** — RSA headlines get combined randomly
@@ -495,6 +506,7 @@ For large-scale creative production (Anthropic's growth team generates 100+ vari
 - **Retiring creative too early** — Allow 1,000+ impressions before judging
 
 ---
+
 ## Tool Integrations
 
 For pulling performance data and managing campaigns, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
@@ -531,6 +543,7 @@ node tools/clis/google-ads.js reports get --type ad_performance --date-range las
 > or a reporting connector such as Supermetrics or Coupler.
 
 ---
+
 ## Related Skills
 
 - **ads**: For campaign strategy, targeting, budgets, and optimization

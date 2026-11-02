@@ -14,29 +14,29 @@ tags:
   - hvac-maintenance
   - iot
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2025-05-01T20:48:50
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: IBM/AssetOpsBench
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2397
-  last_commit: 2026-10-25T02:15:42Z
-  stars_delta_7d: 32
-  stars_growth_pct: 1.4
-  trending_score: 32.43
-  rank_current: 89
-  rank_delta: -51
+  stars: 2410
+  last_commit: 2026-11-02T00:30:40Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.5
+  trending_score: 13.07
+  rank_current: 117
+  rank_delta: -29
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2330
     - 2350
     - 2365
     - 2397
+    - 2410
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: IBM/AssetOpsBench
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:10.525Z
+  fetched_at: 2026-11-02T09:05:48.776Z
   truncated: false
 type: agent_tool
 tool:
@@ -94,6 +94,7 @@ tool:
 > 🎉 **AssetOpsBench is officially accepted at KDD 2026** (Datasets & Benchmarks Track), Jeju, South Korea, alongside our hands-on tutorial *Building Reliable Industrial Agents with MCP*. See [Publications](#publications) for the full list of 2025–2026 work.
 
 ---
+
 ## At a Glance
 
 <table>
@@ -112,6 +113,7 @@ tool:
 **Now with:** simplified interface and native **MCP (Model Context Protocol)** support.
 
 ---
+
 ## Quick Start
 
 ```bash
@@ -133,6 +135,7 @@ Or jump in instantly:
 > Active development is on `main`. The codebase used for various publication venues continues to be maintained on separate branches, for example, ACL 2026 [`IndustryAssetEQA`](https://github.com/IBM/AssetOpsBench/tree/IndustryAssetEQA) and prior experimental work is maintained on [`main-0.x`](https://github.com/IBM/AssetOpsBench/tree/main-0.x).
 
 ---
+
 ## What is AssetOpsBench?
 
 AssetOpsBench is a **unified framework for developing, orchestrating, and evaluating domain-specific AI agents** in industrial asset operations and maintenance. It provides reproducible scenarios, agent tooling, and evaluation pipelines for multi-step workflows in simulated industrial environments.
@@ -169,6 +172,7 @@ The `src/` directory contains MCP servers and a plan-execute runner built on the
 
 
 ---
+
 ## Example Scenarios
 
 | Domain | Example Task |
@@ -181,6 +185,7 @@ The `src/` directory contains MCP servers and a plan-execute runner built on the
 Some tasks focus on a single domain, others are multi-step end-to-end workflows. Explore all scenarios on [Hugging Face](https://huggingface.co/datasets/ibm-research/AssetOpsBench).
 
 ---
+
 ## Leaderboards
 
 - To be revised (WIP with latest models)
@@ -193,6 +198,7 @@ Example: MetaAgent leaderboard
 ![meta_agent_leaderboard](https://github.com/user-attachments/assets/615059be-e296-40d3-90ec-97ee6cb00412)
 
 ---
+
 ## Publications
 
 **12+ contributions across 7 top venues** in 2025–2026 from the team behind AssetOpsBench.
@@ -256,6 +262,7 @@ Example: MetaAgent leaderboard
 </details>
 
 ---
+
 ## Tutorials & Technical Material
 
 📘 Hands-on guides from our team:
@@ -267,6 +274,7 @@ Example: MetaAgent leaderboard
 - [**AssetOpsBench Technical Material**](https://github.com/IBM/AssetOpsBench/blob/main/docs/tutorial/AssetOpsBench_Technical_Material.pdf)
 
 ---
+
 ## AI Competitions
 
 AssetOpsBench powers public AI agent competitions that bring together researchers, students, and practitioners worldwide.
@@ -290,6 +298,7 @@ Launched in September 2025 at CODS 2025, the competition evaluated multi-agent s
 - 👥 **365 participants** · **500+ agent submissions**
 
 ---
+
 ## Talks & Events
 
 | Date | Event |
@@ -302,6 +311,7 @@ Launched in September 2025 at CODS 2025, the competition evaluated multi-agent s
 | 2025-06-01 | AssetOpsBench v1.0 released — 141 industrial scenarios |
 
 ---
+
 ## University Projects & Extensions
 
 AssetOpsBench is being extended by university research groups exploring new asset classes, evaluation paradigms, and agentic architectures. **To list your project, open a PR.**
@@ -322,6 +332,7 @@ AssetOpsBench is being extended by university research groups exploring new asse
 - **Agentic AI Workflows for Naval Operations and Maintenance** — Exploring AssetOpsBench for evaluating agentic AI workflows, with future extensions using digital-twin-generated synthetic data. [Priyam Dalmia](https://github.com/priyamDalmia), [Chin-Teng Lin](https://profiles.uts.edu.au/Chin-Teng.Lin), [Fred Chang](https://profiles.uts.edu.au/Fred.Chang), University of Technology Sydney
  - **Knowledge Graphs as the Missing Data Layer for LLM-Based Industrial Asset Operations** — Treats a typed knowledge graph as the *data layer* for AssetOpsBench agents: holding the model and orchestration fixed, the same GPT-4 rises from 65% to 82–83% with LLM-generated Cypher and to 99% with deterministic graph handlers on the 139-scenario snapshot, plus Generation-Augmented Knowledge (GAK) — provenance-tagged enrichment — for the non-deterministic FMSR scenarios. Accepted at Agents+Graph @ VLDB 2026. Madhulatha Mandarapu, Sandeep Kunkunuru (VaidhyaMegha / Samyama) · [paper](https://arxiv.org/abs/2605.26874) · [repo](https://github.com/samyama-ai/assetops-kg)
 ---
+
 ## Call for Scenario Contribution
 
 We are expanding **AssetOpsBench** to cover a broader range of industrial challenges. We invite researchers and practitioners to contribute new scenarios, particularly in:
@@ -340,11 +351,13 @@ We are expanding **AssetOpsBench** to cover a broader range of industrial challe
    - Nianjun Zhou — [jzhou@us.ibm.com](mailto:jzhou@us.ibm.com)
 
 ---
+
 ## Infrastructure Support
 
 Model API access for AssetOpsBench 2.0 is enabled by [TokenRouter](https://tokenrouter.com) (PaleBlueDot AI), a unified API platform providing access to leading AI models through a single API endpoint.
 
 ---
+
 ## Contributors
 
 Thanks to these wonderful people ✨
@@ -610,6 +623,7 @@ Thanks to these wonderful people ✨
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ---
+
 ## Star History
 
 <a href="https://www.star-history.com/?repos=ibm%2Fassetopsbench&type=date&legend=top-left">
@@ -621,6 +635,7 @@ Thanks to these wonderful people ✨
 </a>
 
 ---
+
 <div align="center">
 
 **If AssetOpsBench is useful to your work, please ⭐ star the repo, 🍴 fork it, and tell us what you're building.**
@@ -628,6 +643,7 @@ Thanks to these wonderful people ✨
 </div>
 
 ---
+
 <div align="center">
 
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ibm-assetopsbench-badge.png)](https://mseep.ai/app/ibm-assetopsbench)

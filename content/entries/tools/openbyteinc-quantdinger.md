@@ -4,9 +4,9 @@ name: QuantDinger
 tagline: Open-source AI Trading OS, agent trading, and vibe trading, with Jev
   System One integration. Research, build Python strategies, backtest, and
   paper/li
-summary: QuantDinger Open-source AI Trading OS Turn trading ideas into Python
-  strategies, backtests, paper trading, live execution, and monitoring — all in
-  one self-hosted stack. QuantDinger is a product of Open Byte Inc. AI r...
+summary: QuantDinger - Open-Source AI Quant Research Platform Turn trading ideas
+  into Python strategies, backtests, paper trading, live execution, and
+  monitoring — all in one self-hosted stack. QuantDinger is a product of Open...
 categories:
   - domain-research
 tags:
@@ -18,24 +18,25 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: OpenByteInc/QuantDinger
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13130
-  last_commit: 2026-10-26T07:25:33Z
-  stars_delta_7d: 222
-  stars_growth_pct: 1.7
-  trending_score: 225.82
-  rank_current: 30
+  stars: 13422
+  last_commit: 2026-11-01T11:00:13Z
+  stars_delta_7d: 292
+  stars_growth_pct: 2.2
+  trending_score: 298.49
+  rank_current: 29
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12519
     - 12908
     - 13130
+    - 13422
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: OpenByteInc/QuantDinger
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:53.887Z
+  fetched_at: 2026-11-02T09:05:30.351Z
   truncated: false
 type: agent_tool
 tool:
@@ -63,8 +64,7 @@ tool:
     </picture>
   </a>
 
-  <h1>QuantDinger</h1>
-  <p><strong>Open-source AI Trading OS</strong></p>
+  <p><strong>QuantDinger - Open-Source AI Quant Research Platform</strong></p>
   <p>Turn trading ideas into Python strategies, backtests, paper trading, live execution, and monitoring — all in one self-hosted stack.</p>
   <p><strong>QuantDinger is a product of Open Byte Inc.</strong></p>
   <p><em>AI research → Strategy code → Backtest → Paper/Live execution → Monitoring</em></p>
@@ -104,6 +104,8 @@ tool:
     ·
     <a href="https://www.quantdinger.com"><strong>Website</strong></a>
     ·
+    <a href="https://aws.amazon.com/marketplace/pp/prodview-ywy4zb5wnsari"><strong>Deploy on AWS Marketplace</strong></a>
+    ·
     <a href="#watch-quantdinger-in-action"><strong>Video Demo</strong></a>
     ·
     <a href="mailto:support@quantdinger.com"><strong>Official Support Email</strong></a>
@@ -124,8 +126,8 @@ tool:
     <a href="https://www.bestpractices.dev/projects/15860"><img src="https://www.bestpractices.dev/projects/15860/badge" alt="OpenSSF Best Practices"></a>
     <a href="https://sonarcloud.io/summary/new_code?id=OpenByteInc_QuantDinger"><img src="https://sonarcloud.io/api/project_badges/measure?project=OpenByteInc_QuantDinger&metric=alert_status" alt="SonarQube Cloud Quality Gate"></a>
     <a href="https://api.reuse.software/info/github.com/OpenByteInc/QuantDinger"><img src="https://api.reuse.software/badge/github.com/OpenByteInc/QuantDinger" alt="REUSE status"></a>
-    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/OPENCHAIN_ISO_5230_SELF_ASSESSMENT.md"><img src="https://img.shields.io/badge/OpenChain_ISO%2FIEC_5230-self--assessed-0B6B53?style=flat-square" alt="OpenChain ISO/IEC 5230 self-assessed"></a>
-    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/OPENCHAIN_ISO_18974_SELF_ASSESSMENT.md"><img src="https://img.shields.io/badge/OpenChain_ISO%2FIEC_18974-self--assessed-0B6B53?style=flat-square" alt="OpenChain ISO/IEC 18974 self-assessed"></a>
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/OPENCHAIN_ISO_5230_SELF_ASSESSMENT.md" title="Open Byte Inc. OpenChain ISO/IEC 5230 conformant program"><img src="https://img.shields.io/badge/OpenChain_ISO%2FIEC_5230-conformant-0B6B53?style=flat-square" alt="OpenChain ISO/IEC 5230 conformant"></a>
+    <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/OPENCHAIN_ISO_18974_SELF_ASSESSMENT.md" title="Open Byte Inc. OpenChain ISO/IEC 18974 conformant program"><img src="https://img.shields.io/badge/OpenChain_ISO%2FIEC_18974-conformant-0B6B53?style=flat-square" alt="OpenChain ISO/IEC 18974 conformant"></a>
     <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/badges/python-3.12.svg" alt="Python 3.12">
     <img src="https://img.shields.io/badge/PostgreSQL-18-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL 18">
     <img src="https://img.shields.io/badge/Redis-8-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis 8">
@@ -144,16 +146,33 @@ tool:
     <a href="https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=quantdinger" title="Atlas Cloud — AI inference sponsor">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://www.atlascloud.ai/logo-white.svg">
-        <img src="https://www.atlascloud.ai/logo.svg" alt="Atlas Cloud" width="142">
+        <img src="https://www.atlascloud.ai/logo.svg" alt="Atlas Cloud" width="134" align="middle">
       </picture>
     </a>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://aws.amazon.com/" title="Amazon Web Services — cloud infrastructure sponsor">
+    <a href="https://aws.amazon.com/marketplace/pp/prodview-ywy4zb5wnsari" title="Deploy QuantDinger on AWS Marketplace">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35.png">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" width="70">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" width="54" align="middle">
       </picture>
     </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://openai.com/" title="OpenAI — open-source development tooling support">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/badges/openai-wordmark-white.svg">
+        <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/badges/openai-wordmark-black.svg" alt="OpenAI" width="150" align="middle">
+      </picture>
+    </a>
+  </p>
+  <p>
+    <a href="https://www.nvidia.com/en-us/startups/" title="Open Byte Inc. has joined NVIDIA Inception">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/badges/nvidia-inception-member-dark.png">
+        <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/badges/nvidia-inception-member.png" alt="NVIDIA Inception Program" width="64" align="middle">
+      </picture>
+    </a>
+    &nbsp;&nbsp;
+    <strong>Open Byte Inc. has joined NVIDIA Inception.</strong>
   </p>
 </div>
 
@@ -169,7 +188,11 @@ tool:
 ## Watch QuantDinger in action
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/screenshots/quantdinger-v5-2x.gif" alt="QuantDinger product demo at 2× speed" width="800">
+  <a href="https://youtu.be/y9EiCZSaIt0">
+    <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/screenshots/quantdinger-youtube-overview.png" alt="Watch the latest QuantDinger overview on YouTube" width="800">
+  </a>
+  <br>
+  <strong><a href="https://youtu.be/y9EiCZSaIt0">▶ Watch the latest QuantDinger product tour on YouTube</a></strong>
 </p>
 
 ## What QuantDinger is
@@ -193,6 +216,12 @@ and deployment remain under the operator's control.
 
 ### Strategy evolution and signal-only virtual accounts
 
+- **Factor Lab** loads one point-in-time universe panel once and benchmarks up
+  to 40 registered technical, fundamental, TA-Lib, or Qlib factors. It uses a
+  time-ordered holdout, out-of-sample IC retention, Benjamini-Hochberg
+  false-discovery control, cost-aware scoring, factor-life-cycle labels, and
+  cross-factor IC correlation. The same workflow is available from the web UI,
+  Human API, Agent Gateway, and MCP.
 - **Strategy evolution** searches declared tunable parameters with random,
   grid, or TPE optimization, using bar-count walk-forward validation and a final
   blind holdout. Jobs run asynchronously with per-strategy history, automatic
@@ -301,6 +330,25 @@ Use the [distributed runtime deployment and scaling guide](https://github.com/Op
 before changing replica counts or moving the stack to multiple hosts.
 
 ## Quick start
+
+If you are unsure whether to choose Windows, Linux/macOS, a cloud server, SaaS,
+or a mobile client, start with the
+[installation and deployment overview](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/getting-started/INSTALLATION.md).
+Each path covers installation, verification, upgrades, post-install setup, and troubleshooting.
+
+### Fastest cloud deployment: AWS Marketplace
+
+<p align="center">
+  <a href="https://aws.amazon.com/marketplace/pp/prodview-ywy4zb5wnsari"><img src="https://img.shields.io/badge/AWS%20Marketplace-Deploy%20QuantDinger-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="Deploy QuantDinger from AWS Marketplace"></a>
+</p>
+
+Launch the free QuantDinger software from its public
+[AWS Marketplace product page](https://aws.amazon.com/marketplace/pp/prodview-ywy4zb5wnsari).
+The Marketplace delivery option provisions the single-node container stack and
+its required AWS infrastructure through CloudFormation. QuantDinger has no
+software fee; normal AWS infrastructure charges still apply. See the
+[deployment and upgrade guide](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/AWS_MARKETPLACE_DEPLOYMENT.md)
+for first login, backups, upgrades, rollback, and cost notes.
 
 ### Option A: prebuilt images
 
@@ -432,10 +480,26 @@ docker compose ps
 The base stack does not start Prometheus, Grafana, or Alertmanager. This keeps
 the default open-source installation smaller.
 
-For detailed installation paths, Windows notes, China mirror settings, and
-PostgreSQL migration guidance, see
-[Installation troubleshooting](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/INSTALL_TROUBLESHOOTING.md) and the
-[cloud deployment guide](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/CLOUD_DEPLOYMENT_EN.md).
+For complete platform instructions, see [Windows](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/WINDOWS_INSTALLATION.md),
+[Linux and macOS](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/LINUX_MACOS_INSTALLATION.md),
+[cloud](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/CLOUD_DEPLOYMENT_EN.md),
+[SaaS](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/SAAS_DEPLOYMENT.md), and
+[mobile client deployment](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/MOBILE_CLIENT_DEPLOYMENT.md). Continue with
+[post-installation setup](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/getting-started/POST_INSTALL_SETUP.md); use the
+[installation FAQ](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/INSTALLATION_FAQ.md) and
+[installation troubleshooting](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/INSTALL_TROUBLESHOOTING.md) when needed.
+
+After the first login, follow the
+[30-minute quickstart](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/getting-started/QUICKSTART_30_MINUTES.md) to configure
+the core system and produce a first research result and backtest. Production
+administrators should also read the
+[configuration reference](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/CONFIGURATION_REFERENCE.md),
+[backup, restore, and migration guide](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/BACKUP_RESTORE_MIGRATION.md),
+and [upgrade and rollback guide](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/UPGRADE_ROLLBACK.md).
+
+For the free AWS Marketplace single-node delivery option, including first
+launch, upgrades, backup, rollback, and cost notes, see the
+[AWS Marketplace deployment guide](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/AWS_MARKETPLACE_DEPLOYMENT.md).
 
 ## Production deployment
 
@@ -793,6 +857,13 @@ The maintained documentation index is available at [`docs/README.md`](https://gi
 
 | Topic | Document |
 | --- | --- |
+| Installation and platform choice | [Installation overview](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/getting-started/INSTALLATION.md) |
+| 30-minute quickstart | [First complete workflow](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/getting-started/QUICKSTART_30_MINUTES.md) |
+| System configuration | [Configuration reference](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/CONFIGURATION_REFERENCE.md) |
+| External services | [Broker, data, and AI integrations](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/INTEGRATION_GUIDE.md) |
+| Backup and migration | [Backup, restore, and migration](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/BACKUP_RESTORE_MIGRATION.md) |
+| Upgrade and rollback | [Upgrade and rollback](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/UPGRADE_ROLLBACK.md) |
+| Incident diagnosis | [Error knowledge base](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/ERROR_KNOWLEDGE_BASE.md) |
 | Contributor architecture | [Architecture](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/architecture/ARCHITECTURE.md) |
 | Module ownership | [Module boundaries](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/architecture/MODULE_BOUNDARIES.md) |
 | Process and task ownership | [Process roles](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/architecture/PROCESS_ROLES_AND_TASKS.md) |
@@ -804,7 +875,9 @@ The maintained documentation index is available at [`docs/README.md`](https://gi
 | Indicator development | [Indicator guide](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/trading/INDICATOR_DEV_GUIDE.md) |
 | MCP and agents | [Agent documentation](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/agent/README.md) |
 | Cloud deployment | [Cloud deployment](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/CLOUD_DEPLOYMENT_EN.md) |
+| AWS Marketplace | [One-click deployment and upgrade](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/AWS_MARKETPLACE_DEPLOYMENT.md) |
 | Installation problems | [Troubleshooting](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/deployment/INSTALL_TROUBLESHOOTING.md) |
+| Documentation maintenance | [Documentation standard](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/architecture/DOCUMENTATION_MAINTENANCE.md) |
 
 ## Contributing
 
@@ -819,6 +892,10 @@ and the process for claiming scoped contributor work.
 ## License and commercial terms
 
 - Backend source code is licensed under [Apache License 2.0](https://github.com/OpenByteInc/QuantDinger/blob/main/LICENSE).
+- This repository passes automated REUSE checks. Open Byte Inc. has completed
+  [OpenChain ISO/IEC 5230 and ISO/IEC 18974 online self-certification and maintains conformance evidence](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/compliance/README.md).
+  Conformance applies to the defined management-program scope; it is not an
+  independent third-party certification of the QuantDinger software.
 - QuantDinger is a product of **Open Byte Inc**. The name, logo, product
   identity, and commercial licensing are managed separately from the code license.
 - Web frontend source is published in
@@ -881,11 +958,11 @@ QuantDinger's continued development and open-source community are supported by:
 
 <table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="33.33%">
       <a href="https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=quantdinger">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://www.atlascloud.ai/logo-white.svg">
-          <img src="https://www.atlascloud.ai/logo.svg" alt="Atlas Cloud" width="190">
+          <img src="https://www.atlascloud.ai/logo.svg" alt="Atlas Cloud" width="176" align="middle">
         </picture>
       </a>
       <br><br>
@@ -893,11 +970,11 @@ QuantDinger's continued development and open-source community are supported by:
       <br>
       <sub>AI inference sponsor</sub>
     </td>
-    <td align="center" width="50%">
-      <a href="https://aws.amazon.com/">
+    <td align="center" width="33.33%">
+      <a href="https://aws.amazon.com/marketplace/pp/prodview-ywy4zb5wnsari">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35.png">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" width="100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" width="72" align="middle">
         </picture>
       </a>
       <br><br>
@@ -905,12 +982,27 @@ QuantDinger's continued development and open-source community are supported by:
       <br>
       <sub>Cloud infrastructure sponsor</sub>
     </td>
+    <td align="center" width="33.33%">
+      <a href="https://openai.com/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="docs/badges/openai-wordmark-white.svg">
+          <img src="https://raw.githubusercontent.com/OpenByteInc/QuantDinger/main/docs/badges/openai-wordmark-black.svg" alt="OpenAI" width="220" align="middle">
+        </picture>
+      </a>
+      <br><br>
+      <strong>OpenAI</strong>
+      <br>
+      <sub>Open-source development tooling sponsor</sub>
+    </td>
   </tr>
 </table>
 
 We are grateful to [Atlas Cloud](https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=quantdinger) for supporting AI
-model inference and to [Amazon Web Services](https://aws.amazon.com/) for
-supporting the cloud infrastructure that helps QuantDinger serve its community.
+model inference, to [Amazon Web Services](https://aws.amazon.com/) for cloud
+infrastructure support, and to [OpenAI](https://openai.com/) for open-source
+development tooling support that helps QuantDinger serve its community.
+
+<sub>OpenAI and the OpenAI logo are trademarks of OpenAI. Their inclusion acknowledges program and tooling support and does not imply product certification or endorsement.</sub>
 
 ## Acknowledgements
 

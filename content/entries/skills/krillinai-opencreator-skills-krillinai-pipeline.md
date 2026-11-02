@@ -1,8 +1,12 @@
 ---
 slug: krillinai-opencreator-skills-krillinai-pipeline
 name: krillinai-pipeline
-tagline: Agent skill from krillinai/OpenCreator
-summary: Agent skill from krillinai/OpenCreator
+tagline: Use when validating or documenting a multi-stage KrillinAI CLI output
+  plan; the current pipeline command supports dry-run planning only, not
+  end-to-en
+summary: The dry-run validates output names and returns a successful
+  pipeline-stage JSON response. It does not execute stages or write a task
+  manifest.
 categories:
   - media-creative
 tags:
@@ -11,10 +15,10 @@ tags:
   - deskop-app
   - dubbing
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: krillinai/OpenCreator
@@ -22,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13936
-  last_commit: 2026-10-26T01:28:37Z
-  stars_delta_7d: 235
-  stars_growth_pct: 1.7
-  trending_score: 239.03
+  stars: 14088
+  last_commit: 2026-11-02T05:56:31Z
+  stars_delta_7d: 152
+  stars_growth_pct: 1.1
+  trending_score: 153.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12614
     - 12884
     - 13701
     - 13936
+    - 14088
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +44,14 @@ readme_source:
   repo: krillinai/OpenCreator
   path: skills/krillinai-pipeline/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:44:49.730Z
+  fetched_at: 2026-11-02T09:06:44.739Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: krillinai-pipeline
-  description: Agent skill from krillinai/OpenCreator
+  description: Use when validating or documenting a multi-stage KrillinAI CLI
+    output plan; the current pipeline command supports dry-run planning only,
+    not end-to-end execution.
   folder_path: skills/krillinai-pipeline
   extra_files: []
   pack_total_skills: 9
@@ -57,4 +63,45 @@ skill:
   pack_slug: krillinai-opencreator
 ---
 
-Agent skill from krillinai/OpenCreator
+# KrillinAI Pipeline
+Use this skill to validate a requested stage plan. Run real work through the individual stage commands because non-dry-run `pipeline` execution returns `unsupported_command`.
+
+## Plan Validation
+
+```bash
+(cd "$KRILLINAI_CWD" && "$KRILLINAI_CLI" pipeline \
+  --outputs "subtitle,tts,vertical-bilingual" \
+  --dry-run)
+```
+
+## Outputs Values
+
+| Output | Stage |
+|---|---|
+| `subtitle` | Generate subtitle files |
+| `tts` | Generate dubbing |
+| `horizontal-bilingual` | Render landscape bilingual video |
+| `horizontal-dubbed` | Render landscape dubbed video |
+| `vertical-bilingual` | Render portrait bilingual video |
+| `vertical-dubbed` | Render portrait dubbed video |
+| `cover` | Generate cover |
+
+The dry-run validates output names and returns a successful pipeline-stage JSON response. It does not execute stages or write a task manifest.
+
+## Execute The Plan
+
+Map the validated outputs to `subtitle`, `tts`, `render-horizontal`, `render-vertical`, and `cover`. Run each required command independently and use the same absolute `--workdir`.
+
+## Recovery Strategy
+
+- If `subtitle` succeeds and render fails, rerun only render with the same `--workdir`.
+- If TTS fails, keep subtitle outputs and rerun `tts` after fixing provider config.
+- Read `krillinai_manifest.json` before rerunning to avoid repeating expensive work.
+
+## Verification
+
+- Require terminal JSON with `"ok": true` for dry-run validation.
+- For real work, confirm every independently executed stage succeeded.
+- Confirm manifest stages and requested output files, not just the plan response.
+- Inspect final requested media/cover files, not only intermediate outputs.
+- For shared CLI details, read `skills/krillinai-cli/references/cli-contract.md`.

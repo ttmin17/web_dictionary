@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-growth-skills-revenue-operations
 name: revenue-operations
-tagline: Analyzes sales pipeline health, revenue forecasting accuracy, and
-  go-to-market efficiency metrics for SaaS revenue optimization. Use when
-  analyzing sa
+tagline: Use for pipeline coverage, forecast accuracy or GTM efficiency (magic
+  number, CAC payback). Runs pipeline_analyzer.py, forecast_accuracy_tracker.py
+  an
 summary: Analyzes sales pipeline health including coverage ratios, stage
   conversion rates, deal velocity, aging risks, and concentration risks.
 categories:
@@ -17,7 +17,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,17 +42,14 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-growth/skills/revenue-operations/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.235Z
+  fetched_at: 2026-11-02T09:06:18.453Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: revenue-operations
-  description: Analyzes sales pipeline health, revenue forecasting accuracy, and
-    go-to-market efficiency metrics for SaaS revenue optimization. Use when
-    analyzing sales pipeline coverage, forecasting revenue, evaluating
-    go-to-market performance, reviewing sales metrics, assessing pipeline
-    analysis, tracking forecast accuracy with MAPE, calculating GTM efficiency,
-    or measuring sales efficiency and unit economics for SaaS teams.
+  description: Use for pipeline coverage, forecast accuracy or GTM efficiency
+    (magic number, CAC payback). Runs pipeline_analyzer.py,
+    forecast_accuracy_tracker.py and gtm_efficiency_calculator.py.
   folder_path: business-growth/skills/revenue-operations
   extra_files:
     - assets/expected_output.json
@@ -65,7 +62,7 @@ skill:
     - references/gtm-efficiency-benchmarks.md
     - references/pipeline-management-framework.md
     - references/revops-metrics-guide.md
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -80,6 +77,7 @@ Pipeline analysis, forecast accuracy tracking, and GTM efficiency measurement fo
 > **Output formats:** All scripts support `--format text` (human-readable) and `--format json` (dashboards/integrations).
 
 ---
+
 ## Quick Start
 
 ```bash
@@ -94,6 +92,7 @@ python scripts/gtm_efficiency_calculator.py assets/sample_gtm_data.json --format
 ```
 
 ---
+
 ## Tools Overview
 
 ### 1. Pipeline Analyzer
@@ -237,6 +236,7 @@ python scripts/gtm_efficiency_calculator.py gtm_data.json --format text
 ```
 
 ---
+
 ## Revenue Operations Workflows
 
 ### Weekly Pipeline Review
@@ -318,6 +318,7 @@ Combine all three tools for a comprehensive QBR analysis.
 5. Align GTM efficiency metrics with growth targets
 
 ---
+
 ## Reference Documentation
 
 | Reference | Description |
@@ -327,6 +328,7 @@ Combine all three tools for a comprehensive QBR analysis.
 | [GTM Efficiency Benchmarks](https://github.com/alirezarezvani/claude-skills/blob/main/business-growth/skills/revenue-operations/references/gtm-efficiency-benchmarks.md) | SaaS benchmarks by stage, industry standards, improvement strategies |
 
 ---
+
 ## Templates
 
 | Template | Use Case |

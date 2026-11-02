@@ -16,10 +16,10 @@ tags:
   - agi
   - chatbot
 status: active
-quality_percentile: 87
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: the-open-agent/openagent
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5712
-  last_commit: 2026-10-25T13:57:48Z
-  stars_delta_7d: 14
-  stars_growth_pct: 0.2
-  trending_score: 14.03
+  stars: 5730
+  last_commit: 2026-11-02T01:23:53Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.3
+  trending_score: 18.06
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5688
     - 5698
     - 5712
+    - 5730
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: the-open-agent/openagent
   path: skills/coding-agent/SKILL.md
   branch: master
-  fetched_at: 2026-10-26T07:38:10.202Z
+  fetched_at: 2026-11-02T09:05:48.638Z
   truncated: false
 type: agent_skill
 skill:
@@ -61,7 +62,7 @@ skill:
     required.'
   folder_path: skills/coding-agent
   extra_files: []
-  pack_total_skills: 54
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -121,6 +122,7 @@ bash pty:true command:"claude --dangerously-skip-permissions 'task'"
 | `kill`      | Terminate the session                                |
 
 ---
+
 ## Quick Start: One-Shot Tasks
 
 For quick prompts/chats, create a temp git repo and run:
@@ -136,6 +138,7 @@ bash pty:true workdir:~/Projects/myproject command:"codex exec 'Add error handli
 **Why git init?** Codex refuses to run outside a trusted git directory. Creating a temp repo solves this for scratch work.
 
 ---
+
 ## The Pattern: workdir + background + pty
 
 For longer tasks, use background mode with PTY:
@@ -164,6 +167,7 @@ process action:kill sessionId:XXX
 **Why workdir matters:** Agent wakes up in a focused directory, doesn't wander off reading unrelated files (like your soul.md 😅).
 
 ---
+
 ## Codex CLI
 
 **Model:** `gpt-5.2-codex` is the default (set in ~/.codex/config.toml)
@@ -222,6 +226,7 @@ gh pr comment <PR#> --body "<review content>"
 ```
 
 ---
+
 ## Claude Code
 
 ```bash
@@ -233,6 +238,7 @@ bash workdir:~/project background:true command:"claude --permission-mode bypassP
 ```
 
 ---
+
 ## OpenCode
 
 ```bash
@@ -240,6 +246,7 @@ bash pty:true workdir:~/project command:"opencode run 'Your task'"
 ```
 
 ---
+
 ## Pi Coding Agent
 
 ```bash
@@ -256,6 +263,7 @@ bash pty:true command:"pi --provider openai --model gpt-4o-mini -p 'Your task'"
 **Note:** Pi now has Anthropic prompt caching enabled (PR #584, merged Jan 2026)!
 
 ---
+
 ## Parallel Issue Fixing with git worktrees
 
 For fixing multiple issues in parallel, use git worktrees:
@@ -283,6 +291,7 @@ git worktree remove /tmp/issue-99
 ```
 
 ---
+
 ## ⚠️ Rules
 
 1. **Use the right execution mode per agent**:
@@ -300,6 +309,7 @@ git worktree remove /tmp/issue-99
 9. **NEVER checkout branches in ~/Projects/openclaw/** - that's the LIVE OpenClaw instance!
 
 ---
+
 ## Progress Updates (Critical)
 
 When you spawn coding agents in the background, keep the user in the loop.
@@ -315,6 +325,7 @@ When you spawn coding agents in the background, keep the user in the loop.
 This prevents the user from seeing only "Agent failed before reply" and having no idea what happened.
 
 ---
+
 ## Auto-Notify on Completion
 
 For long-running background tasks, append a wake trigger to your prompt so OpenClaw gets notified immediately when the agent finishes (instead of waiting for the next heartbeat):
@@ -337,6 +348,7 @@ When completely finished, run: openclaw system event --text \"Done: Built todos 
 This triggers an immediate wake event — Skippy gets pinged in seconds, not 10 minutes.
 
 ---
+
 ## Learnings (Jan 2026)
 
 - **PTY is essential:** Coding agents are interactive terminal apps. Without `pty:true`, output breaks or agent hangs.

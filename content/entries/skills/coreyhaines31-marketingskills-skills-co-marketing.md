@@ -17,7 +17,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/co-marketing/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.288Z
+  fetched_at: 2026-11-02T09:06:13.821Z
   truncated: false
 type: agent_skill
 skill:
@@ -57,7 +58,7 @@ skill:
   extra_files:
     - evals/evals.json
     - references/partnership-types.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -82,6 +83,7 @@ If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or 
 - Structuring co-marketing agreements
 
 ---
+
 ## Partner Identification Framework
 
 ### 1. Audience Overlap Analysis
@@ -138,6 +140,7 @@ Rate potential partners (1-5) on:
 - Job postings mentioning your tool + others
 
 ---
+
 ## Partnership Types
 
 Co-marketing is one of **five partnership types**. Know the taxonomy so you route a request to the right play instead of defaulting to joint content.
@@ -157,6 +160,7 @@ Standout moves: **integrations** as a decision factor (83% of enterprise buyers)
 For the full taxonomy — build patterns, economics, examples, and how to choose where to start — see **[references/partnership-types.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/co-marketing/references/partnership-types.md)**. (Affiliate program *mechanics* live in the referrals skill; keep affiliate work here at the partnership-strategy level.)
 
 ---
+
 ## Co-Marketing Campaign Types
 
 ### Content Partnerships
@@ -199,6 +203,7 @@ For the full taxonomy — build patterns, economics, examples, and how to choose
 | **Joint AMA or Twitter Space** | Low | Thought leadership |
 
 ---
+
 ## Brainstorming Partner Campaigns
 
 When brainstorming with a specific partner, consider:
@@ -235,6 +240,7 @@ Ask these to generate ideas:
 - "What data do we both have that would make a compelling story?"
 
 ---
+
 ## Approaching Potential Partners
 
 ### Cold Outreach Template
@@ -264,6 +270,7 @@ Would you be open to a quick call to explore?
 5. **Clear ask** (what you want from them, what you'll provide)
 
 ---
+
 ## Structuring the Partnership
 
 ### Key Questions to Align On
@@ -287,6 +294,7 @@ Would you be open to a quick call to explore?
 8. **Metrics sharing**: What data you'll share post-campaign
 
 ---
+
 ## Measuring Co-Marketing Success
 
 ### Quantitative Metrics
@@ -306,6 +314,7 @@ Would you be open to a quick call to explore?
 - Relationship strengthened for future campaigns
 
 ---
+
 ## Co-Marketing Checklist
 
 ### Partner Identification
@@ -331,6 +340,7 @@ Would you be open to a quick call to explore?
 - [ ] Discuss future collaboration opportunities
 
 ---
+
 ## Task-Specific Questions
 
 1. Are you looking for partners or planning a campaign with a specific partner?
@@ -341,6 +351,7 @@ Would you be open to a quick call to explore?
 6. What's your timeline and budget for co-marketing?
 
 ---
+
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key tools for co-marketing:
@@ -352,6 +363,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **PartnerStack** | Partner and affiliate program management | [partnerstack.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/partnerstack.md) |
 
 ---
+
 ## Related Skills
 
 - **referrals** — For customer referral and affiliate programs (customers referring customers)

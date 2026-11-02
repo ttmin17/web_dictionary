@@ -1,8 +1,12 @@
 ---
 slug: gentleman-programming-gentle-ai-internal-assets-skills-gentle-ai-bench
 name: bench
-tagline: Agent skill from Gentleman-Programming/gentle-ai
-summary: Agent skill from Gentleman-Programming/gentle-ai
+tagline: "Trigger: bench, journey, journeys, driven mode, gentle-ai-bench,
+  journey corpus, j-numbers, bench axis. Author and verify gentle-ai bench
+  journeys; go"
+summary: Load when touching bench/ in gentle-ai, adding or changing a journey,
+  changing a product semantic a journey might pin, or diagnosing a bench failure
+  in CI's Unit Tests job.
 categories:
   - coding-agents
 tags:
@@ -11,10 +15,10 @@ tags:
   - ai-coding
   - claude-code
 status: active
-quality_percentile: 89
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -22,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8020
-  last_commit: 2026-10-26T04:03:33Z
-  stars_delta_7d: 171
-  stars_growth_pct: 2.2
-  trending_score: 174.73
+  stars: 8181
+  last_commit: 2026-11-02T02:09:02Z
+  stars_delta_7d: 161
+  stars_growth_pct: 2
+  trending_score: 164.23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7736
     - 7849
     - 8020
+    - 8181
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +44,14 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/gentle-ai-bench/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:56.082Z
+  fetched_at: 2026-11-02T09:06:38.259Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: bench
-  description: Agent skill from Gentleman-Programming/gentle-ai
+  description: "Trigger: bench, journey, journeys, driven mode, gentle-ai-bench,
+    journey corpus, j-numbers, bench axis. Author and verify gentle-ai bench
+    journeys; go test ./bench never proves driven execution."
   folder_path: internal/assets/skills/gentle-ai-bench
   extra_files: []
   pack_total_skills: 18

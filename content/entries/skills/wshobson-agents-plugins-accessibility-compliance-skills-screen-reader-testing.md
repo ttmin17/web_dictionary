@@ -16,10 +16,10 @@ tags:
   - ai-agents
   - anthropic
 status: active
-quality_percentile: 93
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2025-07-24T23:28:14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: wshobson/agents
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 41725
-  last_commit: 2026-10-26T01:08:14Z
-  stars_delta_7d: 673
-  stars_growth_pct: 1.6
-  trending_score: 684.03
-  rank_current: 33
-  rank_delta: -4
+  stars: 42095
+  last_commit: 2026-11-02T01:08:47Z
+  stars_delta_7d: 370
+  stars_growth_pct: 0.9
+  trending_score: 373.28
+  rank_current: 46
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 40271
     - 40590
     - 41052
     - 41725
+    - 42095
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: wshobson/agents
   path: plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:26.189Z
+  fetched_at: 2026-11-02T09:06:18.052Z
   truncated: false
 type: agent_skill
 skill:
@@ -61,7 +61,7 @@ skill:
     - references/nvda.md
     - references/voiceover-ios.md
     - references/voiceover.md
-  pack_total_skills: 185
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code

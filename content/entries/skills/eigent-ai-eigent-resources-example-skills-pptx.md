@@ -1,8 +1,10 @@
 ---
 slug: eigent-ai-eigent-resources-example-skills-pptx
 name: pptx
-tagline: Agent skill from eigent-ai/eigent
-summary: Agent skill from eigent-ai/eigent
+tagline: "Use this skill any time a .pptx file is involved in any way — as
+  input, output, or both. This includes: creating slide decks, pitch decks, or
+  presenta"
+summary: Read editing.md for full details.
 categories:
   - agent-frameworks
 tags:
@@ -11,10 +13,10 @@ tags:
   - agentic-ai
   - agentic-workflow
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: eigent-ai/eigent
@@ -22,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15663
-  last_commit: 2026-10-25T23:52:55Z
-  stars_delta_7d: 64
-  stars_growth_pct: 0.4
-  trending_score: 64.26
+  stars: 15716
+  last_commit: 2026-11-01T07:09:54Z
+  stars_delta_7d: 53
+  stars_growth_pct: 0.3
+  trending_score: 53.18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15467
     - 15514
     - 15599
     - 15663
+    - 15716
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,12 +42,21 @@ readme_source:
   repo: eigent-ai/eigent
   path: resources/example-skills/pptx/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.977Z
+  fetched_at: 2026-11-02T09:06:43.495Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: pptx
-  description: Agent skill from eigent-ai/eigent
+  description: 'Use this skill any time a .pptx file is involved in any way — as
+    input, output, or both. This includes: creating slide decks, pitch decks, or
+    presentations; reading, parsing, or extracting text from any .pptx file
+    (even if the extracted content will be used elsewhere, like in an email or
+    summary); editing, modifying, or updating existing presentations; combining
+    or splitting slide files; working with templates, layouts, speaker notes, or
+    comments. Trigger whenever the user mentions "deck," "slides,"
+    "presentation," or references a .pptx filename, regardless of what they plan
+    to do with the content afterward. If a .pptx file needs to be opened,
+    created, or touched, use this skill.'
   folder_path: resources/example-skills/pptx
   extra_files:
     - LICENSE.txt
@@ -76,7 +87,9 @@ skill:
 | Edit or create from template | Read [editing.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/editing.md) |
 | Create from scratch | Read [pptxgenjs.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/pptxgenjs.md) |
 
----## Reading Content
+---
+
+## Reading Content
 
 ```bash
 # Text extraction
@@ -89,20 +102,26 @@ python scripts/thumbnail.py presentation.pptx
 python scripts/office/unpack.py presentation.pptx unpacked/
 ```
 
----## Editing Workflow
+---
+
+## Editing Workflow
 
 **Read [editing.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/editing.md) for full details.**
 
 1. Analyze template with `thumbnail.py`
 2. Unpack → manipulate slides → edit content → clean → pack
 
----## Creating from Scratch
+---
+
+## Creating from Scratch
 
 **Read [pptxgenjs.md](https://github.com/eigent-ai/eigent/blob/main/resources/example-skills/pptx/pptxgenjs.md) for full details.**
 
 Use when no template or reference presentation is available.
 
----## Design Ideas
+---
+
+## Design Ideas
 
 **Don't create boring slides.** Plain bullets on a white background won't impress anyone. Consider ideas from this list for each slide.
 
@@ -190,7 +209,9 @@ Choose colors that match your topic — don't default to generic blue. Use these
 - **Don't use low-contrast elements** — icons AND text need strong contrast against the background; avoid light text on light backgrounds or dark text on dark backgrounds
 - **NEVER use accent lines under titles** — these are a hallmark of AI-generated slides; use whitespace or background color instead
 
----## QA (Required)
+---
+
+## QA (Required)
 
 **Assume there are problems. Your job is to find them.**
 
@@ -224,7 +245,9 @@ If grep returns results, fix them before declaring success.
 
 **Do not declare success until you've completed at least one fix-and-verify cycle.**
 
----## Converting to Images
+---
+
+## Converting to Images
 
 Convert presentations to individual slide images for visual inspection:
 
@@ -241,7 +264,9 @@ To re-render specific slides after fixes:
 pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 ```
 
----## Dependencies
+---
+
+## Dependencies
 
 - `pip install "markitdown[pptx]"` - text extraction
 - `pip install Pillow` - thumbnail grids

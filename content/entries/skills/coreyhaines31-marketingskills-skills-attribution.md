@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/attribution/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.287Z
+  fetched_at: 2026-11-02T09:06:13.821Z
   truncated: false
 type: agent_skill
 skill:
@@ -71,7 +72,7 @@ skill:
     - references/by-business-type.md
     - references/first-party-tracking.md
     - references/measurement-paradigms.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -102,6 +103,7 @@ State these up front so you don't rebuild neighboring skills:
 - **Showing up in / measuring AI search** → **ai-seo**. Attribution names AI traffic as a blind spot only.
 
 ---
+
 ## Pillar A — Interpretation
 
 ### 1. What attribution can and can't tell you
@@ -203,6 +205,7 @@ Defaults differ sharply. Summary here; full playbooks in `references/by-business
 - **Ecommerce / DTC (short cycle, self-serve):** fast journeys, high volume, spend concentrated in paid social + search. Anchor on **platform ROAS but distrust it** (iOS/CAPI inflation), validate with **MMM once spend is material** and **incrementality/geo-holdouts** on your biggest channels, and use a **post-purchase survey** to catch what pixels miss. Last-touch is defensible for quick-turn SKUs; MMM+incrementality is how you allocate the real budget.
 
 ---
+
 ## Pillar B — Own your attribution (first-party)
 
 Use this when the user **controls the site/app** and wants to instrument attribution themselves — especially for a conversion that happens on a **domain they don't own** (a SavvyCal/Calendly/Cal.com booking, a Stripe Checkout page). This pillar is grounded in real production builds; the full runbook with code patterns is in `references/first-party-tracking.md`. The essentials:
@@ -244,6 +247,7 @@ But first-touch alone can't run the multi-touch models from §2. **Store the ful
 The pattern is tool-agnostic: identify + merge exists in PostHog, Segment, Amplitude, and via user-id in GA4; the third-party stitch works with any tool that has a metadata passthrough + webhook. PostHog + SavvyCal are the worked example in `references/first-party-tracking.md`.
 
 ---
+
 ## Output format
 
 Deliver an **attribution readout**, not a data dump:
@@ -288,6 +292,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **RB2B** | De-anonymize B2B website visitors | - | [rb2b.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/rb2b.md) |
 
 ---
+
 ## Related Skills
 
 - **analytics** — event tracking, tracking plans, UTMs, GA4/GTM setup. Do this *before* attribution.

@@ -12,29 +12,30 @@ tags:
   - ai-agents
   - api
   - developer-tools
-status: active
-quality_percentile: 12
+status: slowing
+quality_percentile: 11
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Klavis-AI/klavis
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5827
+  stars: 5830
   last_commit: 2026-06-01T21:21:04Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.2
-  trending_score: 13.03
-  rank_current: 74
-  rank_delta: -1
+  stars_delta_7d: 3
+  stars_growth_pct: 0.1
+  trending_score: 3
+  rank_current: 98
+  rank_delta: -29
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5809
     - 5814
     - 5827
+    - 5830
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: Klavis-AI/klavis
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:57.994Z
+  fetched_at: 2026-11-02T09:05:35.326Z
   truncated: false
 type: mcp_server
 launch:
@@ -209,6 +210,7 @@ curl -X POST "https://api.klavis.ai/v1/mcp-server/instance" \
 - 🌐 [Klavis AI Website](https://www.klavis.ai)
 
 ---
+
 <div align="center">
   <p><strong>Made with ❤️ by the Klavis Team</strong></p>
 </div>

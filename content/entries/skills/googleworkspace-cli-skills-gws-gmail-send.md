@@ -1,8 +1,11 @@
 ---
 slug: googleworkspace-cli-skills-gws-gmail-send
 name: gws-gmail-send
-tagline: Agent skill from googleworkspace/cli
-summary: Agent skill from googleworkspace/cli
+tagline: "Gmail: Send an email."
+summary: "- Handles RFC 5322 formatting, MIME encoding, and base64
+  automatically. - Use --from to send from a configured send-as alias instead of
+  your primary address. - Use -a/--attach to add file attachments. Can be
+  specified..."
 categories:
   - productivity-ops
 tags:
@@ -11,10 +14,10 @@ tags:
   - automation
   - cli
 status: active
-quality_percentile: 54
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: googleworkspace/cli
@@ -22,17 +25,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 31663
-  last_commit: 2026-10-06T20:23:04Z
-  stars_delta_7d: 0
+  stars: 32055
+  last_commit: 2026-10-30T16:06:54Z
+  stars_delta_7d: 890
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
-    - 31270
     - 31448
     - 31663
-    - 31663
+    - 32055
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +42,15 @@ readme_source:
   repo: googleworkspace/cli
   path: skills/gws-gmail-send/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.390Z
+  fetched_at: 2026-11-02T09:06:42.261Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: gws-gmail-send
-  description: Agent skill from googleworkspace/cli
+  description: "Gmail: Send an email."
   folder_path: skills/gws-gmail-send
   extra_files: []
-  pack_total_skills: 95
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +59,56 @@ skill:
   pack_slug: googleworkspace-cli
 ---
 
-Agent skill from googleworkspace/cli
+# gmail +send
+> **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
+
+Send an email
+
+## Usage
+
+```bash
+gws gmail +send --to <EMAILS> --subject <SUBJECT> --body <TEXT>
+```
+
+## Flags
+
+| Flag | Required | Default | Description |
+|------|----------|---------|-------------|
+| `--to` | ✓ | — | Recipient email address(es), comma-separated |
+| `--subject` | ✓ | — | Email subject |
+| `--body` | ✓ | — | Email body (plain text, or HTML with --html) |
+| `--from` | — | — | Sender address (for send-as/alias; omit to use account default) |
+| `--attach` | — | — | Attach a file (can be specified multiple times) |
+| `--cc` | — | — | CC email address(es), comma-separated |
+| `--bcc` | — | — | BCC email address(es), comma-separated |
+| `--html` | — | — | Treat --body as HTML content (default is plain text) |
+| `--dry-run` | — | — | Show the request that would be sent without executing it |
+| `--draft` | — | — | Save as draft instead of sending |
+
+## Examples
+
+```bash
+gws gmail +send --to alice@example.com --subject 'Hello' --body 'Hi Alice!'
+gws gmail +send --to alice@example.com --subject 'Hello' --body 'Hi!' --cc bob@example.com
+gws gmail +send --to alice@example.com --subject 'Hello' --body '<b>Bold</b> text' --html
+gws gmail +send --to alice@example.com --subject 'Hello' --body 'Hi!' --from alias@example.com
+gws gmail +send --to alice@example.com --subject 'Report' --body 'See attached' -a report.pdf
+gws gmail +send --to alice@example.com --subject 'Files' --body 'Two files' -a a.pdf -a b.csv
+gws gmail +send --to alice@example.com --subject 'Hello' --body 'Hi!' --draft
+```
+
+## Tips
+
+- Handles RFC 5322 formatting, MIME encoding, and base64 automatically.
+- Use --from to send from a configured send-as alias instead of your primary address.
+- Use -a/--attach to add file attachments. Can be specified multiple times. Total size limit: 25MB.
+- With --html, use fragment tags (<p>, <b>, <a>, <br>, etc.) — no <html>/<body> wrapper needed.
+- Use --draft to save the message as a draft instead of sending it immediately.
+
+> [!CAUTION]
+> This is a **write** command — confirm with the user before executing.
+
+## See Also
+
+- [gws-shared](https://github.com/googleworkspace/cli/blob/main/skills/gws-gmail-send/../gws-shared/SKILL.md) — Global flags and auth
+- [gws-gmail](https://github.com/googleworkspace/cli/blob/main/skills/gws-gmail-send/../gws-gmail/SKILL.md) — All send, read, and manage email commands

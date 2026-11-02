@@ -16,44 +16,48 @@ tags:
   - claude-code
   - code-analysis
 status: active
-quality_percentile: 91
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-02-24T22:01:00
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: DeusData/codebase-memory-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 47498
-  last_commit: 2026-10-26T01:29:10Z
-  stars_delta_7d: 611
-  stars_growth_pct: 1.3
-  trending_score: 618.96
-  rank_current: 5
-  rank_delta: 0
+  stars: 47981
+  last_commit: 2026-11-02T06:46:29Z
+  stars_delta_7d: 483
+  stars_growth_pct: 1
+  trending_score: 487.91
+  rank_current: 7
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 45967
     - 46502
     - 46887
     - 47498
+    - 47981
 language: en
 needs_keys: false
-prerequisites: []
+prerequisites:
+  - Node.js >= 18
 readme_source:
   repo: DeusData/codebase-memory-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:35:59.894Z
+  fetched_at: 2026-11-02T09:05:22.746Z
   truncated: true
 type: mcp_server
 launch:
   transport: stdio
-  args: []
+  command: npx
+  args:
+    - -y
+    - codebase-memory-mcp@
   env_vars: []
-  confidence: none
+  confidence: readme
 ---
 
 # codebase-memory-mcp: local code intelligence for AI agents via MCP
@@ -296,7 +300,7 @@ codebase-memory-mcp config set auto_index true
 
 `auto_index` is off by default. When enabled, new projects are indexed automatically on first connection. The configurable file limit is `config set auto_index_limit 50000`. Previously indexed projects can be watched through `auto_watch` (on by default), subject to its global setting and session ownership.
 
-Each initialized, long-lived MCP session can register its root project when it connects and any target from a successful `index_repository` call, including custom project names and roots in another worktree. While `auto_watch` is enabled, these watches belong to the registering sessions and remain while at least one owning session is connected; closing the last owner removes the watch. An async index registers its target only after success and while its requesting session remains connected. CLI indexing and failed MCP indexes do not register watches. Global `auto_watch` controls registration and removes all watches on the next refresh or registration request when set to `false`. `index_status` reports this in its `watch` object: `watched`, and either the poll cadence and last scan time or the `reason` it is not watched.
+Each initialized, long-lived MCP session can register its root project when it connects and any target from a successful `index_repository` call, including custom project names and roots in another worktree. While `auto_watch` is enabled, these watches belong to the registering sessions and remain while at least one owning session is connected; closing the last owner removes the watch. Under a daemon started with `daemon start` a watch outlives its last owning session: the project stays watched and is re-indexed in the background when it changes, until that daemon stops, the project is deleted, its directory disappears, or `auto_watch` is set to `false`. An async index registers its target only after success and while its requesting session remains connected. CLI indexing and failed MCP indexes do not register watches. Global `auto_watch` controls registration and removes all watches on the next refresh or registration request when set to `false`. `index_status` reports this in its `watch` object: `watched`, and either the poll cadence and last scan time or the `reason` it is not watched.
 
 Watcher registration is controlled globally by `auto_watch` (default `true`). On the next refresh or registration request, `true` allows MCP sessions to register their root on connect and their successful `index_repository` targets; `false` removes all watches. CLI indexing and failed MCP indexes do not add watches.
 
@@ -603,12 +607,5 @@ nix run github:DeusData/codebase-memory-mcp#codebase-memory-mcp-ui -- --ui=true 
 ```
 
 Or build a binary into `./result/bin/codebase-memory-mcp`:
-
-```bash
-nix build github:DeusData/codebase-memory-mcp                          # standard
-nix build github:DeusData/codebase-memory-mcp#codebase-memory-mcp-ui   # with UI
-```
-
-Working in a clone? Use `.` in place of the flake URL, e.g. `nix run .#codebase-memory-mcp-ui -- --ui=true`, or drop into a shell that puts the binary on `PATH` with `nix shell .#codebase-memory-mcp-ui`.
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/DeusData/codebase-memory-mcp)).*

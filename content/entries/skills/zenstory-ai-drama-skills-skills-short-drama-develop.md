@@ -1,8 +1,8 @@
 ---
 slug: zenstory-ai-drama-skills-skills-short-drama-develop
 name: short-drama-develop
-tagline: Agent skill from zenstory-ai/drama-skills
-summary: Agent skill from zenstory-ai/drama-skills
+tagline: 将中文小说、短剧或漫剧想法、梗概、改编材料、已有系列笔记或多集完整剧本发展成可追溯的改编方案、戏剧方向、创作简报、导演阐述、故事引擎与分集地图，并按题材与制作形态（画风）选择写法。用户提出“导入小说做短剧”“从多集整稿生成/补分集地图”“开发短剧/漫剧”“做故事设定/系列大纲/分集规划”“写导演阐述
+summary: 离线验证多集整稿的精确索引、切片和源文件变更检测：
 categories:
   - media-creative
 tags:
@@ -11,10 +11,10 @@ tags:
   - ai-video
   - aigc
 status: active
-quality_percentile: 76
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -22,30 +22,30 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3360
-  last_commit: 2026-10-20T19:23:14Z
-  stars_delta_7d: 307
-  stars_growth_pct: 10.1
-  trending_score: 337.87
+  stars: 3650
+  last_commit: 2026-11-02T08:30:37Z
+  stars_delta_7d: 290
+  stars_growth_pct: 8.6
+  trending_score: 315.03
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2574
     - 2825
     - 3053
     - 3360
-language: en
+    - 3650
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: zenstory-ai/drama-skills
   path: skills/short-drama-develop/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:26.649Z
+  fetched_at: 2026-11-02T09:06:48.357Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: short-drama-develop
-  description: Agent skill from zenstory-ai/drama-skills
+  description: 将中文小说、短剧或漫剧想法、梗概、改编材料、已有系列笔记或多集完整剧本发展成可追溯的改编方案、戏剧方向、创作简报、导演阐述、故事引擎与分集地图，并按题材与制作形态（画风）选择写法。用户提出“导入小说做短剧”“从多集整稿生成/补分集地图”“开发短剧/漫剧”“做故事设定/系列大纲/分集规划”“写导演阐述”“这个题材怎么写”“定画风/制作形态”“把这个点子变成短剧”或需要梳理人物冲突与集间交接时使用；已有单集剧本可直接进入写作、资产或审查流程，不强制补开发文件。
   folder_path: skills/short-drama-develop
   extra_files:
     - agents/openai.yaml
@@ -68,7 +68,7 @@ skill:
 ---
 
 # 短剧开发
-把创作者的意图变成能持续制造**选择、代价与状态变化**的故事系统。保留创作者的题材、结局和尺度选择；不要把流行套路当成剧情答案。
+把创作者的意图变成能持续制造**选择、代价与状态变化**的故事系统，保留创作者对题材、结局和尺度的选择。流行套路只能作为候选方法。
 
 ## Quick Start
 
@@ -81,9 +81,9 @@ python3 {技能目录}/scripts/episode_intake.py index <多集整稿> --out <epi
 
 ## 开始前
 
-本技能可独立安装和执行。先读取用户明确提供的材料与本任务直接输入；若当前目录是
-`short-drama` 项目且项目工具可用，可以读取 `status` 并使用其发布生命周期，但缺少 core
-或任何其他技能都不是开发工作的阻断条件。[阶段契约](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-develop/references/stage-contract.md) 给出
+本技能可独立安装和执行。先读取用户明确提供的材料与本任务的直接输入；若当前目录是
+`short-drama` 项目且项目工具可用，可以读取 `status` 并使用其发布生命周期。缺少 core
+或其他技能时，仍可基于现有输入完成开发。[阶段契约](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-develop/references/stage-contract.md) 给出
 本阶段边界、制作形态输入与规则表，无需读取其他技能的文件。
 
 ## 先判断入口
@@ -119,7 +119,7 @@ python3 {技能目录}/scripts/episode_intake.py index <多集整稿> --out <epi
 
 每个候选都说明：戏剧承诺、主角追求、对抗机制、反复回报、可升级的状态、长线终止条件、主要制作负担。让创作者选择或组合，并记录取舍理由；未选方案不进入既定事实。
 
-需要完整方法时读取 [story-craft.md](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-develop/references/story-craft.md)。题材已经确定时，可从
+需要深化戏剧承诺或冲突机制时，读取 [story-craft.md](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-develop/references/story-craft.md)。题材已经确定时，可从
 [genre-cards.md](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-develop/references/genre-cards.md) 按索引取**一张**题材卡，用来校准该题材更常用的
 压力来源、场面颗粒与制作负担；它是可被创作者一句话覆盖的参考，不替代方向选择，也不进入交付物。
 
@@ -162,7 +162,7 @@ python3 {技能目录}/scripts/episode_intake.py index <多集整稿> --out <epi
 - 候选确实改变机制，选定方向贯穿简报、引擎与分集地图；
 - 每次升级能指出权力、信息、关系、暴露、资源、时间或代价的变化；
 - 每集先兑现一部分当集承诺，再留下具体的决定、危险或问题；
-- 改编项目里核心人物的立场、核心关系和主线没有被改写；原著没有的新增内容都登记为 `add`，并列在简报里；
+- 改编项目保留核心人物的立场、核心关系和主线，创作者已接受的改动除外；原著没有的新增内容都登记为 `add`，并列在简报里；
 - 没有把格式偏好冒充普遍规律。
 
 这些是所有者自检，不是终审。展示创作者可读的新增/修改摘要，请创作者接受后再作为下游来源；

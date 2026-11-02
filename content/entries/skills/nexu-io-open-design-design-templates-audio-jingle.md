@@ -1,8 +1,14 @@
 ---
 slug: nexu-io-open-design-design-templates-audio-jingle
 name: audio-jingle
-tagline: Agent skill from nexu-io/open-design
-summary: Agent skill from nexu-io/open-design
+tagline: |-
+  Audio generation skill — jingles, beds, voiceover, and sound effects.
+  Routes music requests to Suno V5 / Udio / Lyria, speech to MiniMax
+  TTS / FishAud
+summary: "audioKind, audioModel, audioDuration (seconds), and (for speech)
+  voice. Branch by known values and use them verbatim. Missing metadata is not
+  an instruction to ask: infer a safe default when possible, and emit a
+  clari..."
 categories:
   - media-creative
 tags:
@@ -11,10 +17,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -22,17 +28,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 104025
-  last_commit: 2026-10-26T07:31:43Z
-  stars_delta_7d: 1726
-  stars_growth_pct: 1.7
-  trending_score: 1755.12
+  stars: 105423
+  last_commit: 2026-11-02T05:06:45Z
+  stars_delta_7d: 1398
+  stars_growth_pct: 1.3
+  trending_score: 1416.79
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99839
     - 100908
     - 102299
     - 104025
+    - 105423
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,16 +46,20 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/audio-jingle/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:48.575Z
+  fetched_at: 2026-11-02T09:06:41.704Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: audio-jingle
-  description: Agent skill from nexu-io/open-design
+  description: |
+    Audio generation skill — jingles, beds, voiceover, and sound effects.
+    Routes music requests to Suno V5 / Udio / Lyria, speech to MiniMax
+    TTS / FishAudio / ElevenLabs V3, and SFX to ElevenLabs SFX or
+    AudioCraft. Output is one MP3/WAV file saved to the project folder.
   folder_path: design-templates/audio-jingle
   extra_files:
     - example.html
-  pack_total_skills: 401
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

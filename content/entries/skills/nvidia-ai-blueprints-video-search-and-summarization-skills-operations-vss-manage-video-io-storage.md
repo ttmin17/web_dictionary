@@ -18,7 +18,7 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1947
-  last_commit: 2026-10-26T07:13:28Z
-  stars_delta_7d: 14
+  stars: 1960
+  last_commit: 2026-11-02T08:44:46Z
+  stars_delta_7d: 13
   stars_growth_pct: 0.7
-  trending_score: 14.1
+  trending_score: 13.09
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1933
     - 1947
+    - 1960
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
   path: skills/operations/vss-manage-video-io-storage/SKILL.md
   branch: develop
-  fetched_at: 2026-10-26T07:38:16.963Z
+  fetched_at: 2026-11-02T09:05:52.637Z
   truncated: false
 type: agent_skill
 skill:
@@ -196,11 +197,13 @@ For Kubernetes, do not use `kubectl port-forward`, an in-cluster Service name, a
 3. **If `vss vios list` exits 0, proceed.** An empty sensor list at exit 0 means the deployment has no sensors; it is not a missing service. Do not retry it.
 
 ---
+
 ## Known limitation — leftover containers from prior deploys
 
 VIOS's sensor listing (`GET /vst/api/v1/sensor/list`) can return **HTTP 502 Bad Gateway** or stale results when leftover `*-smc` VST containers from an earlier deploy survive teardown and win the `network_mode: host` port-bind race on `:30000` / `:30888`. `vss vios list` fails that way, and so do `timeline`, `clip`, `snapshot`, and `delete`, because each resolves the sensor name through that listing. Report the failure; do not route around it with a raw call. **Remediation: re-run `/vss-build-vision-ai`** — its Step 0 teardown grep clears the full `sensor-ms-*` / `vst-ingress-*` / `sdr-*` / `sdrc-*` / `rtspserver-ms-*` set. Full failure-mode catalogue, remediation, and the current routing contract (direct vs SDRC; SDR/Envoy removed in PR #711) live in `references/deploy-vios-service.md § Known Deployment Issues` and [issue #151](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/issues/151).
 
 ---
+
 ## Setup
 
 **Recorded origin:** `vss configure show`. CLI examples take no endpoint.
@@ -228,6 +231,7 @@ VIOS's sensor listing (`GET /vst/api/v1/sensor/list`) can return **HTTP 502 Bad 
 **Resolving a sensor:** Address media by the sensor name. Confirm it with `vss vios list` (`--type video|stream` and `--sensor NAME` optional). Do not build a sensorId from a name. If an id is required, read it from that listing.
 
 ---
+
 ## Service Map
 
 | Capability | How | Authoritative reference |
@@ -242,6 +246,7 @@ VIOS's sensor listing (`GET /vst/api/v1/sensor/list`) can return **HTTP 502 Bad 
 | **NvStreamer** (synthetic RTSP only) | Direct API only when the caller already supplied `VSS_STREAMER_URL`. If it is absent, stop and ask. Do not derive a hostname or port. | `references/nvstreamer-api-reference.md` (separate from VIOS; no `/vst` prefix; `type: "streamer"` on `/version`) |
 
 ---
+
 ## Operations
 
 Supported operations are the `vss vios` verbs in the service map. Read [`references/api-reference.md`](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/skills/operations/vss-manage-video-io-storage/references/api-reference.md) only for the direct-REST cases in **Instructions**, against `VST_API_BASE`.
@@ -251,6 +256,7 @@ NvStreamer is outside `vss`. When the user explicitly asks for a synthetic RTSP 
 For integration- and deployment-time questions about how VIOS interacts with other microservices or how it's brought up, defer to [`references/integrate-vios-service.md`](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/skills/operations/vss-manage-video-io-storage/references/integrate-vios-service.md) and [`references/deploy-vios-service.md`](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/skills/operations/vss-manage-video-io-storage/references/deploy-vios-service.md) respectively (see the **Reference contracts** table above for what each covers).
 
 ---
+
 ## Workflow: sensor name/IP -> clip or snapshot
 
 When the user has a sensor name or IP but needs a clip or snapshot:
@@ -282,6 +288,7 @@ When the user has a sensor name or IP but needs a clip or snapshot:
    Use the returned `media_url` as given. A clip's `warmed: false` means the CLI host could not fetch it; report that rather than rebuilding the URL.
 
 ---
+
 ## Responses
 
 Covered operations return CLI JSON on stdout and a typed exit code. Branch on the exit code ([`AGENTS.md`](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/skills/operations/vss-manage-video-io-storage/../../../AGENTS.md)). An empty sensor list at exit 0 is an answer. Do not retry it.
@@ -302,6 +309,7 @@ If `vss vios add` exits 3 with `Failed to get media information`, this is the li
 The doubled `http://` VIOS writes into `/url` responses (Finding 8 in `references/integrate-vios-service.md § Known Integration Constraints`) does not reach you through `vss vios clip` or `snapshot`: the CLI re-anchors every returned URL on the recorded origin. It matters only for a direct `/url` call, where you strip the duplicated prefix yourself.
 
 ---
+
 ## Examples
 
 Example operation prompts:
@@ -327,6 +335,7 @@ Example operation prompts:
 - **Error**: a consumer (RT-CV, RT-Embed, RT-VLM) does not list a source just added to VIOS. **Cause**: the deployment fans a new source out by webhook, asynchronously and with retries, so consumer state trails registration. **Solution**: allow for the delay — the slowest shipped receivers retry for ~30 minutes before giving up. Never call a consumer directly to compensate; [`references/provision-vios-source.md`](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/skills/operations/vss-manage-video-io-storage/references/provision-vios-source.md) has the logs to read if it genuinely never arrives.
 
 ---
+
 ## Tips
 
 - **jq:** Capture CLI stdout before piping to `jq`, or use `set -o pipefail`. `jq`'s exit code is not the CLI's. See [`AGENTS.md`](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/blob/develop/skills/operations/vss-manage-video-io-storage/../../../AGENTS.md).

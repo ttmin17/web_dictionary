@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/churn-prevention/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.287Z
+  fetched_at: 2026-11-02T09:06:13.821Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
     - evals/evals.json
     - references/cancel-flow-patterns.md
     - references/dunning-playbook.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -106,6 +107,7 @@ Gather this context (ask if not provided):
 - Brand tone for offboarding? (Empathetic, direct, playful)
 
 ---
+
 ## How This Skill Works
 
 Churn has two types requiring different strategies:
@@ -124,6 +126,7 @@ This skill supports three modes:
 3. **Set up dunning** — Failed payment recovery with retries and email sequences
 
 ---
+
 ## Cancel Flow Design
 
 ### The Cancel Flow Structure
@@ -268,6 +271,7 @@ The key insight: **match the offer to the reason.** A discount won't save someon
 For detailed cancel flow patterns by industry and billing provider, see [references/cancel-flow-patterns.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/churn-prevention/references/cancel-flow-patterns.md).
 
 ---
+
 ## Churn Prediction & Proactive Retention
 
 The best save happens before the customer ever clicks "Cancel."
@@ -332,6 +336,7 @@ Validate score mappings and intervention thresholds against later observed renew
 | Annual renewal in 30 days | Value recap email + renewal confirmation |
 
 ---
+
 ## Involuntary Churn: Payment Recovery
 
 Failed payments cause 30-50% of all churn but are the most recoverable.
@@ -396,6 +401,7 @@ Not all failures are the same. Retry strategy by decline type:
 For the complete dunning playbook with provider-specific setup, see [references/dunning-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/churn-prevention/references/dunning-playbook.md).
 
 ---
+
 ## Metrics & Measurement
 
 ### Key Churn Metrics
@@ -434,6 +440,7 @@ Test one variable at a time:
 **How to run cancel flow experiments:** Use the **ab-testing** skill to design statistically rigorous tests. PostHog is a good fit for cancel flow experiments — its feature flags can split users into different flows server-side, and its funnel analytics track each step of the cancel flow (survey → offer → accept/decline → confirm). See the [PostHog integration guide](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/posthog.md) for setup.
 
 ---
+
 ## Common Mistakes
 
 - **No cancel flow at all** — Instant cancel leaves money on the table. Even a simple survey + one offer saves 10-15%
@@ -448,6 +455,7 @@ Test one variable at a time:
 - **No post-cancel path** — Make reactivation easy and trigger win-back emails, because some churned users will want to come back
 
 ---
+
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
@@ -482,6 +490,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | `segment` | Event routing for health scoring |
 
 ---
+
 ## Related Skills
 
 - **emails**: For win-back email sequences after cancellation

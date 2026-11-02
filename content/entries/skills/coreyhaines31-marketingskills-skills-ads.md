@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 56570
-  last_commit: 2026-10-22T16:57:46Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 2.1
-  trending_score: 1162.4
+  stars: 57933
+  last_commit: 2026-10-31T00:53:07Z
+  stars_delta_7d: 1363
+  stars_growth_pct: 2.4
+  trending_score: 1395.84
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54518
     - 55431
     - 56570
+    - 57933
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ads/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:09.286Z
+  fetched_at: 2026-11-02T09:06:13.820Z
   truncated: false
 type: agent_skill
 skill:
@@ -75,7 +76,7 @@ skill:
     - references/google-ads-audit-checklist.md
     - references/google-search-playbook.md
     - references/linkedin-b2b-playbook.md
-  pack_total_skills: 52
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -118,6 +119,7 @@ Gather this context (ask if not provided):
 - What's your current funnel conversion rate?
 
 ---
+
 ## Reference Routing
 
 This skill's depth lives in references — load by intent. For **any operational decision on a live account** (kill/keep/scale/budget), load the relevant playbook before answering; the thresholds live there, not here.
@@ -128,17 +130,18 @@ This skill's depth lives in references — load by intent. For **any operational
 | B2B strategy, funnel stages, budget splits, kill rules, lead quality, breakeven math | [b2b-paid-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/b2b-paid-playbook.md) | Demand lifecycle, leading/lagging signals, kill rules, offline conversion loop, U/B/F lead scoring, scaling quadrant |
 | Meta operations: when to kill/graduate/scale an ad, fatigue, testing structure, partnership/creator ads, declining reach | [meta-decision-system.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/meta-decision-system.md) | TCPL-anchored decision tree, ad-count ceiling, 80/20 CBO structure, fatigue bands, lead forms, Advantage+ transition, partnership-ads playbook, rolling-reach signal |
 | LinkedIn operations: bidding, audience sizing, scaling, benchmarks, TLAs, formats | [linkedin-b2b-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/linkedin-b2b-playbook.md) | Bidding progression, penetration scaling, sizing rules, funnel benchmarks, document/conversation ads, audit shortlist |
-| Google Search: what to spend on first, structure, match types, negatives, PMax | [google-search-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/google-search-playbook.md) | Intent ladder, account structure, match-type gates, negatives, bidding by volume, offline conversions, PMax guardrails |
+| Google Search: what to spend on first, structure, match types, negatives, PMax | [google-search-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/google-search-playbook.md) | Intent ladder, account structure, match-type gates (incl. AI Max), negatives, bidding by volume, offline conversions, PMax guardrails |
 | Named-account targeting, pipeline acceleration, cross-channel retargeting | [abm-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/abm-playbook.md) | LinkedIn/Meta ABM, list mechanics, acceleration campaigns, UTM cross-channel remarketing, ABM measurement |
 | Generating Google RSAs | [rsa-output-spec.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/rsa-output-spec.md) | Mandatory output spec — limits, sidecars, template, self-check |
 | Weekly or daily account check, "what changed," stakeholder readout | [operating-check.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/operating-check.md) | Ordered six-step check, HOLD/FIX/TEST/INVESTIGATE calls, facts/hypotheses/missing data, Friday readout under 200 words |
 | Auditing a live account, grading account health, quoting benchmarks, recommending changes | [audit-guardrails.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/audit-guardrails.md) | Pass/fail/unknown scoring, evidence coverage, recommendation safety, hard stops, benchmark discipline |
 | Analyzing or reporting on Google Ads data, search-term waste, pause/keep/scale on low volume, client-facing findings | [reading-google-ads-data.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/reading-google-ads-data.md) | Withheld search terms (disclosed vs total clicks), conversions vs all_conversions, click-date attribution, experiment arms, 30-day change history, zero-in-N table, break-even CVR, verified/inferred/stale, "conclusions that sound right" |
 | Itemized Google Ads / ecommerce account audit (Search + Shopping + PMax + GMC + Demand Gen) | [google-ads-audit-checklist.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/google-ads-audit-checklist.md) | 32 checks across 11 categories — feed/GMC quality, Shopping segmentation, PMax signals/budget, DG format splits, lander funnels; each scored pass/fail/unknown/NA via audit-guardrails; deep dives for conversion signals and wasted-spend negatives |
-| Agentic creative/competitive research: ad-library teardown, review→persona mapping, organic competitor teardown | [creative-research-automation.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/creative-research-automation.md) | Ad Library output schema (format split, % partnership, inferred personas, top-10 by impressions), reviews→CSV→personas doc→deck, "who creatives target vs. who buys," connectors + scheduled-to-Slack workflow |
+| Agentic creative/competitive research: ad-library teardown, weekly competitor ad tracker, review→persona mapping, organic competitor teardown | [creative-research-automation.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/creative-research-automation.md) | Ad Library output schema (format split, % partnership, inferred personas, top-10 by impressions), reviews→CSV→personas doc→deck, "who creatives target vs. who buys," connectors + scheduled-to-Slack workflow |
 | Audience setup, tracking setup, launch checklists, copy formulas | [audience-targeting.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/audience-targeting.md) · [platform-setup-checklists.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/platform-setup-checklists.md) · [ad-copy-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/ad-copy-templates.md) | Existing foundations |
 
 ---
+
 ## Platform Selection Guide
 
 | Platform | Best For | Use When |
@@ -150,6 +153,7 @@ This skill's depth lives in references — load by intent. For **any operational
 | **TikTok** | Younger demographics, viral creative | Audience skews 18-34, video capacity |
 
 ---
+
 ## Campaign Structure Best Practices
 
 ### Account Organization
@@ -188,6 +192,7 @@ LI_LeadGen_CMOs-SaaS_Whitepaper_Mar24
 - Wait 3-5 days between increases for algorithm learning
 
 ---
+
 ## Ad Copy Frameworks
 
 ### Key Formulas
@@ -204,6 +209,7 @@ LI_LeadGen_CMOs-SaaS_Whitepaper_Mar24
 **For detailed templates and headline formulas**: See [references/ad-copy-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/ad-copy-templates.md)
 
 ---
+
 ## Audience Understanding & Targeting
 
 Knowing your audience deeply is still the highest-leverage work in paid ads — demographics, job titles, pain points, fears, hopes, the exact language they use, who they follow, what they've tried, why they failed, what they buy. **Gather every identifier you can.**
@@ -250,11 +256,13 @@ Trying to make up for weak creative with hyper-precise targeting. If your creati
 **For detailed targeting strategies by platform**: See [references/audience-targeting.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/audience-targeting.md)
 
 ---
+
 ## Modern Meta playbook (Andromeda era — 2026+)
 
-Meta's Andromeda algorithm (2025) made creative volume and variety the main lever: target broadly and let specific creative do the targeting, ship many cheap static concepts, and make ads look native rather than polished. The full playbook (creative volume, creative as targeting, identity keywords, AI variants, zombie campaigns, native-looking ads, and running creator ads as distinct concepts with a quality optimization event) is in [references/meta-andromeda-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/meta-andromeda-playbook.md).
+Meta's Andromeda algorithm (2025) made creative volume and variety the main lever: target broadly and let specific creative do the targeting, ship many cheap static concepts, and make ads look native rather than polished. The full playbook (creative volume, creative as targeting, identity keywords, AI variants, zombie campaigns, native-looking ads, running creator ads as distinct concepts with a quality optimization event, and ad sequencing) is in [references/meta-andromeda-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/meta-andromeda-playbook.md).
 
 ---
+
 ## Creative Best Practices
 
 ### Image Ads
@@ -284,6 +292,7 @@ Meta's Andromeda algorithm (2025) made creative volume and variety the main leve
 5. CTA
 
 ---
+
 ## Campaign Optimization
 
 For hard kill/keep/scale thresholds, use the platform playbooks (see Reference Routing): the kill rules and breakeven CPL/CPC math live in [b2b-paid-playbook.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/b2b-paid-playbook.md), and Meta's full decision tree lives in [meta-decision-system.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/meta-decision-system.md).
@@ -322,6 +331,7 @@ For hard kill/keep/scale thresholds, use the platform playbooks (see Reference R
 4. Monitor and adjust targets based on results
 
 ---
+
 ## Retargeting Strategies
 
 ### Funnel-Based Approach
@@ -368,6 +378,7 @@ Build out your retargeting layer with these 4 ad types running simultaneously:
 These four together, retargeting the same audience that didn't convert from the top-of-funnel ad, dramatically lift the ROAS of the entire funnel.
 
 ---
+
 ## Landing Page Alignment (the headline-mirror trick)
 
 Ad-to-landing-page congruence is the single most underrated lever in paid ads. Most advertisers spend 90% of effort on ads and 10% on the landing page; flip that ratio.
@@ -450,6 +461,7 @@ The most common scaling failure: a business at a 40 ROAS spending $5k/month, ref
 - Massive insight-to-creative loop that most advertisers skip
 
 ---
+
 ## Platform Setup
 
 Before launching campaigns, ensure proper tracking and account setup.
@@ -465,6 +477,7 @@ Before launching campaigns, ensure proper tracking and account setup.
 - [ ] Targeting matches intended audience
 
 ---
+
 ## Google RSA Output Spec (mandatory when generating RSAs)
 
 When the user requests Google Ads RSAs, load [references/rsa-output-spec.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/references/rsa-output-spec.md) and follow it exactly — hard character limits, required sidecar artifacts (ad groups, negatives, sitelinks, callouts), output order, template shape, CFM medical compliance, and the pre-send self-check. Do not output any RSA that violates it.
@@ -505,6 +518,7 @@ Before auditing a live account, grading account health, quoting benchmarks, or r
 - Making big budget changes (disrupts learning)
 
 ---
+
 ## Task-Specific Questions
 
 1. What platform(s) are you currently running or want to start with?
@@ -515,6 +529,7 @@ Before auditing a live account, grading account health, quoting benchmarks, or r
 6. Do you have pixel/conversion tracking set up?
 
 ---
+
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key advertising platforms:
@@ -529,6 +544,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 For tracking setup, see the **conversion-tracking** skill; tool guides: [ga4.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/ga4.md), [segment.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/segment.md)
 
 ---
+
 ## Related Skills
 
 - **ad-creative**: For generating and iterating ad headlines, descriptions, and creative at scale

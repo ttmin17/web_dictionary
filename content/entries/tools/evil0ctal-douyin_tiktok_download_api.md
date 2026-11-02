@@ -18,26 +18,26 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2021-11-07T01:35:09
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Evil0ctal/Douyin_TikTok_Download_API
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 20906
-  last_commit: 2026-10-26T05:59:38Z
-  stars_delta_7d: 127
-  stars_growth_pct: 0.6
-  trending_score: 127.78
-  rank_current: 55
-  rank_delta: -38
+  stars: 21103
+  last_commit: 2026-11-02T07:43:14Z
+  stars_delta_7d: 197
+  stars_growth_pct: 0.9
+  trending_score: 198.86
+  rank_current: 38
+  rank_delta: 17
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 20496
     - 20625
     - 20779
     - 20906
+    - 21103
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: Evil0ctal/Douyin_TikTok_Download_API
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:36:25.844Z
+  fetched_at: 2026-11-02T09:05:26.574Z
   truncated: false
 type: agent_tool
 tool:
@@ -292,21 +292,28 @@ illegal** — they are for making friends and talking about the work.
 | The posts under a hashtag | ❌ | ✅ | — |
 | Keyword search: posts and accounts | ❌ | ✅ | ✅ |
 | A live room: whether it is on, and its pull URLs | ✅ | ✅ | ✅ |
+| A live room by its broadcast's own id, and Douyin app share links | ✅ | ✅ | — |
+| Whether many live rooms are on air, in one call | ✅ | ✅ | ❌ |
+| A live room's audience ranking | ✅ | ❌ | ❌ |
 | Trending boards | ✅ | ❌ | ✅ |
 
 Douyin serves its follower and following lists only to a signed-in session, so those
 two endpoints are not registered at all: an endpoint that always returns an empty page
 is worth nothing. Search and the posts under a hashtag are the same story: Douyin refuses
 both to a guest, and no signed-in answer has been measured yet, so neither is offered there.
-On TikTok search answers a guest one thin page, so an imported login is what pages it.
+On TikTok the account search answers a guest, while the post search refuses one outright
+(measured 2026-11-02), so an imported login is what it takes.
 Importing your own logged-in cookies widens what the rest can see, too.
 On Bilibili that matters most for comments: a guest is shown the three hottest and no
 more, so an imported login is what turns that into the full thread. On Douyin it decides
 an author's liked posts outright: a guest is shown none, public or not, so that list
-needs a logged-in identity in the pool.
+needs a logged-in identity in the pool. An imported login is used at your own risk:
+platforms rarely ban an account for reading data with it, but a ban cannot be ruled out
+([what to know before importing one](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/documents/en/06-identities-and-proxies.md#a-logged-in-jar-is-not-a-guest-identity)).
 
 The dashes are not gaps: a Douyin or TikTok post is never more than one video, so it has no
-parts to list.
+parts to list, and a Bilibili live room has one number for good rather than an id per
+broadcast.
 
 Media downloads, the content archive, counter snapshots, collections and a watchlist
 are built in; none of them needs another service.
@@ -578,7 +585,7 @@ filesystem, process supervision — you put back yourself. That section lists th
 | Web console | `/` | Identity pool, scheduler, library, downloads, transcriptions, logs, diagnostics |
 | API reference | `/docs` | Swagger UI inside the console, English and Chinese |
 | Bare reference | `/swagger`, `/redoc` | No login required |
-| REST API | `/api/v1/...` | 126 operations |
+| REST API | `/api/v1/...` | 128 operations |
 | MCP | `/mcp` | Shares the service layer with REST; client setup at `/mcp-guide` in the console |
 | CLI | `dtk --help` | Same |
 

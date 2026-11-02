@@ -15,29 +15,29 @@ tags:
   - asyncio
   - authentication-middleware
 status: active
-quality_percentile: 96
+quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2025-05-08T08:16:59
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: IBM/mcp-context-forge
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4692
-  last_commit: 2026-10-25T19:40:38Z
-  stars_delta_7d: 43
-  stars_growth_pct: 0.9
-  trending_score: 43.4
-  rank_current: 43
-  rank_delta: -11
+  stars: 4740
+  last_commit: 2026-11-02T05:27:38Z
+  stars_delta_7d: 48
+  stars_growth_pct: 1
+  trending_score: 48.49
+  rank_current: 38
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4582
     - 4616
     - 4649
     - 4692
+    - 4740
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: IBM/mcp-context-forge
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:10.533Z
+  fetched_at: 2026-11-02T09:05:44.736Z
   truncated: false
 type: mcp_server
 launch:
@@ -89,6 +89,7 @@ It runs as a fully compliant MCP server, deployable via PyPI or Docker, and scal
 
 ![ContextForge Web UI](https://raw.githubusercontent.com/IBM/mcp-context-forge/main/docs/docs/images/mcpgateway.gif)
 ---
+
 <!-- vscode-markdown-toc -->
 ## Table of Contents
 
@@ -110,6 +111,7 @@ It runs as a fully compliant MCP server, deployable via PyPI or Docker, and scal
 - [Contributing](#contributing)
 
 ---
+
 ### 📌 Quick Links
 
 | Resource | Description |
@@ -121,6 +123,7 @@ It runs as a fully compliant MCP server, deployable via PyPI or Docker, and scal
 | **[Deprecations](https://ibm.github.io/mcp-context-forge/deprecations/)** | Deprecated runtime paths and migration guidance |
 
 ---
+
 ## Overview & Goals
 
 **ContextForge** is an open source registry and proxy that federates any [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server, A2A server, or REST/gRPC API, providing centralized governance, discovery, and observability. It optimizes agent and tool calling, and supports plugins. See the [project roadmap](https://ibm.github.io/mcp-context-forge/architecture/roadmap/) for more details.
@@ -143,6 +146,7 @@ It currently supports:
 For a list of upcoming features, check out the [ContextForge Roadmap](https://ibm.github.io/mcp-context-forge/architecture/roadmap/)
 
 ---
+
 <details>
 <summary><strong>🔌 Gateway Layer with Protocol Flexibility</strong></summary>
 
@@ -208,11 +212,13 @@ See **[Observability Documentation](https://ibm.github.io/mcp-context-forge/mana
 </details>
 
 ---
+
 ## Quick Start - PyPI
 
 ContextForge is published on [PyPI](https://pypi.org/project/mcp-contextforge-gateway/) as `mcp-contextforge-gateway`.
 
 ---
+
 > ⚠️ **`JWT_SECRET_KEY` and `AUTH_ENCRYPTION_SECRET` are required in every environment — including local development.** The gateway will not start without them. Generate real secrets with `python3 -m mcpgateway.scripts.init_secrets` before first run.
 
 **TLDR** — single command using [uv](https://docs.astral.sh/uv/):
@@ -383,6 +389,7 @@ npx -y @modelcontextprotocol/inspector
 </details>
 
 ---
+
 ## Quick Start - Containers
 
 Use the official OCI image from GHCR with **Docker** *or* **Podman**.
@@ -534,6 +541,7 @@ kubectl exec deployment/mcp-gateway-mcp-context-forge -- \
 - 📈 **Monitoring** - Built-in Grafana dashboards and alerting
 
 ---
+
 ### 🐳 Docker (Single Container)
 
 ```bash
@@ -608,6 +616,7 @@ docker run -d --name mcpgateway -p 4444:4444 \
 </details>
 
 ---
+
 ### 🦭 Podman (rootless-friendly)
 
 ```bash
@@ -638,6 +647,7 @@ podman run -d --name mcpgateway --network=host \
 </details>
 
 ---
+
 <details>
 <summary><strong>✏️ Docker/Podman tips</strong></summary>
 
@@ -654,6 +664,7 @@ podman run -d --name mcpgateway --network=host \
 </details>
 
 ---
+
 <details>
 <summary><strong>🚑 Smoke-test the running container</strong></summary>
 
@@ -669,6 +680,7 @@ curl -s -H "Authorization: Bearer $MCPGATEWAY_BEARER_TOKEN" \
 </details>
 
 ---
+
 ## Quick Start: VS Code Dev Container
 
 Clone the repo and open in VS Code—it will detect `.devcontainer` and prompt to **"Reopen in Container"**. The container includes Python 3.11, Docker CLI, and all project dependencies.
@@ -676,6 +688,7 @@ Clone the repo and open in VS Code—it will detect `.devcontainer` and prompt t
 For detailed setup, workflows, and GitHub Codespaces instructions, see **[Developer Onboarding](https://ibm.github.io/mcp-context-forge/development/developer-onboarding/)**.
 
 ---
+
 ## Installation
 
 ```bash
@@ -732,6 +745,7 @@ docker run --name mcp-postgres \
 </details>
 
 ---
+
 ## Upgrading
 
 For upgrade instructions, migration guides, and rollback procedures, see:
@@ -741,6 +755,7 @@ For upgrade instructions, migration guides, and rollback procedures, see:
 - **[CHANGELOG.md](https://github.com/IBM/mcp-context-forge/blob/main/CHANGELOG.md)** — Version history and breaking changes
 
 ---
+
 ## Configuration
 
 > ⚠️ If any required `.env` variable is missing or invalid, the gateway will fail fast at startup with a validation error via Pydantic.
@@ -847,6 +862,7 @@ These values differ from code defaults to provide a working local/dev setup:
 For the complete list of 300+ environment variables organized by category (authentication, caching, SSO, observability, etc.), see the **[Configuration Reference](https://ibm.github.io/mcp-context-forge/manage/configuration/)**.
 
 ---
+
 ## Running
 
 ### Quick Reference
@@ -904,6 +920,7 @@ uvicorn mcpgateway.main:app --host 0.0.0.0 --port 4444 --workers 4
 ```
 
 ---
+
 ## Cloud Deployment
 
 ContextForge can be deployed to any major cloud platform:
@@ -920,6 +937,7 @@ ContextForge can be deployed to any major cloud platform:
 For comprehensive deployment guides, see **[Deployment Documentation](https://ibm.github.io/mcp-context-forge/deployment/)**.
 
 ---
+
 ## API Reference
 
 Interactive API documentation is available when the server is running:
@@ -943,6 +961,7 @@ curl -H "Authorization: Bearer $TOKEN" http://localhost:4444/health
 For comprehensive curl examples covering all endpoints, see the **[API Usage Guide](https://ibm.github.io/mcp-context-forge/manage/api-usage/)**.
 
 ---
+
 ## Testing
 
 ```bash
@@ -955,6 +974,7 @@ make coverage        # Generate coverage report
 See [Doctest Coverage Guide](https://ibm.github.io/mcp-context-forge/development/doctest-coverage/) for documentation testing details.
 
 ---
+
 ## Project Structure
 
 ```
@@ -983,6 +1003,7 @@ plugins/             # Plugin framework and implementations
 For complete structure, see [CONTRIBUTING.md](https://github.com/IBM/mcp-context-forge/blob/main/CONTRIBUTING.md) or run `tree -L 2`.
 
 ---
+
 ## Development
 
 ```bash
@@ -999,6 +1020,7 @@ For development workflows, see:
 - **[Building & Packaging](https://ibm.github.io/mcp-context-forge/development/building/)**
 
 ---
+
 ## Troubleshooting
 
 Common issues and solutions:
@@ -1017,6 +1039,7 @@ Common issues and solutions:
 For detailed troubleshooting guides, see **[Troubleshooting Documentation](https://ibm.github.io/mcp-context-forge/manage/troubleshooting/)**.
 
 ---
+
 ## Contributing
 
 1. Fork the repo, create a feature branch.
@@ -1027,6 +1050,7 @@ For detailed troubleshooting guides, see **[Troubleshooting Documentation](https
 See **[CONTRIBUTING.md](https://github.com/IBM/mcp-context-forge/blob/main/CONTRIBUTING.md)** for full guidelines and **[Issue Guide #2502](https://github.com/IBM/mcp-context-forge/issues/2502)** for how to file bugs, request features, and find issues to work on.
 
 ---
+
 ## Changelog
 
 A complete changelog can be found here: [CHANGELOG.md](https://github.com/IBM/mcp-context-forge/blob/main/CHANGELOG.md)

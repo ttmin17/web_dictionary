@@ -1,8 +1,11 @@
 ---
 slug: dreammis-social-auto-upload-skills-youtube-upload
 name: youtube-upload
-tagline: Agent skill from dreammis/social-auto-upload
-summary: Agent skill from dreammis/social-auto-upload
+tagline: 使用 social-auto-upload 的 `sau youtube` 登录 YouTube 并上传、安排定时或设置视频可见范围。Use
+  when 用户要向 YouTube 发布或定时发布视频，或检查 Google/YouTube 登录状态。
+summary: 标题最多 100 个字符。--visibility 可选 public、unlisted、private，默认
+  public；--thumbnail 指定封面，--playlist 指定已有播放列表。只有用户明确给出定时时间才传 --schedule
+  "YYYY-MM-DD HH:MM"；该选项会使用 YouTube Studio 的 Schedule 状态，需核对页面显示的日期与时间。
 categories:
   - other
 tags:
@@ -11,10 +14,10 @@ tags:
   - douyin
   - tiktok
 status: active
-quality_percentile: 70
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: dreammis/social-auto-upload
@@ -22,27 +25,29 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 15815
+  stars: 16015
   last_commit: 2026-10-22T18:42:22Z
-  stars_delta_7d: 654
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 200
+  stars_growth_pct: 1.3
+  trending_score: 202.53
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 15815
-language: en
+    - 16015
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: dreammis/social-auto-upload
   path: skills/youtube-upload/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:10.102Z
+  fetched_at: 2026-11-02T09:06:45.043Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: youtube-upload
-  description: Agent skill from dreammis/social-auto-upload
+  description: 使用 social-auto-upload 的 `sau youtube` 登录 YouTube
+    并上传、安排定时或设置视频可见范围。Use when 用户要向 YouTube 发布或定时发布视频，或检查 Google/YouTube 登录状态。
   folder_path: skills/youtube-upload
   extra_files: []
   pack_total_skills: 18
@@ -54,4 +59,15 @@ skill:
   pack_slug: dreammis-social-auto-upload
 ---
 
-Agent skill from dreammis/social-auto-upload
+# YouTube 视频发布
+调用现有 `sau youtube` CLI。登录在浏览器中完成 Google 账号登录，不使用二维码；账号名是本地会话别名。
+
+```powershell
+sau youtube login --account creator
+sau youtube check --account creator
+sau youtube upload-video --account creator --file videos/demo.mp4 --title "标题" --desc "简介" --tags tag1,tag2 --visibility public
+```
+
+标题最多 100 个字符。`--visibility` 可选 `public`、`unlisted`、`private`，默认 `public`；`--thumbnail` 指定封面，`--playlist` 指定已有播放列表。只有用户明确给出定时时间才传 `--schedule "YYYY-MM-DD HH:MM"`；该选项会使用 YouTube Studio 的 Schedule 状态，需核对页面显示的日期与时间。
+
+发布前再次核对账号、视频、标题、说明、标签、可见范围及立即/定时意图。上传或发布遇到超时时先查 YouTube Studio 中的原视频，不盲目重传。上传成功不等于审核完成或公开视频已可播放。

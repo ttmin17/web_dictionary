@@ -3,7 +3,7 @@ slug: asgeirtj-system_prompts_leaks-anthropic-claude-code-skills-code-review
 name: code-review
 tagline: Review the current diff, or a PR number/branch/path target, for
   correctness bugs (plus reuse/simplification/efficiency cleanups where the
-  model's revi
+  model's reci
 summary: high effort → 8 inline angles → dedup (no verify) → ≤10 findings
 categories:
   - coding-agents
@@ -13,10 +13,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 86
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -24,15 +24,16 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 70224
-  last_commit: 2026-10-25T19:55:03Z
-  stars_delta_7d: 344
-  stars_growth_pct: 0.5
-  trending_score: 345.69
+  stars: 70623
+  last_commit: 2026-11-02T07:02:10Z
+  stars_delta_7d: 399
+  stars_growth_pct: 0.6
+  trending_score: 401.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
     - 70224
+    - 70623
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,25 +41,25 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/code-review/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:00.810Z
+  fetched_at: 2026-11-02T09:06:14.073Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: code-review
   description: "Review the current diff, or a PR number/branch/path target, for
     correctness bugs (plus reuse/simplification/efficiency cleanups where the
-    model's review recipe covers them) at the given effort level
-    (low|medium|high|xhigh|max: from few high-confidence findings up to many,
-    some of them uncertain; ultra: deep multi-agent review in the cloud); with
-    no level given, it reuses the level you typed last. Pass --comment to post
-    findings as inline PR comments, or --fix to apply the findings to the
-    working tree after the review. Pass --max-findings <n> to report up to n
-    findings, or --max-findings all for every finding. The choice stays until
-    you pass --max-findings default. For ultra on a GitHub.com PR target, --post
-    asks to post the finished review’s findings to the PR as a single comment
-    from the user’s GitHub account (not a review; the launch dialog still
-    confirms in interactive sessions, while non-interactive mode posts on the
-    flag alone) and --no-post hides that option."
+    model's recipe covers them) at the effort level given first, before any
+    target (low|medium|high|xhigh|max: from few high-confidence findings to
+    many, some uncertain; ultra: deep multi-agent review in the cloud (requires
+    claude.ai account access)); with no level given, it reuses the level you
+    typed last. Pass --comment to post findings as inline PR comments, or --fix
+    to apply them to the working tree after the review. Pass --max-findings <n>
+    to report up to n findings, or --max-findings all for every finding. The
+    choice stays until you pass --max-findings default. For ultra on a
+    GitHub.com PR target, --post asks to post the finished review's findings to
+    the PR as a single comment from the user's GitHub account (not a review; the
+    launch dialog still confirms in interactive sessions, while non-interactive
+    mode posts on the flag alone) and --no-post hides that option."
   folder_path: Anthropic/claude-code/skills/code-review
   extra_files:
     - high.md
@@ -67,7 +68,7 @@ skill:
     - medium.md
     - report-findings-tool.md
     - xhigh.md
-  pack_total_skills: 217
+  pack_total_skills: 24
   is_pack_primary: false
   clients:
     - claude-code

@@ -14,29 +14,29 @@ tags:
   - anti-bot-detection
   - browser-automation
 status: active
-quality_percentile: 73
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2025-04-15T10:55:56
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: brightdata/brightdata-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2687
-  last_commit: 2026-10-20T09:53:42Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.3
-  trending_score: 7.02
-  rank_current: 82
-  rank_delta: -16
+  stars: 2705
+  last_commit: 2026-11-01T13:21:14Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.7
+  trending_score: 18.12
+  rank_current: 64
+  rank_delta: 13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2659
     - 2673
     - 2680
     - 2687
+    - 2705
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: brightdata/brightdata-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:37:59.007Z
+  fetched_at: 2026-11-02T09:05:40.517Z
   truncated: false
 type: mcp_server
 launch:
@@ -89,6 +89,7 @@ launch:
 </div>
 
 ---
+
 ## Overview
 
 The Bright Data MCP server gives AI agents real-time access to public web data. It exposes **32 tools** covering:
@@ -104,6 +105,7 @@ Every request is routed through Bright Data's unblocking infrastructure, so page
 Two deployment options: a hosted remote server (one URL, no installation) or a local instance via `npx @brightdata/mcp`.
 
 ---
+
 ## Quick Start
 
 **Hosted server — no installation.** Add this URL to your MCP client:
@@ -279,6 +281,7 @@ For any client that supports local MCP servers:
 </details>
 
 ---
+
 ## Pricing and Free Tier
 
 Every account includes a recurring monthly free tier. **No credit card or commitment required to start.**
@@ -307,6 +310,7 @@ Beyond the free tier — pay as you go, no commitment:
 [Full pricing, volume plans and enterprise →](https://brightdata.com/pricing/mcp-server)
 
 ---
+
 ## Use Cases
 
 ### Real-time research
@@ -400,10 +404,11 @@ Gather source material from many pages at once, filtered by recency and relevanc
 
 | Task | Tools |
 |------|-------|
-| Collect multiple sources in one call | `scrape_batch` (up to 10 URLs) |
+| Collect multiple sources in one call | `scrape_batch` (up to 5 URLs) |
 | News and finance data | `search_engine` with news queries, `run_scraper` with the Yahoo Finance scraper |
 
 ---
+
 ## How It Compares
 
 | Capability | Bright Data MCP | Typical web MCP servers |
@@ -420,6 +425,7 @@ Gather source material from many pages at once, filtered by recency and relevanc
 | Free tier | 5,000 requests/month, browser automation included, no credit card | Varies; often rate-limited keyless access |
 
 ---
+
 ## Tool Selection: Groups
 
 Tools are organized into groups so you only load what you need. Fewer tools means less context for your agent to process.
@@ -477,11 +483,12 @@ Coding agent setup (Claude Code / Cursor / Windsurf) — npm, PyPI and GitHub da
 ```
 
 ---
+
 ## Tools Reference (32 Tools)
 
 ### Which tool to use
 
-- **Known URL, need the content:** `scrape_as_markdown`. Multiple URLs (up to 10): `scrape_batch`
+- **Known URL, need the content:** `scrape_as_markdown`. Multiple URLs (up to 5): `scrape_batch`
 - **Need to find information:** `search_engine`. Multiple queries (up to 10): `search_engine_batch`
 - **Structured data from a known platform (Amazon, LinkedIn, TikTok, npm, PyPI, etc.):** `search_scrapers` → `get_scraper_details` → `run_scraper` — returns clean JSON, faster and more reliable than scraping the same page
 - **Structured JSON from a page no scraper covers:** `extract`
@@ -504,8 +511,8 @@ Notes on scraper runs:
 |------|-------------|-------|
 | `search_engine` | Search Google, Bing, or Yandex. Google returns JSON (URL, title, description); Bing and Yandex return Markdown. Paginate with the `cursor` parameter | default / every group |
 | `search_engine_batch` | Up to 10 search queries in one call | default / `advanced_scraping` |
-| `scrape_as_markdown` | Any URL as Markdown. Bot protection and CAPTCHA handled automatically | default / every group |
-| `scrape_batch` | Up to 10 URLs in one call; returns an array of URL/content pairs in Markdown | default / `advanced_scraping` |
+| `scrape_as_markdown` | Any URL. Returns the content as markdown (default), text, html or ld_json | default / every group |
+| `scrape_batch` | Up to 5 URLs in one call. Returns the content as markdown (default), text, html or ld_json | default / `advanced_scraping` |
 | `scrape_as_html` | Any URL as raw HTML | default / `advanced_scraping` |
 | `extract` | Scrape a page and convert it to structured JSON using AI, with an optional custom extraction prompt | default / `advanced_scraping` |
 | `session_stats` | Tool usage counts for the current session | default / `advanced_scraping` |
@@ -592,6 +599,7 @@ Filter search over stored LinkedIn datasets; returns matching records at once, w
 [Full tool reference in the docs →](https://docs.brightdata.com/ai/mcp-server/tools)
 
 ---
+
 ## Agent Skills
 
 Ready-to-use skills that teach your agent how to use this MCP server correctly. The full collection lives at [github.com/brightdata/skills](https://github.com/brightdata/skills) — 21 skills covering MCP orchestration, competitive intelligence, price comparison, brand listening, SEO audits, scraper building, RAG pipelines, and more.
@@ -607,6 +615,7 @@ Three of the highest-impact skills:
 [Browse all 21 skills →](https://github.com/brightdata/skills)
 
 ---
+
 ## Configuration
 
 ### Basic setup (local)
@@ -677,6 +686,7 @@ extend their tool timeout on progress will cap the wait at their own limit — `
 is the knob on the server side. Browser tools are not covered.
 
 ---
+
 ## Documentation
 
 | Resource | Link |
@@ -688,6 +698,7 @@ is the knob on the server side. Browser tools are not covered.
 | Changelog | [CHANGELOG.md](https://github.com/brightdata-com/brightdata-mcp/blob/main/CHANGELOG.md) |
 
 ---
+
 ## Troubleshooting
 
 <details>
@@ -721,6 +732,7 @@ Check your internet connection and firewall settings.
 </details>
 
 ---
+
 ## Contributing
 
 - [Report bugs](https://github.com/brightdata-com/brightdata-mcp/issues)
@@ -730,6 +742,7 @@ Check your internet connection and firewall settings.
 Please follow [Bright Data's coding standards](https://brightdata.com/dna/js_code).
 
 ---
+
 ## Support
 
 | Channel | Link |
@@ -739,6 +752,7 @@ Please follow [Bright Data's coding standards](https://brightdata.com/dna/js_cod
 | Email | [support@brightdata.com](mailto:support@brightdata.com) |
 
 ---
+
 ## License
 
 MIT © [Bright Data Ltd.](https://brightdata.com)

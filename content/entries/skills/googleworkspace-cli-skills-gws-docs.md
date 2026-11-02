@@ -1,8 +1,10 @@
 ---
 slug: googleworkspace-cli-skills-gws-docs
 name: gws-docs
-tagline: Agent skill from googleworkspace/cli
-summary: Agent skill from googleworkspace/cli
+tagline: Read and write Google Docs.
+summary: "- batchUpdate — Applies one or more updates to the document. Each
+  request is validated before being applied. If any request is not valid, then
+  the entire request will fail and nothing will be applied. Some requests ha..."
 categories:
   - productivity-ops
 tags:
@@ -11,10 +13,10 @@ tags:
   - automation
   - cli
 status: active
-quality_percentile: 54
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: googleworkspace/cli
@@ -22,17 +24,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 31663
-  last_commit: 2026-10-06T20:23:04Z
-  stars_delta_7d: 0
+  stars: 32055
+  last_commit: 2026-10-30T16:06:54Z
+  stars_delta_7d: 890
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
-    - 31270
     - 31448
     - 31663
-    - 31663
+    - 32055
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,15 +41,15 @@ readme_source:
   repo: googleworkspace/cli
   path: skills/gws-docs/SKILL.md
   branch: main
-  fetched_at: 2026-10-19T07:40:30.390Z
+  fetched_at: 2026-11-02T09:06:42.260Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: gws-docs
-  description: Agent skill from googleworkspace/cli
+  description: Read and write Google Docs.
   folder_path: skills/gws-docs
   extra_files: []
-  pack_total_skills: 95
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -57,4 +58,37 @@ skill:
   pack_slug: googleworkspace-cli
 ---
 
-Agent skill from googleworkspace/cli
+# docs (v1)
+> **PREREQUISITE:** Read `../gws-shared/SKILL.md` for auth, global flags, and security rules. If missing, run `gws generate-skills` to create it.
+
+```bash
+gws docs <resource> <method> [flags]
+```
+
+## Helper Commands
+
+| Command | Description |
+|---------|-------------|
+| [`+write`](https://github.com/googleworkspace/cli/blob/main/skills/gws-docs/../gws-docs-write/SKILL.md) | Append text to a document |
+
+## API Resources
+
+### documents
+
+  - `batchUpdate` — Applies one or more updates to the document. Each request is validated before being applied. If any request is not valid, then the entire request will fail and nothing will be applied. Some requests have replies to give you some information about how they are applied. Other requests do not need to return information; these each return an empty reply. The order of replies matches that of the requests.
+  - `create` — Creates a blank document using the title given in the request. Other fields in the request, including any provided content, are ignored. Returns the created document.
+  - `get` — Gets the latest version of the specified document.
+
+## Discovering Commands
+
+Before calling any API method, inspect it:
+
+```bash
+# Browse resources and methods
+gws docs --help
+
+# Inspect a method's required params, types, and defaults
+gws schema docs.<resource>.<method>
+```
+
+Use `gws schema` output to build your `--params` and `--json` flags.

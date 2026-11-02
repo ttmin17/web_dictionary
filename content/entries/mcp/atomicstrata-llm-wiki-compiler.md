@@ -13,28 +13,29 @@ tags:
   - cli
   - compiler
 status: active
-quality_percentile: 60
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: atomicstrata/llm-wiki-compiler
   official_vendor: false
   license: MIT
 signals:
-  stars: 2215
-  last_commit: 2026-10-19T20:15:10Z
-  stars_delta_7d: 18
+  stars: 2232
+  last_commit: 2026-10-30T23:58:21Z
+  stars_delta_7d: 17
   stars_growth_pct: 0.8
-  trending_score: 18.15
-  rank_current: 66
-  rank_delta: -21
+  trending_score: 17.13
+  rank_current: 68
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2180
     - 2197
     - 2215
+    - 2232
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: atomicstrata/llm-wiki-compiler
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:38:02.898Z
+  fetched_at: 2026-11-02T09:05:40.672Z
   truncated: false
 type: mcp_server
 launch:
@@ -103,6 +104,7 @@ Create signed template distributions, discover them through explicitly trusted c
 [Explore Configurable Lifecycle Profiles →](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/docs/concepts/configurable-lifecycle-profiles.mdx)
 
 ---
+
 ## What llmwiki does
 
 Compile raw sources into an interlinked, citation-traceable markdown wiki that agents and humans can browse, query, lint, export, and reuse. The default profile preserves the classic concepts-and-queries layout; optional profiles add domain-specific types and workflows without adding domain branches to the compiler.

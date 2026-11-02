@@ -18,26 +18,26 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: koala73/worldmonitor
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 89544
-  last_commit: 2026-10-26T06:46:32Z
-  stars_delta_7d: 770
-  stars_growth_pct: 0.9
-  trending_score: 776.68
-  rank_current: 17
-  rank_delta: -8
+  stars: 89985
+  last_commit: 2026-11-02T08:59:12Z
+  stars_delta_7d: 441
+  stars_growth_pct: 0.5
+  trending_score: 443.17
+  rank_current: 23
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 87972
     - 88374
     - 88774
     - 89544
+    - 89985
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: koala73/worldmonitor
   path: README.md
   branch: main
-  fetched_at: 2026-10-26T07:35:59.790Z
+  fetched_at: 2026-11-02T09:05:22.857Z
   truncated: false
 type: agent_tool
 tool:
@@ -124,6 +124,7 @@ The terminal dashboard runs the same live data in your shell: world map, news, m
 ![World Monitor terminal dashboard](https://raw.githubusercontent.com/koala73/worldmonitor/main/docs/images/tui/overview.webp)
 
 ---
+
 ## What It Does
 
 - **Curated news feeds** across global and regional categories, AI-synthesized into briefs
@@ -140,6 +141,7 @@ The terminal dashboard runs the same live data in your shell: world map, news, m
 For the full feature list, architecture, data sources, and algorithms, see the **[documentation](https://www.worldmonitor.app/docs/documentation)**.
 
 ---
+
 ## Support Status
 
 All site variants and desktop binaries are built from a single codebase and ship from the same release process. The table below clarifies maintenance status so you know which surfaces are safe to depend on.
@@ -153,7 +155,10 @@ All site variants and desktop binaries are built from a single codebase and ship
 Issues filed against any of the above are triaged from the same backlog — see the [issues board](https://github.com/koala73/worldmonitor/issues) for currently-open work.
 
 ---
+
 ## Quick Start
+
+Requires Node.js 24, the version pinned in `.nvmrc`. Distribution packages are often older. Debian 12 and Raspberry Pi OS ship Node.js 18 with npm 9.2.0, where `npm install` stops with `Invalid comparator: file:vendor/braces`. Install Node.js 24 with [nvm](https://github.com/nvm-sh/nvm) (`nvm install` inside the checkout reads `.nvmrc`) or from [nodejs.org](https://nodejs.org/en/download).
 
 ```bash
 git clone https://github.com/koala73/worldmonitor.git
@@ -179,6 +184,7 @@ npm run dev:energy     # energy.worldmonitor.app
 See the **[self-hosting guide](https://www.worldmonitor.app/docs/getting-started)** for deployment options (Vercel, Docker, static).
 
 ---
+
 ## Tech Stack
 
 | Category | Technologies |
@@ -193,12 +199,14 @@ See the **[self-hosting guide](https://www.worldmonitor.app/docs/getting-started
 Full stack details in the **[architecture docs](https://www.worldmonitor.app/docs/architecture)**.
 
 ---
+
 ## Programmatic Access
 
 World Monitor is built for agents and scripts as well as browsers:
 
 - **MCP server** — `https://worldmonitor.app/mcp` (Streamable HTTP). Public `tools/list`; `tools/call` authenticates with a `X-WorldMonitor-Key` header or OAuth.
   The server also publishes its Agent Skills through the draft `io.modelcontextprotocol/skills` extension (`skills/list`, `skills/get`, and `skill://…` resource reads).
+- **Google Antigravity and Gemini listing preparation** — install the bundled Antigravity plugin (`.antigravity-plugin/plugin.json` + `mcp_config.json`) with `agy plugin install ./worldmonitor`. Gemini custom apps and Connected Apps sign in through Google's OAuth callbacks. See [Gemini and Antigravity](https://www.worldmonitor.app/docs/gemini-antigravity).
 - **REST API** — base `https://api.worldmonitor.app`, described by the [OpenAPI spec](https://worldmonitor.app/openapi.yaml).
 - **CLI** — the official [`worldmonitor`](https://www.npmjs.com/package/worldmonitor) npm package (source in [`cli/`](https://github.com/koala73/worldmonitor/blob/main/cli/)). Run it with no arguments in a terminal for the [terminal dashboard](https://www.worldmonitor.app/docs/cli-dashboard):
 
@@ -214,16 +222,25 @@ World Monitor is built for agents and scripts as well as browsers:
 Agent discovery files: [`llms.txt`](https://worldmonitor.app/llms.txt) · [agent-skills manifest](https://worldmonitor.app/.well-known/agent-skills/index.json) · [api-catalog](https://worldmonitor.app/.well-known/api-catalog). Get an API key at [worldmonitor.app/pro](https://www.worldmonitor.app/pro).
 
 ---
+
 ## Flight Data
 
 Flight data provided graciously by [Wingbits](https://wingbits.com?utm_source=worldmonitor&utm_medium=referral&utm_campaign=worldmonitor), the most advanced ADS-B flight data solution.
 
 ---
+
+## Supported By
+
+World Monitor's web app and API run on [Vercel](https://vercel.com?utm_source=worldmonitor&utm_medium=referral&utm_campaign=worldmonitor). Thank you to Vercel for their generous support of the project.
+
+---
+
 ## Data Sources
 
 WorldMonitor aggregates attributed upstream sources across geopolitics, finance, energy, climate, aviation, cyber, military, infrastructure, and news intelligence. Curated feeds and freshness-tracked source groups are published in the full [data sources catalog](https://www.worldmonitor.app/docs/data-sources), with provider, feed-tier, license-posture, and collection-method details.
 
 ---
+
 ## Contributing
 
 Contributions welcome! See [CONTRIBUTING.md](https://github.com/koala73/worldmonitor/blob/main/CONTRIBUTING.md) for guidelines.
@@ -234,6 +251,7 @@ npm run build:full       # Production build
 ```
 
 ---
+
 ## License
 
 **AGPL-3.0-only** for the source code. Commercial use is permitted under the AGPL when you comply with its copyleft and source-availability terms.
@@ -251,6 +269,7 @@ See [LICENSE](https://github.com/koala73/worldmonitor/blob/main/LICENSE) for the
 Copyright (C) 2024-2026 Elie Habib. All rights reserved.
 
 ---
+
 ## Author
 
 **Elie Habib** — [GitHub](https://github.com/koala73)
@@ -270,6 +289,7 @@ We thank the following researchers for responsibly disclosing security issues:
 See our [Security Policy](https://github.com/koala73/worldmonitor/blob/main/SECURITY.md) for responsible disclosure guidelines.
 
 ---
+
 <p align="center">
   <a href="https://www.worldmonitor.app">worldmonitor.app</a> &nbsp;·&nbsp;
   <a href="https://www.worldmonitor.app/docs/documentation">docs.worldmonitor.app</a> &nbsp;·&nbsp;

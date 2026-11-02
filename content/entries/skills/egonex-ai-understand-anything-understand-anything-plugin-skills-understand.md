@@ -14,10 +14,10 @@ tags:
   - claude-code
   - claude-skills
 status: active
-quality_percentile: 72
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: Egonex-AI/Understand-Anything
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 88302
+  stars: 89723
   last_commit: 2026-10-26T07:05:22Z
-  stars_delta_7d: 1382
+  stars_delta_7d: 1421
   stars_growth_pct: 1.6
-  trending_score: 1403.97
+  trending_score: 1443.87
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 85511
     - 86141
     - 86920
     - 88302
+    - 89723
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: Egonex-AI/Understand-Anything
   path: understand-anything-plugin/skills/understand/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:16.231Z
+  fetched_at: 2026-11-02T09:06:06.958Z
   truncated: false
 type: agent_skill
 skill:
@@ -86,6 +86,7 @@ Analyze the current codebase and produce a `knowledge-graph.json` file in the pr
   - A directory path (e.g. `/path/to/repo` or `../other-project`) — Analyze the given directory instead of the current working directory
 
 ---
+
 ## Progress Reporting
 
 Throughout execution, report progress to the user at each phase transition and during batch processing. This keeps users informed on large codebases where analysis can take a long time.
@@ -104,6 +105,7 @@ Throughout execution, report progress to the user at each phase transition and d
   > Example: `Phase 1 complete. Found 247 files across 3 languages.`
 
 ---
+
 ## Phase 0 — Pre-flight
 
 Determine whether to run a full analysis or incremental update.
@@ -300,6 +302,7 @@ Determine whether to run a full analysis or incremental update.
    - Detect the project entry point by checking for common patterns (in order): `src/index.ts`, `src/main.ts`, `src/App.tsx`, `index.js`, `main.py`, `manage.py`, `app.py`, `wsgi.py`, `asgi.py`, `run.py`, `__main__.py`, `main.go`, `cmd/*/main.go`, `src/main.rs`, `src/lib.rs`, `src/main/java/**/Application.java`, `Program.cs`, `config.ru`, `index.php`. Store first match as `$ENTRY_POINT`.
 
 ---
+
 ## Phase 0.5 — Ignore Configuration (full analysis only)
 
 Set up and verify the `.understandignore` file before a full scan. Incremental preparation already applies the current ignore rules and must skip this confirmation phase.
@@ -318,6 +321,7 @@ Set up and verify the `.understandignore` file before a full scan. Incremental p
 4. After confirmation, proceed to Phase 1.
 
 ---
+
 ## Phase 1 — SCAN (Full analysis only)
 
 Report to the user: `[Phase 1/7] Scanning project files...`
@@ -364,6 +368,7 @@ If the scan result includes `filteredByIgnore > 0`, report:
 > Excluded {filteredByIgnore} files via `.understandignore` and/or `--exclude` rules.
 
 ---
+
 ## Phase 1.5 — BATCH
 
 Report: `[Phase 1.5/7] Computing semantic batches...`
@@ -390,6 +395,7 @@ Capture stderr. Append any line starting with `Warning:` to `$PHASE_WARNINGS` fo
 If the script exits non-zero, the failure is hard — relay the full stderr to the user as a Phase 1.5 failure. Do not attempt to recover; the script's internal fallback (count-based) already handles recoverable issues. A non-zero exit means a fundamental problem (missing input file, malformed JSON, etc.).
 
 ---
+
 ## Phase 2 — ANALYZE
 
 ### Full analysis path
@@ -497,6 +503,7 @@ If repair preparation, the repair dispatch, or the second merge fails, **STOP** 
 Parser limitation: automatic deletion requires both a deterministic parser and a declaration-coverage adapter. Current adapters cover JavaScript/JSX, TypeScript/TSX, Ruby, Python, Go, Rust, and C++; other grammars remain conservative even if parsing succeeds. Languages without a deterministic structural parser (including `.sh`, `.ps1`, and `.bat`) cannot have missing symbols automatically confirmed as deleted. Such omissions remain `unknown`, even for genuine deletions, and stop publication pending manual investigation or parser support. Supplemental LLM source inspection and regex guesses are not deletion evidence. Callables without explicit class containment require source identity verification even when their IDs/names stay unchanged and neither graph emits class nodes; unsupported or unextractable callables therefore also block in this case. Dots in an opaque ID are not ownership evidence. Stable explicit class ownership can establish preservation without parsing. Identical current descriptors within one HEAD may preserve repair references; this does not waive verification of the previous published symbols across revisions.
 
 ---
+
 ## Phase 3 — ASSEMBLE REVIEW
 
 Run this phase for **full analysis only**. Both incremental actions skip assemble-reviewer: their deterministic merge/reconciliation checks replace this whole-graph LLM pass. The user-facing `--review` option is still honored later by the graph-reviewer in Phase 6.
@@ -525,6 +532,7 @@ Pass these parameters in the dispatch prompt:
 After the subagent completes, read `$UA_DIR/intermediate/assemble-review.json` and add any notes to `$PHASE_WARNINGS`.
 
 ---
+
 ## Phase 4 — ARCHITECTURE
 
 Run this phase for full analysis and for incremental plans where `rerunArchitecture === true`. For `PARTIAL_UPDATE`, dispatch no architecture agent; `finalize-incremental.mjs` preserves surviving assignments, removes dangling/empty layers, and assigns new nodes deterministically by deepest common parent directory, then graph connectivity, then previous layer order.
@@ -609,6 +617,7 @@ All four fields (`id`, `name`, `description`, `nodeIds`) are required.
 > Maintain the same layer names and IDs where possible. Only add/remove layers if the file structure has materially changed.
 
 ---
+
 ## Phase 5 — TOUR
 
 Run this phase for full analysis and for incremental plans where `rerunTour === true`. For `PARTIAL_UPDATE`, dispatch no tour agent and do not rewrite the narrative; finalization only removes dangling node IDs from the existing steps.
@@ -696,6 +705,7 @@ This helper validates/deduplicates nodes and edges, reconciles layers/tour, and 
 - With `--review`, copy the newly saved `$UA_DIR/knowledge-graph.json` to `$UA_DIR/intermediate/assembled-graph.json`, then continue to the full graph-reviewer path in Phase 6. Do not run the inline default reviewer.
 
 ---
+
 ## Phase 6 — REVIEW
 
 Report to the user: `[Phase 6/7] Validating knowledge graph...`
@@ -736,6 +746,7 @@ Assemble the full KnowledgeGraph JSON object:
 3. **Check `$ARGUMENTS` for `--review` flag.** Then run the appropriate validation path:
 
 ---
+
 #### Default path (no `--review`): inline deterministic validation
 
 Write the following Node.js script to `$UA_DIR/tmp/ua-inline-validate.cjs`:
@@ -816,6 +827,7 @@ node "$UA_DIR/tmp/ua-inline-validate.cjs" \
 If the script exits non-zero, read stderr, fix the script, and retry once.
 
 ---
+
 #### `--review` path: full LLM reviewer
 
 If `--review` IS in `$ARGUMENTS`, dispatch the LLM graph-reviewer subagent as follows:
@@ -842,6 +854,7 @@ Pass these parameters in the dispatch prompt:
 > Write output to: `$UA_DIR/intermediate/review.json`
 
 ---
+
 4. Read `$UA_DIR/intermediate/review.json`.
 
 5. **If `issues` array is non-empty:**
@@ -856,6 +869,7 @@ Pass these parameters in the dispatch prompt:
 6. **If `issues` array is empty:** Proceed to Phase 7.
 
 ---
+
 ## Phase 7 — SAVE
 
 Report to the user: `[Phase 7/7] Saving knowledge graph...`
@@ -929,6 +943,7 @@ Report to the user: `[Phase 7/7] Saving knowledge graph...`
    If final validation did not pass, report that the graph was saved with warnings and dashboard launch was skipped.
 
 ---
+
 ## Error Handling
 
 - If any subagent dispatch fails, retry **once** with the same prompt plus additional context about the failure.
@@ -939,6 +954,7 @@ Report to the user: `[Phase 7/7] Saving knowledge graph...`
 - NEVER silently drop errors. Every failure must be visible in the final report.
 
 ---
+
 ## Reference: KnowledgeGraph Schema
 
 ### Node Types (13 total)

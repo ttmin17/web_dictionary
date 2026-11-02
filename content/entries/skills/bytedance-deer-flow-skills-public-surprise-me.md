@@ -1,8 +1,10 @@
 ---
 slug: bytedance-deer-flow-skills-public-surprise-me
 name: surprise-me
-tagline: Agent skill from bytedance/deer-flow
-summary: Agent skill from bytedance/deer-flow
+tagline: 'Create a delightful, unexpected "wow" experience for the user by
+  dynamically discovering and creatively combining other enabled skills.
+  Triggers when '
+summary: Read all the skills listed in the .
 categories:
   - agent-frameworks
 tags:
@@ -14,7 +16,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: bytedance/deer-flow
@@ -22,15 +24,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 84431
-  last_commit: 2026-10-26T07:13:01Z
-  stars_delta_7d: 328
-  stars_growth_pct: 0.4
-  trending_score: 329.28
+  stars: 84868
+  last_commit: 2026-11-02T07:56:17Z
+  stars_delta_7d: 437
+  stars_growth_pct: 0.5
+  trending_score: 439.26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 84103
     - 84431
+    - 84868
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,15 +41,19 @@ readme_source:
   repo: bytedance/deer-flow
   path: skills/public/surprise-me/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:45:36.112Z
+  fetched_at: 2026-11-02T09:06:57.915Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: surprise-me
-  description: Agent skill from bytedance/deer-flow
+  description: Create a delightful, unexpected "wow" experience for the user by
+    dynamically discovering and creatively combining other enabled skills.
+    Triggers when the user says "surprise me" or any request expressing a desire
+    for an unexpected creative showcase. Also triggers when the user is bored,
+    wants inspiration, or asks for "something interesting".
   folder_path: skills/public/surprise-me
   extra_files: []
-  pack_total_skills: 29
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -55,4 +62,50 @@ skill:
   pack_slug: bytedance-deer-flow
 ---
 
-Agent skill from bytedance/deer-flow
+# Surprise Me
+Deliver an unexpected, delightful experience by dynamically discovering available skills and combining them creatively.
+
+## Workflow
+
+### Step 1: Discover Available Skills
+
+Read all the skills listed in the <available_skills>.
+
+### Step 2: Plan the Surprise
+
+Select **1 to 3** skills and design a creative mashup. The goal is a single cohesive deliverable, not separate demos.
+
+**Creative combination principles:**
+- Juxtapose skills in unexpected ways (e.g., a presentation about algorithmic art, a research report turned into a slide deck, a styled doc with canvas-designed illustrations)
+- Incorporate the user's known interests/context from memory if available
+- Prioritize visual impact and emotional delight over information density
+- The output should feel like a gift — polished, surprising, and fun
+
+**Theme ideas (pick or remix):**
+- Something tied to today's date, season, or trending news
+- A mini creative project the user never asked for but would love
+- A playful "what if" concept
+- An aesthetic artifact combining data + design
+- A fun interactive HTML/React experience
+
+### Step 3: Fallback — No Other Skills Available
+
+If no other skills are discovered (only surprise-me exists), use one of these fallbacks:
+
+1. **News-based surprise**: Search today's news for a fascinating story, then create a beautifully designed HTML artifact presenting it in a visually striking way
+2. **Interactive HTML experience**: Build a creative single-page web experience — generative art, a mini-game, a visual poem, an animated infographic, or an interactive story
+3. **Personalized artifact**: Use known user context to create something personal and delightful
+
+### Step 4: Execute
+
+1. Read the full SKILL.md body of each selected skill
+2. Follow each skill's instructions for technical execution
+3. Combine outputs into one cohesive deliverable
+4. Present the result with minimal preamble — let the work speak for itself
+
+### Step 5: Reveal
+
+Present the surprise with minimal spoilers. A short teaser line, then the artifact.
+
+- **Good reveal:** "I made you something ✨" + [the artifact]
+- **Bad reveal:** "I decided to combine the pptx skill with the canvas-design skill to create a presentation about..." (kills the surprise)

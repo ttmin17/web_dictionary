@@ -1,8 +1,12 @@
 ---
 slug: k-dense-ai-scientific-agent-skills-skills-13c-metabolic-flux
 name: 13c-metabolic-flux
-tagline: Agent skill from K-Dense-AI/scientific-agent-skills
-summary: Agent skill from K-Dense-AI/scientific-agent-skills
+tagline: Estimates intracellular metabolic fluxes from steady-state carbon-13
+  isotope-tracing measurements using validated atom maps, mfapy isotope
+  simulation,
+summary: This implementation supports metabolic and isotopic steady state, a
+  single shared flux state across one or more tracer experiments, nonnegative
+  one-way reaction fluxes, and carbon-subset mass distributions. Reversible...
 categories:
   - domain-research
 tags:
@@ -11,10 +15,10 @@ tags:
   - bioinformatics
   - chemoinformatics
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: K-Dense-AI/scientific-agent-skills
@@ -22,18 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 54638
-  last_commit: 2026-10-19T09:33:57Z
-  stars_delta_7d: 1906
-  stars_growth_pct: 3.6
-  trending_score: 1974.89
-  rank_current: 17
-  rank_delta: -10
+  stars: 55754
+  last_commit: 2026-10-26T09:36:15Z
+  stars_delta_7d: 1116
+  stars_growth_pct: 2
+  trending_score: 1138.79
+  rank_current: 28
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 48703
     - 52732
     - 54638
+    - 55754
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,12 +46,19 @@ readme_source:
   repo: K-Dense-AI/scientific-agent-skills
   path: skills/13c-metabolic-flux/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:21.745Z
+  fetched_at: 2026-11-02T09:06:42.518Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: 13c-metabolic-flux
-  description: Agent skill from K-Dense-AI/scientific-agent-skills
+  description: Estimates intracellular metabolic fluxes from steady-state
+    carbon-13 isotope-tracing measurements using validated atom maps, mfapy
+    isotope simulation, constrained multistart fitting, and flux-profile
+    diagnostics. Use for 13C-MFA, carbon tracing, mass isotopomer distributions
+    (MDVs/MIDs), positional isotopomers, parallel tracer experiments, and
+    determining whether labeling data constrain a pathway flux. Distinguishes
+    measured-label inference from COBRA flux balance analysis and flags
+    experiments requiring nonstationary MFA.
   folder_path: skills/13c-metabolic-flux
   extra_files:
     - assets/branch-fluxes.json
@@ -59,7 +71,7 @@ skill:
     - assets/tca-model.json
     - assets/tca-reference-mdv.json
     - assets/tca-tracer.json
-  pack_total_skills: 177
+  pack_total_skills: 25
   is_pack_primary: true
   clients:
     - claude-code

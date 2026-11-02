@@ -14,10 +14,10 @@ tags:
   - codex
   - data-visualization
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-04-16T18:01:16
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: cathrynlavery/diagram-design
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 61160
-  last_commit: 2026-10-26T04:42:00Z
-  stars_delta_7d: 3208
-  stars_growth_pct: 5.5
-  trending_score: 3385.58
-  rank_current: 7
-  rank_delta: -1
+  stars: 64170
+  last_commit: 2026-11-01T09:13:30Z
+  stars_delta_7d: 3010
+  stars_growth_pct: 4.9
+  trending_score: 3158.14
+  rank_current: 11
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 44654
     - 53703
     - 57952
     - 61160
+    - 64170
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: cathrynlavery/diagram-design
   path: skills/diagram-design/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:01.115Z
+  fetched_at: 2026-11-02T09:06:10.269Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,12 +56,12 @@ skill:
     nested, tree, org chart, layer stack, exploded axonometric, axonometric
     plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and
     dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt
-    and scatter charts (bubble, beeswarm), high-level, process, medallion, data
-    flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map,
-    kanban, user journey, service blueprint, deployment, dependency graph, UML
-    class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio,
-    Mermaid, and .excalidraw import, plus lifecycle phase maps, block
-    decomposition trees, and onboarding guidance.
+    and scatter charts (bubble, beeswarm, box plot), high-level, process,
+    medallion, data flow, DP integration, DP security matrix, Sankey, fishbone,
+    Wardley map, kanban, user journey, service blueprint, deployment, dependency
+    graph, UML class, story map, or database schema diagrams as HTML/SVG/PNG,
+    with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps,
+    block decomposition trees, and onboarding guidance.
   folder_path: skills/diagram-design
   extra_files:
     - assets/example-architecture-containment-dark.html
@@ -89,6 +89,7 @@ Create diagrams as self-contained HTML files with inline SVG and an editorial de
 Forty-five visual types. Semantic patterns describe behavior; type references describe layout.
 
 ---
+
 ## 0. First-time setup — style guide gate
 
 **Before generating your first diagram in a new project, verify the style guide has been customized.**
@@ -106,6 +107,7 @@ Then branch per the matching section of [`references/onboarding.md`](https://git
 **Once the style guide has been customized** (or the user explicitly chose default), skip this gate on later runs. A leading profile header names the copied-in active profile. Without a header, any semantic-role value or typography family differing from shipped defaults means **custom-unsaved**: skip the gate and offer to save it as a profile. All-default tokens with no marker/header trigger the gate. After onboarding, offer to save as a named client profile per `references/profiles.md`.
 
 ---
+
 ## 1. Philosophy
 
 **The highest-quality move is usually deletion.**
@@ -120,6 +122,7 @@ Applied to schematics:
 **Target density: 4/10.** Enough to be technically complete. Not so dense it needs a guide. Above 9 nodes, it's probably two diagrams.
 
 ---
+
 ## 2. When to Use
 
 Use for any of the 45 visual types (§3) when a reader will learn more from a visual than from prose, a table, or a bulleted list.
@@ -134,6 +137,7 @@ Use for any of the 45 visual types (§3) when a reader will learn more from a vi
 Before drawing, ask: *Would the reader learn more from this than from a well-written paragraph?* If no, don't draw.
 
 ---
+
 ## 3. Selection: semantic pattern, then visual type
 
 When behavior, state, enforcement, or risk carries the meaning, first load [`references/semantic-patterns.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/semantic-patterns.md) and choose one primary pattern. Then choose the nearest visual type for layout. If no pattern matches, choose the type directly.
@@ -183,7 +187,7 @@ The pattern owns semantic primitives and its tighter budget; the type owns layou
 | Cross-tabulated data; fill encodes value per cell | **Heatmap** | [type-heatmap.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-heatmap.md) |
 | Continuous trends over time, change between exactly two states (slopegraph), one distribution per series (ridgeline), or rank movement across several snapshots (bump) | **Line chart** | [type-line.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-line.md) |
 | Tasks and phases on a timeline | **Gantt** | [type-gantt.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-gantt.md) |
-| Correlation or distribution of two variables; bubble (three variables) and beeswarm (one variable, dot per item) variants | **Scatter plot** | [type-scatter.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-scatter.md) |
+| Correlation or distribution of two variables; bubble (three variables), beeswarm (one variable, dot per item), and box plot (five-number summary per group) variants | **Scatter plot** | [type-scatter.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-scatter.md) |
 | End-to-end data stack on a container cluster | **High-Level** | [type-high-level.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-high-level.md) |
 | Multi-actor sequential process with data handoffs | **Process** | [type-process.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-process.md) |
 | Multi-tier data storage with quality levels and access policies | **Medallion** | [type-medallion.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-medallion.md) |
@@ -215,6 +219,7 @@ Rules of thumb:
 Before rendering, state the plan in one short message: the chosen visual type (and semantic pattern, if routed), the size preset, and anything the complexity budget (§7) will force out. If the user is reachable, let them redirect before you draw; if not, proceed and note the assumptions beside the deliverable. Skip the pause only when the request already pins type, size, and content exactly.
 
 ---
+
 ## 4. Universal Anti-patterns
 
 These mark "AI slop" schematics of any type:
@@ -237,6 +242,7 @@ These mark "AI slop" schematics of any type:
 Type-specific anti-patterns live in each type reference linked in the guide.
 
 ---
+
 ## 5. Design System
 
 **The design system is skinnable.** [`references/style-guide.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/style-guide.md) is the single source of truth for colors, typography, tokens, and the default palette; this file names semantic roles (`paper`, `ink`, `muted`, `accent`, `link`, …). To apply a brand, edit `style-guide.md` or run the URL-based flow in [`references/onboarding.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/onboarding.md).
@@ -267,6 +273,7 @@ Type-reference snippets write roles as placeholders: `{ink}`, `{ink @ 0.40}` for
 **Mono is for technical content only** — never as a blanket "dev" font, and never JetBrains Mono.
 
 ---
+
 ## 6. Core SVG Primitives
 
 Universal building blocks. Type-specialized primitives (lifeline, activation bar, region) live in the relevant type reference linked in the guide. Optional primitives:
@@ -294,6 +301,7 @@ Non-negotiable, and §9 checks each one. Full text and edge cases: [primitives-c
 6. **Mask before node.** A label mask must not overlap a node drawn after it; badge masks fully inside a node and masks over earlier zones are fine. From a repository checkout, verify with `python3 <repo-root>/scripts/verify-geometry.py <file>`.
 
 ---
+
 ## 7. Layout & Spacing
 
 Structural geometry sits on a 4px grid: node origins, widths, heights, gaps, and padding divide by 4. Type sizes follow the role ramp in [output-spec.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/output-spec.md), not the grid. Allowed values, the off-grid exceptions, and page layout: [`references/layout-budget.md`](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/layout-budget.md).
@@ -313,11 +321,13 @@ Per-type limits (lifelines, lanes, series, bars, stages, and the rest): [layout-
 If you exceed, split into two diagrams (overview + detail).
 
 ---
+
 ## 8. Summary Card Pattern
 
 Don't use 3 identical generic cards. Vary the treatment: column widths such as `1.1fr 1fr 0.9fr`, a white background with a 1px hairline border and 6px radius, no `box-shadow`. Markup and the card-dot variants: [layout-budget.md § Summary Card Pattern](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/layout-budget.md#summary-card-pattern).
 
 ---
+
 ## 9. Pre-Output Checklist (Taste Gate)
 
 Run before producing any diagram.
@@ -376,6 +386,7 @@ Run before producing any diagram.
 - [ ] No JetBrains Mono anywhere?
 
 ---
+
 ## 10. Templates & Variants
 
 Every diagram ships in three variants (see `assets/`):
@@ -402,6 +413,7 @@ Every diagram ships in three variants (see `assets/`):
 5. Run the §9 taste gate.
 
 ---
+
 ## 11. Importing an Existing Diagram (draw.io), Mermaid, and Excalidraw
 
 Route by source: `.drawio*` → [import-drawio.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/import-drawio.md); `.mmd`, `.mermaid`, or Markdown containing a fenced `mermaid` block → [import-mermaid.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/import-mermaid.md); `.excalidraw` → [import-excalidraw.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/import-excalidraw.md). Follow it for "convert this", "redraw this diagram", "make this presentable", and the matching import command.
@@ -429,6 +441,7 @@ Set these four import decisions **before** drawing. Full spec: [output-spec.md](
 The size preset sets the `viewBox` **and** the type ramp; `faithful` is the only exemption from the §7 budget — zoned above 9 nodes, split above 24. The §6 connector rules never relax.
 
 ---
+
 ## 12. Output
 
 Always produce a single self-contained `.html` file:

@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-c-level-advisor-chief-ai-officer-advisor-skills-chief-ai-officer-advisor
 name: chief-ai-officer-advisor
-tagline: "Chief AI Officer advisory for startups: model build-vs-buy decisions
-  (API vs fine-tune vs in-house), AI risk classification under EU AI Act + US
-  state"
+tagline: "Use for AI strategy decisions: API vs fine-tune vs build, EU AI Act or
+  US state risk classification, when self-hosting pays off, or AI hiring order.
+  R"
 summary: 1. Should we use an API, fine-tune, or build our own? — model
   build-vs-buy with 3-year TCO 2. Is this AI use case high-risk under
   regulation, and how do we govern it? — EU AI Act + NIST AI RMF + US state
@@ -19,7 +19,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -27,16 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28730
-  last_commit: 2026-10-23T11:30:28Z
-  stars_delta_7d: 1198
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 29146
+  last_commit: 2026-10-31T11:28:59Z
+  stars_delta_7d: 416
+  stars_growth_pct: 1.4
+  trending_score: 422.02
+  velocity_source: snapshot_delta
   sparkline_4w:
-    - 27812
     - 28112
     - 28730
+    - 29146
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,20 +44,15 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:10.236Z
+  fetched_at: 2026-11-02T09:06:18.454Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: chief-ai-officer-advisor
-  description: "Chief AI Officer advisory for startups: model build-vs-buy
-    decisions (API vs fine-tune vs in-house), AI risk classification under EU AI
-    Act + US state patchwork, AI cost economics (API-to-self-hosted breakeven),
-    and AI team org evolution. Use when deciding whether to call an API or
-    fine-tune, classifying AI use cases for regulatory risk, calculating when
-    self-hosting pays off, sequencing AI hires, or when user mentions CAIO, AI
-    strategy, model selection, foundation model, fine-tuning, EU AI Act, NIST AI
-    RMF, AI governance, model risk, or AI economics. Strategic only — does not
-    duplicate engineering AI/ML skills."
+  description: "Use for AI strategy decisions: API vs fine-tune vs build, EU AI
+    Act or US state risk classification, when self-hosting pays off, or AI
+    hiring order. Runs model_buildvsbuy_calculator.py, ai_risk_classifier.py and
+    ai_cost_economics.py."
   folder_path: c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor
   extra_files:
     - references/ai_cost_economics.md
@@ -67,7 +62,7 @@ skill:
     - scripts/ai_cost_economics.py
     - scripts/ai_risk_classifier.py
     - scripts/model_buildvsbuy_calculator.py
-  pack_total_skills: 383
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code
@@ -293,6 +288,7 @@ python scripts/ai_cost_economics.py workload.json
 - [ai_team_org_evolution.md](https://github.com/alirezarezvani/claude-skills/blob/main/c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor/references/ai_team_org_evolution.md) — Stage-to-role map + role definitions (AI engineer ≠ ML engineer ≠ scientist) + anti-patterns
 
 ---
+
 **Version:** 1.0.0
 **Status:** Production Ready
 **Disclaimer:** AI regulation is evolving rapidly. This skill surfaces decisions and tradeoffs as of 2026 but cannot replace qualified AI counsel for binding compliance decisions, especially under EU AI Act conformity assessments.

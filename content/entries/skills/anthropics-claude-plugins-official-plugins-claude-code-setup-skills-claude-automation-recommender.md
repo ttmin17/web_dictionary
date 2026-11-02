@@ -13,10 +13,10 @@ tags:
   - claude-code
   - skills
 status: active
-quality_percentile: 98
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -24,17 +24,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 44625
-  last_commit: 2026-10-25T07:34:42Z
-  stars_delta_7d: 1711
-  stars_growth_pct: 4
-  trending_score: 1779.22
+  stars: 45763
+  last_commit: 2026-11-02T07:29:13Z
+  stars_delta_7d: 1138
+  stars_growth_pct: 2.6
+  trending_score: 1167.02
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 37497
     - 37789
     - 42914
     - 44625
+    - 45763
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: plugins/claude-code-setup/skills/claude-automation-recommender/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:42:05.836Z
+  fetched_at: 2026-11-02T09:06:14.499Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,7 +59,7 @@ skill:
     - references/plugins-reference.md
     - references/skills-reference.md
     - references/subagent-templates.md
-  pack_total_skills: 29
+  pack_total_skills: 21
   is_pack_primary: false
   clients:
     - claude-code
@@ -226,6 +226,7 @@ I've analyzed your codebase and identified the top automations for each category
 - **Key Libraries**: [relevant libraries detected]
 
 ---
+
 ### 🔌 MCP Servers
 
 #### context7
@@ -233,6 +234,7 @@ I've analyzed your codebase and identified the top automations for each category
 **Install**: `claude mcp add context7`
 
 ---
+
 ### 🎯 Skills
 
 #### [skill name]
@@ -241,12 +243,15 @@ I've analyzed your codebase and identified the top automations for each category
 **Invocation**: User-only / Both / Claude-only
 **Also available in**: [plugin-name] plugin (if applicable)
 ```yaml
----name: [skill-name]
+---
+name: [skill-name]
 description: [what it does]
 disable-model-invocation: true  # for user-only
----```
+---
+```
 
 ---
+
 ### ⚡ Hooks
 
 #### [hook name]
@@ -254,6 +259,7 @@ disable-model-invocation: true  # for user-only
 **Where**: `.claude/settings.json`
 
 ---
+
 ### 🤖 Subagents
 
 #### [agent name]
@@ -261,6 +267,7 @@ disable-model-invocation: true  # for user-only
 **Where**: `.claude/agents/[name].md`
 
 ---
+
 **Want more?** Ask for additional recommendations for any specific category (e.g., "show me more MCP server options" or "what other hooks would help?").
 
 **Want help implementing any of these?** Just ask and I can help you set up any of the recommendations above.
@@ -305,6 +312,7 @@ disable-model-invocation: true  # for user-only
 - Team-wide standardization
 
 ---
+
 ## Configuration Tips
 
 ### MCP Server Setup

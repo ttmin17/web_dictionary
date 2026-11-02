@@ -17,7 +17,7 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-02T09:07:29.758Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 103202
-  last_commit: 2026-10-25T21:00:05Z
-  stars_delta_7d: 1527
-  stars_growth_pct: 1.5
-  trending_score: 1549.93
+  stars: 109995
+  last_commit: 2026-11-02T08:57:22Z
+  stars_delta_7d: 6793
+  stars_growth_pct: 6.6
+  trending_score: 7240.13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 97519
     - 100334
     - 101675
     - 103202
+    - 109995
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: claude-mem-cursor/skills/mem-search/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:41:14.400Z
+  fetched_at: 2026-11-02T09:06:10.112Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,7 +52,7 @@ skill:
     this?", "how did we do X last time?", or wants work from previous sessions.
   folder_path: claude-mem-cursor/skills/mem-search
   extra_files: []
-  pack_total_skills: 33
+  pack_total_skills: 17
   is_pack_primary: false
   clients:
     - claude-code
