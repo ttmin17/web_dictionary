@@ -14,29 +14,29 @@ tags:
   - ai-cybersecurity
   - ai-hacking
 status: slowing
-quality_percentile: 54
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2025-07-10T17:53:18
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: 0x4m4/hexstrike-ai
   official_vendor: false
   license: MIT
 signals:
-  stars: 13283
+  stars: 13374
   last_commit: 2026-08-03T14:33:09Z
-  stars_delta_7d: 186
-  stars_growth_pct: 1.4
-  trending_score: 188.64
-  rank_current: 42
-  rank_delta: -2
+  stars_delta_7d: 277
+  stars_growth_pct: 2.1
+  trending_score: 282.86
+  rank_current: 38
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12751
     - 12924
     - 13097
-    - 13283
+    - 13374
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: 0x4m4/hexstrike-ai
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:30.425Z
+  fetched_at: 2026-11-05T13:11:37.350Z
   truncated: false
 type: agent_tool
 tool:
@@ -827,7 +827,7 @@ MIT License - see LICENSE file for details.
 
 ### **🚀 Ready to Transform Your AI Agents?**
 
-**[⭐ Star this repository](https://github.com/0x4m4/hexstrike-ai)** • **[🍴 Fork and contribute](https://github.com/0x4m4/hexstrike-ai/fork)** • **[📖 Read the docs](https://github.com/0x4m4/hexstrike-ai/blob/master/docs/)**
+**[⭐ Star this repository](https://github.com/0x4m4/hexstrike-ai)** • **[🍴 Fork and contribute](https://github.com/0x4m4/hexstrike-ai/fork)** • **[📖 Read the docs](https://raw.githubusercontent.com/0x4m4/hexstrike-ai/master/docs/)**
 
 ---
 

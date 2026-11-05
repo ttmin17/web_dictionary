@@ -12,24 +12,24 @@ tags:
   - claude-code
   - code-review
 status: active
-quality_percentile: 28
+quality_percentile: 30
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Get-Concord-AI/concord-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 836
-  last_commit: 2026-10-30T14:01:25Z
-  stars_delta_7d: 51
+  stars: 966
+  last_commit: 2026-11-04T18:55:04Z
+  stars_delta_7d: 59
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 836
+    - 966
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +38,7 @@ readme_source:
   repo: Get-Concord-AI/concord-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.621Z
+  fetched_at: 2026-11-05T13:12:09.627Z
   truncated: false
 type: mcp_server
 launch:
@@ -142,6 +142,10 @@ adapters independently. Use `--no-adapters` to skip that step or
 Pass `--no-mcp` to write only the workspace and instructions while managing MCP
 registration yourself.
 
+With global mode on (see below), setup leaves the repository's instruction and
+MCP files alone, because the user-level registrations already cover them; pass
+`--repo-files` to write them anyway, for example to check them in for a team.
+
 </details>
 
 <details>
@@ -159,8 +163,9 @@ agent and adds a short Concord section to their user instruction files
 written into those repositories: their work is kept in `~/.concord/global.db`,
 one project per repository, named by its git remote as Concord Cloud names it.
 Sessions outside any repository share the `general` project. A repository you
-did set up keeps everything in its own `.concord/`. Turning global mode off
-removes exactly what it added.
+did set up keeps everything in its own `.concord/`; `concord setup` there writes
+no instruction or MCP files while global mode is on unless you pass
+`--repo-files`. Turning global mode off removes exactly what it added.
 
 </details>
 

@@ -17,7 +17,7 @@ status: active
 quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: deepseek-ai/deepseek-harness
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 268886
-  last_commit: 2026-10-30T06:54:11Z
-  stars_delta_7d: 7068
-  stars_growth_pct: 2.7
-  trending_score: 7258.81
+  stars: 273440
+  last_commit: 2026-11-04T13:06:39Z
+  stars_delta_7d: 11622
+  stars_growth_pct: 4.4
+  trending_score: 12137.9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 253669
     - 261818
-    - 268886
+    - 273440
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: deepseek-ai/deepseek-harness
   path: packages/sandbox/sandbox-windows-acl/assets/diagnose-windows-sandbox-acl/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:52.549Z
+  fetched_at: 2026-11-05T13:13:20.854Z
   truncated: false
 type: agent_skill
 skill:

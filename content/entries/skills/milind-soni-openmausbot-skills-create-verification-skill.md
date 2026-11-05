@@ -19,7 +19,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: milind-soni/OpenMausBot
@@ -27,14 +27,14 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10902
-  last_commit: 2026-11-02T08:45:02Z
-  stars_delta_7d: 924
+  stars: 12583
+  last_commit: 2026-11-05T09:31:40Z
+  stars_delta_7d: 1025
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 10902
+    - 12583
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: milind-soni/OpenMausBot
   path: skills/create-verification-skill/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:26.675Z
+  fetched_at: 2026-11-05T13:12:47.675Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,7 +53,7 @@ skill:
   folder_path: skills/create-verification-skill
   extra_files:
     - manifest.json
-  pack_total_skills: 3
+  pack_total_skills: 4
   is_pack_primary: true
   clients:
     - claude-code

@@ -13,29 +13,29 @@ tags:
   - ai-agent
   - chat
 status: active
-quality_percentile: 65
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: iOfficeAI/AionUi
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 33985
-  last_commit: 2026-10-23T14:21:51Z
-  stars_delta_7d: 211
-  stars_growth_pct: 0.6
-  trending_score: 212.32
-  rank_current: 35
-  rank_delta: 11
+  stars: 34051
+  last_commit: 2026-11-05T05:31:20Z
+  stars_delta_7d: 277
+  stars_growth_pct: 0.8
+  trending_score: 279.27
+  rank_current: 39
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33490
     - 33626
     - 33774
-    - 33985
+    - 34051
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: iOfficeAI/AionUi
   path: readme.md
   branch: main
-  fetched_at: 2026-11-02T09:06:14.929Z
+  fetched_at: 2026-11-05T13:12:32.022Z
   truncated: false
 type: agent_tool
 tool:
@@ -99,7 +99,7 @@ tool:
 </p>
 
 <p align="center">
-  <strong>💬 Community:</strong> <a href="https://discord.gg/2QAwJn7Egx" target="_blank">Discord (English)</a> | <a href="https://github.com/iOfficeAI/AionUi/blob/main/resources/wx-26.png" target="_blank">微信 (中文群)</a> | <a href="https://twitter.com/AionUI" target="_blank">Twitter</a>
+  <strong>💬 Community:</strong> <a href="https://discord.gg/2QAwJn7Egx" target="_blank">Discord (English)</a> | <a href="https://github.com/iOfficeAI/AionUi/blob/main/resources/wx-27.png" target="_blank">微信 (中文群)</a> | <a href="https://twitter.com/AionUI" target="_blank">Twitter</a>
 </p>
 
 ---
@@ -761,7 +761,7 @@ brew install aionui
 - [Report Issues](https://github.com/iOfficeAI/AionUi/issues) — bugs and feature requests
 - [Release Updates](https://github.com/iOfficeAI/AionUi/releases) — get the latest version
 - [Discord Community](https://discord.gg/2QAwJn7Egx) — English community
-- [WeChat Group](https://github.com/iOfficeAI/AionUi/blob/main/resources/wx-26.png) — Chinese community
+- [WeChat Group](https://github.com/iOfficeAI/AionUi/blob/main/resources/wx-27.png) — Chinese community
 
 ### Contributing
 

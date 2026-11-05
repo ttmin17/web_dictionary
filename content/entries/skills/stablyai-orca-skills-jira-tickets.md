@@ -14,10 +14,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 112992
-  last_commit: 2026-11-02T09:03:00Z
-  stars_delta_7d: 6772
-  stars_growth_pct: 6.4
-  trending_score: 7203.75
+  stars: 116163
+  last_commit: 2026-11-05T13:05:51Z
+  stars_delta_7d: 9943
+  stars_growth_pct: 9.4
+  trending_score: 10873.74
   velocity_source: snapshot_delta
   sparkline_4w:
     - 91386
     - 97177
     - 106220
-    - 112992
+    - 116163
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: stablyai/orca
   path: skills/jira-tickets/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:03.762Z
+  fetched_at: 2026-11-05T13:12:17.680Z
   truncated: false
 type: agent_skill
 skill:

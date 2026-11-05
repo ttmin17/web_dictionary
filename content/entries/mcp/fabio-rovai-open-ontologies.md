@@ -14,24 +14,24 @@ tags:
   - formal-verification
   - infrastructure-as-code
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: fabio-rovai/open-ontologies
   official_vendor: false
   license: MIT
 signals:
-  stars: 2740
-  last_commit: 2026-11-02T08:31:37Z
+  stars: 2819
+  last_commit: 2026-11-04T23:13:28Z
   stars_delta_7d: 81
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 2740
+    - 2819
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +39,7 @@ readme_source:
   repo: fabio-rovai/open-ontologies
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.466Z
+  fetched_at: 2026-11-05T13:11:48.835Z
   truncated: false
 type: mcp_server
 launch:
@@ -362,7 +362,7 @@ That answer has a limit, and the command states the limit. A digest binds a
 certificate to bytes. It does not bind a certificate to a state of the world. A
 store that changed and then changed back gives the same answer. The type-level
 form of this work is [decision
-0010](docs/decisions/0010-the-input-is-a-value-and-not-a-store.md), and that
+0010](https://github.com/fabio-rovai/open-ontologies/blob/main/docs/decisions/0010-the-input-is-a-value-and-not-a-store.md), and that
 work is open.
 
 One case needs a word, because you will meet it. `reason` writes its inferences
@@ -464,6 +464,10 @@ cargo build --release --features embeddings,plugins,sql
 For Intel macOS, for native Windows and for other systems, read
 [docs/quickstart.md](https://github.com/fabio-rovai/open-ontologies/blob/main/docs/quickstart.md) and [docs/windows.md](https://github.com/fabio-rovai/open-ontologies/blob/main/docs/windows.md).
 
+The Docker image is for linux/amd64 only, so on Apple silicon run it under
+emulation with
+`docker run --rm -i --platform linux/amd64 ghcr.io/fabio-rovai/open-ontologies:latest`.
+
 The `serve` command starts an MCP server. That server speaks JSON-RPC on stdin and
 stdout. Thus, at start, the server looks as if it stopped, while it waits for a
 client. This behaviour is correct. From a terminal, use the CLI subcommands
@@ -507,8 +511,9 @@ and this page does not list them. A large list of features is not the argument.
 
 Some tools need an optional Cargo feature, and they return an error without that
 feature. Four tools need `embeddings`. Two tools need `plugins`. Two tools need
-`postgres` or `duckdb`. The published binaries and the GHCR image use the default
-feature set. Thus they do not carry those eight tools.
+`postgres` or `duckdb`. The release binaries have `embeddings` and `plugins`, so
+they lack only the two tools that need `postgres` or `duckdb`. The GHCR image also
+has `sql`, which turns on `postgres` and `duckdb`, so it carries all eight tools.
 
 The Python package `open-ontologies-lite` also reasons now. It reasons in pure
 Python, and it needs no Rust toolchain. The same Lean binaries check its

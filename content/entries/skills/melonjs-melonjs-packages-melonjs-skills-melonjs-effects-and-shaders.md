@@ -14,10 +14,10 @@ tags:
   - agent-skills
   - canvas
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,15 +25,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6432
-  last_commit: 2026-11-02T09:01:47Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.2
-  trending_score: 13.03
+  stars: 6442
+  last_commit: 2026-11-05T10:39:00Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.4
+  trending_score: 23.08
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
-    - 6432
+    - 6442
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-effects-and-shaders/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:46.464Z
+  fetched_at: 2026-11-05T13:13:18.598Z
   truncated: false
 type: agent_skill
 skill:
@@ -820,6 +820,7 @@ same question after construction.
 
 | symptom | cause |
 |---|---|
+| a camera's post effect hides another camera drawn before it | before 20.13 a later camera's pass replaced the whole frame; update. Since then each camera's effects apply to what it draws, over the cameras before it |
 | effect does nothing, warning in console | Canvas fallback — no programmable pipeline |
 | effect does nothing on some machines only | GLSL-only shader, `video.AUTO` chose WebGPU |
 | a white or solid box where the effect should be | carrier renderable drawn while the effect is disabled |

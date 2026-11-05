@@ -11,10 +11,10 @@ tags:
   - sse
   - streamable-http
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2024-12-26T20:31:54
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: sparfenyuk/mcp-proxy
@@ -22,12 +22,12 @@ source:
   license: MIT
 signals:
   stars: 2814
-  last_commit: 2026-11-02T08:57:05Z
+  last_commit: 2026-11-04T21:04:47Z
   stars_delta_7d: 8
   stars_growth_pct: 0.3
   trending_score: 8.02
-  rank_current: 81
-  rank_delta: -7
+  rank_current: 87
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2781
@@ -43,7 +43,7 @@ readme_source:
   repo: sparfenyuk/mcp-proxy
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.529Z
+  fetched_at: 2026-11-05T13:11:48.962Z
   truncated: false
 type: mcp_server
 launch:
@@ -104,6 +104,10 @@ graph LR
 
 This mode requires providing the URL of the MCP Server's SSE endpoint as the program’s first argument. If the server uses Streamable HTTP transport, make sure to enforce it on the `mcp-proxy` side by passing `--transport=streamablehttp`.
 
+When the proxy is a **Streamable HTTP client**, it bounds the final MCP session-termination `DELETE` request, including reading its response body, to five seconds. After cancellation or timeout, closing a received response gets a shielded, cooperative grace of up to one second; cleanup code that ignores cancellation can take longer. Graceful CLI teardown after SIGINT requires Python 3.11+; on Python 3.10, SIGINT may interrupt the event loop before the final `DELETE` is sent ([asyncio runner documentation](https://docs.python.org/3.11/library/asyncio-runner.html#handling-keyboard-interruption)). This limit applies only to that termination operation; normal `GET` streams and `POST` tool calls retain their usual HTTP timeouts. It is specific to reverse-client mode and does not change the stateful/stateless behavior of proxied HTTP servers.
+
+In reverse Streamable HTTP mode, an HTTP `404` on a `POST` for an established upstream session marks that session lost. The operation that received the `404` is never retried; its failure follows the existing proxy handling, and the server may already have applied it. A later explicit request may use a replacement session only when its complete initialization handshake matches the original. The proxy does not restore subscriptions, logging levels, or other upstream session-local state; after stateful resource or logging operations, or when the handshake changes, it refuses later requests and the MCP client must restart. Progress notifications are sent only to the current healthy session and are not buffered or replayed.
+
 Arguments
 
 | Name             | Required | Description                                                                                                       | Example                                       |
@@ -146,6 +150,16 @@ For Claude Desktop, the configuration entry can look like this:
 }
 ```
 
+Closing the client's stdin disconnects the remote session and cancels connection setup, initialization, and active
+requests. Queued input is abandoned. Each input frame is limited to 4 MiB of UTF-8 wire payload bytes, excluding
+CR/LF delimiters. At most 4 MiB and 128 frames may be admitted but not yet consumed; empty and malformed frames count
+toward the frame limit. Exceeding either limit exits with an error instead of silently dropping input. These are
+admission limits, not an exact memory limit, because decoded text and protocol objects use additional memory.
+
+The client must read or close stdout. A full, unread stdout pipe can prevent process exit. A cancelled blocking stdin
+read may leave one daemon thread and its private descriptor until the read returns or the process exits. The helper
+supports one active CLI lifespan per process.
+
 ## 2. SSE to stdio
 
 Run a proxy server exposing a SSE server that connects to a local stdio server.
@@ -166,9 +180,27 @@ graph LR
 ### 2.1 Configuration
 
 Configure the HTTP server with `--host` and `--port`; the defaults are `127.0.0.1` and an available port. A wildcard
-bind such as `0.0.0.0` requires `--allowed-host` entries for the Host authorities clients will use. The deprecated
-`--sse-host` and `--sse-port` options are ineffective; use `--host` and `--port` instead. Additional environment
-variables can be passed to the local stdio server using `--env`. Put local server arguments after the `--` separator.
+bind such as `0.0.0.0` requires `--allowed-host` entries for the Host authorities clients will use. These host checks
+and CORS settings do not authenticate callers by default. `--headers` and `API_ACCESS_TOKEN` authenticate upstream
+client requests; they do not authenticate callers of this server.
+
+To require inbound authentication, set `MCP_PROXY_AUTH_TOKEN` or pass `--auth-bearer-token TOKEN`. An explicit CLI
+value takes precedence over the environment variable. Prefer the environment variable because local process tools may
+show command-line arguments. With neither value set, the server keeps its unauthenticated default. When enabled, every
+HTTP request needs `Authorization: Bearer TOKEN`, including requests to `/status`, `/healthz`, SSE, StreamableHTTP,
+and named-server routes. Health probes must send the token. Configured CORS preflight requests still work without a
+token; ordinary `OPTIONS` requests require one. Host and Origin checks continue to apply.
+
+`MCP_PROXY_AUTH_TOKEN` is removed from child processes when `--pass-environment` copies the proxy environment.
+Values passed explicitly with `--env` or a named-server configuration remain part of that server's environment.
+This shared token does not provide user identity or roles and does not make the proxy compliant with MCP OAuth.
+Use TLS or a trusted network/reverse proxy when exposing the server beyond a trusted local network.
+
+The deprecated `--sse-host` and `--sse-port` options are ineffective; use `--host` and `--port` instead. Additional
+environment variables can be passed to the local stdio server using `--env`. Put local server arguments after the `--` separator.
+
+Startup logs list the SSE and StreamableHTTP endpoints for each configured backend. With `--port=0`, they list endpoint
+paths because Uvicorn selects the actual port during startup; combine each path with Uvicorn's listening address.
 
 Arguments
 
@@ -177,12 +209,14 @@ Arguments
 | `command_or_url`                     | Yes                        | The command to spawn the MCP stdio server                                                     | uvx mcp-server-fetch                        |
 | `--port`                             | No, random available       | The MCP server port to listen on                                                              | 8080                                        |
 | `--host`                             | No, `127.0.0.1` by default | Host IP address to bind. Wildcard binds require explicit `--allowed-host` authorities.       | 0.0.0.0                                     |
+| `--auth-bearer-token`                | No                         | Require one shared Bearer token on every inbound HTTP request. Prefer `MCP_PROXY_AUTH_TOKEN`. | `<TOKEN>`                                  |
 | `--allowed-host`                     | No                         | Additional trusted Host authority; repeat for each hostname/IP and port clients use.         | --allowed-host mcp.example.com:8080         |
 | `--env`                              | No                         | Additional environment variables to pass to the MCP stdio server. Can be used multiple times. | FOO BAR                                     |
 | `--cwd`                              | No                         | The working directory to pass to the MCP stdio server process.                                | /tmp                                        |
 | `--pass-environment`                 | No                         | Pass through all environment variables when spawning the server                               | --no-pass-environment                       |
 | `--allow-origin`                     | No                         | Allowed origins for the SSE server. Can be used multiple times. Default is no CORS allowed.   | --allow-origin "\*"                         |
 | `--expose-header`                    | No                         | Headers added to `Access-Control-Expose-Headers`. Can be used multiple times. Defaults to `mcp-session-id`. | --expose-header Custom-Header              |
+| `--initialization-timeout SECONDS`   | No                         | Deadline for each stdio server initialization; default is unlimited. Cleanup may take additional time. | --initialization-timeout 30                 |
 | `--stateless`                        | No                         | Enable stateless mode for streamable http transports. Default is False                        | --no-stateless                              |
 | `--named-server NAME COMMAND_STRING` | No                         | Defines a named stdio server.                                                                 | --named-server fetch 'uvx mcp-server-fetch' |
 | `--named-server-config FILE_PATH`    | No                         | Path to a JSON file defining named stdio servers.                                             | --named-server-config /path/to/servers.json |
@@ -229,7 +263,17 @@ mcp-proxy --port=8080 --allow-origin='*' --expose-header Custom-Header uvx mcp-s
 If a default server is specified (the `command_or_url` argument without `--named-server` or `--named-server-config`), it will be accessible at the root paths (e.g., `http://127.0.0.1:8080/sse`).
 
 Named servers (whether defined by `--named-server` or `--named-server-config`) will be accessible under `/servers/<server-name>/` (e.g., `http://127.0.0.1:8080/servers/fetch1/sse`).
-The `/status` endpoint provides global status.
+The `/status` endpoint provides global status. Its `server_instances` keys normally use the configured
+named-server names and `default` for the positional server. If both a positional server and a named
+server called `default` are configured, all entries use route keys instead: `/` for the positional
+server and `/servers/<name>` for named servers. This keeps both instances distinct without reserving
+a configured name.
+
+If a named server fails with a spawn-stage operating-system error other than `TimeoutError`, an MCP
+initialization error, an initialization timeout, or stdout EOF observed before activation, `mcp-proxy`
+marks it as `failed` in `/status` and continues with the remaining named servers. Failed servers have
+no routes or advertised endpoints. Other startup failures, cleanup failures, and failures in the
+positional server remain fatal. Startup exits with an error if none of the configured servers starts.
 
 **JSON Configuration File Format for `--named-server-config`:**
 
@@ -304,6 +348,9 @@ uv tool install git+https://github.com/sparfenyuk/mcp-proxy
 Starting from version 0.3.2, it's possible to pull and run the corresponding container image.
 Release images are published to GHCR and Docker Hub as multi-platform manifests for `linux/amd64` and `linux/arm64`;
 Docker selects the matching image for the host architecture automatically.
+The runtime image includes `uv` and `uvx`, so Python MCP servers can be launched
+without building a separate image to install these executables. Installing tools
+with dependencies that are not already cached still requires network access.
 
 ```bash
 docker run --rm -t ghcr.io/sparfenyuk/mcp-proxy:v0.12.0 --help
@@ -327,22 +374,37 @@ docker run --rm -t sparfenyuk/mcp-proxy:v0.12.0 --help
 
 ## Extending the container image
 
-You can extend the `mcp-proxy` container image to include additional executables. For instance, `uv` is not included by
-default, but you can create a custom image with it:
+The published `mcp-proxy` image includes `uv` and `uvx`, but not Node.js or npm. To run Node.js MCP servers with
+`npx`, build a custom extension image:
 
 ```Dockerfile
 # file: mcp-proxy.Dockerfile
 
 FROM ghcr.io/sparfenyuk/mcp-proxy:latest
 
-# Install the 'uv' package
-RUN python3 -m ensurepip && pip install --no-cache-dir uv
-
-ENV PATH="/usr/local/bin:$PATH" \
-    UV_PYTHON_PREFERENCE=only-system
-
-ENTRYPOINT ["catatonit", "--", "mcp-proxy"]
+RUN apk add --no-cache nodejs npm
+ENV UV_PYTHON_PREFERENCE=only-system
 ```
+
+Build and run the custom image:
+
+```bash
+docker build -f mcp-proxy.Dockerfile -t mcp-proxy-custom .
+docker run --rm -t mcp-proxy-custom --port=8080 -- npx -y @modelcontextprotocol/server-filesystem /tmp
+```
+
+The first `npx` launch needs network access to download a package that is not already cached.
+
+To check a locally built image, run the opt-in container tests:
+
+```bash
+docker build -t mcp-proxy:test .
+MCP_PROXY_TEST_IMAGE=mcp-proxy:test uv run --frozen pytest -q tests/test_container_image.py
+```
+
+These tests disable container network access, run a local wheel through `uvx`, and
+launch an MCP server through `uv` to list and call a tool through the proxy.
+Without `MCP_PROXY_TEST_IMAGE`, the container tests are skipped.
 
 ## Docker Compose Setup
 
@@ -426,6 +488,9 @@ stdio client options:
 SSE server options:
   --port PORT           Port to expose an SSE server on. Default is a random port
   --host HOST           Host to expose an SSE server on. Default is 127.0.0.1
+  --initialization-timeout SECONDS
+                        Maximum time to initialize each stdio server. By default, wait indefinitely.
+                        A timeout fails proxy startup and does not limit tool calls. Cleanup may take additional time.
   --stateless, --no-stateless
                         Enable stateless mode for streamable http transports. Default is False
   --sse-port SSE_PORT   (deprecated and ineffective; use --port)

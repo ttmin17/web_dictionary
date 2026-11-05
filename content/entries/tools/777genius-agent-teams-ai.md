@@ -15,28 +15,28 @@ tags:
   - agent-to-agent
   - ai-agents
 status: active
-quality_percentile: 67
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: 777genius/agent-teams-ai
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2387
-  last_commit: 2026-11-01T23:34:36Z
-  stars_delta_7d: 55
-  stars_growth_pct: 2.4
-  trending_score: 56.3
+  stars: 2406
+  last_commit: 2026-11-05T12:25:11Z
+  stars_delta_7d: 74
+  stars_growth_pct: 3.2
+  trending_score: 76.35
   rank_current: 80
   rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2278
     - 2332
-    - 2387
+    - 2406
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: 777genius/agent-teams-ai
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.692Z
+  fetched_at: 2026-11-05T13:11:49.335Z
   truncated: false
 type: agent_tool
 tool:

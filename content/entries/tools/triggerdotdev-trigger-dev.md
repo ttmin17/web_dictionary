@@ -16,26 +16,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: triggerdotdev/trigger.dev
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16688
-  last_commit: 2026-10-31T11:59:31Z
-  stars_delta_7d: 71
-  stars_growth_pct: 0.4
-  trending_score: 71.3
-  rank_current: 72
-  rank_delta: 8
+  stars: 16716
+  last_commit: 2026-11-03T11:54:09Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.6
+  trending_score: 99.59
+  rank_current: 73
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16531
     - 16571
     - 16617
-    - 16688
+    - 16716
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: triggerdotdev/trigger.dev
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:30.361Z
+  fetched_at: 2026-11-05T13:11:37.331Z
   truncated: false
 type: agent_tool
 tool:
@@ -178,7 +178,7 @@ We have a large active community in our official [Discord server](https://trigge
 
 ## Development
 
-To setup and develop locally or contribute to the open source project, follow our [development guide](https://github.com/triggerdotdev/trigger.dev/blob/main/CONTRIBUTING.md).
+To setup and develop locally or contribute to the open source project, follow our [development guide](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/main/CONTRIBUTING.md).
 
 ## Meet the Amazing People Behind This Project:
 

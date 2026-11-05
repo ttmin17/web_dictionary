@@ -17,25 +17,25 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: rtk-ai/rtk
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 85267
-  last_commit: 2026-11-02T01:13:22Z
-  stars_delta_7d: 692
-  stars_growth_pct: 0.8
-  trending_score: 697.66
-  rank_current: 17
-  rank_delta: 1
+  stars: 85616
+  last_commit: 2026-11-05T12:12:08Z
+  stars_delta_7d: 1041
+  stars_growth_pct: 1.2
+  trending_score: 1053.81
+  rank_current: 16
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 83907
     - 84575
-    - 85267
+    - 85616
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: rtk-ai/rtk
   path: README.md
   branch: develop
-  fetched_at: 2026-11-02T09:06:05.719Z
+  fetched_at: 2026-11-05T13:12:20.245Z
   truncated: false
 type: agent_tool
 tool:

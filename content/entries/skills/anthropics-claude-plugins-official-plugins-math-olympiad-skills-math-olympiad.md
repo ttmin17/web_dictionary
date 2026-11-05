@@ -16,7 +16,7 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: anthropics/claude-plugins-official
@@ -24,17 +24,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 45763
-  last_commit: 2026-11-02T07:29:13Z
-  stars_delta_7d: 1138
-  stars_growth_pct: 2.6
-  trending_score: 1167.02
+  stars: 46193
+  last_commit: 2026-11-05T07:28:35Z
+  stars_delta_7d: 1568
+  stars_growth_pct: 3.5
+  trending_score: 1623.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 37789
     - 42914
     - 44625
-    - 45763
+    - 46193
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: anthropics/claude-plugins-official
   path: plugins/math-olympiad/skills/math-olympiad/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:14.500Z
+  fetched_at: 2026-11-05T13:12:30.806Z
   truncated: false
 type: agent_skill
 skill:

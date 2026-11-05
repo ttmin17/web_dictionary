@@ -17,18 +17,18 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-01-07T19:58:51
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: headroomlabs-ai/headroom
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 78603
-  last_commit: 2026-11-02T08:20:08Z
-  stars_delta_7d: 756
-  stars_growth_pct: 1
-  trending_score: 763.34
+  stars: 78898
+  last_commit: 2026-11-05T08:56:05Z
+  stars_delta_7d: 1051
+  stars_growth_pct: 1.4
+  trending_score: 1065.19
   rank_current: 15
   rank_delta: -7
   velocity_source: snapshot_delta
@@ -36,7 +36,7 @@ signals:
     - 75189
     - 75939
     - 77847
-    - 78603
+    - 78898
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: headroomlabs-ai/headroom
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:05.675Z
+  fetched_at: 2026-11-05T13:12:26.135Z
   truncated: false
 type: agent_tool
 tool:
@@ -83,7 +83,7 @@ tool:
   <b><a href="https://docs.headroomlabs.ai/docs/quickstart">Quickstart</a></b> ·
   <b><a href="#headroom-for-teams">Headroom for Teams</a></b> ·
   <a href="#get-started-60-seconds">Install</a> ·
-  <a href="#proof">Proof</a> ·
+  <a href="#proof-measured-token-savings">Proof</a> ·
   <a href="#agent-compatibility">Agents</a> ·
   <a href="https://docs.headroomlabs.ai/docs">Docs</a> ·
   <a href="https://discord.gg/yRmaUNpsPJ">Discord</a> ·
@@ -98,10 +98,46 @@ tool:
 
 <!-- mcp-name: io.github.headroomlabs-ai/headroom -->
 
-Headroom compresses everything your AI agent reads — tool outputs, logs, RAG
-chunks, files, and conversation history — before it reaches the LLM. Same
-answers, fraction of the tokens. Compression runs on your machine; no prompt or
-file content is sent anywhere to be compressed.
+**Headroom** (`headroom-ai` on PyPI and npm) compresses everything your AI agent
+reads — tool outputs, logs, RAG chunks, files, and conversation history — before
+it reaches the LLM. Same answers, fewer input tokens. Measured: 21–57% fewer
+input tokens on four agent scenarios, 90%+ on repeated JSON arrays and log
+lines, little on prose ([Proof](#proof-measured-token-savings)). Compression
+runs on your machine; no prompt or file content is sent anywhere to be compressed.
+
+## Start here
+
+**My app calls an LLM** (Python, LangChain, LiteLLM, Agno, Strands):
+
+```bash
+pip install headroom-ai
+```
+
+```python
+from headroom import compress
+
+result = compress(messages, model="gpt-4o")  # OpenAI or Anthropic message dicts
+client.chat.completions.create(model="gpt-4o", messages=result.messages)
+```
+
+No API key, no model download, in-process. Set `HEADROOM_OFFLINE=1` for a
+zero-network run. Tool and assistant messages are compressed; user messages are
+left alone unless you pass `compress_user_messages=True`.
+[FastAPI example](https://docs.headroomlabs.ai/docs/fastapi) ·
+[API reference](https://docs.headroomlabs.ai/docs/api-reference).
+TypeScript apps: `npm install headroom-ai` plus the proxy
+(`pip install "headroom-ai[proxy]"`, `headroom proxy --port 8787`); the npm SDK
+sends messages to it. [TypeScript quickstart](https://docs.headroomlabs.ai/docs/quickstart)
+
+**I run coding agents** (Claude Code, Codex, Cursor, Copilot, OpenCode, Aider):
+
+```bash
+uv tool install --python 3.13 "headroom-ai[all]"
+headroom wrap claude
+```
+
+Zero code changes. [Agent compatibility](#agent-compatibility) ·
+[Proxy](https://docs.headroomlabs.ai/docs/proxy)
 
 <p align="center">
   <a href="https://headroomlabs.ai"><img src="https://raw.githubusercontent.com/headroomlabs-ai/headroom/main/.github/assets/enterprise-perk.svg" alt="Headroom Enterprise for teams. Talk to us: hello@headroomlabs.ai." width="880"></a>
@@ -174,7 +210,7 @@ headroom perf
 headroom dashboard                      # live savings (proxy must be running)
 ```
 
-Inline, in Python:
+### Reduce input tokens in your own app
 
 ```python
 from headroom import compress
@@ -196,11 +232,17 @@ Headroom. For Claude Code, Serena is registered for the wrapped project only
 `--code-memory-scope user` to make it available in every project, or
 `--code-memory none` to skip it. `headroom unwrap` removes either registration.
 
+`headroom wrap ...` is session-scoped: its proxy exits with the wrapped agent.
+For a proxy that survives reboots, use the turnkey `headroom deploy` command.
+Use `headroom install apply` when you need to choose a specific persistent
+service, scheduled task, Docker runtime, scope, or provider target; see the
+[persistent installs guide](https://docs.headroomlabs.ai/docs/persistent-installs).
+
 The `headroom` CLI ships only in the PyPI package. The npm `headroom-ai` package
 is the TypeScript SDK — a library you import
 (`import { compress } from 'headroom-ai'`) — and provides no `headroom` command.
 
-## Proof
+## Proof: measured token savings
 
 Four scenarios built from real MCP server output formats, measured with the
 provider tokenizer and the shipped `compress()`. Seeded and offline, so you get
@@ -314,12 +356,12 @@ Saved** card then reads `measured` rather than `estimated`, with the band.
 | Goose | ✅ | starts proxy + launches |
 | OpenHands | ✅ | starts proxy + launches |
 | Mistral Vibe | ✅ | starts proxy + launches |
-| Oh My Pi | ✅ | injects config · starts proxy + launches |
+| Oh My Pi | ✅ | Anthropic + OpenAI/Codex · injects config · starts proxy + launches |
 | Cortex Code | Library only | 60–65% savings in library mode; no `wrap` |
 | Kimi CLI | ✅ | OAuth bearer forwarded — log in once |
 | ZCode | ✅ | starts the proxy and prints base URLs for ZCode settings |
 
-[^third-party-upstream]: `headroom wrap` routes OpenAI-compatible traffic to the default upstream (`https://api.openai.com/v1`). For a third-party OpenAI-compatible provider (DeepSeek, Together, OpenRouter, a self-hosted gateway), pass `--openai-api-url https://api.deepseek.com/v1` — or set `OPENAI_TARGET_API_URL` before wrapping — otherwise your provider key is sent to OpenAI and rejected with `401 Incorrect API key provided`. See [OpenCode + DeepSeek](https://github.com/headroomlabs-ai/headroom/blob/main/docs/content/docs/opencode-deepseek.mdx).
+[^third-party-upstream]: `headroom wrap` routes OpenAI-compatible traffic to the default upstream (`https://api.openai.com/v1`). For a third-party OpenAI-compatible provider (DeepSeek, Together, OpenRouter, a self-hosted gateway), pass `--openai-api-url https://api.deepseek.com/v1` — or set `OPENAI_TARGET_API_URL` before wrapping — otherwise your provider key is sent to OpenAI and rejected with `401 Incorrect API key provided`. See [OpenCode + DeepSeek](https://docs.headroomlabs.ai/docs/opencode-deepseek).
 
 Any OpenAI-compatible client works through `headroom proxy`. MCP-native clients:
 `headroom mcp install`. Undo durable wrapping with `headroom unwrap <tool>`
@@ -424,18 +466,23 @@ session or the resulting context window.
 
 ## When to use · when to skip
 
-**Good fit if you** run coding agents daily and want savings without touching
-your code, work across several agents and want one shared memory, or need
-compression that is reversible — originals stay retrievable through CCR for the
-configured TTL.
+**Use the library** (`compress()`) when your own code builds the prompt: an API
+that forwards tool results, logs, search hits, database rows or long chat
+history to a model. It is a function over the message list, runs in-process with
+no key and no network, and works anywhere Python runs, including sandboxes and
+serverless functions.
 
-**Skip it if you** only use one provider's native compaction and don't need
-cross-agent memory, or work in a sandbox where local processes can't run.
+**Use the proxy or `headroom wrap`** when you want savings on a coding agent or
+any client you do not control, with no code changes, or when you want one shared
+memory across several agents. Either way, compression is reversible: originals
+stay retrievable through CCR for the configured TTL.
 
-Headroom pays off on long agent sessions with heavy tool output. Short
-conversational exchanges, prose, and already-dense payloads see little or no
-reduction, and blocks under `min_input_words` come back byte-identical.
-[Limitations](https://docs.headroomlabs.ai/docs/limitations) has the full list.
+**Skip it** for short conversational prompts and prose: there is little to
+compress, and blocks under the Kompress `min_input_words` floor come back
+byte-identical. If your provider's native compaction already covers your traffic
+and you do not need reversibility or cross-agent memory, you may not need
+Headroom either. [Limitations](https://docs.headroomlabs.ai/docs/limitations)
+has the full list.
 
 <details>
 <summary><b>Integrations — drop Headroom into any stack</b></summary>

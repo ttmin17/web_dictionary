@@ -14,25 +14,25 @@ status: active
 quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: aaif-goose/goose
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 56115
-  last_commit: 2026-11-02T04:38:01Z
-  stars_delta_7d: 387
-  stars_growth_pct: 0.7
-  trending_score: 389.69
-  rank_current: 26
-  rank_delta: -1
+  stars: 56247
+  last_commit: 2026-11-04T21:01:37Z
+  stars_delta_7d: 519
+  stars_growth_pct: 0.9
+  trending_score: 523.83
+  rank_current: 25
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 55427
     - 55728
-    - 56115
+    - 56247
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: aaif-goose/goose
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:54.032Z
+  fetched_at: 2026-11-05T13:13:24.411Z
   truncated: false
 type: agent_tool
 tool:

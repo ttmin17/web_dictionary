@@ -17,25 +17,25 @@ status: active
 quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: CoderGamester/mcp-unity
   official_vendor: false
   license: MIT
 signals:
-  stars: 2011
+  stars: 2013
   last_commit: 2026-10-11T12:20:40Z
-  stars_delta_7d: 15
-  stars_growth_pct: 0.8
-  trending_score: 15.11
-  rank_current: 113
-  rank_delta: -41
+  stars_delta_7d: 17
+  stars_growth_pct: 0.9
+  trending_score: 17.14
+  rank_current: 116
+  rank_delta: -44
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1936
     - 1996
-    - 2011
+    - 2013
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: CoderGamester/mcp-unity
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:48.839Z
+  fetched_at: 2026-11-05T13:12:03.413Z
   truncated: false
 type: agent_tool
 tool:
@@ -805,7 +805,7 @@ Contributions are welcome! Please feel free to submit a Pull Request or open an 
 
 ## License
 
-This project is under [MIT License](https://github.com/CoderGamester/mcp-unity/blob/main/LICENSE.md)
+This project is under [MIT License](https://raw.githubusercontent.com/CoderGamester/mcp-unity/main/LICENSE.md)
 
 ## Acknowledgements
 

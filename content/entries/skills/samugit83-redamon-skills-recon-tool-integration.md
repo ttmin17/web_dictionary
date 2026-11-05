@@ -16,7 +16,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -24,16 +24,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3264
-  last_commit: 2026-11-01T16:47:54Z
-  stars_delta_7d: 50
-  stars_growth_pct: 1.6
-  trending_score: 50.78
+  stars: 3298
+  last_commit: 2026-11-04T18:34:53Z
+  stars_delta_7d: 84
+  stars_growth_pct: 2.6
+  trending_score: 86.2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
-    - 3264
+    - 3298
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/recon-tool-integration/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:07:16.752Z
+  fetched_at: 2026-11-05T13:13:51.217Z
   truncated: false
 type: agent_skill
 skill:
@@ -57,7 +57,7 @@ skill:
     recon/entrypoint.sh.
   folder_path: skills/recon-tool-integration
   extra_files: []
-  pack_total_skills: 16
+  pack_total_skills: 17
   is_pack_primary: false
   clients:
     - claude-code

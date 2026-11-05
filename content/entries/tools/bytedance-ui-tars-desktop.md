@@ -16,26 +16,26 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2025-01-19T09:04:43
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: bytedance/UI-TARS-desktop
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 39515
+  stars: 39551
   last_commit: 2026-10-09T01:29:53Z
-  stars_delta_7d: 123
-  stars_growth_pct: 0.3
-  trending_score: 123.38
-  rank_current: 54
-  rank_delta: 10
+  stars_delta_7d: 159
+  stars_growth_pct: 0.4
+  trending_score: 159.64
+  rank_current: 57
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 39261
     - 39322
     - 39392
-    - 39515
+    - 39551
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: bytedance/UI-TARS-desktop
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:22.928Z
+  fetched_at: 2026-11-05T13:11:27.496Z
   truncated: false
 type: agent_tool
 tool:
@@ -132,7 +132,7 @@ English | [简体中文](https://github.com/bytedance/UI-TARS-desktop/blob/main/
 - **\[2025-06-25\]** We released an Agent TARS Beta and Agent TARS CLI - [Introducing Agent TARS Beta](https://agent-tars.com/blog/2025-06-25-introducing-agent-tars-beta.html), a multimodal AI agent that aims to explore a work form that is closer to human-like task completion through rich multimodal capabilities (such as GUI Agent, Vision) and seamless integration with various real-world tools.
 - **\[2025-06-12\]** - 🎁 We are thrilled to announce the release of UI-TARS Desktop v0.2.0! This update introduces two powerful new features: **Remote Computer Operator** and **Remote Browser Operator**—both completely free. No configuration required: simply click to remotely control any computer or browser, and experience a new level of convenience and intelligence.
 - **\[2025-04-17\]** - 🎉 We're thrilled to announce the release of new UI-TARS Desktop application v0.1.0, featuring a redesigned Agent UI. The application enhances the computer using experience, introduces new browser operation features, and supports [the advanced UI-TARS-1.5 model](https://seed-tars.com/1.5) for improved performance and precise control.
-- **\[2025-02-20\]** - 📦 Introduced [UI TARS SDK](https://github.com/bytedance/UI-TARS-desktop/blob/main/docs/sdk.md), is a powerful cross-platform toolkit for building GUI automation agents.
+- **\[2025-02-20\]** - 📦 Introduced [UI TARS SDK](https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/main/docs/sdk.md), is a powerful cross-platform toolkit for building GUI automation agents.
 - **\[2025-01-23\]** - 🚀 We updated the **[Cloud Deployment](https://github.com/bytedance/UI-TARS-desktop/blob/main/docs/deployment.md#cloud-deployment)** section in the 中文版: [GUI模型部署教程](https://bytedance.sg.larkoffice.com/docx/TCcudYwyIox5vyxiSDLlgIsTgWf#U94rdCxzBoJMLex38NPlHL21gNb) with new information related to the ModelScope platform. You can now use the ModelScope platform for deployment.
 
 <br>

@@ -13,28 +13,28 @@ tags:
   - ai-agent
   - ai-coding-agent
 status: active
-quality_percentile: 84
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Q00/ouroboros
   official_vendor: false
   license: MIT
 signals:
-  stars: 6306
-  last_commit: 2026-11-01T19:58:39Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0.5
-  trending_score: 31.15
-  rank_current: 52
-  rank_delta: -3
+  stars: 6325
+  last_commit: 2026-11-05T13:06:11Z
+  stars_delta_7d: 50
+  stars_growth_pct: 0.8
+  trending_score: 50.4
+  rank_current: 47
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6247
     - 6275
-    - 6306
+    - 6325
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: Q00/ouroboros
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:02.603Z
+  fetched_at: 2026-11-05T13:13:37.414Z
   truncated: false
 type: mcp_server
 launch:

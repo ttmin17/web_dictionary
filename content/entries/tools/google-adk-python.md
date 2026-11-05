@@ -17,25 +17,25 @@ status: active
 quality_percentile: 100
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/adk-python
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 22081
-  last_commit: 2026-11-02T08:37:05Z
-  stars_delta_7d: 73
-  stars_growth_pct: 0.3
-  trending_score: 73.24
-  rank_current: 70
-  rank_delta: -13
+  stars: 22113
+  last_commit: 2026-11-05T10:47:38Z
+  stars_delta_7d: 105
+  stars_growth_pct: 0.5
+  trending_score: 105.5
+  rank_current: 68
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 21907
     - 22008
-    - 22081
+    - 22113
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: google/adk-python
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:58.815Z
+  fetched_at: 2026-11-05T13:13:30.411Z
   truncated: false
 type: agent_tool
 tool:
@@ -266,7 +266,7 @@ adk deploy cloud_run --with_ui --env GOOGLE_GENAI_USE_ENTERPRISE=1 <agent-folder
 We welcome contributions from the community! Whether it's bug reports, feature requests, documentation improvements, or code contributions, please see our:
 
 - [General contribution guideline and flow](https://adk.dev/community/contributing-guide/).
-- [Code Contributing Guidelines](https://github.com/google/adk-python/blob/main/CONTRIBUTING.md) to get started.
+- [Code Contributing Guidelines](https://raw.githubusercontent.com/google/adk-python/main/CONTRIBUTING.md) to get started.
 
 ## Community Repo
 

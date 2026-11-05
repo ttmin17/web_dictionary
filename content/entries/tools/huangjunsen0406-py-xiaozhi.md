@@ -14,28 +14,28 @@ tags:
   - embodied-ai
   - esp32
 status: active
-quality_percentile: 97
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: huangjunsen0406/py-xiaozhi
   official_vendor: false
   license: MIT
 signals:
-  stars: 3539
+  stars: 3541
   last_commit: 2026-10-31T15:29:40Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.3
-  trending_score: 11.03
-  rank_current: 120
-  rank_delta: -7
+  stars_delta_7d: 13
+  stars_growth_pct: 0.4
+  trending_score: 13.05
+  rank_current: 122
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3517
     - 3528
-    - 3539
+    - 3541
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: huangjunsen0406/py-xiaozhi
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.731Z
+  fetched_at: 2026-11-05T13:11:44.705Z
   truncated: false
 type: agent_tool
 tool:
@@ -368,4 +368,4 @@ style warnings elsewhere remain a separate cleanup task.
 
 ## License
 
-[MIT License](https://github.com/huangjunsen0406/py-xiaozhi/blob/main/LICENSE)
+[MIT License](https://raw.githubusercontent.com/huangjunsen0406/py-xiaozhi/main/LICENSE)

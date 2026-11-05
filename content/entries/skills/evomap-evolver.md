@@ -18,7 +18,7 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: EvoMap/evolver
@@ -26,18 +26,18 @@ source:
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 8716
-  last_commit: 2026-11-01T09:57:28Z
-  stars_delta_7d: 14
+  stars: 8722
+  last_commit: 2026-11-05T04:35:15Z
+  stars_delta_7d: 20
   stars_growth_pct: 0.2
-  trending_score: 14.02
-  rank_current: 125
-  rank_delta: -5
+  trending_score: 20.05
+  rank_current: 120
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8687
     - 8702
-    - 8716
+    - 8722
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: EvoMap/evolver
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:16.881Z
+  fetched_at: 2026-11-05T13:13:51.427Z
   truncated: false
 type: agent_skill
 skill:

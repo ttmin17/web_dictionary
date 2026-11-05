@@ -16,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27822
-  last_commit: 2026-10-30T20:57:42Z
-  stars_delta_7d: 171
-  stars_growth_pct: 0.6
-  trending_score: 172.06
+  stars: 27897
+  last_commit: 2026-11-04T18:13:42Z
+  stars_delta_7d: 246
+  stars_growth_pct: 0.9
+  trending_score: 248.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27430
     - 27522
     - 27651
-    - 27822
+    - 27897
 language: zh
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-zh/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:19.481Z
+  fetched_at: 2026-11-05T13:12:38.536Z
   truncated: false
 type: agent_skill
 skill:
@@ -287,6 +287,8 @@ if 操作失败:
 恢复任务前，可运行 `sh "<skill-dir>/scripts/set-active-plan.sh" --list` 查找计划；在 Windows PowerShell 中运行 `& "<skill-dir>/scripts/set-active-plan.ps1" -List`。将 `<skill-dir>` 替换为此技能的安装目录，并将当前工作目录保持在项目根目录。
 
 此命令仅执行读取，列出当前目录下 `.planning/` 中的命名计划及阶段进度。`[active]` 表示共享的默认指针，不会将会话绑定到计划。并行任务仍需为每个宿主设置 `PLAN_ID`，或使用独立的工作树。
+
+当钩子提示有多个计划可用，或某个命名计划的所有阶段均已完成时，运行列表命令，并告诉用户哪些计划看起来已经完成。只归档用户同意的计划：`--archive <id>`（PowerShell：`-Archive <id>`）预览移动到 `.planning/.archive/` 的操作，`--yes`（`-Yes`）执行移动，`--restore <id>`（`-Restore <id>`）将计划移回。不要仅因计划时间较久或已完成就将其归档。
 
 ## 安全边界
 

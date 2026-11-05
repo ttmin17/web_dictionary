@@ -15,10 +15,10 @@ tags:
   - agent-skills
   - ai-coding
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8550
-  last_commit: 2026-11-02T08:44:58Z
-  stars_delta_7d: 352
-  stars_growth_pct: 4.3
-  trending_score: 367.11
+  stars: 8648
+  last_commit: 2026-11-05T13:06:48Z
+  stars_delta_7d: 450
+  stars_growth_pct: 5.5
+  trending_score: 474.7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7377
     - 7831
     - 8198
-    - 8550
+    - 8648
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/skills/rigs/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:34.151Z
+  fetched_at: 2026-11-05T13:12:57.373Z
   truncated: false
 type: agent_skill
 skill:

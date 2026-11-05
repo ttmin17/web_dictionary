@@ -12,29 +12,29 @@ tags:
   - daw
   - generative-ai
 status: active
-quality_percentile: 53
+quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2025-03-19T17:00:09
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ahujasid/ableton-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3289
+  stars: 3302
   last_commit: 2026-09-22T10:37:13Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.3
-  trending_score: 42.54
-  rank_current: 40
-  rank_delta: 2
+  stars_delta_7d: 55
+  stars_growth_pct: 1.7
+  trending_score: 55.93
+  rank_current: 44
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3177
     - 3207
     - 3247
-    - 3289
+    - 3302
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: ahujasid/ableton-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:48.800Z
+  fetched_at: 2026-11-05T13:11:58.632Z
   truncated: false
 type: mcp_server
 launch:
@@ -363,7 +363,7 @@ There are two tiers, and they have different defaults.
 
 **Dataset recording — off by default, opt-in.** Everything with your work in it: prompts, MIDI notes, track and clip names, and device settings, which may be published as part of an open dataset used to train music-production models. Nothing here is collected unless you explicitly turn it on.
 
-To see exactly what data each tier collects, see the [Terms & Data Use](https://github.com/ahujasid/ableton-mcp/blob/main/TERMS.md).
+To see exactly what data each tier collects, see the [Terms & Data Use](https://raw.githubusercontent.com/ahujasid/ableton-mcp/main/TERMS.md).
 
 ### Opting in to dataset recording
 

@@ -14,29 +14,29 @@ tags:
   - boss-zhipin
   - claude
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-03-20T08:41:59
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: can4hou6joeng4/boss-agent-cli
   official_vendor: false
   license: MIT
 signals:
-  stars: 2174
-  last_commit: 2026-11-02T08:59:17Z
-  stars_delta_7d: 29
-  stars_growth_pct: 1.4
-  trending_score: 29.39
-  rank_current: 97
-  rank_delta: -13
+  stars: 2197
+  last_commit: 2026-11-05T06:09:37Z
+  stars_delta_7d: 52
+  stars_growth_pct: 2.4
+  trending_score: 53.26
+  rank_current: 94
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2080
     - 2106
     - 2145
-    - 2174
+    - 2197
 language: zh
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: can4hou6joeng4/boss-agent-cli
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:48.799Z
+  fetched_at: 2026-11-05T13:11:58.628Z
   truncated: false
 type: agent_tool
 tool:
@@ -78,7 +78,7 @@ tool:
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/can4hou6joeng4/boss-agent-cli/pulls)
 [![MCP Toplist](https://mcptoplist.com/badge/glama%2Fcan4hou6joeng4%2Fboss-agent-cli.svg)](https://mcptoplist.com/server/glama%2Fcan4hou6joeng4%2Fboss-agent-cli)
 
-[快速上手](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/getting-started.md) · [Agent 集成](#-agent-集成) · [命令](#-命令) · [排障](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/troubleshooting.md) · [路线图](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/ROADMAP.md) · **中文** | [English](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/README.en.md)
+[快速上手](https://raw.githubusercontent.com/can4hou6joeng4/boss-agent-cli/master/docs/getting-started.md) · [Agent 集成](#-agent-集成) · [命令](#-命令) · [排障](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/troubleshooting.md) · [路线图](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/ROADMAP.md) · **中文** | [English](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/README.en.md)
 
 <a href="https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/demo/showcase/boss-agent-cli-showcase.mp4" title="观看 48 秒产品发布会动画">
   <img src="https://raw.githubusercontent.com/can4hou6joeng4/boss-agent-cli/master/demo/showcase/boss-agent-cli-showcase.gif?v=keynote-20261008" alt="boss-agent-cli 极光发布会动画：福利筛选、双角色工作流与 Agent 接入" width="100%">
@@ -104,7 +104,7 @@ boss-agent-cli 把职位发现、福利筛选、本地简历与 AI、投递沟�
 - **纯终端向导**：直接运行 `boss` 或 `boss wizard`，选择角色、平台和目标；同一 workflow 也可用 `--input-json`、run ID 或 MCP 推进和恢复
 - **本地候选池与统计**：查看详情后本地保存、读取带有效状态的网页职位收藏并仅同步有效项 / 用标签和备注复盘候选岗位、离线对比、查看漏斗统计 —— `shortlist` `stats` `watch` `preset` `favorites`
 - **AI 求职增强 + 本地模型**：JD 分析、简历润色、定向优化、候选池匹配、模拟面试、沟通指导；本地模型权重外置，支持 Ollama/vLLM OpenAI 兼容接口 —— `ai analyze-jd` `ai local configure` `ai local smoke`
-- **Schema 驱动 + JSON 信封**：stdout 只输出 `{ok, data, pagination, error, hints}` 信封，`boss schema` 是能力真源，适合 CLI 编排 / Shell Agent / MCP / Python SDK
+- **Schema 驱动 + JSON 信封**：stdout 只输出 `{ok, schema_version, command, data, pagination, error, hints}` 七键信封，`boss schema` 是能力真源，适合 CLI 编排 / Shell Agent / MCP / Python SDK
 - **招聘者完整链路**：先确认招聘者身份，再进入候选人搜索、推荐牛人、首次招呼、附件简历接收与下载、简历、聊天/最近消息、回复和职位管理 —— `hr whoami/candidates/recommendations/greet/applications/resume/chat/last-messages/reply/request-resume/accept-resume/download-resume/jobs`
 - **平台抽象**：`Platform` / `RecruiterPlatform` 双注册表 + `--platform` 全局选项；当前注册平台为 `zhipin`（BOSS 直聘）
 
@@ -188,12 +188,12 @@ with BossClient(AuthManager(...)) as client:
 `boss schema` 暴露 39 个顶层命令 + 14 个一级招聘者子命令，按工作流分组：
 
 - **认证**：`login` · `logout` · `status` · `doctor`
-- **职位发现**：`search` · `detail` · `show` · `cities` · `history`
+- **职位发现**：`search` · `recommend` · `detail` · `show` · `cities` · `history`
 - **本地整理**：`watch` · `preset` · `shortlist` · `stats` · `favorites`
 - **可恢复采集**：`crawl configure/run/start/status/results/resume/stop/shortlist`
 - **简历 / AI**：`resume` · `me` · `ai analyze-jd` · `ai polish` · `ai optimize` · `ai fit` · `ai suggest-keywords` · `ai resume-optimize` · `ai cover-letter` · `ai interview-prep` · `ai chat-coach` · `ai local`
 - **系统 / workflow**：`wizard` · `schema` · `platforms` · `export` · `config` · `clean`
-- **候选者动作**：`greet` · `batch-greet` · `apply` · `exchange` · `chat*` · `pipeline` · `digest`
+- **候选者动作**：`greet` · `batch-greet` · `apply` · `exchange` · `chat` · `chatmsg` · `chat-summary` · `mark` · `interviews` · `pipeline` · `digest` · `follow-up`
 - **招聘者**：`hr whoami/applications/candidates/recommendations/greet/resume/chat/chatmsg/last-messages/reply/request-resume/accept-resume/download-resume/jobs`
 
 完整命令表、参数与福利筛选原理见 **[命令参考](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/commands.md)**；能力真源是 `boss schema`（支持 `--format openai-tools` / `anthropic-tools` 导出工具定义）。
@@ -264,7 +264,7 @@ CLI (Click)
 
 ## 🤝 贡献者
 
-欢迎 Issue / PR：`git clone` → `feat/xxx` 分支 → 写测试 → `python scripts/quality_baseline.py`（Windows 中文系统可先 `$env:PYTHONUTF8='1'`）→ PR。详见 [CONTRIBUTING.md](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/CONTRIBUTING.md)，上手路径见 [快速上手](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/getting-started.md)。
+欢迎 Issue / PR：`git clone` → `feat/xxx` 分支 → 写测试 → `python scripts/quality_baseline.py`（Windows 中文系统可先 `$env:PYTHONUTF8='1'`）→ PR。详见 [CONTRIBUTING.md](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/CONTRIBUTING.md)，上手路径见 [快速上手](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/getting-started.md)。可复现的离线 MCP 评测见 [`evals/README.md`](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/evals/README.md)。
 
 感谢每一位让 boss-agent-cli 变得更好的贡献者，去关注他们！❤️
 

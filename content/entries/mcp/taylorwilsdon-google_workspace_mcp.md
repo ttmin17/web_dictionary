@@ -18,26 +18,26 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: taylorwilsdon/google_workspace_mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3459
-  last_commit: 2026-10-30T21:39:34Z
-  stars_delta_7d: 46
-  stars_growth_pct: 1.3
-  trending_score: 46.62
-  rank_current: 39
-  rank_delta: 2
+  stars: 3478
+  last_commit: 2026-11-05T12:02:02Z
+  stars_delta_7d: 65
+  stars_growth_pct: 1.9
+  trending_score: 66.24
+  rank_current: 38
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3332
     - 3371
     - 3413
-    - 3459
+    - 3478
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: taylorwilsdon/google_workspace_mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.693Z
+  fetched_at: 2026-11-05T13:11:44.759Z
   truncated: false
 type: mcp_server
 launch:
@@ -143,7 +143,7 @@ Full dependency tree in `pyproject.toml`, pinned in `uv.lock`.
 
 **For Legal & Procurement**
 
-This project is [MIT licensed](https://github.com/taylorwilsdon/google_workspace_mcp/blob/main/LICENSE) — 
+This project is [MIT licensed](https://raw.githubusercontent.com/taylorwilsdon/google_workspace_mcp/main/LICENSE) — 
 
 - **Use commercially without restriction** — build products, sell services, deploy internally
 - **Fork, embed, redistribute** — MIT requires only attribution

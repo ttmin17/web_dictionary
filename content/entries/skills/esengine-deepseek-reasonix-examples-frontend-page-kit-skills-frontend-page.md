@@ -17,7 +17,7 @@ status: active
 quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: esengine/DeepSeek-Reasonix
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 36040
-  last_commit: 2026-11-02T08:27:56Z
-  stars_delta_7d: 73
-  stars_growth_pct: 0.2
-  trending_score: 73.15
+  stars: 36085
+  last_commit: 2026-11-05T10:50:53Z
+  stars_delta_7d: 118
+  stars_growth_pct: 0.3
+  trending_score: 118.39
   velocity_source: snapshot_delta
   sparkline_4w:
     - 35858
     - 35967
-    - 36040
+    - 36085
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: esengine/DeepSeek-Reasonix
   path: examples/frontend-page-kit/skills/frontend-page/SKILL.md
   branch: studio
-  fetched_at: 2026-11-02T09:07:03.167Z
+  fetched_at: 2026-11-05T13:13:38.239Z
   truncated: false
 type: agent_skill
 skill:

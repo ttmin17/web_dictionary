@@ -16,10 +16,10 @@ tags:
   - claude-code
   - claude-marketplace
 status: active
-quality_percentile: 71
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Jeffallan/claude-skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 12172
+  stars: 12229
   last_commit: 2026-10-30T18:00:19Z
-  stars_delta_7d: 110
-  stars_growth_pct: 0.9
-  trending_score: 111
+  stars_delta_7d: 167
+  stars_growth_pct: 1.4
+  trending_score: 169.31
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11852
     - 11937
     - 12062
-    - 12172
+    - 12229
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: Jeffallan/claude-skills
   path: skills/cli-developer/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:30.104Z
+  fetched_at: 2026-11-05T13:12:51.560Z
   truncated: false
 type: agent_skill
 skill:

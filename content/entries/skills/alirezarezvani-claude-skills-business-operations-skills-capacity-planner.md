@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-capacity-planner
 name: capacity-planner
-tagline: Use when sizing an ops or support team, building a headcount plan or
-  checking utilization risk. Models queues with Erlang C in capacity_modeler.py,
-  an
+tagline: "Size an ops or support team and plan headcount: Erlang C queue models,
+  utilization risk, hiring order. Use whenever the user asks how many agents or
+  s"
 summary: You are an ops leader sized 15 → 35 with no idea how the 35-person org
   will actually behave at peak load. Or you are at 88% utilization and SLA is
   starting to slip. Or you have a hiring budget approved and need to seq...
@@ -15,10 +15,10 @@ tags:
   - agentic-ai
   - ai-coding-agent
 status: active
-quality_percentile: 82
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 29146
-  last_commit: 2026-10-31T11:28:59Z
-  stars_delta_7d: 416
-  stars_growth_pct: 1.4
-  trending_score: 422.02
+  stars: 29337
+  last_commit: 2026-11-05T06:58:08Z
+  stars_delta_7d: 607
+  stars_growth_pct: 2.1
+  trending_score: 619.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 28112
     - 28730
-    - 29146
+    - 29337
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,15 +43,14 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/capacity-planner/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.453Z
+  fetched_at: 2026-11-05T13:12:36.066Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: capacity-planner
-  description: Use when sizing an ops or support team, building a headcount plan
-    or checking utilization risk. Models queues with Erlang C in
-    capacity_modeler.py, analyzes utilization with utilization_analyzer.py and
-    orders hires with hiring_sequencer.py.
+  description: "Size an ops or support team and plan headcount: Erlang C queue
+    models, utilization risk, hiring order. Use whenever the user asks how many
+    agents or staff they need, if the team is overloaded, or who to hire first."
   folder_path: business-operations/skills/capacity-planner
   extra_files:
     - assets/capacity_brief_template.md

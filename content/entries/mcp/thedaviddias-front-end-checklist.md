@@ -11,28 +11,28 @@ tags:
   - checklist
   - css
 status: active
-quality_percentile: 70
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: thedaviddias/Front-End-Checklist
   official_vendor: false
   license: MIT
 signals:
-  stars: 74630
+  stars: 74649
   last_commit: 2026-10-31T05:44:22Z
-  stars_delta_7d: 65
+  stars_delta_7d: 84
   stars_growth_pct: 0.1
-  trending_score: 65.06
+  trending_score: 84.09
   rank_current: 31
   rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74506
     - 74565
-    - 74630
+    - 74649
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: thedaviddias/Front-End-Checklist
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:54.079Z
+  fetched_at: 2026-11-05T13:13:24.840Z
   truncated: true
 type: mcp_server
 launch:
@@ -132,7 +132,7 @@ Connect an MCP-capable agent to Front-End Checklist for frontend code review, st
 
 - Public endpoint: [mcp.frontendchecklist.io](https://mcp.frontendchecklist.io)
 - Public docs: [frontendchecklist.io/mcp](https://frontendchecklist.io/mcp)
-- Local/editor integration: stdio server at [`packages/mcp/src/cli.ts`](https://github.com/thedaviddias/Front-End-Checklist/blob/main/packages/mcp/src/cli.ts)
+- Local/editor integration: stdio server at [`packages/mcp/src/cli.ts`](https://raw.githubusercontent.com/thedaviddias/Front-End-Checklist/main/packages/mcp/src/cli.ts)
 
 What you can do:
 

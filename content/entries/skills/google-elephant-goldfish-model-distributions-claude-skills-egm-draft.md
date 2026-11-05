@@ -14,10 +14,10 @@ tags:
   - antigravity
   - claude-code
 status: active
-quality_percentile: 97
+quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/elephant-goldfish-model
@@ -25,14 +25,14 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 9666
-  last_commit: 2026-11-01T13:38:10Z
-  stars_delta_7d: 1349
+  stars: 12110
+  last_commit: 2026-11-04T20:36:04Z
+  stars_delta_7d: 1591
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 9666
+    - 12110
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: google/elephant-goldfish-model
   path: distributions/claude/skills/egm-draft/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:32.179Z
+  fetched_at: 2026-11-05T13:12:49.760Z
   truncated: false
 type: agent_skill
 skill:
@@ -113,12 +113,12 @@ the aligned problem and requirements from the brainstorm phase.
     strictly one question (`len(questions) == 1`), be the sole tool call in the
     turn, and provide clear, action-oriented options without `(Recommended)`
     prefixes.
-13. **Owner Decides Architecture**: When a design decision has more than one
+13. **Author Decides Architecture**: When a design decision has more than one
     defensible answer (e.g., data model, component boundaries, storage,
     protocols), present up to three options, each with its mechanism,
-    trade-offs, and the conditions under which it fails, and ask the owner to
+    trade-offs, and the conditions under which it fails, and ask the author to
     choose through a single-select gate. Do not rank the options, mark a
-    default, or pick one. If the owner asks you to choose ("just pick one"),
+    default, or pick one. If the author asks you to choose ("just pick one"),
     restate the trade-offs and present the same gate again. Decide mechanical
     choices with one defensible answer (e.g., file naming, formatting)
     yourself.
@@ -208,10 +208,15 @@ this strict generation order:
         deprecation.
     *   **Priority 3: Interactive Chat Prompt**: If neither file exists, prompt
         the user in chat for the feature's problem statement, goals, and
-        technical context, or offer to launch `/egm-brainstorm`.
+        technical context, or suggest that the user start the `egm-brainstorm`
+        skill with the host's command form (for example `/egm:egm-brainstorm`
+        in Claude Code and agy CLI, or the skill picker in Codex).
 3.  **Verify State**: Parse the document. Present a quick confirmation to the
     user to ensure we are starting with the correct context.
 4.  **Consensus**: Get explicit approval to start drafting the document.
+5.  **Resolve Author**: Use the `Author` from the ingested brief if it has one.
+    Otherwise use `git config user.name`, then `GIT_AUTHOR_NAME`. If neither is
+    set, prompt the user in chat. Record it in the document header.
 
 ### Step 2: Draft Overview, Goals & Problem Statement
 
@@ -256,6 +261,9 @@ this strict generation order:
     English in Markdown format.
 3.  **Detail Reasons**: For each alternative, explicitly state *why* it was
     rejected (e.g., higher latency, scaling limitations, team unfamiliarity).
+    Document author decisions as `Rejected by author: [technical rationale]`.
+    Do NOT state `Rejected by maintainer` unless quoting an upstream maintainer
+    issue, discussion, or PR URL.
 4.  **Update Draft Artifact (MANDATORY)**: Update `design_draft.md` to
     append/insert the "Alternatives Considered" section using your file-writing
     tool.
@@ -360,8 +368,7 @@ strictly:
     syntax, and proper code block fences.
 
 6.  **Handoff**: Provide a clickable link to the finalized design and recommend
-    that the user review the document with:
-
-    ```markdown
-    `egm-review` <DESIGN_PATH>
-    ```
+    that the user review it by starting the `egm-review` skill on
+    `<DESIGN_PATH>` with the host's command form (for example
+    `/egm:egm-review <DESIGN_PATH>` in Claude Code and agy CLI, or the skill
+    picker in Codex).

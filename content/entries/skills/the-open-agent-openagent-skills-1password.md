@@ -17,7 +17,7 @@ status: active
 quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: the-open-agent/openagent
@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 18
   stars_growth_pct: 0.3
   trending_score: 18.06
-  rank_current: 119
-  rank_delta: 3
+  rank_current: 123
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5688
@@ -45,7 +45,7 @@ readme_source:
   repo: the-open-agent/openagent
   path: skills/1password/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:05:48.637Z
+  fetched_at: 2026-11-05T13:11:58.404Z
   truncated: false
 type: agent_skill
 skill:

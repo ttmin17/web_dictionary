@@ -12,10 +12,10 @@ tags:
   - android
   - claude-code
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: makecindy/cindy
@@ -23,14 +23,14 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8968
-  last_commit: 2026-11-02T09:02:07Z
-  stars_delta_7d: 612
+  stars: 9318
+  last_commit: 2026-11-05T13:08:04Z
+  stars_delta_7d: 616
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 8968
+    - 9318
 language: zh
 needs_keys: false
 prerequisites: []
@@ -38,7 +38,7 @@ readme_source:
   repo: makecindy/cindy
   path: apps/desktop/resources/bot-packages/startup-qa-bot/0.5.2/skills/startup-qa-bot-evidence/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:34.030Z
+  fetched_at: 2026-11-05T13:12:57.381Z
   truncated: false
 type: agent_skill
 skill:

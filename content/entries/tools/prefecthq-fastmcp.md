@@ -14,26 +14,26 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: PrefectHQ/fastmcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 28272
-  last_commit: 2026-11-02T08:42:55Z
-  stars_delta_7d: 70
-  stars_growth_pct: 0.2
-  trending_score: 70.17
-  rank_current: 73
-  rank_delta: -10
+  stars: 28315
+  last_commit: 2026-11-05T13:04:28Z
+  stars_delta_7d: 113
+  stars_growth_pct: 0.4
+  trending_score: 113.45
+  rank_current: 66
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 28063
     - 28132
     - 28202
-    - 28272
+    - 28315
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: PrefectHQ/fastmcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:44.734Z
+  fetched_at: 2026-11-05T13:11:54.061Z
   truncated: false
 type: agent_tool
 tool:
@@ -187,4 +187,4 @@ Give your coding agent [`llms.txt`](https://gofastmcp.com/llms.txt) as its start
 
 ## Contributing
 
-Start with [CONTRIBUTING.md](https://github.com/PrefectHQ/fastmcp/blob/main/CONTRIBUTING.md) for accepted contributions and the issue-assignment workflow, then follow the [Contributing Guide](https://gofastmcp.com/development/contributing) for setup and validation. Agents should read [AGENTS.md](https://github.com/PrefectHQ/fastmcp/blob/main/AGENTS.md).
+Start with [CONTRIBUTING.md](https://raw.githubusercontent.com/PrefectHQ/fastmcp/main/CONTRIBUTING.md) for accepted contributions and the issue-assignment workflow, then follow the [Contributing Guide](https://gofastmcp.com/development/contributing) for setup and validation. Agents should read [AGENTS.md](https://github.com/PrefectHQ/fastmcp/blob/main/AGENTS.md).

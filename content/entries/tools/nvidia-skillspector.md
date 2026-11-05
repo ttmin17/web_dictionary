@@ -17,26 +17,26 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: NVIDIA/SkillSpector
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 23909
-  last_commit: 2026-11-02T06:44:07Z
-  stars_delta_7d: 2262
-  stars_growth_pct: 10.4
-  trending_score: 2498.37
-  rank_current: 9
-  rank_delta: 5
+  stars: 24436
+  last_commit: 2026-11-04T22:40:16Z
+  stars_delta_7d: 2789
+  stars_growth_pct: 12.9
+  trending_score: 3148.33
+  rank_current: 11
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20114
     - 20514
     - 21647
-    - 23909
+    - 24436
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: NVIDIA/SkillSpector
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.630Z
+  fetched_at: 2026-11-05T13:12:37.472Z
   truncated: true
 type: agent_tool
 tool:
@@ -80,7 +80,7 @@ SkillSpector is part of the [NVIDIA Verified Skills pipeline](https://docs.nvidi
 ## Documentation
 
 - **[Scan agent skills before installation](https://docs.nvidia.com/skills/scanning-agent-skills)** — Hosted guide: when to scan, how to read a report, and how to gate installs.
-- **[Development guide](https://github.com/NVIDIA/SkillSpector/blob/main/docs/DEVELOPMENT.md)** — Architecture, package layout, and how to extend the analyzer pipeline.
+- **[Development guide](https://raw.githubusercontent.com/NVIDIA/SkillSpector/main/docs/DEVELOPMENT.md)** — Architecture, package layout, and how to extend the analyzer pipeline.
 - **[Analysis resource bounds](https://github.com/NVIDIA/SkillSpector/blob/main/docs/ANALYSIS_RESOURCE_BOUNDS.md)** — Fail-closed bundle, parser, nested-artifact, ledger, and finding ceilings.
 - **[Pi extension](https://github.com/NVIDIA/SkillSpector/blob/main/docs/PI_EXTENSION.md)** — Install SkillSpector as a Pi tool for scanning skills from inside agent sessions.
 - **[OpenCode extension](https://github.com/NVIDIA/SkillSpector/blob/main/docs/OPENCODE_EXTENSION.md)** — Install SkillSpector as an OpenCode tool and `/skillspector` command for scanning skills from inside agent sessions.
@@ -928,7 +928,7 @@ The top-level shape is (this example shows a full LLM-backed scan; with `--no-ll
   "skill": { "name": "...", "source": "...", "scanned_at": "<ISO 8601>" },
   "risk_assessment": { "score": 0, "severity": "LOW", "recommendation": "SAFE" },
   "components": [ { "path": "...", "type": "...", "lines": 0, "executable": false, "size_bytes": 0 } ],
-  "issues": [ { "id": "...", "category": "...", "severity": "...", "confidence": 0.0, "location": { "file": "...", "start_line": 0 } } ],
+  "issues": [ { "id": "...", "category": "...", "severity": "...", "confidence": 0.0, "location": { "file": "...", "start_line": 0 }, "surface": "code" } ],
   "metadata": {
     "has_executable_scripts": false,
     "skillspector_version": "...",
@@ -955,6 +955,10 @@ The top-level shape is (this example shows a full LLM-backed scan; with `--no-ll
 
 - `risk_assessment.severity` ∈ `LOW | MEDIUM | HIGH | CRITICAL`.
 - `risk_assessment.recommendation` ∈ `SAFE | CAUTION | DO_NOT_INSTALL`, mapped from severity: `LOW → SAFE`, `MEDIUM → CAUTION`, `HIGH`/`CRITICAL → DO_NOT_INSTALL`.
+- `issues[].surface` and `suppressed[].surface` are advisory, heuristic labels for where a finding landed:
+  `code | instructions | docs | tests | comments | config`. JSON expands compacted groups into one `issues[]` entry
+  per occurrence, each with its own `surface`; SARIF emits `properties.surface` on each result. The label is
+  path/line-based and the scanned author can influence it, so do not use it as the sole suppression or security signal.
 - `metadata.llm_error` appears only when LLM analysis was requested but unavailable.
 - Archive-member components retain their virtual `path` and include `outer_path`, `nested_path`,
   and container provenance. Virtual paths identify in-memory members, not on-disk files; see

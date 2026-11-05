@@ -1212,5 +1212,6 @@
   "codewhale-hq-codewhale-crates-engine-tests-fixtures-extension_host-raw-agent-presets-source-skills-b-preset-note": "codewhale-hq-codewhale-crates-engine-tests-fixtures-extension_host-raw-agent-presets-no-default-source-skills-a-preset-note",
   "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-claude": "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp",
   "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-codex": "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp",
-  "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-opencode": "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp"
+  "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-opencode": "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp",
+  "citrolabs-ego-lite-skills-ego-browser": "citrolabs-ego-lite-plugins-ego-skills-ego-browser"
 }

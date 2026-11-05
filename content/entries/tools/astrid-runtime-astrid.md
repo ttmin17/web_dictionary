@@ -18,25 +18,25 @@ status: active
 quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: astrid-runtime/astrid
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10290
-  last_commit: 2026-11-02T08:47:01Z
-  stars_delta_7d: 4
+  stars: 10291
+  last_commit: 2026-11-05T06:56:55Z
+  stars_delta_7d: 5
   stars_growth_pct: 0
-  trending_score: 4
-  rank_current: 136
-  rank_delta: -8
+  trending_score: 5
+  rank_current: 133
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10282
     - 10286
-    - 10290
+    - 10291
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: astrid-runtime/astrid
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:01.638Z
+  fetched_at: 2026-11-05T13:13:33.081Z
   truncated: false
 type: agent_tool
 tool:
@@ -94,7 +94,7 @@ and composed without putting application policy into the kernel.
 
 [Get started](#quick-start) · [Write a capsule](#write-a-capsule) ·
 [Read the Book](https://github.com/astrid-runtime/book) ·
-[Release notes](https://github.com/astrid-runtime/astrid/blob/main/CHANGELOG.md)
+[Release notes](https://raw.githubusercontent.com/astrid-runtime/astrid/main/CHANGELOG.md)
 
 ## Quick start
 
@@ -464,7 +464,7 @@ identity before independently checking the BLAKE3 manifest and extracting any by
 Cargo remain responsible for updates they install; signed SHA-256 manifests remain available for
 their compatibility requirements. GitHub build-provenance attestations are published as additional
 evidence and are not substituted for the updater's release-archive signature. See the
-[self-update security model](https://github.com/astrid-runtime/astrid/blob/main/docs/self-update-security.md).
+[self-update security model](https://raw.githubusercontent.com/astrid-runtime/astrid/main/docs/self-update-security.md).
 
 ## Contributing
 

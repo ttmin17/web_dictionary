@@ -14,10 +14,10 @@ tags:
   - computer-automation
   - computer-use
 status: active
-quality_percentile: 75
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: simular-ai/Agent-S
@@ -25,18 +25,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12853
+  stars: 12880
   last_commit: 2026-10-30T20:56:06Z
-  stars_delta_7d: 111
-  stars_growth_pct: 0.9
-  trending_score: 111.97
-  rank_current: 82
-  rank_delta: 1
+  stars_delta_7d: 138
+  stars_growth_pct: 1.1
+  trending_score: 139.49
+  rank_current: 87
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12651
     - 12742
-    - 12853
+    - 12880
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: simular-ai/Agent-S
   path: integrations/openclaw/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:59.659Z
+  fetched_at: 2026-11-05T13:13:31.277Z
   truncated: false
 type: agent_skill
 skill:

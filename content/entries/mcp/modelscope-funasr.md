@@ -18,26 +18,26 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2022-11-24T02:28:11
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: modelscope/FunASR
   official_vendor: false
   license: MIT
 signals:
-  stars: 20912
-  last_commit: 2026-11-02T08:58:26Z
-  stars_delta_7d: 95
-  stars_growth_pct: 0.5
-  trending_score: 95.43
-  rank_current: 23
-  rank_delta: 5
+  stars: 20947
+  last_commit: 2026-11-05T11:29:01Z
+  stars_delta_7d: 130
+  stars_growth_pct: 0.6
+  trending_score: 130.81
+  rank_current: 24
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20677
     - 20748
     - 20817
-    - 20912
+    - 20947
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: modelscope/FunASR
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.538Z
+  fetched_at: 2026-11-05T13:11:32.352Z
   truncated: false
 type: mcp_server
 launch:
@@ -96,7 +96,7 @@ For Fun-ASR-Nano transcription with the Hugging Face API, start with the [Transf
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/modelscope/FunASR/blob/main/examples/colab/funasr_quickstart.ipynb)
 
-No local setup? Open the [Colab quickstart](https://github.com/modelscope/FunASR/blob/main/examples/colab/) to transcribe a public sample or upload your own audio in a browser.
+No local setup? Open the [Colab quickstart](https://raw.githubusercontent.com/modelscope/FunASR/main/examples/colab/) to transcribe a public sample or upload your own audio in a browser.
 
 Found FunASR useful? [Star the project](https://github.com/modelscope/FunASR) so more builders can find it.
 
@@ -421,7 +421,8 @@ recordings with the same evaluation scope.
 ## What's new
 
 - **MOSS-Transcribe-Diarize** brings long-form ASR, timestamps, and anonymous speaker labels to FunASR services, Docker, Kubernetes, vLLM/SGLang workflows, and FunClip. [Deploy MOSS ->](https://github.com/modelscope/FunASR/blob/main/docs/moss_transcribe_diarize.md)
-- **FunASR 1.4.20** preserves the original optional speaker dependency failure in a chained `ImportError` when `spk_model` is requested, while ASR-only construction remains available. [Fix #3819](https://github.com/modelscope/FunASR/pull/3819). Install with `python -m pip install -U "funasr==1.4.20"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.20)
+- **FunASR 1.4.21** preserves the streaming punctuation cache on empty or whitespace chunks, returning an empty result without touching cached words or the embedding path; nonempty inference is unchanged. [Fix #3824](https://github.com/modelscope/FunASR/pull/3824). Install with `python -m pip install -U "funasr==1.4.21"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.21)
+  **FunASR 1.4.20** preserves the original optional speaker dependency failure in a chained `ImportError` when `spk_model` is requested, while ASR-only construction remains available. [Fix #3819](https://github.com/modelscope/FunASR/pull/3819). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.20)
   **FunASR 1.4.19** handles empty-token Paraformer batches, enforces `max_speakers` for automatic clustering, and adds validated JSON-object `--hf_overrides` support to realtime WebSocket serving. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.19)
   Previous release **FunASR 1.4.18** fixes cross-script hotword misreplacement, filtered-token timestamp alignment, and Chinese VAD sentence/speaker drift. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.18)
   **Earlier release: FunASR 1.4.17** adds explicit PCM16 input and improves timestamp, hotword, speaker-sample-rate, and long-segment streaming handling. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.17)

@@ -16,26 +16,26 @@ status: active
 quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: jeremylongshore/tons-of-skills-marketplace
   official_vendor: false
   license: MIT
 signals:
-  stars: 2890
-  last_commit: 2026-11-02T06:26:09Z
-  stars_delta_7d: 18
-  stars_growth_pct: 0.6
-  trending_score: 18.11
-  rank_current: 65
-  rank_delta: -7
+  stars: 2900
+  last_commit: 2026-11-05T07:09:00Z
+  stars_delta_7d: 28
+  stars_growth_pct: 1
+  trending_score: 28.27
+  rank_current: 63
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2835
     - 2851
     - 2872
-    - 2890
+    - 2900
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: jeremylongshore/tons-of-skills-marketplace
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:50.271Z
+  fetched_at: 2026-11-05T13:13:18.861Z
   truncated: false
 type: mcp_server
 launch:
@@ -223,7 +223,7 @@ Four artifact classes live in this repository, distinguished on sight and never 
 
 Start with the contribution guide, then the intake and review standards every submission passes through:
 
-- [Contribution requirements](https://github.com/jeremylongshore/tons-of-skills-marketplace/blob/main/.github/CONTRIBUTING.md) — including the AI-assistance disclosure expectation.
+- [Contribution requirements](https://raw.githubusercontent.com/jeremylongshore/tons-of-skills-marketplace/main/.github/CONTRIBUTING.md) — including the AI-assistance disclosure expectation.
 - [Skill submission intake standard](https://github.com/jeremylongshore/tons-of-skills-marketplace/blob/main/000-docs/700-DR-GUID-skill-submission-standard.md) — the tiered document matrix new plugins ship with.
 - [External-PR review standard](https://github.com/jeremylongshore/tons-of-skills-marketplace/blob/main/000-docs/709-DR-GUID-reviewing-external-prs.md) — how maintainers triage and what gets a submission merged.
 

@@ -13,28 +13,28 @@ tags:
   - google
   - test-automation
 status: active
-quality_percentile: 96
+quality_percentile: 94
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/artemis
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 16170
+  stars: 16662
   last_commit: 2026-10-01T21:37:15Z
-  stars_delta_7d: 1307
-  stars_growth_pct: 8.8
-  trending_score: 1421.93
+  stars_delta_7d: 1799
+  stars_growth_pct: 12.1
+  trending_score: 2016.75
   rank_current: 12
   rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12663
     - 14863
-    - 16170
+    - 16662
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: google/artemis
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:59.654Z
+  fetched_at: 2026-11-05T13:13:31.319Z
   truncated: false
 type: agent_tool
 tool:

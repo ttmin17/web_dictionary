@@ -14,28 +14,28 @@ tags:
   - arbitrage
   - backtesting
 status: active
-quality_percentile: 91
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: hummingbot/hummingbot
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 20908
-  last_commit: 2026-10-20T03:18:44Z
-  stars_delta_7d: 199
-  stars_growth_pct: 1
-  trending_score: 200.91
-  rank_current: 37
-  rank_delta: 12
+  stars: 20949
+  last_commit: 2026-11-04T15:07:00Z
+  stars_delta_7d: 240
+  stars_growth_pct: 1.2
+  trending_score: 242.78
+  rank_current: 44
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20573
     - 20709
-    - 20908
+    - 20949
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: hummingbot/hummingbot
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:06:58.967Z
+  fetched_at: 2026-11-05T13:13:30.602Z
   truncated: false
 type: agent_tool
 tool:
@@ -88,7 +88,7 @@ The Hummingbot codebase is free and publicly available under the Apache 2.0 open
 The recommended way to run the Hummingbot client directly is the **`hbot` command-line interface**, installed from
 source. `hbot` runs, controls, and monitors a trading bot non-interactively: start/stop a bot, author
 and tune configs, and read trades, PnL, logs, and status — all scriptable, as compact Markdown with
-stable exit codes. See the **[hbot CLI guide](https://github.com/hummingbot/hummingbot/blob/master/hummingbot/cli/README.md)** for the full reference.
+stable exit codes. See the **[hbot CLI guide](https://raw.githubusercontent.com/hummingbot/hummingbot/master/hummingbot/cli/README.md)** for the full reference.
 
 Requires [Anaconda or Miniconda](https://www.anaconda.com/download).
 
@@ -271,7 +271,7 @@ We pledge that we will not use the information/data you provide us for trading p
 
 The Hummingbot architecture features modular components that can be maintained and extended by individual community members.
 
-We welcome contributions from the community! Please review these [guidelines](https://github.com/hummingbot/hummingbot/blob/master/CONTRIBUTING.md) before submitting a pull request.
+We welcome contributions from the community! Please review these [guidelines](https://raw.githubusercontent.com/hummingbot/hummingbot/master/CONTRIBUTING.md) before submitting a pull request.
 
 If you represent an exchange that wants an official Hummingbot connector, see [How to Add a Hummingbot Connector](https://hummingbot.org/exchanges/#how-to-add-a-hummingbot-connector) for the available integration options.
 

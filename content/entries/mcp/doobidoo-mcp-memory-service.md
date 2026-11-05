@@ -15,29 +15,29 @@ tags:
   - ai-agents
   - autogen
 status: active
-quality_percentile: 86
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: doobidoo/mcp-memory-service
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2060
-  last_commit: 2026-11-02T08:41:21Z
-  stars_delta_7d: 14
-  stars_growth_pct: 0.7
-  trending_score: 14.1
-  rank_current: 72
-  rank_delta: -20
+  stars: 2086
+  last_commit: 2026-11-05T13:06:46Z
+  stars_delta_7d: 40
+  stars_growth_pct: 2
+  trending_score: 40.78
+  rank_current: 56
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2012
     - 2021
     - 2046
-    - 2060
+    - 2086
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: doobidoo/mcp-memory-service
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:48.804Z
+  fetched_at: 2026-11-05T13:11:58.692Z
   truncated: false
 type: mcp_server
 launch:
@@ -79,7 +79,7 @@ context in 5ms — without cloud lock-in or API costs.
 [![OAuth 2.0](https://img.shields.io/badge/Auth-OAuth%202.0%20%2B%20DCR-green)](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/oauth-setup.md)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/doobidoo/mcp-memory-service)
 
-Getting started: [English](https://mcpmemory.services/) · [Deutsch](https://mcpmemory.services/de/) · [Español](https://mcpmemory.services/es/) · [日本語](https://mcpmemory.services/ja/) · [简体中文](https://mcpmemory.services/zh-cn/)
+Getting started: [English](https://mcpmemory.services/) · [Deutsch](https://mcpmemory.services/de/) · [Español](https://mcpmemory.services/es/) · [日本語](https://mcpmemory.services/ja/) · [简体中文](https://mcpmemory.services/zh-cn/) · [繁體中文](https://mcpmemory.services/zh-tw/) · [Français](https://mcpmemory.services/fr/) · [Português (Brasil)](https://mcpmemory.services/pt-br/) · [한국어](https://mcpmemory.services/ko/)
 
 ---
 
@@ -202,7 +202,7 @@ python3 codex/install_hooks.py
 
 Restart Codex and review the hooks with `/hooks`. They retrieve project context,
 capture new learnings, and checkpoint outcomes before compaction and at session end.
-See [Codex hook setup](https://github.com/doobidoo/mcp-memory-service/blob/main/codex/README.md) for prerequisites, authentication, and project-local installation.
+See [Codex hook setup](https://raw.githubusercontent.com/doobidoo/mcp-memory-service/main/codex/README.md) for prerequisites, authentication, and project-local installation.
 
 </details>
 

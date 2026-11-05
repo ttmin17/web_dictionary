@@ -12,28 +12,28 @@ tags:
   - agent-orchestration
   - agentic-workflow
 status: active
-quality_percentile: 55
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Enderfga/claw-orchestrator
   official_vendor: false
   license: MIT
 signals:
-  stars: 604
-  last_commit: 2026-11-02T01:50:11Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.8
-  trending_score: 5.04
-  rank_current: 93
-  rank_delta: -5
+  stars: 601
+  last_commit: 2026-11-04T16:16:44Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.3
+  trending_score: 2.01
+  rank_current: 100
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 595
     - 599
-    - 604
+    - 601
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Enderfga/claw-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.463Z
+  fetched_at: 2026-11-05T13:13:44.586Z
   truncated: false
 type: mcp_server
 launch:
@@ -99,6 +99,14 @@ https://github.com/user-attachments/assets/5bf9bea8-e5ac-4632-a292-a80a45831dff
 
 ## News
 
+- **[2026-11]** v7.20.0: a fan-out agent can run as a goal, so several agents can each work a copy of a
+  project until it is done, in parallel.
+- **[2026-11]** v7.19.0: a fan-out agent can run in a directory of its own, so several agents can write code
+  in parallel, one copy each.
+- **[2026-11]** v7.18.0: `CLAWO_CLAUDE_GATEWAY=1` runs a `claude` session on any model your own
+  Anthropic-compatible gateway serves, by its own name.
+- **[2026-11]** v7.17.0: an agent can resume a paused autoloop run itself (`autoloop_resume`), and a Codex goal
+  that hits a model at capacity is resumed on its thread instead of failing.
 - **[2026-10]** v7.16.0: `clawo goal --engine claude` runs a goal on Claude Code's `/goal`, with the same
   checkpointing, resume and verification as a Codex goal.
 - **[2026-10]** [ResearchBoost-Agent](https://github.com/AI4AI-for-Anything/ResearchBoost-Agent), an autonomous agent
@@ -190,7 +198,7 @@ engine, so one dropdown switches between Claude, Codex, Antigravity and Grok mod
 
 | Engine      | CLI        | Tested version                  |
 | ----------- | ---------- | ------------------------------- |
-| Claude Code | `claude`   | 2.1.316                         |
+| Claude Code | `claude`   | 2.1.317                         |
 | Codex       | `codex`    | 0.166.0                         |
 | Antigravity | `agy`      | 1.4.12                          |
 | Grok Build  | `grok`     | 1.0.70                          |

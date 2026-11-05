@@ -18,26 +18,26 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: firecrawl/firecrawl-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 7749
-  last_commit: 2026-11-02T02:43:31Z
-  stars_delta_7d: 63
-  stars_growth_pct: 0.8
-  trending_score: 63.52
-  rank_current: 32
-  rank_delta: 5
+  stars: 7765
+  last_commit: 2026-11-05T12:13:23Z
+  stars_delta_7d: 79
+  stars_growth_pct: 1
+  trending_score: 79.81
+  rank_current: 34
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7593
     - 7635
     - 7686
-    - 7749
+    - 7765
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: firecrawl/firecrawl-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.079Z
+  fetched_at: 2026-11-05T13:11:42.876Z
   truncated: true
 type: mcp_server
 launch:
@@ -446,7 +446,7 @@ Use this guide to select the right tool for your task:
 | gov       | US primary law and regulatory material         | results[] with snippets                          |
 | agent     | Multi-source research, unknown or many sites   | JSON (structured data)                           |
 | monitor   | Recurring page checks                          | monitor/check metadata and diffs                 |
-| research  | Paper and GitHub repository research           | research results and repo matches                |
+| research  | Paper research (developer for repositories)    | research results                                 |
 
 ### Format Selection Guide
 
@@ -1019,7 +1019,7 @@ Stop an interact session for a scraped page when you are done interacting.
 
 ### 12. Research Tools (`firecrawl_research_*`)
 
-Search and inspect papers and GitHub repositories through the research MCP tools.
+Search and inspect papers through the research MCP tools. For GitHub repositories, issues, and pull requests, use `firecrawl_developer_search`.
 
 **Covers:** paper abstracts and full text across biomedical, life-science, and clinical literature (PubMed, bioRxiv, medRxiv) alongside arXiv and other scientific sources.
 

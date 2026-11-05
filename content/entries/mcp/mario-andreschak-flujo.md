@@ -13,28 +13,28 @@ tags:
   - agentic-workflow
   - ai-chat
 status: active
-quality_percentile: 49
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mario-andreschak/FLUJO
   official_vendor: false
   license: MIT
 signals:
-  stars: 671
-  last_commit: 2026-11-01T18:31:16Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.8
-  trending_score: 5.04
-  rank_current: 92
-  rank_delta: 1
+  stars: 673
+  last_commit: 2026-11-05T04:41:43Z
+  stars_delta_7d: 7
+  stars_growth_pct: 1.1
+  trending_score: 7.07
+  rank_current: 90
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 663
     - 666
-    - 671
+    - 673
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: mario-andreschak/FLUJO
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:16.982Z
+  fetched_at: 2026-11-05T13:13:51.334Z
   truncated: false
 type: mcp_server
 launch:
@@ -69,7 +69,7 @@ launch:
 [**Install FLUJO ↓**](#-quick-install-recommended) · [**Explore features ↓**](#-key-features) · [**Watch the walkthrough →**](https://flujo.com.co/film/) · [**Website →**](https://flujo.com.co/) · [**Online demo →**](https://try.flujo.com.co/)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/mario-andreschak/FLUJO/main/LICENSE)
-[![Version](https://img.shields.io/badge/version-3.48.3-green.svg)](https://raw.githubusercontent.com/mario-andreschak/FLUJO/main/package.json)
+[![Version](https://img.shields.io/badge/version-3.48.7-green.svg)](https://raw.githubusercontent.com/mario-andreschak/FLUJO/main/package.json)
 
 </div>
 
@@ -377,7 +377,7 @@ The default installation is for one trusted operator on localhost, without a sig
 
 ![Project vision for agent swarms across machines](https://github.com/user-attachments/assets/bee2aa60-ab8f-46b8-9e57-225529bda2fe)
 
-These are longer-term ambitions. Related directions include real-time voice, deeper roots/checkpoint support and builds suited to smaller devices. See the [current project status](https://github.com/mario-andreschak/FLUJO/blob/main/docs/project-status.md) or [share a feature request](https://github.com/mario-andreschak/FLUJO/issues).
+These are longer-term ambitions. Related directions include real-time voice, deeper roots/checkpoint support and builds suited to smaller devices. See the [current project status](https://raw.githubusercontent.com/mario-andreschak/FLUJO/main/docs/project-status.md) or [share a feature request](https://github.com/mario-andreschak/FLUJO/issues).
 
 ## Contributing and community
 

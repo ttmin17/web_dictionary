@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27822
-  last_commit: 2026-10-30T20:57:42Z
-  stars_delta_7d: 171
-  stars_growth_pct: 0.6
-  trending_score: 172.06
-  rank_current: 71
-  rank_delta: 1
+  stars: 27897
+  last_commit: 2026-11-04T18:13:42Z
+  stars_delta_7d: 246
+  stars_growth_pct: 0.9
+  trending_score: 248.19
+  rank_current: 69
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27430
     - 27522
     - 27651
-    - 27822
+    - 27897
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-ar/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:19.481Z
+  fetched_at: 2026-11-05T13:12:38.535Z
   truncated: false
 type: agent_skill
 skill:
@@ -292,6 +292,8 @@ if فشل العملية:
 للعثور على مهمة قبل استئنافها، شغّل `sh "<skill-dir>/scripts/set-active-plan.sh" --list` أو، في Windows PowerShell، `& "<skill-dir>/scripts/set-active-plan.ps1" -List`. استبدل `<skill-dir>` بمسار تثبيت هذه المهارة، وأبقِ دليل العمل الحالي عند جذر المشروع.
 
 يعرض هذا الأمر للقراءة فقط الخطط المسماة وتقدّم مراحلها داخل `.planning/` في دليل العمل الحالي. تشير `[active]` إلى المؤشر الافتراضي المشترك، ولا تربط جلسة بخطة. تتطلب المهام المتزامنة تعيين `PLAN_ID` لكل مضيف أو استخدام أشجار عمل منفصلة.
+
+إذا أبلغت الخطافات بوجود عدة خطط متاحة، أو اكتملت جميع مراحل خطة مسماة، فشغّل أمر القائمة وأخبر المستخدم بالخطط التي تبدو منتهية. لا تؤرشف إلا الخطط التي يوافق عليها المستخدم: يعرض `--archive <id>` (في PowerShell: `-Archive <id>`) معاينة لنقل الخطة إلى `.planning/.archive/`، وينفّذ `--yes` (في PowerShell: `-Yes`) النقل، ويعيد `--restore <id>` (في PowerShell: `-Restore <id>`) الخطة إلى مكانها. لا تؤرشف أي خطة لمجرد قِدمها أو اكتمال مراحلها.
 
 ## الحدود الأمنية
 

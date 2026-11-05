@@ -13,29 +13,29 @@ tags:
   - apify-alternative
   - cli
 status: active
-quality_percentile: 67
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-03-10T17:50:15
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: 0xMassi/webclaw
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2421
-  last_commit: 2026-10-30T14:53:05Z
-  stars_delta_7d: 31
-  stars_growth_pct: 1.3
-  trending_score: 31.4
-  rank_current: 95
-  rank_delta: 25
+  stars: 2430
+  last_commit: 2026-11-04T14:23:28Z
+  stars_delta_7d: 40
+  stars_growth_pct: 1.7
+  trending_score: 40.67
+  rank_current: 96
+  rank_delta: 24
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2375
     - 2382
     - 2390
-    - 2421
+    - 2430
 language: en
 needs_keys: false
 prerequisites:
@@ -44,8 +44,8 @@ readme_source:
   repo: 0xMassi/webclaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.684Z
-  truncated: false
+  fetched_at: 2026-11-05T13:11:49.237Z
+  truncated: true
 type: agent_tool
 tool:
   subcategory: coding_agent
@@ -511,7 +511,7 @@ The index is a free shared service, so webclaw sends it one request at a time, a
 
 `--path-prefix`, `--include-paths` and `--exclude-paths` filter the list as they filter a crawl, and the fallback crawl spends its pages inside them. `--query` lists the URLs best match first by the words in their paths, weighting words that few of the site's paths share, and putting whole-word matches ahead of longer words a query word only starts ("auto" in `auto.html` before `autovacuum.html`). It reads no page, so it only helps when the URL names the topic: "cancel an asyncio task" puts `asyncio-task.html` first among the docs.python.org URLs. `--map-limit` keeps the first N, after the ranking. The MCP `map` tool takes `source`, `limit` and `query`.
 
-On 10 sites in our benchmark (docs, news, shops and blogs, half of them without a sitemap), `--map-source sitemap,cc` found 44,122 URLs on the sites' own hosts against 17,026 for plain `--map`, and 96% of a sample answered 200 with HTML. On the day we measured, the index failed on 4 of the 10 sites even so. See [benchmarks](https://github.com/0xMassi/webclaw/blob/main/benchmarks/README.md#url-discovery).
+On 10 sites in our benchmark (docs, news, shops and blogs, half of them without a sitemap), `--map-source sitemap,cc` found 44,122 URLs on the sites' own hosts against 17,026 for plain `--map`, and 96% of a sample answered 200 with HTML. On the day we measured, the index failed on 4 of the 10 sites even so. See [benchmarks](https://raw.githubusercontent.com/0xMassi/webclaw/main/benchmarks/README.md#url-discovery).
 
 ### Workflow examples
 
@@ -769,6 +769,7 @@ webclaw/
 | `ORCAROUTER_BASE_URL` | OrcaRouter base URL (defaults to https://api.orcarouter.ai/v1) |
 | `WEBCLAW_PROXY` | Single proxy URL |
 | `WEBCLAW_PROXY_FILE` | Proxy pool file |
+| `WEBCLAW_ALLOW_CIDRS` | Comma-separated CIDRs or addresses that webclaw may fetch although they are private or reserved, e.g. `198.18.0.0/15` when a TUN-mode proxy's fake-IP DNS answers every domain with an address from that range (otherwise every page tool fails with "blocked private or internal address"). For the MCP server, set it in the server's `env` block. Loopback, link-local, multicast and cloud metadata addresses stay blocked whatever it lists |
 | `WEBCLAW_RENDER` | MCP server rendering: `auto` (default), `always` or `never`; needs a `browser` build |
 | `WEBCLAW_CDP_URL` | MCP server renders with the browser at this DevTools endpoint instead of launching Chrome |
 | `WEBCLAW_BROWSER_PROFILE` | MCP server keeps its browser's cookies and storage in this directory between runs; see `--browser-profile` |
@@ -965,6 +966,4 @@ Thanks to everyone improving webclaw through issues, examples, docs, bug reports
 
 ---
 
-## License
-
-[AGPL-3.0-only](https://github.com/0xMassi/webclaw/blob/main/LICENSE)
+*(README truncated for display. [Read the full README on GitHub](https://github.com/0xMassi/webclaw)).*

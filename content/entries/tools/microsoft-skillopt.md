@@ -16,26 +16,26 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: microsoft/SkillOpt
   official_vendor: true
   license: MIT
 signals:
-  stars: 18812
-  last_commit: 2026-11-01T14:47:38Z
-  stars_delta_7d: 131
-  stars_growth_pct: 0.7
-  trending_score: 131.92
-  rank_current: 50
-  rank_delta: 0
+  stars: 18906
+  last_commit: 2026-11-05T11:18:04Z
+  stars_delta_7d: 225
+  stars_growth_pct: 1.2
+  trending_score: 227.71
+  rank_current: 46
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 18302
     - 18547
     - 18681
-    - 18812
+    - 18906
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: microsoft/SkillOpt
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:42.682Z
+  fetched_at: 2026-11-05T13:13:08.508Z
   truncated: false
 type: agent_tool
 tool:
@@ -72,11 +72,17 @@ tool:
   <a href="https://trendshift.io/repositories/38498?utm_source=trendshift-badge&utm_medium=badge&utm_campaign=badge-trendshift-38498" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/38498/weekly?language=Python" alt="microsoft%2FSkillOpt | Trendshift" width="250" height="55"/></a>
 </p>
 
+<p align="center">
+  <a href="https://www.credly.com/badges/d9fd6cd8-e310-4e9b-9f63-ed7a3383fc85/public_url" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/microsoft/SkillOpt/main/skillopt-assets/hackathon-2026-executive-1st.png" alt="Microsoft Global Hackathon 2026 – 1st Place Executive Challenge Winner" width="110" height="110"/></a>
+</p>
+
 > 📖 **For installation, data preparation, training/eval commands, configuration, and framework internals, start with the versioned [SkillOpt documentation](https://github.com/microsoft/SkillOpt/blob/main/docs/index.md). A concise rendered overview is available in the [Documentation & Reproduction Guide](https://microsoft.github.io/SkillOpt/docs/guideline.html), and longer-form engineering analysis appears on the [Technical Blog](https://microsoft.github.io/SkillOpt/blog/). We also maintain a [Changelog](https://github.com/microsoft/SkillOpt/blob/main/CHANGELOG.md) for released and unreleased changes.**
 
 ---
 
 ## News 🔥🔥🔥
+- **[2026-11]** 🎤 **SkillOpt is accepted to NeurIPS 2026 as a Spotlight!** See you in Sydney!
+- **[2026-11]** 🏆 **SkillOpt won 1st Place in the Executive Challenge at the Microsoft Global Hackathon 2026** ([badge](https://www.credly.com/badges/d9fd6cd8-e310-4e9b-9f63-ed7a3383fc85/public_url), issued by The Microsoft Garage).
 - **[2026-07-24]** 📰 **SkillOpt in the news.** Read the official [Microsoft Research feature](https://www.microsoft.com/en-us/research/blog/skillopt-agent-skills-as-trainable-parameters/), along with recent coverage from [VentureBeat](https://venturebeat.com/orchestration/microsofts-open-source-skillopt-automatically-upgrades-ai-agent-skills-without-touching-model-weights), [Synced (机器之心)](https://mp.weixin.qq.com/s/pMlyj3a3KOh8L7cIHClRXA), [Flowtivity](https://flowtivity.ai/blog/microsoft-skillopt-train-ai-agent-skills/), and [The Decoder](https://the-decoder.com/microsofts-skillopt-boosts-gpt-5-5-by-using-nothing-but-a-trained-markdown-file/).
 - **[2026-07-02]** 🚀 **SkillOpt [v0.2.0](https://github.com/microsoft/SkillOpt/releases/tag/v0.2.0) is out on [PyPI](https://pypi.org/project/skillopt/)!** Headline feature: **SkillOpt-Sleep**, a nightly offline self-evolution engine (harvest → mine → replay → consolidate behind a held-out validation gate), now shipped as the `skillopt-sleep` CLI. It also includes experimental multi-objective, replay, and dream-rollout controls; the main CLI keeps conservative defaults and does not expose every experiment-harness control as a flag. The release source adds integration shells for **Claude Code, Codex, Copilot, and Devin**, plus an **OpenClaw reference adaptation**; these plugin/MCP files live in the repository rather than the PyPI wheel. It also adds SearchQA split materialization, Windows robustness, and hardened JSON parsing. See the [release notes](https://github.com/microsoft/SkillOpt/releases/tag/v0.2.0) for full release details and contributor acknowledgements.
 - **[2026-06-15]** 😴 **SkillOpt-Sleep (preview)** — a nightly offline self-evolution companion for local coding agents (Claude Code / Codex / Copilot): review past sessions, replay recurring tasks, and consolidate validated skills behind a held-out gate. See **[`docs/sleep/README.md`](https://github.com/microsoft/SkillOpt/blob/main/docs/sleep/README.md)** for what it is, how to use it, and results.

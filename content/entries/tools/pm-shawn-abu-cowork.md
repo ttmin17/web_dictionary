@@ -13,24 +13,24 @@ tags:
   - ai-agent
   - ai-assistant
 status: active
-quality_percentile: 68
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: PM-Shawn/Abu-Cowork
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 416
-  last_commit: 2026-11-02T06:12:21Z
+  stars: 419
+  last_commit: 2026-11-04T02:06:02Z
   stars_delta_7d: 12
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 416
+    - 419
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +39,7 @@ readme_source:
   repo: PM-Shawn/Abu-Cowork
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:25.169Z
+  fetched_at: 2026-11-05T13:14:00.315Z
   truncated: false
 type: agent_tool
 tool:

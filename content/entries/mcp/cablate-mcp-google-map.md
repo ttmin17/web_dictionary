@@ -17,26 +17,26 @@ status: active
 quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: cablate/mcp-google-map
   official_vendor: false
   license: MIT
 signals:
-  stars: 487
+  stars: 489
   last_commit: 2026-10-22T07:11:22Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.6
-  trending_score: 3.02
-  rank_current: 97
-  rank_delta: -26
+  stars_delta_7d: 5
+  stars_growth_pct: 1
+  trending_score: 5.05
+  rank_current: 93
+  rank_delta: -22
   velocity_source: snapshot_delta
   sparkline_4w:
     - 471
     - 473
     - 484
-    - 487
+    - 489
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: cablate/mcp-google-map
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:34.310Z
+  fetched_at: 2026-11-05T13:12:57.664Z
   truncated: false
 type: mcp_server
 launch:

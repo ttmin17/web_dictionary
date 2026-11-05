@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - python
 status: active
-quality_percentile: 96
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: kungfu-systems/kungfu
@@ -26,18 +26,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4539
+  stars: 4540
   last_commit: 2026-10-31T06:41:20Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.1
-  trending_score: 6.01
-  rank_current: 132
-  rank_delta: 2
+  stars_delta_7d: 7
+  stars_growth_pct: 0.2
+  trending_score: 7.01
+  rank_current: 128
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4531
     - 4533
-    - 4539
+    - 4540
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: kungfu-systems/kungfu
   path: framework/core/src/python/kungfu/agent/skills/amp/SKILL.md
   branch: dev/v4/v4.0
-  fetched_at: 2026-11-02T09:07:22.130Z
+  fetched_at: 2026-11-05T13:13:56.605Z
   truncated: false
 type: agent_skill
 skill:

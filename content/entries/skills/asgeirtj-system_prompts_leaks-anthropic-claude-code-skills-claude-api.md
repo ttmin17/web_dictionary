@@ -19,7 +19,7 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -27,16 +27,16 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 70623
-  last_commit: 2026-11-02T07:02:10Z
-  stars_delta_7d: 399
-  stars_growth_pct: 0.6
-  trending_score: 401.27
+  stars: 70818
+  last_commit: 2026-11-04T16:40:29Z
+  stars_delta_7d: 594
+  stars_growth_pct: 0.8
+  trending_score: 599.02
   velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
     - 70224
-    - 70623
+    - 70818
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/claude-api/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:14.073Z
+  fetched_at: 2026-11-05T13:12:31.590Z
   truncated: true
 type: agent_skill
 skill:
@@ -359,6 +359,12 @@ See `{lang}/claude-api/README.md` (Compaction section) for code examples. Full d
 
 ---
 
+## Message Threads (Quick Reference)
+
+**Beta (`message-threads-2026-08-12`); not Managed Agents session threads.** With a `thread` field on the request, the API keeps the conversation for a short time, so each later request sends only the new messages. In long multi-turn loops (agent tool loops, long chats) that means smaller requests and lower time to first token, at the same price. Threads are best-effort: keep your own copy of the conversation and replay it when the API can't continue the thread; the SDK thread helper (`client.beta.messages.thread(...)`) does this for you. **Threads can't be combined with compaction**, most context editing, Message Batches or token counting; to compact, start a new thread from a summary you write. Message threads are not ZDR eligible. Using this feature does not affect your use of other ZDR eligible features. Availability: `shared/platform-availability.md`. Read `shared/message-threads.md` before writing thread code.
+
+---
+
 ## Prompt Caching (Quick Reference)
 
 **Prefix match.** Any byte change anywhere in the prefix invalidates everything after it. Render order is `tools` -> `system` -> `messages`. Keep stable content first (frozen system prompt, deterministic tool list), put volatile content (timestamps, per-request IDs, varying questions) after the last `cache_control` breakpoint.
@@ -442,17 +448,5 @@ Use the **Mantle** client (Messages-API Bedrock endpoint). Bedrock model IDs tak
 `AnthropicBedrock` / `BedrockClient` / `BedrockBackend` (without `Mantle`) are the legacy `bedrock-runtime` InvokeModel path - prefer the Mantle client for new code.
 
 **Older models on Bedrock:** the SDK releases under `shared/api-version-migration.md` -> Set the version, and later ones, send API version `2026-10-21` through their Bedrock clients too, and Bedrock accepts it only for Claude 4.7 and later. For a model listed at `https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock-legacy`, keep the SDK below that release and pin it, along with its separate Bedrock package if it has one (`@anthropic-ai/bedrock-sdk` and `Anthropic.Bedrock` below 1.0.0, `anthropic-java-bedrock` below 3.0.0); in a new project, use the majors before those releases. A hand-built request keeps the version it sends today.
-
-### Microsoft Foundry
-
-| Language | Client |
-|---|---|
-| Python | `from anthropic import AnthropicFoundry` -> `AnthropicFoundry(api_key=..., resource="...")` |
-| TypeScript | `import AnthropicFoundry from "@anthropic-ai/foundry-sdk"` -> `new AnthropicFoundry({ ... })` |
-| Java | `AnthropicOkHttpClient.builder().backend(FoundryBackend.fromEnv()).build()` (from `com.anthropic.foundry.backends`) |
-| C# | `new AnthropicFoundryClient(new AnthropicFoundryApiKeyCredentials(...))` (package `Anthropic.Foundry`) |
-| PHP | `Foundry\Client::fromEnvironment(baseUrl: '...')` (reads `ANTHROPIC_FOUNDRY_API_KEY`) |
-
-The Go and Ruby SDKs do not currently support Foundry. For Ruby, use the standard `Anthropic::Client.new(base_url: "<foundry endpoint>")` as a fallback (Entra ID auth is not built in).
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/asgeirtj/system_prompts_leaks)).*

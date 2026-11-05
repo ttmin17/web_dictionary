@@ -13,10 +13,10 @@ tags:
   - automation
   - devops
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: uvwt/agentdock
@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 16
   stars_growth_pct: 1.3
   trending_score: 16.2
-  rank_current: 123
-  rank_delta: -8
+  rank_current: 124
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1234
@@ -44,7 +44,7 @@ readme_source:
   repo: uvwt/agentdock
   path: core-skills/agentdock-user-guide/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.110Z
+  fetched_at: 2026-11-05T13:12:09.446Z
   truncated: false
 type: agent_skill
 skill:

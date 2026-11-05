@@ -17,7 +17,7 @@ status: active
 quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ucsandman/DashClaw
@@ -25,7 +25,7 @@ source:
   license: MIT
 signals:
   stars: 314
-  last_commit: 2026-10-31T20:47:38Z
+  last_commit: 2026-11-04T01:23:21Z
   stars_delta_7d: 1
   stars_growth_pct: 0.3
   trending_score: 1
@@ -44,7 +44,7 @@ readme_source:
   repo: ucsandman/DashClaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:25.140Z
+  fetched_at: 2026-11-05T13:14:00.351Z
   truncated: false
 type: mcp_server
 launch:
@@ -238,7 +238,7 @@ One command provisions Postgres (Docker or embedded), generates secrets, mints y
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fucsandman%2FDashClaw&env=DATABASE_URL,DASHCLAW_API_KEY,ENCRYPTION_KEY,NEXTAUTH_SECRET,NEXTAUTH_URL,CRON_SECRET,DASHCLAW_LOCAL_ADMIN_PASSWORD&envDescription=Required%20DashClaw%20configuration.%20See%20.env.example%20for%20details.&envLink=https%3A%2F%2Fgithub.com%2Fucsandman%2FDashClaw%2Fblob%2Fmain%2F.env.example&project-name=my-dashclaw&repository-name=my-dashclaw&products=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%22neon%22%2C%22productSlug%22%3A%22neon%22%2C%22protocol%22%3A%22storage%22%7D%5D&skippable-integrations=1)
 
-Click the button, add Neon when prompted, and fill in the variables from [`.env.example`](https://github.com/ucsandman/DashClaw/blob/main/.env.example). Provider plans and limits determine hosting cost. The configured Vercel build runs schema migration before building the app; required-schema or migration-checksum failures stop it.
+Click the button, add Neon when prompted, and fill in the variables from [`.env.example`](https://raw.githubusercontent.com/ucsandman/DashClaw/main/.env.example). Provider plans and limits determine hosting cost. The configured Vercel build runs schema migration before building the app; required-schema or migration-checksum failures stop it.
 
 The hosted trial is the **secondary** door: to see the Approvals inbox before deploying anything, [hosted.dashclaw.io](https://hosted.dashclaw.io/connect) mints a capped trial workspace in the browser. Coming from the trial, click **Export workspace** on its `/connect` card and run `dashclaw import <bundle.json>` against your own instance. Policies, decisions, history, agents, and assumptions carry over; API keys and secret values never ride a bundle. Operator runbook: [`docs/hosted-deployment-runbook.md`](https://github.com/ucsandman/DashClaw/blob/main/docs/hosted-deployment-runbook.md).
 

@@ -11,29 +11,29 @@ tags:
   - autocad
   - cad
 status: active
-quality_percentile: 53
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: wzyn20051216/solidworks-automation-skill
   official_vendor: false
   license: MIT
 signals:
-  stars: 1673
-  last_commit: 2026-11-01T12:38:28Z
-  stars_delta_7d: 189
-  stars_growth_pct: 12.7
-  trending_score: 213.07
-  rank_current: 34
-  rank_delta: -3
+  stars: 1753
+  last_commit: 2026-11-04T06:14:35Z
+  stars_delta_7d: 269
+  stars_growth_pct: 18.1
+  trending_score: 317.76
+  rank_current: 35
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1197
     - 1291
     - 1484
-    - 1673
+    - 1753
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: wzyn20051216/solidworks-automation-skill
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:52.771Z
+  fetched_at: 2026-11-05T13:12:03.398Z
   truncated: false
 type: agent_tool
 tool:
@@ -70,6 +70,10 @@ tool:
 
 工具调用成功，不代表任务真的完成；需要 Review 的任务会经过结果验证后再交付。
 
+当前发布版本为 **v2.0.1**：技能 ZIP、CAD Studio 安装版与便携版统一版本并包含同版运行时。下载入口和升级说明见 [v2.0.1 发布说明](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/docs/releases/v2.0.1.md)。
+
+CAD Studio 会对各生产执行器统一检查交付文件是否为本轮新增或内容已变化；旧文件拒绝交付，证据不足转为待复核。扫描范围、兼容性与验证方法见[本轮交付门禁](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/references/delivery-freshness.md)。
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Release](https://img.shields.io/github/v/release/wzyn20051216/solidworks-automation-skill)](https://github.com/wzyn20051216/solidworks-automation-skill/releases)
@@ -95,7 +99,7 @@ AI 负责理解意图、查证 API、规划步骤；Execution Core 保证执行�
 
 | 案例 | 能力 | 状态 |
 |---|---|---|
-| [M6×1 真实螺纹孔](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/subskills/solidworks-threaded-holes/README.md) | Metric Tap Thread，重建后回读 | `verified` |
+| [M6×1 真实螺纹孔](https://raw.githubusercontent.com/wzyn20051216/solidworks-automation-skill/main/subskills/solidworks-threaded-holes/README.md) | Metric Tap Thread，重建后回读 | `verified` |
 | [CNC 多圆角/倒角安装座](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/subskills/solidworks-fillet-chamfer-cnc/README.md) | 语义选边、可变半径、face/full-round/setback | `stable` |
 | [标准渐开线直齿轮](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/references/gears.md) | 模数/齿数/压力角驱动实体 | `pilot` |
 

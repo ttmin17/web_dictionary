@@ -14,10 +14,10 @@ tags:
   - agent-skills
   - canvas
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,15 +25,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6432
-  last_commit: 2026-11-02T09:01:47Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.2
-  trending_score: 13.03
+  stars: 6442
+  last_commit: 2026-11-05T10:39:00Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.4
+  trending_score: 23.08
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
-    - 6432
+    - 6442
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-camera-and-drawing/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:46.464Z
+  fetched_at: 2026-11-05T13:13:18.597Z
   truncated: false
 type: agent_skill
 skill:
@@ -269,6 +269,14 @@ and an overridden `postDraw`:
 this.cameras.set("minimap", new MinimapCamera());
 ```
 
+A stage's cameras draw in the order they were added, each over the ones before
+it, so a full-screen second camera is a layer: a `Camera3d` drawing a 3D
+background first, the game's own camera over it, each kept to its part of the
+world with `visibilityLayer` / `cullMask` (below). A camera's post effects
+apply to what that camera draws: the first camera's pass starts the frame, and
+a later camera's is blended over what is already there (20.13 and later;
+before, it wiped out the cameras before it).
+
 View state is per camera, not per scene: a `Camera3d` carries its own distance
 fog (`setFog`), so a minimap or split-screen view fogs independently of the main
 one — and a `Camera2d` never fogs. See `melonjs-3d`.
@@ -450,6 +458,7 @@ const data = await rt.toImageData(0, 0, w, h);
 
 | symptom | cause |
 |---|---|
+| a second camera's post effect wipes out what the first camera drew | before 20.13 a later camera's post-effect pass replaced the whole frame; update, or put the effects on a container instead of the camera |
 | `follow()` set but the view never moves | viewport bounds still at renderer size |
 | `invalid target for me.Camera2d.follow` | passed `player.pos` — pass the renderable, a `Vector2d` or a `Vector3d` |
 | camera drag jumps around | using world (`gameWorldX`) instead of screen (`gameScreenX`) coordinates |

@@ -16,10 +16,10 @@ tags:
   - blueprint
   - claude
 status: active
-quality_percentile: 58
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 804
-  last_commit: 2026-11-01T01:15:39Z
-  stars_delta_7d: 16
-  stars_growth_pct: 2
-  trending_score: 16.32
+  stars: 810
+  last_commit: 2026-11-05T02:04:26Z
+  stars_delta_7d: 22
+  stars_growth_pct: 2.8
+  trending_score: 22.61
   velocity_source: snapshot_delta
   sparkline_4w:
     - 745
     - 781
     - 788
-    - 804
+    - 810
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/enhanced-input/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:01.689Z
+  fetched_at: 2026-11-05T13:12:14.951Z
   truncated: false
 type: agent_skill
 skill:

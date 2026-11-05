@@ -17,25 +17,25 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: microsoft/agent-governance-toolkit
   official_vendor: true
   license: MIT
 signals:
-  stars: 6507
-  last_commit: 2026-10-30T18:36:45Z
-  stars_delta_7d: 38
-  stars_growth_pct: 0.6
-  trending_score: 38.22
-  rank_current: 47
-  rank_delta: 3
+  stars: 6520
+  last_commit: 2026-11-05T10:55:46Z
+  stars_delta_7d: 51
+  stars_growth_pct: 0.8
+  trending_score: 51.4
+  rank_current: 46
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6442
     - 6469
-    - 6507
+    - 6520
 language: en
 needs_keys: true
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: microsoft/agent-governance-toolkit
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:21.141Z
+  fetched_at: 2026-11-05T13:13:55.696Z
   truncated: false
 type: mcp_server
 launch:
@@ -150,7 +150,7 @@ The policy engine is published upstream as
 [`agent-control-spec`](https://github.com/responsibleai/agent-control-spec).
 [`agent-hooks`](https://github.com/responsibleai/agent-hooks) defines its
 interception contract. AGT retains the `AgentControl` host APIs and framework
-adapters in [`policy-engine/`](https://github.com/microsoft/agent-governance-toolkit/blob/main/policy-engine/), not a second decision engine.
+adapters in [`policy-engine/`](https://raw.githubusercontent.com/microsoft/agent-governance-toolkit/main/policy-engine/), not a second decision engine.
 This keeps policy evaluation in one place. AGT can adopt upstream fixes through
 a dependency update while keeping its host APIs and framework integrations.
 See the [ACS package guide](https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/packages/agent-control-specification.md) for

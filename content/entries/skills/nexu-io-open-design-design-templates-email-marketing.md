@@ -17,7 +17,7 @@ status: active
 quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 105423
-  last_commit: 2026-11-02T05:06:45Z
-  stars_delta_7d: 1398
-  stars_growth_pct: 1.3
-  trending_score: 1416.79
+  stars: 106053
+  last_commit: 2026-11-05T12:59:13Z
+  stars_delta_7d: 2028
+  stars_growth_pct: 1.9
+  trending_score: 2067.54
   velocity_source: snapshot_delta
   sparkline_4w:
     - 100908
     - 102299
     - 104025
-    - 105423
+    - 106053
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/email-marketing/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:41.705Z
+  fetched_at: 2026-11-05T13:13:07.777Z
   truncated: false
 type: agent_skill
 skill:

@@ -12,28 +12,28 @@ tags:
   - ai-communication
   - ai-for-science
 status: active
-quality_percentile: 39
+quality_percentile: 38
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mims-harvard/ToolUniverse
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1770
-  last_commit: 2026-11-02T07:09:54Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.6
-  trending_score: 11.07
-  rank_current: 76
-  rank_delta: -9
+  stars: 1777
+  last_commit: 2026-11-05T11:45:47Z
+  stars_delta_7d: 18
+  stars_growth_pct: 1
+  trending_score: 18.18
+  rank_current: 74
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1746
     - 1759
-    - 1770
+    - 1777
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: mims-harvard/ToolUniverse
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:13.553Z
+  fetched_at: 2026-11-05T13:13:48.173Z
   truncated: false
 type: mcp_server
 launch:
@@ -130,7 +130,7 @@ The base install covers the API and database tools. Local ML, cheminformatics, a
 
 ## What is ToolUniverse?
 
-ToolUniverse is an ecosystem for creating AI scientist systems from any large language model. Powered by the AI-Tool Interaction Protocol, it standardizes how LLMs identify and call tools, integrating more than **1000 machine learning models, datasets, APIs, and scientific packages** for data analysis, knowledge retrieval, and experimental design.
+ToolUniverse is an ecosystem for creating AI scientist systems from any large language model. Powered by the AI-Tool Interaction Protocol, it standardizes how LLMs identify and call tools, integrating more than **2,700 machine learning models, datasets, APIs, and scientific packages** for data analysis, knowledge retrieval, and experimental design.
 
 **Key features:**
 
@@ -139,8 +139,8 @@ ToolUniverse is an ecosystem for creating AI scientist systems from any large la
 - [**MCP Integration**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/building_ai_scientists/mcp_support.html): Native Model Context Protocol server with configurable transport and tool selection
 - [**Async Operations**](https://zitniklab.hms.harvard.edu/ToolUniverse/expand_tooluniverse/async_tools_guide.html): Long-running tasks (protein docking, molecular simulations) with progress tracking and parallel execution
 - [**Tool Composition**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/tool_composition.html): Chain tools for sequential or parallel execution in self-directed workflows
-- [**Compact Mode**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/building_ai_scientists/compact_mode.html): Reduces 1000+ tools to 4-5 core discovery tools, saving ~99% context window
-- [**CLI (`tu`)**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/tu_cli.html): Discover, inspect, run, and test tools directly from the terminal — 9 subcommands for interactive and scripted workflows
+- [**Compact Mode**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/building_ai_scientists/compact_mode.html): Reduces 2,700+ tools to 4-5 core discovery tools, saving ~99% context window
+- [**CLI (`tu`)**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/tu_cli.html): Discover, inspect, run, and test tools directly from the terminal — 14 subcommands for interactive and scripted workflows
 - [**Agent Skills**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/skills_showcase.html): 68 pre-built research workflows for drug discovery, precision oncology, rare disease diagnosis, pharmacovigilance, and more
 - [**Literature Search**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/literature_search_tools_tutorial.html): Unified search across PubMed, Semantic Scholar, ArXiv, BioRxiv, Europe PMC, and more
 - [**Two-Tier Result Caching**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/cache_system.html): In-memory LRU + SQLite persistence with per-tool fingerprinting for 10x speedup, offline support, and reproducibility

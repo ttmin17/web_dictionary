@@ -9,7 +9,7 @@ summary: This skill is the knowledge layer. The plannotator-review,
   three most common actions; use this reference when you need to pick the right
   com...
 categories:
-  - coding-agents
+  - productivity-ops
 tags:
   - agents
   - claude-code
@@ -19,7 +19,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: backnotprop/plannotator
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9817
-  last_commit: 2026-11-02T09:01:25Z
-  stars_delta_7d: 170
-  stars_growth_pct: 1.8
-  trending_score: 173
+  stars: 9860
+  last_commit: 2026-11-05T13:05:30Z
+  stars_delta_7d: 213
+  stars_growth_pct: 2.2
+  trending_score: 217.7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9393
     - 9506
     - 9647
-    - 9817
+    - 9860
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: backnotprop/plannotator
   path: apps/skills/core/plannotator/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:33.158Z
+  fetched_at: 2026-11-05T13:12:55.600Z
   truncated: false
 type: agent_skill
 skill:
@@ -221,6 +221,7 @@ plannotator guide export --guide <guide.json> --patch <diff.patch> [--out <file.
 plannotator guide export --snapshot <snapshot.json> [--out <file.html>]
 plannotator guide share --id <savedGuideId> [--public] [--ttl <7d|24h|30m|3600>] [--json]
 plannotator guide unshare <id> --token <deleteToken>
+plannotator guide import --guide <guide.json> --patch <diff.patch> [--pr <url>]
 ```
 
 Guided Reviews are AI-generated walkthroughs of a diff, produced inside the code review UI. The CLI works with saved ones:
@@ -229,6 +230,7 @@ Guided Reviews are AI-generated walkthroughs of a diff, produced inside the code
 - `export` writes one portable, self-contained HTML file (the viewer loads from guides.show). `--guide` + `--patch` exports a guide you authored yourself against a unified diff (`--patch -` reads stdin; validation is strict and names any file the guide references that the patch lacks). `--out -` writes to stdout. `--viewer-url` overrides the pinned viewer base.
 - `share` uploads the guide and prints a link. Encrypted by default: the key lives only in the URL fragment and the host stores ciphertext. `--public` stores it unencrypted so chat apps can unfurl a preview. `--ttl` sets an expiry; otherwise the link stays until `unshare`. A saved guide records its link, and a second `share --id` refuses rather than orphaning the first link's delete token.
 - `unshare <id> --token <t>` removes a link using the delete token printed at share time.
+- `import` saves a guide you authored (`--guide` + `--patch`, checked as for `export`, or `--snapshot`) so the next `plannotator review` of this repository lists it under Guides. `--pr <url>` saves it with that PR's repository and labels it with the PR. Prints the new id; it never replaces a saved guide.
 
 ## plannotator sessions
 
@@ -249,20 +251,29 @@ plannotator inbox status [--json] | stop | restart
 
 The Plannotator Inbox is one local window per machine where you leave the person messages, `:::question` blocks they answer with a click, files to annotate and guided reviews. Nothing blocks: you send, then keep working or end your turn.
 
-- Use it for a decision only they can make (a `:::question` block, then go on with work that does not depend on it), long work you finished (one short summary, with the files to look at in `attachments`), or when they ask. One thread per work stream, unless the person says otherwise. A decision you sent to the Inbox stays there: when the person writes in the chat, say there what waits (a short summary and the thread's link), but never also ask it in the chat with a blocking question tool (AskUserQuestion or similar). Ask in the chat only about something new they raised there that needs no pictures or files, or when they ask. Be proactive about Inbox updates and about replying to the person through the Inbox when you think they would want you to. Don't withhold important updates or decisions, and don't batch updates to send later: proactivity is better than procrastination. Use a review (plan review, `annotate`, `review`) when you need a decision on this document or diff before you go on.
+- Use it for a decision only they can make (a `:::question` block, then go on with work that does not depend on it), long work you finished (one short summary with its pictures in place, `![alt](https://raw.githubusercontent.com/backnotprop/plannotator/main/apps/skills/core/plannotator/path)` in the body where you write about each, and the files to look at in `attachments`), or when they ask. One thread per work stream, unless the person says otherwise. A decision you sent to the Inbox stays there: when the person writes in the chat, say there what waits (a short summary and the thread's link), but never also ask it in the chat with a blocking question tool (AskUserQuestion or similar). Ask in the chat only about something new they raised there that needs no pictures or files, or when they ask. Be proactive about Inbox updates and about replying to the person through the Inbox when you think they would want you to. Don't withhold important updates or decisions, and don't batch updates to send later: proactivity is better than procrastination. Use a review (plan review, `annotate`, `review`) when you need a decision on this document or diff before you go on.
 - If you have a `plannotator_inbox` tool, use it; otherwise use the stdio MCP server `plannotator inbox mcp`. When send_message says the person's reply arrives in this session by itself, end your turn instead of waiting; otherwise go on with your work and read the thread later with read_thread.
 - For many Inbox calls in a row (a tidy above all), `plannotator inbox call` runs any action from a script and prints its result as JSON; `plannotator inbox --help` says how.
 - Run `plannotator inbox --help` once and read it before your first use: it is the full guide (tools and arguments, threads, where replies go, question syntax, replacing questions, connecting other agents).
 - Never run `plannotator inbox` just to send: calls start a stopped Inbox in the background, and bare `plannotator inbox` opens the window for the person. `--tailscale` is the person's choice; never add it. `plannotator inbox status` only reads; never run `plannotator inbox stop` or `restart` unless the person asks.
 - When the person asks where their Inbox is, or to open it (a closed tab), run `plannotator inbox --open`: it opens the window in their browser (starting the Inbox in the background if needed), prints its address on stdout and returns at once. Tell them the address.
 
+## plannotator t3
+
+```bash
+plannotator t3 login --url <T3 MCP URL>
+plannotator t3 logout --url <T3 MCP URL>
+```
+
+If the person uses T3 Code, set it up once so their Inbox replies reach Claude threads in T3 as new turns: run `plannotator t3 --help` and follow its two steps. The person approves T3's sign-in page themselves.
+
 ## plannotator card
 
 ```bash
-plannotator card <create|move|say|link|ship|drop|list> ...
+plannotator card <create|move|say|link|ship|drop|list|initiative_delete> ...
 ```
 
-Only while the person has turned the Inbox's Board on (Settings → Capabilities); it is off by default, and then every call answers `board_off` and writes nothing, so use it only when your inbox tool lists `card` or the person asks. The Board holds one card per piece of work that outlasts a reply, in the column of its stage (backlog, designing, your_look, building, your_review, shipped). Use the `card` action of a `plannotator_inbox` tool when you have one; this CLI is the same call from a shell. `plannotator card --help` gives the arguments, and `plannotator inbox --help` its card section while the Board is on. The icebox is the person's only. A title is 2–5 words naming the work ("Pi update fix"), never a sentence; where it stands goes in `say`. When a card waits on the person, link the Inbox thread where they make the call (`thread_id`), so "You: …" opens it.
+Only while the person has turned the Inbox's Board on (Settings → Capabilities); it is off by default, and then every call answers `board_off` and writes nothing, so use it only when your inbox tool lists `card` or the person asks. The Board holds one card per piece of work that outlasts a reply, in the column of where the work stands (todo, in_progress, in_review, done; backlog for what nobody asked for yet). Use the `card` action of a `plannotator_inbox` tool when you have one; this CLI is the same call from a shell. `plannotator card --help` gives the arguments, and `plannotator inbox --help` its card section while the Board is on. A card the person put in backlog is theirs to move. A title is 2–5 words naming the work ("Pi update fix"), never a sentence; where it stands goes in `say`. Move a card to in_review yourself when you hand your part over, with `you` and the Inbox thread where the person makes the call (`thread_id`), so "You: …" opens it. Ship a card when you see its PR merge (the Board may also move it to done once every PR linked with `--pr` merged). `--initiative <name>` (the card action's `initiative`) puts a card in an initiative. Not all cards need an initiative: put a card in one only when it is part of an extensive effort that spans several cards or PRs, and reuse an initiative that fits (list shows them) instead of making a near-duplicate. Use good judgement; don't overthink it.
 
 ## Other subcommands
 

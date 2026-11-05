@@ -4,7 +4,7 @@ name: Agent-Reach
 tagline: Give your AI agent eyes to see the entire internet. Read & search
   Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API
   fees.
-summary: 登录墙后的平台、视频里的内容、中文平台、干净的结构化数据，一条命令拿到
+summary: 让你的 Agent 直接搜索和阅读 X、Reddit、YouTube、小红书……
 categories:
   - browser-web
 tags:
@@ -16,26 +16,26 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Panniantong/Agent-Reach
   official_vendor: false
   license: MIT
 signals:
-  stars: 107797
-  last_commit: 2026-11-01T07:23:13Z
-  stars_delta_7d: 5110
-  stars_growth_pct: 5
-  trending_score: 5364.29
-  rank_current: 5
-  rank_delta: -2
+  stars: 109025
+  last_commit: 2026-11-05T11:07:58Z
+  stars_delta_7d: 6338
+  stars_growth_pct: 6.2
+  trending_score: 6729.19
+  rank_current: 6
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 96891
     - 99237
     - 102687
-    - 107797
+    - 109025
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: Panniantong/Agent-Reach
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:05.640Z
+  fetched_at: 2026-11-05T13:12:20.224Z
   truncated: false
 type: agent_tool
 tool:
@@ -62,7 +62,7 @@ tool:
 </p>
 
 <p align="center">
-  登录墙后的平台、视频里的内容、中文平台、干净的结构化数据，一条命令拿到
+  让你的 Agent 直接搜索和阅读 X、Reddit、YouTube、小红书……
 </p>
 
 <p align="center">
@@ -113,14 +113,6 @@ tool:
 <tr>
 <td width="180" align="center"><a href="https://www.tencentcloud.com/act/pro/intl-openclaw?referral_code=G76Y819A&amp;lang=zh&amp;pg="><img src="https://raw.githubusercontent.com/Panniantong/Agent-Reach/main/docs/assets/sponsors/tencent-cloud.svg" alt="腾讯云 OpenClaw" width="150"></a></td>
 <td>在腾讯云 Lighthouse 秒级部署 OpenClaw 全能助手，可通过对话丝滑接入 Agent Reach，给你的 OpenClaw 一键装上互联网能力。</td>
-</tr>
-<tr>
-<td width="180" align="center"><a href="https://www.coreclaw.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=Reach&amp;utm_term=Reach&amp;utm_id=Reach"><img src="https://raw.githubusercontent.com/Panniantong/Agent-Reach/main/docs/assets/sponsors/coreclaw.png" alt="CoreClaw" width="150"></a></td>
-<td><a href="https://www.coreclaw.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=Reach&amp;utm_term=Reach&amp;utm_id=Reach">CoreClaw</a> | 网页抓取平台与现成数据采集工具，CoreClaw 提供 100+ 现成数据采集工具，支持 Amazon、TikTok、Google Maps、Instagram、Facebook、YouTube 等平台，无需代码，支持 JSON/CSV 导出，仅对成功结果计费。<a href="https://www.coreclaw.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=Reach&amp;utm_term=Reach&amp;utm_id=Reach">免费$3测试！</a></td>
-</tr>
-<tr>
-<td width="180" align="center"><a href="https://www.ucloud.cn/site/active/astraflow?ytag=geo_waituo_Agent"><img src="https://raw.githubusercontent.com/Panniantong/Agent-Reach/main/docs/assets/sponsors/astraflow.png" alt="星图 AstraFlow" width="150"></a></td>
-<td><a href="https://www.ucloud.cn/site/active/astraflow?ytag=geo_waituo_Agent">优刻得星图astraflow大模型</a>，支持200+模型一键调用：内置 Kimi K3、DeepSeek V4/V3、Qwen 3、GLM5.2、happyhorse等全球领先开源大模型，无需自训，开箱即用</td>
 </tr>
 </table>
 

@@ -17,7 +17,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8246
-  last_commit: 2026-11-02T08:30:43Z
-  stars_delta_7d: 240
-  stars_growth_pct: 3
-  trending_score: 247.19
+  stars: 8324
+  last_commit: 2026-11-05T09:18:15Z
+  stars_delta_7d: 318
+  stars_growth_pct: 4
+  trending_score: 330.63
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7517
     - 7737
     - 8006
-    - 8246
+    - 8324
 language: zh
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-cover/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:36.242Z
+  fetched_at: 2026-11-05T13:13:00.228Z
   truncated: false
 type: agent_skill
 skill:
@@ -83,7 +83,7 @@ skill:
 先找当前书：项目根 `.active-book` 指向项目内现有目录时就是当前书；否则从项目根往下最多 4 层找（跳过 `.` 开头的目录、`node_modules`、`拆文库/`、`对标/`），含 `追踪/`、`正文/`、`设定/` 子目录或 `正文.md`、`设定.md` 文件的是书目录，找到多本时请作者选择。有 `正文/` 或 `设定/` 子目录的是长篇，有 `正文.md` 或 `设定.md` 的是短篇。找到后读：
 
 - 长篇：`设定/题材定位.md`「基本信息」的书名、题材类型、目标平台、核心梗；
-- 短篇：`设定.md`「基本信息」的标题、目标平台、目标情绪，以及「一句话梗概」「题材招式」。
+- 短篇：`设定.md`「基本信息」的标题、目标平台、目标情绪，以及「一句话梗概」「这篇用的套路」（旧书叫「题材招式」）。
 
 已有或调用方传入的已确认字段不再问；笔名没有明确提供时才问。没有书目录或缺项时，用宿主可用的提问方式一次问齐缺少的书名、笔名、目标平台。
 
@@ -101,7 +101,7 @@ skill:
 
 仅提示词模式没有题材依据时先问作者，不用下面第 2 条的「都市」兜底。
 
-1. 有「题材类型」（长篇）或梗概、题材招式（短篇）时，按内容选风格库中最接近的一节。
+1. 有「题材类型」（长篇）或梗概、套路（短篇）时，按内容选风格库中最接近的一节。
 2. 没有，或对不上风格库任何一节（如年代、种田、无限流、电竞）时，用书名（必要时简介）对照「题材推断规则」：只命中一个题材就用它；命中多个按该表下方的优先级取一；都没命中先用「都市」。
 3. 第 2 条推断出的题材，在 Step 4 给作者看方案时一并说出来，作者可以改。
 

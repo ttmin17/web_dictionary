@@ -13,10 +13,10 @@ tags:
   - automation
   - devops
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: uvwt/agentdock
@@ -42,7 +42,7 @@ readme_source:
   repo: uvwt/agentdock
   path: core-skills/skill-installation/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.110Z
+  fetched_at: 2026-11-05T13:12:09.446Z
   truncated: false
 type: agent_skill
 skill:

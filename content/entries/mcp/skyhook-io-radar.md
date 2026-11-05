@@ -17,26 +17,26 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: skyhook-io/radar
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4015
-  last_commit: 2026-11-02T08:55:21Z
-  stars_delta_7d: 104
-  stars_growth_pct: 2.7
-  trending_score: 106.77
-  rank_current: 21
-  rank_delta: 10
+  stars: 4048
+  last_commit: 2026-11-05T13:05:13Z
+  stars_delta_7d: 137
+  stars_growth_pct: 3.5
+  trending_score: 141.8
+  rank_current: 22
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3758
     - 3851
     - 3911
-    - 4015
+    - 4048
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: skyhook-io/radar
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.279Z
+  fetched_at: 2026-11-05T13:11:44.191Z
   truncated: false
 type: mcp_server
 launch:
@@ -80,7 +80,7 @@ Radar shows you what's broken in a Kubernetes cluster, why, and what changed: is
 - [Installation](#installation)
 - [Usage](#usage)
 - [Views](#views) — Issues · Topology · Resources · Image Filesystem · Timeline · Helm · Compare · TLS · GitOps · Traffic · Metrics · Capacity · Cost · Audit · Network path · Upgrade impact · RBAC · Auth
-- [Supported Resources](#supported-resources)
+- [Supported Resources & Integrations](#supported-resources--integrations)
 - [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Security](#security)
 - [Development](#development) · [Contributing](#contributing)
@@ -339,6 +339,7 @@ Table-based resource browser with smart columns per resource kind.
 </p>
 
 - Browse all resource types including CRDs
+- Inspect CRD definitions, versions, instances, and searchable schemas
 - Search by name, filter by status or problems (CrashLoopBackOff, ImagePullBackOff, etc.)
 - Add custom columns from any label or annotation — sortable, filterable, and resizable
 - Click any resource for YAML manifest, related resources, logs, and events
@@ -490,13 +491,13 @@ No auth by default (local use). See the **[Authentication Guide](https://github.
 
 ---
 
-## Supported Resources
+## Supported Resources & Integrations
 
-Radar auto-discovers any CRD in your cluster. Popular tools get [dedicated integrations](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md) with topology edges, detail views, and AI summaries.
+Radar auto-discovers any CRD in your cluster. Popular tools get [dedicated integrations](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md) with resource views, topology, AI context and application evidence. Coverage varies by integration.
 
 The Helm chart grants read access to common built-in Kubernetes kinds; Secrets and RBAC objects depend on chart settings and the authentication mode. CRD-based integrations need the CRD installed in your cluster *and* read access; most API groups are granted by default, and the chart's [RBAC](https://github.com/skyhook-io/radar/blob/main/deploy/helm/radar/README.md#rbac) and [CRD access](https://github.com/skyhook-io/radar/blob/main/deploy/helm/radar/README.md#crd-access) sections list what is on, what is opt-in, and how to add rules.
 
-| Category | Resources |
+| Category / integration | Coverage |
 |----------|-----------|
 | **Workloads** | Deployments, DaemonSets, StatefulSets, ReplicaSets, Pods, Jobs, CronJobs |
 | **Networking** | Services, Ingresses, NetworkPolicies, Endpoints, EndpointSlices, PodDisruptionBudgets |
@@ -527,8 +528,11 @@ The Helm chart grants read access to common built-in Kubernetes kinds; Secrets a
 | **Prometheus Operator** | ServiceMonitor, PodMonitor, PrometheusRule, Alertmanager |
 | **Security (Trivy)** | VulnerabilityReport, ConfigAuditReport, ExposedSecretReport, ClusterComplianceReport, SbomReport, RbacAssessmentReport, InfraAssessmentReport |
 | **Strimzi** | [KafkaConnector failure evidence](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md#strimzi-kafka-connectors) (connector/task status) |
+| **[RabbitMQ](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md#local-runtime-evidence-rabbitmq-nats-and-vault)** | Node-reported disk and memory alarms - **local collection** |
+| **[NATS](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md#local-runtime-evidence-rabbitmq-nats-and-vault)** | JetStream consumer backlog, acknowledgment-pending and redelivery counters - **local collection** |
 | **Velero** | Backup, Restore, Schedule, BackupStorageLocation, VolumeSnapshotLocation |
 | **External Secrets** | ExternalSecret, ClusterExternalSecret, SecretStore, ClusterSecretStore |
+| **[Vault](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md#local-runtime-evidence-rabbitmq-nats-and-vault)** | Initialization, seal and standby state - **local collection** |
 | **CloudNativePG** | Cluster, Backup, ScheduledBackup, Pooler, Database, Publication, Subscription, ImageCatalog, ClusterImageCatalog, ObjectStore — plus [dedicated views](https://github.com/skyhook-io/radar/blob/main/docs/cnpg.md) for fleet, protection and declaration triage |
 | **Crossplane** | Managed Resources (any provider), Composite Resources, Claims, Provider, ProviderConfig, Function, Configuration, Composition, CompositionRevision, XRD |
 | **Kyverno** | Policy, ClusterPolicy, PolicyReport, ClusterPolicyReport |
@@ -545,6 +549,12 @@ The Helm chart grants read access to common built-in Kubernetes kinds; Secrets a
 | **Model serving** | KAITO (Workspace, RAGEngine), NVIDIA NIM (NIMService/NIMCache/NIMPipeline), AMD GPU Operator (DeviceConfig) — basic |
 | **Cost (OpenCost / Kubecost)** | Namespace/workload/node cost via compatible Prometheus metrics or the Kubecost 3 Aggregator (no CRDs) |
 | **CRDs** | Any Custom Resource Definition in your cluster (auto-discovered) |
+
+### Local runtime evidence
+
+When Radar runs locally, use **Collect RabbitMQ evidence**, **Collect NATS evidence** or **Collect Vault evidence** in resource details to select a Pod and collect explicitly. MCP clients can also collect after operator approval.
+
+These observations describe one Pod endpoint, not overall application health, and do not add automatic Issues detection. See the [collection requirements and limitations](https://github.com/skyhook-io/radar/blob/main/docs/mcp.md#explicit-local-runtime-evidence).
 
 ---
 

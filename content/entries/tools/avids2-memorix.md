@@ -16,28 +16,26 @@ tags:
   - antigravity
   - claude-code
 status: active
-quality_percentile: 46
+quality_percentile: 44
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-19T07:41:42.374Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: AVIDS2/memorix
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 846
-  last_commit: 2026-10-17T16:47:08Z
-  stars_delta_7d: 0
+  stars: 900
+  last_commit: 2026-11-05T11:36:59Z
+  stars_delta_7d: 24
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 151
-  rank_delta: -110
-  velocity_source: snapshot_delta
+  velocity_source: age_velocity
   sparkline_4w:
     - 836
     - 846
-    - 846
+    - 900
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +44,7 @@ readme_source:
   repo: AVIDS2/memorix
   path: README.md
   branch: main
-  fetched_at: 2026-10-19T07:34:17.287Z
+  fetched_at: 2026-11-05T13:12:09.675Z
   truncated: false
 type: agent_tool
 tool:
@@ -108,6 +106,7 @@ tool:
 </p>
 
 ---
+
 > Maintainer status and the current public work boundary live in
 > [ACTIVE_WORK.md](https://github.com/AVIDS2/memorix/blob/main/ACTIVE_WORK.md). It is the repository's single living work
 > tracker.
@@ -353,7 +352,7 @@ What it installs depends on the target agent, but the goal is the same: make Mem
 - Claude Code: installs the Memorix plugin package, adds `CLAUDE.md` guidance, and enables hook capture when you do not pass `--noHooks`.
 - Codex: installs one user-level Memorix plugin with bundled stdio MCP, skills, and lifecycle hooks. It does not write project-local `.codex` config or change your model, approval, or sandbox settings. When Codex asks, review the plugin hook definition once with `/hooks`; `--noHooks` skips automatic capture.
 - GitHub Copilot CLI: installs the Copilot plugin package and official Memorix skills.
-- Pi: installs the user-level Pi package and official skills.
+- Pi: installs the Pi extension/skills package and native MCP config (Pi 1.0+): `~/.pi/agent/mcp.json` with `--global`, or `.pi/mcp.json` for project setup.
 - Cursor: writes Cursor MCP/rules/config entries in the chosen scope.
 - Gemini CLI: installs the extension package, `GEMINI.md` context, hooks, and skills. Antigravity CLI has an official Gemini CLI migration path, but Gemini CLI remains an active standalone target.
 - OpenCode: installs the local plugin file, `opencode.json`, skills, and `AGENTS.md` guidance.
@@ -602,6 +601,10 @@ For OpenRouter embeddings, use `provider = "api"`, `base_url = "https://openrout
 For Requesty, choose Requesty in `memorix init` or set `provider = "requesty"` in `[memory.llm]` (endpoint `https://router.requesty.ai/v1`, key from `REQUESTY_API_KEY` or `MEMORIX_LLM_API_KEY`). Requesty embeddings use `provider = "api"`, `base_url = "https://router.requesty.ai/v1"`, and `model = "openai/text-embedding-3-small"` with `REQUESTY_API_KEY`.
 
 For [API Route](https://www.api-route.com), choose API Route in `memorix init` or set `provider = "apiroute"` in `[memory.llm]`. The preset uses `https://global.api-route.com/v1` and `deepseek-v4.1-flash`, with your own `API_ROUTE_API_KEY` or `MEMORIX_LLM_API_KEY`. It is opt-in memory LLM processing; embeddings and memcode's model registry are configured separately. See [configuration](https://github.com/AVIDS2/memorix/blob/main/docs/CONFIGURATION.md#api-route-memory-preset).
+
+For [Cheaper Inference](https://cheaperinference.com), choose Cheaper Inference in `memorix init` or set `provider = "cheaperinference"` in `[memory.llm]`. The preset uses `https://api.cheaperinference.com/v1` and `gpt-5.4-mini`, with your own `CHEAPER_INFERENCE_API_KEY` or `MEMORIX_LLM_API_KEY`. It is opt-in memory LLM processing; embeddings and memcode's model registry are configured separately. See [configuration](https://github.com/AVIDS2/memorix/blob/main/docs/CONFIGURATION.md#cheaper-inference-memory-preset).
+
+For [Runcrate](https://runcrate.ai), choose Runcrate in `memorix init` or set `provider = "runcrate"` in `[memory.llm]`. The preset uses `https://api.runcrate.ai/v1` and the open-weight `deepseek-ai/DeepSeek-V4.1-Flash`, with your own `RUNCRATE_API_KEY` or `MEMORIX_LLM_API_KEY`. It is opt-in memory LLM processing; embeddings and memcode's model registry are configured separately. See [configuration](https://github.com/AVIDS2/memorix/blob/main/docs/CONFIGURATION.md#runcrate-memory-preset).
 
 For controlled MiniMax media generation, set `MINIMAX_API_KEY` (global) or
 `MINIMAX_CN_API_KEY` (China region) in your environment or `.env`. The media

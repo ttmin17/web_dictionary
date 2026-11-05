@@ -10,21 +10,21 @@ tags:
   - llm
   - vibe-coding
 status: active
-quality_percentile: 68
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: upstash/context7
   official_vendor: false
   license: MIT
 signals:
-  stars: 64064
-  last_commit: 2026-11-02T08:58:53Z
-  stars_delta_7d: 372
-  stars_growth_pct: 0.6
-  trending_score: 374.17
+  stars: 64230
+  last_commit: 2026-11-05T12:24:38Z
+  stars_delta_7d: 538
+  stars_growth_pct: 0.8
+  trending_score: 542.54
   rank_current: 9
   rank_delta: -3
   velocity_source: snapshot_delta
@@ -32,7 +32,7 @@ signals:
     - 62986
     - 63272
     - 63692
-    - 64064
+    - 64230
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: upstash/context7
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:22.749Z
+  fetched_at: 2026-11-05T13:11:27.557Z
   truncated: false
 type: mcp_server
 launch:

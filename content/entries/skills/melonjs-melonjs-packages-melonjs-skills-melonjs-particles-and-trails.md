@@ -14,10 +14,10 @@ tags:
   - agent-skills
   - canvas
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,15 +25,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6432
-  last_commit: 2026-11-02T09:01:47Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.2
-  trending_score: 13.03
+  stars: 6442
+  last_commit: 2026-11-05T10:39:00Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.4
+  trending_score: 23.08
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
-    - 6432
+    - 6442
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-particles-and-trails/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:46.466Z
+  fetched_at: 2026-11-05T13:13:18.600Z
   truncated: false
 type: agent_skill
 skill:
@@ -214,15 +214,21 @@ fountain and wrong for an explosion: additive sprites piled on one point clip
 all three channels there however well they are tinted, so a burst reads as one
 bright flash rather than as debris.
 
-Give it the size of whatever broke. The area is measured from the emitter's own
-position, NOT centred on it, so offset by half or the whole burst sits down and
-to the right of its source:
+Give it the size of whatever broke. The constructor centres the area on the
+point it is given, so pass the centre of the source:
 
 ```js
 const area = radius * 2;
-const emitter = new ParticleEmitter(x - area / 2, y - area / 2, {
-    width: area, height: area,
-});
+const emitter = new ParticleEmitter(x, y, { width: area, height: area });
+```
+
+After that, `pos` is the area's top-left corner, as on any renderable. To move
+the emitter to a new source later, offset by half, or the burst sits down and
+to the right of it:
+
+```js
+emitter.pos.set(x - area / 2, y - area / 2);   // re-aimed at (x, y)
+emitter.burstParticles();
 ```
 
 Under a `Camera3d`, `depth` (20.13) gives the area its third side: each
@@ -455,7 +461,8 @@ answer when you want discrete puffs rather than a continuous ribbon.
 | frame rate drops with many effects | an emitter per event instead of one re-aimed emitter |
 | a 3D burst is invisible under a `Camera3d` | before 20.8 a particle was culled at twice its depth; update |
 | the whole burst launches from one pixel | `width`/`height` are the spawn area and default to `1` |
-| the burst sits down-right of its source | the spawn area starts at the emitter's position; offset by half |
+| the burst sits down-right of its source | the emitter was moved by setting `pos` to the source: `pos` is the area's top-left corner, so offset by half (only the constructor centres it) |
+| the burst sits up-left of its source | the constructor was given the top-left corner: it centres the area on (x, y), so pass the centre |
 | the middle of a burst goes white | additive sprites overlapping — `textureAdditive: false`, or spread them |
 | debris chunks look like squares | the default sprite is a filled square; pass your own `image` |
 | a ring tilts with the camera instead of staying on a surface | the launch axis is in WORLD axes, not the camera basis |

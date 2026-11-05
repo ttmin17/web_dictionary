@@ -16,26 +16,26 @@ status: active
 quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: punitarani/fli
   official_vendor: false
   license: MIT
 signals:
-  stars: 3468
+  stars: 3477
   last_commit: 2026-09-20T23:05:06Z
-  stars_delta_7d: 38
-  stars_growth_pct: 1.1
-  trending_score: 38.42
-  rank_current: 46
-  rank_delta: -35
+  stars_delta_7d: 47
+  stars_growth_pct: 1.4
+  trending_score: 47.64
+  rank_current: 48
+  rank_delta: -37
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3225
     - 3234
     - 3430
-    - 3468
+    - 3477
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: punitarani/fli
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.697Z
+  fetched_at: 2026-11-05T13:11:44.746Z
   truncated: false
 type: mcp_server
 launch:
@@ -541,7 +541,7 @@ for flight in flights:
 
 ### Running Examples
 
-Runnable examples live in [`examples/python/`](https://github.com/punitarani/fli/blob/main/examples/python):
+Runnable examples live in [`examples/python/`](https://raw.githubusercontent.com/punitarani/fli/main/examples/python):
 
 ```bash
 # Run examples with uv (recommended)

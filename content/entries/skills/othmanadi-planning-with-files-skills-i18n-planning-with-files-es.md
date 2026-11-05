@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27822
-  last_commit: 2026-10-30T20:57:42Z
-  stars_delta_7d: 171
-  stars_growth_pct: 0.6
-  trending_score: 172.06
+  stars: 27897
+  last_commit: 2026-11-04T18:13:42Z
+  stars_delta_7d: 246
+  stars_growth_pct: 0.9
+  trending_score: 248.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27430
     - 27522
     - 27651
-    - 27822
+    - 27897
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-es/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:19.481Z
+  fetched_at: 2026-11-05T13:12:38.535Z
   truncated: false
 type: agent_skill
 skill:
@@ -298,6 +298,8 @@ Para agentes, añade `--json` (PowerShell: `-Json`) al comando de listado para o
 Para encontrar una tarea antes de retomarla, ejecuta `sh "<skill-dir>/scripts/set-active-plan.sh" --list` o, en Windows PowerShell, `& "<skill-dir>/scripts/set-active-plan.ps1" -List`. Sustituye `<skill-dir>` por el directorio de instalación de este skill y mantén la raíz del proyecto como directorio de trabajo actual.
 
 Este comando de solo lectura muestra los planes con nombre y el progreso de sus fases en `.planning/` del directorio actual. `[active]` marca el puntero predeterminado compartido; no vincula una sesión a un plan. Las tareas simultáneas siguen necesitando una `PLAN_ID` por host o árboles de trabajo separados.
+
+Si los hooks indican que hay varios planes disponibles, o todas las fases de un plan con nombre están completas, ejecuta el comando de listado e indica al usuario qué planes parecen terminados. Archiva solo los planes que el usuario apruebe: `--archive <id>` (PowerShell: `-Archive <id>`) muestra una vista previa del traslado a `.planning/.archive/`, `--yes` (`-Yes`) lo aplica y `--restore <id>` (`-Restore <id>`) devuelve el plan. Nunca archives un plan solo por su antigüedad o porque esté completo.
 
 ## Límites de seguridad
 

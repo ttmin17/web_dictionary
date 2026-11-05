@@ -17,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3264
-  last_commit: 2026-11-01T16:47:54Z
-  stars_delta_7d: 50
-  stars_growth_pct: 1.6
-  trending_score: 50.78
+  stars: 3298
+  last_commit: 2026-11-04T18:34:53Z
+  stars_delta_7d: 84
+  stars_growth_pct: 2.6
+  trending_score: 86.2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
-    - 3264
+    - 3298
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/llm-provider-integration/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:07:16.752Z
+  fetched_at: 2026-11-05T13:13:51.216Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,7 +58,7 @@ skill:
     provider row".
   folder_path: skills/llm-provider-integration
   extra_files: []
-  pack_total_skills: 16
+  pack_total_skills: 17
   is_pack_primary: false
   clients:
     - claude-code
@@ -85,7 +85,9 @@ For a non-LLM external API *tool*, use `agentic-tool-integration`.
   `claude-*` and bare OpenAI ids MUST carry a `provider/<model>` prefix, resolved by
   `parse_model_provider()` in
   [agentic/orchestrator_helpers/llm_setup.py](https://github.com/samugit83/redamon/blob/master/skills/llm-provider-integration/../../agentic/orchestrator_helpers/llm_setup.py).
-  An unprefixed id routes to the wrong provider silently.
+  An unprefixed id routes to the wrong provider silently. `loop/` is NOT a provider: it is
+  Agent in the Loop (an external MCP client answers), and every builder outside a chat
+  run refuses it (`refuse_loop_model`, the `agent-in-the-loop` skill).
 - **NEVER treat every `user_llm_providers` row as a chat LLM.** A non-chat type
   (today `jev`, the TypeSafe decision API) must be skipped by every path that
   builds a chat model, or its token is sent to the wrong host: `setup_llm`'s

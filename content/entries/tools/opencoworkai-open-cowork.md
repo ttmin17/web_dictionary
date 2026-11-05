@@ -12,28 +12,28 @@ tags:
   - ai-tools
   - anthropic
 status: active
-quality_percentile: 69
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OpenCoworkAI/open-cowork
   official_vendor: false
   license: MIT
 signals:
-  stars: 2249
+  stars: 2256
   last_commit: 2026-10-20T10:08:13Z
-  stars_delta_7d: 20
-  stars_growth_pct: 0.9
-  trending_score: 20.18
-  rank_current: 108
-  rank_delta: 8
+  stars_delta_7d: 27
+  stars_growth_pct: 1.2
+  trending_score: 27.33
+  rank_current: 106
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2219
     - 2229
-    - 2249
+    - 2256
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: OpenCoworkAI/open-cowork
   path: readme.md
   branch: main
-  fetched_at: 2026-11-02T09:07:06.745Z
+  fetched_at: 2026-11-05T13:13:40.148Z
   truncated: false
 type: agent_tool
 tool:

@@ -11,10 +11,10 @@ tags:
   - coding-agent
   - developer-tools
 status: active
-quality_percentile: 43
+quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: inferstep/ATLAS
@@ -22,8 +22,8 @@ source:
   license: AGPL-3.0
 signals:
   stars: 2110
-  last_commit: 2026-11-02T07:42:52Z
-  stars_delta_7d: 54
+  last_commit: 2026-11-05T06:10:57Z
+  stars_delta_7d: 53
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
@@ -38,7 +38,7 @@ readme_source:
   repo: inferstep/ATLAS
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:06.689Z
+  fetched_at: 2026-11-05T13:13:40.143Z
   truncated: false
 type: agent_tool
 tool:

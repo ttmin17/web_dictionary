@@ -13,28 +13,28 @@ tags:
   - ai-assistant
   - claude
 status: active
-quality_percentile: 60
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ShenSeanChen/waku-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 2126
+  stars: 2135
   last_commit: 2026-10-23T18:49:21Z
-  stars_delta_7d: 22
-  stars_growth_pct: 1
-  trending_score: 22.23
-  rank_current: 104
-  rank_delta: -28
+  stars_delta_7d: 31
+  stars_growth_pct: 1.5
+  trending_score: 31.46
+  rank_current: 102
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2051
     - 2104
-    - 2126
+    - 2135
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: ShenSeanChen/waku-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:21.095Z
+  fetched_at: 2026-11-05T13:13:55.680Z
   truncated: false
 type: agent_tool
 tool:

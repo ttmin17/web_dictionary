@@ -17,25 +17,25 @@ status: active
 quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Mintplex-Labs/anything-llm
   official_vendor: false
   license: MIT
 signals:
-  stars: 67844
-  last_commit: 2026-10-30T23:50:45Z
-  stars_delta_7d: 275
-  stars_growth_pct: 0.4
-  trending_score: 276.12
+  stars: 67969
+  last_commit: 2026-11-05T00:25:02Z
+  stars_delta_7d: 400
+  stars_growth_pct: 0.6
+  trending_score: 402.37
   rank_current: 30
   rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 67297
     - 67569
-    - 67844
+    - 67969
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: Mintplex-Labs/anything-llm
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:06:54.002Z
+  fetched_at: 2026-11-05T13:13:24.424Z
   truncated: false
 type: agent_tool
 tool:
@@ -71,8 +71,11 @@ tool:
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/6UyHPeGZAC" target="_blank">
-      <img src="https://img.shields.io/badge/chat-mintplex_labs-blue.svg?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAH1UExURQAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////r6+ubn5+7u7/3+/v39/enq6urq6/v7+97f39rb26eoqT1BQ0pOT4+Rkuzs7cnKykZKS0NHSHl8fdzd3ejo6UxPUUBDRdzc3RwgIh8jJSAkJm5xcvHx8aanqB4iJFBTVezt7V5hYlJVVuLj43p9fiImKCMnKZKUlaaoqSElJ21wcfT09O3u7uvr6zE0Nr6/wCUpK5qcnf7+/nh7fEdKTHx+f0tPUOTl5aipqiouMGtubz5CRDQ4OsTGxufn515hY7a3uH1/gXBydIOFhlVYWvX29qaoqCQoKs7Pz/Pz87/AwUtOUNfY2dHR0mhrbOvr7E5RUy8zNXR2d/f39+Xl5UZJSx0hIzQ3Odra2/z8/GlsbaGjpERHSezs7L/BwScrLTQ4Odna2zM3Obm7u3x/gKSmp9jZ2T1AQu/v71pdXkVISr2+vygsLiInKTg7PaOlpisvMcXGxzk8PldaXPLy8u7u7rm6u7S1tsDBwvj4+MPExbe4ueXm5s/Q0Kyf7ewAAAAodFJOUwAABClsrNjx/QM2l9/7lhmI6jTB/kA1GgKJN+nea6vy/MLZQYeVKK3rVA5tAAAAAWJLR0QB/wIt3gAAAAd0SU1FB+cKBAAmMZBHjXIAAAISSURBVDjLY2CAAkYmZhZWNnYODnY2VhZmJkYGVMDIycXNw6sBBbw8fFycyEoYGfkFBDVQgKAAPyMjQl5IWEQDDYgIC8FUMDKKsmlgAWyiEBWMjGJY5YEqxMAqGMWFNXAAYXGgAkYJSQ2cQFKCkYFRShq3AmkpRgYJbghbU0tbB0Tr6ukbgGhDI10gySfBwCwDUWBsYmpmDqQtLK2sbTQ0bO3sHYA8GWYGWWj4WTs6Obu4ami4OTm7exhqeHp5+4DCVJZBDmqdr7ufn3+ArkZgkJ+fU3CIRmgYWFiOARYGvo5OQUHhEUAFTkF+kVHRsLBgkIeyYmLjwoOc4hMSk5JTnINS06DC8gwcEEZ6RqZGlpOfc3ZObl5+gZ+TR2ERWFyBQQFMF5eklmqUpQb5+ReU61ZUOvkFVVXXQBSAraitq29o1GiKcfLzc29u0mjxBzq0tQ0kww5xZHtHUGeXhkZhdxBYgZ4d0LI6c4gjwd7siQQraOp1AivQ6CuAKZCDBBRQQQNQgUb/BGf3cqCCiZOcnCe3QQIKHNRTpk6bDgpZjRkzg3pBQTBrdtCcuZCgluAD0vPmL1gIdvSixUuWgqNs2YJ+DUhkEYxuggkGmOQUcckrioPTJCOXEnZ5JS5YslbGnuyVERlDDFvGEUPOWvwqaH6RVkHKeuDMK6SKnHlVhTgx8jeTmqy6Eij7K6nLqiGyPwChsa1MUrnq1wAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0xMC0wNFQwMDozODo0OSswMDowMB9V0a8AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMTAtMDRUMDA6Mzg6NDkrMDA6MDBuCGkTAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIzLTEwLTA0VDAwOjM4OjQ5KzAwOjAwOR1IzAAAAABJRU5ErkJggg==" alt="Discord">
+  <a href="https://github.com/Mintplex-Labs/anything-llm/discussions" target="_blank">
+      <img src="https://img.shields.io/github/discussions/Mintplex-Labs/anything-llm?style=flat&logo=github&label=discussions" alt="GitHub Discussions">
+  </a> |
+  <a href="https://www.reddit.com/r/anythingllm/" target="_blank">
+      <img src="https://img.shields.io/badge/reddit-r%2Fanythingllm-FF4500?style=flat&logo=reddit&logoColor=white" alt="r/anythingllm">
   </a> |
   <a href="https://github.com/Mintplex-Labs/anything-llm/blob/master/LICENSE" target="_blank">
       <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=white" alt="License">
@@ -252,7 +255,7 @@ Mintplex Labs & the community maintain a number of deployment methods, scripts, 
 | --------------------------------------------------------- |
 | [![Deploy on Easypanel][easypanel-btn]][easypanel-deploy] |
 
-[or set up a production AnythingLLM instance without Docker →](https://github.com/Mintplex-Labs/anything-llm/blob/master/BARE_METAL.md)
+[or set up a production AnythingLLM instance without Docker →](https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/BARE_METAL.md)
 
 ## How to setup for development
 
@@ -348,7 +351,7 @@ premium-sponsors (reserved for $100/mth sponsors who request to be called out he
 ---
 
 Copyright © 2026 [Mintplex Labs][profile-link]. <br />
-This project is [MIT](https://github.com/Mintplex-Labs/anything-llm/blob/master/LICENSE) licensed.
+This project is [MIT](https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/LICENSE) licensed.
 
 <!-- LINK GROUP -->
 

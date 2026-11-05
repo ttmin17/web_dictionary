@@ -18,7 +18,7 @@ status: slowing
 quality_percentile: 3
 selection_reason: quality_percentile
 first_seen: 2025-04-01T15:09:38
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: AI-QL/tuui
@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 110
-  rank_delta: -4
+  rank_current: 107
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1157
@@ -46,7 +46,7 @@ readme_source:
   repo: AI-QL/tuui
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.766Z
+  fetched_at: 2026-11-05T13:12:08.932Z
   truncated: false
 type: mcp_server
 launch:
@@ -106,7 +106,7 @@ You can quickly get started with the project through a variety of options tailor
 
 - To `download` and use the application directly, go to the releases page: [Releases](https://github.com/AI-QL/tuui/releases/latest)
 
-- For `developer` setup, refer to the installation guide: [Getting Started (English)](https://github.com/AI-QL/tuui/blob/main/docs/src/en/installation-and-build/getting-started.md) | [快速入门 (中文)](https://github.com/AI-QL/tuui/blob/main/docs/src/zhHans/installation-and-build/getting-started.md)
+- For `developer` setup, refer to the installation guide: [Getting Started (English)](https://raw.githubusercontent.com/AI-QL/tuui/main/docs/src/en/installation-and-build/getting-started.md) | [快速入门 (中文)](https://github.com/AI-QL/tuui/blob/main/docs/src/zhHans/installation-and-build/getting-started.md)
 
 - To `ask the AI` directly about the project, visit: [TUUI@DeepWiki](https://deepwiki.com/AI-QL/tuui)
 
@@ -248,7 +248,7 @@ In such cases, first complete the installation manually with `pip` or `npm` in t
 
 We welcome contributions of any kind to this project, including feature enhancements, UI improvements, documentation updates, test case completions, and syntax corrections. I believe that a real developer can write better code than AI, so if you have concerns about certain parts of the code implementation, feel free to share your suggestions or submit a pull request.
 
-Please review our [Code of Conduct](https://github.com/AI-QL/tuui/blob/main/CODE_OF_CONDUCT.md). It is in effect at all times. We expect it to be honored by everyone who contributes to this project.
+Please review our [Code of Conduct](https://raw.githubusercontent.com/AI-QL/tuui/main/CODE_OF_CONDUCT.md). It is in effect at all times. We expect it to be honored by everyone who contributes to this project.
 
 For more information, please see [Contributing Guidelines](https://github.com/AI-QL/tuui/blob/main/CONTRIBUTING.md)
 

@@ -15,25 +15,25 @@ status: active
 quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ruvnet/metaharness
   official_vendor: false
   license: MIT
 signals:
-  stars: 737
-  last_commit: 2026-11-02T08:45:14Z
-  stars_delta_7d: 21
-  stars_growth_pct: 2.9
-  trending_score: 21.62
-  rank_current: 105
-  rank_delta: 13
+  stars: 738
+  last_commit: 2026-11-05T08:34:28Z
+  stars_delta_7d: 22
+  stars_growth_pct: 3.1
+  trending_score: 22.68
+  rank_current: 109
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 707
     - 716
-    - 737
+    - 738
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: ruvnet/metaharness
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:16.945Z
+  fetched_at: 2026-11-05T13:13:48.240Z
   truncated: false
 type: agent_tool
 tool:
@@ -377,7 +377,7 @@ equivalent `metaharness` invocation.
 | `npx @metaharness/gaming my-bot` | game-design pod | [![npm](https://img.shields.io/npm/v/@metaharness/gaming?color=cb3837&logo=npm)](https://www.npmjs.com/package/@metaharness/gaming) |
 
 All 18 are live on npm under [`@metaharness`](https://www.npmjs.com/org/metaharness). Source + per-package README:
-[`examples-packages/`](https://github.com/ruvnet/metaharness/blob/main/examples-packages/) · plain-language deep-dive gists:
+[`examples-packages/`](https://raw.githubusercontent.com/ruvnet/metaharness/main/examples-packages/) · plain-language deep-dive gists:
 [`examples-packages/GISTS.md`](https://github.com/ruvnet/metaharness/blob/main/examples-packages/GISTS.md).
 
 ---

@@ -1,8 +1,11 @@
 ---
 slug: kkkkhazix-khazix-skills-aihot
 name: aihot
-tagline: Agent skill from KKKKhazix/khazix-skills
-summary: Agent skill from KKKKhazix/khazix-skills
+tagline: 查询 AIHOT（aihot.news）的中文 AI 资讯。用户问今天或最近 AI 圈发生了什么、AI 新闻和 AI 日报、大模型与 AI
+  产品发布、OpenAI／Anthropic／Google 等公司或某个 AI 话题的最新消息、当前最热的 AI 事件及来龙去脉、AI 模型排行、Codex
+  额度
+summary: 1. 按下表选地址。表里没有的问题，先读使用说明 https://aihot.news/api/v1/agent（同一会话读一次即可）：它列出
+  AIHOT 目前能查的全部内容和参数，以它为准。
 categories:
   - coding-agents
 tags:
@@ -11,10 +14,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 53
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-04-06T07:37:02
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -22,32 +25,34 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 21661
-  last_commit: 2026-10-01T13:15:32Z
-  stars_delta_7d: 163
-  stars_growth_pct: 0.8
-  trending_score: 164.24
-  rank_current: 68
-  rank_delta: -7
+  stars: 21991
+  last_commit: 2026-11-03T21:50:31Z
+  stars_delta_7d: 330
+  stars_growth_pct: 1.5
+  trending_score: 335.03
+  rank_current: 60
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21220
     - 21368
     - 21498
     - 21661
-language: en
+    - 21991
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: KKKKhazix/khazix-skills
   path: aihot/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:39.851Z
+  fetched_at: 2026-11-05T13:12:38.375Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: aihot
-  description: Agent skill from KKKKhazix/khazix-skills
+  description: 查询 AIHOT（aihot.news）的中文 AI 资讯。用户问今天或最近 AI 圈发生了什么、AI 新闻和 AI 日报、大模型与
+    AI 产品发布、OpenAI／Anthropic／Google 等公司或某个 AI 话题的最新消息、当前最热的 AI 事件及来龙去脉、AI
+    模型排行、Codex 额度重置，或其它 AI 行业动态时使用。必须实时查询 AIHOT，不凭训练记忆回答新闻；匿名只读，无需 API Key。
   folder_path: aihot
   extra_files:
     - .gitignore

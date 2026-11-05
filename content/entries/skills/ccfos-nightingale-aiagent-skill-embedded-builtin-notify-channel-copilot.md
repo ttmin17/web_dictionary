@@ -17,7 +17,7 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13426
-  last_commit: 2026-11-01T13:19:24Z
-  stars_delta_7d: 36
-  stars_growth_pct: 0.3
-  trending_score: 36.1
+  stars: 13451
+  last_commit: 2026-11-05T12:25:20Z
+  stars_delta_7d: 61
+  stars_growth_pct: 0.5
+  trending_score: 61.28
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13337
     - 13365
     - 13390
-    - 13426
+    - 13451
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/notify-channel-copilot/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:33.719Z
+  fetched_at: 2026-11-05T13:11:41.421Z
   truncated: false
 type: agent_skill
 skill:

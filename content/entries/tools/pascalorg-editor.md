@@ -12,21 +12,21 @@ tags:
   - ai-agents
   - architecture
 status: active
-quality_percentile: 94
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: pascalorg/editor
   official_vendor: false
   license: MIT
 signals:
-  stars: 25270
-  last_commit: 2026-10-30T23:09:48Z
-  stars_delta_7d: 156
-  stars_growth_pct: 0.6
-  trending_score: 156.97
+  stars: 25337
+  last_commit: 2026-11-05T06:43:20Z
+  stars_delta_7d: 223
+  stars_growth_pct: 0.9
+  trending_score: 224.98
   rank_current: 47
   rank_delta: 1
   velocity_source: snapshot_delta
@@ -34,7 +34,7 @@ signals:
     - 24840
     - 24973
     - 25114
-    - 25270
+    - 25337
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: pascalorg/editor
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.541Z
+  fetched_at: 2026-11-05T13:11:32.474Z
   truncated: false
 type: agent_tool
 tool:
@@ -178,7 +178,7 @@ codex plugin marketplace add pascalorg/editor
 codex plugin add pascal-agent-skills@pascal
 ```
 
-OpenClaw installation becomes available after the skills are published under Pascal's ClawHub publisher. See [skills/README.md](https://github.com/pascalorg/editor/blob/main/skills/README.md) for the owner-qualified install and verification commands.
+OpenClaw installation becomes available after the skills are published under Pascal's ClawHub publisher. See [skills/README.md](https://raw.githubusercontent.com/pascalorg/editor/main/skills/README.md) for the owner-qualified install and verification commands.
 
 [`pascal-3d`](https://github.com/pascalorg/editor/blob/main/skills/pascal-3d/SKILL.md) covers safe local or hosted MCP setup and verified scene work. [`furniture-fit`](https://github.com/pascalorg/editor/blob/main/skills/furniture-fit/SKILL.md) produces a bounded, evidence-based footprint assessment without claiming unsupported height, swing, or delivery checks. See [skills/README.md](https://github.com/pascalorg/editor/blob/main/skills/README.md) for package details and validation.
 

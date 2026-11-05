@@ -12,10 +12,10 @@ tags:
   - ai-video
   - aigc
 status: active
-quality_percentile: 81
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3650
-  last_commit: 2026-11-02T08:30:37Z
-  stars_delta_7d: 290
-  stars_growth_pct: 8.6
-  trending_score: 315.03
+  stars: 3812
+  last_commit: 2026-11-04T18:11:51Z
+  stars_delta_7d: 452
+  stars_growth_pct: 13.5
+  trending_score: 512.8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2825
     - 3053
     - 3360
-    - 3650
+    - 3812
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: zenstory-ai/drama-skills
   path: skills/short-drama-assets/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:48.356Z
+  fetched_at: 2026-11-05T13:13:16.395Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,7 +59,7 @@ skill:
     - references/location-and-view.md
     - references/occurrence-extraction.md
     - references/prop-and-state.md
-  pack_total_skills: 12
+  pack_total_skills: 13
   is_pack_primary: false
   clients:
     - claude-code

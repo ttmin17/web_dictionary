@@ -15,10 +15,10 @@ tags:
   - browser-agent
   - browser-automation
 status: active
-quality_percentile: 62
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: browserbase/stagehand
@@ -26,18 +26,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 25902
-  last_commit: 2026-10-30T23:33:45Z
-  stars_delta_7d: 88
-  stars_growth_pct: 0.3
-  trending_score: 88.3
-  rank_current: 90
-  rank_delta: -3
+  stars: 25956
+  last_commit: 2026-11-05T10:11:36Z
+  stars_delta_7d: 142
+  stars_growth_pct: 0.6
+  trending_score: 142.78
+  rank_current: 85
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 25731
     - 25814
-    - 25902
+    - 25956
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: browserbase/stagehand
   path: packages/cli/skills/browse/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:58.960Z
+  fetched_at: 2026-11-05T13:13:30.611Z
   truncated: false
 type: agent_skill
 skill:

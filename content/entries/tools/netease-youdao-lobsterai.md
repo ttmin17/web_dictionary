@@ -13,28 +13,28 @@ tags:
   - automation
   - autonomous-agents
 status: active
-quality_percentile: 95
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: netease-youdao/LobsterAI
   official_vendor: false
   license: MIT
 signals:
-  stars: 6160
-  last_commit: 2026-11-02T08:00:44Z
-  stars_delta_7d: 9
-  stars_growth_pct: 0.1
-  trending_score: 9.01
-  rank_current: 123
-  rank_delta: -30
+  stars: 6168
+  last_commit: 2026-11-05T11:50:33Z
+  stars_delta_7d: 17
+  stars_growth_pct: 0.3
+  trending_score: 17.05
+  rank_current: 118
+  rank_delta: -25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6126
     - 6151
-    - 6160
+    - 6168
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: netease-youdao/LobsterAI
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:13.508Z
+  fetched_at: 2026-11-05T13:13:44.696Z
   truncated: false
 type: agent_tool
 tool:

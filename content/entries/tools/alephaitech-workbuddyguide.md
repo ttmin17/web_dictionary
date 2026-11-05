@@ -15,25 +15,25 @@ status: active
 quality_percentile: 51
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: AlephAITech/WorkBuddyGuide
   official_vendor: false
   license: MIT
 signals:
-  stars: 3682
+  stars: 3747
   last_commit: 2026-10-19T09:10:37Z
-  stars_delta_7d: 72
-  stars_growth_pct: 2
-  trending_score: 73.44
-  rank_current: 69
-  rank_delta: -11
+  stars_delta_7d: 137
+  stars_growth_pct: 3.8
+  trending_score: 142.2
+  rank_current: 61
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3516
     - 3610
-    - 3682
+    - 3747
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: AlephAITech/WorkBuddyGuide
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:46.734Z
+  fetched_at: 2026-11-05T13:13:18.806Z
   truncated: false
 type: agent_tool
 tool:

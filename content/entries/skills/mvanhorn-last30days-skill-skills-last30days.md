@@ -15,10 +15,10 @@ tags:
   - bluesky
   - claude
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-01-23T20:37:37
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mvanhorn/last30days-skill
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 66300
-  last_commit: 2026-11-01T18:47:38Z
-  stars_delta_7d: 799
-  stars_growth_pct: 1.2
-  trending_score: 808.75
-  rank_current: 34
-  rank_delta: -3
+  stars: 66691
+  last_commit: 2026-11-03T14:42:28Z
+  stars_delta_7d: 1190
+  stars_growth_pct: 1.8
+  trending_score: 1211.62
+  rank_current: 33
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 64141
     - 64689
     - 65501
-    - 66300
+    - 66691
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: mvanhorn/last30days-skill
   path: skills/last30days/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:10.244Z
+  fetched_at: 2026-11-05T13:12:26.097Z
   truncated: false
 type: agent_skill
 skill:

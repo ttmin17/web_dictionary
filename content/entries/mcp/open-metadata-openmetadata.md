@@ -17,26 +17,26 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: open-metadata/OpenMetadata
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15655
-  last_commit: 2026-11-02T08:58:32Z
-  stars_delta_7d: 74
-  stars_growth_pct: 0.5
-  trending_score: 74.35
-  rank_current: 28
-  rank_delta: -1
+  stars: 15687
+  last_commit: 2026-11-05T13:06:45Z
+  stars_delta_7d: 106
+  stars_growth_pct: 0.7
+  trending_score: 106.72
+  rank_current: 27
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15460
     - 15511
     - 15581
-    - 15655
+    - 15687
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: open-metadata/OpenMetadata
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:30.424Z
+  fetched_at: 2026-11-05T13:11:37.368Z
   truncated: false
 type: mcp_server
 launch:

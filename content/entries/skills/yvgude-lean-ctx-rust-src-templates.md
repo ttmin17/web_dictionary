@@ -14,10 +14,10 @@ tags:
   - ai-coding
   - ai-governance
 status: active
-quality_percentile: 73
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-03-23T19:48:59
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: yvgude/lean-ctx
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3924
-  last_commit: 2026-11-02T07:15:04Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.6
-  trending_score: 23.14
-  rank_current: 116
-  rank_delta: 9
+  stars: 3928
+  last_commit: 2026-11-05T05:38:52Z
+  stars_delta_7d: 27
+  stars_growth_pct: 0.7
+  trending_score: 27.19
+  rank_current: 117
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3875
     - 3888
     - 3901
-    - 3924
+    - 3928
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: yvgude/lean-ctx
   path: rust/src/templates/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.548Z
+  fetched_at: 2026-11-05T13:11:44.932Z
   truncated: false
 type: agent_skill
 skill:
@@ -75,12 +75,12 @@ skill:
   pack_slug: yvgude-lean-ctx
 ---
 
-# LeanCTX — Context Gateway for AI Systems
-Control what your AI can see. LeanCTX Engine provides local context selection,
+# LeanCTX — Context Gateway for AI agents
+Control what your AI can see. LeanCTX provides local context selection,
 supported access and content controls, and evidence of observed context operations
 for existing agents: Select → Control → Learn → Prove. Learn means local task and
 knowledge continuity, not model training. Recovery depends on source or
-archive availability and access permissions. LeanCTX SDK is the separate
+archive availability and access permissions. LeanCTX | SDK is the separate
 integration surface for applications.
 
 lean-ctx shapes context before it reaches you: cached reads, compressed shell

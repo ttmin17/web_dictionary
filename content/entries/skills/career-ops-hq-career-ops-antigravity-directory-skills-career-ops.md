@@ -18,7 +18,7 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: career-ops-hq/career-ops
@@ -26,18 +26,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 79381
-  last_commit: 2026-11-02T06:19:16Z
-  stars_delta_7d: 2008
-  stars_growth_pct: 2.6
-  trending_score: 2060.11
-  rank_current: 17
-  rank_delta: -8
+  stars: 80344
+  last_commit: 2026-11-05T12:19:01Z
+  stars_delta_7d: 2971
+  stars_growth_pct: 3.8
+  trending_score: 3085.08
+  rank_current: 15
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 75550
     - 77373
-    - 79381
+    - 80344
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: career-ops-hq/career-ops
   path: antigravity-directory/skills/career-ops/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:06.130Z
+  fetched_at: 2026-11-05T13:12:20.949Z
   truncated: false
 type: agent_skill
 skill:
@@ -80,9 +80,9 @@ Resolve every path in this router against one of these two roots, never against 
 A skills catalog, or the career-ops plugin from a plugin directory (Claude or OpenAI), installs only this `SKILL.md`. The modes, scripts and `AGENTS.md` it routes to live in the career-ops repository, so no mode can run until career-ops is installed. Never improvise a mode from this file alone: an evaluation without the repo's modes and the user's CV is not a career-ops evaluation.
 
 1. Look for an existing install before offering a new one: the directory in `CAREER_OPS_ROOT` if it is set, then `./career-ops`, then `~/career-ops`. The first one that contains both `AGENTS.md` and `modes/` is `PROJECT_ROOT`; tell the user which one you are using, read `PROJECT_ROOT/AGENTS.md` in full, and continue with their request.
-2. If there is none, tell the user in a few lines that career-ops runs from its own folder, and offer to set it up with `npx @santifer/career-ops@1.38.0 init`. It needs Node.js, downloads the latest release from https://github.com/career-ops-hq/career-ops into `./career-ops` and installs its dependencies. Ask before running it: it downloads and installs software. <!-- x-release-please-version -->
+2. If there is none, tell the user in a few lines that career-ops runs from its own folder, and offer to set it up with `npx @santifer/career-ops@1.39.0 init`. It needs Node.js, downloads the latest release from https://github.com/career-ops-hq/career-ops into `./career-ops` and installs its dependencies. Ask before running it: it downloads and installs software. <!-- x-release-please-version -->
 3. With a yes, run it from the current directory (or the folder the user picks). Then treat the new `career-ops` folder as `PROJECT_ROOT`: read its `AGENTS.md` in full, run every script from it, and pick up the user's original request (a pasted job URL or JD included). If their CV and profile are not there yet, the first-run setup in `AGENTS.md` comes first: it walks them through it by chatting. Tell them that next time they can open their AI CLI inside that folder.
-4. If they prefer to install it themselves, give the one command (`npx @santifer/career-ops@1.38.0 init`, then `cd career-ops` and open the AI CLI there) and, for Claude Code, the plugin alternative: `/plugin marketplace add career-ops-hq/career-ops` then `/plugin install career-ops@career-ops`. Then stop. <!-- x-release-please-version -->
+4. If they prefer to install it themselves, give the one command (`npx @santifer/career-ops@1.39.0 init`, then `cd career-ops` and open the AI CLI there) and, for Claude Code, the plugin alternative: `/plugin marketplace add career-ops-hq/career-ops` then `/plugin install career-ops@career-ops`. Then stop. <!-- x-release-please-version -->
 
 ### Claude Code plugin install
 
@@ -271,7 +271,7 @@ After determining the mode, load the necessary files before executing:
 
 If `modes/_custom.md` exists, read it after `modes/_profile.md` and before the selected mode file. It contains user house rules and procedural preferences. It may override workflow/style defaults, but it never adds factual claims about the candidate.
 
-Resolve `language.modes_dir` before applying the path shorthand below. With no setting, use `modes`. With a scalar directory, preserve the existing behavior: use that directory's `_shared.md` and localized mode file when it provides one. With a list, load every declared directory's `_shared.md` exactly once (including the baseline `modes/_shared.md` when `modes` appears), but use only the FIRST entry's evaluation-mode file for Blocks A-F; later entries contribute context, never a competing evaluation file. User-layer `_profile.md` and `_custom.md` remain under `modes/` in `DATA_ROOT`.
+Resolve `language.modes_dir` before applying the path shorthand below. With no setting, use `modes`. With a scalar directory, preserve the existing behavior: use that directory's `_shared.md` and localized mode file when it provides one. When it provides no file for the selected mode (most market sets ship no `cover.md`, `email.md` or `contacto.md`), load the English `modes/{mode}.md`: it is the canonical file and carries that mode's guardrails, including the draft-only, never-send rule. Never run a mode from the localized `_shared.md` alone or improvise its steps. With a list, load every declared directory's `_shared.md` exactly once (including the baseline `modes/_shared.md` when `modes` appears), but use only the FIRST entry's evaluation-mode file for Blocks A-F; later entries contribute context, never a competing evaluation file. User-layer `_profile.md` and `_custom.md` remain under `modes/` in `DATA_ROOT`.
 
 ### Modes that require `_shared.md` + their mode file
 

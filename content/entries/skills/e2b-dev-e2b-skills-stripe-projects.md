@@ -15,10 +15,10 @@ tags:
   - code-interpreter
   - copilot
 status: active
-quality_percentile: 62
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: e2b-dev/E2B
@@ -26,18 +26,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14667
-  last_commit: 2026-11-02T07:10:58Z
-  stars_delta_7d: 110
-  stars_growth_pct: 0.8
-  trending_score: 110.83
-  rank_current: 84
-  rank_delta: -9
+  stars: 14721
+  last_commit: 2026-11-05T08:43:37Z
+  stars_delta_7d: 164
+  stars_growth_pct: 1.1
+  trending_score: 165.85
+  rank_current: 83
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 14439
     - 14557
-    - 14667
+    - 14721
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: e2b-dev/E2B
   path: skills/stripe-projects/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:59.673Z
+  fetched_at: 2026-11-05T13:13:31.199Z
   truncated: false
 type: agent_skill
 skill:

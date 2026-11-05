@@ -14,28 +14,28 @@ tags:
   - automation
   - browser
 status: active
-quality_percentile: 69
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: nanobrowser/nanobrowser
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14217
+  stars: 14245
   last_commit: 2026-10-24T07:28:41Z
-  stars_delta_7d: 36
-  stars_growth_pct: 0.3
-  trending_score: 36.09
-  rank_current: 92
-  rank_delta: -19
+  stars_delta_7d: 64
+  stars_growth_pct: 0.5
+  trending_score: 64.29
+  rank_current: 89
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 14121
     - 14181
-    - 14217
+    - 14245
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: nanobrowser/nanobrowser
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:06:59.699Z
+  fetched_at: 2026-11-05T13:13:31.254Z
   truncated: false
 type: agent_tool
 tool:
@@ -86,7 +86,7 @@ Nanobrowser is an open-source AI agent that works in your own browser. Tell it a
 ## 🔥 Why Nanobrowser?
 
 - **Free.** No subscription and no hidden costs. Use your own API key or a local model, and pay only for what you use.
-- **Private.** Everything runs in your browser. Your keys stay in the browser and go only to their own provider. Pages go only to the model you choose. A daily count of users and usage counts are sent without an ID and never include your pages or sites; see [PRIVACY.md](https://github.com/nanobrowser/nanobrowser/blob/master/PRIVACY.md).
+- **Private.** Everything runs in your browser. Your keys stay in the browser and go only to their own provider. Pages go only to the model you choose. A daily count of users and usage counts are sent without an ID and never include your pages or sites; see [PRIVACY.md](https://raw.githubusercontent.com/nanobrowser/nanobrowser/master/PRIVACY.md).
 - **Flexible LLM.** Choose from many cloud providers, or run a model on your own computer, and switch whenever you like. No lock-in.
 - **Open source.** All the code is public, so you can see exactly how it works and change it to fit your needs.
 

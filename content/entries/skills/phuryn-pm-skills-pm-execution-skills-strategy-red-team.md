@@ -15,10 +15,10 @@ tags:
   - agentic-skills
   - claude-code-marketplace
 status: active
-quality_percentile: 70
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: phuryn/pm-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27614
+  stars: 27709
   last_commit: 2026-10-29T19:09:57Z
-  stars_delta_7d: 233
-  stars_growth_pct: 0.9
-  trending_score: 234.98
+  stars_delta_7d: 328
+  stars_growth_pct: 1.2
+  trending_score: 331.93
   velocity_source: snapshot_delta
   sparkline_4w:
     - 26957
     - 27192
     - 27381
-    - 27614
+    - 27709
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: phuryn/pm-skills
   path: pm-execution/skills/strategy-red-team/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:41.829Z
+  fetched_at: 2026-11-05T13:13:07.698Z
   truncated: false
 type: agent_skill
 skill:

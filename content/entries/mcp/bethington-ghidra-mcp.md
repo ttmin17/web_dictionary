@@ -15,21 +15,21 @@ tags:
   - ghidra-extension
   - java
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2025-08-30T06:40:03
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: bethington/ghidra-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6058
+  stars: 6126
   last_commit: 2026-11-02T06:31:05Z
-  stars_delta_7d: 148
-  stars_growth_pct: 2.5
-  trending_score: 151.71
+  stars_delta_7d: 216
+  stars_growth_pct: 3.7
+  trending_score: 223.89
   rank_current: 15
   rank_delta: 1
   velocity_source: snapshot_delta
@@ -37,7 +37,7 @@ signals:
     - 5559
     - 5782
     - 5910
-    - 6058
+    - 6126
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: bethington/ghidra-mcp
   path: README.md
   branch: dev
-  fetched_at: 2026-11-02T09:05:35.129Z
+  fetched_at: 2026-11-05T13:11:43.349Z
   truncated: true
 type: mcp_server
 launch:

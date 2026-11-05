@@ -13,29 +13,29 @@ tags:
   - tag-non-production
   - xcode
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: getsentry/MobileBuildMCP
   official_vendor: false
   license: MIT
 signals:
-  stars: 6531
-  last_commit: 2026-11-01T11:09:32Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
-  rank_current: 61
-  rank_delta: -1
+  stars: 6543
+  last_commit: 2026-11-03T15:33:30Z
+  stars_delta_7d: 35
+  stars_growth_pct: 0.5
+  trending_score: 35.19
+  rank_current: 59
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6476
     - 6488
     - 6508
-    - 6531
+    - 6543
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: getsentry/MobileBuildMCP
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.155Z
+  fetched_at: 2026-11-05T13:11:42.939Z
   truncated: false
 type: mcp_server
 launch:
@@ -174,6 +174,6 @@ The CLI uses a per-workspace daemon for stateful operations (log capture, debugg
 
 ## Licence
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/getsentry/MobileBuildMCP/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/getsentry/MobileBuildMCP/main/LICENSE) file for details.
 For third-party licensing notices see the [THIRD_PARTY_LICENSES](https://github.com/getsentry/MobileBuildMCP/blob/main/THIRD_PARTY_LICENSES) file for details.
 For npm package attributions see the [THIRD_PARTY_PACKAGE_LICENSES](https://github.com/getsentry/MobileBuildMCP/blob/main/THIRD_PARTY_PACKAGE_LICENSES.md) file for details.

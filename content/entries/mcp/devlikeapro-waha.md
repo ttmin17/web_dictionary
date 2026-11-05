@@ -17,26 +17,26 @@ status: active
 quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2020-10-20T08:49:48
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: devlikeapro/waha
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 7725
-  last_commit: 2026-10-28T09:40:49Z
-  stars_delta_7d: 40
-  stars_growth_pct: 0.5
-  trending_score: 40.21
-  rank_current: 42
-  rank_delta: -9
+  stars: 7747
+  last_commit: 2026-11-04T08:02:43Z
+  stars_delta_7d: 62
+  stars_growth_pct: 0.8
+  trending_score: 62.5
+  rank_current: 40
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7587
     - 7629
     - 7685
-    - 7725
+    - 7747
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: devlikeapro/waha
   path: README.md
   branch: core
-  fetched_at: 2026-11-02T09:05:35.080Z
+  fetched_at: 2026-11-05T13:11:42.985Z
   truncated: false
 type: mcp_server
 launch:
@@ -199,7 +199,7 @@ curl -d "{\"chatId\": \"${PHONE}@c.us\", \"text\": \"Hello from WhatsApp HTTP AP
 
 ## Start the project
 1. Clone the repository
-2. Make sure you're using node>=22 (check [.nvmrc](https://github.com/devlikeapro/waha/blob/core/.nvmrc) to get the version)
+2. Make sure you're using node>=22 (check [.nvmrc](https://raw.githubusercontent.com/devlikeapro/waha/core/.nvmrc) to get the version)
 3. Install the **whatsapp-rust-bridge prerequisites**:
  ```bash
 # Bun runtime used by whatsapp-rust-bridge prepare scripts

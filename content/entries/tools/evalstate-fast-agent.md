@@ -13,29 +13,29 @@ tags:
   - agent-framework
   - agent-skills
 status: active
-quality_percentile: 83
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: evalstate/fast-agent
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3954
-  last_commit: 2026-11-02T08:33:54Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.1
-  trending_score: 5.01
-  rank_current: 135
-  rank_delta: -10
+  stars: 3962
+  last_commit: 2026-11-04T17:31:55Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.3
+  trending_score: 13.04
+  rank_current: 123
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3932
     - 3942
     - 3949
-    - 3954
+    - 3962
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: evalstate/fast-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.278Z
+  fetched_at: 2026-11-05T13:11:44.803Z
   truncated: false
 type: agent_tool
 tool:
@@ -359,7 +359,7 @@ async def main() -> None:
 ```
 
 Extended example and all params sample is available in the repository as
-[`examples/workflows/agents_as_tools_extended.py`](https://github.com/evalstate/fast-agent/blob/main/examples/workflows/agents_as_tools_extended.py).
+[`examples/workflows/agents_as_tools_extended.py`](https://raw.githubusercontent.com/evalstate/fast-agent/main/examples/workflows/agents_as_tools_extended.py).
 
 ## MCP OAuth (v2.1)
 

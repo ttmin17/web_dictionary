@@ -14,29 +14,29 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 83
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2025-02-12T06:39:48
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: haris-musa/excel-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 4271
-  last_commit: 2026-10-31T19:30:43Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.2
-  trending_score: 7.01
-  rank_current: 85
-  rank_delta: -20
+  stars: 4278
+  last_commit: 2026-11-04T19:26:32Z
+  stars_delta_7d: 14
+  stars_growth_pct: 0.3
+  trending_score: 14.05
+  rank_current: 80
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4235
     - 4248
     - 4264
-    - 4271
+    - 4278
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: haris-musa/excel-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.238Z
+  fetched_at: 2026-11-05T13:11:44.082Z
   truncated: false
 type: mcp_server
 launch:

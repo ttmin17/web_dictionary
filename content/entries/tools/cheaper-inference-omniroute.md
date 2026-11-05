@@ -13,27 +13,27 @@ tags:
   - ai-gateway
   - anthropic
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: cheaper-inference/OmniRoute
   official_vendor: false
   license: MIT
 signals:
-  stars: 83719
-  last_commit: 2026-11-02T04:51:50Z
-  stars_delta_7d: 2486
-  stars_growth_pct: 3.1
-  trending_score: 2562.08
-  rank_current: 7
+  stars: 84704
+  last_commit: 2026-11-05T13:00:08Z
+  stars_delta_7d: 3471
+  stars_growth_pct: 4.3
+  trending_score: 3619.31
+  rank_current: 9
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 81233
-    - 83719
+    - 84704
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: cheaper-inference/OmniRoute
   path: README.md
   branch: release/v3.8.53
-  fetched_at: 2026-11-02T09:06:05.715Z
+  fetched_at: 2026-11-05T13:12:20.553Z
   truncated: true
 type: agent_tool
 tool:
@@ -69,6 +69,8 @@ tool:
 <br/>
 
 # 🚀 OmniRoute — The Free AI Gateway
+
+**Created by [Diego Souza](https://github.com/diegosouzapw)**
 
 <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 380 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 380 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
 
@@ -129,7 +131,7 @@ tool:
 |                           |          v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | ------------------------- | :-----------------------: | :---------: | :-------------------: |
 | 🌐 Providers              |            352            |   **358**   |          380          |
-| 🧠 Unique chat model IDs  |           1320            |  **1374**   |         1475          |
+| 🧠 Unique chat model IDs  |           1320            |  **1374**   |         1491          |
 | 🖼️ Modality Bridge        | 🆕 vision + audio + video |      ✓      |           ✓           |
 | 📡 Radar free catalog     |         🆕 opt-in         |      ✓      |           ✓           |
 | ⚖️ Quota-aware scheduling |      🆕 Quota-Share       |      ✓      |           ✓           |
@@ -138,7 +140,7 @@ tool:
 | 🛤️ LTS rail infra         |             —             |      —      |  🆕 release channels  |
 | 🔎 Model discovery API    |             —             |      —      | 🆕 `/v1/models/query` |
 
-**→ [Roadmap](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/ROADMAP.md) — riding the rail to `v3.9.0 LTS`**
+**→ [Roadmap](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/ROADMAP.md) — riding the rail to `v3.9.0 LTS`**
 
 </div>
 
@@ -194,7 +196,7 @@ tool:
     <td align="right"><b>📦 Project</b></td>
     <td align="center"><a href="#%EF%B8%8F-tech-stack">🛠️ Tech Stack</a></td>
     <td align="center"><a href="#-documentation">📖 Docs</a></td>
-    <td align="center"><a href="#-900-contributors">👥 Contributors</a></td>
+    <td align="center"><a href="#-1000-contributors">👥 Contributors</a></td>
   </tr>
 </table>
 
@@ -293,7 +295,7 @@ curl http://localhost:20128/v1/chat/completions \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub>`auto` needs an eligible route. A fresh installation can have no eligible keyless targets, and a keyless provider may reject third-party clients. Providers marked `tos: avoid`, including Kiro, are excluded from automatic routing by default; connecting an account does not override that setting. See the [Free Tiers Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/getting-started/FREE-TIERS-GUIDE.md) before choosing a provider.</sub>
+<sub>`auto` needs an eligible route. A fresh installation can have no eligible keyless targets, and a keyless provider may reject third-party clients. Providers marked `tos: avoid`, including Kiro, are excluded from automatic routing by default; connecting an account does not override that setting. See the [Free Tiers Guide](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/getting-started/FREE-TIERS-GUIDE.md) before choosing a provider.</sub>
 
 <sub>📦 Copy-paste quickstart scripts for **Python, Node.js, PHP, and cURL** → [`examples/quickstart/`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/examples/quickstart/)</sub>
 
@@ -305,7 +307,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 380 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 380 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 53 recurring/keyless free-forever providers · 39 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 380 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 380 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 54 recurring/keyless free-forever providers · 39 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
 
 <br/>
 <br/>

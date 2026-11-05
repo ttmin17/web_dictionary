@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 57
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: automazeio/ccpm
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8425
-  last_commit: 2026-10-19T10:00:48Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.1
-  trending_score: 11.01
-  rank_current: 128
+  stars: 8430
+  last_commit: 2026-11-04T13:13:23Z
+  stars_delta_7d: 16
+  stars_growth_pct: 0.2
+  trending_score: 16.03
+  rank_current: 125
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8414
-    - 8425
+    - 8430
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: automazeio/ccpm
   path: skill/ccpm/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:30.313Z
+  fetched_at: 2026-11-05T13:12:57.748Z
   truncated: false
 type: agent_skill
 skill:
@@ -141,6 +141,8 @@ For deterministic operations — anything that reads and reports without needing
 | What's next | `bash references/scripts/next.sh` |
 | What's blocked | `bash references/scripts/blocked.sh` |
 | Validate project state | `bash references/scripts/validate.sh` |
+| Neon branch for an epic (optional) | `bash references/scripts/neon-branch.sh create <epic>` |
+| Remove that Neon branch on merge | `bash references/scripts/neon-branch.sh cleanup <epic>` |
 
 Use the LLM for work that requires reasoning: writing PRDs, analyzing parallelism, launching agents, synthesizing updates.
 

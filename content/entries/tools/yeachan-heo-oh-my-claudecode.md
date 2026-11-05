@@ -11,21 +11,21 @@ tags:
   - automation
   - claude
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Yeachan-Heo/oh-my-claudecode
   official_vendor: false
   license: MIT
 signals:
-  stars: 40506
-  last_commit: 2026-11-02T08:39:41Z
-  stars_delta_7d: 236
-  stars_growth_pct: 0.6
-  trending_score: 237.38
+  stars: 40605
+  last_commit: 2026-11-05T12:43:25Z
+  stars_delta_7d: 335
+  stars_growth_pct: 0.8
+  trending_score: 337.79
   rank_current: 33
   rank_delta: -1
   velocity_source: snapshot_delta
@@ -33,7 +33,7 @@ signals:
     - 39864
     - 40055
     - 40270
-    - 40506
+    - 40605
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Yeachan-Heo/oh-my-claudecode
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:14.842Z
+  fetched_at: 2026-11-05T13:12:31.893Z
   truncated: false
 type: agent_tool
 tool:
@@ -81,7 +81,7 @@ English | [한국어](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/
 
 _Don't learn Claude Code. Just use OMC._
 
-[Get Started](#quick-start) • [Documentation](https://yeachan-heo.github.io/oh-my-claudecode-website) • [CLI Reference](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#cli-reference) • [Workflows](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#workflows) • [Migration Guide](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/MIGRATION.md) • [Discord](https://discord.gg/wSyUQYfhAw)
+[Get Started](#quick-start) • [Documentation](https://yeachan-heo.github.io/oh-my-claudecode-website) • [CLI Reference](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#cli-reference) • [Workflows](https://yeachan-heo.github.io/oh-my-claudecode-website/docs/#workflows) • [Migration Guide](https://raw.githubusercontent.com/Yeachan-Heo/oh-my-claudecode/main/docs/MIGRATION.md) • [Discord](https://discord.gg/wSyUQYfhAw)
 
 ---
 
@@ -775,5 +775,5 @@ If Oh-My-ClaudeCode helps your workflow, consider sponsoring:
 
 OmC includes a [`geobench`](https://github.com/NomaDamas/geobench) product spec for measuring LLM hit rate, MRR, share of voice, and citations.
 
-- Spec: [`geobench/oh-my-claudecode.yaml`](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/geobench/oh-my-claudecode.yaml)
+- Spec: [`geobench/oh-my-claudecode.yaml`](https://raw.githubusercontent.com/Yeachan-Heo/oh-my-claudecode/main/geobench/oh-my-claudecode.yaml)
 - Runbook: [`docs/geobench.md`](https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/docs/geobench.md)

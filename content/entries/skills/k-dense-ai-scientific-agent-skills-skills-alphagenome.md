@@ -18,7 +18,7 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: K-Dense-AI/scientific-agent-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 55754
-  last_commit: 2026-10-26T09:36:15Z
-  stars_delta_7d: 1116
-  stars_growth_pct: 2
-  trending_score: 1138.79
+  stars: 56183
+  last_commit: 2026-11-02T09:23:27Z
+  stars_delta_7d: 1545
+  stars_growth_pct: 2.8
+  trending_score: 1588.69
   velocity_source: snapshot_delta
   sparkline_4w:
     - 48703
     - 52732
     - 54638
-    - 55754
+    - 56183
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: K-Dense-AI/scientific-agent-skills
   path: skills/alphagenome/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:42.519Z
+  fetched_at: 2026-11-05T13:13:08.294Z
   truncated: false
 type: agent_skill
 skill:

@@ -15,10 +15,10 @@ tags:
   - ai-video
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Vincentwei1021/video-shotcraft
@@ -26,14 +26,14 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16001
+  stars: 17181
   last_commit: 2026-10-29T16:17:26Z
-  stars_delta_7d: 1014
+  stars_delta_7d: 1019
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 16001
+    - 17181
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: Vincentwei1021/video-shotcraft
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:22.294Z
+  fetched_at: 2026-11-05T13:12:42.820Z
   truncated: false
 type: agent_skill
 skill:

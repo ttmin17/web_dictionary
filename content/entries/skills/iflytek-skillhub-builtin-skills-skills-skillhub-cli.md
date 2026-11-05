@@ -15,10 +15,10 @@ tags:
   - ai-governance
   - ai-infrastructure
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: iflytek/skillhub
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5356
-  last_commit: 2026-11-02T08:27:55Z
-  stars_delta_7d: 64
-  stars_growth_pct: 1.2
-  trending_score: 64.77
+  stars: 5391
+  last_commit: 2026-11-05T12:44:39Z
+  stars_delta_7d: 99
+  stars_growth_pct: 1.9
+  trending_score: 100.85
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5249
     - 5292
-    - 5356
+    - 5391
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: iflytek/skillhub
   path: builtin-skills/skills/skillhub-cli/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:24.737Z
+  fetched_at: 2026-11-05T13:14:00.164Z
   truncated: false
 type: agent_skill
 skill:

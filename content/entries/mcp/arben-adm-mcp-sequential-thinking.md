@@ -18,7 +18,7 @@ status: active
 quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2025-01-09T22:47:33
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: arben-adm/mcp-sequential-thinking
@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 111
-  rank_delta: -22
+  rank_current: 108
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 955
@@ -47,7 +47,7 @@ readme_source:
   repo: arben-adm/mcp-sequential-thinking
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:57.311Z
+  fetched_at: 2026-11-05T13:12:09.657Z
   truncated: false
 type: mcp_server
 launch:

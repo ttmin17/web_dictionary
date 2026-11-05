@@ -15,25 +15,25 @@ status: active
 quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: QwenLM/qwen-code
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 28875
-  last_commit: 2026-11-02T08:55:45Z
-  stars_delta_7d: 151
-  stars_growth_pct: 0.5
-  trending_score: 151.79
-  rank_current: 14
-  rank_delta: -2
+  stars: 29023
+  last_commit: 2026-11-05T13:07:45Z
+  stars_delta_7d: 299
+  stars_growth_pct: 1
+  trending_score: 302.11
+  rank_current: 12
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 28570
     - 28724
-    - 28875
+    - 29023
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: QwenLM/qwen-code
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:02.585Z
+  fetched_at: 2026-11-05T13:13:37.397Z
   truncated: false
 type: mcp_server
 launch:
@@ -126,7 +126,7 @@ cd /path/to/your-project
 qwen
 ```
 
-Inside the session, run `/auth` to configure your provider and API key. Then try:
+Inside the session, run `/auth` and choose [**Qwen Account with Subscription**](https://chat.qwen.ai/?memberPlan=qwen_code) to sign in with your **Plus or Pro subscription**, or configure a provider with an API key. Then try:
 
 ```text
 Explain this repository and show me where to start.
@@ -156,7 +156,7 @@ Choose the interface that fits your workflow:
 For automation and custom integrations:
 
 - **Headless** — Run `qwen -p "..."` in scripts, CI/CD, or batch jobs.
-- **SDKs** — Build with [TypeScript](https://github.com/QwenLM/qwen-code/blob/main/packages/sdk-typescript/README.md), [Python](https://github.com/QwenLM/qwen-code/blob/main/packages/sdk-python/README.md), or [Java](https://github.com/QwenLM/qwen-code/blob/main/packages/sdk-java/qwencode/README.md).
+- **SDKs** — Build with [TypeScript](https://raw.githubusercontent.com/QwenLM/qwen-code/main/packages/sdk-typescript/README.md), [Python](https://github.com/QwenLM/qwen-code/blob/main/packages/sdk-python/README.md), or [Java](https://github.com/QwenLM/qwen-code/blob/main/packages/sdk-java/qwencode/README.md).
 - **Daemon** — Run `qwen serve` to connect clients over HTTP + SSE (ACP). _(experimental)_ [Daemon guide](https://qwenlm.github.io/qwen-code-docs/en/users/qwen-serve/).
 - **Computer Use** — Set up [native MCP tools](https://github.com/QwenLM/qwen-code/blob/main/packages/cua-driver/README.md#agent-integration) or [Node REPL + SDK](https://github.com/QwenLM/qwen-code/blob/main/packages/node-repl/README.md#usage) in Qwen Code, Claude Code, or Codex.
 

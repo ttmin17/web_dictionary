@@ -17,25 +17,25 @@ status: active
 quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: zeronsh/zeron
   official_vendor: false
   license: MIT
 signals:
-  stars: 3437
-  last_commit: 2026-11-01T22:58:38Z
-  stars_delta_7d: 75
-  stars_growth_pct: 2.2
-  trending_score: 76.67
-  rank_current: 67
-  rank_delta: 4
+  stars: 3454
+  last_commit: 2026-11-05T12:29:26Z
+  stars_delta_7d: 92
+  stars_growth_pct: 2.7
+  trending_score: 94.52
+  rank_current: 75
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3301
     - 3362
-    - 3437
+    - 3454
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: zeronsh/zeron
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:06.713Z
+  fetched_at: 2026-11-05T13:13:37.579Z
   truncated: false
 type: agent_tool
 tool:

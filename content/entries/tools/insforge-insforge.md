@@ -13,28 +13,28 @@ tags:
   - deno
   - embeddings
 status: active
-quality_percentile: 69
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: InsForge/InsForge
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13277
-  last_commit: 2026-11-01T17:06:36Z
-  stars_delta_7d: 62
+  stars: 13286
+  last_commit: 2026-11-02T21:47:33Z
+  stars_delta_7d: 71
   stars_growth_pct: 0.5
-  trending_score: 62.29
-  rank_current: 75
-  rank_delta: -8
+  trending_score: 71.38
+  rank_current: 83
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13147
     - 13215
-    - 13277
+    - 13286
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: InsForge/InsForge
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:59.716Z
+  fetched_at: 2026-11-05T13:13:31.205Z
   truncated: false
 type: agent_tool
 tool:
@@ -319,7 +319,7 @@ In addition to running InsForge locally, you can also launch InsForge using a pr
 
 ## Contributing
 
-**Contributing**: If you're interested in contributing, you can check our guide here [CONTRIBUTING.md](https://github.com/InsForge/InsForge/blob/main/CONTRIBUTING.md). We truly appreciate pull requests, and all types of help are appreciated!
+**Contributing**: If you're interested in contributing, you can check our guide here [CONTRIBUTING.md](https://raw.githubusercontent.com/InsForge/InsForge/main/CONTRIBUTING.md). We truly appreciate pull requests, and all types of help are appreciated!
 
 **Support**: If you need any help or support, we're responsive on our [Discord channel](https://discord.com/invite/MPxwj5xVvW), and also feel free to email us [info@insforge.dev](mailto:info@insforge.dev) too!
 

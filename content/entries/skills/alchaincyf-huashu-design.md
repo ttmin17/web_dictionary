@@ -15,7 +15,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alchaincyf/huashu-design
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28452
-  last_commit: 2026-10-30T17:51:13Z
-  stars_delta_7d: 2090
-  stars_growth_pct: 7.9
-  trending_score: 2255.7
-  rank_current: 15
+  stars: 28764
+  last_commit: 2026-11-04T03:28:47Z
+  stars_delta_7d: 2402
+  stars_growth_pct: 9.1
+  trending_score: 2620.86
+  rank_current: 19
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 26362
-    - 28452
+    - 28764
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: alchaincyf/huashu-design
   path: SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:18.587Z
+  fetched_at: 2026-11-05T13:12:37.411Z
   truncated: false
 type: agent_skill
 skill:
@@ -244,6 +244,13 @@ python3 "$HD/scripts/learn.py" harvest <项目目录>                           
 5. 检查点问答改成产出里的 assumption 清单，gate 文件照写
 
 降级牺牲流程，不牺牲真实资产协议、可读性底线，也不跳过三方向门。
+
+**在 DeepSeek Harness 桌面端里**（工具清单里有 `load_workspace_dependencies`）：
+- 先调用它。下文的 `python3` 换成它返回的 Python（自带 python-pptx、Pillow），`node` 换成它返回的 Node；不要 `pip install`，也不要去找系统 Python
+- 以插件装上时，`playwright`、`pptxgenjs`、`pdf-lib` 已随插件装好（`sharp` 没带，缩略图脚本会自动改用浏览器截小图），`$HD/scripts/*.mjs` 直接能跑。浏览器先用 Playwright 自带的，没有就借用户电脑上的 Chrome / Edge；三样都没有时先问用户要不要下载（`npx playwright install chromium`，一百多 MB），同意了才装
+- 这里没有 Python 版 playwright：可编辑 PPTX 走路线 A（`export_deck_pptx.mjs`），路线 B 的 `pptx_from_rendered.py` 跑不了要说明；`verify.py` 换成 `gen_deck_thumbs.mjs` 出每页缩略图，再逐张读图看
+- `learn.py`、`design_lint.py` 默认写 `~/.huashu-design/`，在「工作区内修改」权限下会被拦：先设 `HUASHU_DESIGN_HOME=<工作区>/.huashu-design` 再跑
+- 三方向门照走，用 `ask_user_question` 让用户挑
 
 没有 fork-verifier 就用 `scripts/verify.py`；没有 Tweaks host 就用纯前端 localStorage 版（`references/tweaks-system.md`）；
 没有结构化问题 UI 就在对话里用 markdown 清单问；HTML 里要调 LLM 就用 mock 或让用户填自己的 key。

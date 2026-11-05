@@ -13,28 +13,28 @@ tags:
   - ai-engineering
   - ai-observability
 status: active
-quality_percentile: 61
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: openlit/openlit
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2900
-  last_commit: 2026-10-30T20:33:52Z
-  stars_delta_7d: 17
-  stars_growth_pct: 0.6
-  trending_score: 17.1
-  rank_current: 111
-  rank_delta: -19
+  stars: 2921
+  last_commit: 2026-11-03T14:26:09Z
+  stars_delta_7d: 38
+  stars_growth_pct: 1.3
+  trending_score: 38.5
+  rank_current: 97
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2858
     - 2883
-    - 2900
+    - 2921
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: openlit/openlit
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:06.710Z
+  fetched_at: 2026-11-05T13:13:40.252Z
   truncated: false
 type: agent_tool
 tool:
@@ -671,7 +671,7 @@ You can contribute by:
 * reporting issues
 * sharing OpenLIT with other developers
 
-Check the repository's issues for opportunities to contribute. To run OpenLIT from source, see [Run OpenLIT locally](https://github.com/openlit/openlit/blob/main/CONTRIBUTING.md#run-openlit-locally): one script, `scripts/dev-realtime.sh`, starts the UI, OTLP receiver, realtime engine, and NATS.
+Check the repository's issues for opportunities to contribute. To run OpenLIT from source, see [Run OpenLIT locally](https://raw.githubusercontent.com/openlit/openlit/main/CONTRIBUTING.md#run-openlit-locally): one script, `scripts/dev-realtime.sh`, starts the UI, OTLP receiver, realtime engine, and NATS.
 
 ---
 

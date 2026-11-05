@@ -15,25 +15,25 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: strands-agents/harness-sdk
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9027
-  last_commit: 2026-11-02T07:58:35Z
-  stars_delta_7d: 77
-  stars_growth_pct: 0.9
-  trending_score: 77.66
-  rank_current: 66
-  rank_delta: -7
+  stars: 9054
+  last_commit: 2026-11-05T07:58:21Z
+  stars_delta_7d: 104
+  stars_growth_pct: 1.2
+  trending_score: 105.21
+  rank_current: 69
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8862
     - 8950
-    - 9027
+    - 9054
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: strands-agents/harness-sdk
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.470Z
+  fetched_at: 2026-11-05T13:13:44.711Z
   truncated: false
 type: agent_tool
 tool:

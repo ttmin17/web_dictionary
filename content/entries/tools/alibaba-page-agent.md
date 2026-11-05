@@ -15,25 +15,25 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alibaba/page-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 29618
-  last_commit: 2026-10-31T05:52:31Z
-  stars_delta_7d: 55
+  stars: 29635
+  last_commit: 2026-11-04T05:41:21Z
+  stars_delta_7d: 72
   stars_growth_pct: 0.2
-  trending_score: 55.1
+  trending_score: 72.18
   rank_current: 82
   rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 29496
     - 29563
-    - 29618
+    - 29635
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: alibaba/page-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:58.069Z
+  fetched_at: 2026-11-05T13:13:29.570Z
   truncated: false
 type: agent_tool
 tool:
@@ -72,7 +72,7 @@ The GUI Agent Living in Your Webpage. One script gives any web page its own AI a
 
 <a href="https://trendshift.io/repositories/22551?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-22551" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/22551" alt="alibaba%2Fpage-agent | Trendshift" width="180"/></a>
 
-🌐 **English** | [中文](https://github.com/alibaba/page-agent/blob/main/docs/README-zh.md)
+🌐 **English** | [中文](https://raw.githubusercontent.com/alibaba/page-agent/main/docs/README-zh.md)
 
 <a href="https://alibaba.github.io/page-agent/" target="_blank"><b>🚀 Demo</b></a> | <a href="https://alibaba.github.io/page-agent/docs/introduction/overview" target="_blank"><b>📖 Docs</b></a> | <a href="https://news.ycombinator.com/item?id=47264138" target="_blank"><b>📢 HN Discussion</b></a> | <a href="https://x.com/simonluvramen" target="_blank"><b>𝕏 Follow on X</b></a>
 
@@ -142,7 +142,7 @@ For more programmatic usage, see [📖 Documentations](https://alibaba.github.io
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! See [CONTRIBUTING.md](https://github.com/alibaba/page-agent/blob/main/CONTRIBUTING.md) for guidelines and [docs/developer-guide.md](https://github.com/alibaba/page-agent/blob/main/docs/developer-guide.md) for local development workflows.
+We welcome contributions from the community! See [CONTRIBUTING.md](https://raw.githubusercontent.com/alibaba/page-agent/main/CONTRIBUTING.md) for guidelines and [docs/developer-guide.md](https://github.com/alibaba/page-agent/blob/main/docs/developer-guide.md) for local development workflows.
 
 Built something cool with PageAgent? Share it in [Show and Tell](https://github.com/alibaba/page-agent/discussions/categories/show-and-tell). 🙌
 

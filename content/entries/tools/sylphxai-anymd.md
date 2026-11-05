@@ -18,26 +18,26 @@ status: active
 quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: SylphxAI/anymd
   official_vendor: false
   license: MIT
 signals:
-  stars: 1059
-  last_commit: 2026-11-02T06:10:18Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.5
-  trending_score: 5.02
-  rank_current: 133
-  rank_delta: -19
+  stars: 1062
+  last_commit: 2026-11-03T21:45:50Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.8
+  trending_score: 8.06
+  rank_current: 126
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1038
     - 1044
     - 1054
-    - 1059
+    - 1062
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: SylphxAI/anymd
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.744Z
+  fetched_at: 2026-11-05T13:12:09.161Z
   truncated: false
 type: agent_tool
 tool:

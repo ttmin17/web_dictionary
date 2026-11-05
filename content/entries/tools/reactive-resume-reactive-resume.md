@@ -17,26 +17,26 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: reactive-resume/reactive-resume
   official_vendor: false
   license: MIT
 signals:
-  stars: 45184
-  last_commit: 2026-11-02T08:58:53Z
-  stars_delta_7d: 317
-  stars_growth_pct: 0.7
-  trending_score: 319.24
-  rank_current: 28
-  rank_delta: -5
+  stars: 45370
+  last_commit: 2026-11-05T04:33:23Z
+  stars_delta_7d: 503
+  stars_growth_pct: 1.1
+  trending_score: 508.64
+  rank_current: 26
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 44233
     - 44513
     - 44867
-    - 45184
+    - 45370
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: reactive-resume/reactive-resume
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:22.896Z
+  fetched_at: 2026-11-05T13:11:27.541Z
   truncated: false
 type: agent_tool
 tool:
@@ -472,4 +472,4 @@ weekly. Triaged bugs become `status: confirmed`; feature proposals become `statu
 
 ## License
 
-[MIT](https://github.com/reactive-resume/reactive-resume/blob/main/LICENSE) — do whatever you want with it.
+[MIT](https://raw.githubusercontent.com/reactive-resume/reactive-resume/main/LICENSE) — do whatever you want with it.

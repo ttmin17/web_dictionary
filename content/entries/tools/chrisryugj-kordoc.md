@@ -1,9 +1,9 @@
 ---
 slug: chrisryugj-kordoc
 name: kordoc
-tagline: "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘
-  CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown —
-  CLI "
+tagline: 한국 문서를 읽고·고치고·새로 쓰는 AI 문서 도구 — HWP·HWPX·PDF·오피스·스캔(OCR)을 Markdown으로,
+  신구대조·서식 보존 편집·Markdown→HWPX 작성·HWP→HWPX 변환·양식 채우기·공문서 검수까지. 라이브러리·CLI·MCP |
+  Read,
 summary: "- 📊 PDF 공개 벤치 종합 0.964: opendataloader-bench 200문서, 공개 리더보드 12개 파서보다
   높은 점수(4.22.14 측정). 측정 조건 - 🇰🇷 한국 공문서 표 구조 100%: 원본 HWPX 2,424문서의 보이는 표
   10,342개 전부 구조 일치. 검증 결과"
@@ -15,29 +15,29 @@ tags:
   - document-parser
   - docx
 status: active
-quality_percentile: 93
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: chrisryugj/kordoc
   official_vendor: false
   license: MIT
 signals:
-  stars: 2887
-  last_commit: 2026-11-02T08:55:12Z
-  stars_delta_7d: 116
-  stars_growth_pct: 4.2
-  trending_score: 120.86
-  rank_current: 55
-  rank_delta: -20
+  stars: 2924
+  last_commit: 2026-11-05T12:03:42Z
+  stars_delta_7d: 153
+  stars_growth_pct: 5.5
+  trending_score: 161.45
+  rank_current: 56
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2435
     - 2588
     - 2771
-    - 2887
+    - 2924
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: chrisryugj/kordoc
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.472Z
+  fetched_at: 2026-11-05T13:11:49.032Z
   truncated: false
 type: agent_tool
 tool:
@@ -76,7 +76,7 @@ tool:
 
 HWP 3.x·5.x, HWPX, HWPML, PDF, XLS·XLSX, DOCX, PPTX, PNG·JPG·WebP를 Markdown과 구조화 데이터로 변환합니다. 라이브러리·CLI·MCP 서버로 사용할 수 있습니다.
 
-[English](https://github.com/chrisryugj/kordoc/blob/main/README-EN.md) · [상세 사용법](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md) · [벤치마크](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md) · [변경 이력](https://github.com/chrisryugj/kordoc/blob/main/CHANGELOG.md)
+[English](https://raw.githubusercontent.com/chrisryugj/kordoc/main/README-EN.md) · [상세 사용법](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md) · [벤치마크](https://github.com/chrisryugj/kordoc/blob/main/docs/benchmarks.md) · [변경 이력](https://github.com/chrisryugj/kordoc/blob/main/CHANGELOG.md)
 
 ![같은 법령 별표를 HWP·HWPX·PDF·스캔 이미지로 넣은 kordoc 실제 출력](https://raw.githubusercontent.com/chrisryugj/kordoc/main/docs/readme-hero.gif)
 
@@ -118,7 +118,7 @@ Claude Code 플러그인:
 /plugin install kordoc@kordoc
 ```
 
-[수동 MCP 등록과 설치 문제 해결](https://github.com/chrisryugj/kordoc/blob/main/docs/usage.md)
+[수동 MCP 등록과 설치 문제 해결](https://raw.githubusercontent.com/chrisryugj/kordoc/main/docs/usage.md)
 
 ## 빠른 시작
 
@@ -191,7 +191,7 @@ await writeFile("보고서.hwpx", Buffer.from(hwpx))
 | 법령 별표 | 272건 · 346표 | HWP **346/346**, PDF **343/346 · 99.13%** |
 | PDF 전체 | 1,911문서 중 1,729건 채점 | 글 커버리지 **99.80%** |
 | OCR | 53문서 · 102쪽 · 66표 | CER **0.0239** · 글자 재현율 **99.32%** · 표 구조 일치 **34/66** |
-| KoOCR-Bench v2.0c (외부) | 공개 877쪽 (표·글·손글씨·순서) | 종합 기본값 **0.807** · `ocrRec: "auto"` **0.828** (4.24.37) |
+| KoOCR-Bench v2.0c (외부) | 공개 877쪽 (표·글·손글씨·순서) | 종합 기본값 **0.883** · `ocrRec: "auto"` **0.884** · 손글씨 **0.901** · 제목 재현율 0.924 (4.24.46) |
 | opendataloader-bench | PDF 200문서 | 종합 기본값 **0.964** · OCR 끔 **0.939** |
 | HWPX 렌더 배치 | 한컴 PDF 짝 1,565문서(쪽 수 일치 1,508) · 글 조각 111,480 · 그림 4,300 | 글 위치(±1.5pt) **106,904 · 95.9%** · 그림 위치(±2pt) **4,213 · 98.0%** |
 
@@ -199,15 +199,15 @@ await writeFile("보고서.hwpx", Buffer.from(hwpx))
 
 ## 최근 업데이트
 
-최신 배포: **[4.24.37](https://github.com/chrisryugj/kordoc/releases/tag/v4.24.37)** · 2026-11-02
+최신 배포: **[4.24.46](https://github.com/chrisryugj/kordoc/releases/tag/v4.24.46)** · 2026-11-05
 
 | 버전 | 주요 변경 | 수치 변화 |
 | --- | --- | --- |
-| 4.24.37 | OCR 표: 통계표 묶음 안 빈칸 열·괘선 없는 본문 행 펼치기·행 합침 아래 행 가르기·이웃 칸 값 몰림·음영 머리 띠와 칠한 첫 열 경계 · 머리 행 있는 표를 차트로 풀던 것 · 시험지 문항 상자 풀기 · `ocrRec: "auto"`(손글씨 쪽만 손글씨 모델) | KoOCR-Bench v2.0c 공개 877쪽 종합 0.742 → **0.807**(`ocrRec: "auto"` **0.828**) · 자체 벤치 문서별 그대로 |
-| 4.24.36 | PDF 띄어쓰기(한컴 PDF): 자간 줄인 글의 낱말 공백 되살림 · 공백 글리프 위에 덧찍은 쉼표("55만원,") · 날짜 "2026. 8. 28." 공백 유지 · 줄 끝에서 갈린 연도 "20⏎25년" | PDF 글 어절 F1 99.076 → **99.103%** · 그 밖 지표 그대로 |
-| 4.24.35 | PDF: 자간 줄인 수치의 같은 숫자 둘("129.9") 지키기 · 글자마다 찍은 첨자 줄을 본문에 붙이기 · 수 가운데서 꺾인 줄("1,2⏎96억"·"(4.1⏎6.~5.16.)")과 칸 소수 잇기 · 표지 책등 외기둥 세로 글 | PDF 표 칸 완전 일치 0.99264 → **0.99267** · 칸 내용 0.98902 → **0.98905** · PDF 글 순서 99.359 → **99.360%** · 어절 F1 99.073 → **99.076%** · 그 밖 지표 그대로 |
-| 4.24.34 | to-hwpx: 파일 여러 개·폴더 일괄 변환(하위 폴더, 이미 있는 .hwpx 건너뜀) · PDF: 기호 글꼴 작은 네모로 찍고 공백으로 적은 "·" 글머리 되살림 · 글자 단위로 나눈 줄 머리 어미("는데"·"졌다")·겹조사 잇기 | PDF 표 칸 완전 일치 0.99221 → **0.99264** · 칸 내용 0.98896 → **0.98902** · PDF 글 재현율 99.883 → **99.885%** · 순서 99.356 → **99.359%** · 어절 F1 99.071 → **99.073%** · 그 밖 지표 그대로 |
-| 4.24.33 | PDF 표: 모아찍기 쪽 넘김에서 오른쪽 쪽 머리 상자로 넘어간 칸 글을 앞 칸에 잇기 · 칸을 한 겹 더 깐 1×1 클립(통계표 숫자 칸)을 중첩 표 대신 칸 글로 | PDF 표 칸 내용 일치 0.98794 → **0.98896** · 칸 완전 일치 0.99153 → **0.99221** · 그 밖 벤치 지표 그대로 |
+| 4.24.46 | OCR: 숫자 줄 획이 가짜 가로선이 되어 값이 쌓이던 계속비·통계표 · 묶음 첫 열 이름표 아래 하위 행 펼치기 · 본문 두 행뿐인 작은 표 열 · PDF 위아래로 쌓인 두 열린 표 · 엑셀 표 칸의 원본 시트 주소(`sourceRows`·`sourceCols`) | KoOCR-Bench 종합 0.881 → **0.883**(`auto` **0.884**) · 관보 CER .091 → .082 · 통계표 .886 → .893 · 자체 벤치 문서별 하락 0 |
+| 4.24.45 | OCR: 순위표 이름·값 열("중 국155,252" → 국적 \| 입국자) 가르기 · 상자 하나가 비켜 앉아 통째로 남던 통계표 하위 행 펼치기 · 걸친 글 이름표 옆 쌓인 구성비 행 | KoOCR-Bench 종합 0.878 → **0.881**(`auto` **0.882**) · 통계표 .872 → **.886** · 자체 벤치 문서별 하락 0 |
+| 4.24.44 | OCR: 여러 단 본문(펼친 교재·용어 단)이 군집 표로 묶이던 것 · 그림 OCR(`ocr: true`)이 옅은 글 한 줄 띠 그림(각주)도 읽기 | KoOCR-Bench 종합 0.877 → **0.878**(`auto` **0.879**, 측정 변환기 수정 기준) · 사용자 실문서 CER .301 → .285 · ODL `ocr: true` .9665 → .9666 · 자체 벤치 문서별 하락 0 |
+| 4.24.43 | OCR: 사전에 없는 원문자 자모·영문(㉠~㉭·ⓐ~ⓩ) 되살리기(고리 속 다시 읽기·홀자모 획 판정) · 번호 장·절 제목·영문 대문자 줄 제목 · PDF 특허 문단 번호 · 빈 중첩표만 든 후행 열 | KoOCR-Bench 종합 0.872 → **0.877**(`auto` **0.877**) · 수능 원문자 보존 .682 → **.947** · 제목 재현율 .798 → .924 · ODL 제목 .949 → .953 · 자체 벤치 문서별 하락 0 |
+| 4.24.42 | OCR: 기본 설정도 뚜렷한 손글씨 쪽은 손글씨 모델로(`ocrRec: "printed"` 로 끔) · 납작한 한 줄 띠 검출 · 통계표 본문 펼치기(이름·값 줄·세로쓰기 이름표·두 줄 숫자 행·걸친 칸 글) · 부푼 상자 행 띠 · 구성비·증감률 열과 쌓인 구성비 행 · 세로선 너머 이웃 칸 글자 · 붙어 읽힌 쉼표 정수 | KoOCR-Bench 종합 0.835 → **0.872**(`auto` **0.873**) · 손글씨 .761 → **.901** · 통계표 .839 → .872 · 자체 벤치 문서별 하락 0 |
 
 이전 버전과 상세 내용은 [변경 이력](https://github.com/chrisryugj/kordoc/blob/main/CHANGELOG.md)에 있습니다.
 

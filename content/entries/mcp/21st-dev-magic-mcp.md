@@ -13,29 +13,29 @@ tags:
   - cursor
   - model-context-protocol
 status: active
-quality_percentile: 41
+quality_percentile: 40
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: 21st-dev/magic-mcp
   official_vendor: false
   license: ISC
 signals:
-  stars: 6342
+  stars: 6385
   last_commit: 2026-09-09T20:38:22Z
-  stars_delta_7d: 86
-  stars_growth_pct: 1.4
-  trending_score: 87.18
-  rank_current: 24
-  rank_delta: -10
+  stars_delta_7d: 129
+  stars_growth_pct: 2.1
+  trending_score: 131.66
+  rank_current: 23
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6003
     - 6109
     - 6256
-    - 6342
+    - 6385
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: 21st-dev/magic-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:44.715Z
+  fetched_at: 2026-11-05T13:11:54.126Z
   truncated: false
 type: mcp_server
 launch:

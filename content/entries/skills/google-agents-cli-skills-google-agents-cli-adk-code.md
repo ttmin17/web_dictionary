@@ -19,7 +19,7 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/agents-cli
@@ -27,18 +27,18 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 6280
-  last_commit: 2026-10-27T10:30:55Z
-  stars_delta_7d: 104
-  stars_growth_pct: 1.7
-  trending_score: 105.75
-  rank_current: 85
-  rank_delta: 4
+  stars: 6304
+  last_commit: 2026-11-04T17:44:59Z
+  stars_delta_7d: 128
+  stars_growth_pct: 2.1
+  trending_score: 130.65
+  rank_current: 89
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6099
     - 6176
-    - 6280
+    - 6304
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: google/agents-cli
   path: skills/google-agents-cli-adk-code/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:04.621Z
+  fetched_at: 2026-11-05T13:13:40.008Z
   truncated: false
 type: agent_skill
 skill:
@@ -78,7 +78,7 @@ skill:
 ---
 
 # ADK Code Reference
-Activate `/google-agents-cli-workflow` first for required development phases and scaffolding steps.
+Activate `/google-agents-cli-workflow` first.
 
 ## 1. Study Recipes (No Project Needed)
 
@@ -95,7 +95,7 @@ clone the repo and read the one matching the capability you need before implemen
 Do NOT write agent code until a project is scaffolded.
 
 1. Verify project: run `agents-cli info` (proceed if config exists).
-2. New project: run `agents-cli scaffold create <name> --agent adk_python --deployment-target <target>` — use `--agent adk_go` for Go.
+2. No project: load `/google-agents-cli-workflow` and agree the spec with the user (its Phase 0) before you scaffold.
 3. Existing code: run `agents-cli scaffold enhance .`.
 
 ## Quick Reference — Most Common Patterns

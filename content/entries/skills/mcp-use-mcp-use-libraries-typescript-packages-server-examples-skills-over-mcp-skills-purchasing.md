@@ -11,10 +11,10 @@ tags:
   - apps-sdk
   - chatgpt
 status: active
-quality_percentile: 95
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2025-03-28T10:06:31
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mcp-use/mcp-use
@@ -22,19 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10837
-  last_commit: 2026-10-30T22:29:57Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.2
-  trending_score: 23.05
-  rank_current: 117
-  rank_delta: -5
+  stars: 10848
+  last_commit: 2026-11-05T01:27:30Z
+  stars_delta_7d: 34
+  stars_growth_pct: 0.3
+  trending_score: 34.11
+  rank_current: 113
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10753
     - 10785
     - 10814
-    - 10837
+    - 10848
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: mcp-use/mcp-use
   path: libraries/typescript/packages/server/examples/skills-over-mcp/skills/purchasing/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:34.623Z
+  fetched_at: 2026-11-05T13:11:42.649Z
   truncated: false
 type: agent_skill
 skill:

@@ -15,29 +15,29 @@ tags:
   - bitbucket
   - chatgpt
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: atlassian/atlassian-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1140
-  last_commit: 2026-10-29T18:23:30Z
-  stars_delta_7d: 19
-  stars_growth_pct: 1.7
-  trending_score: 19.32
-  rank_current: 63
-  rank_delta: 3
+  stars: 1148
+  last_commit: 2026-11-03T22:02:59Z
+  stars_delta_7d: 27
+  stars_growth_pct: 2.4
+  trending_score: 27.65
+  rank_current: 65
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1090
     - 1106
     - 1121
-    - 1140
+    - 1148
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: atlassian/atlassian-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.688Z
+  fetched_at: 2026-11-05T13:12:08.956Z
   truncated: false
 type: mcp_server
 launch:

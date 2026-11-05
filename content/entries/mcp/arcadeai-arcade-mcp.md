@@ -15,26 +15,26 @@ status: active
 quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ArcadeAI/arcade-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 1071
-  last_commit: 2026-10-30T00:24:41Z
-  stars_delta_7d: 12
-  stars_growth_pct: 1.1
-  trending_score: 12.14
-  rank_current: 74
-  rank_delta: 11
+  stars: 1080
+  last_commit: 2026-11-05T01:05:13Z
+  stars_delta_7d: 21
+  stars_growth_pct: 2
+  trending_score: 21.42
+  rank_current: 71
+  rank_delta: 14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1049
     - 1054
     - 1059
-    - 1071
+    - 1080
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: ArcadeAI/arcade-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.759Z
+  fetched_at: 2026-11-05T13:12:09.089Z
   truncated: false
 type: mcp_server
 launch:
@@ -73,7 +73,7 @@ launch:
 
 **Open-source Python framework for building MCP servers and tools.**
 
-[Documentation](https://docs.arcade.dev) • [Examples](https://github.com/ArcadeAI/arcade-mcp/blob/main/examples/mcp_servers/) • [Discord](https://discord.com/invite/GUZEMpEZ9p)
+[Documentation](https://docs.arcade.dev) • [Examples](https://raw.githubusercontent.com/ArcadeAI/arcade-mcp/main/examples/mcp_servers/) • [Discord](https://discord.com/invite/GUZEMpEZ9p)
 
 ## What is arcade-mcp
 

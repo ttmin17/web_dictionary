@@ -13,28 +13,28 @@ tags:
   - chatbot
   - hermes
 status: active
-quality_percentile: 42
+quality_percentile: 41
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: fathah/hermes-desktop
   official_vendor: false
   license: MIT
 signals:
-  stars: 14511
+  stars: 14535
   last_commit: 2026-10-13T14:53:59Z
-  stars_delta_7d: 55
-  stars_growth_pct: 0.4
-  trending_score: 55.21
-  rank_current: 81
-  rank_delta: 9
+  stars_delta_7d: 79
+  stars_growth_pct: 0.5
+  trending_score: 79.43
+  rank_current: 78
+  rank_delta: 12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 14428
     - 14456
-    - 14511
+    - 14535
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: fathah/hermes-desktop
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.461Z
+  fetched_at: 2026-11-05T13:13:44.805Z
   truncated: false
 type: agent_tool
 tool:
@@ -124,7 +124,7 @@ Instead of managing the CLI by hand, the app walks through install, provider set
 
 Download the desktop app for your operating system from [hermesone.org](https://hermesone.org) or [GitHub Releases](https://github.com/fathah/hermes-desktop/releases). `npm install hermes-desktop` is not a supported desktop app installation method.
 
-To run the app in development, clone this repository and follow the [Contributing Guide](https://github.com/fathah/hermes-desktop/blob/main/CONTRIBUTING.md#getting-started). Its `npm install` step installs dependencies inside the source checkout.
+To run the app in development, clone this repository and follow the [Contributing Guide](https://raw.githubusercontent.com/fathah/hermes-desktop/main/CONTRIBUTING.md#getting-started). Its `npm install` step installs dependencies inside the source checkout.
 
 <details>
 <summary>Windows</summary>

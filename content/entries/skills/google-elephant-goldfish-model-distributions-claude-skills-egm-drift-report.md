@@ -15,10 +15,10 @@ tags:
   - antigravity
   - claude-code
 status: active
-quality_percentile: 97
+quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/elephant-goldfish-model
@@ -26,14 +26,14 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 9666
-  last_commit: 2026-11-01T13:38:10Z
-  stars_delta_7d: 1349
+  stars: 12110
+  last_commit: 2026-11-04T20:36:04Z
+  stars_delta_7d: 1591
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 9666
+    - 12110
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: google/elephant-goldfish-model
   path: distributions/claude/skills/egm-drift-report/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:32.179Z
+  fetched_at: 2026-11-05T13:12:49.760Z
   truncated: false
 type: agent_skill
 skill:

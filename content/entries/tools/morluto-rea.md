@@ -15,18 +15,18 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: morluto/rea
   official_vendor: false
   license: MIT
 signals:
-  stars: 420342
-  last_commit: 2026-11-02T09:02:40Z
-  stars_delta_7d: 33731
-  stars_growth_pct: 8.7
-  trending_score: 36673.96
+  stars: 432921
+  last_commit: 2026-11-05T10:41:15Z
+  stars_delta_7d: 46310
+  stars_growth_pct: 12
+  trending_score: 51857.22
   rank_current: 1
   rank_delta: 0
   velocity_source: snapshot_delta
@@ -34,7 +34,7 @@ signals:
     - 196748
     - 327205
     - 386611
-    - 420342
+    - 432921
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: morluto/rea
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:02.200Z
+  fetched_at: 2026-11-05T13:12:15.235Z
   truncated: false
 type: agent_tool
 tool:
@@ -83,6 +83,8 @@ tool:
 <a href="https://trendshift.io/repositories/82054?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-82054" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/82054" alt="morluto%2Frea | Trendshift" width="250" height="55"/></a>
 
 **[Website](https://rea.tools/) · [Guides](https://rea.tools/guides/) · [Showcases](https://rea.tools/showcase/)**
+
+<a href="https://discord.com/invite/GkcryMnJDM"><img alt="Join the REA community on Discord" src="https://img.shields.io/badge/Join%20us%20on%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="40"></a>
 
 [Quick start](#quick-start) · [How REA works](#how-rea-works) · [What you can analyze](#what-you-can-analyze) · [Showcases](#showcases) · [Build RL environments](#build-rl-environments) · [FAQ](#faq) · [Documentation](#documentation)
 
@@ -153,7 +155,7 @@ available. Run package acquisition from a trusted directory outside the target
 project. Installation and recovery details are in the setup guide below.
 
 Setup supports Claude Code, Codex, Cursor, Gemini CLI, Grok Build and
-[other agents](https://github.com/morluto/rea/blob/main/docs/installation.md#supported-agents). See
+[other agents](https://raw.githubusercontent.com/morluto/rea/main/docs/installation.md#supported-agents). See
 [installation and setup](https://github.com/morluto/rea/blob/main/docs/installation.md) for provider configuration and
 manual MCP registration and Claude Code/Codex plugin installation.
 

@@ -15,10 +15,10 @@ tags:
   - agentic-workspace
   - ai-agents
 status: active
-quality_percentile: 71
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 53181
-  last_commit: 2026-11-02T08:58:57Z
-  stars_delta_7d: 194
-  stars_growth_pct: 0.4
-  trending_score: 194.71
+  stars: 53277
+  last_commit: 2026-11-05T13:04:32Z
+  stars_delta_7d: 290
+  stars_growth_pct: 0.5
+  trending_score: 291.59
   velocity_source: snapshot_delta
   sparkline_4w:
     - 52597
     - 52736
     - 52987
-    - 53181
+    - 53277
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: resources/code-cli-skills/code-mate-hermes/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:41.638Z
+  fetched_at: 2026-11-05T13:13:06.776Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,7 +53,7 @@ skill:
     the user asks to delegate work to Hermes.
   folder_path: resources/code-cli-skills/code-mate-hermes
   extra_files: []
-  pack_total_skills: 20
+  pack_total_skills: 21
   is_pack_primary: false
   clients:
     - claude-code

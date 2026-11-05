@@ -15,10 +15,10 @@ tags:
   - claude-skills
   - hyperframes
 status: active
-quality_percentile: 58
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: latent-spaces/brag
@@ -26,11 +26,11 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 19959
+  stars: 20370
   last_commit: 2026-10-23T21:18:13Z
-  stars_delta_7d: 1290
-  stars_growth_pct: 6.9
-  trending_score: 1379.14
+  stars_delta_7d: 1701
+  stars_growth_pct: 9.1
+  trending_score: 1855.98
   rank_current: 25
   rank_delta: -9
   velocity_source: snapshot_delta
@@ -38,7 +38,7 @@ signals:
     - 15657
     - 16800
     - 18669
-    - 19959
+    - 20370
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: latent-spaces/brag
   path: skills/brag-slim/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:22.422Z
+  fetched_at: 2026-11-05T13:12:43.139Z
   truncated: false
 type: agent_skill
 skill:

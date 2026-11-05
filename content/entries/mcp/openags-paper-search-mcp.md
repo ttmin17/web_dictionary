@@ -14,21 +14,21 @@ tags:
   - arxiv-papers
   - paper-search
 status: active
-quality_percentile: 33
+quality_percentile: 32
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: openags/paper-search-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2973
+  stars: 2997
   last_commit: 2026-10-02T06:16:38Z
-  stars_delta_7d: 55
-  stars_growth_pct: 1.9
-  trending_score: 56.04
+  stars_delta_7d: 79
+  stars_growth_pct: 2.7
+  trending_score: 81.14
   rank_current: 33
   rank_delta: 1
   velocity_source: snapshot_delta
@@ -36,7 +36,7 @@ signals:
     - 2817
     - 2863
     - 2918
-    - 2973
+    - 2997
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: openags/paper-search-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.479Z
+  fetched_at: 2026-11-05T13:11:48.856Z
   truncated: false
 type: mcp_server
 launch:
@@ -110,7 +110,7 @@ A Model Context Protocol (MCP) server for searching and downloading academic pap
 
 The bundled MCP server supports `stdio` (the default), `sse`, and `streamable-http`. Network transports bind to `127.0.0.1` by default. Optional OAuth protected-resource mode adds standard discovery, JWT bearer-token validation and required scopes to both HTTP transports, using an external authorization server.
 
-Enable it with `--auth oauth` or `PAPER_SEARCH_MCP_AUTH=oauth` and the explicit issuer/JWKS/resource/audience/scope configuration in [OAuth protected-resource setup](https://github.com/openags/paper-search-mcp/blob/main/docs/OAUTH_PROTECTED_RESOURCE.md). Invalid or incomplete HTTP auth settings fail startup. stdio remains independent of HTTP authentication. Local HTTP without OAuth configuration remains open; do not publish that listener directly. A protected remote deployment still needs TLS, rate limits and filesystem isolation. This feature does not host login/accounts or replace the external issuer's OAuth flow; live identity-provider interoperability must be validated for your deployment.
+Enable it with `--auth oauth` or `PAPER_SEARCH_MCP_AUTH=oauth` and the explicit issuer/JWKS/resource/audience/scope configuration in [OAuth protected-resource setup](https://raw.githubusercontent.com/openags/paper-search-mcp/main/docs/OAUTH_PROTECTED_RESOURCE.md). Invalid or incomplete HTTP auth settings fail startup. stdio remains independent of HTTP authentication. Local HTTP without OAuth configuration remains open; do not publish that listener directly. A protected remote deployment still needs TLS, rate limits and filesystem isolation. This feature does not host login/accounts or replace the external issuer's OAuth flow; live identity-provider interoperability must be validated for your deployment.
 
 ---
 
@@ -885,7 +885,7 @@ Web of Science Starter is available only through `search_wos` or an explicit
 key does **not** add it to default, `all`, `fast`, or `fastest` searches. Supply
 `PAPER_SEARCH_MCP_WOS_API_KEY` (legacy `WOS_API_KEY` also works) at runtime; the
 connector does not create accounts or persist credentials. See
-[the institutional connector guide](https://github.com/openags/paper-search-mcp/blob/main/docs/INSTITUTIONAL_CONNECTORS.md) for limits,
+[the institutional connector guide](https://raw.githubusercontent.com/openags/paper-search-mcp/main/docs/INSTITUTIONAL_CONNECTORS.md) for limits,
 errors, capability boundaries, and validation status.
 
 Scopus is likewise explicit-only (`-s scopus` or MCP `search_scopus`), using

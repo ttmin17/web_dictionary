@@ -14,7 +14,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,17 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8246
-  last_commit: 2026-11-02T08:30:43Z
-  stars_delta_7d: 240
-  stars_growth_pct: 3
-  trending_score: 247.19
+  stars: 8324
+  last_commit: 2026-11-05T09:18:15Z
+  stars_delta_7d: 318
+  stars_growth_pct: 4
+  trending_score: 330.63
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7517
     - 7737
     - 8006
-    - 8246
+    - 8324
 language: zh
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-long-analyze/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:36.242Z
+  fetched_at: 2026-11-05T13:13:00.228Z
   truncated: false
 type: agent_skill
 skill:
@@ -74,7 +74,7 @@ skill:
 
 > Agent 兼容性：只检查当前宿主的 agent；ZCode 查插件注册的同名角色，用 `Agent` 按实际 schema 派发，不要求 `.zcode/agents`。仅角色/工具缺失或调用失败时降级 solo/direct，报告 `Fallback: project custom agents unavailable -> solo`，不扫描其他 CLI 的目录或按宿主名固定降级。
 >
-> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 38` 不一致时（标记缺失、字段缺失/非整数、小于或大于 38）照常按当前宿主角色来源检查并 spawn，同时报告 `Notice: agents bundle 版本不匹配（项目 {N}，本版 38）` 并提示重新运行 `/story-setup` 后新开会话；大于 38 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有当前宿主角色缺失或不暴露调用能力时才降级 solo/direct。
+> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 39` 不一致时（标记缺失、字段缺失/非整数、小于或大于 39）照常按当前宿主角色来源检查并 spawn，同时报告 `Notice: agents bundle 版本不匹配（项目 {N}，本版 39）` 并提示重新运行 `/story-setup` 后新开会话；大于 39 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有当前宿主角色缺失或不暴露调用能力时才降级 solo/direct。
 
 ## 分析边界
 

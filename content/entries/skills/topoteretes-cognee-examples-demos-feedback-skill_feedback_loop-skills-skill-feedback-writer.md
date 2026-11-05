@@ -17,7 +17,7 @@ status: active
 quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: topoteretes/cognee
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32995
-  last_commit: 2026-11-02T07:53:50Z
-  stars_delta_7d: 236
-  stars_growth_pct: 0.7
-  trending_score: 237.7
+  stars: 33091
+  last_commit: 2026-11-05T12:45:43Z
+  stars_delta_7d: 332
+  stars_growth_pct: 1
+  trending_score: 335.36
   velocity_source: snapshot_delta
   sparkline_4w:
     - 32175
     - 32515
     - 32759
-    - 32995
+    - 33091
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: topoteretes/cognee
   path: examples/demos/feedback/skill_feedback_loop/skills/skill-feedback-writer/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:38.747Z
+  fetched_at: 2026-11-05T13:13:03.325Z
   truncated: false
 type: agent_skill
 skill:

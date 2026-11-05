@@ -17,25 +17,25 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: browser-use/browser-harness
   official_vendor: false
   license: MIT
 signals:
-  stars: 18813
-  last_commit: 2026-11-02T08:43:40Z
-  stars_delta_7d: 193
-  stars_growth_pct: 1
-  trending_score: 195
-  rank_current: 40
-  rank_delta: 14
+  stars: 18879
+  last_commit: 2026-11-05T00:11:36Z
+  stars_delta_7d: 259
+  stars_growth_pct: 1.4
+  trending_score: 262.6
+  rank_current: 43
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 18491
     - 18620
-    - 18813
+    - 18879
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: browser-use/browser-harness
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:22.281Z
+  fetched_at: 2026-11-05T13:12:42.934Z
   truncated: false
 type: agent_tool
 tool:

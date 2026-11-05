@@ -14,29 +14,29 @@ tags:
   - com-automation
   - conditional-formatting
 status: active
-quality_percentile: 37
+quality_percentile: 36
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: sbroenne/mcp-server-excel
   official_vendor: false
   license: MIT
 signals:
-  stars: 841
-  last_commit: 2026-11-01T11:34:55Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.8
-  trending_score: 7.06
-  rank_current: 83
-  rank_delta: -3
+  stars: 847
+  last_commit: 2026-11-05T09:27:39Z
+  stars_delta_7d: 13
+  stars_growth_pct: 1.6
+  trending_score: 13.2
+  rank_current: 82
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 817
     - 828
     - 834
-    - 841
+    - 847
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: sbroenne/mcp-server-excel
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.585Z
+  fetched_at: 2026-11-05T13:12:10.000Z
   truncated: false
 type: mcp_server
 launch:
@@ -70,7 +70,7 @@ its official COM API. It can refresh Power Query, recalculate formulas, evaluate
 DAX, run VBA and Python `=PY()`, and preserve PivotTables, charts, macros, the
 Data Model, and workbook formatting.
 
-**63 MCP tools across 33 feature areas, with 433 operations**, cover end-to-end Excel automation.
+**64 MCP tools across 33 feature areas, with 437 operations**, cover end-to-end Excel automation.
 
 > [!IMPORTANT]
 > Requires **Windows**, **Microsoft Excel 2016 or later**, and an interactive
@@ -108,7 +108,7 @@ working in that workbook. Excel determines whether newly opened files are read-o
 - **[Automation & advanced](https://excelmcpserver.dev/features/automation-advanced/):**
   VBA, Python in Excel, Goal Seek, scenarios, data tables, windows, and XML Maps.
 
-Explore the [capabilities behind all 433 operations](https://excelmcpserver.dev/features/).
+Explore the [capabilities behind all 437 operations](https://excelmcpserver.dev/features/).
 Current command details come from CLI help or the MCP tool descriptions.
 
 ## See It in Action
@@ -151,7 +151,7 @@ AI assistant or script
  Real Excel COM API
 ```
 
-[Read the architecture](https://github.com/sbroenne/mcp-server-excel/blob/main/docs/ARCHITECTURE.md) or browse the
+[Read the architecture](https://raw.githubusercontent.com/sbroenne/mcp-server-excel/main/docs/ARCHITECTURE.md) or browse the
 [MCP Server](https://excelmcpserver.dev/mcp-server/) and
 [CLI](https://excelmcpserver.dev/cli/) guides.
 
@@ -167,7 +167,7 @@ AI assistant or script
 [Security](https://excelmcpserver.dev/security/) ·
 [Privacy](https://excelmcpserver.dev/privacy/)
 
-**License:** MIT License - see [LICENSE](https://github.com/sbroenne/mcp-server-excel/blob/main/LICENSE) file
+**License:** MIT License - see [LICENSE](https://raw.githubusercontent.com/sbroenne/mcp-server-excel/main/LICENSE) file
 
 ## Related Projects
 

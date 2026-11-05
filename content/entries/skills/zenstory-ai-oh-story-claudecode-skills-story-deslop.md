@@ -14,7 +14,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,17 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8246
-  last_commit: 2026-11-02T08:30:43Z
-  stars_delta_7d: 240
-  stars_growth_pct: 3
-  trending_score: 247.19
+  stars: 8324
+  last_commit: 2026-11-05T09:18:15Z
+  stars_delta_7d: 318
+  stars_growth_pct: 4
+  trending_score: 330.63
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7517
     - 7737
     - 8006
-    - 8246
+    - 8324
 language: zh
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-deslop/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:36.242Z
+  fetched_at: 2026-11-05T13:13:00.228Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,11 +53,11 @@ skill:
     - references/deslop-gates.md
     - references/expression.md
     - references/narrative-focus.md
+    - references/short-deslop.md
     - references/story-logic.md
     - references/style-resolution.md
     - scripts/check-ai-patterns.js
     - scripts/check-degeneration.js
-    - scripts/normalize-punctuation.js
   pack_total_skills: 14
   is_pack_primary: false
   clients:
@@ -91,7 +91,7 @@ skill:
 
 ### Phase 1：读原文与三层扫描
 
-从正文路径确定书目录和篇幅：单个 `正文.md` 一般是短篇，`正文/` 下逐章文件一般是长篇；优先采用作者与项目的明确说明。按开头的文风裁决读本书要求，通读本次正文，按需查相关前文和已定设计，不整读无关全书。资料缺失时继续有依据的部分，标明未知。本次涉及多章时，逐章完成 Phase 1–4 再进下一章，交给写手时每章派一次。
+从正文路径确定书目录和篇幅：单个 `正文.md` 一般是短篇，`正文/` 下逐章文件一般是长篇；优先采用作者与项目的明确说明；短篇另读 [references/short-deslop.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-deslop/references/short-deslop.md) 的卖点保护。按开头的文风裁决读本书要求，通读本次正文，按需查相关前文和已定设计，不整读无关全书。资料缺失时继续有依据的部分，标明未知。本次涉及多章时，逐章完成 Phase 1–4 再进下一章，交给写手时每章派一次。
 
 默认完整读取以下三份方法后扫描；明确限定范围时按 [references/deslop-gates.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-deslop/references/deslop-gates.md) 选择需要的方法：
 
@@ -137,7 +137,7 @@ node scripts/check-ai-patterns.js --check --fail-on=blocking <正文文件...>
 
 > Agent 兼容性：只检查当前宿主：Claude `.claude/agents/{agent}.md`（`subagent_type`）、OpenCode `.opencode/agents/{agent}.md`（`subagent` 的 `agent`）、Codex `.codex/agents/{agent}.toml`（`agent_type`）、Antigravity `.agents/agents/agent-name/agent.md`（`invoke_subagent` + `TypeName`）。ZCode 查插件注册的同名角色，用 `Agent` 按实际 schema 派发，不要求 `.zcode/agents`。仅角色/工具不可用或返回未知 agent 时降级 solo/direct：白话告诉作者「这次由我直接改」，`Fallback: project custom agents unavailable -> solo` 原文只进报告最后一行「技术备注：」。
 >
-> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 38` 不一致时（标记缺失、字段缺失/非整数、小于或大于 38）**照常按当前宿主角色来源检查并 spawn**，同时用一句白话提示作者「写作助手是旧版，运行 /story-setup（ZCode 先更新插件）后新开会话」，`Notice: agents bundle 版本不匹配（项目 {N}，本版 38）` 原文写进技术备注行；大于 38 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有当前宿主角色缺失或不暴露调用能力时才降级 solo/direct，`Fallback: ... -> solo` 同样只进技术备注行。
+> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 39` 不一致时（标记缺失、字段缺失/非整数、小于或大于 39）**照常按当前宿主角色来源检查并 spawn**，同时用一句白话提示作者「写作助手是旧版，运行 /story-setup（ZCode 先更新插件）后新开会话」，`Notice: agents bundle 版本不匹配（项目 {N}，本版 39）` 原文写进技术备注行；大于 39 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有当前宿主角色缺失或不暴露调用能力时才降级 solo/direct，`Fallback: ... -> solo` 同样只进技术备注行。
 
 改动文件前，先把原文复制到书内 `.story/work/去味原稿/{YYYYMMDD}_{原文件名}`，Phase 4 对照它回读；作者要撤回时用它恢复。
 
@@ -168,7 +168,7 @@ node scripts/check-degeneration.js --check --fail-on=blocking <正文文件...>
 node scripts/normalize-punctuation.js <正文文件...>
 ```
 
-标点脚本把白名单以外的省略号、破折号、双连字符换成逗号、句号、冒号或删去，并删除独立分隔线；不动问号和感叹号，默认不改引号。仅作者或项目明确要求时才加 `--quote-mode ascii` 或 `--quote-mode yan`。白名单登记按文风裁决文件执行，不因脚本报警自行放行。
+标点脚本保留引号里的省略号（统一成 `……`），把白名单以外的其余省略号、破折号、双连字符换成逗号、句号、冒号或删去，并删除独立分隔线；不动问号和感叹号，默认不改引号。仅作者或项目明确要求时才加 `--quote-mode ascii` 或 `--quote-mode yan`。白名单登记按文风裁决文件执行，不因脚本报警自行放行。
 
 完成一次改稿与复扫；仅为新发现的具体问题继续修补，全文扫描最多三轮。没有新问题即停，达到上限仍未解决的列入报告。脚本不可用时如实说明，继续可完成的语义检查，不宣称已通过。
 

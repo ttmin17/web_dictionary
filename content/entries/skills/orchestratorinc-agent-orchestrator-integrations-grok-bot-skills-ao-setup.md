@@ -14,10 +14,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 82
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14008
-  last_commit: 2026-11-02T08:45:34Z
-  stars_delta_7d: 352
-  stars_growth_pct: 2.6
-  trending_score: 361.07
+  stars: 14127
+  last_commit: 2026-11-05T13:02:06Z
+  stars_delta_7d: 471
+  stars_growth_pct: 3.4
+  trending_score: 487.24
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13138
     - 13339
     - 13656
-    - 14008
+    - 14127
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-setup/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:23.529Z
+  fetched_at: 2026-11-05T13:12:49.372Z
   truncated: false
 type: agent_skill
 skill:
@@ -109,7 +109,7 @@ After a yes, on that computer. The download takes a few minutes, so the install 
 f(){ mkdir -p ~/.ao-grok && cat > ~/.ao-grok/install-orchestrator.sh <<'EOF'
 a=$([ "$(sysctl -n hw.optional.arm64 2>/dev/null)" = 1 ] && echo arm64 || echo x64); d=$(mktemp -d)
 echo "downloading the $a build"
-curl -fsSL -o "$d/o.dmg" "https://github.com/OrchestratorInc/agent-orchestrator/releases/latest/download/agent-orchestrator-darwin-$a.dmg" || { echo DOWNLOAD_FAILED; rm -rf "$d"; exit 1; }
+curl -fsSL -o "$d/o.dmg" "https://github.com/OrchestratorInc/agent-orchestrator/releases/latest/download/Orchestrator-darwin-$a.dmg" || { echo DOWNLOAD_FAILED; rm -rf "$d"; exit 1; }
 m=$(hdiutil attach -nobrowse -readonly "$d/o.dmg" | awk -F'\t' '/\/Volumes\//{print $NF}' | tail -1)
 [ -n "$m" ] || { echo INSTALL_FAILED; rm -rf "$d"; exit 1; }
 app=$(find "$m" -maxdepth 1 -name '*.app' 2>/dev/null | head -1)

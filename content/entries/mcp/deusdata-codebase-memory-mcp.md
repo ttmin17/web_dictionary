@@ -19,26 +19,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-02-24T22:01:00
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: DeusData/codebase-memory-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 47981
-  last_commit: 2026-11-02T06:46:29Z
-  stars_delta_7d: 483
-  stars_growth_pct: 1
-  trending_score: 487.91
-  rank_current: 7
-  rank_delta: -2
+  stars: 48153
+  last_commit: 2026-11-04T23:21:44Z
+  stars_delta_7d: 655
+  stars_growth_pct: 1.4
+  trending_score: 664.03
+  rank_current: 8
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 46502
     - 46887
     - 47498
-    - 47981
+    - 48153
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: DeusData/codebase-memory-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:22.746Z
+  fetched_at: 2026-11-05T13:11:27.620Z
   truncated: true
 type: mcp_server
 launch:
@@ -190,6 +190,8 @@ Installation also equips supported coding agents to use the graph in daily work.
 
 Hook augmentation is context-only and fail-open: it does not replace or block the requested tool call. Features vary by client and platform; some clients use durable instructions or a parent-agent handoff instead of hooks or direct subagent MCP access. Codex users review and trust installed hooks through `/hooks`. See [Multi-Agent Support](#multi-agent-support) and [Sessions, compaction, and subagents](#sessions-compaction-and-subagents) for exact support and activation requirements.
 
+Hooks are enabled by default. Run `codebase-memory-mcp install --no-hooks` to remove CBM-managed hooks while keeping MCP registration and other integration files; the choice persists for later installs and updates. Run `codebase-memory-mcp install --hooks` to re-enable them, or inspect the current preference with `codebase-memory-mcp config get install_hooks`.
+
 ### Session Coordination Daemon
 
 CBM automatically shares one per-account coordination daemon across Claude Code, Codex, OpenCode, and every other configured client. There is no opt-in setting for MCP servers or hook clients: the first daemon-backed CBM session starts it, each session registers its own work, and a session-managed daemon stops after the final session. A daemon started with `daemon start` remains running until stopped. The daemon owns long-lived background services such as watchers, shared indexing jobs, and the optional UI. Closing one session cancels work owned only by that session, while work still needed by another session continues.
@@ -307,6 +309,8 @@ Watcher registration is controlled globally by `auto_watch` (default `true`). On
 To turn the watcher off entirely, set `config set watcher_enabled false` (default `true`): the background poll thread never starts and no project is registered, while `auto_index` and manual `index_repository` keep working. Unlike `auto_watch`, which takes effect on the next refresh or registration request, `watcher_enabled` is read once when the background daemon starts, so run `codebase-memory-mcp daemon stop` after changing it; reconnecting your MCP client alone will not restart the daemon. See [docs/CONFIGURATION.md](https://github.com/DeusData/codebase-memory-mcp/blob/main/docs/CONFIGURATION.md#2-cli-managed-runtime-settings).
 
 The watcher follows **git** projects only by default: a project indexed from a directory that is not a git repository is not watched and stays at its last index until you run `index_repository` again. To have such roots polled too, set `config set watch_non_git true` (default `false`, read when the daemon starts): they are then checked on the same cadence with a file-tree scan that uses the indexer's own ignore rules.
+
+Linked git worktrees are indexed as their own projects by default. Set `config set ignore_worktrees true` to skip them on the automatic paths — useful when short-lived `git worktree add` checkouts would otherwise each leave behind a permanent index of the same repository. An explicit `index_repository` call on a worktree is then refused unless you pass `index_worktree=true`. See [docs/CONFIGURATION.md](https://github.com/DeusData/codebase-memory-mcp/blob/main/docs/CONFIGURATION.md#ignore_worktrees).
 
 ### Keeping Up to Date
 
@@ -572,40 +576,5 @@ irm https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/scripts/
 ```
 
 </details>
-
-### AUR (Arch Linux)
-
-```bash
-yay -S codebase-memory-mcp-bin
-```
-
-```bash
-paru -S codebase-memory-mcp-bin
-```
-
-The `codebase-memory-mcp-bin` package is available at: https://aur.archlinux.org/packages/codebase-memory-mcp-bin
-
-### Nix (flake)
-
-The flake exposes two server packages plus the standalone frontend:
-
-| Package | Contents |
-|---------|----------|
-| `default` (`codebase-memory-mcp`) | Standard server, no UI |
-| `codebase-memory-mcp-ui` | Server with CBM Lens embedded (`--ui=true` works) |
-| `graph-ui` | Just the built CBM Lens assets (`dist/`) |
-
-Run directly without installing:
-
-```bash
-# Standard server
-nix run github:DeusData/codebase-memory-mcp
-
-# Server with CBM Lens embedded
-nix run github:DeusData/codebase-memory-mcp#codebase-memory-mcp-ui -- --ui=true --port=9749
-# then open http://127.0.0.1:9749
-```
-
-Or build a binary into `./result/bin/codebase-memory-mcp`:
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/DeusData/codebase-memory-mcp)).*

@@ -12,10 +12,10 @@ tags:
   - ai-agent
   - anthropic
 status: active
-quality_percentile: 72
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: thClaws/thClaws
@@ -27,8 +27,8 @@ signals:
   stars_delta_7d: 8
   stars_growth_pct: 0.6
   trending_score: 8.05
-  rank_current: 125
-  rank_delta: 10
+  rank_current: 127
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1241
@@ -42,7 +42,7 @@ readme_source:
   repo: thClaws/thClaws
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.712Z
+  fetched_at: 2026-11-05T13:12:08.993Z
   truncated: false
 type: agent_tool
 tool:
@@ -70,7 +70,7 @@ A native-Rust AI agent workspace that codes, automates, remembers, and coordinat
 [![Platform](https://img.shields.io/badge/platform-macOS%20·%20Windows%20·%20Linux-lightgrey.svg)](#installation)
 [![Built with Rust](https://img.shields.io/badge/built%20with-Rust-orange.svg)](https://www.rust-lang.org/)
 
-[Website](https://thclaws.ai) · [Download](https://thclaws.ai/downloads.html) · [Manual](https://thclaws.ai/manual) · [Enterprise](https://github.com/thClaws/thClaws/blob/main/ENTERPRISE.md) · [Discussions](https://github.com/thClaws/thClaws/discussions) · [Contribute](#contribute) · [Supporters](https://github.com/thClaws/thClaws/blob/main/SUPPORTERS.md)
+[Website](https://thclaws.ai) · [Download](https://thclaws.ai/downloads.html) · [Manual](https://thclaws.ai/manual) · [Enterprise](https://raw.githubusercontent.com/thClaws/thClaws/main/ENTERPRISE.md) · [Discussions](https://github.com/thClaws/thClaws/discussions) · [Contribute](#contribute) · [Supporters](https://github.com/thClaws/thClaws/blob/main/SUPPORTERS.md)
 
 </div>
 

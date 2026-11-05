@@ -16,7 +16,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8246
-  last_commit: 2026-11-02T08:30:43Z
-  stars_delta_7d: 240
-  stars_growth_pct: 3
-  trending_score: 247.19
+  stars: 8324
+  last_commit: 2026-11-05T09:18:15Z
+  stars_delta_7d: 318
+  stars_growth_pct: 4
+  trending_score: 330.63
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7517
     - 7737
     - 8006
-    - 8246
+    - 8324
 language: zh
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-review/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:36.243Z
+  fetched_at: 2026-11-05T13:13:00.229Z
   truncated: false
 type: agent_skill
 skill:
@@ -72,7 +72,7 @@ skill:
 ---
 
 # story-review：多视角对抗式审查
-> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 38` 不一致时（标记缺失、字段缺失/非整数、小于或大于 38）**照常按当前宿主角色来源检查并 spawn**；同时在「这次怎么审的」里用一句白话提示作者「审稿助手是旧版，运行 /story-setup（ZCode 先更新插件）后新开会话」，`Notice: agents bundle 版本不匹配（项目 {N}，本版 38）` 原文写进技术备注行；大于 38 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。版本提示本身不触发降级；文件缺失或异常、工具不可用、递归限制或调用失败按 Phase 0 处理，技术备注写 `Fallback: ... -> solo`。
+> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 39` 不一致时（标记缺失、字段缺失/非整数、小于或大于 39）**照常按当前宿主角色来源检查并 spawn**；同时在「这次怎么审的」里用一句白话提示作者「审稿助手是旧版，运行 /story-setup（ZCode 先更新插件）后新开会话」，`Notice: agents bundle 版本不匹配（项目 {N}，本版 39）` 原文写进技术备注行；大于 39 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。版本提示本身不触发降级；文件缺失或异常、工具不可用、递归限制或调用失败按 Phase 0 处理，技术备注写 `Fallback: ... -> solo`。
 
 你负责协调审查，找出小说的结构、角色、文字与设定问题，给出有原文依据的修改建议。
 

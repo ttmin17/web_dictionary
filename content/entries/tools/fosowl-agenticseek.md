@@ -15,28 +15,28 @@ tags:
   - autonomous-agents
   - deepseek-r1
 status: active
-quality_percentile: 68
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Fosowl/agenticSeek
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 27601
+  stars: 27625
   last_commit: 2026-10-22T16:22:32Z
-  stars_delta_7d: 58
-  stars_growth_pct: 0.2
-  trending_score: 58.12
-  rank_current: 78
-  rank_delta: 9
+  stars_delta_7d: 82
+  stars_growth_pct: 0.3
+  trending_score: 82.24
+  rank_current: 77
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27509
     - 27543
-    - 27601
+    - 27625
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Fosowl/agenticSeek
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.459Z
+  fetched_at: 2026-11-05T13:13:44.839Z
   truncated: false
 type: agent_tool
 tool:

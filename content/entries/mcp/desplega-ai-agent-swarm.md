@@ -15,21 +15,21 @@ status: active
 quality_percentile: 32
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: desplega-ai/agent-swarm
   official_vendor: false
   license: MIT
 signals:
-  stars: 982
-  last_commit: 2026-11-02T08:37:15Z
+  stars: 1008
+  last_commit: 2026-11-05T13:02:30Z
   stars_delta_7d: 22
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 982
+    - 1008
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +38,7 @@ readme_source:
   repo: desplega-ai/agent-swarm
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.255Z
+  fetched_at: 2026-11-05T13:13:44.454Z
   truncated: false
 type: mcp_server
 launch:
@@ -150,7 +150,7 @@ No server yet? Deploy the Railway template in one click:
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/agent-swarm)
 
-Or [deploy one](https://docs.agent-swarm.dev/docs/guides/one-click-deploy) on any VPS: paste [`deploy/cloud-init.yaml`](https://github.com/desplega-ai/agent-swarm/blob/main/deploy/cloud-init.yaml) as the user data of a new 4 vCPU / 8 GB Ubuntu server (Hetzner, DigitalOcean, Lightsail, Vultr). It installs Docker and Caddy, serves the API over HTTPS on `<ip>.sslip.io` or your domain, and shows the `/setup` link to root at login. To look first, [try it for an hour on E2B](https://docs.agent-swarm.dev/docs/guides/one-click-deploy#try-it-for-an-hour-on-e2b); that trial deletes its data when the sandboxes stop.
+Or [deploy one](https://docs.agent-swarm.dev/docs/guides/one-click-deploy) on any VPS: paste [`deploy/cloud-init.yaml`](https://raw.githubusercontent.com/desplega-ai/agent-swarm/main/deploy/cloud-init.yaml) as the user data of a new 4 vCPU / 8 GB Ubuntu server (Hetzner, DigitalOcean, Lightsail, Vultr). It installs Docker and Caddy, serves the API over HTTPS on `<ip>.sslip.io` or your domain, and shows the `/setup` link to root at login. To look first, [try it for an hour on E2B](https://docs.agent-swarm.dev/docs/guides/one-click-deploy#try-it-for-an-hour-on-e2b); that trial deletes its data when the sandboxes stop.
 
 Or use the examples directly:
 

@@ -16,7 +16,7 @@ status: active
 quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: datamodel-code-generator/datamodel-code-generator
@@ -24,14 +24,14 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4047
-  last_commit: 2026-11-02T08:56:36Z
+  stars: 4049
+  last_commit: 2026-11-05T13:08:13Z
   stars_delta_7d: 10
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 4047
+    - 4049
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +39,7 @@ readme_source:
   repo: datamodel-code-generator/datamodel-code-generator
   path: skills/datamodel-code-generator/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:46.953Z
+  fetched_at: 2026-11-05T13:13:14.385Z
   truncated: false
 type: agent_skill
 skill:

@@ -15,7 +15,7 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -23,16 +23,16 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 70623
-  last_commit: 2026-11-02T07:02:10Z
-  stars_delta_7d: 399
-  stars_growth_pct: 0.6
-  trending_score: 401.27
+  stars: 70818
+  last_commit: 2026-11-04T16:40:29Z
+  stars_delta_7d: 594
+  stars_growth_pct: 0.8
+  trending_score: 599.02
   velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
     - 70224
-    - 70623
+    - 70818
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/artifact-design/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:14.069Z
+  fetched_at: 2026-11-05T13:12:31.583Z
   truncated: false
 type: agent_skill
 skill:

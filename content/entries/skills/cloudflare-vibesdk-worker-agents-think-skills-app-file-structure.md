@@ -15,10 +15,10 @@ tags:
   - durable-objects
   - text-to-app
 status: active
-quality_percentile: 100
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: cloudflare/vibesdk
@@ -26,16 +26,16 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 5448
+  stars: 5458
   last_commit: 2026-10-22T01:20:01Z
-  stars_delta_7d: 21
-  stars_growth_pct: 0.4
-  trending_score: 21.08
+  stars_delta_7d: 31
+  stars_growth_pct: 0.6
+  trending_score: 31.18
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5411
     - 5427
-    - 5448
+    - 5458
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: cloudflare/vibesdk
   path: worker/agents/think/skills/app-file-structure/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:03.251Z
+  fetched_at: 2026-11-05T13:13:38.337Z
   truncated: false
 type: agent_skill
 skill:

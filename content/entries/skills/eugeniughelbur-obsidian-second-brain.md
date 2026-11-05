@@ -16,10 +16,10 @@ tags:
   - ai-agents
   - ai-note-taking
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-03-24T11:58:12
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: eugeniughelbur/obsidian-second-brain
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 5100
-  last_commit: 2026-11-01T15:29:14Z
-  stars_delta_7d: 180
-  stars_growth_pct: 3.7
-  trending_score: 186.59
-  rank_current: 67
-  rank_delta: 11
+  stars: 5166
+  last_commit: 2026-11-04T22:10:55Z
+  stars_delta_7d: 246
+  stars_growth_pct: 5
+  trending_score: 258.3
+  rank_current: 68
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4746
     - 4811
     - 4920
-    - 5100
+    - 5166
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: eugeniughelbur/obsidian-second-brain
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:46.773Z
+  fetched_at: 2026-11-05T13:13:14.221Z
   truncated: true
 type: agent_skill
 skill:
@@ -140,12 +140,8 @@ Scan the structure to understand: folder names, template locations, naming conve
 
 ### 3. Bootstrap a new vault
 
-If the user has no vault yet, run:
+If the user has no vault yet, bootstrap it from the local copy of the skill. The skill is already installed if you are reading this file, so never pipe a remote install script into a shell on the user's behalf.
 ```bash
-# One-line install + bootstrap (asks 3 questions: vault path, your name, preset)
-curl -sL https://raw.githubusercontent.com/eugeniughelbur/obsidian-second-brain/main/scripts/quick-install.sh | bash
-
-# Or manual:
 python scripts/bootstrap_vault.py --path ~/path/to/vault --name "Your Name"
 
 # With a preset:

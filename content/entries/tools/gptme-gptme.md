@@ -16,25 +16,25 @@ status: active
 quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: gptme/gptme
   official_vendor: false
   license: MIT
 signals:
-  stars: 4466
-  last_commit: 2026-11-02T08:47:30Z
-  stars_delta_7d: 3
+  stars: 4469
+  last_commit: 2026-11-05T13:06:58Z
+  stars_delta_7d: 6
   stars_growth_pct: 0.1
-  trending_score: 3
-  rank_current: 139
-  rank_delta: -15
+  trending_score: 6.01
+  rank_current: 131
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4456
     - 4463
-    - 4466
+    - 4469
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: gptme/gptme
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:07:13.777Z
+  fetched_at: 2026-11-05T13:13:44.782Z
   truncated: false
 type: agent_tool
 tool:
@@ -667,7 +667,7 @@ Community and usage numbers (stars, downloads, contributors) are collected daily
 ## 📝 Citation
 
 If you use gptme in your research, please cite it. The citation metadata lives in
-[`CITATION.cff`](https://github.com/gptme/gptme/blob/master/CITATION.cff) (GitHub's "Cite this repository" button uses it).
+[`CITATION.cff`](https://raw.githubusercontent.com/gptme/gptme/master/CITATION.cff) (GitHub's "Cite this repository" button uses it).
 The [Zenodo concept DOI](https://doi.org/10.5281/zenodo.22816651) identifies gptme
 across all archived versions. For reproducibility, cite the version-specific DOI
 from the Zenodo record for the release you used.

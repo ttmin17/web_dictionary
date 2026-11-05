@@ -15,10 +15,10 @@ tags:
   - anthropic
   - automation
 status: active
-quality_percentile: 96
+quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: aden-hive/hive
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11131
-  last_commit: 2026-10-26T11:58:57Z
-  stars_delta_7d: 9
-  stars_growth_pct: 0.1
-  trending_score: 9.01
+  stars: 11142
+  last_commit: 2026-11-02T10:07:20Z
+  stars_delta_7d: 20
+  stars_growth_pct: 0.2
+  trending_score: 20.04
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11099
     - 11108
     - 11122
-    - 11131
+    - 11142
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: aden-hive/hive
   path: core/framework/skills/_preset_skills/terminal-tools-troubleshooting/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:45.646Z
+  fetched_at: 2026-11-05T13:13:12.237Z
   truncated: false
 type: agent_skill
 skill:

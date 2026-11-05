@@ -17,26 +17,26 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Vexa-ai/vexa
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2938
-  last_commit: 2026-11-02T08:53:39Z
-  stars_delta_7d: 31
-  stars_growth_pct: 1.1
-  trending_score: 31.33
-  rank_current: 51
-  rank_delta: 11
+  stars: 2950
+  last_commit: 2026-11-04T16:34:26Z
+  stars_delta_7d: 43
+  stars_growth_pct: 1.5
+  trending_score: 43.64
+  rank_current: 52
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2879
     - 2889
     - 2907
-    - 2938
+    - 2950
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Vexa-ai/vexa
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.504Z
+  fetched_at: 2026-11-05T13:11:48.766Z
   truncated: false
 type: mcp_server
 launch:
@@ -449,7 +449,7 @@ What that means in practice:
 
 | Artifact | What it answers |
 |---|---|
-| [`architecture.calm.json`](https://github.com/Vexa-ai/vexa/blob/main/architecture.calm.json) | machine-readable architecture (FINOS **CALM**) — every service and data flow, drift-gated in CI |
+| [`architecture.calm.json`](https://raw.githubusercontent.com/Vexa-ai/vexa/main/architecture.calm.json) | machine-readable architecture (FINOS **CALM**) — every service and data flow, drift-gated in CI |
 | [`SECURITY.md`](https://github.com/Vexa-ai/vexa/blob/main/SECURITY.md) | how to report a vulnerability |
 | [`security-insights.yml`](https://github.com/Vexa-ai/vexa/blob/main/security-insights.yml) | OpenSSF Security Insights manifest |
 | [`license-exceptions.json`](https://github.com/Vexa-ai/vexa/blob/main/license-exceptions.json) | license gating: Category-A permissive deps, exceptions explicit |

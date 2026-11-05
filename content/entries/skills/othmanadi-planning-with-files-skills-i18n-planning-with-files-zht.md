@@ -16,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27822
-  last_commit: 2026-10-30T20:57:42Z
-  stars_delta_7d: 171
-  stars_growth_pct: 0.6
-  trending_score: 172.06
+  stars: 27897
+  last_commit: 2026-11-04T18:13:42Z
+  stars_delta_7d: 246
+  stars_growth_pct: 0.9
+  trending_score: 248.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27430
     - 27522
     - 27651
-    - 27822
+    - 27897
 language: zh
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/i18n/planning-with-files-zht/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:19.481Z
+  fetched_at: 2026-11-05T13:12:38.536Z
   truncated: false
 type: agent_skill
 skill:
@@ -287,6 +287,8 @@ if 操作失敗:
 恢復任務前，可執行 `sh "<skill-dir>/scripts/set-active-plan.sh" --list` 尋找計畫；在 Windows PowerShell 中執行 `& "<skill-dir>/scripts/set-active-plan.ps1" -List`。將 `<skill-dir>` 替換為此技能的安裝目錄，並將目前工作目錄保持在專案根目錄。
 
 此命令僅執行讀取，列出目前目錄下 `.planning/` 中的具名計畫及階段進度。`[active]` 表示共用的預設指標，不會將工作階段綁定至計畫。平行任務仍需為每個宿主設定 `PLAN_ID`，或使用獨立的工作樹。
+
+當鉤子提示有多個計畫可用，或某個具名計畫的所有階段均已完成時，執行清單命令，並告訴使用者哪些計畫看起來已經完成。只封存使用者同意的計畫：`--archive <id>`（PowerShell：`-Archive <id>`）預覽移動到 `.planning/.archive/` 的操作，`--yes`（`-Yes`）執行移動，`--restore <id>`（`-Restore <id>`）將計畫移回。不要僅因計畫時間較久或已完成就將其封存。
 
 ## 安全邊界
 

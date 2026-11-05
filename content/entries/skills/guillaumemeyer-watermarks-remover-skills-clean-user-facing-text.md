@@ -19,7 +19,7 @@ status: active
 quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-08-11T16:32:38
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: guillaumemeyer/watermarks-remover
@@ -27,11 +27,11 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 25939
-  last_commit: 2026-11-01T13:33:56Z
-  stars_delta_7d: 1020
-  stars_growth_pct: 4.1
-  trending_score: 1061.75
+  stars: 26358
+  last_commit: 2026-11-02T20:26:10Z
+  stars_delta_7d: 1439
+  stars_growth_pct: 5.8
+  trending_score: 1522.1
   rank_current: 29
   rank_delta: 6
   velocity_source: snapshot_delta
@@ -39,7 +39,7 @@ signals:
     - 23994
     - 24395
     - 24919
-    - 25939
+    - 26358
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: guillaumemeyer/watermarks-remover
   path: skills/clean-user-facing-text/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:34.451Z
+  fetched_at: 2026-11-05T13:12:58.026Z
   truncated: false
 type: agent_skill
 skill:

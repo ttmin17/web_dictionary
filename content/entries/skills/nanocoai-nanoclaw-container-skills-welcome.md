@@ -18,7 +18,7 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: nanocoai/nanoclaw
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 31070
-  last_commit: 2026-11-02T06:38:17Z
-  stars_delta_7d: 54
+  stars: 31086
+  last_commit: 2026-11-05T12:27:55Z
+  stars_delta_7d: 70
   stars_growth_pct: 0.2
-  trending_score: 54.09
+  trending_score: 70.16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 30935
     - 30966
     - 31016
-    - 31070
+    - 31086
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: nanocoai/nanoclaw
   path: container/skills/welcome/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:15.252Z
+  fetched_at: 2026-11-05T13:12:32.370Z
   truncated: false
 type: agent_skill
 skill:

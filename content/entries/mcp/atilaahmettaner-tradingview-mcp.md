@@ -13,21 +13,21 @@ tags:
   - futures
   - market-data
 status: active
-quality_percentile: 86
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: atilaahmettaner/tradingview-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5190
+  stars: 5215
   last_commit: 2026-10-29T14:24:40Z
-  stars_delta_7d: 52
-  stars_growth_pct: 1
-  trending_score: 52.53
+  stars_delta_7d: 77
+  stars_growth_pct: 1.5
+  trending_score: 78.15
   rank_current: 36
   rank_delta: -1
   velocity_source: snapshot_delta
@@ -35,7 +35,7 @@ signals:
     - 5047
     - 5083
     - 5138
-    - 5190
+    - 5215
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: atilaahmettaner/tradingview-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.336Z
+  fetched_at: 2026-11-05T13:11:43.637Z
   truncated: false
 type: mcp_server
 launch:

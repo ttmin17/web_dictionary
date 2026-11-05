@@ -17,26 +17,26 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2025-12-05T17:58:26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: YishenTu/claudian
   official_vendor: false
   license: MIT
 signals:
-  stars: 15889
-  last_commit: 2026-11-02T07:41:18Z
-  stars_delta_7d: 89
-  stars_growth_pct: 0.6
-  trending_score: 89.5
-  rank_current: 64
-  rank_delta: -4
+  stars: 15912
+  last_commit: 2026-11-05T12:39:52Z
+  stars_delta_7d: 112
+  stars_growth_pct: 0.7
+  trending_score: 112.79
+  rank_current: 67
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15653
     - 15725
     - 15800
-    - 15889
+    - 15912
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: YishenTu/claudian
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:22.292Z
+  fetched_at: 2026-11-05T13:12:42.870Z
   truncated: false
 type: agent_tool
 tool:

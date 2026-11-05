@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -26,11 +26,11 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 112992
-  last_commit: 2026-11-02T09:03:00Z
-  stars_delta_7d: 6772
-  stars_growth_pct: 6.4
-  trending_score: 7203.75
+  stars: 116163
+  last_commit: 2026-11-05T13:05:51Z
+  stars_delta_7d: 9943
+  stars_growth_pct: 9.4
+  trending_score: 10873.74
   rank_current: 4
   rank_delta: -3
   velocity_source: snapshot_delta
@@ -38,7 +38,7 @@ signals:
     - 91386
     - 97177
     - 106220
-    - 112992
+    - 116163
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: stablyai/orca
   path: resources/native-chat-visuals/skills/orca-chat-visuals/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:03.761Z
+  fetched_at: 2026-11-05T13:12:17.680Z
   truncated: false
 type: agent_skill
 skill:
@@ -85,6 +85,16 @@ clearer.
 - Use Orca's theme variables for surfaces, text, and controls; pair hover `--accent` with
   `--accent-foreground`. Scope fixed-palette CSS to its mockup. Orca updates tokens and
   `color-scheme` live. Charts use `--chart-1` to `--chart-5`.
+- Make the saved HTML readable in an ordinary browser too: use paired fallback values such as
+  `background:var(--background,#fff);color:var(--foreground,#171717)` for every theme-token use.
+  Scripts reading chart colors need a fallback too: `getComputedStyle(document.documentElement)
+  .getPropertyValue('--chart-1').trim() || '#2563eb'`. Never redefine Orca's tokens on `:root`:
+  those declarations would override the viewer's live theme. Use separate names for local colors.
+- Exposed tokens: `--background`, `--foreground`, `--card`, `--card-foreground`, `--popover`,
+  `--popover-foreground`, `--primary`, `--primary-foreground`, `--secondary`,
+  `--secondary-foreground`, `--muted`, `--muted-foreground`, `--accent`, `--accent-foreground`,
+  `--destructive`, `--destructive-foreground`, `--border`, `--input`, `--ring`, `--radius`,
+  `--font-sans`, `--font-mono`, and `--chart-1` through `--chart-5`.
 
 ## Showing it
 

@@ -14,26 +14,26 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ThinkInAIXYZ/deepchat
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6384
-  last_commit: 2026-11-02T07:45:19Z
-  stars_delta_7d: 13
+  stars: 6385
+  last_commit: 2026-11-05T10:16:26Z
+  stars_delta_7d: 14
   stars_growth_pct: 0.2
-  trending_score: 13.03
-  rank_current: 118
-  rank_delta: 19
+  trending_score: 14.03
+  rank_current: 120
+  rank_delta: 17
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6359
     - 6370
     - 6371
-    - 6384
+    - 6385
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: ThinkInAIXYZ/deepchat
   path: README.md
   branch: dev
-  fetched_at: 2026-11-02T09:06:46.888Z
+  fetched_at: 2026-11-05T13:13:14.157Z
   truncated: false
 type: agent_tool
 tool:
@@ -85,41 +85,6 @@ tool:
 <div align="center">
   <a href="https://github.com/ThinkInAIXYZ/deepchat/blob/dev/README.zh.md">中文</a> / <a href="https://github.com/ThinkInAIXYZ/deepchat/blob/dev/README.md">English</a> / <a href="https://github.com/ThinkInAIXYZ/deepchat/blob/dev/README.jp.md">日本語</a>
 </div>
-
-## ❤️ Sponsor
-
-<table>
-  <tr>
-    <td width="25%" align="center">
-      <a href="https://www.openmodel.ai?ref=ZGLyq8YQ">
-        <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/assets/sponsors/openmodel.png" alt="OpenModel" width="240" />
-      </a>
-    </td>
-    <td width="75%">
-      Thanks to OpenModel for sponsoring this project! OpenModel offers client-specific discounts of
-      up to 90% for Codex and 60% for Claude Code across supported models, helping developers cut API
-      costs without changing how they work. Just connect your OpenModel API key and keep using Codex
-      or Claude Code as usual — supported clients are detected automatically and discounted routes
-      are applied with no extra parameters or manual routing required. You can also configure
-      fallback behavior per API key, choosing whether to continue at standard pricing or stop when a
-      discounted route is temporarily unavailable. DeepChat users can register via <a
-      href="https://www.openmodel.ai?ref=ZGLyq8YQ">this link</a>.
-    </td>
-  </tr>
-  <tr>
-    <td width="25%" align="center">
-      <a href="https://www.packyapi.ai/register?aff=0A33">
-        <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/assets/sponsors/packycode.png" alt="PackyCode" width="240" />
-      </a>
-    </td>
-    <td width="75%">
-      PackyCode is a stable, high-performance API relay provider, offering relay services for Claude
-      Code, Codex, Gemini, and more. With automatic failover, smart routing, and unlimited
-      concurrency, it turns AI into a real productivity tool. Register via <a
-      href="https://www.packyapi.ai/register?aff=0A33">this link</a> and get started!
-    </td>
-  </tr>
-</table>
 
 ## 📑 Table of Contents
 
@@ -544,6 +509,10 @@ Common commands include `/start`, `/help`, `/pair`, `/new`, `/sessions`, `/use`,
       <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/obscurify.svg" width="50" height="50" alt="Obscurify.ai Icon"><br/>
       <a href="https://obscurify.ai/?utm_source=deepchat">Obscurify.ai</a>
     </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/wally-color.svg" width="50" height="50" alt="Wally Icon"><br/>
+      <a href="https://www.runwally.com/">Wally</a>
+    </td>
   </tr>
 
 </table>
@@ -627,7 +596,7 @@ Check the [Contribution Guidelines](https://github.com/ThinkInAIXYZ/deepchat/blo
 
 ## 👨‍💻 Contributors
 
-Thank you for considering contributing to deepchat! The contribution guide can be found in the [Contribution Guidelines](https://github.com/ThinkInAIXYZ/deepchat/blob/dev/CONTRIBUTING.md).
+Thank you for considering contributing to deepchat! The contribution guide can be found in the [Contribution Guidelines](https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/CONTRIBUTING.md).
 
 <a href="https://openomy.com/thinkinaixyz/deepchat" target="_blank" style="display: block; width: 100%;" align="center">
   <img src="https://openomy.com/svg?repo=thinkinaixyz/deepchat&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />

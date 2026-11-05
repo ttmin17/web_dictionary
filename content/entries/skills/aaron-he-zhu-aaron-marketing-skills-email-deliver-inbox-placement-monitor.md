@@ -19,7 +19,7 @@ status: active
 quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: aaron-he-zhu/aaron-marketing-skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3048
-  last_commit: 2026-11-02T03:58:19Z
-  stars_delta_7d: 34
-  stars_growth_pct: 1.1
-  trending_score: 34.38
+  stars: 3072
+  last_commit: 2026-11-05T04:47:38Z
+  stars_delta_7d: 58
+  stars_growth_pct: 1.9
+  trending_score: 59.12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2930
     - 2980
     - 3014
-    - 3048
+    - 3072
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: aaron-he-zhu/aaron-marketing-skills
   path: email/deliver/inbox-placement-monitor/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:53.857Z
+  fetched_at: 2026-11-05T13:13:24.176Z
   truncated: false
 type: agent_skill
 skill:

@@ -16,7 +16,7 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-05-11T01:08:15
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: simonlin1212/a-stock-data
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11397
-  last_commit: 2026-10-30T11:58:11Z
-  stars_delta_7d: 258
-  stars_growth_pct: 2.3
-  trending_score: 263.98
-  rank_current: 53
-  rank_delta: 9
+  stars: 11525
+  last_commit: 2026-11-03T23:52:13Z
+  stars_delta_7d: 386
+  stars_growth_pct: 3.5
+  trending_score: 399.38
+  rank_current: 51
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10843
     - 10946
     - 11139
-    - 11397
+    - 11525
 language: zh
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: simonlin1212/a-stock-data
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:26.404Z
+  fetched_at: 2026-11-05T13:12:47.389Z
   truncated: true
 type: agent_skill
 skill:
@@ -75,9 +75,13 @@ skill:
 > 
 > 作者：Simon 林 · X [@linsizhen](https://x.com/linsizhen) · 邮箱：simonlin0423@gmail.com
 
-# A股全栈数据工具包 V3.10.3
+# A股全栈数据工具包 V3.10.4
 
 十五层数据架构，87 个能力端点（82 主端点 + 5 备胎）、34 个来源。V3.10 新增的 2 个入口于 2026-09-22 实测，V3.9 新增的 25 个入口于 2026-09-20 实测；旧端点的验证日期见各章节。覆盖主板/创业板/科创板/ST，北交所覆盖依端点而异；已有备胎的数据可按「备用源速查」降级。
+
+> **V3.10.4（基金复权修复，2026-11-04 · #64）：** 入口数、来源数不变，个股的返回值不变。§1.6 `sina_adjust_factor()` / `apply_adjust()`：
+> 基金（ETF / LOF）原来只读新浪的 `f`（基金恒为 1），复权等于没做；现在补读 `s`（累计份额折算比例）和 `u`（累计每份分红），
+> 前复权 `raw / s - u`、后复权 `(raw + u) * s`，因子多出 `split` / `dividend`，结果多出 `adj_split` / `adj_dividend`。
 
 > **V3.10.3（上证e互动时间列修复，2026-10-23）：** 入口数、来源数不变，返回的数据也不变。§10.3 `sse_e_interaction()`：
 > 站点 1 天内的回复时间写成「昨天 18:22」，原来只认绝对时间，遇到就整页抛 `RuntimeError`；现在相对 / 绝对写法都换算成
@@ -1268,8 +1272,8 @@ etf_quotes = tencent_quote(["510050", "510300"])
 | `volume` 单位 | **科创板（688 / 689）是股**，其余是手：沪深主板、创业板、B 股、ETF（含科创板 ETF 588）、LOF、REITs 1 手 = 100 股 / 份，可转债 1 手 = 10 张，指数也是手；日周月线、分钟线、复权与否都是这个规则 |
 
 > ⚠️ **腾讯前复权是等差口径**（逐次减去每股分红）：茅台 2020-01-02 原始价 1130.00、腾讯 qfq 870.741，差额正是此后累计分红；
-> 高分红老股早年会被减成负数（茅台 2015 年约 -117.6）。本函数遇到 ≤0 价格直接抛错。**长区间回测请取 `adjust=''`，
-> 再用 §1.6 的比例因子复权**。本接口**没有成交额**，需要成交额用 §1.3。
+> 高分红老股早年会被减成负数（茅台 2015 年约 -117.6）。本函数遇到 ≤0 价格直接抛错。**个股长区间回测请取 `adjust=''`，
+> 再用 §1.6 的比例因子复权；基金（ETF/LOF）长区间请用 §1.6 的 `hfq`（基金为等差+折算口径）**。本接口**没有成交额**，需要成交额用 §1.3。
 
 > ⚠️ **成交量按股对账前先看这几条**（#57，2026-10-05 对照通达信盘后包与 Baostock 实测）：
 > - **整手取整**：科创板以外，日线的量是当日总股数取整到手——2020-03-11 起基本是四舍五入（实测差 −52～+50 股），更早是舍去零头（差 −99～0 股），

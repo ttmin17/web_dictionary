@@ -14,28 +14,28 @@ tags:
   - ai-assistant
   - desktop
 status: active
-quality_percentile: 88
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: tinyhumansai/openhuman
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 42496
-  last_commit: 2026-10-31T17:04:06Z
-  stars_delta_7d: 153
-  stars_growth_pct: 0.4
-  trending_score: 153.55
-  rank_current: 48
-  rank_delta: -10
+  stars: 42559
+  last_commit: 2026-11-05T11:05:32Z
+  stars_delta_7d: 216
+  stars_growth_pct: 0.5
+  trending_score: 217.1
+  rank_current: 49
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 42157
     - 42343
-    - 42496
+    - 42559
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: tinyhumansai/openhuman
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:53.999Z
+  fetched_at: 2026-11-05T13:13:24.458Z
   truncated: false
 type: agent_tool
 tool:

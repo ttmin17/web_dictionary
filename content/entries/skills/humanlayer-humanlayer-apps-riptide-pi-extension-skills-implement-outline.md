@@ -13,10 +13,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 71
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: humanlayer/humanlayer
@@ -24,15 +24,15 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12750
-  last_commit: 2026-10-31T16:19:01Z
-  stars_delta_7d: 222
-  stars_growth_pct: 1.8
-  trending_score: 225.93
+  stars: 12810
+  last_commit: 2026-11-02T23:41:54Z
+  stars_delta_7d: 282
+  stars_growth_pct: 2.3
+  trending_score: 288.35
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12528
-    - 12750
+    - 12810
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: humanlayer/humanlayer
   path: apps/riptide-pi-extension/skills/implement-outline/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:26.166Z
+  fetched_at: 2026-11-05T13:12:51.739Z
   truncated: false
 type: agent_skill
 skill:

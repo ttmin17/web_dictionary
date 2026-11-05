@@ -14,10 +14,10 @@ tags:
   - antigravity
   - claude-code
 status: active
-quality_percentile: 97
+quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/elephant-goldfish-model
@@ -25,14 +25,14 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 9666
-  last_commit: 2026-11-01T13:38:10Z
-  stars_delta_7d: 1349
+  stars: 12110
+  last_commit: 2026-11-04T20:36:04Z
+  stars_delta_7d: 1591
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 9666
+    - 12110
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: google/elephant-goldfish-model
   path: distributions/claude/skills/egm-bootstrap/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:32.178Z
+  fetched_at: 2026-11-05T13:12:49.759Z
   truncated: false
 type: agent_skill
 skill:
@@ -109,9 +109,9 @@ If your harness has no subagent tool, run the scout steps inline.
     `git add`). All filesystem changes must be written locally using standard
     file-writing tools. Tracking
     and submitting is deferred to the human user.
-3.  **Temporary File Isolation**: Parallel workers sharing the workspace must
-    perform all status tracking, check-pointing, and log writing in independent,
-    worker-specific directories outside the project repository workspace.
+3.  **Temporary File Isolation**: Each worker keeps its status, checkpoint,
+    and log files in its own directory outside the workspace (host scratch or
+    `mktemp -d`), never a fixed, shared path. If neither exists, skip them.
 4.  **Tool Usage (CRITICAL)**: Use your shell, file-reading, file-writing, and file-editing tools for directory discovery and contract/README
     generation. Adhere to clean Markdown formatting directly during generation
     (standard headers, tables, and fenced code blocks). If a project markdown

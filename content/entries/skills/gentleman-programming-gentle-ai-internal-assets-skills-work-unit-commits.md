@@ -15,7 +15,7 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8181
-  last_commit: 2026-11-02T02:09:02Z
-  stars_delta_7d: 161
-  stars_growth_pct: 2
-  trending_score: 164.23
+  stars: 8335
+  last_commit: 2026-11-05T09:09:20Z
+  stars_delta_7d: 315
+  stars_growth_pct: 3.9
+  trending_score: 327.37
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7736
     - 7849
     - 8020
-    - 8181
+    - 8335
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/work-unit-commits/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:38.260Z
+  fetched_at: 2026-11-05T13:13:02.663Z
   truncated: false
 type: agent_skill
 skill:

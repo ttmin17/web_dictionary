@@ -14,25 +14,25 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: TencentCloud/Octop
   official_vendor: false
   license: MIT
 signals:
-  stars: 11462
-  last_commit: 2026-11-02T07:19:07Z
-  stars_delta_7d: 377
-  stars_growth_pct: 3.4
-  trending_score: 389.82
-  rank_current: 25
-  rank_delta: -13
+  stars: 11697
+  last_commit: 2026-11-05T13:03:29Z
+  stars_delta_7d: 612
+  stars_growth_pct: 5.5
+  trending_score: 645.79
+  rank_current: 22
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9981
     - 11085
-    - 11462
+    - 11697
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: TencentCloud/Octop
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:01.516Z
+  fetched_at: 2026-11-05T13:13:33.128Z
   truncated: false
 type: agent_tool
 tool:
@@ -76,7 +76,7 @@ tool:
 <p align="center">
   <a href="https://www.python.org/downloads/"><img alt="Python 3.12+" src="https://img.shields.io/badge/python-3.12%2B-blue?logo=python&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green" /></a>
-  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.0.3b2-orange" /></a>
+  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.0.3b3-orange" /></a>
   <a href="https://pypi.org/project/octop/"><img src="https://img.shields.io/pypi/v/octop" alt="PyPI" /></a>
   <a href="https://github.com/astral-sh/ruff"><img alt="Code Style: Ruff" src="https://img.shields.io/badge/code%20style-ruff-000000?logo=ruff&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TencentCloud/Octop?style=social" /></a>
@@ -250,19 +250,19 @@ This roadmap may shift as the community grows; treat it as indicative only.
 **macOS / Linux** — one-line installer (recommended):
 
 ```bash
-curl -fsSL https://finnie-1258344699.cos.ap-guangzhou.myqcloud.com/octop/install.sh | bash
+curl -fsSL https://download.octop.cloud/octop/scripts/install.sh | bash
 ```
 
 **Windows (PowerShell)**:
 
 ```powershell
-irm https://finnie-1258344699.cos.ap-guangzhou.myqcloud.com/octop/install.ps1 | iex
+irm https://download.octop.cloud/octop/scripts/install.ps1 | iex
 ```
 
 **Windows (cmd)** — download and run, or from a cloned repo:
 
 ```bat
-curl -fsSL https://finnie-1258344699.cos.ap-guangzhou.myqcloud.com/octop/install.bat -o install.bat
+curl -fsSL https://download.octop.cloud/octop/scripts/install.bat -o install.bat
 install.bat
 ```
 
@@ -278,7 +278,7 @@ The installer places `octop` on your PATH via `~/.octop/bin`. Optional extras:
 
 ```bash
 # Download Playwright Chromium for browser automation (skipped if a system Chrome/Chromium is already present)
-curl -fsSL https://finnie-1258344699.cos.ap-guangzhou.myqcloud.com/octop/install.sh | bash -s -- --extras browser
+curl -fsSL https://download.octop.cloud/octop/scripts/install.sh | bash -s -- --extras browser
 ```
 
 See [scripts/README.md](https://github.com/TencentCloud/Octop/blob/main/scripts/README.md) for all install options (`--version`, `--from-source`, `--mirror`, Windows flags).
@@ -290,7 +290,7 @@ See [scripts/README.md](https://github.com/TencentCloud/Octop/blob/main/scripts/
 | Windows | `Octop-desktop-windows-amd64-<version>.exe` (64-bit) / `Octop-desktop-windows-arm64-<version>.exe` (ARM64) — NSIS installer |
 | macOS | `Octop-desktop-darwin-arm64-<version>.dmg` (Apple Silicon) / `Octop-desktop-darwin-amd64-<version>.dmg` (Intel) |
 | Linux | `Octop-desktop-linux-amd64-<version>.tar.gz` / `Octop-desktop-linux-arm64-<version>.tar.gz` |
-| FnOS NAS | `Octop-fnos-docker-<version>.fpk` (recommended on ARM; amd64/arm64 image) / `Octop-fnos-native-<version>.fpk` (x86_64, no Docker) / `Octop-fnos-native-arm64-<version>.fpk` (ARM64 fallback if no Docker) — install via App Center |
+| FnOS NAS | `Octop-fnos-docker-lite-<version>.fpk` (smaller image) / `Octop-fnos-docker-<version>.fpk` (full: desktop, OCR, local models) / `Octop-fnos-native-amd64-<version>.fpk` (x86_64, no Docker) / `Octop-fnos-native-arm64-<version>.fpk` (ARM64 fallback if no Docker) — install via App Center |
 
 See [desktop/README.md](https://github.com/TencentCloud/Octop/blob/main/desktop/README.md) for the desktop shell and [fnos/README.md](https://github.com/TencentCloud/Octop/blob/main/fnos/README.md) for the FnOS packaging guide.
 
@@ -541,7 +541,7 @@ Interactive API docs: **http://127.0.0.1:8088/api/docs** (disabled by default �
 
 The control plane can also use PostgreSQL — set `database` in `config.json`, or `OCTOP_DATABASE_*` / the first-run wizard. With PostgreSQL, agent memory reuses the same DSN by default (per-agent schema); to keep file-based memory, set `"memory": { "backend": { "type": "sqlite" } }` in the agent config. See [docs/configuration.md](https://github.com/TencentCloud/Octop/blob/main/docs/configuration.md) and [docs/adr/002-database-backends.md](https://github.com/TencentCloud/Octop/blob/main/docs/adr/002-database-backends.md).
 
-See [docs/configuration.md](https://github.com/TencentCloud/Octop/blob/main/docs/configuration.md) for env vars and `config.json`.
+See [docs/configuration.md](https://github.com/TencentCloud/Octop/blob/main/docs/configuration.md) for env vars and `config.json`. Hosts that cannot reach the public catalog can run a private plugin and expert market; the HTTP contract is in [docs/private-market.md](https://github.com/TencentCloud/Octop/blob/main/docs/private-market.md). A private SkillHub-compatible skill market is [docs/skill-market.md](https://github.com/TencentCloud/Octop/blob/main/docs/skill-market.md) (`SKILL_MARKET_ORIGIN`).
 
 ## 🏗️ Architecture
 
@@ -636,6 +636,14 @@ See [CHANGELOG.md](https://github.com/TencentCloud/Octop/blob/main/CHANGELOG.md)
 ## 💬 Community
 
 - **Discord** — join the English-speaking community: [discord.gg/QnWdhJxq9h](https://discord.gg/QnWdhJxq9h)
+
+### WeChat
+
+Search for **腾讯Octop** in WeChat, or scan:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TencentCloud/Octop/main/docs/assets/wechat-octop.png" alt="WeChat search for 腾讯Octop" width="480" />
+</p>
 
 ### WeCom Customer Group (CN)
 

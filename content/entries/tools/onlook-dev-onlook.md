@@ -15,27 +15,27 @@ tags:
   - cursor
   - design
 status: active
-quality_percentile: 58
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: onlook-dev/onlook
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 27078
+  stars: 27120
   last_commit: 2026-10-21T20:42:29Z
-  stars_delta_7d: 72
-  stars_growth_pct: 0.3
-  trending_score: 72.19
-  rank_current: 71
+  stars_delta_7d: 114
+  stars_growth_pct: 0.4
+  trending_score: 114.48
+  rank_current: 64
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27006
-    - 27078
+    - 27120
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: onlook-dev/onlook
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.665Z
+  fetched_at: 2026-11-05T13:12:37.456Z
   truncated: false
 type: agent_tool
 tool:
@@ -258,7 +258,7 @@ If you have a suggestion that would make this better, please fork the repo and
 create a pull request. You can also
 [open issues](https://github.com/onlook-dev/onlook/issues).
 
-See the [CONTRIBUTING.md](https://github.com/onlook-dev/onlook/blob/main/CONTRIBUTING.md) for instructions and code of conduct.
+See the [CONTRIBUTING.md](https://raw.githubusercontent.com/onlook-dev/onlook/main/CONTRIBUTING.md) for instructions and code of conduct.
 
 #### Contributors
 
@@ -280,7 +280,7 @@ See the [CONTRIBUTING.md](https://github.com/onlook-dev/onlook/blob/main/CONTRIB
 
 ## License
 
-Distributed under the Apache 2.0 License. See [LICENSE.md](https://github.com/onlook-dev/onlook/blob/main/LICENSE.md) for more
+Distributed under the Apache 2.0 License. See [LICENSE.md](https://raw.githubusercontent.com/onlook-dev/onlook/main/LICENSE.md) for more
 information.
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

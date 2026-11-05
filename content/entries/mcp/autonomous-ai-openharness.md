@@ -14,28 +14,28 @@ tags:
   - agent-harness
   - ai-agents
 status: active
-quality_percentile: 34
+quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: autonomous-ai/openharness
   official_vendor: false
   license: MIT
 signals:
-  stars: 1408
-  last_commit: 2026-11-02T09:03:16Z
-  stars_delta_7d: 39
-  stars_growth_pct: 2.8
-  trending_score: 40.11
-  rank_current: 43
-  rank_delta: -7
+  stars: 1428
+  last_commit: 2026-11-05T13:08:34Z
+  stars_delta_7d: 59
+  stars_growth_pct: 4.3
+  trending_score: 61.54
+  rank_current: 41
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1316
     - 1369
-    - 1408
+    - 1428
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: autonomous-ai/openharness
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:21.269Z
+  fetched_at: 2026-11-05T13:13:55.732Z
   truncated: false
 type: mcp_server
 launch:

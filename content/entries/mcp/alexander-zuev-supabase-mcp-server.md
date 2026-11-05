@@ -15,10 +15,10 @@ tags:
   - supabase
   - windsurf
 status: active
-quality_percentile: 13
+quality_percentile: 11
 selection_reason: quality_percentile
 first_seen: 2025-02-15T08:54:29
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alexander-zuev/supabase-mcp-server
@@ -30,8 +30,8 @@ signals:
   stars_delta_7d: 2
   stars_growth_pct: 0.2
   trending_score: 2
-  rank_current: 103
-  rank_delta: 5
+  rank_current: 104
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 831
@@ -47,7 +47,7 @@ readme_source:
   repo: alexander-zuev/supabase-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.596Z
+  fetched_at: 2026-11-05T13:12:10.059Z
   truncated: false
 type: mcp_server
 launch:

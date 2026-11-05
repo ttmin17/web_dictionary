@@ -16,18 +16,18 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: NousResearch/hermes-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 259631
-  last_commit: 2026-11-02T08:50:19Z
-  stars_delta_7d: 2480
-  stars_growth_pct: 1
-  trending_score: 2503.92
+  stars: 260753
+  last_commit: 2026-11-05T13:07:23Z
+  stars_delta_7d: 3602
+  stars_growth_pct: 1.4
+  trending_score: 3652.45
   rank_current: 8
   rank_delta: -1
   velocity_source: snapshot_delta
@@ -35,7 +35,7 @@ signals:
     - 253381
     - 255031
     - 257151
-    - 259631
+    - 260753
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: NousResearch/hermes-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:02.242Z
+  fetched_at: 2026-11-05T13:12:15.537Z
   truncated: false
 type: agent_tool
 tool:

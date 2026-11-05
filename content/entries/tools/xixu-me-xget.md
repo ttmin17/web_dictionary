@@ -12,28 +12,28 @@ tags:
   - agent-skills
   - xget
 status: active
-quality_percentile: 85
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: xixu-me/xget
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 8213
-  last_commit: 2026-11-01T00:23:10Z
-  stars_delta_7d: 7
+  stars: 8212
+  last_commit: 2026-11-05T08:47:34Z
+  stars_delta_7d: 6
   stars_growth_pct: 0.1
-  trending_score: 7.01
-  rank_current: 127
-  rank_delta: -16
+  trending_score: 6
+  rank_current: 132
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8194
     - 8206
-    - 8213
+    - 8212
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: xixu-me/xget
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:42.681Z
+  fetched_at: 2026-11-05T13:13:08.555Z
   truncated: true
 type: agent_tool
 tool:
@@ -85,7 +85,7 @@ tool:
 [![Docker](https://img.shields.io/badge/Docker-2496ED?&logo=docker&logoColor=white)](#self-hosted-deployment)
 [![Podman](https://img.shields.io/badge/Podman-892CA0?&logo=podman&logoColor=white)](#self-hosted-deployment)
 
-**English** | [汉语（简体）](https://github.com/xixu-me/xget/blob/main/README.zh-Hans.md) |
+**English** | [汉语（简体）](https://raw.githubusercontent.com/xixu-me/xget/main/README.zh-Hans.md) |
 [漢語（繁體）](https://github.com/xixu-me/xget/blob/main/README.zh-Hant.md)
 
 </div>

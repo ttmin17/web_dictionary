@@ -12,28 +12,28 @@ tags:
   - browser-agent
   - chrome-extension
 status: active
-quality_percentile: 23
+quality_percentile: 25
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: fullselfbrowsing/FSB
   official_vendor: false
   license: MIT
 signals:
-  stars: 205
-  last_commit: 2026-10-28T16:56:38Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0.5
-  trending_score: 1
-  rank_current: 107
-  rank_delta: -32
+  stars: 204
+  last_commit: 2026-11-04T20:22:35Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 111
+  rank_delta: -36
   velocity_source: snapshot_delta
   sparkline_4w:
     - 196
     - 204
-    - 205
+    - 204
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: fullselfbrowsing/FSB
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:25.136Z
+  fetched_at: 2026-11-05T13:14:00.335Z
   truncated: false
 type: mcp_server
 launch:
@@ -157,7 +157,7 @@ Preview before writing: append `--dry-run`. Sanity check with `npx -y fsb-mcp-se
 
 Want to run FSB standalone from the extension popup/side panel? Open settings, paste an API key (xAI, Gemini, OpenAI, Anthropic, OpenRouter, LM Studio, or custom), and start there — no MCP needed.
 
-**On OpenClaw?** Install FSB directly from [ClawHub](https://clawhub.ai/lakshmanturlapati/full-selfbrowsing). That is the fastest onboarding route. If you need the manual fallback, the FSB skill in [`skills/fsb/`](https://github.com/fullselfbrowsing/FSB/blob/main/skills/fsb/SKILL.md) still prints the canonical OpenClaw stdio config block and runs the doctor flow. The bare `--openclaw` install flag stays manual because OpenClaw's MCP config schema is unstable across builds.
+**On OpenClaw?** Install FSB directly from [ClawHub](https://clawhub.ai/lakshmanturlapati/full-selfbrowsing). That is the fastest onboarding route. If you need the manual fallback, the FSB skill in [`skills/fsb/`](https://raw.githubusercontent.com/fullselfbrowsing/FSB/main/skills/fsb/SKILL.md) still prints the canonical OpenClaw stdio config block and runs the doctor flow. The bare `--openclaw` install flag stays manual because OpenClaw's MCP config schema is unstable across builds.
 
 **On Hermes?** Use the same skill at [`skills/fsb/`](https://github.com/fullselfbrowsing/FSB/blob/main/skills/fsb/SKILL.md). Run `node skills/fsb/scripts/print-hermes-yaml.mjs` to print the canonical `~/.hermes/config.yaml` `mcp_servers.fsb` block, or run `node skills/fsb/scripts/install-host.mjs` to detect a local Hermes config and gate the install on consent.
 

@@ -14,29 +14,29 @@ tags:
   - model-context-protocol
   - reddit
 status: active
-quality_percentile: 52
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2025-09-14T05:52:29
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: karanb192/reddit-mcp-buddy
   official_vendor: false
   license: MIT
 signals:
-  stars: 870
+  stars: 880
   last_commit: 2026-11-02T08:09:10Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.6
-  trending_score: 5.03
-  rank_current: 94
-  rank_delta: -15
+  stars_delta_7d: 15
+  stars_growth_pct: 1.7
+  trending_score: 15.26
+  rank_current: 78
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 853
     - 859
     - 865
-    - 870
+    - 880
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: karanb192/reddit-mcp-buddy
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.275Z
+  fetched_at: 2026-11-05T13:12:09.790Z
   truncated: false
 type: mcp_server
 launch:

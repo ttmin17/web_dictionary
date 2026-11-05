@@ -16,25 +16,25 @@ status: active
 quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: vastsa/PI-Desktop
   official_vendor: false
   license: LGPL-3.0
 signals:
-  stars: 7599
-  last_commit: 2026-11-02T08:09:35Z
-  stars_delta_7d: 310
-  stars_growth_pct: 4.3
-  trending_score: 323.18
-  rank_current: 27
-  rank_delta: -1
+  stars: 7707
+  last_commit: 2026-11-05T12:15:22Z
+  stars_delta_7d: 418
+  stars_growth_pct: 5.7
+  trending_score: 441.97
+  rank_current: 28
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7006
     - 7289
-    - 7599
+    - 7707
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: vastsa/PI-Desktop
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:02.570Z
+  fetched_at: 2026-11-05T13:13:37.446Z
   truncated: false
 type: agent_tool
 tool:
@@ -79,7 +79,7 @@ Local-first · Model-agnostic · Plugin-powered · macOS / Windows / Linux
 
 **[Download](https://github.com/vastsa/PI-Desktop/releases/latest)** ·
 [Documentation](https://pi-docs.aiuo.net/) ·
-[Build a Plugin](https://github.com/vastsa/PI-Desktop/blob/main/docs/plugin-development.md) ·
+[Build a Plugin](https://raw.githubusercontent.com/vastsa/PI-Desktop/main/docs/plugin-development.md) ·
 [Screenshots](https://github.com/vastsa/PI-Desktop/blob/main/docs/guide/screenshots.md) ·
 [简体中文](https://github.com/vastsa/PI-Desktop/blob/main/README.zh-CN.md)
 

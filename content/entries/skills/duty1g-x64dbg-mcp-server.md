@@ -13,10 +13,10 @@ tags:
   - binary-analysis
   - claude
 status: active
-quality_percentile: 60
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: duty1g/x64dbg-mcp-server
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2733
-  last_commit: 2026-10-12T08:49:17Z
-  stars_delta_7d: 125
-  stars_growth_pct: 4.8
-  trending_score: 130.99
-  rank_current: 79
-  rank_delta: 22
+  stars: 2779
+  last_commit: 2026-11-03T11:09:20Z
+  stars_delta_7d: 171
+  stars_growth_pct: 6.6
+  trending_score: 182.21
+  rank_current: 81
+  rank_delta: 20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2484
     - 2563
     - 2608
-    - 2733
+    - 2779
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: duty1g/x64dbg-mcp-server
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.493Z
+  fetched_at: 2026-11-05T13:11:49.253Z
   truncated: false
 type: agent_skill
 skill:

@@ -14,29 +14,29 @@ tags:
   - automation
   - claude-ai
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: yusufkaraaslan/Skill_Seekers
   official_vendor: false
   license: MIT
 signals:
-  stars: 15264
+  stars: 15283
   last_commit: 2026-09-30T18:49:17Z
-  stars_delta_7d: 41
-  stars_growth_pct: 0.3
-  trending_score: 41.11
-  rank_current: 41
-  rank_delta: -1
+  stars_delta_7d: 60
+  stars_growth_pct: 0.4
+  trending_score: 60.24
+  rank_current: 42
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15141
     - 15180
     - 15223
-    - 15264
+    - 15283
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: yusufkaraaslan/Skill_Seekers
   path: README.md
   branch: development
-  fetched_at: 2026-11-02T09:05:30.358Z
+  fetched_at: 2026-11-05T13:11:37.364Z
   truncated: false
 type: mcp_server
 launch:
@@ -91,7 +91,7 @@ English | [简体中文](https://github.com/yusufkaraaslan/Skill_Seekers/blob/de
 </p>
 <!-- SPONSORS:END -->
 
-**[Become a sponsor](https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/SPONSORSHIP.md)** · [GitHub Sponsors](https://github.com/sponsors/yusufkaraaslan)
+**[Become a sponsor](https://raw.githubusercontent.com/yusufkaraaslan/Skill_Seekers/development/SPONSORSHIP.md)** · [GitHub Sponsors](https://github.com/sponsors/yusufkaraaslan)
 
 ---
 

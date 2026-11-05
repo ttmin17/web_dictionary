@@ -18,7 +18,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-07-31T09:40:58
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: genspark-ai/genoffice
@@ -26,11 +26,11 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11533
-  last_commit: 2026-11-02T08:37:19Z
-  stars_delta_7d: 661
-  stars_growth_pct: 6.1
-  trending_score: 701.19
+  stars: 11764
+  last_commit: 2026-11-05T04:14:45Z
+  stars_delta_7d: 892
+  stars_growth_pct: 8.2
+  trending_score: 965.18
   rank_current: 35
   rank_delta: -8
   velocity_source: snapshot_delta
@@ -38,7 +38,7 @@ signals:
     - 9558
     - 9983
     - 10872
-    - 11533
+    - 11764
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: genspark-ai/genoffice
   path: skills/genoffice/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:30.165Z
+  fetched_at: 2026-11-05T13:12:51.510Z
   truncated: true
 type: agent_skill
 skill:

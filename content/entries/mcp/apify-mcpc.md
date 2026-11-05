@@ -17,26 +17,26 @@ status: active
 quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: apify/mcpc
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1081
-  last_commit: 2026-10-31T00:06:22Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.7
-  trending_score: 8.06
-  rank_current: 80
-  rank_delta: -17
+  stars: 1088
+  last_commit: 2026-11-05T13:01:08Z
+  stars_delta_7d: 15
+  stars_growth_pct: 1.4
+  trending_score: 15.21
+  rank_current: 79
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1026
     - 1056
     - 1073
-    - 1081
+    - 1088
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: apify/mcpc
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.750Z
+  fetched_at: 2026-11-05T13:12:08.972Z
   truncated: true
 type: mcp_server
 launch:
@@ -257,7 +257,7 @@ Run "mcpc --json" to get the same data as `{ sessions: [...], profiles: [...] }`
 Agent guide: mcpc help --skill
 ```
 
-[REFERENCE.md](https://github.com/apify/mcpc/blob/main/docs/REFERENCE.md) collects the full `--help` output of every command in one page.
+[REFERENCE.md](https://raw.githubusercontent.com/apify/mcpc/main/docs/REFERENCE.md) collects the full `--help` output of every command in one page.
 In your terminal, run `mcpc help <command>` to see the same help for a single command.
 
 ### General actions
@@ -333,7 +333,7 @@ mcpc @fs tools-list
 mcpc @fs tools-call list_directory path:=/
 ```
 
-See [MCP feature support](#mcp-feature-support) for details about all supported MCP features and commands.
+See [MCP support](#mcp-support) for details about all supported MCP features and commands.
 
 #### Command arguments
 
@@ -658,7 +658,7 @@ is missing, expired, or invalid, `mcpc` fails with an error that includes the ri
 | `--x402 [scheme]`               | Skip OAuth auto-detection; use x402 payments instead. Optional scheme: `auto` (default), `upto`, `exact`. Combine with `--profile` to use both. |
 | _(none)_                        | Use `default` profile if it exists; otherwise connect anonymously.                                                                              |
 
-Config file headers (from `--config`) apply to servers loaded from that file.
+Headers set on a config file entry (`file:entry`) apply to the server that entry describes.
 
 ```bash
 # Default: 'default' profile if it exists, else anonymous
@@ -674,7 +674,7 @@ mcpc connect mcp.apify.com @apify --header "Authorization: Bearer ${APIFY_TOKEN}
 mcpc connect mcp.apify.com @apify-anon --no-profile
 
 # x402 micropayments instead of OAuth
-mcpc connect mcp.apify.com @apify --x402
+mcpc connect mcp.example.com @paid --x402
 ```
 
 ## MCP proxy
@@ -782,7 +782,7 @@ for tool in $(mcpc --json @server tools-list | jq -r '.[].name'); do
 done
 ```
 
-For a complete example script, see [`docs/examples/company-lookup.sh`](https://github.com/apify/mcpc/blob/main/docs/examples/company-lookup.sh).
+For a complete example script, see [`docs/examples/company-lookup.sh`](https://raw.githubusercontent.com/apify/mcpc/main/docs/examples/company-lookup.sh).
 
 ### Schema validation
 
@@ -960,17 +960,17 @@ Pass the `--x402` flag when connecting to a session. It accepts an optional sche
 
 ```bash
 # Create a session with x402 payment support (auto picks the best advertised scheme)
-mcpc connect mcp.apify.com @apify --x402
+mcpc connect mcp.example.com @paid --x402
 
 # Pin a specific scheme — position doesn't matter, before or after positional args
-mcpc connect --x402 upto mcp.apify.com @apify
-mcpc connect mcp.apify.com @apify --x402 exact
+mcpc connect --x402 upto mcp.example.com @paid
+mcpc connect mcp.example.com @paid --x402 exact
 
 # The session now automatically handles 402 responses using your preference
-mcpc @apify tools-call expensive-tool query:="hello"
+mcpc @paid tools-call expensive-tool query:="hello"
 
 # Restart re-uses the saved scheme from sessions.json — no need to repeat the flag
-mcpc @apify restart
+mcpc @paid restart
 ```
 
 When `--x402` is active, a fetch middleware wraps all HTTP requests to the MCP server.
@@ -983,6 +983,45 @@ If any request returns HTTP 402, the middleware transparently signs and retries.
 | Base Mainnet         | ✅ Supported |
 | Base Sepolia testnet | ✅ Supported |
 
+### Full x402 usage example
+
+This end-to-end example pays for the [Apify MCP server](https://mcp.apify.com) with no account or API key.
+[Apify](https://apify.com) is the largest and most trusted marketplace of tools for AI agents,
+with thousands of ready-made Actors for web scraping, data extraction, and automation.
+[Apify AGI](https://agi.apify.com) sells a prepaid, spend-capped API token for an x402 payment
+(`exact` scheme, USDC on Base mainnet), and `mcpc` uses that token as a Bearer credential.
+Each tool call is then billed against the token's prepaid balance.
+
+```bash
+# 1. Create a wallet (or import one) and send USDC on Base to the printed address or QR code.
+#    Signing is gasless, so the wallet needs no ETH.
+mcpc x402 init
+
+#    Once sent, check that the USDC balance has arrived.
+mcpc x402
+
+# 2. Fetch the payment challenge for a $1 token, the minimum (the PAYMENT-REQUIRED header).
+URL='https://agi.apify.com/protocols/x402/prepaid-tokens?amount=1&currency=usd'
+REQ=$(curl -s -D - -o /dev/null "$URL" | awk -F': ' 'tolower($1)=="payment-required"{print $2}' | tr -d '\r\n')
+
+# 3. Sign it with the wallet and resubmit; the server settles the payment and returns the token.
+SIG=$(mcpc x402 sign "$REQ" --scheme exact --json | jq -r .paymentSignature)
+TOKEN=$(curl -s -H "PAYMENT-SIGNATURE: $SIG" "$URL" | jq -r .token)
+
+# 4. Connect with the token and use the server as usual.
+mcpc connect mcp.apify.com @apify --header "Authorization: Bearer $TOKEN"
+mcpc @apify tools-list
+mcpc @apify tools-call search-actors keywords:="Google Maps"
+
+# 5. Check how much of the prepaid balance is left.
+curl -s -H "Authorization: Bearer $TOKEN" https://agi.apify.com/prepaid-tokens/balance
+```
+
+![mcpc paying for a prepaid token with x402 and using it with an MCP server](https://raw.githubusercontent.com/apify/mcpc/main/docs/vhs/x402.gif?v=1)
+
+`mcpc` keeps the token only for the `@apify` session, so save `$TOKEN` if you want to reuse it elsewhere.
+See [agi.apify.com/AGENTS.md](https://agi.apify.com/AGENTS.md) for current prices, limits, and terms.
+
 ## MCP support
 
 `mcpc` aims to be the most complete MCP client on the command line. It's built on the official
@@ -990,8 +1029,6 @@ If any request returns HTTP 402, the middleware transparently signs and retries.
 major client-facing features of the [MCP specification](https://modelcontextprotocol.io/specification/latest),
 from tools, resources, and prompts to the newest additions like async tasks and skills. Each is exposed as
 a first-class command with consistent human-readable and `--json` output.
-
-### MCP feature support
 
 Where `mcpc` stands on each part of the MCP specification:
 
@@ -1021,7 +1058,7 @@ Beyond the interactive browser login, the **Authorization** row also covers the 
 [MCP authorization extensions](#mcp-authorization-extensions): OAuth client credentials and
 enterprise-managed authorization.
 
-#### MCP extensions
+### MCP extensions
 
 Extensions are the optional, modular parts of MCP, negotiated through the `extensions` field of
 client and server capabilities. Where `mcpc` stands on the
@@ -1041,7 +1078,7 @@ issued, and can answer a tool call with a task handle. Skills is declared by ser
 client issues `skills/list` and `skills/get` once it sees that declaration. `mcpc @session` lists
 what a server declares in return, and says which of those `mcpc` can use.
 
-#### Server instructions
+### Server instructions
 
 MCP servers can provide instructions describing their capabilities and usage. These are displayed when you connect to a server or show its session overview:
 
@@ -1095,7 +1132,7 @@ on `2025-11-25` connections.
 }
 ```
 
-#### Tools
+### Tools
 
 Tools are the heart of MCP, and `mcpc` gives you the whole toolbox to discover, inspect, validate, and call them:
 
@@ -1142,7 +1179,7 @@ server's current tools.
 - **Schema validation**: pin a tool's schema with `--schema` to catch breaking changes in CI and
   scripts before they bite (see [Schema validation](#schema-validation)).
 
-#### Prompts
+### Prompts
 
 List and retrieve server-defined prompt templates:
 
@@ -1156,7 +1193,7 @@ mcpc @apify prompts-get analyze-website url:=https://example.com
 
 <!-- TODO: Add example of prompt templates -->
 
-#### Resources
+### Resources
 
 Access server-provided data sources by URI:
 
@@ -1194,7 +1231,7 @@ mcpc @apify resources-subscribe "file:///config.json" ./config.json
 mcpc @apify resources-unsubscribe "file:///config.json"
 ```
 
-#### Completion
+### Completion
 
 Servers that declare the `completions` capability can suggest values for prompt arguments and
 resource template variables
@@ -1217,7 +1254,7 @@ mcpc @apify completion-complete resource 'file:///{path}' path:=/ho
 Servers return at most 100 suggestions ranked by relevance; `hasMore` in the `--json` output says
 whether there were more. Completion works the same on `2025-11-25` and `2026-07-28` servers.
 
-#### Skills
+### Skills
 
 Implements the [MCP Skills extension](https://github.com/modelcontextprotocol/ext-skills)
 (`io.modelcontextprotocol/skills`), which requires MCP `2026-07-28` or later.
@@ -1240,29 +1277,5 @@ mcpc @apify skills-get pdf-processing references/FORMS.md
 
 # Print just the content (no header/fences) — pipe straight to an LLM or a file
 mcpc @apify skills-get git-workflow --raw > /tmp/SKILL.md
-
-# JSON for scripts: [{ uri, frontmatter: { name, description, ... }, resources }]
-mcpc --json @apify skills-list | jq -r '.[].frontmatter.name'
-
-# List a directory inside a skill (servers that declare "directoryRead": true)
-mcpc @apify resources-directory-read skill://pdf-processing/templates
-```
-
-![mcpc skills-list and skills-get demo](https://raw.githubusercontent.com/apify/mcpc/main/docs/vhs/skills.gif?v=1)
-
-Every entry from `skills-list` is complete: the skill's verbatim frontmatter plus a manifest of every
-file with its SHA-256 digest and byte size. `skills-get` uses that manifest as the spec requires —
-it fetches the entry, reads the file, and checks the bytes against the declared size and digest (and, for
-a `SKILL.md`, that the document's frontmatter is what the entry advertised). **Content that fails any of
-those checks is not printed**, and a file missing from the manifest is refused rather than read. Skills
-whose content is generated carry `"resources": "dynamic"` instead of a manifest; `mcpc` reads them but
-labels them unverified.
-
-Skills appear under capabilities in `mcpc @session` output when a server declares the extension in
-`capabilities.extensions["io.modelcontextprotocol/skills"]`. Skill content is treated as untrusted
-input — `mcpc` only reads and prints it; it never executes hooks, scripts, or other frontmatter-declared
-behavior, and `allowed-tools` grants nothing.
-
-#### List change notifications
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/apify/mcpc)).*

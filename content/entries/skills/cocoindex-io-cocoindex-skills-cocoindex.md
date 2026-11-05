@@ -18,7 +18,7 @@ status: active
 quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: cocoindex-io/cocoindex
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11811
-  last_commit: 2026-11-02T01:17:58Z
-  stars_delta_7d: 57
-  stars_growth_pct: 0.5
-  trending_score: 57.28
+  stars: 11826
+  last_commit: 2026-11-05T07:15:22Z
+  stars_delta_7d: 72
+  stars_growth_pct: 0.6
+  trending_score: 72.44
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11720
     - 11754
-    - 11811
+    - 11826
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: cocoindex-io/cocoindex
   path: skills/cocoindex/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:02.417Z
+  fetched_at: 2026-11-05T13:13:33.991Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,7 +62,7 @@ skill:
     - references/patterns.md
     - references/setup_database.md
     - references/setup_project.md
-  pack_total_skills: 5
+  pack_total_skills: 6
   is_pack_primary: false
   clients:
     - claude-code
@@ -211,7 +211,7 @@ topic_target.declare_target_state(key="msg-1", value=json.dumps(data))
 Use `ContextKey` to share expensive resources (DB connections, models) across components:
 
 ```python
-EMBEDDER = coco.ContextKey[SentenceTransformerEmbedder](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/embedder)
+EMBEDDER = coco.ContextKey[SentenceTransformerEmbedder](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/"embedder")
 
 @coco.lifespan
 async def coco_lifespan(builder: coco.EnvironmentBuilder) -> AsyncIterator[None]:
@@ -244,7 +244,7 @@ for chunk in chunks:
 
 By default, `app.update()` runs in **catch-up mode**: it scans all sources, processes what changed since the last run (memoized components are skipped), syncs target states, and returns. Each call still has to scan sources to discover changes.
 
-**Live mode** keeps the app running after catch-up and lets components stream changes continuously from their sources (e.g., file watcher, Kafka consumer), applying them with very low latency.
+**Live mode** keeps the app running after catch-up and lets components stream changes continuously from their sources (e.g., file watcher, Kafka consumer), applying them with low latency.
 
 ```python
 # Enable live mode
@@ -320,8 +320,8 @@ from cocoindex.resources.file import FileLike, PatternFilePathMatcher
 from cocoindex.resources.id import IdGenerator
 
 DATABASE_URL = "postgres://cocoindex:cocoindex@localhost/cocoindex"
-PG_DB = coco.ContextKey[asyncpg.Pool](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/pg_db)
-EMBEDDER = coco.ContextKey[SentenceTransformerEmbedder](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/embedder)
+PG_DB = coco.ContextKey[asyncpg.Pool](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/"pg_db")
+EMBEDDER = coco.ContextKey[SentenceTransformerEmbedder](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/"embedder")
 
 _splitter = RecursiveSplitter()
 
@@ -454,7 +454,7 @@ cocoindex ls [main.py]                 # List apps
 cocoindex show main.py [--tree]        # Show component paths
 ```
 
-## Best Practices
+## Pipeline design guidelines
 
 ### 1. Use `@coco.fn` on All Processing Functions
 
@@ -494,7 +494,7 @@ async def coco_lifespan(builder: coco.EnvironmentBuilder) -> AsyncIterator[None]
 ### 5. Use `Annotated[NDArray, CONTEXT_KEY]` for Vectors
 
 ```python
-EMBEDDER = coco.ContextKey[SentenceTransformerEmbedder](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/embedder)
+EMBEDDER = coco.ContextKey[SentenceTransformerEmbedder](https://github.com/cocoindex-io/cocoindex/blob/main/skills/cocoindex/"embedder")
 
 @dataclass
 class Record:

@@ -13,24 +13,24 @@ tags:
   - ai-coding
   - automation
 status: active
-quality_percentile: 43
+quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ZaxbyHub/opencode-swarm
   official_vendor: false
   license: MIT
 signals:
-  stars: 516
-  last_commit: 2026-11-02T06:31:07Z
+  stars: 518
+  last_commit: 2026-11-05T05:57:31Z
   stars_delta_7d: 13
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 516
+    - 518
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +39,7 @@ readme_source:
   repo: ZaxbyHub/opencode-swarm
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.536Z
+  fetched_at: 2026-11-05T13:13:44.727Z
   truncated: true
 type: agent_tool
 tool:
@@ -69,7 +69,7 @@ tool:
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/ZaxbyHub/opencode-swarm/main/LICENSE)
 [![Tests](https://img.shields.io/badge/tests-6000%2B-success)](https://github.com/zaxbysauce/opencode-swarm)
 
-[Website](https://swarmai.site/) · [Getting Started](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/getting-started.md) · [Configuration](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/configuration.md) · [Architecture](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/architecture.md)
+[Website](https://swarmai.site/) · [Getting Started](https://raw.githubusercontent.com/ZaxbyHub/opencode-swarm/main/docs/getting-started.md) · [Configuration](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/configuration.md) · [Architecture](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/architecture.md)
 
 </div>
 
@@ -210,7 +210,7 @@ Swarm has two independent mode systems:
 
 Full-Auto reduces approval friction by deterministically allowing safe operations (read-only tools, in-scope writes, safe shell) and routing every ambiguous or high-risk action (writes to plugin/build/guardrail paths, network, dependency changes, plan/phase mutations, subagent delegation) through the read-only `critic_oversight` agent before it executes. Denials are returned to the agent as structured signals so it can choose a safer path; repeated denials pause the run; phase completion requires an APPROVED oversight record. See [docs/modes.md](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/modes.md#full-auto) for `mode`, `permission_policy`, `denials`, and `oversight` config keys, fail-closed semantics, and recovery from a paused run.
 
-Epic binds to the current plan and runs fully on OpenCode 1.x and OpenCode 2 (7.x plugin). On OpenCode 2 the v2 adapter ships a session-capable client, places coder worktree sessions with an eager parentless create (#3169 Phase 3), and — since #3169 Phase 4 — dispatches human-typed `/swarm` commands natively, so the full flow (`/swarm epic start` → waves → phase review → close) is available there; the remaining live-host verification legs are tracked on #3169, and the dual-host CI lane has landed (merge-queue v2 smoke cell, weekly host-contract v2 digest, and a vendored-pin freshness notice). The epic itself is always opened by the user (`human-only` policy — the agent cannot start one on any host). `/swarm epic start` also refuses plans too small to benefit and suggests Balanced. The `epic_next_wave` tool then dispatches each phase as waves of tasks whose declared scopes don't conflict; in a git project each coder works in an isolated worktree on an epic branch, and `/swarm epic close` squash-lands the work as staged changes for you to review. Every task in a wave still runs the full per-task QA pipeline (Stage A and Stage B). Epic learns which files tasks tend to write together and uses it to plan later waves and epics. See [docs/modes.md](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/modes.md#epic-mode-preview); maintainers start with [src/epic/README.md](https://github.com/ZaxbyHub/opencode-swarm/blob/main/src/epic/README.md).
+Epic binds to the current plan and runs fully on OpenCode 1.x and OpenCode 2 (7.x plugin). On OpenCode 2 the v2 adapter ships a session-capable client, places coder worktree sessions with an eager parented create that is then moved into the worktree (#3169 Phase 3; #3558), and — since #3169 Phase 4 — dispatches human-typed `/swarm` commands natively, so the full flow (`/swarm epic start` → waves → phase review → close) is available there; the remaining live-host verification legs are tracked on #3169, and the dual-host CI lane has landed (merge-queue v2 smoke cell, weekly host-contract v2 digest, and a vendored-pin freshness notice). The epic itself is always opened by the user (`human-only` policy — the agent cannot start one on any host). `/swarm epic start` also refuses plans too small to benefit and suggests Balanced. The `epic_next_wave` tool then dispatches each phase as waves of tasks whose declared scopes don't conflict; in a git project each coder works in an isolated worktree on an epic branch, and `/swarm epic close` squash-lands the work as staged changes for you to review. Every task in a wave still runs the full per-task QA pipeline (Stage A and Stage B). Epic learns which files tasks tend to write together and uses it to plan later waves and epics. See [docs/modes.md](https://github.com/ZaxbyHub/opencode-swarm/blob/main/docs/modes.md#epic-mode-preview); maintainers start with [src/epic/README.md](https://github.com/ZaxbyHub/opencode-swarm/blob/main/src/epic/README.md).
 
 **Project mode** — persistent via `execution_mode` config key:
 

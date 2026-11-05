@@ -14,28 +14,28 @@ tags:
   - anthropic
   - autonomous-agents
 status: active
-quality_percentile: 81
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: vxcontrol/pentagi
   official_vendor: false
   license: MIT
 signals:
-  stars: 32985
+  stars: 33388
   last_commit: 2026-10-22T23:26:13Z
-  stars_delta_7d: 539
-  stars_growth_pct: 1.7
-  trending_score: 547.95
-  rank_current: 19
-  rank_delta: -9
+  stars_delta_7d: 942
+  stars_growth_pct: 2.9
+  trending_score: 969.35
+  rank_current: 18
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 31207
     - 32446
-    - 32985
+    - 33388
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: vxcontrol/pentagi
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:58.148Z
+  fetched_at: 2026-11-05T13:13:29.787Z
   truncated: true
 type: agent_tool
 tool:
@@ -142,7 +142,7 @@ You can watch the video **PentAGI overview**:
 - Persistent Storage. All commands and outputs are stored in PostgreSQL with [pgvector](https://hub.docker.com/r/vxcontrol/pgvector) extension.
 - Scalable Architecture. Microservices-based design supporting horizontal scaling.
 - Self-Hosted Solution. Complete control over your deployment and data.
-- Flexible Authentication. Support for 10+ LLM providers ([OpenAI](https://platform.openai.com/), [Anthropic](https://www.anthropic.com/), [Google AI/Gemini](https://ai.google.dev/), [AWS Bedrock](https://aws.amazon.com/bedrock/), [Ollama](https://ollama.com/), [DeepSeek](https://www.deepseek.com/en/), [GLM](https://z.ai/), [Kimi](https://platform.moonshot.ai/), [Qwen](https://www.alibabacloud.com/en/), [MiniMax](https://www.minimax.io/), [Mistral](https://mistral.ai/), [xAI](https://x.ai/), Custom for any OpenAI-compatible endpoint including [Azure OpenAI](#using-azure-openai)) plus aggregators ([OpenRouter](https://openrouter.ai/), [DeepInfra](https://deepinfra.com/), [Atlas Cloud](https://www.atlascloud.ai/), [OpenCode Go plan](https://opencode.ai/en/go)). For production local deployments, see our [vLLM + Qwen3.5-27B-FP8 guide](https://github.com/vxcontrol/pentagi/blob/main/examples/guides/vllm-qwen35-27b-fp8.md).
+- Flexible Authentication. Support for 10+ LLM providers ([OpenAI](https://platform.openai.com/), [Anthropic](https://www.anthropic.com/), [Google AI/Gemini](https://ai.google.dev/), [AWS Bedrock](https://aws.amazon.com/bedrock/), [Ollama](https://ollama.com/), [DeepSeek](https://www.deepseek.com/en/), [GLM](https://z.ai/), [Kimi](https://platform.moonshot.ai/), [Qwen](https://www.alibabacloud.com/en/), [MiniMax](https://www.minimax.io/), [Mistral](https://mistral.ai/), [xAI](https://x.ai/), Custom for any OpenAI-compatible endpoint including [Azure OpenAI](#using-azure-openai)) plus aggregators ([OpenRouter](https://openrouter.ai/), [DeepInfra](https://deepinfra.com/), [Atlas Cloud](https://www.atlascloud.ai/), [OpenCode Go plan](https://opencode.ai/en/go)). For production local deployments, see our [vLLM + Qwen3.5-27B-FP8 guide](https://raw.githubusercontent.com/vxcontrol/pentagi/main/examples/guides/vllm-qwen35-27b-fp8.md).
 - API Token Authentication. Secure Bearer token system for programmatic access to REST and GraphQL APIs.
 - Quick Deployment. Easy setup through [Docker Compose](https://docs.docker.com/compose/) with comprehensive environment configuration.
 

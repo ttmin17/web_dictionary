@@ -15,28 +15,28 @@ tags:
   - ai-agents
   - ai-roles
 status: active
-quality_percentile: 82
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: jnMetaCode/agency-agents-zh
   official_vendor: false
   license: MIT
 signals:
-  stars: 21786
-  last_commit: 2026-10-27T14:39:44Z
-  stars_delta_7d: 184
-  stars_growth_pct: 0.9
-  trending_score: 185.57
-  rank_current: 43
-  rank_delta: -14
+  stars: 21887
+  last_commit: 2026-11-04T02:48:07Z
+  stars_delta_7d: 285
+  stars_growth_pct: 1.3
+  trending_score: 288.76
+  rank_current: 37
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 21355
     - 21602
-    - 21786
+    - 21887
 language: zh
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: jnMetaCode/agency-agents-zh
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.634Z
+  fetched_at: 2026-11-05T13:12:37.630Z
   truncated: true
 type: agent_tool
 tool:
@@ -186,21 +186,6 @@ tool:
 
 <table>
 <tr>
-<td width="25%">
-  <a href="https://sidrune.ai/register?source=github&campaign=agencyagents&promo=agencyagents&aff=RQHWKAMQLX2S">
-    <img src="https://raw.githubusercontent.com/jnMetaCode/agency-agents-zh/main/assets/sponsor-sidrune-ai.png" alt="Sidrune AI — 一个入口，接入并管理全球主流 AI 模型" width="100%">
-  </a>
-</td>
-<td width="75%" valign="middle">
-
-感谢 [Sidrune AI](https://sidrune.ai/register?source=github&campaign=agencyagents&promo=agencyagents&aff=RQHWKAMQLX2S) 赞助本项目！**一个入口，接入并管理全球主流 AI 模型。** Sidrune AI 面向个人开发者、技术团队与企业，通过统一 API 接入并管理全球主流 AI 模型；通过多线路动态调度提升可用性，模型表现、响应时间与费用透明可查。根据不同模型与线路，API 调用成本较官方或基准价格可降低 40%—98%。🎁 **通过[此链接](https://sidrune.ai/register?source=github&campaign=agencyagents&promo=agencyagents&aff=RQHWKAMQLX2S)注册，即可获得 $3 API 额度！**
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
 <td width="25%" align="center" valign="middle">
   <a href="https://www.ucloud.cn/site/active/astraflow-credit?ytag=geo_waituo_agencyagentszh">
     <img src="https://raw.githubusercontent.com/jnMetaCode/agency-agents-zh/main/assets/sponsor-astraflow.png" alt="星图 AstraFlow — 视频模型一站式调用，200+ 大模型一键接入" width="100">
@@ -250,7 +235,7 @@ ao compose "帮我写一篇关于 AI Agent 的深度分析文章" --run
 
 一套**开箱即用的 AI 角色库**。每个智能体都有明确的身份定义、关键规则、工作流程和交付物，安装到你的 AI 编程工具后用自然语言激活。
 
-**和普通提示词的区别**：普通提示词告诉 AI "你是一个专家"；这里的智能体定义了专家**怎么思考、怎么做事、交付什么**。例如[安全工程师](https://github.com/jnMetaCode/agency-agents-zh/blob/main/engineering/engineering-security-engineer.md)会按 OWASP Top 10 逐项审查代码，[小红书运营专家](https://github.com/jnMetaCode/agency-agents-zh/blob/main/marketing/marketing-xiaohongshu-operator.md)会输出完整的种草笔记策略和达人合作方案。
+**和普通提示词的区别**：普通提示词告诉 AI "你是一个专家"；这里的智能体定义了专家**怎么思考、怎么做事、交付什么**。例如[安全工程师](https://raw.githubusercontent.com/jnMetaCode/agency-agents-zh/main/engineering/engineering-security-engineer.md)会按 OWASP Top 10 逐项审查代码，[小红书运营专家](https://github.com/jnMetaCode/agency-agents-zh/blob/main/marketing/marketing-xiaohongshu-operator.md)会输出完整的种草笔记策略和达人合作方案。
 
 ---
 

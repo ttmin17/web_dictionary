@@ -11,29 +11,29 @@ tags:
   - "12306"
   - train-tickets
 status: slowing
-quality_percentile: 26
+quality_percentile: 22
 selection_reason: quality_percentile
 first_seen: 2025-04-14T14:31:32
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Joooook/12306-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2421
+  stars: 2424
   last_commit: 2026-07-31T06:22:59Z
-  stars_delta_7d: 15
-  stars_growth_pct: 0.6
-  trending_score: 15.09
-  rank_current: 70
-  rank_delta: 2
+  stars_delta_7d: 18
+  stars_growth_pct: 0.7
+  trending_score: 18.13
+  rank_current: 75
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2372
     - 2395
     - 2406
-    - 2421
+    - 2424
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Joooook/12306-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.684Z
+  fetched_at: 2026-11-05T13:11:49.200Z
   truncated: false
 type: mcp_server
 launch:
@@ -149,7 +149,7 @@ docker run -p [your_port]:8080 -d 12306-mcp npx 12306-mcp --port 8080
 
 ## <div align="center">📚Documentation</div>
 
-- [服务原理详解](https://github.com/Joooook/12306-mcp/blob/main/docs/principle.md)  12306-MCP服务的工作原理
+- [服务原理详解](https://raw.githubusercontent.com/Joooook/12306-mcp/main/docs/principle.md)  12306-MCP服务的工作原理
 - [架构图](https://github.com/Joooook/12306-mcp/blob/main/docs/architecture.md)  12306-MCP服务的架构图
    ![12306-MCP 服务架构图](https://raw.githubusercontent.com/Joooook/12306-mcp/main/docs/architecture.png)
 

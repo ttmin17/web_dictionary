@@ -1,8 +1,10 @@
 ---
 slug: kkkkhazix-khazix-skills-hv-analysis
 name: hv-analysis
-tagline: Agent skill from KKKKhazix/khazix-skills
-summary: Agent skill from KKKKhazix/khazix-skills
+tagline: |-
+  横纵分析法（Horizontal-Vertical Analysis）深度研究Skill。由数字生命卡兹克提出，融合了索绪尔的历时-共时分析、社会科学的纵向-横截面研究设计、商学院案例研究法与竞争战略分析的核心思想。
+  当用户想要系统性研究一个产品、公司、概念、技术或人物时使用。核心是双轴分析：纵轴追
+summary: 你正在执行一次横纵分析法深度研究。按用户指定的格式交付，默认 PDF 和 Markdown 源稿。
 categories:
   - coding-agents
 tags:
@@ -11,10 +13,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 53
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -22,30 +24,35 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 21661
-  last_commit: 2026-10-01T13:15:32Z
-  stars_delta_7d: 163
-  stars_growth_pct: 0.8
-  trending_score: 164.24
+  stars: 21991
+  last_commit: 2026-11-03T21:50:31Z
+  stars_delta_7d: 330
+  stars_growth_pct: 1.5
+  trending_score: 335.03
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21220
     - 21368
     - 21498
     - 21661
-language: en
+    - 21991
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: KKKKhazix/khazix-skills
   path: hv-analysis/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:39.851Z
+  fetched_at: 2026-11-05T13:12:38.375Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: hv-analysis
-  description: Agent skill from KKKKhazix/khazix-skills
+  description: |
+    横纵分析法（Horizontal-Vertical Analysis）深度研究Skill。由数字生命卡兹克提出，融合了索绪尔的历时-共时分析、社会科学的纵向-横截面研究设计、商学院案例研究法与竞争战略分析的核心思想。
+    当用户想要系统性研究一个产品、公司、概念、技术或人物时使用。核心是双轴分析：纵轴追踪从诞生到当下的完整生命历程（以叙事故事呈现），横轴在当下时间截面上与竞品/同类进行系统性横向对比，最后交叉两条轴产出独到洞察。默认产出 PDF 和 Markdown，用户可指定 HTML 或 Markdown。
+    触发词包括但不限于：横纵分析、研究一下、帮我分析、深度研究、做个研究、调研一下、竞品分析、帮我看看这个东西怎么样、这个产品/公司/概念是怎么回事、帮我摸清楚、帮我搞懂、帮我做个deep research。
+    即使用户只是说"帮我了解一下XX"或"XX是什么来头"，只要上下文暗示需要系统性的深度研究（而非简单的概念解释），都应该触发。也适用于用户丢来一个产品名、公司名、技术名词说"帮我研究一下这个"的场景。
+    不要用于简单的名词解释（用户只是问"XX是什么"）、不要用于公众号写作（那个用khazix-writer）、不要用于纯标题摘要生成（按用户的标题需求直接处理）。
   folder_path: hv-analysis
   extra_files:
     - references/schema.json
@@ -63,13 +70,15 @@ skill:
 > **方法论溯源**
 > 横纵分析法由数字生命卡兹克（Khazix）提出，融合了语言学中的历时-共时分析（Saussure）、社会科学中的纵向-横截面研究设计、商学院案例研究法、以及竞争战略分析的核心思想，形成了一套适用于产品/公司/概念/人物的通用研究框架。核心原则不变：纵向追时间深度，横向追同期广度，最终交汇出判断。
 
-你正在执行一次横纵分析法深度研究。最终产出一份**排版精美的PDF研究报告**。
+你正在执行一次横纵分析法深度研究。按用户指定的格式交付，默认 PDF 和 Markdown 源稿。
 
 ## 前置准备
 
+先确定输出格式、篇幅和研究重点；用户指定的 1500 字、HTML 等要求优先于以下完整长报告参考。
+
 ### 环境准备
 
-1. **确认PDF转换脚本可用**：本Skill自带 `scripts/md_to_pdf.py`（基于WeasyPrint），用于将最终Markdown报告转为排版精美的PDF。确保依赖已安装：`pip install weasyprint markdown --break-system-packages`。
+1. **确认安装完整**：需要本目录的 `scripts/md_to_pdf.py` 和 `references/`，第三方市场可能只分发提示词；缺文件时从官方仓库安装完整目录，不能假装 PDF 已生成。优先使用已有 Python 环境；需要安装依赖时，在用户缓存目录创建或复用 venv（macOS/Linux：`~/.cache/khazix-skills/hv-analysis`；Windows：`LocalApplicationData` 下的 `khazix-skills/hv-analysis`），使用该环境的 Python，项目目录只保存稿件和报告。**按输出格式检查依赖**：本Skill自带 `scripts/md_to_pdf.py`（基于WeasyPrint），用于将最终Markdown报告转为排版精美的PDF。HTML 只需 `markdown`；PDF 才需要 `weasyprint` 和系统 Pango。安装说明见 https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation，不使用 `--break-system-packages`。
 2. **写作风格**：本Skill已内置完整的写作风格指南（见下文"写作风格"部分），无需额外加载其他skill。
 
 ### 明确研究对象
@@ -81,7 +90,9 @@ skill:
 3. **研究动机**（可选）：为什么要研究它？最近发生了什么？
 4. **特别关注点**（可选）：有没有特别想深入的方向？
 
----## 第一步：联网信息收集
+---
+
+## 第一步：联网信息收集
 
 这个方法论的质量完全取决于信息的丰富度和准确性。**必须联网搜索**，不能仅靠已有知识。研究报告的价值在于深度和完整度，所以信息收集阶段宁可多搜，不要因为信息不够导致后面的分析浮于表面。
 
@@ -93,20 +104,7 @@ skill:
 - **子Agent 2 — 横向信息**：竞品识别、各竞品的特点和用户口碑、行业对比评测、市场份额
 - **子Agent 3**（复杂对象才需要）：补充信息，如创始人深度背景、行业环境变化、用户社区讨论（GitHub issues、Reddit、Twitter/X、知乎等）
 
-**子Agent联网工具使用指南**（直接写入每个子Agent的prompt中）：
-
-每个子Agent的prompt中必须包含以下联网指引：
-
-> 你需要联网获取信息。使用以下工具：
-> - **WebSearch**：用于搜索发现信息来源，获取摘要和关键词结果
-> - **WebFetch**：当已知具体URL时，用于从页面定向提取内容
-> - 如果用户环境中安装了 web-access skill（检查路径 `/mnt/.claude/skills/web-access/SKILL.md` 是否存在），优先加载它并遵循其指引，它提供更强的浏览器CDP能力
-> - 搜索策略：先用WebSearch发现信息来源和线索，找到具体URL后用WebFetch深入提取
-> - 多次搜索、多个关键词组合，不要只搜一次就放弃
-> - 一手来源优于二手来源：官方博客 > 权威媒体原创报道 > 转载/聚合
-> - **学术类研究对象必查arxiv**：如果研究对象涉及学术概念、算法、AI模型、技术范式等，必须通过arxiv API获取相关论文。调用方式：`curl -s "https://export.arxiv.org/api/query?search_query=all:关键词1+AND+all:关键词2&max_results=10"`，或用WebFetch访问同一URL。返回XML格式，包含标题、作者、摘要、发布日期、PDF链接。可按需调整关键词组合和结果数量。找到关键论文后，用WebFetch读取论文页面（`https://arxiv.org/abs/论文ID`）获取更多细节。
-
-prompt要描述目标（"获取""调研""了解"），不要用暗示具体手段的动词（"搜索""爬取"），让子Agent自主判断最佳获取方式。
+使用当前宿主实际提供的搜索和网页读取工具，不依赖某个模型或固定工具名。支持并行任务时可按上面的分工研究；不支持则顺序完成。搜索不可用时先尝试已知官方页面；仍无法取证就交付已有证据与缺口，不能用模型记忆冒充实时搜索结果。
 
 ### 信息来源优先级
 
@@ -120,6 +118,8 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 | 行业分析 | 权威媒体原创报道（非转载） |
 | 学术/技术原理 | arXiv论文（`export.arxiv.org/api/query`）、Google Scholar、学术会议论文集 |
 
+采集时为关键事实记录 URL、事件发生时间和页面发布时间/更新时间，不能混为一谈。优先直接的一手证据；无一手证据时比较互不转载的独立来源。只有单一二手来源时标「单一来源」；各方主张冲突时标「有分歧」并对称归属；缺证据标「暂缺」，不补造。预测和推断明确标注。价格、规模、现状优先当前有效来源，旧资料用于历史叙事。
+
 ### 信息充分性自检
 
 搜索完成后检查：
@@ -129,7 +129,9 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 
 信息不够就再补搜。不要凑合。
 
----## 第二步：纵向分析（Diachronic / Longitudinal）
+---
+
+## 第二步：纵向分析（Diachronic / Longitudinal）
 
 沿时间轴，完整还原研究对象从诞生到现在的发展全貌。这是报告的主体部分，篇幅应该最重。
 
@@ -147,9 +149,11 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 
 ### 篇幅
 
-6000-15000字。历史越长、节点越多的对象靠近上限，新生事物靠近下限。核心原则是把故事讲完整、讲透，每个关键节点都值得展开，不要为了压缩而跳过重要细节。宁可写长写细，也不要蜻蜓点水。
+完整长报告参考6000-15000字；短报告按用户预算压缩。历史越长、节点越多的对象靠近上限，新生事物靠近下限。核心原则是把故事讲完整、讲透，每个关键节点都值得展开，不要为了压缩而跳过重要细节。宁可写长写细，也不要蜻蜓点水。
 
----## 第三步：横向分析（Synchronic / Cross-sectional）
+---
+
+## 第三步：横向分析（Synchronic / Cross-sectional）
 
 以当前时间点为切面，将研究对象与同赛道的竞品/同类进行全面对比。
 
@@ -177,9 +181,11 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 
 ### 篇幅
 
-3000-10000字。场景A控制在3000字左右，场景C每个主要竞品至少展开1500字以上的独立分析，不要一笔带过。
+完整长报告参考3000-10000字。场景A控制在3000字左右，场景C主要竞品按重要性分配篇幅，不要一笔带过。
 
----## 第四步：横纵交汇洞察
+---
+
+## 第四步：横纵交汇洞察
 
 这是整篇报告的精华段。把纵向发展脉络和横向竞争格局结合起来，给出综合性的、新的判断。不要写成前面内容的缩写版。
 
@@ -193,9 +199,11 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 
 ### 篇幅
 
-1500-3000字。
+完整长报告参考1500-3000字，用户篇幅优先。
 
----## 写作风格
+---
+
+## 写作风格
 
 这不是一份冷冰冰的咨询报告，而是一篇让人能从头读到尾的深度研究。写作风格需要在「研究报告的严谨」和「卡兹克的可读性」之间找到平衡点。
 
@@ -240,19 +248,25 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 
 避免咨询公司式的套话和空洞概括。用具体的细节和例子代替概括性陈述。比如不要写「该公司在这一阶段实现了快速增长」，而要写「从2024年中期的1000万美元ARR到2025年底的10亿美元，增长曲线几乎是垂直的」。
 
----## 第五步：生成PDF报告
+---
 
-报告写完后，使用本Skill自带的 `scripts/md_to_pdf.py` 脚本将Markdown转为排版精美的PDF。
+## 第五步：生成报告
+
+默认输出 PDF，并保留 Markdown 源稿；用户指定 HTML 时输出扩展名用 `.html`，沿用同一脚本的响应式页面，不需要 WeasyPrint。用户指定 Obsidian 时，把 Markdown 保存到用户指定的 vault 路径并回读核实，不需要新增配置或另一套转换器。
+
+PDF 或 HTML 使用同一个 `scripts/md_to_pdf.py` 转换；Markdown 直接交付，不运行转换。
 
 ### 转换流程
 
 1. **先完成Markdown稿件**：将完整报告写为标准Markdown格式，保存为 `[研究对象]_横纵分析报告.md`
-2. **安装依赖**（如未安装）：`pip install weasyprint markdown --break-system-packages`
-3. **运行转换脚本**：
+2. **解析实际路径**：从当前加载的 Skill 位置取得绝对目录 `HV_SKILL_DIR`，把所选环境的 Python 绝对路径设为 `HV_PYTHON`；路径包含空格时也必须可用。
+3. **安装缺少的依赖并转换**：HTML 只安装 `markdown`；PDF 再安装 `weasyprint` 及官方要求的系统库。Markdown 交付无需转换依赖。下面的 shell 示例使用已解析的路径，作者按用户要求填写；HTML 输出把扩展名改为 `.html`。
    ```bash
-   python [skill目录]/scripts/md_to_pdf.py input.md output.pdf --title "研究对象名称" --author "数字生命卡兹克"
+   "$HV_PYTHON" -m pip install markdown
+   "$HV_PYTHON" "$HV_SKILL_DIR/scripts/md_to_pdf.py" input.md output.pdf --title "研究对象名称" --author "报告作者"
    ```
-4. 脚本会自动生成中间HTML文件（便于调试）和最终PDF
+   PowerShell 调用路径变量时使用 `& $HV_PYTHON "$HV_SKILL_DIR/scripts/md_to_pdf.py" ...`。
+4. PDF 模式生成 HTML 和 PDF；HTML 模式只生成 HTML。打开实际产物核对标题、中文、表格和分页。
 
 ### 脚本内置的排版规范
 
@@ -261,7 +275,7 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 - **页面**：A4，页边距上25mm/左右20mm/下20mm
 - **封面页**：自动生成，包含标题（28pt深蓝色）、副标题「横纵分析法深度研究报告」、作者信息、装饰分隔线
 - **配色**：H1标题=#1a5276深蓝、H2=#1e8449绿色、H3=#2e86c1浅蓝、H4=#5b2c6f紫色，正文=#2c3e50深灰
-- **字体**：CSS fallback链 `"Droid Sans Fallback", Helvetica, Arial, sans-serif`，自动处理中英文混排
+- **字体**：CSS fallback链 `PingFang SC / Microsoft YaHei / Noto Sans CJK SC` 等跨平台中文字体，自动处理中英文混排
 - **正文**：10.5pt，行距1.75，两端对齐，孤行/寡行控制
 - **引用块**：左侧3pt深蓝竖线 + 浅灰背景
 - **表格**：全宽、深蓝表头白字、斑马纹行
@@ -312,9 +326,11 @@ prompt要描述目标（"获取""调研""了解"），不要用暗示具体手�
 
 ### 文件命名和交付
 
-PDF文件命名为 `[研究对象名称]_横纵分析报告.pdf`，保存到用户的工作目录中。
+使用用户指定格式和路径。默认 PDF 文件命名为 `[研究对象名称]_横纵分析报告.pdf`，保存到用户的工作目录中。
 
----## 不同研究对象类型的适配
+---
+
+## 不同研究对象类型的适配
 
 核心原则不变（纵向追时间深度，横向追同期广度），但侧重点不同：
 
@@ -326,7 +342,11 @@ PDF文件命名为 `[研究对象名称]_横纵分析报告.pdf`，保存到用�
 
 **研究人物时**：纵轴重点关注个人经历、职业轨迹、关键决策、成长曲线、公开言论变化；横轴重点关注与同领域其他人物的对比（做事方式、风格、成就、影响力、路线选择差异）。
 
----## 篇幅总览
+---
+
+## 篇幅总览
+
+下表是完整深度报告的参考，不是凑字数要求。用户指定篇幅、时限或重点时优先遵守；证据少就缩短并说明缺口。需要快速阅读时在正文前加结论摘要、关键时间线和竞品对比表，保留叙事解释。
 
 | 部分 | 字数范围 | 说明 |
 |-----|---------|------|
@@ -335,7 +355,9 @@ PDF文件命名为 `[研究对象名称]_横纵分析报告.pdf`，保存到用�
 | 横纵交汇 | 1,500 - 3,000字 | 精华段，给出新判断 |
 | **全文总计** | **10,000 - 30,000字** | 不要怕长，深度和完整度是价值所在 |
 
----## 质检清单
+---
+
+## 质检清单
 
 交付前自检：
 
@@ -351,5 +373,5 @@ PDF文件命名为 `[研究对象名称]_横纵分析报告.pdf`，保存到用�
 - [ ] 没有触犯绝对禁区里的任何一条？
 - [ ] 所有关键事实标注了信息来源？
 - [ ] 搜不到的信息诚实标注了「暂缺」，没有编造？
-- [ ] PDF排版美观、结构清晰、可读性好？
-- [ ] 总字数在 10,000-30,000 字的范围内？
+- [ ] 所选格式的实际产物可读、标题和中文显示正常？
+- [ ] 篇幅符合用户需求和证据密度，没有为了字数重复或编造？

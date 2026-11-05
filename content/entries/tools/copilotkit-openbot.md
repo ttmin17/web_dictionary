@@ -16,24 +16,24 @@ tags:
   - ai-agents
   - browser-automation
 status: active
-quality_percentile: 95
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: CopilotKit/OpenBot
   official_vendor: false
   license: MIT
 signals:
-  stars: 9751
-  last_commit: 2026-11-01T18:47:13Z
-  stars_delta_7d: 877
+  stars: 10214
+  last_commit: 2026-11-05T12:48:21Z
+  stars_delta_7d: 888
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 9751
+    - 10214
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: CopilotKit/OpenBot
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:01.511Z
+  fetched_at: 2026-11-05T13:13:33.150Z
   truncated: false
 type: agent_tool
 tool:
@@ -202,7 +202,7 @@ A Bot is any endpoint speaking [AG-UI](https://github.com/ag-ui-protocol/ag-ui),
 
 ## Quick start
 
-> **Setting up with an AI assistant?** Paste [`prompt.txt`](https://github.com/CopilotKit/OpenBot/blob/main/prompt.txt) into it first. It carries the
+> **Setting up with an AI assistant?** Paste [`prompt.txt`](https://raw.githubusercontent.com/CopilotKit/OpenBot/main/prompt.txt) into it first. It carries the
 > same steps as below plus the things that are easy to get wrong: which of the blank keys in
 > `.env.example` are actually yours to fill (the CopilotKit key and a model key), which the start
 > script fills for you, and what each start-up refusal means. Every claim in it is checked against
@@ -241,6 +241,17 @@ A Bot is any endpoint speaking [AG-UI](https://github.com/ag-ui-protocol/ag-ui),
    as the default by itself unless [Admin → Automatic Learning](https://github.com/CopilotKit/OpenBot/blob/main/docs/automatic-learning.md)
    has a saved setting.
    Managed Intelligence needs no separate licence token.
+
+   The same CopilotKit CLI sign-in provisions Composio automatically when you run
+   `bash scripts/start.sh`. If that cannot complete, OpenBot still starts, with apps
+   unavailable. You can run `bun run setup:composio` first to prepare it separately, or
+   later to retry; it does not need a Learning container. The helper creates or reuses one
+   isolated Composio project for this installation and saves its project key to `.env`.
+   Existing Composio keys and Arcade configurations are preserved. Keep the private
+   `.env.openbot-installation-id` file across restarts and interrupted setup attempts;
+   do not copy it into a new installation. This needs a published CopilotKit CLI with
+   `integrations composio provision` and the hosted provisioning service enabled.
+   See [Composio setup](https://github.com/CopilotKit/OpenBot/blob/main/docs/plugins/composio.md#automatic-project-setup) for deployment preparation.
 
 3. Fill the remaining required values:
 
@@ -422,6 +433,7 @@ Settings worth knowing:
 | ------------------------------------ | ------------------------------------------------------------------------- |
 | `OPENBOT_SINGLE_USER`                | Admits every request as one administrator. Required when no identity provider is configured; `.env.example` ships it on. |
 | `OPENAI_BASE_URL`                    | Answers the OpenAI-shaped calls from somewhere else: a gateway, a proxy.  |
+| `COPILOTKIT_OPENAI_API`              | `responses` or `chat`: the OpenAI API the built-in Bots call behind that `OPENAI_BASE_URL`. Unset, models that take tools only through the Responses API (`gpt-5.6` and later) get `responses` and the rest get `chat`. |
 | `ANTHROPIC_BASE_URL`, `GOOGLE_GENERATIVE_AI_BASE_URL` | The same, for those two APIs.            |
 | `COMPUTER_TOKEN`                     | Secret every Bot computer request must present. `start.sh` falls back to a fixed dev value. |
 | `SUPERVISOR_TOKEN`                   | Secret the supervisor requires. `start.sh` falls back to a fixed dev value. |
@@ -572,6 +584,7 @@ Use `bash scripts/start.sh` for the whole stack and `bash scripts/stop.sh` to ta
 - [docs/README.md](https://github.com/CopilotKit/OpenBot/blob/main/docs/README.md)
 - [docs/architecture.md](https://github.com/CopilotKit/OpenBot/blob/main/docs/architecture.md)
 - [docs/configuration.md](https://github.com/CopilotKit/OpenBot/blob/main/docs/configuration.md)
+- [docs/personal-edition.md](https://github.com/CopilotKit/OpenBot/blob/main/docs/personal-edition.md): OpenBot for one person, with no sign-in and no Admin
 - [docs/development.md](https://github.com/CopilotKit/OpenBot/blob/main/docs/development.md)
 - [docs/coworkers.md](https://github.com/CopilotKit/OpenBot/blob/main/docs/coworkers.md)
 - [docs/routines.md](https://github.com/CopilotKit/OpenBot/blob/main/docs/routines.md)

@@ -15,25 +15,25 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: agentscope-ai/QwenPaw
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 37185
-  last_commit: 2026-11-02T08:37:40Z
-  stars_delta_7d: 919
-  stars_growth_pct: 2.5
-  trending_score: 942.29
+  stars: 37386
+  last_commit: 2026-11-05T08:47:53Z
+  stars_delta_7d: 1120
+  stars_growth_pct: 3.1
+  trending_score: 1154.59
   rank_current: 14
   rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 35842
     - 36266
-    - 37185
+    - 37386
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: agentscope-ai/QwenPaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:58.269Z
+  fetched_at: 2026-11-05T13:13:29.628Z
   truncated: false
 type: agent_tool
 tool:
@@ -81,7 +81,7 @@ tool:
 
 <a href="https://trendshift.io/repositories/25882" target="_blank"><img src="https://trendshift.io/api/badge/trendshift/repositories/25882/daily" alt="agentscope-ai%2FQwenPaw | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-[[Documentation](https://qwenpaw.agentscope.io/)] [[中文](https://github.com/agentscope-ai/QwenPaw/blob/main/README_zh.md)] [[日本語](https://github.com/agentscope-ai/QwenPaw/blob/main/README_ja.md)] [[Русский](https://github.com/agentscope-ai/QwenPaw/blob/main/README_ru.md)]
+[[Documentation](https://qwenpaw.agentscope.io/)] [[中文](https://raw.githubusercontent.com/agentscope-ai/QwenPaw/main/README_zh.md)] [[日本語](https://github.com/agentscope-ai/QwenPaw/blob/main/README_ja.md)] [[Русский](https://github.com/agentscope-ai/QwenPaw/blob/main/README_ru.md)]
 
 <p align="center">
   <img src="https://gw.alicdn.com/imgextra/i1/O1CN01sens5C1TuwioeGexL_!!6000000002443-55-tps-771-132.svg" alt="QwenPaw Logo" width="120">
@@ -311,7 +311,7 @@ Then open **http://127.0.0.1:8088/** for the Console. Config, memory, and skills
 > No port mapping (`-p`) is needed; the container shares the host network directly. Note that all container ports are exposed on the host, which may cause conflicts if the port is already in use.
 >
 
-The image is built from scratch. To build the image yourself, please refer to the [Build Docker image](https://github.com/agentscope-ai/QwenPaw/blob/main/scripts/README.md#build-docker-image) section in `scripts/README.md`, and then push to your registry.
+The image is built from scratch. To build the image yourself, please refer to the [Build Docker image](https://raw.githubusercontent.com/agentscope-ai/QwenPaw/main/scripts/README.md#build-docker-image) section in `scripts/README.md`, and then push to your registry.
 
 ---
 
@@ -590,7 +590,7 @@ When running `qwenpaw init` interactively, you will be asked whether to opt in. 
 
 ## License
 
-QwenPaw is released under the [Apache License 2.0](https://github.com/agentscope-ai/QwenPaw/blob/main/LICENSE).
+QwenPaw is released under the [Apache License 2.0](https://raw.githubusercontent.com/agentscope-ai/QwenPaw/main/LICENSE).
 
 ---
 

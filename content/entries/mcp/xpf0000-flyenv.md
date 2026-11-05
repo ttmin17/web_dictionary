@@ -13,29 +13,29 @@ tags:
   - development-environment
   - docker-alternative
 status: active
-quality_percentile: 83
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: xpf0000/FlyEnv
   official_vendor: false
   license: BSD-3-Clause
 signals:
-  stars: 3326
-  last_commit: 2026-11-02T06:41:01Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.4
-  trending_score: 13.05
-  rank_current: 73
-  rank_delta: -14
+  stars: 3339
+  last_commit: 2026-11-05T13:03:05Z
+  stars_delta_7d: 26
+  stars_growth_pct: 0.8
+  trending_score: 26.2
+  rank_current: 66
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3278
     - 3292
     - 3313
-    - 3326
+    - 3339
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: xpf0000/FlyEnv
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:36.709Z
+  fetched_at: 2026-11-05T13:11:44.746Z
   truncated: false
 type: mcp_server
 launch:

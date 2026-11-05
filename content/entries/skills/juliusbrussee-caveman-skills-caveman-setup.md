@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: JuliusBrussee/caveman
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 116795
-  last_commit: 2026-11-02T07:45:06Z
-  stars_delta_7d: 1685
-  stars_growth_pct: 1.5
-  trending_score: 1709.67
+  stars: 117655
+  last_commit: 2026-11-05T07:18:24Z
+  stars_delta_7d: 2545
+  stars_growth_pct: 2.2
+  trending_score: 2601.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 111405
     - 113528
     - 115110
-    - 116795
+    - 117655
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: JuliusBrussee/caveman
   path: skills/caveman-setup/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:05.503Z
+  fetched_at: 2026-11-05T13:12:19.721Z
   truncated: false
 type: agent_skill
 skill:

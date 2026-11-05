@@ -14,28 +14,28 @@ tags:
   - hermes-agent
   - nous-research
 status: active
-quality_percentile: 80
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: nesquena/hermes-webui
   official_vendor: false
   license: MIT
 signals:
-  stars: 19347
-  last_commit: 2026-11-02T07:03:29Z
-  stars_delta_7d: 157
-  stars_growth_pct: 0.8
-  trending_score: 158.28
-  rank_current: 46
-  rank_delta: -3
+  stars: 19404
+  last_commit: 2026-11-05T12:37:56Z
+  stars_delta_7d: 214
+  stars_growth_pct: 1.1
+  trending_score: 216.39
+  rank_current: 50
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 19028
     - 19190
-    - 19347
+    - 19404
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: nesquena/hermes-webui
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:06:58.885Z
+  fetched_at: 2026-11-05T13:13:30.567Z
   truncated: true
 type: agent_tool
 tool:

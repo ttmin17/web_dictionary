@@ -18,21 +18,21 @@ status: active
 quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Orkas-AI/Orkas
   official_vendor: false
   license: MIT
 signals:
-  stars: 7693
-  last_commit: 2026-11-02T04:09:53Z
-  stars_delta_7d: 288
+  stars: 9034
+  last_commit: 2026-11-05T01:34:00Z
+  stars_delta_7d: 331
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 7693
+    - 9034
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: Orkas-AI/Orkas
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.496Z
+  fetched_at: 2026-11-05T13:13:44.748Z
   truncated: false
 type: agent_tool
 tool:
@@ -77,7 +77,7 @@ Orkas is built to keep a project moving, not just answer one prompt. A **project
 [![X: @leochenpm](https://img.shields.io/badge/X-%40leochenpm-black?logo=x)](https://x.com/leochenpm)
 [![Website: orkas.ai](https://img.shields.io/badge/Website-orkas.ai-5b57d6)](https://orkas.ai/?source=gh-orkas)
 
-[English](https://github.com/Orkas-AI/Orkas/blob/main/README.md) · [简体中文](https://github.com/Orkas-AI/Orkas/blob/main/README.zh-CN.md) · [日本語](https://github.com/Orkas-AI/Orkas/blob/main/README.ja.md)
+[English](https://raw.githubusercontent.com/Orkas-AI/Orkas/main/README.md) · [简体中文](https://github.com/Orkas-AI/Orkas/blob/main/README.zh-CN.md) · [日本語](https://github.com/Orkas-AI/Orkas/blob/main/README.ja.md)
 
 ---
 
@@ -208,6 +208,8 @@ The download link detects your system and starts the right installer.
 | --- | --- | --- |
 | **Claude Code** | Anthropic's agentic coding tool — in the terminal, IDE, desktop and web, built on Claude models. | Not either-or: Orkas runs Claude Code as one of its agents. Around it, Orkas adds a model-agnostic team for the work beyond code — research, content, video and more — with projects, to-dos and automations that keep it moving. [Orkas vs Claude Code →](https://orkas.ai/compare/orkas-vs-claude-code/?source=gh-orkas) |
 | **Codex** | OpenAI's coding agent — in the terminal, your editor and the cloud. | Not either-or: Orkas runs Codex as one of its agents, next to Claude Code and OpenCode. The Commander can hand the coding to Codex and the review to another agent, then cover the non-code half of a release — docs, launch posts and videos. [Orkas vs Codex →](https://orkas.ai/compare/orkas-vs-codex/?source=gh-orkas) |
+| **Claude Cowork** | Anthropic's agent for everyday work, now part of Claude — on desktop, web and mobile with a paid Claude plan. It runs in Anthropic's cloud by default and uses Claude models. | An open-source (MIT) alternative to Claude Cowork that's free to start, with 500 credits. Orkas runs its agents on your computer and keeps your data local by default, with the built-in Orkas model, your own provider keys or a local endpoint. The Commander can also bring in Claude Code, Codex and other CLI agents. The trade-off: Orkas needs your computer awake, while Cowork's cloud tasks can keep running without it. [Claude Cowork alternatives →](https://orkas.ai/compare/claude-cowork-alternatives/?source=gh-orkas) |
+| **Manus** | An AI agent that plans and runs tasks in Manus's cloud by default. The Manus Studio desktop app (macOS and Windows) can also work in a folder you choose, with tasks still planned in the cloud. | An open-source (MIT) alternative to Manus. Orkas runs its agents on your computer and keeps your data local by default, with the built-in Orkas model, your own provider keys or a local endpoint. Projects, to-dos and automations keep the work moving. The trade-off: Orkas needs your computer awake, while Manus's cloud tasks can keep running without it. [Open-source Manus alternative →](https://orkas.ai/open-source-manus-alternative/?source=gh-orkas) |
 | **LangChain** | A developer framework/library for building LLM apps and agents — code-first, embedded in your own Python/JS app. | Orkas is a desktop app you direct through chat, not by writing orchestration code. Data stays local by default. |
 | **CrewAI** | A Python framework for orchestrating role-playing autonomous agents — you define crews and agents in code. | Orkas brings multi-agent orchestration into a desktop app, with projects, to-dos, automations and per-agent self-improvement built in. |
 | **OpenClaw** | A personal-agent platform with messaging integrations, multi-agent routing and sub-agents. | Orkas provides a desktop workspace for finished deliverables, with built-in specialists and coordination across Claude Code, Codex, OpenCode and other CLI agents. OpenClaw can join that workflow as a CLI agent. |

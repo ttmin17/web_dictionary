@@ -14,28 +14,28 @@ tags:
   - ai-agents
   - android
 status: active
-quality_percentile: 79
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: firerpa/lamda
   official_vendor: false
   license: MIT
 signals:
-  stars: 8707
+  stars: 8715
   last_commit: 2026-09-27T10:05:24Z
-  stars_delta_7d: 45
-  stars_growth_pct: 0.5
-  trending_score: 45.23
-  rank_current: 87
-  rank_delta: -1
+  stars_delta_7d: 53
+  stars_growth_pct: 0.6
+  trending_score: 53.32
+  rank_current: 93
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8627
     - 8662
-    - 8707
+    - 8715
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: firerpa/lamda
   path: README.md
   branch: "10"
-  fetched_at: 2026-11-02T09:05:34.074Z
+  fetched_at: 2026-11-05T13:11:43.071Z
   truncated: false
 type: agent_tool
 tool:

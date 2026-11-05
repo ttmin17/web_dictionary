@@ -19,7 +19,7 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ruvnet/ruflo
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 80579
-  last_commit: 2026-11-02T06:38:36Z
-  stars_delta_7d: 1236
-  stars_growth_pct: 1.6
-  trending_score: 1255.25
+  stars: 80952
+  last_commit: 2026-11-05T04:50:54Z
+  stars_delta_7d: 1609
+  stars_growth_pct: 2
+  trending_score: 1641.63
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74512
     - 76729
     - 79343
-    - 80579
+    - 80952
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: ruvnet/ruflo
   path: plugins/ruflo-ai-team/directory/skills/monitor-ai-team/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.357Z
+  fetched_at: 2026-11-05T13:11:32.189Z
   truncated: false
 type: agent_skill
 skill:

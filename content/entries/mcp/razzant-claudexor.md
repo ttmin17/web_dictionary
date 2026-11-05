@@ -16,28 +16,28 @@ tags:
   - ai-coding
   - ai-coding-assistant
 status: active
-quality_percentile: 39
+quality_percentile: 38
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: razzant/claudexor
   official_vendor: false
   license: MIT
 signals:
-  stars: 520
-  last_commit: 2026-11-02T08:08:37Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.6
-  trending_score: 3.02
-  rank_current: 96
-  rank_delta: -2
+  stars: 523
+  last_commit: 2026-11-04T14:40:55Z
+  stars_delta_7d: 6
+  stars_growth_pct: 1.2
+  trending_score: 6.07
+  rank_current: 91
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 515
     - 517
-    - 520
+    - 523
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,8 +45,8 @@ readme_source:
   repo: razzant/claudexor
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.469Z
-  truncated: false
+  fetched_at: 2026-11-05T13:13:44.759Z
+  truncated: true
 type: mcp_server
 launch:
   transport: stdio
@@ -158,6 +158,12 @@ CLI + daemon from npm (installs the `claudexor` and `claudexord` bins):
 npm install -g claudexor
 claudexor doctor
 ```
+
+`pr` delivery requires the pinned publication scanner, which the npm packages do
+not bundle. Prepare it once with `claudexor scanner prepare`, or offline from the
+official archive with `claudexor scanner prepare --from-archive <file>`; a running
+daemon picks it up at its next `pr`. See
+[Publication scanner](https://github.com/razzant/claudexor/blob/main/docs/ARCHITECTURE.md#publication-scanner).
 
 You can also build from source — see Quickstart below.
 
@@ -637,7 +643,10 @@ downgrade. See
 ## Web, Budgets, And Gates
 
 External web context is a typed run policy (`--web off|auto|cached|live`),
-separate from shell/network sandboxing. `off` is strict; `auto`, `cached`, and
+separate from shell/network sandboxing. `off` asks each route to switch off its
+own web tools and refuses a route that cannot; it is not a network switch, since
+the vendor API connection stays open, and receipts name each route's switch while
+saying that network traffic is not measured. `auto`, `cached`, and
 `live` are optional preferences, so unused, denied, unavailable, or failed web
 never blocks an otherwise useful result and remains visible as evidence or a
 warning. A harness such as Cursor that cannot guarantee `off` is refused before
@@ -740,6 +749,12 @@ claudexor daemon status --json
 claudexor daemon logs
 claudexor daemon stop
 ```
+
+If start refuses with `another claudexor daemon owns <path>` while nothing answers,
+read [Legacy PID-only writer records](https://github.com/razzant/claudexor/blob/main/docs/ARCHITECTURE.md#legacy-pid-only-writer-records)
+before touching that path. Its manual steps apply only to a record without
+`identity`; one that carries `identity` stays held until the next start can
+replace it.
 
 ## Artifact Layout
 
@@ -1047,8 +1062,10 @@ named file store and sends its bound token as a `WorkosCursorSessionToken` cooki
 to cursor.com; it does not refresh OAuth or write credentials. Dashboard balances
 and spending are display-only, not execution-quota or admission evidence.
 Public lookups: release name checks (registries), update checks (GitHub release
-manifest), download statistics (GitHub/npm). These are user-invoked except the
-app's update check on foreground; there is no update timer or auto-update ping.
+manifest), download statistics (GitHub/npm), the pinned scanner archive (GitHub
+release, `claudexor scanner prepare` without `--from-archive`). These are
+user-invoked except the app's update check on foreground; there is no update timer
+or auto-update ping.
 Files named `telemetry/` are **local only**: cost/latency averages and run evidence,
 not transmitted analytics.
 
@@ -1089,28 +1106,4 @@ then remove the daemon-owned paths above (and npm/global install or the app
 bundle). Do not delete a repository's `.claudexor/` directory as part of the
 product uninstall.
 
-## Upgrading from 0.x
-
-Version 2 is a clean breaking reset: it does not import or mutate v1 project,
-trust, secret, run, or thread state. Retired config keys and old wire mode ids
-hard-error instead of being migrated or aliased. Keep any v1 state you may
-need separately. After upgrading, run
-`claudexor plugin repair all` so generated host-plugin files match the new
-version, and restart the daemon (`claudexor daemon stop` — the next command
-starts the new build).
-
-## Version History
-
-The root `package.json` is the version SSOT. The full release history lives in
-[`CHANGELOG.md`](https://github.com/razzant/claudexor/blob/main/CHANGELOG.md).
-
-## License
-
-[MIT](https://github.com/razzant/claudexor/blob/main/LICENSE) (c) 2026 Anton Razzhigaev — inbound contributions are accepted under
-the same license.
-
-## Author
-
-Claudexor is written by Anton ([@razzant](https://t.me/razzant)).
-News and discussion live in the author's Telegram channel:
-[t.me/abstractdl](https://t.me/abstractdl).
+*(README truncated for display. [Read the full README on GitHub](https://github.com/razzant/claudexor)).*

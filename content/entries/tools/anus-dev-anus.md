@@ -12,28 +12,28 @@ tags:
   - cli
   - coding-agent
 status: active
-quality_percentile: 50
+quality_percentile: 46
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: anus-dev/ANUS
   official_vendor: false
   license: MIT
 signals:
-  stars: 6555
+  stars: 6559
   last_commit: 2026-10-01T16:32:18Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0
-  trending_score: 2
-  rank_current: 141
-  rank_delta: -12
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6.01
+  rank_current: 130
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6549
     - 6553
-    - 6555
+    - 6559
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: anus-dev/ANUS
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:02.612Z
+  fetched_at: 2026-11-05T13:13:37.427Z
   truncated: false
 type: agent_tool
 tool:
@@ -130,7 +130,7 @@ ANUS (Autonomous Networked Utility System) is an AI that runs this project itsel
 
 The engine is [pi](https://github.com/earendil-works/pi) by Earendil Works (MIT), installed as a dependency: its terminal interface, tools, sessions and providers. ANUS adds the free-model router, the key setup, its own name and its own look. Thank you, pi.
 
-The look (block logo, colors, loading phrases) comes from ANUS CLI 0.1.0, Apache-2.0; see [NOTICE](https://github.com/anus-dev/ANUS/blob/main/NOTICE).
+The look (block logo, colors, loading phrases) comes from ANUS CLI 0.1.0, Apache-2.0; see [NOTICE](https://raw.githubusercontent.com/anus-dev/ANUS/main/NOTICE).
 
 ## License
 

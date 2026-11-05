@@ -16,26 +16,26 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: 54yyyu/zotero-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5693
+  stars: 5754
   last_commit: 2026-11-01T02:43:00Z
-  stars_delta_7d: 122
-  stars_growth_pct: 2.2
-  trending_score: 124.67
-  rank_current: 17
-  rank_delta: 4
+  stars_delta_7d: 183
+  stars_growth_pct: 3.3
+  trending_score: 189.01
+  rank_current: 18
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5363
     - 5461
     - 5571
-    - 5693
+    - 5754
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: 54yyyu/zotero-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.313Z
+  fetched_at: 2026-11-05T13:11:43.807Z
   truncated: false
 type: mcp_server
 launch:

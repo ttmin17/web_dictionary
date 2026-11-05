@@ -14,10 +14,10 @@ tags:
   - antigravity
   - claude-code
 status: active
-quality_percentile: 97
+quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/elephant-goldfish-model
@@ -25,14 +25,14 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 9666
-  last_commit: 2026-11-01T13:38:10Z
-  stars_delta_7d: 1349
+  stars: 12110
+  last_commit: 2026-11-04T20:36:04Z
+  stars_delta_7d: 1591
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 9666
+    - 12110
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: google/elephant-goldfish-model
   path: distributions/claude/skills/egm-review-loop/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:32.179Z
+  fetched_at: 2026-11-05T13:12:49.760Z
   truncated: false
 type: agent_skill
 skill:
@@ -106,7 +106,13 @@ The caller or user provides exactly these parameters:
 *   **`Standards`**: Mapping of reviewer names to standard names (shortnames or
     paths).
 *   **`GoldfishContext`**: A reading list (source files, directories, or
-    documentation URLs) fed to reviewers to establish their baseline.
+    documentation URLs) fed to reviewers to establish their baseline. An empty
+    list from the caller counts as provided; do not ask for it again. Some
+    reviewers cannot open URLs, so before the first round save the raw page of
+    each URL as a new file in the working directory (or your harness's artifact
+    directory) and pass its absolute path instead. If a page cannot be saved,
+    ask the user for a local copy and end your turn; if no one can answer,
+    as in a headless run, leave it out, tell the user, and keep going.
 
 ## Path & Standard Resolution Logic
 
@@ -167,8 +173,10 @@ file` mode is specified, confirm full-file line bounds).
         The synthesizer spawns the Goldfish review swarm in
         parallel, deduplicates findings, writes the report artifact, and
         returns a single summary message to avoid context pollution in the root
-        conversation. Pass it the Failed Reviewers rule below. Its summary must
-        give a status, `completed` or `not run`, for each requested reviewer.
+        conversation. Pass it the Failed Reviewers rule below and
+        `GoldfishContext`, and tell it to give those files to each reviewer.
+        Its summary must give a status, `completed` or `not run`, for each
+        requested reviewer.
     *   **Direct Dispatch (Flat Swarm)**: Alternatively, spawn each requested
         reviewer subagent in `Reviewers` directly.
         Instruct each subagent to first read its persona definition in

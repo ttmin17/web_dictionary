@@ -19,21 +19,21 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mobile-next/mobile-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10216
-  last_commit: 2026-11-01T19:51:53Z
-  stars_delta_7d: 122
+  stars: 10314
+  last_commit: 2026-11-02T14:50:26Z
+  stars_delta_7d: 119
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 10216
+    - 10314
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: mobile-next/mobile-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:33.863Z
+  fetched_at: 2026-11-05T13:11:41.720Z
   truncated: false
 type: mcp_server
 launch:
@@ -486,7 +486,7 @@ test('sign in', async ({ screen }) => {
 });
 ```
 
-Start with `npm init mobilewright@latest`. The [step-by-step guide](https://github.com/mobile-next/mobile-mcp/blob/main/docs/mobilewright-ci.md) goes from an agent session to a test running in GitHub Actions.
+Start with `npm init mobilewright@latest`. The [step-by-step guide](https://raw.githubusercontent.com/mobile-next/mobile-mcp/main/docs/mobilewright-ci.md) goes from an agent session to a test running in GitHub Actions.
 
 ### ☁️ Scale up, use a cloud device
 

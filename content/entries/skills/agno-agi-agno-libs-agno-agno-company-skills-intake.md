@@ -14,10 +14,10 @@ tags:
   - developer-tools
   - python
 status: active
-quality_percentile: 62
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: agno-agi/agno
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 43011
-  last_commit: 2026-11-02T08:04:25Z
-  stars_delta_7d: 120
-  stars_growth_pct: 0.3
-  trending_score: 120.34
+  stars: 43073
+  last_commit: 2026-11-05T13:02:48Z
+  stars_delta_7d: 182
+  stars_growth_pct: 0.4
+  trending_score: 182.77
   velocity_source: snapshot_delta
   sparkline_4w:
     - 42805
     - 42891
-    - 43011
+    - 43073
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: agno-agi/agno
   path: libs/agno/agno/company/skills/intake/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:54.901Z
+  fetched_at: 2026-11-05T13:13:25.527Z
   truncated: false
 type: agent_skill
 skill:

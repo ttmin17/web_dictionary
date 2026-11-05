@@ -7,7 +7,7 @@ summary: State back what the user wants in your own words. If the conversation
   already has rich context, summarize it. If the goal is bare or vague, do
   minimal shallow exploration of the codebase to ground your understanding....
 categories:
-  - coding-agents
+  - productivity-ops
 tags:
   - agents
   - claude-code
@@ -17,7 +17,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: backnotprop/plannotator
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9817
-  last_commit: 2026-11-02T09:01:25Z
-  stars_delta_7d: 170
-  stars_growth_pct: 1.8
-  trending_score: 173
+  stars: 9860
+  last_commit: 2026-11-05T13:05:30Z
+  stars_delta_7d: 213
+  stars_growth_pct: 2.2
+  trending_score: 217.7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9393
     - 9506
     - 9647
-    - 9817
+    - 9860
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: backnotprop/plannotator
   path: apps/skills/extra/plannotator-setup-goal/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:33.159Z
+  fetched_at: 2026-11-05T13:12:55.600Z
   truncated: false
 type: agent_skill
 skill:

@@ -13,24 +13,24 @@ tags:
   - agy-cli
   - ai-agent
 status: active
-quality_percentile: 26
+quality_percentile: 23
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: imshaikot/browsentic
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 267
+  stars: 273
   last_commit: 2026-10-27T01:40:57Z
   stars_delta_7d: 17
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 267
+    - 273
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +39,7 @@ readme_source:
   repo: imshaikot/browsentic
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:25.139Z
+  fetched_at: 2026-11-05T13:14:00.331Z
   truncated: false
 type: mcp_server
 launch:

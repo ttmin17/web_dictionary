@@ -15,29 +15,29 @@ tags:
   - claude-code
   - claude-plugin
 status: active
-quality_percentile: 59
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: artokun/comfyui-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 886
-  last_commit: 2026-10-26T17:51:03Z
-  stars_delta_7d: 23
-  stars_growth_pct: 2.7
-  trending_score: 23.61
-  rank_current: 60
-  rank_delta: -7
+  stars: 893
+  last_commit: 2026-11-04T10:40:05Z
+  stars_delta_7d: 30
+  stars_growth_pct: 3.5
+  trending_score: 31.04
+  rank_current: 61
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 819
     - 840
     - 863
-    - 886
+    - 893
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: artokun/comfyui-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.252Z
+  fetched_at: 2026-11-05T13:12:09.654Z
   truncated: false
 type: mcp_server
 launch:
@@ -198,7 +198,7 @@ This package also ships as a Claude Code plugin that adds slash commands, skills
 
 42 skills total: model-family guides (Flux, WAN, LTX 2.3, MiniMax H3, Qwen, Z-Image, Ideogram 4, ERNIE, ANIMA + anime / WAN / Z-Image LoRA training), the **model-registry** (curated download URLs), the **civitai** pairing skill, node authoring, the **launch/performance-flags** matrix, and the core four below. Full list on the [plugin docs page](https://comfyui-mcp.artokun.io/docs/plugin).
 
-> **Installer packs.** [`packs/`](https://github.com/artokun/comfyui-mcp/blob/main/packs/) bundles 13 one-command ComfyUI setups: ANIMA, Ideogram 4, LTX-2.3, ERNIE, WAN (animate / longer-videos / transparent), Qwen (image / image-edit), Z-Image (turbo / base / xy-plot) and artokun-flow (WAN Animate: replace / animate). Each is a manifest of custom nodes + model URLs + workflow that drives both `apply_manifest` and generated `install-windows.bat` / `install-runpod.sh`, with CI that validates every model link + payload size. See [`packs/README.md`](https://github.com/artokun/comfyui-mcp/blob/main/packs/README.md).
+> **Installer packs.** [`packs/`](https://raw.githubusercontent.com/artokun/comfyui-mcp/main/packs/) bundles 13 one-command ComfyUI setups: ANIMA, Ideogram 4, LTX-2.3, ERNIE, WAN (animate / longer-videos / transparent), Qwen (image / image-edit), Z-Image (turbo / base / xy-plot) and artokun-flow (WAN Animate: replace / animate). Each is a manifest of custom nodes + model URLs + workflow that drives both `apply_manifest` and generated `install-windows.bat` / `install-runpod.sh`, with CI that validates every model link + payload size. See [`packs/README.md`](https://github.com/artokun/comfyui-mcp/blob/main/packs/README.md).
 
 | Skill | Description |
 |-------|-------------|

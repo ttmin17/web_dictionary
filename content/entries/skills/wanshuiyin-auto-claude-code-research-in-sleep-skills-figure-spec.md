@@ -15,10 +15,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 90
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 18475
-  last_commit: 2026-11-01T05:01:47Z
-  stars_delta_7d: 387
-  stars_growth_pct: 2.1
-  trending_score: 395.28
+  stars: 18704
+  last_commit: 2026-11-03T16:40:15Z
+  stars_delta_7d: 616
+  stars_growth_pct: 3.4
+  trending_score: 636.98
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17411
     - 17693
     - 18088
-    - 18475
+    - 18704
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/figure-spec/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:30.193Z
+  fetched_at: 2026-11-05T13:11:41.112Z
   truncated: false
 type: agent_skill
 skill:

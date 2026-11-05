@@ -16,7 +16,7 @@ status: active
 quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: CodeSoul-co/Hypha
@@ -43,7 +43,7 @@ readme_source:
   repo: CodeSoul-co/Hypha
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:25.280Z
+  fetched_at: 2026-11-05T13:14:00.484Z
   truncated: false
 type: mcp_server
 launch:

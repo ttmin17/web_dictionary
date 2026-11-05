@@ -11,28 +11,28 @@ tags:
   - clawbot
   - cli-tool
 status: active
-quality_percentile: 75
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: HKUDS/DeepTutor
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 53985
-  last_commit: 2026-10-31T16:51:35Z
-  stars_delta_7d: 11051
-  stars_growth_pct: 25.7
-  trending_score: 13895.47
+  stars: 55257
+  last_commit: 2026-11-05T11:40:48Z
+  stars_delta_7d: 12323
+  stars_growth_pct: 28.7
+  trending_score: 15859.97
   rank_current: 3
   rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 41692
     - 42934
-    - 53985
+    - 55257
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: HKUDS/DeepTutor
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:54.076Z
+  fetched_at: 2026-11-05T13:13:24.665Z
   truncated: true
 type: agent_tool
 tool:
@@ -104,7 +104,7 @@ tool:
 
 ---
 
-> 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at [`Roadmap`](https://github.com/HKUDS/DeepTutor/issues/498), and see our [Contributing Guide](https://github.com/HKUDS/DeepTutor/blob/main/CONTRIBUTING.md) for branching strategy, coding standards, and how to get started.
+> 🤝 **We welcome any kinds of contributing!** Vote on roadmap items or propose new ones at [`Roadmap`](https://github.com/HKUDS/DeepTutor/issues/498), and see our [Contributing Guide](https://raw.githubusercontent.com/HKUDS/DeepTutor/main/CONTRIBUTING.md) for branching strategy, coding standards, and how to get started.
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/HKUDS/DeepTutor/main/assets/figs/web-dev/overview.png" alt="DeepTutor Home and workspace navigation" width="900">

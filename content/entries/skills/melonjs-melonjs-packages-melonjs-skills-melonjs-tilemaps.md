@@ -14,10 +14,10 @@ tags:
   - agent-skills
   - canvas
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,15 +25,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6432
-  last_commit: 2026-11-02T09:01:47Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.2
-  trending_score: 13.03
+  stars: 6442
+  last_commit: 2026-11-05T10:39:00Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.4
+  trending_score: 23.08
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
-    - 6432
+    - 6442
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-tilemaps/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:46.468Z
+  fetched_at: 2026-11-05T13:13:18.603Z
   truncated: false
 type: agent_skill
 skill:
@@ -475,6 +475,7 @@ unanimated layer into the offscreen-bake path instead.
 
 | symptom | cause |
 |---|---|
+| objects a screen added just before `level.load` draw in the order they were added (a background over everything) | before 20.13 the reset inside `level.load` dropped the sort still pending for the persistent children it kept; update, or call `sort()` on their container once the level is loaded |
 | a Tiled object becomes a plain shape with no behaviour | its class/name does not match any registered factory, or it was registered after `level.load` |
 | the world is still empty right after `level.load` | the load is deferred to a timer while the loop runs — `await level.load(id, { async: true })`, or use `onLoaded` / `LEVEL_LOADED` |
 | `await level.load(id)` returned `true` rather than a promise | without `async: true` the call returns a boolean; `await true` resolves immediately and the load has not run yet — pass the flag when you mean to await |

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3264
-  last_commit: 2026-11-01T16:47:54Z
-  stars_delta_7d: 50
-  stars_growth_pct: 1.6
-  trending_score: 50.78
+  stars: 3298
+  last_commit: 2026-11-04T18:34:53Z
+  stars_delta_7d: 84
+  stars_growth_pct: 2.6
+  trending_score: 86.2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
-    - 3264
+    - 3298
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/mcp-server-tools/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:07:16.752Z
+  fetched_at: 2026-11-05T13:13:51.216Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,7 +59,7 @@ skill:
     scopes, expiry presets or token prefix in webapp/src/lib/mcpAuth.ts.
   folder_path: skills/mcp-server-tools
   extra_files: []
-  pack_total_skills: 16
+  pack_total_skills: 17
   is_pack_primary: false
   clients:
     - claude-code
@@ -117,9 +117,14 @@ the generated reference page, never by this skill.
   lists, so a new tool's verb goes there; an op literal such as `list_muted` or `mute_many`
   in an agent-facing file then reads as an unknown tool. Wrap ops in
   [triageGraph.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/mcp/triageGraph.ts) helpers instead.
-- **Watch the `write` bucket headroom.** [apiReference.test.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/mcp/apiReference.test.ts)
-  calls every tool with ONE token inside one test, against the `write` limit (10/min by
-  default). A new write tool that overflows it must raise that test's limit, not drop a call.
+- **Watch the bucket headroom.** [apiReference.test.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/mcp/apiReference.test.ts)
+  calls every tool with ONE token inside one test. It raises the `write` and `loop` limits
+  (`MCP_RATE_WRITE_PER_MIN`, `MCP_RATE_LOOP_PER_MIN`); a new tool on a tighter bucket
+  (`exec`, `query`, `start`, `compare`) that overflows must raise that test's limit, not drop a call.
+- **A tool behind a deployment switch is withdrawn at registration, and every test that lists
+  tools stubs the switch on.** The files that stub `MCP_KALI_EXEC_ENABLED` also stub
+  `AGENT_IN_THE_LOOP_ENABLED`; a new switch joins both lists, or its tools vanish from
+  `tools/list`, the counts and the generated reference.
 - **A required ARRAY argument needs an `EXAMPLE_EXTRA_ARGS` entry.** `placeholderFor` has no
   array branch, so the generated example would name no item (`mute_findings`' `findingIds`).
 - **A new scope gates writes; reads go under an existing read scope.** Every `ScopeAccess` in

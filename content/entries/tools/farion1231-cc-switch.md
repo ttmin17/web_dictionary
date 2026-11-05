@@ -16,25 +16,25 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: farion1231/cc-switch
   official_vendor: false
   license: MIT
 signals:
-  stars: 151085
-  last_commit: 2026-11-02T08:43:57Z
-  stars_delta_7d: 2330
-  stars_growth_pct: 1.6
-  trending_score: 2366.5
+  stars: 152047
+  last_commit: 2026-11-05T12:25:31Z
+  stars_delta_7d: 3292
+  stars_growth_pct: 2.2
+  trending_score: 3364.85
   rank_current: 10
   rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 146073
     - 148755
-    - 151085
+    - 152047
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: farion1231/cc-switch
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:02.065Z
+  fetched_at: 2026-11-05T13:12:15.234Z
   truncated: true
 type: agent_tool
 tool:
@@ -72,7 +72,7 @@ tool:
 
 ### 🌐 The Only Official Website: **[ccswitch.io](https://ccswitch.io)**
 
-English | [中文](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md) | [日本語](https://github.com/farion1231/cc-switch/blob/main/README_JA.md) | [Deutsch](https://github.com/farion1231/cc-switch/blob/main/README_DE.md) | [Changelog](https://github.com/farion1231/cc-switch/blob/main/CHANGELOG.md)
+English | [中文](https://raw.githubusercontent.com/farion1231/cc-switch/main/README_ZH.md) | [日本語](https://github.com/farion1231/cc-switch/blob/main/README_JA.md) | [Deutsch](https://github.com/farion1231/cc-switch/blob/main/README_DE.md) | [Changelog](https://github.com/farion1231/cc-switch/blob/main/CHANGELOG.md)
 
 **[Download](#download--installation) · [Quick Start](#quick-start) · [Features](#features) · [FAQ](#faq) · [User Manual](https://github.com/farion1231/cc-switch/blob/main/docs/user-manual/en/README.md)**
 
@@ -132,11 +132,6 @@ The platform also supports enterprise-grade concurrency, a dedicated admin conso
 <tr>
 <td width="180"><a href="https://runapi.host/register?aff=iOKB"><img src="https://raw.githubusercontent.com/farion1231/cc-switch/main/assets/partners/logos/runapi.jpg" alt="RunAPI" width="150"></a></td>
 <td>Thanks to RunAPI for sponsoring this project! RunAPI is a high-performance and reliable AI model API gateway — one API key gives you access to 150+ mainstream models including OpenAI, Claude, Gemini, DeepSeek, and Grok, with prices as low as 10% of the official rate and excellent stability. It works seamlessly with Claude Code, OpenClaw, and other tools. Exclusive benefit for CC Switch users: register via <a href="https://runapi.host/register?aff=iOKB">this link</a> and enjoy a 10% discount on your first top-up!</td>
-</tr>
-
-<tr>
-<td width="180"><a href="https://dit.ai?utm_source=ccswitch"><img src="https://raw.githubusercontent.com/farion1231/cc-switch/main/assets/partners/logos/dit-banner.png" alt="DIT.ai" width="150"></a></td>
-<td>Thanks to DIT.ai for sponsoring this project! Same models. Often a much lower bill. One OpenAI-compatible API for 50+ models: GPT, Claude, Gemini, and more, with routing across 160+ providers to the best available price-to-quality option, typically 30–70% below official list pricing. Change your base URL and API key, keep your stack, and start calling. CC Switch users: register via <a href="https://dit.ai?utm_source=ccswitch">this link</a> and use code <strong>cc-switch</strong> for 30% off your welcome top-up.</td>
 </tr>
 
 <tr>
@@ -505,5 +500,15 @@ It depends on the tool:
 
 <details>
 <summary><strong>In Aggregation mode, why don't the aggregated models show up in Codex's /model?</strong></summary>
+
+Codex reads its model list only at startup. After entering or leaving Aggregation mode, adding or removing an aggregated provider, or changing a provider's aggregated models, fully restart Codex to see the new list:
+
+- **Codex CLI**: Closing the terminal and running `codex` again isn't enough. Every `codex` in every terminal shares one background daemon, and it has to be restarted to pick up the new list. When CC Switch detects that Codex is still using the old list, it shows a notice at the top of the Codex page; click "Restart Codex daemon" in the notice. Restarting interrupts any tasks running in the daemon.
+- **Codex desktop app**: Quit it completely and reopen it (press ⌘Q on macOS; closing the window isn't enough).
+- **Editor extensions**: Reopen the editor window.
+
+Claude Code isn't affected: changes to aggregated models take effect immediately.
+
+</details>
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/farion1231/cc-switch)).*

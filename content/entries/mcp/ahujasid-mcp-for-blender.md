@@ -16,18 +16,18 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2025-03-07T09:58:58
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ahujasid/mcp-for-blender
   official_vendor: false
   license: MIT
 signals:
-  stars: 33038
-  last_commit: 2026-10-29T09:13:34Z
-  stars_delta_7d: 668
-  stars_growth_pct: 2.1
-  trending_score: 681.79
+  stars: 33364
+  last_commit: 2026-11-04T13:04:08Z
+  stars_delta_7d: 994
+  stars_growth_pct: 3.1
+  trending_score: 1024.52
   rank_current: 5
   rank_delta: -2
   velocity_source: snapshot_delta
@@ -35,7 +35,7 @@ signals:
     - 30632
     - 31608
     - 32370
-    - 33038
+    - 33364
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: ahujasid/mcp-for-blender
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:44.871Z
+  fetched_at: 2026-11-05T13:11:54.221Z
   truncated: false
 type: mcp_server
 launch:
@@ -735,6 +735,7 @@ It runs through [Premium](#premium) with no key, or on your own Tripo API key.
 Through Premium, text uses your default quality and an image counts as one high-quality generation.
 [Get a Tripo API key](https://developers.tripo3d.ai/en/keys).
 Tick **Tripo** under **AI Model Generation** in the sidebar, choose a **Model**, and paste the key.
+For a [tripo3d.com](https://www.tripo3d.com/) (China) account, set **Tripo Domain** to `.com` in the add-on preferences.
 
 #### Meshy
 
@@ -865,6 +866,10 @@ For headless setups or CI, credentials can also be injected by environment varia
 | `BLENDERMCP_MESHY_API_KEY` |
 | `BLENDERMCP_TRIPO_API_KEY` |
 
+Hyper3D with your own key uses the `Gen-2.5-Medium` tier on both the main-site
+and fal.ai paths. The free trial key is available only in main-site mode; fal.ai
+requires your own fal.ai API key. The trial key button is hidden in fal.ai mode.
+
 ---
 
 ## Troubleshooting
@@ -885,6 +890,19 @@ The system uses a simple JSON-based protocol over TCP sockets:
 
 - **Commands** are sent as JSON objects with a `type` and optional `params`
 - **Responses** are JSON objects with a `status` and `result` or `message`
+
+### Connecting from another machine
+
+The add-on listens on `localhost` by default. To accept connections from another
+trusted PC, Docker, or WSL, open **Edit > Preferences > Add-ons > MCP for Blender**,
+set **Bind Address** to the Blender machine's LAN IPv4 address (or `0.0.0.0` for all
+interfaces), enable **Allow Remote Connections**, then disconnect and reconnect. On
+the client side, set `BLENDER_HOST` to that address and `BLENDER_PORT` to the port
+shown in Blender.
+
+**Remote access has no authentication or encryption and lets clients run Python in
+Blender.** Use it only on a trusted network behind a firewall, never on the public
+internet. An SSH tunnel to the default `localhost` listener is a safer alternative.
 
 ## Limitations & Security Considerations
 

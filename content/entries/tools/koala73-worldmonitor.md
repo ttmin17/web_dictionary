@@ -18,18 +18,18 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: koala73/worldmonitor
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 89985
-  last_commit: 2026-11-02T08:59:12Z
-  stars_delta_7d: 441
-  stars_growth_pct: 0.5
-  trending_score: 443.17
+  stars: 90185
+  last_commit: 2026-11-05T13:05:46Z
+  stars_delta_7d: 641
+  stars_growth_pct: 0.7
+  trending_score: 645.59
   rank_current: 23
   rank_delta: -6
   velocity_source: snapshot_delta
@@ -37,7 +37,7 @@ signals:
     - 88374
     - 88774
     - 89544
-    - 89985
+    - 90185
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: koala73/worldmonitor
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:22.857Z
+  fetched_at: 2026-11-05T13:11:27.577Z
   truncated: false
 type: agent_tool
 tool:
@@ -149,7 +149,7 @@ All site variants and desktop binaries are built from a single codebase and ship
 | Surface | Status | Notes |
 |---------|--------|-------|
 | `worldmonitor.app`, `tech.`, `finance.`, `commodity.`, `happy.`, `energy.` | Stable | Public deployments built from this repo, actively maintained |
-| Desktop binaries (Windows / macOS Apple Silicon / macOS Intel / Linux AppImage) | Stable | One Tauri binary for every variant — install World Monitor and switch to tech, finance, commodity, energy, or happy in-app. There is deliberately no per-variant download |
+| Desktop binaries (Windows / macOS Apple Silicon / macOS Intel / Linux AppImage x64 and ARM64) | Stable | One Tauri binary for every variant — install World Monitor and switch to tech, finance, commodity, energy, or happy in-app. There is deliberately no per-variant download |
 | `worldmonitor` npm package (terminal dashboard and CLI) | Stable | Published from [`cli/`](https://github.com/koala73/worldmonitor/blob/main/cli/) on every `cli-v*` tag |
 
 Issues filed against any of the above are triaged from the same backlog — see the [issues board](https://github.com/koala73/worldmonitor/issues) for currently-open work.

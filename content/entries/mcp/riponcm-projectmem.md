@@ -18,26 +18,26 @@ status: active
 quality_percentile: 25
 selection_reason: quality_percentile
 first_seen: 2026-05-09T20:28:36
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: riponcm/projectmem
   official_vendor: false
   license: MIT
 signals:
-  stars: 874
+  stars: 877
   last_commit: 2026-11-01T22:32:34Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.7
-  trending_score: 6.04
-  rank_current: 88
-  rank_delta: 19
+  stars_delta_7d: 9
+  stars_growth_pct: 1
+  trending_score: 9.09
+  rank_current: 85
+  rank_delta: 22
   velocity_source: snapshot_delta
   sparkline_4w:
     - 864
     - 868
     - 868
-    - 874
+    - 877
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: riponcm/projectmem
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.272Z
+  fetched_at: 2026-11-05T13:12:09.661Z
   truncated: false
 type: mcp_server
 launch:

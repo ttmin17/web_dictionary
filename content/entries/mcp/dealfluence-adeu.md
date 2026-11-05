@@ -18,7 +18,7 @@ status: active
 quality_percentile: 22
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: dealfluence/adeu
@@ -26,7 +26,7 @@ source:
   license: MIT
 signals:
   stars: 170
-  last_commit: 2026-11-01T09:46:54Z
+  last_commit: 2026-11-05T12:55:17Z
   stars_delta_7d: 4
   stars_growth_pct: 0
   trending_score: 0
@@ -41,7 +41,7 @@ readme_source:
   repo: dealfluence/adeu
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:27.992Z
+  fetched_at: 2026-11-05T13:14:04.442Z
   truncated: false
 type: mcp_server
 launch:

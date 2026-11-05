@@ -15,10 +15,10 @@ tags:
   - ai-coding
   - ai-governance
 status: active
-quality_percentile: 73
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: yvgude/lean-ctx
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3924
-  last_commit: 2026-11-02T07:15:04Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.6
-  trending_score: 23.14
+  stars: 3928
+  last_commit: 2026-11-05T05:38:52Z
+  stars_delta_7d: 27
+  stars_growth_pct: 0.7
+  trending_score: 27.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3875
     - 3888
     - 3901
-    - 3924
+    - 3928
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: yvgude/lean-ctx
   path: skills/lean-ctx-review/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.548Z
+  fetched_at: 2026-11-05T13:11:44.932Z
   truncated: false
 type: agent_skill
 skill:

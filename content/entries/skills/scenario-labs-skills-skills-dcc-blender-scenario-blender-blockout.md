@@ -19,7 +19,7 @@ status: active
 quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 1476
-  last_commit: 2026-11-02T07:44:52Z
-  stars_delta_7d: 337
-  stars_growth_pct: 29.6
-  trending_score: 436.71
+  stars: 2778
+  last_commit: 2026-11-05T09:51:22Z
+  stars_delta_7d: 1639
+  stars_growth_pct: 143.9
+  trending_score: 3997.49
   velocity_source: snapshot_delta
   sparkline_4w:
     - 995
     - 1056
     - 1139
-    - 1476
+    - 2778
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/blender/scenario-blender-blockout/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.527Z
+  fetched_at: 2026-11-05T13:12:03.082Z
   truncated: false
 type: agent_skill
 skill:
@@ -224,9 +224,9 @@ open.
    (frame, position), stride 0.42 x height for a walk, about 0.7 for a run; gestures with `K.pose`;
    extras with `K.crowd(style=...)`.
 4. **Props and vehicles**: literal primitives at true position. Mark a vehicle's front in geometry
-   (light blocks and grille in front, dark red at the rear); wheels at z = radius, separate with one
-   spin channel only when a close shot reads rotation (kit wheels are body mesh). No loose blocks
-   near a figure.
+   (light blocks and grille in front, dark red behind); wheels at z = radius (kit wheels: body
+   mesh). Spinning wheels, cyclists ([contract](https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-blockout/references/contract.md)): `K.drive` a `"bicycle"`
+   `K.vehicle`, `K.pedal` its rider, never `K.walk_path`. No loose blocks near a figure.
 5. **Light**: one area light; named key, fill, rim only when the brief designs light.
 6. **Cameras**: rigs and lenses per shot, `B.bind_cuts`.
 7. **Motion polish**: `B.key_rail` and `B.smooth_keys`, keys past cuts, handheld, vehicle travel as

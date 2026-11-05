@@ -14,10 +14,10 @@ tags:
   - notion-api
   - npm
 status: slowing
-quality_percentile: 22
+quality_percentile: 19
 selection_reason: quality_percentile
 first_seen: 2024-11-30T10:01:30
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: suekou/mcp-notion-server
@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 112
-  rank_delta: -22
+  rank_current: 109
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 920
@@ -45,7 +45,7 @@ readme_source:
   repo: suekou/mcp-notion-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.444Z
+  fetched_at: 2026-11-05T13:12:09.574Z
   truncated: false
 type: mcp_server
 launch:

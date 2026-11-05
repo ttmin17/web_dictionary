@@ -10,28 +10,28 @@ tags:
   - coding-agent
   - documentation-tool
 status: active
-quality_percentile: 35
+quality_percentile: 34
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ref-tools/ref-tools-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 1183
+  stars: 1184
   last_commit: 2026-10-24T00:25:58Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 109
-  rank_delta: -4
+  stars_delta_7d: 1
+  stars_growth_pct: 0.1
+  trending_score: 1
+  rank_current: 105
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1183
     - 1183
-    - 1183
+    - 1184
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +40,7 @@ readme_source:
   repo: ref-tools/ref-tools-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.198Z
+  fetched_at: 2026-11-05T13:13:44.521Z
   truncated: false
 type: mcp_server
 launch:

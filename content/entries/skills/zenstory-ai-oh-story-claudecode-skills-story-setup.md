@@ -16,7 +16,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8246
-  last_commit: 2026-11-02T08:30:43Z
-  stars_delta_7d: 240
-  stars_growth_pct: 3
-  trending_score: 247.19
+  stars: 8324
+  last_commit: 2026-11-05T09:18:15Z
+  stars_delta_7d: 318
+  stars_growth_pct: 4
+  trending_score: 330.63
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7517
     - 7737
     - 8006
-    - 8246
+    - 8324
 language: zh
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-setup/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:36.243Z
+  fetched_at: 2026-11-05T13:13:00.229Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,7 +62,7 @@ skill:
     - references/agent-references/character-relations.md
     - references/agent-references/deslop-gates.md
     - references/agent-references/dialogue-mastery.md
-    - references/agent-references/emotion-on-page.md
+    - references/agent-references/expression.md
   pack_total_skills: 14
   is_pack_primary: false
   clients:
@@ -93,9 +93,9 @@ skill:
 > 判据是「有没有 `SKILL.md`」：只看正在执行的 `SKILL.md` 同级的 `references/`。项目内 `.claude/skills/story-setup/`、`.codex/skills/story-setup/` 和 OpenCode 的 `skills/story-setup/` 只有 `references/agent-references/`、不含 `SKILL.md`，不会是执行目录，也不要拿它们核对。Antigravity / ZCode / OpenClaw / Reasonix / generic 的项目副本是整份 skill 拷贝、自带 `SKILL.md`，9 个子目录本就齐全，照常核对即可。
 
 1. 检查当前目录是否已部署过（存在 `.story-deployed`）
-   - `agents_version` 缺失、非整数或小于 `38` → 标记为待更新，继续执行当前部署
-   - `agents_version: 38` → 使用 AskUserQuestion 确认是否重新部署；提示里写明重新部署只用**当前本地 skill 包**刷新项目文件，要拿 skill 本身的新版本得先更新 oh-story-claudecode（`npx skills add` 或 marketplace），再回来重跑
-   - `agents_version` 大于 `38` → 当前 story-setup 比项目部署旧；停止以避免降级覆盖，提示先更新 oh-story-claudecode，不写任何部署文件
+   - `agents_version` 缺失、非整数或小于 `39` → 标记为待更新，继续执行当前部署
+   - `agents_version: 39` → 使用 AskUserQuestion 确认是否重新部署；提示里写明重新部署只用**当前本地 skill 包**刷新项目文件，要拿 skill 本身的新版本得先更新 oh-story-claudecode（`npx skills add` 或 marketplace），再回来重跑
+   - `agents_version` 大于 `39` → 当前 story-setup 比项目部署旧；停止以避免降级覆盖，提示先更新 oh-story-claudecode，不写任何部署文件
    - 同时读 `target_cli` 字段。**已部署项目以 sentinel 里的值为准**：非空时（逗号分隔的多端组合原样保留）这些端照常重新部署，不再让作者选；第 4 步仍判断当前宿主：判断出来且不在其中（作者换了软件）→ AskUserQuestion 问「这个文件夹之前是给 {已部署宿主名} 装的，你现在用的是 {当前宿主名}，要一起装上吗？」（「一起装上（推荐）」「只更新原来的」），选前者就加进 `target_cli`；判断不出不问。字段缺失或为空才走第 4-6 步。用户明确要求增删目标端时，用 AskUserQuestion 在现有值基础上改，改完的值写回 sentinel。
    - `target_cli` 不含 opencode、但项目里有 `.opencode/plugins/story-hooks.ts` 或 `.opencode/agents/`（多端部署时 OpenCode 曾被版本门拦下）→ 用 AskUserQuestion 问是否把 OpenCode 加回来；选加回则先过 [references/deploy-opencode.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-setup/references/deploy-opencode.md) 的「部署前置」，通过后写回 `target_cli`
 2. 检查是否有书名目录（包含 `追踪/` 子目录的目录，或用户自定义结构）
@@ -156,8 +156,8 @@ Phase 2 幂等：复制、写入与各宿主合并重复执行结果一致。受
 - 写入以下字段（YAML `key: value` 格式，hook 用 `references/templates/hooks/lib/sentinel.sh` 读取）：
   ```
   deployed_at: <date -u +"%Y-%m-%dT%H:%M:%SZ">
-  agents_version: 38
-  setup_skill_version: 1.3.6
+  agents_version: 39
+  setup_skill_version: 1.3.7
   target_cli: claude-code（或 opencode、codex、antigravity、zcode、openclaw、reasonix、generic，或其任意组合）
   resolver_strategy: project-local-skill-reference
   references_dir: .claude/skills/story-setup/references/agent-references（Codex 写 .codex/skills/...；Antigravity 写 .agents/skills/...；ZCode 写 .zcode/skills/...；OpenCode / OpenClaw / Reasonix / generic 写 skills/...；多端用逗号分隔）

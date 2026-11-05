@@ -16,10 +16,10 @@ tags:
   - claude-code
   - claude-code-skill
 status: active
-quality_percentile: 85
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-02-11T13:01:49
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-ads
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10660
+  stars: 10763
   last_commit: 2026-11-01T21:08:14Z
-  stars_delta_7d: 235
-  stars_growth_pct: 2.3
-  trending_score: 240.3
-  rank_current: 58
-  rank_delta: -9
+  stars_delta_7d: 338
+  stars_growth_pct: 3.2
+  trending_score: 348.96
+  rank_current: 55
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9953
     - 10124
     - 10425
-    - 10660
+    - 10763
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: AgriciDaniel/claude-ads
   path: ads/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:30.004Z
+  fetched_at: 2026-11-05T13:12:56.128Z
   truncated: false
 type: agent_skill
 skill:

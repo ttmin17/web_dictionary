@@ -15,28 +15,28 @@ tags:
   - cli
   - comfyui
 status: active
-quality_percentile: 57
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: wiltodelta/remove-ai-watermarks
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6249
-  last_commit: 2026-11-01T17:47:13Z
-  stars_delta_7d: 118
-  stars_growth_pct: 1.9
-  trending_score: 120.27
-  rank_current: 19
-  rank_delta: 6
+  stars: 6288
+  last_commit: 2026-11-05T01:58:40Z
+  stars_delta_7d: 157
+  stars_growth_pct: 2.6
+  trending_score: 161.02
+  rank_current: 20
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6054
     - 6131
-    - 6249
+    - 6288
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: wiltodelta/remove-ai-watermarks
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:34.297Z
+  fetched_at: 2026-11-05T13:12:57.648Z
   truncated: false
 type: mcp_server
 launch:
@@ -98,7 +98,7 @@ removal.
 > responsible for how they use it. It does not target stock agency previews or
 > other watermarks that protect third party paid content. Some jurisdictions,
 > including China, restrict removing AI labels or supplying tools that do. See
-> [scope, safety, and legal notes](https://github.com/wiltodelta/remove-ai-watermarks/blob/main/docs/legal-and-safety.md).
+> [scope, safety, and legal notes](https://raw.githubusercontent.com/wiltodelta/remove-ai-watermarks/main/docs/legal-and-safety.md).
 
 ## Choose what you want to do
 

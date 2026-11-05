@@ -11,28 +11,28 @@ tags:
   - cron
   - docker
 status: active
-quality_percentile: 74
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: 0xJacky/nginx-ui
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 11727
-  last_commit: 2026-11-02T06:04:43Z
-  stars_delta_7d: 60
-  stars_growth_pct: 0.5
-  trending_score: 60.31
-  rank_current: 77
-  rank_delta: 19
+  stars: 11735
+  last_commit: 2026-11-05T06:24:23Z
+  stars_delta_7d: 68
+  stars_growth_pct: 0.6
+  trending_score: 68.4
+  rank_current: 85
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11644
     - 11667
-    - 11727
+    - 11735
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: 0xJacky/nginx-ui
   path: README.md
   branch: dev
-  fetched_at: 2026-11-02T09:05:33.891Z
+  fetched_at: 2026-11-05T13:11:41.672Z
   truncated: false
 type: agent_tool
 tool:
@@ -136,7 +136,7 @@ Thanks to [JetBrains](https://www.jetbrains.com/?from=nginx-ui) for supporting u
 
 [![Stargazers over time](https://cloud.nginxui.com/stars/0xJacky/nginx-ui.svg)](https://cloud.nginxui.com/stars/0xJacky/nginx-ui.svg)
 
-English | [Español](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-es.md) | [简体中文](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-zh_CN.md) | [繁體中文](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-zh_TW.md) | [Tiếng Việt](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-vi_VN.md) | [日本語](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-ja_JP.md)
+English | [Español](https://raw.githubusercontent.com/0xJacky/nginx-ui/dev/resources/readme/README-es.md) | [简体中文](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-zh_CN.md) | [繁體中文](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-zh_TW.md) | [Tiếng Việt](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-vi_VN.md) | [日本語](https://github.com/0xJacky/nginx-ui/blob/dev/resources/readme/README-ja_JP.md)
 
 <details>
   <summary>Table of Contents</summary>

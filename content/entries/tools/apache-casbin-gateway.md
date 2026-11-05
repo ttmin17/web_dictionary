@@ -13,24 +13,24 @@ tags:
   - ai-agent
   - ai-gateway
 status: active
-quality_percentile: 43
+quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: apache/casbin-gateway
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 645
+  stars: 647
   last_commit: 2026-10-31T10:53:52Z
   stars_delta_7d: 1
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 645
+    - 647
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +39,7 @@ readme_source:
   repo: apache/casbin-gateway
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:07:10.475Z
+  fetched_at: 2026-11-05T13:13:44.470Z
   truncated: true
 type: agent_tool
 tool:

@@ -16,25 +16,25 @@ status: active
 quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: cuga-project/cuga-agent
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1060
-  last_commit: 2026-11-02T08:55:13Z
-  stars_delta_7d: 11
-  stars_growth_pct: 1
-  trending_score: 11.12
-  rank_current: 119
-  rank_delta: 3
+  stars: 1086
+  last_commit: 2026-11-05T11:41:27Z
+  stars_delta_7d: 37
+  stars_growth_pct: 3.5
+  trending_score: 38.31
+  rank_current: 98
+  rank_delta: 24
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1042
     - 1049
-    - 1060
+    - 1086
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: cuga-project/cuga-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.223Z
+  fetched_at: 2026-11-05T13:13:44.456Z
   truncated: false
 type: agent_tool
 tool:
@@ -79,6 +79,8 @@ CUGA turns business requests into actions across your applications, APIs, and do
 **[CUGA Apps](https://github.com/cuga-project/cuga-apps)** · **[CUGA Harness Kit](https://github.com/cuga-project/cuga-harness-kit)** · **[Discord](https://discord.gg/PN3Zdq4dEd)**
 
 [Apache 2.0](https://github.com/cuga-project/cuga-agent/blob/main/LICENSE) · Configurable Generalist Agent · Built with IBM SiL
+
+English · [简体中文](https://github.com/cuga-project/cuga-agent/blob/main/docs/readme/README.zh-CN.md)
 
 ---
 
@@ -322,7 +324,7 @@ asyncio.run(main())
 
 Configure a model before running the example. Replace the sample tool with your own service integration.
 
-**[CugaAgent SDK](https://docs.cuga.dev/docs/build/cuga-agent/)** · **[CugaSupervisor](https://docs.cuga.dev/docs/build/cuga-supervisor/)** · **[Tool integration examples](https://github.com/cuga-project/cuga-agent/blob/main/docs/examples/cuga_with_runtime_tools/README.md)**
+**[CugaAgent SDK](https://docs.cuga.dev/docs/build/cuga-agent/)** · **[CugaSupervisor](https://docs.cuga.dev/docs/build/cuga-supervisor/)** · **[Tool integration examples](https://github.com/cuga-project/cuga-agent/blob/main/docs/examples/cuga_with_runtime_tools/README.md)** · **[Durable conversations](https://github.com/cuga-project/cuga-agent/blob/main/docs/readme/configuration-guide.md#sdk-durable-conversations)**
 
 ## Explore further
 

@@ -18,25 +18,25 @@ status: active
 quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: vstorm-co/pydantic-deepagents
   official_vendor: false
   license: MIT
 signals:
-  stars: 1111
+  stars: 1116
   last_commit: 2026-10-30T14:01:47Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.5
-  trending_score: 5.02
-  rank_current: 132
-  rank_delta: -1
+  stars_delta_7d: 10
+  stars_growth_pct: 0.9
+  trending_score: 10.09
+  rank_current: 124
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1103
     - 1106
-    - 1111
+    - 1116
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: vstorm-co/pydantic-deepagents
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.205Z
+  fetched_at: 2026-11-05T13:13:44.553Z
   truncated: false
 type: agent_tool
 tool:
@@ -713,7 +713,7 @@ If pydantic-deep saved you from wiring an agent harness by hand — **[give it a
 
 ## License
 
-MIT — see [LICENSE](https://github.com/vstorm-co/pydantic-deepagents/blob/main/LICENSE)
+MIT — see [LICENSE](https://raw.githubusercontent.com/vstorm-co/pydantic-deepagents/main/LICENSE)
 
 ---
 

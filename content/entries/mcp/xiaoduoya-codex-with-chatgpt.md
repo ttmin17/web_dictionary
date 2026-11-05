@@ -14,29 +14,29 @@ tags:
   - codex
   - model-context-protocol
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: XiaoDuoYa/codex-with-chatgpt
   official_vendor: false
   license: MIT
 signals:
-  stars: 7634
+  stars: 7656
   last_commit: 2026-10-01T05:19:24Z
-  stars_delta_7d: 81
-  stars_growth_pct: 1.1
-  trending_score: 81.87
-  rank_current: 26
-  rank_delta: -4
+  stars_delta_7d: 103
+  stars_growth_pct: 1.4
+  trending_score: 104.4
+  rank_current: 29
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7345
     - 7457
     - 7553
-    - 7634
+    - 7656
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: XiaoDuoYa/codex-with-chatgpt
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:44.738Z
+  fetched_at: 2026-11-05T13:11:54.055Z
   truncated: false
 type: mcp_server
 launch:

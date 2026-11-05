@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 82
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14008
-  last_commit: 2026-11-02T08:45:34Z
-  stars_delta_7d: 352
-  stars_growth_pct: 2.6
-  trending_score: 361.07
+  stars: 14127
+  last_commit: 2026-11-05T13:02:06Z
+  stars_delta_7d: 471
+  stars_growth_pct: 3.4
+  trending_score: 487.24
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13138
     - 13339
     - 13656
-    - 14008
+    - 14127
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-update/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:23.529Z
+  fetched_at: 2026-11-05T13:12:49.372Z
   truncated: false
 type: agent_skill
 skill:

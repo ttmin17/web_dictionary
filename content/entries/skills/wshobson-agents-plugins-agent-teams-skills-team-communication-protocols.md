@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - anthropic
 status: active
-quality_percentile: 92
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: wshobson/agents
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 42095
+  stars: 42229
   last_commit: 2026-11-02T01:08:47Z
-  stars_delta_7d: 370
-  stars_growth_pct: 0.9
-  trending_score: 373.28
+  stars_delta_7d: 504
+  stars_growth_pct: 1.2
+  trending_score: 510.09
   velocity_source: snapshot_delta
   sparkline_4w:
     - 40590
     - 41052
     - 41725
-    - 42095
+    - 42229
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: wshobson/agents
   path: plugins/agent-teams/skills/team-communication-protocols/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.052Z
+  fetched_at: 2026-11-05T13:12:37.231Z
   truncated: false
 type: agent_skill
 skill:

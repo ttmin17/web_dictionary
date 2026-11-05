@@ -11,10 +11,10 @@ tags:
   - deepseek
   - gemini-cli
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: yetone/magpie
@@ -22,15 +22,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28093
-  last_commit: 2026-11-02T08:58:59Z
-  stars_delta_7d: 6252
-  stars_growth_pct: 28.6
-  trending_score: 8041.64
+  stars: 30263
+  last_commit: 2026-11-05T12:16:34Z
+  stars_delta_7d: 8422
+  stars_growth_pct: 38.6
+  trending_score: 11669.57
   velocity_source: snapshot_delta
   sparkline_4w:
     - 21841
-    - 28093
+    - 30263
 language: en
 needs_keys: false
 prerequisites: []
@@ -38,7 +38,7 @@ readme_source:
   repo: yetone/magpie
   path: internal/sessions/testdata/droid-skills/skills/wave-hand/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.847Z
+  fetched_at: 2026-11-05T13:12:32.427Z
   truncated: false
 type: agent_skill
 skill:

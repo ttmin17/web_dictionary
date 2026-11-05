@@ -12,28 +12,28 @@ tags:
   - deepseek-harness
   - diagram-generator
 status: active
-quality_percentile: 94
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: DayuanJiang/next-ai-draw-io
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 36566
-  last_commit: 2026-11-01T13:06:18Z
-  stars_delta_7d: 153
-  stars_growth_pct: 0.4
-  trending_score: 153.64
+  stars: 36708
+  last_commit: 2026-11-05T09:52:07Z
+  stars_delta_7d: 295
+  stars_growth_pct: 0.8
+  trending_score: 297.39
   rank_current: 13
   rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 36318
     - 36413
-    - 36566
+    - 36708
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: DayuanJiang/next-ai-draw-io
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:22.842Z
+  fetched_at: 2026-11-05T13:11:27.501Z
   truncated: false
 type: mcp_server
 launch:
@@ -222,7 +222,7 @@ Open [http://localhost:6002](http://localhost:6002).
 | --- | --- |
 | Tencent EdgeOne Pages | [![Deploy to EdgeOne Pages](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?repository-url=https%3A%2F%2Fgithub.com%2FDayuanJiang%2Fnext-ai-draw-io) Deploying there also gives you a [daily free quota for DeepSeek models](https://pages.edgeone.ai/document/edge-ai) |
 | Vercel | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDayuanJiang%2Fnext-ai-draw-io) Set the same environment variables in the Vercel dashboard as in your `.env.local` |
-| Cloudflare Workers | [Cloudflare deploy guide](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/cloudflare-deploy.md) |
+| Cloudflare Workers | [Cloudflare deploy guide](https://raw.githubusercontent.com/DayuanJiang/next-ai-draw-io/main/docs/en/cloudflare-deploy.md) |
 | Docker | [Docker guide](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/docker.md) |
 | Offline or intranet | [Offline deployment](https://github.com/DayuanJiang/next-ai-draw-io/blob/main/docs/en/offline-deployment.md) |
 

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/agents-cli
@@ -26,16 +26,16 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 6280
-  last_commit: 2026-10-27T10:30:55Z
-  stars_delta_7d: 104
-  stars_growth_pct: 1.7
-  trending_score: 105.75
+  stars: 6304
+  last_commit: 2026-11-04T17:44:59Z
+  stars_delta_7d: 128
+  stars_growth_pct: 2.1
+  trending_score: 130.65
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6099
     - 6176
-    - 6280
+    - 6304
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: google/agents-cli
   path: skills/google-agents-cli-eval/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:04.622Z
+  fetched_at: 2026-11-05T13:13:40.009Z
   truncated: false
 type: agent_skill
 skill:
@@ -108,13 +108,13 @@ Improving agent quality is iterative. The 4 stages below describe the loop. Each
 
 ### 2. Run the Eval (always run)
 
-**Default:** `agents-cli eval run` runs the agent over the dataset and grades the traces, writing `results_<ts>.{json,html}` to `artifacts/grade_results/`.
+**Default:** `agents-cli eval run` runs the agent over the dataset and grades the traces, writing `results_<ts>.{json,html}` to `artifacts/grade_results/`. Its last line is the verdict, e.g. `RESULT: FAIL (custom_response_quality 3.20 < 4.00; custom_response_quality: 1 case errored)`, and it exits 1 when a metric misses its threshold or a case errored. Agree the thresholds with the user and record them in the eval config (see *Evaluation Configuration Schema*).
 
 **Decoupled form:** `eval generate` then `eval grade`, for a custom traces location, re-grading without re-running the agent, or traces from `synthesize` (`eval grade` alone).
 
 ### 3. Analyze Failures
 
-**Default:** Open the latest `artifacts/grade_results/results_<ts>.html` (or `.json`) and identify failed metrics — see *What to fix when scores fail* below for the fix table.
+**Default:** Start from the `Failures:` list above the `RESULT:` line, which names each metric that missed its threshold, the cases below it, and the cases that errored. Then open the latest `artifacts/grade_results/results_<ts>.html` (or `.json`) for those cases' scores and judge rationales — see *What to fix when scores fail* below for the fix table.
 
 **Opt-in:** `agents-cli eval analyze`, LLM-based failure clustering; prefer when you have 10+ failing cases and want categorized failure modes. See `references/advanced-commands.md`.
 
@@ -199,6 +199,9 @@ agents-cli eval run
 
 # Advanced: pick the dataset, metrics, and output dir
 agents-cli eval run --dataset tests/eval/datasets/custom.json --metrics final_response_quality,safety --output ./out/
+
+# Gate: exit 1 if the 1-5 judge averages below 4
+agents-cli eval run --fail-under custom_response_quality=4
 ```
 
 ### `eval generate`
@@ -229,7 +232,7 @@ Live agents run over a WebSocket, not `/run_sse`: add `--mode adk_live` to `gene
 
 ### `eval grade`
 
-Scores traces (from `eval generate`, `eval dataset synthesize`, or hand-authored) against built-in or custom metrics. Writes timestamped `results_<YYYYMMDD_HHMMSS>.json` (consumed by `eval compare`) and `.html` (open in a browser) into the output dir, and prints a summary table to the console.
+Scores traces (from `eval generate`, `eval dataset synthesize`, or hand-authored) against built-in or custom metrics. Writes timestamped `results_<YYYYMMDD_HHMMSS>.json` (consumed by `eval compare`) and `.html` (open in a browser) into the output dir, and prints a summary table to the console. The output ends with a `RESULT: PASS|FAIL (...)` line; the command exits 1 when a metric's mean score is below its threshold (`thresholds` in the config, or `--fail-under`) or any case errored, so CI can gate on the exit code.
 
 ```bash
 # Basic — defaults: traces from artifacts/traces/, results to artifacts/grade_results/,
@@ -318,6 +321,7 @@ A complete trace — agent responses plus `function_call` / `function_response` 
 
 - `metrics_to_run`: the **selection list** of metric names to execute on this run. A name resolves to a `custom_metrics` entry when one matches, otherwise to the built-in metric of that name.
 - `custom_metrics` — a **definition pool** of custom metrics available to this project. Defining a metric here does **not** run it; it must also appear in `metrics_to_run` (or be passed via `--metrics name1,name2` on the CLI, which is equivalent to overriding `metrics_to_run` for that invocation).
+- `thresholds` (optional) — the minimum **mean score** per metric, in that metric's own scale (built-ins score 0-1, the scaffolded `custom_response_quality` judge 1-5). A run with a metric below its threshold exits 1 and lists the cases scoring below it; `pass_rate` in the results is then the share of cases at or above it, unless the eval service already reported one. `--fail-under METRIC=SCORE` (repeatable, one metric each) overrides them per run. Errored cases fail the run with or without thresholds.
 
 **Minimal example (YAML preferred — human-readable, no JSON escaping for prompts and Python):**
 
@@ -341,6 +345,10 @@ custom_metrics:
       def evaluate(instance):
           turns = (instance.get("agent_data") or {}).get("turns", [])
           return {'score': len(turns)}
+
+thresholds:
+  multi_turn_task_success: 0.8
+  example_llm_metric: 4
 ```
 
 JSON is also accepted (same field names, with `prompt_template` and `custom_function` as escaped strings) — but **always prefer YAML** for human-readable configs.
@@ -434,7 +442,7 @@ Don't assert that eval passes — show the evidence. Concrete output prevents fa
 
 - **After running eval:** Paste the scores table output so the user can see exactly what passed and failed.
 - **After fixing a failure:** Show before/after scores for the specific case you fixed, and confirm no other cases regressed.
-- **Before deploy:** Rerun `agents-cli eval run` and show the scores for every case, not just the one you fixed. `eval run` exits 0 whatever the scores are, so the numbers you paste are the gate, not the exit code.
+- **Before deploy:** Rerun `agents-cli eval run` and show the scores for every case, not just the one you fixed, plus the final `RESULT:` line. The exit code gates only on the `thresholds` you set (and errored cases), so confirm they match the bar you agreed with the user.
 
 ---
 

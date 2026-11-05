@@ -1,8 +1,9 @@
 ---
 slug: chrisryugj-korean-law-mcp
 name: korean-law-mcp
-tagline: 법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증 | MCP server for
-  Korean law — search statutes, precedents, and ordinances, and verify citations
+tagline: "법령·판례를 AI가 찾고 인용까지 검증하는 MCP 서버 — 법제처 API 42개를 도구 10개로: 법령·조문·별표,
+  판례·헌재·해석례 23개 도메인, 조례 정비 레이더, 신구조문대비표 | MCP server for Korean law — statutes,
+  precede"
 summary: "바로 쓰기: Claude.ai 커넥터에 https://mcp.gomdori.app/law?oc=본인키 한 줄, Claude
   Code는 플러그인 두 줄 → 설치 및 사용법"
 categories:
@@ -13,29 +14,29 @@ tags:
   - claude
   - claude-desktop
 status: active
-quality_percentile: 93
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2025-12-19T11:03:22
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: chrisryugj/korean-law-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2826
-  last_commit: 2026-11-01T09:19:03Z
-  stars_delta_7d: 39
-  stars_growth_pct: 1.4
-  trending_score: 39.55
-  rank_current: 44
-  rank_delta: -6
+  stars: 2842
+  last_commit: 2026-11-03T12:23:15Z
+  stars_delta_7d: 55
+  stars_growth_pct: 2
+  trending_score: 56.09
+  rank_current: 43
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2697
     - 2739
     - 2787
-    - 2826
+    - 2842
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: chrisryugj/korean-law-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.460Z
+  fetched_at: 2026-11-05T13:11:48.732Z
   truncated: false
 type: mcp_server
 launch:
@@ -73,7 +74,7 @@ launch:
 
 > 법제처 Open API 기반 MCP 서버 + CLI. Claude Desktop, Cursor, Windsurf, Zed, Claude.ai 등에서 바로 사용 가능.
 
-[English](https://github.com/chrisryugj/korean-law-mcp/blob/main/README-EN.md)
+[English](https://raw.githubusercontent.com/chrisryugj/korean-law-mcp/main/README-EN.md)
 
 **바로 쓰기:** Claude.ai 커넥터에 `https://mcp.gomdori.app/law?oc=본인키` 한 줄, Claude Code는 플러그인 두 줄 → [설치 및 사용법](#설치-및-사용법)
 
@@ -97,10 +98,12 @@ VS Code·Cursor는 버튼 한 번으로 연결됩니다(키 없이 공용 한도
 
 ## 최근 업데이트
 
-현재 버전 **v4.15.21**. 수치는 모두 [CHANGELOG](https://github.com/chrisryugj/korean-law-mcp/blob/main/CHANGELOG.md)의 실측 기록에서 옮김.
+현재 버전 **v4.15.23**. 수치는 모두 [CHANGELOG](https://github.com/chrisryugj/korean-law-mcp/blob/main/CHANGELOG.md)의 실측 기록에서 옮김.
 
 | 버전 | 주요 변경 | 변화 |
 |------|-----------|------|
+| 4.15.23 | 인용 검증: 항으로 나뉘지 않은 조문(민법 제750조 등)에 붙인 「제2항」을 ⚠ 대신 ✗로, 「제1항」은 조문 번호만 쓰라고 안내 | 재현 테스트 5건 |
+| 4.15.22 | 행정안전부 법령해석 `mois`(지방세 유권해석) + 중앙부처 1차 해석 `ministry`(39개 부처, `options.ministry`) 도메인(#182). 지방세 해석 질의는 국세청 대신 행안부로 라우팅 | 도메인 21 → 23 |
 | 4.15.21 | 대비표: 쉼표 붙은 후단 삭제 `<후단 삭제>` · 번호만 밀린 호·목 "(현행 제2호와 같음)" · 현행보다 긴 "(현행과 같음)" 범위는 현행 끝까지로(#181) | 재현 테스트 3건 |
 | 4.15.20 | 대비표 개정안 칸: 개정 부분이 마침표 바로 앞에서 끝나고 단서·후단이 신설되면 마침표가 「-」로 바뀌던 것(#180) | 건축법 제79조⑤ 재현 테스트 |
 | 4.15.19 | 대비표 한글(.hwpx) 본문 왼쪽 정렬 — 줄표가 넘어간 짧은 줄이 벌어지던 것 | 한글 화면 확인 |
@@ -416,12 +419,12 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 `verify_citations` 실제 결과 예시:
 
 ```
-"민법 제750조 … 근로기준법 제60조 제1항 … 상법 제401조의2 제7항 … 형법 제9999조"
+"주택임대차보호법 제3조의2 제2항 … 같은 법 제6조의3 제1항 … 제7조 제3항에 따라 5%를 넘지 못하고 … 제8조 제4항"
 
-✓ 민법 제750조(불법행위의 내용) 실존
-✓ 근로기준법 제60조(연차 유급휴가) 제1항 실존
-✗ 상법 제401조의2 — 제7항 없음 (최대 제2항)
-✗ 형법 제9999조 — 해당 조문 없음 (존재 범위: 제1조~제372조)
+✓ 주택임대차보호법 제3조의2(보증금의 회수) 제2항 실존
+✓ 주택임대차보호법 제6조의3(계약갱신 요구 등) 제1항 실존
+✗ 주택임대차보호법 제7조(차임 등의 증감청구권) — [NOT_FOUND] 제3항 없음 (최대 제2항)
+✗ 주택임대차보호법 제8조(보증금 중 일정액의 보호) — [NOT_FOUND] 제4항 없음 (최대 제3항)
 ```
 
 ### 자주 쓰는 옵션
@@ -451,8 +454,8 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 | | `get_law_text` | 조문 전문 조회 (`jo="부칙"`으로 부칙) |
 | | `get_annexes` | 별표/서식 조회 (금액표·요율표·별지서식, `date` 로 그날 시행 버전의 별표) |
 | **자치법규** (1) | `ordinance_radar` | 조례 정비 레이더: 근거 상위법 개정 자동 대조 |
-| **통합** (2) | `search_decisions` | **21개 도메인** 통합 검색 (판례·헌재·조세심판·관세·국세청·고용노동부 해석·공정위·노동위·산재보험재심사·고용보험심사·해석례·행심·개인정보위·권익위·소청심사·학칙·공사공단·공공기관·조약·영문법령) |
-| | `get_decision_text` | **21개 도메인** 전문 조회 |
+| **통합** (2) | `search_decisions` | **23개 도메인** 통합 검색 (판례·헌재·조세심판·관세·국세청·고용노동부·행정안전부 해석·중앙부처 1차 해석(39개 부처)·공정위·노동위·산재보험재심사·고용보험심사·해석례·행심·개인정보위·권익위·소청심사·학칙·공사공단·공공기관·조약·영문법령) |
+| | `get_decision_text` | **23개 도메인** 전문 조회 |
 | **메타** (2) | `discover_tools` | 전문 도구 검색 (용어·별표·이력·비교 등) |
 | | `execute_tool` | 전문 도구 프록시 실행 |
 
@@ -492,7 +495,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 - **실패를 "없음"으로 답하지 않음**: 조회 실패·점검 페이지·예산 초과는 `[NOT_FOUND]` 등 명시 마커로 구분
 - **별표/별지서식 본문 추출**: HWPX·HWP·PDF·XLSX·DOCX 자동 변환 ([kordoc](https://github.com/chrisryugj/kordoc) 엔진)
 - **8개 체인 + 9개 시나리오**: 기본 체인에 상황별 확장 분석 자동 추가 (과태료 감경, 관세 통관, 위임입법 감시 등)
-- **21개 도메인 통합 검색**: `search_decisions` 하나로 판례·헌재·조세심판·공정위·노동위 등 즉시 접근
+- **23개 도메인 통합 검색**: `search_decisions` 하나로 판례·헌재·조세심판·공정위·노동위 등 즉시 접근
 - **캐시**: 검색 1시간, 조문 24시간 TTL
 - **원격 엔드포인트**: 설치 없이 `https://mcp.gomdori.app/law`로 바로 사용 (구 `korean-law-mcp.fly.dev/mcp`도 하위호환 유지)
 

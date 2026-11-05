@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-operations-skills-business-operations-skills
 name: business-operations-skills
-tagline: "Use when an internal operations request needs routing (process,
-  vendors, capacity, internal comms, SOPs, procurement): 'where's the
-  bottleneck', 'vend"
+tagline: "Route internal operations requests to the right BizOps skill: process,
+  vendors, capacity, internal comms, SOPs, procurement. Use whenever the user
+  ask"
 summary: The orchestrator classifies the inquiry by signals detected in the
   prompt. Two-signal threshold for confident routing; one-signal triggers a
   clarifying question.
@@ -15,10 +15,10 @@ tags:
   - agentic-ai
   - ai-coding-agent
 status: active
-quality_percentile: 82
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -26,16 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 29146
-  last_commit: 2026-10-31T11:28:59Z
-  stars_delta_7d: 416
-  stars_growth_pct: 1.4
-  trending_score: 422.02
+  stars: 29337
+  last_commit: 2026-11-05T06:58:08Z
+  stars_delta_7d: 607
+  stars_growth_pct: 2.1
+  trending_score: 619.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 28112
     - 28730
-    - 29146
+    - 29337
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,14 +43,14 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-operations/skills/business-operations-skills/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.453Z
+  fetched_at: 2026-11-05T13:12:36.065Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: business-operations-skills
-  description: "Use when an internal operations request needs routing (process,
-    vendors, capacity, internal comms, SOPs, procurement): 'where's the
-    bottleneck', 'vendor health'. Lists the BizOps skills and routes to one."
+  description: "Route internal operations requests to the right BizOps skill:
+    process, vendors, capacity, internal comms, SOPs, procurement. Use whenever
+    the user asks where the bottleneck is or about vendor health."
   folder_path: business-operations/skills/business-operations-skills
   extra_files: []
   pack_total_skills: 25

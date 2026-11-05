@@ -13,26 +13,26 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2025-03-04T16:42:04
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: github/github-mcp-server
   official_vendor: true
   license: MIT
 signals:
-  stars: 34153
-  last_commit: 2026-10-30T20:23:35Z
-  stars_delta_7d: 191
-  stars_growth_pct: 0.6
-  trending_score: 192.07
-  rank_current: 11
-  rank_delta: -1
+  stars: 34252
+  last_commit: 2026-11-05T05:52:22Z
+  stars_delta_7d: 290
+  stars_growth_pct: 0.9
+  trending_score: 292.48
+  rank_current: 14
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 33579
     - 33745
     - 33962
-    - 34153
+    - 34252
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: github/github-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.533Z
+  fetched_at: 2026-11-05T13:11:32.568Z
   truncated: true
 type: mcp_server
 launch:
@@ -144,7 +144,7 @@ Alternatively, to manually configure VS Code, choose the appropriate JSON block 
 
 ### Install in other MCP hosts
 
-- **[Copilot CLI](https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-copilot-cli.md)** - Installation guide for GitHub Copilot CLI
+- **[Copilot CLI](https://raw.githubusercontent.com/github/github-mcp-server/main/docs/installation-guides/install-copilot-cli.md)** - Installation guide for GitHub Copilot CLI
 - **[GitHub Copilot in other IDEs](https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-other-copilot-ides.md)** - Installation for JetBrains, Visual Studio, Eclipse, and Xcode with GitHub Copilot
 - **[Claude Applications](https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-claude.md)** - Installation guide for Claude Desktop and Claude Code CLI
 - **[Codex](https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-codex.md)** - Installation guide for OpenAI Codex
@@ -245,7 +245,7 @@ GitHub Enterprise Server does not support remote server hosting. Please refer to
 
 1. To run the server in a container, you will need to have [Docker](https://www.docker.com/) installed.
 2. Once Docker is installed, you will also need to ensure Docker is running. The Docker image is available at `ghcr.io/github/github-mcp-server`. The image is public; if you get errors on pull, you may have an expired token and need to `docker logout ghcr.io`.
-3. **Authentication.** On github.com you don't need to create anything up front — the one-click buttons above log you in with OAuth on first use (a browser-based flow; the token is kept in memory only). The Docker buttons publish a fixed callback port (`127.0.0.1:8085`) so the container's login callback is reachable. See **[Local Server OAuth Login](https://github.com/github/github-mcp-server/blob/main/docs/oauth-login.md)** for how it works, headless/device-code fallback, and bringing your own OAuth or GitHub App (required for GitHub Enterprise Server and `ghe.com`).
+3. **Authentication.** On github.com you don't need to create anything up front — the one-click buttons above log you in with OAuth on first use (a browser-based flow; the token is kept in memory only). The Docker buttons publish a fixed callback port (`127.0.0.1:8085`) so the container's login callback is reachable. See **[Local Server OAuth Login](https://raw.githubusercontent.com/github/github-mcp-server/main/docs/oauth-login.md)** for how it works, headless/device-code fallback, and bringing your own OAuth or GitHub App (required for GitHub Enterprise Server and `ghe.com`).
 
    Prefer a token? You can still authenticate with a [GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new) by setting `GITHUB_PERSONAL_ACCESS_TOKEN` instead (it takes precedence over OAuth). The MCP server can use many of the GitHub APIs, so enable the permissions that you feel comfortable granting your AI tools (to learn more about access tokens, please check out the [documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)).
 

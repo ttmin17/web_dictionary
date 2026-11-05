@@ -15,10 +15,10 @@ tags:
   - claude-code
   - claude-skills
 status: active
-quality_percentile: 65
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Egonex-AI/Understand-Anything
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 89723
+  stars: 90862
   last_commit: 2026-10-26T07:05:22Z
-  stars_delta_7d: 1421
-  stars_growth_pct: 1.6
-  trending_score: 1443.87
+  stars_delta_7d: 2560
+  stars_growth_pct: 2.9
+  trending_score: 2634.22
   velocity_source: snapshot_delta
   sparkline_4w:
     - 86141
     - 86920
     - 88302
-    - 89723
+    - 90862
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: Egonex-AI/Understand-Anything
   path: understand-anything-plugin/skills/understand-onboard/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:06.957Z
+  fetched_at: 2026-11-05T13:12:22.265Z
   truncated: false
 type: agent_skill
 skill:

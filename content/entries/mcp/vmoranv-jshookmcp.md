@@ -15,26 +15,26 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: vmoranv/jshookmcp
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2095
-  last_commit: 2026-11-02T07:28:42Z
-  stars_delta_7d: 33
-  stars_growth_pct: 1.6
-  trending_score: 33.53
-  rank_current: 48
-  rank_delta: 38
+  stars: 2099
+  last_commit: 2026-11-05T12:35:58Z
+  stars_delta_7d: 37
+  stars_growth_pct: 1.8
+  trending_score: 37.66
+  rank_current: 57
+  rank_delta: 29
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2041
     - 2057
     - 2062
-    - 2095
+    - 2099
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: vmoranv/jshookmcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:40.669Z
+  fetched_at: 2026-11-05T13:11:58.642Z
   truncated: false
 type: mcp_server
 launch:
@@ -68,11 +68,13 @@ launch:
 [![MCP](https://img.shields.io/badge/MCP-current-8A2BE2.svg)](https://modelcontextprotocol.io/)
 [![pnpm](https://img.shields.io/badge/pnpm-10.x-F69220.svg)](https://pnpm.io/)
 
+<a href="https://trendshift.io/repositories/31180?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-31180" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/31180/daily?language=TypeScript" alt="vmoranv%2Fjshookmcp | Trendshift" width="250" height="55"/></a>
+
 **A search-first, profile-aware reverse-engineering workspace for AI agents.**
 
 **Hook the page, capture the network, deobfuscate the bundle, disassemble the WASM, instrument the process — and let one MCP server keep the whole attack surface in reach without drowning the model in schemas.**
 
-English · [中文](https://github.com/vmoranv/jshookmcp/blob/master/README.zh.md)
+English · [中文](https://raw.githubusercontent.com/vmoranv/jshookmcp/master/README.zh.md)
 
 <p align="center">
   <a href="https://github.com/vmoranv/jshookmcp/stargazers">
@@ -128,7 +130,7 @@ English · [中文](https://github.com/vmoranv/jshookmcp/blob/master/README.zh.m
 
 Most MCP servers for JS analysis expose a handful of hand-rolled tools or wrap a single browser engine. jshook is closer to an **operating system for front-end reverse engineering** — 36 self-discovered domains, a search-first meta-tool that keeps token cost under control, and runtime recovery that survives broken pages and dropped sessions:
 
-- **Search-first, profile-aware.** The `search` profile loads about 3K tokens of tool metadata; the `full` profile exposes all 735 tools at around 109K tokens (measured 2026-10-10 — this figure scales with the tool count, so re-measure it when the catalog grows). Agents move between them as the task grows — `search` → `workflow` → `full` — instead of drowning in schemas from the first turn.
+- **Search-first, profile-aware.** The `search` profile loads about 3K tokens of tool metadata; the `full` profile exposes all 736 tools at around 109K tokens (measured 2026-10-10 — this figure scales with the tool count, so re-measure it when the catalog grows). Agents move between them as the task grows — `search` → `workflow` → `full` — instead of drowning in schemas from the first turn.
 - **Runtime recovery and session isolation.** Streamable HTTP sessions restore activated domains, browser attach state, and coverage state after reconnects; per-client browser-side state stays isolated so two agents cannot trample each other's CDP sessions.
 - **Full-stack browser automation.** Chromium and Camoufox via CDP with anti-detection, an explicit-input CAPTCHA solver (no built-in page/feature probing), a self-signed HTTPS interception CA on demand, and HTTP/2 frame building.
 - **Real reverse engineering, not string searches.** WASM disassembly via wabt (`wasm2wat` / `wasm-decompile` / `wasm-objdump`), Frida/Ghidra/IDA bridges, native FFI scanning, hardware breakpoints, PE introspection, GraphQL/Burp Suite proxy bridges, and AST transforms — not a single regex call wrapped as a tool.
@@ -142,7 +144,7 @@ A scan of what's in the box. Each row links to the detailed [Capability overview
 
 | Area | Highlights |
 | --- | --- |
-| **Tool profiles** | `search` (~3K tokens, BM25 + hybrid vector ranking) · `workflow` (composite scripts) · `full` (all 735 tools) |
+| **Tool profiles** | `search` (~3K tokens, BM25 + hybrid vector ranking) · `workflow` (composite scripts) · `full` (all 736 tools) |
 | **Browser automation** | Chromium and Camoufox · CDP attach to existing targets · anti-detection presets · explicit-input CAPTCHA solver · popup, download, permission, and protocol interceptors |
 | **Network interception** | HTTP/1.1 + HTTP/2 frame building · MITM proxy with auto-generated CA · WebSocket capture · GraphQL introspection helpers · Burp Suite bridge |
 | **JS hooks and analysis** | LLM-powered deobfuscation · crypto routine detection · AST comprehension · source-map reconstruction · script/scriptlet extraction and replay |
@@ -277,7 +279,7 @@ The built-in surface below is generated from the runtime registry and checked in
 
 <!-- metadata-sync:start -->
 - Package version: `0.4.3`
-- Built-in tools: `735`
+- Built-in tools: `736`
 - Domains: `adb-bridge`, `binary-instrument`, `browser`, `canvas`, `coordination`, `core`, `cross-domain`, `dart-inspector`, `debugger`, `encoding`, `exploit-dev`, `extension-registry`, `graphql`, `instrumentation`, `maintenance`, `memory`, `mojo-ipc`, `native-bridge`, `native-emulator`, `network`, `platform`, `process`, `protocol-analysis`, `proxy`, `session`, `sourcemap`, `streaming`, `syscall-hook`, `tasks`, `tls-inspector`, `trace`, `transform`, `v8-inspector`, `wasm`, `webgpu`, `workflow`
 - Note: this snapshot is generated from the runtime registry; do not edit the counts by hand.
 <!-- metadata-sync:end -->
@@ -292,7 +294,7 @@ The built-in surface below is generated from the runtime registry and checked in
 - **Lazy initialization** — handlers instantiated on first call, not at startup.
 - **BM25 + vector search** — `search_tools` meta-tool with hybrid ranking and adaptive weights.
 - **MCP `ToolAnnotations`** — every tool carries `readOnlyHint` / `destructiveHint` / `idempotentHint` / `openWorldHint`.
-- **Profile ladder** — `search` (~3K tokens) → `workflow` (composite scripts) → `full` (all 735 tools).
+- **Profile ladder** — `search` (~3K tokens) → `workflow` (composite scripts) → `full` (all 736 tools).
 - **Transport symmetry** — stdio and Streamable HTTP expose the same surface; sessions are isolated per client.
 
 See the [Architecture guide](https://vmoranv.github.io/jshookmcp/guide/best-practices.html) and [Configuration reference](https://vmoranv.github.io/jshookmcp/guide/configuration.html) for the canonical details.
@@ -339,4 +341,4 @@ runtimes (ONNX, Z3, Binaryen, Camoufox, Playwright) depending on the profile.
 
 ## License
 
-[AGPLv3](https://github.com/vmoranv/jshookmcp/blob/master/LICENSE).
+[AGPLv3](https://raw.githubusercontent.com/vmoranv/jshookmcp/master/LICENSE).

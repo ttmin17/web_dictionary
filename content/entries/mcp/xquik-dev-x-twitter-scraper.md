@@ -15,29 +15,29 @@ tags:
   - social-media-api
   - tweet-scraper
 status: active
-quality_percentile: 27
+quality_percentile: 29
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Xquik-dev/x-twitter-scraper
   official_vendor: false
   license: MIT
 signals:
-  stars: 226
-  last_commit: 2026-10-30T07:19:25Z
-  stars_delta_7d: 6
-  stars_growth_pct: 2.7
-  trending_score: 6.14
-  rank_current: 86
-  rank_delta: -8
+  stars: 227
+  last_commit: 2026-11-04T18:23:09Z
+  stars_delta_7d: 7
+  stars_growth_pct: 3.2
+  trending_score: 7.2
+  rank_current: 88
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 213
     - 214
     - 220
-    - 226
+    - 227
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: Xquik-dev/x-twitter-scraper
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:06:34.336Z
+  fetched_at: 2026-11-05T13:13:02.950Z
   truncated: false
 type: mcp_server
 launch:
@@ -414,7 +414,7 @@ async () => xquik.request("/api/v1/x/tweets/search", {
 ```
 
 MCP responses use normalized `snake_case` fields. Use REST to download support
-attachments. Read the [MCP setup guide](https://github.com/Xquik-dev/x-twitter-scraper/blob/master/skills/xquik-mcp/references/mcp-setup.md).
+attachments. Read the [MCP setup guide](https://raw.githubusercontent.com/Xquik-dev/x-twitter-scraper/master/skills/xquik-mcp/references/mcp-setup.md).
 
 ### CLI
 

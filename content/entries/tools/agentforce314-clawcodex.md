@@ -16,22 +16,22 @@ status: active
 quality_percentile: 46
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: agentforce314/clawcodex
   official_vendor: false
   license: MIT
 signals:
-  stars: 925
-  last_commit: 2026-11-02T00:22:15Z
+  stars: 927
+  last_commit: 2026-11-05T09:14:36Z
   stars_delta_7d: 33
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
     - 911
-    - 925
+    - 927
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +40,7 @@ readme_source:
   repo: agentforce314/clawcodex
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.310Z
+  fetched_at: 2026-11-05T13:13:44.575Z
   truncated: true
 type: agent_tool
 tool:
@@ -242,7 +242,7 @@ The configuration file is saved at `~/.clawcodex/config.json`. Minimal example:
 }
 ```
 
-> **Note:** `TAVILY_API_KEY` is required for the WebSearch tool — get a key at [tavily.com](https://tavily.com).
+> **Note:** the WebSearch tool uses Tavily when `TAVILY_API_KEY` is set — get a key at [tavily.com](https://tavily.com). Without one, a DeepSeek API key is enough: WebSearch then goes through [DeepSeek's Search API](https://api-docs.deepseek.com/guides/search), billed to that account at $0.75 per 1,000 searches. A `deepseek` provider whose `base_url` points at another host (a gateway) is not used for search.
 
 The `session`, `settings`, and `env` blocks are optional — sensible defaults apply when they're omitted. See [Configure](#configure) for the full structure.
 
@@ -467,11 +467,11 @@ providers = [
     # OpenAI-compatible vendors
     "nvidia-nim", "atlascloud", "wanjie-ark", "volcengine", "xiaomi-mimo",
     "novita", "fireworks", "siliconflow", "siliconflow-cn", "arcee", "moonshot",
-    "huggingface", "together", "stepfun", "deepinfra", "runcrate", "cloudgpu", "meta",
-    "groq", "cerebras", "baseten", "xai",
+    "huggingface", "together", "stepfun", "deepinfra", "runcrate", "cloudgpu",
+    "cheapaimodel", "meta", "groq", "cerebras", "baseten", "xai",
     # Local servers (no API key required)
     "ollama", "vllm", "sglang",
-]  # 32 providers; aliases like `nim`, `kimi`, `hf`, `grok` resolve automatically
+]  # 33 providers; aliases like `nim`, `kimi`, `hf`, `grok` resolve automatically
 ```
 
 Any new OpenAI-compatible vendor is a one-row addition to
@@ -860,7 +860,7 @@ Sources: [models](https://platform.minimax.io/docs/guides/models-intro.md),
 
 - **`session`** — REPL session persistence: `auto_save` writes each session automatically; `max_history` caps retained turns.
 - **`settings`** — the advisor (reviewer) feature. **`advisor_enabled` is the master switch — `false` by default, so the advisor is OFF unless you opt in** (set it to `true`, or run `/advisor <provider>:<model>` which flips it on). `advisor_provider` / `advisor_model` pick the reviewer model; `advisor_client_mode` routes the call via the client.
-- **`settings.modelLimits`** — context/output limits for private or gateway models absent from the built-in catalog. Keys may be exact model IDs, model prefixes, or host-qualified IDs such as `localhost:4000:private-model`; exact matches beat prefixes and host-qualified keys beat bare keys within the same match type. Built-in catalog metadata remains authoritative.
+- **`settings.modelLimits`** — context/output limits for private or gateway models absent from the built-in catalog. Keys may be exact model IDs (tagged IDs such as `llama3.1:8b` included), model prefixes, or host-qualified IDs such as `localhost:4000:private-model`; exact matches beat prefixes and host-qualified keys beat bare keys within the same match type. `maxOutputTokens` is treated as a ceiling. When a reply is cut off, the retry with a larger output budget never asks for more than it, or for more than the configured `contextWindow` leaves after the input, and compaction requests stay under it too. Built-in catalog metadata remains authoritative.
 - **`env`** — secrets and environment values injected at startup (e.g. `TAVILY_API_KEY` for web search). Managed via `clawcodex config`; keys here are exported into the process environment without overriding anything you already set in your shell.
 
 #### Stream-stall tuning

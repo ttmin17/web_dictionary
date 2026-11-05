@@ -12,28 +12,28 @@ tags:
   - autonomous-agents
   - claude
 status: active
-quality_percentile: 46
+quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: cft0808/edict
   official_vendor: false
   license: MIT
 signals:
-  stars: 17044
+  stars: 17046
   last_commit: 2026-09-28T02:33:22Z
-  stars_delta_7d: 29
+  stars_delta_7d: 31
   stars_growth_pct: 0.2
-  trending_score: 29.05
-  rank_current: 99
-  rank_delta: 8
+  trending_score: 31.06
+  rank_current: 103
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17000
     - 17015
-    - 17044
+    - 17046
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: cft0808/edict
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:59.654Z
+  fetched_at: 2026-11-05T13:13:31.214Z
   truncated: false
 type: agent_tool
 tool:
@@ -884,7 +884,7 @@ python3 scripts/skill_manager.py import-official-hub --agents menxia
 
 ## 📄 License
 
-[MIT](https://github.com/cft0808/edict/blob/main/LICENSE) · 由 [OpenClaw](https://openclaw.ai) 社区构建
+[MIT](https://raw.githubusercontent.com/cft0808/edict/main/LICENSE) · 由 [OpenClaw](https://openclaw.ai) 社区构建
 
 ---
 

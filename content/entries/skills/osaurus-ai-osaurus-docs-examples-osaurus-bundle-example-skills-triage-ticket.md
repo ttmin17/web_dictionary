@@ -17,7 +17,7 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: osaurus-ai/osaurus
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8102
-  last_commit: 2026-11-02T08:53:21Z
-  stars_delta_7d: 26
-  stars_growth_pct: 0.3
-  trending_score: 26.08
-  rank_current: 115
+  stars: 8131
+  last_commit: 2026-11-05T11:48:59Z
+  stars_delta_7d: 55
+  stars_growth_pct: 0.7
+  trending_score: 55.37
+  rank_current: 106
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8076
-    - 8102
+    - 8131
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: osaurus-ai/osaurus
   path: docs/examples/osaurus-bundle-example/skills/triage-ticket/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.084Z
+  fetched_at: 2026-11-05T13:11:42.903Z
   truncated: false
 type: agent_skill
 skill:

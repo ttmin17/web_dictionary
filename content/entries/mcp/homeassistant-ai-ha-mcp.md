@@ -16,26 +16,26 @@ status: active
 quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: homeassistant-ai/ha-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5399
-  last_commit: 2026-11-02T08:10:04Z
-  stars_delta_7d: 150
-  stars_growth_pct: 2.9
-  trending_score: 154.29
-  rank_current: 12
-  rank_delta: 8
+  stars: 5439
+  last_commit: 2026-11-05T11:55:42Z
+  stars_delta_7d: 190
+  stars_growth_pct: 3.6
+  trending_score: 196.88
+  rank_current: 17
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5050
     - 5133
     - 5249
-    - 5399
+    - 5439
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: homeassistant-ai/ha-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:44.717Z
+  fetched_at: 2026-11-05T13:11:54.110Z
   truncated: false
 type: mcp_server
 launch:
@@ -122,7 +122,7 @@ The recommended way to run ha-mcp is the **HA-MCP Custom Component**. It install
 
 The component's second entry type, the **File & YAML services entry** (**HA-MCP File & YAML Tools**), is only needed if you enable ha-mcp's opt-in file and YAML editing tools (feature flags, off by default) — skip it otherwise; you can add it later at any time. It works with any server type (in-process, app, Docker, or stdio).
 
-[Full in-process server documentation →](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/in-process-server.md) · [Setup Wizard for client-specific config →](https://homeassistant-ai.github.io/ha-mcp/setup/)
+[Full in-process server documentation →](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/docs/in-process-server.md) · [Setup Wizard for client-specific config →](https://homeassistant-ai.github.io/ha-mcp/setup/)
 
 ### 🏠 Home Assistant app (add-on)
 
@@ -138,7 +138,7 @@ Prefer to run ha-mcp as a Home Assistant **app (add-on)**? On **Home Assistant O
 3. Open the **Logs** tab to find your unique MCP URL.
 4. Connect your AI client to that URL — **no token or credential setup needed**.
 
-[Full app documentation →](https://github.com/homeassistant-ai/ha-mcp/blob/master/homeassistant-addon/DOCS.md)
+[Full app documentation →](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/homeassistant-addon/DOCS.md)
 
 > ⚠️ **Configure exactly one install method per client.** The custom component, the app, Docker/PyPI, and local stdio are independent ways to run the same server — pick one and point your AI client at that single URL. Keeping two entries for the same server in one client (for example a local `uvx ha-mcp@latest` entry with `HOMEASSISTANT_URL` / `HOMEASSISTANT_TOKEN` alongside an app or component URL) is a known cause of connection hangs.
 
@@ -378,7 +378,7 @@ To add manually on Home Assistant 2026.10 or older: open **HACS** > **Integratio
 
 After installing, restart Home Assistant, then open **Settings** > **Devices & Services** > **Add Integration**, search for **HA-MCP Custom Component**, and add the **HA-MCP File & YAML Tools** entry.
 
-To run the full ha-mcp server in-process through this same component, see the **Get Started** section at the top and the [full in-process server documentation →](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/in-process-server.md).
+To run the full ha-mcp server in-process through this same component, see the **Get Started** section at the top and the [full in-process server documentation →](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/docs/in-process-server.md).
 
 ---
 
@@ -443,6 +443,19 @@ Leave it off in clients with deferred tool loading (claude.ai, Claude Desktop, C
 > 🔄 **Refresh your client's tool list after changing this (or any) setting.** Toggling `ENABLE_TOOL_SEARCH` (or changing pinned/disabled tools, Read Only Mode, etc.) changes the tools the server exposes, but your AI client keeps serving its **cached** tool list until it re-fetches. Restarting the app or Home Assistant does **not** refresh the client — reconnect or refresh the MCP server in your client (e.g. re-add/refresh the connector in ChatGPT, or close and reopen Claude Desktop). If you skip this, newly enabled tools won't appear in the client at all, and tools the server no longer exposes still show as available but fail when called (`Unknown tool`, or the Read Only Mode error for a write tool that mode hides). ChatGPT sometimes keeps serving the stale list even after the connector is removed and re-added under the same name — if tools are still missing after re-adding, delete the connector and create a new one with a **different name**.
 
 For the HA app, the same option is documented in [`homeassistant-addon/DOCS.md`](https://github.com/homeassistant-ai/ha-mcp/blob/master/homeassistant-addon/DOCS.md#enable_tool_search) along with the in-app settings UI for fine-grained tool enable/disable/pin.
+
+### Per-URL tool catalog
+
+`ENABLE_TOOL_SEARCH` defaults to off, and it sets the catalog of the main endpoint only. When several clients share one server, give each the URL for the catalog it needs: a client with built-in tool search keeps the full list, a small-context client gets the search tools. The suffixes are fixed overrides that ignore `ENABLE_TOOL_SEARCH`:
+
+```text
+Main endpoint (follows ENABLE_TOOL_SEARCH):  https://example.com/private_your_secret
+Always the full catalog:                     https://example.com/private_your_secret/catalog/full
+Always the search tools:                     https://example.com/private_your_secret/catalog/search
+Read-only, search tools:                     https://example.com/private_your_secret/readonly/catalog/search
+```
+
+Each URL keeps its catalog for the life of the connection, so a client picks its catalog only by the URL it is given. Reconnect the client after changing its URL so it refreshes its tool list. Home Assistant webhook URLs accept the same suffixes, alone or after `/readonly`: `https://your-ha.example/api/webhook/<webhook-id>/catalog/search`. This needs an embedded integration or Webhook Proxy app (add-on) release that serves them, with a matching MCP server; an older one returns 404 for a suffixed URL. Stdio runs one client per server process, so set `ENABLE_TOOL_SEARCH` in that client's server environment instead.
 
 ---
 

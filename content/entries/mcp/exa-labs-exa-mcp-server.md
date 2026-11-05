@@ -12,29 +12,29 @@ tags:
   - crawling
   - model-context-protocol
 status: active
-quality_percentile: 60
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: exa-labs/exa-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 5208
-  last_commit: 2026-11-02T01:26:06Z
-  stars_delta_7d: 39
+  stars: 5212
+  last_commit: 2026-11-03T01:15:55Z
+  stars_delta_7d: 43
   stars_growth_pct: 0.8
-  trending_score: 39.29
-  rank_current: 45
-  rank_delta: 2
+  trending_score: 43.36
+  rank_current: 53
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5118
     - 5138
     - 5169
-    - 5208
+    - 5212
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: exa-labs/exa-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.318Z
+  fetched_at: 2026-11-05T13:11:43.776Z
   truncated: false
 type: mcp_server
 launch:
@@ -167,6 +167,14 @@ https://mcp.exa.ai/mcp?tools=web_search_exa,web_fetch_exa,agent_run
 ```
 
 Exa Agent requires authentication (OAuth or an [API key](https://dashboard.exa.ai/api-keys)).
+
+### Dynamic Highlights (beta)
+
+Add `dynamicHighlights=true` to the MCP URL to make `web_search_exa` and `web_search_advanced_exa` return [Dynamic Highlights](https://exa.ai/docs/contents/quickstart#dynamic-highlights). These are highlights chosen across all results under one shared budget, not a fixed budget per URL, so less text reaches your agent's context. When the server runs locally, set `DYNAMIC_HIGHLIGHTS=true` instead.
+
+```
+https://mcp.exa.ai/mcp?dynamicHighlights=true
+```
 
 ## Agent Skills
 

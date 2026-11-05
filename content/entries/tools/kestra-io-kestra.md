@@ -13,28 +13,28 @@ tags:
   - control-plane
   - data-engineering
 status: active
-quality_percentile: 75
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: kestra-io/kestra
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 30118
-  last_commit: 2026-11-02T09:02:25Z
-  stars_delta_7d: 118
-  stars_growth_pct: 0.4
-  trending_score: 118.46
-  rank_current: 57
-  rank_delta: -12
+  stars: 30149
+  last_commit: 2026-11-05T12:54:40Z
+  stars_delta_7d: 149
+  stars_growth_pct: 0.5
+  trending_score: 149.74
+  rank_current: 59
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 29847
     - 30000
-    - 30118
+    - 30149
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: kestra-io/kestra
   path: README.md
   branch: develop
-  fetched_at: 2026-11-02T09:06:58.110Z
+  fetched_at: 2026-11-05T13:13:29.647Z
   truncated: false
 type: agent_tool
 tool:
@@ -174,6 +174,10 @@ Kestra 2.0 is a major release. The highlights below are the short version. See [
 Deploy Kestra on AWS using our CloudFormation template:
 
 [![Launch Stack](https://cdn.jsdelivr.net/gh/buildkite/cloudformation-launch-stack-button-svg@master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://kestra-deployment-templates.s3.eu-west-3.amazonaws.com/aws/cloudformation/ec2-rds-s3/kestra-oss.yaml&stackName=kestra-oss)
+
+### Launch on Azure (Terraform deployment)
+
+Deploy Kestra on an Azure Virtual Machine with Azure Database for PostgreSQL and Azure Blob Storage using [our Terraform module](https://github.com/kestra-io/deployment-templates/tree/main/azure/terraform/kestra-oss). See the [Azure VM installation guide](https://kestra.io/docs/installation/azure-vm) for architecture and configuration details.
 
 ### Launch on Google Cloud (Terraform deployment)
 

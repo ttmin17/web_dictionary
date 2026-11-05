@@ -14,10 +14,10 @@ tags:
   - codex
   - docx
 status: active
-quality_percentile: 64
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-03-15T07:39:12
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: iOfficeAI/OfficeCLI
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32933
+  stars: 33067
   last_commit: 2026-10-30T06:48:51Z
-  stars_delta_7d: 456
-  stars_growth_pct: 1.4
-  trending_score: 462.4
-  rank_current: 37
-  rank_delta: 10
+  stars_delta_7d: 590
+  stars_growth_pct: 1.8
+  trending_score: 600.72
+  rank_current: 41
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 31942
     - 32159
     - 32477
-    - 32933
+    - 33067
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: iOfficeAI/OfficeCLI
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:16.499Z
+  fetched_at: 2026-11-05T13:12:34.751Z
   truncated: false
 type: agent_skill
 skill:

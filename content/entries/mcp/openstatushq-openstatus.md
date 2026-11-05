@@ -15,26 +15,26 @@ status: active
 quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: openstatusHQ/openstatus
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 9242
-  last_commit: 2026-11-01T10:20:44Z
-  stars_delta_7d: 10
-  stars_growth_pct: 0.1
-  trending_score: 10.01
-  rank_current: 79
-  rank_delta: -35
+  stars: 9248
+  last_commit: 2026-11-05T13:01:08Z
+  stars_delta_7d: 16
+  stars_growth_pct: 0.2
+  trending_score: 16.03
+  rank_current: 77
+  rank_delta: -33
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9178
     - 9195
     - 9232
-    - 9242
+    - 9248
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: openstatusHQ/openstatus
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:33.873Z
+  fetched_at: 2026-11-05T13:11:41.688Z
   truncated: false
 type: mcp_server
 launch:
@@ -195,7 +195,7 @@ The template source and the setup instructions are in [ephraimduncan/openstatus-
 
 #### Dashboard
 
-See [apps/dashboard/README.md](https://github.com/openstatusHQ/openstatus/blob/main/apps/dashboard/README.md) for full steps (env, db, login, troubleshooting).
+See [apps/dashboard/README.md](https://raw.githubusercontent.com/openstatusHQ/openstatus/main/apps/dashboard/README.md) for full steps (env, db, login, troubleshooting).
 
 #### Status page
 
@@ -247,4 +247,4 @@ Interested in our enterprise plan or need special features? Email us at [ping@op
 
 ## License
 
-Distributed under the [AGPL-3.0 License](https://github.com/openstatusHQ/openstatus/blob/main/LICENSE).
+Distributed under the [AGPL-3.0 License](https://raw.githubusercontent.com/openstatusHQ/openstatus/main/LICENSE).

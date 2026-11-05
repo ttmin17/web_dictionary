@@ -18,25 +18,25 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: TabularisDB/tabularis
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5361
-  last_commit: 2026-11-01T13:39:13Z
-  stars_delta_7d: 74
-  stars_growth_pct: 1.4
-  trending_score: 75.04
-  rank_current: 68
-  rank_delta: 11
+  stars: 5380
+  last_commit: 2026-11-05T10:19:33Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.8
+  trending_score: 94.64
+  rank_current: 74
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5236
     - 5287
-    - 5361
+    - 5380
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: TabularisDB/tabularis
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.302Z
+  fetched_at: 2026-11-05T13:11:43.565Z
   truncated: false
 type: agent_tool
 tool:
@@ -80,6 +80,7 @@ Tabularis is an open-source desktop SQL workspace with 3 built-in database drive
   <img src="https://img.shields.io/github/stars/TabularisDB/tabularis?style=flat" alt="Stars" />
   <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FTabularisDB%2Ftabularis%2Fdownload-stats%2Fdownloads.json&amp;style=flat" alt="Downloads" />
   <img src="https://github.com/TabularisDB/tabularis/workflows/Release/badge.svg" alt="Build & Release" />
+  <a href="https://www.blacksmith.sh/?utm_source=tabularis&amp;utm_medium=referral&amp;utm_campaign=sponsor"><img src="https://img.shields.io/badge/CI_powered_by-Blacksmith-0B1015?style=flat" height="20" alt="CI powered by Blacksmith" /></a>
   <a href="https://discord.com/invite/K2hmhfHRSt"><img src="https://img.shields.io/discord/1502944695808950282?color=5865F2&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://gitster.dev/repo/TabularisDB/tabularis"><img src="https://gitster.dev/api/repositories/badge/cmlko1jr60005ne4yh7i7oy3e" alt="Gitster" /></a>
   <br />
@@ -125,13 +126,13 @@ sudo snap install tabularis       # Linux
 
 Or grab an installer directly:
 
-- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_x64-setup.exe)
+- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_x64-setup.exe)
 
-- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_x64.dmg)
+- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_x64.dmg)
 
-- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis_0.30.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.30.0/tabularis-0.30.0-1.x86_64.rpm)
+- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis-0.31.0-1.x86_64.rpm)
 
-The app UI is available in English, Italian, Spanish, Chinese (Simplified), French, German, Japanese, Russian, Korean, Tagalog, Portuguese (Brazilian) and Vietnamese.
+The app UI is available in English, Italian, Spanish, Chinese (Simplified), Chinese (Traditional), French, German, Japanese, Russian, Korean, Tagalog, Portuguese (Brazilian) and Vietnamese.
 
 > [!TIP]
 > **Discord:** [Join our Discord server](https://discord.com/invite/K2hmhfHRSt) to talk with the maintainers, share feedback, and get help from the community.
@@ -312,7 +313,7 @@ Join our [Discord server](https://discord.com/invite/K2hmhfHRSt) to talk with th
 
 ## Changelog
 
-Every release is documented in [CHANGELOG.md](https://github.com/TabularisDB/tabularis/blob/main/CHANGELOG.md).
+Every release is documented in [CHANGELOG.md](https://raw.githubusercontent.com/TabularisDB/tabularis/main/CHANGELOG.md).
 
 ## Features
 

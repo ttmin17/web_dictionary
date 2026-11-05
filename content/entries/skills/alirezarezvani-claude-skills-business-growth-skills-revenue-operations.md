@@ -1,9 +1,9 @@
 ---
 slug: alirezarezvani-claude-skills-business-growth-skills-revenue-operations
 name: revenue-operations
-tagline: Use for pipeline coverage, forecast accuracy or GTM efficiency (magic
-  number, CAC payback). Runs pipeline_analyzer.py, forecast_accuracy_tracker.py
-  an
+tagline: "Check sales pipeline and forecasts: pipeline coverage, forecast
+  accuracy, magic number, CAC payback. Use whenever the user asks if pipeline is
+  enough "
 summary: Analyzes sales pipeline health including coverage ratios, stage
   conversion rates, deal velocity, aging risks, and concentration risks.
 categories:
@@ -14,10 +14,10 @@ tags:
   - agentic-ai
   - ai-coding-agent
 status: active
-quality_percentile: 82
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 29146
-  last_commit: 2026-10-31T11:28:59Z
-  stars_delta_7d: 416
-  stars_growth_pct: 1.4
-  trending_score: 422.02
+  stars: 29337
+  last_commit: 2026-11-05T06:58:08Z
+  stars_delta_7d: 607
+  stars_growth_pct: 2.1
+  trending_score: 619.82
   velocity_source: snapshot_delta
   sparkline_4w:
     - 28112
     - 28730
-    - 29146
+    - 29337
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,14 +42,14 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-growth/skills/revenue-operations/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.453Z
+  fetched_at: 2026-11-05T13:12:36.065Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: revenue-operations
-  description: Use for pipeline coverage, forecast accuracy or GTM efficiency
-    (magic number, CAC payback). Runs pipeline_analyzer.py,
-    forecast_accuracy_tracker.py and gtm_efficiency_calculator.py.
+  description: "Check sales pipeline and forecasts: pipeline coverage, forecast
+    accuracy, magic number, CAC payback. Use whenever the user asks if pipeline
+    is enough or how good forecasts are."
   folder_path: business-growth/skills/revenue-operations
   extra_files:
     - assets/expected_output.json

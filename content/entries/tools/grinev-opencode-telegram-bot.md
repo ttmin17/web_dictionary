@@ -14,28 +14,28 @@ tags:
   - coding-agent
   - developer-tools
 status: active
-quality_percentile: 55
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: grinev/opencode-telegram-bot
   official_vendor: false
   license: MIT
 signals:
-  stars: 1327
+  stars: 1340
   last_commit: 2026-10-31T17:38:17Z
-  stars_delta_7d: 41
-  stars_growth_pct: 3.2
-  trending_score: 42.31
-  rank_current: 88
-  rank_delta: 10
+  stars_delta_7d: 54
+  stars_growth_pct: 4.2
+  trending_score: 56.27
+  rank_current: 92
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1266
     - 1286
-    - 1327
+    - 1340
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: grinev/opencode-telegram-bot
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.262Z
+  fetched_at: 2026-11-05T13:13:44.513Z
   truncated: false
 type: agent_tool
 tool:

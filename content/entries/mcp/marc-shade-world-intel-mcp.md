@@ -16,29 +16,29 @@ tags:
   - anthropic
   - claude
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2025-11-29T16:49:53
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: marc-shade/world-intel-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 1057
+  stars: 1062
   last_commit: 2026-10-18T19:44:29Z
-  stars_delta_7d: 22
-  stars_growth_pct: 2.1
-  trending_score: 22.47
-  rank_current: 62
-  rank_delta: -36
+  stars_delta_7d: 27
+  stars_growth_pct: 2.6
+  trending_score: 27.7
+  rank_current: 64
+  rank_delta: -38
   velocity_source: snapshot_delta
   sparkline_4w:
     - 941
     - 967
     - 1035
-    - 1057
+    - 1062
 language: en
 needs_keys: false
 prerequisites:
@@ -48,7 +48,7 @@ readme_source:
   repo: marc-shade/world-intel-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:56.697Z
+  fetched_at: 2026-11-05T13:12:08.943Z
   truncated: true
 type: mcp_server
 launch:

@@ -3,7 +3,7 @@ slug: ar9av-obsidian-wiki
 name: obsidian-wiki
 tagline: Framework for AI agents to build and maintain a digital brain through
   Obsidian wiki | Memory System for Agents
-summary: A digital brain you grow with your AI agent.
+summary: A unified digital brain you grow with your AI agents.
 categories:
   - databases-memory
 tags:
@@ -12,29 +12,29 @@ tags:
   - brain
   - claude-code
 status: active
-quality_percentile: 76
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Ar9av/obsidian-wiki
   official_vendor: false
   license: MIT
 signals:
-  stars: 3654
-  last_commit: 2026-11-01T09:10:34Z
-  stars_delta_7d: 33
-  stars_growth_pct: 0.9
-  trending_score: 33.3
-  rank_current: 94
-  rank_delta: -5
+  stars: 3687
+  last_commit: 2026-11-05T09:28:11Z
+  stars_delta_7d: 66
+  stars_growth_pct: 1.8
+  trending_score: 67.2
+  rank_current: 87
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3558
     - 3590
     - 3621
-    - 3654
+    - 3687
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: Ar9av/obsidian-wiki
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:46.737Z
+  fetched_at: 2026-11-05T13:13:18.907Z
   truncated: false
 type: agent_tool
 tool:
@@ -63,7 +63,7 @@ tool:
 
 <h1 align="center">obsidian-wiki</h1>
 
-<p align="center"><b>A digital brain you grow with your AI agent.</b></p>
+<p align="center"><b>A unified digital brain you grow with your AI agents.</b></p>
 
 <p align="center">
   It remembers what you figure out, connects it to what you already know,<br>
@@ -220,7 +220,7 @@ More → **[Memory Surface](https://github.com/Ar9av/obsidian-wiki/blob/main/doc
 - **Queries stay cheap as it grows.** Titles, tags, and summaries get read before page bodies. 20 pages or 2000, roughly the same cost.
 - **It's yours.** Plain markdown in a folder. Push it to a private repo, open it in Obsidian, grep it, delete it. No service, no lock-in, nothing leaves your machine.
 - **It carries context across sessions.** An owner profile, open threads, and a running snapshot get injected at session start, so you don't re-explain yourself.
-- **Works where you already work.** One `.skills/` directory, symlinked into every agent you use.
+- **Works where you already work.** One `skills/` directory, symlinked into every agent you use.
 
 **What it isn't**
 

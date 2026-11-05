@@ -12,29 +12,29 @@ tags:
   - ai-tools
   - anthropic
 status: active
-quality_percentile: 33
+quality_percentile: 30
 selection_reason: quality_percentile
 first_seen: 2025-03-20T05:05:00
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: utensils/mcp-nixos
   official_vendor: false
   license: MIT
 signals:
-  stars: 871
+  stars: 877
   last_commit: 2026-10-26T00:11:46Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.8
-  trending_score: 7.06
-  rank_current: 82
-  rank_delta: 15
+  stars_delta_7d: 13
+  stars_growth_pct: 1.5
+  trending_score: 13.2
+  rank_current: 81
+  rank_delta: 16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 853
     - 862
     - 864
-    - 871
+    - 877
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: utensils/mcp-nixos
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.268Z
+  fetched_at: 2026-11-05T13:12:09.989Z
   truncated: false
 type: mcp_server
 launch:

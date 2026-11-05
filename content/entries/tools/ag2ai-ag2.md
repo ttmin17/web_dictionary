@@ -14,28 +14,28 @@ tags:
   - agent-framework
   - agentic
 status: active
-quality_percentile: 91
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ag2ai/ag2
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5040
-  last_commit: 2026-11-02T00:07:28Z
-  stars_delta_7d: 21
-  stars_growth_pct: 0.4
-  trending_score: 21.09
-  rank_current: 106
-  rank_delta: -1
+  stars: 5045
+  last_commit: 2026-11-04T10:58:20Z
+  stars_delta_7d: 26
+  stars_growth_pct: 0.5
+  trending_score: 26.13
+  rank_current: 107
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5004
     - 5019
-    - 5040
+    - 5045
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: ag2ai/ag2
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:21.133Z
+  fetched_at: 2026-11-05T13:13:55.748Z
   truncated: false
 type: agent_tool
 tool:
@@ -181,7 +181,7 @@ For a step-by-step walk through of AG2 concepts and code, see the [Quick Start](
 
 ### Installation
 
-AG2 requires **Python version >= 3.10**. AG2 is available as `ag2` on PyPI.
+AG2 requires **Python version >= 3.11**. AG2 is available as `ag2` on PyPI.
 
 **Windows/Linux:**
 ```bash
@@ -203,7 +203,7 @@ Each provider config reads its standard environment variable, so keys never need
 export OPENAI_API_KEY="<your-api-key>"     # or ANTHROPIC_API_KEY, GEMINI_API_KEY, ...
 ```
 
-You can also pass a key explicitly with `OpenAIConfig(model="gpt-4o-mini", api_key=...)` — useful when each request brings its own key.
+You can also pass a key explicitly with `OpenAICompletionsConfig(model="gpt-4o-mini", api_key=...)` — useful when each request brings its own key.
 
 ### Run your first agent
 
@@ -213,12 +213,12 @@ AG2 is async throughout. `Agent.ask(...)` starts a turn and returns an `AgentRep
 import asyncio
 
 from ag2 import Agent
-from ag2.config import OpenAIConfig
+from ag2.config import OpenAICompletionsConfig
 
 agent = Agent(
     "assistant",
     prompt="You are a helpful assistant.",
-    config=OpenAIConfig(model="gpt-4o-mini"),
+    config=OpenAICompletionsConfig(model="gpt-4o-mini"),
 )
 
 
@@ -257,7 +257,7 @@ The `Agent` is the fundamental building block of AG2. `ask()` runs a turn; calli
 import asyncio
 
 from ag2 import Agent
-from ag2.config import OpenAIConfig
+from ag2.config import OpenAICompletionsConfig
 
 reviewer = Agent(
     "reviewer",
@@ -265,7 +265,7 @@ reviewer = Agent(
         "You are a code reviewer. Analyze the provided code and suggest improvements. "
         "Do not generate code, only suggest improvements."
     ),
-    config=OpenAIConfig(model="gpt-4o-mini"),
+    config=OpenAICompletionsConfig(model="gpt-4o-mini"),
 )
 
 
@@ -292,7 +292,7 @@ import asyncio
 from datetime import datetime
 
 from ag2 import Agent, tool
-from ag2.config import OpenAIConfig
+from ag2.config import OpenAICompletionsConfig
 
 
 @tool
@@ -304,7 +304,7 @@ async def get_weekday(date_string: str) -> str:
 date_agent = Agent(
     "date_agent",
     prompt="You find the day of the week for a given date.",
-    config=OpenAIConfig(model="gpt-4o-mini"),
+    config=OpenAICompletionsConfig(model="gpt-4o-mini"),
     tools=[get_weekday],
 )
 
@@ -327,7 +327,7 @@ Human oversight is often essential for validating or guiding AI outputs. Call `c
 import asyncio
 
 from ag2 import Agent, Context, tool
-from ag2.config import OpenAIConfig
+from ag2.config import OpenAICompletionsConfig
 from ag2.events import HumanInputRequest, HumanMessage
 
 
@@ -351,7 +351,7 @@ teacher = Agent(
         "Draft a short lesson plan, then call the publish_lesson_plan tool to have it published. "
         "Approval is collected by the tool — never ask for approval in plain text."
     ),
-    config=OpenAIConfig(model="gpt-4o-mini"),
+    config=OpenAICompletionsConfig(model="gpt-4o-mini"),
     tools=[publish_lesson_plan],
     hitl_hook=hitl_hook,
 )
@@ -377,7 +377,7 @@ Here a `conversation` channel — a free-form two-party session where either sid
 import asyncio
 
 from ag2 import Agent
-from ag2.config import OpenAIConfig
+from ag2.config import OpenAICompletionsConfig
 from ag2.knowledge import MemoryKnowledgeStore
 from ag2.network import EV_TEXT, Hub
 
@@ -396,7 +396,7 @@ async def wait_for_messages(hub: Hub, channel_id: str, expected: int, timeout: f
 
 
 async def main() -> None:
-    config = OpenAIConfig(model="gpt-4o-mini")
+    config = OpenAICompletionsConfig(model="gpt-4o-mini")
     hub = await Hub.open(MemoryKnowledgeStore(), ttl_sweep_interval=0)
 
     planner = await hub.register(
@@ -433,23 +433,25 @@ Channels come in several shapes — `conversation` (free-form, two parties), `co
 
 A bare `Agent` is just a model loop. The **harness** is the set of opt-in primitives you compose onto it. Two of the most useful:
 
-- **`knowledge=`** — a `KnowledgeStore` the agent can read and write, so it remembers across runs.
+- **`KnowledgePlugin`** — a `KnowledgeStore` the agent can read and write, so it remembers across runs.
 - **`compact=`** — a strategy that caps history growth. `SummarizeCompact` folds the dropped turns into a summary rather than discarding them outright.
 
-Pair the store with a `WorkingMemoryPolicy` in `assembly=` and the agent's memory is injected into the system prompt on every turn — recall no longer depends on the model *choosing* to look it up.
+Pair the store with a `WorkingMemoryPolicy` through `AssemblerMiddleware` and the agent's memory is injected into the system prompt on every turn — recall no longer depends on the model *choosing* to look it up.
 
 ```python
 import asyncio
 from pathlib import Path
 
-from ag2 import Agent, KnowledgeConfig, MemoryStream
+from ag2 import Agent, MemoryStream
+from ag2.assembly import AssemblerMiddleware
 from ag2.compact import CompactTrigger, SummarizeCompact
-from ag2.config import OpenAIConfig
+from ag2.config import OpenAICompletionsConfig
 from ag2.events import CompactionCompleted, CompactionFailed
-from ag2.knowledge import DiskKnowledgeStore
+from ag2.knowledge import KnowledgePlugin, DiskKnowledgeStore
+from ag2.middleware import Middleware
 from ag2.policies import WorkingMemoryPolicy
 
-config = OpenAIConfig(model="gpt-4o-mini")
+config = OpenAICompletionsConfig(model="gpt-4o-mini")
 
 # Disk-backed, so anything the agent remembers survives the process exiting.
 STORE_DIR = Path("./knowledge_demo")
@@ -465,15 +467,17 @@ agent = Agent(
         "Keep every reply to one or two sentences."
     ),
     config=config,
-    knowledge=KnowledgeConfig(
-        store=store,
-        # Summarize the dropped history instead of forgetting it outright.
-        compact=SummarizeCompact(target=4, config=config),
-        compact_trigger=CompactTrigger(max_events=8),
-    ),
+    plugins=[
+        KnowledgePlugin(
+            store=store,
+            # Summarize the dropped history instead of forgetting it outright.
+            compact=SummarizeCompact(target=4, config=config),
+            compact_trigger=CompactTrigger(max_events=8),
+        )
+    ],
     # Injects memory/working.md into the system prompt on every turn, so recall
     # does not depend on the model choosing to call the knowledge tool.
-    assembly=[WorkingMemoryPolicy()],
+    middleware=[Middleware(AssemblerMiddleware, policies=[WorkingMemoryPolicy()])],
 )
 
 stream = MemoryStream()
@@ -517,7 +521,7 @@ tutor: I remember that you, Dana, teach 4th grade at Rosewood Elementary with 26
        and your class struggles the most with understanding why we have seasons.
 ```
 
-See the [Agent Harness guide](https://docs.ag2.ai/docs/user-guide/agent_harness/) for `assembly=`, `tasks=`, aggregation, and the full turn lifecycle.
+See the [Agent Harness guide](https://docs.ag2.ai/docs/user-guide/agent_harness/) for context policies, delegation, aggregation, and the full turn lifecycle.
 
 ### Advanced agentic design patterns
 

@@ -16,7 +16,7 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -24,16 +24,16 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 70623
-  last_commit: 2026-11-02T07:02:10Z
-  stars_delta_7d: 399
-  stars_growth_pct: 0.6
-  trending_score: 401.27
+  stars: 70818
+  last_commit: 2026-11-04T16:40:29Z
+  stars_delta_7d: 594
+  stars_growth_pct: 0.8
+  trending_score: 599.02
   velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
     - 70224
-    - 70623
+    - 70818
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/design-sync/non-storybook/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:14.074Z
+  fetched_at: 2026-11-05T13:12:31.592Z
   truncated: false
 type: agent_skill
 skill:
@@ -96,7 +96,6 @@ No Storybook - the component list comes from the package's shipped `.d.ts` expor
    Top-level config keys are validated strictly: an unknown or removed key fails the run immediately with the fix named in the message (a `config: ...` error line, prefixed with a cross mark). That is the migration path when the schema changes - fix the config as the message says; the scripts carry no compat code.
 
    **`.design-sync/NOTES.md`** is where repo-specific quirks live (workspace build order, flaky stories, odd entry paths, anything a future re-sync should know). Write it as multi-line markdown - one bullet per gotcha. **Append to it whenever the user tells you about an issue or you learn something during the verify loop**, so the next sync picks it up without the user repeating themselves. Before finishing, also write the forward-looking part - a **Re-sync risks** section listing what can silently go stale (data inlined into config, neutralized or owned previews tied to upstream code), what was only partially verified, and what the build assumed (toolchain version, network-fetched assets). Fixes record what you did; this section tells the next run what to watch. Commit it alongside the config.
-
 7. **Run the converter.** For large DSes (200+ components) the ts-morph `.d.ts` parse can take several minutes - `[DTS]` progress lines on stderr show it's working. Stage scripts into `.ds-sync/` and install converter deps there (isolated from the repo's lockfile/package manager):
 
 ```bash
@@ -322,7 +321,7 @@ The converter does NOT emit the adherence config, the `ds_manifest`, a version f
 
 ## Troubleshooting
 
-**Previews show "context" or "provider" errors** (e.g. "No `<X>` context", "use`<Hook>` must be inside `<Provider>`") -> the DS needs a provider wrapper. Set `cfg.provider` to the DS's top-level provider. For a chain, nest via `inner`:  
+**Previews show "context" or "provider" errors** (e.g. "No `<X>` context", "use`<Hook>` must be inside `<Provider>`") -> the DS needs a provider wrapper. Set `cfg.provider` to the DS's top-level provider. For a chain, nest via `inner`:
 ```json
 {"provider": {"component": "ThemeProvider", "props": {"theme": {}}, "inner": {"component": "RouterProvider"}}}
 ```

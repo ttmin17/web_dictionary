@@ -13,10 +13,10 @@ tags:
   - automation
   - cli
 status: active
-quality_percentile: 56
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: googleworkspace/cli
@@ -24,16 +24,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 32055
-  last_commit: 2026-10-30T16:06:54Z
-  stars_delta_7d: 890
+  stars: 32123
+  last_commit: 2026-11-03T01:37:22Z
+  stars_delta_7d: 883
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
     - 31448
     - 31663
-    - 32055
+    - 32123
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: googleworkspace/cli
   path: skills/gws-forms/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:42.261Z
+  fetched_at: 2026-11-05T13:13:07.199Z
   truncated: false
 type: agent_skill
 skill:

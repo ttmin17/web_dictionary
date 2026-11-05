@@ -16,26 +16,26 @@ status: active
 quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2019-04-08T11:44:25
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: JerBouma/FinanceToolkit
   official_vendor: false
   license: MIT
 signals:
-  stars: 5486
-  last_commit: 2026-11-01T15:13:45Z
-  stars_delta_7d: 24
-  stars_growth_pct: 0.4
-  trending_score: 24.11
-  rank_current: 59
-  rank_delta: -4
+  stars: 5496
+  last_commit: 2026-11-05T06:47:31Z
+  stars_delta_7d: 34
+  stars_growth_pct: 0.6
+  trending_score: 34.21
+  rank_current: 60
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5428
     - 5439
     - 5462
-    - 5486
+    - 5496
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: JerBouma/FinanceToolkit
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.311Z
+  fetched_at: 2026-11-05T13:11:43.492Z
   truncated: true
 type: mcp_server
 launch:

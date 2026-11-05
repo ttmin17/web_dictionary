@@ -19,7 +19,7 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: pbakaus/impeccable
@@ -27,14 +27,14 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 99802
-  last_commit: 2026-11-01T18:04:59Z
-  stars_delta_7d: 1975
+  stars: 103436
+  last_commit: 2026-11-05T07:26:35Z
+  stars_delta_7d: 2037
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 99802
+    - 103436
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: pbakaus/impeccable
   path: cursor-plugin/skills/impeccable/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:38.613Z
+  fetched_at: 2026-11-05T13:13:03.091Z
   truncated: false
 type: agent_skill
 skill:

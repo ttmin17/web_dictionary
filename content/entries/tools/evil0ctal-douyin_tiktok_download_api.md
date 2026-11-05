@@ -18,26 +18,26 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2021-11-07T01:35:09
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Evil0ctal/Douyin_TikTok_Download_API
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 21103
+  stars: 21179
   last_commit: 2026-11-02T07:43:14Z
-  stars_delta_7d: 197
-  stars_growth_pct: 0.9
-  trending_score: 198.86
-  rank_current: 38
-  rank_delta: 17
+  stars_delta_7d: 273
+  stars_growth_pct: 1.3
+  trending_score: 276.56
+  rank_current: 40
+  rank_delta: 15
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20625
     - 20779
     - 20906
-    - 21103
+    - 21179
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: Evil0ctal/Douyin_TikTok_Download_API
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.574Z
+  fetched_at: 2026-11-05T13:11:32.326Z
   truncated: false
 type: agent_tool
 tool:
@@ -150,7 +150,7 @@ and Chinese. Register and post; nothing is gated.
 One real call: paste a link, send it, get the normalised result back. The identity pool, the
 scheduler and the API reference it passed through on the way are all in the same console.
 The interface follows the browser's language, and both are written by hand rather than
-machine-translated. [中文界面](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/screenshots/console-zh.gif)
+machine-translated. [中文界面](https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/main/screenshots/console-zh.gif)
 
 ### Try it without installing anything
 
@@ -717,7 +717,7 @@ would otherwise have to ask you.
 
 ## 📄 Licence
 
-[Apache License 2.0](https://github.com/Evil0ctal/Douyin_TikTok_Download_API/blob/main/LICENSE).
+[Apache License 2.0](https://raw.githubusercontent.com/Evil0ctal/Douyin_TikTok_Download_API/main/LICENSE).
 
 You may use, modify and distribute this project, **including commercially and inside
 closed-source products**. The grant is irrevocable. In return the licence asks you to:

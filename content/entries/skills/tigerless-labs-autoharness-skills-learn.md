@@ -13,10 +13,10 @@ tags:
   - claude-code-plugin
   - llm-agents
 status: active
-quality_percentile: 57
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: tigerless-labs/autoharness
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10622
-  last_commit: 2026-10-30T18:53:20Z
+  stars: 10744
+  last_commit: 2026-11-04T16:47:40Z
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 137
-  rank_delta: -2
+  rank_current: 133
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11051
     - 11140
     - 10753
-    - 10622
+    - 10744
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: tigerless-labs/autoharness
   path: skills/learn/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:26.308Z
+  fetched_at: 2026-11-05T13:12:51.976Z
   truncated: false
 type: agent_skill
 skill:

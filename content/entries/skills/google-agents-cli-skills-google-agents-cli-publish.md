@@ -19,7 +19,7 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/agents-cli
@@ -27,16 +27,16 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 6280
-  last_commit: 2026-10-27T10:30:55Z
-  stars_delta_7d: 104
-  stars_growth_pct: 1.7
-  trending_score: 105.75
+  stars: 6304
+  last_commit: 2026-11-04T17:44:59Z
+  stars_delta_7d: 128
+  stars_growth_pct: 2.1
+  trending_score: 130.65
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6099
     - 6176
-    - 6280
+    - 6304
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: google/agents-cli
   path: skills/google-agents-cli-publish/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:04.622Z
+  fetched_at: 2026-11-05T13:13:40.009Z
   truncated: false
 type: agent_skill
 skill:
@@ -207,6 +207,8 @@ agents-cli publish gemini \
 Agent Registry (Preview) is the Google Cloud fleet-wide catalog of **agents and MCP servers**, separate from a Gemini app.
 Agents deployed to a managed runtime (Agent Runtime in Gemini
 platform) are **auto-registered** — no extra step after `agents-cli deploy`.
+For A2A projects, `agents-cli deploy` also stores the served agent card on the
+engine, so the entry is listed as an A2A agent with the card's skills.
 Manage them with `gcloud` (requires `roles/agentregistry.editor`):
 
 ```bash

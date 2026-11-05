@@ -17,25 +17,25 @@ status: active
 quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: infiniflow/ragflow
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 93339
-  last_commit: 2026-11-02T08:33:50Z
-  stars_delta_7d: 460
-  stars_growth_pct: 0.5
-  trending_score: 462.28
-  rank_current: 21
-  rank_delta: 0
+  stars: 93584
+  last_commit: 2026-11-05T12:52:34Z
+  stars_delta_7d: 705
+  stars_growth_pct: 0.8
+  trending_score: 710.35
+  rank_current: 20
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 92449
     - 92879
-    - 93339
+    - 93584
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: infiniflow/ragflow
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:50.262Z
+  fetched_at: 2026-11-05T13:13:18.874Z
   truncated: false
 type: agent_tool
 tool:
@@ -148,14 +148,6 @@ For local deployment, see [Local Deployment](#-local-deployment).
 - 2026-07-02 Added Google BigQuery data source ingestion and incremental synchronization.
 
 See the [full release notes](https://ragflow.io/docs/dev/release_notes) for more updates.
-
-## 🎉 Stay Tuned
-
-⭐️ Star our repository to stay up-to-date with exciting new features and improvements! Get instant notifications for new releases! 🌟
-
-<div align="center" style="margin-top:20px;margin-bottom:20px;">
-<img alt="RAGFlow feature updates" src="https://github.com/user-attachments/assets/18c9707e-b8aa-4caf-a154-037089c105ba" width="1200"/>
-</div>
 
 ## 🌟 Key Features
 

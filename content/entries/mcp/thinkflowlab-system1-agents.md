@@ -14,27 +14,27 @@ tags:
   - browser-automation
   - claude-code-plugin
 status: active
-quality_percentile: 22
+quality_percentile: 19
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ThinkFlowLab/system1-agents
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 178
-  last_commit: 2026-11-02T05:53:28Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0.6
-  trending_score: 1
-  rank_current: 108
+  stars: 180
+  last_commit: 2026-11-04T12:08:18Z
+  stars_delta_7d: 3
+  stars_growth_pct: 1.7
+  trending_score: 3.04
+  rank_current: 98
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 177
-    - 178
+    - 180
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: ThinkFlowLab/system1-agents
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:27.991Z
+  fetched_at: 2026-11-05T13:14:00.443Z
   truncated: false
 type: mcp_server
 launch:
@@ -78,7 +78,7 @@ launch:
 [![skill](https://img.shields.io/badge/skill-npx%20skills%20add-black.svg)](#from-claude-code-or-codex)
 [![Listed on laya-ai.com](https://laya-ai.com/badges/listed-on-laya-ai.svg)](https://laya-ai.com/projects#project-thinkflowlab-system1-agents)
 
-[Quickstart](#choose-your-path) · [From Claude Code or Codex](#from-claude-code-or-codex) · [Benchmarks](https://github.com/ThinkFlowLab/system1-agents/blob/main/docs/benchmarks.md) · [Docs](#docs)
+[Quickstart](#choose-your-path) · [From Claude Code or Codex](#from-claude-code-or-codex) · [Benchmarks](https://raw.githubusercontent.com/ThinkFlowLab/system1-agents/main/docs/benchmarks.md) · [Docs](#docs)
 
 <!-- placeholder: name the chat model behind the "chat model" columns (the MODEL_NAME of these runs). -->
 

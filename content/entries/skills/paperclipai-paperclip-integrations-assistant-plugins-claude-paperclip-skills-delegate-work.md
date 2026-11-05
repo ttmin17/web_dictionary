@@ -18,7 +18,7 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: paperclipai/paperclip
@@ -26,11 +26,11 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 110038
-  last_commit: 2026-11-02T06:27:13Z
-  stars_delta_7d: 2632
-  stars_growth_pct: 2.5
-  trending_score: 2696.5
+  stars: 111275
+  last_commit: 2026-11-05T13:07:15Z
+  stars_delta_7d: 3869
+  stars_growth_pct: 3.6
+  trending_score: 4008.37
   rank_current: 13
   rank_delta: -4
   velocity_source: snapshot_delta
@@ -38,7 +38,7 @@ signals:
     - 101411
     - 104300
     - 107406
-    - 110038
+    - 111275
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: paperclipai/paperclip
   path: integrations/assistant-plugins/claude/paperclip/skills/delegate-work/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:09.437Z
+  fetched_at: 2026-11-05T13:12:24.738Z
   truncated: false
 type: agent_skill
 skill:

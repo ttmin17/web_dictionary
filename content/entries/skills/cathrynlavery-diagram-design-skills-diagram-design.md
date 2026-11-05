@@ -14,10 +14,10 @@ tags:
   - codex
   - data-visualization
 status: active
-quality_percentile: 65
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-04-16T18:01:16
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: cathrynlavery/diagram-design
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 64170
-  last_commit: 2026-11-01T09:13:30Z
-  stars_delta_7d: 3010
-  stars_growth_pct: 4.9
-  trending_score: 3158.14
-  rank_current: 11
-  rank_delta: -4
+  stars: 65197
+  last_commit: 2026-11-03T18:31:42Z
+  stars_delta_7d: 4037
+  stars_growth_pct: 6.6
+  trending_score: 4303.47
+  rank_current: 12
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 53703
     - 57952
     - 61160
-    - 64170
+    - 65197
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: cathrynlavery/diagram-design
   path: skills/diagram-design/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:10.269Z
+  fetched_at: 2026-11-05T13:12:26.148Z
   truncated: false
 type: agent_skill
 skill:

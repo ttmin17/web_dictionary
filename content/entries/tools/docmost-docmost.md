@@ -13,28 +13,28 @@ tags:
   - confluence
   - document
 status: active
-quality_percentile: 62
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: docmost/docmost
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 22196
-  last_commit: 2026-11-01T23:45:42Z
-  stars_delta_7d: 96
-  stars_growth_pct: 0.4
-  trending_score: 96.42
+  stars: 22230
+  last_commit: 2026-11-05T12:22:02Z
+  stars_delta_7d: 130
+  stars_growth_pct: 0.6
+  trending_score: 130.76
   rank_current: 62
   rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 22026
     - 22100
-    - 22196
+    - 22230
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: docmost/docmost
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:58.809Z
+  fetched_at: 2026-11-05T13:13:30.430Z
   truncated: false
 type: agent_tool
 tool:

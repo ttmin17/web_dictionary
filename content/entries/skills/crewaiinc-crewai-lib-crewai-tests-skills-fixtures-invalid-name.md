@@ -14,7 +14,7 @@ status: active
 quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: crewAIInc/crewAI
@@ -22,18 +22,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 60411
-  last_commit: 2026-11-02T06:37:07Z
-  stars_delta_7d: 302
-  stars_growth_pct: 0.5
-  trending_score: 303.52
-  rank_current: 51
-  rank_delta: 3
+  stars: 60531
+  last_commit: 2026-11-05T10:21:28Z
+  stars_delta_7d: 422
+  stars_growth_pct: 0.7
+  trending_score: 424.96
+  rank_current: 50
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 59856
     - 60109
-    - 60411
+    - 60531
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: crewAIInc/crewAI
   path: lib/crewai/tests/skills/fixtures/invalid-name/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:54.321Z
+  fetched_at: 2026-11-05T13:13:24.836Z
   truncated: false
 type: agent_skill
 skill:

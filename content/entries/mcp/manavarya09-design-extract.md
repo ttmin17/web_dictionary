@@ -16,26 +16,26 @@ status: active
 quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Manavarya09/design-extract
   official_vendor: false
   license: MIT
 signals:
-  stars: 4458
-  last_commit: 2026-10-31T20:16:41Z
-  stars_delta_7d: 81
-  stars_growth_pct: 1.9
-  trending_score: 82.5
-  rank_current: 25
-  rank_delta: -7
+  stars: 4739
+  last_commit: 2026-11-05T08:50:20Z
+  stars_delta_7d: 362
+  stars_growth_pct: 8.3
+  trending_score: 391.94
+  rank_current: 10
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4229
     - 4259
     - 4377
-    - 4458
+    - 4739
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: Manavarya09/design-extract
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.244Z
+  fetched_at: 2026-11-05T13:11:43.575Z
   truncated: false
 type: mcp_server
 launch:
@@ -58,7 +58,7 @@ launch:
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/website/public/logo-specimen.svg" alt="designlang — reads a website the way a developer reads a stylesheet" width="900">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/banner.webp" alt="designlang: read any site’s design system, as tokens for Tailwind, Figma and your AI editor. npx designlang stripe.com" width="100%">
 </p>
 
 <p align="center">
@@ -82,7 +82,7 @@ launch:
   <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/designlang.png" alt="designlang in action — extracts DTCG tokens, Tailwind config, Figma variables, brand book PDF" width="100%">
 </p>
 
-[![designlang on npm](https://pkgfolio.vercel.app/embed/pkg/designlang?v=2)](https://www.npmjs.com/package/designlang)
+
 
 ## Sponsors
 
@@ -112,25 +112,31 @@ It also goes where extractors don't: **layout patterns**, **responsive behavior 
 
 ## Quick start
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/cli.webp" alt="Oil painting of a developer on a rooftop at night with a laptop" width="100%">
+</p>
+
 ```bash
-npx designlang https://stripe.com                      # extract everything
-npx designlang dna stripe.com                          # place it in the measured design space: neighbours + percentiles ← v13.1
-npx designlang site stripe.com                         # whole-site: one canonical system + consistency grade ← v12.23
-npx designlang fidelity stripe.com --clone localhost:3000  # score a clone vs the original (visual + motion) ← v12.24
-npx designlang gallery                                 # static shareable gallery of measured clones      ← v12.24
-npx designlang studio                                  # live token editor: edit, preview, export, share ← v12.19
-npx designlang verify stripe.com                       # fidelity score: rebuild from tokens vs live ← v12.18
-npx designlang pair stripe.com linear.app              # fuse two designs (visuals A × voice B)    ← v12.8
-npx designlang brand stripe.com                        # full brand-guidelines book (13 chapters)  ← v12.7
-npx designlang theme-swap stripe.com --primary "#ff4800"  # recolour around your brand        ← v12.6
-npx designlang pack stripe.com                         # one polished design-system directory ← v12.4
-npx designlang remix stripe.com --as cyberpunk         # restyle in another vocabulary       ← v12.3
-npx designlang remix stripe.com --all                  # emit all 6 vocabs at once           ← v12.3
-npx designlang grade https://stripe.com --badge        # report card + SVG badge             ← v12.2
-npx designlang battle stripe.com vercel.com            # head-to-head graded fight           ← v12.2
+npx designlang https://stripe.com                      # extract everything: tokens, Tailwind, shadcn, Figma, DESIGN.md
+npx designlang slop https://yoursite.com               # how generic does it look? a score out of 100, with every tell
+npx designlang verify-ui localhost:3000 --brand DESIGN.md  # check your UI against your brand at 390, 768 and 1280px
+npx designlang mcp                                     # give Claude Code, Cursor and Windsurf your design system
+npx designlang dna stripe.com                          # place it in the measured design space: neighbours + percentiles
+npx designlang site stripe.com                         # whole-site: one canonical system + consistency grade
+npx designlang fidelity stripe.com --clone localhost:3000  # score a clone against the original (visual + motion)
+npx designlang studio                                  # live token editor: edit, preview, export, share
+npx designlang brand stripe.com                        # full brand-guidelines book (13 chapters)
+npx designlang pair stripe.com linear.app              # fuse two designs (visuals from A, voice from B)
+npx designlang theme-swap stripe.com --primary "#ff4800"  # recolour around your brand
+npx designlang pack stripe.com                         # one polished design-system directory
+npx designlang remix stripe.com --as cyberpunk         # restyle in another vocabulary (--all for all six)
+npx designlang grade https://stripe.com --badge        # report card + SVG badge
+npx designlang battle stripe.com vercel.com            # head-to-head graded fight
 npx designlang clone https://stripe.com                # working Next.js starter
 npx designlang --full https://stripe.com               # screenshots + responsive + interactions
 ```
+
+Needs Node.js 20 or later. No account, no API key.
 
 Drop a live design-score badge in any README:
 
@@ -138,7 +144,17 @@ Drop a live design-score badge in any README:
 ![Design Score](https://designlang.app/badge/stripe.com.svg)
 ```
 
+## Is it generic? (`slop`) and is it on brand? (`verify-ui`)
+
+`designlang slop <url>` opens the page in a real browser and scores how generic it looks, from 0 (distinct) to 100 (generic), listing each known AI-design tell it found with what was measured and where. Add `--brand DESIGN.md` to also score how close the page is to your brand. Try it in the browser at [designlang.app/slop](https://designlang.app/slop).
+
+`designlang verify-ui <url> --brand <DESIGN.md or tokens>` checks a screen, `localhost` included, at phone, tablet and desktop widths and in dark mode. It returns pass or fail, an on-brand score, and every drift with the expected and actual value. It exits 1 on drift, so it can gate CI. Your AI editor can run the same check itself through the MCP tool `verify_ui`.
+
 ## Watch it read — live Extraction Theatre (`v13`)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/showcase.webp" alt="Oil painting of tiny people carrying the colours, type and spacing off a giant web page" width="100%">
+</p>
 
 Don't take the output on faith — **watch it happen.** On
 [designlang.app/watch](https://designlang.app/watch) you paste a URL and a real
@@ -175,6 +191,10 @@ You get, alongside the standard pack emitted from the **canonical** system:
 | `*-site-consistency.md` | a 0–100 consistency grade, per-category breakdown, and the off-system outliers to consolidate |
 
 ## Measured clone fidelity (`fidelity` + `gallery`)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/proof.webp" alt="Oil painting of eight framed website samples on a workbench, seven ticked off" width="100%">
+</p>
 
 Cloning tools all *claim* "pixel-perfect" — none of them **measure** it. `designlang
 fidelity` does. Point it at the original and your clone (often a local dev
@@ -290,6 +310,10 @@ to an installed Google Chrome.
 
 ## Use in Claude Code (plugin)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/ai.webp" alt="Oil painting of a small robot at an easel copying a colour palette and type specimen" width="100%">
+</p>
+
 designlang ships as a **Claude Code plugin** — eleven slash commands that wrap
 the CLI. Install it from inside Claude Code:
 
@@ -348,6 +372,10 @@ npx designlang https://stripe.com --smart
 
 ## What you get
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/platforms.webp" alt="Oil painting of a river of violet paint flowing into a phone, tablet, laptop and watch" width="100%">
+</p>
+
 Each run writes 17+ files to `./design-extract-output/`. The headline outputs:
 
 | File | What it is |
@@ -371,6 +399,10 @@ Each run writes 17+ files to `./design-extract-output/`. The headline outputs:
 Multi-platform (`--platforms web,ios,android,flutter,wordpress,all`) adds `ios/`, `android/`, `flutter/`, and a WordPress block theme. `--emit-agent-rules` adds Cursor / Claude Code / generic agent rule files.
 
 ## Why designlang vs anything else
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/compare.webp" alt="Oil painting of a brass scale weighing neat colour chips against grey scraps" width="100%">
+</p>
 
 Other tools give you the paint. designlang reads the architecture:
 
@@ -514,6 +546,10 @@ Commands:
 
 ## Example output
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/brandbook.webp" alt="Oil painting of a person on a park bench reading a book of colour palettes" width="100%">
+</p>
+
 `designlang https://vercel.com --full` →
 
 ```
@@ -542,7 +578,7 @@ designlang ships surfaces beyond the CLI:
 | Surface | Path | Description |
 |---------|------|-------------|
 | **CLI** | `npx designlang <url>` | Main entry point. |
-| **VS Code extension** | [`vscode-extension/`](https://github.com/Manavarya09/design-extract/blob/main/vscode-extension/) | "Extract design from URL" command + auto-inject into workspace. |
+| **VS Code extension** | [`vscode-extension/`](https://raw.githubusercontent.com/Manavarya09/design-extract/main/vscode-extension/) | "Extract design from URL" command + auto-inject into workspace. |
 | **Raycast extension** | [`raycast-extension/`](https://github.com/Manavarya09/design-extract/blob/main/raycast-extension/) | Extract, score, and "copy CLI command" from Raycast. |
 | **Figma plugin** | [`figma-plugin/`](https://github.com/Manavarya09/design-extract/blob/main/figma-plugin/) | Paste a URL inside Figma, get a full Variables collection. |
 | **GitHub Action** | [`github-action/`](https://github.com/Manavarya09/design-extract/blob/main/github-action/) | "Design regression guard" — diffs tokens on every PR and comments. |
@@ -583,6 +619,10 @@ In Cursor / Codex / etc., use `/extract-design <url>`.
 
 
 ## Contributing
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Manavarya09/design-extract/main/assets/art/guides.webp" alt="Oil painting of a teacher at a board of colour swatches with three students" width="100%">
+</p>
 
 See [CONTRIBUTING.md](https://github.com/Manavarya09/design-extract/blob/main/CONTRIBUTING.md). PRs welcome!
 

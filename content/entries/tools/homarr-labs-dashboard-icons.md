@@ -16,27 +16,27 @@ tags:
   - codex
   - dashboard
 status: active
-quality_percentile: 83
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: homarr-labs/dashboard-icons
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8990
-  last_commit: 2026-10-26T14:25:41Z
-  stars_delta_7d: 54
-  stars_growth_pct: 0.6
-  trending_score: 54.33
-  rank_current: 83
+  stars: 9008
+  last_commit: 2026-11-04T21:07:03Z
+  stars_delta_7d: 72
+  stars_growth_pct: 0.8
+  trending_score: 72.58
+  rank_current: 81
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 8936
-    - 8990
+    - 9008
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: homarr-labs/dashboard-icons
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:33.875Z
+  fetched_at: 2026-11-05T13:11:41.676Z
   truncated: false
 type: agent_tool
 tool:
@@ -122,7 +122,7 @@ The server is free and needs no API key: `https://dashboardicons.com/api/mcp`
 | **OpenClaw**      | `openclaw mcp add dashboard-icons --url https://dashboardicons.com/api/mcp --transport streamable-http`                                  |
 | **Other clients** | Any client with Streamable HTTP support takes the URL. Stdio-only clients can use `npx -y mcp-remote https://dashboardicons.com/api/mcp` |
 
-Then ask something like _"Add icons for every service in my docker-compose.yml"_. You can also open **Add to MCP client** on [dashboardicons.com](https://dashboardicons.com) for copy-paste setup. Tools, limits and sign-in are covered in the [MCP documentation](https://github.com/homarr-labs/dashboard-icons/blob/main/web/docs/MCP.md).
+Then ask something like _"Add icons for every service in my docker-compose.yml"_. You can also open **Add to MCP client** on [dashboardicons.com](https://dashboardicons.com) for copy-paste setup. Tools, limits and sign-in are covered in the [MCP documentation](https://raw.githubusercontent.com/homarr-labs/dashboard-icons/main/web/docs/MCP.md).
 
 ### Direct Links
 

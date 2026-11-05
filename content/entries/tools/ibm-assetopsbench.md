@@ -14,10 +14,10 @@ tags:
   - hvac-maintenance
   - iot
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2025-05-01T20:48:50
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: IBM/AssetOpsBench
@@ -25,12 +25,12 @@ source:
   license: Apache-2.0
 signals:
   stars: 2410
-  last_commit: 2026-11-02T00:30:40Z
+  last_commit: 2026-11-05T00:34:33Z
   stars_delta_7d: 13
   stars_growth_pct: 0.5
   trending_score: 13.07
-  rank_current: 117
-  rank_delta: -29
+  rank_current: 121
+  rank_delta: -33
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2350
@@ -45,7 +45,7 @@ readme_source:
   repo: IBM/AssetOpsBench
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:48.776Z
+  fetched_at: 2026-11-05T13:11:58.738Z
   truncated: false
 type: agent_tool
 tool:
@@ -129,7 +129,7 @@ python -m assetopsbench.run --scenario "List all sensors of Chiller 6 in MAIN si
 Or jump in instantly:
 - 🚀 **[Run on Colab](https://colab.research.google.com/github/IBM/AssetOpsBench/blob/main-0.x/notebook/LLM_Agent.ipynb)** — no install required (illustration of LLM Agent)
 - 🎮 **[Try the HF Playground](https://huggingface.co/spaces/ibm-research/AssetOps-Bench)** — interactive demo
-- 📖 **[Read INSTRUCTIONS.md](https://github.com/IBM/AssetOpsBench/blob/main/INSTRUCTIONS.md)** — full setup, MCP servers, plan-execute runner
+- 📖 **[Read INSTRUCTIONS.md](https://raw.githubusercontent.com/IBM/AssetOpsBench/main/INSTRUCTIONS.md)** — full setup, MCP servers, plan-execute runner
 
 > [!NOTE]
 > Active development is on `main`. The codebase used for various publication venues continues to be maintained on separate branches, for example, ACL 2026 [`IndustryAssetEQA`](https://github.com/IBM/AssetOpsBench/tree/IndustryAssetEQA) and prior experimental work is maintained on [`main-0.x`](https://github.com/IBM/AssetOpsBench/tree/main-0.x).
@@ -342,7 +342,7 @@ We are expanding **AssetOpsBench** to cover a broader range of industrial challe
 
 **How to contribute:**
 
-1. **Define** your scenario following our [Utterance Guideline](https://github.com/IBM/AssetOpsBench/blob/main/docs/guideline/utterance_design_guideline.md) and [Ground Truth Guideline](https://github.com/IBM/AssetOpsBench/blob/main/docs/guideline/ground_truth_design_guideline.md)
+1. **Define** your scenario following our [Utterance Guideline](https://raw.githubusercontent.com/IBM/AssetOpsBench/main/docs/guideline/utterance_design_guideline.md) and [Ground Truth Guideline](https://github.com/IBM/AssetOpsBench/blob/main/docs/guideline/ground_truth_design_guideline.md)
 2. **Explore** the [Hugging Face dataset](https://huggingface.co/datasets/ibm-research/AssetOpsBench) for examples
    - For external public sources and starter asset-class mappings, see [External Industrial Dataset Guide](https://github.com/IBM/AssetOpsBench/blob/main/docs/external-industrial-datasets.md)
 3. **Submit** a Pull Request or open an [Issue](https://github.com/IBM/AssetOpsBench/issues) with the tag `new-scenario`

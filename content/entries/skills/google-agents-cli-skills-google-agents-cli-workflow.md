@@ -18,7 +18,7 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: google/agents-cli
@@ -26,16 +26,16 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 6280
-  last_commit: 2026-10-27T10:30:55Z
-  stars_delta_7d: 104
-  stars_growth_pct: 1.7
-  trending_score: 105.75
+  stars: 6304
+  last_commit: 2026-11-04T17:44:59Z
+  stars_delta_7d: 128
+  stars_growth_pct: 2.1
+  trending_score: 130.65
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6099
     - 6176
-    - 6280
+    - 6304
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: google/agents-cli
   path: skills/google-agents-cli-workflow/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:04.622Z
+  fetched_at: 2026-11-05T13:13:40.010Z
   truncated: false
 type: agent_skill
 skill:
@@ -80,8 +80,8 @@ skill:
 > **Before writing agent code, make sure a scaffolded project exists (see Phase 2).** Skipping scaffolding loses eval boilerplate, CI/CD config, and project conventions.
 
 
-> Requires: google-agents-cli ~= 1.12.0
-> If version is behind, run: uv tool install "google-agents-cli~=1.12.0"
+> Requires: google-agents-cli ~= 1.13.0
+> If version is behind, run: uv tool install "google-agents-cli~=1.13.0"
 
 > Check version: agents-cli info
 > [Install uv](https://docs.astral.sh/uv/getting-started/installation/index.md) first if needed.
@@ -161,7 +161,7 @@ Once you have a clear understanding, proceed to **Phase 1**.
 > credentials · OAuth consent to reach a user's own data · delegating to sub-agents with isolated
 > context · speaking A2A to other agents · reacting to events or a schedule · researching a topic
 > online and reporting it with citations · generating images or video · monitoring a deployed
-> agent's quality from its production traces — then a recipe already
+> agent's quality from its production traces · talking to the agent by voice in real time — then a recipe already
 > implements it. Look it up **before you commit to an implementation.**
 >
 > This list covers the same capabilities as the topic index in `/google-agents-cli-adk-code` → `references/recipes.md`. If you extend one, extend the other.
@@ -234,7 +234,7 @@ It contains the dataset schema, config format, and critical gotchas. Do NOT skip
 3. Discuss results with the user
 4. Fix issues and iterate on the core cases first
 5. Only after core cases pass, add edge cases and new scenarios
-6. Repeat until every case meets the bar you agreed with the user (`eval run` exits 0 whatever the scores are, so read them)
+6. Repeat until every case meets the bar you agreed with the user. Record that bar as `thresholds` in the eval config: `eval run` then ends with `RESULT: PASS` or `RESULT: FAIL (...)` and exits 1 on a miss or an errored case
 
 **Expect 5-10+ iterations here.**
 

@@ -16,25 +16,25 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: MemTensor/MemOS
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12226
-  last_commit: 2026-10-29T11:26:35Z
-  stars_delta_7d: 130
-  stars_growth_pct: 1.1
-  trending_score: 131.4
-  rank_current: 52
-  rank_delta: -11
+  stars: 12263
+  last_commit: 2026-11-04T06:42:18Z
+  stars_delta_7d: 167
+  stars_growth_pct: 1.4
+  trending_score: 169.31
+  rank_current: 54
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11926
     - 12096
-    - 12226
+    - 12263
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: MemTensor/MemOS
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:01.538Z
+  fetched_at: 2026-11-05T13:13:33.063Z
   truncated: false
 type: agent_tool
 tool:
@@ -80,6 +80,10 @@ tool:
 
   <p align="center">
     <strong>Give your Agent persistent memory and the ability to grow.</strong><br/>
+  </p>
+
+  <p align="center">
+<a href="https://trendshift.io/repositories/18526?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-18526" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/18526" alt="MemTensor%2FMemOS | Trendshift" width="250" height="55"/></a>
   </p>
 
   <p align="center">

@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 72
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27822
-  last_commit: 2026-10-30T20:57:42Z
-  stars_delta_7d: 171
-  stars_growth_pct: 0.6
-  trending_score: 172.06
+  stars: 27897
+  last_commit: 2026-11-04T18:13:42Z
+  stars_delta_7d: 246
+  stars_growth_pct: 0.9
+  trending_score: 248.19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27430
     - 27522
     - 27651
-    - 27822
+    - 27897
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/planning-with-files/SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:19.482Z
+  fetched_at: 2026-11-05T13:12:38.536Z
   truncated: false
 type: agent_skill
 skill:
@@ -300,6 +300,8 @@ For agent-readable paths and state, add `--json` (PowerShell: `-Json`) to the li
 To find a task before resuming it, run `sh "<skill-dir>/scripts/set-active-plan.sh" --list` or, in Windows PowerShell, `& "<skill-dir>/scripts/set-active-plan.ps1" -List`. Replace `<skill-dir>` with this installed skill directory and keep your current directory at the project root.
 
 This read-only command lists named plans and phase progress under the current directory's `.planning/`. `[active]` marks the shared default pointer; it does not bind a session. Concurrent tasks still require each host's `PLAN_ID` or separate worktrees.
+
+When hooks report that multiple plans are available, or every phase of a named plan is complete, run the listing command and tell the user which plans look finished. Archive only the plans the user approves: `--archive <id>` (PowerShell: `-Archive <id>`) previews the move to `.planning/.archive/`, `--yes` (`-Yes`) applies it, and `--restore <id>` (`-Restore <id>`) moves it back. Never archive on age or completion alone.
 
 ### Parallel task workflow
 

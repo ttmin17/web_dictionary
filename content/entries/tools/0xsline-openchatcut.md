@@ -16,26 +16,26 @@ status: active
 quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: 0xsline/OpenChatCut
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2850
+  stars: 2923
   last_commit: 2026-10-21T13:09:03Z
-  stars_delta_7d: 170
-  stars_growth_pct: 6.3
-  trending_score: 180.78
-  rank_current: 44
-  rank_delta: -5
+  stars_delta_7d: 243
+  stars_growth_pct: 9.1
+  trending_score: 265.03
+  rank_current: 42
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2329
     - 2510
     - 2680
-    - 2850
+    - 2923
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: 0xsline/OpenChatCut
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:50.265Z
+  fetched_at: 2026-11-05T13:13:18.845Z
   truncated: false
 type: agent_tool
 tool:

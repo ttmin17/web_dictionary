@@ -17,7 +17,7 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ruvnet/ruflo
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 80579
-  last_commit: 2026-11-02T06:38:36Z
-  stars_delta_7d: 1236
-  stars_growth_pct: 1.6
-  trending_score: 1255.25
+  stars: 80952
+  last_commit: 2026-11-05T04:50:54Z
+  stars_delta_7d: 1609
+  stars_growth_pct: 2
+  trending_score: 1641.63
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74512
     - 76729
     - 79343
-    - 80579
+    - 80952
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: ruvnet/ruflo
   path: plugins/ruflo-agentdb/skills/agentdb-query/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.357Z
+  fetched_at: 2026-11-05T13:11:32.189Z
   truncated: false
 type: agent_skill
 skill:
@@ -75,7 +75,7 @@ When you need to store, retrieve, or search knowledge across agent sessions. Age
 3. **Store knowledge** — `mcp__plugin_ruflo-core_ruflo__agentdb_hierarchical-store` for structured tier-keyed data (tiers: `working|episodic|semantic`).
 4. **Recall knowledge** — `mcp__plugin_ruflo-core_ruflo__agentdb_hierarchical-recall` with a query.
 5. **Search patterns** — `mcp__plugin_ruflo-core_ruflo__agentdb_pattern-search` for learned patterns (ReasoningBank-routed).
-6. **Synthesize context** — `mcp__plugin_ruflo-core_ruflo__agentdb_context-synthesize` to combine multiple memories.
+6. **Summarize past task outcomes** — `mcp__plugin_ruflo-core_ruflo__agentdb_context-synthesize` for the success rate, reward and critique patterns of earlier tasks like this one. Not for combining ordinary memories: it summarizes validated task episodes (task, reward, success) and answers `no-memories` or `no-eligible-episodes` for ordinary records, which is correct, not missing data. Combine those yourself from what recall and search return.
 7. **Build causal graph** — `mcp__plugin_ruflo-core_ruflo__agentdb_causal-edge` to link related knowledge.
 
 ## Available controller groups

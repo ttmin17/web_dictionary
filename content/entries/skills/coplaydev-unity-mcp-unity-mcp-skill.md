@@ -18,7 +18,7 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: CoplayDev/unity-mcp
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 15632
+  stars: 15727
   last_commit: 2026-10-30T18:15:23Z
-  stars_delta_7d: 210
-  stars_growth_pct: 1.4
-  trending_score: 212.86
-  rank_current: 63
-  rank_delta: -15
+  stars_delta_7d: 305
+  stars_growth_pct: 2
+  trending_score: 311.03
+  rank_current: 65
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
     - 14902
     - 15115
     - 15422
-    - 15632
+    - 15727
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: CoplayDev/unity-mcp
   path: unity-mcp-skill/SKILL.md
   branch: beta
-  fetched_at: 2026-11-02T09:05:44.719Z
+  fetched_at: 2026-11-05T13:11:54.004Z
   truncated: false
 type: agent_skill
 skill:

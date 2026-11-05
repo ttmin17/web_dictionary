@@ -14,10 +14,10 @@ tags:
   - ai-agents
   - claude-code
 status: active
-quality_percentile: 56
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: NVIDIA/skills
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3817
-  last_commit: 2026-10-30T18:10:11Z
-  stars_delta_7d: 82
-  stars_growth_pct: 2.2
-  trending_score: 83.8
+  stars: 3870
+  last_commit: 2026-11-05T00:43:06Z
+  stars_delta_7d: 135
+  stars_growth_pct: 3.6
+  trending_score: 139.88
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3581
     - 3642
     - 3735
-    - 3817
+    - 3870
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: NVIDIA/skills
   path: skills/amc-run-rtsp-calibration/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:50.101Z
+  fetched_at: 2026-11-05T13:13:18.149Z
   truncated: false
 type: agent_skill
 skill:

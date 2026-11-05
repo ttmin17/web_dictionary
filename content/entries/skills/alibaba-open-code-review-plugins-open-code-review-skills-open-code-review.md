@@ -17,7 +17,7 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alibaba/open-code-review
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 49270
-  last_commit: 2026-11-01T20:39:07Z
-  stars_delta_7d: 978
-  stars_growth_pct: 2
-  trending_score: 997.81
+  stars: 49481
+  last_commit: 2026-11-05T11:35:17Z
+  stars_delta_7d: 1189
+  stars_growth_pct: 2.5
+  trending_score: 1218.27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 46827
     - 47619
     - 48292
-    - 49270
+    - 49481
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: alibaba/open-code-review
   path: plugins/open-code-review/skills/open-code-review/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:38.887Z
+  fetched_at: 2026-11-05T13:13:03.517Z
   truncated: false
 type: agent_skill
 skill:

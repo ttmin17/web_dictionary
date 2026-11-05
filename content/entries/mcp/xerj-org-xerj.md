@@ -18,24 +18,24 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: xerj-org/xerj
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 18725
-  last_commit: 2026-11-02T08:43:47Z
-  stars_delta_7d: 3064
-  stars_growth_pct: 19.6
-  trending_score: 3663.46
+  stars: 19160
+  last_commit: 2026-11-05T12:28:31Z
+  stars_delta_7d: 3499
+  stars_growth_pct: 22.3
+  trending_score: 4280.75
   rank_current: 2
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15661
-    - 18725
+    - 19160
 language: en
 needs_keys: true
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: xerj-org/xerj
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.505Z
+  fetched_at: 2026-11-05T13:11:32.380Z
   truncated: false
 type: mcp_server
 launch:
@@ -101,7 +101,7 @@ how they solved the problem before writing its own code. In a controlled study t
 coding agent's output tokens by 2.7x at the same 16/16 solve rate
 ([case study](https://xerj.org/case-studies/reference-coding.html)), and people report
 roughly 5x in everyday work
-([field reports](https://github.com/xerj-org/xerj/blob/main/user-feedback/11-reference-coding-field-reports/2026-08-11-token-savings-reports.md)).
+([field reports](https://raw.githubusercontent.com/xerj-org/xerj/main/user-feedback/11-reference-coding-field-reports/2026-08-11-token-savings-reports.md)).
 It is enough for a smaller, cheaper model to out-code a pricier one working from memory,
 while you spend less time in fix loops. Try it now with a one-prompt install:
 
@@ -428,7 +428,7 @@ Twenty-six clients can register `xerj mcp` as a local stdio server. The entry is
 two fields - the absolute path to the binary, and `mcp` as its only argument - but where that entry
 lives and which key wraps it differ per client. `tested` means the server was registered in that
 client and `xerj_search` appeared in its tool list; `untested` means the path and shape are
-transcribed from the client's own documentation and nobody has run it yet. Five rows have been run.
+transcribed from the client's own documentation and nobody has run it yet. Six rows have been run.
 OpenCode v2.1.2 on Windows against `xerj` v1.0.0-rc.97 answered `initialize` and `tools/list`
 with its full tool list. Cline CLI 3.0.73 on Linux against `xerj` v1.0.0-rc.98 loaded this
 section's `mcpServers` block at `~/.cline/data/settings/cline_mcp_settings.json`. `xerj_search`
@@ -448,7 +448,7 @@ call against an autoindexed repository. DeepSeek Harness 44.7.0 on Windows again
 spawned `xerj mcp` without an application restart, exposed `mcp__xerj__xerj_search`,
 and executed a search. The tested entry was the profile patch; the `dsh/` bundle
 was not exercised. The run set `XERJ_DISABLE_FEEDBACK=true` and observed no automatic
-field report. [Contributor's verification and limits](https://github.com/xerj-org/xerj/pull/2446).
+field report. [Contributor's verification and limits](https://github.com/xerj-org/xerj/pull/2446). Antigravity on Windows 11 (x86_64-pc-windows-msvc) against `xerj` v1.0.0-rc.100 loaded this section's `mcpServers` block at `~/.gemini/config/mcp_config.json` with `XERJ_DISABLE_FEEDBACK=true`: the client spawned `xerj.exe mcp`, received 22 tools in `tools/list` (including `xerj_search` and `xerj_def`), and executed one `xerj_search` and one `xerj_def` call against an autoindexed repository (`iscvlab/mcp-bridges`).
 
 Correcting an `untested` row is a welcome first PR.
 
@@ -472,7 +472,7 @@ Correcting an `untested` row is a welcome first PR.
 | Amp | `~/.config/amp/settings.json`, `.amp/settings.json` in the workspace, or `amp mcp add` | `amp.mcpServers` | the key keeps the `amp.` prefix | untested |
 | Goose | `~/.config/goose/config.yaml`, `%APPDATA%\Block\goose\config\config.yaml` | `extensions` | `cmd`, not `command`, and YAML | untested |
 | Kiro | `.kiro/settings/mcp.json` in the workspace, `~/.kiro/settings/mcp.json` user | `mcpServers` | `${VAR}` expansion needs approval | untested |
-| Antigravity | `~/.gemini/config/mcp_config.json`, or `.agents/mcp_config.json` in the workspace | `mcpServers` | remote servers use `serverUrl` | untested |
+| Antigravity | `~/.gemini/config/mcp_config.json`, or `.agents/mcp_config.json` in the workspace | `mcpServers` | remote servers use `serverUrl` | tested |
 | OpenClaw | `~/.openclaw/openclaw.json` (JSON5) | `mcp.servers` | `transport: "stdio"` | untested |
 | [DeepSeek Harness (dsh)](https://github.com/xerj-org/xerj/blob/main/dsh/) | `$DSH_HOME/cordis.patch.yml`, or a profile patch | `- insert:` with `@deepseek-ai/dsh-mcp-client` | one plugin instance per server | tested |
 | Warp | Settings > Agents > MCP servers, or `~/.warp/.mcp.json` and `.warp/.mcp.json` in the project | `mcpServers` | `working_directory`, not `cwd` | untested |

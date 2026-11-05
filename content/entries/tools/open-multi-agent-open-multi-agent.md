@@ -17,25 +17,25 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: open-multi-agent/open-multi-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 7043
-  last_commit: 2026-10-29T17:50:03Z
-  stars_delta_7d: 19
+  stars: 7046
+  last_commit: 2026-11-04T16:56:40Z
+  stars_delta_7d: 22
   stars_growth_pct: 0.3
-  trending_score: 19.05
-  rank_current: 109
-  rank_delta: -8
+  trending_score: 22.07
+  rank_current: 112
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7005
     - 7024
-    - 7043
+    - 7046
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: open-multi-agent/open-multi-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:21.257Z
+  fetched_at: 2026-11-05T13:13:55.981Z
   truncated: false
 type: agent_tool
 tool:
@@ -159,7 +159,7 @@ Declare required roles and their execution order, then check whether the actual 
 ## Runs where you run
 
 - **No telemetry, no hosted control plane.** A library with no OMA backend or account, and none planned. It makes no analytics, license, update, or phone-home request. [Self-hosting](https://github.com/open-multi-agent/open-multi-agent/blob/main/docs/self-hosting.md)
-- **Your keys, your models.** Built-in adapters for Anthropic, OpenAI, Azure OpenAI, Bedrock, Gemini, Grok, and Copilot, and for DeepSeek, Doubao, Hunyuan, MiniMax, MiMo, and Qiniu; Ollama, vLLM, and llama-server through `baseURL`; any OpenAI-compatible endpoint and Vercel AI SDK providers. [Providers](https://github.com/open-multi-agent/open-multi-agent/blob/main/docs/providers.md)
+- **Your keys, your models.** Built-in adapters for Anthropic, OpenAI, Azure OpenAI, Bedrock, Gemini, Grok, NVIDIA, and Copilot, and for DeepSeek, Doubao, Hunyuan, MiniMax, MiMo, and Qiniu; Ollama, vLLM, and llama-server through `baseURL`; any OpenAI-compatible endpoint and Vercel AI SDK providers. [Providers](https://github.com/open-multi-agent/open-multi-agent/blob/main/docs/providers.md)
 - **Egress policy.** `offline` or `allowlist`, checked before a built-in adapter connects. A child policy can only tighten its parent, an unenforceable transport fails closed, and process and ACP backends sit outside it. [LLM egress policy](https://github.com/open-multi-agent/open-multi-agent/blob/main/docs/egress-policy.md)
 
 ## Built with OMA

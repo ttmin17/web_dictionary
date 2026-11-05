@@ -16,18 +16,18 @@ status: active
 quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-05-06T08:04:52
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: CodeAbra/iai-personal-memory-engine
   official_vendor: false
   license: MIT
 signals:
-  stars: 918
+  stars: 917
   last_commit: 2026-11-02T06:32:47Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.3
-  trending_score: 3.01
+  stars_delta_7d: 2
+  stars_growth_pct: 0.2
+  trending_score: 2
   rank_current: 137
   rank_delta: -5
   velocity_source: snapshot_delta
@@ -35,7 +35,7 @@ signals:
     - 906
     - 912
     - 915
-    - 918
+    - 917
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: CodeAbra/iai-personal-memory-engine
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.259Z
+  fetched_at: 2026-11-05T13:12:09.710Z
   truncated: false
 type: agent_tool
 tool:

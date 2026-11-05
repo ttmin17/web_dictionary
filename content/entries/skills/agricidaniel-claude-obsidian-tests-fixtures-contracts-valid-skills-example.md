@@ -11,10 +11,10 @@ tags:
   - ai-second-brain
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-obsidian
@@ -22,17 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16065
+  stars: 16185
   last_commit: 2026-10-25T22:24:31Z
-  stars_delta_7d: 238
-  stars_growth_pct: 1.5
-  trending_score: 241.58
+  stars_delta_7d: 358
+  stars_growth_pct: 2.3
+  trending_score: 366.1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15504
     - 15634
     - 15827
-    - 16065
+    - 16185
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: AgriciDaniel/claude-obsidian
   path: tests/fixtures/contracts/valid/skills/example/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:24.415Z
+  fetched_at: 2026-11-05T13:12:46.215Z
   truncated: false
 type: agent_skill
 skill:

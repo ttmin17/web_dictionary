@@ -17,25 +17,25 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: browser-use/browser-use
   official_vendor: false
   license: MIT
 signals:
-  stars: 119803
-  last_commit: 2026-11-02T01:31:56Z
-  stars_delta_7d: 646
-  stars_growth_pct: 0.5
-  trending_score: 649.5
+  stars: 120100
+  last_commit: 2026-11-05T09:04:15Z
+  stars_delta_7d: 943
+  stars_growth_pct: 0.8
+  trending_score: 950.46
   rank_current: 6
   rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 118460
     - 119157
-    - 119803
+    - 120100
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: browser-use/browser-use
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:50.264Z
+  fetched_at: 2026-11-05T13:13:18.795Z
   truncated: false
 type: mcp_server
 launch:
@@ -273,7 +273,7 @@ async with driver, AsyncAnthropic() as client:
     result = await runner.until_done()
 ```
 
-[Quickstart ↗](https://github.com/browser-use/browser-use/blob/main/examples/integrations/toolsets-for-claude) · [Integration docs ↗](https://docs.browser-use.com/open-source/customize/integrations/toolsets-for-claude)
+[Quickstart ↗](https://raw.githubusercontent.com/browser-use/browser-use/main/examples/integrations/toolsets-for-claude) · [Integration docs ↗](https://docs.browser-use.com/open-source/customize/integrations/toolsets-for-claude)
 
 <br/>
 

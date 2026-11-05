@@ -18,7 +18,7 @@ status: active
 quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: stacklok/toolhive
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2319
-  last_commit: 2026-11-01T20:04:51Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.3
-  trending_score: 8.03
-  rank_current: 131
-  rank_delta: -14
+  stars: 2325
+  last_commit: 2026-11-05T11:49:03Z
+  stars_delta_7d: 14
+  stars_growth_pct: 0.6
+  trending_score: 14.08
+  rank_current: 127
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2279
     - 2295
     - 2311
-    - 2319
+    - 2325
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: stacklok/toolhive
   path: skills/toolhive-cli-user/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:48.860Z
+  fetched_at: 2026-11-05T13:11:58.656Z
   truncated: false
 type: agent_skill
 skill:

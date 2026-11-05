@@ -14,10 +14,10 @@ tags:
   - claude-ai
   - claude-code
 status: active
-quality_percentile: 59
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-05-09T23:10:58
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: rahilp/second-brain-cloudflare
@@ -29,8 +29,8 @@ signals:
   stars_delta_7d: 17
   stars_growth_pct: 2.1
   trending_score: 17.35
-  rank_current: 66
-  rank_delta: 4
+  rank_current: 76
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 802
@@ -45,7 +45,7 @@ readme_source:
   repo: rahilp/second-brain-cloudflare
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:57.597Z
+  fetched_at: 2026-11-05T13:12:10.017Z
   truncated: false
 type: mcp_server
 launch:
@@ -79,7 +79,7 @@ Second Brain gives those tools one persistent memory system. It runs in your own
 
 The desktop app is the easiest way to start. It builds your Second Brain and connects your AI tools in about two minutes—no terminal or Cloudflare setup required.
 
-### [Download for Mac or Windows](https://github.com/rahilp/second-brain-cloudflare/blob/main/releases/latest)
+### [Download for Mac or Windows](https://raw.githubusercontent.com/rahilp/second-brain-cloudflare/main/releases/latest)
 
 ---
 
@@ -117,7 +117,7 @@ Second Brain can now be a team's memory without stopping being yours.
 
 The same Worker supports personal and team use; there is no separate team deployment. In the API, CLI, and MCP tools, the Shared layer is represented by the stable workspace value `company`. See the [Team Setup guide](https://github.com/rahilp/second-brain-cloudflare/wiki/Team-Setup) for member management, capture policies, sharing, and upgrades.
 
-**v3.0.0 scope:** each brain has **one** shared team. The API and MCP layer include optional `team` parameters and a `list_teams` tool so multi-team support can ship later without breaking changes; the dashboard and admin flows do not create or switch between multiple teams yet. See [CHANGELOG.md](https://github.com/rahilp/second-brain-cloudflare/blob/main/CHANGELOG.md).
+**v3.0.0 scope:** each brain has **one** shared team. The API and MCP layer include optional `team` parameters and a `list_teams` tool so multi-team support can ship later without breaking changes; the dashboard and admin flows do not create or switch between multiple teams yet. See [CHANGELOG.md](https://raw.githubusercontent.com/rahilp/second-brain-cloudflare/main/CHANGELOG.md).
 
 ## How it works
 

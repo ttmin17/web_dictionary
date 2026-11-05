@@ -17,24 +17,24 @@ status: active
 quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: DemonDamon/AgenticX
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 880
-  last_commit: 2026-11-02T06:58:35Z
-  stars_delta_7d: 187
-  stars_growth_pct: 27
-  trending_score: 237.46
-  rank_current: 32
+  stars: 971
+  last_commit: 2026-11-05T12:38:34Z
+  stars_delta_7d: 278
+  stars_growth_pct: 40.1
+  trending_score: 389.52
+  rank_current: 31
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 693
-    - 880
+    - 971
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: DemonDamon/AgenticX
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:25.123Z
+  fetched_at: 2026-11-05T13:13:56.319Z
   truncated: false
 type: agent_tool
 tool:
@@ -79,7 +79,7 @@ tool:
 
 ---
 
-**Language / 语言**: [English](https://github.com/DemonDamon/AgenticX/blob/main/README.md) | [中文](https://github.com/DemonDamon/AgenticX/blob/main/README_ZN.md)
+**Language / 语言**: [English](https://raw.githubusercontent.com/DemonDamon/AgenticX/main/README.md) | [中文](https://github.com/DemonDamon/AgenticX/blob/main/README_ZN.md)
 
 ---
 

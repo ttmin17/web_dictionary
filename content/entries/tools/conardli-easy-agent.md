@@ -18,25 +18,25 @@ status: active
 quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: ConardLi/easy-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 1020
-  last_commit: 2026-11-02T05:35:28Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.5
-  trending_score: 5.02
-  rank_current: 134
-  rank_delta: 6
+  stars: 1022
+  last_commit: 2026-11-04T15:47:58Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.7
+  trending_score: 7.05
+  rank_current: 128
+  rank_delta: 12
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1016
     - 1015
-    - 1020
+    - 1022
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: ConardLi/easy-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.219Z
+  fetched_at: 2026-11-05T13:13:44.488Z
   truncated: false
 type: agent_tool
 tool:
@@ -71,7 +71,7 @@ A terminal coding agent that reads your code, edits files, and runs commands und
 
 Easy Agent (`eagent`) runs in your terminal next to your repository. Describe a task and it plans the work, reads and changes files, runs tests or shell commands, and reports back. Every action that can change your machine goes through permission rules, workspace trust, and an optional OS-level sandbox. It works with Anthropic, OpenAI-compatible, Gemini, and local models.
 
-The code is written to be read as well as run. Model communication, the agentic loop, tools, permissions, context management, and each extension system live in separate layers. The documents linked below explain how the security-relevant parts behave and why, and the [learning path](https://github.com/ConardLi/easy-agent/blob/main/docs/learning-path.md) walks through the layers in order with code snapshots, which helps if you want to build or customize an agent of your own.
+The code is written to be read as well as run. Model communication, the agentic loop, tools, permissions, context management, and each extension system live in separate layers. The documents linked below explain how the security-relevant parts behave and why, and the [learning path](https://raw.githubusercontent.com/ConardLi/easy-agent/main/docs/learning-path.md) walks through the layers in order with code snapshots, which helps if you want to build or customize an agent of your own.
 
 > 中文文档：[README.zh-CN.md](https://github.com/ConardLi/easy-agent/blob/main/README.zh-CN.md)
 

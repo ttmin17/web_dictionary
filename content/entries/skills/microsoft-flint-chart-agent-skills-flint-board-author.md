@@ -17,7 +17,7 @@ status: active
 quality_percentile: 93
 selection_reason: official_vendor
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: microsoft/flint-chart
@@ -25,19 +25,19 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 4526
-  last_commit: 2026-11-01T18:08:38Z
-  stars_delta_7d: 67
-  stars_growth_pct: 1.5
-  trending_score: 68.01
-  rank_current: 97
-  rank_delta: -9
+  stars: 4545
+  last_commit: 2026-11-03T23:49:30Z
+  stars_delta_7d: 86
+  stars_growth_pct: 1.9
+  trending_score: 87.66
+  rank_current: 99
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4367
     - 4380
     - 4459
-    - 4526
+    - 4545
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: microsoft/flint-chart
   path: agent-skills/flint-board-author/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.081Z
+  fetched_at: 2026-11-05T13:11:44.516Z
   truncated: false
 type: agent_skill
 skill:

@@ -13,28 +13,28 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 46
+quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: CoderLuii/HolyClaude
   official_vendor: false
   license: MIT
 signals:
-  stars: 2603
+  stars: 2615
   last_commit: 2026-11-01T09:56:23Z
-  stars_delta_7d: 10
-  stars_growth_pct: 0.4
-  trending_score: 10.04
-  rank_current: 121
-  rank_delta: -2
+  stars_delta_7d: 22
+  stars_growth_pct: 0.8
+  trending_score: 22.19
+  rank_current: 111
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2584
     - 2593
-    - 2603
+    - 2615
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: CoderLuii/HolyClaude
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:07:06.723Z
+  fetched_at: 2026-11-05T13:13:40.410Z
   truncated: true
 type: agent_tool
 tool:
@@ -97,7 +97,7 @@ One command. Full AI development workstation. Claude Code, web UI, headless brow
 
 You know the drill. You want Claude Code. But you also want it in a browser. With a headless browser for screenshots and testing. With Playwright configured. With every AI CLI. With TypeScript, Python, deployment tools, database clients, GitHub CLI.
 
-v1.6.8 updates the bundled AI CLIs and developer tools using official upstream releases. Debian Chromium is 156.0.8078.47 for AMD64 and ARM64. The Docker client remains an opt-in Full-derived recipe; stock images still ship without it. See the [deferred replacements](https://github.com/CoderLuii/HolyClaude/blob/master/docs/official-dependency-updates.md) for integrations that still need an equivalent official release.
+v1.6.8 updates the bundled AI CLIs and developer tools using official upstream releases. Debian Chromium is 156.0.8078.47 for AMD64 and ARM64. The Docker client remains an opt-in Full-derived recipe; stock images still ship without it. See the [deferred replacements](https://raw.githubusercontent.com/CoderLuii/HolyClaude/master/docs/official-dependency-updates.md) for integrations that still need an equivalent official release.
 
 > [!WARNING]
 > Dependency scans still run. Accepted upstream vulnerabilities remain listed with their installed versions, raw severity and available fixes; acceptance does not mean fixed. Retained modified third-party artifacts are identified separately from official releases. HolyClaude source checks, artifact integrity and runtime tests still block delivery. See the [dependency policy](https://github.com/CoderLuii/HolyClaude/blob/master/security/upstream-dependency-policy.json) and the release's scan evidence before deploying.

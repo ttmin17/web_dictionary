@@ -12,21 +12,21 @@ tags:
   - ida-plugin
   - ida-pro
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mrexodia/ida-pro-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 13287
+  stars: 13373
   last_commit: 2026-09-26T15:42:10Z
-  stars_delta_7d: 130
-  stars_growth_pct: 1
-  trending_score: 131.28
+  stars_delta_7d: 216
+  stars_growth_pct: 1.6
+  trending_score: 219.55
   rank_current: 16
   rank_delta: -3
   velocity_source: snapshot_delta
@@ -34,7 +34,7 @@ signals:
     - 12770
     - 13005
     - 13157
-    - 13287
+    - 13373
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: mrexodia/ida-pro-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:30.333Z
+  fetched_at: 2026-11-05T13:11:37.399Z
   truncated: false
 type: mcp_server
 launch:

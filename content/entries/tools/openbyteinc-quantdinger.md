@@ -15,28 +15,28 @@ tags:
   - crypto
   - exchange
 status: active
-quality_percentile: 94
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: OpenByteInc/QuantDinger
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13422
-  last_commit: 2026-11-01T11:00:13Z
-  stars_delta_7d: 292
-  stars_growth_pct: 2.2
-  trending_score: 298.49
+  stars: 13541
+  last_commit: 2026-11-05T09:34:16Z
+  stars_delta_7d: 411
+  stars_growth_pct: 3.1
+  trending_score: 423.87
   rank_current: 29
   rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12908
     - 13130
-    - 13422
+    - 13541
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: OpenByteInc/QuantDinger
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:30.351Z
+  fetched_at: 2026-11-05T13:11:37.367Z
   truncated: false
 type: agent_tool
 tool:
@@ -320,7 +320,8 @@ One backend image is reused by several containers with different commands:
 | `strategy-evaluator-worker` | Owns hot distributed bar runtimes and evaluates fenced strategy inbox events. |
 | `kafka-audit-worker` | Validates and records the versioned event stream independently of execution. |
 | `scheduler-worker` | Runs portfolio, deployment, payment, and signal schedules. |
-| `celery-worker` | Executes finite AI, backtest, experiment, report, and maintenance jobs. |
+| `celery-worker` | Executes finite AI, report, and maintenance jobs. |
+| `celery-backtest-worker` | Executes backtests, factor research, and experiments; recycles its child after every task. |
 | `celery-beat` | Dispatches periodic Celery tasks. |
 
 See [Backend process roles](https://github.com/OpenByteInc/QuantDinger/blob/main/docs/architecture/PROCESS_ROLES_AND_TASKS.md),
@@ -686,8 +687,9 @@ flowchart TD
     O --> T["Place order normally and record provider unavailable"]
 ```
 
-Configure `JEV_API_KEY`, `JEV_BASE_URL`, `JEV_MODEL`, and
-`JEV_TIMEOUT_SECONDS` in **System Settings → AI / LLM**. TypeSafe documents the
+Configure `JEV_ENABLED`, `JEV_API_KEY`, `JEV_BASE_URL`, `JEV_MODEL`, and
+`JEV_TIMEOUT_SECONDS` in **System Settings → AI / LLM**. When JEV is disabled,
+the decision filter uses the configured LLM directly. TypeSafe documents the
 HTTP contract at [`POST /v1/systemone`](https://docs.typesafe.ai/introduction/quickstart).
 
 ## AI agents and MCP
@@ -808,7 +810,7 @@ QuantDinger/
 | --- | --- |
 | Synchronous API request | `app/routes` -> `app/services` -> database, cache, market-data, or trading adapter |
 | Durable strategy command | API route -> PostgreSQL command record -> `trading-worker` -> strategy runtime and broker adapter |
-| Finite background job | API or Celery beat -> job Redis -> `app/tasks` in `celery-worker` -> PostgreSQL result |
+| Finite background job | API or Celery beat -> job Redis -> `app/tasks` in the queue-specific Celery worker -> PostgreSQL result |
 | Scheduled domain work | `app/commands/scheduler.py` -> scheduling services -> durable state and notifications |
 | Monitoring | API and workers -> `app/observability` metrics -> Prometheus -> Grafana and Alertmanager |
 | Agent or MCP call | MCP client -> `mcp_server` -> `/api/agent/v1` -> the same service layer used by human APIs |

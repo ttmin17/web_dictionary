@@ -18,26 +18,26 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2025-05-08T08:16:59
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: IBM/mcp-context-forge
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4740
-  last_commit: 2026-11-02T05:27:38Z
-  stars_delta_7d: 48
-  stars_growth_pct: 1
-  trending_score: 48.49
-  rank_current: 38
-  rank_delta: 1
+  stars: 4757
+  last_commit: 2026-11-05T13:03:30Z
+  stars_delta_7d: 65
+  stars_growth_pct: 1.4
+  trending_score: 65.9
+  rank_current: 39
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4616
     - 4649
     - 4692
-    - 4740
+    - 4757
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: IBM/mcp-context-forge
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:44.736Z
+  fetched_at: 2026-11-05T13:11:54.181Z
   truncated: false
 type: mcp_server
 launch:
@@ -751,7 +751,7 @@ docker run --name mcp-postgres \
 For upgrade instructions, migration guides, and rollback procedures, see:
 
 - **[Upgrade Guide](https://ibm.github.io/mcp-context-forge/manage/upgrade/)** — General upgrade procedures
-- **[MIGRATION.md](https://github.com/IBM/mcp-context-forge/blob/main/MIGRATION.md)** — Breaking changes and step-by-step upgrade instructions
+- **[MIGRATION.md](https://raw.githubusercontent.com/IBM/mcp-context-forge/main/MIGRATION.md)** — Breaking changes and step-by-step upgrade instructions
 - **[CHANGELOG.md](https://github.com/IBM/mcp-context-forge/blob/main/CHANGELOG.md)** — Version history and breaking changes
 
 ---

@@ -17,26 +17,26 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2025-04-15T10:55:56
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: brightdata/brightdata-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2705
-  last_commit: 2026-11-01T13:21:14Z
-  stars_delta_7d: 18
-  stars_growth_pct: 0.7
-  trending_score: 18.12
-  rank_current: 64
-  rank_delta: 13
+  stars: 2711
+  last_commit: 2026-11-05T11:06:34Z
+  stars_delta_7d: 24
+  stars_growth_pct: 0.9
+  trending_score: 24.21
+  rank_current: 68
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2673
     - 2680
     - 2687
-    - 2705
+    - 2711
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: brightdata/brightdata-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.517Z
+  fetched_at: 2026-11-05T13:11:49.283Z
   truncated: false
 type: mcp_server
 launch:
@@ -78,7 +78,7 @@ launch:
   <a href="#quick-start">Quick Start</a> •
   <a href="#pricing-and-free-tier">Pricing</a> •
   <a href="#use-cases">Use Cases</a> •
-  <a href="#tools-reference-32-tools">Tools</a> •
+  <a href="#tools-reference-30-tools">Tools</a> •
   <a href="#agent-skills">Agent Skills</a> •
   <a href="#documentation">Docs</a> •
   <a href="#support">Support</a>
@@ -92,9 +92,9 @@ launch:
 
 ## Overview
 
-The Bright Data MCP server gives AI agents real-time access to public web data. It exposes **32 tools** covering:
+The Bright Data MCP server gives AI agents real-time access to public web data. It exposes **30 tools** covering:
 
-- **Web search** — Google, Bing, and Yandex results as structured data
+- **Web search** — Bing and Google results as structured data
 - **Page scraping** — any URL as Markdown or HTML, with bot detection, CAPTCHA solving, and proxy rotation handled automatically on every request
 - **Structured data (Web Scraper API)** — clean JSON from 1,200+ pre-built scrapers: Amazon, LinkedIn, Instagram, TikTok, YouTube, X, Reddit, Facebook, Crunchbase, Zillow, npm, PyPI and more, without parsing HTML. Six tools find and run any of them
 - **Browser automation** — navigate, click, type, screenshot, and read pages in a remote browser session
@@ -292,7 +292,7 @@ What's included free:
 
 - Fetch any webpage and extract as Markdown
 - Access to 60+ pre-built scrapers for popular domains
-- Web search (Google, Bing, Yandex)
+- Web search (Bing, Google)
 - Web unlocking (bot detection bypass, CAPTCHA solving, proxy rotation)
 - Browser automation
 - Geo-targeting
@@ -356,9 +356,8 @@ Replace built-in fetch/search tools that get blocked on protected sites. Every r
 |------|-------|
 | Drop-in replacement for built-in web search | `search_engine` |
 | Drop-in replacement for built-in URL fetch | `scrape_as_markdown` |
-| Parallel data collection (10 at a time) | `search_engine_batch`, `scrape_batch` |
+| Parallel data collection (5 at a time) | `search_engine_batch`, `scrape_batch` |
 | Interactive sites (login walls, infinite scroll, dynamic content) | `scraping_browser_*` (14 tools) |
-| Structured JSON from any page, no schema needed | `extract` |
 
 ### Coding agents
 
@@ -413,10 +412,10 @@ Gather source material from many pages at once, filtered by recency and relevanc
 
 | Capability | Bright Data MCP | Typical web MCP servers |
 |------------|-----------------|------------------------|
-| Total tools | 32 | 2–10 |
+| Total tools | 30 | 2–10 |
 | Platform-specific structured JSON extractors | 1,200+ pre-built scrapers across e-commerce, social, business, finance, travel, app stores, through 6 tools | Rare; generic scraping only |
 | Unblocking (bot detection bypass, CAPTCHA solving, proxy rotation) | Built into every request | Usually none; blocked on protected sites |
-| Search engines | Google, Bing, Yandex | Usually one |
+| Search engines | Bing, Google | Usually one |
 | Browser automation | 14 tools, remote browser, no local setup | Limited or none |
 | LLM response collection (ChatGPT, Perplexity) | Yes | Not offered |
 | Package registry data (npm, PyPI) | Yes | Not offered |
@@ -430,9 +429,9 @@ Gather source material from many pages at once, filtered by recency and relevanc
 
 Tools are organized into groups so you only load what you need. Fewer tools means less context for your agent to process.
 
-- With no `GROUPS` or `TOOLS`, all 32 tools are enabled. Setting either one limits the server to those tools only
+- With no `GROUPS` or `TOOLS`, all 30 tools are enabled. Setting either one limits the server to those tools only
 - `GROUPS` enables tool bundles. Comma-separated: `GROUPS="scrapers,browser"` (local) or `&groups=scrapers,browser` (hosted URL)
-- `TOOLS` adds individual tools on top: `TOOLS="extract,scrape_as_html"`. On its own, it enables only the tools you list
+- `TOOLS` adds individual tools on top: `TOOLS="scrape_batch,session_stats"`. On its own, it enables only the tools you list
 - Every group also includes `search_engine`, `scrape_as_markdown` and `ask_brightdata_assistant`
 - Group ID `custom` is reserved; use `TOOLS` for individual picks
 
@@ -441,13 +440,13 @@ Tools are organized into groups so you only load what you need. Fewer tools mean
 | `scrapers` | Search and run any pre-built Web Scraper API scraper (Amazon, LinkedIn, TikTok, npm, ...) | 6 |
 | `browser` | Remote browser automation | 14 |
 | `geo` | ChatGPT and Perplexity response collection | 2 |
-| `advanced_scraping` | Batch tools, HTML scraping, AI extraction, session stats | 5 |
+| `advanced_scraping` | Batch tools, session stats | 3 |
 
 Older group IDs (`ecommerce`, `social`, `business`, `finance`, `research`, `app_stores`, `travel`, `code`) still work and enable the `scrapers` tools; `social` and `business` also add `search_dataset` and `list_dataset_fields`. Old `web_data_*` names in `TOOLS` enable the `scrapers` tools too.
 
 ### Configuration examples
 
-Local server with browser automation and AI extraction:
+Local server with browser automation and batch tools:
 
 ```json
 {
@@ -457,8 +456,7 @@ Local server with browser automation and AI extraction:
       "args": ["@brightdata/mcp"],
       "env": {
         "API_TOKEN": "<your-api-token-here>",
-        "GROUPS": "browser,advanced_scraping",
-        "TOOLS": "extract"
+        "GROUPS": "browser,advanced_scraping"
       }
     }
   }
@@ -484,15 +482,14 @@ Coding agent setup (Claude Code / Cursor / Windsurf) — npm, PyPI and GitHub da
 
 ---
 
-## Tools Reference (32 Tools)
+## Tools Reference (30 Tools)
 
 ### Which tool to use
 
 - **Known URL, need the content:** `scrape_as_markdown`. Multiple URLs (up to 5): `scrape_batch`
-- **Need to find information:** `search_engine`. Multiple queries (up to 10): `search_engine_batch`
+- **Need to find information:** `search_engine`. Multiple queries (up to 5): `search_engine_batch`
 - **Structured data from a known platform (Amazon, LinkedIn, TikTok, npm, PyPI, etc.):** `search_scrapers` → `get_scraper_details` → `run_scraper` — returns clean JSON, faster and more reliable than scraping the same page
-- **Structured JSON from a page no scraper covers:** `extract`
-- **Raw HTML:** `scrape_as_html`
+- **Raw HTML:** `scrape_as_markdown` with `format: 'html'`
 - **Page requires interaction (click, type, scroll, login):** `scraping_browser_*` tools
 - **How ChatGPT/Perplexity answer a prompt:** `chatgpt_ai_insights` / `perplexity_ai_insights`
 - **Question about Bright Data itself (products, zones, errors, setup):** `ask_brightdata_assistant`
@@ -505,16 +502,14 @@ Notes on scraper runs:
 - If a run fails, `scrape_as_markdown` works on the same URL as a fallback
 
 <details>
-<summary><b>Search and Scraping — 7 tools</b></summary>
+<summary><b>Search and Scraping — 5 tools</b></summary>
 
 | Tool | Description | Group |
 |------|-------------|-------|
-| `search_engine` | Search Google, Bing, or Yandex. Google returns JSON (URL, title, description); Bing and Yandex return Markdown. Paginate with the `cursor` parameter | default / every group |
-| `search_engine_batch` | Up to 10 search queries in one call | default / `advanced_scraping` |
+| `search_engine` | Search Bing (default) or Google. Returns JSON (link, title, description), 10 results per page. Params: `country`, `page` (from 0), `time_range` (`hour`, `day`, `week`, `month`, `year`, `any`; Bing supports only `day`, `week`, `year`) | default / every group |
+| `search_engine_batch` | Up to 5 search queries in one call | default / `advanced_scraping` |
 | `scrape_as_markdown` | Any URL. Returns the content as markdown (default), text, html or ld_json | default / every group |
 | `scrape_batch` | Up to 5 URLs in one call. Returns the content as markdown (default), text, html or ld_json | default / `advanced_scraping` |
-| `scrape_as_html` | Any URL as raw HTML | default / `advanced_scraping` |
-| `extract` | Scrape a page and convert it to structured JSON using AI, with an optional custom extraction prompt | default / `advanced_scraping` |
 | `session_stats` | Tool usage counts for the current session | default / `advanced_scraping` |
 
 </details>
@@ -645,7 +640,7 @@ Three of the highest-impact skills:
       "env": {
         "API_TOKEN": "your-token-here",
         "RATE_LIMIT": "100/1h",
-        "WEB_UNLOCKER_ZONE": "custom",
+        "SERP_ZONE": "custom_serp",
         "BROWSER_ZONE": "custom_browser"
       }
     }
@@ -659,7 +654,7 @@ Three of the highest-impact skills:
 |----------|-------------|---------|---------|
 | `API_TOKEN` | Your Bright Data API token (required) | - | `your-token-here` |
 | `RATE_LIMIT` | Custom rate limiting | unlimited | `100/1h`, `50/30m` |
-| `WEB_UNLOCKER_ZONE` | Custom Web Unlocker zone name | `mcp_unlocker` | `my_custom_zone` |
+| `SERP_ZONE` | Custom SERP API zone name, used by the search tools | `mcp_serp` | `my_serp_zone` |
 | `BROWSER_ZONE` | Custom Browser zone name | `mcp_browser` | `my_browser_zone` |
 | `CONTENT_GATE` | When page content returned by a data tool looks like instructions to change the MCP configuration, the server asks the user (via MCP elicitation) before returning it. Set to `off` to disable | `on` | `off` |
 | `CONTENT_GATE_TIMEOUT` | Seconds to wait for the user's answer before withholding the content | `120` | `60`, `300` |
@@ -667,11 +662,11 @@ Three of the highest-impact skills:
 | `BASE_TIMEOUT` | Request timeout for base tools in seconds (search and scrape) | No limit | `60`, `120` |
 | `BASE_MAX_RETRIES` | Max retries for base tools on transient errors (0-3) | `0` | `1`, `3` |
 | `GROUPS` | Comma-separated tool group IDs. Limits the server to these groups | All tools | `scrapers,browser` |
-| `TOOLS` | Comma-separated individual tool names. Limits the server to these tools | All tools | `extract,scrape_as_html` |
+| `TOOLS` | Comma-separated individual tool names. Limits the server to these tools | All tools | `scrape_batch,session_stats` |
 
 ### Content gate
 
-`scrape_as_markdown`, `search_engine`, `extract` and their batch variants return whatever a web
+`scrape_as_markdown`, `search_engine` and their batch variants return whatever a web
 page says. If that content contains text that reads like instructions to change your MCP
 configuration — register a server, run an `npx -y` package, edit the MCP config file — the server
 pauses and asks you, through your MCP client, before returning it. Approve and the content is

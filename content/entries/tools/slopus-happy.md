@@ -12,28 +12,28 @@ tags:
   - claude-code
   - claude-desktop
 status: active
-quality_percentile: 72
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: slopus/happy
   official_vendor: false
   license: MIT
 signals:
-  stars: 24446
-  last_commit: 2026-11-02T06:31:37Z
-  stars_delta_7d: 127
-  stars_growth_pct: 0.5
-  trending_score: 127.66
-  rank_current: 53
-  rank_delta: 3
+  stars: 24503
+  last_commit: 2026-11-05T11:45:28Z
+  stars_delta_7d: 184
+  stars_growth_pct: 0.8
+  trending_score: 185.39
+  rank_current: 52
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 24204
     - 24319
-    - 24446
+    - 24503
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: slopus/happy
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:18.593Z
+  fetched_at: 2026-11-05T13:12:37.431Z
   truncated: false
 type: agent_tool
 tool:
@@ -119,9 +119,10 @@ happy claude
 happy codex
 ```
 
-- [happy-app](https://github.com/slopus/happy/blob/main/packages/happy-app): the Happy mobile app and web client (Expo)
+- [happy-ios](https://github.com/slopus/happy/blob/main/packages/happy-ios): native Swift/UIKit iOS app
+- [happy-android](https://github.com/slopus/happy/blob/main/packages/happy-android): native Kotlin/Jetpack Compose Android app
+- [happy-i18n](https://github.com/slopus/happy/blob/main/packages/happy-i18n): shared JSON translations
 - [happy-cli](https://github.com/slopus/happy/blob/main/packages/happy-cli): the original Happy CLI (`happy` on npm)
-- [happy-agent](https://github.com/slopus/happy/blob/main/packages/happy-agent): remote session control for the original Happy CLI (not the Happy Agent runtime)
 - [happy-server](https://github.com/slopus/happy/blob/main/packages/happy-server): the relay server for encrypted sync
 - [happy-push-server](https://github.com/slopus/happy/blob/main/packages/happy-push-server): Cloudflare Worker that delivers push notifications via APNs/FCM (replaces the Expo push service)
 

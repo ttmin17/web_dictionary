@@ -18,26 +18,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: vitali87/code-graph-rag
   official_vendor: false
   license: MIT
 signals:
-  stars: 5307
-  last_commit: 2026-11-02T08:35:38Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.1
-  rank_current: 102
-  rank_delta: 1
+  stars: 5314
+  last_commit: 2026-11-04T16:42:42Z
+  stars_delta_7d: 30
+  stars_growth_pct: 0.6
+  trending_score: 30.17
+  rank_current: 104
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5249
     - 5266
     - 5284
-    - 5307
+    - 5314
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: vitali87/code-graph-rag
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.303Z
+  fetched_at: 2026-11-05T13:11:43.614Z
   truncated: false
 type: agent_tool
 tool:
@@ -127,10 +127,9 @@ Code-Graph-RAG parses a multi-language codebase with Tree-sitter, sharpened by c
 ## Latest News 🔥
 
 <!-- SECTION:latest_news -->
-- **Quiet Mode Enhancement**: The `--quiet` flag for the CLI now suppresses the scanning line for dead code and duplicates, providing a cleaner output.
-- **Context Budget Fix**: The system now correctly handles cases where a target doesn't fit within the allocated budget, preventing unexpected behaviour.
-- **Code Quality**: Changes have been made to report decorator and modifier changes that affect method calls and to ensure submodule grammars are loaded correctly.
-- **CGR Prune Feature**: A new `cgr prune` functionality has been added to remove projects where the root no longer exists.
+- **Rust Upgrade**: Updated Rust to version 1.99.1-slim-trixie.
+- **Signature Functionality**: Added support for reading and writing JavaScript headers for change signatures, including the ability to change the signature of JavaScript functions or methods.
+- **macOS Compatibility**: The build now leaves macOS-14 support.
 <!-- /SECTION:latest_news -->
 
 See [NEWS.md](https://github.com/vitali87/code-graph-rag/blob/main/NEWS.md) for the full history.

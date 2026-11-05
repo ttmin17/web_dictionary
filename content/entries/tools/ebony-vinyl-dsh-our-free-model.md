@@ -4,7 +4,7 @@ name: dsh-our-free-model
 tagline: "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3
   在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no
   sign-up"
-summary: QQ 群：1132961812（ai技术交流群14） 扫码或搜索群号加入群聊，一起交流插件使用心得、反馈问题与分享玩法。
+summary: QQ 群：386179533（ai技术交流学习群） 扫码或搜索群号加入群聊，一起交流插件使用心得、反馈问题与分享玩法。
 categories:
   - agent-frameworks
 tags:
@@ -16,24 +16,24 @@ status: active
 quality_percentile: 51
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Ebony-Vinyl/dsh-our-free-model
   official_vendor: false
   license: MIT
 signals:
-  stars: 56426
-  last_commit: 2026-11-02T08:10:54Z
-  stars_delta_7d: 12840
-  stars_growth_pct: 29.5
-  trending_score: 16622.54
+  stars: 61859
+  last_commit: 2026-11-05T06:24:03Z
+  stars_delta_7d: 18273
+  stars_growth_pct: 41.9
+  trending_score: 25933.77
   rank_current: 2
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 43586
-    - 56426
+    - 61859
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Ebony-Vinyl/dsh-our-free-model
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:54.053Z
+  fetched_at: 2026-11-05T13:13:24.457Z
   truncated: true
 type: agent_tool
 tool:
@@ -94,9 +94,9 @@ tool:
 ## 交流群
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Ebony-Vinyl/dsh-our-free-model/main/docs/images/qq-group-14.png" alt="ai技术交流群14入群二维码（群号：1132961812）" width="300">
+  <img src="https://raw.githubusercontent.com/Ebony-Vinyl/dsh-our-free-model/main/docs/images/qq-group-386179533.png" alt="ai技术交流学习群入群二维码（群号：386179533）" width="300">
   <br>
-  <b>QQ 群：1132961812（ai技术交流群14）</b>
+  <b>QQ 群：386179533（ai技术交流学习群）</b>
   <br>
   扫码或搜索群号加入群聊，一起交流插件使用心得、反馈问题与分享玩法。
 </div>

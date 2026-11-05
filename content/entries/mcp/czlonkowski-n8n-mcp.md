@@ -12,21 +12,21 @@ tags:
   - n8n
   - workflows
 status: active
-quality_percentile: 95
+quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: czlonkowski/n8n-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 23191
-  last_commit: 2026-10-27T19:07:26Z
-  stars_delta_7d: 53
-  stars_growth_pct: 0.2
-  trending_score: 53.12
+  stars: 23216
+  last_commit: 2026-11-03T20:20:32Z
+  stars_delta_7d: 78
+  stars_growth_pct: 0.3
+  trending_score: 78.26
   rank_current: 35
   rank_delta: 11
   velocity_source: snapshot_delta
@@ -34,7 +34,7 @@ signals:
     - 23058
     - 23102
     - 23138
-    - 23191
+    - 23216
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: czlonkowski/n8n-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.539Z
+  fetched_at: 2026-11-05T13:11:32.355Z
   truncated: false
 type: mcp_server
 launch:
@@ -57,13 +57,13 @@ launch:
 ---
 
 # n8n-MCP
-A Model Context Protocol (MCP) server that provides AI assistants with comprehensive access to n8n node documentation, properties, and operations. Deploy in minutes to give Claude and other AI assistants deep knowledge about n8n's 3,143 workflow automation nodes (841 core + 2,302 community).
+A Model Context Protocol (MCP) server that provides AI assistants with comprehensive access to n8n node documentation, properties, and operations. Deploy in minutes to give Claude and other AI assistants deep knowledge about n8n's 3,434 workflow automation nodes (842 core + 2,592 community).
 
 ## Overview
 
 n8n-MCP serves as a bridge between n8n's workflow automation platform and AI models, enabling them to understand and work with n8n nodes effectively. It provides structured access to:
 
-- **3,143 n8n nodes** - 841 core nodes + 2,302 community nodes (1,879 verified)
+- **3,434 n8n nodes** - 842 core nodes + 2,592 community nodes (2,164 verified)
 - **Node properties** - 99% coverage with detailed schemas
 - **Node operations** - 66.5% coverage of available actions
 - **Documentation** - 86% coverage from official n8n docs (including AI nodes)

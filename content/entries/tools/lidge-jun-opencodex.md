@@ -15,29 +15,29 @@ tags:
   - anthropic
   - chatgpt
 status: active
-quality_percentile: 71
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: lidge-jun/opencodex
   official_vendor: false
   license: MIT
 signals:
-  stars: 18157
-  last_commit: 2026-11-02T08:58:38Z
-  stars_delta_7d: 251
-  stars_growth_pct: 1.4
-  trending_score: 254.52
-  rank_current: 31
-  rank_delta: -7
+  stars: 18228
+  last_commit: 2026-11-04T12:36:21Z
+  stars_delta_7d: 322
+  stars_growth_pct: 1.8
+  trending_score: 327.79
+  rank_current: 34
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17353
     - 17586
     - 17906
-    - 18157
+    - 18228
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: lidge-jun/opencodex
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:06:22.320Z
+  fetched_at: 2026-11-05T13:12:42.905Z
   truncated: false
 type: agent_tool
 tool:

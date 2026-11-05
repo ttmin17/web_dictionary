@@ -11,28 +11,28 @@ tags:
   - alphaevolve
   - coding-agent
 status: active
-quality_percentile: 61
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: algorithmicsuperintelligence/openevolve
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 7686
-  last_commit: 2026-11-02T06:35:07Z
-  stars_delta_7d: 35
-  stars_growth_pct: 0.5
-  trending_score: 35.16
-  rank_current: 93
-  rank_delta: -19
+  stars: 7715
+  last_commit: 2026-11-05T12:52:57Z
+  stars_delta_7d: 64
+  stars_growth_pct: 0.8
+  trending_score: 64.54
+  rank_current: 88
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7593
     - 7651
-    - 7686
+    - 7715
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: algorithmicsuperintelligence/openevolve
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:02.551Z
+  fetched_at: 2026-11-05T13:13:37.390Z
   truncated: false
 type: agent_tool
 tool:

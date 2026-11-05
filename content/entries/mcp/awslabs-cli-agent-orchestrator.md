@@ -17,26 +17,26 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: awslabs/cli-agent-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1501
-  last_commit: 2026-11-02T08:54:15Z
-  stars_delta_7d: 28
-  stars_growth_pct: 1.9
-  trending_score: 28.53
-  rank_current: 55
-  rank_delta: 1
+  stars: 1516
+  last_commit: 2026-11-05T10:26:30Z
+  stars_delta_7d: 43
+  stars_growth_pct: 2.9
+  trending_score: 44.26
+  rank_current: 51
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1418
     - 1451
     - 1473
-    - 1501
+    - 1516
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: awslabs/cli-agent-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:52.820Z
+  fetched_at: 2026-11-05T13:12:08.972Z
   truncated: false
 type: mcp_server
 launch:
@@ -97,7 +97,7 @@ guides, reference, and two interactive courses.
 CAO runs a local `cao-server`, starts provider CLIs in isolated terminal
 sessions, and gives a supervisor tools for coordinating workers. The agents
 remain full CLI processes with their native authentication and capabilities.
-See [CODEBASE.md](https://github.com/awslabs/cli-agent-orchestrator/blob/main/CODEBASE.md) for the runtime architecture and package layout.
+See [CODEBASE.md](https://raw.githubusercontent.com/awslabs/cli-agent-orchestrator/main/CODEBASE.md) for the runtime architecture and package layout.
 
 ## Prerequisites
 

@@ -18,25 +18,25 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: lemonade-sdk/lemonade
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6039
-  last_commit: 2026-11-02T08:38:38Z
-  stars_delta_7d: 40
-  stars_growth_pct: 0.7
-  trending_score: 40.27
-  rank_current: 90
-  rank_delta: -25
+  stars: 6111
+  last_commit: 2026-11-05T12:44:11Z
+  stars_delta_7d: 112
+  stars_growth_pct: 1.9
+  trending_score: 114.09
+  rank_current: 65
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5930
     - 5999
-    - 6039
+    - 6111
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: lemonade-sdk/lemonade
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.064Z
+  fetched_at: 2026-11-05T13:11:43.507Z
   truncated: false
 type: agent_tool
 tool:
@@ -173,7 +173,7 @@ To see the backends available on your PC:
 lemonade backends
 ```
 
-For hybrid setups, Lemonade can also route to any OpenAI-compatible cloud provider (Fireworks, OpenAI, OpenRouter, Together, …) alongside local models — see [Cloud Offload](https://github.com/lemonade-sdk/lemonade/blob/main/docs/guide/configuration/cloud.md). *(Experimental.)*
+For hybrid setups, Lemonade can also route to any OpenAI-compatible cloud provider (Fireworks, OpenAI, OpenRouter, Together, …) alongside local models — see [Cloud Offload](https://raw.githubusercontent.com/lemonade-sdk/lemonade/main/docs/guide/configuration/cloud.md). *(Experimental.)*
 
 
 ## Model Library
@@ -205,8 +205,8 @@ Lemonade supports multiple inference engines for LLM, speech, TTS, and image gen
   </thead>
   <tbody>
     <tr>
-      <td rowspan="11"><strong>Text generation</strong></td>
-      <td rowspan="6"><code>llamacpp</code></td>
+      <td rowspan="16"><strong>Text generation</strong></td>
+      <td rowspan="8"><code>llamacpp</code></td>
       <td><code>system</code></td>
       <td><code>x86_64</code>/ARM64 CPU, GPU</td>
       <td>Linux</td>
@@ -237,6 +237,16 @@ Lemonade supports multiple inference engines for LLM, speech, TTS, and image gen
       <td>Windows, Linux</td>
     </tr>
     <tr>
+      <td><code>nathanw</code>‡</td>
+      <td>AMD Strix Halo (Vulkan performance fork)</td>
+      <td>Linux</td>
+    </tr>
+    <tr>
+      <td><code>halobox</code>‡</td>
+      <td>AMD Strix Halo (Halo Box ROCm fork)</td>
+      <td>Linux</td>
+    </tr>
+    <tr>
       <td rowspan="1"><code>llamacpp-hrx</code></td>
       <td><code>hrx</code>†</td>
       <td>AMD GPUs (gfx1100, gfx1151)</td>
@@ -264,6 +274,24 @@ Lemonade supports multiple inference engines for LLM, speech, TTS, and image gen
       <td rowspan="1"><code>ds4</code></td>
       <td><code>rocm</code>‡</td>
       <td>Prebuilt ds4 for AMD Strix Halo</td>
+      <td>Linux</td>
+    </tr>
+    <tr>
+      <td rowspan="1"><code>rocmfpx</code></td>
+      <td><code>rocm</code>‡</td>
+      <td>AMD Strix Halo</td>
+      <td>Linux</td>
+    </tr>
+    <tr>
+      <td rowspan="1"><code>halogen</code></td>
+      <td><code>rocm</code>‡</td>
+      <td>AMD Strix Halo</td>
+      <td>Linux</td>
+    </tr>
+    <tr>
+      <td rowspan="1"><code>gufo</code></td>
+      <td><code>rocm</code>‡</td>
+      <td>AMD Strix Halo</td>
       <td>Linux</td>
     </tr>
     <tr>
@@ -394,8 +422,13 @@ Lemonade supports multiple inference engines for LLM, speech, TTS, and image gen
       <td>Linux</td>
     </tr>
     <tr>
-      <td rowspan="3"><strong>3D generation</strong></td>
-      <td rowspan="3"><code>trellis</code></td>
+      <td rowspan="4"><strong>3D generation</strong></td>
+      <td rowspan="4"><code>trellis</code></td>
+      <td><code>cuda12</code>†</td>
+      <td>NVIDIA Pascal/Volta GPUs (CUDA 12)</td>
+      <td>Windows, Linux</td>
+    </tr>
+    <tr>
       <td><code>cuda</code>†</td>
       <td>NVIDIA GPUs</td>
       <td>Windows, Linux</td>

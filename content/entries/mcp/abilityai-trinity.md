@@ -16,25 +16,25 @@ status: active
 quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Abilityai/trinity
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 727
-  last_commit: 2026-11-02T08:44:16Z
-  stars_delta_7d: 26
-  stars_growth_pct: 3.7
-  trending_score: 26.96
-  rank_current: 57
-  rank_delta: -6
+  stars: 735
+  last_commit: 2026-11-05T12:43:13Z
+  stars_delta_7d: 34
+  stars_growth_pct: 4.9
+  trending_score: 35.65
+  rank_current: 58
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 676
     - 701
-    - 727
+    - 735
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: Abilityai/trinity
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:17.088Z
+  fetched_at: 2026-11-05T13:13:51.581Z
   truncated: false
 type: mcp_server
 launch:
@@ -237,7 +237,7 @@ Then open `http://localhost`, claim the admin account, and connect a model in th
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://marketplace.digitalocean.com/apps/trinity?refcode=d1f053807871&action=deploy) [![Launch on AWS Marketplace](https://img.shields.io/badge/Launch_on-AWS_Marketplace-FF9900?style=for-the-badge)](https://aws.amazon.com/marketplace/pp/prodview-q6f3biwa662o2)
 
 - **DigitalOcean** - [Marketplace](https://marketplace.digitalocean.com/apps/trinity?refcode=d1f053807871&action=deploy) or the guided [`trinity-do-create.sh`](https://docs.ability.ai/getting-started/deploying/digitalocean)
-- **AWS** - [Marketplace](https://aws.amazon.com/marketplace/pp/prodview-q6f3biwa662o2), or build the AMI and CloudFormation stack yourself with [packer/aws/README.md](https://github.com/Abilityai/trinity/blob/main/packer/aws/README.md)
+- **AWS** - [Marketplace](https://aws.amazon.com/marketplace/pp/prodview-q6f3biwa662o2), or build the AMI and CloudFormation stack yourself with [packer/aws/README.md](https://raw.githubusercontent.com/Abilityai/trinity/main/packer/aws/README.md)
 - **Vultr** - [Marketplace image](https://github.com/Abilityai/trinity/blob/main/scripts/deploy/vultr-marketplace.md)
 - **Any server you can SSH into** - `/trinity:deploy-new-instance` from the [abilities](https://github.com/abilityai/abilities) marketplace
 

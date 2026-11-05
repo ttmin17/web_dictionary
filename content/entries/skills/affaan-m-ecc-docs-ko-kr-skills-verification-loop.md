@@ -12,10 +12,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 97
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: affaan-m/ECC
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 295040
+  stars: 297571
   last_commit: 2026-11-02T04:56:08Z
-  stars_delta_7d: 5968
-  stars_growth_pct: 2.1
-  trending_score: 6091.21
+  stars_delta_7d: 8499
+  stars_growth_pct: 2.9
+  trending_score: 8748.88
   velocity_source: snapshot_delta
   sparkline_4w:
     - 278380
     - 283494
     - 289072
-    - 295040
+    - 297571
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: affaan-m/ECC
   path: docs/ko-KR/skills/verification-loop/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:05.415Z
+  fetched_at: 2026-11-05T13:12:19.738Z
   truncated: false
 type: agent_skill
 skill:

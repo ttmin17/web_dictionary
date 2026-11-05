@@ -14,29 +14,29 @@ tags:
   - claude
   - claude-ai
 status: active
-quality_percentile: 67
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: bytebase/dbhub
   official_vendor: false
   license: MIT
 signals:
-  stars: 3769
-  last_commit: 2026-10-26T09:22:30Z
-  stars_delta_7d: 48
-  stars_growth_pct: 1.3
-  trending_score: 48.62
-  rank_current: 86
-  rank_delta: -5
+  stars: 3791
+  last_commit: 2026-11-03T06:59:40Z
+  stars_delta_7d: 70
+  stars_growth_pct: 1.9
+  trending_score: 71.32
+  rank_current: 84
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3639
     - 3676
     - 3721
-    - 3769
+    - 3791
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: bytebase/dbhub
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.686Z
+  fetched_at: 2026-11-05T13:11:44.748Z
   truncated: false
 type: agent_tool
 tool:
@@ -174,7 +174,7 @@ pnpm dev
 pnpm build && pnpm start --transport stdio --dsn "postgres://user:password@localhost:5432/dbname"
 ```
 
-See [Testing](https://github.com/bytebase/dbhub/blob/main/.claude/skills/testing/SKILL.md) and [Debug](https://dbhub.ai/config/debug).
+See [Testing](https://raw.githubusercontent.com/bytebase/dbhub/main/.claude/skills/testing/SKILL.md) and [Debug](https://dbhub.ai/config/debug).
 
 ## Contributors
 

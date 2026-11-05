@@ -15,10 +15,10 @@ tags:
   - agents
   - dotnet
 status: active
-quality_percentile: 99
+quality_percentile: 100
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: microsoft/agent-framework
@@ -26,18 +26,18 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 14492
-  last_commit: 2026-11-02T05:12:39Z
-  stars_delta_7d: 175
-  stars_growth_pct: 1.2
-  trending_score: 177.14
-  rank_current: 69
-  rank_delta: 7
+  stars: 14546
+  last_commit: 2026-11-05T12:54:54Z
+  stars_delta_7d: 229
+  stars_growth_pct: 1.6
+  trending_score: 232.66
+  rank_current: 73
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 14200
     - 14317
-    - 14492
+    - 14546
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: microsoft/agent-framework
   path: dotnet/samples/02-agents/AgentSkills/Agent_Step01_FileBasedSkills/skills/unit-converter/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:20.938Z
+  fetched_at: 2026-11-05T13:13:55.532Z
   truncated: false
 type: agent_skill
 skill:

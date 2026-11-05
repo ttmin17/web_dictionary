@@ -13,10 +13,10 @@ tags:
   - douyin
   - tiktok
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: dreammis/social-auto-upload
@@ -24,15 +24,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 16015
+  stars: 16145
   last_commit: 2026-10-22T18:42:22Z
-  stars_delta_7d: 200
-  stars_growth_pct: 1.3
-  trending_score: 202.53
+  stars_delta_7d: 330
+  stars_growth_pct: 2.1
+  trending_score: 336.89
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15815
-    - 16015
+    - 16145
 language: zh
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: dreammis/social-auto-upload
   path: skills/tiktok-upload/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:45.043Z
+  fetched_at: 2026-11-05T13:13:12.024Z
   truncated: false
 type: agent_skill
 skill:

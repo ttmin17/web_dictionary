@@ -13,10 +13,10 @@ tags:
   - book-to-skill
   - context-engineering
 status: active
-quality_percentile: 70
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-05-01T02:09:39
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: virgiliojr94/book-to-skill
@@ -24,11 +24,11 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 36742
-  last_commit: 2026-10-28T13:26:03Z
-  stars_delta_7d: 620
-  stars_growth_pct: 1.7
-  trending_score: 630.64
+  stars: 37030
+  last_commit: 2026-11-03T17:53:25Z
+  stars_delta_7d: 908
+  stars_growth_pct: 2.5
+  trending_score: 930.82
   rank_current: 36
   rank_delta: -6
   velocity_source: snapshot_delta
@@ -36,7 +36,7 @@ signals:
     - 34751
     - 35303
     - 36122
-    - 36742
+    - 37030
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: virgiliojr94/book-to-skill
   path: SKILL.md
   branch: master
-  fetched_at: 2026-11-02T09:06:38.435Z
+  fetched_at: 2026-11-05T13:13:03.072Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,6 +58,7 @@ skill:
     file.
   folder_path: .
   extra_files:
+    - .gitattributes
     - .github/FUNDING.yml
     - .github/ISSUE_TEMPLATE/bug_report.md
     - .github/ISSUE_TEMPLATE/feature_request.md
@@ -67,7 +68,6 @@ skill:
     - .github/workflows/codeql.yml
     - .github/workflows/deploy-docs.yml
     - .gitignore
-    - AGENTS.md
   pack_total_skills: 1
   is_pack_primary: true
   clients:
@@ -203,7 +203,7 @@ Store the answer as `BOOK_TYPE`:
 - Option 3 → `BOOK_TYPE=text`
 
 **If `BOOK_TYPE=technical`**, inform the user before proceeding:
-> "📐 Technical mode selected — using Docling for structure-aware extraction (tables, code blocks, formulas preserved as markdown). This takes ~1.5s per page, so expect a few minutes for longer sources. Starting now…"
+> "📐 Technical mode selected — PDFs attempt Docling for layout-aware extraction. EPUBs and other formats use their existing text extractors; code, tables, and formulas may lose structure. Check each source's `extraction_method` and `fallback_reason` in metadata.json for the actual extraction path."
 
 **If `BOOK_TYPE=text`**, inform:
 > "📄 Text mode selected — using the fastest suitable extractor for each file type. Plain text/Markdown/HTML are usually ready in seconds; PDFs use pdftotext when available."
@@ -534,7 +534,7 @@ If a chapter genuinely has no worked example and resists expansion, let it land 
 
 For EACH chapter/major section identified in Step 3:
 
-Read the corresponding section of the extracted `full_text.txt` (use character offsets or grep for chapter headings).
+Read the corresponding section of the extracted `full_text.txt` using top-level `chapter_ranges` from `metadata.json` when present (`start_line`/`end_line` are 1-based inclusive, for `sed`/`Read`); otherwise grep for chapter headings. (`sources[].chapter_ranges` use the same fields but line numbers in that source's text only, not the consolidated `full_text.txt`.)
 
 Create `$SKILLS_HOME/<skill_name>/chapters/ch<NN>-<slug>.md` using the structure below.
 
@@ -684,6 +684,7 @@ the relevant chapter file before answering.
 - [glossary.md](https://github.com/virgiliojr94/book-to-skill/blob/master/glossary.md) — all key terms with definitions
 - [patterns.md](https://github.com/virgiliojr94/book-to-skill/blob/master/patterns.md) — all techniques and design patterns
 - [cheatsheet.md](https://github.com/virgiliojr94/book-to-skill/blob/master/cheatsheet.md) — quick reference tables and decision guides
+- Full text: `<output_text from metadata.json>` — grep it for depth the chapter files omit (local extraction, not shipped)
 
 ---
 

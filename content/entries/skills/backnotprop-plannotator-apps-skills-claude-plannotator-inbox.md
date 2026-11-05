@@ -5,7 +5,7 @@ tagline: Open the Plannotator Inbox in the browser (starting it if needed), say
   its address, and learn how to use the Inbox for the rest of the session.
 summary: "!plannotator inbox --open"
 categories:
-  - coding-agents
+  - productivity-ops
 tags:
   - agents
   - claude-code
@@ -15,7 +15,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: backnotprop/plannotator
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9817
-  last_commit: 2026-11-02T09:01:25Z
-  stars_delta_7d: 170
-  stars_growth_pct: 1.8
-  trending_score: 173
+  stars: 9860
+  last_commit: 2026-11-05T13:05:30Z
+  stars_delta_7d: 213
+  stars_growth_pct: 2.2
+  trending_score: 217.7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9393
     - 9506
     - 9647
-    - 9817
+    - 9860
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: backnotprop/plannotator
   path: apps/skills/claude/plannotator-inbox/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:33.158Z
+  fetched_at: 2026-11-05T13:12:55.599Z
   truncated: false
 type: agent_skill
 skill:
@@ -68,7 +68,7 @@ skill:
 
 The Plannotator Inbox is one window on this computer where you leave the person messages, `:::question` blocks they answer with a click, and files. They answer when they can. Nothing blocks: you send, then keep working or end your turn.
 
-- Use it for a decision only they can make (a :::question block; go on with other work), finished long work (a short summary, files in `attachments`), or when they ask.
+- Use it for a decision only they can make (a :::question block; go on with other work), finished long work (a short summary with its pictures inline, files in `attachments`), or when they ask.
 - One thread per work stream, unless the person says otherwise.
 - Send with a `plannotator_inbox` tool when you have one (it can be listed with a prefix and may need loading through tool search first): `action` `send_message`, with a markdown `body`. Otherwise call `send_message` on the Inbox's MCP server, `plannotator inbox mcp`.
 - send_message's result says whether the person's reply arrives in this session by itself. When it does, do not wait or poll for it: end your turn or go on with other work. When it does not, go on with your work and read the thread later with read_thread.

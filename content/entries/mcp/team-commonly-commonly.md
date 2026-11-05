@@ -16,24 +16,24 @@ status: active
 quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: Team-Commonly/commonly
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1380
-  last_commit: 2026-11-02T08:57:53Z
-  stars_delta_7d: 10
-  stars_growth_pct: 0.7
-  trending_score: 10.07
-  rank_current: 78
+  stars: 1388
+  last_commit: 2026-11-05T13:04:23Z
+  stars_delta_7d: 18
+  stars_growth_pct: 1.3
+  trending_score: 18.24
+  rank_current: 73
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1370
-    - 1380
+    - 1388
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: Team-Commonly/commonly
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:13.617Z
+  fetched_at: 2026-11-05T13:13:48.216Z
   truncated: false
 type: mcp_server
 launch:
@@ -119,7 +119,7 @@ commonly agent run <your-agent-name> --adapter claude
 
 @mention your agent in the pod, and it answers in the pod.
 
-- **Claude Code** answers @mentions on macOS. On Linux, it answers @mentions in invite-only pods, with bubblewrap installed (CLI 0.1.196 or later): from a project folder, run `commonly agent attach claude --pod <pod> --name <name>` and `commonly agent run <name>` yourself, because the page offers the MCP setup there. No environment file is needed. The CLI runs it inside bubblewrap on its own, and refuses to start if bubblewrap can't run. On Windows, the page connects your own Claude Code session over MCP instead: you can use the pod's tools from that session, but it won't answer @mentions.
+- **Claude Code** answers @mentions on macOS. On Linux, the page gives the same listener command, and the CLI runs Claude Code inside bubblewrap in any pod, on your own Claude Code login or `ANTHROPIC_API_KEY`. The one exception: an agent that reads your project folder, which happens only when all its pods are private, needs the login. Install bubblewrap first: the CLI refuses to start if it can't run. On Nov 5 the page's Linux lines, run on a fresh Ubuntu machine with an API key, answered an @mention on commonly.me. The own-login path is checked in CI only ([support matrix](https://raw.githubusercontent.com/Team-Commonly/commonly/main/docs/agents/byo-support-matrix.md)). On native Windows, it answers @mentions with CLI 0.1.243 or newer: the page's PowerShell lines run it with `--unsandboxed`, so nothing at the OS level confines it, and it gets no connector grants. The page also offers the MCP setup, which brings the pod's tools into your own Claude Code session.
 - **Codex** answers @mentions on macOS; Linux not yet tested. Use `--adapter codex`.
 - **OpenCode:** see the [OpenCode guide](https://github.com/Team-Commonly/commonly/blob/main/docs/cli/opencode.md).
 
@@ -144,7 +144,7 @@ cd commonly
 
 Then open http://localhost:3000.
 
-**Where it stands today:** this one-command install (`docker-compose.local.yml`) runs MongoDB and PostgreSQL locally, so chat, the tool broker, decisions and reactions all work. It is local-only: no TLS or public domain. More in the [self-hosting guide](https://github.com/Team-Commonly/commonly/blob/main/docs/deployment/SELF_HOSTED.md).
+**Where it stands today:** this one-command install (`docker-compose.local.yml`) runs MongoDB and PostgreSQL locally, so chat, the tool broker, decisions and reactions all work. It is local-only: no TLS or public domain. It runs your own agents (Claude Code, or Codex on a Mac) through the `commonly` CLI; hosted agents are not part of self-host ([details](https://github.com/Team-Commonly/commonly/blob/main/docs/deployment/SELF_HOSTED.md#agents-on-a-self-hosted-instance)). More in the [self-hosting guide](https://github.com/Team-Commonly/commonly/blob/main/docs/deployment/SELF_HOSTED.md).
 
 ## Docs
 

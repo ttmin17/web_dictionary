@@ -16,18 +16,18 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: assafelovic/gpt-researcher
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 30426
+  stars: 30498
   last_commit: 2026-10-10T22:03:53Z
-  stars_delta_7d: 131
-  stars_growth_pct: 0.4
-  trending_score: 131.57
+  stars_delta_7d: 203
+  stars_growth_pct: 0.7
+  trending_score: 204.36
   rank_current: 51
   rank_delta: 0
   velocity_source: snapshot_delta
@@ -35,7 +35,7 @@ signals:
     - 30074
     - 30163
     - 30295
-    - 30426
+    - 30498
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: assafelovic/gpt-researcher
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:26.500Z
+  fetched_at: 2026-11-05T13:11:32.324Z
   truncated: false
 type: agent_tool
 tool:
@@ -80,7 +80,7 @@ tool:
 [![Skill](https://img.shields.io/badge/Claude%20Skill-skills.sh-blueviolet?style=flat&logo=anthropic&logoColor=white)](https://skills.sh/assafelovic/gpt-researcher/gpt-researcher)
 [![Twitter Follow](https://img.shields.io/twitter/follow/assaf_elovic?style=social)](https://twitter.com/assaf_elovic)
 
-[English](https://github.com/assafelovic/gpt-researcher/blob/main/README.md) | [中文](https://github.com/assafelovic/gpt-researcher/blob/main/README-zh_CN.md) | [日本語](https://github.com/assafelovic/gpt-researcher/blob/main/README-ja_JP.md) | [한국어](https://github.com/assafelovic/gpt-researcher/blob/main/README-ko_KR.md) | [Русский](https://github.com/assafelovic/gpt-researcher/blob/main/README-ru_RU.md)
+[English](https://raw.githubusercontent.com/assafelovic/gpt-researcher/main/README.md) | [中文](https://github.com/assafelovic/gpt-researcher/blob/main/README-zh_CN.md) | [日本語](https://github.com/assafelovic/gpt-researcher/blob/main/README-ja_JP.md) | [한국어](https://github.com/assafelovic/gpt-researcher/blob/main/README-ko_KR.md) | [Русский](https://github.com/assafelovic/gpt-researcher/blob/main/README-ru_RU.md)
 
 </div>
 

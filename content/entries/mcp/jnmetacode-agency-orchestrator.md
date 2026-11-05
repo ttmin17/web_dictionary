@@ -13,29 +13,29 @@ tags:
   - ai-agents
   - autogen-alternative
 status: active
-quality_percentile: 49
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: jnMetaCode/agency-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2432
-  last_commit: 2026-10-22T06:14:05Z
-  stars_delta_7d: 27
-  stars_growth_pct: 1.1
-  trending_score: 27.3
-  rank_current: 56
-  rank_delta: -2
+  stars: 2447
+  last_commit: 2026-11-03T09:04:08Z
+  stars_delta_7d: 42
+  stars_growth_pct: 1.7
+  trending_score: 42.73
+  rank_current: 54
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2356
     - 2382
     - 2405
-    - 2432
+    - 2447
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: jnMetaCode/agency-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.716Z
+  fetched_at: 2026-11-05T13:11:49.205Z
   truncated: false
 type: mcp_server
 launch:
@@ -85,18 +85,7 @@ launch:
 ## ❤️ 赞助商 &nbsp;<sub>🙏 想出现在这里？联系 **jnMetaCode@qq.com** 赞助</sub>
 
 <table>
-<tr>
-<td width="25%">
-  <a href="https://go.apimart.ai/gh-agency-orchestrator">
-    <img src="https://raw.githubusercontent.com/jnMetaCode/agency-orchestrator/main/assets/sponsors/apimart.jpg" alt="APIMart —— 专注 AI 图片/视频生成的低价 API 平台，GPT-Image-2 低至 $0.006/张，1 美元可出图 160+ 张" width="100%">
-  </a>
-</td>
-<td width="75%" valign="middle">
 
-感谢 [APIMart](https://go.apimart.ai/gh-agency-orchestrator) 赞助了本项目！APIMart 是专注 AI 图片/视频生成的低价 API 平台，**GPT-Image-2 低至 $0.006/张**，1 美元可出图 160+ 张。图片、视频一套异步 API 通吃，提交任务拿 ID、回调取结果，跑批万张不超时、换模型不改代码。按量付费、无月费，🎁 **通过[此链接](https://go.apimart.ai/gh-agency-orchestrator)注册即可开用！**
-
-</td>
-</tr>
 </table>
 
 ---
@@ -883,7 +872,7 @@ ao-output/产品需求评审-2026-03-22/
 
 ## 贡献
 
-参见 [CONTRIBUTING.md](https://github.com/jnMetaCode/agency-orchestrator/blob/main/CONTRIBUTING.md)，欢迎 PR！
+参见 [CONTRIBUTING.md](https://raw.githubusercontent.com/jnMetaCode/agency-orchestrator/main/CONTRIBUTING.md)，欢迎 PR！
 
 ## 许可证
 

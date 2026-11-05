@@ -11,28 +11,28 @@ tags:
   - agentic-ai
   - agents
 status: active
-quality_percentile: 42
+quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: promptise-com/Foundry
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 893
-  last_commit: 2026-10-27T21:30:45Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0.1
-  trending_score: 1
-  rank_current: 142
-  rank_delta: -40
+  stars: 894
+  last_commit: 2026-11-05T11:12:27Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.2
+  trending_score: 2
+  rank_current: 138
+  rank_delta: -36
   velocity_source: snapshot_delta
   sparkline_4w:
     - 874
     - 892
-    - 893
+    - 894
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: promptise-com/Foundry
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:07:16.971Z
+  fetched_at: 2026-11-05T13:13:48.183Z
   truncated: false
 type: agent_tool
 tool:
@@ -156,7 +156,7 @@ agent = await build_agent(
 
 To start a full project instead, run `promptise init --project my-bot`.
 
-**Any model, one string.** `openai:gpt-5-mini` · `anthropic:claude-sonnet-4-5` · `azure:chat-prod` · `gemini:gemini-2.5-pro` · `bedrock:…` · `ollama:llama3.1`. The same string works in `build_agent()`, `.superagent` files and every CLI command, and `promptise models check <string>` tells you exactly what a provider still needs. → [Model setup](https://docs.promptise.com/getting-started/model-setup/)
+**Any model, one string.** `openai:gpt-5-mini` · `anthropic:claude-sonnet-5-5` · `azure:chat-prod` · `gemini:gemini-3.8-flash` · `bedrock:…` · `ollama:llama3.1`. The same string works in `build_agent()`, `.superagent` files and every CLI command, and `promptise models check <string>` tells you exactly what a provider still needs. → [Model setup](https://docs.promptise.com/getting-started/model-setup/)
 
 <br/>
 

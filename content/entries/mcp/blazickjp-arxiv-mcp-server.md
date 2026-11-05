@@ -15,29 +15,29 @@ tags:
   - gpt
   - llm
 status: active
-quality_percentile: 33
+quality_percentile: 30
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: blazickjp/arxiv-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3246
+  stars: 3258
   last_commit: 2026-10-08T13:08:10Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.3
-  trending_score: 11.04
-  rank_current: 77
-  rank_delta: -4
+  stars_delta_7d: 23
+  stars_growth_pct: 0.7
+  trending_score: 23.16
+  rank_current: 70
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3214
     - 3224
     - 3235
-    - 3246
+    - 3258
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: blazickjp/arxiv-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:36.747Z
+  fetched_at: 2026-11-05T13:11:48.862Z
   truncated: false
 type: mcp_server
 launch:
@@ -544,7 +544,7 @@ Paper text and LaTeX are untrusted external content. A paper can contain text in
 - Review generated summaries before taking external actions.
 - Keep Streamable HTTP private unless authentication is provided upstream.
 
-See [SECURITY.md](https://github.com/blazickjp/arxiv-mcp-server/blob/main/SECURITY.md) for the reporting policy and threat details.
+See [SECURITY.md](https://raw.githubusercontent.com/blazickjp/arxiv-mcp-server/main/SECURITY.md) for the reporting policy and threat details.
 
 ## Development
 

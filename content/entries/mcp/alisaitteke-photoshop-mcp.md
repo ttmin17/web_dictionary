@@ -13,27 +13,27 @@ tags:
   - claude
   - creative-automation
 status: active
-quality_percentile: 44
+quality_percentile: 43
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: alisaitteke/photoshop-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 787
-  last_commit: 2026-11-01T04:01:37Z
-  stars_delta_7d: 50
-  stars_growth_pct: 6.8
-  trending_score: 53.39
-  rank_current: 34
+  stars: 808
+  last_commit: 2026-11-03T21:10:47Z
+  stars_delta_7d: 71
+  stars_growth_pct: 9.6
+  trending_score: 77.84
+  rank_current: 37
   rank_delta: null
   velocity_source: snapshot_delta
   sparkline_4w:
     - 737
-    - 787
+    - 808
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: alisaitteke/photoshop-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-02T09:05:57.599Z
+  fetched_at: 2026-11-05T13:12:10.016Z
   truncated: false
 type: mcp_server
 launch:
@@ -108,7 +108,7 @@ TYPESAFE_API_KEY=... npx -p @alisaitteke/photoshop-mcp ui
 Experimental and opt-in. Without the key the UI works exactly as before and
 nothing is sent to TypeSafe; with it, prompts also go to `api.typesafe.ai`.
 Routes, thresholds and the off switch:
-[`docs/standalone-ui.md`](https://github.com/alisaitteke/photoshop-mcp/blob/master/docs/standalone-ui.md#jev-intent-routing-experimental-opt-in).
+[`docs/standalone-ui.md`](https://raw.githubusercontent.com/alisaitteke/photoshop-mcp/master/docs/standalone-ui.md#jev-intent-routing-experimental-opt-in).
 
 ## What can it do?
 
@@ -205,7 +205,7 @@ Or add this to your MCP client's config (Cursor, Claude Desktop, …):
 3. **Photoshop executes** — each recipe lands as one undoable step.
 
 Something went wrong? The AI reads the structured error and knows what to try
-next. Common fixes: [`docs/troubleshooting.md`](https://github.com/alisaitteke/photoshop-mcp/blob/master/docs/troubleshooting.md).
+next. Common fixes: [`docs/troubleshooting.md`](https://raw.githubusercontent.com/alisaitteke/photoshop-mcp/master/docs/troubleshooting.md).
 
 ## Documentation
 

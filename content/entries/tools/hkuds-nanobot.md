@@ -16,26 +16,26 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: HKUDS/nanobot
   official_vendor: false
   license: MIT
 signals:
-  stars: 49753
-  last_commit: 2026-11-02T08:47:01Z
-  stars_delta_7d: 396
-  stars_growth_pct: 0.8
-  trending_score: 399.18
-  rank_current: 24
-  rank_delta: 12
+  stars: 49845
+  last_commit: 2026-11-05T09:22:29Z
+  stars_delta_7d: 488
+  stars_growth_pct: 1
+  trending_score: 492.82
+  rank_current: 27
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 48993
     - 49166
     - 49357
-    - 49753
+    - 49845
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: HKUDS/nanobot
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:40.705Z
+  fetched_at: 2026-11-05T13:11:49.245Z
   truncated: true
 type: agent_tool
 tool:
@@ -365,7 +365,7 @@ Use a regular topic for a bounded objective with a clear completion condition, f
 /goal Review this project's tests and list the smallest missing test case.
 ```
 
-The goal lets nanobot continue work across model turns while the gateway runs; a scheduled automation instead starts a turn at specified times. Use `/stop` to interrupt the current work, and ask nanobot to cancel the goal if you want to abandon it. Keep the gateway running for unattended work using the background or service options below.
+An active goal keeps nanobot working beyond the ordinary iteration limit until it records completion, cancellation, or a blocked state. This can use more model tokens; `/stop` interrupts the current work, while asking nanobot to cancel the goal abandons the objective. Execution errors can also stop the work. A scheduled automation instead starts work at specified times. Keep the gateway running for unattended work using the background or service options below.
 
 After a gateway restart, reopen the original topic and review saved results before explicitly continuing any interrupted work. Recovery does not blindly replay uncertain tool actions. See the [long-running agent guide](https://github.com/HKUDS/nanobot/blob/main/docs/guides/long-running-ai-agent.md) for starting conditions and related automation options.
 
@@ -438,7 +438,7 @@ Render will ask for `ANTHROPIC_API_KEY` and a private `NANOBOT_WEB_TOKEN`, then 
 
 **Self-host**
 
-Prefer your own infrastructure? Follow the [deployment guide](https://github.com/HKUDS/nanobot/blob/main/docs/deployment.md) for Docker, Docker Compose, Linux services, and macOS LaunchAgent setup.
+Prefer your own infrastructure? Follow the [deployment guide](https://raw.githubusercontent.com/HKUDS/nanobot/main/docs/deployment.md) for Docker, Docker Compose, Linux services, and macOS LaunchAgent setup.
 
 ## 🌐 WebUI
 

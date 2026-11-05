@@ -14,21 +14,21 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 73
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-04-06T04:41:14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 6824
+  stars: 7005
   last_commit: 2026-10-27T08:57:57Z
-  stars_delta_7d: 813
-  stars_growth_pct: 13.5
-  trending_score: 922.96
+  stars_delta_7d: 994
+  stars_growth_pct: 16.5
+  trending_score: 1158.37
   rank_current: 4
   rank_delta: -2
   velocity_source: snapshot_delta
@@ -36,7 +36,7 @@ signals:
     - 4710
     - 5247
     - 6011
-    - 6824
+    - 7005
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-02T09:05:35.098Z
+  fetched_at: 2026-11-05T13:11:43.006Z
   truncated: false
 type: mcp_server
 launch:

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: nimbalyst/nimbalyst
@@ -27,18 +27,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2014
-  last_commit: 2026-10-31T20:28:04Z
-  stars_delta_7d: 39
-  stars_growth_pct: 2
-  trending_score: 39.77
+  stars: 2023
+  last_commit: 2026-11-04T07:28:07Z
+  stars_delta_7d: 48
+  stars_growth_pct: 2.4
+  trending_score: 49.17
   rank_current: 109
   rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1931
     - 1975
-    - 2014
+    - 2023
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: nimbalyst/nimbalyst
   path: packages/extensions/animation/claude-plugin/skills/animation/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:07:10.047Z
+  fetched_at: 2026-11-05T13:13:44.319Z
   truncated: false
 type: agent_skill
 skill:
@@ -425,7 +425,7 @@ There is **no video export**. If someone wants MP4, say so rather than implying 
 To *present* a finished animation to someone inside Nimbalyst you do not export at all. A `.anim.json` has a registered custom editor, so a link to it alone on its own paragraph in a **markdown document** upgrades into the live, playing embed:
 
 ```
-[Session kanban](https://github.com/nimbalyst/nimbalyst/blob/main/packages/extensions/animation/claude-plugin/skills/animation/abs/path/board.anim.json "width=1040 height=585)
+[Session kanban](https://github.com/nimbalyst/nimbalyst/blob/main/packages/extensions/animation/claude-plugin/skills/animation/abs/path/board.anim.json "width=1040 height=585")
 ```
 
 That is the right way to hand over an *existing* animation -- it is live and full-fidelity, where a screenshot is frozen and (for an animation) misleading. Two things decide whether it works:

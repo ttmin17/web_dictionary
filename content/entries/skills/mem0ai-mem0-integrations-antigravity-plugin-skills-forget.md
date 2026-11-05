@@ -17,7 +17,7 @@ status: active
 quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-05T13:14:07.410Z
 source:
   kind: github_repo
   repo: mem0ai/mem0
@@ -25,18 +25,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 68264
-  last_commit: 2026-10-30T21:36:23Z
-  stars_delta_7d: 440
-  stars_growth_pct: 0.6
-  trending_score: 442.85
+  stars: 68461
+  last_commit: 2026-11-04T10:55:44Z
+  stars_delta_7d: 637
+  stars_growth_pct: 0.9
+  trending_score: 642.98
   rank_current: 38
   rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 67421
     - 67824
-    - 68264
+    - 68461
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mem0ai/mem0
   path: integrations/antigravity-plugin/skills/forget/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:57.661Z
+  fetched_at: 2026-11-05T13:13:29.153Z
   truncated: false
 type: agent_skill
 skill:
