@@ -62,6 +62,46 @@ External link [Google](https://google.com) and anchor [Jump](#install) should no
     expect(result).toContain('#install');
   });
 
+  it('rewrites multi-line image alt text and link labels properly', () => {
+    const input = `
+![The thread workspace: threads sidebar, an agent turn with an inline artifact
+preview and applied-change receipt, live per-account quota cards, and the
+> composer](docs/assets/app-agent-run.jpg)
+
+[A multi-line link label
+describing the documentation](docs/guide.md "Guide Title")
+<img src="assets/preview.png" alt="preview" />
+<a href="docs/install.md">Install</a>
+    `.trim();
+
+    const result = rewriteRelativeLinks(input, 'razzant', 'claudexor', 'main');
+
+    expect(result).toContain('https://raw.githubusercontent.com/razzant/claudexor/main/docs/assets/app-agent-run.jpg');
+    expect(result).toContain('https://github.com/razzant/claudexor/blob/main/docs/guide.md "Guide Title"');
+    expect(result).toContain('src="https://raw.githubusercontent.com/razzant/claudexor/main/assets/preview.png"');
+    expect(result).toContain('href="https://github.com/razzant/claudexor/blob/main/docs/install.md"');
+  });
+
+  it('rewrites markdown reference-style link and image definitions', () => {
+    const input = `
+[![Docker][docker-btn]][docker-deploy]
+
+[docker-btn]: ./deploy/buttons/docker.png
+[docker-deploy]: ./deploy/docker-deploy.md
+[doc-with-title]: docs/guide.md "Setup Guide"
+[key: string]: unknown
+[^1]: footnote text
+    `.trim();
+
+    const result = rewriteRelativeLinks(input, 'insforge', 'insforge', 'main');
+
+    expect(result).toContain('[docker-btn]: https://raw.githubusercontent.com/insforge/insforge/main/deploy/buttons/docker.png');
+    expect(result).toContain('[docker-deploy]: https://github.com/insforge/insforge/blob/main/deploy/docker-deploy.md');
+    expect(result).toContain('[doc-with-title]: https://github.com/insforge/insforge/blob/main/docs/guide.md "Setup Guide"');
+    expect(result).toContain('[key: string]: unknown');
+    expect(result).toContain('[^1]: footnote text');
+  });
+
   it('applies the 60 KB size cap with a clean heading cut', () => {
     const smallContent = '# Small Doc\n\nShort readme content here.';
     const smallResult = applySizeCap(smallContent, 1000, 'acme', 'tool');

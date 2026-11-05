@@ -242,14 +242,14 @@ If you are developing agentic tooling and want to provide an integrated browser 
 
 For a reference implementation, see the [Gemini CLI browser agent documentation](https://geminicli.com/docs/core/subagents/#browser-agent).
 
-[advanced-usage-guide]: ./docs/advanced-usage.md
-[changelog]: ./CHANGELOG.md
-[cli]: ./docs/cli.md
-[client-configurations-guide]: ./docs/client-configurations.md
-[configuration-guide]: ./docs/configuration.md
-[contributing]: ./CONTRIBUTING.md
-[design-principles]: ./docs/design-principles.md
+[advanced-usage-guide]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/advanced-usage.md
+[changelog]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/CHANGELOG.md
+[cli]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/cli.md
+[client-configurations-guide]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/client-configurations.md
+[configuration-guide]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md
+[contributing]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/CONTRIBUTING.md
+[design-principles]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/design-principles.md
 [skills]: #skills
-[slim-tool-reference]: ./docs/slim-tool-reference.md
-[tool-reference]: ./docs/tool-reference.md
-[troubleshooting]: ./docs/troubleshooting.md
+[slim-tool-reference]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/slim-tool-reference.md
+[tool-reference]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md
+[troubleshooting]: https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md

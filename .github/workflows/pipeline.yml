@@ -51,15 +51,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE_FULL_RUN: ${{ inputs.force_full_run }}
 
-      - name: Commit & Push Catalog Changes
-        id: commit_step
+      - name: Check for Catalog Changes
+        id: check_changes
         run: |
           if [ -n "$(git status --porcelain content/ data/)" ]; then
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
-            git add content/ data/
-            git commit -m "chore(catalog): weekly catalog refresh"
-            git push origin main
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else
             echo "No catalog changes detected this run."
@@ -67,24 +62,33 @@ jobs:
           fi
 
       - name: Setup Pages
-        if: steps.commit_step.outputs.has_changes == 'true'
+        if: steps.check_changes.outputs.has_changes == 'true'
         id: pages
         uses: actions/configure-pages@v5
 
       - name: Build Astro Site & Pagefind Search Index
-        if: steps.commit_step.outputs.has_changes == 'true'
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: pnpm run site:build
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
+      - name: Commit & Push Catalog Changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/ data/
+          git commit -m "chore(catalog): weekly catalog refresh"
+          git push origin main
+
       - name: Upload Pages Artifact
-        if: steps.commit_step.outputs.has_changes == 'true'
+        if: steps.check_changes.outputs.has_changes == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'apps/site/dist'
 
       - name: Deploy to GitHub Pages
-        if: steps.commit_step.outputs.has_changes == 'true'
+        if: steps.check_changes.outputs.has_changes == 'true'
         id: deployment
         uses: actions/deploy-pages@v4

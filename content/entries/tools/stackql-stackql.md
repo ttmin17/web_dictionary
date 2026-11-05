@@ -94,14 +94,14 @@ tool:
 <!-- github links -->
 [issues]: https://github.com/stackql/stackql/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBUG%5D
 [features]: https://github.com/stackql/stackql/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=%5BFEATURE%5D
-[developers]: /docs/developer_guide.md
-[registrycont]: /docs/registry_contribution.md
-[designdocs]: /docs/high-level-design.md
-[contributing]: /CONTRIBUTING.md
+[developers]: https://github.com/stackql/stackql/blob/main/docs/developer_guide.md
+[registrycont]: https://github.com/stackql/stackql/blob/main/docs/registry_contribution.md
+[designdocs]: https://github.com/stackql/stackql/blob/main/docs/high-level-design.md
+[contributing]: https://github.com/stackql/stackql/blob/main/CONTRIBUTING.md
 [discussions]: https://github.com/orgs/stackql/discussions
 <!-- repo assets -->
-[darkmodeterm]: /docs/images/stackql-light-term.gif#gh-dark-mode-only
-[lightmodeterm]: /docs/images/stackql-dark-term.gif#gh-light-mode-only
+[darkmodeterm]: https://raw.githubusercontent.com/stackql/stackql/main/docs/images/stackql-light-term.gif#gh-dark-mode-only
+[lightmodeterm]: https://raw.githubusercontent.com/stackql/stackql/main/docs/images/stackql-dark-term.gif#gh-light-mode-only
 <!-- misc links -->
 [twitter]: https://twitter.com/stackql
 [mcpregistry]: https://registry.modelcontextprotocol.io/?search=stackql

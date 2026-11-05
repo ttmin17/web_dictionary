@@ -109,11 +109,11 @@ to say it works.
 
 ![The Accounts and Quota surfaces: multi-account claude/codex/cursor list with
 live usage, add & log in, auto-switch at quota limit, and per-window
-5-hour/7-day quota bars](docs/assets/app-main-window.png)
+5-hour/7-day quota bars](https://raw.githubusercontent.com/razzant/claudexor/main/docs/assets/app-main-window.png)
 
 ![The thread workspace: threads sidebar, an agent turn with an inline artifact
 preview and applied-change receipt, live per-account quota cards, and the
-composer](docs/assets/app-agent-run.jpg)
+composer](https://raw.githubusercontent.com/razzant/claudexor/main/docs/assets/app-agent-run.jpg)
 
 - [Prerequisites](#prerequisites)
 - [Install](#install)
@@ -172,7 +172,7 @@ warnings:
    the external Git and harness route needed by the work you select.
 
 ![Installing the macOS app: the mounted DMG window with Claudexor.app being
-dragged into the Applications folder](docs/assets/app-install-dmg.png)
+dragged into the Applications folder](https://raw.githubusercontent.com/razzant/claudexor/main/docs/assets/app-install-dmg.png)
 
 The app bundles its own daemon runtime and starts it on launch; installing the
 Claudexor CLI is only needed for terminal use. Git and vendor harnesses remain

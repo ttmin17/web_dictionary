@@ -117,29 +117,48 @@ export function rewriteRelativeLinks(
   let result = content;
 
   // 1. Markdown images: ![alt](relative/path)
-  result = result.replace(/!\[(.*?)\]\((?!https?:\/\/|data:|#|mailto:)(.*?)\)/g, (_, alt, url) => {
-    const cleanUrl = url.trim().replace(/^['"]|['"]$/g, '');
-    const resolved = resolveRepoPath(subpath, cleanUrl);
-    return `![${alt}](${rawBase}/${resolved})`;
+  result = result.replace(/!\[([\s\S]*?)\]\((?!https?:\/\/|\/\/|data:|#|mailto:)([\s\S]*?)\)/g, (_, alt, url) => {
+    const matchTitle = url.trim().match(/^(\S+)(?:\s+(["'].*?["']))?$/s);
+    const rawUrl = matchTitle ? matchTitle[1] : url.trim().replace(/^['"]|['"]$/g, '');
+    const titlePart = matchTitle && matchTitle[2] ? ` ${matchTitle[2]}` : '';
+    const resolved = resolveRepoPath(subpath, rawUrl);
+    return `![${alt}](${rawBase}/${resolved}${titlePart})`;
   });
 
   // 2. Markdown links: [text](relative/path)
-  result = result.replace(/(?<!!)\[(.*?)\]\((?!https?:\/\/|data:|#|mailto:)(.*?)\)/g, (_, text, url) => {
-    const cleanUrl = url.trim().replace(/^['"]|['"]$/g, '');
-    const resolved = resolveRepoPath(subpath, cleanUrl);
-    return `[${text}](${blobBase}/${resolved})`;
+  result = result.replace(/(?<!\!)\[([\s\S]*?)\]\((?!https?:\/\/|\/\/|data:|#|mailto:)([\s\S]*?)\)/g, (_, text, url) => {
+    const matchTitle = url.trim().match(/^(\S+)(?:\s+(["'].*?["']))?$/s);
+    const rawUrl = matchTitle ? matchTitle[1] : url.trim().replace(/^['"]|['"]$/g, '');
+    const titlePart = matchTitle && matchTitle[2] ? ` ${matchTitle[2]}` : '';
+    const resolved = resolveRepoPath(subpath, rawUrl);
+    return `[${text}](${blobBase}/${resolved}${titlePart})`;
   });
 
   // 3. HTML <img> tags with relative src
-  result = result.replace(/<img\b([^>]*?)\bsrc=(['"])(?!https?:\/\/|data:|#)(.*?)\2([^>]*?)>/gi, (_, before, q, src, after) => {
+  result = result.replace(/<img\b([^>]*?)\bsrc=(['"])(?!https?:\/\/|\/\/|data:|#)(.*?)\2([^>]*?)>/gi, (_, before, q, src, after) => {
     const resolved = resolveRepoPath(subpath, src.trim());
     return `<img${before}src=${q}${rawBase}/${resolved}${q}${after}>`;
   });
 
   // 4. HTML <a> tags with relative href
-  result = result.replace(/<a\b([^>]*?)\bhref=(['"])(?!https?:\/\/|data:|#|mailto:)(.*?)\2([^>]*?)>/gi, (_, before, q, href, after) => {
+  result = result.replace(/<a\b([^>]*?)\bhref=(['"])(?!https?:\/\/|\/\/|data:|#|mailto:)(.*?)\2([^>]*?)>/gi, (_, before, q, href, after) => {
     const resolved = resolveRepoPath(subpath, href.trim());
     return `<a${before}href=${q}${blobBase}/${resolved}${q}${after}>`;
+  });
+
+  // 5. Markdown reference-style link definitions: [label]: path/to/target
+  result = result.replace(/^([ \t]*\[([a-zA-Z0-9_\-\.\s]+)\]:\s*)(?!https?:\/\/|\/\/|data:|#|mailto:)(<[^>]+>|\S+)(.*)$/gm, (match, prefix, label, url, rest) => {
+    let cleanUrl = url.trim();
+    if (cleanUrl.startsWith('<') && cleanUrl.endsWith('>')) {
+      cleanUrl = cleanUrl.slice(1, -1);
+    }
+    if (!cleanUrl.includes('/') && !/\.[a-zA-Z0-9]+(?:[#?].*)?$/.test(cleanUrl)) {
+      return match;
+    }
+    const resolved = resolveRepoPath(subpath, cleanUrl);
+    const isImage = /\.(png|jpe?g|gif|svg|webp|avif|ico|bmp)(?:[#?].*)?$/i.test(cleanUrl);
+    const base = isImage ? rawBase : blobBase;
+    return `${prefix}${base}/${resolved}${rest}`;
   });
 
   return result;

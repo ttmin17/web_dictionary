@@ -409,5 +409,5 @@ Show your project is built with InsForge.
 
 <!-- LINK GROUPS -->
 
-[docker-btn]: ./deploy/buttons/docker.png
-[docker-deploy]: ./deploy/docker-deploy.md
+[docker-btn]: https://raw.githubusercontent.com/InsForge/InsForge/main/deploy/buttons/docker.png
+[docker-deploy]: https://github.com/InsForge/InsForge/blob/main/deploy/docker-deploy.md
