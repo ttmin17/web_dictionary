@@ -13,10 +13,10 @@ tags:
   - ai-skill
   - china-stocks
 status: active
-quality_percentile: 88
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-05-11T01:08:15
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: simonlin1212/a-stock-data
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11525
+  stars: 11618
   last_commit: 2026-11-03T23:52:13Z
-  stars_delta_7d: 386
-  stars_growth_pct: 3.5
-  trending_score: 399.38
-  rank_current: 51
-  rank_delta: 11
+  stars_delta_7d: 93
+  stars_growth_pct: 0.8
+  trending_score: 93.75
+  rank_current: 68
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10843
     - 10946
     - 11139
     - 11525
+    - 11618
 language: zh
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: simonlin1212/a-stock-data
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:47.389Z
+  fetched_at: 2026-11-09T09:27:41.783Z
   truncated: true
 type: agent_skill
 skill:

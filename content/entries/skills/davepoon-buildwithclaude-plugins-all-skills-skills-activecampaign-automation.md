@@ -13,10 +13,10 @@ tags:
   - claude-code-commands
   - claude-skills
 status: active
-quality_percentile: 95
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: davepoon/buildwithclaude
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3725
-  last_commit: 2026-11-05T07:32:57Z
-  stars_delta_7d: 47
-  stars_growth_pct: 1.3
-  trending_score: 47.6
+  stars: 3733
+  last_commit: 2026-11-08T06:05:38Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.2
+  trending_score: 8.02
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3631
     - 3650
     - 3678
     - 3725
+    - 3733
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: davepoon/buildwithclaude
   path: plugins/all-skills/skills/activecampaign-automation/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:11:48.617Z
+  fetched_at: 2026-11-09T09:26:59.194Z
   truncated: false
 type: agent_skill
 skill:

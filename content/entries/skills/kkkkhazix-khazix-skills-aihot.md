@@ -17,7 +17,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-04-06T07:37:02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 21991
-  last_commit: 2026-11-03T21:50:31Z
-  stars_delta_7d: 330
-  stars_growth_pct: 1.5
-  trending_score: 335.03
-  rank_current: 60
-  rank_delta: 8
+  stars: 22096
+  last_commit: 2026-11-08T08:46:42Z
+  stars_delta_7d: 105
+  stars_growth_pct: 0.5
+  trending_score: 105.5
+  rank_current: 64
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21368
     - 21498
     - 21661
     - 21991
+    - 22096
 language: zh
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: KKKKhazix/khazix-skills
   path: aihot/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:38.375Z
+  fetched_at: 2026-11-09T09:27:34.835Z
   truncated: false
 type: agent_skill
 skill:
@@ -102,4 +102,4 @@ skill:
 - 只根据返回内容回答。查不到就如实说，不用训练记忆或其它新闻源冒充 AIHOT 的实时结果。
 - 请求失败：429 按 `Retry-After` 等待；5xx 或超时等几秒重试一次；仍失败就告诉用户 AIHOT 暂时不可用，并附 `https://aihot.news`。
 - 不需要、也不得索要用户的 API Key、cookie、账号或文件。
-- 匿名访问不代表所有用途均获许可：个人非商业、公益非商业和组织内部使用免费；面向外部的商业用途须事先取得 AIHOT 书面授权，见 `https://aihot.news/terms`（授权联系 wzglyay@virxact.com）。`LICENSE` 的 MIT 许可只覆盖本 Skill 文件，不覆盖 AIHOT 的服务、数据和第三方原文。
+- 匿名访问不代表所有用途均获许可：个人非商业、公益非商业和组织内部使用免费；面向外部的商业用途须事先取得 AIHOT 书面授权，见 `https://aihot.news/terms`（授权联系 agent@virxact.com）。`LICENSE` 的 MIT 许可只覆盖本 Skill 文件，不覆盖 AIHOT 的服务、数据和第三方原文。

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: aden-hive/hive
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11142
-  last_commit: 2026-11-02T10:07:20Z
-  stars_delta_7d: 20
-  stars_growth_pct: 0.2
-  trending_score: 20.04
+  stars: 11148
+  last_commit: 2026-11-08T01:41:04Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11099
     - 11108
     - 11122
     - 11142
+    - 11148
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: aden-hive/hive
   path: core/framework/skills/_preset_skills/terminal-tools-job-control/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:12.236Z
+  fetched_at: 2026-11-09T09:28:01.340Z
   truncated: false
 type: agent_skill
 skill:
@@ -90,9 +90,9 @@ terminal_job_logs(job_id, since_offset=0, max_bytes=64000)
   → { data, offset, next_offset, status: "running"|"exited", exit_code, ... }
 
 # Repeat with since_offset = previous next_offset until status == "exited"
-# Or block once with wait_until_exit=True:
-terminal_job_logs(job_id, since_offset=N, wait_until_exit=True, wait_timeout_sec=30)
-  → blocks server-side until exit or timeout
+# Or, better when you have nothing else to do, wait once with wait_until_exit=True:
+terminal_job_logs(job_id, since_offset=N, wait_until_exit=True)
+  → waits until exit, a new message for you, or wait_timeout_sec (at most 600, the default)
 ```
 
 After exit, the job is retained for inspection (`terminal_job_manage(action="list")`) until evicted by FIFO (50 most recent exits kept).
@@ -162,7 +162,7 @@ terminal_job_logs(job_id="job_xxx", tail=True, max_bytes=64000)
 Or block until exit and grab everything:
 
 ```
-terminal_job_logs(job_id="job_xxx", since_offset=0, wait_until_exit=True, wait_timeout_sec=30)
+terminal_job_logs(job_id="job_xxx", since_offset=0, wait_until_exit=True)
 ```
 
 ## Hard rules

@@ -14,10 +14,10 @@ tags:
   - anthropic
   - artificial-intelligence
 status: active
-quality_percentile: 71
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 113294
-  last_commit: 2026-11-05T12:13:30Z
-  stars_delta_7d: 10092
-  stars_growth_pct: 9.8
-  trending_score: 11078.88
+  stars: 115108
+  last_commit: 2026-11-09T09:22:00Z
+  stars_delta_7d: 1814
+  stars_growth_pct: 1.6
+  trending_score: 1843.04
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 100334
     - 101675
     - 103202
     - 113294
+    - 115108
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: cowork/skills/mem-setup/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:25.869Z
+  fetched_at: 2026-11-09T09:27:21.596Z
   truncated: false
 type: agent_skill
 skill:
@@ -51,8 +51,9 @@ skill:
   description: >
     This skill should be used when the user asks to "set up claude-mem", "pair
     claude-mem", "connect cmem", "add my cmem key", "set up cloud sync in
-    Cowork", or provides cmem.ai Connect values (sync token, user id, SyncHub
-    URL) for this plugin. Configures the claude-mem-cowork plugin credentials.
+    Cowork" or in the Claude app, or provides cmem.ai Connect values (sync
+    token, user id, SyncHub URL) for this plugin. Configures the CMEM Pro plugin
+    credentials.
   folder_path: cowork/skills/mem-setup
   extra_files: []
   pack_total_skills: 17
@@ -64,7 +65,7 @@ skill:
   pack_slug: thedotmack-claude-mem
 ---
 
-# Claude-Mem Setup (Cowork pairing)
+# Claude-Mem Setup (Claude app pairing)
 Configure this plugin with the user's own cmem.ai credentials so hooks can
 capture and inject memory. Anyone can pair — credentials are per-user
 configuration, never hardcoded in plugin logic.
@@ -92,7 +93,7 @@ optional.
    `config.json`: set `apiKey` to the sync token, `userId`, and `syncHubUrl`.
    Leave other settings unless the user asks (`inject` toggles). Project naming
    is automatic (`cmem_work_*`) and is not configurable.
-2. Cowork containers are ephemeral: edits to the installed copy last only for
+2. Claude app containers are ephemeral: edits to the installed copy last only for
    this session. To make pairing permanent, repackage — zip the plugin
    directory as `<plugin-name>.plugin` and send it to the user to re-install
    (the cowork-plugin skill's packaging flow). Tell the user this is why.

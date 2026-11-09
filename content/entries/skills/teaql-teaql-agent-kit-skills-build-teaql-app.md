@@ -18,7 +18,7 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: teaql/teaql-agent-kit
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2818
-  last_commit: 2026-11-03T19:46:48Z
-  stars_delta_7d: 0
+  stars: 2819
+  last_commit: 2026-11-06T00:37:12Z
+  stars_delta_7d: 1
   stars_growth_pct: 0
-  trending_score: 0
+  trending_score: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2818
     - 2818
     - 2818
+    - 2819
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: teaql/teaql-agent-kit
   path: skills/build-teaql-app/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:40.466Z
+  fetched_at: 2026-11-09T09:28:24.388Z
   truncated: false
 type: agent_skill
 skill:

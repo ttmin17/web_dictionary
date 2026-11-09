@@ -14,26 +14,26 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-04-06T14:56:45
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: MinishLab/semble
   official_vendor: false
   license: MIT
 signals:
-  stars: 6362
-  last_commit: 2026-11-03T08:37:09Z
-  stars_delta_7d: 67
-  stars_growth_pct: 1.1
-  trending_score: 67.71
+  stars: 6381
+  last_commit: 2026-11-08T08:23:11Z
+  stars_delta_7d: 19
+  stars_growth_pct: 0.3
+  trending_score: 19.06
   rank_current: 86
-  rank_delta: -16
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6199
     - 6231
     - 6295
     - 6362
+    - 6381
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: MinishLab/semble
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:42.962Z
+  fetched_at: 2026-11-09T09:26:52.380Z
   truncated: false
 type: agent_tool
 tool:

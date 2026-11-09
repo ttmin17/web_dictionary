@@ -2,10 +2,10 @@
 slug: tabularisdb-tabularis
 name: tabularis
 tagline: "Open-source desktop SQL workspace with 3 built-in database drivers and
-  26 shipped driver plugins, including SQL Server, DuckDB, ClickHouse and Redis.
+  29 shipped driver plugins, including SQL Server, DuckDB, ClickHouse and Redis.
   "
 summary: Tabularis is an open-source desktop SQL workspace with 3 built-in
-  database drivers and 26 shipped driver plugins, including DuckDB, ClickHouse,
+  database drivers and 29 shipped driver plugins, including DuckDB, ClickHouse,
   Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devi...
 categories:
   - databases-memory
@@ -15,28 +15,29 @@ tags:
   - cross-platform
   - database-client
 status: active
-quality_percentile: 78
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: TabularisDB/tabularis
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5380
-  last_commit: 2026-11-05T10:19:33Z
-  stars_delta_7d: 93
-  stars_growth_pct: 1.8
-  trending_score: 94.64
-  rank_current: 74
-  rank_delta: 5
+  stars: 5411
+  last_commit: 2026-11-09T08:55:58Z
+  stars_delta_7d: 31
+  stars_growth_pct: 0.6
+  trending_score: 31.18
+  rank_current: 71
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5236
     - 5287
     - 5380
+    - 5411
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: TabularisDB/tabularis
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.565Z
+  fetched_at: 2026-11-09T09:26:53.541Z
   truncated: false
 type: agent_tool
 tool:
@@ -64,7 +65,7 @@ tool:
 
 # Tabularis
 
-Tabularis is an open-source desktop SQL workspace with 3 built-in database drivers and 26 shipped driver plugins, including DuckDB, ClickHouse, Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devin (formerly Windsurf) read your schema and run queries in the same app you already use.
+Tabularis is an open-source desktop SQL workspace with 3 built-in database drivers and 29 shipped driver plugins, including DuckDB, ClickHouse, Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devin (formerly Windsurf) read your schema and run queries in the same app you already use.
 
 <p align="center">
   <b><a href="https://tabularis.dev">Website</a></b> ·
@@ -183,7 +184,7 @@ The app UI is available in English, Italian, Spanish, Chinese (Simplified), Chin
 | Plugins in **any language** (JSON-RPC over stdio)                  |                ✅                |      Java/Eclipse plugins      | JavaScript plugins |          ❌           |
 | AI text-to-SQL with **local models** (Ollama)                      |                ✅                |    Cloud-based AI assistant    |         ❌         |          ❌           |
 | Visual EXPLAIN with interactive plan graphs                        |                ✅                |               ✅               |         ❌         |          ❌           |
-| Databases out of the box                                           | 3 built-in + 26 driver plugins |              100+              |        20+         |          ~10          |
+| Databases out of the box                                           | 3 built-in + 29 driver plugins |              100+              |        20+         |          ~10          |
 
 > [!NOTE]
 > Comparison as of June 2026; features in other tools may have changed since. If you need dozens of drivers, use DBeaver. Tabularis focuses on doing a few databases well.
@@ -209,14 +210,17 @@ PostgreSQL, MySQL/MariaDB and SQLite ship built in. Everything else is a plugin.
 | IBM Informix             | [tabularis-informix-plugin](https://github.com/danielnuld/tabularis-informix-plugin)            | HackerNews     | [tabularis-hackernews-plugin](https://github.com/TabularisDB/tabularis-hackernews-plugin)       |
 | Cassandra / ScyllaDB     | [tabularis-cassandra-plugin](https://github.com/TabularisDB/tabularis-cassandra-plugin)         | Harper         | [tabularis-harper-plugin](https://github.com/HarperFast/tabularis-harper-plugin)                |
 | PostgreSQL               | [tabularis-postgresql-plugin](https://github.com/TabularisDB/tabularis-postgresql-plugin)       | Trino          | [tabularis-trino-plugin](https://github.com/TabularisDB/tabularis-trino-plugin)                 |
+| Neon                     | [neon-plugin](https://github.com/TabularisDB/neon-plugin)                                       | OpenSearch     | [tabularis-opensearch-plugin-go](https://github.com/Xrondev/tabularis-opensearch-plugin-go)     |
+| SurrealDB                | [tabularis-surrealdb-plugin](https://github.com/TabularisDB/tabularis-surrealdb-plugin)         |                |                                                                                                 |
 
 **On the bounty board**
 
 | Status      | Databases                                                                    |
 | ----------- | ---------------------------------------------------------------------------- |
-| In progress | Amazon Redshift, Etcd, Meilisearch, Snowflake, SQL Anywhere                                |
-| Scoped      | TiDB                                                            |
-| Open        | Firebird, SurrealDB                                      |
+| In progress    | Meilisearch                  |
+| Coming soon    | Snowflake                    |
+| Scoped         | Amazon Redshift, TiDB        |
+| Open           | Etcd, Firebird, SQL Anywhere |
 
 > [!NOTE]
 > **Shipped** drivers are installable from the [plugin registry](https://tabularis.dev/plugins). Everything else is on the [bounty board](https://tabularis.dev/plugins/bounties): claim one, sponsor one, or [request a database](https://github.com/TabularisDB/tabularis/discussions).
@@ -334,6 +338,7 @@ Every release is documented in [CHANGELOG.md](https://raw.githubusercontent.com/
 - **ER Diagram:** Interactive Entity-Relationship visualization (pan, zoom, layout) with selective table diagram generation.
 - **Context Actions:** Show data, count rows, modify schema, duplicate/delete tables.
 - **SQL Dump & Import:** Export and restore databases with a single flow.
+- **Table Export & Import:** Save one table, its structure and rows, as a SQL file and import it into any connection that uses the same driver, from the sidebar or the command palette.
 
 ### SQL Editor
 

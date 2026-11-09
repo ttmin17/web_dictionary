@@ -17,26 +17,26 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-04-06T04:41:14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 7005
+  stars: 7142
   last_commit: 2026-10-27T08:57:57Z
-  stars_delta_7d: 994
-  stars_growth_pct: 16.5
-  trending_score: 1158.37
-  rank_current: 4
-  rank_delta: -2
+  stars_delta_7d: 137
+  stars_growth_pct: 2
+  trending_score: 139.68
+  rank_current: 11
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4710
     - 5247
     - 6011
     - 7005
+    - 7142
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: irinabuht12-oss/google-ads-meta-ads-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.006Z
+  fetched_at: 2026-11-09T09:26:53.104Z
   truncated: false
 type: mcp_server
 launch:

@@ -19,21 +19,24 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mobile-next/mobile-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10314
-  last_commit: 2026-11-02T14:50:26Z
-  stars_delta_7d: 119
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 10425
+  last_commit: 2026-11-07T08:39:20Z
+  stars_delta_7d: 111
+  stars_growth_pct: 1.1
+  trending_score: 112.19
+  rank_current: 12
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 10314
+    - 10425
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +45,7 @@ readme_source:
   repo: mobile-next/mobile-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:41.720Z
+  fetched_at: 2026-11-09T09:26:51.019Z
   truncated: false
 type: mcp_server
 launch:

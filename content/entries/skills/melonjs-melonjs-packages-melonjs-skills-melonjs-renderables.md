@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -27,13 +27,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -42,7 +43,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-renderables/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.602Z
+  fetched_at: 2026-11-09T09:28:07.056Z
   truncated: false
 type: agent_skill
 skill:
@@ -352,6 +353,12 @@ other correct ending.
 `obj.alwaysUpdate === true`. An off-screen object with the default
 `alwaysUpdate = false` does not tick at all.
 
+A `Container` is culled by its own bounds, which do not follow its children
+unless it has a size of its own (`resize`) or `enableChildBoundsUpdate` is on.
+With the flag, the bounds are the children's union, re-measured on every update
+and, while the group is off screen, before each culling check — so a squad that
+walks back into view is drawn again.
+
 ## Anchors and floating
 
 - `anchorPoint` defaults to centre `(0.5, 0.5)` on `Renderable`, but `Container`
@@ -383,6 +390,7 @@ Hand-rolled equivalents miss the batching and the multi-backend support.
 | effect silently does nothing | running on the Canvas renderer |
 | object appears frozen while its state changes | `update()` not returning `true` |
 | off-screen object never ticks | `update()` is gated on `inViewport` — set `alwaysUpdate = true` |
+| a group of moving children vanishes once they leave where they started | a sizeless container's bounds did not follow its children: give it a size, or `enableChildBoundsUpdate` (which only followed them from 20.13.0) |
 | custom draw offset by half the size | centred `anchorPoint` default not zeroed |
 | spatial query never finds an object | `isKinematic` left `true` — not in the broadphase |
 | `z` unexpectedly 0 after a `set` | `Vector3d.set(x, y)` defaults `z` to 0 — `setPosition(x, y)` on the renderable leaves the depth alone |

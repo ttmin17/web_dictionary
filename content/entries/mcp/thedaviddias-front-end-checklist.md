@@ -14,25 +14,26 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: thedaviddias/Front-End-Checklist
   official_vendor: false
   license: MIT
 signals:
-  stars: 74649
+  stars: 74680
   last_commit: 2026-10-31T05:44:22Z
-  stars_delta_7d: 84
-  stars_growth_pct: 0.1
-  trending_score: 84.09
-  rank_current: 31
-  rank_delta: 1
+  stars_delta_7d: 31
+  stars_growth_pct: 0
+  trending_score: 31.01
+  rank_current: 34
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 74506
     - 74565
     - 74649
+    - 74680
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: thedaviddias/Front-End-Checklist
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:24.840Z
+  fetched_at: 2026-11-09T09:28:11.183Z
   truncated: true
 type: mcp_server
 launch:

@@ -18,26 +18,26 @@ status: active
 quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-05-02T03:30:19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: beenuar/AiSOC
   official_vendor: false
   license: MIT
 signals:
-  stars: 7350
-  last_commit: 2026-11-05T12:41:35Z
-  stars_delta_7d: 3512
-  stars_growth_pct: 91.5
-  trending_score: 6725.69
-  rank_current: 7
-  rank_delta: -1
+  stars: 6844
+  last_commit: 2026-11-09T08:30:22Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 135
+  rank_delta: -128
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2405
     - 2418
     - 3838
     - 7350
+    - 6844
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: beenuar/AiSOC
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:54.147Z
+  fetched_at: 2026-11-09T09:27:04.003Z
   truncated: false
 type: agent_tool
 tool:
@@ -65,8 +65,8 @@ tool:
 
 **An open-source, self-hostable AI Security Operations Center.** It ingests your security telemetry, detects and correlates threats, investigates them with AI agents whose reasoning is fully auditable, and proposes responses a human approves.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-22.1.0-f59e0b?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/CHANGELOG.md) [![CI](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/ci.yml)
-[![CodeQL](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/codeql.yml?branch=main&label=CodeQL&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/codeql.yml) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/beenuar/AiSOC/badge)](https://securityscorecards.dev/viewer/?uri=github.com/beenuar/AiSOC) [![Technical Guide](https://img.shields.io/badge/Technical%20Guide-27%20page%20PDF-dc2626?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-22.2.0-f59e0b?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/CHANGELOG.md) [![CI](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/ci.yml)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/codeql.yml?branch=main&label=CodeQL&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/codeql.yml) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/beenuar/AiSOC/badge)](https://securityscorecards.dev/viewer/?uri=github.com/beenuar/AiSOC) [![Technical Guide](https://img.shields.io/badge/Technical%20Guide-28%20page%20PDF-dc2626?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf)
 
 **[Technical Guide (PDF)](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf)** · [Docs](https://beenuar.github.io/AiSOC/) · [Architecture](https://raw.githubusercontent.com/beenuar/AiSOC/main/docs/architecture/README.md) · [What actually works](https://github.com/beenuar/AiSOC/blob/main/docs/audit/REPOSITORY_REALITY.md) · [Discussions](https://github.com/beenuar/AiSOC/discussions)
 

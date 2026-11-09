@@ -10,11 +10,16 @@ summary: "- The user explicitly asks for code-drawn art: a PixelSpec or SVG
   rout..."
 categories:
   - media-creative
+tags:
+  - agent-skills
+  - claude-code
+  - codex
+  - grok-build
 status: active
-quality_percentile: 49
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-04-23T20:52:52
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 0x0funky/agent-sprite-forge
@@ -22,16 +27,14 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4436
-  last_commit: 2026-10-06T14:09:38Z
-  stars_delta_7d: 117
+  stars: 5408
+  last_commit: 2026-11-06T18:20:34Z
+  stars_delta_7d: 184
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 4334
-    - 4436
-    - 4436
+    - 5408
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +42,7 @@ readme_source:
   repo: 0x0funky/agent-sprite-forge
   path: skills/codeart2d/SKILL.md
   branch: main
-  fetched_at: 2026-10-14T14:55:18.531Z
+  fetched_at: 2026-11-09T09:28:03.484Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +70,13 @@ skill:
     - examples/plate-effects.json
     - examples/potion-icons.svg
     - examples/slash.fx.json
-tags: []
+  pack_total_skills: 5
+  is_pack_primary: true
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: 0x0funky-agent-sprite-forge
 ---
 
 # Code Art 2D

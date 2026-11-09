@@ -18,7 +18,7 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 810
-  last_commit: 2026-11-05T02:04:26Z
-  stars_delta_7d: 22
-  stars_growth_pct: 2.8
-  trending_score: 22.61
+  stars: 823
+  last_commit: 2026-11-09T01:15:40Z
+  stars_delta_7d: 13
+  stars_growth_pct: 1.6
+  trending_score: 13.21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 745
     - 781
     - 788
     - 810
+    - 823
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/landscape-materials/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:12:14.952Z
+  fetched_at: 2026-11-09T09:27:17.225Z
   truncated: false
 type: agent_skill
 skill:

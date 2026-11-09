@@ -16,7 +16,7 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: HBAI-Ltd/Toonflow-app
@@ -24,18 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 20698
+  stars: 21175
   last_commit: 2026-11-05T07:55:21Z
-  stars_delta_7d: 1269
-  stars_growth_pct: 6.5
-  trending_score: 1351.88
+  stars_delta_7d: 477
+  stars_growth_pct: 2.3
+  trending_score: 487.99
   rank_current: 30
-  rank_delta: -6
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 18170
     - 19429
     - 20698
+    - 21175
 language: zh
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: HBAI-Ltd/Toonflow-app
   path: packages/mcp/skills/toonflow/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:31.017Z
+  fetched_at: 2026-11-09T09:28:17.569Z
   truncated: false
 type: agent_skill
 skill:

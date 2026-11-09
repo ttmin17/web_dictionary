@@ -14,29 +14,29 @@ tags:
   - boss-zhipin
   - claude
 status: active
-quality_percentile: 58
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-03-20T08:41:59
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: can4hou6joeng4/boss-agent-cli
   official_vendor: false
   license: MIT
 signals:
-  stars: 2197
-  last_commit: 2026-11-05T06:09:37Z
-  stars_delta_7d: 52
-  stars_growth_pct: 2.4
-  trending_score: 53.26
-  rank_current: 94
-  rank_delta: -10
+  stars: 2202
+  last_commit: 2026-11-09T09:19:48Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.2
+  trending_score: 5.01
+  rank_current: 113
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2080
     - 2106
     - 2145
     - 2197
+    - 2202
 language: zh
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: can4hou6joeng4/boss-agent-cli
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:11:58.628Z
+  fetched_at: 2026-11-09T09:27:08.339Z
   truncated: false
 type: agent_tool
 tool:
@@ -78,7 +78,7 @@ tool:
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/can4hou6joeng4/boss-agent-cli/pulls)
 [![MCP Toplist](https://mcptoplist.com/badge/glama%2Fcan4hou6joeng4%2Fboss-agent-cli.svg)](https://mcptoplist.com/server/glama%2Fcan4hou6joeng4%2Fboss-agent-cli)
 
-[快速上手](https://raw.githubusercontent.com/can4hou6joeng4/boss-agent-cli/master/docs/getting-started.md) · [Agent 集成](#-agent-集成) · [命令](#-命令) · [排障](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/troubleshooting.md) · [路线图](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/ROADMAP.md) · **中文** | [English](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/README.en.md)
+[快速上手](https://raw.githubusercontent.com/can4hou6joeng4/boss-agent-cli/master/docs/getting-started.md) · [架构](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/architecture.md) · [Agent 集成](#-agent-集成) · [命令](#-命令) · [排障](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/docs/troubleshooting.md) · [路线图](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/ROADMAP.md) · **中文** | [English](https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/README.en.md)
 
 <a href="https://github.com/can4hou6joeng4/boss-agent-cli/blob/master/demo/showcase/boss-agent-cli-showcase.mp4" title="观看 48 秒产品发布会动画">
   <img src="https://raw.githubusercontent.com/can4hou6joeng4/boss-agent-cli/master/demo/showcase/boss-agent-cli-showcase.gif?v=keynote-20261008" alt="boss-agent-cli 极光发布会动画：福利筛选、双角色工作流与 Agent 接入" width="100%">

@@ -16,25 +16,26 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: netease-youdao/LobsterAI
   official_vendor: false
   license: MIT
 signals:
-  stars: 6168
-  last_commit: 2026-11-05T11:50:33Z
-  stars_delta_7d: 17
-  stars_growth_pct: 0.3
-  trending_score: 17.05
-  rank_current: 118
-  rank_delta: -25
+  stars: 6176
+  last_commit: 2026-11-09T09:23:47Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.1
+  trending_score: 8.01
+  rank_current: 101
+  rank_delta: 17
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6126
     - 6151
     - 6168
+    - 6176
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: netease-youdao/LobsterAI
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.696Z
+  fetched_at: 2026-11-09T09:28:28.366Z
   truncated: false
 type: agent_tool
 tool:

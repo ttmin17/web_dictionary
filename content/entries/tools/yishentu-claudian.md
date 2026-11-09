@@ -4,8 +4,8 @@ name: claudian
 tagline: An Obsidian plugin that embeds Claude Code, Codex and other agents as
   an AI collaborator in your vault.
 summary: An Obsidian plugin that embeds AI coding agents (Claude Code, Codex,
-  Grok Build, OpenCode, Pi, DeepSeek Harness, and more to come) in your vault.
-  Your vault becomes the agent's working directory — file read/write, sea...
+  Grok Build, Antigravity CLI, OpenCode, Pi, DeepSeek Harness, and more to come)
+  in your vault. Your vault becomes the agent's working directory — fil...
 categories:
   - productivity-ops
 tags:
@@ -17,26 +17,26 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2025-12-05T17:58:26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: YishenTu/claudian
   official_vendor: false
   license: MIT
 signals:
-  stars: 15912
-  last_commit: 2026-11-05T12:39:52Z
-  stars_delta_7d: 112
-  stars_growth_pct: 0.7
-  trending_score: 112.79
-  rank_current: 67
-  rank_delta: -7
+  stars: 15950
+  last_commit: 2026-11-09T00:48:40Z
+  stars_delta_7d: 38
+  stars_growth_pct: 0.2
+  trending_score: 38.09
+  rank_current: 63
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15653
     - 15725
     - 15800
     - 15912
+    - 15950
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: YishenTu/claudian
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:42.870Z
+  fetched_at: 2026-11-09T09:27:38.232Z
   truncated: false
 type: agent_tool
 tool:
@@ -80,11 +80,11 @@ tool:
 
 ![Preview](https://raw.githubusercontent.com/YishenTu/claudian/main/assets/Preview.png)
 
-An Obsidian plugin that embeds AI coding agents (Claude Code, Codex, Grok Build, OpenCode, Pi, DeepSeek Harness, and more to come) in your vault. Your vault becomes the agent's working directory — file read/write, search, bash, and multi-step workflows all work out of the box.
+An Obsidian plugin that embeds AI coding agents (Claude Code, Codex, Grok Build, Antigravity CLI, OpenCode, Pi, DeepSeek Harness, and more to come) in your vault. Your vault becomes the agent's working directory — file read/write, search, bash, and multi-step workflows all work out of the box.
 
 ## Features & Usage
 
-Open Claudian interface from the ribbon icon or command palette. Everything works like your familiar coding agent, Claude Code, Codex, Grok Build, OpenCode, Pi, and DeepSeek Harness — talk to the agent, and it reads, writes, edits, searches and run commands in your vault.
+Open Claudian interface from the ribbon icon or command palette. Everything works like your familiar coding agent, Claude Code, Codex, Grok Build, Antigravity CLI, OpenCode, Pi, and DeepSeek Harness — talk to the agent, and it reads, writes, edits, searches and run commands in your vault.
 
 **Inline Edit** — Select text or start at the cursor position + hotkey to edit directly in notes with word-level diff preview.
 
@@ -111,6 +111,7 @@ Open Claudian interface from the ribbon icon or command palette. Everything work
 ## Requirements
 
 - At least one of the following harnesses:
+  - [Antigravity CLI](https://antigravity.google/product/antigravity-cli)
   - [Claude Code](https://code.claude.com/docs/en/overview)
   - [Codex](https://github.com/openai/codex)
   - [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)
@@ -161,7 +162,7 @@ npm run build
 
 ## Privacy & Data Use
 
-- **Sent to API**: Your input, attached files, images, and tool call outputs. Depending on the selected provider, data is sent to Anthropic (Claude), OpenAI (Codex), xAI (Grok), or the providers configured in OpenCode, Pi, or DeepSeek Harness. The destination can be configured through provider settings and environment variables.
+- **Sent to API**: Your input, attached files, images, and tool call outputs. Depending on the selected provider, data is sent to Anthropic (Claude), OpenAI (Codex), xAI (Grok), Google (Antigravity), or the providers configured in OpenCode, Pi, or DeepSeek Harness. The destination can be configured through provider settings and environment variables.
 - **No telemetry or unsolicited background activity**: Claudian does not run telemetry beacons. UI polling timers read local Obsidian/editor selection state only. Network activity is limited to explicit provider runtime work, configured MCP endpoints, a 127.0.0.1-only listener that OpenCode, DeepSeek and Grok sessions use for Claudian's session tools, provider SDK/CLI calls needed to answer your requests, and their configured services.
 
 ## Troubleshooting
@@ -183,6 +184,7 @@ src/
 │   ├── auxiliary/               # Shared provider auxiliary services
 │   └── ...                      # bootstrap, commands, rpc, security, storage, tools, types
 ├── providers/
+│   ├── antigravity/             # Antigravity CLI ACP adaptor, transcript history, models
 │   ├── claude/                  # Claude Agent SDK adaptor, native history, plugins
 │   ├── codex/                   # Codex shared app-server adaptor, JSON-RPC, JSONL history
 │   ├── deepseek/                # DeepSeek Harness native Remote adaptor, presets, and history

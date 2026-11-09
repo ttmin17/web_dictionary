@@ -13,29 +13,29 @@ tags:
   - factor-analysis
   - finance
 status: active
-quality_percentile: 49
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2019-04-08T11:44:25
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: JerBouma/FinanceToolkit
   official_vendor: false
   license: MIT
 signals:
-  stars: 5496
-  last_commit: 2026-11-05T06:47:31Z
-  stars_delta_7d: 34
-  stars_growth_pct: 0.6
-  trending_score: 34.21
-  rank_current: 60
-  rank_delta: -5
+  stars: 5512
+  last_commit: 2026-11-09T07:11:02Z
+  stars_delta_7d: 16
+  stars_growth_pct: 0.3
+  trending_score: 16.05
+  rank_current: 52
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5428
     - 5439
     - 5462
     - 5496
+    - 5512
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: JerBouma/FinanceToolkit
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.492Z
+  fetched_at: 2026-11-09T09:26:53.516Z
   truncated: true
 type: mcp_server
 launch:
@@ -375,7 +375,7 @@ Options usually price more risk than follows, as their sellers want to be paid f
 
 All three are listed in the United States and valued on earnings that lie years ahead, which makes US inflation and interest rates the backdrop to their share prices. In 2022, the year the maximum drawdown above shows each of them falling by more than half, inflation reached 9% and the Federal Reserve raised its policy rate from 0.12% to 4.38%.
 
-The [economics](https://www.jeroenbouma.com/projects/financetoolkit/docs/economics) module covers 60+ countries with 50+ indicators, from GDP and unemployment to money supply and interest rates, and the [fixed income](https://www.jeroenbouma.com/projects/financetoolkit/docs/fixedincome) module adds bond yields, yield curves, central bank rates and bond and derivative valuations. Both are reached through the same Toolkit instance, or on their own with `from financetoolkit import Economics, FixedIncome`:
+The [economics](https://www.jeroenbouma.com/projects/financetoolkit/docs/economics) module covers 60+ countries with 50+ indicators, from GDP and unemployment to money supply and interest rates, and the [fixed income](https://www.jeroenbouma.com/projects/financetoolkit/docs/fixedincome) module adds bond yields, yield curves, central bank rates and calculations on individual bonds. Both are reached through the same Toolkit instance, or on their own with `from financetoolkit import Economics, FixedIncome`:
 
 ```python
 # Inflation on the same month a year earlier and the Federal Reserve's policy rate
@@ -505,7 +505,7 @@ The three US funds and SMH largely hold the same companies, with SOXX and SMH sh
 
 ## Building a Diversified Portfolio
 
-A fund spreads the risk over the sector, but the sector still moves as one. The [portfolio](https://www.jeroenbouma.com/projects/financetoolkit/docs/portfolio-optimization) module builds portfolios from the tickers of any Toolkit: minimum variance, maximum Sharpe ratio, mean-variance, risk parity, Hierarchical Risk Parity, minimum CVaR and Black-Litterman weights, the efficient frontier, risk contributions, stress tests and attribution. Below the semiconductor fund is combined with health care (XLV), energy (XLE), long-term Treasuries (TLT) and gold (GLD):
+A fund spreads the risk over the sector, but the sector still moves as one. The [portfolio](https://www.jeroenbouma.com/projects/financetoolkit/docs/portfolio-optimization) module builds portfolios from the tickers of any Toolkit: minimum variance, maximum Sharpe ratio, mean-variance, risk parity, Hierarchical Risk Parity, minimum CVaR, Black-Litterman, maximum diversification, minimum tracking error and growth optimal (Kelly) weights, the efficient frontier, risk contributions, stress tests and attribution. Below the semiconductor fund is combined with health care (XLV), energy (XLE), long-term Treasuries (TLT) and gold (GLD):
 
 ```python
 # Initialize the Toolkit for funds across sectors and asset classes from 2021 to 2025

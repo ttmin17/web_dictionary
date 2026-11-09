@@ -16,26 +16,26 @@ status: active
 quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: vibheksoni/stealth-browser-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3335
-  last_commit: 2026-11-02T13:41:35Z
-  stars_delta_7d: 54
-  stars_growth_pct: 1.6
-  trending_score: 54.89
-  rank_current: 45
-  rank_delta: -37
+  stars: 3352
+  last_commit: 2026-11-05T18:35:03Z
+  stars_delta_7d: 17
+  stars_growth_pct: 0.5
+  trending_score: 17.09
+  rank_current: 50
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2223
     - 3000
     - 3281
     - 3335
+    - 3352
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: vibheksoni/stealth-browser-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:11:48.817Z
+  fetched_at: 2026-11-09T09:26:55.257Z
   truncated: false
 type: mcp_server
 launch:
@@ -96,6 +96,7 @@ Navigate Cloudflare challenges, anti-bot checks, and login walls with real Chrom
 
 - `STEALTHMCP35` — 35% off to Mobile and Residential Proxies
 - `STEALTHMCP40` — 40% off to ISP (Static) Proxies
+- `STEALTHMCP2X`: 2X traffic for Black Friday
 
 [Get started with NodeMaven](https://go.nodemaven.com/stealthbrowsermcpreadmeoct)
 

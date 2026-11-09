@@ -15,25 +15,26 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: agentscope-ai/QwenPaw
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 37386
-  last_commit: 2026-11-05T08:47:53Z
-  stars_delta_7d: 1120
-  stars_growth_pct: 3.1
-  trending_score: 1154.59
-  rank_current: 14
-  rank_delta: 8
+  stars: 37523
+  last_commit: 2026-11-09T07:18:31Z
+  stars_delta_7d: 137
+  stars_growth_pct: 0.4
+  trending_score: 137.5
+  rank_current: 27
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 35842
     - 36266
     - 37386
+    - 37523
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: agentscope-ai/QwenPaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:29.628Z
+  fetched_at: 2026-11-09T09:28:15.354Z
   truncated: false
 type: agent_tool
 tool:
@@ -478,6 +479,8 @@ See [Security](https://qwenpaw.agentscope.io/docs/security) for details.
 | [CLI](https://qwenpaw.agentscope.io/docs/cli)                            | Init, cron jobs, skills, clean                   |
 | [Agent Team Practice](https://qwenpaw.agentscope.io/docs/practice-agent-team) | Multi-agent team deployment guide           |
 | [FAQ](https://qwenpaw.agentscope.io/docs/faq)                           | Common questions and troubleshooting             |
+
+In the Console, `/clear` and a successful `/new` leave the chat empty when you reopen it or reload the page. See [Magic commands](https://qwenpaw.agentscope.io/docs/commands).
 
 Full documentation: [qwenpaw.agentscope.io/docs](https://qwenpaw.agentscope.io/docs)
 

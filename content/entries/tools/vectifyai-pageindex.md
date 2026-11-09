@@ -15,25 +15,26 @@ status: active
 quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: VectifyAI/PageIndex
   official_vendor: false
   license: MIT
 signals:
-  stars: 40010
-  last_commit: 2026-11-05T09:56:05Z
-  stars_delta_7d: 269
-  stars_growth_pct: 0.7
-  trending_score: 270.82
-  rank_current: 41
-  rank_delta: -22
+  stars: 40269
+  last_commit: 2026-11-09T08:09:38Z
+  stars_delta_7d: 259
+  stars_growth_pct: 0.6
+  trending_score: 260.68
+  rank_current: 18
+  rank_delta: 23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 39265
     - 39741
     - 40010
+    - 40269
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: VectifyAI/PageIndex
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:29.619Z
+  fetched_at: 2026-11-09T09:28:15.431Z
   truncated: false
 type: agent_tool
 tool:

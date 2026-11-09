@@ -18,10 +18,10 @@ tags:
   - ai-writing
   - chatgpt
 status: active
-quality_percentile: 57
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-01-18T05:30:15
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: blader/humanizer
@@ -29,19 +29,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 65094
+  stars: 66804
   last_commit: 2026-10-28T07:17:33Z
-  stars_delta_7d: 4381
-  stars_growth_pct: 7.2
-  trending_score: 4697.13
-  rank_current: 10
-  rank_delta: 1
+  stars_delta_7d: 1710
+  stars_growth_pct: 2.6
+  trending_score: 1754.92
+  rank_current: 11
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 56481
     - 58216
     - 60713
     - 65094
+    - 66804
 language: en
 needs_keys: false
 prerequisites: []
@@ -49,7 +49,7 @@ readme_source:
   repo: blader/humanizer
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:26.225Z
+  fetched_at: 2026-11-09T09:27:26.336Z
   truncated: false
 type: agent_skill
 skill:

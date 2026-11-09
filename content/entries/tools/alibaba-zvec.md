@@ -17,25 +17,26 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: alibaba/zvec
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16188
-  last_commit: 2026-11-05T07:16:29Z
-  stars_delta_7d: 37
+  stars: 16215
+  last_commit: 2026-11-09T01:43:35Z
+  stars_delta_7d: 27
   stars_growth_pct: 0.2
-  trending_score: 37.08
-  rank_current: 100
-  rank_delta: -6
+  trending_score: 27.05
+  rank_current: 75
+  rank_delta: 25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16126
     - 16151
     - 16188
+    - 16215
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: alibaba/zvec
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:08.528Z
+  fetched_at: 2026-11-09T09:27:58.552Z
   truncated: false
 type: agent_tool
 tool:

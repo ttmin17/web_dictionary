@@ -16,7 +16,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: agentscope-ai/agentscope-java
@@ -24,18 +24,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6265
-  last_commit: 2026-11-05T08:34:33Z
-  stars_delta_7d: 144
-  stars_growth_pct: 2.4
-  trending_score: 147.39
-  rank_current: 84
-  rank_delta: 2
+  stars: 6300
+  last_commit: 2026-11-09T00:55:32Z
+  stars_delta_7d: 35
+  stars_growth_pct: 0.6
+  trending_score: 35.2
+  rank_current: 98
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6038
     - 6121
     - 6265
+    - 6300
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: agentscope-ai/agentscope-java
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:59.722Z
+  fetched_at: 2026-11-09T09:28:42.415Z
   truncated: false
 type: agent_skill
 skill:

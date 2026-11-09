@@ -18,25 +18,26 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: unclecode/crawl4ai
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 86941
+  stars: 87128
   last_commit: 2026-11-04T12:20:01Z
-  stars_delta_7d: 662
-  stars_growth_pct: 0.8
-  trending_score: 667.08
+  stars_delta_7d: 187
+  stars_growth_pct: 0.2
+  trending_score: 187.4
   rank_current: 21
-  rank_delta: -1
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 85806
     - 86279
     - 86941
+    - 87128
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: unclecode/crawl4ai
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:18.822Z
+  fetched_at: 2026-11-09T09:28:11.147Z
   truncated: false
 type: agent_tool
 tool:

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8648
-  last_commit: 2026-11-05T13:06:48Z
-  stars_delta_7d: 450
-  stars_growth_pct: 5.5
-  trending_score: 474.7
-  rank_current: 49
-  rank_delta: -10
+  stars: 8774
+  last_commit: 2026-11-09T09:15:26Z
+  stars_delta_7d: 126
+  stars_growth_pct: 1.5
+  trending_score: 127.84
+  rank_current: 58
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7377
     - 7831
     - 8198
     - 8648
+    - 8774
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/agent-operated-software/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:57.364Z
+  fetched_at: 2026-11-09T09:27:49.755Z
   truncated: false
 type: agent_skill
 skill:
@@ -118,7 +118,11 @@ When a tool produces an artifact, do not make every consumer invent a completene
 3. Flush and atomically rename the partial artifact to its final path.
 4. Write the manifest, then a `.done` sentinel last.
 
-Consumers fail closed on the shared proof. A filename or exit code is not content verification.
+Consumers of an artifact fail closed on the shared proof: don't read a file before its sentinel exists,
+because it may be half-written. A filename or exit code is not content verification. This rule is for
+artifact integrity only. For delivery, routing and checks, uncertainty fails open: deliver, and report
+what couldn't be checked. The hard lines are the exception: when a change can't tell whether it would
+expose a credential, delete someone's data, spend money or publish, it stops and asks.
 
 ## Build with an agent SDLC
 

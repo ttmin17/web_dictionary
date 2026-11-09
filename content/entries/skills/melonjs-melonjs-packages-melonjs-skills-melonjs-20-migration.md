@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -27,15 +27,16 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
-  rank_current: 118
-  rank_delta: null
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 136
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -44,7 +45,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-20-migration/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.595Z
+  fetched_at: 2026-11-09T09:28:07.050Z
   truncated: false
 type: agent_skill
 skill:

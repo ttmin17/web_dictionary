@@ -18,26 +18,26 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: taylorwilsdon/google_workspace_mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3478
-  last_commit: 2026-11-05T12:02:02Z
-  stars_delta_7d: 65
-  stars_growth_pct: 1.9
-  trending_score: 66.24
-  rank_current: 38
-  rank_delta: 3
+  stars: 3492
+  last_commit: 2026-11-08T22:54:15Z
+  stars_delta_7d: 14
+  stars_growth_pct: 0.4
+  trending_score: 14.06
+  rank_current: 57
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3332
     - 3371
     - 3413
     - 3478
+    - 3492
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: taylorwilsdon/google_workspace_mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.759Z
+  fetched_at: 2026-11-09T09:26:55.246Z
   truncated: false
 type: mcp_server
 launch:
@@ -169,7 +169,7 @@ This project is [MIT licensed](https://raw.githubusercontent.com/taylorwilsdon/g
 </td>
 <td align="center" width="25%">
 <h3>📅</h3><a href="https://workspacemcp.com/google-calendar?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=services-google-calendar"><b>Calendar</b></a><br>
-<sub>7 tools - events, free/busy,<br>Out of Office, Focus Time</sub>
+<sub>7 tools - events, sharing, free/busy,<br>Out of Office, Focus Time</sub>
 </td>
 <td align="center" width="25%">
 <h3>📝</h3><a href="https://workspacemcp.com/google-docs?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=services-google-docs"><b>Docs</b></a><br>
@@ -272,6 +272,8 @@ uvx workspace-mcp --transport streamable-http --tool-tier core
 </table>
 
 **Tool tiers** keep context windows lean: `core` is the essential set, `extended` adds management operations, `complete` loads everything. Combine with `--tools <service> ...`, `--read-only`, or per-service `--permissions`, and subtract individual tools with `--disabled-tools <name> ...` - details in the [server modes docs](https://workspacemcp.com/docs?utm_source=github.com&utm_medium=referral&utm_campaign=readme&utm_content=tiers-server-modes#server-modes).
+
+**Per-request toolsets** let HTTP clients sharing one server see different tools, using the same headers as the GitHub MCP server. `X-MCP-Toolsets` takes comma-separated service names (the `--tools` names, e.g. `gmail,drive`) and `X-MCP-Tools` takes comma-separated tool names (e.g. `search_gmail_messages`); when both are sent the request gets the union. Names ignore case and whitespace, unknown names match nothing, and a blank or missing header leaves the tool list unchanged. Headers only narrow what the server already loaded: a tool removed by the tier, `--tools`, `--read-only`, `--permissions` or `--disabled-tools` stays unavailable, and calls to tools outside the request's selection fail as unknown tools.
 
 ## Connect Your Client
 

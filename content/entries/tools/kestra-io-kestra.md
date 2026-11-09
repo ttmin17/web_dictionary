@@ -13,28 +13,29 @@ tags:
   - control-plane
   - data-engineering
 status: active
-quality_percentile: 74
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: kestra-io/kestra
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 30149
-  last_commit: 2026-11-05T12:54:40Z
-  stars_delta_7d: 149
-  stars_growth_pct: 0.5
-  trending_score: 149.74
-  rank_current: 59
-  rank_delta: -14
+  stars: 30175
+  last_commit: 2026-11-09T09:23:21Z
+  stars_delta_7d: 26
+  stars_growth_pct: 0.1
+  trending_score: 26.02
+  rank_current: 77
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
     - 29847
     - 30000
     - 30149
+    - 30175
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: kestra-io/kestra
   path: README.md
   branch: develop
-  fetched_at: 2026-11-05T13:13:29.647Z
+  fetched_at: 2026-11-09T09:28:15.567Z
   truncated: false
 type: agent_tool
 tool:

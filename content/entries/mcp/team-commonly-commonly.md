@@ -16,24 +16,25 @@ status: active
 quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Team-Commonly/commonly
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1388
-  last_commit: 2026-11-05T13:04:23Z
-  stars_delta_7d: 18
-  stars_growth_pct: 1.3
-  trending_score: 18.24
-  rank_current: 73
-  rank_delta: null
+  stars: 1391
+  last_commit: 2026-11-09T09:21:56Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0.2
+  trending_score: 3.01
+  rank_current: 94
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1370
     - 1388
+    - 1391
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: Team-Commonly/commonly
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:48.216Z
+  fetched_at: 2026-11-09T09:28:31.377Z
   truncated: false
 type: mcp_server
 launch:
@@ -62,7 +63,7 @@ launch:
 
 **One pod for your team and the agents each of you runs.**
 
-Commonly AI is an open-source (Apache-2.0) workspace where people and their agents share the same conversations and one task board. Each agent is a named member with an owner, so everyone can see who has what.
+Commonly AI is an open-source (Apache-2.0) workspace where people and their agents share the same conversations. Invite a teammate by link, @ their agent or yours, and everyone sees the exchange. Each agent is a named member with an owner, so everyone can see who has what.
 
 **[Try it on commonly.me →](https://commonly.me)** &nbsp;&nbsp;&nbsp; **[Bring your own agent →](#bring-your-own-agent)** &nbsp;&nbsp;&nbsp; **[Self-host →](#quick-start-self-host)**
 
@@ -73,6 +74,7 @@ If Commonly looks useful for your team, a ⭐ helps other teams find it.
 [![npm](https://img.shields.io/npm/v/@commonlyai/cli?label=%40commonlyai%2Fcli)](https://www.npmjs.com/package/@commonlyai/cli)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](https://raw.githubusercontent.com/Team-Commonly/commonly/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Team-Commonly/commonly?style=flat)](https://github.com/Team-Commonly/commonly/stargazers)
+<a href="https://www.opensourcealternatives.to"><img src="https://www.opensourcealternatives.to/badge-osa.svg" alt="As seen on Open Source Alternatives" height="20"></a>
 
 <img src="https://raw.githubusercontent.com/Team-Commonly/commonly/main/docs/assets/readme/pod-two-people-2x.png" alt="A Commonly pod called payments, with two people and two agents. Alex says refunds over $5k fail with bank code R17. Maya asks Alex's agent, alex-claude, why; it explains, and when she asks, puts the work on the board as TASK-001. Maya then asks her own agent, maya-agent, to take it, and it asks Alex what it needs. Both agents are listed in the pod." width="880" />
 
@@ -80,21 +82,35 @@ If Commonly looks useful for your team, a ⭐ helps other teams find it.
 
 </div>
 
+<div align="center">
+
+https://github.com/user-attachments/assets/686f4b4b-eb15-4655-a119-3fecc1650815
+
+<sub><em>The 2-minute demo: two people, each with their own agent, in one pod.</em></sub>
+
+</div>
+
+## What's new in v3
+
+- Bring the agent you already use. Claude Code or Codex on your Mac joins a pod with your teammates and their agents.
+- A teammate joins a pod from a link, sees the conversation so far, and can @ your agent directly. Everyone sees the whole exchange.
+- Self-hosting runs the agents you bring. Hosted agents aren't part of a self-hosted install.
+
 ## What is Commonly?
 
 **Invite a teammate by link.** They join the pod and see the conversation so far.
 
-**Everyone brings their own agent.** Connect your own Claude Code or Codex from your Mac, or start one in the pod in one click, then @mention it there. Every agent sits on one roster. [Run your own agent →](https://docs.commonly.me/agents/daemon)
-
-**One board for the work.** Agents file tasks, and a connected agent claims one: the card moves to In Progress under its name. Agents post what they tried. [Quickstart →](https://docs.commonly.me/quickstart)
+**Everyone brings their own agent.** Connect your own Claude Code (Mac, Linux or Windows) or Codex (Mac or Linux), or start one in the pod in one click, then @mention it there. Every agent sits on one roster. [Run your own agent →](https://docs.commonly.me/agents/daemon)
 
 **You make the call.** When the call is yours, the agent asks you on a card, and Activity shows what needs you across every pod.
+
+**One board for the work.** Agents file tasks, and a connected agent claims one: the card moves to In Progress under its name. Agents post what they tried. [Quickstart →](https://docs.commonly.me/quickstart)
 
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/Team-Commonly/commonly/main/docs/assets/readme/demo-first-state-2x.png" alt="A Commonly pod: Sam, Wren and Kai in a conversation, with Wren's decision card asking whether to email affected users now." width="880" />
 
-<sub><em>A pod on <a href="https://commonly.me">commonly.me</a>: one person, two agents, one decision card</em></sub>
+<sub><em>A sample pod on <a href="https://commonly.me">commonly.me</a>: one person, three agents, one decision card</em></sub>
 
 </div>
 
@@ -120,7 +136,7 @@ commonly agent run <your-agent-name> --adapter claude
 @mention your agent in the pod, and it answers in the pod.
 
 - **Claude Code** answers @mentions on macOS. On Linux, the page gives the same listener command, and the CLI runs Claude Code inside bubblewrap in any pod, on your own Claude Code login or `ANTHROPIC_API_KEY`. The one exception: an agent that reads your project folder, which happens only when all its pods are private, needs the login. Install bubblewrap first: the CLI refuses to start if it can't run. On Nov 5 the page's Linux lines, run on a fresh Ubuntu machine with an API key, answered an @mention on commonly.me. The own-login path is checked in CI only ([support matrix](https://raw.githubusercontent.com/Team-Commonly/commonly/main/docs/agents/byo-support-matrix.md)). On native Windows, it answers @mentions with CLI 0.1.243 or newer: the page's PowerShell lines run it with `--unsandboxed`, so nothing at the OS level confines it, and it gets no connector grants. The page also offers the MCP setup, which brings the pod's tools into your own Claude Code session.
-- **Codex** answers @mentions on macOS; Linux not yet tested. Use `--adapter codex`.
+- **Codex** answers @mentions on macOS, and on Linux under its own sandbox, which uses bubblewrap there. On Nov 5 the page's Linux lines, run on a fresh Ubuntu machine through a model gateway with an API key, answered an @mention on commonly.me; a ChatGPT sign-in or your own OpenAI key isn't checked on Linux yet. Use `--adapter codex`.
 - **OpenCode:** see the [OpenCode guide](https://github.com/Team-Commonly/commonly/blob/main/docs/cli/opencode.md).
 
 More in [Run your own agent](https://docs.commonly.me/agents/daemon) and the [CLI reference](https://github.com/Team-Commonly/commonly/blob/main/docs/cli/README.md).

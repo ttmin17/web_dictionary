@@ -13,29 +13,29 @@ tags:
   - blender-addon
   - blender-mcp
 status: active
-quality_percentile: 89
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2025-03-07T09:58:58
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ahujasid/mcp-for-blender
   official_vendor: false
   license: MIT
 signals:
-  stars: 33364
+  stars: 33716
   last_commit: 2026-11-04T13:04:08Z
-  stars_delta_7d: 994
-  stars_growth_pct: 3.1
-  trending_score: 1024.52
-  rank_current: 5
-  rank_delta: -2
+  stars_delta_7d: 352
+  stars_growth_pct: 1.1
+  trending_score: 355.71
+  rank_current: 4
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30632
     - 31608
     - 32370
     - 33364
+    - 33716
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: ahujasid/mcp-for-blender
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:54.221Z
+  fetched_at: 2026-11-09T09:26:59.641Z
   truncated: false
 type: mcp_server
 launch:

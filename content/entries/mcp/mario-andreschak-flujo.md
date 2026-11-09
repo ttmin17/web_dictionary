@@ -16,7 +16,7 @@ status: active
 quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mario-andreschak/FLUJO
@@ -24,16 +24,17 @@ source:
   license: MIT
 signals:
   stars: 673
-  last_commit: 2026-11-05T04:41:43Z
-  stars_delta_7d: 7
-  stars_growth_pct: 1.1
-  trending_score: 7.07
-  rank_current: 90
-  rank_delta: 3
+  last_commit: 2026-11-08T18:23:22Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 116
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 663
     - 666
+    - 673
     - 673
 language: en
 needs_keys: false
@@ -43,7 +44,7 @@ readme_source:
   repo: mario-andreschak/FLUJO
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:51.334Z
+  fetched_at: 2026-11-09T09:28:34.213Z
   truncated: false
 type: mcp_server
 launch:

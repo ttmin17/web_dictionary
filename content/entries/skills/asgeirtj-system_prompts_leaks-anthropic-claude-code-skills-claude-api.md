@@ -19,7 +19,7 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 70818
-  last_commit: 2026-11-04T16:40:29Z
-  stars_delta_7d: 594
-  stars_growth_pct: 0.8
-  trending_score: 599.02
+  stars: 71063
+  last_commit: 2026-11-08T08:33:05Z
+  stars_delta_7d: 245
+  stars_growth_pct: 0.3
+  trending_score: 245.85
   velocity_source: snapshot_delta
   sparkline_4w:
     - 69880
     - 70224
     - 70818
+    - 71063
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/claude-api/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:31.590Z
+  fetched_at: 2026-11-09T09:27:26.193Z
   truncated: true
 type: agent_skill
 skill:
@@ -125,7 +126,7 @@ Several common Claude API shapes changed in 2025-2026. If you recall a pattern f
 | Extended thinking | `thinking: {type: "enabled", budget_tokens: N}` | On Claude 4.6+ models: `thinking: {type: "adaptive"}`. `budget_tokens` is deprecated on Opus 4.6 / Sonnet 4.6 and **rejected with a 400** on Fable 5/5.1 / Sonnet 5.5 / Sonnet 5 / Opus 5.5 / 5 / 4.8 / 4.7. Pre-4.6 models still use `budget_tokens`. |
 | Web search / web fetch tool type | `web_search_20250305`, `web_fetch_20250910` | `web_search_20260209`, `web_fetch_20260209` (dynamic filtering) on Opus 5.5/5/4.8/4.7/4.6, Sonnet 5.5, Sonnet 5, and Sonnet 4.6. Older models keep the basic variants; on Vertex AI only basic `web_search_20250305` is available (web fetch is not on Vertex) - see the Server Tools QR below. |
 | PHP parameter names | snake_case wire names as named args (`max_tokens`) | Top-level named args are camelCase (`maxTokens`). Nested array keys vary by feature (e.g. `'taskBudget'`, `'skillID'`, `'mcp_server_name'`) - copy the exact key from the documented example; do not bulk-convert. |
-| Managed Agents credentials | Keep secrets host-side via custom tools (the only option before vaults shipped) | Vault `environment_variable` credentials - stored by Anthropic, substituted at egress, never visible in the sandbox (`shared/managed-agents-tools.md` -> Vaults). Host-side custom tools remain the fallback for self-hosted sandboxes. |
+| Managed Agents credentials | Keep secrets host-side via custom tools (the only option before vaults shipped) | Vault `environment_variable` credentials - stored by Anthropic, substituted at egress, so the sandbox holds only a placeholder unless a service sends the secret back (`shared/managed-agents-tools.md` -> Vaults). Host-side custom tools remain the fallback for self-hosted sandboxes. |
 | Files API / Skills | `client.beta.files.*` / `client.beta.skills.*` with beta `files-api-2025-04-14` / `skills-2025-10-02` | Out of beta: `client.files.*` / `client.skills.*`, no beta header. In current SDKs `client.beta.files` / `client.beta.skills` have breaking shape changes from previous versions, matching the stable namespaces - migrate per `shared/live-sources.md` -> Files API / Skills Guide. |
 
 ---
@@ -141,6 +142,7 @@ If the User Request at the bottom of this prompt is a bare subcommand string (no
 | `upgrade` | Upgrade the project's Anthropic SDK dependency across a major version. Trailing words may name the language and/or a scope (`upgrade python`, `upgrade python sdk src/`). Read the declared version first. Every SDK, Python 0.x included, and the `ant` CLI: follow the `api-version` row if the upgrade reaches or passes the release in its guide's "Set the version" table (an upgrade to the newest release does); if not, point the user at that SDK's CHANGELOG (repositories in `shared/live-sources.md`), except Python 0.x to 1.x, below. Don't improvise from the Python guide. Python 0.x to 1.x (the user's choice, or where `shared/api-version-migration.md` sends you): **read `python/claude-api/sdk-upgrade.md` immediately** and follow it in order: Step 0 (confirm scope, then establish the current and target versions - a published 1.x must exist before you write a pin), the Step 1 inventory, each numbered section, then verification and the report. Do not summarize the guide - execute it. This is not model migration - to move code to a newer Claude model, use `migrate`. |
 | `api-version` | Move code to a newer API version (`anthropic-version` header). **Read `shared/api-version-migration.md` immediately** and follow it in order. |
 | `cost-optimize` | Reduce what existing Claude API code costs to run, without sacrificing output quality. **Read `shared/cost-optimization.md` immediately** and follow it in order: Step 0 (establish scope, quality bar, and baseline), the token profile - measured through the Usage and Cost Admin API when the user has an Admin API key, from the app's own `response.usage` logs when it has those (ask), or estimated from the code otherwise - then a savings-ranked shortlist of levers (quoted in dollars, % of bill, or relative buckets depending on which of those data sources you have), free wins (caching, input-token hygiene, loop hygiene, output-token hygiene, batch) before tradeoffs (budgets, effort, model choice, multi-model); any lever that earns a place becomes its own diff - proposed by default, applied and measured against the eval covering the traffic it touches when the user asks and approves - and "no changes recommended" is a valid outcome. Two standing rules: every run that exercises the model spends real money, so get the user's approval first; and when context for a lever is missing, work through it interactively with the user - this workflow is not expected to one-shot the audit. Do not summarize the guide - execute it; presenting the profile and the ranked plan to the user is part of executing it. |
+| `latency-optimize` | Reduce how long existing Claude API code makes people wait, without giving up output quality. **Read `shared/latency-optimization.md` immediately.** Words after the subcommand are the user's request: start from them and from what the repository shows - answer a question, try the change they named, or find where the time goes and propose a few changes. The guide says when to open its reference files and `shared/latency-optimization/latency_probe.py`. No change counts as a win without the eval, nothing billed runs without the user's yes, and "no changes recommended" is a valid outcome. |
 | `build-eval` | Help the user build an eval set for their Claude-powered app. **Read `shared/evals/build-eval.md` immediately** and run its interview: Step 0 (what's being evaluated), Step 1 (source the prompts - existing eval / transcripts / synthesized), Step 2 (grading method), Step 3 (runnable script + measured cost). Get the user's explicit sign-off on the inputs, the grading method, and the cost before producing the eval. |
 | `preserved-thinking-migration` | Make an existing integration compatible with preserved thinking - the check that keeps a thinking block valid only in the conversation that produced it. **Read `shared/preserved-thinking-migration.md` immediately** and follow it in order: Step 0 (scope, traffic classes, platform and model, enforcement status, quality bar, baseline), Step 0.5 (prove the check is running with the three-request self-test), Step 1 (capture request bodies, diff consecutive pairs with `shared/preserved-thinking-migration/prefix_diff.py`, scan the code for the causes, name each edit and whether it is deliberate), Step 2 (replay a test slice with `prefix_mismatch_behavior: "drop_block"` under the `thinking-binding-controls-2026-08-01` header, count new dropped blocks per conversation, read the diagnosis header when present), Step 3 (one cause per diff in order of reasoning lost - proposed by default, applied when the user asks - then re-measure, keep or revert; the three-arm protocol when an eval exists), the model-switch section (in `shared/preserved-thinking-migration/causes.md`, with the cause table and the keep list) when the harness routes between models, Step 4 (the break profile and the changes). Two standing rules: every replay spends real money, so get the user's approval for the measurement budget first; and "no changes recommended" - the slice replayed thinking and nothing was dropped - is a valid outcome. Causes that have an append-only form only under a newer beta (keep-tail and background compaction: `compact-2026-09-04`; same-name tool changes: `inline-tools-2026-09-15`) are, where that beta is not available, measured and decided, not rewritten. For the *why* (the three-step check, the append-only edit table) it chains to `shared/model-migration.md` -> Breaking change 3; do not summarize the guide - execute it. |
 | `hillclimb` | Iteratively improve the user's app against an existing eval. **Read `shared/evals/eval-hillclimb.md` immediately** and follow it: Step 0 (confirm a runnable eval exists - if not, route to `build-eval`), Step 1 (what to change / what's off-limits), Step 2 (budget + stopping condition from measured per-run cost), get the plan approved, then the read->propose->apply->run->record loop with on-disk state and a train/validation/test split. |
@@ -446,7 +448,5 @@ Use the **Mantle** client (Messages-API Bedrock endpoint). Bedrock model IDs tak
 | Ruby | `Anthropic::BedrockMantleClient.new(aws_region: "...")` |
 
 `AnthropicBedrock` / `BedrockClient` / `BedrockBackend` (without `Mantle`) are the legacy `bedrock-runtime` InvokeModel path - prefer the Mantle client for new code.
-
-**Older models on Bedrock:** the SDK releases under `shared/api-version-migration.md` -> Set the version, and later ones, send API version `2026-10-21` through their Bedrock clients too, and Bedrock accepts it only for Claude 4.7 and later. For a model listed at `https://platform.claude.com/docs/en/build-with-claude/claude-on-amazon-bedrock-legacy`, keep the SDK below that release and pin it, along with its separate Bedrock package if it has one (`@anthropic-ai/bedrock-sdk` and `Anthropic.Bedrock` below 1.0.0, `anthropic-java-bedrock` below 3.0.0); in a new project, use the majors before those releases. A hand-built request keeps the version it sends today.
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/asgeirtj/system_prompts_leaks)).*

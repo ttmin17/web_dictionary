@@ -16,10 +16,10 @@ tags:
   - claude-code-skills
   - codex
 status: active
-quality_percentile: 56
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ljagiello/ctf-skills
@@ -27,19 +27,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3601
-  last_commit: 2026-10-30T16:48:55Z
-  stars_delta_7d: 71
-  stars_growth_pct: 2
-  trending_score: 72.43
-  rank_current: 95
-  rank_delta: 2
-  velocity_source: snapshot_delta
+  stars: 3664
+  last_commit: 2026-11-06T18:44:31Z
+  stars_delta_7d: 89
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
-    - 3437
     - 3475
     - 3530
-    - 3601
+    - 3664
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +44,7 @@ readme_source:
   repo: ljagiello/ctf-skills
   path: ctf-ai-ml/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:52.136Z
+  fetched_at: 2026-11-09T09:28:09.061Z
   truncated: false
 type: agent_skill
 skill:

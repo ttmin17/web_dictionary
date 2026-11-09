@@ -18,25 +18,26 @@ status: active
 quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: infobyte/faraday
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 6841
+  stars: 6847
   last_commit: 2026-10-29T20:25:25Z
-  stars_delta_7d: 20
-  stars_growth_pct: 0.3
-  trending_score: 20.06
-  rank_current: 114
-  rank_delta: -10
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6.01
+  rank_current: 106
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6803
     - 6821
     - 6841
+    - 6847
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: infobyte/faraday
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:13:44.736Z
+  fetched_at: 2026-11-09T09:28:28.336Z
   truncated: false
 type: agent_tool
 tool:

@@ -15,29 +15,29 @@ tags:
   - ghidra-extension
   - java
 status: active
-quality_percentile: 72
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2025-08-30T06:40:03
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: bethington/ghidra-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6126
-  last_commit: 2026-11-02T06:31:05Z
-  stars_delta_7d: 216
-  stars_growth_pct: 3.7
-  trending_score: 223.89
-  rank_current: 15
-  rank_delta: 1
+  stars: 6173
+  last_commit: 2026-11-08T08:31:41Z
+  stars_delta_7d: 47
+  stars_growth_pct: 0.8
+  trending_score: 47.36
+  rank_current: 20
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5559
     - 5782
     - 5910
     - 6126
+    - 6173
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: bethington/ghidra-mcp
   path: README.md
   branch: dev
-  fetched_at: 2026-11-05T13:11:43.349Z
+  fetched_at: 2026-11-09T09:26:52.333Z
   truncated: true
 type: mcp_server
 launch:
@@ -72,8 +72,8 @@ Every [release](https://github.com/bethington/ghidra-mcp/releases) ships the two
 pieces you need: the Ghidra extension (`GhidraMCP-<version>.zip`) and the MCP
 bridge (`ghidra_mcp_bridge-<version>-py3-none-any.whl`).
 
-1. **Install the prerequisites:** [Ghidra 12.1.4](https://github.com/NationalSecurityAgency/ghidra/releases),
-   Java 21 and [uv](https://docs.astral.sh/uv/getting-started/installation/).
+1. **Install the prerequisites:** [Ghidra 12.2](https://github.com/NationalSecurityAgency/ghidra/releases),
+   Java 25 and [uv](https://docs.astral.sh/uv/getting-started/installation/).
    The extension only loads in the exact Ghidra version it was built for.
 2. **Install the extension:** in Ghidra's project window, **File > Install
    Extensions**, click **+**, pick the `GhidraMCP-<version>.zip` you downloaded,
@@ -203,16 +203,27 @@ for you.
 
 ### Prerequisites
 
-- **Java 21 LTS** (OpenJDK recommended)
+- **Java 25 LTS** (OpenJDK recommended)
 - **Apache Maven 3.9+** for the `python -m tools.setup` commands below (Maven is their default backend). Not needed if you build with the committed Gradle wrapper instead — see step 6
-- **Ghidra 12.1.4** (or compatible version)
+- **Ghidra 12.2** (or compatible version)
 - **Python 3.10+** with [uv](https://docs.astral.sh/uv/) (recommended) or pip + venv
 
-> Shared Ghidra Server users: Ghidra 12.1.4 clients require a Ghidra
-> Server at 12.1, 12.0.5, or a newer compatible version. Upgrade the
-> server before using this plugin from a 12.1 client.
+> Shared Ghidra Server users: Ghidra 12.2 clients enforce TLS server
+> authentication on every connection, loopback included, so the server's
+> certificate must be trusted (**Edit > Manage Certificates...** on Windows
+> and macOS). A server previously refused on the Server Allow List stays
+> refused, including for headless `ghidra://` runs, until it is changed with
+> `support/updateServerAllowList`. See Ghidra's `WhatsNew` before upgrading a
+> shared deployment.
 >
-> Ghidra 12.1.4 ships Jython as an optional extension. Java scripts work
+> Programs saved by 12.2 may not open in an earlier Ghidra. Programs from an
+> earlier Ghidra open read-only until upgraded, because 12.2 raises the program
+> database version. With Ghidra closed and a backup taken, upgrade a project with
+> `support/analyzeHeadless <project_dir> <project_name> -process '*' -recursive -noanalysis`.
+> Add `-connect <user> -p` for a shared project. Without `-commit`, nothing is
+> committed to the server, but unmodified checkouts become modified.
+>
+> Ghidra 12.2 ships Jython as an optional extension. Java scripts work
 > by default, but `.py` scripts in `ghidra_scripts/` require installing
 > the Jython extension from **File > Install Extensions** and restarting
 > Ghidra.
@@ -234,15 +245,15 @@ for you.
 2. **Recommended: run environment preflight first:**
 
    ```text
-   python -m tools.setup preflight --ghidra-path "F:\ghidra_12.1.4_PUBLIC"
+   python -m tools.setup preflight --ghidra-path "F:\ghidra_12.2_PUBLIC"
    ```
 
 3. **Build and deploy to Ghidra:**
 
    ```text
-   python -m tools.setup ensure-prereqs --ghidra-path "F:\ghidra_12.1.4_PUBLIC"
+   python -m tools.setup ensure-prereqs --ghidra-path "F:\ghidra_12.2_PUBLIC"
    python -m tools.setup build
-   python -m tools.setup deploy --ghidra-path "F:\ghidra_12.1.4_PUBLIC"
+   python -m tools.setup deploy --ghidra-path "F:\ghidra_12.2_PUBLIC"
    ```
 
    `deploy` saves/closes an already-running matching Ghidra instance when
@@ -258,7 +269,7 @@ for you.
    ```text
    # Skip automatic prerequisite setup
    python -m tools.setup build
-   python -m tools.setup deploy --ghidra-path "F:\ghidra_12.1.4_PUBLIC"
+   python -m tools.setup deploy --ghidra-path "F:\ghidra_12.2_PUBLIC"
    ```
 
 5. **Show command help**:
@@ -328,15 +339,15 @@ for you.
 3. **Run environment preflight:**
 
    ```bash
-   python -m tools.setup preflight --ghidra-path ~/ghidra_12.1.4_PUBLIC
+   python -m tools.setup preflight --ghidra-path ~/ghidra_12.2_PUBLIC
    ```
 
 4. **Build and deploy to Ghidra (single command):**
 
    ```bash
-   python -m tools.setup ensure-prereqs --ghidra-path ~/ghidra_12.1.4_PUBLIC
+   python -m tools.setup ensure-prereqs --ghidra-path ~/ghidra_12.2_PUBLIC
    python -m tools.setup build
-   python -m tools.setup deploy --ghidra-path ~/ghidra_12.1.4_PUBLIC
+   python -m tools.setup deploy --ghidra-path ~/ghidra_12.2_PUBLIC
    ```
 
    This will:
@@ -349,7 +360,7 @@ for you.
 5. **Optional: setup only Maven dependencies:**
 
    ```bash
-   python -m tools.setup install-ghidra-deps --ghidra-path ~/ghidra_12.1.4_PUBLIC
+   python -m tools.setup install-ghidra-deps --ghidra-path ~/ghidra_12.2_PUBLIC
    ```
 
 6. **Show command help:**
@@ -393,7 +404,7 @@ for you.
        --ghidra-path /opt/homebrew/opt/ghidra/libexec
    ```
 
-   The extension is installed to `~/Library/ghidra/ghidra_12.1.4_PUBLIC/Extensions/GhidraMCP/`.
+   The extension is installed to `~/Library/ghidra/ghidra_12.2_PUBLIC/Extensions/GhidraMCP/`.
 
    > **Note:** the Homebrew path contains no version string, so `tools.setup` reads the Ghidra version from `Ghidra/application.properties` inside the installation instead.
 
@@ -806,9 +817,11 @@ The headless server serves only its Unix domain socket unless `--port` or
 
 When connecting to a shared Ghidra Server, GhidraMCP can suppress the password dialog automatically. It resolves credentials in this order (first non-empty value wins):
 
-Compatibility note: Ghidra 12.1.4 clients require Ghidra Server 12.1.2,
-12.0.5, or a newer compatible server. Older shared servers are not safe
-targets for a 12.1 client upgrade.
+Compatibility note: Ghidra 12.2 clients require Ghidra Server 12.1, 12.0.5,
+or a newer compatible server, and refuse a server whose TLS certificate they
+do not trust. Import a self-signed server's certificate on each client with
+**Edit > Manage Certificates...**, and on the server side note that a 12.2
+server with no `ghidra.keystore` listens on loopback only.
 
 1. `GHIDRA_SERVER_PASSWORD` environment variable (or `.env` file in the Ghidra install directory or `~`)
 2. `~/.ghidra-cred` — single-line password file in your home directory
@@ -965,7 +978,7 @@ again even with a URL configured.
 
 ### Python Ghidra scripts fail with "No script provider found"
 
-**Cause:** In Ghidra 12.1.4, Jython support is no longer enabled by
+**Cause:** In Ghidra 12.2, Jython support is no longer enabled by
 default. `.py` scripts need the bundled Jython extension; Python 3
 scripts should use PyGhidra instead of the Ghidra Script Manager.
 
@@ -981,7 +994,7 @@ scripts should use PyGhidra instead of the Ghidra Script Manager.
 
 **Solution:**
 
-1. Manual install location: `~/.config/ghidra/ghidra_12.1.4_PUBLIC/Extensions/GhidraMCP/lib/GhidraMCP.jar`
+1. Manual install location: `~/.config/ghidra/ghidra_12.2_PUBLIC/Extensions/GhidraMCP/lib/GhidraMCP.jar`
    (`%APPDATA%\ghidra\...` on Windows, `~/Library/ghidra/...` on macOS)
 2. Or use: **File > Install Extensions > Add** and select the ZIP file — see the
    [illustrated guide](https://github.com/bethington/ghidra-mcp/blob/dev/docs/INSTALL_GUI.md)
@@ -995,7 +1008,7 @@ scripts should use PyGhidra instead of the Ghidra Script Manager.
 
 ```text
 # Windows (recommended)
-python -m tools.setup install-ghidra-deps --ghidra-path "C:\ghidra_12.1.4_PUBLIC"
+python -m tools.setup install-ghidra-deps --ghidra-path "C:\ghidra_12.2_PUBLIC"
 ```
 
 Under Gradle, a wall of `package ghidra.program.model.address does not exist`
@@ -1208,13 +1221,5 @@ Available on the standalone headless server (`GhidraMCPHeadlessServer`).
 - `run_analysis` - Run auto-analysis on the current program
 - `search_byte_patterns` - Search for byte patterns
 - `search_instructions` - Search for instructions by mnemonic and/or operand substring
-
-### Malware & Anti-Analysis
-
-- `analyze_api_call_chains` - Analyze API call chains
-- `detect_crypto_constants` - Detect crypto constants
-- `detect_malware_behaviors` - Detect malware behaviors
-- `extract_iocs_with_context` - Extract IOCs with context
-- `find_anti_analysis_techniques` - Find anti-analysis techniques
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/bethington/ghidra-mcp)).*

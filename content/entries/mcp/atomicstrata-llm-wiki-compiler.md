@@ -13,29 +13,29 @@ tags:
   - cli
   - compiler
 status: active
-quality_percentile: 66
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: atomicstrata/llm-wiki-compiler
   official_vendor: false
   license: MIT
 signals:
-  stars: 2239
+  stars: 2246
   last_commit: 2026-10-30T23:58:21Z
-  stars_delta_7d: 24
-  stars_growth_pct: 1.1
-  trending_score: 24.26
-  rank_current: 67
-  rank_delta: -6
+  stars_delta_7d: 7
+  stars_growth_pct: 0.3
+  trending_score: 7.02
+  rank_current: 74
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2180
     - 2197
     - 2215
     - 2239
+    - 2246
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: atomicstrata/llm-wiki-compiler
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:49.509Z
+  fetched_at: 2026-11-09T09:26:59.687Z
   truncated: false
 type: mcp_server
 launch:

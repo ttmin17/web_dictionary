@@ -16,7 +16,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,13 +25,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -40,7 +41,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-3d/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.596Z
+  fetched_at: 2026-11-09T09:28:07.052Z
   truncated: false
 type: agent_skill
 skill:
@@ -359,6 +360,11 @@ You will often *have* to. A `Container` has `autoDepth: true` by default, so
 index** — a real world depth in a 3D scene, and never the one you wanted. Pass
 it (`world.addChild(mesh, z)`), or set `mesh.depth` afterwards. The glTF
 importer turns `autoDepth` off on the container it loads into for this reason.
+
+A `Container`'s depth carries to its children when they are drawn, as it
+already did for culling and the sort: a group at depth 400 draws its sprites
+and meshes 400 units further away. One more reason to give containers an
+explicit z.
 
 **`floating` does not opt out of this sort.** It skips the camera *transform*,
 not the depth *order*. A floating child is ordered by `|pos.z|` alone — its
@@ -1089,7 +1095,9 @@ level.load("diorama", {
 An **animated** asset instantiates as a `GLTFModel`, which is a game object as
 much as a scene: construct it straight from the parsed descriptor, and place it
 with `pos` / `depth` / `rotate` / `scale` like any other renderable — the
-placement drives the whole rig and composes with the playing clip.
+placement drives the whole rig and composes with the playing clip, and still
+applies while the clip is paused, finished or was never played. `scale()`
+multiplies the `scale` option it was built with.
 
 ```js
 const model = new GLTFModel(loader.getGLTF("boat"), { scale: 40, lit: false });
@@ -1138,6 +1146,11 @@ To branch rather than fail, read `app.renderer.supportsDepthBuffer` after
 | symptom | cause |
 |---|---|
 | scene lit from underneath | `direction` Y sign — this is Y-down, so a sun overhead is **+Y** |
+| `model.scale(2)` throws "not a function" on a `GLTFModel` (before 20.14) | the `scale` option hid the method: update |
+| a `GLTFModel` ignores `pos` / `rotate` once its clip is paused or finished (before 20.14) | it was only re-posed while a clip played: update |
+| a sprite or mesh in a container draws too near under `Camera3d`, and pops in and out at the wrong time (before 20.14) | the container's depth was used to cull and sort its children but not to draw them: update |
+| a lit mesh inside a moved or turned container is lit as if the container were at the origin (before 20.14) | lights were not taken into the container's frame: update. Under a *scaled* container, a point light's range is measured in the container's units |
+| objects at the screen edge pop in a frame late while the camera turns, or a camera cut shows one empty frame (before 20.14) | culling used the camera as it was at the last `camera.update()`: update |
 | a `lit` mesh renders fullbright | it had no normals — supply them, or let the engine generate them |
 | a gradient across one mesh is impossible | `tint` is per object — use `vertexColors` / `setVertexColor` |
 | a mesh stays solid as you fade it out | meshes render opaque; only `alpha` 0 (hidden) and 1 differ |

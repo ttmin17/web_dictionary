@@ -18,7 +18,7 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: google/elephant-goldfish-model
@@ -26,14 +26,15 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 12110
-  last_commit: 2026-11-04T20:36:04Z
-  stars_delta_7d: 1591
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 15688
+  last_commit: 2026-11-09T02:35:53Z
+  stars_delta_7d: 3578
+  stars_growth_pct: 29.5
+  trending_score: 4635.15
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 12110
+    - 15688
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: google/elephant-goldfish-model
   path: distributions/claude/skills/egm-drift-report/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.760Z
+  fetched_at: 2026-11-09T09:27:43.649Z
   truncated: false
 type: agent_skill
 skill:

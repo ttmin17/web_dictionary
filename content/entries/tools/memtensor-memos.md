@@ -16,25 +16,26 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: MemTensor/MemOS
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12263
-  last_commit: 2026-11-04T06:42:18Z
-  stars_delta_7d: 167
-  stars_growth_pct: 1.4
-  trending_score: 169.31
-  rank_current: 54
-  rank_delta: -13
+  stars: 12332
+  last_commit: 2026-11-07T16:48:42Z
+  stars_delta_7d: 69
+  stars_growth_pct: 0.6
+  trending_score: 69.39
+  rank_current: 47
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11926
     - 12096
     - 12263
+    - 12332
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: MemTensor/MemOS
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:33.063Z
+  fetched_at: 2026-11-09T09:28:19.201Z
   truncated: false
 type: agent_tool
 tool:

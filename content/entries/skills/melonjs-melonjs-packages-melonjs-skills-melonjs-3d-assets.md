@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -27,13 +27,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -42,7 +43,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-3d-assets/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.595Z
+  fetched_at: 2026-11-09T09:28:07.051Z
   truncated: false
 type: agent_skill
 skill:
@@ -326,7 +327,9 @@ clip name the asset does not define — check `getAnimationNames()` first.
 
 A `GLTFModel` is placed like any other renderable — `pos`, `depth`, `rotate`
 and `scale` move the **whole rig**, and compose with whatever the active clip
-is doing, so a walk cycle plays wherever the character stands:
+is doing, so a walk cycle plays wherever the character stands. They apply just
+the same while the clip is paused, finished or was never played, and `scale()`
+multiplies the `scale` option the model was built with:
 
 ```js
 const boat = new me.GLTFModel(me.loader.getGLTF("boat"), { scale: 40, lit: false });

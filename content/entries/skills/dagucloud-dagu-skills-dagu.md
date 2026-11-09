@@ -18,7 +18,7 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2022-04-22T13:00:42
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: dagucloud/dagu
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 4549
-  last_commit: 2026-11-05T13:07:30Z
-  stars_delta_7d: 104
-  stars_growth_pct: 2.3
-  trending_score: 106.43
-  rank_current: 93
-  rank_delta: 2
+  stars: 4568
+  last_commit: 2026-11-09T02:09:09Z
+  stars_delta_7d: 19
+  stars_growth_pct: 0.4
+  trending_score: 19.08
+  rank_current: 109
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4341
     - 4383
     - 4445
     - 4549
+    - 4568
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: dagucloud/dagu
   path: skills/dagu/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.002Z
+  fetched_at: 2026-11-09T09:26:53.552Z
   truncated: false
 type: agent_skill
 skill:

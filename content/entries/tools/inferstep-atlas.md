@@ -14,22 +14,25 @@ status: active
 quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: inferstep/ATLAS
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2110
-  last_commit: 2026-11-05T06:10:57Z
-  stars_delta_7d: 53
+  stars: 2111
+  last_commit: 2026-11-09T08:42:21Z
+  stars_delta_7d: 1
   stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  trending_score: 1
+  rank_current: 131
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 2108
     - 2110
+    - 2111
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +41,7 @@ readme_source:
   repo: inferstep/ATLAS
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:40.143Z
+  fetched_at: 2026-11-09T09:28:24.039Z
   truncated: false
 type: agent_tool
 tool:

@@ -13,28 +13,29 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 42
+quality_percentile: 46
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: CoderLuii/HolyClaude
   official_vendor: false
   license: MIT
 signals:
-  stars: 2615
-  last_commit: 2026-11-01T09:56:23Z
-  stars_delta_7d: 22
-  stars_growth_pct: 0.8
-  trending_score: 22.19
-  rank_current: 111
-  rank_delta: 8
+  stars: 2640
+  last_commit: 2026-11-08T09:52:38Z
+  stars_delta_7d: 25
+  stars_growth_pct: 1
+  trending_score: 25.24
+  rank_current: 78
+  rank_delta: 33
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2584
     - 2593
     - 2615
+    - 2640
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: CoderLuii/HolyClaude
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:13:40.410Z
+  fetched_at: 2026-11-09T09:28:24.106Z
   truncated: true
 type: agent_tool
 tool:
@@ -97,7 +98,7 @@ One command. Full AI development workstation. Claude Code, web UI, headless brow
 
 You know the drill. You want Claude Code. But you also want it in a browser. With a headless browser for screenshots and testing. With Playwright configured. With every AI CLI. With TypeScript, Python, deployment tools, database clients, GitHub CLI.
 
-v1.6.8 updates the bundled AI CLIs and developer tools using official upstream releases. Debian Chromium is 156.0.8078.47 for AMD64 and ARM64. The Docker client remains an opt-in Full-derived recipe; stock images still ship without it. See the [deferred replacements](https://raw.githubusercontent.com/CoderLuii/HolyClaude/master/docs/official-dependency-updates.md) for integrations that still need an equivalent official release.
+v1.6.9 updates the bundled AI CLIs and developer tools using official upstream releases. Node and Python Playwright are aligned at 1.64.1, with Debian Chromium 156.0.8078.79 for AMD64 and ARM64. The Docker client remains an opt-in Full-derived recipe; stock images still ship without it. See the [deferred replacements](https://raw.githubusercontent.com/CoderLuii/HolyClaude/master/docs/official-dependency-updates.md) for integrations that still need an equivalent official release.
 
 > [!WARNING]
 > Dependency scans still run. Accepted upstream vulnerabilities remain listed with their installed versions, raw severity and available fixes; acceptance does not mean fixed. Retained modified third-party artifacts are identified separately from official releases. HolyClaude source checks, artifact integrity and runtime tests still block delivery. See the [dependency policy](https://github.com/CoderLuii/HolyClaude/blob/master/security/upstream-dependency-policy.json) and the release's scan evidence before deploying.
@@ -107,8 +108,6 @@ Release-sensitive facts are also published in [`contracts/product-facts.json`](h
 So you start installing things. One by one. Then Chromium won't launch because Docker's shared memory is 64MB. Then Xvfb isn't configured. Then the UID inside the container doesn't match your host and everything is permission denied. Then you realize Claude Code's installer hangs when WORKDIR is root-owned. Then SQLite locks on your NAS mount. Then—
 
 **HolyClaude is the container I built after solving every single one of those problems.**
-
-I've been running this daily on my own server for weeks. Every bug has been hit, diagnosed, and fixed. Every edge case has been handled. Every "why doesn't this work in Docker" has been answered.
 
 You pull it. You run it. You open your browser. You build.
 
@@ -226,7 +225,7 @@ http://localhost:3001
 
 I built this because I was tired of re-doing the same setup every time. Installing Claude Code, wiring up a web UI, configuring Chromium in Docker, fixing permission issues, debugging process supervision. Every time.
 
-So I made a container that does all of it. And then I hit every possible bug so you don't have to.
+HolyClaude bundles those tools in one Docker image.
 
 | | HolyClaude | Doing it yourself |
 |---|---|---|
@@ -241,7 +240,7 @@ So I made a container that does all of it. And then I hit every possible bug so 
 | **Updates** | `docker compose pull && docker compose up -d` | Update 50 tools manually, pray nothing breaks |
 | **Multi-arch** | AMD64 + ARM64 | Pray your Dockerfile builds on ARM |
 
-**The last row of every manual setup is "works on my machine."** HolyClaude works on every machine.
+Images are available for Linux AMD64 and ARM64.
 
 <p align="right">
   <a href="#top">↑ back to top</a>
@@ -294,7 +293,7 @@ Two flavors. Same quality. Pick your weight class.
 
 | Tag | What you get | Best for | Docker Hub compressed size |
 |-----|-------------|----------|----------------------------|
-| **`latest`** | Everything pre-installed — every tool, every library, every CLI | Most users. Zero wait time. Claude never has to stop and install something. | [Check by architecture](https://hub.docker.com/r/coderluii/holyclaude/tags?name=latest) |
+| **`latest`** | Full toolset listed below | Extra agents and specialist tools | [Check by architecture](https://hub.docker.com/r/coderluii/holyclaude/tags?name=latest) |
 | **`slim`** | Core tools only — Claude installs extras on-demand | Smaller VPS, limited disk, metered bandwidth | [Check by architecture](https://hub.docker.com/r/coderluii/holyclaude/tags?name=slim) |
 | `X.Y.Z` | Full image, pinned version | Production stability — you control when to update | Same as `latest` for that release |
 | `X.Y.Z-slim` | Slim image, pinned version | Production + small footprint | Same as `slim` for that release |
@@ -639,7 +638,7 @@ This is not a minimal container. This is an entire development workstation.
 | `pyyaml`, `python-dotenv` | Config file parsing |
 | `rich`, `click`, `tqdm` | Beautiful CLIs and progress bars |
 | `desloppify`, `bandit`, `tree-sitter` | Code-quality scans, Python security checks, parser-backed code analysis |
-| `playwright` | Browser automation (Python and Node 1.64.0 are baked into both images) |
+| `playwright` | Browser automation (Python and Node 1.64.1 are baked into both images) |
 | `pytest`, `pytest-asyncio`, `flake8` | Python tests, async tests, and linting |
 | `aiomqtt`, `aiohttp` | Async MQTT and HTTP clients |
 
@@ -671,9 +670,9 @@ This is not a minimal container. This is an entire development workstation.
 
 | CLI | Command | Version | What it's for |
 |-----|---------|---------|---------------|
-| **Claude Code** | `claude` | 2.1.307 | The main event — you're running inside this |
-| **Gemini CLI** | `gemini` | 0.65.0 | Google's AI coding agent |
-| **OpenAI Codex** | `codex` | 0.163.0 | OpenAI's coding agent |
+| **Claude Code** | `claude` | 2.1.318 | The main event — you're running inside this |
+| **Gemini CLI** | `gemini` | 0.67.0 | Google's AI coding agent |
+| **OpenAI Codex** | `codex` | 0.166.0 | OpenAI's coding agent |
 | **Cursor** | `cursor` | `2026.09.15-d2fe57e` | Cursor's AI agent |
 | **TaskMaster AI** | `task-master` | 0.43.1 | Task planning and orchestration |
 
@@ -690,8 +689,8 @@ The full image includes everything above, plus:
 
 | CLI | Command | Version | What it's for |
 |-----|---------|---------|---------------|
-| **Junie** | `junie` | 3888.1 | JetBrains' AI coding agent |
-| **OpenCode** | `opencode` | 1.19.3 | Open source AI agent (OpenRouter and other providers) |
+| **Junie** | `junie` | 4011.1 | JetBrains' AI coding agent |
+| **OpenCode** | `opencode` | 1.19.5 | Open source AI agent (OpenRouter and other providers) |
 | **Pi Coding Agent** | `pi` | 0.85.1 | Minimal agent harness (multiple providers) |
 
 </details>

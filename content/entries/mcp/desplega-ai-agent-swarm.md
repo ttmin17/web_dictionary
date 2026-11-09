@@ -12,24 +12,27 @@ tags:
   - agent-runtime
   - agent-swarm
 status: active
-quality_percentile: 32
+quality_percentile: 35
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: desplega-ai/agent-swarm
   official_vendor: false
   license: MIT
 signals:
-  stars: 1008
-  last_commit: 2026-11-05T13:02:30Z
+  stars: 1030
+  last_commit: 2026-11-09T09:14:59Z
   stars_delta_7d: 22
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_growth_pct: 2.2
+  trending_score: 22.48
+  rank_current: 42
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1008
+    - 1030
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +41,7 @@ readme_source:
   repo: desplega-ai/agent-swarm
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.454Z
+  fetched_at: 2026-11-09T09:28:27.799Z
   truncated: false
 type: mcp_server
 launch:

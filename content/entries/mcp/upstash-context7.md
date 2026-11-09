@@ -13,26 +13,26 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: upstash/context7
   official_vendor: false
   license: MIT
 signals:
-  stars: 64230
-  last_commit: 2026-11-05T12:24:38Z
-  stars_delta_7d: 538
-  stars_growth_pct: 0.8
-  trending_score: 542.54
+  stars: 64402
+  last_commit: 2026-11-09T08:28:16Z
+  stars_delta_7d: 172
+  stars_growth_pct: 0.3
+  trending_score: 172.46
   rank_current: 9
-  rank_delta: -3
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 62986
     - 63272
     - 63692
     - 64230
+    - 64402
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: upstash/context7
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:11:27.557Z
+  fetched_at: 2026-11-09T09:26:42.607Z
   truncated: false
 type: mcp_server
 launch:
@@ -98,7 +98,7 @@ Works in two modes:
 ## Installation
 
 > [!NOTE]
-> **API Key Recommended**: Get a free API key at [context7.com/dashboard](https://context7.com/dashboard) for higher rate limits.
+> **API Key Recommended**: Get a free API key at [context7.com/dashboard](https://context7.com/dashboard?tab=settings) for higher rate limits.
 
 Set up Context7 for your coding agents with a single command. The `ctx7` CLI requires Node.js 22.13 or newer.
 

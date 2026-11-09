@@ -14,29 +14,29 @@ tags:
   - claude
   - claude-ai
 status: active
-quality_percentile: 72
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: bytebase/dbhub
   official_vendor: false
   license: MIT
 signals:
-  stars: 3791
-  last_commit: 2026-11-03T06:59:40Z
-  stars_delta_7d: 70
-  stars_growth_pct: 1.9
-  trending_score: 71.32
-  rank_current: 84
-  rank_delta: -3
+  stars: 3814
+  last_commit: 2026-11-09T06:43:35Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.6
+  trending_score: 23.14
+  rank_current: 81
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3639
     - 3676
     - 3721
     - 3791
+    - 3814
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: bytebase/dbhub
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.748Z
+  fetched_at: 2026-11-09T09:26:55.241Z
   truncated: false
 type: agent_tool
 tool:

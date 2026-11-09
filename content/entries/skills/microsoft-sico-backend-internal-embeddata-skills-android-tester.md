@@ -14,10 +14,10 @@ tags:
   - agent-management
   - agent-platform
 status: active
-quality_percentile: 59
+quality_percentile: 60
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: microsoft/Sico
@@ -26,16 +26,17 @@ source:
   license: MIT
 signals:
   stars: 284
-  last_commit: 2026-10-31T01:31:52Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.7
-  trending_score: 2.01
-  rank_current: 132
-  rank_delta: 8
+  last_commit: 2026-11-05T23:12:10Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 141
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 283
     - 282
+    - 284
     - 284
 language: en
 needs_keys: false
@@ -44,7 +45,7 @@ readme_source:
   repo: microsoft/Sico
   path: backend/internal/embeddata/skills/android-tester/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.863Z
+  fetched_at: 2026-11-09T09:28:42.891Z
   truncated: false
 type: agent_skill
 skill:

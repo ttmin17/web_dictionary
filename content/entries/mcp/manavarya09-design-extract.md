@@ -16,26 +16,26 @@ status: active
 quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Manavarya09/design-extract
   official_vendor: false
   license: MIT
 signals:
-  stars: 4739
+  stars: 4967
   last_commit: 2026-11-05T08:50:20Z
-  stars_delta_7d: 362
-  stars_growth_pct: 8.3
-  trending_score: 391.94
-  rank_current: 10
-  rank_delta: 8
+  stars_delta_7d: 228
+  stars_growth_pct: 4.8
+  trending_score: 238.97
+  rank_current: 6
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4229
     - 4259
     - 4377
     - 4739
+    - 4967
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: Manavarya09/design-extract
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.575Z
+  fetched_at: 2026-11-09T09:26:53.508Z
   truncated: false
 type: mcp_server
 launch:

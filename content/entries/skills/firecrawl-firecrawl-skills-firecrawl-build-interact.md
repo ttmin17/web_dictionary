@@ -17,7 +17,7 @@ status: active
 quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: firecrawl/firecrawl
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 197788
-  last_commit: 2026-11-02T07:37:49Z
-  stars_delta_7d: 2377
-  stars_growth_pct: 1.2
-  trending_score: 2405.91
-  rank_current: 14
-  rank_delta: -2
+  stars: 199930
+  last_commit: 2026-11-09T07:08:31Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 135
+  rank_delta: -101
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7593
     - 192877
     - 195411
-    - 197788
+    - 7765
+    - 199930
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: firecrawl/firecrawl
   path: skills/firecrawl-build-interact/SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:50.793Z
+  fetched_at: 2026-11-09T09:28:07.943Z
   truncated: false
 type: agent_skill
 skill:

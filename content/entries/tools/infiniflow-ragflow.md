@@ -14,28 +14,29 @@ tags:
   - agentic-ai
   - agentic-retrieval
 status: active
-quality_percentile: 75
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: infiniflow/ragflow
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 93584
-  last_commit: 2026-11-05T12:52:34Z
-  stars_delta_7d: 705
-  stars_growth_pct: 0.8
-  trending_score: 710.35
-  rank_current: 20
+  stars: 93820
+  last_commit: 2026-11-09T09:15:45Z
+  stars_delta_7d: 236
+  stars_growth_pct: 0.3
+  trending_score: 236.6
+  rank_current: 19
   rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 92449
     - 92879
     - 93584
+    - 93820
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: infiniflow/ragflow
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:18.874Z
+  fetched_at: 2026-11-09T09:28:11.134Z
   truncated: false
 type: agent_tool
 tool:
@@ -245,10 +246,10 @@ Local deployment supports both Docker deployment and launching from source. Dock
    cd ragflow/docker
    ```
 
-   Check out the `v1.0.0-rc3` release tag.
+   Check out the `v1.0.0` release tag.
 
    ```bash
-   git checkout v1.0.0-rc3
+   git checkout v1.0.0
    ```
 
    Start the RAGFlow services and their dependencies.

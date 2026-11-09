@@ -17,26 +17,26 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: NVIDIA/SkillSpector
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 24436
-  last_commit: 2026-11-04T22:40:16Z
-  stars_delta_7d: 2789
-  stars_growth_pct: 12.9
-  trending_score: 3148.33
-  rank_current: 11
-  rank_delta: 3
+  stars: 24966
+  last_commit: 2026-11-06T23:27:22Z
+  stars_delta_7d: 530
+  stars_growth_pct: 2.2
+  trending_score: 541.5
+  rank_current: 10
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 20114
     - 20514
     - 21647
     - 24436
+    - 24966
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: NVIDIA/SkillSpector
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:37.472Z
+  fetched_at: 2026-11-09T09:27:34.055Z
   truncated: true
 type: agent_tool
 tool:
@@ -81,6 +81,7 @@ SkillSpector is part of the [NVIDIA Verified Skills pipeline](https://docs.nvidi
 
 - **[Scan agent skills before installation](https://docs.nvidia.com/skills/scanning-agent-skills)** — Hosted guide: when to scan, how to read a report, and how to gate installs.
 - **[Development guide](https://raw.githubusercontent.com/NVIDIA/SkillSpector/main/docs/DEVELOPMENT.md)** — Architecture, package layout, and how to extend the analyzer pipeline.
+- **[Security policy](https://github.com/NVIDIA/SkillSpector/blob/main/SECURITY.md)** — Report suspected vulnerabilities privately to NVIDIA PSIRT.
 - **[Analysis resource bounds](https://github.com/NVIDIA/SkillSpector/blob/main/docs/ANALYSIS_RESOURCE_BOUNDS.md)** — Fail-closed bundle, parser, nested-artifact, ledger, and finding ceilings.
 - **[Pi extension](https://github.com/NVIDIA/SkillSpector/blob/main/docs/PI_EXTENSION.md)** — Install SkillSpector as a Pi tool for scanning skills from inside agent sessions.
 - **[OpenCode extension](https://github.com/NVIDIA/SkillSpector/blob/main/docs/OPENCODE_EXTENSION.md)** — Install SkillSpector as an OpenCode tool and `/skillspector` command for scanning skills from inside agent sessions.
@@ -129,10 +130,10 @@ uv venv .venv && source .venv/bin/activate
 
 # Install for production use
 make install
-
-# Or install with development dependencies
-make install-dev
 ```
+
+To contribute, follow the [Development setup](#setup) for a supported Python
+interpreter and development dependencies.
 
 ### Docker (no Python required)
 
@@ -1008,28 +1009,69 @@ SkillSpector computes the score band and recommendation; how strict the gate is 
 
 ### Setup
 
-All `make` targets assume a virtual environment is already created and activated. The Makefile uses **uv** if available, else **pip**.
+This is the canonical setup recipe for contributing from this checkout. Use
+**Python 3.12-3.15** (`>=3.12,<3.16`, as defined in [pyproject.toml](https://github.com/NVIDIA/SkillSpector/blob/main/pyproject.toml)),
+Git, and `make`. A release tag can have a different Python range; check that
+tag's metadata. The commands below use Bash or Zsh.
+
+With **uv** installed:
 
 ```bash
-# Clone, create venv, activate, install dev dependencies
 git clone https://github.com/NVIDIA/skillspector.git
 cd skillspector
-uv venv .venv && source .venv/bin/activate
-# or: python3 -m venv .venv && source .venv/bin/activate
+uv venv --python 3.12 .venv
+source .venv/bin/activate
 make install-dev
-
-# Run tests
-make test
-
-# Run tests with coverage
-make test-cov
-
-# Run linting
-make lint
-
-# Format code
-make format
 ```
+
+If uv is not installed, clone the repository and enter it as above, then use
+an installed supported Python interpreter with `venv` and pip:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+make install-dev
+```
+
+Create and activate the virtual environment before running any `make` target.
+`make install-dev` uses `uv sync --all-extras` when uv is available, otherwise
+`pip install -e ".[dev]"`.
+
+Start with these local checks:
+
+```bash
+make test-unit
+make lint
+make format-check
+```
+
+`make test-unit` excludes tests marked `integration` or `provider`. This selection
+does not cover every CI job or guarantee network isolation.
+
+Some unit tests start loopback HTTP servers and local multiprocessing sockets.
+Restricted agent sandboxes can deny these operations. Keep the failing
+command and traceback, and use an appropriately permitted environment for a
+diagnostic rerun. Report that result separately; a passing subset does not make
+the original full target pass. See the
+[contributor onboarding check](https://github.com/NVIDIA/SkillSpector/blob/main/docs/validation/CONTRIBUTOR_ONBOARDING.md).
+
+Before submitting a PR, [CONTRIBUTING.md](https://github.com/NVIDIA/SkillSpector/blob/main/CONTRIBUTING.md#how-to-contribute)
+requires `make test`. It runs both `test-unit` and `test-integration`; integration
+tests invoke the full graph and may send test content to a configured LLM provider.
+Review the [provider configuration](https://github.com/NVIDIA/SkillSpector/blob/main/docs/DEVELOPMENT.md#10-environment-and-configuration)
+and credentials or local-service prerequisites before running it:
+
+```bash
+make test
+```
+
+`make test-provider` makes live provider requests and requires the corresponding
+provider configuration; see [Live provider tests](https://github.com/NVIDIA/SkillSpector/blob/main/docs/DEVELOPMENT.md#live-provider-tests).
+`make test-cov` runs the same marker-filtered selection as `test-unit`, with coverage.
+
+`make format` applies lint fixes and formats files **in place**. Run it before
+committing when changes are needed, review the diff, then recheck with `make lint`
+and `make format-check`.
 
 ## How It Works
 
@@ -1052,31 +1094,5 @@ environments without the optional `cryptography` dependency) retain raw fields
 and produce an explicit incomplete-analysis warning. Findings in decoded content
 point to the original bundle and label their projection in evidence. None of this
 verifies signatures, certificate chains, transparency logs, or signer identity.
-
-### Stage 2: LLM Semantic Analysis (Optional)
-- Evaluates context and intent
-- Confirmed findings may gain an explanation and higher confidence, never lower
-- Every deterministic finding stays in the report whether the model confirms it, disputes it, or does not address it
-- Findings the model reviews but does not confirm (disputed, low-confidence, or unaddressed) are tagged `llm-unconfirmed` in JSON and SARIF output
-- Findings whose review fails are kept without that tag; `evidence.llm_review_outcome` distinguishes `confirmed`, `disagreed`, `low-confidence`, `missing`, and `failed` in JSON and SARIF output
-- Results depend on the configured model and prompt context; Stage 2 does not replace
-  deterministic findings or guarantee a particular precision rate
-
-The LLM prompt includes anti-jailbreak protections to prevent malicious skills from manipulating the analysis.
-
-## Live Vulnerability Lookups (SC4)
-
-SC4 uses the [OSV.dev](https://osv.dev) API to check dependencies against the full Open Source Vulnerabilities database — covering tens of thousands of advisories across PyPI and npm.
-
-- **No API key required** — OSV.dev is free and unauthenticated.
-- **Batch queries** — all dependencies are checked in a single HTTP call.
-- **Automatic fallback** — if OSV.dev is unreachable (air-gapped/offline), a small built-in fallback list is used.
-- **Caching** — results are cached in-memory for 1 hour to avoid redundant API calls during a session.
-- **Pipenv** — reads `Pipfile` package tables and the direct/transitive packages in
-  `Pipfile.lock`, including development and custom categories. Exact lock versions
-  can resolve unpinned manifest dependencies. Malformed entries and unsupported
-  VCS/local sources are reported as incomplete dependency checks.
-
-The tool requires outbound HTTPS access to `api.osv.dev` for live vulnerability data. When that is not available, findings are limited to the static fallback list.
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/NVIDIA/SkillSpector)).*

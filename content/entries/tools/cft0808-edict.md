@@ -15,25 +15,26 @@ status: active
 quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: cft0808/edict
   official_vendor: false
   license: MIT
 signals:
-  stars: 17046
+  stars: 17047
   last_commit: 2026-09-28T02:33:22Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0.2
-  trending_score: 31.06
-  rank_current: 103
-  rank_delta: 4
+  stars_delta_7d: 1
+  stars_growth_pct: 0
+  trending_score: 1
+  rank_current: 128
+  rank_delta: -25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17000
     - 17015
     - 17046
+    - 17047
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: cft0808/edict
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:31.214Z
+  fetched_at: 2026-11-09T09:28:18.125Z
   truncated: false
 type: agent_tool
 tool:

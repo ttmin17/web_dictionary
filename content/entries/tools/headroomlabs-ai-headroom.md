@@ -17,26 +17,26 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-01-07T19:58:51
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: headroomlabs-ai/headroom
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 78898
-  last_commit: 2026-11-05T08:56:05Z
-  stars_delta_7d: 1051
-  stars_growth_pct: 1.4
-  trending_score: 1065.19
-  rank_current: 15
-  rank_delta: -7
+  stars: 79191
+  last_commit: 2026-11-09T06:35:45Z
+  stars_delta_7d: 293
+  stars_growth_pct: 0.4
+  trending_score: 294.09
+  rank_current: 16
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 75189
     - 75939
     - 77847
     - 78898
+    - 79191
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: headroomlabs-ai/headroom
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:26.135Z
+  fetched_at: 2026-11-09T09:27:22.543Z
   truncated: false
 type: agent_tool
 tool:
@@ -152,7 +152,7 @@ Zero code changes. [Agent compatibility](#agent-compatibility) ·
 
 - **Library** — `compress(messages)` in Python or TypeScript, inline in any app.
 - **Proxy** — `headroom proxy --port 8787`, zero code changes, any language.
-- **Agent wrap** — `headroom wrap claude|codex|grok|copilot|cursor|aider|opencode|cline|continue|goose|openhands|openclaw|vibe|omp|zcode` in one command; undo with `headroom unwrap <tool>`.
+- **Agent wrap** — `headroom wrap claude|codex|grok|copilot|cursor|aider|opencode|cline|continue|goose|openhands|openclaw|vibe|omp|droid|zcode` in one command; undo with `headroom unwrap <tool>`.
 - **MCP server** — `headroom_compress`, `headroom_retrieve`, `headroom_stats` for any MCP client.
 - **Cross-agent memory** — one shared store across Claude, Codex, Gemini and Grok, with automatic dedup.
 - **`headroom learn`** — mines failed sessions and writes corrections to `CLAUDE.local.md` (default, gitignored), `CLAUDE.md`, `AGENTS.md`, `GEMINI.md` or `GROK.md`.
@@ -357,6 +357,7 @@ Saved** card then reads `measured` rather than `estimated`, with the band.
 | OpenHands | ✅ | starts proxy + launches |
 | Mistral Vibe | ✅ | starts proxy + launches |
 | Oh My Pi | ✅ | Anthropic + OpenAI/Codex · injects config · starts proxy + launches |
+| Factory Droid | ✅ | routes via `FACTORY_API_BASE_URL`; Anthropic-model turns compressed, other Factory traffic passed through |
 | Cortex Code | Library only | 60–65% savings in library mode; no `wrap` |
 | Kimi CLI | ✅ | OAuth bearer forwarded — log in once |
 | ZCode | ✅ | starts the proxy and prints base URLs for ZCode settings |
@@ -546,14 +547,18 @@ orchestration stays focused on lifecycle, sequencing and policy:
 
 ```bash
 uv tool install --python 3.13 "headroom-ai[all]"  # CLI, isolated app env
-pip install "headroom-ai[all]"                    # Python, everything — includes the CLI
+pip install "headroom-ai[all]"                    # CLI/proxy feature set
 npm install headroom-ai                           # TypeScript SDK (library only)
 docker pull ghcr.io/headroomlabs-ai/headroom:latest
 ```
 
+`[all]` includes the CLI/proxy feature set, including image support, without PyTorch-backed dependencies.
+Add `[ml]`, `[memory]`, `[evals]`, or `[voice]` separately for those features;
+their PyTorch dependency can install CUDA runtime packages on Linux.
+
 Granular extras: `[proxy]`, `[mcp]`, `[ml]` (Kompress-v2-base), `[code]`,
-`[memory]`, `[vector]` (optional HNSW backend — needs a C++ toolchain, not in
-`[all]`), `[relevance]`, `[image]`, `[agno]`, `[langchain]`, `[evals]`,
+`[memory]`, `[vector]` (optional HNSW backend — needs a C++ toolchain),
+`[relevance]`, `[image]`, `[lean]` (torch-free proxy dependency profile; `[sandbox]` is a deprecated alias), `[agno]`, `[langchain]`, `[evals]`, `[voice]`, and
 `[pytorch-mps]` (Apple-GPU memory-embedder offload — set
 `HEADROOM_EMBEDDER_RUNTIME=pytorch_mps`). Requires **Python 3.11+**.
 

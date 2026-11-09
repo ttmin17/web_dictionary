@@ -9,29 +9,29 @@ categories:
 tags:
   - agents
 status: active
-quality_percentile: 73
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: apify/apify-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 14866
-  last_commit: 2026-11-05T12:57:12Z
-  stars_delta_7d: 1670
-  stars_growth_pct: 12.7
-  trending_score: 1881.34
-  rank_current: 3
-  rank_delta: -2
+  stars: 15357
+  last_commit: 2026-11-08T17:30:42Z
+  stars_delta_7d: 491
+  stars_growth_pct: 3.3
+  trending_score: 507.22
+  rank_current: 2
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10958
     - 11927
     - 13196
     - 14866
+    - 15357
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +40,7 @@ readme_source:
   repo: apify/apify-mcp-server
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:11:37.363Z
+  fetched_at: 2026-11-09T09:26:47.553Z
   truncated: false
 type: mcp_server
 launch:
@@ -429,7 +429,7 @@ Follow-ups work too. "Show me the next 10 results from that run" makes the agent
 - `search-actors` returns only free and pay-per-event Actors that pass the platform's agent-safety filters, so rental and pay-per-result Actors don't appear in search. [Full-permission Actors](https://docs.apify.com/actors/running/permissions#full-permission-actors) need your one-time approval; until then, `call-actor` returns an error with an approval link.
 - Some tools work without an Apify account: `search-actors`, `fetch-actor-details`, `search-apify-docs`, `fetch-apify-docs`, `apify-api-search`, and `apify-api-details`. Select only those, for example `https://mcp.apify.com?tools=search-actors`, and the hosted server accepts the connection without a token.
 
-> 🪙 **Agentic payments (experimental).** Agents can pay for Actor runs without an Apify account. [AGI](https://agi.apify.com) sells a prepaid, spend-capped Apify API token for an x402, MPP, or Skyfire payment. The agent then uses it as a normal Bearer token against `mcp.apify.com`, with any Actor. See the [agentic payments documentation](https://docs.apify.com/agents/payments) for supported methods and limits, and [agi.apify.com/AGENTS.md](https://agi.apify.com/AGENTS.md) for protocol details.
+> 🪙 **Agentic payments (experimental).** Agents can pay for Actor runs without an Apify account. [AGI](https://agi.apify.com) sells a prepaid, spend-capped Apify API token for an x402, MPP, or Skyfire payment. The agent then uses it as a normal Bearer token against `mcp.apify.com`, with any Actor that uses limited permissions. See the [agentic payments documentation](https://docs.apify.com/agents/payments) for supported methods and limits, and [agi.apify.com/AGENTS.md](https://agi.apify.com/AGENTS.md) for protocol details.
 
 ## 📡 Telemetry
 

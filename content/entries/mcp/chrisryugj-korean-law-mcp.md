@@ -17,26 +17,26 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2025-12-19T11:03:22
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: chrisryugj/korean-law-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2842
+  stars: 2850
   last_commit: 2026-11-03T12:23:15Z
-  stars_delta_7d: 55
-  stars_growth_pct: 2
-  trending_score: 56.09
-  rank_current: 43
-  rank_delta: -5
+  stars_delta_7d: 8
+  stars_growth_pct: 0.3
+  trending_score: 8.02
+  rank_current: 73
+  rank_delta: -30
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2697
     - 2739
     - 2787
     - 2842
+    - 2850
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: chrisryugj/korean-law-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:48.732Z
+  fetched_at: 2026-11-09T09:26:59.413Z
   truncated: false
 type: mcp_server
 launch:

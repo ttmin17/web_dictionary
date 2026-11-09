@@ -7,33 +7,34 @@ summary: npx metaharness · open the Studio →
 categories:
   - agent-frameworks
 tags:
+  - agent-evaluation
   - agent-harness
   - agent-harness-generator
   - agent-scaffolding
-  - agentic-ai
 status: active
 quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ruvnet/metaharness
   official_vendor: false
   license: MIT
 signals:
-  stars: 738
-  last_commit: 2026-11-05T08:34:28Z
-  stars_delta_7d: 22
-  stars_growth_pct: 3.1
-  trending_score: 22.68
-  rank_current: 109
-  rank_delta: 9
+  stars: 742
+  last_commit: 2026-11-09T08:35:29Z
+  stars_delta_7d: 4
+  stars_growth_pct: 0.5
+  trending_score: 4.02
+  rank_current: 117
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 707
     - 716
     - 738
+    - 742
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: ruvnet/metaharness
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:48.240Z
+  fetched_at: 2026-11-09T09:28:34.202Z
   truncated: false
 type: agent_tool
 tool:

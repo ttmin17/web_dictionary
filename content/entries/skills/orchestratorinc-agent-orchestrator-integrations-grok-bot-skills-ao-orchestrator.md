@@ -1,9 +1,9 @@
 ---
 slug: orchestratorinc-agent-orchestrator-integrations-grok-bot-skills-ao-orchestrator
 name: ao-orchestrator
-tagline: "Talk to a project's AO orchestrator: pass the user's request to it,
-  wait for its reply and relay it. The default route for starting or changing
-  work, "
+tagline: "Talk to a project's Orchestrator orchestrator: pass the user's request
+  to it, wait for its reply and relay it. The default route for starting or
+  chang"
 summary: 'Follow the ao-rules skill ("Who does what: orchestrator first").
   Sending a message is a write: do it only for what the user asked in this
   turn.'
@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14127
-  last_commit: 2026-11-05T13:02:06Z
-  stars_delta_7d: 471
-  stars_growth_pct: 3.4
-  trending_score: 487.24
+  stars: 14314
+  last_commit: 2026-11-09T09:23:57Z
+  stars_delta_7d: 187
+  stars_growth_pct: 1.3
+  trending_score: 189.48
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13138
     - 13339
     - 13656
     - 14127
+    - 14314
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,16 +44,16 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-orchestrator/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.372Z
+  fetched_at: 2026-11-09T09:27:42.805Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ao-orchestrator
-  description: "Talk to a project's AO orchestrator: pass the user's request to
-    it, wait for its reply and relay it. The default route for starting or
-    changing work, \"catch me up\", \"why\", \"what next\" and plans. Use for
-    \"in <project>: <ask>\", \"tell the orchestrator ...\", \"catch me up on
-    <project>\", \"start work on ...\"."
+  description: "Talk to a project's Orchestrator orchestrator: pass the user's
+    request to it, wait for its reply and relay it. The default route for
+    starting or changing work, \"catch me up\", \"why\", \"what next\" and
+    plans. Use for \"in <project>: <ask>\", \"tell the orchestrator ...\",
+    \"catch me up on <project>\", \"start work on ...\"."
   folder_path: integrations/grok-bot/skills/ao-orchestrator
   extra_files: []
   pack_total_skills: 8
@@ -78,7 +78,7 @@ for s in json.load(sys.stdin)["sessions"]: print(s["id"], (s.get("activity") or 
 ```
 - One line: that is the orchestrator. Its state tells you if it is busy (`active`).
 - `exited`: resume it first with `aoapi POST "sessions/<id>/resume-agent" '{}'`, then go on.
-- Provision state `failed`: AO could not create its workspace, and messages to it fail. Read the reason with `aoapi GET "sessions/<id>"` (field `provisionError`), tell the user in plain words, and ask them to fix it in AO. Stop here.
+- Provision state `failed`: Orchestrator could not create its workspace, and messages to it fail. Read the reason with `aoapi GET "sessions/<id>"` (field `provisionError`), tell the user in plain words, and ask them to fix it in Orchestrator. Stop here.
 - No line: ask "There's no orchestrator in <project> on <host>. Start one with your request?" On yes, start it with the request as its first message (step 3's file and tag), then go to step 4. Its reply is its first turn:
 
 ### Start an orchestrator
@@ -107,7 +107,7 @@ EOF
   aoapi POST "sessions/$O/resume-agent" '{}' >/dev/null; sleep 5
   aoapi POST "sessions/$O/send" "$B" >/dev/null && echo "sent TAG=$TAG F=$F"; }; f
 ```
-A failed send prints AO's error. If it still fails after the retry, tell the user the orchestrator isn't accepting messages and to open it in AO.
+A failed send prints Orchestrator's error. If it still fails after the retry, tell the user the orchestrator isn't accepting messages and to open it in Orchestrator.
 
 If the orchestrator was `active` in step 2, the message waits and runs as its own turn after the current one. Tell the user right away, in one line: "The orchestrator is busy with <what its last turn is about>. Your question is queued and runs next." Then go on to step 4.
 

@@ -12,10 +12,10 @@ tags:
   - claude-code
   - cli
 status: active
-quality_percentile: 57
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: jarrodwatts/claude-hud
@@ -23,18 +23,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 29115
-  last_commit: 2026-11-03T08:28:58Z
-  stars_delta_7d: 228
-  stars_growth_pct: 0.8
-  trending_score: 229.8
-  rank_current: 74
-  rank_delta: -46
+  stars: 29137
+  last_commit: 2026-11-09T07:23:08Z
+  stars_delta_7d: 22
+  stars_growth_pct: 0.1
+  trending_score: 22.02
+  rank_current: 107
+  rank_delta: -33
   velocity_source: snapshot_delta
   sparkline_4w:
     - 28632
     - 28887
     - 29115
+    - 29137
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: jarrodwatts/claude-hud
   path: skills/hud/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:37.405Z
+  fetched_at: 2026-11-09T09:27:30.320Z
   truncated: false
 type: agent_skill
 skill:

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-02-07T08:17:38
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-seo
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 26860
+  stars: 27547
   last_commit: 2026-11-01T06:07:26Z
-  stars_delta_7d: 5487
-  stars_growth_pct: 25.7
-  trending_score: 6895.65
-  rank_current: 8
-  rank_delta: 5
+  stars_delta_7d: 687
+  stars_growth_pct: 2.6
+  trending_score: 704.57
+  rank_current: 24
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 18843
     - 19212
     - 21373
     - 26860
+    - 27547
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: AgriciDaniel/claude-seo
   path: extensions/ahrefs/skills/seo-ahrefs/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:42.608Z
+  fetched_at: 2026-11-09T09:27:38.018Z
   truncated: false
 type: agent_skill
 skill:

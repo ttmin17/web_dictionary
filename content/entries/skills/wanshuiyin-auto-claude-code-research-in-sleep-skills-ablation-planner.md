@@ -14,10 +14,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 86
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-03-10T07:31:45
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 18704
-  last_commit: 2026-11-03T16:40:15Z
-  stars_delta_7d: 616
-  stars_growth_pct: 3.4
-  trending_score: 636.98
-  rank_current: 39
-  rank_delta: -1
+  stars: 18911
+  last_commit: 2026-11-08T10:12:54Z
+  stars_delta_7d: 207
+  stars_growth_pct: 1.1
+  trending_score: 209.29
+  rank_current: 46
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17411
     - 17693
     - 18088
     - 18704
+    - 18911
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/ablation-planner/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:11:41.103Z
+  fetched_at: 2026-11-09T09:26:46.947Z
   truncated: false
 type: agent_skill
 skill:

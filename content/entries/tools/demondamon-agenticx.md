@@ -14,27 +14,28 @@ tags:
   - ai-agent
   - ai-orchestration
 status: active
-quality_percentile: 49
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: DemonDamon/AgenticX
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 971
-  last_commit: 2026-11-05T12:38:34Z
-  stars_delta_7d: 278
-  stars_growth_pct: 40.1
-  trending_score: 389.52
-  rank_current: 31
-  rank_delta: null
+  stars: 1029
+  last_commit: 2026-11-09T08:05:01Z
+  stars_delta_7d: 58
+  stars_growth_pct: 6
+  trending_score: 61.46
+  rank_current: 51
+  rank_delta: -20
   velocity_source: snapshot_delta
   sparkline_4w:
     - 693
     - 971
+    - 1029
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: DemonDamon/AgenticX
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:56.319Z
+  fetched_at: 2026-11-09T09:28:42.595Z
   truncated: false
 type: agent_tool
 tool:

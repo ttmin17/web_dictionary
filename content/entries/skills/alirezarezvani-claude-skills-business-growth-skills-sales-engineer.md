@@ -14,10 +14,10 @@ tags:
   - agentic-ai
   - ai-coding-agent
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: alirezarezvani/claude-skills
@@ -25,16 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 29337
+  stars: 29502
   last_commit: 2026-11-05T06:58:08Z
-  stars_delta_7d: 607
-  stars_growth_pct: 2.1
-  trending_score: 619.82
+  stars_delta_7d: 165
+  stars_growth_pct: 0.6
+  trending_score: 165.93
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 28112
     - 28730
     - 29337
+    - 29502
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: alirezarezvani/claude-skills
   path: business-growth/skills/sales-engineer/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:36.065Z
+  fetched_at: 2026-11-09T09:27:33.881Z
   truncated: false
 type: agent_skill
 skill:

@@ -14,28 +14,29 @@ tags:
   - browser-agent
   - browser-automation
 status: active
-quality_percentile: 92
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: browser-use/browser-use
   official_vendor: false
   license: MIT
 signals:
-  stars: 120100
-  last_commit: 2026-11-05T09:04:15Z
-  stars_delta_7d: 943
-  stars_growth_pct: 0.8
-  trending_score: 950.46
-  rank_current: 6
-  rank_delta: -2
+  stars: 120389
+  last_commit: 2026-11-09T09:20:21Z
+  stars_delta_7d: 289
+  stars_growth_pct: 0.2
+  trending_score: 289.7
+  rank_current: 5
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 118460
     - 119157
     - 120100
+    - 120389
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: browser-use/browser-use
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:18.795Z
+  fetched_at: 2026-11-09T09:28:07.298Z
   truncated: false
 type: mcp_server
 launch:

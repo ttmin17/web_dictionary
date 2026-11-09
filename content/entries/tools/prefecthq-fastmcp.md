@@ -14,26 +14,26 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: PrefectHQ/fastmcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 28315
-  last_commit: 2026-11-05T13:04:28Z
-  stars_delta_7d: 113
-  stars_growth_pct: 0.4
-  trending_score: 113.45
-  rank_current: 66
-  rank_delta: -3
+  stars: 28356
+  last_commit: 2026-11-09T09:22:04Z
+  stars_delta_7d: 41
+  stars_growth_pct: 0.1
+  trending_score: 41.06
+  rank_current: 61
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 28063
     - 28132
     - 28202
     - 28315
+    - 28356
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: PrefectHQ/fastmcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:54.061Z
+  fetched_at: 2026-11-09T09:27:04.031Z
   truncated: false
 type: agent_tool
 tool:

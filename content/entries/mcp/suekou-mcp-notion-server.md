@@ -17,7 +17,7 @@ status: slowing
 quality_percentile: 19
 selection_reason: quality_percentile
 first_seen: 2024-11-30T10:01:30
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: suekou/mcp-notion-server
@@ -29,13 +29,13 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 109
-  rank_delta: -19
+  rank_current: 114
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 920
     - 921
     - 925
+    - 924
     - 924
 language: en
 needs_keys: false
@@ -45,7 +45,7 @@ readme_source:
   repo: suekou/mcp-notion-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:09.574Z
+  fetched_at: 2026-11-09T09:27:13.014Z
   truncated: false
 type: mcp_server
 launch:

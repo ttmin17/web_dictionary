@@ -4,7 +4,8 @@ name: surprise-me
 tagline: 'Create a delightful, unexpected "wow" experience for the user by
   dynamically discovering and creatively combining other enabled skills.
   Triggers when '
-summary: Read all the skills listed in the .
+summary: Inspect the names and descriptions in . Read only the bodies of skills
+  selected for the deliverable.
 categories:
   - agent-frameworks
 tags:
@@ -16,7 +17,7 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: bytedance/deer-flow
@@ -24,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 85022
-  last_commit: 2026-11-05T08:06:20Z
-  stars_delta_7d: 591
-  stars_growth_pct: 0.7
-  trending_score: 595.14
+  stars: 85169
+  last_commit: 2026-11-09T09:06:05Z
+  stars_delta_7d: 147
+  stars_growth_pct: 0.2
+  trending_score: 147.25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 84103
     - 84431
     - 85022
+    - 85169
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +43,7 @@ readme_source:
   repo: bytedance/deer-flow
   path: skills/public/surprise-me/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:29.361Z
+  fetched_at: 2026-11-09T09:28:15.117Z
   truncated: false
 type: agent_skill
 skill:
@@ -69,7 +71,7 @@ Deliver an unexpected, delightful experience by dynamically discovering availabl
 
 ### Step 1: Discover Available Skills
 
-Read all the skills listed in the <available_skills>.
+Inspect the names and descriptions in <available_skills>. Read only the bodies of skills selected for the deliverable.
 
 ### Step 2: Plan the Surprise
 
@@ -90,7 +92,7 @@ Select **1 to 3** skills and design a creative mashup. The goal is a single cohe
 
 ### Step 3: Fallback — No Other Skills Available
 
-If no other skills are discovered (only surprise-me exists), use one of these fallbacks:
+If no other skills are discovered (only surprise-me exists), choose an approach suited to the user and available tools. These are optional examples:
 
 1. **News-based surprise**: Search today's news for a fascinating story, then create a beautifully designed HTML artifact presenting it in a visually striking way
 2. **Interactive HTML experience**: Build a creative single-page web experience — generative art, a mini-game, a visual poem, an animated infographic, or an interactive story

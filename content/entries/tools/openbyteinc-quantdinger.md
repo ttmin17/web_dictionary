@@ -1,42 +1,43 @@
 ---
 slug: openbyteinc-quantdinger
 name: QuantDinger
-tagline: Open-source AI Trading OS, agent trading, and vibe trading, with Jev
-  System One integration. Research, build Python strategies, backtest, and
-  paper/li
+tagline: "The most complete open-source, self-hosted Agentic Trading OS—AI
+  research, Python strategies, factor discovery, backtesting, optimization,
+  paper/live "
 summary: QuantDinger - Open-Source AI Quant Research Platform Turn trading ideas
   into Python strategies, backtests, paper trading, live execution, and
   monitoring — all in one self-hosted stack. QuantDinger is a product of Open...
 categories:
   - domain-research
 tags:
+  - agentic-ai
+  - ai-agents
   - backtesting
-  - binance
   - crypto
-  - exchange
 status: active
-quality_percentile: 93
+quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OpenByteInc/QuantDinger
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13541
-  last_commit: 2026-11-05T09:34:16Z
-  stars_delta_7d: 411
-  stars_growth_pct: 3.1
-  trending_score: 423.87
-  rank_current: 29
-  rank_delta: 1
+  stars: 13645
+  last_commit: 2026-11-08T08:17:07Z
+  stars_delta_7d: 104
+  stars_growth_pct: 0.8
+  trending_score: 104.8
+  rank_current: 36
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12908
     - 13130
     - 13541
+    - 13645
 language: en
 needs_keys: false
 prerequisites:
@@ -45,14 +46,14 @@ readme_source:
   repo: OpenByteInc/QuantDinger
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:37.367Z
+  fetched_at: 2026-11-09T09:26:47.575Z
   truncated: false
 type: agent_tool
 tool:
-  subcategory: other
+  subcategory: agent_framework
   install_command: git clone https://github.com/OpenByteInc/QuantDinger.git
   runtime: docker
-  execution_mode: cloud
+  execution_mode: hybrid
   has_mcp_support: false
 ---
 

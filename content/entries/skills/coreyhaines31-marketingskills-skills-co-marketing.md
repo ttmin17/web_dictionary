@@ -14,10 +14,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 85
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 58638
-  last_commit: 2026-11-04T19:01:33Z
-  stars_delta_7d: 2068
-  stars_growth_pct: 3.7
-  trending_score: 2143.6
+  stars: 59301
+  last_commit: 2026-11-06T17:53:06Z
+  stars_delta_7d: 663
+  stars_growth_pct: 1.1
+  trending_score: 670.5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 54518
     - 55431
     - 56570
     - 58638
+    - 59301
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/co-marketing/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:31.503Z
+  fetched_at: 2026-11-09T09:27:29.915Z
   truncated: false
 type: agent_skill
 skill:

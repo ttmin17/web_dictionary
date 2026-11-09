@@ -11,28 +11,29 @@ tags:
   - agents
   - anthropic
 status: active
-quality_percentile: 91
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: strands-agents/samples
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 924
-  last_commit: 2026-11-03T13:36:21Z
-  stars_delta_7d: 9
-  stars_growth_pct: 1
-  trending_score: 9.09
-  rank_current: 125
-  rank_delta: 1
+  stars: 928
+  last_commit: 2026-11-06T22:03:19Z
+  stars_delta_7d: 4
+  stars_growth_pct: 0.4
+  trending_score: 4.02
+  rank_current: 115
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
     - 910
     - 915
     - 924
+    - 928
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: strands-agents/samples
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:48.152Z
+  fetched_at: 2026-11-09T09:28:31.377Z
   truncated: false
 type: agent_tool
 tool:

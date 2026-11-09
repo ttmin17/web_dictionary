@@ -17,26 +17,26 @@ status: active
 quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: apify/mcpc
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1088
-  last_commit: 2026-11-05T13:01:08Z
-  stars_delta_7d: 15
-  stars_growth_pct: 1.4
-  trending_score: 15.21
-  rank_current: 79
-  rank_delta: -16
+  stars: 1092
+  last_commit: 2026-11-06T15:17:49Z
+  stars_delta_7d: 4
+  stars_growth_pct: 0.4
+  trending_score: 4.01
+  rank_current: 91
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1026
     - 1056
     - 1073
     - 1088
+    - 1092
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: apify/mcpc
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:08.972Z
+  fetched_at: 2026-11-09T09:27:12.739Z
   truncated: true
 type: mcp_server
 launch:

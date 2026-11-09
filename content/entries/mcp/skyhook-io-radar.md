@@ -17,26 +17,26 @@ status: active
 quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: skyhook-io/radar
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4048
-  last_commit: 2026-11-05T13:05:13Z
-  stars_delta_7d: 137
-  stars_growth_pct: 3.5
-  trending_score: 141.8
-  rank_current: 22
-  rank_delta: 9
+  stars: 4071
+  last_commit: 2026-11-09T08:17:39Z
+  stars_delta_7d: 23
+  stars_growth_pct: 0.6
+  trending_score: 23.13
+  rank_current: 41
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3758
     - 3851
     - 3911
     - 4048
+    - 4071
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: skyhook-io/radar
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.191Z
+  fetched_at: 2026-11-09T09:26:53.725Z
   truncated: false
 type: mcp_server
 launch:
@@ -291,7 +291,7 @@ radar
 | `--listen-address` | `127.0.0.1` | HTTP listen IP address (IPv4 or IPv6), or `localhost`. Bind a specific local IP or use `0.0.0.0` for all interfaces. Non-loopback access needs authentication and network controls. |
 | `--no-browser` | `false` | Don't auto-open browser |
 | `--timeline-storage` | `memory` | Timeline storage backend: `memory`, `sqlite`, or `postgres` |
-| `--disable-exec` | `false` | Disable pod terminal, debug shells and pod file browsing |
+| `--disable-exec` | `false` | Disable pod terminal, debug shells, pod file browsing, CloudNativePG sessions and MCP `exec_pod` |
 | `--auth-mode` | `none` | Authentication mode: `none`, `proxy`, or `oidc` ([details](https://github.com/skyhook-io/radar/blob/main/docs/authentication.md)) |
 | `--no-mcp` | `false` | Disable all MCP endpoints |
 | `--mcp-read-only` | `false` | Expose only read-only MCP tools; disable `/mcp` (env: `RADAR_MCP_READ_ONLY`) |

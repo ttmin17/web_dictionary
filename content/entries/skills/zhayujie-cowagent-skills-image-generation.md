@@ -19,7 +19,7 @@ status: active
 quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2022-08-07T08:33:41
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: zhayujie/CowAgent
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 47802
-  last_commit: 2026-11-05T09:00:15Z
-  stars_delta_7d: 202
-  stars_growth_pct: 0.4
-  trending_score: 202.86
-  rank_current: 78
-  rank_delta: -7
+  stars: 47849
+  last_commit: 2026-11-09T09:14:14Z
+  stars_delta_7d: 47
+  stars_growth_pct: 0.1
+  trending_score: 47.05
+  rank_current: 90
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 47380
     - 47461
     - 47600
     - 47802
+    - 47849
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: zhayujie/CowAgent
   path: skills/image-generation/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:12:26.623Z
+  fetched_at: 2026-11-09T09:27:26.682Z
   truncated: false
 type: agent_skill
 skill:

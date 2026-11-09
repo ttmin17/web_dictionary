@@ -15,28 +15,29 @@ tags:
   - cli
   - comfyui
 status: active
-quality_percentile: 56
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: wiltodelta/remove-ai-watermarks
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6288
-  last_commit: 2026-11-05T01:58:40Z
-  stars_delta_7d: 157
-  stars_growth_pct: 2.6
-  trending_score: 161.02
-  rank_current: 20
-  rank_delta: 5
+  stars: 6324
+  last_commit: 2026-11-09T06:44:19Z
+  stars_delta_7d: 36
+  stars_growth_pct: 0.6
+  trending_score: 36.21
+  rank_current: 29
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6054
     - 6131
     - 6288
+    - 6324
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: wiltodelta/remove-ai-watermarks
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:57.648Z
+  fetched_at: 2026-11-09T09:27:49.924Z
   truncated: false
 type: mcp_server
 launch:

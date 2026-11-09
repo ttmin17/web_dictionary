@@ -19,7 +19,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-03-24T11:58:12
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: eugeniughelbur/obsidian-second-brain
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 5166
-  last_commit: 2026-11-04T22:10:55Z
-  stars_delta_7d: 246
-  stars_growth_pct: 5
-  trending_score: 258.3
-  rank_current: 68
-  rank_delta: 10
+  stars: 5237
+  last_commit: 2026-11-08T23:56:53Z
+  stars_delta_7d: 71
+  stars_growth_pct: 1.4
+  trending_score: 71.98
+  rank_current: 75
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4746
     - 4811
     - 4920
     - 5166
+    - 5237
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: eugeniughelbur/obsidian-second-brain
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:14.221Z
+  fetched_at: 2026-11-09T09:28:02.932Z
   truncated: true
 type: agent_skill
 skill:
@@ -83,7 +83,7 @@ skill:
     - .github/ISSUE_TEMPLATE/config.yml
     - .github/ISSUE_TEMPLATE/feature_request.yml
     - .github/PULL_REQUEST_TEMPLATE.md
-    - .github/dependabot.yml
+    - .github/RELEASE_NOTES_TEMPLATE.md
   pack_total_skills: 1
   is_pack_primary: true
   clients:

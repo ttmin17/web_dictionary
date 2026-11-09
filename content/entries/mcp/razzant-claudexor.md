@@ -16,10 +16,10 @@ tags:
   - ai-coding
   - ai-coding-assistant
 status: active
-quality_percentile: 38
+quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: razzant/claudexor
@@ -27,16 +27,17 @@ source:
   license: MIT
 signals:
   stars: 523
-  last_commit: 2026-11-04T14:40:55Z
-  stars_delta_7d: 6
-  stars_growth_pct: 1.2
-  trending_score: 6.07
-  rank_current: 91
-  rank_delta: 3
+  last_commit: 2026-11-09T00:34:47Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 117
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 515
     - 517
+    - 523
     - 523
 language: en
 needs_keys: false
@@ -45,7 +46,7 @@ readme_source:
   repo: razzant/claudexor
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.759Z
+  fetched_at: 2026-11-09T09:28:28.316Z
   truncated: true
 type: mcp_server
 launch:
@@ -79,7 +80,7 @@ with a vendor quota source (Antigravity, Claude, and Codex). Cursor's internal
 dashboard supplies dated monetary resources, not an execution-quota verdict.
 Everything runs on your machine, files are the source of truth, and there is no telemetry.
 
-Current status: **v5.0.2**. See "Stability at 2.0" below for what is a stable
+Current status: **v5.1.0**. See "Stability at 2.0" below for what is a stable
 contract and what remains experimental; retired verbs and mode ids hard-error
 with the new spelling instead of silently aliasing.
 

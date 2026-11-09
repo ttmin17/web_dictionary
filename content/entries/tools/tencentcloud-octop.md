@@ -14,25 +14,26 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: TencentCloud/Octop
   official_vendor: false
   license: MIT
 signals:
-  stars: 11697
-  last_commit: 2026-11-05T13:03:29Z
-  stars_delta_7d: 612
-  stars_growth_pct: 5.5
-  trending_score: 645.79
-  rank_current: 22
-  rank_delta: -10
+  stars: 11801
+  last_commit: 2026-11-09T06:34:17Z
+  stars_delta_7d: 104
+  stars_growth_pct: 0.9
+  trending_score: 104.92
+  rank_current: 35
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9981
     - 11085
     - 11697
+    - 11801
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: TencentCloud/Octop
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:33.128Z
+  fetched_at: 2026-11-09T09:28:19.222Z
   truncated: false
 type: agent_tool
 tool:
@@ -76,7 +77,7 @@ tool:
 <p align="center">
   <a href="https://www.python.org/downloads/"><img alt="Python 3.12+" src="https://img.shields.io/badge/python-3.12%2B-blue?logo=python&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green" /></a>
-  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.0.3b3-orange" /></a>
+  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.0.3b4-orange" /></a>
   <a href="https://pypi.org/project/octop/"><img src="https://img.shields.io/pypi/v/octop" alt="PyPI" /></a>
   <a href="https://github.com/astral-sh/ruff"><img alt="Code Style: Ruff" src="https://img.shields.io/badge/code%20style-ruff-000000?logo=ruff&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TencentCloud/Octop?style=social" /></a>
@@ -512,6 +513,7 @@ After `octop run`, open **http://127.0.0.1:8088**.
 </p>
 
 - **Chat** — real-time conversation with experts and teams
+- **Cloud** — Tencent CVM fleet overview, instance metrics, and a resident ops expert
 - **Experts** — create experts, pick templates / MBTI personas, share or publish experts, configure providers
 - **AgentTeams** *(Beta)* — coordinator + member experts for multi-step work
 - **Connectors** — OAuth apps and MCP gateways

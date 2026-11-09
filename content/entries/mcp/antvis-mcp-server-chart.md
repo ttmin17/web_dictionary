@@ -14,29 +14,29 @@ tags:
   - skills
   - visualization
 status: active
-quality_percentile: 33
+quality_percentile: 31
 selection_reason: quality_percentile
 first_seen: 2025-04-25T09:10:06
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: antvis/mcp-server-chart
   official_vendor: false
   license: MIT
 signals:
-  stars: 4414
+  stars: 4416
   last_commit: 2026-08-27T01:50:14Z
-  stars_delta_7d: 10
-  stars_growth_pct: 0.2
-  trending_score: 10.02
-  rank_current: 84
-  rank_delta: 11
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 2
+  rank_current: 99
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4396
     - 4402
     - 4404
     - 4414
+    - 4416
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: antvis/mcp-server-chart
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.978Z
+  fetched_at: 2026-11-09T09:26:53.732Z
   truncated: false
 type: mcp_server
 launch:

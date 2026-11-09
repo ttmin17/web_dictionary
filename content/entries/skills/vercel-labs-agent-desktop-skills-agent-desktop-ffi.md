@@ -16,10 +16,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 68
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: vercel-labs/agent-desktop
@@ -27,14 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16211
-  last_commit: 2026-11-05T06:31:12Z
-  stars_delta_7d: 437
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 19921
+  last_commit: 2026-11-08T20:44:28Z
+  stars_delta_7d: 3710
+  stars_growth_pct: 22.9
+  trending_score: 4559.06
+  rank_current: 3
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 16211
+    - 19921
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +45,7 @@ readme_source:
   repo: vercel-labs/agent-desktop
   path: skills/agent-desktop-ffi/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:32.358Z
+  fetched_at: 2026-11-09T09:28:18.460Z
   truncated: false
 type: agent_skill
 skill:

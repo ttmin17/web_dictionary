@@ -18,26 +18,26 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2022-11-24T02:28:11
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: modelscope/FunASR
   official_vendor: false
   license: MIT
 signals:
-  stars: 20947
-  last_commit: 2026-11-05T11:29:01Z
-  stars_delta_7d: 130
-  stars_growth_pct: 0.6
-  trending_score: 130.81
-  rank_current: 24
-  rank_delta: 4
+  stars: 20973
+  last_commit: 2026-11-09T04:49:20Z
+  stars_delta_7d: 26
+  stars_growth_pct: 0.1
+  trending_score: 26.03
+  rank_current: 38
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 20677
     - 20748
     - 20817
     - 20947
+    - 20973
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: modelscope/FunASR
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:32.352Z
+  fetched_at: 2026-11-09T09:26:43.282Z
   truncated: false
 type: mcp_server
 launch:
@@ -421,7 +421,10 @@ recordings with the same evaluation scope.
 ## What's new
 
 - **MOSS-Transcribe-Diarize** brings long-form ASR, timestamps, and anonymous speaker labels to FunASR services, Docker, Kubernetes, vLLM/SGLang workflows, and FunClip. [Deploy MOSS ->](https://github.com/modelscope/FunASR/blob/main/docs/moss_transcribe_diarize.md)
-- **FunASR 1.4.21** preserves the streaming punctuation cache on empty or whitespace chunks, returning an empty result without touching cached words or the embedding path; nonempty inference is unchanged. [Fix #3824](https://github.com/modelscope/FunASR/pull/3824). Install with `python -m pip install -U "funasr==1.4.21"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.21)
+- **FunASR 1.4.24** ignores empty non-linguistic symbols to prevent tokenizer loops, fixes padded variance normalization, and prevents CIF crashes in mixed batches containing zero-fire samples. [Fix #3852](https://github.com/modelscope/FunASR/pull/3852), [fix #3853](https://github.com/modelscope/FunASR/pull/3853), [fix #3854](https://github.com/modelscope/FunASR/pull/3854). A checkpoint trained with both `norm_means=True` and `norm_vars=True` needs recognition-quality reevaluation because normalized features change; `norm_vars=False` remains the default. Install with `python -m pip install -U "funasr==1.4.24"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.24)
+  **FunASR 1.4.23** fixes the online frontend cursor for `lfr_m=lfr_n=1` and redundant empty final offline VAD chunks. With a supplied `token_list`, SentencePiece `ids2tokens` returns model pieces; use `tokens2text` for text. Without `token_list`, legacy text decoding is unchanged. [Fix #3849](https://github.com/modelscope/FunASR/pull/3849), [fix #3783](https://github.com/modelscope/FunASR/pull/3783). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.23)
+  **FunASR 1.4.22** honors per-call `merge_length_s` and evaluates dynamic VAD silence thresholds per frame using the current segment duration, preserving the fixed-threshold opt-out. [Fix #3841](https://github.com/modelscope/FunASR/pull/3841), [fix #3833](https://github.com/modelscope/FunASR/pull/3833). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.22)
+  **FunASR 1.4.21** preserves the streaming punctuation cache on empty or whitespace chunks; nonempty inference is unchanged. [Fix #3824](https://github.com/modelscope/FunASR/pull/3824). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.21)
   **FunASR 1.4.20** preserves the original optional speaker dependency failure in a chained `ImportError` when `spk_model` is requested, while ASR-only construction remains available. [Fix #3819](https://github.com/modelscope/FunASR/pull/3819). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.20)
   **FunASR 1.4.19** handles empty-token Paraformer batches, enforces `max_speakers` for automatic clustering, and adds validated JSON-object `--hf_overrides` support to realtime WebSocket serving. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.19)
   Previous release **FunASR 1.4.18** fixes cross-script hotword misreplacement, filtered-token timestamp alignment, and Chinese VAD sentence/speaker drift. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.18)

@@ -19,26 +19,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-02-24T22:01:00
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: DeusData/codebase-memory-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 48153
-  last_commit: 2026-11-04T23:21:44Z
-  stars_delta_7d: 655
-  stars_growth_pct: 1.4
-  trending_score: 664.03
-  rank_current: 8
-  rank_delta: -3
+  stars: 48383
+  last_commit: 2026-11-07T05:43:50Z
+  stars_delta_7d: 230
+  stars_growth_pct: 0.5
+  trending_score: 231.1
+  rank_current: 7
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 46502
     - 46887
     - 47498
     - 48153
+    - 48383
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: DeusData/codebase-memory-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:27.620Z
+  fetched_at: 2026-11-09T09:26:42.635Z
   truncated: true
 type: mcp_server
 launch:

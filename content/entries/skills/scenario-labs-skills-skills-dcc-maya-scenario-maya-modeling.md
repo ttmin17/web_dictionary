@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - ai-art
 status: active
-quality_percentile: 66
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2778
-  last_commit: 2026-11-05T09:51:22Z
-  stars_delta_7d: 1639
-  stars_growth_pct: 143.9
-  trending_score: 3997.49
+  stars: 3568
+  last_commit: 2026-11-08T18:29:18Z
+  stars_delta_7d: 790
+  stars_growth_pct: 28.4
+  trending_score: 1014.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 995
     - 1056
     - 1139
     - 2778
+    - 3568
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/maya/scenario-maya-modeling/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:03.092Z
+  fetched_at: 2026-11-09T09:27:08.082Z
   truncated: false
 type: agent_skill
 skill:

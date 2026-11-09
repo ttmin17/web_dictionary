@@ -18,26 +18,26 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2021-11-07T01:35:09
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Evil0ctal/Douyin_TikTok_Download_API
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 21179
-  last_commit: 2026-11-02T07:43:14Z
-  stars_delta_7d: 273
-  stars_growth_pct: 1.3
-  trending_score: 276.56
-  rank_current: 40
-  rank_delta: 15
+  stars: 21305
+  last_commit: 2026-11-08T07:42:06Z
+  stars_delta_7d: 126
+  stars_growth_pct: 0.6
+  trending_score: 126.75
+  rank_current: 29
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 20625
     - 20779
     - 20906
     - 21179
+    - 21305
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: Evil0ctal/Douyin_TikTok_Download_API
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:32.326Z
+  fetched_at: 2026-11-09T09:26:43.276Z
   truncated: false
 type: agent_tool
 tool:

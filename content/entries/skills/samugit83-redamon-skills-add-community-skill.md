@@ -17,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -25,18 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3298
-  last_commit: 2026-11-04T18:34:53Z
-  stars_delta_7d: 84
-  stars_growth_pct: 2.6
-  trending_score: 86.2
-  rank_current: 100
-  rank_delta: -6
+  stars: 3340
+  last_commit: 2026-11-08T10:18:09Z
+  stars_delta_7d: 42
+  stars_growth_pct: 1.3
+  trending_score: 42.53
+  rank_current: 93
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
     - 3298
+    - 3340
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/add-community-skill/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:51.215Z
+  fetched_at: 2026-11-09T09:28:34.063Z
   truncated: false
 type: agent_skill
 skill:

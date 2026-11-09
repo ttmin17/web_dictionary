@@ -17,24 +17,25 @@ status: active
 quality_percentile: 19
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ThinkFlowLab/system1-agents
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 180
-  last_commit: 2026-11-04T12:08:18Z
-  stars_delta_7d: 3
-  stars_growth_pct: 1.7
-  trending_score: 3.04
-  rank_current: 98
-  rank_delta: null
+  stars: 181
+  last_commit: 2026-11-06T11:50:57Z
+  stars_delta_7d: 1
+  stars_growth_pct: 0.6
+  trending_score: 1
+  rank_current: 111
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 177
     - 180
+    - 181
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: ThinkFlowLab/system1-agents
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.443Z
+  fetched_at: 2026-11-09T09:28:45.427Z
   truncated: false
 type: mcp_server
 launch:

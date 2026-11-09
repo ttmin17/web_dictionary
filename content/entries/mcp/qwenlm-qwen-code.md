@@ -15,25 +15,26 @@ status: active
 quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: QwenLM/qwen-code
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 29023
-  last_commit: 2026-11-05T13:07:45Z
-  stars_delta_7d: 299
-  stars_growth_pct: 1
-  trending_score: 302.11
-  rank_current: 12
-  rank_delta: 0
+  stars: 29122
+  last_commit: 2026-11-09T09:23:36Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.3
+  trending_score: 99.34
+  rank_current: 14
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 28570
     - 28724
     - 29023
+    - 29122
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: QwenLM/qwen-code
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:37.397Z
+  fetched_at: 2026-11-09T09:28:20.350Z
   truncated: false
 type: mcp_server
 launch:
@@ -126,7 +127,7 @@ cd /path/to/your-project
 qwen
 ```
 
-Inside the session, run `/auth` and choose [**Qwen Account with Subscription**](https://chat.qwen.ai/?memberPlan=qwen_code) to sign in with your **Plus or Pro subscription**, or configure a provider with an API key. Then try:
+Inside the session, run `/auth` and choose [**Qwen Account with Subscription**](https://chat.qwen.ai/?memberPlan=qwen_code&entry=qwen_code&paywallScene=cli) to sign in with your **Plus or Pro subscription**, or configure a provider with an API key. Then try:
 
 ```text
 Explain this repository and show me where to start.

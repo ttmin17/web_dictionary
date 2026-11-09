@@ -15,7 +15,7 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: xbtlin/ai-berkshire
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 17019
+  stars: 17066
   last_commit: 2026-11-04T07:20:01Z
-  stars_delta_7d: 130
-  stars_growth_pct: 0.8
-  trending_score: 131
+  stars_delta_7d: 47
+  stars_growth_pct: 0.3
+  trending_score: 47.13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 16732
     - 16790
     - 16889
     - 17019
+    - 17066
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: xbtlin/ai-berkshire
   path: codex-skills/thesis-tracker/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:46.855Z
+  fetched_at: 2026-11-09T09:27:41.557Z
   truncated: false
 type: agent_skill
 skill:

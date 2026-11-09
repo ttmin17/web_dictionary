@@ -13,29 +13,29 @@ tags:
   - llms
   - python
 status: active
-quality_percentile: 87
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: assafelovic/gpt-researcher
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 30498
-  last_commit: 2026-10-10T22:03:53Z
-  stars_delta_7d: 203
-  stars_growth_pct: 0.7
-  trending_score: 204.36
-  rank_current: 51
-  rank_delta: 0
+  stars: 30594
+  last_commit: 2026-11-09T09:19:17Z
+  stars_delta_7d: 96
+  stars_growth_pct: 0.3
+  trending_score: 96.3
+  rank_current: 38
+  rank_delta: 13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30074
     - 30163
     - 30295
     - 30498
+    - 30594
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: assafelovic/gpt-researcher
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:32.324Z
+  fetched_at: 2026-11-09T09:26:43.261Z
   truncated: false
 type: agent_tool
 tool:
@@ -64,7 +64,7 @@ tool:
 
 <div align="center" id="top">
 
-<img src="https://github.com/assafelovic/gpt-researcher/assets/13554167/20af8286-b386-44a5-9a83-3be1365139c3" alt="Logo" width="80">
+<img src="https://raw.githubusercontent.com/assafelovic/gpt-researcher/main/docs/static/img/gptr-logo-tile.png" alt="GPT Researcher logo" width="80">
 
 ####
 
@@ -101,8 +101,11 @@ The agent produces detailed, factual, and unbiased research reports with citatio
 - Selective web sources can introduce bias into research tasks.
 
 ## Demo
-<a href="https://www.youtube.com/watch?v=f60rlc_QCxE" target="_blank" rel="noopener">
-  <img src="https://github.com/user-attachments/assets/ac2ec55f-b487-4b3f-ae6f-b8743ad296e4" alt="Demo video" width="800" target="_blank" />
+<a href="https://github.com/user-attachments/assets/4d3f26cf-8ccc-413a-b17c-80aa9e1b52d1">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://github.com/user-attachments/assets/25d92184-c59e-4115-9961-759ada1ec952">
+    <img src="https://github.com/user-attachments/assets/3a56a008-fcbd-4373-9e40-8d6027120cfb" alt="GPT Researcher turning a question into a cited report" width="800">
+  </picture>
 </a>
 
 ## Install as Claude Skill

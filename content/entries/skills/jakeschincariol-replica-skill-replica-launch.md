@@ -16,7 +16,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Jakeschincariol/replica-skill
@@ -24,14 +24,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7706
+  stars: 8543
   last_commit: 2026-10-03T12:07:53Z
-  stars_delta_7d: 1033
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 837
+  stars_growth_pct: 10.9
+  trending_score: 927.91
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 7706
+    - 8543
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: Jakeschincariol/replica-skill
   path: replica-launch/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:10.440Z
+  fetched_at: 2026-11-09T09:27:59.761Z
   truncated: false
 type: agent_skill
 skill:

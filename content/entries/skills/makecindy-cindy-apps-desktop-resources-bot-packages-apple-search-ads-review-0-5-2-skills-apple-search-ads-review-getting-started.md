@@ -11,10 +11,10 @@ tags:
   - android
   - claude-code
 status: active
-quality_percentile: 76
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: makecindy/cindy
@@ -22,14 +22,15 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9318
-  last_commit: 2026-11-05T13:08:04Z
-  stars_delta_7d: 616
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 9577
+  last_commit: 2026-11-09T09:17:38Z
+  stars_delta_7d: 259
+  stars_growth_pct: 2.8
+  trending_score: 266.2
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 9318
+    - 9577
 language: zh
 needs_keys: false
 prerequisites: []
@@ -37,7 +38,7 @@ readme_source:
   repo: makecindy/cindy
   path: apps/desktop/resources/bot-packages/apple-search-ads-review/0.5.2/skills/apple-search-ads-review-getting-started/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:57.380Z
+  fetched_at: 2026-11-09T09:27:49.725Z
   truncated: false
 type: agent_skill
 skill:

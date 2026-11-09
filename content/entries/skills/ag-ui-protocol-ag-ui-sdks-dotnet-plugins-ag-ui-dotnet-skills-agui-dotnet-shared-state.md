@@ -15,10 +15,10 @@ tags:
   - agent-ui
   - agentic-workflow
 status: active
-quality_percentile: 68
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ag-ui-protocol/ag-ui
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 17031
-  last_commit: 2026-11-05T12:17:49Z
-  stars_delta_7d: 212
-  stars_growth_pct: 1.3
-  trending_score: 214.67
+  stars: 17074
+  last_commit: 2026-11-08T04:33:23Z
+  stars_delta_7d: 43
+  stars_growth_pct: 0.3
+  trending_score: 43.11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16674
     - 16819
     - 17031
+    - 17074
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: ag-ui-protocol/ag-ui
   path: sdks/dotnet/plugins/ag-ui-dotnet/skills/agui-dotnet-shared-state/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:32.803Z
+  fetched_at: 2026-11-09T09:28:19.055Z
   truncated: false
 type: agent_skill
 skill:

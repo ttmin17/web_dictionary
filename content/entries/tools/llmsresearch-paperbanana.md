@@ -19,26 +19,26 @@ status: active
 quality_percentile: 44
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: llmsresearch/paperbanana
   official_vendor: false
   license: MIT
 signals:
-  stars: 2466
+  stars: 2472
   last_commit: 2026-09-17T15:36:41Z
-  stars_delta_7d: 47
-  stars_growth_pct: 1.9
-  trending_score: 47.91
-  rank_current: 95
-  rank_delta: 13
+  stars_delta_7d: 6
+  stars_growth_pct: 0.2
+  trending_score: 6.01
+  rank_current: 109
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2397
     - 2406
     - 2419
     - 2466
+    - 2472
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: llmsresearch/paperbanana
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:49.366Z
+  fetched_at: 2026-11-09T09:26:59.706Z
   truncated: false
 type: agent_tool
 tool:

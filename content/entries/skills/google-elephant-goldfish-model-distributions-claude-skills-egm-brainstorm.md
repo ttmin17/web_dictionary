@@ -18,7 +18,7 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: google/elephant-goldfish-model
@@ -26,14 +26,15 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 12110
-  last_commit: 2026-11-04T20:36:04Z
-  stars_delta_7d: 1591
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 15688
+  last_commit: 2026-11-09T02:35:53Z
+  stars_delta_7d: 3578
+  stars_growth_pct: 29.5
+  trending_score: 4635.15
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 12110
+    - 15688
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: google/elephant-goldfish-model
   path: distributions/claude/skills/egm-brainstorm/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.759Z
+  fetched_at: 2026-11-09T09:27:43.649Z
   truncated: false
 type: agent_skill
 skill:
@@ -150,6 +151,7 @@ If your harness has no subagent tool, stop and tell the user: a review in the sa
 | **Migration & Backward Compatibility** | Rollout safety & version skew | *How do existing clients/data migrate? Does this break serialized schemas, protos, or persistent storage? How is rollback handled mid-migration?* |
 | **Observability & SRE Debuggability** | Telemetry & operational visibility | *Are key operations traceable via distributed tracing? Are telemetry metrics actionable? How will oncall engineers triage a production incident at 3 AM?* |
 | **Long-Term Tech Debt & Maintenance** | Future maintainability | *Does this introduce tightly coupled dependencies or brittle state machines that will be painful to maintain in 2 years?* |
+| **Inventive Catalyst** | Contradiction elimination & inventive transforms | *What fundamental trade-off is this design accepting as inevitable? How can we resolve this conflict using proven software transforms to achieve the Ideal Final Result without compromise?* |
 
 ## Execution Workflow
 
@@ -212,17 +214,18 @@ If your harness has no subagent tool, stop and tell the user: a review in the sa
 ### Step 2: Goldfish Review & Synthesis
 
 1.  **Delegate to Synthesizer Subagent**: Spawn the intermediate
-    **`egm-synthesizer`** agent (or parallel Goldfish subagents across the 6
+    **`egm-synthesizer`** agent (or parallel Goldfish subagents across the 7
     specialized lenses if your harness cannot nest subagents):
     *   Subagent: `egm-synthesizer` (`agents/synthesizer.md`)
     *   `Prompt`: >- Conduct multi-lens brainstorm for feature concept:
         `[AnchoredFeatureHypothesis]`. Mode: `BRAINSTORM`. Reviewers:
         `[egm-design, egm-codebase-details, egm-zoom-out, egm-comprehension,
-        egm-implementation-readiness, egm-structural]`.
+        egm-implementation-readiness, egm-structural, egm-inventive-catalyst]`.
 2.  **Synthesizer Execution**: The `egm-synthesizer` subagent launches the
     parallel Goldfish reviewers across the specialized lenses (`egm-design`,
     `egm-codebase-details`, `egm-zoom-out`, `egm-comprehension`,
-    `egm-implementation-readiness`, `egm-structural`) with `Mode: BRAINSTORM`.
+    `egm-implementation-readiness`, `egm-structural`,
+    `egm-inventive-catalyst`) with `Mode: BRAINSTORM`.
 3.  **Deduplication**: Collect the raw findings from the Goldfish reviewers,
     deduplicate overlapping points, and format them into a cohesive analysis.
 4.  **Write/Update Artifact**: Format and write the synthesized brief to
@@ -243,7 +246,7 @@ The `concepts_brief.md` artifact follows this structure:
 
 ## Analysis
 
-[Cohesive analysis found by review lenses written in plain English.]
+[Cohesive analysis found by review lenses written in plain English, covering inventive contradictions, suggested catalog patterns, secondary trade-offs, and the Ideal Final Result.]
 
 ## Goals vs. Non-Goals
 

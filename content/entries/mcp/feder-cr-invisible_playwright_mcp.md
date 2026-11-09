@@ -13,24 +13,27 @@ tags:
   - autonomous-agents
   - browser-agent
 status: active
-quality_percentile: 32
+quality_percentile: 30
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: feder-cr/invisible_playwright_mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 886
+  stars: 877
   last_commit: 2026-10-21T20:36:34Z
-  stars_delta_7d: 142
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  rank_current: 115
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 886
+    - 877
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +43,7 @@ readme_source:
   repo: feder-cr/invisible_playwright_mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:09.653Z
+  fetched_at: 2026-11-09T09:27:13.000Z
   truncated: false
 type: mcp_server
 launch:

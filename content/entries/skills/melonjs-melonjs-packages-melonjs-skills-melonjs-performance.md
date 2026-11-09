@@ -17,7 +17,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -26,13 +26,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -41,7 +42,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-performance/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.601Z
+  fetched_at: 2026-11-09T09:28:07.055Z
   truncated: false
 type: agent_skill
 skill:
@@ -423,6 +424,7 @@ In rough order for a typical 2D game:
 
 | symptom | cause |
 |---|---|
+| the game stops updating for good after a long hitch, or freezes on the first frame of a new state, while `requestAnimationFrame` keeps running (20.12 and 20.13) | one update slower than ten frames made the next step need more saved time than the loop keeps: update |
 | high draw-call count | the texture-unit pool overflows, or primitives/meshes are interleaved with sprites |
 | draw calls jump when one effect is enabled | a custom shader on the quad batcher disables multi-texture batching |
 | frame time spikes and GC pauses | allocating per frame instead of pooling |

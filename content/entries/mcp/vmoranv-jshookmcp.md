@@ -15,26 +15,26 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: vmoranv/jshookmcp
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2099
-  last_commit: 2026-11-05T12:35:58Z
-  stars_delta_7d: 37
-  stars_growth_pct: 1.8
-  trending_score: 37.66
-  rank_current: 57
-  rank_delta: 29
+  stars: 2106
+  last_commit: 2026-11-06T05:43:21Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.3
+  trending_score: 7.02
+  rank_current: 75
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2041
     - 2057
     - 2062
     - 2099
+    - 2106
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: vmoranv/jshookmcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:11:58.642Z
+  fetched_at: 2026-11-09T09:27:08.331Z
   truncated: false
 type: mcp_server
 launch:

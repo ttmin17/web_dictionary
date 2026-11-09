@@ -15,10 +15,10 @@ tags:
   - apps-sdk
   - chatgpt
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mcp-use/mcp-use
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10848
-  last_commit: 2026-11-05T01:27:30Z
-  stars_delta_7d: 34
-  stars_growth_pct: 0.3
-  trending_score: 34.11
+  stars: 10859
+  last_commit: 2026-11-07T20:09:55Z
+  stars_delta_7d: 11
+  stars_growth_pct: 0.1
+  trending_score: 11.01
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10753
     - 10785
     - 10814
     - 10848
+    - 10859
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mcp-use/mcp-use
   path: skills/chatgpt-app-builder/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:11:42.650Z
+  fetched_at: 2026-11-09T09:26:52.183Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +63,7 @@ skill:
     - references/skills-over-mcp.md
     - references/verification.md
     - references/views.md
-  pack_total_skills: 6
+  pack_total_skills: 7
   is_pack_primary: false
   clients:
     - claude-code

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8648
-  last_commit: 2026-11-05T13:06:48Z
-  stars_delta_7d: 450
-  stars_growth_pct: 5.5
-  trending_score: 474.7
+  stars: 8774
+  last_commit: 2026-11-09T09:15:26Z
+  stars_delta_7d: 126
+  stars_growth_pct: 1.5
+  trending_score: 127.84
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7377
     - 7831
     - 8198
     - 8648
+    - 8774
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/skills/rigs/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:57.373Z
+  fetched_at: 2026-11-09T09:27:49.762Z
   truncated: false
 type: agent_skill
 skill:
@@ -117,9 +117,16 @@ person needs in their project or home folder and name that path.
   network access, such as Codex's default one. Re-run that one command with network access before you tell the person
   to sign in again or fix anything.
 - **Install:** `npm install -g @openrig/cli`, then `rig setup --providers codex` (or `claude`, or `both`: the harness
-  the person uses). Setup checks Node, tmux and the logins. It installs tmux (with Homebrew, when present) or the chosen
-  harness (with npm) if either is missing, installs Herdr for the OpenRig view unless they decline it (`--no-herdr`),
-  and adds an OpenRig block to `~/.tmux.conf`, so say all of that first. It doesn't start the daemon. Then `rig doctor`.
+  the person uses). If the global install fails because npm's global prefix isn't writable (often a system Node with
+  prefix `/usr`), first point npm's prefix at a folder the person owns whose `bin` is on their login PATH, for example
+  `npm config set prefix ~/.local` when `~/.local/bin` is on it; say first that this changes their npm settings, and
+  their shell profile if `~/.local/bin` isn't on the login PATH. If they use a Node version manager such as nvm,
+  install with its Node instead; nvm refuses an npm `prefix` setting. Install inside the project only if neither is
+  possible: Codex seats can then report `rig: command not found`. Setting and checking the login PATH: "Before you
+  start" in https://github.com/mvschwarz/openrig/blob/main/docs/reference/getting-started.md#before-you-start. Setup
+  checks Node, tmux and the logins. It installs tmux (with Homebrew, when present) or the chosen harness (with npm) if
+  either is missing, installs Herdr for the OpenRig view unless they decline it (`--no-herdr`), and adds an OpenRig
+  block to `~/.tmux.conf`, so say all of that first. It doesn't start the daemon. Then `rig doctor`.
 - **Then go on to step 2:** say it's installed and ask what they want worked on, and in which repository. A plain
   "install OpenRig" includes this. Stop here only if they say not to start a team.
 - **If something fails:** `rig context get help` is the help guide for the installed version. If `rig` itself won't

@@ -16,10 +16,10 @@ tags:
   - ai-agents-framework
   - aiagentframework
 status: active
-quality_percentile: 91
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: VoltAgent/voltagent
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10921
-  last_commit: 2026-11-04T16:38:39Z
-  stars_delta_7d: 51
-  stars_growth_pct: 0.5
-  trending_score: 51.24
+  stars: 10934
+  last_commit: 2026-11-06T14:57:04Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.1
+  trending_score: 13.02
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10832
     - 10870
     - 10921
+    - 10934
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: VoltAgent/voltagent
   path: examples/with-workspace/workspace/skills/playwright-cli/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:33.710Z
+  fetched_at: 2026-11-09T09:28:19.469Z
   truncated: false
 type: agent_skill
 skill:

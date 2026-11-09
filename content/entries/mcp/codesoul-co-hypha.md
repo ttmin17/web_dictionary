@@ -13,10 +13,10 @@ tags:
   - agent-memory
   - agent-runtime
 status: active
-quality_percentile: 37
+quality_percentile: 33
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: CodeSoul-co/Hypha
@@ -25,15 +25,16 @@ source:
 signals:
   stars: 451
   last_commit: 2026-09-04T06:52:51Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.4
-  trending_score: 2.01
-  rank_current: 101
-  rank_delta: -1
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 118
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
     - 448
     - 449
+    - 451
     - 451
 language: en
 needs_keys: false
@@ -43,7 +44,7 @@ readme_source:
   repo: CodeSoul-co/Hypha
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.484Z
+  fetched_at: 2026-11-09T09:28:42.606Z
   truncated: false
 type: mcp_server
 launch:

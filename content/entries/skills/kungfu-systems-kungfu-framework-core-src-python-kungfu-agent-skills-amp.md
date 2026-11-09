@@ -18,7 +18,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: kungfu-systems/kungfu
@@ -26,18 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4540
+  stars: 4542
   last_commit: 2026-10-31T06:41:20Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.2
-  trending_score: 7.01
-  rank_current: 128
-  rank_delta: 6
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 2
+  rank_current: 132
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4531
     - 4533
     - 4540
+    - 4542
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +46,7 @@ readme_source:
   repo: kungfu-systems/kungfu
   path: framework/core/src/python/kungfu/agent/skills/amp/SKILL.md
   branch: dev/v4/v4.0
-  fetched_at: 2026-11-05T13:13:56.605Z
+  fetched_at: 2026-11-09T09:28:39.441Z
   truncated: false
 type: agent_skill
 skill:

@@ -15,10 +15,10 @@ tags:
   - research
   - security
 status: active
-quality_percentile: 62
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-01-14T18:23:21
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: trailofbits/skills
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: CC-BY-SA-4.0
 signals:
-  stars: 8017
-  last_commit: 2026-11-04T17:39:20Z
-  stars_delta_7d: 213
-  stars_growth_pct: 2.7
-  trending_score: 218.81
-  rank_current: 75
-  rank_delta: -8
+  stars: 8084
+  last_commit: 2026-11-06T15:20:09Z
+  stars_delta_7d: 67
+  stars_growth_pct: 0.8
+  trending_score: 67.56
+  rank_current: 77
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7507
     - 7640
     - 7804
     - 8017
+    - 8084
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: trailofbits/skills
   path: plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:13.931Z
+  fetched_at: 2026-11-09T09:28:02.750Z
   truncated: false
 type: agent_skill
 skill:

@@ -14,10 +14,10 @@ tags:
   - code-review
   - codex
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: backnotprop/plannotator
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9860
-  last_commit: 2026-11-05T13:05:30Z
-  stars_delta_7d: 213
-  stars_growth_pct: 2.2
-  trending_score: 217.7
+  stars: 9921
+  last_commit: 2026-11-09T08:32:06Z
+  stars_delta_7d: 61
+  stars_growth_pct: 0.6
+  trending_score: 61.38
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9393
     - 9506
     - 9647
     - 9860
+    - 9921
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: backnotprop/plannotator
   path: apps/qwen-code/skills/plannotator-last/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:55.599Z
+  fetched_at: 2026-11-09T09:27:48.838Z
   truncated: false
 type: agent_skill
 skill:

@@ -16,25 +16,26 @@ status: active
 quality_percentile: 94
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: google/artemis
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 16662
+  stars: 17058
   last_commit: 2026-10-01T21:37:15Z
-  stars_delta_7d: 1799
-  stars_growth_pct: 12.1
-  trending_score: 2016.75
-  rank_current: 12
-  rank_delta: -7
+  stars_delta_7d: 396
+  stars_growth_pct: 2.4
+  trending_score: 405.41
+  rank_current: 11
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12663
     - 14863
     - 16662
+    - 17058
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: google/artemis
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:31.319Z
+  fetched_at: 2026-11-09T09:28:17.732Z
   truncated: false
 type: agent_tool
 tool:

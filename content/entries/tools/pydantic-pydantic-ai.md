@@ -15,28 +15,29 @@ tags:
   - harness
   - harness-engineering
 status: active
-quality_percentile: 83
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: pydantic/pydantic-ai
   official_vendor: false
   license: MIT
 signals:
-  stars: 21037
-  last_commit: 2026-11-05T13:05:39Z
-  stars_delta_7d: 162
-  stars_growth_pct: 0.8
-  trending_score: 163.26
-  rank_current: 55
-  rank_delta: -11
+  stars: 21099
+  last_commit: 2026-11-09T09:24:24Z
+  stars_delta_7d: 62
+  stars_growth_pct: 0.3
+  trending_score: 62.18
+  rank_current: 50
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20721
     - 20875
     - 21037
+    - 21099
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: pydantic/pydantic-ai
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:51.361Z
+  fetched_at: 2026-11-09T09:28:34.244Z
   truncated: false
 type: agent_tool
 tool:

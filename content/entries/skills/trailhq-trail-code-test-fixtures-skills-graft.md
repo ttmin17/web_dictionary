@@ -18,7 +18,7 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: trailhq/Trail-Code
@@ -26,18 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 11096
-  last_commit: 2026-11-05T11:18:00Z
-  stars_delta_7d: 336
-  stars_growth_pct: 3.1
-  trending_score: 346.49
-  rank_current: 56
-  rank_delta: -15
+  stars: 11155
+  last_commit: 2026-11-09T06:06:29Z
+  stars_delta_7d: 59
+  stars_growth_pct: 0.5
+  trending_score: 59.31
+  rank_current: 82
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10412
     - 10760
     - 11096
+    - 11155
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +46,7 @@ readme_source:
   repo: trailhq/Trail-Code
   path: test/fixtures/skills/graft/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:11:42.245Z
+  fetched_at: 2026-11-09T09:26:51.735Z
   truncated: false
 type: agent_skill
 skill:

@@ -17,25 +17,26 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: microsoft/agent-governance-toolkit
   official_vendor: true
   license: MIT
 signals:
-  stars: 6520
-  last_commit: 2026-11-05T10:55:46Z
-  stars_delta_7d: 51
-  stars_growth_pct: 0.8
-  trending_score: 51.4
-  rank_current: 46
-  rank_delta: 4
+  stars: 6545
+  last_commit: 2026-11-09T08:40:02Z
+  stars_delta_7d: 25
+  stars_growth_pct: 0.4
+  trending_score: 25.1
+  rank_current: 39
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6442
     - 6469
     - 6520
+    - 6545
 language: en
 needs_keys: true
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: microsoft/agent-governance-toolkit
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:55.696Z
+  fetched_at: 2026-11-09T09:28:38.578Z
   truncated: false
 type: mcp_server
 launch:

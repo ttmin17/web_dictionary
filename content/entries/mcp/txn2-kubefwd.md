@@ -14,29 +14,29 @@ tags:
   - devops
   - devops-tools
 status: active
-quality_percentile: 41
+quality_percentile: 40
 selection_reason: quality_percentile
 first_seen: 2018-08-05T22:05:58
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: txn2/kubefwd
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4179
+  stars: 4181
   last_commit: 2026-11-03T22:36:30Z
   stars_delta_7d: 2
   stars_growth_pct: 0
   trending_score: 2
-  rank_current: 103
-  rank_delta: -1
+  rank_current: 100
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4176
     - 4177
     - 4177
     - 4179
+    - 4181
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: txn2/kubefwd
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:11:44.093Z
+  fetched_at: 2026-11-09T09:26:53.745Z
   truncated: false
 type: mcp_server
 launch:

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3298
-  last_commit: 2026-11-04T18:34:53Z
-  stars_delta_7d: 84
-  stars_growth_pct: 2.6
-  trending_score: 86.2
+  stars: 3340
+  last_commit: 2026-11-08T10:18:09Z
+  stars_delta_7d: 42
+  stars_growth_pct: 1.3
+  trending_score: 42.53
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
     - 3298
+    - 3340
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/agent-in-the-loop/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:51.215Z
+  fetched_at: 2026-11-09T09:28:34.064Z
   truncated: false
 type: agent_skill
 skill:
@@ -95,10 +96,25 @@ skill:
   the marker first. A new loop that retries on ANY exception must `break` on
   `getattr(e, "no_retry", False)` ([errors.py](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../agentic/agent_in_the_loop/errors.py),
   [phase.py](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../agentic/orchestrator_helpers/phase.py) is the example).
+- **A limit that can end a run is told to both sides.** An interactive driver makes no call
+  while its person talks to it, so the driver reads `runEndsIfSilentSeconds` on every step
+  and the pack tells it never to end its turn while a run is live; the drawer gets
+  `noDriverEndsInSeconds` and shows the clock time the run ends. A new timer or cap that ends
+  a run goes into both, or a driver that read only `deadlineInSeconds` believes it has longer.
+  Keep `LOOP_STEP_DEADLINE_S` above `LOOP_NO_DRIVER_GRACE_S`: the deadline counts from the
+  step's opening, so a lower one ends a pause first.
+- **A run that ends for want of an answer keeps what it found.** The report node's fallback
+  is built from state alone (last Fireteam wave, session findings, how to resume), since
+  after a lost driver every later step, the report included, fails at once
+  ([generate_response_node.py](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../agentic/orchestrator_helpers/nodes/generate_response_node.py)).
 - **A new model call site gets an `llm_purpose(...)` label**, or its step reaches the driver
   as `other` with a `text` answer format ([purpose.py](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../agentic/agent_in_the_loop/purpose.py)).
-- **Dangerous tools always ask a person in a loop run.** Read the setting through
-  `confirmation_required(get_setting('REQUIRE_TOOL_CONFIRMATION', True))`, never directly.
+- **A loop run follows the project's `REQUIRE_TOOL_CONFIRMATION`, and an unattended run
+  shows it.** The gates read the setting as in a provider run; `_stream_graph` passes it to
+  `run_scope(tool_confirmation=...)`, the drawer's `loop_status` carries it as
+  `toolConfirmation`, and `false` puts a red risk icon next to the Agent in the Loop chip
+  ([loopStatus.ts](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../webapp/src/app/graph/components/AIAssistantDrawer/hooks/loopStatus.ts)).
+  It stays out of the driver's view and the step (a step change bumps `contractVersion`).
 - **Only a person answers approvals, questions and dangerous-tool confirmations.** No MCP
   tool may answer them ([loopTools.ts](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../webapp/src/lib/mcp/loopTools.ts)).
 - **A driver token holds no write or exec scope besides `agent:loop`.** Compute it from
@@ -120,12 +136,13 @@ skill:
 
 | Concern | File |
 | --- | --- |
-| Switch, tunables, `is_loop_model`, `is_loop_llm`, `confirmation_required` | `agentic/agent_in_the_loop/__init__.py` |
+| Switch, tunables, `is_loop_model`, `is_loop_llm` | `agentic/agent_in_the_loop/__init__.py` |
 | Steps, leases, deadlines, no-driver rule, dedup, pruning | `agentic/agent_in_the_loop/broker.py` |
 | Run scope around every streaming graph loop | `AgentOrchestrator._stream_graph` in `agentic/orchestrator.py` |
 | MCP tools, client, driver-token rule | `webapp/src/lib/mcp/loopTools.ts`, `loopClient.ts`, `loopScopes.ts` |
 | Skill pack per client | `webapp/src/lib/mcp/loopSkill.ts` |
 | Drawer status strings | `webapp/src/app/graph/components/AIAssistantDrawer/hooks/loopStatus.ts` |
+| Fallback report when a loop step fails | `agentic/orchestrator_helpers/nodes/generate_response_node.py` |
 
 ## Resources
 

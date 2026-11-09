@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -27,13 +27,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -42,7 +43,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.604Z
+  fetched_at: 2026-11-09T09:28:07.058Z
   truncated: false
 type: agent_skill
 skill:
@@ -109,7 +110,7 @@ dependencies.
 | [melonjs-particles-and-trails](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-particles-and-trails/SKILL.md) | `ParticleEmitter`, burst versus stream, `referenceSpace`, and the `Trail` renderable. |
 | [melonjs-lighting](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-lighting/SKILL.md) | 2D dynamic lighting — `Light2d`, stage ambient, normal-mapped sprites. |
 | [melonjs-deployment](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-deployment/SKILL.md) | Scaffolding a project, building, browser support and transpiling, native and mini-game platforms. |
-| [melonjs-loading-assets](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-loading-assets/SKILL.md) | Resource descriptors, the asset type list, base URLs, cross-origin, progress events, unloading. |
+| [melonjs-loading-assets](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-loading-assets/SKILL.md) | Resource descriptors, the asset type list, a multi-level game's assets as bundles (`common` + one per level), loading and freeing a level's assets, base URLs, cross-origin, progress events. |
 | [melonjs-renderer-backends](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-renderer-backends/SKILL.md) | A feature works on one machine but not another; choosing or pinning a backend; degrading gracefully. |
 | [melonjs-display-and-scaling](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-display-and-scaling/SKILL.md) | Blurry, soft or cropped output; the design resolution, how the canvas fills its page, and pixel-perfect integer scaling. |
 | [melonjs-events](https://github.com/melonjs/melonJS/blob/master/packages/melonjs/skills/melonjs/../melonjs-events/SKILL.md) | The event bus, per-frame and lifecycle events, and subscribing without leaking. |

@@ -15,10 +15,10 @@ tags:
   - claude-code
   - claude-marketplace
 status: active
-quality_percentile: 70
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Jeffallan/claude-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 12229
+  stars: 12283
   last_commit: 2026-10-30T18:00:19Z
-  stars_delta_7d: 167
-  stars_growth_pct: 1.4
-  trending_score: 169.31
+  stars_delta_7d: 54
+  stars_growth_pct: 0.4
+  trending_score: 54.24
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11852
     - 11937
     - 12062
     - 12229
+    - 12283
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: Jeffallan/claude-skills
   path: skills/cpp-pro/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:51.561Z
+  fetched_at: 2026-11-09T09:27:45.249Z
   truncated: false
 type: agent_skill
 skill:

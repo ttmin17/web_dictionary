@@ -18,7 +18,7 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: codewhale-hq/Codewhale
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 41158
-  last_commit: 2026-11-05T13:03:13Z
-  stars_delta_7d: 40
-  stars_growth_pct: 0.1
-  trending_score: 40.04
+  stars: 41160
+  last_commit: 2026-11-09T09:21:05Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 41101
     - 41118
     - 41158
+    - 41160
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: codewhale-hq/Codewhale
   path: crates/skills/assets/skills/delegate/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:37.248Z
+  fetched_at: 2026-11-09T09:28:23.915Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,7 +64,7 @@ skill:
 ---
 
 # Delegate
-Use sub-agents when they can do focused work in parallel while the parent keeps architectural judgment, integration, and final verification.
+Use sub-agents when they can do focused work in parallel while the parent keeps architectural judgment, integration, and the final review.
 
 ## Keep vs Delegate
 
@@ -82,7 +83,7 @@ Delegate to sub-agents:
 - Boilerplate generation from an explicit spec
 - Independent checks that can run while parent work continues
 
-Do not delegate tiny one-step tasks, ambiguous product decisions, destructive operations without a clear acceptance criterion, or final verification.
+Do not delegate tiny one-step tasks, ambiguous product decisions, or destructive operations without a clear acceptance criterion.
 
 ## Launch Focused Work
 
@@ -118,7 +119,7 @@ Use `fork_context: true` only when the child genuinely needs the current convers
 
 ## Route the Work
 
-Choose the route per child from `agent(action:"roster")` (no provider request), not from memory. It lists each role's resolved route and the models you may pick.
+Routes are optional: a child inherits a working route by default. To choose one, `agent(action:"roster")` (no provider request) lists each role's resolved route and the models you may pick.
 
 - `thinking` overrides a saved tier on any role. Dial: `off low medium high xhigh max ultra`, plus `inherit` (role default, then session effort) and `auto`.
 - `model` and `model_strength` apply to unpinned routes only. A pinned profile refuses a conflicting model; to choose a model, start an unpinned role such as `general`. `model_strength: "faster"` is the same-family faster sibling, `"same"` the session model.

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: aden-hive/hive
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11142
-  last_commit: 2026-11-02T10:07:20Z
-  stars_delta_7d: 20
-  stars_growth_pct: 0.2
-  trending_score: 20.04
+  stars: 11148
+  last_commit: 2026-11-08T01:41:04Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11099
     - 11108
     - 11122
     - 11142
+    - 11148
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: aden-hive/hive
   path: core/framework/skills/_preset_skills/terminal-tools-foundations/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:12.236Z
+  fetched_at: 2026-11-09T09:28:01.340Z
   truncated: false
 type: agent_skill
 skill:
@@ -113,16 +113,16 @@ The agent loop first waits up to five seconds for `terminal_exec`. A slower call
 { "auto_backgrounded": true, "exit_code": null, "job_id": "job_<hex>", ... }
 ```
 
-When you see `auto_backgrounded: true`, **pivot to polling**. The job is still running:
+When you see `auto_backgrounded: true`, the job is still running. When you have nothing else to do meanwhile, wait for it:
 
 ```
-terminal_job_logs(job_id, since_offset=0, wait_until_exit=true, wait_timeout_sec=30)
-  → blocks server-side until the job exits or the timeout, returns logs + status
+terminal_job_logs(job_id, since_offset=0, wait_until_exit=true)
+  → waits until the job exits or a new message for you arrives, returns logs + status
 ```
 
 You're not failing — you're freed up to do other work while the long task runs.
 
-`collect_result` does not redeem `job_id`: after collecting a promoted call, use `terminal_job_logs` until status is `exited`. Track separate stdout/stderr offsets; use `terminal_job_manage(action="signal_term", job_id=...)` to cancel. Poll waits are capped at 45 seconds and do not extend execution deadlines. Job retrieval/management ship with basic exec; explicit job creation and PTYs require the advanced category.
+`collect_result` does not redeem `job_id`: after collecting a promoted call, use `terminal_job_logs` until status is `exited`. Track separate stdout/stderr offsets; use `terminal_job_manage(action="signal_term", job_id=...)` to cancel. One wait lasts up to `wait_timeout_sec` (at most 600, the default); prefer one long wait to repeated short ones, each of which costs a whole model turn. A wait does not extend the execution deadline. Job retrieval/management ship with basic exec; explicit job creation and PTYs require the advanced category.
 
 `timeout_sec` defaults to 60 seconds **from command start**, including time after promotion. Expiry terminates the owned process tree; final logs report `timed_out=true`. A deadline at or before promotion kills inline. Set `timeout_sec=0` for unlimited execution with promotion enabled. To keep execution foreground, set `auto_background_after_sec=0` and a finite timeout of at most 220 seconds (or less if the caller has a smaller budget). Use managed jobs for longer waits. Jobs belong to the terminal server and do not survive its restart.
 

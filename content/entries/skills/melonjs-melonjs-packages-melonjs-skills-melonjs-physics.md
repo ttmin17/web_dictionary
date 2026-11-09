@@ -19,7 +19,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -28,13 +28,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -43,7 +44,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-physics/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.601Z
+  fetched_at: 2026-11-09T09:28:07.056Z
   truncated: false
 type: agent_skill
 skill:
@@ -216,6 +217,11 @@ class Player extends Sprite {
 The engine forwards it to the active adapter when the renderable is added with
 `Container.addChild`, and only if that container is already attached to the root
 world; the broadphase picks the renderable up on the next `world.update()`.
+Nesting is fine: adding a container registers the body of every renderable
+below it, at any depth, and removing it — destroyed, pooled or kept alive —
+takes them all out again, so moving a whole group with `other.addChild(group)`
+keeps each body simulated, once. A persistent container's children keep their
+bodies through `world.reset()` (a state change or `level.load`).
 Calling `adapter.addBody()` yourself registers the body but leaves the
 renderable out of the scene graph, so it integrates but never collides.
 
@@ -333,6 +339,13 @@ arc segments each, so it is the usual way to meet that cap; the adapter now
 samples it down and keeps the extent. Anything the 2D backends cannot express
 is refused loudly on both, rather than leaving a body with no collision
 geometry that silently never collides.
+
+A polygon may be wound either way: its edge normals are oriented outward from
+its signed area. Before 20.13 they pointed inward on a counter-clockwise
+polygon — a Tiled polygon drawn that way, anything mirrored with
+`scale(-1, 1)` or a `Rect` of negative width — and the built-in circle test
+then collided a circle with it from tens of pixels away, as soon as their
+bounding boxes met. Polygon against polygon was never affected.
 
 Whatever a backend really simulates is what `getBodyShapes()` reports, so the
 debug panel is the fastest way to see an approximation for what it is.
@@ -597,6 +610,15 @@ and only active under a 3D broadphase — i.e. `world.sortOn === "depth"`, which
 `world.adapter.capabilities.raycasts3d` before calling either. `raycast` itself
 is capability-gated by `capabilities.raycasts`.
 
+On the built-in adapter a 2D ray measures each shape the way the narrowphase
+measures it against a planar shape: polygons, `Rect`, `RoundRect` and `Line`
+by their edges, an `Ellipse` with its rotation, a `Box3d` by its XY footprint
+and a `Sphere` as a circle of its radius (a 2D ray is unbounded along Z). A
+`Point` has no area to cross and is skipped, as is an unknown shape type,
+with a one-time console warning. Before 20.13 a body carrying a `Point`,
+`Sphere` or `Box3d` made every ray that reached it throw, and a rotated
+ellipse was hit where it would have been unrotated.
+
 The legacy `collision.rayCast(line, result)` is a different API: it takes a
 `Line`, returns an **array** of every intersecting renderable, and only exists
 on the built-in path.
@@ -693,8 +715,9 @@ group.resize(width, height);
 ```
 
 `enableChildBoundsUpdate` also gives it one, but it re-measures the whole child
-list on every update — reach for it only when the extent genuinely IS the
-members' union and moves with them (a flock, a squad), not to give a fixed
+list on every update (after the children have moved, and before each culling
+check while it is off screen) — reach for it only when the extent genuinely IS
+the members' union and moves with them (a flock, a squad), not to give a fixed
 group a size.
 
 ## Built-in world quirks
@@ -720,13 +743,25 @@ real rigid-body engine:
 - **`applyForce(x, y)` is linear only** unless you pass the optional
   `(pointX, pointY)` application point, which generates a torque
   `τ = r × F` into `body.angularVelocity` via `body.pseudoInertia`.
-  `applyTorque(τ)` is the direct form.
+  `applyTorque(τ)` is the direct form. The point is in **world** coordinates,
+  as on matter and planck, and the lever arm is measured from the centre of
+  the shapes where they collide: the renderable's drawn frame (so the anchor
+  counts) plus any parent container's position. `renderable.getBounds()` is
+  in that space, so `b.centerX, b.top` is the top centre.
 - **Force accumulators reset at end-of-step** — for every body, including
   static, paused and off-screen ones — so forces must be applied every frame to
   persist.
 - **`isGrounded` is flag-based, not contact-based** — the adapter returns
   `!body.falling && !body.jumping`, flags updated by the last resolved
-  collision, not a live contact test.
+  collision, not a live contact test. The DIRECTION of the push-out decides
+  them: pushed up out of a floor while not rising is a landing, pushed down
+  by a ceiling while rising (or `jumping`) ends the jump and falls, and a
+  side contact, a body touched from above while standing, or a body with
+  `gravityScale` 0 leaves them alone. Before 20.13 a magnitude test decided
+  instead, so anything that sank a pixel or more per step — gravity above
+  about `1.02`, mass above about `1.03`, `timer.tick > 1` at a low frame
+  rate, a floor moving up under it — stayed `falling` while sitting flush on
+  the floor, and could never jump.
 - **`def.density` maps 1:1 to `body.mass`** (default `1`), and `def.friction` is
   **ignored** entirely. `body.friction` is a per-axis `Vector2d` of per-step
   velocity damping fed from `def.frictionAir`, not a surface coefficient.
@@ -757,6 +792,12 @@ rotated needs planck or matter. Under the builtin solver, approximate it with a
 shape that is close enough at every angle (a circle, or a square for
 90° steps), or rotate the shapes yourself with `body.rotate(angle)` — which
 does rotate them, unlike `setAngle()`.
+
+The visual turn pivots on the centre of the body's shapes, where they are
+drawn and collide, whatever the renderable's `anchorPoint`. Before 20.13 it
+ignored the anchor, so a centre-anchored renderable turned about its
+bottom-right corner and swung away from where it stood; only a `(0, 0)`
+anchor turned in place.
 
 `body.rotate()` applies a **delta** and does not update `body.angle`; the two
 are unlinked, so a body driven by `rotate()` still reports an angle of `0`.
@@ -804,13 +845,17 @@ Same call, different magnitude — these are the ones that waste an afternoon:
 - **`body.position` is the centroid in matter**, while `renderable.pos` is
   top-left in melonJS. The adapter stores a per-body offset so `renderable.pos`
   stays correct — but read `body.position` directly and you get the centroid.
-- **Degenerate (zero-area / collinear) polygons — a Tiled polyline, a `Line` —
-  cannot be built by matter and fall back to their axis-aligned bounding box.**
-  Any other shape type throws `unsupported shape type`.
+- **A `Line` (what Tiled emits for a polyline) is a thin 2px rectangle along
+  the segment on matter**, which is what `getBodyShapes()` reports (since
+  matter-adapter 1.5.0; before that it fell back to its axis-aligned bounding
+  box). Only a degenerate (zero-area, collinear) `Polygon` still falls back to
+  its bounding box. Any other shape type throws `unsupported shape type`.
 - **Ellipses become circles on matter**, using the average of the two radii.
 - **`isGrounded` is capability-gated** (`capabilities.isGrounded`) and computed
   differently per adapter: a flag read on built-in, a live scan of active
-  contacts on matter.
+  contacts on matter and planck, counting a solid contact that pushes the body
+  up (a sensor contact counts when the other body is below). On every adapter
+  the side of a wall is not ground.
 
 Adapter-specific escapes exist (`(this.body as MatterAdapter.Body).frictionAir`,
 `adapter.matter.Constraint.create(...)`) but are not portable — flag them if you
@@ -839,14 +884,26 @@ use them. `adapter.capabilities` (`constraints`,
 | a small shape sits at the sprite's corner | a shape's offset is measured from the drawn frame's TOP-LEFT; `new Sphere(0, 0, 0, r)` is the corner, `(width / 2, height / 2)` is the centre |
 | a rotated renderable reports an unrotated bounding box | `autoTransform: false` opts `updateBounds()` out of the transform |
 | a body in a pile sinks into the floor (built-in) | fixed in 20.7 for anything with an immovable side; bodies pinned only by other DYNAMIC bodies still overlap by a pixel or two, which is what planck/matter are for |
+| `applyForce` with a point spins a body pushed through its centre, or tips it the wrong way (built-in) | before 20.13 the point was measured against the body's LOCAL bounds, so only a body at the world origin got the right torque; upgrade, and drop any `pos` you subtracted to compensate |
 | forces do nothing after switching adapter | magnitude units differ — re-tune, don't reuse numbers |
 | `body.position` disagrees with `renderable.pos` on matter | matter stores the centroid, melonJS the top-left — the adapter offsets between them |
+| a `bodyDef` two containers down never falls nor collides (`body` stays `undefined`) | before 20.13 only the added container's own children were registered; upgrade |
+| `other.addChild(group)` throws "renderable is already adapter-managed" | before 20.13 a group detached with keepalive (which moving it does) left its children's bodies registered, still simulated off-stage; upgrade |
+| the children of a persistent container stop falling and colliding after a state change or `level.load` | before 20.13 `world.reset()` kept only the bodies whose own renderable was persistent; upgrade, or flag each child `isPersistent` |
 | `bodyDef.shapes: "…"` throws "is not loaded" | the name must match the `name` the JSON was preloaded under, not its filename |
 | everything falls far too fast or too slow after swapping backends | gravity is a different unit per backend; see the table above |
 | debris lands holding its spawn angle and never tumbles | `fixedRotation: true`, or matter-adapter < 1.4.0 / planck-adapter < 1.5.0 |
 | a rotated sprite collides as if upright | the built-in solver rotates visually only — `body.angle` never rotates the shapes. Use planck/matter, or `body.rotate(angle)` |
+| `setAngle` swings a sprite away from where it stood (built-in) | before 20.13 the pivot ignored `anchorPoint`, so a centre-anchored renderable turned about its bottom-right corner; upgrade |
+| `isGrounded()` stays `false` on the floor, so the player cannot jump (built-in) | before 20.13 a body sinking 1px or more per step (gravity or mass above ~1.02, `timer.tick > 1`, a rising floor) never landed; upgrade |
+| a circle body is shoved by a polygon it is nowhere near (built-in) | before 20.13 a counter-clockwise polygon (Tiled, mirrored with `scale(-1, 1)`) had inward edge normals; upgrade |
+| `raycast` throws "reading 'x'" / "reading 'length'" (built-in) | before 20.13 a body carrying a `Point`, `Sphere` or `Box3d` broke the ray walk; upgrade |
+| a ray passes through a rotated ellipse, or stops short of it (built-in) | before 20.13 the raycast ignored `Ellipse#angle`; upgrade |
 | the debug hitbox does not follow a spinning body | pre-1.2.1 matter-adapter / pre-1.3.1 planck-adapter returned the authored shapes rather than the rotated ones |
-| a Tiled polyline becomes a solid box on matter | matter cannot build a zero-area polygon; the adapter falls back to its AABB |
+| a Tiled polyline becomes a solid box on matter | matter-adapter < 1.5.0 built a `Line` as its AABB; upgrade (a degenerate `Polygon` still falls back to one) |
+| the player climbs a tall wall with repeated jumps (matter, planck) | matter-adapter < 1.5.3 / planck-adapter < 1.6.3 counted any contact with a lower body as ground; upgrade |
+| a hero made of several shapes is never grounded, so it cannot jump (matter) | matter-adapter < 1.5.3 missed contacts on the parts of a compound body; upgrade |
+| `setSensor(true)` on a platform under the player does nothing, so it cannot be dropped through (matter) | matter-adapter < 1.5.3 did not update a contact already in place; upgrade |
 
 ## Related skills
 

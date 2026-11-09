@@ -12,28 +12,29 @@ tags:
   - claude-code
   - claude-desktop
 status: active
-quality_percentile: 70
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: slopus/happy
   official_vendor: false
   license: MIT
 signals:
-  stars: 24503
-  last_commit: 2026-11-05T11:45:28Z
-  stars_delta_7d: 184
-  stars_growth_pct: 0.8
-  trending_score: 185.39
-  rank_current: 52
-  rank_delta: 4
+  stars: 24550
+  last_commit: 2026-11-09T09:05:35Z
+  stars_delta_7d: 47
+  stars_growth_pct: 0.2
+  trending_score: 47.09
+  rank_current: 57
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 24204
     - 24319
     - 24503
+    - 24550
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: slopus/happy
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:37.431Z
+  fetched_at: 2026-11-09T09:27:34.061Z
   truncated: false
 type: agent_tool
 tool:

@@ -16,25 +16,26 @@ status: active
 quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: CloakHQ/CloakBrowser
   official_vendor: false
   license: MIT
 signals:
-  stars: 32727
-  last_commit: 2026-11-03T18:15:13Z
-  stars_delta_7d: 229
-  stars_growth_pct: 0.7
-  trending_score: 230.61
-  rank_current: 45
-  rank_delta: -11
+  stars: 32790
+  last_commit: 2026-11-08T20:12:54Z
+  stars_delta_7d: 63
+  stars_growth_pct: 0.2
+  trending_score: 63.12
+  rank_current: 49
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 32300
     - 32498
     - 32727
+    - 32790
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: CloakHQ/CloakBrowser
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:29.796Z
+  fetched_at: 2026-11-09T09:28:15.509Z
   truncated: true
 type: agent_tool
 tool:
@@ -208,7 +209,7 @@ page.goto("https://example.com")
 
 ---
 
-## Latest: v0.7.0 — 87 source-level stealth patches (Chromium 156.0.8078.47.1)
+## Latest: v0.7.1 — 87 source-level stealth patches (Chromium 156.0.8078.47.1)
 
 - **CloakBrowser Pro Stable** — Chromium `156.0.8078.47.1` on Linux x64, Linux ARM64, Windows x64, and macOS (Apple Silicon and Intel). Set a `license_key` (`licenseKey` in JS) or the `CLOAKBROWSER_LICENSE_KEY` env var and the wrapper fetches the latest Stable build for your platform automatically. See [CloakBrowser Pro](#cloakbrowser-pro)
 - **.NET 8 / C# client** — CloakBrowser now ships as a NuGet package (`CloakBrowser`), mirroring the Python and JS wrappers.

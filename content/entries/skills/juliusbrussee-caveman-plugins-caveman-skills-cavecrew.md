@@ -18,7 +18,7 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-04-04T10:03:00
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: JuliusBrussee/caveman
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 117655
-  last_commit: 2026-11-05T07:18:24Z
-  stars_delta_7d: 2545
-  stars_growth_pct: 2.2
-  trending_score: 2601.27
-  rank_current: 20
-  rank_delta: 0
+  stars: 118474
+  last_commit: 2026-11-09T01:48:59Z
+  stars_delta_7d: 819
+  stars_growth_pct: 0.7
+  trending_score: 824.7
+  rank_current: 21
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 111405
     - 113528
     - 115110
     - 117655
+    - 118474
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: JuliusBrussee/caveman
   path: plugins/caveman/skills/cavecrew/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:19.719Z
+  fetched_at: 2026-11-09T09:27:20.645Z
   truncated: false
 type: agent_skill
 skill:
@@ -128,6 +128,7 @@ Skip investigator. Hand exact path:line to `cavecrew-builder` directly.
 
 ## What NOT to do
 
+- Don't accept or reject a subagent's absence claim (`No match.`, `No issues.`, "section missing", "unchanged") without one targeted check of the relevant file, search scope, or diff. Check cited line numbers are within the file before acting.
 - Don't use `cavecrew-builder` when you don't already know the file. Spawn investigator first or main thread will eat tokens passing context.
 - Don't chain `cavecrew-investigator → cavecrew-builder` for a 5-file refactor. Builder will return `too-big.` and you'll have wasted a turn.
 - Don't ask `cavecrew-reviewer` for "general feedback" — it returns findings only, no architecture opinions. Use `Code Reviewer` for that when installed.

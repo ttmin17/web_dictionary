@@ -14,29 +14,29 @@ tags:
   - hvac-maintenance
   - iot
 status: active
-quality_percentile: 58
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2025-05-01T20:48:50
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: IBM/AssetOpsBench
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2410
-  last_commit: 2026-11-05T00:34:33Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.5
-  trending_score: 13.07
-  rank_current: 121
-  rank_delta: -33
+  stars: 2416
+  last_commit: 2026-11-09T00:56:56Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.2
+  trending_score: 6.01
+  rank_current: 111
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2350
     - 2365
     - 2397
     - 2410
+    - 2416
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: IBM/AssetOpsBench
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:58.738Z
+  fetched_at: 2026-11-09T09:27:08.361Z
   truncated: false
 type: agent_tool
 tool:

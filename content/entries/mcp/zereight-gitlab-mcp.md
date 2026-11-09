@@ -12,28 +12,29 @@ tags:
   - devtools
   - gitlab
 status: active
-quality_percentile: 86
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: zereight/gitlab-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2085
-  last_commit: 2026-11-05T05:56:06Z
-  stars_delta_7d: 20
-  stars_growth_pct: 1
-  trending_score: 20.19
-  rank_current: 72
-  rank_delta: -8
+  stars: 2091
+  last_commit: 2026-11-09T03:50:32Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.3
+  trending_score: 6.02
+  rank_current: 77
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2049
     - 2065
     - 2085
+    - 2091
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: zereight/gitlab-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:58.926Z
+  fetched_at: 2026-11-09T09:27:08.451Z
   truncated: true
 type: mcp_server
 launch:
@@ -308,7 +309,7 @@ The store path is pinned by your lock file; update it with `nix flake update git
 
 The examples use `zereight-mcp-gitlab`, a less collision-prone alias for the legacy `mcp-gitlab` binary. If your MCP client cannot find it, use the absolute path from `which zereight-mcp-gitlab`.
 
-No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.20`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. To try a fix merged to `main` before the next stable release, use `npx -y @zereight/mcp-gitlab@next`, a pre-release build that is not meant for production. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
+No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.21`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. To try a fix merged to `main` before the next stable release, use `npx -y @zereight/mcp-gitlab@next`, a pre-release build that is not meant for production. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
 
 #### Claude Desktop one-click install (MCP Bundle)
 

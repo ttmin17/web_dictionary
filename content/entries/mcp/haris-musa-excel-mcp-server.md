@@ -14,29 +14,29 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 82
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2025-02-12T06:39:48
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: haris-musa/excel-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 4278
-  last_commit: 2026-11-04T19:26:32Z
-  stars_delta_7d: 14
-  stars_growth_pct: 0.3
-  trending_score: 14.05
-  rank_current: 80
-  rank_delta: -15
+  stars: 4284
+  last_commit: 2026-11-09T08:25:34Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6.01
+  rank_current: 78
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4235
     - 4248
     - 4264
     - 4278
+    - 4284
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: haris-musa/excel-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.082Z
+  fetched_at: 2026-11-09T09:26:53.731Z
   truncated: false
 type: mcp_server
 launch:
@@ -257,7 +257,7 @@ docker run -p 8017:8017 -v "$PWD/workbooks:/data" -e EXCEL_MCP_AUTH_TOKEN=change
 | `--allow-vba-write` | `EXCEL_MCP_ALLOW_VBA_WRITE=1` | off | Add tools that write VBA macros (see warning below); ignored with `--read-only` |
 | `--tools AREAS` | `EXCEL_MCP_TOOLS` | all | Only offer the core tools and these comma-separated areas, to save context (see [Choosing tools](#choosing-tools)) |
 | `--max-file-mb N` | `EXCEL_MCP_MAX_FILE_MB` | `100` | Largest workbook the server opens. Also sets the unpacked-size limit (10 times this) that every opened or uploaded workbook must stay under; parts compressed over 500:1 are refused |
-| `--max-cells N` | `EXCEL_MCP_MAX_CELLS` | `100000` | Most cells one call may read, write or format; reads are still returned in pages |
+| `--max-cells N` | `EXCEL_MCP_MAX_CELLS` | `100000` | Most cells one call may read, write or format; reads are still returned in pages; also bounds text to 256 characters per cell on average |
 | `--max-pivot-cells N` | `EXCEL_MCP_MAX_PIVOT_CELLS` | `3000000` | Largest PivotTable source in cells (a 230,000-row, 13-column sheet); creating one from the biggest sources takes a minute and about 2 GB of memory |
 | `--max-loaded-cells N` | `EXCEL_MCP_MAX_LOADED_CELLS` | `3000000` | Most cells and rows of a workbook that may be loaded into memory at once, about 0.5 KB each (a 3,000,000 limit is about 1.5 GB). A workbook with more is refused by the tools that must load whole sheets; `read_range` and the other streaming reads, and edits of large sheets that parse only some rows, are not limited by the size of the sheet |
 | `--log-level LEVEL` | | `WARNING` | Logging on stderr |
@@ -367,7 +367,7 @@ refused, since any change would invalidate the signature.
   `http(s)://`, `mailto:` or `#Sheet!A1` link only.
 - Paths are resolved, including symlinks, before they are checked against the allowed
   folders. Network (UNC) and Windows device paths are always rejected.
-- A single call processes at most 100,000 cells (`--max-cells`), and large reads are returned in pages.
+- A single call processes at most 100,000 cells (`--max-cells`) and, on average, 256 characters of text per cell (25.6 million characters at the default), and large reads are returned in pages. Text a workbook stores once but many cells hold is counted in every cell, and a workbook that saving would expand past the unpacked-size limit is refused.
 - Cell contents are data from files. The server tells the model not to follow instructions
   found in them, but review what an assistant does with workbooks from untrusted sources.
 

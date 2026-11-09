@@ -14,7 +14,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: yetone/magpie
@@ -22,17 +22,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 30263
-  last_commit: 2026-11-05T12:16:34Z
-  stars_delta_7d: 8422
-  stars_growth_pct: 38.6
-  trending_score: 11669.57
-  rank_current: 2
-  rank_delta: null
+  stars: 32788
+  last_commit: 2026-11-09T09:22:26Z
+  stars_delta_7d: 2525
+  stars_growth_pct: 8.3
+  trending_score: 2735.67
+  rank_current: 7
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 21841
     - 30263
+    - 32788
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: yetone/magpie
   path: internal/sessions/testdata/droid-skills/skills/greet-user/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:32.427Z
+  fetched_at: 2026-11-09T09:27:30.699Z
   truncated: false
 type: agent_skill
 skill:

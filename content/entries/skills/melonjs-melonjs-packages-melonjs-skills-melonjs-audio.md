@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -27,13 +27,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -42,7 +43,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-audio/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.597Z
+  fetched_at: 2026-11-09T09:28:07.052Z
   truncated: false
 type: agent_skill
 skill:
@@ -122,6 +123,11 @@ loops, and it records the name as the current track — which is what
 `state.pause(true)` → `pauseTrack()`. `stopTrack()`, `pauseTrack()`,
 `resumeTrack()` and `getCurrentTrack()` all read that same single slot, so there
 is only ever one current *track name*.
+
+`playTrack` on a track that is paused restarts it. `pauseTrack` and
+`resumeTrack` act on the track alone, so effects played from the same file (an
+audio sprite holding both) keep going, and `resumeTrack` on a track that is
+playing does nothing.
 
 **`playTrack` stops the track it replaces** (20.9.0 and later; before that it
 only assigned the slot, and the previous bed kept looping underneath where
@@ -220,6 +226,11 @@ audio.muteAll();                // everything (audio.disable() is an alias)
 audio.unmuteAll();              // (audio.enable() is an alias)
 audio.muted();                  // global mute state
 ```
+
+`setVolume` is a master level over everything; the `volume` given to a `play`
+or `playTrack` is that sound's own level, 1 when left out, and what is heard is
+the product of the two. So a music slider fades the track's own level
+(`audio.fade(name, v, v, 1)`) and a master slider calls `setVolume`.
 
 `audio.unload(name)` / `audio.unloadAll()` free the decoded buffers; `unload`
 also clears the current-track pointer if it named that clip.
@@ -573,7 +584,10 @@ either way — blank screen, empty console.
 | a positioned sound is silent, or only audible right next to the player | placed by hand with `audio.position()`, which keeps WebAudio's metre defaults (`refDistance: 1`) — use `follow` / `at`, or set `refDistance` in pixels with `audio.panner()` |
 | a positioned sound does not follow the player | nothing is placing it — `audio.play(name, { follow: entity })`, and `audio.setListener(player)` once |
 | a followed sound pans to the wrong side as the player moves | the listener was moved **and** positions are still relative to the player — with a listener in the world, pass absolute world coordinates |
-| a looping sound outlives the entity that owns it | `follow` without `stopWithTarget: true` |
+| a looping sound outlives the entity that owns it | `follow` without `stopWithTarget: true`; with it, before 20.14 a pooled entity going back to its pool did not count either |
+| new sounds are quieter than the volume slider says, or the music stays silent after the volume went to 0 and back (before 20.14) | the global volume was applied twice: update |
+| "Retry" from a pause menu restarts the level with no music (before 20.14) | `playTrack` on a paused track stopped it: update |
+| a clip's load-time `on: { end }` stops firing after `audio.stop(name)` (before 20.14) | `stop(name)` removed it: update |
 | a voice panned with `stereo()` loses its 3D placement, or the reverse | one panner node per voice and last writer wins — pick one per voice and stay with it |
 | a reverb / compressor on the master gain does not affect the music | the music is `stream: true`, which bypasses the master gain — preload it buffered |
 | a looping MP3 drops out for a moment at every loop, in Safari only | Safari keeps the encoder's padding at the end of the file: loop a sprite region of the clip's exact length (see "A loop with no gap") |

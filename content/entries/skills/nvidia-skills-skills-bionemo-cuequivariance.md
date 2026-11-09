@@ -17,7 +17,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: NVIDIA/skills
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3870
-  last_commit: 2026-11-05T00:43:06Z
-  stars_delta_7d: 135
-  stars_growth_pct: 3.6
-  trending_score: 139.88
+  stars: 3907
+  last_commit: 2026-11-06T22:04:08Z
+  stars_delta_7d: 37
+  stars_growth_pct: 1
+  trending_score: 37.35
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3581
     - 3642
     - 3735
     - 3870
+    - 3907
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: NVIDIA/skills
   path: skills/bionemo-cuequivariance/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:18.152Z
+  fetched_at: 2026-11-09T09:28:10.993Z
   truncated: false
 type: agent_skill
 skill:

@@ -17,7 +17,7 @@ status: active
 quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: code-yeongyu/senpi
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 512
-  last_commit: 2026-11-05T13:00:13Z
-  stars_delta_7d: 15
-  stars_growth_pct: 3
-  trending_score: 15.45
+  stars: 514
+  last_commit: 2026-11-09T08:42:55Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.4
+  trending_score: 2.01
   velocity_source: snapshot_delta
   sparkline_4w:
     - 484
     - 497
     - 512
+    - 514
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: code-yeongyu/senpi
   path: packages/senpi-codemode/src/skill/bun/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:48.038Z
+  fetched_at: 2026-11-09T09:28:31.234Z
   truncated: false
 type: agent_skill
 skill:
@@ -105,9 +106,9 @@ Bun 1.4.0 (Aug 2026) through 1.4.4 (Oct 2026) ships builtins and CLIs that repla
 | Serve a static dir (ETag/Range/304 handled) | `Bun.serve({ routes: { "/x/*": { dir } } })` | express.static, serve-static, sirv | http-networking |
 | HTTP/2 + HTTP/3 server; fetch protocol/compress/proxy; per-client pools | `http2: true`, `http3: true`, `fetch(url, { protocol, compress, proxy })`, `new Bun.FetchSession()` | undici Agent | http-networking |
 | Stream a download to disk; replay a request as curl | `Bun.write(path, await fetch(url))`, `BUN_CONFIG_VERBOSE_FETCH=curl` | pipeline + createWriteStream | http-networking |
-| Tests across CPU workers / CI shards / changed files / flaky retry | `bun test --parallel --shard=1/3 --changed=main --retry` | jest/vitest infra | test |
+| Tests across CPU workers / CI shards / changed files / flaky retry | `bun test --parallel --shard=1/3 --changed=main --retry=3` | jest/vitest infra | test |
 | Kill "passes alone, fails in suite" bugs; hunt flakes | `bun test --isolate`, `--rerun-each N`, `--only-failures` | vitest default behavior | test |
-| Single-file executables with embedded assets and profile-guided startup; feature flags; in-memory bundling; metafile; React Compiler | `bun build --compile --asset ./public --bytecode-order`, `bun:bundle feature()`, `files:{}`, `metafile: true`, `--react-compiler` | pkg hacks, esbuild define/plugins, babel-plugin-react-compiler | build |
+| Single-file executables with embedded assets and profile-guided startup; feature flags; in-memory bundling; metafile; React Compiler | `bun build --compile --bytecode --bytecode-order=<profile> --asset ./public`, `bun:bundle feature()`, `files:{}`, `metafile: true`, `--react-compiler` | pkg hacks, esbuild define/plugins, babel-plugin-react-compiler | build |
 | Diff package versions, fix vulns, dedupe/prune, licenses, explain a dep | `bun pm diff`, `bun audit fix`, `bun dedupe`, `bun prune`, `bun pm licenses`, `bun why` | npm-diff, npm audit fix, npm ls | install |
 | Offline / cached installs; Docker layers; CI cache; 7x faster CI | `bun install --offline\|--prefer-offline`, `bun pm fetch`, `bun pm cache pack\|unpack`, `linker = "isolated"` | pnpm store | install |
 | Profile CPU/heap/bundle as grep-able Markdown | `bun --cpu-prof-md`, `--heap-prof-md`, `bun build --metafile-md` | Chrome DevTools round-trip | dev-tooling |

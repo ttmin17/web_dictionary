@@ -15,10 +15,10 @@ tags:
   - codex
   - computer-use
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: milind-soni/OpenMausBot
@@ -26,14 +26,15 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12583
-  last_commit: 2026-11-05T09:31:40Z
-  stars_delta_7d: 1025
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 18995
+  last_commit: 2026-11-09T04:53:35Z
+  stars_delta_7d: 6412
+  stars_growth_pct: 51
+  trending_score: 9679.4
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 12583
+    - 18995
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: milind-soni/OpenMausBot
   path: skills/data-dashboards/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:47.675Z
+  fetched_at: 2026-11-09T09:27:38.670Z
   truncated: false
 type: agent_skill
 skill:
@@ -77,7 +78,7 @@ that with `show_html` and the page's `app_id`; the same card refreshes.
 | A quick answer or one chart | No page. Use the Data tools (`data_sql`, `data_show`) or a markdown table. |
 | A small summary to look at here | A chat page (`show_html`) with pre-aggregated rows embedded as CSV. |
 | To explore bigger data, or a link to share | Query with the Data tools, export the slice with `data_export` (`format: "parquet"`) into a folder beside `index.html`, show the folder in the chat with `show_html` `path`, and `publish_page` it when the person wants a link: the same card gains it. |
-| "Keep it up to date" | The shared page, plus a schedule (`trigger`, `action=create`, `when=schedule`) whose instructions re-run the export, set `CONFIG.updated`, and publish the same folder again. Publishing the same path keeps the same link. |
+| "Keep it up to date", "live" | The folder page with `live: true` on `show_html` (and on `publish_page` for a link), plus a schedule (`trigger`, `action=create`, `when=schedule`) whose instructions only re-run the export into the same folder and set `CONFIG.updated`. A live chat card reloads within seconds of the folder changing; a live link is published again by itself (at most once a minute) and open copies reload. Without `live`, the schedule must publish the same folder again; the same path keeps the same link. |
 
 Publish only when the person asks to share. A published page is public: never put secrets, personal details or rows they didn't ask to share in it.
 

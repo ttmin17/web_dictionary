@@ -14,10 +14,10 @@ tags:
   - dsh
   - dsh-plugin
 status: active
-quality_percentile: 56
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: deepseek-ai/deepseek-harness
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 273440
+  stars: 276996
   last_commit: 2026-11-04T13:06:39Z
-  stars_delta_7d: 11622
-  stars_growth_pct: 4.4
-  trending_score: 12137.9
+  stars_delta_7d: 3556
+  stars_growth_pct: 1.3
+  trending_score: 3602.24
   velocity_source: snapshot_delta
   sparkline_4w:
     - 253669
     - 261818
     - 273440
+    - 276996
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: deepseek-ai/deepseek-harness
   path: packages/skill/skill-office/assets/office-render/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:20.855Z
+  fetched_at: 2026-11-09T09:28:09.120Z
   truncated: false
 type: agent_skill
 skill:

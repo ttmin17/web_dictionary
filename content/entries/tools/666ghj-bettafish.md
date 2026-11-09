@@ -13,28 +13,29 @@ tags:
   - deep-research
   - deep-search
 status: active
-quality_percentile: 73
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 666ghj/BettaFish
   official_vendor: false
   license: GPL-2.0
 signals:
-  stars: 42592
+  stars: 42611
   last_commit: 2026-10-16T03:33:52Z
-  stars_delta_7d: 62
-  stars_growth_pct: 0.1
-  trending_score: 62.09
-  rank_current: 90
-  rank_delta: -24
+  stars_delta_7d: 19
+  stars_growth_pct: 0
+  trending_score: 19.01
+  rank_current: 87
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 42461
     - 42530
     - 42592
+    - 42611
 language: zh
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: 666ghj/BettaFish
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:51.383Z
+  fetched_at: 2026-11-09T09:28:34.237Z
   truncated: false
 type: agent_tool
 tool:

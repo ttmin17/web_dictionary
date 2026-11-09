@@ -16,26 +16,26 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Panniantong/Agent-Reach
   official_vendor: false
   license: MIT
 signals:
-  stars: 109025
-  last_commit: 2026-11-05T11:07:58Z
-  stars_delta_7d: 6338
-  stars_growth_pct: 6.2
-  trending_score: 6729.19
+  stars: 110433
+  last_commit: 2026-11-08T02:17:48Z
+  stars_delta_7d: 1408
+  stars_growth_pct: 1.3
+  trending_score: 1426.18
   rank_current: 6
-  rank_delta: -3
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 96891
     - 99237
     - 102687
     - 109025
+    - 110433
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: Panniantong/Agent-Reach
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:20.224Z
+  fetched_at: 2026-11-09T09:27:22.461Z
   truncated: false
 type: agent_tool
 tool:
@@ -81,11 +81,11 @@ tool:
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/NSZz22R39"><img src="https://img.shields.io/badge/Discord-加入社区-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="加入 Agent Reach Discord 社区"></a>
+  <a href="https://discord.gg/FN6hpGrYKg"><img src="https://img.shields.io/badge/Discord-加入社区-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="加入 Agent Reach Discord 社区"></a>
 </p>
 
 <p align="center">
-  💬 有问题、想要新平台、或者想看看别人怎么用？来 <a href="https://discord.gg/NSZz22R39">Discord</a> 聊聊。
+  💬 有问题、想要新平台、或者想看看别人怎么用？来 <a href="https://discord.gg/FN6hpGrYKg">Discord</a> 聊聊。
 </p>
 
 ---
@@ -268,7 +268,6 @@ Star 一下，下次需要的时候能找到。⭐
 ## 联系
 
 - 📧 **Email:** pnt01@foxmail.com
-- 🐦 **Twitter/X:** [@Neo_Reidlab](https://x.com/Neo_Reidlab)
 
 ## 业务合作 / 交流群
 
@@ -277,7 +276,7 @@ Star 一下，下次需要的时候能找到。⭐
 <p align="center">
   <img src="https://raw.githubusercontent.com/Panniantong/Agent-Reach/main/docs/wechat-group-qr.jpg" width="280" alt="WeChat QR">
   &nbsp;&nbsp;
-  <a href="https://discord.gg/NSZz22R39"><img src="https://img.shields.io/badge/Discord-加入社区-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="加入 Agent Reach Discord 社区"></a>
+  <a href="https://discord.gg/FN6hpGrYKg"><img src="https://img.shields.io/badge/Discord-加入社区-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="加入 Agent Reach Discord 社区"></a>
 </p>
 
 > Bug 反馈和功能请求请用 [GitHub Issues](https://github.com/Panniantong/Agent-Reach/issues)，更容易跟踪。

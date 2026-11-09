@@ -1,9 +1,9 @@
 ---
 slug: orchestratorinc-agent-orchestrator-integrations-grok-bot-skills-ao-actions
 name: ao-actions
-tagline: "Direct actions on one AO session or PR: stop or interrupt, resume,
-  merge a PR, start a review, screenshot a session's browser, send a session's
-  files,"
+tagline: "Direct actions on one Orchestrator session or PR: stop or interrupt,
+  resume, merge a PR, start a review, screenshot a session's browser, send a
+  sessio"
 summary: "Follow the ao-rules skill. Find the session first (ao-rules \"AO
   hosts\": /). Run each action on the owner host from its via computer. \"Yes\"
   means the user's yes for that exact action in this chat."
@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14127
-  last_commit: 2026-11-05T13:02:06Z
-  stars_delta_7d: 471
-  stars_growth_pct: 3.4
-  trending_score: 487.24
+  stars: 14314
+  last_commit: 2026-11-09T09:23:57Z
+  stars_delta_7d: 187
+  stars_growth_pct: 1.3
+  trending_score: 189.48
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13138
     - 13339
     - 13656
     - 14127
+    - 14314
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,16 +44,17 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-actions/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.371Z
+  fetched_at: 2026-11-09T09:27:42.805Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ao-actions
-  description: "Direct actions on one AO session or PR: stop or interrupt, resume,
-    merge a PR, start a review, screenshot a session's browser, send a session's
-    files, keep a host awake, and recurring AO automations. Use for \"stop
-    <session>\", \"merge <PR>\", \"review <session>'s PR\", \"show me what
-    <session> built\", \"keep the Mac awake tonight\", \"every night, ...\"."
+  description: "Direct actions on one Orchestrator session or PR: stop or
+    interrupt, resume, merge a PR, start a review, screenshot a session's
+    browser, send a session's files, keep a host awake, and recurring
+    Orchestrator automations. Use for \"stop <session>\", \"merge <PR>\",
+    \"review <session>'s PR\", \"show me what <session> built\", \"keep the Mac
+    awake tonight\", \"every night, ...\"."
   folder_path: integrations/grok-bot/skills/ao-actions
   extra_files: []
   pack_total_skills: 8
@@ -74,7 +75,7 @@ Follow the ao-rules skill. Find the session first (ao-rules "AO hosts": `<host>/
 | Resume an exited agent | `aoapi POST "sessions/<id>/resume-agent" '{}'` | No | All |
 | Restore an ended session | `aoapi POST "sessions/<id>/restore" '{}'` (an ended orchestrator can't come back while its project has another live one) | Yes | All |
 | Merge a PR | see "Merge" | Yes, per PR | All |
-| Start AO's reviewer on a session's PR | `ao review trigger <id>` | Yes | Local |
+| Start Orchestrator's reviewer on a session's PR | `ao review trigger <id>` | Yes | Local |
 | Screenshot a session's browser | see "Screenshot" | No | Local |
 | A session's files | see "Files" | No | Local |
 | Keep the host awake | see "Keep awake" | Yes | Local |
@@ -98,7 +99,7 @@ Tell the user the link, checks (`ci`), review decision and whether it can merge 
 ```sh
 f(){ <aoapi helper>; aoapi POST "prs/<pr number>/merge" "$(python3 -c 'import json,sys; print(json.dumps({"prUrl":sys.argv[1],"expectedHeadSha":sys.argv[2]}))' '<url>' '<headSha>')"; }; f
 ```
-If the PR got new commits since you showed it, AO refuses the merge. Show it again and ask again.
+If the PR got new commits since you showed it, Orchestrator refuses the merge. Show it again and ask again.
 
 ## Screenshot
 The session must have a browser page open. `BROWSER_CAPABILITY_INVALID` means it has none: say so.
@@ -119,10 +120,10 @@ For a run that must last overnight, after a yes:
 ```sh
 f(){ <aoapi helper>; aoapi POST awake/sessions "$(python3 -c 'import json,sys; print(json.dumps({"mode":"duration","durationSeconds":int(sys.argv[1]),"scope":"ao"}))' '<seconds>')"; }; f
 ```
-Say when it ends. The user can stop it in AO. An `AWAKE` error that mentions a safety stop means AO stopped keep-awake on purpose (for example on battery): tell the user to resume it in AO. Don't resume it yourself.
+Say when it ends. The user can stop it in Orchestrator. An `AWAKE` error that mentions a safety stop means Orchestrator stopped keep-awake on purpose (for example on battery): tell the user to resume it in Orchestrator. Don't resume it yourself.
 
 ## Automations
-For recurring agent work that should run on the host even when the bot is off (for example "every night, update dependencies in <project>"), create an AO automation after a yes:
+For recurring agent work that should run on the host even when the bot is off (for example "every night, update dependencies in <project>"), create an Orchestrator automation after a yes:
 ```sh
 ao automation create --project '<project>' --name '<name>' --cron '<m h dom mon dow>' --timezone '<IANA zone>' --prompt '<task>'
 ```

@@ -16,26 +16,26 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: NousResearch/hermes-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 260753
-  last_commit: 2026-11-05T13:07:23Z
-  stars_delta_7d: 3602
-  stars_growth_pct: 1.4
-  trending_score: 3652.45
-  rank_current: 8
-  rank_delta: -1
+  stars: 261892
+  last_commit: 2026-11-09T09:21:27Z
+  stars_delta_7d: 1139
+  stars_growth_pct: 0.4
+  trending_score: 1143.98
+  rank_current: 7
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 253381
     - 255031
     - 257151
     - 260753
+    - 261892
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: NousResearch/hermes-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:15.537Z
+  fetched_at: 2026-11-09T09:27:17.551Z
   truncated: false
 type: agent_tool
 tool:
@@ -114,7 +114,7 @@ Run this in PowerShell:
 iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 ```
 
-The source installer delegates Python 3.14, Node.js, npm, ripgrep, FFmpeg,
+The source installer delegates Python 3.14, Node.js, npm, pnpm, ripgrep, FFmpeg,
 and Python dependencies to PM. If Git is absent, it stages the verified Git
 for Windows archive in Hermes' tool store. It does not replace your system Git.
 See [installation methods](https://hermes-agent.nousresearch.com/docs/getting-started/installation)

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: kevinpbuckley/VibeUE
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 810
-  last_commit: 2026-11-05T02:04:26Z
-  stars_delta_7d: 22
-  stars_growth_pct: 2.8
-  trending_score: 22.61
+  stars: 823
+  last_commit: 2026-11-09T01:15:40Z
+  stars_delta_7d: 13
+  stars_growth_pct: 1.6
+  trending_score: 13.21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 745
     - 781
     - 788
     - 810
+    - 823
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: kevinpbuckley/VibeUE
   path: Content/Skills/animsequence/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:12:14.949Z
+  fetched_at: 2026-11-09T09:27:17.222Z
   truncated: false
 type: agent_skill
 skill:
@@ -77,6 +77,13 @@ skill:
 # Animation Sequence & Editing Skill
 
 This skill covers the **inspect → profile → preview → validate → bake** workflow for safe animation bone edits with correct bone-space handling and constraint validation.
+
+For gesture/limb work, prefer the **pose authoring** calls over raw local keys: `solve_limb_ik`
+(two-bone IK to a component-space target), `apply_hand_pose` (named fist/open/point/relax/spread,
+axes derived from the skeleton's own knuckle geometry), `interpolate_bone_frames` (eased spans
+between authored keys), then `capture_animation_sequence` to review frames as PNGs — captures
+render in a private preview scene, never the open level, and work during PIE. Details in
+`api-reference.md` → "Pose Authoring Methods".
 
 > **Loading skills:** skills load via the engine's `AgentSkillToolset` (`ListSkills` / `GetSkills`) —
 > there is no `vibeue-skills-manager` tool. Run the VibeUE services below with `execute_python_code`

@@ -17,26 +17,26 @@ status: active
 quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2025-04-15T10:55:56
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: brightdata/brightdata-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2711
+  stars: 2716
   last_commit: 2026-11-05T11:06:34Z
-  stars_delta_7d: 24
-  stars_growth_pct: 0.9
-  trending_score: 24.21
-  rank_current: 68
-  rank_delta: 9
+  stars_delta_7d: 5
+  stars_growth_pct: 0.2
+  trending_score: 5.01
+  rank_current: 86
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2673
     - 2680
     - 2687
     - 2711
+    - 2716
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: brightdata/brightdata-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:49.283Z
+  fetched_at: 2026-11-09T09:26:59.337Z
   truncated: false
 type: mcp_server
 launch:

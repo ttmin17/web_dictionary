@@ -11,28 +11,29 @@ tags:
   - cron
   - docker
 status: active
-quality_percentile: 72
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 0xJacky/nginx-ui
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 11735
-  last_commit: 2026-11-05T06:24:23Z
-  stars_delta_7d: 68
-  stars_growth_pct: 0.6
-  trending_score: 68.4
-  rank_current: 85
-  rank_delta: 11
+  stars: 11752
+  last_commit: 2026-11-08T16:29:18Z
+  stars_delta_7d: 17
+  stars_growth_pct: 0.1
+  trending_score: 17.02
+  rank_current: 94
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11644
     - 11667
     - 11735
+    - 11752
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: 0xJacky/nginx-ui
   path: README.md
   branch: dev
-  fetched_at: 2026-11-05T13:11:41.672Z
+  fetched_at: 2026-11-09T09:26:51.027Z
   truncated: false
 type: agent_tool
 tool:
@@ -204,7 +205,8 @@ URL：[https://demo.nginxui.com](https://demo.nginxui.com)
 - **MCP** (Model Context Protocol) provides special interfaces for AI agents to interact with Nginx UI, enabling automated configuration management and service control.
 - One-click deployment and automatic renewal Let's Encrypt certificates.
 - Online editing websites configurations with our self-designed **NgxConfigEditor** which is a user-friendly block editor for nginx configurations or **Ace Code Editor** which supports **LLM Code Completion** and highlighting nginx configuration syntax.
-- Online view Nginx logs
+- View Nginx logs online, with indexed search, a traffic dashboard and visitor maps
+- Plugin system: install signed plugins from the marketplace, an uploaded file or an offline directory, for example the official DNS-01 plugin with the DNS providers for certificates
 - Written in Go and Vue, distribution is a single executable binary.
 - Automatically test configuration file and reload nginx after saving configuration.
 - Web Terminal
@@ -309,6 +311,7 @@ you can easily make the switch.
 1. When using this container for the first time, ensure that the volume mapped to /etc/nginx is empty.
 2. If you want to host static files, you can map directories to container.
 3. If you are upgrading from an older image, see the [Docker WebSocket fix guide](https://nginxui.com/guide/docker-websocket-fix.html) for required `conf.d/nginx-ui.conf` updates.
+4. The image bundles the official DNS-01 plugin and installs it on the first start. Installed plugins are kept in `/etc/nginx-ui/plugins`, so keep `/etc/nginx-ui` on a volume. When upgrading from v2, see [Upgrading to v3](https://nginxui.com/guide/upgrade-v3.html).
 
 <details>
 <summary><b>Deploy with Docker</b></summary>

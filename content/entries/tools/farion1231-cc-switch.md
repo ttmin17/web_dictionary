@@ -16,25 +16,26 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: farion1231/cc-switch
   official_vendor: false
   license: MIT
 signals:
-  stars: 152047
-  last_commit: 2026-11-05T12:25:31Z
-  stars_delta_7d: 3292
-  stars_growth_pct: 2.2
-  trending_score: 3364.85
-  rank_current: 10
-  rank_delta: -6
+  stars: 152951
+  last_commit: 2026-11-09T03:52:48Z
+  stars_delta_7d: 904
+  stars_growth_pct: 0.6
+  trending_score: 909.37
+  rank_current: 9
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 146073
     - 148755
     - 152047
+    - 152951
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: farion1231/cc-switch
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:15.234Z
+  fetched_at: 2026-11-09T09:27:17.616Z
   truncated: true
 type: agent_tool
 tool:
@@ -165,10 +166,10 @@ The platform also supports enterprise-grade concurrency, a dedicated admin conso
 </tr>
 
 <tr>
-<td width="180"><a href="https://teamorouter.cn/?utm_source=cc_switch&utm_medium=referral&utm_campaign=ai_directory"><img src="https://raw.githubusercontent.com/farion1231/cc-switch/main/assets/partners/logos/TeamoRouter-banner.png" alt="TeamoRouter" width="150"></a></td>
+<td width="180"><a href="https://teamorouter.com/?utm_source=cc_switch&utm_medium=referral&utm_campaign=ai_directory"><img src="https://raw.githubusercontent.com/farion1231/cc-switch/main/assets/partners/logos/TeamoRouter-banner.png" alt="TeamoRouter" width="150"></a></td>
 <td>Thanks to TeamoRouter for sponsoring this project! TeamoRouter is an enterprise-grade Agentic LLM gateway built for developers, AI teams, and businesses. Without requiring any subscriptions, it lets you access Claude Code, Codex, Gemini CLI, OpenAI Codex, and other popular AI agents through a single unified API, while offering API pricing at discounts of up to 90%.
 Unlike typical API relay services, TeamoRouter aggregates hundreds of official model providers and trusted infrastructure partners, including OpenAI, Anthropic, Vertex, Azure, and AWS bedrock. Every provider is verified for 100% Agent protocol compatibility, cache performance, and request traceability, ensuring stable quality instead of reverse-engineered or diluted endpoints. The platform delivers near-official TTFT, 99.6% SLA, enterprise-scale throughput up to 5,000 QPM, and industry-leading cache hit rates that dramatically reduce token costs for long-running agent workflows.
-TeamoRouter also offers enterprise features including centralized billing, team management, BYOK, smart routing, usage analytics, dynamic provider optimization, and dedicated support. For an even simpler experience, Teamo Desktop lets you use Claude Code, Codex, Gemini CLI, and other popular AI agents with one-click setup—no API key management or manual gateway configuration required. Register via <a href="https://teamorouter.cn/?utm_source=cc_switch&utm_medium=referral&utm_campaign=ai_directory">this link</a> as a new user to receive 10% off your first top-up.</td>
+TeamoRouter also offers enterprise features including centralized billing, team management, BYOK, smart routing, usage analytics, dynamic provider optimization, and dedicated support. For an even simpler experience, Teamo Desktop lets you use Claude Code, Codex, Gemini CLI, and other popular AI agents with one-click setup—no API key management or manual gateway configuration required. Register via <a href="https://teamorouter.com/?utm_source=cc_switch&utm_medium=referral&utm_campaign=ai_directory">this link</a> as a new user to receive 10% off your first top-up.</td>
 </tr>
 
 <tr>
@@ -474,7 +475,7 @@ For detailed guides on every feature, check out the **[User Manual](https://gith
 - **CLI tool management** — On the "Apps" page in the sidebar, see the current and latest versions of command-line tools like Claude Code and Codex, install, upgrade, or upgrade all in one click, and diagnose duplicate installations; on Windows it can also manage tools inside WSL (see FAQ)
 - **Deep Link** (`ccswitch://`) — Import providers, MCP servers, and prompts, or add skill repositories, in one click via a link; create links with the [online generator](https://ccswitch.io/deplink.html); site owners who want an import button can follow the [integration guide](https://github.com/farion1231/cc-switch/blob/main/docs/guides/deeplink-site-integration-guide-en.md)
 - **Built-in utilities** — Skip Claude Code's first-run confirmation, hide AI attribution, have the VS Code Claude Code extension follow CC Switch's provider switches, and more
-- Dark / Light / System theme, auto-launch, auto-updater, atomic writes, auto-backups (see where every backup lives and how much space it takes in "Settings → Data"), i18n (zh/zh-TW/en/ja, plus community-translated Turkish)
+- Dark / Light / System theme, auto-launch, auto-updater, atomic writes, auto-backups (see where every backup lives and how much space it takes in "Settings → Data"), i18n (zh/zh-TW/en/ja, plus community-translated Turkish and Korean)
 
 ## FAQ
 
@@ -508,7 +509,5 @@ Codex reads its model list only at startup. After entering or leaving Aggregatio
 - **Editor extensions**: Reopen the editor window.
 
 Claude Code isn't affected: changes to aggregated models take effect immediately.
-
-</details>
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/farion1231/cc-switch)).*

@@ -14,10 +14,10 @@ tags:
   - codex
   - decision-making
 status: active
-quality_percentile: 57
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-03-02T08:47:09
-last_updated: 2026-11-02T09:07:29.758Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 0xNyk/council-of-high-intelligence
@@ -25,19 +25,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4738
-  last_commit: 2026-11-02T05:20:53Z
-  stars_delta_7d: 30
-  stars_growth_pct: 0.6
-  trending_score: 30.19
-  rank_current: 113
-  rank_delta: -5
-  velocity_source: snapshot_delta
+  stars: 4821
+  last_commit: 2026-11-09T05:21:24Z
+  stars_delta_7d: 134
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
-    - 4622
     - 4672
     - 4708
-    - 4738
+    - 4821
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +42,7 @@ readme_source:
   repo: 0xNyk/council-of-high-intelligence
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-02T09:06:34.481Z
+  fetched_at: 2026-11-09T09:27:50.036Z
   truncated: false
 type: agent_skill
 skill:

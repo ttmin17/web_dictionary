@@ -11,29 +11,29 @@ tags:
   - autocad
   - cad
 status: active
-quality_percentile: 58
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: wzyn20051216/solidworks-automation-skill
   official_vendor: false
   license: MIT
 signals:
-  stars: 1753
+  stars: 1896
   last_commit: 2026-11-04T06:14:35Z
-  stars_delta_7d: 269
-  stars_growth_pct: 18.1
-  trending_score: 317.76
-  rank_current: 35
-  rank_delta: -4
+  stars_delta_7d: 143
+  stars_growth_pct: 8.2
+  trending_score: 154.67
+  rank_current: 22
+  rank_delta: 13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1197
     - 1291
     - 1484
     - 1753
+    - 1896
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: wzyn20051216/solidworks-automation-skill
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:03.398Z
+  fetched_at: 2026-11-09T09:27:08.616Z
   truncated: false
 type: agent_tool
 tool:

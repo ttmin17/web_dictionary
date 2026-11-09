@@ -14,29 +14,29 @@ tags:
   - automation
   - claude-ai
 status: active
-quality_percentile: 73
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: yusufkaraaslan/Skill_Seekers
   official_vendor: false
   license: MIT
 signals:
-  stars: 15283
+  stars: 15294
   last_commit: 2026-09-30T18:49:17Z
-  stars_delta_7d: 60
-  stars_growth_pct: 0.4
-  trending_score: 60.24
-  rank_current: 42
-  rank_delta: -2
+  stars_delta_7d: 11
+  stars_growth_pct: 0.1
+  trending_score: 11.01
+  rank_current: 66
+  rank_delta: -24
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15141
     - 15180
     - 15223
     - 15283
+    - 15294
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: yusufkaraaslan/Skill_Seekers
   path: README.md
   branch: development
-  fetched_at: 2026-11-05T13:11:37.364Z
+  fetched_at: 2026-11-09T09:26:47.558Z
   truncated: false
 type: mcp_server
 launch:

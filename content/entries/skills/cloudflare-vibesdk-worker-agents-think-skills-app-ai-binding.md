@@ -17,7 +17,7 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: cloudflare/vibesdk
@@ -25,18 +25,19 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 5458
+  stars: 5463
   last_commit: 2026-10-22T01:20:01Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0.6
-  trending_score: 31.18
-  rank_current: 114
-  rank_delta: 4
+  stars_delta_7d: 5
+  stars_growth_pct: 0.1
+  trending_score: 5
+  rank_current: 127
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5411
     - 5427
     - 5458
+    - 5463
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: cloudflare/vibesdk
   path: worker/agents/think/skills/app-ai-binding/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:38.337Z
+  fetched_at: 2026-11-09T09:28:20.882Z
   truncated: false
 type: agent_skill
 skill:

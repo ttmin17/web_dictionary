@@ -18,26 +18,26 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: doobidoo/mcp-memory-service
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2086
-  last_commit: 2026-11-05T13:06:46Z
-  stars_delta_7d: 40
-  stars_growth_pct: 2
-  trending_score: 40.78
-  rank_current: 56
-  rank_delta: -4
+  stars: 2099
+  last_commit: 2026-11-08T16:04:54Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.6
+  trending_score: 13.08
+  rank_current: 59
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2012
     - 2021
     - 2046
     - 2086
+    - 2099
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: doobidoo/mcp-memory-service
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:58.692Z
+  fetched_at: 2026-11-09T09:27:08.331Z
   truncated: false
 type: mcp_server
 launch:

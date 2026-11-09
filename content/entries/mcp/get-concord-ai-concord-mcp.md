@@ -15,21 +15,24 @@ status: active
 quality_percentile: 30
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Get-Concord-AI/concord-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 966
-  last_commit: 2026-11-04T18:55:04Z
-  stars_delta_7d: 59
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 1004
+  last_commit: 2026-11-08T23:30:25Z
+  stars_delta_7d: 38
+  stars_growth_pct: 3.9
+  trending_score: 39.49
+  rank_current: 24
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 966
+    - 1004
 language: en
 needs_keys: false
 prerequisites:
@@ -38,7 +41,7 @@ readme_source:
   repo: Get-Concord-AI/concord-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:09.627Z
+  fetched_at: 2026-11-09T09:27:12.840Z
   truncated: false
 type: mcp_server
 launch:
@@ -200,6 +203,7 @@ aside once no session started before the link is running (nothing is deleted).
 | Google Antigravity                 | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/antigravity.md)        |
 | GitHub Copilot CLI                 | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/github-copilot-cli.md) |
 | Devin CLI                          | Project-level setup via `concord setup`            |
+| Conductor (Claude Code, Codex)     | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/conductor.md)          |
 | Any other MCP-capable coding agent | [Manual setup](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/other-mcp-clients.md)        |
 
 > There is no universal `/concord` slash command — commands are client-specific.

@@ -17,7 +17,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -26,13 +26,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -41,7 +42,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-input/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.599Z
+  fetched_at: 2026-11-09T09:28:07.054Z
   truncated: false
 type: agent_skill
 skill:
@@ -119,6 +120,14 @@ narrows it; it also repeats while the key is held, so guard anything that must
 happen once. Keep polling for movement and for a menu cursor, where one step
 per press and a key held across a state change are the things that matter.
 
+When the window loses the focus or the page is hidden, every key and
+`bindPointer` button still held is released, since its real release goes to
+another window: polling sees it up when the player comes back, and a key still
+held then is pressed again by its next `keydown`. No `KEYUP` is sent for it,
+so code moved by `KEYDOWN` / `KEYUP` rather than by polling should also listen
+to `event.BLUR`. A gamepad's presses are left to the gamepad, which is read
+every frame.
+
 The full signature is `bindKey(keyCode, action, lock?, preventDefault?)`;
 `preventDefault` defaults to `input.preventDefault` (itself `true`). Pass the
 fourth argument per binding, or change the global default with
@@ -167,6 +176,11 @@ The accepted event names are exactly `"pointerdown"`, `"pointerup"`,
 throw `invalid event type`. melonJS maps the canonical name onto whichever
 mouse/touch events the device actually supports, so you always register the
 pointer name.
+
+A region can listen to `"pointerup"` alone, to act on release: it gets the
+release of a press made on it. With several fingers on one region, each finger
+that pressed it gets its own `pointerup` / `pointercancel`; `pointerenter` and
+`pointerleave` still follow one pointer per region.
 
 ## Which object gets the event
 
@@ -247,9 +261,10 @@ globalThis.addEventListener("pointerup", onRelease);
 
 For plain drag-and-drop, `Draggable` / `DropTarget` already wire all of this up
 (`pointerdown` / `pointerup` / `pointercancel` regions plus a global
-`POINTERMOVE` listener) and emit `event.DRAGSTART` / `event.DRAGEND`. `DRAGEND`
-still originates from a region handler, so it only fires when the release lands
-on the draggable itself.
+`POINTERMOVE` listener) and emit `event.DRAGSTART` / `event.DRAGEND`, and
+follow the pointer under any camera, scrolled or zoomed. `DRAGEND` still
+originates from a region handler, so it only fires when the release lands on
+the draggable itself.
 
 ## Gamepad
 
@@ -391,6 +406,12 @@ Every press lasts at least one frame, so a 15 ms thumb tap still reaches
 `isKeyPressed`, and Safari's pinch gesture is cancelled while the controls
 show, so a second thumb works on iOS.
 
+To match the game's artwork, pass an already-loaded `TextureAtlas` as
+`skin` to `GamepadPlugin`, with `base` / `thumb` region names on sticks
+and `region` / optional `pressed` names on buttons. Omitted parts keep
+their shapes. Regions scale to the controls' sizes without changing hit areas;
+labels, floating controls, opacity, hiding and dimming keep working.
+
 A single key can also be pressed directly, reaching the same actions:
 
 ```js
@@ -409,6 +430,11 @@ input.triggerKeyEvent(input.KEY.LEFT, false);   // release
 | drag stops when leaving the object | region events end at the region — use `event.POINTERMOVE` |
 | release never detected outside the region | no global pointer-up event — add a raw listener |
 | jump fires every frame while held | `bindKey` without its third `lock` argument |
+| the hero keeps walking after an Alt-Tab, until the key is pressed again (before 20.14) | the key's release went to another window: update, held keys are now released on blur |
+| a region with only a `"pointerup"` callback never gets it, or the first finger's release is lost with two on one region (before 20.14) | the release was only delivered to the last pointer to press the region: update |
+| firing (a key bound with `bindPointer`) stops while the button is held and the wheel turns (before 20.14) | a wheel event released the main button's key: update |
+| clicks land off target after browser zoom or a move to another screen (before 20.14) | the pointer was scaled by the live pixel ratio against a canvas sized with the old one: update |
+| a `Draggable` jumps away when grabbed, and stays stuck dragging, once the camera has moved (before 20.14) | it mixed screen and world coordinates: update |
 | `invalid event type` thrown at registration | non-pointer name (`"click"`, `"mousedown"`, …) passed to `registerPointerEvent` |
 | `no action defined for keycode N` | `bindGamepad` called before `bindKey` for that keycode |
 | floating stick ignores the right half of the screen | its `area` defaults to `"half"`, its own side — use `area: "screen"` |

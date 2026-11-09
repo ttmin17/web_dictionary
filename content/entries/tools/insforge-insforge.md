@@ -16,25 +16,26 @@ status: active
 quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: InsForge/InsForge
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13286
-  last_commit: 2026-11-02T21:47:33Z
-  stars_delta_7d: 71
-  stars_growth_pct: 0.5
-  trending_score: 71.38
-  rank_current: 83
-  rank_delta: -16
+  stars: 13310
+  last_commit: 2026-11-08T17:17:42Z
+  stars_delta_7d: 24
+  stars_growth_pct: 0.2
+  trending_score: 24.04
+  rank_current: 80
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13147
     - 13215
     - 13286
+    - 13310
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: InsForge/InsForge
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:31.205Z
+  fetched_at: 2026-11-09T09:28:17.784Z
   truncated: false
 type: agent_tool
 tool:

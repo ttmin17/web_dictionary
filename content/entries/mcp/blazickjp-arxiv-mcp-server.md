@@ -18,26 +18,26 @@ status: active
 quality_percentile: 30
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: blazickjp/arxiv-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3258
+  stars: 3263
   last_commit: 2026-10-08T13:08:10Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.7
-  trending_score: 23.16
-  rank_current: 70
-  rank_delta: 3
+  stars_delta_7d: 5
+  stars_growth_pct: 0.2
+  trending_score: 5.01
+  rank_current: 84
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3214
     - 3224
     - 3235
     - 3258
+    - 3263
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: blazickjp/arxiv-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:48.862Z
+  fetched_at: 2026-11-09T09:26:55.298Z
   truncated: false
 type: mcp_server
 launch:

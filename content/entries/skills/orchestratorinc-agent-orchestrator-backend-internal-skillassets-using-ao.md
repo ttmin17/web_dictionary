@@ -1,9 +1,9 @@
 ---
 slug: orchestratorinc-agent-orchestrator-backend-internal-skillassets-using-ao
 name: using-ao
-tagline: "Catalog of the AO (Agent Orchestrator) `ao` CLI: spawning workers,
-  managing sessions and projects, creating reusable Cues, sending messages,
-  controlli"
+tagline: "Catalog of the Orchestrator `ao` CLI: spawning workers, managing
+  sessions and projects, creating reusable Cues, sending messages, controlling
+  the shar"
 summary: "- Most read commands accept --json for machine-readable output. - -p /
   --project scopes session subcommand lookups to one project. - Session and
   project ids are shown by ao session ls and ao project ls. - To refer to..."
@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14127
-  last_commit: 2026-11-05T13:02:06Z
-  stars_delta_7d: 471
-  stars_growth_pct: 3.4
-  trending_score: 487.24
-  rank_current: 48
-  rank_delta: -2
+  stars: 14314
+  last_commit: 2026-11-09T09:23:57Z
+  stars_delta_7d: 187
+  stars_growth_pct: 1.3
+  trending_score: 189.48
+  rank_current: 51
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13138
     - 13339
     - 13656
     - 14127
+    - 14314
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,16 +46,16 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: backend/internal/skillassets/using-ao/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.371Z
+  fetched_at: 2026-11-09T09:27:42.804Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: using-ao
-  description: "Catalog of the AO (Agent Orchestrator) `ao` CLI: spawning workers,
-    managing sessions and projects, creating reusable Cues, sending messages,
-    controlling the shared browser, previewing pages, and daemon control. Use
-    when using the ao CLI, creating Cues, spawning workers, or managing AO
-    sessions in an AO workspace."
+  description: "Catalog of the Orchestrator `ao` CLI: spawning workers, managing
+    sessions and projects, creating reusable Cues, sending messages, controlling
+    the shared browser, previewing pages, and daemon control. Use when using the
+    ao CLI, creating Cues, spawning workers, or managing Orchestrator-managed
+    sessions in an Orchestrator workspace."
   folder_path: backend/internal/skillassets/using-ao
   extra_files:
     - commands/automation.md
@@ -77,8 +77,8 @@ skill:
   pack_slug: orchestratorinc-agent-orchestrator
 ---
 
-# AO CLI Catalog
-`ao` is a thin CLI over the local AO daemon. Every command is `ao <command> --help` for the authoritative flag list.
+# Orchestrator CLI Catalog
+`ao` is a thin CLI over the local Orchestrator daemon. Every command is `ao <command> --help` for the authoritative flag list.
 
 | Command | What it does | When to use | Details |
 |---|---|---|---|
@@ -86,23 +86,23 @@ skill:
 | `session` | Manage agent sessions (list, kill, rename, restore, history, etc.) | Inspecting or controlling running/terminated sessions, or reading the full conversation after taking over from another agent | [commands/session.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/session.md) |
 | `agent` | Inspect installed harnesses and launch readiness | Choosing or diagnosing an agent harness | `ao agent ls --refresh` |
 | `pr` | Merge a PR or resolve its review threads | Completing a reviewed change | `ao pr merge` / `ao pr resolve-comments` |
-| `project` | Register, inspect, configure, or remove projects | Setting up or managing repos AO knows about | [commands/project.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/project.md) |
+| `project` | Register, inspect, configure, or remove projects | Setting up or managing repos Orchestrator knows about | [commands/project.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/project.md) |
 | `automation` | Manage durable recurring session automations | Creating, editing, disabling, deleting, and inspecting scheduled runs | [commands/automation.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/automation.md) |
 | `cue` | Create or list reusable project Cues | Saving a repetitive command or agent task at the user's request | [commands/cue.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/cue.md) |
 | `orchestrator` | List orchestrator sessions | Viewing which sessions are orchestrators | [commands/orchestrator.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/orchestrator.md) |
-| `review` | Start, list, cancel, or submit AO's native reviewer for a worker's PR (default: this session) | Reviewing implementation PRs owned by AO workers. Use a normal review-only worker for someone else's PR | [commands/review.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/review.md) |
+| `review` | Start, list, cancel, or submit Orchestrator's native reviewer for a worker's PR (default: this session) | Reviewing implementation PRs owned by workers. Use a normal review-only worker for someone else's PR | [commands/review.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/review.md) |
 | `send` | Send a message to a running agent session | Messaging a live agent; use `--steer` to correct it mid-turn | [commands/send.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/send.md) |
 | `report` | Persist a meaningful worker report | Checkpoints, blockers, decisions, outputs, and completion | [commands/report.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/report.md) |
 | `preview` | Start a session-owned app or open an exact URL/file | Running and showing the worker's relevant app, Markdown, HTML, PDF, or image | [commands/preview.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/preview.md) |
 | `render` | Show a self-contained HTML page inline in a chat thread | Answering with a chart, table, diagram, or mockup | [commands/render.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/render.md) |
 | `browser` | Inspect and control the session's shared live browser | Verifying a web app through snapshots, interactions, waits, screenshots, console, and errors | [commands/browser.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/browser.md) |
 | `browser` (remote host) | Drive the host's shared remote Chromium, used when `AO_AGENT_BROWSER_URL` is set | Same browser verification on a self-hosted remote host; one browser is shared across sessions | [commands/browser-remote.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/browser-remote.md) |
-| `remote-host` | Link this machine to the user's AO account, or turn its remote access on or off | Setting up a VM or other headless machine so the user's desktops and phones can use it | [commands/remote-host.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/remote-host.md) |
-| `start` | Fetch (if needed) and open the AO desktop app | Launching the app | [commands/start.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/start.md) |
-| `stop` | Stop the AO daemon | Shutting down AO | [commands/stop.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/stop.md) |
+| `remote-host` | Link this machine to the user's Orchestrator account, or turn its remote access on or off | Setting up a VM or other headless machine so the user's desktops and phones can use it | [commands/remote-host.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/remote-host.md) |
+| `start` | Fetch (if needed) and open the Orchestrator desktop app | Launching the app | [commands/start.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/start.md) |
+| `stop` | Stop the Orchestrator daemon | Shutting down Orchestrator | [commands/stop.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/stop.md) |
 | `status` | Show daemon status | Verifying the daemon is up and healthy | [commands/status.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/status.md) |
-| `doctor` | Run local health checks | Diagnosing AO setup problems | [commands/doctor.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/doctor.md) |
-| `import` | Import projects from a legacy AO install | Migrating from the old flat-file store | [commands/import.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/import.md) |
+| `doctor` | Run local health checks | Diagnosing Orchestrator setup problems | [commands/doctor.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/doctor.md) |
+| `import` | Import projects from a legacy Orchestrator install | Migrating from the old flat-file store | [commands/import.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/import.md) |
 | `version` | Print version information | Checking installed version | - |
 | `completion` | Generate shell completion scripts | Setting up tab completion | - |
 
@@ -111,7 +111,7 @@ skill:
 - Most read commands accept `--json` for machine-readable output.
 - `-p / --project` scopes session subcommand lookups to one project.
 - Session and project ids are shown by `ao session ls` and `ao project ls`.
-- To refer to a session in AO Chat or the AO terminal, use the canonical in-app
+- To refer to a session in Orchestrator Chat or the Orchestrator terminal, use the canonical in-app
   link `ao://sessions/{project-id}/{session-id}`. Read
   [commands/session.md](https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/commands/session.md) for identity, encoding, and safety
   rules before constructing one.

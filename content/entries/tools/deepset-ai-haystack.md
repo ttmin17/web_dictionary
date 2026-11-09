@@ -13,28 +13,29 @@ tags:
   - agentic-rag
   - agents
 status: active
-quality_percentile: 95
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: deepset-ai/haystack
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 26930
-  last_commit: 2026-11-05T12:56:24Z
-  stars_delta_7d: 86
-  stars_growth_pct: 0.3
-  trending_score: 86.28
-  rank_current: 76
-  rank_delta: -14
+  stars: 26945
+  last_commit: 2026-11-09T09:02:05Z
+  stars_delta_7d: 15
+  stars_growth_pct: 0.1
+  trending_score: 15.01
+  rank_current: 97
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 26773
     - 26844
     - 26930
+    - 26945
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: deepset-ai/haystack
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:30.472Z
+  fetched_at: 2026-11-09T09:28:17.039Z
   truncated: false
 type: agent_tool
 tool:

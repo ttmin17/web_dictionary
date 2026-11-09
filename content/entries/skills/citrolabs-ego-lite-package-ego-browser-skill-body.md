@@ -14,7 +14,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: citrolabs/ego-lite
@@ -22,19 +22,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 21747
-  last_commit: 2026-11-05T04:23:36Z
-  stars_delta_7d: 2149
-  stars_growth_pct: 11
-  trending_score: 2384.65
-  rank_current: 21
-  rank_delta: -6
+  stars: 22231
+  last_commit: 2026-11-09T06:10:30Z
+  stars_delta_7d: 484
+  stars_growth_pct: 2.2
+  trending_score: 494.77
+  rank_current: 29
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17284
     - 17658
     - 19598
     - 21747
+    - 22231
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: citrolabs/ego-lite
   path: package/ego-browser/skill-body/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:38.022Z
+  fetched_at: 2026-11-09T09:27:34.398Z
   truncated: false
 type: agent_skill
 skill:

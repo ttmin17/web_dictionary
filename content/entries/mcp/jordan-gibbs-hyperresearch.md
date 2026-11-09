@@ -17,26 +17,26 @@ status: active
 quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: jordan-gibbs/hyperresearch
   official_vendor: false
   license: MIT
 signals:
-  stars: 4402
-  last_commit: 2026-11-01T18:57:21Z
-  stars_delta_7d: 291
-  stars_growth_pct: 7.1
-  trending_score: 311.6
-  rank_current: 11
-  rank_delta: -2
+  stars: 4445
+  last_commit: 2026-11-06T17:24:56Z
+  stars_delta_7d: 43
+  stars_growth_pct: 1
+  trending_score: 43.42
+  rank_current: 23
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3850
     - 3882
     - 4111
     - 4402
+    - 4445
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: jordan-gibbs/hyperresearch
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.104Z
+  fetched_at: 2026-11-09T09:26:53.762Z
   truncated: false
 type: mcp_server
 launch:
@@ -58,7 +58,7 @@ launch:
   confidence: manifest
 ---
 
-<img width="1280" height="400" alt="hyperresearch-readme-hero-1280x400" src="https://github.com/user-attachments/assets/320680fc-bc56-4eac-9ec2-7ec46d4bde98" />
+<img width="1280" height="400" alt="hyperresearch: Research built on evidence. It searches the web, scholarly papers, SEC filings, clinical trials, economic data and more. It checks the citations and keeps every source, so each run builds on the last." src="https://raw.githubusercontent.com/jordan-gibbs/hyperresearch/main/assets/readme-hero.png" />
 
 <h3 align="center">The Most Powerful Deep Research Harness: a deep research skill for Claude Code and OpenAI Codex</h3>
 

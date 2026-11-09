@@ -14,10 +14,10 @@ tags:
   - architecture-diagram
   - asyncapi
 status: active
-quality_percentile: 59
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Agents365-ai/drawio-skill
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10591
-  last_commit: 2026-11-01T07:26:09Z
-  stars_delta_7d: 232
-  stars_growth_pct: 2.2
-  trending_score: 237.2
-  rank_current: 72
-  rank_delta: 1
+  stars: 10649
+  last_commit: 2026-11-06T03:55:43Z
+  stars_delta_7d: 58
+  stars_growth_pct: 0.5
+  trending_score: 58.32
+  rank_current: 83
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10111
     - 10231
     - 10359
     - 10591
+    - 10649
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: Agents365-ai/drawio-skill
   path: skills/drawio-skill/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:11:41.600Z
+  fetched_at: 2026-11-09T09:26:51.069Z
   truncated: false
 type: agent_skill
 skill:
@@ -136,6 +136,11 @@ commands are offline and stdlib-only.
 
 ## Creation workflow
 
+Before the first native export, resolve the draw.io CLI once (see Export
+invariants below). `python3 scripts/diagramctl.py doctor` prints the absolute
+path it found. The bundled exporters resolve it themselves, so a name mismatch
+(`drawio` vs `draw.io.exe`) no longer blocks them.
+
 1. Infer the diagram type, audience, scope, output format, and location from the
    request. Ask only when a missing choice materially changes the result;
    default to PNG plus `.drawio` in the working directory.
@@ -170,8 +175,20 @@ commands are offline and stdlib-only.
 
 ## Export invariants
 
-Resolve the available binary once (`drawio`, `draw.io`, the macOS app path, or
-the Windows executable) and use that exact binary for the run.
+Resolve the available binary once, to an **absolute path**, and use that exact
+path for the run. `scripts/drawio_cli.py` does this for every bundled exporter
+(`buildup.py`, `drawio2pptx.py`, `drawiohtml.py`, `prdiff.py`, `svgflow.py`,
+`timelapse.py`), and `diagramctl.py doctor` reports the result. It tries both
+PATH names, then the macOS app bundle and the Windows install directories:
+
+- macOS Homebrew and Linux packages: `drawio` (no dot)
+- Windows: `draw.io.exe` (with the dot). `drawio` does not exist there, and
+  `subprocess` cannot launch a `.cmd`/`.bat` shim, so never pass a bare name.
+- macOS app bundle: `/Applications/draw.io.app/Contents/MacOS/draw.io`
+- Windows install directories: `%ProgramFiles%\draw.io\draw.io.exe`,
+  `%LOCALAPPDATA%\Programs\draw.io\draw.io.exe`
+
+The commands below use `drawio`; substitute your resolved path.
 
 ```bash
 # Draft for visual inspection: never use -e here

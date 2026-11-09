@@ -13,29 +13,29 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 53
+quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-05-06T08:04:52
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: CodeAbra/iai-personal-memory-engine
   official_vendor: false
   license: MIT
 signals:
-  stars: 917
+  stars: 921
   last_commit: 2026-11-02T06:32:47Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.2
-  trending_score: 2
-  rank_current: 137
-  rank_delta: -5
+  stars_delta_7d: 4
+  stars_growth_pct: 0.4
+  trending_score: 4.02
+  rank_current: 116
+  rank_delta: 21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 906
     - 912
     - 915
     - 917
+    - 921
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: CodeAbra/iai-personal-memory-engine
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:09.710Z
+  fetched_at: 2026-11-09T09:27:12.976Z
   truncated: false
 type: agent_tool
 tool:

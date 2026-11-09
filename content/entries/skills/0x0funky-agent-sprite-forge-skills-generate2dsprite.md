@@ -8,11 +8,16 @@ summary: "- A character, creature, prop, item, icon or FX is needed as a master
   code-drawn) and need clips, palettes or an engine export."
 categories:
   - media-creative
+tags:
+  - agent-skills
+  - claude-code
+  - codex
+  - grok-build
 status: active
-quality_percentile: 49
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 0x0funky/agent-sprite-forge
@@ -20,16 +25,14 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4436
-  last_commit: 2026-10-06T14:09:38Z
-  stars_delta_7d: 147
+  stars: 5408
+  last_commit: 2026-11-06T18:20:34Z
+  stars_delta_7d: 184
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 4334
-    - 4436
-    - 4436
+    - 5408
 language: en
 needs_keys: false
 prerequisites: []
@@ -37,7 +40,7 @@ readme_source:
   repo: 0x0funky/agent-sprite-forge
   path: skills/generate2dsprite/SKILL.md
   branch: main
-  fetched_at: 2026-10-14T14:55:18.557Z
+  fetched_at: 2026-11-09T09:28:03.485Z
   truncated: false
 type: agent_skill
 skill:
@@ -63,11 +66,17 @@ skill:
     - references/character-animation.md
     - references/engine-export.md
     - references/frames-and-clips.md
+    - references/hibit.md
     - references/master-still.md
     - references/modes.md
     - references/palette-and-pixels.md
-    - references/processing.md
-tags: []
+  pack_total_skills: 5
+  is_pack_primary: false
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: 0x0funky-agent-sprite-forge
 ---
 
 # Generate 2D Sprite
@@ -97,9 +106,11 @@ Image generation is the default art source for characters, creatures, props, ico
 2. **Local**: your own image tool (Codex `image_gen`, Grok's native tool) when you have one, otherwise the user's signed-in Codex CLI, then Grok CLI.
 3. **codeart2d** only when the user explicitly asks for code-drawn art, or when `route_media.py` prints `no-route` (exit 3). Then say "code-drawn, no image model".
 
+Hibit FX are the one exception: `fx_pixelfx.py check` sends them to pixelfx when the user has it installed (route A, third-party code-drawn FX, credited and disclosed), else to the image route (route B). See [hibit.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/hibit.md#4-fx-route-a-pixelfx-or-route-b-image-route).
+
 Every image goes through one command: `python "<skill-dir>/../generate2dmedia/scripts/route_media.py" image --prompt-file <txt> --reference <png> --size 1024x1024 --out-dir <new>`. It picks the route in that order and prints one JSON line with `route`, `artifact`, `sha256` and `estimateUsd`; `resolve --kind image` says which route would run. Existing art the user supplies is always welcome. Never claim a generation that did not happen; keep the prompt and contract and report a missing capability.
 
-- **Finish:** HD is the default: full colour, clean alpha, one registration and a premultiplied area downscale to the game height. The pixel finish (one shared palette, binary alpha, no dither) is an option when the user asks for pixel art. Never prompt an image model for a logical pixel grid; the pixel look comes from the finish.
+- **Finish:** HD is the default: full colour, clean alpha, one registration and a premultiplied area downscale to the game height. The pixel finish (one shared palette, binary alpha, no dither) is an option when the user asks for pixel art; the hibit finish (flat lineless art from the model, then one character palette, a majority-vote downscale and an outline colour taken from the image) when they want the hi-bit look ([hibit.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/hibit.md)). Never prompt an image model for a logical pixel grid; the pixel look comes from the finish.
 - **Characters:** approve one master still per character, then animate it with video2dsprite: one image-to-video clip per action, all from that master (`sprite_set.py`). Keep every action's body height from the master's rest pose.
 - **Sheets** are for FX, icons and props (and frames the user supplies), not for character animation.
 
@@ -107,7 +118,7 @@ Every image goes through one command: `python "<skill-dir>/../generate2dmedia/sc
 
 One approved master still per character, then one image-to-video clip per action from it ([video2dsprite](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/../video2dsprite/SKILL.md)); sheets are for FX, icons and props. Wording: [prompt-rules.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/prompt-rules.md); commands, framing and `master.json`: [master-still.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/master-still.md).
 
-1. Spec (`--spec <json>` and/or flags): `--name`, `--subject`, `--identity` (long and precise), `--facing left|right|front|back`, `--class hero|mob|boss|prop`, `--finish hd|pixel` (HD default; pixel only when asked), `--identity-ref` (FIRST image, copied exactly), `--style-ref` (SECOND: an approved peer sprite, style and framing only), `--key` (default `#FF00FF`; green or blue for purple and pink designs).
+1. Spec (`--spec <json>` and/or flags): `--name`, `--subject`, `--identity` (long and precise), `--facing left|right|front|back`, `--class hero|mob|boss|prop`, `--finish hd|pixel|hibit` (HD default; pixel or hibit only when asked; hibit makes the still flat and lineless), `--identity-ref` (FIRST image, copied exactly), `--style-ref` (SECOND: an approved peer sprite, style and framing only), `--key` (default `#FF00FF`; green or blue for purple and pink designs).
 2. Generate: `python "<skill-dir>/scripts/master_still.py" generate --spec <json> --takes 3 --output-dir <new>`. Each take goes through generate2dmedia `route_media.py` (API key first, then the local daemon); `takes.png` shows them side by side. Exit 3 means no route: say so; codeart2d is the fallback ("code-drawn, no image model"). With the host's own image tool: run `master_still.py prompt` and attach the listed references in that order.
 3. Choose by looking: identity, facing, nothing touching an edge, no text.
 4. Fix a near-miss by edit, never by re-roll: `master_still.py edit --run <dir> --take N --change "<one change>" --output-dir <new>` (or `--master <dir>`).
@@ -159,6 +170,7 @@ Sheets (FX, icons, props): `sheet_qc.py spill` on the raw sheet, then `generate2
 | Engine export | `export_engine.py --clips <animation-clips.json> --target all --output-dir <new>`; Sprite3D: `--target godot-sprite3d --world-height <units>` ([engine-export.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/engine-export.md)) |
 | Play clips in a game (gait, hit-stop, transitions) | [runtime-integration.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/runtime-integration.md) |
 | Code-drawn sprites, rigs or FX, only on request | codeart2d `render_pixelspec.py`, `rig_animate.py` or `fx_build.py` with `--build-clips` (never `process`), then `export_engine.py`; disclose them as code-drawn |
+| FX for a hibit game | `fx_pixelfx.py check` picks the route (a route the user names wins). A, pixelfx installed (recommended): `fx_pixelfx.py render --pixelfx <checkout> --id <effect> --ramp ... --snap <palette.json>`, [pixelfx](https://github.com/patch-gg/pixelfx) by Patch (MIT, a separate project the user clones), ship `CREDITS.txt` and disclose as code-drawn by pixelfx. B, otherwise: a 2x2 FX sheet from the image route, `process --scale-strategy registered --cell-size 512`, then `hibit_fx.py pixelize --palette <palette.json>` ([hibit.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/hibit.md)) |
 
 ## Acceptance
 
@@ -169,4 +181,4 @@ Sheets (FX, icons, props): `sheet_qc.py spill` on the raw sheet, then `generate2
 
 ## References
 
-[processing.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/processing.md) (process flags, legacy switches), [modes.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/modes.md), [prompt-rules.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/prompt-rules.md), [action-recipes.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/action-recipes.md), [character-animation.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/character-animation.md) (animation index), [frames-and-clips.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/frames-and-clips.md), [palette-and-pixels.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/palette-and-pixels.md), [engine-export.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/engine-export.md), [runtime-integration.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/runtime-integration.md), [video-handoff.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/video-handoff.md); data contracts in `references/schemas/sprite.schema.json`.
+[processing.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/processing.md) (process flags, legacy switches), [modes.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/modes.md), [prompt-rules.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/prompt-rules.md), [action-recipes.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/action-recipes.md), [character-animation.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/character-animation.md) (animation index), [frames-and-clips.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/frames-and-clips.md), [palette-and-pixels.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/palette-and-pixels.md), [hibit.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/hibit.md) (hi-bit finish, plates, FX routes A pixelfx and B image), [engine-export.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/engine-export.md), [runtime-integration.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/runtime-integration.md), [video-handoff.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dsprite/references/video-handoff.md); data contracts in `references/schemas/sprite.schema.json`.

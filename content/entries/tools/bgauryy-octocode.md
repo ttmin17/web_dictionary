@@ -13,10 +13,10 @@ tags:
   - claude-ai
   - code-intelligence
 status: active
-quality_percentile: 44
+quality_percentile: 43
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: bgauryy/octocode
@@ -24,14 +24,16 @@ source:
   license: MIT
 signals:
   stars: 958
-  last_commit: 2026-11-04T21:53:11Z
-  stars_delta_7d: 13
+  last_commit: 2026-11-06T18:36:24Z
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  rank_current: 140
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 950
-    - 950
+    - 958
     - 958
 language: en
 needs_keys: false
@@ -41,7 +43,7 @@ readme_source:
   repo: bgauryy/octocode
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:09.812Z
+  fetched_at: 2026-11-09T09:27:13.042Z
   truncated: false
 type: agent_tool
 tool:

@@ -18,25 +18,26 @@ status: active
 quality_percentile: 41
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Intrect-io/OpenSwarm
   official_vendor: false
   license: MIT
 signals:
-  stars: 871
+  stars: 872
   last_commit: 2026-11-04T02:41:13Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.3
-  trending_score: 3.01
-  rank_current: 136
-  rank_delta: 2
+  stars_delta_7d: 1
+  stars_growth_pct: 0.1
+  trending_score: 1
+  rank_current: 133
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 867
     - 868
     - 871
+    - 872
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: Intrect-io/OpenSwarm
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:48.206Z
+  fetched_at: 2026-11-09T09:28:31.440Z
   truncated: true
 type: agent_tool
 tool:

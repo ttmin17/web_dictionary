@@ -12,29 +12,29 @@ tags:
   - anthropic
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-05-06T11:12:42
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OpenOSINT/OpenOSINT
   official_vendor: false
   license: MIT
 signals:
-  stars: 1853
+  stars: 1909
   last_commit: 2026-11-05T12:47:58Z
-  stars_delta_7d: 40
-  stars_growth_pct: 2.2
-  trending_score: 40.88
-  rank_current: 55
-  rank_delta: -10
+  stars_delta_7d: 56
+  stars_growth_pct: 3
+  trending_score: 57.69
+  rank_current: 19
+  rank_delta: 36
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1749
     - 1777
     - 1813
     - 1853
+    - 1909
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: OpenOSINT/OpenOSINT
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:03.315Z
+  fetched_at: 2026-11-09T09:27:08.607Z
   truncated: false
 type: mcp_server
 launch:

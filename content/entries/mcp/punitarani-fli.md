@@ -13,29 +13,29 @@ tags:
   - google-flights
   - google-flights-api
 status: active
-quality_percentile: 37
+quality_percentile: 32
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: punitarani/fli
   official_vendor: false
   license: MIT
 signals:
-  stars: 3477
+  stars: 3489
   last_commit: 2026-09-20T23:05:06Z
-  stars_delta_7d: 47
-  stars_growth_pct: 1.4
-  trending_score: 47.64
-  rank_current: 48
-  rank_delta: -37
+  stars_delta_7d: 12
+  stars_growth_pct: 0.3
+  trending_score: 12.04
+  rank_current: 64
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3225
     - 3234
     - 3430
     - 3477
+    - 3489
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: punitarani/fli
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.746Z
+  fetched_at: 2026-11-09T09:26:55.234Z
   truncated: false
 type: mcp_server
 launch:

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: tt-a1i/archify
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 93722
-  last_commit: 2026-11-05T03:56:15Z
-  stars_delta_7d: 4332
-  stars_growth_pct: 4.8
-  trending_score: 4541.94
-  rank_current: 11
-  rank_delta: -6
+  stars: 94886
+  last_commit: 2026-11-09T09:22:25Z
+  stars_delta_7d: 1164
+  stars_growth_pct: 1.2
+  trending_score: 1178.46
+  rank_current: 15
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 82940
     - 85550
     - 89390
     - 93722
+    - 94886
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: tt-a1i/archify
   path: archify/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:20.292Z
+  fetched_at: 2026-11-09T09:27:22.370Z
   truncated: false
 type: agent_skill
 skill:

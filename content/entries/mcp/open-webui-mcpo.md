@@ -15,26 +15,26 @@ status: slowing
 quality_percentile: 5
 selection_reason: quality_percentile
 first_seen: 2025-03-30T10:03:03
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: open-webui/mcpo
   official_vendor: false
   license: MIT
 signals:
-  stars: 4417
+  stars: 4421
   last_commit: 2026-05-17T20:40:30Z
-  stars_delta_7d: 6
+  stars_delta_7d: 4
   stars_growth_pct: 0.1
-  trending_score: 6.01
-  rank_current: 92
-  rank_delta: -10
+  trending_score: 4
+  rank_current: 93
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4399
     - 4405
     - 4411
     - 4417
+    - 4421
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: open-webui/mcpo
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.939Z
+  fetched_at: 2026-11-09T09:26:53.774Z
   truncated: false
 type: mcp_server
 launch:

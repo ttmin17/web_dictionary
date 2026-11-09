@@ -12,28 +12,29 @@ tags:
   - agent-orchestration
   - agentic-workflow
 status: active
-quality_percentile: 54
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Enderfga/claw-orchestrator
   official_vendor: false
   license: MIT
 signals:
-  stars: 601
-  last_commit: 2026-11-04T16:16:44Z
+  stars: 603
+  last_commit: 2026-11-08T05:31:12Z
   stars_delta_7d: 2
   stars_growth_pct: 0.3
   trending_score: 2.01
-  rank_current: 100
-  rank_delta: -12
+  rank_current: 97
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 595
     - 599
     - 601
+    - 603
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: Enderfga/claw-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.586Z
+  fetched_at: 2026-11-09T09:28:27.799Z
   truncated: false
 type: mcp_server
 launch:
@@ -198,10 +199,10 @@ engine, so one dropdown switches between Claude, Codex, Antigravity and Grok mod
 
 | Engine      | CLI        | Tested version                  |
 | ----------- | ---------- | ------------------------------- |
-| Claude Code | `claude`   | 2.1.317                         |
+| Claude Code | `claude`   | 2.1.319                         |
 | Codex       | `codex`    | 0.166.0                         |
-| Antigravity | `agy`      | 1.4.12                          |
-| Grok Build  | `grok`     | 1.0.70                          |
+| Antigravity | `agy`      | 1.5.3                           |
+| Grok Build  | `grok`     | 1.0.77                          |
 | OpenCode    | `opencode` | 1.19.5                          |
 | ACP agent   | any        | Kimi Code 2.3.1, dsh 0.2.1-rc.2 |
 | Custom CLI  | any        | —                               |

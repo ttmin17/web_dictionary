@@ -14,28 +14,29 @@ tags:
   - embodied-ai
   - esp32
 status: active
-quality_percentile: 95
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: huangjunsen0406/py-xiaozhi
   official_vendor: false
   license: MIT
 signals:
-  stars: 3541
-  last_commit: 2026-10-31T15:29:40Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.4
-  trending_score: 13.05
-  rank_current: 122
-  rank_delta: -9
+  stars: 3548
+  last_commit: 2026-11-09T01:32:31Z
+  stars_delta_7d: 7
+  stars_growth_pct: 0.2
+  trending_score: 7.01
+  rank_current: 103
+  rank_delta: 19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3517
     - 3528
     - 3541
+    - 3548
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: huangjunsen0406/py-xiaozhi
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.705Z
+  fetched_at: 2026-11-09T09:26:55.223Z
   truncated: false
 type: agent_tool
 tool:
@@ -110,7 +111,6 @@ Thanks to GitDo.net for sponsoring this project! GitDo.net is an AI API aggregat
 |                                                                     |                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [**Token能量站**](https://factory.pub/register?aff=3rXc)            | Thanks to Token能量站 (Factory.pub) for sponsoring this project! Providing API relay for **GPT, Grok, Claude** and other major models — stable, reliable, and affordable. **[Register here](https://factory.pub/register?aff=3rXc)**        |
-| [**良心AI**](https://www.openailaozu.com/register?aff=5Y7JEH5HBTXS) | Thanks to 良心AI for sponsoring this project! Providing API relay for **GPT, Claude, Gemini** and other major models — direct connection, stable and high-speed. **[Register here](https://www.openailaozu.com/register?aff=5Y7JEH5HBTXS)** |
 
 </details>
 
@@ -136,7 +136,7 @@ py-xiaozhi is a lightweight, cross-platform multi-modal AI interaction framework
 - **Multi-modal Vision** — Camera capture + vision-language model integration for image understanding and scene perception
 - **MCP Tool Ecosystem** — Modular JSON-RPC 2.0 tool server: music player, camera, screenshot, app management, weather, volume control
 - **Cross-platform Deployment** — Windows 10+ / macOS 10.15+ / Linux (x86_64 & ARM), optimized for Raspberry Pi and edge boards
-- **Multiple UI Modes** — PySide6 + QML GUI / CLI / GPIO, adapting to desktop, headless server, and embedded environments
+- **Multiple UI Modes** — PySide6 + QML GUI / TUI / GPIO, adapting to desktop, headless server, and embedded environments
 - **Offline Wake Word** — Sherpa-ONNX based on-device keyword spotting with custom wake word support
 - **IoT & Embodied AI Ready** — GPIO interface for robotics control, hardware actuation, and sensor integration
 - **WebSocket / MQTT** — Dual protocol communication with WSS/TLS encrypted transmission and auto-reconnection
@@ -178,6 +178,16 @@ py-xiaozhi is a lightweight, cross-platform multi-modal AI interaction framework
 - **Layered Design**: Clear separation of application layer, protocol layer, and UI layer
 - **Dependency Injection**: Component lifecycle managed via bootstrap container
 - **Plugin System**: Audio, UI, MCP tools and other components loaded via plugin system
+
+### Device States
+
+`StateManager` owns `IDLE`, `LISTENING`, `SPEAKING` and `NOTIFYING`;
+`ConversationSession` coordinates transitions. A successful wake/button action enters
+`LISTENING` after the protocol connects and accepts the listen request. TTS moves the
+device to `SPEAKING`; once local playback drains, the session resumes `LISTENING` or
+returns to `IDLE`. Server notifications play in `NOTIFYING` while otherwise idle,
+then return to `IDLE`. Connection establishment belongs to the protocol lifecycle,
+not a separate device state.
 
 ### Key Technical Components
 
@@ -222,7 +232,7 @@ py-xiaozhi/
 │   ├── protocols/              # Communication protocols (WebSocket/MQTT)
 │   ├── ui/                     # User interface
 │   │   ├── gui/                # PySide6 + QML graphical interface
-│   │   ├── cli/                # Command line interface
+│   │   ├── tui/                # Textual full-screen terminal interface
 │   │   └── gpio/               # GPIO embedded interface
 │   └── utils/                  # Utility functions
 ├── libs/                       # Third-party native libraries
@@ -243,16 +253,20 @@ py-xiaozhi/
 git clone https://github.com/huangjunsen0406/py-xiaozhi.git
 cd py-xiaozhi
 
-# Base install (CLI / GPIO mode)
+# Base install (GPIO mode on Linux)
 uv sync                                    # Recommended (uv users)
 # or: pip install -e .                    # pip users
+
+# TUI mode (extra: Textual)
+uv sync --extra tui
+# or: pip install -e '.[tui]'
 
 # GUI mode (extra: PySide6 + qasync)
 uv sync --extra gui                        # Recommended (uv users)
 # or: pip install -e '.[gui]'             # pip users
 
-# Full development environment (GUI + test / packaging tools)
-uv sync --extra gui --group dev
+# Full development environment (GUI + TUI + test / packaging tools)
+uv sync --extra gui --extra tui --group dev
 
 # Code formatting
 ./format_code.sh
@@ -260,8 +274,8 @@ uv sync --extra gui --group dev
 # Run program - GUI mode (default; requires gui extra)
 python main.py
 
-# Run program - CLI mode (base install is enough)
-python main.py --mode cli
+# Run program - TUI mode (requires tui extra)
+python main.py --mode tui
 
 # Specify communication protocol
 python main.py --protocol websocket  # WebSocket (default)
@@ -276,9 +290,9 @@ or load Qt/audio. `--help` and invalid arguments exit before runtime initializat
 
 ```bash
 # Installed command (GUI still needs the gui extra)
-xiaozhi --mode cli
+xiaozhi --mode tui
 # Equivalent module entry point
-python -m src --mode cli
+python -m src --mode tui
 
 # Full regression suite, including Qt model tests without a display
 uv run --extra gui --extra tui python -m pytest -q -W error::RuntimeWarning
@@ -315,19 +329,11 @@ style warnings elsewhere remain a separate cleanup task.
 
 ### State Transition Diagram
 
-```
-                        +----------------+
-                        |                |
-                        v                |
-+------+  Wake/Button  +------------+   |   +------------+
-| IDLE | -----------> | CONNECTING | --+-> | LISTENING  |
-+------+              +------------+       +------------+
-   ^                                            |
-   |                                            | Voice Recognition Complete
-   |          +------------+                    v
-   +--------- |  SPEAKING  | <-----------------+
-     Playback +------------+
-     Complete
+```text
+IDLE -- wake/button + protocol ready --> LISTENING
+LISTENING -- TTS starts --> SPEAKING
+SPEAKING -- playback drained --> LISTENING (continue) / IDLE (finish)
+IDLE -- server notification --> NOTIFYING -- playback drained --> IDLE
 ```
 
 ## Contributing

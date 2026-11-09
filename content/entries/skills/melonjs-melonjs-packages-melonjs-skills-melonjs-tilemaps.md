@@ -17,7 +17,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -26,13 +26,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -41,7 +42,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-tilemaps/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.603Z
+  fetched_at: 2026-11-09T09:28:07.057Z
   truncated: false
 type: agent_skill
 skill:
@@ -90,12 +91,21 @@ await loader.preload([
 level.load("map1");           // inside Stage.onResetEvent
 ```
 
+**A game with several maps** keeps each map and the images only it uses in a
+bundle of its own, beside a `common` bundle for the shared tileset, the player
+and the sounds: an assets file exporting `{ common: [...], map1: [...],
+map2: [...] }`, passed as it is to `loader.preload()`. A map's level can then be
+freed with `loader.unload("map1")` and brought back with
+`await loader.load("map1")` before `level.load("map1")`; a game whose maps
+loop back simply keeps them all loaded. `melonjs-loading-assets` covers the
+pattern.
+
 Asset `type` is `"tmx"` for maps and `"tsx"` for external tilesets — those are
 the only two type strings the loader knows. The *file* can be `.tmx` / `.tsx`
 (XML), or `.json` / `.tmj` / `.tsj`; the parser branches on the extension, not
 on the type. `type: "tmj"` throws `unknown or invalid resource type`. You can
-also skip `src` and pass the map inline via `data` (with `format: "json"` or
-`"xml"`).
+also skip `src` and pass the map inline via `data`, as the parsed JSON object
+of a Tiled JSON export (not an XML string).
 
 `level.load(levelId, options)` accepts `container` (default `game.world`),
 `onLoaded` (default `game.onLevelLoaded`), `flatten` (default `game.mergeGroup`),
@@ -273,6 +283,36 @@ Two coordinate systems, and the methods do not share one:
 | `setTile(tile, col, row)` | column and row | puts `tile` there, and returns it |
 | `clearTile(col, row)` | column and row | empties the cell: `cellAt` then returns `null` |
 | `getTileById(gid, col, row)` | a global tile id, column and row | a new `Tile`, to pass to `setTile` |
+
+Columns and rows are the map's tile coordinates, the ones Tiled shows. On an
+**infinite** map a layer can hold tiles left of or above the map's origin:
+there `board.startx` / `board.starty` are negative, its cells run from
+`startx` to `startx + cols - 1` (and `starty` to `starty + rows - 1`), and
+`cellAt(-3, -2)` is the tile Tiled shows at (-3, -2), drawn where Tiled draws
+it. On a finite map both are 0:
+
+```js
+for (let row = board.starty; row < board.starty + board.rows; row++) {
+    for (let col = board.startx; col < board.startx + board.cols; col++) {
+        const tile = board.cellAt(col, row);   // every cell, infinite maps included
+    }
+}
+```
+
+An infinite map's `getBounds()` (and its `width` / `height`) covers the map's
+own area and every painted tile, so a level loaded with `setViewportBounds`
+lets the camera reach tiles painted past the map's size, or left of or above
+its origin. Empty chunk cells past the last painted tile are not part of it.
+Size a camera you set up yourself from `map.getBounds()`, not from
+`cols * tilewidth`, which is only right for an orthogonal map:
+
+```js
+const b = level.getCurrentLevel().getBounds();
+app.viewport.setBounds(b.left, b.top, b.width, b.height);
+```
+
+The viewport bounds still cover only the map's `width` x `height`: set them
+yourself to scroll to tiles painted outside it.
 
 A `Tile` carries `tileId` (its **global** id), `col`, `row` and `tileset`.
 Tiled shows a tile's *local* id in the tileset editor; the global id is
@@ -479,7 +519,7 @@ unanimated layer into the offscreen-bake path instead.
 | a Tiled object becomes a plain shape with no behaviour | its class/name does not match any registered factory, or it was registered after `level.load` |
 | the world is still empty right after `level.load` | the load is deferred to a timer while the loop runs — `await level.load(id, { async: true })`, or use `onLoaded` / `LEVEL_LOADED` |
 | `await level.load(id)` returned `true` rather than a promise | without `async: true` the call returns a boolean; `await true` resolves immediately and the load has not run yet — pass the flag when you mean to await |
-| `level <id> not found` | the map was never preloaded, or the asset `name` differs from the id passed to `load` |
+| `level <id> not found` | the map was never preloaded, its bundle was unloaded (`await loader.load(bundleId)` first), or the asset `name` differs from the id passed to `load` |
 | `unknown or invalid resource type` | asset `type` set to `"tmj"` / `"tsj"` — use `"tmx"` / `"tsx"` with the `.tmj` / `.tsj` file |
 | camera will not scroll | `setViewportBounds: false`, or the map was added with `addTo()` (which defaults to `false`) |
 | `No inflate function set` at parse time | compressed layers without the tiled-inflate plugin |
@@ -496,6 +536,12 @@ unanimated layer into the offscreen-bake path instead.
 | a tileset's transparent color (`trans`) still shows (the console says it could not be applied) | the image cannot be read back: an image the game made itself from another origin without CORS (an `<img>` with no `crossOrigin`) cannot be, so load it with the loader, which only loads an image another origin's server allows (its CORS headers) and can always read back; and a compressed texture cannot be changed: export it with an alpha channel instead |
 | `cellAt` returns `null` (or the wrong tile) for a cell that has one | it was given pixels: `cellAt`, `setTile` and `clearTile` take column and row, only `getTile` takes world pixels |
 | `setTile` shows the wrong tile, or nothing | it was given Tiled's local tile id: use the global id, `tileset.firstgid + localId`, through `getTileById` |
+| on an infinite map the camera stops before tiles painted past the map's size, or left of or above its origin | an older melonJS held the camera to the map's width and height from (0, 0): update; and size a camera you set up yourself from `map.getBounds()` |
+| oversized tiles overlap in the wrong order (the map's render order is not "right-down") | an older melonJS drew every layer "right-down", whatever the map's render order: update |
+| an infinite map's tiles sit in the wrong row, or tiles left of or above the origin are missing | an older melonJS ignored where the chunks start (update); and loop from `layer.startx` / `layer.starty`, not 0, to reach cells left of or above the origin |
+| on a staggered map `getTile` gives the neighbouring tile on every row but the first, or a scrolled view draws nothing | a bug of older melonJS versions in the staggered renderer: update |
+| on an isometric (or staggered, oblique) map `getTile` gives an edge tile for a point just outside the tiles | an older melonJS rounded a fractional column or row toward 0: update |
+| tiles of a second tileset draw from the first tileset's image (that first one has a `margin`) | an older melonJS let its gid range overrun into the next tileset (update): the range is the `tilecount` Tiled saved |
 | a layer is `undefined` from `getChildByName(name)[0]` | the level is not in the world yet (await `level.load(id, { async: true })`), or the name differs from the layer's in Tiled |
 | a tile set or cleared at run time does not block or free movement | tile layers carry no collision: collision comes from collision object layers |
 | the level's `name` is not its id after loading | a map custom property named `name` replaced it: map properties are set over the map's own fields |

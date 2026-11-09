@@ -15,29 +15,29 @@ tags:
   - asyncio
   - authentication-middleware
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2025-05-08T08:16:59
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: IBM/mcp-context-forge
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4757
-  last_commit: 2026-11-05T13:03:30Z
-  stars_delta_7d: 65
-  stars_growth_pct: 1.4
-  trending_score: 65.9
-  rank_current: 39
-  rank_delta: 0
+  stars: 4777
+  last_commit: 2026-11-09T01:01:05Z
+  stars_delta_7d: 20
+  stars_growth_pct: 0.4
+  trending_score: 20.08
+  rank_current: 45
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4616
     - 4649
     - 4692
     - 4757
+    - 4777
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: IBM/mcp-context-forge
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:54.181Z
+  fetched_at: 2026-11-09T09:27:03.931Z
   truncated: false
 type: mcp_server
 launch:
@@ -695,11 +695,6 @@ For detailed setup, workflows, and GitHub Codespaces instructions, see **[Develo
 make venv install-dev      # create .venv + install deps + build Admin UI
 make serve                 # gunicorn on :4444
 ```
-
-Rust workspace note:
-- Workspace-owned Rust crates live under `crates/` and are picked up by the root `Cargo.toml` via `crates/*`.
-- Run `cargo build`, `cargo test`, and `cargo check` from the repo root to cover the shared workspace.
-- `make venv install-dev` creates the root `.venv`, which is also reused by the workspace's PyO3/maturin builds.
 
 <details>
 <summary><strong>Alternative: UV or pip</strong></summary>

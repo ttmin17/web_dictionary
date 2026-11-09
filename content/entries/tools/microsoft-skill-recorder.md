@@ -18,25 +18,26 @@ status: active
 quality_percentile: 97
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: microsoft/skill-recorder
   official_vendor: true
   license: MIT
 signals:
-  stars: 5692
+  stars: 5723
   last_commit: 2026-11-04T11:44:52Z
-  stars_delta_7d: 571
-  stars_growth_pct: 11.2
-  trending_score: 634.67
-  rank_current: 24
-  rank_delta: -9
+  stars_delta_7d: 31
+  stars_growth_pct: 0.5
+  trending_score: 31.17
+  rank_current: 72
+  rank_delta: -48
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4245
     - 5121
     - 5692
+    - 5723
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: microsoft/skill-recorder
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:14.167Z
+  fetched_at: 2026-11-09T09:28:02.934Z
   truncated: false
 type: agent_tool
 tool:

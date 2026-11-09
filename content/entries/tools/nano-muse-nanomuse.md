@@ -18,24 +18,25 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: nano-muse/nanoMuse
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 3208
-  last_commit: 2026-11-05T02:43:10Z
-  stars_delta_7d: 602
-  stars_growth_pct: 23.1
-  trending_score: 741.07
-  rank_current: 19
-  rank_delta: null
+  stars: 3345
+  last_commit: 2026-11-09T04:46:54Z
+  stars_delta_7d: 137
+  stars_growth_pct: 4.3
+  trending_score: 142.85
+  rank_current: 25
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2606
     - 3208
+    - 3345
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: nano-muse/nanoMuse
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:18.852Z
+  fetched_at: 2026-11-09T09:28:07.338Z
   truncated: false
 type: agent_tool
 tool:
@@ -219,6 +220,7 @@ Everyone whose change has landed on `main`, from GitHub's contributors list.
 <a href="https://github.com/ZxlDragonDoctor"><img src="https://avatars.githubusercontent.com/u/152901610?v=4&s=48" width="48" height="48" alt="ZxlDragonDoctor"></a>
 <a href="https://github.com/aliabbas6622"><img src="https://avatars.githubusercontent.com/u/193962983?v=4&s=48" width="48" height="48" alt="aliabbas6622"></a>
 <a href="https://github.com/DennyHo0917"><img src="https://avatars.githubusercontent.com/u/149746199?v=4&s=48" width="48" height="48" alt="DennyHo0917"></a>
+<a href="https://github.com/maidivh"><img src="https://avatars.githubusercontent.com/u/22905321?v=4&s=48" width="48" height="48" alt="maidivh"></a>
 <a href="https://github.com/jtboy80826"><img src="https://avatars.githubusercontent.com/u/243465398?v=4&s=48" width="48" height="48" alt="jtboy80826"></a>
 <a href="https://github.com/cypggs"><img src="https://avatars.githubusercontent.com/u/3694954?v=4&s=48" width="48" height="48" alt="cypggs"></a>
 <a href="https://github.com/aiapienthusiast"><img src="https://avatars.githubusercontent.com/u/327629069?v=4&s=48" width="48" height="48" alt="aiapienthusiast"></a>

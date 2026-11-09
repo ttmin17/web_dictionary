@@ -18,25 +18,26 @@ status: active
 quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Fosowl/agenticSeek
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 27625
+  stars: 27644
   last_commit: 2026-10-22T16:22:32Z
-  stars_delta_7d: 82
-  stars_growth_pct: 0.3
-  trending_score: 82.24
-  rank_current: 77
-  rank_delta: 10
+  stars_delta_7d: 19
+  stars_growth_pct: 0.1
+  trending_score: 19.01
+  rank_current: 88
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27509
     - 27543
     - 27625
+    - 27644
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: Fosowl/agenticSeek
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.839Z
+  fetched_at: 2026-11-09T09:28:28.314Z
   truncated: false
 type: agent_tool
 tool:

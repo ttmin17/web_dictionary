@@ -18,7 +18,7 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: aden-hive/hive
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11142
-  last_commit: 2026-11-02T10:07:20Z
-  stars_delta_7d: 20
-  stars_growth_pct: 0.2
-  trending_score: 20.04
+  stars: 11148
+  last_commit: 2026-11-08T01:41:04Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11099
     - 11108
     - 11122
     - 11142
+    - 11148
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: aden-hive/hive
   path: core/framework/skills/_default_skills/image-generation/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:12.234Z
+  fetched_at: 2026-11-09T09:28:01.338Z
   truncated: false
 type: agent_skill
 skill:
@@ -120,21 +120,21 @@ the path in their message) or an image you generated earlier (use its saved
 
 Image generation can take a couple of minutes, so `image_generate` **runs in the
 background**: it returns immediately with `{"status":"started","handle":"bg_…"}`.
-You then poll the generic **`collect_result`** tool with that handle until the
-image is ready:
+You then call the generic **`collect_result`** tool with that handle, which waits
+for the image:
 
 ```
 start = image_generate(prompt="A minimalist bee logo, flat vector, amber on white")
 # start.handle == "bg_1"
-res = collect_result(handle="bg_1", wait_seconds=30)
-#   → {"status":"pending", ...}   ← not done yet; call collect_result again
-#   → eventually the real result: {"images":[{"path": …}], "usage": …, …}
+res = collect_result(handle="bg_1")
+#   → the real result: {"images":[{"path": …}], "usage": …, …}
+#   → or {"status":"pending", ...} if a new message arrived first
 ```
 
-`collect_result` waits up to `wait_seconds` (≤45) per call and returns
-`{"status":"pending"}` until generation finishes — just call it again with the
-same handle until you get the real result. It's fine to do other small things
-between polls. Don't start a second image while one is pending unless the user
+`collect_result` waits until generation finishes. If a new message for you arrives
+first it returns `{"status":"pending"}` at once: answer the message, then call it
+again with the same handle. It's fine to do other small things before calling it.
+Don't start a second image while one is pending unless the user
 asked for several.
 
 ## Show the user
@@ -166,6 +166,6 @@ never raises). Handle these:
 User: "make us a logo — a friendly robot, simple and modern."
 
 1. `image_generate(prompt="A friendly modern robot mascot logo, simple flat vector, rounded shapes, teal and white, centered, plain background", quality="low")` → `{"status":"started","handle":"bg_1"}`
-2. `collect_result(handle="bg_1", wait_seconds=30)` — repeat until it returns the real result (not `{"status":"pending"}`).
+2. `collect_result(handle="bg_1")` — it waits for the real result (call it again if a new message made it return `{"status":"pending"}`).
 3. Take `result.images[0].path`, call `attach_file(that_path)`.
 4. Reply briefly: "Here's a first take — want it bolder, a different color, or any tweaks?"

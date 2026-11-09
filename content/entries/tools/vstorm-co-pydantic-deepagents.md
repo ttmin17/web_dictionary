@@ -15,28 +15,29 @@ tags:
   - anthropic
   - claude-code
 status: active
-quality_percentile: 55
+quality_percentile: 51
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: vstorm-co/pydantic-deepagents
   official_vendor: false
   license: MIT
 signals:
-  stars: 1116
+  stars: 1114
   last_commit: 2026-10-30T14:01:47Z
-  stars_delta_7d: 10
-  stars_growth_pct: 0.9
-  trending_score: 10.09
-  rank_current: 124
-  rank_delta: 7
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 139
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1103
     - 1106
     - 1116
+    - 1114
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: vstorm-co/pydantic-deepagents
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.553Z
+  fetched_at: 2026-11-09T09:28:28.164Z
   truncated: false
 type: agent_tool
 tool:

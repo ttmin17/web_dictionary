@@ -15,10 +15,10 @@ tags:
   - change-data-capture
   - codebase-intelligence
 status: active
-quality_percentile: 61
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: cocoindex-io/cocoindex
@@ -26,18 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11826
-  last_commit: 2026-11-05T07:15:22Z
-  stars_delta_7d: 72
-  stars_growth_pct: 0.6
-  trending_score: 72.44
-  rank_current: 101
-  rank_delta: 9
+  stars: 11832
+  last_commit: 2026-11-09T09:24:06Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6
+  rank_current: 124
+  rank_delta: -23
   velocity_source: snapshot_delta
   sparkline_4w:
     - 11720
     - 11754
     - 11826
+    - 11832
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,19 +46,18 @@ readme_source:
   repo: cocoindex-io/cocoindex
   path: dev/agent-skills/backport/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:33.990Z
+  fetched_at: 2026-11-09T09:28:19.989Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: backport
-  description: "Backport a merged CocoIndex pull request from main to a release
+  description: 'Backport a merged CocoIndex pull request from main to a release
     branch (release/X.Y) so that it ships in the next patch release: decide
-    whether it qualifies, create the branch from the minor's tag when it doesn't
-    exist yet, cherry-pick with -x in a scratch worktree, resolve conflicts, and
-    land it through a pull request to the release branch. Use whenever the user
-    wants a landed change in a patch release: \"backport #2673\", \"backport
-    this to 1.1\", \"cherry-pick #2660 onto the release branch\", \"get this fix
-    into 1.1.1\", \"create the release branch for 1.1\"."
+    whether it qualifies, cherry-pick with -x in a scratch worktree, resolve
+    conflicts, and land it through a pull request to the release branch. Use
+    whenever the user wants a landed change in a patch release: "backport
+    #2673", "backport this to 1.1", "cherry-pick #2660 onto the release branch",
+    "get this fix into 1.1.1".'
   folder_path: dev/agent-skills/backport
   extra_files: []
   pack_total_skills: 6
@@ -75,9 +75,10 @@ skill:
 A minor release (`1.2.0`) is cut from `main`. A patch release (`1.1.1`) is cut
 from the minor's release branch, `release/1.1`, which starts at the minor's tag
 (`v1.1.0`) and moves only by backports: squash-merged pull requests that
-cherry-pick commits already on `main`. The branch exists once its first
-backport needs it, and only the newest minor's branch takes backports; an
-older one stays as it is (its ruleset forbids deleting it).
+cherry-pick commits already on `main`. The minor's release creates the branch
+from its tag (`dev/agent-skills/create-release/SKILL.md`, step 7), and only
+the newest minor's branch takes backports; an older one stays as it is (its
+ruleset forbids deleting it).
 
 A release branch has no merge queue. A pull request to it runs the full CI
 tier on its own, and `ci-gate` must pass before it can be squash-merged.
@@ -128,14 +129,9 @@ git tag -l 'v[0-9]*' | sort -V | tail -1             # the newest release tag
 git ls-remote --heads origin 'release/*'             # the branches that exist
 ```
 
-**No branch yet?** Create it from the minor's tag, and nothing else:
-
-```bash
-git push origin v<X.Y>.0:refs/heads/release/<X.Y>
-```
-
-The `release-branches` ruleset then applies: no deletion, no force push, pull
-requests only, `ci-gate` required.
+**No branch for the newest minor?** Its release missed the last step: create
+the branch the way that step does (`dev/agent-skills/create-release/SKILL.md`,
+step 7), from the minor's tag and nothing else.
 
 ## 2. Cherry-pick in a scratch worktree
 

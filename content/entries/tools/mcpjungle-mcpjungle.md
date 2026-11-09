@@ -16,24 +16,25 @@ status: active
 quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mcpjungle/MCPJungle
   official_vendor: false
   license: MPL-2.0
 signals:
-  stars: 1599
+  stars: 1616
   last_commit: 2026-11-03T22:51:07Z
-  stars_delta_7d: 289
-  stars_growth_pct: 22.1
-  trending_score: 352.76
-  rank_current: 32
-  rank_delta: null
+  stars_delta_7d: 17
+  stars_growth_pct: 1.1
+  trending_score: 17.18
+  rank_current: 92
+  rank_delta: -60
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1310
     - 1599
+    - 1616
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: mcpjungle/MCPJungle
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:03.297Z
+  fetched_at: 2026-11-09T09:27:08.591Z
   truncated: false
 type: agent_tool
 tool:

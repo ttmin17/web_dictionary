@@ -13,27 +13,28 @@ tags:
   - cli
   - glassdoor
 status: active
-quality_percentile: 82
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: speedyapply/JobSpy
   official_vendor: false
   license: MIT
 signals:
-  stars: 4643
+  stars: 4673
   last_commit: 2026-10-27T15:30:44Z
-  stars_delta_7d: 81
-  stars_growth_pct: 1.8
-  trending_score: 82.44
-  rank_current: 32
-  rank_delta: null
+  stars_delta_7d: 30
+  stars_growth_pct: 0.6
+  trending_score: 30.19
+  rank_current: 35
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4562
     - 4643
+    - 4673
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: speedyapply/JobSpy
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.646Z
+  fetched_at: 2026-11-09T09:26:53.529Z
   truncated: false
 type: mcp_server
 launch:

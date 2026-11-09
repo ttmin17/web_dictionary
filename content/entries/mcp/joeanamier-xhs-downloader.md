@@ -14,29 +14,29 @@ tags:
   - downloader
   - fastapi
 status: active
-quality_percentile: 73
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2023-08-16T11:03:36
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: JoeanAmier/XHS-Downloader
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 13215
-  last_commit: 2026-11-05T11:35:25Z
-  stars_delta_7d: 103
-  stars_growth_pct: 0.8
-  trending_score: 103.81
-  rank_current: 30
-  rank_delta: 0
+  stars: 13246
+  last_commit: 2026-11-07T11:18:47Z
+  stars_delta_7d: 31
+  stars_growth_pct: 0.2
+  trending_score: 31.07
+  rank_current: 33
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13000
     - 13048
     - 13112
     - 13215
+    - 13246
 language: zh
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: JoeanAmier/XHS-Downloader
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:11:41.716Z
+  fetched_at: 2026-11-09T09:26:47.425Z
   truncated: false
 type: mcp_server
 launch:

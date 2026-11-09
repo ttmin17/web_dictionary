@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - anthropic
 status: active
-quality_percentile: 88
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: wshobson/agents
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 42229
-  last_commit: 2026-11-02T01:08:47Z
-  stars_delta_7d: 504
-  stars_growth_pct: 1.2
-  trending_score: 510.09
+  stars: 42342
+  last_commit: 2026-11-09T01:08:33Z
+  stars_delta_7d: 113
+  stars_growth_pct: 0.3
+  trending_score: 113.3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 40590
     - 41052
     - 41725
     - 42229
+    - 42342
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: wshobson/agents
   path: plugins/before-you-build/skills/before-you-build/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:37.232Z
+  fetched_at: 2026-11-09T09:27:30.177Z
   truncated: false
 type: agent_skill
 skill:

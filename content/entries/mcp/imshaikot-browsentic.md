@@ -13,24 +13,27 @@ tags:
   - agy-cli
   - ai-agent
 status: active
-quality_percentile: 23
+quality_percentile: 25
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: imshaikot/browsentic
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 273
-  last_commit: 2026-10-27T01:40:57Z
-  stars_delta_7d: 17
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 282
+  last_commit: 2026-11-06T12:32:12Z
+  stars_delta_7d: 9
+  stars_growth_pct: 3.3
+  trending_score: 9.3
+  rank_current: 70
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 273
+    - 282
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: imshaikot/browsentic
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.331Z
+  fetched_at: 2026-11-09T09:28:45.476Z
   truncated: false
 type: mcp_server
 launch:
@@ -191,7 +194,7 @@ The extension dials out to Browsentic Bridge, because a Manifest V3 service work
 
 ![The side panel in Chrome partway through a run, waiting for approval to send a reminder; the Mac app's Overview and its one-click setup; the Windows app's agent picker and its Android phone checks](https://raw.githubusercontent.com/imshaikot/browsentic/main/docs/assets/side-panel-and-apps.webp)
 
-The [side panel](https://github.com/imshaikot/browsentic/blob/main/docs/guide/features/conversations.md) is where you work with the agent. Every page action shows up as a step, and consequential ones, such as submitting a form, wait for your [approval](https://github.com/imshaikot/browsentic/blob/main/docs/guide/approvals.md). A new tab opens [Browsentic Home](https://github.com/imshaikot/browsentic/blob/main/docs/guide/features/new-tab.md), a full-page composer with your frequent sites, which hands the task to the side panel as soon as you send it; you can switch it off.
+The [side panel](https://github.com/imshaikot/browsentic/blob/main/docs/guide/features/conversations.md) is where you work with the agent. Every page action shows up as a step, and consequential ones, such as submitting a form, wait for your [approval](https://github.com/imshaikot/browsentic/blob/main/docs/guide/approvals.md). Put several of your own tabs in one conversation and the panel stays on it as you move between them, and the agent works across them. A new tab opens [Browsentic Home](https://github.com/imshaikot/browsentic/blob/main/docs/guide/features/new-tab.md), a full-page composer with your frequent sites, which hands the task to the side panel as soon as you send it; you can switch it off.
 
 The desktop apps for [macOS](https://github.com/imshaikot/browsentic/blob/main/docs/guide/mac-app.md) and [Windows](https://github.com/imshaikot/browsentic/blob/main/docs/guide/windows-app.md) ([experimental](https://github.com/imshaikot/browsentic/blob/main/docs/guide/limits.md#windows-is-experimental)) install Node and Browsentic Bridge in one click, turn the Bridge on and off, add the extension to each browser, pick the [agent CLI](https://github.com/imshaikot/browsentic/blob/main/docs/guide/agents.md) and its model, and check an [Android phone](https://github.com/imshaikot/browsentic/blob/main/docs/guide/features/android.md) before the side panel drives it.
 

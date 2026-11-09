@@ -13,10 +13,10 @@ tags:
   - claude-code
   - claude-skills
 status: active
-quality_percentile: 58
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Egonex-AI/Understand-Anything
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 90862
-  last_commit: 2026-10-26T07:05:22Z
-  stars_delta_7d: 2560
-  stars_growth_pct: 2.9
-  trending_score: 2634.22
+  stars: 91658
+  last_commit: 2026-11-07T05:37:08Z
+  stars_delta_7d: 796
+  stars_growth_pct: 0.9
+  trending_score: 802.97
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86141
     - 86920
     - 88302
     - 90862
+    - 91658
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: Egonex-AI/Understand-Anything
   path: understand-anything-plugin/skills/understand-dashboard/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:22.264Z
+  fetched_at: 2026-11-09T09:27:23.654Z
   truncated: false
 type: agent_skill
 skill:
@@ -106,6 +106,8 @@ Start the Understand Anything dashboard to visualize the knowledge graph for the
 
 3. Find the dashboard code. The dashboard is at `packages/dashboard/` relative to this plugin's root directory. Check these paths in order and use the first that exists:
    - `${CLAUDE_PLUGIN_ROOT}/packages/dashboard/` (Claude Code runtime root, highest priority)
+   - `${DEVIN_PLUGIN_ROOT}/packages/dashboard/` (explicit override, when set)
+   - Two levels up from this skill's own directory, `<SKILL_DIR>` (the base directory your platform reported when loading this skill — covers plugin installs with no fixed location, such as Devin's)
    - `~/.understand-anything-plugin/packages/dashboard/` (universal symlink, all installs)
    - Two levels up from `~/.agents/skills/understand-dashboard` real path (self-relative fallback)
    - Two levels up from `~/.copilot/skills/understand-dashboard` real path (Copilot personal skills fallback)
@@ -117,6 +119,7 @@ Start the Understand Anything dashboard to visualize the knowledge graph for the
 
    Use the Bash tool to resolve:
    ```bash
+   SKILL_DIR_RELATIVE=$(cd -P "<SKILL_DIR>" 2>/dev/null && cd ../.. && pwd || echo "")
    SKILL_REAL=$(realpath ~/.agents/skills/understand-dashboard 2>/dev/null || readlink -f ~/.agents/skills/understand-dashboard 2>/dev/null || echo "")
    SELF_RELATIVE=$([ -n "$SKILL_REAL" ] && cd "$SKILL_REAL/../.." 2>/dev/null && pwd || echo "")
    COPILOT_SKILL_REAL=$(realpath ~/.copilot/skills/understand-dashboard 2>/dev/null || readlink -f ~/.copilot/skills/understand-dashboard 2>/dev/null || echo "")
@@ -125,6 +128,8 @@ Start the Understand Anything dashboard to visualize the knowledge graph for the
    PLUGIN_ROOT=""
    for candidate in \
      "${CLAUDE_PLUGIN_ROOT}" \
+     "${DEVIN_PLUGIN_ROOT}" \
+     "$SKILL_DIR_RELATIVE" \
      "$HOME/.understand-anything-plugin" \
      "$SELF_RELATIVE" \
      "$COPILOT_SELF_RELATIVE" \
@@ -141,6 +146,8 @@ Start the Understand Anything dashboard to visualize the knowledge graph for the
      echo "Error: Cannot find the understand-anything plugin root."
      echo "Checked:"
      echo "  - ${CLAUDE_PLUGIN_ROOT:-<unset CLAUDE_PLUGIN_ROOT>}"
+     echo "  - ${DEVIN_PLUGIN_ROOT:-<unset DEVIN_PLUGIN_ROOT>}"
+     echo "  - ${SKILL_DIR_RELATIVE:-<unresolved path derived from the skill directory>}"
      echo "  - $HOME/.understand-anything-plugin"
      echo "  - ${SELF_RELATIVE:-<unresolved path derived from ~/.agents/skills/understand-dashboard>}"
      echo "  - ${COPILOT_SELF_RELATIVE:-<unresolved path derived from ~/.copilot/skills/understand-dashboard>}"

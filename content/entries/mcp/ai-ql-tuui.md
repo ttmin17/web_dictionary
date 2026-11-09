@@ -18,7 +18,7 @@ status: slowing
 quality_percentile: 3
 selection_reason: quality_percentile
 first_seen: 2025-04-01T15:09:38
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: AI-QL/tuui
@@ -30,11 +30,11 @@ signals:
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 107
-  rank_delta: -1
+  rank_current: 113
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1157
+    - 1159
     - 1159
     - 1159
     - 1159
@@ -46,7 +46,7 @@ readme_source:
   repo: AI-QL/tuui
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:08.932Z
+  fetched_at: 2026-11-09T09:27:12.746Z
   truncated: false
 type: mcp_server
 launch:

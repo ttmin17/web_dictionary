@@ -16,7 +16,7 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8648
-  last_commit: 2026-11-05T13:06:48Z
-  stars_delta_7d: 450
-  stars_growth_pct: 5.5
-  trending_score: 474.7
+  stars: 8774
+  last_commit: 2026-11-09T09:15:26Z
+  stars_delta_7d: 126
+  stars_growth_pct: 1.5
+  trending_score: 127.84
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7377
     - 7831
     - 8198
     - 8648
+    - 8774
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/openrig-user/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:57.371Z
+  fetched_at: 2026-11-09T09:27:49.760Z
   truncated: true
 type: agent_skill
 skill:
@@ -155,6 +155,10 @@ so an interrupted create can be reconciled. That ID names a request, not a row. 
 when the command exits 0. A non-zero exit means no row was confirmed, even when stdout carries a `qitemId`: an
 indeterminate answer repeats the request ID so you can reconcile by it. Don't merge stderr into stdout and keep the
 first `qitem-…` you find there; a refused create prints its request ID first, too.
+
+A timed-out write can still land late. To retry a `create` or `rig stream emit` safely, repeat it unchanged with the
+same `--id` (create's request ID, or the emit's own), since the daemon keeps one row or item per ID; an emit sent
+without `--id` has no ID to reuse, so look for it with `rig stream list --source <seat>` before emitting again.
 
 Read back (`rig queue show <id> --full --json`, or `rig queue transitions <id>`) when the answer doesn't show what you
 need, for example:
@@ -902,7 +906,7 @@ rig send <session> "message" --json
 - `--wait-for-idle <seconds>` — wait until the target is explicitly idle before sending. **Cannot be combined with `--force`** (that pairing is rejected: exit 1, nothing sent).
 - `--raw` — send exact text/keystrokes without the From/To messaging envelope (still guarded against interactive prompts).
 - `--dangerously-interact --reason "<why>"` — the ONLY override of the prompt/permission guard: deliberately drive an interactive prompt/permission block (implies `--raw`, requires `--reason`, audit-logged).
-  On a guard-attached managed seat, a non-menu override stops and shows existing typed/pasted input (author unknown) with `override_input_present`; unreadable input stops with `override_input_unknown`. Recognized dim suggestions are shown separately and count as empty; a collapsed paste shows only its label, not hidden contents.
+  On a guard-attached managed seat, a non-menu override stops and shows existing typed/pasted input (author unknown) with `override_input_present`. Input it can't read doesn't stop the override: the answer is typed, nothing is cleared, and the result reports the input as unreadable (never empty) with a warning that the answer may join or submit existing text. Recognized dim suggestions are shown separately and count as empty; a collapsed paste shows only its label, not hidden contents.
   Inspect the input, deliberately clear the native prompt with native/tmux controls, then retry. Manual clearing is outside OpenRig's lease and observation checks and is not recorded; human typing can still race a read and paste.
   When you deliberately need to type without that composer check (for example an unsupported input you inspected yourself), add `--type-without-checking` with `--dangerously-interact --reason "<why>"`. It does not clear input and may join or submit existing text. Ordinary sends and wakes keep their current rules.
 - `--host <id>` — send on a remote host declared in `~/.openrig/hosts.yaml` (ssh hosts shell out; http hosts go CLI-direct to the remote daemon).

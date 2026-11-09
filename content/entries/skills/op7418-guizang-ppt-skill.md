@@ -13,10 +13,10 @@ tags:
   - codex
   - html-deck
 status: active
-quality_percentile: 57
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: op7418/guizang-ppt-skill
@@ -24,14 +24,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 29326
+  stars: 29501
   last_commit: 2026-10-30T12:45:28Z
-  stars_delta_7d: 977
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 175
+  stars_growth_pct: 0.6
+  trending_score: 176.04
+  rank_current: 52
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 29326
+    - 29501
 language: zh
 needs_keys: false
 prerequisites: []
@@ -39,7 +42,7 @@ readme_source:
   repo: op7418/guizang-ppt-skill
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:31.956Z
+  fetched_at: 2026-11-09T09:27:30.313Z
   truncated: false
 type: agent_skill
 skill:

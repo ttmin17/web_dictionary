@@ -13,24 +13,27 @@ tags:
   - ai-coding
   - automation
 status: active
-quality_percentile: 42
+quality_percentile: 41
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ZaxbyHub/opencode-swarm
   official_vendor: false
   license: MIT
 signals:
-  stars: 518
-  last_commit: 2026-11-05T05:57:31Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 520
+  last_commit: 2026-11-09T08:39:31Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.4
+  trending_score: 2.01
+  rank_current: 124
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 518
+    - 520
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: ZaxbyHub/opencode-swarm
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.727Z
+  fetched_at: 2026-11-09T09:28:28.333Z
   truncated: true
 type: agent_tool
 tool:

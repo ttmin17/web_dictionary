@@ -16,25 +16,26 @@ status: active
 quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: neuml/txtai
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13065
-  last_commit: 2026-11-04T16:40:54Z
-  stars_delta_7d: 30
-  stars_growth_pct: 0.2
-  trending_score: 30.07
-  rank_current: 105
-  rank_delta: 16
+  stars: 13190
+  last_commit: 2026-11-06T23:17:03Z
+  stars_delta_7d: 125
+  stars_growth_pct: 1
+  trending_score: 126.2
+  rank_current: 32
+  rank_delta: 73
   velocity_source: snapshot_delta
   sparkline_4w:
     - 13027
     - 13035
     - 13065
+    - 13190
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: neuml/txtai
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:13:31.329Z
+  fetched_at: 2026-11-09T09:28:17.923Z
   truncated: false
 type: agent_tool
 tool:

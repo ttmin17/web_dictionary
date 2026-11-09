@@ -17,25 +17,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ag2ai/ag2
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5045
-  last_commit: 2026-11-04T10:58:20Z
-  stars_delta_7d: 26
-  stars_growth_pct: 0.5
-  trending_score: 26.13
-  rank_current: 107
-  rank_delta: -2
+  stars: 5053
+  last_commit: 2026-11-09T00:06:12Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.2
+  trending_score: 8.01
+  rank_current: 102
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5004
     - 5019
     - 5045
+    - 5053
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: ag2ai/ag2
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:55.748Z
+  fetched_at: 2026-11-09T09:28:38.556Z
   truncated: false
 type: agent_tool
 tool:

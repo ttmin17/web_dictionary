@@ -17,26 +17,26 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: stickerdaniel/linkedin-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4117
-  last_commit: 2026-11-04T17:48:58Z
-  stars_delta_7d: 102
-  stars_growth_pct: 2.5
-  trending_score: 104.59
-  rank_current: 28
-  rank_delta: -4
+  stars: 4155
+  last_commit: 2026-11-09T04:49:42Z
+  stars_delta_7d: 38
+  stars_growth_pct: 0.9
+  trending_score: 38.35
+  rank_current: 25
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3852
     - 3925
     - 4015
     - 4117
+    - 4155
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: stickerdaniel/linkedin-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:44.057Z
+  fetched_at: 2026-11-09T09:26:53.738Z
   truncated: false
 type: mcp_server
 launch:
@@ -150,7 +150,7 @@ Use code <strong>FOUNDING20</strong> for 20% off your first year. <a href="https
 | `get_conversation` | Read a conversation's messages using a LinkedIn username or thread ID. |
 | `search_conversations` | Search messages by keyword and return links to matching conversation threads. |
 | `archive_conversation` | Archive a conversation by thread ID; a repeat call reports it already archived. |
-| `send_message` | Send after confirmation; profile targets may open a new DM ([#483](https://github.com/stickerdaniel/linkedin-mcp-server/issues/483)). |
+| `send_message` | Message a profile after confirmation. Threads use `reply_to_conversation`. |
 | `reply_to_conversation` | Reply inside an existing thread or InMail by thread ID. Sends after confirmation. |
 | `get_company_profile` | Read company information, with optional sections for posts and open jobs. |
 | `get_company_posts` | Read recent posts from a company's feed, with links to the original posts. |

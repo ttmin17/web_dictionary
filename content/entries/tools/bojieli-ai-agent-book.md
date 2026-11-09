@@ -12,28 +12,29 @@ tags:
   - book
   - coding-agent
 status: active
-quality_percentile: 74
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: bojieli/ai-agent-book
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 57238
+  stars: 57539
   last_commit: 2026-10-08T15:06:27Z
-  stars_delta_7d: 1331
-  stars_growth_pct: 2.4
-  trending_score: 1362.69
-  rank_current: 13
-  rank_delta: 3
+  stars_delta_7d: 301
+  stars_growth_pct: 0.5
+  trending_score: 302.58
+  rank_current: 15
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 54876
     - 55907
     - 57238
+    - 57539
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: bojieli/ai-agent-book
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:33.122Z
+  fetched_at: 2026-11-09T09:28:19.204Z
   truncated: false
 type: agent_tool
 tool:

@@ -14,10 +14,10 @@ tags:
   - ai-agent
   - cli
 status: active
-quality_percentile: 19
+quality_percentile: 22
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: jin-bo/agentao
@@ -25,15 +25,16 @@ source:
   license: MIT
 signals:
   stars: 310
-  last_commit: 2026-11-02T13:41:51Z
+  last_commit: 2026-11-07T02:41:49Z
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 110
+  rank_current: 119
   rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 309
+    - 310
     - 310
     - 310
 language: en
@@ -45,7 +46,7 @@ readme_source:
   repo: jin-bo/agentao
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.320Z
+  fetched_at: 2026-11-09T09:28:42.662Z
   truncated: false
 type: mcp_server
 launch:

@@ -16,10 +16,10 @@ tags:
   - chatgpt
   - claude
 status: active
-quality_percentile: 76
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-08-11T16:32:38
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: guillaumemeyer/watermarks-remover
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 26358
+  stars: 26779
   last_commit: 2026-11-02T20:26:10Z
-  stars_delta_7d: 1439
-  stars_growth_pct: 5.8
-  trending_score: 1522.1
-  rank_current: 29
-  rank_delta: 6
+  stars_delta_7d: 421
+  stars_growth_pct: 1.6
+  trending_score: 427.72
+  rank_current: 32
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 23994
     - 24395
     - 24919
     - 26358
+    - 26779
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: guillaumemeyer/watermarks-remover
   path: skills/clean-user-facing-text/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:58.026Z
+  fetched_at: 2026-11-09T09:27:50.059Z
   truncated: false
 type: agent_skill
 skill:

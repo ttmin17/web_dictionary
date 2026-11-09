@@ -13,10 +13,10 @@ tags:
   - book-to-skill
   - context-engineering
 status: active
-quality_percentile: 76
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-05-01T02:09:39
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: virgiliojr94/book-to-skill
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 37030
-  last_commit: 2026-11-03T17:53:25Z
-  stars_delta_7d: 908
-  stars_growth_pct: 2.5
-  trending_score: 930.82
-  rank_current: 36
-  rank_delta: -6
+  stars: 37427
+  last_commit: 2026-11-08T21:22:31Z
+  stars_delta_7d: 397
+  stars_growth_pct: 1.1
+  trending_score: 401.26
+  rank_current: 33
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 34751
     - 35303
     - 36122
     - 37030
+    - 37427
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: virgiliojr94/book-to-skill
   path: SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:03.072Z
+  fetched_at: 2026-11-09T09:27:53.908Z
   truncated: false
 type: agent_skill
 skill:

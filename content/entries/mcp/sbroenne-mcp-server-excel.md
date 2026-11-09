@@ -14,29 +14,29 @@ tags:
   - com-automation
   - conditional-formatting
 status: active
-quality_percentile: 36
+quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: sbroenne/mcp-server-excel
   official_vendor: false
   license: MIT
 signals:
-  stars: 847
-  last_commit: 2026-11-05T09:27:39Z
-  stars_delta_7d: 13
-  stars_growth_pct: 1.6
-  trending_score: 13.2
-  rank_current: 82
-  rank_delta: -2
+  stars: 868
+  last_commit: 2026-11-09T09:22:13Z
+  stars_delta_7d: 21
+  stars_growth_pct: 2.5
+  trending_score: 21.52
+  rank_current: 43
+  rank_delta: 39
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 817
     - 828
     - 834
     - 847
+    - 868
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: sbroenne/mcp-server-excel
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:10.000Z
+  fetched_at: 2026-11-09T09:27:12.991Z
   truncated: false
 type: mcp_server
 launch:

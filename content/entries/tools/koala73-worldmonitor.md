@@ -18,26 +18,26 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: koala73/worldmonitor
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 90185
-  last_commit: 2026-11-05T13:05:46Z
-  stars_delta_7d: 641
-  stars_growth_pct: 0.7
-  trending_score: 645.59
-  rank_current: 23
-  rank_delta: -6
+  stars: 90401
+  last_commit: 2026-11-09T09:21:22Z
+  stars_delta_7d: 216
+  stars_growth_pct: 0.2
+  trending_score: 216.52
+  rank_current: 20
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 88374
     - 88774
     - 89544
     - 90185
+    - 90401
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: koala73/worldmonitor
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:27.577Z
+  fetched_at: 2026-11-09T09:26:42.699Z
   truncated: false
 type: agent_tool
 tool:
@@ -157,6 +157,16 @@ Issues filed against any of the above are triaged from the same backlog — see 
 ---
 
 ## Quick Start
+
+**One-line install** (self-host the full stack with Docker — dashboard, Redis, AIS relay, seeded public data):
+
+```bash
+curl -fsSL https://www.worldmonitor.app/install.sh | bash
+```
+
+This clones into `./worldmonitor` (or reuses your checkout), generates the required secrets, starts the stack, and seeds data. Then open [localhost:3000](http://localhost:3000). Options: `--dir`, `--port`, `--no-seed`, `--no-build`, passed after `bash -s --` (see `scripts/install.sh --help`). API keys are optional. Details, production notes, and uninstall: [SELF_HOSTING.md](https://github.com/koala73/worldmonitor/blob/main/SELF_HOSTING.md).
+
+**Local development** (hot-reload Vite server):
 
 Requires Node.js 24, the version pinned in `.nvmrc`. Distribution packages are often older. Debian 12 and Raspberry Pi OS ship Node.js 18 with npm 9.2.0, where `npm install` stops with `Invalid comparator: file:vendor/braces`. Install Node.js 24 with [nvm](https://github.com/nvm-sh/nvm) (`nvm install` inside the checkout reads `.nvmrc`) or from [nodejs.org](https://nodejs.org/en/download).
 

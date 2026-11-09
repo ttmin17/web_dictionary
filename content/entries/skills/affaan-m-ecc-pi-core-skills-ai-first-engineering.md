@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 95
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: affaan-m/ECC
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 297571
-  last_commit: 2026-11-02T04:56:08Z
-  stars_delta_7d: 8499
-  stars_growth_pct: 2.9
-  trending_score: 8748.88
+  stars: 299857
+  last_commit: 2026-11-09T04:56:24Z
+  stars_delta_7d: 2286
+  stars_growth_pct: 0.8
+  trending_score: 2303.56
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 278380
     - 283494
     - 289072
     - 297571
+    - 299857
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: affaan-m/ECC
   path: pi/core/skills/ai-first-engineering/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:19.739Z
+  fetched_at: 2026-11-09T09:27:17.197Z
   truncated: false
 type: agent_skill
 skill:

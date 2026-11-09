@@ -14,7 +14,7 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: codewhale-hq/Codewhale
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 41158
-  last_commit: 2026-11-05T13:03:13Z
-  stars_delta_7d: 40
-  stars_growth_pct: 0.1
-  trending_score: 40.04
+  stars: 41160
+  last_commit: 2026-11-09T09:21:05Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 2
   velocity_source: snapshot_delta
   sparkline_4w:
     - 41101
     - 41118
     - 41158
+    - 41160
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: codewhale-hq/Codewhale
   path: crates/engine/tests/fixtures/extension_host/skills-root/profiles/review-skills/quick-check/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:37.247Z
+  fetched_at: 2026-11-09T09:28:23.915Z
   truncated: false
 type: agent_skill
 skill:

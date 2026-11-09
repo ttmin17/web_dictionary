@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14127
-  last_commit: 2026-11-05T13:02:06Z
-  stars_delta_7d: 471
-  stars_growth_pct: 3.4
-  trending_score: 487.24
+  stars: 14314
+  last_commit: 2026-11-09T09:23:57Z
+  stars_delta_7d: 187
+  stars_growth_pct: 1.3
+  trending_score: 189.48
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13138
     - 13339
     - 13656
     - 14127
+    - 14314
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-update/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.372Z
+  fetched_at: 2026-11-09T09:27:42.805Z
   truncated: false
 type: agent_skill
 skill:
@@ -67,7 +67,7 @@ skill:
 
 Follow the ao-rules skill. This runs on the bot's own cloud computer (the box), not on the user's computers. It changes only this bot's ao-* skills, and only after the user's yes.
 
-The skills are published in the public AO repository (`OrchestratorInc/agent-orchestrator`, folder `integrations/grok-bot/`) with a `manifest.json` that lists each skill's sha256. Every check reads the newest commit on `main`, then downloads the manifest and the skills from that exact commit, so the files always match each other.
+The skills are published in the public Orchestrator repository (`OrchestratorInc/agent-orchestrator`, folder `integrations/grok-bot/`) with a `manifest.json` that lists each skill's sha256. Every check reads the newest commit on `main`, then downloads the manifest and the skills from that exact commit, so the files always match each other.
 
 ## 1. Save the fetcher
 Save it on the box if `/workspace/ao-bot/fetch.py` is missing or differs:

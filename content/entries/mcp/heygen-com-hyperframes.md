@@ -14,24 +14,25 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: heygen-com/hyperframes
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 79284
-  last_commit: 2026-11-05T13:08:26Z
-  stars_delta_7d: 6849
-  stars_growth_pct: 9.5
-  trending_score: 7496.6
+  stars: 81316
+  last_commit: 2026-11-09T09:23:22Z
+  stars_delta_7d: 2032
+  stars_growth_pct: 2.6
+  trending_score: 2084.08
   rank_current: 1
-  rank_delta: null
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 72435
     - 79284
+    - 81316
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +41,7 @@ readme_source:
   repo: heygen-com/hyperframes
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:20.237Z
+  fetched_at: 2026-11-09T09:27:22.401Z
   truncated: false
 type: mcp_server
 launch:

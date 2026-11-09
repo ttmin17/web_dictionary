@@ -12,29 +12,29 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 53
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ArcadeAI/arcade-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 1080
-  last_commit: 2026-11-05T01:05:13Z
-  stars_delta_7d: 21
-  stars_growth_pct: 2
-  trending_score: 21.42
-  rank_current: 71
-  rank_delta: 14
+  stars: 1085
+  last_commit: 2026-11-08T23:08:02Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.5
+  trending_score: 5.02
+  rank_current: 83
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1049
     - 1054
     - 1059
     - 1080
+    - 1085
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: ArcadeAI/arcade-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:09.089Z
+  fetched_at: 2026-11-09T09:27:12.721Z
   truncated: false
 type: mcp_server
 launch:

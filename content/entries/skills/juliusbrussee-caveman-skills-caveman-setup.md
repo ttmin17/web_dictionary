@@ -18,7 +18,7 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: JuliusBrussee/caveman
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 117655
-  last_commit: 2026-11-05T07:18:24Z
-  stars_delta_7d: 2545
-  stars_growth_pct: 2.2
-  trending_score: 2601.27
+  stars: 118474
+  last_commit: 2026-11-09T01:48:59Z
+  stars_delta_7d: 819
+  stars_growth_pct: 0.7
+  trending_score: 824.7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 111405
     - 113528
     - 115110
     - 117655
+    - 118474
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: JuliusBrussee/caveman
   path: skills/caveman-setup/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:19.721Z
+  fetched_at: 2026-11-09T09:27:20.646Z
   truncated: false
 type: agent_skill
 skill:

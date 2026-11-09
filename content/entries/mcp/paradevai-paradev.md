@@ -16,21 +16,24 @@ status: active
 quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ParadevAI/Paradev
   official_vendor: false
   license: MIT
 signals:
-  stars: 15960
-  last_commit: 2026-11-05T12:57:26Z
-  stars_delta_7d: 294
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 16118
+  last_commit: 2026-11-09T09:20:27Z
+  stars_delta_7d: 158
+  stars_growth_pct: 1
+  trending_score: 159.56
+  rank_current: 10
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 15960
+    - 16118
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: ParadevAI/Paradev
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:42.850Z
+  fetched_at: 2026-11-09T09:27:38.186Z
   truncated: false
 type: mcp_server
 launch:

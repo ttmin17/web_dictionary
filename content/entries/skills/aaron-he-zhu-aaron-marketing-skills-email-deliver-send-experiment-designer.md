@@ -15,10 +15,10 @@ tags:
   - ai-staff
   - brand-messaging
 status: active
-quality_percentile: 56
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: aaron-he-zhu/aaron-marketing-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3072
-  last_commit: 2026-11-05T04:47:38Z
-  stars_delta_7d: 58
-  stars_growth_pct: 1.9
-  trending_score: 59.12
+  stars: 3107
+  last_commit: 2026-11-09T04:14:35Z
+  stars_delta_7d: 35
+  stars_growth_pct: 1.1
+  trending_score: 35.4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2930
     - 2980
     - 3014
     - 3072
+    - 3107
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: aaron-he-zhu/aaron-marketing-skills
   path: email/deliver/send-experiment-designer/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:24.177Z
+  fetched_at: 2026-11-09T09:28:10.847Z
   truncated: false
 type: agent_skill
 skill:

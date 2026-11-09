@@ -18,7 +18,7 @@ status: active
 quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8648
-  last_commit: 2026-11-05T13:06:48Z
-  stars_delta_7d: 450
-  stars_growth_pct: 5.5
-  trending_score: 474.7
+  stars: 8774
+  last_commit: 2026-11-09T09:15:26Z
+  stars_delta_7d: 126
+  stars_growth_pct: 1.5
+  trending_score: 127.84
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7377
     - 7831
     - 8198
     - 8648
+    - 8774
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/refocusing/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:57.372Z
+  fetched_at: 2026-11-09T09:27:49.761Z
   truncated: false
 type: agent_skill
 skill:
@@ -108,6 +108,11 @@ the complete node and notes bodies. The script resolves `topology.root` and `wor
 `rig config get`. When a known current node must be supplied, pass `--work-start` or
 `--topology-start` with its literal absolute path in the same plain command. Do not
 substitute the project root for a mission or slice node and claim that mission was traced.
+A catalogued project's root can sit outside `workspace.root`. The refocus hook passes the daemon's
+catalogued project roots as `--work-root`, and the work trace ascends to the deepest known root that
+contains the node. Run by hand, pass the project root with `--work-root` (repeatable) or
+`OPENRIG_REFOCUS_WORK_ROOT`. Don't point `OPENRIG_WORKSPACE_ROOT` at the project instead: the CLI reads
+that variable as `workspace.root` too.
 
 The trace walks the topology and work trees. For the project's own declared context (intent, context files,
 skills), `rig context work-install` lists it; read what the next action needs.

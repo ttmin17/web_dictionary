@@ -18,7 +18,7 @@ status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: JuliusBrussee/caveman
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 117655
-  last_commit: 2026-11-05T07:18:24Z
-  stars_delta_7d: 2545
-  stars_growth_pct: 2.2
-  trending_score: 2601.27
+  stars: 118474
+  last_commit: 2026-11-09T01:48:59Z
+  stars_delta_7d: 819
+  stars_growth_pct: 0.7
+  trending_score: 824.7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 111405
     - 113528
     - 115110
     - 117655
+    - 118474
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: JuliusBrussee/caveman
   path: plugins/caveman/skills/caveman-compress/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:19.719Z
+  fetched_at: 2026-11-09T09:27:20.645Z
   truncated: false
 type: agent_skill
 skill:
@@ -74,7 +74,7 @@ skill:
 # Caveman Compress
 ## Purpose
 
-> **Data leaves the machine.** Compression sends the file's full text to the model provider that `scripts/compress.py` is configured for: the `claude` CLI, the Anthropic API, or an OpenAI-compatible endpoint. Files whose names look like secrets (`.env`, `credentials`, `secrets`, `.netrc`, …) are refused before they are read. Don't compress a file the provider shouldn't see.
+> **Data leaves the machine.** Compression sends the file's full text to the model provider that `scripts/compress.py` is configured for: the `claude` CLI, the Anthropic API, or an OpenAI-compatible endpoint. Files whose names look like secrets (`.env`, `credentials`, `secrets`, `.netrc`, …) are refused before they are read, and a file whose text holds a credential (a private key block, or a cloud, Git host or model API token) is refused before anything is sent. Don't compress a file the provider shouldn't see.
 
 Compress natural language files (CLAUDE.md, todos, preferences) into caveman-speak to reduce input tokens. Compressed version overwrites original. Human-readable backup saved as `<filename>.original.md`, but NOT beside the source file — it lives in an out-of-tree data dir (`$XDG_DATA_HOME/caveman-compress/backups/<parent-dir-name>/`, or `%LOCALAPPDATA%\caveman-compress\backups\<parent-dir-name>\` on Windows) so skill auto-loaders don't re-ingest it as a live file.
 

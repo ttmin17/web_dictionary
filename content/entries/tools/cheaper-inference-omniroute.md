@@ -16,24 +16,25 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: cheaper-inference/OmniRoute
   official_vendor: false
   license: MIT
 signals:
-  stars: 84704
-  last_commit: 2026-11-05T13:00:08Z
-  stars_delta_7d: 3471
-  stars_growth_pct: 4.3
-  trending_score: 3619.31
-  rank_current: 9
-  rank_delta: null
+  stars: 85802
+  last_commit: 2026-11-09T09:22:58Z
+  stars_delta_7d: 1098
+  stars_growth_pct: 1.3
+  trending_score: 1112.23
+  rank_current: 8
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 81233
     - 84704
+    - 85802
 language: en
 needs_keys: false
 prerequisites:
@@ -41,8 +42,8 @@ prerequisites:
 readme_source:
   repo: cheaper-inference/OmniRoute
   path: README.md
-  branch: release/v3.8.53
-  fetched_at: 2026-11-05T13:12:20.553Z
+  branch: release/v3.8.54
+  fetched_at: 2026-11-09T09:27:22.517Z
   truncated: true
 type: agent_tool
 tool:
@@ -63,7 +64,7 @@ tool:
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
 
 <br/>
 <br/>
@@ -72,7 +73,7 @@ tool:
 
 **Created by [Diego Souza](https://github.com/diegosouzapw)**
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 380 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 380 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 381 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 381 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
 
 </div>
 
@@ -84,11 +85,11 @@ tool:
 
 > **Bring your own provider accounts.** This is an estimated aggregate across separately eligible third-party free tiers, not a token grant from OmniRoute. Sign up, obtain credentials where required, and connect the providers you can use; each provider controls its limits, availability, and terms.
 >
-> Stacking free tiers by hand is painful — dozens of SDKs, dozens of rate limits, and no idea how much you actually have. OmniRoute catalogs **485 free-tier entries across 34 recurring pool keys** and computes the token headline from the **17 pools with a published positive monthly budget plus five per-model Groq caps**, deduplicated by shared pool. Quotas that only open after a regional identity check (today: ModelScope) are shown apart, +~6M behind regional identity verification, and never summed into the headline. The result stays visible on the dashboard (`/dashboard/free-tiers`).
+> Stacking free tiers by hand is painful — dozens of SDKs, dozens of rate limits, and no idea how much you actually have. OmniRoute catalogs **465 free-tier entries across 34 recurring pool keys** and computes the token headline from the **17 pools with a published positive monthly budget plus five per-model Groq caps**, deduplicated by shared pool. Quotas that only open after a regional identity check (today: ModelScope) are shown apart, +~6M behind regional identity verification, and never summed into the headline. The result stays visible on the dashboard (`/dashboard/free-tiers`).
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute free-tier budget card: ~1.62B free tokens per month steady, up to ~2.22B in the first month with signup credits, from 34 documented recurring pool keys covering 485 cataloged free-tier entries behind one endpoint. Honest pool-deduped math — each shared pool counted once, including 17 recurring pools with a published positive monthly token budget plus five per-model Groq caps; 12 providers are marked avoid in the terms-risk catalog so you decide. Budget bar includes Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (five per-model caps) and smaller pools, plus first-month signup credits and permanently-free no-token-cap providers surfaced separately so they never inflate the headline. Live used/remaining on /dashboard/free-tiers."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute free-tier budget card: ~1.62B free tokens per month steady, up to ~2.22B in the first month with signup credits, from 34 documented recurring pool keys covering 465 cataloged free-tier entries behind one endpoint. Honest pool-deduped math — each shared pool counted once, including 17 recurring pools with a published positive monthly token budget plus five per-model Groq caps; 12 providers are marked avoid in the terms-risk catalog so you decide. Budget bar includes Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (five per-model caps) and smaller pools, plus first-month signup credits and permanently-free no-token-cap providers surfaced separately so they never inflate the headline. Live used/remaining on /dashboard/free-tiers."/>
 
-> Animated summary of the live `/dashboard/free-tiers` page. Full methodology (pool dedupe, credit tiers, provider terms): **[docs/reference/FREE_TIERS.md](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/FREE_TIERS.md)**.
+> Animated summary of the live `/dashboard/free-tiers` page. Full methodology (pool dedupe, credit tiers, provider terms): **[docs/reference/FREE_TIERS.md](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/FREE_TIERS.md)**.
 >
 > <sub>These figures are re-audited every two weeks against the live catalog and **move both ways** — a provider ends a free tier and the number drops; a new one lands and it climbs. We publish what the catalog actually computes, never a rounded-up best case.</sub>
 
@@ -120,7 +121,7 @@ tool:
 [![WhatsApp Brasil](https://img.shields.io/badge/WhatsApp_Brasil-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)
 [![Website](https://img.shields.io/badge/Website-omniroute.online-blue?logo=google-chrome&logoColor=white)](https://omniroute.online)
 
-**Questions, provider tips, roadmap & support → [Discord](https://discord.gg/U47eFqAXCn) · [Telegram](https://t.me/omnirouteOficial) · WhatsApp [🌍 Global](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4) / [🇧🇷 Brasil](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4) / [Portal](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)**
+**Questions, provider tips, roadmap & support → [Discord](https://discord.gg/U47eFqAXCn) · [Telegram](https://t.me/omnirouteOficial) · WhatsApp [🌍 Global](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4) / [🇧🇷 Brasil](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4) / [📢 Official Channel](https://whatsapp.com/channel/0029VbDwC7A3wtb5PN6a5t2R) / [Portal](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)**
 
 <br/>
 
@@ -128,9 +129,9 @@ tool:
 
 <div align="center">
 
-|                           |          v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
+|                           |          v3.8.50          | **v3.8.51** |      `v3.8.54+`       |
 | ------------------------- | :-----------------------: | :---------: | :-------------------: |
-| 🌐 Providers              |            352            |   **358**   |          380          |
+| 🌐 Providers              |            352            |   **358**   |          381          |
 | 🧠 Unique chat model IDs  |           1320            |  **1374**   |         1491          |
 | 🖼️ Modality Bridge        | 🆕 vision + audio + video |      ✓      |           ✓           |
 | 📡 Radar free catalog     |         🆕 opt-in         |      ✓      |           ✓           |
@@ -140,7 +141,7 @@ tool:
 | 🛤️ LTS rail infra         |             —             |      —      |  🆕 release channels  |
 | 🔎 Model discovery API    |             —             |      —      | 🆕 `/v1/models/query` |
 
-**→ [Roadmap](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/ROADMAP.md) — riding the rail to `v3.9.0 LTS`**
+**→ [Roadmap](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/ROADMAP.md) — riding the rail to `v3.9.0 LTS`**
 
 </div>
 
@@ -151,7 +152,7 @@ tool:
 [![npm version](https://img.shields.io/npm/v/omniroute?color=cb3837&logo=npm)](https://www.npmjs.com/package/omniroute)
 ![NPM Monthly](https://img.shields.io/npm/dm/omniroute?label=npm/month&color=cb3837&logo=npm)
 [![Docker Hub](https://img.shields.io/docker/v/diegosouzapw/omniroute?label=Docker%20Hub&logo=docker&color=2496ED)](https://hub.docker.com/r/diegosouzapw/omniroute)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/LICENSE)
 ![Docker Pulls](https://img.shields.io/docker/pulls/diegosouzapw/omniroute?label=docker%20pulls&logo=docker&color=2496ED)
 ![Electron Downloads](https://img.shields.io/github/downloads/diegosouzapw/omniroute/total?style=flat&label=electron%20downloads&logo=electron&color=47848F)
 
@@ -171,7 +172,7 @@ tool:
   <tr>
     <td align="right"><b>⚙️ Features</b></td>
     <td align="center"><a href="#-combos--the-flagship">🎯 Combos</a></td>
-    <td align="center"><a href="#-380-ai-providers--153-catalog-marked-free">🌐 Providers</a></td>
+    <td align="center"><a href="#-381-ai-providers--153-catalog-marked-free">🌐 Providers</a></td>
     <td align="center"><a href="#-full-cli--a2a--mcp">🔌 CLI &amp; MCP</a></td>
   </tr>
   <tr>
@@ -205,73 +206,73 @@ tool:
 <div align="center">
   <b>🌐 In 67 languages</b>
   <br/><br/>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/us.svg" width="30" alt="English (en)" title="English (en)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/pt-BR/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/br.svg" width="30" alt="Português — Brasil (pt-BR)" title="Português — Brasil (pt-BR)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/pt/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/pt.svg" width="30" alt="Português (pt)" title="Português (pt)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/es/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/es.svg" width="30" alt="Español (es)" title="Español (es)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/fr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/fr.svg" width="30" alt="Français (fr)" title="Français (fr)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/it/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/it.svg" width="30" alt="Italiano (it)" title="Italiano (it)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/de/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/de.svg" width="30" alt="Deutsch (de)" title="Deutsch (de)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/nl/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/nl.svg" width="30" alt="Nederlands (nl)" title="Nederlands (nl)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ru/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ru.svg" width="30" alt="Русский (ru)" title="Русский (ru)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/uk-UA/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ua.svg" width="30" alt="Українська (uk-UA)" title="Українська (uk-UA)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/pl/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/pl.svg" width="30" alt="Polski (pl)" title="Polski (pl)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/cs/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/cz.svg" width="30" alt="Čeština (cs)" title="Čeština (cs)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/sk/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/sk.svg" width="30" alt="Slovenčina (sk)" title="Slovenčina (sk)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ro/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ro.svg" width="30" alt="Română (ro)" title="Română (ro)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/hu/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/hu.svg" width="30" alt="Magyar (hu)" title="Magyar (hu)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/bg/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/bg.svg" width="30" alt="Български (bg)" title="Български (bg)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/da/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/dk.svg" width="30" alt="Dansk (da)" title="Dansk (da)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/fi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/fi.svg" width="30" alt="Suomi (fi)" title="Suomi (fi)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/no/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/no.svg" width="30" alt="Norsk (no)" title="Norsk (no)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/sv/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/se.svg" width="30" alt="Svenska (sv)" title="Svenska (sv)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/zh-CN/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/cn.svg" width="30" alt="中文 — 简体 (zh-CN)" title="中文 — 简体 (zh-CN)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/zh-TW/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/tw.svg" width="30" alt="中文 — 繁體 (zh-TW)" title="中文 — 繁體 (zh-TW)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ja/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/jp.svg" width="30" alt="日本語 (ja)" title="日本語 (ja)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ko/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/kr.svg" width="30" alt="한국어 (ko)" title="한국어 (ko)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/th/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/th.svg" width="30" alt="ไทย (th)" title="ไทย (th)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/vi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/vn.svg" width="30" alt="Tiếng Việt (vi)" title="Tiếng Việt (vi)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/id/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/id.svg" width="30" alt="Bahasa Indonesia (id)" title="Bahasa Indonesia (id)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ms/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/my.svg" width="30" alt="Bahasa Melayu (ms)" title="Bahasa Melayu (ms)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/phi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ph.svg" width="30" alt="Filipino (phi)" title="Filipino (phi)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/hi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="हिन्दी (hi)" title="हिन्दी (hi)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/gu/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="ગુજરાતી (gu)" title="ગુજરાતી (gu)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/mr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="मराठी (mr)" title="मराठी (mr)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ta/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="தமிழ் (ta)" title="தமிழ் (ta)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/te/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="తెలుగు (te)" title="తెలుగు (te)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/bn/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/bd.svg" width="30" alt="বাংলা (bn)" title="বাংলা (bn)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ur/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/pk.svg" width="30" alt="اردو (ur)" title="اردو (ur)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/fa/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ir.svg" width="30" alt="فارسی (fa)" title="فارسی (fa)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ar/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/sa.svg" width="30" alt="العربية (ar)" title="العربية (ar)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/he/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/il.svg" width="30" alt="עברית (he)" title="עברית (he)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/tr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/tr.svg" width="30" alt="Türkçe (tr)" title="Türkçe (tr)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/az/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/az.svg" width="30" alt="Azərbaycan (az)" title="Azərbaycan (az)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/sw/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/tz.svg" width="30" alt="Kiswahili (sw)" title="Kiswahili (sw)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/el/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/gr.svg" width="30" alt="Ελληνικά (el)" title="Ελληνικά (el)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/hr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/hr.svg" width="30" alt="Hrvatski (hr)" title="Hrvatski (hr)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/sr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/rs.svg" width="30" alt="Српски (sr)" title="Српски (sr)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/lt/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/lt.svg" width="30" alt="Lietuvių (lt)" title="Lietuvių (lt)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/et/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ee.svg" width="30" alt="Eesti (et)" title="Eesti (et)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/lv/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/lv.svg" width="30" alt="Latviešu (lv)" title="Latviešu (lv)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/sl/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/si.svg" width="30" alt="Slovenščina (sl)" title="Slovenščina (sl)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/mt/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/mt.svg" width="30" alt="Malti (mt)" title="Malti (mt)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ga/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ie.svg" width="30" alt="Gaeilge (ga)" title="Gaeilge (ga)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/kn/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="ಕನ್ನಡ (kn)" title="ಕನ್ನಡ (kn)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ml/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="മലയാളം (ml)" title="മലയാളം (ml)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/or/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="ଓଡ଼ିଆ (or)" title="ଓଡ଼ିଆ (or)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/pa/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/in.svg" width="30" alt="ਪੰਜਾਬੀ (pa)" title="ਪੰਜਾਬੀ (pa)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ne/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/np.svg" width="30" alt="नेपाली (ne)" title="नेपाली (ne)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/si/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/lk.svg" width="30" alt="සිංහල (si)" title="සිංහල (si)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/my/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/mm.svg" width="30" alt="မြန်မာ (my)" title="မြန်မာ (my)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/km/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/kh.svg" width="30" alt="ខ្មែរ (km)" title="ខ្មែរ (km)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ha/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ng.svg" width="30" alt="Hausa (ha)" title="Hausa (ha)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/yo/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ng.svg" width="30" alt="Yorùbá (yo)" title="Yorùbá (yo)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ig/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ng.svg" width="30" alt="Igbo (ig)" title="Igbo (ig)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/am/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/et.svg" width="30" alt="አማርኛ (am)" title="አማርኛ (am)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/uz/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/uz.svg" width="30" alt="Oʻzbekcha (uz)" title="Oʻzbekcha (uz)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/ka/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ge.svg" width="30" alt="ქართული (ka)" title="ქართული (ka)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/hy/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/am.svg" width="30" alt="Հայերեն (hy)" title="Հայերեն (hy)"></a>
-  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/i18n/bs/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/flags/ba.svg" width="30" alt="Bosanski (bs)" title="Bosanski (bs)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/us.svg" width="30" alt="English (en)" title="English (en)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/pt-BR/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/br.svg" width="30" alt="Português — Brasil (pt-BR)" title="Português — Brasil (pt-BR)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/pt/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/pt.svg" width="30" alt="Português (pt)" title="Português (pt)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/es/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/es.svg" width="30" alt="Español (es)" title="Español (es)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/fr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/fr.svg" width="30" alt="Français (fr)" title="Français (fr)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/it/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/it.svg" width="30" alt="Italiano (it)" title="Italiano (it)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/de/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/de.svg" width="30" alt="Deutsch (de)" title="Deutsch (de)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/nl/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/nl.svg" width="30" alt="Nederlands (nl)" title="Nederlands (nl)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ru/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ru.svg" width="30" alt="Русский (ru)" title="Русский (ru)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/uk-UA/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ua.svg" width="30" alt="Українська (uk-UA)" title="Українська (uk-UA)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/pl/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/pl.svg" width="30" alt="Polski (pl)" title="Polski (pl)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/cs/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/cz.svg" width="30" alt="Čeština (cs)" title="Čeština (cs)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/sk/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/sk.svg" width="30" alt="Slovenčina (sk)" title="Slovenčina (sk)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ro/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ro.svg" width="30" alt="Română (ro)" title="Română (ro)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/hu/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/hu.svg" width="30" alt="Magyar (hu)" title="Magyar (hu)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/bg/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/bg.svg" width="30" alt="Български (bg)" title="Български (bg)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/da/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/dk.svg" width="30" alt="Dansk (da)" title="Dansk (da)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/fi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/fi.svg" width="30" alt="Suomi (fi)" title="Suomi (fi)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/no/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/no.svg" width="30" alt="Norsk (no)" title="Norsk (no)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/sv/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/se.svg" width="30" alt="Svenska (sv)" title="Svenska (sv)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/zh-CN/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/cn.svg" width="30" alt="中文 — 简体 (zh-CN)" title="中文 — 简体 (zh-CN)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/zh-TW/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/tw.svg" width="30" alt="中文 — 繁體 (zh-TW)" title="中文 — 繁體 (zh-TW)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ja/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/jp.svg" width="30" alt="日本語 (ja)" title="日本語 (ja)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ko/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/kr.svg" width="30" alt="한국어 (ko)" title="한국어 (ko)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/th/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/th.svg" width="30" alt="ไทย (th)" title="ไทย (th)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/vi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/vn.svg" width="30" alt="Tiếng Việt (vi)" title="Tiếng Việt (vi)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/id/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/id.svg" width="30" alt="Bahasa Indonesia (id)" title="Bahasa Indonesia (id)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ms/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/my.svg" width="30" alt="Bahasa Melayu (ms)" title="Bahasa Melayu (ms)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/phi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ph.svg" width="30" alt="Filipino (phi)" title="Filipino (phi)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/hi/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="हिन्दी (hi)" title="हिन्दी (hi)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/gu/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="ગુજરાતી (gu)" title="ગુજરાતી (gu)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/mr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="मराठी (mr)" title="मराठी (mr)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ta/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="தமிழ் (ta)" title="தமிழ் (ta)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/te/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="తెలుగు (te)" title="తెలుగు (te)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/bn/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/bd.svg" width="30" alt="বাংলা (bn)" title="বাংলা (bn)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ur/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/pk.svg" width="30" alt="اردو (ur)" title="اردو (ur)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/fa/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ir.svg" width="30" alt="فارسی (fa)" title="فارسی (fa)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ar/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/sa.svg" width="30" alt="العربية (ar)" title="العربية (ar)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/he/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/il.svg" width="30" alt="עברית (he)" title="עברית (he)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/tr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/tr.svg" width="30" alt="Türkçe (tr)" title="Türkçe (tr)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/az/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/az.svg" width="30" alt="Azərbaycan (az)" title="Azərbaycan (az)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/sw/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/tz.svg" width="30" alt="Kiswahili (sw)" title="Kiswahili (sw)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/el/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/gr.svg" width="30" alt="Ελληνικά (el)" title="Ελληνικά (el)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/hr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/hr.svg" width="30" alt="Hrvatski (hr)" title="Hrvatski (hr)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/sr/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/rs.svg" width="30" alt="Српски (sr)" title="Српски (sr)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/lt/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/lt.svg" width="30" alt="Lietuvių (lt)" title="Lietuvių (lt)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/et/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ee.svg" width="30" alt="Eesti (et)" title="Eesti (et)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/lv/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/lv.svg" width="30" alt="Latviešu (lv)" title="Latviešu (lv)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/sl/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/si.svg" width="30" alt="Slovenščina (sl)" title="Slovenščina (sl)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/mt/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/mt.svg" width="30" alt="Malti (mt)" title="Malti (mt)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ga/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ie.svg" width="30" alt="Gaeilge (ga)" title="Gaeilge (ga)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/kn/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="ಕನ್ನಡ (kn)" title="ಕನ್ನಡ (kn)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ml/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="മലയാളം (ml)" title="മലയാളം (ml)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/or/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="ଓଡ଼ିଆ (or)" title="ଓଡ଼ିଆ (or)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/pa/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/in.svg" width="30" alt="ਪੰਜਾਬੀ (pa)" title="ਪੰਜਾਬੀ (pa)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ne/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/np.svg" width="30" alt="नेपाली (ne)" title="नेपाली (ne)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/si/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/lk.svg" width="30" alt="සිංහල (si)" title="සිංහල (si)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/my/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/mm.svg" width="30" alt="မြန်မာ (my)" title="မြန်မာ (my)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/km/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/kh.svg" width="30" alt="ខ្មែរ (km)" title="ខ្មែរ (km)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ha/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ng.svg" width="30" alt="Hausa (ha)" title="Hausa (ha)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/yo/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ng.svg" width="30" alt="Yorùbá (yo)" title="Yorùbá (yo)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ig/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ng.svg" width="30" alt="Igbo (ig)" title="Igbo (ig)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/am/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/et.svg" width="30" alt="አማርኛ (am)" title="አማርኛ (am)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/uz/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/uz.svg" width="30" alt="Oʻzbekcha (uz)" title="Oʻzbekcha (uz)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/ka/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ge.svg" width="30" alt="ქართული (ka)" title="ქართული (ka)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/hy/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/am.svg" width="30" alt="Հայերեն (hy)" title="Հայերեն (hy)"></a>
+  <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/i18n/bs/README.md"><img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/flags/ba.svg" width="30" alt="Bosanski (bs)" title="Bosanski (bs)"></a>
 </div>
 
 <br/>
@@ -285,7 +286,7 @@ tool:
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
 
 ```bash
 # After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
@@ -295,9 +296,9 @@ curl http://localhost:20128/v1/chat/completions \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub>`auto` needs an eligible route. A fresh installation can have no eligible keyless targets, and a keyless provider may reject third-party clients. Providers marked `tos: avoid`, including Kiro, are excluded from automatic routing by default; connecting an account does not override that setting. See the [Free Tiers Guide](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/getting-started/FREE-TIERS-GUIDE.md) before choosing a provider.</sub>
+<sub>`auto` needs an eligible route. A fresh installation can have no eligible keyless targets, and a keyless provider may reject third-party clients. Providers marked `tos: avoid`, including Kiro, are excluded from automatic routing by default; connecting an account does not override that setting. See the [Free Tiers Guide](https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/getting-started/FREE-TIERS-GUIDE.md) before choosing a provider.</sub>
 
-<sub>📦 Copy-paste quickstart scripts for **Python, Node.js, PHP, and cURL** → [`examples/quickstart/`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/examples/quickstart/)</sub>
+<sub>📦 Copy-paste quickstart scripts for **Python, Node.js, PHP, and cURL** → [`examples/quickstart/`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/examples/quickstart/)</sub>
 
 <br/>
 
@@ -307,7 +308,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 380 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 380 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 54 recurring/keyless free-forever providers · 39 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 381 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 381 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 39 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
 
 <br/>
 <br/>
@@ -318,11 +319,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
 
 </div>
 
@@ -336,7 +337,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 <p align="center">
   <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">
-    <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/public/sponsors/kimi-k3-banner.png" width="100%" alt="Kimi K3 — Open Frontier Intelligence · 2.8T parameters · 1M-token context"/>
+    <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/public/sponsors/kimi-k3-banner.png" width="100%" alt="Kimi K3 — Open Frontier Intelligence · 2.8T parameters · 1M-token context"/>
   </a>
 </p>
 
@@ -348,7 +349,7 @@ curl http://localhost:20128/v1/chat/completions \
       <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="public/providers/kimi-logomark-dark.svg">
-          <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/public/providers/kimi-logomark-light.svg" width="64" alt="Kimi (Moonshot AI)"/>
+          <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/public/providers/kimi-logomark-light.svg" width="64" alt="Kimi (Moonshot AI)"/>
         </picture>
       </a>
       <br/><b>Kimi</b><br/><sub>Moonshot AI</sub><br/><br/>
@@ -363,7 +364,7 @@ curl http://localhost:20128/v1/chat/completions \
   <tr>
     <td align="center" width="150">
       <a href="https://cheaperinference.com/?utm_source=omniroute">
-        <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/public/providers/cli-generic.svg" width="64" alt="Cheaper Inference"/>
+        <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/public/providers/cli-generic.svg" width="64" alt="Cheaper Inference"/>
       </a>
       <br/><b>Cheaper Inference</b><br/><sub>cheaperinference.com</sub><br/><br/>
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Open Source Friend"/>
@@ -389,7 +390,7 @@ curl http://localhost:20128/v1/chat/completions \
   <tr>
     <td align="center" width="120">
       <a href="https://agentrouter.org/register?aff=70LM">
-        <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/public/providers/cli-generic.svg" width="32" alt="AgentRouter"/>
+        <img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/public/providers/cli-generic.svg" width="32" alt="AgentRouter"/>
       </a>
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
@@ -413,7 +414,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/strategies-grid.svg" width="100%" alt="Animated examples for 18 of the 20 combo routing strategies — one tile per strategy: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized and quota-weighted are not animated; the table below describes all 20."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/strategies-grid.svg" width="100%" alt="Animated examples for 18 of the 20 combo routing strategies — one tile per strategy: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized and quota-weighted are not animated; the table below describes all 20."/>
 
 > A **combo** is a chain of models OmniRoute routes across **automatically**. If quota runs out, a provider fails, or costs spike, the combo can move to the next eligible healthy model. 🛡️
 
@@ -427,8 +428,8 @@ No combo to create. Set your model to `auto` (or a variant) and OmniRoute builds
   <tr><td align="left" nowrap><code>auto/coding</code></td><td align="left">🧑‍💻 Quality-first weights for code generation</td></tr>
   <tr><td align="left" nowrap><code>auto/fast</code></td><td align="left">⚡ Lowest latency first</td></tr>
   <tr><td align="left" nowrap><code>auto/cheap</code></td><td align="left">💰 Cheapest per token first</td></tr>
-  <tr><td align="left" nowrap><code>auto/subscription</code></td><td align="left">🎟️ Only the subscription quota you already pay for — fails closed, never a billable fallback (<a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/routing/SUBSCRIPTION_LADDER.md">guide</a>)</td></tr>
-  <tr><td align="left" nowrap><code>auto/thrifty</code></td><td align="left">🪜 Plan quota first, then one rung at a time to the cheapest paid options — back on the plan after it resets (<a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/routing/SUBSCRIPTION_LADDER.md">guide</a>)</td></tr>
+  <tr><td align="left" nowrap><code>auto/subscription</code></td><td align="left">🎟️ Only the subscription quota you already pay for — fails closed, never a billable fallback (<a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/SUBSCRIPTION_LADDER.md">guide</a>)</td></tr>
+  <tr><td align="left" nowrap><code>auto/thrifty</code></td><td align="left">🪜 Plan quota first, then one rung at a time to the cheapest paid options — back on the plan after it resets (<a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/SUBSCRIPTION_LADDER.md">guide</a>)</td></tr>
   <tr><td align="left" nowrap><code>auto/offline</code></td><td align="left">🔋 Most quota / rate-limit headroom first</td></tr>
   <tr><td align="left" nowrap><code>auto/smart</code></td><td align="left">🔭 Quality-first + 10% exploration to discover better models</td></tr>
   <tr><td align="left" nowrap><code>auto/lkgp</code></td><td align="left">📌 Explicit last-known-good-provider stickiness</td></tr>
@@ -549,15 +550,15 @@ All **20** strategies — mix & match per combo step:
   </tr>
 </table>
 
-<sub>The Auto-Combo engine scores every candidate on **16 factors** (health, quota, cost, latency, task fit, quality, session availability…) — see [`docs/routing/AUTO-COMBO.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/routing/AUTO-COMBO.md).</sub>
+<sub>The Auto-Combo engine scores every candidate on **16 factors** (health, quota, cost, latency, task fit, quality, session availability…) — see [`docs/routing/AUTO-COMBO.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md).</sub>
 
 ##
 
 ### 🧱 Resilience is built in (3 independent layers)
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/resilience-layers.svg" width="100%" alt="OmniRoute resilience — 3 independent self-healing layers, the right layer for the right failure. Layer 1 provider circuit breaker (whole provider): trips only on 408/5xx, thresholds OAuth 8× / API-key 12× / local 2×, resets 60s/30s/15s into a HALF-OPEN probe, lazy recovery; while OPEN the combo reroutes to the next provider. Layer 2 connection cooldown (one key/account): base 5s OAuth / 3s API-key, exponential ×2 backoff with anti-thundering-herd guard, 429 honors Retry-After, success clears all error state; one cooling key is skipped while sibling keys keep serving. Layer 3 model lockout (one model): per-model 429, local 404 or mode denials lock just that model — never the whole connection. Terminal states (banned, expired, credits exhausted) are for the operator, not cooldowns."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/resilience-layers.svg" width="100%" alt="OmniRoute resilience — 3 independent self-healing layers, the right layer for the right failure. Layer 1 provider circuit breaker (whole provider): trips only on 408/5xx, thresholds OAuth 8× / API-key 12× / local 2×, resets 60s/30s/15s into a HALF-OPEN probe, lazy recovery; while OPEN the combo reroutes to the next provider. Layer 2 connection cooldown (one key/account): base 5s OAuth / 3s API-key, exponential ×2 backoff with anti-thundering-herd guard, 429 honors Retry-After, success clears all error state; one cooling key is skipped while sibling keys keep serving. Layer 3 model lockout (one model): per-model 429, local 404 or mode denials lock just that model — never the whole connection. Terminal states (banned, expired, credits exhausted) are for the operator, not cooldowns."/>
 
-<sub>📖 [Auto-Combo Engine](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/routing/AUTO-COMBO.md) · [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/architecture/RESILIENCE_GUIDE.md)</sub>
+<sub>📖 [Auto-Combo Engine](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md) · [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
 <br/>
 
@@ -567,9 +568,9 @@ All **20** strategies — mix & match per combo step:
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 380 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 381 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
 
-<sub>📊 Full methodology &amp; per-feature detail vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
+<sub>📊 Full methodology &amp; per-feature detail vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
@@ -589,7 +590,7 @@ OmniRoute is MIT-licensed and maintained in the open. If it saves you time or mo
 
 **🇧🇷 PIX** — instant, no fees (Brazil)
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.53/docs/assets/pix-qr.png" width="140" align="right" alt="OmniRoute PIX QR code"/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/assets/pix-qr.png" width="140" align="right" alt="OmniRoute PIX QR code"/>
 
 Key (random): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -619,7 +620,7 @@ Pix copia-e-cola:
 
 <br/>
 
-<p><strong>Developer notes:</strong> The project may generate a local <code>.env</code> file during npm install/postinstall for developer convenience. This file is intentionally ignored via <code>.gitignore</code> (see <code>.gitignore</code>) and must never be committed — if accidentally committed, rotate any exposed secrets and remove the file from history. See <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> for guidance on managing local environment files and secrets.</p>
+<p><strong>Developer notes:</strong> The project may generate a local <code>.env</code> file during npm install/postinstall for developer convenience. This file is intentionally ignored via <code>.gitignore</code> (see <code>.gitignore</code>) and must never be committed — if accidentally committed, rotate any exposed secrets and remove the file from history. See <a href="https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> for guidance on managing local environment files and secrets.</p>
 
 ## 📡 OmniRoute Radar
 
@@ -646,35 +647,35 @@ the current catalog at **[radar.omniroute.online/planos](https://radar.omniroute
 
 </div>
 
-> Recent highlights from **v3.8.20 → v3.8.53**. Full history in [`CHANGELOG.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/CHANGELOG.md).
+> Recent highlights from **v3.8.20 → v3.8.54**. Full history in [`CHANGELOG.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/CHANGELOG.md).
 
-- **⚖️ `quota-weighted` routing** — the 20th combo strategy skips exhausted accounts, then draws among the rest in proportion to leftover quota ÷ in-flight load, keeping existing conversations pinned. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/routing/AUTO-COMBO.md)
-- **🧰 Headless mode** — `omniroute serve --headless` (or `OMNIROUTE_HEADLESS=1`) runs only the `/v1/*` proxy engine, with the dashboard and dashboard-only subsystems off. → [Headless Mode](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/guides/HEADLESS.md)
-- **🔎 Model discovery** — `/v1/models` filters by capability, context, kind and text, and `POST /v1/models/query` returns a short deterministic shortlist with the same per-key visibility. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/API_REFERENCE.md)
-- **🔑 Per-key routing control** — pin an API key to one model or combo with `forcedModel`, and add or remove a key's models and combos atomically (`/api/keys/{id}/access`). → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/API_REFERENCE.md) · [OpenAPI](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/openapi.yaml)
-- **🛡️ Finer PII controls** — per-type selection, up to 20 validated custom masking patterns and per-type detection counters; masking itself stays opt-in. → [Guardrails](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/security/GUARDRAILS.md)
-- **🌍 67 languages** — dashboard, docs mirrors and CLI, with `npm run i18n:add-locale` adding a language everywhere in one command. → [i18n Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/guides/I18N.md)
-- **🎛️ OmniConductor** — inbound A2A delegation to your agent fleet, Conductor skills on the Agent Card, and a dashboard panel with Faro push-to-talk voice chat. → [A2A Server](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/frameworks/A2A-SERVER.md)
-- **🛂 Adaptive admission & overload protection** — heavyweight chat requests queue instead of 503ing, with atomic RPM rolling leases per connection. → [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Canonical `/v1/models` ordering** — one contiguous provider-grouped block per provider (combos pinned first), stable across every catalog source. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/API_REFERENCE.md)
-- **🗜️ Compression hardening** — default-on inflation guard, Caveman packs for DE / FR / JA + Chinese (wényán), RTK filters for Gradle & .NET. → [Compression](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Honest flat-rate cost** — subscription / coding-plan providers read **$0** in cost analytics; budget, quota & routing keep estimating. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share routing** — split a shared account's quota fairly across pooled keys, work-conserving so idle slices are lent out. → [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 One-command CLI/agent setup** — 15 registered `setup-*` commands; `omniroute run` launches 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` supports 11 targets with an interactive provider+model picker and per-context favorites. → [CLI Integrations](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Remote mode** — drive a remote OmniRoute with scoped tokens (`connect` / `contexts` / `tokens`) + an `antigravity` OAuth helper for VPS installs. → [Remote Mode](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/guides/REMOTE-MODE.md)
-- **🧭 Smarter auto-routing** — `auto/<category>:<tier>` combos, **Fusion** (model panel + judge), task-aware routing, per-request model / mode / USD-budget overrides. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/routing/AUTO-COMBO.md)
-- **🗜️ Pluggable compression** — 12 composable engines + Compression Studios: LLMLingua-2, two-tier Ultra, omniglyph, per-step fidelity gate, GCF v3.2, drag-reorder editor. → [Compression](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Transparent MITM decrypt (TPROXY)** — capture CLIs that ignore proxy env vars, with a per-SNI CA + trust-store installer. → [MITM/TPROXY](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Cost telemetry everywhere** — `X-OmniRoute-*` cost/usage headers on every endpoint, cache-HIT savings header, per-key USD spend quotas. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/API_REFERENCE.md)
-- **🧠 Memory you control** — off by default, opt-in int8 vector quantization + typed decay, per-request `x-omniroute-no-memory`. → [Memory](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/frameworks/MEMORY.md)
-- **🛡️ Security** — prompt-injection guard on every LLM route (red-team suite), opt-in credential-masking guardrail (redacts leaked API keys/secrets in both directions), free DuckDuckGo last-resort web search, and an optional OIDC login gate for the dashboard (password login always stays available). → [Guardrails](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/security/GUARDRAILS.md)
-- **🖼️ New endpoints** — `/v1/ocr` (Mistral OCR) and `/v1/audio/translations` (Whisper-style) round out the media surface. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/API_REFERENCE.md)
-- **🎨 Image / video / audio generation** — one API for media: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, and speech providers such as ElevenLabs. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/API_REFERENCE.md)
-- **🌍 Deployment & ops** — reverse-proxy `basePath`, browser-language auto-detect, per-key device tracking, root-less MITM trust, zh-TW localization. → [Environment](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/ENVIRONMENT.md)
-- **🤝 More providers & agents** — cloud agents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) with browser + OAuth login, Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi official partnership (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… and a refreshed **380-provider catalog**. → [Providers](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Routing transparency** — every response carries an `X-OmniRoute-Decision` header naming the strategy/provider/latency that served it, a new `cache-optimized` combo strategy + Auto-Combo `cacheAffinity` factor route repeat requests back to the connection holding the cached prefix, and a read-only `/v1/auto-combo/{channel}/candidates` endpoint exposes an `auto/*` channel's live candidate pool. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/routing/AUTO-COMBO.md)
-- **⚡ Local performance & infra** — one-click local Redis, Cloudflare Workers / Deno Deploy relay deployers, Bifrost & Mux as supervised embedded services. → [Embedded Services](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Also in the box** — plugin framework + marketplace, Omni/Agent/GitHub skills frameworks, Obsidian vault integration (22 MCP tools), OpenAI-compatible Batch & Files APIs, semantic response cache, gamification with leaderboards, ACP agent discovery (15 built-in agents), scheduled log export to BigQuery, `auto/chaos` parallel multi-model fan-out, a Telegram bot bridge, an in-app version manager and LMArena-ELO free-provider rankings. → [Docs](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.53/docs/README.md)
+- **⚖️ `quota-weighted` routing** — the 20th combo strategy skips exhausted accounts, then draws among the rest in proportion to leftover quota ÷ in-flight load, keeping existing conversations pinned. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md)
+- **🧰 Headless mode** — `omniroute serve --headless` (or `OMNIROUTE_HEADLESS=1`) runs only the `/v1/*` proxy engine, with the dashboard and dashboard-only subsystems off. → [Headless Mode](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/HEADLESS.md)
+- **🔎 Model discovery** — `/v1/models` filters by capability, context, kind and text, and `POST /v1/models/query` returns a short deterministic shortlist with the same per-key visibility. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
+- **🔑 Per-key routing control** — pin an API key to one model or combo with `forcedModel`, and add or remove a key's models and combos atomically (`/api/keys/{id}/access`). → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md) · [OpenAPI](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/openapi.yaml)
+- **🛡️ Finer PII controls** — per-type selection, up to 20 validated custom masking patterns and per-type detection counters; masking itself stays opt-in. → [Guardrails](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/security/GUARDRAILS.md)
+- **🌍 67 languages** — dashboard, docs mirrors and CLI, with `npm run i18n:add-locale` adding a language everywhere in one command. → [i18n Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/I18N.md)
+- **🎛️ OmniConductor** — inbound A2A delegation to your agent fleet, Conductor skills on the Agent Card, and a dashboard panel with Faro push-to-talk voice chat. → [A2A Server](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/frameworks/A2A-SERVER.md)
+- **🛂 Adaptive admission & overload protection** — heavyweight chat requests queue instead of 503ing, with atomic RPM rolling leases per connection. → [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Canonical `/v1/models` ordering** — one contiguous provider-grouped block per provider (combos pinned first), stable across every catalog source. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
+- **🗜️ Compression hardening** — default-on inflation guard, Caveman packs for DE / FR / JA + Chinese (wényán), RTK filters for Gradle & .NET. → [Compression](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/compression/COMPRESSION_ENGINES.md)
+- **💸 Honest flat-rate cost** — subscription / coding-plan providers read **$0** in cost analytics; budget, quota & routing keep estimating. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Share routing** — split a shared account's quota fairly across pooled keys, work-conserving so idle slices are lent out. → [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 One-command CLI/agent setup** — 15 registered `setup-*` commands; `omniroute run` launches 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` supports 11 targets with an interactive provider+model picker and per-context favorites. → [CLI Integrations](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Remote mode** — drive a remote OmniRoute with scoped tokens (`connect` / `contexts` / `tokens`) + an `antigravity` OAuth helper for VPS installs. → [Remote Mode](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/REMOTE-MODE.md)
+- **🧭 Smarter auto-routing** — `auto/<category>:<tier>` combos, **Fusion** (model panel + judge), task-aware routing, per-request model / mode / USD-budget overrides. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md)
+- **🗜️ Pluggable compression** — 12 composable engines + Compression Studios: LLMLingua-2, two-tier Ultra, omniglyph, per-step fidelity gate, GCF v3.2, drag-reorder editor. → [Compression](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Transparent MITM decrypt (TPROXY)** — capture CLIs that ignore proxy env vars, with a per-SNI CA + trust-store installer. → [MITM/TPROXY](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Cost telemetry everywhere** — `X-OmniRoute-*` cost/usage headers on every endpoint, cache-HIT savings header, per-key USD spend quotas. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
+- **🧠 Memory you control** — off by default, opt-in int8 vector quantization + typed decay, per-request `x-omniroute-no-memory`. → [Memory](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/frameworks/MEMORY.md)
+- **🛡️ Security** — prompt-injection guard on every LLM route (red-team suite), opt-in credential-masking guardrail (redacts leaked API keys/secrets in both directions), free DuckDuckGo last-resort web search, and an optional OIDC login gate for the dashboard (password login always stays available). → [Guardrails](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/security/GUARDRAILS.md)
+- **🖼️ New endpoints** — `/v1/ocr` (Mistral OCR) and `/v1/audio/translations` (Whisper-style) round out the media surface. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
+- **🎨 Image / video / audio generation** — one API for media: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, and speech providers such as ElevenLabs. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
+- **🌍 Deployment & ops** — reverse-proxy `basePath`, browser-language auto-detect, per-key device tracking, root-less MITM trust, zh-TW localization. → [Environment](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/ENVIRONMENT.md)
+- **🤝 More providers & agents** — cloud agents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) with browser + OAuth login, Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi official partnership (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… and a refreshed **381-provider catalog**. → [Providers](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/PROVIDER_REFERENCE.md)
+- **📡 Routing transparency** — every response carries an `X-OmniRoute-Decision` header naming the strategy/provider/latency that served it, a new `cache-optimized` combo strategy + Auto-Combo `cacheAffinity` factor route repeat requests back to the connection holding the cached prefix, and a read-only `/v1/auto-combo/{channel}/candidates` endpoint exposes an `auto/*` channel's live candidate pool. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md)
+- **⚡ Local performance & infra** — one-click local Redis, Cloudflare Workers / Deno Deploy relay deployers, Bifrost & Mux as supervised embedded services. → [Embedded Services](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 Also in the box** — plugin framework + marketplace, Omni/Agent/GitHub skills frameworks, Obsidian vault integration (22 MCP tools), OpenAI-compatible Batch & Files APIs, semantic response cache, gamification with leaderboards, ACP agent discovery (15 built-in agents), scheduled log export to BigQuery, `auto/chaos` parallel multi-model fan-out, a Telegram bot bridge, an in-app version manager and LMArena-ELO free-provider rankings. → [Docs](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/README.md)
 
 <br/>
 

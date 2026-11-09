@@ -16,7 +16,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 21991
-  last_commit: 2026-11-03T21:50:31Z
-  stars_delta_7d: 330
-  stars_growth_pct: 1.5
-  trending_score: 335.03
+  stars: 22096
+  last_commit: 2026-11-08T08:46:42Z
+  stars_delta_7d: 105
+  stars_growth_pct: 0.5
+  trending_score: 105.5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21368
     - 21498
     - 21661
     - 21991
+    - 22096
 language: zh
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: KKKKhazix/khazix-skills
   path: neat-freak/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:38.376Z
+  fetched_at: 2026-11-09T09:27:34.836Z
   truncated: false
 type: agent_skill
 skill:

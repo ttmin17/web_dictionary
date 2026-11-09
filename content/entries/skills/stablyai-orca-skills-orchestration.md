@@ -3,21 +3,20 @@ slug: stablyai-orca-skills-orchestration
 name: orchestration
 tagline: Run work in separate Orca worker agents and get their results back. Use
   when the user asks for Orca workers or supervision (monitor, task DAGs, ask/re
-summary: "Use Orca orchestration to run work in separate Orca worker agents and
-  get their results back: when the user asks for Orca workers or supervision
-  (monitor, task DAGs, ask/reply, decision gates), or when the work needs..."
+summary: Never substitute a non-Orca subagent tool when the user asked for Orca
+  orchestration.
 categories:
   - agent-frameworks
 tags:
-  - ade
   - agent-ide
   - ai-agents
   - automation
+  - bot
 status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -25,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 116163
-  last_commit: 2026-11-05T13:05:51Z
-  stars_delta_7d: 9943
-  stars_growth_pct: 9.4
-  trending_score: 10873.74
+  stars: 119733
+  last_commit: 2026-11-09T09:22:54Z
+  stars_delta_7d: 3570
+  stars_growth_pct: 3.1
+  trending_score: 3679.72
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 91386
     - 97177
     - 106220
     - 116163
+    - 119733
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +42,7 @@ readme_source:
   repo: stablyai/orca
   path: skills/orchestration/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:17.680Z
+  fetched_at: 2026-11-09T09:27:19.238Z
   truncated: false
 type: agent_skill
 skill:
@@ -72,21 +71,9 @@ skill:
 ---
 
 # Orca Orchestration
-This file is a discovery stub, not the usage guide. The full, version-matched Orca
-orchestration reference is served by the `orca` binary itself — kept out of this file on
-purpose so it can never drift from the binary that will actually run your commands.
+This discovery stub loads the version-matched guide from the Orca executable used for this session.
 
-Use Orca orchestration to run work in separate Orca worker agents and get their results
-back: when the user asks for Orca workers or supervision (monitor, task DAGs, ask/reply,
-decision gates), or when the work needs something your own subagents cannot give, such as a
-different agent or its own Orca workspace. "Have Codex (or Claude) review this and report
-back" means an Orca worker of that agent, even when you have your own model subagents. Use
-it as well when you are a dispatched worker sending `ask` questions or `worker_done`. Otherwise prefer your own subagents,
-including for long or parallel work. Use the orca-cli skill instead to hand work off with
-nothing expected back ("hand off", "handoff", "handover", "give this to another agent",
-"another worktree"), and for ordinary terminal control, shell commands, worktree management,
-and the built-in browser. Coordination requires real Orca runtime state; never substitute a
-non-Orca subagent tool when the user asked for Orca orchestration.
+Never substitute a non-Orca subagent tool when the user asked for Orca orchestration.
 
 ## Resolve the CLI for this session
 

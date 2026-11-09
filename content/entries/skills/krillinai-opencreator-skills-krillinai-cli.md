@@ -13,10 +13,10 @@ tags:
   - deskop-app
   - dubbing
 status: active
-quality_percentile: 75
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: krillinai/OpenCreator
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14172
-  last_commit: 2026-11-04T07:21:10Z
-  stars_delta_7d: 236
-  stars_growth_pct: 1.7
-  trending_score: 240
+  stars: 14249
+  last_commit: 2026-11-08T22:49:48Z
+  stars_delta_7d: 77
+  stars_growth_pct: 0.5
+  trending_score: 77.42
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12884
     - 13701
     - 13936
     - 14172
+    - 14249
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: krillinai/OpenCreator
   path: skills/krillinai-cli/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:11.625Z
+  fetched_at: 2026-11-09T09:28:00.497Z
   truncated: false
 type: agent_skill
 skill:

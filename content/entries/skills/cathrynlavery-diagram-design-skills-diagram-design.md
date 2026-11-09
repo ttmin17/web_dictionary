@@ -14,10 +14,10 @@ tags:
   - codex
   - data-visualization
 status: active
-quality_percentile: 64
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-04-16T18:01:16
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: cathrynlavery/diagram-design
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 65197
-  last_commit: 2026-11-03T18:31:42Z
-  stars_delta_7d: 4037
-  stars_growth_pct: 6.6
-  trending_score: 4303.47
-  rank_current: 12
-  rank_delta: -5
+  stars: 65975
+  last_commit: 2026-11-09T03:18:52Z
+  stars_delta_7d: 778
+  stars_growth_pct: 1.2
+  trending_score: 787.28
+  rank_current: 23
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 53703
     - 57952
     - 61160
     - 65197
+    - 65975
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: cathrynlavery/diagram-design
   path: skills/diagram-design/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:26.148Z
+  fetched_at: 2026-11-09T09:27:26.348Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,11 +59,14 @@ skill:
     and scatter charts (bubble, beeswarm, box plot), high-level, process,
     medallion, data flow, DP integration, DP security matrix, Sankey, fishbone,
     Wardley map, kanban, user journey, service blueprint, deployment, dependency
-    graph, UML class, story map, or database schema diagrams as HTML/SVG/PNG,
-    with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps,
-    block decomposition trees, and onboarding guidance.
+    graph (arc diagram), UML class, story map, or database schema diagrams as
+    HTML/SVG/PNG, with .drawio, Mermaid, and .excalidraw import, plus lifecycle
+    phase maps, block decomposition trees, and onboarding guidance.
   folder_path: skills/diagram-design
   extra_files:
+    - assets/example-arc-diagram-dark.html
+    - assets/example-arc-diagram-full.html
+    - assets/example-arc-diagram.html
     - assets/example-architecture-containment-dark.html
     - assets/example-architecture-containment-full.html
     - assets/example-architecture-containment.html
@@ -71,9 +74,6 @@ skill:
     - assets/example-architecture-delta-dark.html
     - assets/example-architecture-delta-full.html
     - assets/example-architecture-delta.html
-    - assets/example-architecture-full.html
-    - assets/example-architecture.html
-    - assets/example-axonometric-plan-campus-animated.html
   pack_total_skills: 1
   is_pack_primary: true
   clients:
@@ -201,7 +201,7 @@ The pattern owns semantic primitives and its tighter budget; the type owns layou
 | What a person does across stages of an experience, and how it feels | **User journey** | [type-journey.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-journey.md) |
 | What the customer does vs what the service hides, across stages, with a line of visibility | **Service blueprint** | [type-service-blueprint.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-service-blueprint.md) |
 | Where software runs — zones, hosts, artifacts, replicas, ports | **Deployment** | [type-deployment.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-deployment.md) |
-| What depends on what, with fan-in and cycles a tree cannot express | **Dependency graph** | [type-dependency.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-dependency.md) |
+| What depends on what, with fan-in and cycles a tree cannot express; arc diagram (nodes on a line, height is skip-span) variant | **Dependency graph** | [type-dependency.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-dependency.md) |
 | Classes with operations, inheritance, composition (other UML routes elsewhere) | **UML class** | [type-uml-class.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-uml-class.md) |
 | Narrative backbone sliced into releases, with the cut line | **Story map** | [type-story-map.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-story-map.md) |
 | Physical tables: SQL types, constraints, indexes, column-level FKs | **Database schema** | [type-db-schema.md](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/type-db-schema.md) |

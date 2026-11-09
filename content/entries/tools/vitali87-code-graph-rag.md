@@ -18,26 +18,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: vitali87/code-graph-rag
   official_vendor: false
   license: MIT
 signals:
-  stars: 5314
-  last_commit: 2026-11-04T16:42:42Z
-  stars_delta_7d: 30
+  stars: 5347
+  last_commit: 2026-11-09T08:29:32Z
+  stars_delta_7d: 33
   stars_growth_pct: 0.6
-  trending_score: 30.17
-  rank_current: 104
-  rank_delta: -1
+  trending_score: 33.2
+  rank_current: 68
+  rank_delta: 36
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5249
     - 5266
     - 5284
     - 5314
+    - 5347
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: vitali87/code-graph-rag
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.614Z
+  fetched_at: 2026-11-09T09:26:53.518Z
   truncated: false
 type: agent_tool
 tool:
@@ -127,9 +127,10 @@ Code-Graph-RAG parses a multi-language codebase with Tree-sitter, sharpened by c
 ## Latest News 🔥
 
 <!-- SECTION:latest_news -->
-- **Rust Upgrade**: Updated Rust to version 1.99.1-slim-trixie.
-- **Signature Functionality**: Added support for reading and writing JavaScript headers for change signatures, including the ability to change the signature of JavaScript functions or methods.
-- **macOS Compatibility**: The build now leaves macOS-14 support.
+- **Continuous Integration Improvements**: Enhanced release cadence tracking and ensured accurate green status for deferred releases.
+- **Code Quality & Clarity**: Resolved several code style and correctness issues including foreach loop variable typing and Python method receiver handling.
+- **Build Process Refinement**: Reduced the default install package count and improved makefile functionality for host/port watching.
+- **Feature Control**: Prevented the use of `--no-endpoint-roots` when endpoint data is absent.
 <!-- /SECTION:latest_news -->
 
 See [NEWS.md](https://github.com/vitali87/code-graph-rag/blob/main/NEWS.md) for the full history.
@@ -210,7 +211,7 @@ To upgrade an existing install, run `uv tool upgrade code-graph-rag` (with pipx,
 You also need Python 3.12+ and `ripgrep`. The graph lives in an embedded SQLite file by default, so there is no database server to run: no Docker and no `cmake`. Memgraph and Neo4j remain available as opt-in backends ([Graph Backends](https://github.com/vitali87/code-graph-rag/blob/main/docs/architecture/embedded-graph.md)). Full prerequisites, source installs, and environment setup are in the [Installation](https://github.com/vitali87/code-graph-rag/blob/main/docs/getting-started/installation.md) guide.
 
 > [!NOTE]
-> The wheel is pure Python (`py3-none-any`), so it installs on any platform with Python 3.12 or newer. Older system interpreters (Debian Bookworm ships 3.11) need the interpreter pinned explicitly; see [Installation](https://github.com/vitali87/code-graph-rag/blob/main/docs/getting-started/installation.md#older-system-interpreters) for the commands.
+> cgr requires its native extension, `cgr-graph-rs`, which ships for CPython 3.12 or newer on Linux (x86_64, aarch64), macOS and Windows x64, so it installs on those platforms only. Older system interpreters (Debian Bookworm ships 3.11) need the interpreter pinned explicitly; see [Installation](https://github.com/vitali87/code-graph-rag/blob/main/docs/getting-started/installation.md#older-system-interpreters) for the commands.
 
 ## Quick Start
 

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -28,13 +28,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -43,7 +44,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-scenes-and-state/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.602Z
+  fetched_at: 2026-11-09T09:28:07.057Z
   truncated: false
 type: agent_skill
 skill:
@@ -170,6 +171,9 @@ this.HUD.isPersistent = true;           // survives level changes
 this.HUD.floating = true;               // screen coordinates, not world
 app.world.addChild(this.HUD, 100);      // explicit z — see melonjs-renderables
 ```
+
+Everything inside a persistent container is kept with it, physics bodies
+included (before 20.13 the children's bodies were dropped by the reset).
 
 ## Transitions and pausing
 
@@ -378,6 +382,14 @@ Four traps:
 - **Stop a tween before destroying its target**, or `onUpdate` fires against a
   dead renderable.
 
+**A target can be an array: a path.** `to({ x: [200, 120, 300] })` runs from
+the current value through each entry in turn, and
+`interpolation: Tween.Interpolation.CatmullRom` smooths the corners. Each
+`start()` builds the path afresh from the current value, so a replay or a chain
+that comes back round runs the same path, and with `yoyo` the return leg plays
+it back the way it came. Before 20.13 a restart ran a longer path each time and
+a `yoyo` path turned the property into `NaN`.
+
 **To animate something that is not a property, tween a holder and push the
 value in `onUpdate`.** A shader uniform and a light's intensity are both set
 through a method, so there is nothing for `to()` to interpolate directly. The
@@ -451,6 +463,7 @@ import { save } from "melonjs";
 
 save.add({ hiscore: 0 });      // once; idempotent, loads any stored value
 save.hiscore = 1200;           // plain assignment writes to localStorage
+save.remove("hiscore");        // gone from localStorage; set it again to save it again
 ```
 
 **In TypeScript, keep what `add()` returns.** The namespace carries a
@@ -480,9 +493,12 @@ both.
 | the world freezes on blur but the game keeps advancing | simulation lives in `Stage.update`, which the pause does not gate — only `Container.update` checks `state.isPaused()` |
 | the player character is left behind and scrolls off after a lost window | same cause: the stage advanced the camera while its world children were paused |
 | a tween does nothing | `.start()` never called |
+| an array (path) tween wanders further on each replay, or goes `NaN` with `yoyo` | before 20.13 `start()` re-prepended the start value to the path and `yoyo` swapped the array into the start value; upgrade |
+| a repeating or `yoyo` tween runs a single cycle when started again (a pulse pulses once, a yoyo stays at the far end) | before 20.13 `start()` did not restore the `repeat` count the first run had used up; upgrade |
 | effect stops during a hit-stop | tween needs `updateWhenPaused = true` |
 | crash after a stage switch | callback ran during teardown — guard with `state.isCurrent` |
 | HUD scrolls away with the camera | missing `floating = true` |
+| a `save` key set again after `save.remove()` reads back fine, then is gone (or back at its default) after a reload (before 20.13) | the write skipped the list of keys restored at boot; update |
 
 ## Related skills
 

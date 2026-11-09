@@ -17,7 +17,7 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: paperclipai/paperclip
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 111275
-  last_commit: 2026-11-05T13:07:15Z
-  stars_delta_7d: 3869
-  stars_growth_pct: 3.6
-  trending_score: 4008.37
+  stars: 112446
+  last_commit: 2026-11-09T09:22:42Z
+  stars_delta_7d: 1171
+  stars_growth_pct: 1.1
+  trending_score: 1183.32
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 101411
     - 104300
     - 107406
     - 111275
+    - 112446
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: paperclipai/paperclip
   path: packages/plugins/plugin-llm-wiki/skills/wiki-query/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:12:24.738Z
+  fetched_at: 2026-11-09T09:27:22.224Z
   truncated: false
 type: agent_skill
 skill:

@@ -16,7 +16,7 @@ status: active
 quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: agno-agi/agno
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 43073
-  last_commit: 2026-11-05T13:02:48Z
-  stars_delta_7d: 182
-  stars_growth_pct: 0.4
-  trending_score: 182.77
+  stars: 43113
+  last_commit: 2026-11-09T08:28:49Z
+  stars_delta_7d: 40
+  stars_growth_pct: 0.1
+  trending_score: 40.04
   velocity_source: snapshot_delta
   sparkline_4w:
     - 42805
     - 42891
     - 43073
+    - 43113
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: agno-agi/agno
   path: libs/agno/agno/company/skills/refresh/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:25.527Z
+  fetched_at: 2026-11-09T09:28:16.229Z
   truncated: false
 type: agent_skill
 skill:

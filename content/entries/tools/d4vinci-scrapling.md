@@ -16,26 +16,26 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: D4Vinci/Scrapling
   official_vendor: false
   license: BSD-3-Clause
 signals:
-  stars: 97400
-  last_commit: 2026-11-04T20:30:31Z
-  stars_delta_7d: 7643
-  stars_growth_pct: 8.5
-  trending_score: 8293.82
-  rank_current: 4
-  rank_delta: 9
+  stars: 100157
+  last_commit: 2026-11-08T13:18:31Z
+  stars_delta_7d: 2757
+  stars_growth_pct: 2.8
+  trending_score: 2835.04
+  rank_current: 3
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 87256
     - 88548
     - 89757
     - 97400
+    - 100157
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: D4Vinci/Scrapling
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:27.700Z
+  fetched_at: 2026-11-09T09:26:42.606Z
   truncated: false
 type: agent_tool
 tool:
@@ -187,7 +187,7 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
       </a>
     </td>
     <td>
-    <a href="https://go.nodemaven.com/scraplingoctober" target="_blank">NodeMaven</a> - The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market. Use code SCRAPLING35 for 35% discount.
+    <a href="https://go.nodemaven.com/scraplingoctober" target="_blank">NodeMaven</a> - The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market. SCRAPLING2X - 2X traffic for Black Friday
     </td>
   </tr>
   <tr>

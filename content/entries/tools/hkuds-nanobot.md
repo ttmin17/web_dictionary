@@ -16,26 +16,26 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: HKUDS/nanobot
   official_vendor: false
   license: MIT
 signals:
-  stars: 49845
-  last_commit: 2026-11-05T09:22:29Z
-  stars_delta_7d: 488
-  stars_growth_pct: 1
-  trending_score: 492.82
-  rank_current: 27
-  rank_delta: 9
+  stars: 49957
+  last_commit: 2026-11-09T08:18:09Z
+  stars_delta_7d: 112
+  stars_growth_pct: 0.2
+  trending_score: 112.25
+  rank_current: 33
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 48993
     - 49166
     - 49357
     - 49845
+    - 49957
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: HKUDS/nanobot
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:49.245Z
+  fetched_at: 2026-11-09T09:26:59.761Z
   truncated: true
 type: agent_tool
 tool:
@@ -588,7 +588,7 @@ Use nanobot for a real task, report what broke, and then pick a focused improvem
 <table>
   <tr>
     <td align="center"><a href="https://github.com/re-bin"><img src="https://avatars.githubusercontent.com/u/52506698?v=4&s=80" width="80" height="80" alt="Xubin Ren"><br><strong>Xubin Ren</strong></a><br><a href="https://x.com/xubinrencs"><img src="https://img.shields.io/badge/@xubinrencs-000000?style=flat&logo=x&logoColor=white" alt="Xubin Ren on X"></a></td>
-    <td align="center"><a href="https://github.com/chengyongru"><img src="https://avatars.githubusercontent.com/u/61816729?v=4&s=80" width="80" height="80" alt="Yongru Chen"><br><strong>Yongru Chen</strong></a><br><a href="https://x.com/chengyongru"><img src="https://img.shields.io/badge/@chengyongru-000000?style=flat&logo=x&logoColor=white" alt="Yongru Chen on X"></a></td>
+    <td align="center"><a href="https://github.com/chengyongru"><img src="https://avatars.githubusercontent.com/u/61816729?v=4&s=80" width="80" height="80" alt="Yongru Cheng"><br><strong>Yongru Cheng</strong></a><br><a href="https://x.com/chengyongru"><img src="https://img.shields.io/badge/@chengyongru-000000?style=flat&logo=x&logoColor=white" alt="Yongru Cheng on X"></a></td>
   </tr>
 </table>
 

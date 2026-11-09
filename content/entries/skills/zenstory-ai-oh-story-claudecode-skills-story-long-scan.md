@@ -2,7 +2,8 @@
 slug: zenstory-ai-oh-story-claudecode-skills-story-long-scan
 name: story-long-scan
 tagline: 长篇网文扫榜。分析起点、番茄、晋江、七猫等平台排行榜与新书数据，提炼市场趋势与热门题材。触发方式：/story-long-scan、/长篇扫榜、「长篇什么火」「起点排行」「扫七猫新书」。
-summary: 核心信念：单本排名提供线索，近期多榜单、多作品的重复模式才支持趋势判断。
+summary: "- 平台：起点 / 番茄 / 晋江 / 七猫 / 刺猬猫 / 多个平台对比 - 频道（番茄、七猫才分）：男频 / 女频 / 都看 -
+  看什么：新书里在冒头的（多采新书样本） / 成熟大盘（只采默认榜单） - 有没有关注的题材方向（没有就做全榜概览）"
 categories:
   - productivity-ops
 tags:
@@ -14,7 +15,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8324
-  last_commit: 2026-11-05T09:18:15Z
-  stars_delta_7d: 318
-  stars_growth_pct: 4
-  trending_score: 330.63
+  stars: 8448
+  last_commit: 2026-11-09T04:53:43Z
+  stars_delta_7d: 124
+  stars_growth_pct: 1.5
+  trending_score: 125.85
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7517
     - 7737
     - 8006
     - 8324
+    - 8448
 language: zh
 needs_keys: false
 prerequisites: []
@@ -40,7 +41,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-long-scan/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:00.228Z
+  fetched_at: 2026-11-09T09:28:00.604Z
   truncated: false
 type: agent_skill
 skill:
@@ -68,25 +69,7 @@ skill:
 ---
 
 # story-long-scan：长篇网文扫榜
-你负责从长篇榜单的重复样本中识别题材候选，结合作者条件给出可行性、失败风险与验证动作。
-
-**核心信念：单本排名提供线索，近期多榜单、多作品的重复模式才支持趋势判断。**
-
----
-
-## 扫榜原则
-
-### 原则 1：扫榜看模式，别只看排名
-
-提取样本中重复的题材、设定、套路、书名词和简介卖点，判断能否支持趋势候选。
-
-### 原则 2：各平台的热度口径不同
-
-番茄看在读，起点看付费榜和总推荐，晋江看收藏、营养液和积分，七猫看热度。完读率、追读、订阅转化是作者后台的数据，采集脚本拿不到，作者没提供就不下结论。
-
-### 原则 3：扫榜的目的是找到你能写的爆款题材
-
-每个方向都结合素材储备、题材边界、计划篇幅和目标平台样本判断可行性，再给选题建议。
+你负责从长篇榜单的重复样本中识别题材候选，结合作者条件给出可行性、失败风险与验证动作。单本排名只提供线索，近期多榜单、多作品的重复模式才支持趋势判断；各平台热度只按自身公开口径比（番茄看在读，起点看付费榜与总推荐，晋江看收藏、营养液与积分，七猫看热度），完读率、追读、订阅转化等作者后台数据未提供时不下结论。
 
 ---
 
@@ -118,7 +101,7 @@ skill:
 1. 每次扫榜在工作目录新建 `扫榜/{YYYYMMDD}/`（同日再扫加 `-2`），下文 `{outdir}` 指它。不往旧目录追加，聚合会混进旧榜。
 2. 只读所选平台参考：[起点](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-long-scan/references/platform-qidian.md) / [番茄](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-long-scan/references/platform-fanqie.md) / [七猫](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-long-scan/references/platform-qimao.md) / [晋江](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-long-scan/references/platform-jjwxc.md) / [刺猬猫](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-long-scan/references/platform-ciweimao.md)。按 Phase 1 的频道和「看什么」运行默认命令；需要 Chrome 的平台先 `/browser-cdp` 启动。
 3. 聚合：`node scripts/aggregate-rank.js {outdir} --out {outdir}/扫榜聚合.md`。**主会话先只读聚合**：题材分布、去重本数、热度与字数中位、标签、书名词、多榜重合和代表作。
-4. 看聚合的「采集情况」：标了问题（书名没解出来、没采到、只有书单、详情没取到）的榜单，按平台参考的「采不到时」排查后重采；重采不了，报告里说明结论不含它。
+4. 看聚合的「采集情况」：标了问题（书名没解出来、没采到、只有书单、详情没取到）的榜单，按平台参考的「采不到时」排查后重采；重采不了，报告里说明结论不含它。只缺热度数字的榜不算采不到：题材、字数照用，只是不进热度结论。
 5. 分析新人物设定、新切入设定和新桥段时按需抽样：`node scripts/aggregate-rank.js {outdir} --sample {题材/标签/书名词} --n 5`，一次一个方向。命中条数含多榜重复，样本本数按同平台书名+作者去重。
 
 #### 作者提供
@@ -212,11 +195,3 @@ skill:
 | 找到方向，想先拆对标书 | story-long-analyze | `/story-long-analyze` |
 | 直接开写 | story-long-write | `/story-long-write` |
 | 更适合短篇 | story-short-scan | `/story-short-scan` |
-
-## 参考资料
-
-| 文件 | 何时读 |
-|------|--------|
-| 五份平台参考（链接见「脚本采集模式」第 2 步） | Phase 2–3：只读所选平台那份——默认命令、可选榜单、字段与热度口径、采不到时、分析维度、本平台读者 |
-| [references/topic-decision.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-long-scan/references/topic-decision.md) | Phase 4 建文件、Phase 5 选题 |
-| [references/genre-trends.md](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-long-scan/references/genre-trends.md) | 只在内置知识模式读 |

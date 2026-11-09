@@ -14,24 +14,27 @@ tags:
   - formal-verification
   - infrastructure-as-code
 status: active
-quality_percentile: 72
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: fabio-rovai/open-ontologies
   official_vendor: false
   license: MIT
 signals:
-  stars: 2819
+  stars: 2856
   last_commit: 2026-11-04T23:13:28Z
-  stars_delta_7d: 81
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 37
+  stars_growth_pct: 1.3
+  trending_score: 37.49
+  rank_current: 27
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 2819
+    - 2856
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +42,7 @@ readme_source:
   repo: fabio-rovai/open-ontologies
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:48.835Z
+  fetched_at: 2026-11-09T09:26:59.453Z
   truncated: false
 type: mcp_server
 launch:

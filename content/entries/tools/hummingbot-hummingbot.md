@@ -17,25 +17,26 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: hummingbot/hummingbot
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 20949
-  last_commit: 2026-11-04T15:07:00Z
-  stars_delta_7d: 240
-  stars_growth_pct: 1.2
-  trending_score: 242.78
-  rank_current: 44
-  rank_delta: 5
+  stars: 21100
+  last_commit: 2026-11-09T05:08:45Z
+  stars_delta_7d: 151
+  stars_growth_pct: 0.7
+  trending_score: 152.09
+  rank_current: 23
+  rank_delta: 21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 20573
     - 20709
     - 20949
+    - 21100
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: hummingbot/hummingbot
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:13:30.602Z
+  fetched_at: 2026-11-09T09:28:17.173Z
   truncated: false
 type: agent_tool
 tool:

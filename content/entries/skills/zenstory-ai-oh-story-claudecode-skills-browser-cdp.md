@@ -17,7 +17,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-04-22T16:35:39
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8324
-  last_commit: 2026-11-05T09:18:15Z
-  stars_delta_7d: 318
-  stars_growth_pct: 4
-  trending_score: 330.63
-  rank_current: 62
-  rank_delta: -11
+  stars: 8448
+  last_commit: 2026-11-09T04:53:43Z
+  stars_delta_7d: 124
+  stars_growth_pct: 1.5
+  trending_score: 125.85
+  rank_current: 59
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7517
     - 7737
     - 8006
     - 8324
+    - 8448
 language: zh
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/browser-cdp/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:00.228Z
+  fetched_at: 2026-11-09T09:28:00.603Z
   truncated: false
 type: agent_skill
 skill:
@@ -146,48 +146,26 @@ CHROME_PID_COUNT=3
 
 ## 常用操作
 
-### 打开页面并等待加载
-
 ```bash
+# 打开页面并等待加载
 agent-browser --cdp 9222 open "<URL>"
 agent-browser --cdp 9222 wait 3000
-```
 
-### 提取页面文本
-
-```bash
+# 提取页面文本或 Auth Token（实际存储位置按站点确认）
 agent-browser --cdp 9222 eval 'document.body.innerText.substring(0, 8000)'
-```
-
-### 提取 Auth Token
-
-示例读取 localStorage 的 `token` 项或 JavaScript 可读的 Cookie；实际存放位置按站点确认。
-
-```bash
 agent-browser --cdp 9222 eval 'localStorage.getItem("token") || document.cookie'
-```
 
-### 复杂 JS（含引号 / `$` / 反引号）
+# 页面交互（snapshot 拿交互元素引用）
+agent-browser --cdp 9222 snapshot -i
+agent-browser --cdp 9222 click "<CSS or @e1>"
+agent-browser --cdp 9222 type "<sel>" "<text>"
 
-用 base64 或标准输入传入脚本，避免 shell 转义错误：
-
-```bash
-# 1) base64 包裹
+# 复杂 JS（含引号 / $ / 反引号，用 base64 或 --stdin 防转义错误）
 agent-browser --cdp 9222 eval -b "$(echo -n "document.querySelectorAll('a').length" | base64)"
-
-# 2) heredoc + --stdin
 cat <<'EOF' | agent-browser --cdp 9222 eval --stdin
 const links = document.querySelectorAll('a');
 links.length;
 EOF
-```
-
-### 页面交互（snapshot 拿元素引用）
-
-```bash
-agent-browser --cdp 9222 snapshot -i        # 仅交互元素
-agent-browser --cdp 9222 click "<CSS or @e1>"
-agent-browser --cdp 9222 type "<sel>" "<text>"
 ```
 
 ---

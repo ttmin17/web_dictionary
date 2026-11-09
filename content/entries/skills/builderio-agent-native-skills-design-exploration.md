@@ -18,7 +18,7 @@ status: active
 quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: BuilderIO/agent-native
@@ -26,14 +26,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7621
-  last_commit: 2026-11-05T11:55:08Z
-  stars_delta_7d: 224
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 7652
+  last_commit: 2026-11-09T08:19:09Z
+  stars_delta_7d: 31
+  stars_growth_pct: 0.4
+  trending_score: 31.13
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 7621
+    - 7652
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: BuilderIO/agent-native
   path: skills/design-exploration/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:55.517Z
+  fetched_at: 2026-11-09T09:28:42.435Z
   truncated: false
 type: agent_skill
 skill:

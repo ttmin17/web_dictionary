@@ -13,10 +13,10 @@ tags:
   - content-generation
   - openclaw
 status: active
-quality_percentile: 92
+quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4437
-  last_commit: 2026-11-02T08:18:55Z
-  stars_delta_7d: 347
-  stars_growth_pct: 8.5
-  trending_score: 376.44
+  stars: 4529
+  last_commit: 2026-11-09T08:42:34Z
+  stars_delta_7d: 92
+  stars_growth_pct: 2.1
+  trending_score: 93.91
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3567
     - 3844
     - 4090
     - 4437
+    - 4529
 language: zh
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/beat-sync-video/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:02.659Z
+  fetched_at: 2026-11-09T09:27:53.745Z
   truncated: false
 type: agent_skill
 skill:

@@ -14,28 +14,29 @@ tags:
   - agentic-ai
   - ai-agents
 status: active
-quality_percentile: 99
+quality_percentile: 100
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: open-multi-agent/open-multi-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 7046
-  last_commit: 2026-11-04T16:56:40Z
-  stars_delta_7d: 22
-  stars_growth_pct: 0.3
-  trending_score: 22.07
-  rank_current: 112
-  rank_delta: -11
+  stars: 7052
+  last_commit: 2026-11-06T17:37:25Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.1
+  trending_score: 6.01
+  rank_current: 105
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7005
     - 7024
     - 7046
+    - 7052
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: open-multi-agent/open-multi-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:55.981Z
+  fetched_at: 2026-11-09T09:28:38.553Z
   truncated: false
 type: agent_tool
 tool:

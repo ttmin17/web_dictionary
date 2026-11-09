@@ -10,29 +10,29 @@ categories:
 tags:
   - github
 status: active
-quality_percentile: 99
+quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2025-03-04T16:42:04
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: github/github-mcp-server
   official_vendor: true
   license: MIT
 signals:
-  stars: 34252
-  last_commit: 2026-11-05T05:52:22Z
-  stars_delta_7d: 290
-  stars_growth_pct: 0.9
-  trending_score: 292.48
-  rank_current: 14
-  rank_delta: -4
+  stars: 34344
+  last_commit: 2026-11-06T23:25:36Z
+  stars_delta_7d: 92
+  stars_growth_pct: 0.3
+  trending_score: 92.25
+  rank_current: 15
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 33579
     - 33745
     - 33962
     - 34252
+    - 34344
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: github/github-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:32.568Z
+  fetched_at: 2026-11-09T09:26:42.617Z
   truncated: true
 type: mcp_server
 launch:

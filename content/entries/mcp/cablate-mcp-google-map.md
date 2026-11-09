@@ -14,29 +14,29 @@ tags:
   - codex-plugin
   - geocoding
 status: active
-quality_percentile: 52
+quality_percentile: 47
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: cablate/mcp-google-map
   official_vendor: false
   license: MIT
 signals:
-  stars: 489
+  stars: 490
   last_commit: 2026-10-22T07:11:22Z
-  stars_delta_7d: 5
-  stars_growth_pct: 1
-  trending_score: 5.05
-  rank_current: 93
-  rank_delta: -22
+  stars_delta_7d: 1
+  stars_growth_pct: 0.2
+  trending_score: 1
+  rank_current: 109
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 471
     - 473
     - 484
     - 489
+    - 490
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: cablate/mcp-google-map
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:57.664Z
+  fetched_at: 2026-11-09T09:27:49.907Z
   truncated: false
 type: mcp_server
 launch:

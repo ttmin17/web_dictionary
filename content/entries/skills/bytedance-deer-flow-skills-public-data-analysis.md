@@ -18,7 +18,7 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: bytedance/deer-flow
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 85022
-  last_commit: 2026-11-05T08:06:20Z
-  stars_delta_7d: 591
-  stars_growth_pct: 0.7
-  trending_score: 595.14
+  stars: 85169
+  last_commit: 2026-11-09T09:06:05Z
+  stars_delta_7d: 147
+  stars_growth_pct: 0.2
+  trending_score: 147.25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 84103
     - 84431
     - 85022
+    - 85169
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: bytedance/deer-flow
   path: skills/public/data-analysis/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:29.358Z
+  fetched_at: 2026-11-09T09:28:15.114Z
   truncated: false
 type: agent_skill
 skill:
@@ -322,10 +323,17 @@ After analysis:
 
 The script automatically caches loaded data to avoid re-parsing files on every call:
 
-- On first load, files are parsed and stored in a persistent DuckDB database under the system temporary directory (`.data-analysis-cache/`)
-- The cache key hashes the ordered input basenames and a separate SHA256 digest of each file. Renaming, reordering, or changing inputs creates a new cache; moving unchanged, identically named inputs to another directory preserves reuse. The updated key namespace ignores older cached table maps, which are rebuilt on first use
-- Subsequent calls with the same files will use the cached database directly (near-instant startup)
+- On first load, files are parsed into a private DuckDB generation under the system temporary directory (.data-analysis-cache/generations-v1/). Its writer closes before a complete generation and table map become visible together through an atomic manifest replacement
+- The cache key hashes the ordered input basenames and a separate SHA256 digest of each file. Renaming, reordering, or changing inputs creates a new cache; moving unchanged, identically named inputs to another directory preserves reuse. Older flat caches are ignored and rebuilt from source without deleting the old files
+- Subsequent calls open a complete generation read-only. Overlapping readers can reuse it while another analysis is still running; invalid manifests or damaged databases rebuild from source
 - Cache is transparent — no extra parameters needed
+
+Concurrent cold calls may build separate complete generations. Failed private
+builds are removed, while complete generations are retained so active readers
+remain valid. Stop analyses before manually clearing `.data-analysis-cache/`;
+automatic cache garbage collection is not implemented. These are rebuildable
+local caches, not snapshots of changing input files or a power-loss guarantee.
+Analysis connections are read-only; export query results with `--output-file`.
 
 This is especially useful when running multiple queries against the same data files (inspect → query → summary).
 

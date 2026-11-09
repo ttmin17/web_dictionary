@@ -12,29 +12,29 @@ tags:
   - crawling
   - model-context-protocol
 status: active
-quality_percentile: 59
+quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: exa-labs/exa-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 5212
-  last_commit: 2026-11-03T01:15:55Z
-  stars_delta_7d: 43
-  stars_growth_pct: 0.8
-  trending_score: 43.36
-  rank_current: 53
-  rank_delta: -6
+  stars: 5217
+  last_commit: 2026-11-05T23:18:45Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.1
+  trending_score: 5
+  rank_current: 87
+  rank_delta: -34
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5118
     - 5138
     - 5169
     - 5212
+    - 5217
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: exa-labs/exa-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.776Z
+  fetched_at: 2026-11-09T09:26:53.541Z
   truncated: false
 type: mcp_server
 launch:

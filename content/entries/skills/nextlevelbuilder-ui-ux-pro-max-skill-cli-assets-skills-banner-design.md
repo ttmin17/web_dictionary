@@ -16,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 77
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: nextlevelbuilder/ui-ux-pro-max-skill
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 145492
-  last_commit: 2026-11-05T07:07:39Z
-  stars_delta_7d: 4973
-  stars_growth_pct: 3.5
-  trending_score: 5149
-  rank_current: 9
-  rank_delta: -1
+  stars: 147098
+  last_commit: 2026-11-07T19:05:11Z
+  stars_delta_7d: 1606
+  stars_growth_pct: 1.1
+  trending_score: 1623.73
+  rank_current: 12
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 135424
     - 137347
     - 140519
     - 145492
+    - 147098
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: nextlevelbuilder/ui-ux-pro-max-skill
   path: cli/assets/skills/banner-design/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:16.583Z
+  fetched_at: 2026-11-09T09:27:18.115Z
   truncated: false
 type: agent_skill
 skill:

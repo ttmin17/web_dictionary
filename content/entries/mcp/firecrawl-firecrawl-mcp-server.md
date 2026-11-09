@@ -18,26 +18,26 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: firecrawl/firecrawl-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 7765
-  last_commit: 2026-11-05T12:13:23Z
-  stars_delta_7d: 79
-  stars_growth_pct: 1
-  trending_score: 79.81
-  rank_current: 34
-  rank_delta: 3
+  stars: 7785
+  last_commit: 2026-11-09T09:03:07Z
+  stars_delta_7d: 20
+  stars_growth_pct: 0.3
+  trending_score: 20.05
+  rank_current: 46
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7593
     - 7635
     - 7686
     - 7765
+    - 7785
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: firecrawl/firecrawl-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:42.876Z
+  fetched_at: 2026-11-09T09:26:52.367Z
   truncated: true
 type: mcp_server
 launch:
@@ -99,7 +99,7 @@ A Model Context Protocol (MCP) server that brings [Firecrawl](https://github.com
 - Use `firecrawl_credit_usage` to check credits left or what credits were spent on, by month or day, optionally broken down by endpoint or API key.
 - Consider something else when you need to hold a browser session open across many of your own steps with your own retry and termination logic: each `firecrawl_interact` call runs one `prompt` or `code` turn to completion and returns control. The session can persist across calls via `scrapeId` and ends with `firecrawl_interact_stop`, but you cannot drive it interactively step-by-step from the client side within a single call.
 
-This server lists 27 tools when the full profile registers with default settings (feedback tools included, not running in local-keyless mode). Setting `FIRECRAWL_NO_SEARCH_FEEDBACK=1` and/or `FIRECRAWL_NO_ENDPOINT_FEEDBACK=1` removes the corresponding feedback tools and reduces this count, as does local keyless startup. For clients with a tool-slot limit: the hosted keyless endpoint (`https://mcp.firecrawl.dev/v2/mcp`, no API key) exposes only 3 (`firecrawl_scrape`, `firecrawl_search`, `firecrawl_parse`), and the dedicated [search-only endpoint](#search-only-endpoint) (`https://mcp.firecrawl.dev/v2/mcp-search`) exposes a fixed set of 9 tools (search, developer, government, and research search, plus Alexandria catalogue lookup and execution).
+This server lists 29 tools when the full profile registers with default settings (feedback tools included, not running in local-keyless mode). Setting `FIRECRAWL_NO_SEARCH_FEEDBACK=1` and/or `FIRECRAWL_NO_ENDPOINT_FEEDBACK=1` removes the corresponding feedback tools and reduces this count, as does local keyless startup. For clients with a tool-slot limit: the hosted keyless endpoint (`https://mcp.firecrawl.dev/v2/mcp`, no API key) exposes only 3 (`firecrawl_scrape`, `firecrawl_search`, `firecrawl_parse`), and the dedicated [search-only endpoint](#search-only-endpoint) (`https://mcp.firecrawl.dev/v2/mcp-search`) exposes a fixed set of 11 tools (search, developer, government, and research search, Alexandria catalogue lookup and execution, and people and company search and enrichment).
 
 ## Installation
 
@@ -147,7 +147,7 @@ A fixed-scope search surface is also hosted at:
 https://mcp.firecrawl.dev/v2/mcp-search
 ```
 
-It exposes a fixed set of nine tools: `firecrawl_search`, `firecrawl_developer_search`, `firecrawl_gov_search`, the four `firecrawl_research_*` tools, and the two Alexandria tools `firecrawl_find_tools` and `firecrawl_scrape`. Its `firecrawl_search` fetches no page content.
+It exposes a fixed set of eleven tools: `firecrawl_search`, `firecrawl_developer_search`, `firecrawl_gov_search`, the four `firecrawl_research_*` tools, the two Alexandria tools `firecrawl_find_tools` and `firecrawl_scrape`, and the [enrich tools](#15b-enrich-tools) `people_company_search` and `people_company_enrich`. Its `firecrawl_search` fetches no page content.
 
 ### Running with npx
 
@@ -1281,11 +1281,27 @@ for data is not consent, and no automatic acceptance or uncertain retries occur.
 No credits are charged for the blocked retrieval. After the admin confirms acceptance, call the same
 tool again with the identical payload and `requestId`.
 
-### 16. Credit Usage Tool
+### 15b. Enrich Tools
 
-The tool requires an authenticated Firecrawl account and is read-only.
+People and company search and enrichment over Alexandria's B2B data providers (Apollo, FullEnrich, People Data Labs and Data Legion). Both tools are listed wherever the server has a credential: they are not listed in local keyless mode or to keyless sessions. The [search-only endpoint](#search-only-endpoint) includes them too. They need a Firecrawl credential (an API key or OAuth access) on a team with Alexandria access.
 
-- `firecrawl_credit_usage` defaults to `{ "view": "current" }` and returns `remainingCredits`, `planCredits`, `billingPeriodStart`, and `billingPeriodEnd`. Remaining credits can exceed plan credits when the team has top-ups or grants.
-- Pass `{ "view": "historical" }` for calendar-month periods containing `startDate`, `endDate`, and `creditsUsed`. Passing `{ "byApiKey": true }` also selects the historical view and splits periods by API key; each row then includes `apiKey`. Passing `{ "byEndpoint": true }` instead splits periods by the endpoint that used the credits (scrape, search, crawl, map, agent, ...); each row then includes `endpoint`. Pass `{ "bin": "day" }` for one period per UTC day instead of per calendar month. Do not combine `byApiKey` with `byEndpoint`, or any of these with `{ "view": "current" }`. The latest period's `endDate` can be null. If the Firecrawl API does not offer the endpoint split or daily periods yet, the result carries a `notice` and monthly figures.
+| Tool | Use it for | Providers |
+| --- | --- | --- |
+| `people_company_search` | Finding people (`entity: "person"`) by title, employer, location and more, or companies (`entity: "company"`) by industry, headcount, location, technology or founding year | apollo, fullenrich, people_data_labs |
+| `people_company_enrich` | Resolving known people to profiles and work history, or known companies to firmographics. With `contact_fields`, finding work email, personal email or mobile for known people | fullenrich, apollo, people_data_labs, datalegion |
+
+No parameter is shared between providers. Each provider block takes that provider's own parameters under its own names (Apollo's `person_titles`, FullEnrich's `current_position_titles`, a People Data Labs `sql` query or Elasticsearch `query`), so a filter a provider lacks is simply absent from its block. A provider runs only when the call includes its block; a call with no provider block (and, for `people_company_search`, no `firecrawl_search` block) fails with `no_provider` and the blocks the tool takes.
+
+`people_company_search` takes `entity`, and each provider block then takes that provider's search filters for people or for companies. An optional `firecrawl_search` block runs a Firecrawl web search beside the providers, with `firecrawl_search`'s query parameters but no page fetching, and reports its results in its own `providers` entry. `people_company_enrich` takes, in each provider block, exactly one of `people` or `companies`: that provider's own list of inputs, 1 to 50 per call, and the same kind in every block. Adding `contact_fields` (`work_email`, `personal_email`, `mobile`) to a people enrichment runs the contact providers on the same people instead of the profile lookup; People Data Labs has no contact lookup and reports `skipped`.
+
+```json
+{
+  "name": "people_company_enrich",
+  "arguments": {
+    "fullenrich": { "companies": [{ "domain": "example.com" }] },
+    "datalegion": { "companies": [{ "domain": "example.com" }, { "name": "Example Labs" }] }
+  }
+}
+```
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/firecrawl/firecrawl-mcp-server)).*

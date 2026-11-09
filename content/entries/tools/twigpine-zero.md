@@ -14,7 +14,7 @@ status: active
 quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Twigpine/zero
@@ -22,16 +22,17 @@ source:
   license: MIT
 signals:
   stars: 1781
-  last_commit: 2026-11-05T04:14:19Z
-  stars_delta_7d: 37
-  stars_growth_pct: 2.1
-  trending_score: 37.78
-  rank_current: 99
-  rank_delta: 24
+  last_commit: 2026-11-09T09:06:39Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 137
+  rank_delta: -38
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1737
     - 1744
+    - 1781
     - 1781
 language: en
 needs_keys: false
@@ -41,7 +42,7 @@ readme_source:
   repo: Twigpine/zero
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:40.159Z
+  fetched_at: 2026-11-09T09:28:27.812Z
   truncated: false
 type: agent_tool
 tool:

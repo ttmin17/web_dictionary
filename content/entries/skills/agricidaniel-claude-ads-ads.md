@@ -19,7 +19,7 @@ status: active
 quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-02-11T13:01:49
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-ads
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10763
+  stars: 10863
   last_commit: 2026-11-01T21:08:14Z
-  stars_delta_7d: 338
-  stars_growth_pct: 3.2
-  trending_score: 348.96
-  rank_current: 55
-  rank_delta: -6
+  stars_delta_7d: 100
+  stars_growth_pct: 0.9
+  trending_score: 100.93
+  rank_current: 65
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9953
     - 10124
     - 10425
     - 10763
+    - 10863
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: AgriciDaniel/claude-ads
   path: ads/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:56.128Z
+  fetched_at: 2026-11-09T09:27:45.852Z
   truncated: false
 type: agent_skill
 skill:

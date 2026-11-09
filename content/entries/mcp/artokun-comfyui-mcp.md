@@ -15,29 +15,29 @@ tags:
   - claude-code
   - claude-plugin
 status: active
-quality_percentile: 65
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: artokun/comfyui-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 893
+  stars: 903
   last_commit: 2026-11-04T10:40:05Z
-  stars_delta_7d: 30
-  stars_growth_pct: 3.5
-  trending_score: 31.04
-  rank_current: 61
-  rank_delta: -8
+  stars_delta_7d: 10
+  stars_growth_pct: 1.1
+  trending_score: 10.11
+  rank_current: 67
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 819
     - 840
     - 863
     - 893
+    - 903
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: artokun/comfyui-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:09.654Z
+  fetched_at: 2026-11-09T09:27:13.080Z
   truncated: false
 type: mcp_server
 launch:

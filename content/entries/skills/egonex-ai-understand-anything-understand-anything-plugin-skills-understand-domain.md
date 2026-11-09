@@ -15,10 +15,10 @@ tags:
   - claude-code
   - claude-skills
 status: active
-quality_percentile: 58
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Egonex-AI/Understand-Anything
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 90862
-  last_commit: 2026-10-26T07:05:22Z
-  stars_delta_7d: 2560
-  stars_growth_pct: 2.9
-  trending_score: 2634.22
+  stars: 91658
+  last_commit: 2026-11-07T05:37:08Z
+  stars_delta_7d: 796
+  stars_growth_pct: 0.9
+  trending_score: 802.97
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86141
     - 86920
     - 88302
     - 90862
+    - 91658
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: Egonex-AI/Understand-Anything
   path: understand-anything-plugin/skills/understand-domain/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:22.264Z
+  fetched_at: 2026-11-09T09:27:23.655Z
   truncated: false
 type: agent_skill
 skill:
@@ -109,9 +109,10 @@ This keeps the legacy `.understand-anything/` directory when it already exists (
 
 **Important:** do **not** assume the plugin root is simply two directories above the skill path string. In many installations `~/.agents/skills/understand-domain` is a symlink into the real plugin checkout. Prefer runtime-provided plugin roots first (for Claude), then fall back to universal symlinks, skill symlink resolution, and common clone-based install paths.
 
-Resolve the plugin root like this:
+Resolve the plugin root like this. Substitute `<SKILL_DIR>` with this skill's directory (the base directory your platform reported when loading this skill) — this is how plugin installs with no fixed location, such as Devin's, are found:
 
 ```bash
+SKILL_DIR_RELATIVE=$(cd -P "<SKILL_DIR>" 2>/dev/null && cd ../.. && pwd || echo "")
 SKILL_REAL=$(realpath ~/.agents/skills/understand-domain 2>/dev/null || readlink -f ~/.agents/skills/understand-domain 2>/dev/null || echo "")
 SELF_RELATIVE=$([ -n "$SKILL_REAL" ] && cd "$SKILL_REAL/../.." 2>/dev/null && pwd || echo "")
 COPILOT_SKILL_REAL=$(realpath ~/.copilot/skills/understand-domain 2>/dev/null || readlink -f ~/.copilot/skills/understand-domain 2>/dev/null || echo "")
@@ -120,6 +121,8 @@ COPILOT_SELF_RELATIVE=$([ -n "$COPILOT_SKILL_REAL" ] && cd "$COPILOT_SKILL_REAL/
 PLUGIN_ROOT=""
 for candidate in \
   "${CLAUDE_PLUGIN_ROOT}" \
+  "${DEVIN_PLUGIN_ROOT}" \
+  "$SKILL_DIR_RELATIVE" \
   "$HOME/.understand-anything-plugin" \
   "$SELF_RELATIVE" \
   "$COPILOT_SELF_RELATIVE" \
@@ -137,6 +140,8 @@ if [ -z "$PLUGIN_ROOT" ]; then
   echo "Error: Cannot find the understand-anything plugin root."
   echo "Checked:"
   echo "  - ${CLAUDE_PLUGIN_ROOT:-<unset CLAUDE_PLUGIN_ROOT>}"
+  echo "  - ${DEVIN_PLUGIN_ROOT:-<unset DEVIN_PLUGIN_ROOT>}"
+  echo "  - ${SKILL_DIR_RELATIVE:-<unresolved path derived from the skill directory>}"
   echo "  - $HOME/.understand-anything-plugin"
   echo "  - ${SELF_RELATIVE:-<unresolved path derived from ~/.agents/skills/understand-domain>}"
   echo "  - ${COPILOT_SELF_RELATIVE:-<unresolved path derived from ~/.copilot/skills/understand-domain>}"

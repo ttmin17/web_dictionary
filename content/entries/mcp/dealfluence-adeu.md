@@ -18,7 +18,7 @@ status: active
 quality_percentile: 22
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: dealfluence/adeu
@@ -26,12 +26,15 @@ source:
   license: MIT
 signals:
   stars: 170
-  last_commit: 2026-11-05T12:55:17Z
-  stars_delta_7d: 4
+  last_commit: 2026-11-08T08:44:32Z
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  rank_current: 121
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
+    - 170
     - 170
 language: en
 needs_keys: false
@@ -41,7 +44,7 @@ readme_source:
   repo: dealfluence/adeu
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:04.442Z
+  fetched_at: 2026-11-09T09:28:45.423Z
   truncated: false
 type: mcp_server
 launch:
@@ -132,12 +135,6 @@ For IDEs or clients that configure MCP servers via JSON, you can use either the 
     }
   }
 }
-```
-
-### Smithery
-To install Adeu using the Smithery package manager:
-```bash
-npx -y @smithery/cli install adeu --client claude
 ```
 
 ---

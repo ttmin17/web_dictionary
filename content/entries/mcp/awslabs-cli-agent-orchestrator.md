@@ -17,26 +17,26 @@ status: active
 quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: awslabs/cli-agent-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1516
-  last_commit: 2026-11-05T10:26:30Z
-  stars_delta_7d: 43
-  stars_growth_pct: 2.9
-  trending_score: 44.26
+  stars: 1532
+  last_commit: 2026-11-09T09:10:04Z
+  stars_delta_7d: 16
+  stars_growth_pct: 1.1
+  trending_score: 16.17
   rank_current: 51
-  rank_delta: 5
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1418
     - 1451
     - 1473
     - 1516
+    - 1532
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: awslabs/cli-agent-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:08.972Z
+  fetched_at: 2026-11-09T09:27:08.627Z
   truncated: false
 type: mcp_server
 launch:
@@ -215,6 +215,8 @@ provider override while keeping the same sequence.
 ### Configure and integrate
 
 - [Ephemeral agents](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/ephemeral-agents.md): opt-in create-only profiles and their limits.
+- [Ephemeral agents setup runbook](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/ephemeral-agents-agent-setup.md): step-by-step setup of
+  ephemeral agents and a decider, written for an agent to follow.
 - [Agent profiles](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/agent-profile.md): profile schema, discovery, provider
   selection, and overrides.
 - [HTTP API and PTY WebSocket](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/api.md): route-family overview and terminal

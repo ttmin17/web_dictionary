@@ -13,28 +13,29 @@ tags:
   - ai-agents
   - autonomous-agent
 status: active
-quality_percentile: 98
+quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: razzant/ouroboros
   official_vendor: false
   license: MIT
 signals:
-  stars: 1608
-  last_commit: 2026-11-05T11:51:23Z
-  stars_delta_7d: 22
-  stars_growth_pct: 1.4
-  trending_score: 22.31
-  rank_current: 110
-  rank_delta: -19
+  stars: 1626
+  last_commit: 2026-11-09T08:49:21Z
+  stars_delta_7d: 18
+  stars_growth_pct: 1.1
+  trending_score: 18.2
+  rank_current: 89
+  rank_delta: 21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1560
     - 1586
     - 1608
+    - 1626
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: razzant/ouroboros
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.487Z
+  fetched_at: 2026-11-09T09:28:27.798Z
   truncated: true
 type: agent_tool
 tool:
@@ -75,7 +76,7 @@ tool:
 [![Linux](https://img.shields.io/badge/Linux-x86__64-orange.svg)](https://ouroboros-agent.ai/install/#linux)
 [![Windows](https://img.shields.io/badge/Windows-x64-blue.svg)][download-windows-x64]
 [![OuroborosHub](https://img.shields.io/badge/OuroborosHub-skills%20marketplace-8A2BE2.svg)](https://github.com/razzant/OuroborosHub)
-[![Version 7.9.0](https://img.shields.io/badge/version-7.9.0-green.svg)](https://raw.githubusercontent.com/razzant/ouroboros/main/VERSION)
+[![Version 7.10.0](https://img.shields.io/badge/version-7.10.0-green.svg)](https://raw.githubusercontent.com/razzant/ouroboros/main/VERSION)
 
 Ouroboros is an open-source, general-purpose AI agent whose identity, durable memory, and history continue across tasks and restarts. It works on external projects, coordinates a live swarm of specialist agents, and can rewrite the implementation it runs on, including its code, architecture, prompts, tools, and dependencies. Reflection can also change how it understands itself without severing that continuity.
 
@@ -108,14 +109,33 @@ Files named `SHA256SUMS`, `release-evidence.json`, `release-smoke-*.json`, and `
 2. Open the DMG and drag `Ouroboros.app` onto the **Applications** shortcut.
 3. Open Ouroboros from Applications. If macOS refuses to open it, choose **Open Anyway** in **System Settings → Privacy & Security** (on macOS 14 and earlier, right-clicking the app and choosing **Open** also works).
 
+On macOS 12 the app runs, but its browser tools refuse Chromium: the patched build they pin needs macOS 13 or later, and Ouroboros never falls back to an older Chromium. WebKit stays a separate choice where Playwright supports it.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/razzant/ouroboros/main/assets/install-macos.png" width="760" alt="Ouroboros DMG window with a large arrow from Ouroboros.app to the Applications shortcut and Install CLI.command below">
 </p>
 
+### Homebrew on macOS
+
+Homebrew can install and update the same notarized app. This repository is its own tap:
+
+```bash
+brew tap razzant/ouroboros https://github.com/razzant/ouroboros.git
+brew install --cask razzant/ouroboros/ouroboros
+```
+
+- Each Stable promotion updates the cask. Homebrew upgrades only when the cask's version differs from the version it recorded when it installed or adopted the app; then a plain `brew upgrade` compares the installed app version on current Homebrew (older versions skip `auto_updates` casks), and a named `brew upgrade --cask ouroboros` or `--greedy` can replace even a newer self-updated app with the cask's Stable version, including its bundled runtime. `brew reinstall` installs the cask's version over whatever app is there.
+- An upgrade replaces the app and its bundled runtime but keeps the managed source checkout (`~/Ouroboros/repo` by default), so Ouroboros goes on running the source it had, for example 7.7.1 inside the 7.8.0 app, until you run Update in the app. In the released 7.8 app, in-app Update changes source, not the app bundle.
+- If Ouroboros.app is already in Applications, `--adopt` takes it over without comparing versions and records the cask's version, so an older adopted app stays as it is and `brew upgrade` reports it up to date until the next Stable promotion; `brew reinstall --cask ouroboros` or `--force` replaces it.
+- Homebrew asks a running Ouroboros to quit before an upgrade or uninstall and reopens it after an upgrade, without your shell environment. If you start Ouroboros with root variables for that launch only, such as `OUROBOROS_APP_ROOT` or `OUROBOROS_DATA_DIR`, quit it first and start it again the same way.
+- The first cask installs 7.8.0. Finish Setup before the first Quit, including a quit by Homebrew: otherwise this version can leave a new data folder that later starts refuse to initialize (#2412). If affected, back up the data folder (`~/Ouroboros/data` by default) and look for `prior_history_without_state` in its `logs/events.jsonl` before changing anything. Use Reset runtime data in Settings only for a confirmed empty new installation. The cask displays this warning because Stable's README remains the release's original.
+- `brew uninstall --cask ouroboros`, with or without `--zap`, removes only the app: `~/Ouroboros` (repository, memory, projects, Deliverables) and any custom roots stay, and so does sign-in startup, so turn off "Start Ouroboros on the host computer when you sign in" first if you use it.
+- The first `brew tap` clones this whole repository.
+
 ### Windows quick start
 
 1. Click [**Download for Windows (.zip)**][download-windows-x64].
-2. Extract the ZIP.
+2. Extract the ZIP to a permanent folder.
 3. Open the extracted `Ouroboros` folder and run `Ouroboros.exe`.
 
 ### Linux quick start
@@ -129,17 +149,27 @@ To run tasks, choose a connected Codex account as the Main model source, configu
 <details>
 <summary>Optional CLI included with desktop downloads</summary>
 
-The desktop packages already contain an optional CLI installer. On macOS, after copying the app to Applications, double-click `Install CLI.command` in the mounted DMG. On Linux use `./Ouroboros/bin/install-ouroboros-cli`; on Windows use `Ouroboros\bin\install-ouroboros-cli.cmd`. These installers create a user-local `ouroboros` command without sudo. You do not need Python or uv.
+The desktop packages already contain an optional CLI installer. On macOS, after copying the app to Applications, double-click `Install CLI.command` in the mounted DMG; after a Homebrew install, run `/Applications/Ouroboros.app/Contents/Resources/bin/install-ouroboros-cli`. On Linux use `./Ouroboros/bin/install-ouroboros-cli`; on Windows use `Ouroboros\bin\install-ouroboros-cli.cmd`. These installers create a user-local `ouroboros` command without sudo. You do not need Python or uv.
 
 </details>
 
-[download-macos-arm64]: https://github.com/razzant/ouroboros/releases/download/v7.9.0/Ouroboros-7.9.0.dmg
-[download-windows-x64]: https://github.com/razzant/ouroboros/releases/download/v7.9.0/Ouroboros-7.9.0-windows-x64.zip
-[download-linux-deb-amd64]: https://github.com/razzant/ouroboros/releases/download/v7.9.0/ouroboros_7.9.0_amd64.deb
-[download-linux-rpm-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.9.0/ouroboros-7.9.0-1.x86_64.rpm
-[download-linux-rpm-red80-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.9.0/ouroboros-7.9.0-1.red80.x86_64.rpm
-[download-linux-appimage-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.9.0/Ouroboros-7.9.0-linux-x86_64.AppImage
-[download-linux-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.9.0/Ouroboros-7.9.0-linux-x86_64.tar.gz
+### Reinstall, move or remove
+
+`~/Ouroboros` (data, memory and the code Ouroboros runs) is the installation; the app is a replaceable host. To replace or move the app, quit Ouroboros, put the new copy in place and open it: your data and code stay, and skill packages and sign-in startup follow the new copy at its next start. A new app changes only the bundled Python, SQLite and Node, never the code in `~/Ouroboros/repo`; in-app Update changes the code. **Settings → About** and the Updates page show both versions, and Ouroboros sees them in its host facts. Quit leaves the Claudexor engine running, by design.
+
+- **macOS:** drag the new `Ouroboros.app` onto Applications and choose Replace, then open it from Applications in Finder: Spotlight can take a while to list a new copy while it indexes. Do not run Ouroboros from the disk image.
+- **Windows:** keep the extracted folder in one permanent place and run it from there, never from inside the ZIP. To update, quit, remove the old folder and extract the new ZIP to the same place.
+- **AppImage:** keep one file at a fixed path and replace it under the same name. **tar.gz:** keep one fixed folder. **deb/rpm:** update with your package manager. **Homebrew:** `brew upgrade` or `brew reinstall` (above).
+- After moving the app, run Install CLI again: the `ouroboros` command points at one copy.
+- Before removing the app, turn off "Start Ouroboros on the host computer when you sign in" and delete the `ouroboros` command (`~/.local/bin/ouroboros`, or `%LOCALAPPDATA%\Ouroboros\bin\ouroboros.cmd` on Windows).
+
+[download-macos-arm64]: https://github.com/razzant/ouroboros/releases/download/v7.10.0/Ouroboros-7.10.0.dmg
+[download-windows-x64]: https://github.com/razzant/ouroboros/releases/download/v7.10.0/Ouroboros-7.10.0-windows-x64.zip
+[download-linux-deb-amd64]: https://github.com/razzant/ouroboros/releases/download/v7.10.0/ouroboros_7.10.0_amd64.deb
+[download-linux-rpm-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.10.0/ouroboros-7.10.0-1.x86_64.rpm
+[download-linux-rpm-red80-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.10.0/ouroboros-7.10.0-1.red80.x86_64.rpm
+[download-linux-appimage-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.10.0/Ouroboros-7.10.0-linux-x86_64.AppImage
+[download-linux-x86_64]: https://github.com/razzant/ouroboros/releases/download/v7.10.0/Ouroboros-7.10.0-linux-x86_64.tar.gz
 
 Ouroboros bundles [Claudexor](https://github.com/razzant/claudexor) as its local execution layer for delegated coding and hosted-agent review. Ouroboros owns the task, memory, review, and final integration, while Claudexor runs the selected connected coding harness and returns durable execution evidence. [Explore Claudexor](https://claudexor.ai/).
 
@@ -255,7 +285,7 @@ If FUSE mounting is unavailable, extract and run ephemerally instead:
 APPIMAGE_EXTRACT_AND_RUN=1 "$HOME/Applications/Ouroboros.AppImage"
 ```
 
-Chromium and WebKit binaries are bundled, but their distro-level shared libraries remain host dependencies. If a browser engine reports missing libraries, use the native `.deb`/`.rpm` package where available, or extract the AppImage and let its bundled Playwright report/install the packages required by your distribution:
+Chromium and WebKit binaries are bundled, but their distro-level shared libraries remain host dependencies. Browser tools start Chromium only inside its sandbox, which on Linux needs unprivileged user namespaces (Ubuntu 23.10+ AppArmor restricts them for unprofiled binaries); where it cannot start they refuse Chromium and name the fix rather than run it unsandboxed. If a browser engine reports missing libraries, use the native `.deb`/`.rpm` package where available, or extract the AppImage and let its bundled Playwright report/install the packages required by your distribution:
 
 ```bash
 "$HOME/Applications/Ouroboros.AppImage" --appimage-extract
@@ -426,8 +456,8 @@ docker run --rm -p 8765:8765 \
   ouroboros-web
 ```
 
-Docker runs the web runtime, not the native desktop shell. Its Python is the same standalone build as the desktop packages (CPython 3.10.22, SQLite 3.53.1). The image bundles Chromium and WebKit for the locked
-Playwright version and needs Docker's default BuildKit builder. Persistent volumes, the managed image whose body updates
+Docker runs the web runtime, not the native desktop shell. Its Python is the same standalone build as the desktop packages (CPython 3.10.22, SQLite 3.53.1). The image bundles WebKit for the locked
+Playwright version and the pinned Chromium, and needs Docker's default BuildKit builder. It runs as root, where Chromium's sandbox cannot start, so browser tools refuse Chromium unless the administrator opts out (`OUROBOROS_CHROMIUM_SANDBOX=off`, [`docs/DEPLOYMENT.md`](https://github.com/razzant/ouroboros/blob/main/docs/DEPLOYMENT.md)). Persistent volumes, the managed image whose body updates
 itself, restart policy and Panic, network exposure and extra CAs: [`docs/DEPLOYMENT.md`](https://github.com/razzant/ouroboros/blob/main/docs/DEPLOYMENT.md); the
 executable recipes are [`packaging/docker/compose.yaml`](https://github.com/razzant/ouroboros/blob/main/packaging/docker/compose.yaml).
 

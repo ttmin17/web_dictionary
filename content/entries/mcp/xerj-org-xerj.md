@@ -4,9 +4,8 @@ name: xerj
 tagline: AI search engine and MCP server for bots and agents. One Rust binary
   indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and
   hybri
-summary: Local-first search engine and MCP server for AI agents. One Rust binary
-  indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and
-  hybrid search, code search and agent memory, behind an Elasticsearch-...
+summary: "The search engine for AI, now with XERJ Query-1: a model that turns
+  your question into a small program over facts you have written."
 categories:
   - databases-memory
 tags:
@@ -18,24 +17,25 @@ status: active
 quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: xerj-org/xerj
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 19160
-  last_commit: 2026-11-05T12:28:31Z
-  stars_delta_7d: 3499
-  stars_growth_pct: 22.3
-  trending_score: 4280.75
-  rank_current: 2
-  rank_delta: null
+  stars: 18629
+  last_commit: 2026-11-09T08:26:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 112
+  rank_delta: -110
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15661
     - 19160
+    - 18629
 language: en
 needs_keys: true
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: xerj-org/xerj
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:32.380Z
+  fetched_at: 2026-11-09T09:26:43.199Z
   truncated: false
 type: mcp_server
 launch:
@@ -59,20 +59,11 @@ launch:
   confidence: readme
 ---
 
-# XERJ
-**XERJ: the search engine for AI agents.** A new way for AI to search for data: one local Rust binary that indexes your code, docs, specs and logs, plus Corpus Hub packs, and returns cited answers.
+<h1 align="center">XERJ</h1>
 
-**Local-first search engine and MCP server for AI agents.** One Rust binary indexes code, docs,
-logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search and agent
-memory, behind an Elasticsearch-compatible API. Works with Claude Code, Cursor and any MCP client.
+<div align="center">
 
-<a href="https://trendshift.io/repositories/116361?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-116361" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/116361" alt="xerj-org%2Fxerj | Trendshift" width="250" height="55"/></a>
-<a href="https://trendshift.io/repositories/116361#achievements" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/116361/daily?language=Rust" alt="XERJ | #1 Rust Repository Of The Day | Trendshift" width="250" height="55"/></a>
-<a href="https://trendshift.io/repositories/116361#achievements" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/116361/weekly?language=Rust" alt="XERJ | #1 Rust Repository Of The Week | Trendshift" width="250" height="55"/></a>
-
-[English](https://github.com/xerj-org/xerj/blob/main/README.md) | [简体中文](https://github.com/xerj-org/xerj/blob/main/README.zh-CN.md) | [日本語](https://github.com/xerj-org/xerj/blob/main/README.ja-JP.md) | [العربية](https://github.com/xerj-org/xerj/blob/main/README.ar.md) | [Español](https://github.com/xerj-org/xerj/blob/main/README.es.md) | [한국어](https://github.com/xerj-org/xerj/blob/main/README.ko.md) | [فارسی](https://github.com/xerj-org/xerj/blob/main/README.fa.md)
-
-
+[![XERJ Query-1](https://img.shields.io/badge/XERJ%20Query--1-new%20in%20rc.101-ffc400?style=flat-square)](https://xerj.org/xerj-query-1)
 [![CI](https://img.shields.io/github/actions/workflow/status/xerj-org/xerj/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/xerj-org/xerj/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/xerj-org/xerj?style=flat-square&label=release)](https://github.com/xerj-org/xerj/releases)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](https://raw.githubusercontent.com/xerj-org/xerj/main/LICENSE)
@@ -82,18 +73,102 @@ memory, behind an Elasticsearch-compatible API. Works with Claude Code, Cursor a
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/invite/yetXFusXfs)
 [![X](https://img.shields.io/badge/X-%40xerj__org-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/xerj_org)
 
-[![Reference coding](https://img.shields.io/badge/reference%20coding-2.7%C3%97%20fewer%20tokens-ff8c00?style=flat-square)](https://xerj.org/case-studies/reference-coding.html)
+[![Reference coding](https://img.shields.io/badge/reference%20coding-2.7%C3%97%20fewer%20output%20tokens-ff8c00?style=flat-square)](https://xerj.org/case-studies/reference-coding.html)
 [![Autoindex](https://img.shields.io/badge/autoindex-zero%20config-ff8c00?style=flat-square)](https://xerj.org/docs/cli.html)
 [![Search](https://img.shields.io/badge/search-BM25%20%2B%20kNN%20%2B%20hybrid-8957e5?style=flat-square)](https://xerj.org/docs/queries.html)
 [![Agent memory](https://img.shields.io/badge/agent%20memory-%2F__memory-00b3a4?style=flat-square)](https://xerj.org/docs/recipes/agentic-memory.html)
 [![MCP](https://img.shields.io/badge/MCP-native-1f6feb?style=flat-square)](https://xerj.org/llms.txt)
 [![llms.txt](https://img.shields.io/badge/llms.txt-agent%20ready-6f42c1?style=flat-square)](https://xerj.org/llms.txt)
-[![ES-YAML conformance](https://img.shields.io/badge/ES--YAML%20conformance-1444%2F1454-brightgreen?style=flat-square)](https://xerj.org/benchmarks)
-[![Single static binary](https://img.shields.io/badge/single%20static%20binary-no%20JVM-orange?style=flat-square)](https://xerj.org/docs/install.html)
+[![ES-YAML conformance](https://img.shields.io/badge/ES--YAML%20conformance-0%20failed%20(1448%2F1458)-brightgreen?style=flat-square)](https://xerj.org/benchmarks)
+[![Single binary](https://img.shields.io/badge/single%20binary-no%20JVM-orange?style=flat-square)](https://xerj.org/docs/install.html)
 [![Default embedder](https://img.shields.io/badge/default%20embedder-lexical%2C%20offline-teal?style=flat-square)](https://xerj.org/docs/vectors.html)
 [![Neural](https://img.shields.io/badge/neural%20embedder-opt--in%2C%20downloads%20~90%20MB-9c6ade?style=flat-square)](https://xerj.org/docs/vectors.html)
 
-XERJ is a community-trusted local AI search that indexes any folder automatically, so your
+<a href="https://trendshift.io/repositories/116361?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-116361" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/116361" alt="xerj-org%2Fxerj | Trendshift" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/116361#achievements" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/116361/daily?language=Rust" alt="XERJ | #1 Rust Repository Of The Day | Trendshift" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/116361#achievements" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/116361/weekly?language=Rust" alt="XERJ | #1 Rust Repository Of The Week | Trendshift" width="250" height="55"/></a>
+
+[English](https://raw.githubusercontent.com/xerj-org/xerj/main/README.md) | [简体中文](https://github.com/xerj-org/xerj/blob/main/README.zh-CN.md) | [日本語](https://github.com/xerj-org/xerj/blob/main/README.ja-JP.md) | [العربية](https://github.com/xerj-org/xerj/blob/main/README.ar.md) | [Español](https://github.com/xerj-org/xerj/blob/main/README.es.md) | [한국어](https://github.com/xerj-org/xerj/blob/main/README.ko.md) | [فارسی](https://github.com/xerj-org/xerj/blob/main/README.fa.md)
+
+</div>
+
+<p align="center">
+  <a href="https://xerj.org/xerj-query-1"><img src="https://raw.githubusercontent.com/xerj-org/xerj/main/docs/media/xerj-query-1-hero.png" alt="XERJ Query-1: a model that turns a question into a small program over facts you have written; the engine runs the program and shows the facts it used. On our 160-question test: 1 wrong answer where RAG with Opus 5.5 gave 9 to 15, $42 of CPU per million questions, and 17 minutes to build a search index of 10 GB of English Wikipedia." width="100%"/></a>
+</p>
+
+<p align="center"><b>The search engine for AI, now with XERJ Query-1: a model that turns your question into a small program over facts you have written.</b></p>
+
+<p align="center">
+  <a href="https://xerj.org/xerj-query-1">XERJ Query-1</a> ·
+  <a href="https://xerj.org/blog/xerj-query-ai-model">Blog post</a> ·
+  <a href="https://github.com/xerj-org/xerj/releases/tag/v1.0.0-rc.101">Release rc.101</a> ·
+  <a href="https://xerj.org/llms.txt">llms.txt</a> ·
+  <a href="https://xerj.org/docs/">Docs</a> ·
+  <a href="https://xerj.org/donate">Donate</a>
+</p>
+
+
+
+## XERJ Query-1, new in rc.101
+
+Most AI search finds text in milliseconds and then asks a language model to write the answer. The model is what
+makes a RAG answer good, and it is also where the seconds and the per-question cost come from.
+
+XERJ Query-1 works the other way. It reads your question and writes a short program (look this up, compare these,
+count those), and the engine runs that program over facts you stored. Lookup and comparison steps point at a stored
+fact and its quoted span; counts return a program hash, not the records. If the data cannot support an answer you get
+`UNKNOWN`; if two facts disagree you get `CONFLICT`. It runs on four CPU cores, offline, with no embeddings to build
+and no GPU.
+
+| | XERJ Query-1 | the usual way | measured on |
+|---|---|---|---|
+| Question to answer | **220 ms** (p50) | 1.5 to 2.3 s for Opus 5.5 to write a RAG answer (API time per call, our command-line client's start-up not counted), after a search of 0.8 to 106 ms | same 160 questions, rc.101 release, 4 model threads, laptop CPU |
+| Wrong answers | **1 of 160** (124 right, 35 declined) | 9 to 15 (RAG with Opus 5.5), 6 (Opus 5.5 reading the whole store), 5 (Opus 5.5 given each question's records) | our 160-question test, drawn from the model's development set; XERJ Query-1 was given each question's records |
+| Cost per million questions | **$42** of CPU | $13,400 (RAG) to $694,000 (Opus re-reading the whole store per question, uncached) | same test, Opus 5.5 list prices; CPU at AWS c7g list price, 4.1 CPU-s per question on a shared ARM server (0.9 on a laptop) |
+| Build a search index of 10 GB of text | **17 min** (BM25, measured) | an estimated 62 to 97 hours to embed it with bge-small on CPU | English Wikipedia (`wikimedia/wikipedia` 20231101.en, first 22 of 41 files, 3,299,578 articles); XERJ Query-1 does not use this index |
+| Correct a fact | **2.3 ms** (one write; the next answer uses it) | re-embed the changed chunk (about 30 ms with bge-small), and the whole store (19.6 s for our 5,000-record test store) when the embedding model changes | rc.101 release, laptop |
+
+Retrieval quality (R@k, nDCG@k) on BEIR, on SearchTome and on our 160-question test, the latency split and every data
+set: [benchmarks/query-1-2026-11](https://github.com/xerj-org/xerj/blob/main/benchmarks/query-1-2026-11/README.md).
+
+The model is off by default; without the flag there is no `/_facts` route and the MCP tool list is unchanged. rc.101
+upgrades the data directory to format 4 on first write, and rc.100 cannot open it again. What it does not do yet,
+measured: sums and totals (a sum question can come back as a member count), and large fact sets (on a 95,000-fact
+namespace asks took 0.82 s at the median and all 20 test questions were declined). It declines more often than an LLM
+would guess. The numbers and their caveats: [blog post](https://xerj.org/blog/xerj-query-ai-model),
+[capabilities](https://github.com/xerj-org/xerj/blob/main/docs/XERJ_QUERY_1.md).
+
+### Try it with the model
+
+```sh
+curl -fsSL https://xerj.org/get | sh -s -- --with-model
+```
+Verify: the installer ends by printing the start line with the model directory it unpacked.
+
+```sh
+xerj --facts-model-dir ~/.local/share/xerj/model --insecure --data-dir ~/xerj-data &
+curl -s localhost:9200/_facts | grep -o '"state":"loaded"'
+```
+Verify: prints `"state":"loaded"`. In the first few seconds after start it prints nothing, because the model is still loading (`"not_loaded"`); run it again.
+
+Write a fact and ask about it: [docs/MODEL_QUICKSTART.md](https://github.com/xerj-org/xerj/blob/main/docs/MODEL_QUICKSTART.md).
+From an agent with no shell, the same calls work over HTTP and the MCP tool `xerj_facts_ask`;
+see [llms.txt](https://xerj.org/llms.txt).
+
+XERJ is research in the open. The model was trained on donated GPU time; if it is useful to
+you, [xerj.org/donate](https://xerj.org/donate) funds the next models. The engine is open
+source; the model ships as a binary bundle, and its training and evaluation data are not
+public yet.
+
+---
+
+## The engine underneath
+
+**Local-first search engine and MCP server for AI agents.** One Rust binary indexes code, docs,
+logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search and agent
+memory, behind an Elasticsearch-compatible API. Works with Claude Code, Cursor and any MCP client.
+
+XERJ is a local AI search engine that indexes any folder automatically, so your
 coding agent stops burning tokens reading files one by one and pulls the exact code it
 needs instead. Reference coding is its main use case and the clearest win: point an agent
 at a task and it downloads the open-source repos closest to it, indexes them, and reuses
@@ -101,7 +176,7 @@ how they solved the problem before writing its own code. In a controlled study t
 coding agent's output tokens by 2.7x at the same 16/16 solve rate
 ([case study](https://xerj.org/case-studies/reference-coding.html)), and people report
 roughly 5x in everyday work
-([field reports](https://raw.githubusercontent.com/xerj-org/xerj/main/user-feedback/11-reference-coding-field-reports/2026-08-11-token-savings-reports.md)).
+([field reports](https://github.com/xerj-org/xerj/blob/main/user-feedback/11-reference-coding-field-reports/2026-08-11-token-savings-reports.md)).
 It is enough for a smaller, cheaper model to out-code a pricier one working from memory,
 while you spend less time in fix loops. Try it now with a one-prompt install:
 
@@ -149,7 +224,8 @@ start unless you explicitly allow it. The full model is in
 
 You join XERJ by running it and sending back one short field report on what it was like: a
 single commit or PR. That report is the membership card, and it is the only thing the
-project asks in return for a free, Apache-2.0 binary. It is what keeps the engine improving
+project asks in return for a free binary (the engine source is Apache-2.0; the XERJ Query-1 crates in release
+binaries since rc.101 are proprietary). It is what keeps the engine improving
 for whoever runs it next.
 
 Humans and AI agents are both welcome; this is deliberately not an agents-only project.
@@ -240,8 +316,7 @@ respect licenses).
 The reason it helps: an agent working from memory retry-loops on any API it has not
 memorised, and grep only tells it where to look; the recovery is still reading source into
 context, up to 1.06M input tokens on one corpus in our measurements. An agent that queries
-XERJ reads the exact passage instead. The 2.7x fewer output tokens than grep (26x vs memory
-alone, 2.1x cheaper) at the same 16/16 solve rate is in
+XERJ reads the exact passage instead. The 2.7x fewer output tokens and 2.1x cheaper than grep at the same 16/16 solve rate (26x fewer tokens than memory alone, which solved 11 of 16) is in
 [The measured reason](#the-measured-reason-reference-coding) above, with a companion run
 scoring 9/9 with retrieval versus 0/9 from memory on a Rust library the model had never seen.
 
@@ -388,6 +463,57 @@ it is not Jev.
 Measurements and how to reproduce them:
 [`benchmarks/beir-hybrid`](https://github.com/xerj-org/xerj/blob/main/benchmarks/beir-hybrid/results/2026-09-20-rerank-full-fiqa) and
 [`benchmarks/decisions-as-retrieval`](https://github.com/xerj-org/xerj/blob/main/benchmarks/decisions-as-retrieval).
+
+## Ask over your own facts
+
+XERJ ships **XERJ Query-1**, a model that answers questions over facts you give it.
+It is off by default; start a node with `--facts-model-dir <DIR>` to turn it on.
+Write documents and facts to a namespace, then ask in plain language. The engine
+returns a checked answer: lookups carry the facts they used and the program that
+produced them; counts carry a program hash and a second-model agreement check, but
+not the counted records.
+
+```sh
+# write a fact
+curl -s localhost:9200/_facts/demo/_bulk -H 'content-type: application/json' -d '{
+  "documents":[{"doc_id":"d1","version":"v1","text":"Ana Bel is 170 cm tall."}],
+  "facts":[{"fact_id":"f1","subject":"Ana Bel","subject_id":"emp:1","relation":"height","kind":"number",
+            "value":"170","unit":"cm","doc_id":"d1","version":"v1","start":11,"end":14,"quote":"170"}]
+}'
+
+# ask
+curl -s localhost:9200/_facts/demo/_ask -H 'content-type: application/json' \
+  -d '{"question":"How tall is Ana Bel?"}' | jq '{final_status,final_answer}'
+# {"final_status":"ANSWER","final_answer":"170 cm"}
+```
+
+Which to use: `_search` for keyword and text lookups over indexed documents;
+`/_facts` + `_ask` for a single-fact question over records you have written as
+subject / relation / value facts. The model answers **only over the `facts[]`
+you wrote** (`kind` is `text`, `date`, `number` or `boolean`; `version` is a
+string; `quote` must equal `text[start:end]`) — documents alone answer `UNKNOWN`.
+XERJ Query-1 runs on CPU with no GPU and nothing leaving the machine. Counting
+questions ("how many people have office Berlin?") are served from an exact
+executor, and only when every fact of the counted subjects carries a stable
+`subject_id` (`"emp:1"`); without it the count is `INCOMPLETE` and the answer
+is `UNKNOWN`. The executor is exact, but the model can pick the wrong set: in our
+review an "or" question and a "total devices" question were both served as
+verified counts of the wrong set. Set counts only on rc.101: numeric thresholds
+decline, and a sum question about something the store has no facts for can be
+served as a member count. It is a separate model from the search embedder. Get the bundle with
+`curl -fsSL https://xerj.org/get | sh -s -- --with-model`, then start a node with
+`xerj --facts-model-dir <dir> --data-dir <dir>` (`XERJ_FACTS_MODEL_DIR=<dir>` is
+the environment equivalent); the model is a swappable `xerj-model-bundle-v1`
+directory. Verify: `curl -s localhost:9200/_facts | jq .model.state` prints
+`"loaded"` (the first seconds after start print `"not_loaded"` while the model
+preloads; poll). On XERJ Score v2, our private development evaluation (1,600 questions
+over MoMA, Tate, PyPI, OurAirports, USGS, NASA Exoplanet Archive and UCI Online Retail
+records plus invented ones, the distribution the model was trained for), the shipped
+model scores **90.29** where Opus 5.5 scores 100. It is not a test on unseen questions.
+See [docs/XERJ_QUERY_1.md](https://github.com/xerj-org/xerj/blob/main/docs/XERJ_QUERY_1.md) for the seven
+capabilities with a verified example each, [docs/MODEL_QUICKSTART.md](https://github.com/xerj-org/xerj/blob/main/docs/MODEL_QUICKSTART.md)
+to get it running and [docs/FACTS_API.md](https://github.com/xerj-org/xerj/blob/main/docs/FACTS_API.md) for the full contract.
+The model weights are a release asset, not part of this repository's source.
 
 ## Connect an agent over MCP
 
@@ -564,7 +690,7 @@ the other direction: it hosts an MCP endpoint other agents connect to, and its s
 their servers from the harness underneath. Grok Bot has no documented local stdio registration; the
 Grok CLI does, which is the `grok` row above.
 
-Twenty-three tools are exposed when Hub tools are enabled. Eleven are thin proxies over an endpoint XERJ already serves:
+On main, 24 tools are exposed when Hub tools are enabled (25 with `--facts-model-dir`, which adds `xerj_facts_ask`); the rc.101 release has 23 and 24, because `xerj_sources` arrives in rc.102. Twelve are thin proxies over an endpoint XERJ already serves:
 
 | Tool | What it does |
 |---|---|
@@ -575,6 +701,7 @@ Twenty-three tools are exposed when Hub tools are enabled. Eleven are thin proxi
 | `xerj_memory_store` / `xerj_memory_recall` | durable agent memory in a namespace, recalled by text, meaning or vector |
 | `xerj_brain_overview` / `xerj_brain_ego` / `xerj_brain_link` / `xerj_brain_unlink` | the second-brain link index: orient, expand one node's evidence-backed neighborhood, assert and retire links |
 | `xerj_plan` | a plain-words filter in, validated query DSL out (`POST /_ask`; deterministic and rule-based, not an LLM) |
+| `xerj_sources` | list, inspect, connect or delete live database sources on the node (`/_xerj/sources`: Postgres snapshot, then logical replication) |
 
 For `xerj_search`, pass `{"prefix":"project","query":"retry policy"}` to search
 `project-*`, matching `xerj search --prefix project`. `prefix` is resolved by
@@ -636,7 +763,7 @@ million tokens, or 26 full context windows, so an agent cannot simply read it. G
 solve this either, because a grep hit is a line, and judging that line means opening the
 whole file.
 
-Querying an index costs kilobytes per question instead. In
+Querying an index with passages and a projected _source costs kilobytes per question (a default _search returns whole documents) instead. In
 [an AI security audit of WordPress core](https://xerj.org/use-cases/code-security-audit.html),
 an agent worked across 1,492 PHP files on roughly 26,000 tokens, which is what it takes to
 load about half a percent of the tree.
@@ -644,8 +771,7 @@ load about half a percent of the tree.
 ## Use cases
 
 - [Reference coding](https://xerj.org/case-studies/reference-coding.html): your coding agent
-  retrieves how peer projects already solved it instead of re-deriving. Measured 2.7x fewer
-  output tokens than grep-driven coding (26x vs memory alone); users report ~5x in real
+  retrieves how peer projects already solved it instead of re-deriving. Measured on four purpose-built libraries: 2.7x fewer output tokens than grep-driven coding (26x vs memory alone, which solved 11 of 16); users have told us ~5x in real
   development.
 - [Code search and security audits](https://xerj.org/use-cases/code-security-audit.html):
   AST-aware indexing, so an agent finds a function instead of a line.
@@ -684,10 +810,11 @@ and a 1.61x smaller on-disk footprint.
 
 All four losses are the same gap: read p99 while a high-rate writer runs. It is
 [written up in full](https://github.com/xerj-org/xerj/blob/main/demo/playbooks/MIXED_READ_UNDER_WRITE_FINDING_2026-07-08.md) rather
-than left out. Results, methodology and the harness are at
-[xerj.org/benchmarks](https://xerj.org/benchmarks) and in
-[`demo/playbooks`](https://github.com/xerj-org/xerj/blob/main/demo/playbooks), so you can rerun them yourself. Treat any number you
-cannot reproduce with skepticism, including ours.
+than left out. Results and methodology are at
+[xerj.org/benchmarks](https://xerj.org/benchmarks) and the harness is in
+[`demo/playbooks`](https://github.com/xerj-org/xerj/blob/main/demo/playbooks) (`bench-matrix.mjs`); the Elasticsearch start and runner
+scripts still need to be published before anyone can rerun it end to end. Treat any number
+you cannot reproduce with skepticism, including ours.
 
 ### Code indexing
 
@@ -762,11 +889,21 @@ limits each one does not lift:
 - [Security model](https://github.com/xerj-org/xerj/blob/main/docs/SECURITY_MODEL.md) for authentication, the reserved
   `.xerj-memory-*` namespace, API keys and what is not enforced.
 - [Reranking](https://github.com/xerj-org/xerj/blob/main/docs/RERANK.md) for the optional `rerank` search stage: an external judge
-  reorders the top hits by a calibrated probability. It is the only search-time feature
+  reorders the top hits by a 0-1 score that sorts well but is not calibrated (nDCG@10 measured
+  on BEIR SciFact, NFCorpus and FiQA). It is the only search-time feature
   that sends document text off the node (proxy embeddings and the WAL tap also send text
   when an operator configures them; the page lists every outbound connection a node can
   open), it needs an operator-configured provider key, and
   its ranking quality with the real model is not verified.
+- [The `/_facts` API](https://github.com/xerj-org/xerj/blob/main/docs/FACTS_API.md) — request/response for writing facts
+  and asking questions: the raw-versus-verified split (`final_status`/
+  `final_answer`), the counting cascade, the revision/phase note, and the error
+  set.
+- [Get the model and serve it](https://github.com/xerj-org/xerj/blob/main/docs/MODEL_QUICKSTART.md) — install, obtain the
+  bundle, start the node with `--facts-model-dir`, write a fact, ask, and verify,
+  one step at a time.
+- [Model bundles](https://github.com/xerj-org/xerj/blob/main/docs/MODEL_BUNDLE.md) — the `xerj-model-bundle-v1` layout the
+  engine loads, its env wiring, and the release asset it ships as.
 - [XERJ vs Lucene 10.3.1](https://github.com/xerj-org/xerj/blob/main/docs/XERJ_VS_LUCENE.md) for a source-pinned, six-axis comparison
   of their storage and search designs.
 

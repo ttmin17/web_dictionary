@@ -15,10 +15,10 @@ tags:
   - claude
   - copilot
 status: active
-quality_percentile: 89
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: CoplayDev/unity-mcp
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 15727
+  stars: 15824
   last_commit: 2026-10-30T18:15:23Z
-  stars_delta_7d: 305
-  stars_growth_pct: 2
-  trending_score: 311.03
-  rank_current: 65
-  rank_delta: -17
+  stars_delta_7d: 97
+  stars_growth_pct: 0.6
+  trending_score: 97.6
+  rank_current: 66
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 14902
     - 15115
     - 15422
     - 15727
+    - 15824
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: CoplayDev/unity-mcp
   path: unity-mcp-skill/SKILL.md
   branch: beta
-  fetched_at: 2026-11-05T13:11:54.004Z
+  fetched_at: 2026-11-09T09:27:03.866Z
   truncated: false
 type: agent_skill
 skill:

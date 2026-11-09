@@ -18,25 +18,26 @@ status: active
 quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: lemonade-sdk/lemonade
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6111
-  last_commit: 2026-11-05T12:44:11Z
-  stars_delta_7d: 112
-  stars_growth_pct: 1.9
-  trending_score: 114.09
-  rank_current: 65
-  rank_delta: 0
+  stars: 6157
+  last_commit: 2026-11-09T07:00:59Z
+  stars_delta_7d: 46
+  stars_growth_pct: 0.8
+  trending_score: 46.35
+  rank_current: 58
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
     - 5930
     - 5999
     - 6111
+    - 6157
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: lemonade-sdk/lemonade
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.507Z
+  fetched_at: 2026-11-09T09:26:52.376Z
   truncated: false
 type: agent_tool
 tool:

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 21991
-  last_commit: 2026-11-03T21:50:31Z
-  stars_delta_7d: 330
-  stars_growth_pct: 1.5
-  trending_score: 335.03
+  stars: 22096
+  last_commit: 2026-11-08T08:46:42Z
+  stars_delta_7d: 105
+  stars_growth_pct: 0.5
+  trending_score: 105.5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21368
     - 21498
     - 21661
     - 21991
+    - 22096
 language: zh
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: KKKKhazix/khazix-skills
   path: leader/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:38.376Z
+  fetched_at: 2026-11-09T09:27:34.835Z
   truncated: false
 type: agent_skill
 skill:
@@ -90,7 +90,7 @@ skill:
 
 任务书六节的结构规格与探索型改法见 [references/anatomy.md](https://github.com/KKKKhazix/khazix-skills/blob/main/leader/references/anatomy.md)——它规定每节写什么，措辞和详略由你贴合任务判断。
 
-**≤4000 字符，硬上限**（本 Skill 的简洁目标；具体宿主上限以当前工具为准）。字符花在不查就会踩的坑上，不写执行者打开仓库一眼能看到的事实；砍调研过程、重复规矩、背景故事。压不进就是活太大——拆成独立几件，一次给一件。
+**≤4000 字符，硬上限**（Claude Code 的 `/goal` 条件最多就收 4000 字符；其他工具以当前上限为准）。字符花在不查就会踩的坑上，不写执行者打开仓库一眼能看到的事实；砍调研过程、重复规矩、背景故事。压不进就是活太大——拆成独立几件，一次给一件。
 
 **先分型**：动笔前能写出验收命令的是**执行型**，全套照走。领导要答案本身（调研、选型、该不该做 X）的是**探索型**——硬指标只会收到凑数的答案，改四处见 anatomy.md。
 

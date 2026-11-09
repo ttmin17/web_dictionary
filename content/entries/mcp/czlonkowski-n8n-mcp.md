@@ -15,26 +15,26 @@ status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: czlonkowski/n8n-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 23216
-  last_commit: 2026-11-03T20:20:32Z
-  stars_delta_7d: 78
-  stars_growth_pct: 0.3
-  trending_score: 78.26
-  rank_current: 35
-  rank_delta: 11
+  stars: 23229
+  last_commit: 2026-11-09T09:22:24Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.1
+  trending_score: 13.01
+  rank_current: 62
+  rank_delta: -27
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 23058
     - 23102
     - 23138
     - 23216
+    - 23229
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: czlonkowski/n8n-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:32.355Z
+  fetched_at: 2026-11-09T09:26:43.219Z
   truncated: false
 type: mcp_server
 launch:
@@ -143,6 +143,7 @@ n8n-MCP works with multiple AI-powered IDEs and tools:
 - [Cursor](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/CURSOR_SETUP.md) - Step-by-step Cursor IDE setup
 - [Windsurf](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/WINDSURF_SETUP.md) - Windsurf integration with project rules
 - [Codex](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/CODEX_SETUP.md) - Codex integration guide
+- [Kiro](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/KIRO_SETUP.md) - Kiro IDE and CLI setup
 - [Antigravity](https://github.com/czlonkowski/n8n-mcp/blob/main/docs/ANTIGRAVITY_SETUP.md) - Antigravity integration guide
 
 ## Add Claude Skills (Optional)

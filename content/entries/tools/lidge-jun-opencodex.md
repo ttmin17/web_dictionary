@@ -15,29 +15,29 @@ tags:
   - anthropic
   - chatgpt
 status: active
-quality_percentile: 64
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: lidge-jun/opencodex
   official_vendor: false
   license: MIT
 signals:
-  stars: 18228
-  last_commit: 2026-11-04T12:36:21Z
-  stars_delta_7d: 322
-  stars_growth_pct: 1.8
-  trending_score: 327.79
-  rank_current: 34
+  stars: 18311
+  last_commit: 2026-11-09T09:18:00Z
+  stars_delta_7d: 83
+  stars_growth_pct: 0.5
+  trending_score: 83.38
+  rank_current: 44
   rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17353
     - 17586
     - 17906
     - 18228
+    - 18311
 language: en
 needs_keys: false
 prerequisites:
@@ -45,8 +45,8 @@ prerequisites:
 readme_source:
   repo: lidge-jun/opencodex
   path: README.md
-  branch: main
-  fetched_at: 2026-11-05T13:12:42.905Z
+  branch: dev
+  fetched_at: 2026-11-09T09:27:38.208Z
   truncated: false
 type: agent_tool
 tool:
@@ -66,23 +66,24 @@ tool:
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/main/assets/banner.png" alt="opencodex — one local gateway for Codex, Claude Code, Claude Desktop, Grok Build and more" width="100%">
+  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/dev/assets/banner.png" alt="opencodex — one local gateway for Codex, Claude Code, Claude Desktop, Grok Build and more" width="100%">
 </p>
 
 <h3 align="center">One local gateway for your AI coding tools and models.</h3>
 <p align="center"><b>Use the models you choose with Codex, Claude Code, Claude Desktop and Grok Build,<br>
 and connect OpenCode, Pi, Qoder, WorkBuddy, Kilo, Cline, T3 Code and more through managed configs.</b><br>
 <a href="https://opencodex.me/reference/client-support/">See every supported tool →</a></p>
+<p align="center">Part of GOAT: run your coding agents on any model, on any machine → <a href="https://trygoat.ai">trygoat.ai</a></p>
 
 <p align="center">
   <a href="https://x.com/claudeebum"><img src="https://img.shields.io/badge/%40claudeebum-000000?logo=x&logoColor=white" alt="Follow @claudeebum on X"></a>
   <a href="https://www.npmjs.com/package/@bitkyc08/opencodex"><img src="https://img.shields.io/npm/v/@bitkyc08/opencodex?color=cb3837&label=npm&logo=npm" alt="npm version"></a>
-  <a href="https://github.com/lidge-jun/opencodex/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@bitkyc08/opencodex?color=blue" alt="license"></a>
+  <a href="https://github.com/lidge-jun/opencodex/blob/dev/LICENSE"><img src="https://img.shields.io/npm/l/@bitkyc08/opencodex?color=blue" alt="license"></a>
   <img src="https://img.shields.io/node/v/@bitkyc08/opencodex?logo=node.js&label=node" alt="node version">
 </p>
 
 ```bash
-npm install -g @bitkyc08/opencodex
+npm install -g --allow-scripts=bun @bitkyc08/opencodex
 ocx start
 ```
 
@@ -103,7 +104,7 @@ The picker is stock Claude Code. The brain behind it isn't.
 
 </td>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/main/assets/claude-code-models.gif" alt="Claude Code running a routed model through opencodex — the status bar shows gpt-5.6-luna-medium as the active model" width="100%">
+  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/dev/assets/claude-code-models.gif" alt="Claude Code running a routed model through opencodex — the status bar shows gpt-5.6-luna-medium as the active model" width="100%">
 </td>
 </tr>
 <tr>
@@ -115,7 +116,7 @@ Pick a provider and go — same workflow, different brain.
 
 </td>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/main/assets/demo.gif" alt="opencodex demo — running a task in the Codex app on a routed non-OpenAI model" width="100%">
+  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/dev/assets/demo.gif" alt="opencodex demo — running a task in the Codex app on a routed non-OpenAI model" width="100%">
 </td>
 </tr>
 <tr>
@@ -127,7 +128,7 @@ Opus answers, then hands the task to a GPT-5.6 Sol subagent.
 
 </td>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/main/assets/claude-desktop-subagent.gif" alt="Claude Desktop answering as Claude Opus 4.8, then dispatching a GPT-5.6 Sol subagent through opencodex" width="100%">
+  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/dev/assets/claude-desktop-subagent.gif" alt="Claude Desktop answering as Claude Opus 4.8, then dispatching a GPT-5.6 Sol subagent through opencodex" width="100%">
 </td>
 </tr>
 <tr>
@@ -139,13 +140,13 @@ Sol drives the session and calls a Kimi K3 subagent.
 
 </td>
 <td width="50%">
-  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/main/assets/grok-build-subagent.gif" alt="Grok Build running GPT-5.6 Sol through opencodex and calling a Kimi K3 subagent" width="100%">
+  <img src="https://raw.githubusercontent.com/lidge-jun/opencodex/dev/assets/grok-build-subagent.gif" alt="Grok Build running GPT-5.6 Sol through opencodex and calling a Kimi K3 subagent" width="100%">
 </td>
 </tr>
 </table>
 
 <p align="center">
-  <a href="https://github.com/lidge-jun/opencodex/blob/main/README.md">English</a> · <a href="https://github.com/lidge-jun/opencodex/blob/main/readme/README.fr.md">Français</a> · <a href="https://github.com/lidge-jun/opencodex/blob/main/readme/README.ko.md">한국어</a> · <a href="https://github.com/lidge-jun/opencodex/blob/main/readme/README.zh-CN.md">简体中文</a> · <a href="https://github.com/lidge-jun/opencodex/blob/main/readme/README.zh-TW.md">繁體中文</a> · <a href="https://github.com/lidge-jun/opencodex/blob/main/readme/README.ru.md">Русский</a> · <a href="https://github.com/lidge-jun/opencodex/blob/main/readme/README.ja.md">日本語</a> · <a href="https://github.com/lidge-jun/opencodex/blob/main/readme/README.tr.md">Türkçe</a> · 📖 <a href="https://opencodex.me/"><b>Full documentation →</b></a>
+  <a href="https://github.com/lidge-jun/opencodex/blob/dev/README.md">English</a> · <a href="https://github.com/lidge-jun/opencodex/blob/dev/readme/README.fr.md">Français</a> · <a href="https://github.com/lidge-jun/opencodex/blob/dev/readme/README.ko.md">한국어</a> · <a href="https://github.com/lidge-jun/opencodex/blob/dev/readme/README.zh-CN.md">简体中文</a> · <a href="https://github.com/lidge-jun/opencodex/blob/dev/readme/README.zh-TW.md">繁體中文</a> · <a href="https://github.com/lidge-jun/opencodex/blob/dev/readme/README.ru.md">Русский</a> · <a href="https://github.com/lidge-jun/opencodex/blob/dev/readme/README.ja.md">日本語</a> · <a href="https://github.com/lidge-jun/opencodex/blob/dev/readme/README.tr.md">Türkçe</a> · 📖 <a href="https://opencodex.me/"><b>Full documentation →</b></a>
 </p>
 
 opencodex is a lightweight local gateway between your coding tools and your model providers. It
@@ -153,16 +154,14 @@ accepts the Responses, Chat Completions and Anthropic Messages APIs and translat
 whatever your provider speaks, carrying streaming, tool calls, reasoning and images where the client,
 model and provider support them. Use Claude, Gemini, Grok, GLM, DeepSeek, Kimi, Qwen, Ollama and other
 providers with Codex, Claude Code, Claude Desktop, Grok Build and the tools listed on the
-[client support page](https://opencodex.me/reference/client-support/). It can also manage a **ChatGPT account pool** for Codex auth: add accounts,
-refresh their quotas in the dashboard, and let new sessions auto-route to the lowest-usage healthy
-account while existing threads stay pinned to the account that started them.
+[client support page](https://opencodex.me/reference/client-support/).
 
 ## Quick start
 
 ### Personal install (CLI)
 
 ```bash
-npm install -g @bitkyc08/opencodex   # Node 18+; the Bun runtime is bundled automatically
+npm install -g --allow-scripts=bun @bitkyc08/opencodex   # Node 18+; the Bun runtime is bundled automatically
 ocx start                         # proxy + dashboard on localhost:10100
 ```
 
@@ -204,31 +203,20 @@ platform from the [latest release](https://github.com/lidge-jun/opencodex/releas
 
 Every file has a `.sha256` next to it on the release page. On macOS 14+ the app also ships a
 WidgetKit extension that shows proxy status, today's usage and provider quotas; the snapshot model
-it renders lives in [`app/`](https://github.com/lidge-jun/opencodex/blob/main/app) (`MenuBarCore`). To build the app yourself, run
+it renders lives in [`app/`](https://github.com/lidge-jun/opencodex/blob/dev/app) (`MenuBarCore`). To build the app yourself, run
 `bun install && bun run build:gui` at the repository root, then in `desktop/` run
 `bun install && bun run prepare-sidecar && bun run prepare-widget && bun run build:local` on macOS,
 or `bun install && bun run prepare-sidecar && bun run build:local` on Windows and Linux (the widget
 step needs macOS). The [Desktop App guide](https://opencodex.me/guides/desktop-app/) and the
 [macOS Menu Bar App guide](https://opencodex.me/guides/macos-menu-bar/) cover first launch, and
-[`AGENTS_INSTALL.md`](https://github.com/lidge-jun/opencodex/blob/main/AGENTS_INSTALL.md#where-things-are-installed) lists everything written to disk.
+[`AGENTS_INSTALL.md`](https://github.com/lidge-jun/opencodex/blob/dev/AGENTS_INSTALL.md#where-things-are-installed) lists everything written to disk.
 
 </details>
-
-### ChatGPT account pool
-
-opencodex can also manage a **ChatGPT account pool** for Codex auth. Add multiple ChatGPT / Codex accounts,
-refresh their 5h / weekly / 30d quota in the dashboard. Under quota routing, new sessions can use
-the lowest-usage healthy account; round-robin and fill-first use their own policies. Existing Codex
-threads normally retain affinity to the account that started them, so long SSH, tmux, or
-mobile-connected sessions do not jump accounts mid-conversation — but quota re-evaluation, failover,
-account exclusion, affinity expiry, or 401/403 and 429 recovery can rebind them. Give the accounts a
-selection order when one of them — usually your Codex Desktop login — should only be reached for
-once the others are drained.
 
 ### Sponsors
 
 Sponsors keep opencodex maintained across every upstream protocol change. Interested?
-See [SPONSORS.md](https://github.com/lidge-jun/opencodex/blob/main/SPONSORS.md).
+See [SPONSORS.md](https://github.com/lidge-jun/opencodex/blob/dev/SPONSORS.md).
 
 <!-- sponsors:main — one banner, model developers only; empty until a Main sponsor signs -->
 
@@ -236,11 +224,11 @@ See [SPONSORS.md](https://github.com/lidge-jun/opencodex/blob/main/SPONSORS.md).
 <table>
 <tbody>
 <tr>
-<td width="180"><a href="https://www.orcarouter.ai/?utm_source=opencodex&utm_medium=readme"><img src="https://raw.githubusercontent.com/lidge-jun/opencodex/main/assets/sponsors/orcarouter.png" alt="OrcaRouter" width="150"></a></td>
+<td width="180"><a href="https://www.orcarouter.ai/?utm_source=opencodex&utm_medium=readme"><img src="https://raw.githubusercontent.com/lidge-jun/opencodex/dev/assets/sponsors/orcarouter.png" alt="OrcaRouter" width="150"></a></td>
 <td>Thanks to <a href="https://www.orcarouter.ai/?utm_source=opencodex&utm_medium=readme">OrcaRouter</a> for sponsoring this project! OrcaRouter is one OpenAI-compatible AI gateway for production AI: adaptive routing that grades every prompt and sends it to the model that clears your bar, automatic failover, routing rules as code, zero-markup provider pricing with prompt caching, and guardrails, an agent firewall, and request logs on every call across 200+ models. Pick <code>OrcaRouter</code> in the Add provider picker or run <code>ocx provider add orcarouter</code>; <code>orcarouter/auto</code> is the adaptive router.</td>
 </tr>
 <tr>
-<td width="180"><a href="https://tokenlab.sh/r/OPENCODEX"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/tokenlab-dark.png"><img src="https://raw.githubusercontent.com/lidge-jun/opencodex/main/assets/sponsors/tokenlab-light.png" alt="TokenLab" width="150"></picture></a></td>
+<td width="180"><a href="https://tokenlab.sh/r/OPENCODEX"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/tokenlab-dark.png"><img src="https://raw.githubusercontent.com/lidge-jun/opencodex/dev/assets/sponsors/tokenlab-light.png" alt="TokenLab" width="150"></picture></a></td>
 <td>Thanks to <a href="https://tokenlab.sh/r/OPENCODEX">TokenLab</a> for sponsoring this project! TokenLab gives coding agents one API key for leading models, supporting OpenAI Responses and Chat Completions, Anthropic Messages, and Gemini's native API formats, with streaming and tool calling. It also provides an MCP server and agent Skills for easy integration. Choose your delivery mode and pay as you go. Pick <code>TokenLab</code> in the Add provider picker or run <code>ocx provider add tokenlab</code>.<br><sub>TokenLab 为编程智能体提供统一的多模型 API，一枚 API Key 即可接入主流模型，支持 OpenAI Responses、Chat Completions、Anthropic Messages 和 Gemini 原生 API 格式，以及流式输出和工具调用。同时提供 MCP 服务器和 Agent Skills，方便接入现有工作流；交付模式可选，按量付费。</sub></td>
 </tr>
 </tbody>
@@ -285,7 +273,7 @@ services:
   hub:
     pull_policy: build
     build:
-      context: https://github.com/lidge-jun/opencodex.git#main
+      context: https://github.com/lidge-jun/opencodex.git#dev
       dockerfile: Dockerfile
       target: runtime
       args:
@@ -332,7 +320,7 @@ they reach the npm package.
 <summary>For agents</summary>
 
 ```bash
-npm install -g @bitkyc08/opencodex
+npm install -g --allow-scripts=bun @bitkyc08/opencodex
 ocx start     # or `ocx service`
 ocx init      # interactive setup: writes ~/.opencodex/config.json and wires Codex
 ```
@@ -342,7 +330,7 @@ commands like `ocx provider add` and `ocx combo set` talk to the **live** proxy 
 when it is unreachable). `ocx status` / `ocx doctor` / `ocx health` report the running state.
 
 > **Agents installing or running opencodex:** read
-> [`AGENTS_INSTALL.md`](https://github.com/lidge-jun/opencodex/blob/main/AGENTS_INSTALL.md). An interactive `ocx start` may ask once whether to
+> [`AGENTS_INSTALL.md`](https://github.com/lidge-jun/opencodex/blob/dev/AGENTS_INSTALL.md). An interactive `ocx start` may ask once whether to
 > star this repository — that is the user's decision, never an agent's. The CLI suppresses the
 > prompt for agent-driven runs and the API refuses them with `403 agent_consent_required`.
 
@@ -364,16 +352,6 @@ see the [installation docs](https://opencodex.me/getting-started/installation/).
 
 - **Use any LLM with Codex, Claude Code, Claude Desktop, and Grok Build** — 40+ providers out of
   the box, each keeping its own native UI.
-- **Pool ChatGPT accounts** — thread affinity, quota-aware auto-switching, cooldown and
-  fail-closed auth handling.
-
-  > **Provider-policy note:** Account pooling is for routing and operational resilience only; it does
-  > not guarantee protection from provider rate limits, enforcement, suspension, or other account
-  > actions. OpenCodex does not endorse using additional accounts to circumvent provider limits or
-  > sharing account credentials between people. You are responsible for complying with each
-  > provider's current terms. See the
-  > [Codex Auth account-pool guidance](https://opencodex.me/guides/web-dashboard/#codex-auth-and-account-pools)
-  > and [OpenAI's current Terms of Use](https://openai.com/policies/terms-of-use/).
 - **Combos** — one virtual model id with failover or weighted round-robin across providers. See
   the [combo guide](https://opencodex.me/guides/combos/).
 - **Sub-agents on any model** — feature routed models in Codex's sub-agent picker, with v1/v2
@@ -523,14 +501,40 @@ loopback (`"hostname": "0.0.0.0"`) **requires** a bearer token — the proxy ref
 without `OPENCODEX_API_AUTH_TOKEN`, and every client request must carry it as
 `x-opencodex-api-key`. Details: [configuration reference](https://opencodex.me/reference/configuration/).
 
+## Advanced usage
+
+Self-hosted options for power users. Review each provider's terms before you enable them.
+
+### ChatGPT account pool
+
+opencodex can also manage a **ChatGPT account pool** for Codex auth. Add multiple ChatGPT / Codex accounts,
+refresh their 5h / weekly / 30d quota in the dashboard. Under quota routing, new sessions can use
+the lowest-usage healthy account; round-robin and fill-first use their own policies. Existing Codex
+threads normally retain affinity to the account that started them, so long SSH, tmux, or
+mobile-connected sessions do not jump accounts mid-conversation — but quota re-evaluation, failover,
+account exclusion, affinity expiry, or 401/403 and 429 recovery can rebind them. Give the accounts a
+selection order when one of them — usually your Codex Desktop login — should only be reached for
+once the others are drained.
+
+- **Pool ChatGPT accounts** — thread affinity, quota-aware auto-switching, cooldown and
+  fail-closed auth handling.
+
+  > **Provider-policy note:** Account pooling is for routing and operational resilience only; it does
+  > not guarantee protection from provider rate limits, enforcement, suspension, or other account
+  > actions. OpenCodex does not endorse using additional accounts to circumvent provider limits or
+  > sharing account credentials between people. You are responsible for complying with each
+  > provider's current terms. See the
+  > [Codex Auth account-pool guidance](https://opencodex.me/guides/web-dashboard/#codex-auth-and-account-pools)
+  > and [OpenAI's current Terms of Use](https://openai.com/policies/terms-of-use/).
+
 ## Documentation
 
 The public docs — install, providers, routing, combos, sub-agents, sidecars, integrations, and
-the CLI/config/management-API references — are built from [`docs-site/`](https://github.com/lidge-jun/opencodex/blob/main/docs-site) and
+the CLI/config/management-API references — are built from [`docs-site/`](https://github.com/lidge-jun/opencodex/blob/dev/docs-site) and
 published to **[opencodex.me](https://opencodex.me/)**.
 
-Maintainer source-of-truth notes live under [`structure/`](https://github.com/lidge-jun/opencodex/blob/main/structure), contributor setup in
-[`CONTRIBUTING.md`](https://github.com/lidge-jun/opencodex/blob/main/CONTRIBUTING.md), and security reporting in [`SECURITY.md`](https://github.com/lidge-jun/opencodex/blob/main/SECURITY.md).
+Maintainer source-of-truth notes live under [`structure/`](https://github.com/lidge-jun/opencodex/blob/dev/structure), contributor setup in
+[`CONTRIBUTING.md`](https://github.com/lidge-jun/opencodex/blob/dev/CONTRIBUTING.md), and security reporting in [`SECURITY.md`](https://github.com/lidge-jun/opencodex/blob/dev/SECURITY.md).
 Report undisclosed vulnerabilities privately through
 [GitHub private vulnerability reporting](https://github.com/lidge-jun/opencodex/security/advisories/new),
 not a public issue.
@@ -551,11 +555,11 @@ bun run typecheck
 bun run test
 ```
 
-See **[Contributing](https://github.com/lidge-jun/opencodex/blob/main/CONTRIBUTING.md)**.
+See **[Contributing](https://github.com/lidge-jun/opencodex/blob/dev/CONTRIBUTING.md)**.
 
 Contributor work that landed through a maintainer carry or reimplementation,
 where the commit does not name its original author, is recorded in
-**[CREDITS.md](https://github.com/lidge-jun/opencodex/blob/main/CREDITS.md)**.
+**[CREDITS.md](https://github.com/lidge-jun/opencodex/blob/dev/CREDITS.md)**.
 
 ## Code signing policy
 
@@ -565,7 +569,7 @@ Free code signing provided by [SignPath.io](https://about.signpath.io/), certifi
 
 - Committers and reviewers: [lidge-jun](https://github.com/lidge-jun)
 - Approvers: [lidge-jun](https://github.com/lidge-jun)
-- Privacy: This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it.
+- Privacy: opencodex sends one anonymous daily usage summary (a per-day install hash that changes daily, version, release channel, platform, install channel, provider kind, coarse model family, active minutes and request, token and error counts; never prompts, model outputs, keys, accounts, hostnames or paths) to telemetry.opencodex.me, and only after the person installing or operating it has seen the notice in the dashboard or an interactive CLI prompt and has not declined. It can be turned off in that notice, in the Windows installer ("Send anonymous usage statistics", checked by default), in Proxy details, or with ocx telemetry disable, OCX_TELEMETRY=0 or DO_NOT_TRACK=1. Only project-wide aggregates of this anonymous data are public. A separate public leaderboard profile is off unless you connect one yourself (dashboard Home or ocx telemetry profile connect); it shares only a chosen handle, display name and colour and your daily request, token and model-family totals, never your anonymous telemetry ID, and disconnecting deletes it. Everything else goes only to the providers and services you configure. See the [telemetry guide](https://opencodex.me/guides/telemetry/).
 
 ## Disclaimer
 

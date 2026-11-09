@@ -1,40 +1,40 @@
 ---
 slug: openlit-openlit
 name: openlit
-tagline: "OpenLIT is the open-source agent harness engineering platform: trace,
-  evaluate, guard, and improve everything around the model in your AI agents, on
-  O"
+tagline: Same agent Smaller bill. The tools and infrastructure to get more work
+  from your AI. Fewer tokens. Less compute. Lower cost.
 summary: ⭐ Star&nbsp;&nbsp;&nbsp;&nbsp; 🚀 Quickstart&nbsp;&nbsp;&nbsp;&nbsp; 📚 Docs
 categories:
-  - agent-frameworks
+  - coding-agents
 tags:
   - agent-harness
   - agent-harness-engineering
   - ai-engineering
   - ai-observability
 status: active
-quality_percentile: 60
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: openlit/openlit
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2921
-  last_commit: 2026-11-03T14:26:09Z
-  stars_delta_7d: 38
-  stars_growth_pct: 1.3
-  trending_score: 38.5
-  rank_current: 97
-  rank_delta: -5
+  stars: 2970
+  last_commit: 2026-11-07T21:04:23Z
+  stars_delta_7d: 49
+  stars_growth_pct: 1.7
+  trending_score: 49.82
+  rank_current: 55
+  rank_delta: 42
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2858
     - 2883
     - 2921
+    - 2970
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: openlit/openlit
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:40.252Z
+  fetched_at: 2026-11-09T09:28:24.071Z
   truncated: false
 type: agent_tool
 tool:
@@ -58,7 +58,7 @@ tool:
 
 <img src="https://github.com/openlit/.github/blob/main/profile/assets/wide-logo-no-bg.png?raw=true" alt="OpenLIT logo" width="30%">
 
-# OpenLIT: the open-source agent harness engineering platform
+# Same Agent, Smaller Bill!
 
 **Trace, evaluate, guard, and improve AI agents and coding agents with OpenTelemetry.**
 Agent observability · Evals · Guardrails · Prompt management · Cost & GPU monitoring · Self-host free (Apache 2.0)

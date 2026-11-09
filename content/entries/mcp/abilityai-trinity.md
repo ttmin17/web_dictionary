@@ -16,25 +16,26 @@ status: active
 quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Abilityai/trinity
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 735
-  last_commit: 2026-11-05T12:43:13Z
-  stars_delta_7d: 34
-  stars_growth_pct: 4.9
-  trending_score: 35.65
-  rank_current: 58
-  rank_delta: -7
+  stars: 750
+  last_commit: 2026-11-09T09:03:22Z
+  stars_delta_7d: 15
+  stars_growth_pct: 2
+  trending_score: 15.31
+  rank_current: 53
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 676
     - 701
     - 735
+    - 750
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: Abilityai/trinity
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:51.581Z
+  fetched_at: 2026-11-09T09:28:34.432Z
   truncated: false
 type: mcp_server
 launch:

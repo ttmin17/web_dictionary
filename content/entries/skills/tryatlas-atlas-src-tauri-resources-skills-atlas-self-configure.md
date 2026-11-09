@@ -1,0 +1,174 @@
+---
+slug: tryatlas-atlas-src-tauri-resources-skills-atlas-self-configure
+name: self-configure
+tagline: Inspect and safely update Atlas user preferences through Atlas's config.toml.
+summary: The same path on every platform. If $XDGCONFIGHOME is set to an
+  absolute path, it's $XDGCONFIGHOME/atlas/config.toml instead — check that
+  variable before assuming.
+categories:
+  - agent-frameworks
+tags:
+  - ai-coding-assistant
+  - claude-code
+  - codex
+  - coding-agents
+status: active
+quality_percentile: 70
+selection_reason: quality_percentile
+first_seen: 2026-11-09
+last_updated: 2026-11-09T09:28:46.976Z
+source:
+  kind: github_repo
+  repo: tryatlas/atlas
+  subpath: src-tauri/resources/skills/atlas-self-configure
+  official_vendor: false
+  license: Apache-2.0
+signals:
+  stars: 9385
+  last_commit: 2026-11-08T10:04:10Z
+  stars_delta_7d: 364
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 9385
+language: en
+needs_keys: false
+prerequisites: []
+readme_source:
+  repo: tryatlas/atlas
+  path: src-tauri/resources/skills/atlas-self-configure/SKILL.md
+  branch: main
+  fetched_at: 2026-11-09T09:27:46.962Z
+  truncated: false
+type: agent_skill
+skill:
+  skill_name: self-configure
+  description: Inspect and safely update Atlas user preferences through Atlas's config.toml.
+  folder_path: src-tauri/resources/skills/atlas-self-configure
+  extra_files: []
+  pack_total_skills: 6
+  is_pack_primary: true
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: tryatlas-atlas
+---
+
+# Atlas self-configure
+Atlas's user-facing preferences live in one human-editable file,
+`config.toml`. This skill is how you (an agent) read and change it safely —
+without touching anything else Atlas persists.
+
+## Where the file lives
+
+```
+~/.config/atlas/config.toml
+```
+
+The same path on every platform. If `$XDG_CONFIG_HOME` is set to an absolute
+path, it's `$XDG_CONFIG_HOME/atlas/config.toml` instead — check that variable
+before assuming.
+
+Editing that file is the supported mechanism, and the only one available to
+you: Atlas's config commands are IPC endpoints reachable from its own UI, not
+agent tools. Atlas watches the file and validates every change you make (see
+step 6 below), so a direct edit is a first-class way in — not a workaround.
+
+If the file does not exist yet, Atlas hasn't created it (a fresh install
+before first launch, or the user deleted it). Do not create one speculatively
+— report that to the user instead of guessing at defaults.
+
+## One project only: the project's own config.toml
+
+A project can override a few keys for itself in a `config.toml` inside the
+project's `.atlas/` directory. Use it only when the user asks for a change in
+*this project* rather than everywhere. Its header says what it is; the rules:
+
+- It holds only the keys the project changes. The allowed keys are the ones
+  whose comment in the global file says a project can override it. Atlas
+  ignores any other key there.
+- Some of those a project can only turn **off** (the comment says "never
+  on"). If the user wants one on for a single project while it's off
+  everywhere else, say that Atlas won't honour it and stop.
+- Delete a key's line to go back to the global value.
+- The same care applies as below: read first, explain, change only your
+  lines, write atomically. It may not exist yet; unlike the global file,
+  creating it is fine — start it with `schemaVersion = 1` and `[settings]`.
+
+## The schema is in the file
+
+Atlas writes a comment above every key: what it does, its default, and any
+constraint on its value — a numeric range, an exact set of allowed strings,
+"must not be empty". **Read those comments and follow them.** They are
+generated from the same table Atlas validates against, so they cannot drift
+from what it will actually accept.
+
+Do not work from a schema you remember, or from one you saw in another
+project. The file in front of you is authoritative, and it is the only thing
+guaranteed to match the Atlas build the user is running.
+
+Two things the comments won't spell out:
+
+- **A key that isn't there.** Some settings mean "unset" by being absent —
+  TOML has no null. The comment for such a key sits above whichever key
+  follows it, so read the whole `[settings]` block, not just the lines with
+  values on them. To clear one of these, delete its line; never write an
+  empty string.
+- **A key Atlas doesn't recognize.** It's preserved untouched and reported to
+  the user as a diagnostic. Never delete a key you don't recognize.
+
+## Making a change
+
+1. **Read the whole file first.** You need its comments and formatting to
+   avoid disturbing them, and you need the target key's comment to know what
+   a valid value even is.
+2. **Explain what you're about to change** to the user before writing: the
+   key, its current value, the new value, and what it does — quoting the
+   file's own comment. Don't silently flip a setting.
+3. **Change only the line (or few lines) you mean to change.** Leave every
+   other key, comment, and blank line exactly as it was — including the
+   comment above the key you're editing, which is Atlas's to rewrite, not
+   yours. Do not reformat, reorder, or re-indent anything:
+
+   ```diff
+    # Inline git blame — a dim author/age/summary annotation trailing the
+    # active line in the editor. (default: true)
+   -someSetting = true
+   +someSetting = false
+   ```
+4. **Validate the value against that key's comment before writing.** If the
+   comment states a range or a fixed set of values and the user asked for
+   something outside it, say so and stop; don't write it and let Atlas reject
+   it.
+5. **Write atomically:** write your edited content to a new file in the
+   *same directory* (e.g. `config.toml.tmp.<random>`), then rename/move it
+   over `config.toml`. Never edit in place — a crash or a concurrent Atlas
+   reload mid-write must not leave a half-written file behind.
+6. **Re-read the file after writing** to confirm your change landed.
+
+Atlas re-validates the whole file whenever it notices a change, live, no
+restart. An invalid edit is rejected entirely and Atlas keeps running on the
+last good settings — but the file stays as you wrote it, and while it's
+invalid Atlas also refuses every settings write from its own UI, until someone
+repairs it or uses "Recreate defaults" (which overwrites it, keeping a
+`.bak-<unix-seconds>` copy). So a bad write is not free: report it and offer to
+restore the exact content you read in step 1, rather than trying to patch your
+way out.
+
+## What this skill must never touch
+
+- API keys, tokens, or any credential — Atlas doesn't store these in a file
+  it owns at all; they live in the user's own shell profile. Never write
+  secrets into `config.toml`.
+- `state.json`, `device.json`, `telemetry.json` — separate files with
+  separate ownership; not in scope for this skill.
+- The user's shell profile (`~/.zshrc` and similar).
+- Atlas's own binary, packages, or update mechanism. "Self-configure" means
+  preferences only, never self-update.
+- Session history, transcripts, or any other per-project `.atlas/` state —
+  none of that is a "setting". Only `.atlas/config.toml` is.
+
+If a request needs any of the above, say so plainly and stop — it's out of
+scope for this skill, not something to work around.

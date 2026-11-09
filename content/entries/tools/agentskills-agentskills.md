@@ -12,21 +12,24 @@ status: active
 quality_percentile: 47
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: agentskills/agentskills
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 26963
+  stars: 27089
   last_commit: 2026-11-04T19:47:27Z
-  stars_delta_7d: 578
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 126
+  stars_growth_pct: 0.5
+  trending_score: 126.59
+  rank_current: 30
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 26963
+    - 27089
 language: en
 needs_keys: false
 prerequisites:
@@ -35,7 +38,7 @@ readme_source:
   repo: agentskills/agentskills
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:08.524Z
+  fetched_at: 2026-11-09T09:27:53.873Z
   truncated: false
 type: agent_tool
 tool:

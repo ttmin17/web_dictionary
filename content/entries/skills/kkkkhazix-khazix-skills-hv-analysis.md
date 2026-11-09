@@ -16,7 +16,7 @@ status: active
 quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 21991
-  last_commit: 2026-11-03T21:50:31Z
-  stars_delta_7d: 330
-  stars_growth_pct: 1.5
-  trending_score: 335.03
+  stars: 22096
+  last_commit: 2026-11-08T08:46:42Z
+  stars_delta_7d: 105
+  stars_growth_pct: 0.5
+  trending_score: 105.5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21368
     - 21498
     - 21661
     - 21991
+    - 22096
 language: zh
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: KKKKhazix/khazix-skills
   path: hv-analysis/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:38.375Z
+  fetched_at: 2026-11-09T09:27:34.835Z
   truncated: false
 type: agent_skill
 skill:
@@ -126,6 +126,8 @@ skill:
 - 纵向：能讲出一个完整的故事吗？有没有明显的信息断层？
 - 横向：竞品列表完整吗？有没有遗漏主要玩家？每个竞品的信息够做对比吗？
 - 来源：关键事实有可靠来源支撑吗？有没有只靠单一来源就下判断的？
+
+复杂对象可以对照 [references/schema.json](https://github.com/KKKKhazix/khazix-skills/blob/main/hv-analysis/references/schema.json) 逐项查缺（关键节点时间线、阶段划分、路径依赖、竞品列表等）；它是信息清单，不是交付格式。
 
 信息不够就再补搜。不要凑合。
 
@@ -260,7 +262,7 @@ PDF 或 HTML 使用同一个 `scripts/md_to_pdf.py` 转换；Markdown 直接交�
 
 1. **先完成Markdown稿件**：将完整报告写为标准Markdown格式，保存为 `[研究对象]_横纵分析报告.md`
 2. **解析实际路径**：从当前加载的 Skill 位置取得绝对目录 `HV_SKILL_DIR`，把所选环境的 Python 绝对路径设为 `HV_PYTHON`；路径包含空格时也必须可用。
-3. **安装缺少的依赖并转换**：HTML 只安装 `markdown`；PDF 再安装 `weasyprint` 及官方要求的系统库。Markdown 交付无需转换依赖。下面的 shell 示例使用已解析的路径，作者按用户要求填写；HTML 输出把扩展名改为 `.html`。
+3. **安装缺少的依赖并转换**：HTML 只安装 `markdown`；PDF 再安装 `weasyprint` 及官方要求的系统库。Markdown 交付无需转换依赖。下面的 shell 示例使用已解析的路径；用户给了署名才加 `--author`，没给就去掉，封面不写作者；HTML 输出把扩展名改为 `.html`。
    ```bash
    "$HV_PYTHON" -m pip install markdown
    "$HV_PYTHON" "$HV_SKILL_DIR/scripts/md_to_pdf.py" input.md output.pdf --title "研究对象名称" --author "报告作者"
@@ -273,7 +275,7 @@ PDF 或 HTML 使用同一个 `scripts/md_to_pdf.py` 转换；Markdown 直接交�
 `md_to_pdf.py` 已内置完整的CSS排版方案，无需手动调整：
 
 - **页面**：A4，页边距上25mm/左右20mm/下20mm
-- **封面页**：自动生成，包含标题（28pt深蓝色）、副标题「横纵分析法深度研究报告」、作者信息、装饰分隔线
+- **封面页**：自动生成，包含标题（28pt深蓝色）、副标题「横纵分析法深度研究报告」、作者信息（传了 `--author` 才有）、装饰分隔线
 - **配色**：H1标题=#1a5276深蓝、H2=#1e8449绿色、H3=#2e86c1浅蓝、H4=#5b2c6f紫色，正文=#2c3e50深灰
 - **字体**：CSS fallback链 `PingFang SC / Microsoft YaHei / Noto Sans CJK SC` 等跨平台中文字体，自动处理中英文混排
 - **正文**：10.5pt，行距1.75，两端对齐，孤行/寡行控制

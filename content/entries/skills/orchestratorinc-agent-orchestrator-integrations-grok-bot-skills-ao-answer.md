@@ -1,9 +1,8 @@
 ---
 slug: orchestratorinc-agent-orchestrator-integrations-grok-bot-skills-ao-answer
 name: ao-answer
-tagline: Find AO sessions that wait on the user, show each question or approval
-  as tap-to-answer options, and send the answer back to that session, following
-  a
+tagline: Find Orchestrator sessions that wait on the user, show each question or
+  approval as tap-to-answer options, and send the answer back to that session, f
 summary: "Follow the ao-rules skill. Its \"Decisions\" section says who may
   answer. Answers go straight to the worker, not through the orchestrator: the
   user's pick must arrive exactly as given."
@@ -15,10 +14,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14127
-  last_commit: 2026-11-05T13:02:06Z
-  stars_delta_7d: 471
-  stars_growth_pct: 3.4
-  trending_score: 487.24
+  stars: 14314
+  last_commit: 2026-11-09T09:23:57Z
+  stars_delta_7d: 187
+  stars_growth_pct: 1.3
+  trending_score: 189.48
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13138
     - 13339
     - 13656
     - 14127
+    - 14314
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,16 +43,16 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-answer/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.371Z
+  fetched_at: 2026-11-09T09:27:42.805Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ao-answer
-  description: Find AO sessions that wait on the user, show each question or
-    approval as tap-to-answer options, and send the answer back to that session,
-    following ao-rules "Decisions" (default, away mode, standing approvals). Use
-    for "what's waiting on me", "answer <session>", "approve it", the AO waiting
-    check routine, and away mode.
+  description: Find Orchestrator sessions that wait on the user, show each
+    question or approval as tap-to-answer options, and send the answer back to
+    that session, following ao-rules "Decisions" (default, away mode, standing
+    approvals). Use for "what's waiting on me", "answer <session>", "approve
+    it", the AO waiting check routine, and away mode.
   folder_path: integrations/grok-bot/skills/ao-answer
   extra_files: []
   pack_total_skills: 8
@@ -109,7 +108,7 @@ In the **AO waiting check** routine: keep what you already showed in `~/.ao-grok
 ## 2. Show it
 Per session, one short briefing first: `<host>/<session>` and its name, what it is doing, and what it asks, in one or two sentences. Don't recommend anything. Then:
 - `approval`: the command or change verbatim, the risk you judge (ao-rules), and the `decisions` labels exactly as options in one card. Mark a decision whose `kind` is `allow_always` as "changes this agent's permissions for good".
-- `user_input`: one card with every question in it, in order (the card pages through them). A field with `oneOf` or `enum` is a question: use the `oneOf` titles or `enum` values as its options, exactly. A field whose `_meta._askUserQuestionCustomAnswer.questionId` names another field is that question's "Other" box: show it as a typed-answer option on that question, not as its own question. Any other free-text field is a question with a typed answer. `detail.inputMode` `url` can't be answered from chat: tell the user to open AO.
+- `user_input`: one card with every question in it, in order (the card pages through them). A field with `oneOf` or `enum` is a question: use the `oneOf` titles or `enum` values as its options, exactly. A field whose `_meta._askUserQuestionCustomAnswer.questionId` names another field is that question's "Other" box: show it as a typed-answer option on that question, not as its own question. Any other free-text field is a question with a typed answer. `detail.inputMode` `url` can't be answered from chat: tell the user to open Orchestrator.
 - `reply`: the agent's question from its last reply, with options if it gave clear ones, else ask for a typed answer.
 
 Several sessions at once: explain them together, then cards per session.

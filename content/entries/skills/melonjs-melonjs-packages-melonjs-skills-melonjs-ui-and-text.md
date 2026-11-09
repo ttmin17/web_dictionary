@@ -19,7 +19,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -28,13 +28,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -43,7 +44,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-ui-and-text/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.604Z
+  fetched_at: 2026-11-09T09:28:07.058Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,17 +55,13 @@ skill:
     ProgressBar, UIPanel (skins, layout, scrolling), Draggable and DropTarget,
     the floating screen-space container pattern, which of two overlapping panels
     gets the pointer, Text and BitmapText, web font loading, and NineSliceSprite
-    panels. Triggers on: UI, HUD, button, checkbox, radio button, UICheckbox,
-    slider, UISlider, volume slider, options menu, settings screen, scrolling
-    list, scroll panel, layout, column, grid, UI skin, UIBaseElement,
-    UISpriteElement, UITextButton, ProgressBar, progress bar, health bar, gauge,
-    Draggable, DropTarget, menu, dialogue, overlapping panels, moveToTop,
-    onOver, onClick, bindKey, keyboard shortcut, button keyboard, Tween, easing,
-    animate a label, wavy text, per-glyph effect, glyphEffect, shake text,
-    rainbow text, Text, BitmapText, fillStyle, fillGradient, gradient text,
-    tint, font, fontface, wordWrapWidth, NineSliceSprite, score display,
-    floating., fullscreen, full screen, requestFullscreen, exitFullscreen,
-    isFullscreen, fullscreen button, fullscreen option"
+    panels. Triggers on: UI, HUD, button, checkbox, radio button, slider, volume
+    slider, options menu, settings screen, scrolling list, UI skin, progress
+    bar, health bar, menu, dialogue, moveToTop, onOver, onClick, bindKey,
+    keyboard shortcut, Tween, animate a label, wavy text, glyphEffect, rainbow
+    text, fillStyle, fillGradient, gradient text, tint, font, fontface,
+    wordWrapWidth, score display, fullscreen, requestFullscreen, fullscreen
+    button."
   folder_path: packages/melonjs/skills/melonjs-ui-and-text
   extra_files: []
   pack_total_skills: 25
@@ -243,9 +240,37 @@ including one it is not currently holding:
 const widest = hudScore.measureText("00:00").width;
 ```
 
+Given a string, it returns a new `TextMetrics` and leaves the label as it was;
+with no argument it returns the label's own metrics. Before 20.13 measuring
+another string overwrote the label's own metrics, so a centred or
+right-aligned label was drawn shifted until its next `setText()`.
+
 Advance widths scale linearly with the point size for one family, so measuring
 on an existing label and scaling the result is exact. For labels you genuinely
 spawn in bulk, `getPool("text")` recycles the bake.
+
+### Multi-line text: the baseline places the whole block
+
+A `\n` in the string (or an array of strings) starts a new line, on `Text` and
+`BitmapText` alike. `textBaseline` then places the block as one piece against
+`pos.y`: its top for `"top"` / `"hanging"`, its middle for `"middle"`, its
+bottom for `"alphabetic"`, `"ideographic"` and `"bottom"`. So a two-line
+`"bottom"` label in a screen corner sits wholly above `pos.y`, and a centred
+`"middle"` label centres every line, not the first. `getBounds()` is that same
+box, which is what culling and the pointer use.
+
+`wordWrapWidth` only ADDS line breaks: each `\n`-separated line is wrapped on
+its own, so explicit breaks and blank lines survive. A line breaks between
+words, never inside one, so a single word wider than `wordWrapWidth` gets a
+line of its own and overflows it:
+
+```js
+const help = new Text(8, 8, {
+    font: "sans-serif", size: 16, wordWrapWidth: 200,
+    text: "CONTROLS\nArrows move, Space jumps, Esc pauses the game.",
+});
+// "CONTROLS" on its own line, then the sentence wrapped under it
+```
 
 ### `fillStyle` means two different things
 
@@ -499,6 +524,7 @@ const hp = new ProgressBar(20, 20, {
 hud.addChild(hp);
 
 hp.value -= 15;                        // clamps; `ratio` reads back 0..1
+hp.max = 50;                           // re-clamps the value into the new range
 ```
 
 `direction` takes `"left-to-right"` (the default), `"right-to-left"`,
@@ -759,7 +785,7 @@ by default):
 | `onClick(event)` | pressed | `false` to stop the event propagating |
 | `onRelease(event)` | the press ends (up, left while held, or cancelled) | `false` to stop propagating |
 | `onOver(event)` | pointer enters | `false` to stop propagating |
-| `onOut(event)` | pointer leaves | — |
+| `onOut(event)` | pointer leaves, or the element is removed while hovered (no event then) | — |
 | `onHold()` | pressed and held | — |
 
 ```js
@@ -777,6 +803,12 @@ class MuteButton extends UISpriteElement {
     }
 }
 ```
+
+Undo in `onOut` whatever `onOver` set up (a tooltip, a highlight, a cursor):
+it also runs when the element leaves the world while the pointer is on it,
+removed on its own, with the panel holding it, or with the scene, so nothing
+is left behind. Keep effects that should only follow the pointer (a sound, a
+tween) out of it, or check `event`, which is `undefined` for a removal.
 
 The image is `button.sprite`: animations, tint and regions live there
 (`setRegion`, `addAnimation`, `setCurrentAnimation` and `isCurrentAnimation`
@@ -921,8 +953,12 @@ class Picker extends UIBaseElement {
 Moving the focus from code is `other.focus()`; `UIBaseElement.focusOwner?.blur()`
 hands the keys back to the game, for example when gameplay resumes.
 
-Two things to know. Enter goes to the focused button, so another button
-whose `bindKey` is Enter waits while the focus ring shows elsewhere. And
+Three things to know. Enter and Space go to the focused widget, so another
+button whose `bindKey` is Enter or Space waits while any other widget has the
+focus, ring shown or hidden: one key press never clicks both. `blur()` the
+focused widget to give Enter back to the shortcut (a disabled or hidden
+focused widget does not keep it). Enter or A held while the window loses
+focus is called off (`onCancel()`, no click), as a held `bindKey` is. And
 accept calls a subclass's `onClick()` METHOD with no pointer event, as
 `bindKey` does: guard `event` there, or act in the `onClick` setting.
 
@@ -1045,7 +1081,10 @@ const volume = new UISlider(40, 120, {
 ```
 
 Drag the thumb, or click the track to jump there. The drag follows the
-pointer after it leaves the track, until it is released. The mouse wheel over
+pointer after it leaves the track, until it is released. As on any widget, the
+press (`onClick`) ends in exactly one of `onRelease` (let go, before
+`onChangeEnd`) or `onCancel` (called off by `cancelPress()`, `enabled = false`
+or removal, with no `onChangeEnd`). The mouse wheel over
 the slider moves it one `step`. `value` snaps to `step` and clamps to the
 range, and setting it does not call `onChange` or `onChangeEnd`: the same rule
 as the checkbox, and neither does changing `min`, `max` or `step`, which
@@ -1283,8 +1322,16 @@ City and Instanced Forest examples park a floating sky at `-10000` or `100000`.
 | a layout ignores a label that changed size | layout runs on add, remove and resize only | call `panel.relayout()` |
 | the arrow keys or the pad do nothing in a menu | no widget has the focus: nothing listens until one does | call `firstWidget.focus()` when the menu opens |
 | the arrow keys stop moving the player after a menu | a widget still has the focus | `UIBaseElement.focusOwner?.blur()`, or remove the menu: a focused widget leaving the scene gives the keys back |
-| a `bindKey: ENTER` button does not fire while another widget is focused | Enter goes to the focused widget while its ring shows | focus that button, or bind another key |
+| a `bindKey: ENTER` button does not fire while another widget is focused | Enter and Space go to the focused widget, ring shown or not, so one press never clicks both | focus that button, `blur()` the focused one, or bind another key |
+| a tooltip or highlight shown in `onOver` stays after its widget is removed (before 20.14) | the pointer's leave never reaches a removed widget | update: a widget removed while hovered now gets `onOut()`, with no event |
+| an `onOut` sound or tween plays when a menu closes or the scene changes (since 20.14) | a widget removed while hovered gets `onOut()` | keep pointer-only effects out of `onOut`, or skip them when its `event` is `undefined` |
+| a widget removed while held gets `onCancel()` and no `onRelease()` | the pointer-up never reaches a removed widget, so the press is called off (and `hover` cleared), leaving it at rest when added back | stop what `onClick()` started in `onCancel()` as well as in `onRelease()` |
+| a `ProgressBar` fill runs past its track after `max` is lowered (before 20.13) | `min` and `max` did not re-clamp the value | update: they re-clamp it now (and call `onChange` if it moved); `ratio` stays within 0..1 |
 | a skinned panel's shadow has square corners | the shadow follows `radius`, and a skin does not set it | set `radius` to the art's corner size |
+| a wrapped label lost its `\n` line breaks, or starts with a blank line (before 20.13) | word wrap joined the lines with spaces, and closed an empty line before an over-wide first word | update: each line is now wrapped on its own and an over-wide word starts the first line |
+| the second line of a multi-line `"bottom"` or `"middle"` `Text` is drawn below where you put it, or outside its bounds (before 20.13) | `Text` placed only the first line by its baseline | update: the whole block is placed by the baseline, as `BitmapText` does |
+| `setText("1,000")` leaves a label showing `["1", "000"]` on two lines, or the other way round (before 20.13) | the change test compared `toString()`, and an array's joins with commas; update |
+| a centred or right-aligned label jumps sideways, or is clipped, after `label.measureText("…")` (before 20.13) | measuring another string overwrote the label's own metrics until its next `setText()`; update, or measure on a label that is not displayed |
 | `new UITextButton` with a font name draws in a plain font | the name is not a loaded bitmap font, so it is drawn as a CSS font | load the bitmap font (image and `.fnt`) under that name, or load the web font |
 
 ## Related skills

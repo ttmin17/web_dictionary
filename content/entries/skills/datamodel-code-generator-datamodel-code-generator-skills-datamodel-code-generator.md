@@ -13,10 +13,10 @@ tags:
   - csv
   - dataclass
 status: active
-quality_percentile: 56
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: datamodel-code-generator/datamodel-code-generator
@@ -24,14 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4049
-  last_commit: 2026-11-05T13:08:13Z
-  stars_delta_7d: 10
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 4053
+  last_commit: 2026-11-09T08:07:15Z
+  stars_delta_7d: 4
+  stars_growth_pct: 0.1
+  trending_score: 4
+  rank_current: 129
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 4049
+    - 4053
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +42,7 @@ readme_source:
   repo: datamodel-code-generator/datamodel-code-generator
   path: skills/datamodel-code-generator/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:14.385Z
+  fetched_at: 2026-11-09T09:28:03.026Z
   truncated: false
 type: agent_skill
 skill:

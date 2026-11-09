@@ -1,8 +1,10 @@
 ---
 slug: nexu-io-html-anything-next-src-lib-templates-skills-card-twitter
 name: card-twitter
-tagline: Agent skill from nexu-io/html-anything
-summary: Agent skill from nexu-io/html-anything
+tagline: 推特金句 / 数据卡, 适合配推文
+summary: '【模板: Twitter 分享卡】 - 容器 w-[1600px] h-[900px], 暗色 / 亮色二选一根据内容情绪。 - 中央一句
+  hero 金句 (text-6xl, font-semibold, 限 2-3 行)。 - 下方作者署名 + 头像占位 + handle。 - 左上角小标签
+  (类型: "Insight" / "Data" / "Quote")。 - 右下角品牌水印。 - 整张卡片有微妙的纹理 (grid 网格...'
 categories:
   - media-creative
 tags:
@@ -11,10 +13,10 @@ tags:
   - ai-agents
   - ai-design
 status: active
-quality_percentile: 58
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: nexu-io/html-anything
@@ -22,34 +24,34 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9246
-  last_commit: 2026-10-13T02:33:42Z
-  stars_delta_7d: 73
-  stars_growth_pct: 0.8
-  trending_score: 73.58
-  velocity_source: snapshot_delta
+  stars: 9478
+  last_commit: 2026-11-09T09:21:19Z
+  stars_delta_7d: 365
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
-    - 9099
     - 9173
     - 9246
-language: en
+    - 9478
+language: zh
 needs_keys: false
 prerequisites: []
 readme_source:
   repo: nexu-io/html-anything
   path: next/src/lib/templates/skills/card-twitter/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:43:59.805Z
+  fetched_at: 2026-11-09T09:27:49.667Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: card-twitter
-  description: Agent skill from nexu-io/html-anything
+  description: 推特金句 / 数据卡, 适合配推文
   folder_path: next/src/lib/templates/skills/card-twitter
   extra_files:
     - example.html
     - example.md
-  pack_total_skills: 81
+  pack_total_skills: 25
   is_pack_primary: false
   clients:
     - claude-code

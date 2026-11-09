@@ -14,7 +14,7 @@ status: active
 quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: code-yeongyu/senpi
@@ -22,16 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 512
-  last_commit: 2026-11-05T13:00:13Z
-  stars_delta_7d: 15
-  stars_growth_pct: 3
-  trending_score: 15.45
+  stars: 514
+  last_commit: 2026-11-09T08:42:55Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.4
+  trending_score: 2.01
   velocity_source: snapshot_delta
   sparkline_4w:
     - 484
     - 497
     - 512
+    - 514
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: code-yeongyu/senpi
   path: packages/coding-agent/test/fixtures/skills/unknown-field/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:48.038Z
+  fetched_at: 2026-11-09T09:28:31.234Z
   truncated: false
 type: agent_skill
 skill:

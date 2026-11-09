@@ -14,26 +14,26 @@ status: active
 quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ThinkInAIXYZ/deepchat
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6385
-  last_commit: 2026-11-05T10:16:26Z
-  stars_delta_7d: 14
-  stars_growth_pct: 0.2
-  trending_score: 14.03
-  rank_current: 120
-  rank_delta: 17
+  stars: 6387
+  last_commit: 2026-11-08T14:29:26Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0
+  trending_score: 2
+  rank_current: 125
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6359
     - 6370
     - 6371
     - 6385
+    - 6387
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: ThinkInAIXYZ/deepchat
   path: README.md
   branch: dev
-  fetched_at: 2026-11-05T13:13:14.157Z
+  fetched_at: 2026-11-09T09:28:02.933Z
   truncated: false
 type: agent_tool
 tool:
@@ -512,6 +512,20 @@ Common commands include `/start`, `/help`, `/pair`, `/new`, `/sessions`, `/use`,
     <td>
       <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/wally-color.svg" width="50" height="50" alt="Wally Icon"><br/>
       <a href="https://www.runwally.com/">Wally</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/trustedrouter.svg" width="50" height="50" alt="TrustedRouter Icon"><br/>
+      <a href="https://trustedrouter.com/">TrustedRouter</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/standardcompute.svg" width="50" height="50" alt="Standard Compute Icon"><br/>
+      <a href="https://standardcompute.com/">Standard Compute</a>
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/uberllm-color.svg" width="50" height="50" alt="UberLLM Icon"><br/>
+      <a href="https://uberllm.dev/">UberLLM</a>
     </td>
   </tr>
 

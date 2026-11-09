@@ -1,12 +1,12 @@
 ---
 slug: orchestratorinc-agent-orchestrator-integrations-grok-bot-skills-ao-status
 name: ao-status
-tagline: "What AO is doing on every host: which sessions are running, waiting on
-  the user, idle or exited, which PRs are ready to merge or got a review, and a
-  d"
-summary: "Follow the ao-rules skill. Read-only in AO: it never marks anything
-  read there. It keeps its own seen list in /.ao-grok/ on each via computer. Run
-  on every host in the AO hosts note, in parallel, each from its via com..."
+tagline: "What Orchestrator is doing on every host: which sessions are running,
+  waiting on the user, idle or exited, which PRs are ready to merge or got a
+  revie"
+summary: "Follow the ao-rules skill. Read-only in Orchestrator: it never marks
+  anything read there. It keeps its own seen list in /.ao-grok/ on each via
+  computer. Run on every host in the AO hosts note, in parallel, each from i..."
 categories:
   - agent-frameworks
 tags:
@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14127
-  last_commit: 2026-11-05T13:02:06Z
-  stars_delta_7d: 471
-  stars_growth_pct: 3.4
-  trending_score: 487.24
+  stars: 14314
+  last_commit: 2026-11-09T09:23:57Z
+  stars_delta_7d: 187
+  stars_growth_pct: 1.3
+  trending_score: 189.48
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13138
     - 13339
     - 13656
     - 14127
+    - 14314
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,14 +44,14 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-status/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:49.372Z
+  fetched_at: 2026-11-09T09:27:42.805Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ao-status
-  description: "What AO is doing on every host: which sessions are running,
-    waiting on the user, idle or exited, which PRs are ready to merge or got a
-    review, and a daily digest. Read-only. Use for \"status\", \"what's
+  description: "What Orchestrator is doing on every host: which sessions are
+    running, waiting on the user, idle or exited, which PRs are ready to merge
+    or got a review, and a daily digest. Read-only. Use for \"status\", \"what's
     running\", \"what's waiting on me\", \"what's ready to merge\", \"anything
     stuck\", and the AO daily digest routine."
   folder_path: integrations/grok-bot/skills/ao-status
@@ -65,7 +65,7 @@ skill:
   pack_slug: orchestratorinc-agent-orchestrator
 ---
 
-Follow the ao-rules skill. Read-only in AO: it never marks anything read there. It keeps its own seen list in `~/.ao-grok/` on each `via` computer. Run on every host in the **AO hosts** note, in parallel, each from its `via` computer with the `aoapi` helper (set `AO_REMOTE_BASE` and `AO_REMOTE_HEADER` for remote hosts). If memory has no **AO hosts** note, run ao-setup first. Don't save hosts without the user's yes.
+Follow the ao-rules skill. Read-only in Orchestrator: it never marks anything read there. It keeps its own seen list in `~/.ao-grok/` on each `via` computer. Run on every host in the **AO hosts** note, in parallel, each from its `via` computer with the `aoapi` helper (set `AO_REMOTE_BASE` and `AO_REMOTE_HEADER` for remote hosts). If memory has no **AO hosts** note, run ao-setup first. Don't save hosts without the user's yes.
 
 ## 1. Sessions
 ```sh

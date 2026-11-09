@@ -13,10 +13,10 @@ tags:
   - ai-agent
   - ai-assistant
 status: active
-quality_percentile: 67
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: PM-Shawn/Abu-Cowork
@@ -24,12 +24,15 @@ source:
   license: Apache-2.0
 signals:
   stars: 419
-  last_commit: 2026-11-04T02:06:02Z
-  stars_delta_7d: 12
+  last_commit: 2026-11-08T10:42:37Z
+  stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  velocity_source: age_velocity
+  rank_current: 144
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
+    - 419
     - 419
 language: en
 needs_keys: false
@@ -39,7 +42,7 @@ readme_source:
   repo: PM-Shawn/Abu-Cowork
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.315Z
+  fetched_at: 2026-11-09T09:28:42.589Z
   truncated: false
 type: agent_tool
 tool:

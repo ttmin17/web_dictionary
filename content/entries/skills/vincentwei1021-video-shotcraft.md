@@ -18,7 +18,7 @@ status: active
 quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Vincentwei1021/video-shotcraft
@@ -26,14 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 17181
+  stars: 18034
   last_commit: 2026-10-29T16:17:26Z
-  stars_delta_7d: 1019
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 853
+  stars_growth_pct: 5
+  trending_score: 895.35
+  rank_current: 20
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 17181
+    - 18034
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +44,7 @@ readme_source:
   repo: Vincentwei1021/video-shotcraft
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:42.820Z
+  fetched_at: 2026-11-09T09:27:38.199Z
   truncated: false
 type: agent_skill
 skill:

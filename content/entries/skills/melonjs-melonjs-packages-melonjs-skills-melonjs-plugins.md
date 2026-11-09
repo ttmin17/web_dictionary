@@ -19,7 +19,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -28,13 +28,14 @@ source:
   license: MIT
 signals:
   stars: 6442
-  last_commit: 2026-11-05T10:39:00Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.4
-  trending_score: 23.08
+  last_commit: 2026-11-09T09:17:57Z
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
+    - 6442
     - 6442
 language: en
 needs_keys: false
@@ -43,7 +44,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-plugins/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:18.601Z
+  fetched_at: 2026-11-09T09:28:07.056Z
   truncated: false
 type: agent_skill
 skill:
@@ -190,6 +191,10 @@ It also exports helpers usable on their own: `onBackButton`, `bindStageBack`,
 `lockOrientation` / `unlockOrientation`, `hideSplash`. See `melonjs-deployment`
 for the wider packaging picture.
 
+With `pauseOnBackground` (the default), going to the background pauses the
+game and coming back resumes it, but only if this pause was the plugin's: a
+game the player had paused stays paused.
+
 ## Physics adapters
 
 `@melonjs/planck-adapter` and `@melonjs/matter-adapter` swap the physics world
@@ -269,6 +274,10 @@ or a `Stage` is simpler and easier to test.
 | plugin setup never runs | setup written in an `init()` method — there is no such hook |
 | `plugin.register` for an adapter does nothing | adapters are a construction setting, not a plugin |
 | physics behaves differently after adding an adapter | expected — units and force scales differ; re-tune |
+| a Spine object slides off screen when the camera moves, or ignores its container (WebGL / WebGPU) | spine-plugin < 4.0.1 drew without the camera's and the parents' transform; upgrade |
+| a Spine object ignores `setOpacity()` / `alpha` | spine-plugin < 4.0.1; upgrade |
+| a game paused from its menu is running again after the app comes back from the background | capacitor-plugin < 1.0.1 resumed on every return; upgrade |
+| touch controls miss the finger after browser zoom or a move to another screen | gamepad-plugin < 1.2.1; upgrade |
 
 ## Related skills
 

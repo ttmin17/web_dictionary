@@ -10,15 +10,15 @@ summary: "- Save it in the folder named by ORCACHATSCRATCHDIR (printenv
 categories:
   - agent-frameworks
 tags:
-  - ade
   - agent-ide
   - ai-agents
   - automation
+  - bot
 status: active
 quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 116163
-  last_commit: 2026-11-05T13:05:51Z
-  stars_delta_7d: 9943
-  stars_growth_pct: 9.4
-  trending_score: 10873.74
+  stars: 119733
+  last_commit: 2026-11-09T09:22:54Z
+  stars_delta_7d: 3570
+  stars_growth_pct: 3.1
+  trending_score: 3679.72
   rank_current: 4
-  rank_delta: -3
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 91386
     - 97177
     - 106220
     - 116163
+    - 119733
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: stablyai/orca
   path: resources/native-chat-visuals/skills/orca-chat-visuals/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:17.680Z
+  fetched_at: 2026-11-09T09:27:19.238Z
   truncated: false
 type: agent_skill
 skill:

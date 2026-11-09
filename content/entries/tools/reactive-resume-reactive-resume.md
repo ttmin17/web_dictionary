@@ -17,26 +17,26 @@ status: active
 quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: reactive-resume/reactive-resume
   official_vendor: false
   license: MIT
 signals:
-  stars: 45370
-  last_commit: 2026-11-05T04:33:23Z
-  stars_delta_7d: 503
-  stars_growth_pct: 1.1
-  trending_score: 508.64
-  rank_current: 26
-  rank_delta: -3
+  stars: 45519
+  last_commit: 2026-11-08T20:43:39Z
+  stars_delta_7d: 149
+  stars_growth_pct: 0.3
+  trending_score: 149.49
+  rank_current: 24
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 44233
     - 44513
     - 44867
     - 45370
+    - 45519
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: reactive-resume/reactive-resume
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:27.541Z
+  fetched_at: 2026-11-09T09:26:42.737Z
   truncated: false
 type: agent_tool
 tool:
@@ -62,11 +62,6 @@ tool:
     confidence: manifest
 ---
 
-> [!IMPORTANT]
-> Reactive Resume now lives at **[`reactive-resume/reactive-resume`](https://github.com/reactive-resume/reactive-resume)** on GitHub.  
-> GHCR images publish to `ghcr.io/reactive-resume/reactive-resume`.  
-> Docker Hub stays at `amruthpillai/reactive-resume`.
-
 <div align="center">
   <a href="https://rxresu.me">
     <img src="https://raw.githubusercontent.com/reactive-resume/reactive-resume/main/apps/web/public/opengraph/banner.jpg" alt="Reactive Resume" />
@@ -80,6 +75,11 @@ tool:
     <a href="https://rxresu.me"><strong>Get Started</strong></a>
     ·
     <a href="https://docs.rxresu.me"><strong>Learn More</strong></a>
+  </p>
+
+  <p>
+    <a href="https://go.rx.cv/ios"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40" /></a>
+    <a href="https://go.rx.cv/android"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="40" /></a>
   </p>
 
   <p>

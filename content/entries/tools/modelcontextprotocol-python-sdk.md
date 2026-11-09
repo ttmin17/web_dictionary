@@ -9,29 +9,29 @@ tags:
   - mcp-client
   - python
 status: active
-quality_percentile: 100
+quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: modelcontextprotocol/python-sdk
   official_vendor: true
   license: MIT
 signals:
-  stars: 24770
-  last_commit: 2026-11-05T12:53:36Z
-  stars_delta_7d: 103
-  stars_growth_pct: 0.4
-  trending_score: 103.43
-  rank_current: 71
-  rank_delta: 7
+  stars: 24804
+  last_commit: 2026-11-05T13:38:56Z
+  stars_delta_7d: 34
+  stars_growth_pct: 0.1
+  trending_score: 34.05
+  rank_current: 67
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 24564
     - 24615
     - 24667
     - 24770
+    - 24804
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +40,7 @@ readme_source:
   repo: modelcontextprotocol/python-sdk
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:32.330Z
+  fetched_at: 2026-11-09T09:26:43.247Z
   truncated: false
 type: agent_tool
 tool:

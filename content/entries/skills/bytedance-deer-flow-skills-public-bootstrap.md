@@ -18,7 +18,7 @@ status: active
 quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: bytedance/deer-flow
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 85022
-  last_commit: 2026-11-05T08:06:20Z
-  stars_delta_7d: 591
-  stars_growth_pct: 0.7
-  trending_score: 595.14
+  stars: 85169
+  last_commit: 2026-11-09T09:06:05Z
+  stars_delta_7d: 147
+  stars_growth_pct: 0.2
+  trending_score: 147.25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 84103
     - 84431
     - 85022
+    - 85169
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: bytedance/deer-flow
   path: skills/public/bootstrap/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:29.357Z
+  fetched_at: 2026-11-09T09:28:15.113Z
   truncated: false
 type: agent_skill
 skill:
@@ -69,7 +70,7 @@ skill:
 ---
 
 # Bootstrap Soul
-A conversational onboarding skill. Through 5–8 adaptive rounds, extract who the user is and what they need, then generate a tight `SOUL.md` that defines their AI partner.
+A conversational onboarding skill. Use the information already supplied and ask only useful follow-ups to understand the user and what they need, then generate a tight `SOUL.md` that defines their AI partner.
 
 ## Architecture
 
@@ -107,16 +108,16 @@ Phase details and conversation strategies are in `references/conversation-guide.
 
 ## Extraction Tracker
 
-Mentally track these fields as the conversation progresses. You need **all required fields** before generating.
+Use these fields as optional discovery prompts. Include only information the user supplies or confirms; an update may need only one field. Do not require personal details unrelated to the requested customization.
 
-| Field | Required | Source Phase |
-|-------|----------|-------------|
+| Field | Include when supported | Source Phase |
+|-------|------------------------|-------------|
 | Preferred language | ✅ | 1 |
 | User's name | ✅ | 2 |
 | User's role / context | ✅ | 2 |
 | AI name | ✅ | 2 |
 | Relationship framing | ✅ | 2 |
-| Core traits (3–5 behavioral rules) | ✅ | 3 |
+| Core traits (supported behavioral rules) | ✅ | 3 |
 | Communication style | ✅ | 3 |
 | Pushback / honesty preference | ✅ | 3 |
 | Autonomy level | ✅ | 3 |
@@ -124,14 +125,14 @@ Mentally track these fields as the conversation progresses. You need **all requi
 | Long-term vision | nice-to-have | 4 |
 | Blind spots / boundaries | nice-to-have | 4 |
 
-If the user is direct and thorough, you can reach generation in 5 rounds. If they're exploratory, take up to 8. Never exceed 8 — if you're still missing fields, make your best inference and confirm.
+Generate when there is enough information for the requested customization. Skip answered questions, respect the user's desired pace, and leave unknown preferences unspecified instead of inventing them.
 
 ## Generation
 
 Once you have enough information:
 
 1. Read `templates/SOUL.template.md` if you haven't already.
-2. Generate the SOUL.md following the template structure exactly.
+2. Adapt the SOUL.md template to the supported preferences and requested scope.
 3. Present it warmly and ask for confirmation. Frame it as "here's [Name] on paper — does this feel right?"
 4. Iterate until the user confirms.
 5. Call the `setup_agent` tool with the confirmed SOUL.md content and a one-line description:
@@ -142,11 +143,11 @@ Once you have enough information:
 6. After the tool returns successfully, confirm: "✅ [Name] is officially real."
 
 **Generation rules:**
-- The final SOUL.md **must always be written in English**, regardless of the user's preferred language or conversation language.
+- Write the final SOUL.md in the user's requested language, otherwise use the established conversation language.
 - Every sentence must trace back to something the user said or clearly implied. No generic filler.
 - Core Traits are **behavioral rules**, not adjectives. Write "argue position, push back, speak truth not comfort" — not "honest and brave."
 - Voice must match the user. Blunt user → blunt SOUL.md. Expressive user → let it breathe.
 - Total SOUL.md should be under 300 words. Density over length.
-- Growth section is mandatory and mostly fixed (see template).
+- Include growth or personalization preferences only when supported by the user. They do not grant permission for personal questions or external actions.
 - You **must** call `setup_agent` — do not write the file manually with bash tools.
 - If `setup_agent` returns an error, report it to the user and do not claim success.

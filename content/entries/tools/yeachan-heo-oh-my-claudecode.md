@@ -14,26 +14,26 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Yeachan-Heo/oh-my-claudecode
   official_vendor: false
   license: MIT
 signals:
-  stars: 40605
-  last_commit: 2026-11-05T12:43:25Z
-  stars_delta_7d: 335
-  stars_growth_pct: 0.8
-  trending_score: 337.79
-  rank_current: 33
-  rank_delta: -1
+  stars: 40704
+  last_commit: 2026-11-09T09:20:03Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.2
+  trending_score: 99.24
+  rank_current: 37
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 39864
     - 40055
     - 40270
     - 40605
+    - 40704
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Yeachan-Heo/oh-my-claudecode
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:31.893Z
+  fetched_at: 2026-11-09T09:27:26.366Z
   truncated: false
 type: agent_tool
 tool:
@@ -690,6 +690,8 @@ OMC features like `omc team` and rate-limit detection require **tmux**:
 | Windows (WSL2) | tmux (inside WSL)                                     | `sudo apt install tmux` |
 
 > **Windows users:** [psmux](https://github.com/marlocarlo/psmux) provides a native `tmux` binary for Windows with 76 tmux-compatible commands. No WSL required.
+>
+> **Windows Node.js version (provider spawns):** On Windows, **Node 22+ (or 21.7+)** is recommended for provider spawns. Node 20's libuv 1.46 may resolve bare-name child process executables from the current working directory, which can cause unexpected behavior. See [#4746](https://github.com/Yeachan-Heo/oh-my-claudecode/issues/4746) for details.
 
 ### Optional: Multi-AI Orchestration
 

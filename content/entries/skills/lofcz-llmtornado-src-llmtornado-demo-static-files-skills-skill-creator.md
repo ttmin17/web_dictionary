@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent2agent
 status: active
-quality_percentile: 59
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: lofcz/LLMTornado
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 651
-  last_commit: 2026-11-04T21:20:08Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.3
-  trending_score: 2.01
+  stars: 652
+  last_commit: 2026-11-09T08:22:09Z
+  stars_delta_7d: 1
+  stars_growth_pct: 0.2
+  trending_score: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 647
     - 649
     - 651
+    - 652
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: lofcz/LLMTornado
   path: src/LlmTornado.Demo/Static/Files/Skills/skill-creator/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:14:04.318Z
+  fetched_at: 2026-11-09T09:28:45.277Z
   truncated: false
 type: agent_skill
 skill:

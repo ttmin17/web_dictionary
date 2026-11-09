@@ -16,26 +16,26 @@ status: active
 quality_percentile: 37
 selection_reason: quality_percentile
 first_seen: 2025-11-29T15:42:31
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: zhizhuodemao/js-reverse-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3047
+  stars: 3057
   last_commit: 2026-09-03T11:45:13Z
-  stars_delta_7d: 46
-  stars_growth_pct: 1.5
-  trending_score: 46.71
-  rank_current: 50
-  rank_delta: 7
+  stars_delta_7d: 10
+  stars_growth_pct: 0.3
+  trending_score: 10.03
+  rank_current: 68
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2945
     - 2979
     - 3001
     - 3047
+    - 3057
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: zhizhuodemao/js-reverse-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:48.735Z
+  fetched_at: 2026-11-09T09:26:59.347Z
   truncated: false
 type: mcp_server
 launch:

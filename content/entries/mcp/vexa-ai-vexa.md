@@ -14,29 +14,29 @@ tags:
   - codex
   - google-meet
 status: active
-quality_percentile: 93
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: Vexa-ai/vexa
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2950
-  last_commit: 2026-11-04T16:34:26Z
-  stars_delta_7d: 43
-  stars_growth_pct: 1.5
-  trending_score: 43.64
-  rank_current: 52
-  rank_delta: 10
+  stars: 2964
+  last_commit: 2026-11-06T08:33:51Z
+  stars_delta_7d: 14
+  stars_growth_pct: 0.5
+  trending_score: 14.07
+  rank_current: 56
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2879
     - 2889
     - 2907
     - 2950
+    - 2964
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Vexa-ai/vexa
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:48.766Z
+  fetched_at: 2026-11-09T09:26:59.434Z
   truncated: false
 type: mcp_server
 launch:

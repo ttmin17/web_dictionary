@@ -11,28 +11,29 @@ tags:
   - alphaevolve
   - coding-agent
 status: active
-quality_percentile: 60
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: algorithmicsuperintelligence/openevolve
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 7715
-  last_commit: 2026-11-05T12:52:57Z
-  stars_delta_7d: 64
-  stars_growth_pct: 0.8
-  trending_score: 64.54
-  rank_current: 88
-  rank_delta: -14
+  stars: 7739
+  last_commit: 2026-11-08T22:50:07Z
+  stars_delta_7d: 24
+  stars_growth_pct: 0.3
+  trending_score: 24.07
+  rank_current: 79
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7593
     - 7651
     - 7715
+    - 7739
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: algorithmicsuperintelligence/openevolve
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:37.390Z
+  fetched_at: 2026-11-09T09:28:20.298Z
   truncated: false
 type: agent_tool
 tool:
@@ -102,6 +103,7 @@ OpenEvolve is an open-source implementation of Google DeepMind's AlphaEvolve. It
 | [Hill Sampling for Test-Time Scaling](https://arxiv.org/abs/2609.25510) | Builds on OpenEvolve's problems and evaluators |
 | [CodeEvolve: Runtime-Enriched Target Selection](https://arxiv.org/abs/2605.04677) | Extends OpenEvolve for Java and Salesforce Apex |
 | [GraphIR](https://arxiv.org/abs/2608.01633) | Neural architecture search states integrated into OpenEvolve |
+| [SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization](https://arxiv.org/abs/2611.08483) · [Code](https://github.com/Qile-J/SwarmEvolve) | Uses OpenEvolve's problems and evaluators for 16 AlphaEvolve problems, and benchmarks against OpenEvolve |
 
 New evolutionary agents also routinely benchmark against OpenEvolve, including [HarnessTTT](https://arxiv.org/abs/2610.17370), [FrugalEvo](https://arxiv.org/abs/2610.03675), [SEDIMA](https://arxiv.org/abs/2610.02361), [EvoDuet](https://arxiv.org/abs/2609.40340), [LoongFlow](https://arxiv.org/abs/2512.24077) and [AscendOptimizer](https://arxiv.org/abs/2603.23566).
 

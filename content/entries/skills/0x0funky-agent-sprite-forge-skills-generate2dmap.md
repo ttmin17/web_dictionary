@@ -9,12 +9,17 @@ summary: "- A playable map, level, room set, tilemap, terrain or prop kit, with
   backdrop, or an HD-2D plate with lights and motion. - Map data must be
   valid..."
 categories:
-  - domain-research
+  - media-creative
+tags:
+  - agent-skills
+  - claude-code
+  - codex
+  - grok-build
 status: active
-quality_percentile: 49
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 0x0funky/agent-sprite-forge
@@ -22,16 +27,14 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 4436
-  last_commit: 2026-10-06T14:09:38Z
-  stars_delta_7d: 147
+  stars: 5408
+  last_commit: 2026-11-06T18:20:34Z
+  stars_delta_7d: 184
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 4334
-    - 4436
-    - 4436
+    - 5408
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +42,7 @@ readme_source:
   repo: 0x0funky/agent-sprite-forge
   path: skills/generate2dmap/SKILL.md
   branch: main
-  fetched_at: 2026-10-14T14:55:18.542Z
+  fetched_at: 2026-11-09T09:28:03.484Z
   truncated: false
 type: agent_skill
 skill:
@@ -68,7 +71,13 @@ skill:
     - references/map-strategies.md
     - references/parallax-backgrounds.md
     - references/prop-pack-contract.md
-tags: []
+  pack_total_skills: 5
+  is_pack_primary: false
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: 0x0funky-agent-sprite-forge
 ---
 
 # Generate 2D Map
@@ -140,6 +149,7 @@ Block out navigation, make art and kit, place it, validate the data, preview, th
 | Room chunks; side-scroll grammar | `validate_chunks.py --chunks <json> --output-dir <new>`; `validate_layout.py --layout <json> --output-dir <new>` |
 | Parallax | `validate_parallax.py --spec <plan> --report <qa.json>` (declare `camera.pivot` and the `aspects` you ship); code-drawn layers on request: codeart2d `parallax_build.py` ([parallax-backgrounds.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dmap/references/parallax-backgrounds.md)) |
 | Fit a painting to the game size or floor | `conform_background.py conform --mode cover` or `--mode ground-fit`; subjects on every screen aspect: `conform_background.py validate-crops` |
+| Hi-bit pixel-art plate (with hibit sprites) | paint the background flat and lineless (never ask the model for "pixel art"), then `hibit_plate.py plate --input <painting> --output-dir <new>`: 480x270 (x4 = 1920x1080), 14 colours, majority downsample, lone-pixel cleanup, a 3x3 paper-cut pass, `palette.json` and `shade-maps.json`; `--palette` shares one palette across a game's plates. Draw it nearest at whole zoom |
 | HD-2D plate | [hd2d-plates.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dmap/references/hd2d-plates.md): plan `stage.json`, `scene_layout_guide.py`, generate with `guide.png` attached, then `validate_stage.py --stage <json> --output-dir <new>`; look at every `layout-*.png` |
 | Lights, shadows, atmosphere | [hd2d-presentation.md](https://github.com/0x0funky/agent-sprite-forge/blob/main/skills/generate2dmap/references/hd2d-presentation.md): `extract_scene_lights.py extract --stage <json>`, curate `lights.json` |
 | Night, lit or damaged variant of a plate | `edit_locality_check.py --before <master> --after <variant> --stage <json> --edit-box <box>`; regenerate on failure |

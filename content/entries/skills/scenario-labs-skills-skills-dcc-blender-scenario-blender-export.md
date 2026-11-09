@@ -14,10 +14,10 @@ tags:
   - ai-agents
   - ai-art
 status: active
-quality_percentile: 66
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2778
-  last_commit: 2026-11-05T09:51:22Z
-  stars_delta_7d: 1639
-  stars_growth_pct: 143.9
-  trending_score: 3997.49
+  stars: 3568
+  last_commit: 2026-11-08T18:29:18Z
+  stars_delta_7d: 790
+  stars_growth_pct: 28.4
+  trending_score: 1014.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 995
     - 1056
     - 1139
     - 2778
+    - 3568
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/blender/scenario-blender-export/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:03.082Z
+  fetched_at: 2026-11-09T09:27:08.075Z
   truncated: false
 type: agent_skill
 skill:
@@ -123,6 +123,9 @@ trip only. The measurements live in [`references/engines.md`](https://github.com
 4. **Export:** `bxe.export(path, preset, objects, **overrides)`. Any exporter keyword overrides the
    preset, such as `bake_anim=True` on `roblox` for an animated file. The result records the
    settings used.
+   - Before Blender 5.2 the glTF exporter has no meshopt. `web` then writes an uncompressed GLB,
+     which loads without `MeshoptDecoder`, and lists the option in `skipped_settings`. Report it to
+     the user. Any other setting the exporter lacks raises.
 5. **Round-trip:** `bxe.round_trip(path, objects, preset=...)` re-imports the file in a background
    Blender, leaving the open scene alone. It compares size (1 mm), triangles, deforming bones, root
    bones (one expected), armature scale, shape keys, every action stored for the objects, and the
@@ -198,9 +201,9 @@ blender -b --factory-startup --python-exit-code 1 -P bx_export.py -- \
 
 For every model in the folder (GLB, glTF, FBX, OBJ, USD, STL, PLY): import into an empty scene, run
 the delivery gate, export with the preset, re-import and compare. It writes `/abs/out/report.json`
-with each file's gate errors, size and round-trip differences. One failing file never stops the
-folder: it gets a `failed` entry. Two inputs sharing a name keep their format in the output name
-(`hero_fbx.glb`, `hero_glb.glb`). Open the report before calling the batch done.
+with each file's gate errors, size, skipped settings and round-trip differences. One failing file
+never stops the folder: it gets a `failed` entry. Two inputs sharing a name keep their format in the
+output name (`hero_fbx.glb`, `hero_glb.glb`). Open the report before calling the batch done.
 
 ## Worked example: a generated GLB to Unity and Godot
 

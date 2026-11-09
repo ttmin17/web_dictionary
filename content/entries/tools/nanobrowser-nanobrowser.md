@@ -14,28 +14,29 @@ tags:
   - automation
   - browser
 status: active
-quality_percentile: 61
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: nanobrowser/nanobrowser
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14245
-  last_commit: 2026-10-24T07:28:41Z
-  stars_delta_7d: 64
-  stars_growth_pct: 0.5
-  trending_score: 64.29
-  rank_current: 89
-  rank_delta: -16
+  stars: 14266
+  last_commit: 2026-11-08T09:03:45Z
+  stars_delta_7d: 21
+  stars_growth_pct: 0.1
+  trending_score: 21.03
+  rank_current: 84
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 14121
     - 14181
     - 14245
+    - 14266
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: nanobrowser/nanobrowser
   path: README.md
   branch: master
-  fetched_at: 2026-11-05T13:13:31.254Z
+  fetched_at: 2026-11-09T09:28:17.703Z
   truncated: false
 type: agent_tool
 tool:
@@ -63,7 +64,7 @@ tool:
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nanobrowser)
 [![Twitter](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/nanobrowser_ai)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/NN3ABHggMK)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Be9BQ6KPdm)
 [![DeepWiki][deepwiki-badge]](https://deepwiki.com/nanobrowser/nanobrowser)
 [![Sponsor](https://img.shields.io/badge/Sponsor-ff69b4?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/alexchenzl)
 
@@ -207,7 +208,7 @@ Contributions of all kinds are welcome:
 
 - **Share prompts and use cases** on our [Discord server](https://discord.gg/NN3ABHggMK).
 - **Give feedback** on how Nanobrowser works for you, on [Discord](https://discord.gg/NN3ABHggMK) or in [GitHub Discussions](https://github.com/nanobrowser/nanobrowser/discussions).
-- **Contribute code**: read [CONTRIBUTING.md](https://github.com/nanobrowser/nanobrowser/blob/master/CONTRIBUTING.md), then open a pull request for a bug fix, a feature or the documentation.
+- **Contribute code**: read [CONTRIBUTING.md](https://github.com/nanobrowser/nanobrowser/blob/master/CONTRIBUTING.md), then open a pull request for a bug fix or a feature. [CONTRIBUTING.md](https://github.com/nanobrowser/nanobrowser/blob/master/CONTRIBUTING.md#what-a-pull-request-may-not-change) says which files a pull request may not change; ask for a change to one of them in an issue.
 
 ## 🔒 Security
 
@@ -215,7 +216,7 @@ If you find a security vulnerability, please **do not** disclose it in public is
 
 ## 💬 Community
 
-- [Discord](https://discord.gg/NN3ABHggMK): chat with the team and the community
+- [Discord](https://discord.gg/Be9BQ6KPdm): chat with the team and the community
 - [X](https://x.com/nanobrowser_ai): updates and announcements
 - [GitHub Discussions](https://github.com/nanobrowser/nanobrowser/discussions): ideas and questions
 

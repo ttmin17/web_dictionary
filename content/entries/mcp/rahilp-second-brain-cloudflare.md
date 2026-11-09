@@ -17,26 +17,26 @@ status: active
 quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-05-09T23:10:58
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: rahilp/second-brain-cloudflare
   official_vendor: false
   license: MIT
 signals:
-  stars: 843
+  stars: 857
   last_commit: 2026-10-30T11:16:05Z
-  stars_delta_7d: 17
-  stars_growth_pct: 2.1
-  trending_score: 17.35
-  rank_current: 76
-  rank_delta: -6
+  stars_delta_7d: 14
+  stars_growth_pct: 1.7
+  trending_score: 14.23
+  rank_current: 55
+  rank_delta: 21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 802
     - 814
     - 826
     - 843
+    - 857
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: rahilp/second-brain-cloudflare
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:10.017Z
+  fetched_at: 2026-11-09T09:27:13.248Z
   truncated: false
 type: mcp_server
 launch:

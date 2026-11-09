@@ -13,29 +13,29 @@ tags:
   - tag-non-production
   - xcode
 status: active
-quality_percentile: 72
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: getsentry/MobileBuildMCP
   official_vendor: false
   license: MIT
 signals:
-  stars: 6543
-  last_commit: 2026-11-03T15:33:30Z
-  stars_delta_7d: 35
-  stars_growth_pct: 0.5
-  trending_score: 35.19
-  rank_current: 59
-  rank_delta: 1
+  stars: 6553
+  last_commit: 2026-11-07T03:33:42Z
+  stars_delta_7d: 10
+  stars_growth_pct: 0.2
+  trending_score: 10.02
+  rank_current: 69
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6476
     - 6488
     - 6508
     - 6543
+    - 6553
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: getsentry/MobileBuildMCP
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:42.939Z
+  fetched_at: 2026-11-09T09:26:53.368Z
   truncated: false
 type: mcp_server
 launch:

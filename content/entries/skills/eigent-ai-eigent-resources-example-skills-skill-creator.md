@@ -19,7 +19,7 @@ status: active
 quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: eigent-ai/eigent
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 15751
-  last_commit: 2026-11-05T10:20:28Z
-  stars_delta_7d: 88
-  stars_growth_pct: 0.6
-  trending_score: 88.49
+  stars: 15780
+  last_commit: 2026-11-05T17:55:26Z
+  stars_delta_7d: 29
+  stars_growth_pct: 0.2
+  trending_score: 29.05
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15514
     - 15599
     - 15663
     - 15751
+    - 15780
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: eigent-ai/eigent
   path: resources/example-skills/skill-creator/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:09.472Z
+  fetched_at: 2026-11-09T09:27:59.178Z
   truncated: false
 type: agent_skill
 skill:

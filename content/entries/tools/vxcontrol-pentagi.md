@@ -17,25 +17,26 @@ status: active
 quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: vxcontrol/pentagi
   official_vendor: false
   license: MIT
 signals:
-  stars: 33388
+  stars: 33749
   last_commit: 2026-10-22T23:26:13Z
-  stars_delta_7d: 942
-  stars_growth_pct: 2.9
-  trending_score: 969.35
-  rank_current: 18
-  rank_delta: -8
+  stars_delta_7d: 361
+  stars_growth_pct: 1.1
+  trending_score: 364.9
+  rank_current: 12
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 31207
     - 32446
     - 33388
+    - 33749
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: vxcontrol/pentagi
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:29.787Z
+  fetched_at: 2026-11-09T09:28:15.535Z
   truncated: true
 type: agent_tool
 tool:

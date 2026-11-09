@@ -12,28 +12,29 @@ tags:
   - browser-agent
   - chrome-extension
 status: active
-quality_percentile: 25
+quality_percentile: 22
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: fullselfbrowsing/FSB
   official_vendor: false
   license: MIT
 signals:
-  stars: 204
-  last_commit: 2026-11-04T20:22:35Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 111
-  rank_delta: -36
+  stars: 205
+  last_commit: 2026-11-06T20:08:40Z
+  stars_delta_7d: 1
+  stars_growth_pct: 0.5
+  trending_score: 1
+  rank_current: 110
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 196
     - 204
     - 204
+    - 205
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: fullselfbrowsing/FSB
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.335Z
+  fetched_at: 2026-11-09T09:28:45.442Z
   truncated: false
 type: mcp_server
 launch:

@@ -15,10 +15,10 @@ tags:
   - agents
   - coding-agent
 status: active
-quality_percentile: 98
+quality_percentile: 97
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: google/agents-cli
@@ -26,16 +26,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 6304
+  stars: 6325
   last_commit: 2026-11-04T17:44:59Z
-  stars_delta_7d: 128
-  stars_growth_pct: 2.1
-  trending_score: 130.65
+  stars_delta_7d: 21
+  stars_growth_pct: 0.3
+  trending_score: 21.07
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6099
     - 6176
     - 6304
+    - 6325
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: google/agents-cli
   path: skills/google-agents-cli-workflow/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:40.010Z
+  fetched_at: 2026-11-09T09:28:22.292Z
   truncated: false
 type: agent_skill
 skill:

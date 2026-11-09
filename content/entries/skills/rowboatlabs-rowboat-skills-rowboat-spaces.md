@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - ai-agents-automation
 status: active
-quality_percentile: 57
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2025-01-13T09:30:40
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: rowboatlabs/rowboat
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 18136
-  last_commit: 2026-11-05T13:05:09Z
-  stars_delta_7d: 50
-  stars_growth_pct: 0.3
-  trending_score: 50.14
-  rank_current: 108
-  rank_delta: -10
+  stars: 18146
+  last_commit: 2026-11-09T08:36:00Z
+  stars_delta_7d: 10
+  stars_growth_pct: 0.1
+  trending_score: 10.01
+  rank_current: 119
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 18011
     - 18032
     - 18086
     - 18136
+    - 18146
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: rowboatlabs/rowboat
   path: skills/rowboat-spaces/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:42.859Z
+  fetched_at: 2026-11-09T09:27:38.181Z
   truncated: false
 type: agent_skill
 skill:

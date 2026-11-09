@@ -13,24 +13,27 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 78
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: IvanMurzak/Unity-MCP
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4590
-  last_commit: 2026-11-05T08:44:45Z
-  stars_delta_7d: 55
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 4608
+  last_commit: 2026-11-09T07:49:03Z
+  stars_delta_7d: 18
+  stars_growth_pct: 0.4
+  trending_score: 18.07
+  rank_current: 48
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 4590
+    - 4608
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: IvanMurzak/Unity-MCP
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.930Z
+  fetched_at: 2026-11-09T09:26:53.550Z
   truncated: false
 type: mcp_server
 launch:
@@ -645,8 +648,11 @@ The Unity MCP Plugin reads the following environment variables (and command-line
 | `UNITY_MCP_TRANSPORT`       | `-UNITY_MCP_TRANSPORT`      | `stdio` / `streamableHttp`    | Force the client transport the plugin configures                    |
 | `UNITY_MCP_START_SERVER`    | `-UNITY_MCP_START_SERVER`   | `true` / `false`              | Force whether the plugin keeps a local server process running       |
 | `UNITY_MCP_TOOLS`           | `-UNITY_MCP_TOOLS`          | comma-separated tool IDs      | Show only the listed tools to MCP clients (tools/list); all others are hidden (a hidden tool still runs when called by name). Unknown IDs are logged as errors. |
+| `UNITY_MCP_CREDENTIALS_DIR` | — (environment only)        | absolute folder path          | Read (and refresh) the machine credential store from this folder instead of `~/.ai-game-dev`. For development/test Editors whose launcher signs in under another profile (the AI Game Dev App's local dev stand); a path, never a token. A relative value is logged and ignored |
 
 > Command-line args take precedence over environment variables. Both override the saved config file value. The short flags `-url`, `-token`, and `-auth` are aliases; the full `-UNITY_MCP_*` arg names are also accepted.
+>
+> **Cloud vs Custom mode in `UserSettings/AI-Game-Developer-Config.json`:** `connectionMode` defaults to `Cloud`, which connects to `https://ai-game.dev/mcp` and never auto-starts the local server (even if `keepServerRunning` is `true`). The saved `"host"` field is used only when `connectionMode` is `"Custom"`; editing `"host"` in the file does not switch the mode. To use a local server, select **Custom** in the AI Game Dev window, or set `"connectionMode": "Custom"` while Unity is closed.
 
 **Example (CI/CD batch mode):**
 

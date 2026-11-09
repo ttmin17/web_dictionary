@@ -16,26 +16,26 @@ status: active
 quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-03-10T17:50:15
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 0xMassi/webclaw
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2430
-  last_commit: 2026-11-04T14:23:28Z
-  stars_delta_7d: 40
-  stars_growth_pct: 1.7
-  trending_score: 40.67
-  rank_current: 96
-  rank_delta: 24
+  stars: 2436
+  last_commit: 2026-11-08T11:01:23Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.2
+  trending_score: 6.01
+  rank_current: 110
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2375
     - 2382
     - 2390
     - 2430
+    - 2436
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: 0xMassi/webclaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:49.237Z
+  fetched_at: 2026-11-09T09:26:59.639Z
   truncated: true
 type: agent_tool
 tool:

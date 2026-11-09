@@ -16,28 +16,29 @@ tags:
   - agent-runtime
   - agent-swarm
 status: slowing
-quality_percentile: 11
+quality_percentile: 10
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: swarmclawai/swarmclaw
   official_vendor: false
   license: MIT
 signals:
-  stars: 704
+  stars: 705
   last_commit: 2026-06-30T20:58:13Z
-  stars_delta_7d: 7
-  stars_growth_pct: 1
-  trending_score: 7.07
-  rank_current: 89
-  rank_delta: -5
+  stars_delta_7d: 1
+  stars_growth_pct: 0.1
+  trending_score: 1
+  rank_current: 108
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
     - 692
     - 697
     - 704
+    - 705
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +47,7 @@ readme_source:
   repo: swarmclawai/swarmclaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:51.453Z
+  fetched_at: 2026-11-09T09:28:34.212Z
   truncated: true
 type: mcp_server
 launch:

@@ -16,26 +16,26 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: microsoft/SkillOpt
   official_vendor: true
   license: MIT
 signals:
-  stars: 18906
-  last_commit: 2026-11-05T11:18:04Z
-  stars_delta_7d: 225
-  stars_growth_pct: 1.2
-  trending_score: 227.71
-  rank_current: 46
-  rank_delta: 4
+  stars: 18955
+  last_commit: 2026-11-07T12:57:49Z
+  stars_delta_7d: 49
+  stars_growth_pct: 0.3
+  trending_score: 49.13
+  rank_current: 56
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 18302
     - 18547
     - 18681
     - 18906
+    - 18955
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: microsoft/SkillOpt
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:08.508Z
+  fetched_at: 2026-11-09T09:27:53.901Z
   truncated: false
 type: agent_tool
 tool:

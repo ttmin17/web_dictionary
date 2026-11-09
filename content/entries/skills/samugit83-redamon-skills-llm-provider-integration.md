@@ -17,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3298
-  last_commit: 2026-11-04T18:34:53Z
-  stars_delta_7d: 84
-  stars_growth_pct: 2.6
-  trending_score: 86.2
+  stars: 3340
+  last_commit: 2026-11-08T10:18:09Z
+  stars_delta_7d: 42
+  stars_growth_pct: 1.3
+  trending_score: 42.53
   velocity_source: snapshot_delta
   sparkline_4w:
     - 3152
     - 3214
     - 3298
+    - 3340
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/llm-provider-integration/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:13:51.216Z
+  fetched_at: 2026-11-09T09:28:34.064Z
   truncated: false
 type: agent_skill
 skill:
@@ -89,7 +90,7 @@ For a non-LLM external API *tool*, use `agentic-tool-integration`.
   Agent in the Loop (an external MCP client answers), and every builder outside a chat
   run refuses it (`refuse_loop_model`, the `agent-in-the-loop` skill).
 - **NEVER treat every `user_llm_providers` row as a chat LLM.** A non-chat type
-  (today `jev`, the TypeSafe decision API) must be skipped by every path that
+  (`jev` for TypeSafe and `jev_openrouter` for native Jev on OpenRouter) must be skipped by every path that
   builds a chat model, or its token is sent to the wrong host: `setup_llm`'s
   custom branch builds `ChatOpenAI(api_key=<row key>)` with no base URL, which is
   api.openai.com. Add the type to `NON_CHAT_PROVIDER_TYPES` in BOTH twins
@@ -100,11 +101,14 @@ For a non-LLM external API *tool*, use `agentic-tool-integration`.
   back to "the first provider" (`custom_provider_or_fallback` falls back only to
   custom-capable types). `setup_llm` also refuses a non-chat type outright.
 - **A non-chat provider's endpoint is a constant, and its type is locked.**
-  `agentic/jev_client.py` is the only code that talks to `api.typesafe.ai`: a fixed
-  base URL, no redirects, fixed error texts. On the webapp, POST forces model,
-  URL and headers and allows one row per user; PUT and the test route refuse a
-  type change in either direction and ignore a body-supplied URL/headers for a
-  stored row, so a stored token can never be re-pointed at another host.
+  `agentic/jev_client.py` owns the fixed TypeSafe and OpenRouter System One
+  endpoints: pinned Jev 1.13, no redirects, retries or provider failover, and fixed
+  error texts. POST forces model, URL and headers; multiple named Jev rows per
+  account are allowed. PUT and the test route refuse a type change and ignore
+  body-supplied URL/headers for a stored row, so a token cannot be re-pointed.
+  Every project explicitly selects its owner's Jev row via `jevProviderId`;
+  null never means the first row. Legacy/unconfigured projects use deterministic
+  fallbacks until a selection is saved. Imports and presets never carry this id.
 - **ALWAYS register the provider in the webapp provider-type registry** and
   **propagate the key kwarg into every LLM call site.** A provider registered but
   not propagated builds a client with no credentials. The guide enumerates all

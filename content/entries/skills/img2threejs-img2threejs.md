@@ -15,10 +15,10 @@ tags:
   - claude-code
   - computer-graphics
 status: active
-quality_percentile: 70
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-07-15T02:58:39
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: img2threejs/img2threejs
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 20326
+  stars: 21005
   last_commit: 2026-11-05T08:38:00Z
-  stars_delta_7d: 1048
-  stars_growth_pct: 5.4
-  trending_score: 1104.97
-  rank_current: 34
-  rank_delta: -5
+  stars_delta_7d: 679
+  stars_growth_pct: 3.3
+  trending_score: 701.68
+  rank_current: 25
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 18060
     - 18402
     - 19278
     - 20326
+    - 21005
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: img2threejs/img2threejs
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:42.909Z
+  fetched_at: 2026-11-09T09:27:38.171Z
   truncated: false
 type: agent_skill
 skill:

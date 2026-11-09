@@ -14,10 +14,10 @@ tags:
   - agentic-skills
   - claude-code-marketplace
 status: active
-quality_percentile: 69
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: phuryn/pm-skills
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27709
-  last_commit: 2026-10-29T19:09:57Z
-  stars_delta_7d: 328
-  stars_growth_pct: 1.2
-  trending_score: 331.93
+  stars: 27797
+  last_commit: 2026-11-08T23:10:04Z
+  stars_delta_7d: 88
+  stars_growth_pct: 0.3
+  trending_score: 88.28
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 26957
     - 27192
     - 27381
     - 27709
+    - 27797
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: phuryn/pm-skills
   path: pm-execution/skills/retro/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:07.698Z
+  fetched_at: 2026-11-09T09:27:57.926Z
   truncated: false
 type: agent_skill
 skill:
@@ -98,6 +98,8 @@ If the user provides files (sprint data, velocity charts, team feedback, or prev
    - Group similar items into themes
    - Identify the most frequently mentioned topics
    - Note sentiment patterns (frustration, energy, confusion)
+
+   If there is no input yet, collect it anonymously before the discussion, so the first or most senior voice doesn't set the agenda: a word cloud or a 1–5 rating for the mood, and written items others can upvote for what went well and what didn't. The live-polls and live-qa skills cover both.
 
 3. **Analyze the sprint performance**:
    - Sprint goal: achieved or not?

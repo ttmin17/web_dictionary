@@ -13,29 +13,29 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 78
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: 54yyyu/zotero-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5754
-  last_commit: 2026-11-01T02:43:00Z
-  stars_delta_7d: 183
-  stars_growth_pct: 3.3
-  trending_score: 189.01
+  stars: 5816
+  last_commit: 2026-11-06T17:28:47Z
+  stars_delta_7d: 62
+  stars_growth_pct: 1.1
+  trending_score: 62.67
   rank_current: 18
-  rank_delta: 3
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5363
     - 5461
     - 5571
     - 5754
+    - 5816
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: 54yyyu/zotero-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:11:43.807Z
+  fetched_at: 2026-11-09T09:26:53.582Z
   truncated: false
 type: mcp_server
 launch:

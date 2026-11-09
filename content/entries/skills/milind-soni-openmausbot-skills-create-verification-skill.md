@@ -16,10 +16,10 @@ tags:
   - codex
   - computer-use
 status: active
-quality_percentile: 81
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: milind-soni/OpenMausBot
@@ -27,14 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12583
-  last_commit: 2026-11-05T09:31:40Z
-  stars_delta_7d: 1025
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 18995
+  last_commit: 2026-11-09T04:53:35Z
+  stars_delta_7d: 6412
+  stars_growth_pct: 51
+  trending_score: 9679.4
+  rank_current: 1
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 12583
+    - 18995
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +45,7 @@ readme_source:
   repo: milind-soni/OpenMausBot
   path: skills/create-verification-skill/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:12:47.675Z
+  fetched_at: 2026-11-09T09:27:38.670Z
   truncated: false
 type: agent_skill
 skill:

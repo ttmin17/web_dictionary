@@ -12,24 +12,27 @@ tags:
   - claude
   - data-science
 status: active
-quality_percentile: 77
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: akfamily/aktools
   official_vendor: false
   license: MIT
 signals:
-  stars: 1555
-  last_commit: 2026-11-05T08:47:34Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 1560
+  last_commit: 2026-11-06T15:40:40Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.3
+  trending_score: 5.02
+  rank_current: 82
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1555
+    - 1560
 language: zh
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: akfamily/aktools
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:03.329Z
+  fetched_at: 2026-11-09T09:27:08.637Z
   truncated: false
 type: mcp_server
 launch:

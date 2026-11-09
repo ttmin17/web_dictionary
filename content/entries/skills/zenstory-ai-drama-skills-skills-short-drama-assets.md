@@ -12,10 +12,10 @@ tags:
   - ai-video
   - aigc
 status: active
-quality_percentile: 75
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: zenstory-ai/drama-skills
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3812
-  last_commit: 2026-11-04T18:11:51Z
-  stars_delta_7d: 452
-  stars_growth_pct: 13.5
-  trending_score: 512.8
+  stars: 3980
+  last_commit: 2026-11-08T04:37:02Z
+  stars_delta_7d: 168
+  stars_growth_pct: 4.4
+  trending_score: 175.4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2825
     - 3053
     - 3360
     - 3812
+    - 3980
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: zenstory-ai/drama-skills
   path: skills/short-drama-assets/SKILL.md
   branch: main
-  fetched_at: 2026-11-05T13:13:16.395Z
+  fetched_at: 2026-11-09T09:28:09.100Z
   truncated: false
 type: agent_skill
 skill:
@@ -69,7 +69,7 @@ skill:
 ---
 
 # 短剧资产拆解
-从剧本提取可复用、可持续的视觉事实，统一写入 `剧集/<EP>/视觉设定.md`；每次出场先判断身份
+从剧本提取可复用、可持续的视觉事实，统一写入 `剧集/<EP>/视觉设定.md`（每个条目使用二级标题 `## <人物|造型|地点|道具> · <中文名称>`）；每次出场先判断身份
 与状态，剧本语义、镜头走位和生成提示词由各负责技能处理。
 
 ## Quick Start
@@ -89,48 +89,31 @@ skill:
 
 ## 工作流
 
-1. 只读当前范围的剧本和已决定的视觉方向；视觉方向还没有时代锚点时，按已提供的原著或剧本事实判断，证据不足则标为待决定。
-2. 逐场找实体、可见描述、状态变化和含混指代，先不创建资产。
-3. 对每项决定新建、复用、增加变体或标记未决；含混指代不猜。
-4. 写最小可识别设定：统一使用 `识别锚点`、本集状态和变化原因；会持续限制后续动作的身体—物件—空间关系写进有生效范围的状态，不当成一次姿势略过。
-5. 检查造型/伤势、持物/所有权、道具状态、地点时段/天气/光态与跨集结束状态。
-6. 给跨镜出现且观众看得出不一致的可见事实写一条连续性锁，其余保持识别锚点即可。此时还没有分镜，镜头范围写 `入画`，锁写在它所属的条目下（服装写在 `造型` 条目下），分镜写完后自动按「视觉依据」生效，见 [连续性锁](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-lock.md)。
-7. 项目提示词语言不是中文时，给每个人物条目写一行 `画面代称：<正文里的拼写>`；正文从不点名它就写 `画面代称：无`。地点和道具按需。
-8. 整集请求自动处理完整集，末端一次回报关键身份决定和未决指代。
-
-## 内容要求
-
-- 每项先写什么不变使它仍是同一资产，再写本集变化。
-- 识别锚点必须可见、可生成、可比较，不用空泛质量词替代事实。
-- 服装、伤势、湿污、道具开合和光态通常是变体，不是新身份。
-- 不复制剧情摘要，只保留下游生成、分镜或连续性真正需要的事实。
-- 文字、标识和敏感信息遵守项目政策，不擅自补造品牌或私密信息。
-- 多集状态写清生效与持续范围；镜头内瞬态留给分镜。
-- 已确认且持续限制动作空间的关系（身体依托、固定、负重、占位或与功能物件的接触）不是普通镜头姿势：可独立识别的物件仍建资产，关系写进状态并交给分镜逐镜投影；只有剧本明确改变时才结束。
-- 连续性锁只锁不随剧情改变的可见事实；锁面用提示词语言写成最小名词短语，会变的部分留给状态。
-- 「画面代称」把提示词正文里的名字对回本条目，供机械核对关键帧里点名的人物、地点或道具。未声明时，检查器使用条目名称；
-  显式声明后只匹配列出的代称，混合语言正文要把实际使用的中文名与其他语言拼写一并列出。提示词正文语言不是中文时，
-  人物条目必须给出结论：列出正文使用的拼写，或在正文从不点名时写 `画面代称：无`。同一个名字全集只用一个拼写，
-  大小写也一致；多个写法用 `、` 分隔。名字与常用词同形（`道具「手机」` 撞上「手机店」）时也写 `画面代称：无`，让核对不按名字找它。
+1. 读取当前范围剧本与已确定的项目视觉方向；尚未确定时代锚点时，按原著或剧本事实提炼（见 [时代锚点](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/era-anchors.md)），证据不足标为待决定。
+2. 逐场提取实体、可见描述、状态变化与含混指代（见 [出现提取](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/occurrence-extraction.md)），对每次出场判定复用、新变体、新身份或未决（见 [身份与变体](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/identity-vs-variant.md)）；含混指代不猜。
+3. 编写最小可识别设定：先写跨场不变的 `识别锚点`，再写 `本集状态`、变化原因与生效范围；不复制剧情摘要，不擅自补造品牌、文字或私密信息。
+4. 持续限制后续动作空间的身体—物件—空间关系写进有生效范围的状态，可独立识别的物件单建道具资产，交分镜逐镜落实（见 [道具与状态](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/prop-and-state.md)）。
+5. 核对造型/伤势、持物/所有权、道具状态、地点时段/天气/光态与跨集结束状态（见 [连续性变化](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-delta.md)）。
+6. 对跨镜出现且不一致会被看出的不变可见事实声明 `连续性锁`：锁面用提示词语言写成最小名词短语，写在所属条目下（服装锁写在 `造型` 条目下），分镜未出时镜头范围写 `入画`（见 [跨镜一致性锁](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-lock.md)）。
+7. 提示词正文语言不是中文或条目名易与普通词同形时，按 [人物与造型](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/character-and-look.md) 填写 `画面代称`（`AST-13`）。
+8. 整集请求一次处理完整集，末尾集中汇报关键身份决定与未决指代。
 
 ## 按需知识
 
-默认只读本 SKILL、当前剧本和视觉方向。遇到对应问题时只打开一份：
+默认只读本 SKILL、当前剧本和视觉方向。按需查阅：
 
 - 阶段边界与规则分级：[阶段契约](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/stage-contract.md)
-- 定时代、写时代锚点，或想把场所、设备、服装写旧：[时代锚点](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/era-anchors.md)
-- 从剧本找真正的资产出现证据：[出现提取](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/occurrence-extraction.md)
-- 新身份、复用、变体或未决：[身份与变体](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/identity-vs-variant.md)
+- 定时代、写时代锚点，或避免把场所/设备/服装无依据写旧：[时代锚点](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/era-anchors.md)
+- 从剧本提取资产出现证据：[出现提取](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/occurrence-extraction.md)
+- 新身份、复用、变体或未决判定：[身份与变体](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/identity-vs-variant.md)
 - 人物识别与造型层次：[人物与造型](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/character-and-look.md)
-- 地点地理、视图和固定锚点：[地点与视图](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/location-and-view.md)
-- 功能道具、所有权、状态变化，或画面上的可读文字与标识：[道具与状态](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/prop-and-state.md)
+- 地点地理、视图与固定锚点：[地点与视图](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/location-and-view.md)
+- 功能道具、所有权、状态变化与可读文字政策：[道具与状态](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/prop-and-state.md)
 - 声音参考的身份与授权边界：[声音方向](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/voice-direction.md)
-- 跨场、跨镜、跨集状态：[连续性变化](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-delta.md)
-- 跨镜服装/道具颜色、材质漂移：[跨镜一致性锁](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-lock.md)
-- 完成前做一次资产漏项检查：[资产审查清单](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/asset-review-checklist.md)
+- 跨场、跨镜、跨集状态交接：[连续性变化](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-delta.md)
+- 跨镜服装/道具颜色、材质锁面：[跨镜一致性锁](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/continuity-lock.md)
+- 完成前漏项与一致性核对：[资产审查清单](https://github.com/zenstory-ai/drama-skills/blob/main/skills/short-drama-assets/references/asset-review-checklist.md)
 
 ## 完成
 
-所有明确出场都已复用、新建、变体化或标为真实未决；需要保持的视觉事实与状态变化已写入唯一
-视觉设定文档，即完成。图片提示词、分镜、审查和生产不自动开始。
-写完本阶段文档后，可转 `$short-drama` 做局部机械核对（只核对已有文档）；五份齐备后再做完整核对。内容质量仍由创作者审查。
+所有明确出场均已复用、新建、变体化或标为真实未决，且识别锚点、状态变化与连续性锁已写入 `剧集/<EP>/视觉设定.md`。完成后可转 `$short-drama` 做局部或完整机械核对；图片提示词、分镜、审查和生产不自动开始。

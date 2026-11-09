@@ -15,29 +15,29 @@ tags:
   - bitbucket
   - chatgpt
 status: active
-quality_percentile: 58
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: atlassian/atlassian-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1148
-  last_commit: 2026-11-03T22:02:59Z
-  stars_delta_7d: 27
-  stars_growth_pct: 2.4
-  trending_score: 27.65
-  rank_current: 65
-  rank_delta: 1
+  stars: 1151
+  last_commit: 2026-11-07T01:08:43Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0.3
+  trending_score: 3.01
+  rank_current: 95
+  rank_delta: -30
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1090
     - 1106
     - 1121
     - 1148
+    - 1151
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: atlassian/atlassian-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:12:08.956Z
+  fetched_at: 2026-11-09T09:27:12.796Z
   truncated: false
 type: mcp_server
 launch:
@@ -140,7 +140,7 @@ Pick your AI client below to install the official Atlassian MCP Server. Each but
       <br><sub>Search and create Jira issues via GitHub Copilot.</sub>
     </td>
     <td align="center" width="180">
-      <a href="https://chatgpt.com/apps/atlassian-rovo/connector_692de805e3ec8191834719067174a384">
+      <a href="https://chatgpt.com/plugins/plugin_asdk_app_6a83901dde988191b3f3cefdcc19acfa">
         <img src="https://img.shields.io/badge/ChatGPT-10A37F?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyIDIgMyA3djEwbDkgNSA5LTVWN3ptMCAyLjMgNi41IDMuNkwxMiAxMS41IDUuNSA3Ljl6TTUgOS42bDYgMy4zdjYuOGwtNi0zLjN6bTE0IDB2Ni44bC02IDMuM3YtNi44eiIvPjwvc3ZnPg==&logoColor=white" alt="Add to ChatGPT"><br>
         <b>Add to ChatGPT</b>
       </a>

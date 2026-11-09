@@ -13,10 +13,10 @@ tags:
   - anthropic
   - chatgpt
 status: active
-quality_percentile: 88
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: decolua/9router
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 31971
-  last_commit: 2026-10-28T09:45:26Z
-  stars_delta_7d: 547
-  stars_growth_pct: 1.7
-  trending_score: 556.52
+  stars: 32162
+  last_commit: 2026-11-09T01:36:54Z
+  stars_delta_7d: 191
+  stars_growth_pct: 0.6
+  trending_score: 192.14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30732
     - 31045
     - 31424
     - 31971
+    - 32162
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: decolua/9router
   path: skills/9router-image/SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:12:33.461Z
+  fetched_at: 2026-11-09T09:27:31.482Z
   truncated: false
 type: agent_skill
 skill:

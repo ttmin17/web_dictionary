@@ -6,11 +6,16 @@ tagline: 制作 PPT、演示文稿、幻灯片、汇报材料时使用。Dashi P
 summary: 如果脚本有输出,把输出内容附在最终回复末尾提醒用户更新;如果脚本无输出或检查失败,保持静默,不要提版本检查。
 categories:
   - media-creative
+tags:
+  - ai-agent
+  - ai-ppt
+  - claude
+  - claude-code
 status: active
-quality_percentile: 42
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-14T14:55:21.336Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: chuspeeism/dashi-ppt-skill
@@ -18,15 +23,14 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 9465
-  last_commit: 2026-09-12T14:13:08Z
-  stars_delta_7d: 197
+  stars: 10507
+  last_commit: 2026-11-06T08:26:30Z
+  stars_delta_7d: 467
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: age_velocity
   sparkline_4w:
-    - 9465
-    - 9465
+    - 10507
 language: zh
 needs_keys: false
 prerequisites: []
@@ -34,7 +38,7 @@ readme_source:
   repo: chuspeeism/dashi-ppt-skill
   path: skills/dashi-ppt/SKILL.md
   branch: main
-  fetched_at: 2026-10-14T14:55:16.380Z
+  fetched_at: 2026-11-09T09:27:46.029Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,8 +57,13 @@ skill:
     - project/.npmrc
     - project/assets/skill/dashi-ppt-favicon.png
     - project/assets/social-icons/bilibili.svg
-tags:
-  - pdf
+  pack_total_skills: 1
+  is_pack_primary: true
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: chuspeeism-dashi-ppt-skill
 ---
 
 # Dashi PPT

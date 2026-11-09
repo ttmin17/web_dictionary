@@ -17,25 +17,26 @@ status: active
 quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: ucsandman/DashClaw
   official_vendor: false
   license: MIT
 signals:
-  stars: 314
-  last_commit: 2026-11-04T01:23:21Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0.3
-  trending_score: 1
-  rank_current: 106
-  rank_delta: 5
+  stars: 316
+  last_commit: 2026-11-09T06:30:27Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.6
+  trending_score: 2.01
+  rank_current: 98
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 313
     - 313
     - 314
+    - 316
 language: en
 needs_keys: true
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: ucsandman/DashClaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:14:00.351Z
+  fetched_at: 2026-11-09T09:28:42.624Z
   truncated: false
 type: mcp_server
 launch:

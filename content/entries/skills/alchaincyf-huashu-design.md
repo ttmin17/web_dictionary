@@ -9,13 +9,13 @@ categories:
 tags:
   - agent-skills
   - ai-design
+  - animation
   - claude-code
-  - claude-skills
 status: active
-quality_percentile: 77
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-09T09:28:46.976Z
 source:
   kind: github_repo
   repo: alchaincyf/huashu-design
@@ -23,17 +23,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 28764
+  stars: 29025
   last_commit: 2026-11-04T03:28:47Z
-  stars_delta_7d: 2402
-  stars_growth_pct: 9.1
-  trending_score: 2620.86
-  rank_current: 19
-  rank_delta: null
+  stars_delta_7d: 261
+  stars_growth_pct: 0.9
+  trending_score: 263.37
+  rank_current: 40
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
     - 26362
     - 28764
+    - 29025
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: alchaincyf/huashu-design
   path: SKILL.md
   branch: master
-  fetched_at: 2026-11-05T13:12:37.411Z
+  fetched_at: 2026-11-09T09:27:34.036Z
   truncated: false
 type: agent_skill
 skill:
