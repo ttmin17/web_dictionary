@@ -13,29 +13,29 @@ tags:
   - claude-code
   - cocoindex
 status: active
-quality_percentile: 61
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: cocoindex-io/cocoindex-code
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2971
-  last_commit: 2026-11-05T23:36:18Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.2
-  trending_score: 6.01
-  rank_current: 79
-  rank_delta: 38
+  stars: 2983
+  last_commit: 2026-11-14T02:53:30Z
+  stars_delta_7d: 12
+  stars_growth_pct: 0.4
+  trending_score: 12.05
+  rank_current: 89
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2926
     - 2948
     - 2965
     - 2971
+    - 2983
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: cocoindex-io/cocoindex-code
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:24.064Z
+  fetched_at: 2026-11-16T09:16:50.267Z
   truncated: false
 type: mcp_server
 launch:

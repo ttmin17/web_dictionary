@@ -13,29 +13,29 @@ tags:
   - chatgpt
   - claude
 status: active
-quality_percentile: 87
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: MemTensor/MemOS
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12332
-  last_commit: 2026-11-07T16:48:42Z
-  stars_delta_7d: 69
-  stars_growth_pct: 0.6
-  trending_score: 69.39
-  rank_current: 47
-  rank_delta: 7
+  stars: 12413
+  last_commit: 2026-11-11T02:51:43Z
+  stars_delta_7d: 81
+  stars_growth_pct: 0.7
+  trending_score: 81.53
+  rank_current: 65
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11926
     - 12096
     - 12263
     - 12332
+    - 12413
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: MemTensor/MemOS
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:19.201Z
+  fetched_at: 2026-11-16T09:16:45.995Z
   truncated: false
 type: agent_tool
 tool:

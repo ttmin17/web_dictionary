@@ -13,29 +13,29 @@ tags:
   - blackmagicdesign
   - davinci-resolve
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: samuelgursky/davinci-resolve-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 4007
-  last_commit: 2026-11-09T04:40:40Z
-  stars_delta_7d: 63
-  stars_growth_pct: 1.6
-  trending_score: 64.01
-  rank_current: 17
-  rank_delta: 2
+  stars: 4124
+  last_commit: 2026-11-16T03:56:42Z
+  stars_delta_7d: 117
+  stars_growth_pct: 2.9
+  trending_score: 120.42
+  rank_current: 22
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3631
     - 3774
     - 3944
     - 4007
+    - 4124
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: samuelgursky/davinci-resolve-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.775Z
+  fetched_at: 2026-11-16T09:15:12.399Z
   truncated: false
 type: mcp_server
 launch:
@@ -58,9 +58,9 @@ launch:
 ---
 
 # DaVinci Resolve MCP Server
-English | [简体中文](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.zh-CN.md)
+English | [简体中文](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.zh-CN.md) | [繁體中文](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-5.0.0-blue.svg)](https://github.com/samuelgursky/davinci-resolve-mcp/releases)
+[![Version](https://img.shields.io/badge/version-5.2.11-blue.svg)](https://github.com/samuelgursky/davinci-resolve-mcp/releases)
 [![npm](https://img.shields.io/npm/v/davinci-resolve-mcp.svg?label=npm&color=CB3837)](https://www.npmjs.com/package/davinci-resolve-mcp)
 [![API Coverage](https://img.shields.io/badge/API%20Coverage-100%25-brightgreen.svg)](https://raw.githubusercontent.com/samuelgursky/davinci-resolve-mcp/main/docs/reference/api-coverage.md)
 [![Tools](https://img.shields.io/badge/MCP%20Tools-37%20(390%20full)-blue.svg)](#server-modes)
@@ -275,6 +275,11 @@ The open-source servers are complete and fully functional on their own.
 
 ## What You Can Do
 
+For scoring to picture, the [Resolve / Live film workflow](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/docs/guides/film-workflow.md)
+adds picture/cue baselines, change reports, verified new-track stem return and
+evidence-based handoff preflight. It preserves source media and reports missing
+calibration or delivery evidence explicitly.
+
 ```text
 "List all projects and open the one called 'My Film'"
 "Create a timeline called 'Assembly Cut' from all clips in the current bin"
@@ -472,9 +477,9 @@ The default server is a local stdio process launched by your MCP client; it does
 | Advanced (offline) tools | **18** — .drp/.drt/.drx + DB authoring, no Resolve running |
 | Kernel Actions | **136** guarded workflow actions across 9 compound tools |
 | API Methods Covered | **361/361** (100%) |
-| Methods Live Tested | **338/361** (93.6%) |
-| Live Test Pass Rate | **338/338** (100%) |
-| Tested Against | DaVinci Resolve 19.1.3 Studio + Resolve 20.3.2 Studio + Resolve 21.0.2 Studio + Resolve 21.0.3 **free** (via the in-app bridge) |
+| Methods Live Tested | **349/361** (96.7%) |
+| Live Test Pass Rate | **349/349** (100%) |
+| Tested Against | DaVinci Resolve 19.1.3 Studio + Resolve 20.3.2 Studio + Resolve 21.0.2 Studio + Resolve 21.0.3 and 21.0.4 **free** (via the in-app bridge) |
 
 For method-by-method status, see [API Coverage and Test Results](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/docs/reference/api-coverage.md). For current workflow support, see [Kernel Action Coverage](https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/docs/kernels/README.md).
 

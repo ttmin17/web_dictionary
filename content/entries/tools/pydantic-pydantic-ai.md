@@ -15,29 +15,29 @@ tags:
   - harness
   - harness-engineering
 status: active
-quality_percentile: 84
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: pydantic/pydantic-ai
   official_vendor: false
   license: MIT
 signals:
-  stars: 21099
-  last_commit: 2026-11-09T09:24:24Z
-  stars_delta_7d: 62
-  stars_growth_pct: 0.3
-  trending_score: 62.18
-  rank_current: 50
-  rank_delta: 5
+  stars: 21233
+  last_commit: 2026-11-16T09:03:42Z
+  stars_delta_7d: 134
+  stars_growth_pct: 0.6
+  trending_score: 134.85
+  rank_current: 47
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 20721
     - 20875
     - 21037
     - 21099
+    - 21233
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: pydantic/pydantic-ai
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:34.244Z
+  fetched_at: 2026-11-16T09:17:02.767Z
   truncated: false
 type: agent_tool
 tool:
@@ -117,7 +117,7 @@ from pydantic_ai.capabilities import WebSearch
 from pydantic_ai_harness import Advisor, Coder
 
 agent = Agent(
-    'anthropic:claude-fable-5-1',
+    'anthropic:claude-fable-5-2',
     capabilities=[
         Coder(),  # files, shell, repo context, sub-agents, context management
         WebSearch(),  # look up docs and error messages on the web
@@ -139,7 +139,7 @@ capabilities = [
 Run the file and you're chatting with the agent in your terminal. To try it before writing any code, run the exported [`coder_agent`](https://pydantic.dev/docs/ai/harness/coder/) with [`clai`](https://pydantic.dev/docs/ai/integrations/cli/#custom-agents) (the Pydantic AI CLI), via [`uvx`](https://docs.astral.sh/uv/guides/tools/):
 
 ```bash
-uvx --with "pydantic-ai-harness[coder]" clai -a pydantic_ai_harness.coder:coder_agent -m anthropic:claude-fable-5-1
+uvx --with "pydantic-ai-harness[coder]" clai -a pydantic_ai_harness.coder:coder_agent -m anthropic:claude-fable-5-2
 ```
 
 **Build this →** [Coder](https://pydantic.dev/docs/ai/harness/coder/), from the [Harness](https://pydantic.dev/docs/ai/harness/)

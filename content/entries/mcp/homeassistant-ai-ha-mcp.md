@@ -13,29 +13,29 @@ tags:
   - home-assistant
   - home-automation
 status: active
-quality_percentile: 66
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: homeassistant-ai/ha-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5518
-  last_commit: 2026-11-09T09:14:12Z
-  stars_delta_7d: 79
-  stars_growth_pct: 1.5
-  trending_score: 80.15
-  rank_current: 16
-  rank_delta: 1
+  stars: 7895
+  last_commit: 2026-11-16T06:49:10Z
+  stars_delta_7d: 2377
+  stars_growth_pct: 43.1
+  trending_score: 3400.95
+  rank_current: 2
+  rank_delta: 14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5133
     - 5249
     - 5439
     - 5518
+    - 7895
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: homeassistant-ai/ha-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:27:03.990Z
+  fetched_at: 2026-11-16T09:15:20.937Z
   truncated: false
 type: mcp_server
 launch:
@@ -67,10 +67,10 @@ launch:
   <!-- mcp-name: io.github.homeassistant-ai/ha-mcp -->
 
   <p align="center">
-    <img src="https://img.shields.io/badge/tools-87-blue" alt="87 Tools">
+    <img src="https://img.shields.io/badge/tools-86-blue" alt="86 Tools">
     <a href="https://github.com/homeassistant-ai/ha-mcp/releases"><img src="https://img.shields.io/github/v/release/homeassistant-ai/ha-mcp" alt="Release"></a>
     <a href="https://github.com/homeassistant-ai/ha-mcp/actions/workflows/e2e-tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/homeassistant-ai/ha-mcp/e2e-tests.yml?branch=master&label=E2E%20Tests" alt="E2E Tests"></a>
-    <a href="https://github.com/homeassistant-ai/ha-mcp/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/homeassistant-ai/ha-mcp.svg" alt="License"></a>
+    <a href="https://github.com/homeassistant-ai/ha-mcp/blob/master/LICENSE"><img src="https://img.shields.io/github/license/homeassistant-ai/ha-mcp.svg" alt="License"></a>
     <br>
     <a href="https://github.com/homeassistant-ai/ha-mcp/commits/master"><img src="https://img.shields.io/github/commit-activity/m/homeassistant-ai/ha-mcp.svg" alt="Activity"></a>
     <a href="https://github.com/jlowin/fastmcp"><img src="https://img.shields.io/badge/Built%20with-FastMCP-purple" alt="Built with FastMCP"></a>
@@ -100,7 +100,7 @@ The recommended way to run ha-mcp is the **HA-MCP integration**. It installs int
 
 **Quick start:**
 
-> The setup below is for version 9.0.0 (October 28, 2026) and later; earlier versions show a shorter setup form without the administrator account step.
+> Only the current stable Home Assistant release is officially supported. Older releases down to 2026.8.0, the technical floor, may or may not run but are not officially supported. A beta release may be supported, but that is not guaranteed; where it is, a fallback keeps current stable working.
 
 1. Install the **HA-MCP integration** (requires **Home Assistant 2026.8.0 or newer**; see [compatibility details](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/docs/in-process-server.md#requirements)). On **Home Assistant 2026.8–2026.10**, open HACS, search for **HA-MCP**, then **Download**.
    On **Home Assistant 2026.11 or newer**, open **Settings → Marketplace**, accept its first-run warning, and search for **HA-MCP**, then **Install**. HA-MCP is in the default catalog, so installing it and receiving its updates do not require connecting GitHub or adding a custom repository. The badge above also opens its catalog page.
@@ -140,14 +140,14 @@ Prefer to run ha-mcp as a Home Assistant **app (add-on)**? On **Home Assistant O
 
 [Full app documentation →](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/homeassistant-addon/DOCS.md)
 
-> ⚠️ **Configure exactly one install method per client.** The custom component, the app, Docker/PyPI, and local stdio are independent ways to run the same server — pick one and point your AI client at that single URL. Keeping two entries for the same server in one client (for example a local `uvx ha-mcp@latest` entry with `HOMEASSISTANT_URL` / `HOMEASSISTANT_TOKEN` alongside an app or component URL) is a known cause of connection hangs.
+> ⚠️ **Configure exactly one install method per client.** The custom component, the app, Docker/PyPI, and local stdio are independent ways to run the same server — pick one and point your AI client at that single URL. Keeping two entries for the same server in one client (for example a local `uvx --python 3.14 ha-mcp@latest` entry with `HOMEASSISTANT_URL` / `HOMEASSISTANT_TOKEN` alongside an app or component URL) is a known cause of connection hangs.
 
 ### Other install methods
 
 These run the server outside Home Assistant — useful for **Container** / **Core** installs (which can't run apps) or a separate host. The [Setup Wizard](https://homeassistant-ai.github.io/ha-mcp/setup/) generates the exact client-specific config for each.
 
 - **Docker (HTTP server):** run `ghcr.io/homeassistant-ai/ha-mcp` in HTTP mode, pointed at your Home Assistant URL and a long-lived token (an administrator's is recommended; non-admin tokens work with limitations), and connect your client to its secret URL. See the [Setup Wizard](https://homeassistant-ai.github.io/ha-mcp/setup/) for the full command and per-client config.
-- **PyPI / uvx (HTTP server):** run the published `ha-mcp` package with `uvx ha-mcp@latest` (or pip) as a streamable-HTTP server the same way. Details in the [Setup Wizard](https://homeassistant-ai.github.io/ha-mcp/setup/).
+- **PyPI / uvx (HTTP server):** run the published `ha-mcp` package with `uvx --python 3.14 ha-mcp@latest` (or pip) as a streamable-HTTP server the same way. Details in the [Setup Wizard](https://homeassistant-ai.github.io/ha-mcp/setup/).
 - **Local stdio (not recommended):** runs ha-mcp on your own machine over stdio. The one-command installers in the **Demo server** section below use this path; the [Setup Wizard](https://homeassistant-ai.github.io/ha-mcp/setup/) covers connecting it to your own Home Assistant.
 - **OIDC authentication:** gate remote access behind an external identity provider (Authentik, Keycloak, Auth0, etc.) instead of a secret URL — all authenticated users share the server's Home Assistant credentials. See [OIDC Mode](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/oidc.md).
 
@@ -285,7 +285,7 @@ If the original entry has been deleted, restore recreates the helper and reports
 <details>
 <!-- TOOLS_TABLE_START -->
 
-<summary><b>Complete Tool List (87 tools)</b></summary>
+<summary><b>Complete Tool List (86 tools)</b></summary>
 
 | Category | Tools |
 |----------|-------|
@@ -301,7 +301,7 @@ If the original entry has been deleted, restore recreates the helper and reports
 | **Developer** | `ha_dev_manage_server`, `ha_dev_manage_settings` |
 | **Device Registry** | `ha_get_device`, `ha_remove_device`, `ha_set_device` |
 | **Energy** | `ha_manage_energy_prefs` |
-| **Entity Registry** | `ha_get_entity_exposure`, `ha_get_entity`, `ha_remove_entity`, `ha_set_entity` |
+| **Entity Registry** | `ha_get_entity`, `ha_remove_entity`, `ha_set_entity` |
 | **Files** | `ha_delete_file` *(beta)*, `ha_list_files` *(beta)*, `ha_read_file` *(beta)*, `ha_write_file` *(beta)* |
 | **Groups** | `ha_config_list_groups`, `ha_config_remove_group`, `ha_config_set_group` |
 | **HACS** | `ha_get_hacs_info`, `ha_manage_hacs` |
@@ -366,6 +366,8 @@ The **HA-MCP integration** also powers a set of privileged tools that standard H
 
 Template helper edit backups and restores also require the component, using either its Server entry or File & YAML Tools entry. These five tools return an error with installation instructions if the component is missing.
 
+A server that runs outside Home Assistant (the app, Docker or pip) needs the component of its own release for these tools. After a server update, update HA-MCP in HACS or the Marketplace and restart Home Assistant; until then they return an error that says so. The in-process server always runs the release its component ships with.
+
 These tools also require beta feature flags. See **[Beta Features](https://github.com/homeassistant-ai/ha-mcp/blob/master/docs/beta.md)** for how to enable them — including the `ENABLE_BETA_FEATURES` master flag, which must be on before the filesystem/YAML sub-flags take effect.
 
 ### Install
@@ -400,7 +402,7 @@ Skills can still be installed manually for clients that prefer local skill files
 
 ## 🔍 Tool Discovery for AI Agents
 
-By default, the full tool catalog (~87 tools) is listed to the client through the standard MCP `tools/list` response. Clients with deferred / on-demand tool loading (claude.ai, Claude Desktop, Claude Code) handle that fine — tools are pulled into context only when needed, so idle context cost is near-zero.
+By default, the full tool catalog (~86 tools) is listed to the client through the standard MCP `tools/list` response. Clients with deferred / on-demand tool loading (claude.ai, Claude Desktop, Claude Code) handle that fine — tools are pulled into context only when needed, so idle context cost is near-zero.
 
 For setups *without* deferred tool support — models like Claude Haiku, Gemini, OpenAI-compatible local models and smaller open-weights models, or clients that inline all tool schemas regardless of model (e.g. GitHub Copilot CLI) — listing the full tool catalog up front adds a lot of idle context and can overwhelm smaller models. To address that, the server ships with a **search-based discovery mode** built on top of FastMCP's BM25 search transform.
 
@@ -435,7 +437,7 @@ A `ha_manage_*` tool combines several operations, so it is reachable from more t
 ### When to enable
 
 - **Claude Haiku, OpenAI-compatible local models, Gemini, or any model without native deferred tool support** — large idle-context savings. The same applies to clients that inline all tool schemas regardless of model (e.g. GitHub Copilot CLI, even when running Claude Sonnet/Opus).
-- MCP clients that cap total tool count (some cap at 100) — surfaces a minimal set (~10 tools) instead of 87.
+- MCP clients that cap total tool count (some cap at 100) — surfaces a minimal set (~10 tools) instead of 86.
 - **Cost-sensitive deployments** — fewer idle tokens per turn.
 
 Leave it off in clients with deferred tool loading (claude.ai, Claude Desktop, Claude Code); the full catalog has no idle cost there, direct calls skip the search step, and the client's built-in tool search is the better choice — there is no benefit to running ha-mcp's on top of it. Whether tools are deferred depends on the client and model combination: the same model can behave differently per client — GitHub Copilot CLI running Claude Sonnet/Opus inlines the full catalog and still benefits from tool search here. Some Codex models and ChatGPT include deferred tools too — check your client/model directly to confirm its features so you don't leave this enabled unnecessarily.

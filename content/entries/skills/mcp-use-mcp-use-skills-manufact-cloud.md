@@ -18,7 +18,7 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mcp-use/mcp-use
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10859
-  last_commit: 2026-11-07T20:09:55Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.1
-  trending_score: 11.01
+  stars: 10979
+  last_commit: 2026-11-13T22:02:51Z
+  stars_delta_7d: 120
+  stars_growth_pct: 1.1
+  trending_score: 121.33
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10785
     - 10814
     - 10848
     - 10859
+    - 10979
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mcp-use/mcp-use
   path: skills/manufact-cloud/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:52.183Z
+  fetched_at: 2026-11-16T09:15:07.644Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,7 +58,7 @@ skill:
     - references/cloud-commands.md
     - references/deployments.md
     - references/management.md
-  pack_total_skills: 7
+  pack_total_skills: 8
   is_pack_primary: false
   clients:
     - claude-code
@@ -113,6 +113,24 @@ the installed version's skills into `.agents/skills`, `.claude/skills`, and
 - Use the returned `dashboardUrl` when a human needs the dashboard. Keep
   credentials and environment variable values out of chat, logs, and commits.
 
+## Report CLI feedback
+
+When the user asks you to report a CLI problem or suggestion, submit a concise
+report with `mcp-use feedback send '...' --json`. Pass the message as one literal
+argument, using an argument array or proper shell escaping so backticks and `$`
+in report text are not evaluated. For text beginning with a dash, use
+`mcp-use feedback send --json -- '...'`.
+Include expected and observed behavior and the affected command;
+omit secrets, personal data, raw logs, and conversation contents. Ask before
+sending when the user has not authorized a report.
+
+No login is needed. Explicit feedback is sent even when passive usage analytics
+is disabled. Exit 0 means the capture endpoint accepted the request; retain the
+`reportId`. It does not confirm human review. Inspect `error.code` on failure:
+`feedback_rejected`, `feedback_network_error`, or `feedback_timeout` (exit 1).
+Invalid input exits 2 with `usage_error`; correct the arguments before sending.
+Network failures and timeouts leave acceptance unknown; do not retry automatically.
+
 ## Choose a command
 
 - **Deploy or redeploy:** read [deployment workflows](https://github.com/mcp-use/mcp-use/blob/main/skills/manufact-cloud/references/deployments.md).
@@ -122,6 +140,8 @@ the installed version's skills into `.agents/skills`, `.claude/skills`, and
   [other Cloud commands](https://github.com/mcp-use/mcp-use/blob/main/skills/manufact-cloud/references/cloud-commands.md).
 - **Create or update alerts:** read [alert rules](https://github.com/mcp-use/mcp-use/blob/main/skills/manufact-cloud/references/alerts.md) for the
   dashboard YAML format, metric selection, and useful recovery conditions.
+- **Analyze server usage, errors, latency, or clients:** use the bundled
+  `manufact-analytics` skill for `analytics catalog` and read-only SQL queries.
 
 `rm` is the destructive verb, with `remove` as an alias. Confirm the target
 organization and server from the user's request before running destructive

@@ -11,29 +11,29 @@ tags:
   - extension
   - llm
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: nicobailon/pi-mcp-adapter
   official_vendor: false
   license: MIT
 signals:
-  stars: 1646
-  last_commit: 2026-11-06T16:06:10Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.2
-  trending_score: 4.01
-  rank_current: 118
-  rank_delta: -10
+  stars: 1652
+  last_commit: 2026-11-11T03:36:30Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.4
+  trending_score: 6.02
+  rank_current: 127
+  rank_delta: -9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1597
     - 1617
     - 1642
     - 1646
+    - 1652
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: nicobailon/pi-mcp-adapter
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.586Z
+  fetched_at: 2026-11-16T09:15:28.647Z
   truncated: false
 type: agent_tool
 tool:

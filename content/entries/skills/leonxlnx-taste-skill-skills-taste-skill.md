@@ -14,10 +14,10 @@ tags:
   - anti-slop
   - claude-code
 status: active
-quality_percentile: 65
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Leonxlnx/taste-skill
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 112215
+  stars: 116461
   last_commit: 2026-11-08T21:51:50Z
-  stars_delta_7d: 1843
-  stars_growth_pct: 1.7
-  trending_score: 1873.77
-  rank_current: 9
-  rank_delta: -2
+  stars_delta_7d: 4246
+  stars_growth_pct: 3.8
+  trending_score: 4406.66
+  rank_current: 7
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99005
     - 102637
     - 110372
     - 112215
+    - 116461
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: Leonxlnx/taste-skill
   path: skills/taste-skill/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:17.380Z
+  fetched_at: 2026-11-16T09:15:40.053Z
   truncated: false
 type: agent_skill
 skill:

@@ -15,10 +15,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 69
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: vercel-labs/agent-desktop
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 19921
-  last_commit: 2026-11-08T20:44:28Z
-  stars_delta_7d: 3710
-  stars_growth_pct: 22.9
-  trending_score: 4559.06
+  stars: 24396
+  last_commit: 2026-11-15T12:53:40Z
+  stars_delta_7d: 4475
+  stars_growth_pct: 22.5
+  trending_score: 5480.25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16211
     - 19921
+    - 24396
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: vercel-labs/agent-desktop
   path: skills/agent-desktop-windows/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:18.460Z
+  fetched_at: 2026-11-16T09:16:44.530Z
   truncated: false
 type: agent_skill
 skill:
@@ -145,6 +146,8 @@ observation, actions and capture there fail or return nothing.
 - **Unsigned binary warnings are expected.** See `references/troubleshooting.md`.
 
 ## What differs on Windows
+
+- Sandboxes are not available on Windows yet. To run agent-desktop in a container you manage yourself, see `agent-browser.dev/desktop/guides/docker-container`.
 
 - Ref actions are semantic UI Automation calls in headless and `--headed` mode, except `right-click`, `double-click`, `triple-click`, `type` and `focus`, which are physical or take focus and need `--headed`.
 - A ref resolves only when it was the only element in the window its snapshot captured with its role, native id, name and description, and exactly one live element still matches. Uniqueness counts the whole window, not the shallow tree a `--skeleton` or `--max-depth` snapshot presents, so a twin below the cut still refuses the ref. Identical twins, such as several identical `Delete` buttons, are refused with `AMBIGUOUS_TARGET`, `details.kind: identity_not_unique`, before anything reaches the app; a live second match is `saved_ref_ambiguous`, and a removed element is `STALE_REF`, `saved_ref_absent`. Take a fresh snapshot after a list changes, and use `--headed mouse-click --xy` when you must pick one of two identical controls.

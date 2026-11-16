@@ -13,10 +13,10 @@ tags:
   - anthropic
   - artificial-intelligence
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 115108
-  last_commit: 2026-11-09T09:22:00Z
-  stars_delta_7d: 1814
-  stars_growth_pct: 1.6
-  trending_score: 1843.04
+  stars: 117496
+  last_commit: 2026-11-16T08:47:55Z
+  stars_delta_7d: 2388
+  stars_growth_pct: 2.1
+  trending_score: 2437.54
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 101675
     - 103202
     - 113294
     - 115108
+    - 117496
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: openclaw/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:21.596Z
+  fetched_at: 2026-11-16T09:15:44.017Z
   truncated: false
 type: agent_skill
 skill:
@@ -192,17 +192,24 @@ Add the `claude-mem` plugin to your OpenClaw gateway configuration:
 ```json
 {
   "plugins": {
-    "claude-mem": {
-      "enabled": true,
-      "config": {
-        "project": "my-project",
-        "syncMemoryFile": true,
-        "workerPort": 37777
+    "entries": {
+      "claude-mem": {
+        "enabled": true,
+        "hooks": { "allowConversationAccess": true },
+        "config": {
+          "project": "my-project",
+          "syncMemoryFile": true,
+          "workerPort": 37777
+        }
       }
     }
   }
 }
 ```
+
+On OpenClaw versions that gate conversation hooks, a plugin installed from outside the bundled set must be allowed to use them. Without `hooks.allowConversationAccess`, OpenClaw loads claude-mem but blocks `before_prompt_build` and `agent_end`, so no prompts, context or summaries are recorded. The installer sets this for you. Older OpenClaw without the gate, such as 2026.2.9, rejects the `hooks` key as an unrecognized key, so leave it out there.
+
+Check what OpenClaw registered with `openclaw plugins inspect claude-mem --runtime --json`: `typedHooks` should list `before_prompt_build` and `agent_end`, and `diagnostics` should be empty. (Older OpenClaw has no `inspect`; use `openclaw plugins info claude-mem --json`.)
 
 #### Config fields explained
 
@@ -240,10 +247,9 @@ The observation feed shows `disconnected` because we haven't configured it yet. 
 
 Have an agent do some work. The plugin automatically records observations through these OpenClaw events:
 
-1. **`before_agent_start`** — Initializes a claude-mem session when the agent starts
-2. **`before_prompt_build`** — Injects the observation timeline into the agent's system prompt (cached for 60s)
-3. **`after_tool_call`** — Records each tool use (Read, Write, Bash, etc.) as an observation
-4. **`agent_end`** — Summarizes the session and marks it complete
+1. **`before_prompt_build`** — Records the user's prompt in a claude-mem session and injects the observation timeline into the agent's system prompt (cached for 60s). OpenClaw before 2026.8.1 still has `before_agent_start`, which carries the raw user prompt, so there the prompt is recorded on `before_agent_start` instead.
+2. **`after_tool_call`** — Records each tool use (Read, Write, Bash, etc.) as an observation
+3. **`agent_end`** — Summarizes the session and marks it complete
 
 All of this happens automatically. No additional configuration needed.
 
@@ -370,16 +376,19 @@ Your complete plugin config should now look like this (using Telegram as an exam
 ```json
 {
   "plugins": {
-    "claude-mem": {
-      "enabled": true,
-      "config": {
-        "project": "my-project",
-        "syncMemoryFile": true,
-        "workerPort": 37777,
-        "observationFeed": {
-          "enabled": true,
-          "channel": "telegram",
-          "to": "123456789"
+    "entries": {
+      "claude-mem": {
+        "enabled": true,
+        "hooks": { "allowConversationAccess": true },
+        "config": {
+          "project": "my-project",
+          "syncMemoryFile": true,
+          "workerPort": 37777,
+          "observationFeed": {
+            "enabled": true,
+            "channel": "telegram",
+            "to": "123456789"
+          }
         }
       }
     }
@@ -445,8 +454,7 @@ Shows observation feed status. Accepts optional `on`/`off` argument.
 ```
 OpenClaw Gateway
   │
-  ├── before_agent_start ───→ Init session
-  ├── before_prompt_build ──→ Inject context into system prompt
+  ├── before_prompt_build ──→ Record prompt + inject context into system prompt
   ├── after_tool_call ──────→ Record observation
   ├── agent_end ────────────→ Summarize + Complete session
   └── gateway_start ────────→ Reset session tracking + context cache
@@ -473,8 +481,7 @@ Every tool use (Read, Write, Bash, etc.) is sent to the claude-mem worker as an 
 
 ### Session lifecycle
 
-- **`before_agent_start`** — Creates a session in the worker.
-- **`before_prompt_build`** — Fetches the observation timeline and returns it as `appendSystemContext`. Cached for 60s.
+- **`before_prompt_build`** — Records the user's request in the worker session, and fetches the observation timeline to return as `appendSystemContext`. Cached for 60s. On OpenClaw before 2026.8.1, `before_agent_start` records the raw prompt instead.
 - **`after_tool_call`** — Records observation (fire-and-forget) from the call's params and result; a failed call's response starts with its error text. Tool responses are truncated to 1000 characters.
 - **`agent_end`** — Sends the last assistant message for summarization, then completes the session. Both fire-and-forget.
 - **`gateway_start`** — Clears all session tracking (session IDs, context cache) so agents start fresh.
@@ -504,22 +511,27 @@ A background service connects to the worker's SSE stream and forwards `new_obser
 ```json
 {
   "plugins": {
-    "claude-mem": {
-      "enabled": true,
-      "config": {
-        "project": "openclaw",
-        "syncMemoryFile": true,
-        "workerPort": 37777,
-        "observationFeed": {
-          "enabled": false,
-          "channel": "telegram",
-          "to": "123456789"
+    "entries": {
+      "claude-mem": {
+        "enabled": true,
+        "hooks": { "allowConversationAccess": true },
+        "config": {
+          "project": "openclaw",
+          "syncMemoryFile": true,
+          "workerPort": 37777,
+          "observationFeed": {
+            "enabled": false,
+            "channel": "telegram",
+            "to": "123456789"
+          }
         }
       }
     }
   }
 }
 ```
+
+Leave out `hooks` on OpenClaw versions without the conversation-hook gate, such as 2026.2.9, which reject it.
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|

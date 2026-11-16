@@ -18,7 +18,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3340
-  last_commit: 2026-11-08T10:18:09Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.3
-  trending_score: 42.53
+  stars: 3411
+  last_commit: 2026-11-14T15:34:14Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2.1
+  trending_score: 72.51
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3152
     - 3214
     - 3298
     - 3340
+    - 3411
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/plugin-platform/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:34.064Z
+  fetched_at: 2026-11-16T09:17:02.509Z
   truncated: false
 type: agent_skill
 skill:
@@ -64,7 +64,7 @@ skill:
     function in redamon.sh.
   folder_path: skills/plugin-platform
   extra_files: []
-  pack_total_skills: 17
+  pack_total_skills: 18
   is_pack_primary: false
   clients:
     - claude-code
@@ -114,14 +114,20 @@ for an LLM call path, `llm-provider-integration`; for tests, `redamon-testing`.
 - **ALWAYS serve a Gateway call through `withGateway`** ([gateway.ts](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../webapp/src/lib/plugins/gateway.ts)).
   It re-authorizes every call: the call token, `action_ended`/`job_ended` (a token must not outlive
   its action or job; found by the phase 04 review), the plugin still serving (enabled, ready, not
-  revoked), the permission an admin granted, and the tenancy of the session. A route that reads
-  the token itself skips some of these.
-- **NEVER let a plugin write what the agent runs.** A plugin may only `propose`; approval, reset
-  and deletion are core routes that check the scope owner strictly
-  ([changeSetAccess.ts](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../webapp/src/lib/plugins/changeSetAccess.ts): `ownsScope`, and
-  `bodyOwnerMatches` because the act-as cookie is site-wide), and admin lifecycle routes re-read the
-  role from the database because the session JWT outlives a demotion
-  ([lifecycleRoutes.ts](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../webapp/src/lib/plugins/lifecycleRoutes.ts)). A `reviewProposal` that
+  revoked), the permission an admin granted, and the tenancy (`checkTenancy`): `projectAccess` for
+  the token's `sub` (as acted under `act`) meets every level `pluginProjectLevels` gives the
+  plugin's permissions (`W`, `W+A` for `llm:invoke`, `O` with none), the project's owner is still
+  the token's `ten`, and a session's conversation is reached only through `conversationReachable`.
+  Every shortfall is the same 404. A model call spends `ten`'s model and keys, never the person's.
+  A route that reads the token itself skips some of these.
+- **NEVER let a plugin write what the agent runs.** A plugin may only `propose`; approval, rejection,
+  reset and deletion are core routes that decide the scope with `scopeRefusal`
+  ([changeSetAccess.ts](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../webapp/src/lib/plugins/changeSetAccess.ts)): a user scope is its
+  account's own (`ownsRow`, plus `bodyOwnerMatches` because the act-as cookie is site-wide), a
+  project scope needs Manage on the project (403 level `M` to a collaborator below it, 404 to
+  anyone else). Admin lifecycle routes ask `platform:plugins` of the account read fresh
+  (`requirePluginAdmin`, [lifecycleRoutes.ts](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../webapp/src/lib/plugins/lifecycleRoutes.ts))
+  because the session JWT outlives a demotion. A `reviewProposal` that
   a job reports is validated in
   [jobs/complete](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../webapp/src/app/api/plugin-gateway/v1/jobs/complete/route.ts) like a sync
   result, never trusted.
@@ -178,4 +184,4 @@ bash tests/plugins_isolation_live.sh          # live: needs ./redamon.sh up
 - [docs/readmes/README.PLUGINS.md](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../docs/readmes/README.PLUGINS.md) - design, lifecycle, trust model
 - [docs/readmes/README.PLUGIN_SDK.md](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../docs/readmes/README.PLUGIN_SDK.md) - the plugin author's contract
 - [docs/readmes/README.TESTING.md](https://github.com/samugit83/redamon/blob/master/skills/plugin-platform/../../docs/readmes/README.TESTING.md) - "The plugin platform" test map
-- Related skills: `builtin-agent-skill`, `llm-provider-integration`, `redamon-testing`
+- Related skills: `builtin-agent-skill`, `llm-provider-integration`, `rbac-authz`, `redamon-testing`

@@ -13,29 +13,29 @@ tags:
   - ai-agents
   - autonomous-agent
 status: active
-quality_percentile: 99
+quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: razzant/ouroboros
   official_vendor: false
   license: MIT
 signals:
-  stars: 1626
-  last_commit: 2026-11-09T08:49:21Z
-  stars_delta_7d: 18
-  stars_growth_pct: 1.1
-  trending_score: 18.2
-  rank_current: 89
-  rank_delta: 21
+  stars: 1671
+  last_commit: 2026-11-16T09:02:08Z
+  stars_delta_7d: 45
+  stars_growth_pct: 2.8
+  trending_score: 46.25
+  rank_current: 86
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1560
     - 1586
     - 1608
     - 1626
+    - 1671
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: razzant/ouroboros
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.798Z
+  fetched_at: 2026-11-16T09:16:54.092Z
   truncated: true
 type: agent_tool
 tool:
@@ -187,6 +187,18 @@ The charts below are self-reported results on Terminal-Bench 2.1, OSWorld-Verifi
   <a href="https://ouroboros-agent.ai/benchmarks/"><img src="https://raw.githubusercontent.com/razzant/ouroboros/main/assets/bench-osworld.svg" width="375" alt="OSWorld-Verified: Ouroboros against the public leaderboard, including the matched Claude Sonnet-4.6 pair"></a>
   <a href="https://ouroboros-agent.ai/benchmarks/"><img src="https://raw.githubusercontent.com/razzant/ouroboros/main/assets/bench-cl-bench.svg" width="375" alt="CL-Bench: Ouroboros against in-context learning baselines, Claude Code, and Codex on matched models"></a>
 </p>
+
+<!-- LLM rating card, for the README at the repository root. The image paths are relative to that README and stable: every edition overwrites the same files, so this block never needs editing. -->
+<p align="center">
+  <a href="https://ouroboros-agent.ai/llm-rating/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/llm-rating/card/latest-en-dark.png">
+      <source media="(prefers-color-scheme: light)" srcset="docs/llm-rating/card/latest-en-light.png">
+      <img alt="What Ouroboros thinks of your LLMs: its personal ranking of the models it works with, with a letter for each kind of work" src="https://raw.githubusercontent.com/razzant/ouroboros/main/docs/llm-rating/card/latest-en-light.png" width="880">
+    </picture>
+  </a>
+</p>
+<p align="center"><a href="https://ouroboros-agent.ai/llm-rating/"><b>What Ouroboros thinks of your LLMs</b></a>: my monthly ranking of the models I work with, and who I call for what.</p>
 
 ---
 

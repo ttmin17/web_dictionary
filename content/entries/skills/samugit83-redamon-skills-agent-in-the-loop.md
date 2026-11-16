@@ -19,7 +19,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3340
-  last_commit: 2026-11-08T10:18:09Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.3
-  trending_score: 42.53
+  stars: 3411
+  last_commit: 2026-11-14T15:34:14Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2.1
+  trending_score: 72.51
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3152
     - 3214
     - 3298
     - 3340
+    - 3411
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/agent-in-the-loop/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:34.064Z
+  fetched_at: 2026-11-16T09:17:02.508Z
   truncated: false
 type: agent_skill
 skill:
@@ -62,7 +62,7 @@ skill:
     LOOP_STATUS handling in the chat drawer.
   folder_path: skills/agent-in-the-loop
   extra_files: []
-  pack_total_skills: 17
+  pack_total_skills: 18
   is_pack_primary: false
   clients:
     - claude-code
@@ -115,8 +115,17 @@ skill:
   `toolConfirmation`, and `false` puts a red risk icon next to the Agent in the Loop chip
   ([loopStatus.ts](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../webapp/src/app/graph/components/AIAssistantDrawer/hooks/loopStatus.ts)).
   It stays out of the driver's view and the step (a step change bumps `contractVersion`).
-- **Only a person answers approvals, questions and dangerous-tool confirmations.** No MCP
-  tool may answer them ([loopTools.ts](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../webapp/src/lib/mcp/loopTools.ts)).
+- **Only a person answers approvals, questions and dangerous-tool confirmations, and only one
+  who may take that decision.** No MCP tool may answer them
+  ([loopTools.ts](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../webapp/src/lib/mcp/loopTools.ts)). Before anything runs or is saved the
+  socket checks the answer twice: `_refused_without` against the ticket's `cap`, then
+  `_refused_now`, which asks the webapp again and refuses when it cannot be reached; an admitted
+  answer is saved with `decision_actor()` (`sub`, `act` under act-as), as `_record_decision` does
+  ([websocket_api.py](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../agentic/websocket_api.py)). A new kind of answer takes all three.
+- **A loop step belongs to the person, never the tenant.** Run scopes and steps are keyed by the
+  session's person (`get_identifiers`; the token's user on the MCP side); the project's owner is
+  only the graph tenant (`get_tenant_id`). A driver reaches a shared project only at
+  `agent:loop`'s level through `mcpProjectAccess` (`loopProjects` in loopTools.ts).
 - **A driver token holds no write or exec scope besides `agent:loop`.** Compute it from
   `MCP_SCOPE_COPY` with `loopTokenProblem`, never a hand list; the loop tools refuse wider
   tokens ([loopScopes.ts](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../webapp/src/lib/mcp/loopScopes.ts)).
@@ -148,4 +157,4 @@ skill:
 
 - [docs/readmes/README.MCP.SERVER.md](https://github.com/samugit83/redamon/blob/master/skills/agent-in-the-loop/../../docs/readmes/README.MCP.SERVER.md) - the inbound MCP server and its security model
 - The wiki page `Agent-in-the-Loop` - setup for Claude Code and Codex, how it works, limits
-- Related skills: `llm-provider-integration`, `mcp-server-tools`, `redamon-testing`
+- Related skills: `llm-provider-integration`, `mcp-server-tools`, `rbac-authz`, `redamon-testing`

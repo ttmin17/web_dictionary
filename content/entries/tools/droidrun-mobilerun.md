@@ -15,29 +15,29 @@ tags:
   - android-automation
   - hacktoberfest
 status: active
-quality_percentile: 75
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: droidrun/mobilerun
   official_vendor: false
   license: MIT
 signals:
-  stars: 10003
-  last_commit: 2026-11-08T17:42:22Z
-  stars_delta_7d: 35
-  stars_growth_pct: 0.4
-  trending_score: 35.12
-  rank_current: 65
-  rank_delta: -7
+  stars: 10050
+  last_commit: 2026-11-14T04:36:54Z
+  stars_delta_7d: 47
+  stars_growth_pct: 0.5
+  trending_score: 47.22
+  rank_current: 84
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9692
     - 9814
     - 9968
     - 10003
+    - 10050
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: droidrun/mobilerun
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:19.192Z
+  fetched_at: 2026-11-16T09:16:46.008Z
   truncated: false
 type: agent_tool
 tool:

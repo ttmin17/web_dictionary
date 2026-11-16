@@ -1,10 +1,10 @@
 ---
 slug: jeecgboot-jeecgboot
 name: JeecgBoot
-tagline: 【AI 时代的业务系统基座】企业级 AI 低代码平台：权限、多租户、工作流、报表、大屏、AI 知识库等通用能力开箱即用，AI
-  只需生成业务差异部分。AI Skills 一句话生成完整系统——建表、前后端代码、菜单权限、BPM 流程、表单、报表、大屏全自动。内置 AI
-  应用平台（聊天、知识库、流程编排
-summary: JeecgBoot AI低代码平台 ===============
+tagline: 一款免费开源的 AI 低代码平台，也是 AI 时代构建复杂业务系统的开源基座！权限、多租户、工作流、报表、大屏、AI
+  知识库等通用能力开箱即用，AI 只需生成业务差异部分。AI Skills 一句话生成完整系统——建表、前后端代码、菜单权限、BPM
+  流程、表单、报表、大屏全自动。内置 AI 应用平台
+summary: JeecgBoot 免费开源的 AI 低代码平台 ===============
 categories:
   - databases-memory
 tags:
@@ -16,26 +16,26 @@ status: active
 quality_percentile: 100
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: jeecgboot/JeecgBoot
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 48407
-  last_commit: 2026-11-05T14:34:39Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0
-  trending_score: 23.01
-  rank_current: 83
-  rank_delta: -11
+  stars: 48495
+  last_commit: 2026-11-11T14:09:01Z
+  stars_delta_7d: 88
+  stars_growth_pct: 0.2
+  trending_score: 88.16
+  rank_current: 63
+  rank_delta: 20
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 48248
     - 48284
     - 48384
     - 48407
+    - 48495
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: jeecgboot/JeecgBoot
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:26.436Z
+  fetched_at: 2026-11-16T09:15:50.476Z
   truncated: false
 type: agent_tool
 tool:
@@ -57,7 +57,7 @@ tool:
 
 中文 | [English](https://github.com/jeecgboot/JeecgBoot/blob/main/README.en-US.md) | [日本語](https://github.com/jeecgboot/JeecgBoot/blob/main/README.ja-JP.md)
 
-JeecgBoot AI低代码平台
+JeecgBoot 免费开源的 AI 低代码平台
 ===============
 
 当前最新版本： 3.9.6（2026-11-05） 
@@ -69,23 +69,30 @@ JeecgBoot AI低代码平台
 [![](https://img.shields.io/badge/version-3.9.6-brightgreen.svg)](https://github.com/jeecgboot/JeecgBoot)
 [![GitHub stars](https://img.shields.io/github/stars/zhangdaiscott/jeecg-boot.svg?style=social&label=Stars)](https://github.com/jeecgboot/JeecgBoot)
 [![GitHub forks](https://img.shields.io/github/forks/zhangdaiscott/jeecg-boot.svg?style=social&label=Fork)](https://github.com/jeecgboot/JeecgBoot)
+[![](https://img.shields.io/badge/开源免费-可商用-success.svg)](https://github.com/jeecgboot/JeecgBoot/blob/master/LICENSE)
 [![Skills](https://img.shields.io/badge/AI%20Skills-自然语言编程-ff4d4f.svg)](https://jeecg.com/skills)
 
-> **JeecgBoot 是 AI 时代构建复杂业务系统的开源基座。**
+> **JeecgBoot 是一款免费开源的 AI 低代码平台（Apache-2.0 协议，个人和企业均可免费商用），也是 AI 时代构建复杂业务系统的开源基座。**
 > 权限、多租户、数据权限、工作流、报表、大屏、AI 知识库等企业级通用能力已经内置并经过大量项目验证；AI 只需要通过 Skills 配置或生成「业务差异部分」，一句话就能得到一个可运行、可维护、可二次开发的业务系统。
 
 项目介绍
 -----------------------------------
 
-<h3 align="center">企业级 AI 低代码开发平台 · AI 编程的业务系统基座</h3>
+<h3 align="center">免费开源的 AI 低代码开发平台 · AI 编程的业务系统基座</h3>
 
-JeecgBoot 是一款 AI 低代码开发平台，以 **低代码开发、AI 应用平台和 AI 知识库** 为核心能力。随着 AI Skills 自然语言编程的发布，平台迈入低代码 v2.0：开发者可用一句话生成完整系统或业务模块，由 AI 自动完成前后端代码、建表 SQL 和菜单权限，生成即可运行；也可快速构建企业 AI 应用和智能知识库，将更多精力投入核心业务。
+JeecgBoot 是一款**免费开源**的 AI 低代码开发平台，以 **低代码开发、AI 应用平台和 AI 知识库** 为核心能力。随着 AI Skills 自然语言编程的发布，平台迈入低代码 v2.0：开发者可用一句话生成完整系统或业务模块，由 AI 自动完成前后端代码、建表 SQL 和菜单权限，生成即可运行；也可快速构建企业 AI 应用和智能知识库，将更多精力投入核心业务。
 
 平台内置完整的 AI 应用开发能力，包括 AI 聊天助手、知识库、流程编排、MCP 和插件，并兼容 ChatGPT、DeepSeek、Ollama 等主流大模型。
 
 JeecgBoot 引领 **“AI 生成 → 在线配置 → 代码生成 → 手工合并”** 的 AI 低代码开发模式，帮助解决 Java 项目中 80% 的重复工作，在大幅提升开发效率的同时保留源码级扩展能力，兼顾效率与灵活性。
 
 平台采用主流前后端分离技术栈，前端基于 Ant Design Vue、Vue3、TypeScript 和 Vite，后端基于 Spring Boot 4、Spring Cloud Alibaba 和 MyBatis-Plus。平台具备强大且颗粒化的权限控制，支持按钮权限和数据权限，可满足大型业务系统需求；功能涵盖在线表单、表单设计、流程设计、门户设计、报表与大屏设计、OA 办公、AI 应用、AI 知识库、大模型管理、AI 流程编排和 AI 聊天等企业级应用场景。
+
+### 开源免费
+
+- **Apache-2.0 协议：** 个人和企业均可免费使用、免费商用，无需购买授权。
+- **完整源码开放：** 前后端源码全部开放，可自由二次开发、私有化部署，不绑定任何云服务。
+- **社区活跃：** GitHub 4.8 万+ Star，持续迭代更新，文档、示例和 AI Skills 全部开源。
 
 ### 核心能力
 

@@ -14,10 +14,10 @@ tags:
   - ai-tools
   - browser-automation
 status: active
-quality_percentile: 69
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: jackwener/OpenCLI
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 30977
+  stars: 31108
   last_commit: 2026-11-07T17:39:55Z
-  stars_delta_7d: 85
-  stars_growth_pct: 0.3
-  trending_score: 85.23
+  stars_delta_7d: 131
+  stars_growth_pct: 0.4
+  trending_score: 131.55
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30421
     - 30650
     - 30892
     - 30977
+    - 31108
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: jackwener/OpenCLI
   path: skills/opencli-autofix/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:16.849Z
+  fetched_at: 2026-11-16T09:16:43.382Z
   truncated: false
 type: agent_skill
 skill:

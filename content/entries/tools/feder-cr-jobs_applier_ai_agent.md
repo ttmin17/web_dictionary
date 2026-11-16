@@ -1,7 +1,7 @@
 ---
 slug: feder-cr-jobs_applier_ai_agent
 name: Jobs_Applier_AI_Agent
-tagline: "AI job application bot: automated job search and job hunting,
+tagline: "AIHawk: AI job application bot, automated job search, job hunting,
   auto-apply to resume-matching jobs while you sleep."
 summary: "An AI job application bot: automated job search, then it auto-applies
   to the jobs that match your resume, while you sleep."
@@ -11,26 +11,29 @@ tags:
   - agentic-ai
   - ai-agent
   - ai-automation
-  - automation
+  - aihawk
 status: active
-quality_percentile: 84
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: feder-cr/Jobs_Applier_AI_Agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 32417
-  last_commit: 2026-11-08T18:05:10Z
-  stars_delta_7d: 272
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 32550
+  last_commit: 2026-11-15T20:26:33Z
+  stars_delta_7d: 133
+  stars_growth_pct: 0.4
+  trending_score: 133.55
+  rank_current: 48
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 32417
+    - 32550
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: feder-cr/Jobs_Applier_AI_Agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:28.427Z
+  fetched_at: 2026-11-16T09:16:56.883Z
   truncated: false
 type: agent_tool
 tool:
@@ -87,10 +90,10 @@ Give it your resume. The job search finds the postings that fit, you pick, and i
 | Step | What happens |
 |---|---|
 | **1. Reads your resume** | Turns it into a search: the titles, the skills and the places that fit you. |
-| **2. Searches** | 10 million postings from 37 public sources, rebuilt every five hours, searched on your computer. |
+| **2. Searches** | Millions of postings of the last 30 days from 37 public sources, rebuilt every five hours, searched on your computer. |
 | **3. Scores** | Asks of every posting, against your resume, one question: is it in line with you? How sure the answer is makes the score, from 1 to 5. 50 jobs to a page, the next one ready while you read this one. |
 | **4. You pick** | Select the jobs you want and say yes once. |
-| **5. Applies** | A real Firefox opens the company's form, fills every required field, attaches your CV and sends. |
+| **5. Applies** | First a quick check that the posting is still open, on the sites where that can be told without a browser. Then a real Firefox opens the company's form, fills every required field, attaches your CV and sends. |
 | **6. Keeps the answer** | What each page said, with a screenshot, for every application. |
 
 ---
@@ -103,18 +106,29 @@ Windows, in PowerShell:
 irm https://raw.githubusercontent.com/feder-cr/Jobs_Applier_AI_Agent/main/run.ps1 | iex
 ```
 
-Linux:
+Linux, and macOS (on a Mac AIHawk finds and scores the jobs, but cannot send applications yet: its browser has no Mac version):
 
 ```bash
 curl -LsSf https://raw.githubusercontent.com/feder-cr/Jobs_Applier_AI_Agent/main/run.sh | sh
 ```
 
-You need a key: [get one from OrcaRouter](https://www.orcarouter.ai/ref/ref_accd17afb78fc95ac4d7).
+You need a key: [get one from OrcaRouter](https://www.orcarouter.ai/ref/ref_accd17afb78fc95ac4d7). Signing up is free, and a new account starts with no credit: add a few dollars there before the first start, or AIHawk cannot read your resume. An application costs a few cents.
 
+The first start downloads about 250 MB and takes a minute or two; after that it opens in seconds, also without a connection. Nothing else needs installing first (on Linux, `curl`). The first application brings the browser, about 430 MB more, and opens it in a window: on Linux that needs a desktop.
+
+## Guides
+
+Written by the AIHawk team:
+
+- [How to auto-apply to jobs](https://autoapplytools.com/how-to-auto-apply-to-jobs/): what auto-apply tools do, and what to check before you let one send applications.
+- [How to apply for jobs, step by step](https://jobhuntlab.com/how-to-apply-for-jobs/): from reading a posting to following up.
+- [ATS-friendly resume template](https://atsresumeguide.com/ats-resume-template/): a plain resume layout that application systems read cleanly.
+- [How to write a cover letter](https://coverletterdesk.com/how-to-write-a-cover-letter/): structure, length and what to include.
+- [How to keep track of job applications](https://trackyourjobsearch.com/how-to-track-job-applications/): what to log for each application, so you know what was sent and when to follow up.
 
 ---
 
-[Sites](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/docs/sites.md) · [Configuration](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/docs/configuration.md) · [Writing a plugin](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/docs/plugins.md) · [Wiki](https://github.com/feder-cr/Jobs_Applier_AI_Agent/wiki) · [Contributing](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/CONTRIBUTING.md) · [Security](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/SECURITY.md) · [Changelog](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/CHANGELOG.md)
+[Sites](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/docs/sites.md) · [Configuration](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/docs/configuration.md) · [Writing a plugin](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/docs/plugins.md) · [Contributing](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/CONTRIBUTING.md) · [Security](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/SECURITY.md) · [Changelog](https://github.com/feder-cr/Jobs_Applier_AI_Agent/blob/main/CHANGELOG.md)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=feder-cr/Jobs_Applier_AI_Agent&type=Date&theme=dark">

@@ -13,29 +13,29 @@ tags:
   - apify-alternative
   - cli
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-03-10T17:50:15
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: 0xMassi/webclaw
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2436
-  last_commit: 2026-11-08T11:01:23Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.2
-  trending_score: 6.01
-  rank_current: 110
-  rank_delta: -14
+  stars: 2444
+  last_commit: 2026-11-13T14:23:43Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.3
+  trending_score: 8.03
+  rank_current: 121
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2382
     - 2390
     - 2430
     - 2436
+    - 2444
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: 0xMassi/webclaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.639Z
+  fetched_at: 2026-11-16T09:15:16.596Z
   truncated: true
 type: agent_tool
 tool:
@@ -145,8 +145,8 @@ Download macOS, Linux, and Windows binaries from [GitHub Releases](https://githu
 #### Windows (x64)
 
 The prebuilt ZIP is the easiest installation and does not require Rust. On the
-[v0.6.22 release page](https://github.com/0xMassi/webclaw/releases/tag/v0.6.22),
-download `webclaw-v0.6.22-x86_64-pc-windows-msvc.zip`. Extract it in File Explorer,
+[v0.7.4 release page](https://github.com/0xMassi/webclaw/releases/tag/v0.7.4),
+download `webclaw-v0.7.4-x86_64-pc-windows-msvc.zip`. Extract it in File Explorer,
 open PowerShell in the extracted folder containing `webclaw.exe`, and run:
 
 ```powershell
@@ -169,7 +169,7 @@ directory if bindgen cannot find it, for example:
 
 ```powershell
 $env:LIBCLANG_PATH = "C:\Program Files\LLVM\bin"
-cargo install --git https://github.com/0xMassi/webclaw.git --tag v0.6.22 --locked webclaw-cli
+cargo install --git https://github.com/0xMassi/webclaw.git --tag v0.7.4 --locked webclaw-cli
 webclaw --version
 ```
 
@@ -188,8 +188,8 @@ docker run --rm ghcr.io/0xmassi/webclaw https://example.com
 ### Cargo
 
 ```bash
-cargo install --git https://github.com/0xMassi/webclaw.git --tag v0.6.22 --locked webclaw-cli
-cargo install --git https://github.com/0xMassi/webclaw.git --tag v0.6.22 --locked webclaw-mcp
+cargo install --git https://github.com/0xMassi/webclaw.git --tag v0.7.4 --locked webclaw-cli
+cargo install --git https://github.com/0xMassi/webclaw.git --tag v0.7.4 --locked webclaw-mcp
 ```
 
 If building from source fails because native build tools are missing, install the platform prerequisites:

@@ -15,27 +15,28 @@ tags:
   - agent-orchestration
   - agent-team
 status: active
-quality_percentile: 55
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Orkas-AI/Orkas
   official_vendor: false
   license: MIT
 signals:
-  stars: 9126
-  last_commit: 2026-11-09T01:23:57Z
-  stars_delta_7d: 92
-  stars_growth_pct: 1
-  trending_score: 92.94
-  rank_current: 40
-  rank_delta: null
+  stars: 9395
+  last_commit: 2026-11-15T22:44:53Z
+  stars_delta_7d: 269
+  stars_growth_pct: 2.9
+  trending_score: 276.93
+  rank_current: 27
+  rank_delta: 13
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9034
     - 9126
+    - 9395
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +45,7 @@ readme_source:
   repo: Orkas-AI/Orkas
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:28.326Z
+  fetched_at: 2026-11-16T09:16:59.348Z
   truncated: false
 type: agent_tool
 tool:

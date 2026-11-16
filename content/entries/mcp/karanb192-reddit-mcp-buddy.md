@@ -3,9 +3,9 @@ slug: karanb192-reddit-mcp-buddy
 name: reddit-mcp-buddy
 tagline: Clean, LLM-optimized Reddit MCP server. Browse posts, search content,
   analyze users. No fluff, just Reddit data.
-summary: A Model Context Protocol (MCP) server for browsing Reddit, searching
-  posts, and analyzing user activity. It needs existing approved Reddit API
-  credentials. Version 1.2.0 added optional posting and commenting with per-...
+summary: A Model Context Protocol (MCP) server that lets an AI assistant browse
+  Reddit, search posts, read comment threads, find subreddits, and look at a
+  user's activity through Reddit's own API. Posting and commenting are op...
 categories:
   - productivity-ops
 tags:
@@ -14,29 +14,29 @@ tags:
   - model-context-protocol
   - reddit
 status: active
-quality_percentile: 54
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2025-09-14T05:52:29
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: karanb192/reddit-mcp-buddy
   official_vendor: false
   license: MIT
 signals:
-  stars: 889
-  last_commit: 2026-11-09T04:36:38Z
+  stars: 898
+  last_commit: 2026-11-14T15:41:28Z
   stars_delta_7d: 9
   stars_growth_pct: 1
   trending_score: 9.09
-  rank_current: 71
-  rank_delta: 7
+  rank_current: 92
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 859
     - 865
     - 880
     - 889
+    - 898
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: karanb192/reddit-mcp-buddy
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:13.031Z
+  fetched_at: 2026-11-16T09:15:34.345Z
   truncated: false
 type: mcp_server
 launch:
@@ -61,12 +61,12 @@ launch:
 # <img src="https://raw.githubusercontent.com/karanb192/reddit-mcp-buddy/main/assets/reddit-mcp-buddy-icon-white-background.png" width="48" align="center"/> Reddit MCP Buddy
 ### Reddit Browser for Claude Desktop and AI Assistants
 
-A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for browsing Reddit, searching posts, and analyzing user activity. It needs existing approved Reddit API credentials. Version 1.2.0 added optional posting and commenting with per-process caps and a client-dependent confirmation flow. See [Posting](#posting-v120).
+A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that lets an AI assistant browse Reddit, search posts, read comment threads, find subreddits, and look at a user's activity through Reddit's own API. Posting and commenting are opt-in. See [Posting](#posting-v120).
 
-> **Reddit is closing the access this server uses.** Only people who already hold approved Reddit API credentials can use it.
+> **You need Reddit API credentials that Reddit has already approved.** Reddit is closing the access this server uses, and there is no way to get new credentials for it.
 >
 > - **2026-10-31:** Reddit stopped accepting new requests for public API access ([migration post](https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/)).
-> - **2026-11-13:** Reddit ends RSS feed support ([changelog, October 8, 2026](https://support.reddithelp.com/hc/en-us/articles/54353370049684-Changelog-October-8-2026)). RSS was the only thing this server could read without credentials, so from this date every call without credentials returns an error saying credentials are needed.
+> - **2026-11-13:** the date Reddit set for ending RSS feed support ([changelog, October 8, 2026](https://support.reddithelp.com/hc/en-us/articles/54353370049684-Changelog-October-8-2026)). RSS was the only thing this server could read without credentials, so every Reddit tool now needs them.
 > - **2027-01-12:** Reddit starts closing API access for apps whose owners have not registered them at [developers.reddit.com/app-registration](https://developers.reddit.com/app-registration) or answered Reddit's outreach ([migration post](https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/)).
 > - **March 2027:** Reddit ends the remaining public API access ([migration post](https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/)).
 >
@@ -77,7 +77,7 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for bro
 [![GitHub stars](https://img.shields.io/github/stars/karanb192/reddit-mcp-buddy.svg?style=flat&logo=github&color=brightgreen)](https://github.com/karanb192/reddit-mcp-buddy/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## 🎬 See It In Action
+## See It In Action
 
 ![Reddit MCP Buddy Demo - AirPods Max 2 and Dune Part Three](https://raw.githubusercontent.com/karanb192/reddit-mcp-buddy/main/assets/images/reddit-mcp-buddy-demo-2026.gif)
 
@@ -89,44 +89,33 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for bro
 
 ## Table of Contents
 
-- [What makes Reddit MCP Buddy different?](#what-makes-reddit-mcp-buddy-different)
-- [Quick Start](#quick-start-30-seconds)
-- [What can it do?](#what-can-it-do)
+- [Quick Start](#quick-start)
+- [What you can ask](#what-you-can-ask)
 - [Available Tools](#available-tools)
+- [NSFW content](#nsfw-content)
 - [Authentication](#authentication)
 - [Posting (v1.2.0)](#posting-v120)
-- [Installation Options](#installation-options)
-  - [Global Install](#global-install)
-  - [From Source](#from-source)
-  - [Using Docker](#using-docker)
-  - [Claude Desktop Extension](#claude-desktop-extension)
-- [Comparison with Other Tools](#comparison-with-other-tools)
+- [Settings](#settings)
+- [Privacy & Data Handling](#privacy--data-handling)
+- [Other ways to install](#other-ways-to-install)
 - [Troubleshooting](#troubleshooting)
 - [Development](#development)
 - [Support](#support)
-- [Related Resources](#-related-resources)
+- [Related Resources](#related-resources)
 
-## What makes Reddit MCP Buddy different?
+## Quick Start
 
-- **🔑 Built for existing API access** - Uses your approved Reddit app's credentials through Reddit's OAuth API
-- **✍️ Opt-in posting (v1.2.0)** - Create posts and comments with a client-dependent confirmation flow, per-process caps, and duplicate suppression
-- **⚡ Local rate limits** - Configured caps of 10/60/100 requests per minute; Reddit applies its own limits
-- **🎯 Clean data** - No fake "sentiment analysis" or made-up metrics
-- **🧠 LLM-optimized** - Built specifically for AI assistants like Claude
-- **📦 TypeScript** - Fully typed, reliable, and maintainable
-- **✅ Rate-limit testing** - Verification tools for the server's local authentication tiers
+You need your approved Reddit app's client ID and secret. [Authentication](#authentication) shows where to find them.
 
-## Quick Start (30 seconds)
-
-### For Claude Desktop - Desktop Extension (Easiest!)
+### Claude Desktop extension
 
 1. **Download**: [reddit-mcp-buddy.mcpb](https://github.com/karanb192/reddit-mcp-buddy/releases/latest/download/reddit-mcp-buddy.mcpb)
 2. **Install**: Open the downloaded file
-3. **Add credentials**: Enter your approved Reddit app's client ID and secret in the extension settings (see [Authentication](#authentication))
+3. **Add credentials**: Enter the client ID and secret in the extension settings
 
-### For Claude Desktop - NPM Method (Alternative)
+### Claude Desktop with npm
 
-Add this to your `claude_desktop_config.json`, with your approved app's credentials (see [Authentication](#authentication)):
+Add this to your `claude_desktop_config.json`:
 
 ```json
 {
@@ -143,7 +132,7 @@ Add this to your `claude_desktop_config.json`, with your approved app's credenti
 }
 ```
 
-### For Claude Code
+### Claude Code
 
 Run this command to add the MCP server (user scope):
 
@@ -153,20 +142,30 @@ claude mcp add --transport stdio reddit-mcp-buddy -s user \
   -- npx -y reddit-mcp-buddy
 ```
 
-### For Other MCP Clients
+### Other MCP clients
 
 Run `npx -y reddit-mcp-buddy` with `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` set in its environment.
 
-## What can it do?
+A global install, a build from source and Docker are under [Other ways to install](#other-ways-to-install).
 
-Ask your AI assistant to:
+## What you can ask
 
-- 📊 **"What's trending on Reddit?"** - Browse hot posts from r/all
-- 🔍 **"Search for discussions about AI"** - Search across all subreddits
-- 💬 **"Get comments from this Reddit post"** - Fetch post with full comment threads
-- 👤 **"Analyze user spez"** - Get user history, karma, and activity
-- 📚 **"Explain Reddit karma"** - Understand Reddit terminology
-- ✍️ **"Post this to r/test"** - Draft, check the sub's rules, and submit after you confirm (opt-in, see [Posting](#posting-v120))
+| Ask your assistant | What it calls |
+|--------------------|---------------|
+| "What's trending on Reddit?" | `browse_subreddit` with subreddit `all`, sort `hot` |
+| "Show me the top posts in r/technology this week" | `browse_subreddit` with sort `top`, time `week` |
+| "What are the top posts about GPT-4 today?" | `search_reddit` with time `day`, sort `top` |
+| "Get the comments from this Reddit post" | `get_post_details` with the post's URL |
+| "Analyze user spez" | `user_analysis` |
+| "Where do people discuss home espresso machines?" | `find_subreddits` with query `home espresso` and the names it thinks fit |
+| "Explain Reddit karma" | `reddit_explain` |
+| "Post this to r/test" | `subreddit_rules`, then `create_post` after you confirm (opt-in, see [Posting](#posting-v120)) |
+
+What comes back:
+
+- **Reddit's data and nothing else.** No sentiment scores or other invented metrics.
+- **Only the fields an assistant needs**, not Reddit's full raw objects.
+- **A note when something was left out.** Hidden NSFW items, subreddits that are private, quarantined or banned, and an author or flair filter applied after Reddit's own limit are all reported in the response.
 
 ## Available Tools
 
@@ -179,10 +178,9 @@ Browse posts from any subreddit with sorting options.
   - Any specific subreddit (e.g., "technology", "programming", "science")
 - Sort by: hot, new, top, rising, controversial
 - Time range: hour, day, week, month, year, all (for top/controversial sort)
-- Include subreddit info: Optional flag for subreddit metadata (requires credentials)
+- Include subreddit info: Optional flag for subreddit metadata
+- Include NSFW: off by default; posts left out are counted in nsfw_hidden
 ```
-
-> **No credentials?** Until 2026-11-13, results come from Reddit's RSS feed (`data_source: "rss"`): `score`, `num_comments`, `upvote_ratio`, and `nsfw` come back `null`, and the `include_nsfw` filter can't be applied. Reddit ends RSS support on 2026-11-13 ([changelog](https://support.reddithelp.com/hc/en-us/articles/54353370049684-Changelog-October-8-2026)); from then on browsing needs credentials too ([Authentication](#authentication)).
 
 ### `search_reddit`
 Search across Reddit or specific subreddits.
@@ -190,10 +188,12 @@ Search across Reddit or specific subreddits.
 - Query: Your search terms
 - Filter by: subreddit, author, time, flair
 - Sort by: relevance, hot, top, new, comments
+- Include NSFW: off by default. Reddit leaves NSFW posts out before it answers, so a
+  search inside an NSFW subreddit returns nothing unless this is on
 ```
 
 ### `get_post_details`
-Get a post with all its comments.
+Get a post and its comments.
 ```
 - Input:
   - Reddit URL (supports multiple formats), OR
@@ -206,6 +206,7 @@ Get a post with all its comments.
   - m.reddit.com (mobile links)
   - redd.it short URLs
   - URLs with query params (?utm_source=...) or fragments (#comment)
+- Comments: 20 by default, up to 500
 - Options: comment sorting, depth, link extraction
 ```
 
@@ -216,15 +217,57 @@ Analyze a Reddit user's profile.
 - Returns: karma, posts, comments, active subreddits
 ```
 
+### `find_subreddits`
+Find subreddits for a topic, and check subreddit names before using them.
+```
+- Query: 2 to 4 keywords, not a sentence (Reddit's subreddit search matches words)
+- Candidates: up to 10 subreddit names the assistant thinks fit (optional)
+- Include NSFW: off by default; subreddits left out are counted in nsfw_hidden
+- Limit: how many Reddit search suggestions to return (default 10, max 50)
+- Min subscribers: search suggestions below this are left out (default 1000);
+  candidates are never filtered by size
+- Returns: name, url, title, description, subscribers with an as-of time, NSFW flag, type,
+  source (assistant or reddit_search), and whether it was confirmed to exist
+- Candidates Reddit does not return are listed in not_found; if the name check itself
+  fails, they come back unchecked instead
+- Subreddits that exist but cannot be read (private, quarantined, banned) are listed
+  in unavailable with the reason
+- At most 2 Reddit requests per call
+```
+
 ### `reddit_explain`
-Get explanations of Reddit terms.
+Get explanations of Reddit terms. Works offline, with no credentials.
 ```
 - Terms: karma, cake day, AMA, ELI5, etc.
 ```
 
 ### Write tools (opt-in)
 
-`create_post`, `add_comment`, and `subreddit_rules` only appear when you enable posting; read-only installs see exactly the five tools above. Details in [Posting (v1.2.0)](#posting-v120).
+`create_post`, `add_comment`, and `subreddit_rules` only appear when you enable posting; read-only installs see exactly the six tools above. Details in [Posting (v1.2.0)](#posting-v120).
+
+## NSFW content
+NSFW posts and subreddits are left out by default. When you ask for them, the assistant can set `include_nsfw` on `browse_subreddit`, `search_reddit` or `find_subreddits` for that one call. To change the rule for the whole server, set `REDDIT_BUDDY_NSFW`:
+
+| Value | What it does |
+|-------|--------------|
+| `ask` (default) | Hidden unless a call sets `include_nsfw: true` |
+| `never` | Always hidden, whatever the assistant sends. `include_nsfw` has no effect, `get_post_details` refuses a post marked NSFW, and `user_analysis` leaves NSFW posts and comments out |
+| `always` | Included unless a call sets `include_nsfw: false` |
+
+```json
+"env": {
+  "REDDIT_CLIENT_ID": "your_client_id",
+  "REDDIT_CLIENT_SECRET": "your_client_secret",
+  "REDDIT_BUDDY_NSFW": "never"
+}
+```
+
+- In `ask` and `always`, `get_post_details` and `user_analysis` are not filtered: you named the post or the user.
+- Any other value is treated as `never` and logged at startup, so a typo cannot open what you meant to lock.
+- The server goes by Reddit's own NSFW mark on each post and subreddit, and on the comments in a user's history. It does not inspect content, so something Reddit has marked as not NSFW is shown.
+- Reddit puts no NSFW mark on the comments under a post, so the post's mark decides for them: `get_post_details` returns the comments of a post that is not marked NSFW as they are, on `never` too.
+- On `never`, anything Reddit has not marked either way is left out as well, and `browse_subreddit` leaves out the subreddit info of an NSFW subreddit.
+- Claude Desktop extension users: use the **NSFW content** field in the extension settings. It maps to the same variable.
 
 ## Authentication
 
@@ -236,7 +279,7 @@ Every tool that reads Reddit needs credentials for a Reddit app whose API access
 - **You do not:** Reddit stopped accepting new requests for public API access on 2026-10-31 ([migration post](https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/)), so there is no way to get credentials for this server now. This project cannot grant access, and it does not provide shared API keys or a third-party OAuth service.
 - **Keep your access past 2027-01-12:** Reddit starts closing API access on that date for apps whose owners have not registered them at [developers.reddit.com/app-registration](https://developers.reddit.com/app-registration) or answered Reddit's outreach ([migration post](https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/)). Registration is done by each app's owner; this project cannot do it for you.
 
-Without credentials, `browse_subreddit` reads Reddit's RSS feeds only until 2026-11-13, when Reddit ends RSS support ([changelog](https://support.reddithelp.com/hc/en-us/articles/54353370049684-Changelog-October-8-2026)). From then on every Reddit tool returns an error that says credentials are needed.
+Without credentials, every Reddit tool returns an error that says credentials are needed.
 
 ### Setup Steps
 
@@ -293,27 +336,19 @@ Leave `REDDIT_PASSWORD` unset when using a refresh token. Setting both is reject
 
 Treat a refresh token like a password. Keep it outside version control and revoke access in [Reddit app preferences](https://www.reddit.com/prefs/apps) when it is no longer needed. OAuth consent does not grant Reddit API approval or extend the approved use case.
 
-### Three-Tier Authentication System
+### Modes and local request caps
 
-Reddit MCP Buddy enforces these local caps. They are not Reddit API quotas or guaranteed throughput:
+The server enforces these caps itself. They are not Reddit API quotas or guaranteed throughput.
 
-| Mode | Local Cap | Required Credentials | Best For |
-|------|------------|---------------------|----------|
-| **No credentials** | 10 req/min* | None | Ends 2026-11-13 |
-| **App-Only** | 60 req/min | Client ID + Secret | Regular browsing |
-| **Authenticated** | 100 req/min | Client ID + Secret, plus refresh token or username/password | Heavy usage, automation |
+| Mode | Credentials | Local cap |
+|------|-------------|-----------|
+| **App-only** | Client ID + secret | 60 requests/minute |
+| **User** | Client ID + secret, plus a refresh token or username and password | 100 requests/minute |
 
-*\*Until 2026-11-13 only. Requests without credentials are served from Reddit's logged-out RSS feed, which applies its own stricter per-IP throttle.*
-
-#### How It Works:
-- **No credentials**: Until 2026-11-13, only `browse_subreddit` (from Reddit's RSS feed, with engagement metrics and NSFW flags as `null`) and the offline `reddit_explain` work. After Reddit ends RSS support that day, every Reddit tool returns an error that says credentials are needed.
-- **App-Only Mode**: Uses OAuth2 client credentials grant (works with both script and web apps)
-- **Authenticated Mode**: Uses OAuth2 refresh-token authentication for an authorized web app, or password grant for a script app
-
-**Important Notes**:
-- Client credentials select app-only mode; a refresh token or username/password selects user authentication.
+- App-only mode uses the OAuth2 client credentials grant and works with both script and web apps.
+- User mode uses a refresh token for an authorized web app, or the password grant for a script app.
 - A refresh token carries the scopes granted during consent. Missing scopes can prevent individual tools from working.
-- User authentication changes this server's local cap; it does not grant a larger quota from Reddit.
+- User mode raises this server's local cap. It does not grant a larger quota from Reddit.
 
 ## Posting (v1.2.0)
 
@@ -357,7 +392,7 @@ Credentials must come from environment variables (or extension config fields, wh
 
 Posting uses your account. The server enforces registration, rate limits, and duplicate checks; human approval also depends on the client:
 
-- **Off by default.** Without `REDDIT_BUDDY_WRITE`, the write tools do not exist: read-only installs see exactly the same 5 tools as before, and pay zero extra context.
+- **Off by default.** Without `REDDIT_BUDDY_WRITE`, the write tools do not exist: read-only installs see only the 6 read tools, and pay zero extra context.
 - **stdio only.** The HTTP transport has no authentication, so write tools refuse to register there. No process on your machine or network can turn the HTTP endpoint into a posting proxy.
 - **Confirmation depends on the client.** Clients supporting [MCP elicitation](https://modelcontextprotocol.io/specification/latest) get a confirmation prompt with the target, account, content preview, full content length, and post options. The prompt requires an explicit acceptance. Previews can be truncated, so review the full draft in your client first. Without elicitation, the server requires a preview or successful dry run followed by the identical payload within 15 minutes. It cannot verify that a human approved that repeat: approval depends on the client's tool prompt and the model following instructions. Only enable posting in a client whose approval behavior you trust.
 - **Hourly caps you cannot raise.** At most 5 posts/hour, 30 comments/hour, and 15 seconds between writes, enforced in the server. Environment variables can tighten these, never loosen them. Honest limit: the caps live in the server process (a restart resets the hour, parallel sessions have separate caps, and a fork of this open-source code can remove them). They exist to make casual abuse pointless, not to stop a determined operator.
@@ -370,6 +405,101 @@ Posting uses your account. The server enforces registration, rate limits, and du
 Reddit's password grant returns a token with **full account scope**. An OAuth refresh token carries the permissions granted during consent. These permissions apply across the account, not just one subreddit. With posting off, the server uses the credentials for reads; enabling posting lets it submit posts and comments. Keep passwords and refresh tokens out of version control and off shared machines.
 
 Also worth knowing: Reddit applies its own account-level posting throttles on top of everything above, based on account age and karma. If Reddit says "try again in N minutes", the server surfaces the wait instead of hammering.
+
+## Settings
+
+### Environment variables
+
+#### Authentication Variables
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `REDDIT_CLIENT_ID` | Reddit app client ID | Yes |
+| `REDDIT_CLIENT_SECRET` | Reddit app secret | Yes |
+| `REDDIT_USERNAME` | Reddit account username, with the password for a script app | No |
+| `REDDIT_PASSWORD` | Reddit account password; leave unset when using a refresh token | No |
+| `REDDIT_REFRESH_TOKEN` | OAuth refresh token for a web app | No |
+| `REDDIT_USER_AGENT` | Custom user agent string | No |
+
+Which credentials select which mode, and the local cap for each, are under [Modes and local request caps](#modes-and-local-request-caps).
+
+#### Server Configuration
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `REDDIT_BUDDY_HTTP` | Run as HTTP server instead of stdio | `false` |
+| `REDDIT_BUDDY_PORT` | HTTP server port (when HTTP=true) | `3000` |
+| `REDDIT_BUDDY_HOST` | Interface the HTTP server binds to | `127.0.0.1` |
+| `REDDIT_BUDDY_ALLOWED_ORIGINS` | Comma-separated browser origins allowed to call the HTTP endpoint | none |
+| `REDDIT_BUDDY_ALLOWED_HOSTS` | Comma-separated `host:port` values accepted in the Host header (DNS-rebinding protection) | loopback values when bound to localhost |
+| `REDDIT_BUDDY_NO_CACHE` | Disable caching (always fetch fresh) | `false` |
+| `REDDIT_BUDDY_NSFW` | [NSFW content](#nsfw-content): `ask` (hidden unless a call asks), `never` (always hidden) or `always` (included by default) | `ask` |
+
+#### Posting (v1.2.0)
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `REDDIT_BUDDY_WRITE` | Register the [posting tools](#posting-v120); requires env user credentials, verified identity and scopes, and stdio | `false` |
+| `REDDIT_BUDDY_MAX_POSTS_PER_HOUR` | Posts per hour; only values from 1 to 4 are honored (0 and invalid values are ignored) | `5` |
+| `REDDIT_BUDDY_MAX_COMMENTS_PER_HOUR` | Comments per hour; only values from 1 to 29 are honored (0 and invalid values are ignored) | `30` |
+| `REDDIT_BUDDY_MIN_WRITE_INTERVAL_S` | Seconds between writes; only values ABOVE 15 are honored | `15` |
+
+The three rate-floor variables can only tighten the built-in caps. Setting them looser than the defaults does nothing, on purpose, and 0 does not mean "pause posting": it falls back to the default cap.
+
+### HTTP mode
+
+The server runs over stdio by default. To run it as a local HTTP server, for Postman MCP or direct API calls:
+
+```bash
+# Run in HTTP mode on port 3000
+npx -y reddit-mcp-buddy --http
+
+# Or with custom port
+REDDIT_BUDDY_PORT=8080 npx -y reddit-mcp-buddy --http
+```
+
+> **HTTP mode has no authentication.** It binds to localhost so only your machine can reach it, and rejects Host headers outside the loopback set. Setting `REDDIT_BUDDY_HOST=0.0.0.0` exposes it to your whole network - only do that on a trusted network (e.g. inside Docker, which sets it deliberately). On a non-loopback bind the Host check is off by default, since clients legitimately arrive with a container IP or service name; set `REDDIT_BUDDY_ALLOWED_HOSTS` to restrict it. Browser requests are rejected unless their origin is listed in `REDDIT_BUDDY_ALLOWED_ORIGINS`; non-browser clients like Postman are unaffected.
+
+### Caching
+
+Reddit's responses are cached in memory to cut repeat requests.
+
+| Content | Cached for |
+|---------|------------|
+| Subreddit listings | 5 minutes |
+| Post details | 10 minutes |
+| Search results | 10 minutes |
+| User profiles | 15 minutes |
+
+- The cache is capped at 50MB and evicts the least-used entries first.
+- Everything is cleared when the server stops.
+- Set `REDDIT_BUDDY_NO_CACHE=true` to turn it off.
+
+### HTTP and HTTPS Proxies
+
+On Node 22.21.0+ in the 22.x line, or Node 24 and newer, enable Node's built-in proxy support before starting the server. The project's Node 26 Docker image supports this. Check `node --version` first: unsupported versions can ignore these settings and connect directly. Node currently marks this feature as under active development.
+
+```json
+{
+  "mcpServers": {
+    "reddit": {
+      "command": "npx",
+      "args": ["-y", "reddit-mcp-buddy"],
+      "env": {
+        "NODE_USE_ENV_PROXY": "1",
+        "HTTP_PROXY": "http://proxy.example.com:8080",
+        "HTTPS_PROXY": "http://proxy.example.com:8080",
+        "NO_PROXY": "localhost,127.0.0.1"
+      }
+    }
+  }
+}
+```
+
+`HTTP_PROXY` routes HTTP requests; `HTTPS_PROXY` routes HTTPS requests, including Reddit API calls. `NO_PROXY` excludes matching hosts. Export these variables in your shell for CLI use, or pass them with Docker's `-e` options. Set them in the process environment before startup; the server does not load a project `.env` file automatically.
+
+Inside Docker, `localhost` refers to the container. On Docker Desktop, use `host.docker.internal` to reach a proxy running on the host.
+
+Proxy authentication can be included in the proxy URL as `http://username:password@proxy.example.com:8080`. Treat that value as a credential and redact it from shared logs and configuration. For a network that uses a private certificate authority, use `NODE_EXTRA_CA_CERTS` with your organization's PEM certificate file instead of disabling TLS verification.
+
+See [Node's proxy and certificate configuration guide](https://nodejs.org/learn/http/enterprise-network-configuration). Proxy support routes network traffic; it does not grant Reddit API approval or bypass Reddit's access rules.
 
 ## Privacy & Data Handling
 
@@ -386,10 +516,7 @@ Reddit MCP Buddy is designed with privacy and transparency in mind. Here's how y
   - Passwords are **never** written to disk - only used in-memory for OAuth token exchange
   - Environment variables (recommended for Claude Desktop) are never persisted by this server
 - **Cache Data**:
-  - Reddit API responses are temporarily cached in memory to improve performance
-  - Cache size limited to 50MB maximum
-  - All cache data is cleared when the server stops
-  - Can be disabled with `REDDIT_BUDDY_NO_CACHE=true`
+  - Reddit API responses are cached in memory only and cleared when the server stops (see [Caching](#caching))
 
 ### Data Transmission
 - **Reddit API Only**: Your credentials are only sent to Reddit's official OAuth endpoints (`https://oauth.reddit.com` and `https://www.reddit.com`)
@@ -412,77 +539,7 @@ Reddit MCP Buddy is designed with privacy and transparency in mind. Here's how y
 ### Questions or Concerns?
 If you have any privacy questions or concerns, please [open an issue](https://github.com/karanb192/reddit-mcp-buddy/issues) on GitHub.
 
-## Testing & Development
-
-### Testing Your Rate Limits
-
-Reddit MCP Buddy includes comprehensive testing tools to verify your authentication is working correctly:
-
-```bash
-# Clone the repository first
-git clone https://github.com/karanb192/reddit-mcp-buddy.git
-cd reddit-mcp-buddy
-npm install
-
-# Test with your current environment settings
-npm run test:rate-limit
-
-# Test specific authentication modes
-npm run test:rate-limit:anon    # Test anonymous mode (10 rpm)
-npm run test:rate-limit:app     # Test app-only mode (60 rpm)
-npm run test:rate-limit:auth    # Test authenticated mode (100 rpm)
-```
-
-The rate limit tester will:
-- Start a local server instance
-- Make rapid API requests to test rate limits
-- Display a real-time progress bar
-- Confirm which authentication tier you're using
-- Show exactly when rate limiting kicks in
-
-### Interactive Authentication Setup (for local testing only)
-
-For local development and testing, you can set up authentication interactively:
-```bash
-npx -y reddit-mcp-buddy --auth
-```
-
-This will prompt you for Reddit app credentials and save them locally. **Note: This does NOT work with Claude Desktop** - use environment variables in your Claude config instead.
-
-### Private sandbox posting test
-
-Build the checkout, then print the proposed test without making any requests:
-
-```bash
-npm run build
-REDDIT_TEST_SUBREDDIT=your_private_sub node tests/live-write.mjs
-```
-
-The live run requires an approved app, `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET`, plus either `REDDIT_REFRESH_TOKEN` or the script-app `REDDIT_USERNAME`/`REDDIT_PASSWORD` pair. The account must moderate the private test subreddit. OAuth validation requires all six scopes: `identity`, `read`, `submit`, `flair`, `history` for recovery, and `edit` for cleanup. The harness checks these before connecting any posting client. Keep credentials outside the repository. On Node versions supporting `--env-file`, a local environment file can supply them:
-
-```bash
-RUN_WRITE_TESTS=1 REDDIT_TEST_SUBREDDIT=your_private_sub \
-  node --env-file=/path/to/private.env tests/live-write.mjs --run
-```
-
-This command performs real writes. It starts actual stdio MCP connections, declines one post request, accepts one test post, and tests comment preview followed by an identical submission from a client without elicitation. The harness supplies the confirmation responses automatically; running it authorizes these test actions. It creates one post and one comment, verifies their content, then attempts deletion of both even after a failure.
-
-The unique marker and any cleanup failures are printed for manual inspection. Lost responses trigger a search of the test user's newest posts and comments; an unresolved outcome or unverified deletion fails the run. Cleanup cannot be guaranteed if the process is killed or Reddit is unavailable. Ordinary unit tests use an offline API fixture, and normal integration runs skip posting unless explicitly enabled.
-
-### Testing with HTTP Mode
-
-To test the server directly in your terminal:
-```bash
-# Run in HTTP mode on port 3000
-npx -y reddit-mcp-buddy --http
-
-# Or with custom port
-REDDIT_BUDDY_PORT=8080 npx -y reddit-mcp-buddy --http
-```
-
-**Note:** The server runs in stdio mode by default (for Claude Desktop). Use `--http` flag for testing with Postman MCP or direct API calls.
-
-## Installation Options
+## Other ways to install
 
 ### Global Install
 ```bash
@@ -518,93 +575,13 @@ bash tests/test-docker.sh reddit-mcp-buddy
 
 The test checks container health, MCP initialization, tool discovery, and shutdown without Reddit credentials.
 
-### Claude Desktop Extension
+### Build the Claude Desktop extension from source
 
-For one-click installation in Claude Desktop, download the pre-built extension:
-
-**📦 [Download reddit-mcp-buddy.mcpb](https://github.com/karanb192/reddit-mcp-buddy/releases/latest/download/reddit-mcp-buddy.mcpb)**
-
-**Installation:** Open the downloaded `.mcpb` file and Claude Desktop installs the extension. Then enter your approved Reddit app's credentials in the extension settings (see [Authentication](#authentication)).
-
-#### Build from Source (Optional)
-
-If you prefer to build the extension yourself:
+The pre-built extension is in [Quick Start](#quick-start). To build it yourself:
 ```bash
 git clone https://github.com/karanb192/reddit-mcp-buddy.git
 cd reddit-mcp-buddy
 ./scripts/build-mcpb.sh
-```
-
-**Note**: Most users should use the standard npm installation method shown in [Quick Start](#quick-start-30-seconds).
-
-## Comparison with Other Tools
-
-| Feature | Reddit MCP Buddy | Other MCP Tools |
-|---------|-------------|----------------|
-| **Credentials** | Existing approved Reddit API access required | Varies by server |
-| **Language** | TypeScript/Node.js | Python (most) |
-| **Tools Count** | 5 read + 3 opt-in write | 8-10 (redundant) |
-| **Fake Metrics** | ✅ Real data only | ❌ "Sentiment scores" |
-| **Search** | ✅ Full search | Limited or none |
-| **Caching** | ✅ Smart caching | Usually none |
-| **LLM Optimized** | ✅ Clear params | Confusing options |
-| **Rate Limit Testing** | ✅ Built-in tools | ❌ No verification |
-
-## Rate Limits
-
-| Mode | Requests/Minute | Cache TTL | Setup Required |
-|------|----------------|-----------|----------------|
-| No credentials (until 2026-11-13) | 10 | 15 min | None |
-| App-only | 60 | 5 min | Client ID + Secret |
-| Authenticated | 100 | 5 min | All credentials |
-
-*Cache TTL applies to subreddit listings. Post details (10 min), search results (10 min), and user profiles (15 min) use fixed TTLs in all modes.*
-
-## Why Reddit MCP Buddy?
-
-### What others do wrong:
-- ❌ **Fake metrics** - "sentiment scores" that are just keyword counting
-- ❌ **Bloated responses** - Returning 100+ fields of Reddit's raw API
-- ❌ **Poor LLM integration** - Confusing parameters and unclear descriptions
-
-### What we do right:
-- ✅ **Real data only** - If it's not from Reddit's API, we don't make it up
-- ✅ **Clean responses** - Only the fields that matter
-- ✅ **Clear parameters** - LLMs understand exactly what to send
-- ✅ **Fast & cached** - Responses are instant when possible
-
-## Examples
-
-### Your AI can now answer:
-
-**"What are the top posts about GPT-4 today?"**
-```
-→ search_reddit with query="GPT-4", time="day", sort="top"
-```
-
-**"Show me what's trending in technology"**
-```
-→ browse_subreddit with subreddit="technology", sort="hot"
-```
-
-**"What do people think about this article?"**
-```
-→ search_reddit with the article URL to find discussions
-```
-
-**"Analyze the user DeepFuckingValue"**
-```
-→ user_analysis with username="DeepFuckingValue"
-```
-
-**"Get the comments from this Reddit post"**
-```
-→ get_post_details with url="https://reddit.com/r/..."
-```
-
-**"What's trending across all of Reddit?"**
-```
-→ browse_subreddit with subreddit="all", sort="hot"
 ```
 
 ## Troubleshooting
@@ -612,17 +589,12 @@ cd reddit-mcp-buddy
 ### Common Issues
 
 **"Reddit ended logged-out RSS access on 2026-11-13"**
-- The server has no credentials, and Reddit no longer serves the RSS feeds it used without them ([changelog](https://support.reddithelp.com/hc/en-us/articles/54353370049684-Changelog-October-8-2026)). The subreddit, post, or user you asked for is not the problem
+- The server has no credentials, and it reads nothing from Reddit without them. Reddit set 2026-11-13 as the end of its RSS feeds ([changelog](https://support.reddithelp.com/hc/en-us/articles/54353370049684-Changelog-October-8-2026)), which were the only logged-out route. The subreddit, post, or user you asked for is not the problem
 - Add your approved app's credentials (see [Authentication](#authentication)). Reddit stopped accepting new API access requests on 2026-10-31, so this only helps people who already hold access
 
 **"Cannot create an app" or "API approval required"**
 - Reddit stopped accepting new requests for public API access on 2026-10-31 ([migration post](https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/)); this project cannot approve an app or remove Reddit's restrictions
 - Use credentials only for an app and use case Reddit has approved
-
-**"Can't achieve 100 requests/minute"**
-- The 10/60/100 tiers are this server's local caps, not guaranteed throughput from Reddit
-- Respect Reddit's rate-limit responses; adding account credentials does not increase Reddit's granted quota
-- Run `npm run test:rate-limit:app` or `npm run test:rate-limit:auth` to inspect the corresponding local mode (requires cloning the repo)
 
 **"Command not found" error**
 ```bash
@@ -634,14 +606,9 @@ npm --version
 $(npm prefix -g)/bin/reddit-mcp-buddy
 ```
 
-**Browsing works but search / comments / user analysis fail**
-- Without credentials, only `browse_subreddit` (from Reddit's RSS feed, until 2026-11-13) and the offline `reddit_explain` work
-- Solution: Add your approved app's credentials (see [Authentication](#authentication))
-
-**Rate limit errors**
-- Local caps: 60 requests/minute with app credentials and 100 with full authentication (10 without credentials, until 2026-11-13)
-- Reddit applies its own API limits; the server retries transient failures, but sustained throttling can still fail
-- Reduce request frequency and respect Reddit's rate-limit responses
+**Rate limit errors, or fewer requests per minute than the cap**
+- The caps under [Modes and local request caps](#modes-and-local-request-caps) are this server's own. Reddit applies its own API limits on top, and user credentials do not raise them
+- The server retries transient failures, but sustained throttling can still fail
 - If an error says `Retry in Ns`, wait that long before retrying. The server returns long upstream waits immediately instead of sleeping through the client's request timeout.
 
 **Write tools don't show up**
@@ -651,90 +618,13 @@ $(npm prefix -g)/bin/reddit-mcp-buddy
 - HTTP mode never registers write tools, by design (the HTTP endpoint has no authentication)
 
 **"Subreddit not found"**
-- Check spelling (case-insensitive)
-- Some subreddits may be private or quarantined
-- Try "all" or "popular" instead
+- Ask the assistant to check the name with `find_subreddits`. It lists names Reddit does not know in `not_found` and names that are private, quarantined or banned in `unavailable`
+- Subreddit names are not case-sensitive
 
 **Connection issues**
 - Reddit may be down (check https://www.redditstatus.com)
 - Firewall blocking requests
 - Try restarting the MCP server
-
-### Environment Variables
-
-#### Authentication Variables
-| Variable | Description | Required | Rate Limit |
-|----------|-------------|----------|------------|
-| `REDDIT_CLIENT_ID` | Reddit app client ID | Yes (from 2026-11-13) | Local cap: 60 req/min (with secret) |
-| `REDDIT_CLIENT_SECRET` | Reddit app secret | Yes (from 2026-11-13) | Local cap: 60 req/min (with ID) |
-| `REDDIT_USERNAME` | Reddit account username | No | Local cap: 100 req/min (with all 4) |
-| `REDDIT_PASSWORD` | Reddit account password | No | Local cap: 100 req/min (with all 4) |
-| `REDDIT_REFRESH_TOKEN` | OAuth refresh token; leave password unset | No | Local cap: 100 req/min with client ID + secret |
-| `REDDIT_USER_AGENT` | Custom user agent string (applies when credentials are configured) | No | - |
-
-#### Server Configuration
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `REDDIT_BUDDY_HTTP` | Run as HTTP server instead of stdio | `false` |
-| `REDDIT_BUDDY_PORT` | HTTP server port (when HTTP=true) | `3000` |
-| `REDDIT_BUDDY_HOST` | Interface the HTTP server binds to | `127.0.0.1` |
-| `REDDIT_BUDDY_ALLOWED_ORIGINS` | Comma-separated browser origins allowed to call the HTTP endpoint | none |
-| `REDDIT_BUDDY_ALLOWED_HOSTS` | Comma-separated `host:port` values accepted in the Host header (DNS-rebinding protection) | loopback values when bound to localhost |
-| `REDDIT_BUDDY_NO_CACHE` | Disable caching (always fetch fresh) | `false` |
-
-#### Posting (v1.2.0)
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `REDDIT_BUDDY_WRITE` | Register the [posting tools](#posting-v120); requires env user credentials, verified identity and scopes, and stdio | `false` |
-| `REDDIT_BUDDY_MAX_POSTS_PER_HOUR` | Posts per hour; only values from 1 to 4 are honored (0 and invalid values are ignored) | `5` |
-| `REDDIT_BUDDY_MAX_COMMENTS_PER_HOUR` | Comments per hour; only values from 1 to 29 are honored (0 and invalid values are ignored) | `30` |
-| `REDDIT_BUDDY_MIN_WRITE_INTERVAL_S` | Seconds between writes; only values ABOVE 15 are honored | `15` |
-
-The three rate-floor variables can only tighten the built-in caps. Setting them looser than the defaults does nothing, on purpose, and 0 does not mean "pause posting": it falls back to the default cap.
-
-> **HTTP mode has no authentication.** It binds to localhost so only your machine can reach it, and rejects Host headers outside the loopback set. Setting `REDDIT_BUDDY_HOST=0.0.0.0` exposes it to your whole network - only do that on a trusted network (e.g. inside Docker, which sets it deliberately). On a non-loopback bind the Host check is off by default, since clients legitimately arrive with a container IP or service name; set `REDDIT_BUDDY_ALLOWED_HOSTS` to restrict it. Browser requests are rejected unless their origin is listed in `REDDIT_BUDDY_ALLOWED_ORIGINS`; non-browser clients like Postman are unaffected.
-
-### HTTP and HTTPS Proxies
-
-On Node 22.21.0+ in the 22.x line, or Node 24 and newer, enable Node's built-in proxy support before starting the server. The project's Node 26 Docker image supports this. Check `node --version` first: unsupported versions can ignore these settings and connect directly. Node currently marks this feature as under active development.
-
-```json
-{
-  "mcpServers": {
-    "reddit": {
-      "command": "npx",
-      "args": ["-y", "reddit-mcp-buddy"],
-      "env": {
-        "NODE_USE_ENV_PROXY": "1",
-        "HTTP_PROXY": "http://proxy.example.com:8080",
-        "HTTPS_PROXY": "http://proxy.example.com:8080",
-        "NO_PROXY": "localhost,127.0.0.1"
-      }
-    }
-  }
-}
-```
-
-`HTTP_PROXY` routes HTTP requests; `HTTPS_PROXY` routes HTTPS requests, including Reddit API and RSS calls. `NO_PROXY` excludes matching hosts. Export these variables in your shell for CLI use, or pass them with Docker's `-e` options. Set them in the process environment before startup; the server does not load a project `.env` file automatically.
-
-Inside Docker, `localhost` refers to the container. On Docker Desktop, use `host.docker.internal` to reach a proxy running on the host.
-
-Proxy authentication can be included in the proxy URL as `http://username:password@proxy.example.com:8080`. Treat that value as a credential and redact it from shared logs and configuration. For a network that uses a private certificate authority, use `NODE_EXTRA_CA_CERTS` with your organization's PEM certificate file instead of disabling TLS verification.
-
-See [Node's proxy and certificate configuration guide](https://nodejs.org/learn/http/enterprise-network-configuration). Proxy support routes network traffic; it does not grant Reddit API approval or bypass Reddit's access rules.
-
-## Technical Details
-
-### Smart Caching System
-
-Reddit MCP Buddy includes intelligent caching to improve performance and reduce API calls:
-
-- **Memory Safe**: Hard limit of 50MB - won't affect your system performance
-- **Per-Content TTLs**: Post details (10min), user profiles (15min), search results (10min); subreddit listings use the mode default (5min with credentials)
-- **LRU Eviction**: Automatically removes least-used data when approaching limits
-- **Hit Tracking**: Optimizes cache based on actual usage patterns
-
-This means faster responses and staying well within Reddit's rate limits, all while using minimal system resources.
 
 ## Development
 
@@ -753,19 +643,15 @@ npm test                     # Unit tests
 npm run test:integration     # Integration tests
 npm run test:all             # All tests
 
-# Test rate limits
-npm run test:rate-limit       # Test with current environment
-npm run test:rate-limit:anon  # Test anonymous mode (10 rpm)
-npm run test:rate-limit:app   # Test app-only mode (60 rpm)
-npm run test:rate-limit:auth  # Test authenticated mode (100 rpm)
-
 # Type check
 npm run typecheck
 ```
 
+Rate-limit checks, local credential setup with `--auth`, and the private sandbox posting test are in [CONTRIBUTING.md](https://github.com/karanb192/reddit-mcp-buddy/blob/main/CONTRIBUTING.md#-testing).
+
 ### Requirements
 - Node.js >= 20.0.0
-- npm or yarn
+- npm
 - TypeScript 5.5+
 
 ## Contributing
@@ -784,7 +670,7 @@ We keep things simple:
 - 💡 [Request features](https://github.com/karanb192/reddit-mcp-buddy/issues)
 - ⭐ [Star on GitHub](https://github.com/karanb192/reddit-mcp-buddy)
 
-## 🔗 Related Resources
+## Related Resources
 
 ### Official MCP Resources
 - **[MCP Registry](https://registry.modelcontextprotocol.io)** - Official registry of MCP servers
@@ -798,16 +684,6 @@ We keep things simple:
 - **[MCP Registry Search](https://registry.modelcontextprotocol.io)** - Search for "reddit" to find all versions
 - **[NPM Package](https://www.npmjs.com/package/reddit-mcp-buddy)** - Install via npm/npx
 - **[GitHub Repository](https://github.com/karanb192/reddit-mcp-buddy)** - Source code and issues
-
-#### View All Versions via API
-```bash
-# Get all versions of reddit-mcp-buddy from the registry
-curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=reddit-mcp-buddy" | jq
-
-# Get just names, version numbers, and latest flag
-curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=reddit-mcp-buddy" | \
-  jq '.servers[] | {name: .server.name, version: .server.version, isLatest: ._meta."io.modelcontextprotocol.registry/official".isLatest}'
-```
 
 ## License
 

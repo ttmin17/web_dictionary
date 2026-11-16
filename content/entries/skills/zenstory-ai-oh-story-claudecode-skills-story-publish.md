@@ -15,10 +15,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8448
-  last_commit: 2026-11-09T04:53:43Z
-  stars_delta_7d: 124
-  stars_growth_pct: 1.5
-  trending_score: 125.85
+  stars: 8649
+  last_commit: 2026-11-13T06:27:00Z
+  stars_delta_7d: 201
+  stars_growth_pct: 2.4
+  trending_score: 205.78
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7737
     - 8006
     - 8324
     - 8448
+    - 8649
 language: zh
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-publish/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:00.604Z
+  fetched_at: 2026-11-16T09:16:33.368Z
   truncated: false
 type: agent_skill
 skill:
@@ -98,7 +98,7 @@ skill:
 1. 调用即先生成并保存资料骨架，再逐步补齐（先读已有同名文件，按下文保护作者手改）。
 2. 读作品材料，记下作者已定的值，只为作者要求的字段生成候选；候选书名先按平台参考的书名规则自查字数和符号，并标出字数。
 3. 按平台参考逐字段核对允许值、数量上限和长度；参考没写的限制标“资料未说明”。
-4. 已有书名、笔名及题材依据时按「封面」处理，不以简介确认作为前置条件。番茄短故事无需平台简介，用设定中的梗概、题材招式和目标情绪支持封面。
+4. 已有书名、笔名及题材依据时按「封面」处理，不以简介确认作为前置条件。番茄短故事无需平台简介，用设定中的梗概、这篇用的套路（旧书叫「题材招式」）和目标情绪支持封面。
 5. 本轮已知信息写入资料，未获取或未确认的字段留空并在「待作者确认」列出；回复说明文件路径、已填写和缺失项，只有所有需求均有结论时才说“发布资料准备完成”。
 6. 发布资料是平台填写值的依据。确认的书名与 `设定/题材定位.md`（短篇为 `设定.md`）里的不一致时，保存后告诉作者；改设定和书目录交给写作 skill，本 skill 不改。
 
@@ -106,7 +106,7 @@ skill:
 
 先看当前会话实际能调用的生图工具（不凭模型名判断），再请作者选“直接生成”“仅提示词”或“暂缓”；作者已经选过且仍可执行的不再问。不因缺工具自动改用付费 API。
 
-把已确认的书名、笔名、平台及作品中的题材依据交给 `story-cover`：长篇用题材类型、核心梗；短篇用梗概、题材招式、目标情绪。已有简介可作补充参考，与平台是否填写简介无关，不为封面另拟或强求简介。缺书名或笔名时先保存资料，将封面字段留空并列待办；仅提示词模式缺题材依据时也先留待确认。直接生成走完整流程，仅提示词走 Step 1-3。完整提示词写进「封面」，成功另记图片路径。入口不可用、失败或暂缓时写明原因，不阻塞保存；生图失败后改仅提示词须作者同意。仅有提示词不称“封面已备妥”，风格尺寸建议不替代平台规格。
+把已确认的书名、笔名、平台及作品中的题材依据交给 `story-cover`：长篇用题材类型、核心梗；短篇用梗概、这篇用的套路（旧书叫「题材招式」）、目标情绪。已有简介可作补充参考，与平台是否填写简介无关，不为封面另拟或强求简介。缺书名或笔名时先保存资料，将封面字段留空并列待办；仅提示词模式缺题材依据时也先留待确认。直接生成走完整流程，仅提示词走 Step 1-3。完整提示词写进「封面」，成功另记图片路径。入口不可用、失败或暂缓时写明原因，不阻塞保存；生图失败后改仅提示词须作者同意。仅有提示词不称“封面已备妥”，风格尺寸建议不替代平台规格。
 
 ## 发布资料文件
 

@@ -1,0 +1,346 @@
+---
+slug: marker-inc-korea-autorag-skills-autorag-doctor
+name: doctor
+tagline: Diagnose and repair a broken or half-working AutoRAG install so every
+  configured source is both indexed and searchable. Checks AutoRAG, MinSync,
+  Jikji
+summary: Always finish with the status table in Report.
+categories:
+  - databases-memory
+tags:
+  - agentic-rag
+  - ai-agents
+  - document-parser
+  - embeddings
+status: active
+quality_percentile: 81
+selection_reason: quality_percentile
+first_seen: 2026-11-16
+last_updated: 2026-11-16T09:17:13.266Z
+source:
+  kind: github_repo
+  repo: Marker-Inc-Korea/AutoRAG
+  subpath: skills/autorag-doctor
+  official_vendor: false
+  license: Apache-2.0
+signals:
+  stars: 5874
+  last_commit: 2026-11-14T16:48:55Z
+  stars_delta_7d: 39
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
+  sparkline_4w:
+    - 5874
+language: en
+needs_keys: false
+prerequisites: []
+readme_source:
+  repo: Marker-Inc-Korea/AutoRAG
+  path: skills/autorag-doctor/SKILL.md
+  branch: main
+  fetched_at: 2026-11-16T09:15:10.333Z
+  truncated: false
+type: agent_skill
+skill:
+  skill_name: doctor
+  description: Diagnose and repair a broken or half-working AutoRAG install so
+    every configured source is both indexed and searchable. Checks AutoRAG,
+    MinSync, Jikji, the embedding backend, and every CLI-backed datasource
+    (lazykatok, discrawl, slacrawl, wacrawl, telecrawl, notcrawl, mailcrawl),
+    then fixes orphan locks, orphan processes, embedding dimension or identity
+    mismatches, stale indexes, and missing setup. Use when search returns
+    nothing or too little, refresh hangs or fails, a datasource disappeared from
+    results, indexes look stale, the embedder is unavailable, or the user asks
+    to check, diagnose, verify, or repair AutoRAG.
+  folder_path: skills/autorag-doctor
+  extra_files: []
+  pack_total_skills: 8
+  is_pack_primary: false
+  clients:
+    - claude-code
+    - codex
+    - antigravity
+  pack_slug: marker-inc-korea-autorag
+---
+
+# AutoRAG doctor
+Goal: every configured datasource is **indexed** *and* **actually returns
+hits**. A green `status` is not enough — the run is done only when a real query
+returns a real hit per datasource, or the datasource is reported as genuinely
+empty or not configured.
+
+Always finish with the status table in [Report](#report).
+
+## Safety
+
+- Diagnosis and repair never delete, move, or edit source documents; a doctor
+  run changes only AutoRAG-owned state.
+- Never delete a datasource's **native** store (`~/Library/Application Support/katok`, `~/.discrawl`,
+  `~/.mailcrawl`, Telegram/WhatsApp/Notion archives). AutoRAG only
+  reads them; rebuilding them is the owning CLI's job.
+- Only AutoRAG-owned state under `AUTORAG_HOME` and the workspace `.autorag`
+  directory may be reset.
+- Never print token or password values. Report credential **names** only.
+- Kill a process only after confirming it is an AutoRAG-owned orphan.
+
+## 1. Triage the core
+
+```bash
+autorag status --json
+autorag health --json
+autorag setup --format json
+```
+
+- `status` reports `state`, `stale`, `diagnostics`, and per-component state for
+  `minsync`, `jikji`, and `datasources`. `stale: true` or any `stale-index`
+  diagnostic means the corpus changed since the last successful refresh.
+- `health` resolves the single search model and does one live completion probe.
+  `--skip-probes` only proves config shape, never live access; do not claim a
+  healthy model from it.
+- `setup --format json` reports `embedding.backend` (`remote`, `daemon`, or
+  `in-process`) and the resolved `provider`/`model`/`dimension` when a backend
+  is alive, or `embedding.reason` and a `remediation` when none is. It only
+  probes; it never starts a daemon. Semantic search needs the daemon (or a
+  remote endpoint) to be running: a backend that is absent is a real
+  `embedding-unavailable` state, not normal.
+
+Config lives at `--config`, `AUTORAG_CONFIG`, `$AUTORAG_HOME/config.json`, or
+`~/.autorag/config.json`. Read `searchPaths`, `workspacePath`, `minSync`,
+`jikji`, and `datasources` before changing anything.
+
+If the CLI itself is missing or the config does not exist, stop and run the
+`autorag-setup` skill first — doctor repairs an existing install, it does not
+create one.
+
+## 2. Probe every datasource natively
+
+Each CLI owns its archive, so ask the CLI, not AutoRAG. A datasource is only
+`active` when its binary exists, its store is present, and its own check passes.
+
+| Datasource | Native check | Re-sync when empty or stale |
+|---|---|---|
+| MinSync (local docs) | `minsync status`, `minsync check`, `minsync verify` | `autorag refresh --method minsync` |
+| Jikji (discovery) | `jikji doctor` | `autorag refresh --method jikji` |
+| Everything (Windows file names) | `autorag status --json` → `components.everything` | `autorag refresh --method everything --json` |
+| KakaoTalk | `lazykatok doctor` | `lazykatok sync && lazykatok index` |
+| Discord | `discrawl --json metadata` | `discrawl sync` |
+| Slack | `slacrawl --json doctor` | `slacrawl sync` |
+| WhatsApp | `wacrawl --json doctor` | `wacrawl import` |
+| Telegram | `telecrawl --json doctor`, `telecrawl --json status` | `telecrawl import` |
+| Notion | `notcrawl doctor`, `notcrawl status` | `notcrawl sync --source desktop` |
+| Obsidian / notes | `autorag status` (AutoRAG-owned index) | `autorag refresh --method datasources`; if corrupt, delete `.autorag/datasources/obsidian/<instance>` first |
+| Mail | `mailcrawl doctor`, `mailcrawl status` | `mailcrawl sync && mailcrawl index` |
+| Coding-agent sessions | `wombat doctor --json` | `wombat sync --index` |
+| Lark / Feishu | `lark-cli auth status --format json` | no local sync; search is remote |
+
+Rules:
+
+- A missing binary is **not configured**, not a failure. Report it with the
+  install command and move on.
+- An empty store is a legitimate zero-hit result. `telecrawl` and `slacrawl`
+  return JSON `null` (not `[]`) for no hits — treat that as empty, not broken.
+- A configured datasource whose native check fails is a **failure** and must be
+  repaired or reported explicitly. Never report a skip as a pass.
+- Zero hits with a non-empty store means the CLI's search path is suspect, not
+  the data. Cross-check against the raw index before concluding (for example
+  `slacrawl sql "select count(*) from message_fts where message_fts match 'x';"`
+  against `slacrawl search x`). A populated index plus an empty CLI result is an
+  upstream bug: report it with the exact reproduction instead of re-syncing.
+
+## 3. Prove searchability
+
+Indexing without retrieval is a failed run. Probe retrieval per datasource
+through the model-free MCP tools, then once end to end:
+
+```text
+autorag.status {}
+autorag.search {"query":"a word that certainly appears","topK":3}
+autorag.search {"query":"recent topic","datasourceIds":["discord"],"topK":3}
+autorag.search {"query":"recent mail subject","scope":"/mailcrawl/**","topK":3}
+```
+
+```bash
+autorag search "summarize the collection" --top-k 3 --json --debug
+```
+
+- **Always read the `diagnostics` returned by MCP `autorag.search`.** A run
+  that silently dropped a whole retrieval method still looks successful, just
+  with fewer results; only the diagnostics name it (`retrieval-method-failed`).
+  The model-backed CLI `autorag search --json`
+  hides `diagnostics`, `sessionId`, and per-result evidence unless `--debug` is
+  set, so pass `--debug` when diagnosing that path.
+- A method missing from the returned `method` values means that method
+  contributed nothing. During a full MinSync re-sync this is expected: the
+  store is being rebuilt, `minsync status` reports `NotSynced`, and local-file
+  hits stay absent until it finishes. Confirm with `minsync status` before
+  treating it as a failure, and never kill a running sync to "fix" it.
+- MCP `autorag.search` needs no model, so it isolates retrieval from model
+  failures.
+- Use MCP `datasourceIds` to select configured connections before retrieval;
+  `scope` narrows results within scope-capable datasources. Discover connection
+  IDs with `autorag.datasources.list`; descriptor tags are metadata only, not
+  search filters. Every configured connection is searchable — if one returns
+  nothing, investigate its native store, connector, or the query itself.
+- `autorag.evidence {"sessionId":"...","resultNumber":N}` shows the exact chunk
+  behind a numbered result; use it to confirm a hit is real and its source is
+  readable. The CLI `autorag evidence SESSION --json` remains for terminal
+  repair.
+- Local-file hits must map to an absolute, existing path. Datasource hits keep
+  source-native identities such as `/kakao/personal/chunks/42`; those are not
+  filesystem paths and must never be passed to `cat`.
+
+## 4. Repair playbook
+
+### Stuck embedding daemon
+
+AutoRAG owns no lock or pid file for embeddings. A running `minsync serve`
+publishes `host`, `port`, and `pid` under `~/.cache/minsync/serve/<instance>/`
+and removes them on a clean stop. A leftover file from a crashed daemon is
+harmless: AutoRAG only adopts a daemon whose `GET /health` answers as a loopback
+server of the wanted model, so a stale entry is skipped.
+
+```bash
+ls ~/.cache/minsync/serve/* 2>/dev/null
+autorag setup --format json
+```
+
+To diagnose an embedding backend that is not alive, `setup --format json` and
+`status` say so (`embedding.reason`, and the `embedding-unavailable`
+diagnostic). AutoRAG never starts the daemon: run `minsync serve
+--idle-timeout 0` by hand (or as a launchd/systemd service, see
+`docs/minsync-setup.md`) and read its own error, or press Ctrl+Shift+E in the
+TUI. When no daemon answers and the in-process addon
+(`@nomadamas/minsync-native`) is missing, that is the `embedder-unavailable`
+state. The daemon stops itself after `--idle-timeout` seconds (default 300), so
+a semantic failure after a quiet spell usually means it timed out. Stop an
+orphaned daemon by the pid from `~/.cache/minsync/serve/<instance>/pid` after
+confirming no live refresh holds it.
+
+Index locks are owned by their engines: MinSync/tantivy locks under
+`<workspace>/.autorag/`, and per-CLI locks such as
+`<workspace>/.autorag/datasources/discrawl/.discrawl-sync.lock`. Delete one
+only after confirming no owning process is alive; otherwise wait for the run
+that holds it.
+
+### Orphan process
+
+```bash
+pgrep -fl 'autorag|minsync' | grep -v pgrep
+```
+
+A refresh that was killed mid-run can leave a `minsync serve` daemon or a
+`minsync` child alive. A daemon idle-stops itself; stop a confirmed orphan by
+the pid from `~/.cache/minsync/serve/<instance>/pid`, and only kill a PID
+directly when it is confirmed orphaned (no parent CLI, no live refresh).
+Re-run `autorag status --json` afterwards to confirm `inFlight: false`.
+
+### Embedding model mismatch
+
+`embedding-identity-mismatch` or a dimension error means the vectors on disk
+were built with a different embedder than the configured one. Vectors of two
+different dimensions can never be compared, so the index must be rebuilt:
+
+```bash
+autorag index rebuild --method minsync
+```
+
+The default is MinSync's local `Qwen/Qwen3-Embedding-0.6B` engine at 1024
+dimensions, reached through a running `minsync serve` daemon or, failing that,
+MinSync's in-process engine. Both report one identity (`provider: minsync`), so
+a store never re-embeds because the daemon appeared or went away. Vectors
+written by the removed local Q8_0 gateway engine are **not** compatible: their
+identity changed, so the memory store (`memory.json.vectors.db`), chat-sidecar
+semantic DBs, and the gist `vectors.json` re-embed on the next refresh, while a
+MinSync workspace created through the old gateway profile needs
+`autorag index rebuild --method minsync` (or
+`autorag index reset --method minsync --yes` then refresh). Changing the
+embedder's `dimension` in config **without** a rebuild leaves retrieval silently
+empty.
+
+### Stale index
+
+`stale-index` diagnostics or `stale: true` mean sources changed after the last
+refresh.
+
+```bash
+autorag refresh --method parsed,minsync --json
+autorag refresh --force --json
+```
+
+Use `--force` only when incremental refresh does not clear it. For continuous
+freshness install an hourly `autorag watch --once` job (cron, launchd, systemd
+timer, or Task Scheduler).
+
+A file the parser failed on (corrupt PDF, encrypted HWP) or that was unreadable is not
+re-parsed on every refresh: it is skipped until its mtime, size or parser version changes.
+After fixing the cause (permissions, OCR setup), run `autorag refresh --retry-failed --json`
+to retry those files once without re-indexing healthy ones.
+
+### Missing or wrong setup
+
+- `unknown-datasource-skill`: the config key is not a builtin template and has
+  no `"type"`. It is skipped, not fatal — fix the name or add `"type"`.
+- `datasource-index-failed` / `sync-failed`: the backing CLI errored. Run that
+  CLI's own check from the table above and fix it there.
+- A missing MinSync binary is not a diagnostic: `autorag search`, `autorag refresh`
+  and MCP tools fail with `MinSync is required ...` and a non-zero exit. Install it
+  (`cargo install minsync`) or leave `minSync.autoInstall` on, then retry.
+- `jikji-unavailable`: the binary is missing and auto-install failed. It
+  installs through cargo; verify the Rust toolchain, then `autorag refresh --method jikji` to retry.
+- `jikji-unsupported-version`: the `jikji` AutoRAG found is older than 0.2.0, so it was never run.
+  The message names the detected version and the binary path. `autorag refresh --method jikji`
+  installs the pinned build; with `jikji.autoInstall: false` or `jikji.binaryPath` upgrade it yourself
+  (`cargo install jikji-cli --version 0.2.1 --locked --force`).
+- `datasource-auth-error` / `datasource-rate-limited`: datasource credentials or quota. Report the
+  missing environment-variable **name** and let the user supply it.
+- A configured datasource that returns nothing is a native store, connector, or
+  query problem — every configured connection is searchable. Run its native
+  check from the table above and fix it there.
+
+## Diagnostic codes
+
+| Code | Meaning | First move |
+|---|---|---|
+| `stale-index` | Sources changed since last refresh | `autorag refresh --method parsed,minsync` |
+| `index-not-ready` | Index missing or never built | `autorag refresh --json` |
+| `minsync-sync-failed` | MinSync indexing failed; the message carries MinSync's own reason | Fix the reported cause, then `autorag refresh --method minsync` |
+| `minsync-file-skipped` | MinSync skipped one file (unreadable, unparsable, or rejected by the embedder) and kept its older chunks; retried on the next sync | Fix that file's permissions/content, then `autorag refresh --method minsync` |
+| `minsync-lock-held` | Another `minsync` run holds `.minsync/lock`, often an orphan left by a killed host; retryable | Wait for it to finish or stop that `minsync` process, then `autorag refresh --method minsync` |
+| `jikji-unavailable` | Jikji binary missing or install failed | Check cargo, retry refresh |
+| `jikji-unsupported-version` | Jikji older than 0.2.0 was found and not run; message names the version and path | `autorag refresh --method jikji` installs the pinned build, or upgrade it yourself |
+| `everything-index-failed` | Windows Everything instance could not start or index; message carries ES exit code and stderr | Fix the reported cause, `autorag refresh --method everything --json` |
+| `embedding-identity-mismatch` | Indexed vectors use a different embedder | `autorag index rebuild --method minsync` |
+| `embedder-unavailable` | No remote endpoint answered, no daemon could start, and the in-process addon is missing or failed | Run `minsync serve` by hand to read its error, install MinSync (`cargo install minsync`) or `@nomadamas/minsync-native`, or configure a remote `minSync.embedder` |
+| `datasource-index-failed` | Backing CLI failed to index | Run that CLI's own doctor |
+| `datasource-empty` | Store has no matching content | Re-sync with the CLI, or accept as empty |
+| `unknown-datasource-skill` | Config name is not a known template | Fix the name or add `"type"` |
+| `retrieval-method-failed` | One method errored during the query | Read `--debug` diagnostics |
+| `rerank-disabled` | Warning: the `rerank` block names no model, so reranking is off and each source contributes its own top 10 to the first answer | Set `rerank.model` to turn it on, or remove the block; nothing else is wrong |
+| `datasource-auth-error` | Datasource credentials missing or rejected | Report the env var name |
+| `query-route-fallback` | Jev routing unavailable (often `OPENROUTER_API_KEY` unset); searched local with the original question | `test -n "$OPENROUTER_API_KEY"`; report the env var name, never its value |
+| `query-decomposition-failed` | Decomposition model call failed; searched the original question | Check `queryDecomposition.model` resolves (`autorag models list --provider openrouter`) |
+| `follow-up-check-fallback` | Jev post-fast-answer check unavailable; the run verified | Same as `query-route-fallback` |
+| `datasource-selection-fallback` | Jev datasource check unavailable; no datasource was searched before the fast answer | Same as `query-route-fallback` |
+| `query-routed` / `datasources-selected` / `follow-up-skipped` | Info: Jev's branch and queries / datasources searched and skipped / fast answer judged final | None; working as intended. A datasource that is never selected usually needs a clearer `description` in the config |
+
+## Report
+
+Always end with this table, one row per datasource and per AutoRAG component:
+
+| Source | Configured | Indexed | Searchable | Issue found | Fix applied |
+|---|---|---|---|---|---|
+| minsync | yes | yes | yes (3 hits) | – | – |
+| discord | yes | yes | no | stale archive | `discrawl sync` |
+| telegram | no | – | – | CLI not installed | reported |
+
+`Searchable` must come from an actual query in step 3, never inferred from
+index state. Follow the table with the exact remaining action for every row
+that is not fully green.
+
+## Completion condition
+
+Done only when: core triage is clean or every remaining diagnostic is
+explained, every configured datasource passed its native check, every one of
+them returned a real hit or is proven empty, every repair was re-verified by
+re-running the failing check, and the report table was delivered.

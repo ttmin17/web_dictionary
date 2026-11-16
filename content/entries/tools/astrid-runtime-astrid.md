@@ -15,10 +15,10 @@ tags:
   - capability-security
   - llm
 status: active
-quality_percentile: 56
+quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: astrid-runtime/astrid
@@ -26,16 +26,16 @@ source:
   license: Apache-2.0
 signals:
   stars: 10291
-  last_commit: 2026-11-07T05:12:50Z
+  last_commit: 2026-11-16T08:54:03Z
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 134
-  rank_delta: -1
+  rank_current: 139
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10282
     - 10286
+    - 10291
     - 10291
     - 10291
 language: en
@@ -46,7 +46,7 @@ readme_source:
   repo: astrid-runtime/astrid
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:19.284Z
+  fetched_at: 2026-11-16T09:16:46.107Z
   truncated: false
 type: agent_tool
 tool:

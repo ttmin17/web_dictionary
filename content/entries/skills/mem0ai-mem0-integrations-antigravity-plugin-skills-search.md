@@ -15,10 +15,10 @@ tags:
   - agents
   - ai-agents
 status: active
-quality_percentile: 76
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mem0ai/mem0
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 68674
+  stars: 69044
   last_commit: 2026-11-06T16:53:07Z
-  stars_delta_7d: 213
-  stars_growth_pct: 0.3
-  trending_score: 213.66
+  stars_delta_7d: 370
+  stars_growth_pct: 0.5
+  trending_score: 371.99
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 67421
     - 67824
     - 68461
     - 68674
+    - 69044
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mem0ai/mem0
   path: integrations/antigravity-plugin/skills/search/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:15.191Z
+  fetched_at: 2026-11-16T09:16:42.457Z
   truncated: false
 type: agent_skill
 skill:

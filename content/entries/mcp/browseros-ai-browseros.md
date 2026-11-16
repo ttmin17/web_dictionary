@@ -15,26 +15,26 @@ status: active
 quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: browseros-ai/BrowserOS
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 14288
-  last_commit: 2026-11-09T08:59:01Z
-  stars_delta_7d: 35
-  stars_growth_pct: 0.2
-  trending_score: 35.09
-  rank_current: 30
-  rank_delta: -9
+  stars: 14361
+  last_commit: 2026-11-16T03:50:38Z
+  stars_delta_7d: 73
+  stars_growth_pct: 0.5
+  trending_score: 73.37
+  rank_current: 27
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13984
     - 14102
     - 14253
     - 14288
+    - 14361
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: browseros-ai/BrowserOS
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:17.735Z
+  fetched_at: 2026-11-16T09:16:44.673Z
   truncated: false
 type: mcp_server
 launch:

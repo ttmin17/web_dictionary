@@ -13,10 +13,10 @@ tags:
   - code-review
   - codex
 status: active
-quality_percentile: 63
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: backnotprop/plannotator
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9921
-  last_commit: 2026-11-09T08:32:06Z
-  stars_delta_7d: 61
-  stars_growth_pct: 0.6
-  trending_score: 61.38
+  stars: 12132
+  last_commit: 2026-11-16T09:03:35Z
+  stars_delta_7d: 2211
+  stars_growth_pct: 22.3
+  trending_score: 2703.74
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9506
     - 9647
     - 9860
     - 9921
+    - 12132
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: backnotprop/plannotator
   path: apps/kiro-cli/skills/plannotator-review/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:48.838Z
+  fetched_at: 2026-11-16T09:16:11.026Z
   truncated: false
 type: agent_skill
 skill:

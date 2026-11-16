@@ -14,29 +14,29 @@ tags:
   - automation
   - claude-ai
 status: active
-quality_percentile: 67
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: yusufkaraaslan/Skill_Seekers
   official_vendor: false
   license: MIT
 signals:
-  stars: 15294
-  last_commit: 2026-09-30T18:49:17Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.1
-  trending_score: 11.01
-  rank_current: 66
-  rank_delta: -24
+  stars: 15324
+  last_commit: 2026-11-16T08:41:01Z
+  stars_delta_7d: 30
+  stars_growth_pct: 0.2
+  trending_score: 30.06
+  rank_current: 56
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15180
     - 15223
     - 15283
     - 15294
+    - 15324
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: yusufkaraaslan/Skill_Seekers
   path: README.md
   branch: development
-  fetched_at: 2026-11-09T09:26:47.558Z
+  fetched_at: 2026-11-16T09:15:02.250Z
   truncated: false
 type: mcp_server
 launch:
@@ -240,7 +240,7 @@ skill-seekers package output/react --target llama-index # → LlamaIndex TextNod
 skill-seekers package output/react --target ibm-bob     # → IBM Bob skill directory
 ```
 
-**LLM platforms (12):** `claude` · `gemini` · `openai` · `minimax` · `opencode` · `kimi` · `deepseek` · `qwen` · `openrouter` · `together` · `fireworks` · `markdown`
+**LLM platforms (13):** `claude` · `gemini` · `openai` · `minimax` · `opencode` · `kimi` · `deepseek` · `qwen` · `openrouter` · `requesty` · `together` · `fireworks` · `markdown`
 **RAG & vector (8):** `langchain` · `llama-index` · `haystack` · `chroma` · `faiss` · `weaviate` · `qdrant` · `pinecone`
 **Other (2):** `atlas` · `ibm-bob`
 

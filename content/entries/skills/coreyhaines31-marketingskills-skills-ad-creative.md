@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-ad-creative
 name: ad-creative
-tagline: When the user wants to generate, iterate, or scale ad creative —
-  headlines, descriptions, primary text, or full ad variations — for any paid
-  advertisi
+tagline: "When the user wants to write or judge ad creative, or asks which ad,
+  hook, or angle to run or kill: headlines, primary text, and variations for
+  Google"
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -16,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,25 +45,17 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ad-creative/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.913Z
+  fetched_at: 2026-11-16T09:15:48.044Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ad-creative
-  description: When the user wants to generate, iterate, or scale ad creative —
-    headlines, descriptions, primary text, or full ad variations — for any paid
-    advertising platform. Also use when the user mentions 'ad copy variations,'
-    'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,'
-    'creative testing,' 'write me some ads,' 'Facebook ad copy,' 'Google ad
-    headlines,' 'LinkedIn ad text,' 'static ads,' 'ad templates,' 'iMessage ad,'
-    'ChatGPT ad,' 'creative strategy,' 'creative roadmap,' 'creative retro,'
-    'hook writing,' 'creative review page,' 'motion video ad,' 'faceless video
-    ad,' 'UGC ad,' 'greenscreen ad,' 'TikTok/Reels ad format,' 'Meta ad format
-    tier list,' or 'creative format taxonomy.' Use it to produce or iterate ad
-    copy at scale. Copy avoids AI tells like 'it's not X, it's Y' reveals. For
-    campaign strategy and targeting, see ads. For landing page copy, see
-    copywriting. Test hypotheses must be falsifiable, naming the metric, the
-    comparison, and the expected direction.
+  description: "When the user wants to write or judge ad creative, or asks which
+    ad, hook, or angle to run or kill: headlines, primary text, and variations
+    for Google, Meta, LinkedIn, and TikTok, fresh angles when creative fatigues.
+    Test hypotheses name the metric, comparison, and expected direction. No AI
+    tells like 'it's not X, it's Y'. For campaign strategy, see ads. For landing
+    pages, see copywriting."
   folder_path: skills/ad-creative
   extra_files:
     - assets/creative-review-template.html
@@ -236,7 +228,7 @@ For detailed specs and format variations, see [references/platform-specs.md](htt
 
 **To decide *which format to make next*** (before briefing any specific ad), consult the Meta creative format taxonomy in [references/meta-creative-formats.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/meta-creative-formats.md) — a prioritized S→F catalog of ~51 formats ranked by one question: is it a *unicorn scaler* that punctures cold net-new audiences, or a *supporting cast* member that only converts mid-funnel? Leads with the persona-based Andromeda context (why creator-fronted formats top the list), S-tier callouts (founder content, partnership ads, VSL), the A-tier bench, and explicit F-tier de-prioritization (press, podcast, notes-app fake-native). Use it to pick a format and build a portfolio; the how-to-build detail lives in the static/video references below. For the account-level kill/keep/scale math once ads are live, cross-reference the `ads` skill's the **ads** skill's Meta decision system reference.
 
-**For static ad structure**, use the template library in [references/static-ad-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/static-ad-templates.md) — layout frameworks (Us vs. Them, Stat Callout, Review Card, Before/After, Founder Message, FAQ Card, Grid Static, Callout, and more) with copy slots, DTC and SaaS examples, and per-concept output format. Each template carries a **tier (S–F)** and **funnel role** (unicorn cold-scaler vs. mid-funnel supporting cast) so you reach for the right one first. Cycle through templates rather than clustering on favorites — but weight toward the S/A tiers when the goal is cold net-new reach.
+**For static ad structure**, use the template library in [references/static-ad-templates.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/static-ad-templates.md) — layout frameworks (Us vs. Them, Stat Callout, Before/After, Founder Message, FAQ Card, Grid Static, Callout, Apology Letter, Simple Guarantee, With / Without, Signs Checklist, and more), plus visual styles (billboard, whiteboard, newspaper, vintage, meme) that restyle any template with copy slots, DTC and SaaS examples, and per-concept output format. Each template carries a **tier (S–F)** and **funnel role** (unicorn cold-scaler vs. mid-funnel supporting cast) so you reach for the right one first. Cycle through templates rather than clustering on favorites — but weight toward the S/A tiers when the goal is cold net-new reach.
 
 **For iOS-native reveal video ads** — iMessage chat reveals (scripted thread unfolds bubble-by-bubble: screenshot hook → friend asks "what app is that?" → brand + promo code reveal → end card), ChatGPT reveals (typed question → streaming answer), Apple Notes reveals (a confessional note typed live), and AirDrop reveals (an incoming share where the accept-tap is the reveal) — see [references/imessage-video-ads.md](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ad-creative/references/imessage-video-ads.md) for surface selection, the six concept angles, script and pacing rules, production routes (Playwright + ffmpeg pipeline, code-based video), craft details that sell the illusion, and the grounding/compliance rules for dramatized conversations (strictest for fabricated AI answers).
 

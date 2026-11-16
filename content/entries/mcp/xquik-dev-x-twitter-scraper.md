@@ -1,11 +1,11 @@
 ---
 slug: xquik-dev-x-twitter-scraper
 name: x-twitter-scraper
-tagline: X (Twitter) scraper API, Twitter MCP server, Claude skill to scrape
-  tweets & followers. Not affiliated with X Corp.
-summary: Xquik is the world's fastest and cheapest X (Twitter) scraper service
-  with the most complete X (Twitter) data. Most other Apify Actors charge before
-  filtering or deduplication. Xquik charges only for delivered, unique...
+tagline: X (Twitter) scraper API, MCP server & Claude skill to scrape tweets &
+  followers. Not affiliated with X Corp.
+summary: Use this X (Twitter) scraper by Xquik to search tweets & posts. Export
+  profiles, followers & replies through REST, MCP, SDKs, CLI, webhooks & Apify.
+  It's an X (Twitter) API alternative. Public reads need no X (Twitter...
 categories:
   - browser-web
 tags:
@@ -14,29 +14,29 @@ tags:
   - social-media-api
   - tweet-scraper
 status: active
-quality_percentile: 30
+quality_percentile: 28
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Xquik-dev/x-twitter-scraper
   official_vendor: false
   license: MIT
 signals:
-  stars: 227
-  last_commit: 2026-11-09T08:54:50Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 120
-  rank_delta: -32
+  stars: 229
+  last_commit: 2026-11-16T08:50:50Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.9
+  trending_score: 2.02
+  rank_current: 106
+  rank_delta: 14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 214
     - 220
     - 227
     - 227
+    - 229
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Xquik-dev/x-twitter-scraper
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:27:49.932Z
+  fetched_at: 2026-11-16T09:16:14.847Z
   truncated: false
 type: mcp_server
 launch:
@@ -57,6 +57,9 @@ launch:
 ---
 
 # X (Twitter) Scraper API & MCP Server by Xquik
+[Watch how Framer uses Xquik scrapers](https://youtu.be/4UOSpoOoC3Y?t=367)
+with Claude Code, Codex, Cursor & more, from 6:07.
+
 Use this X (Twitter) scraper by Xquik to search tweets & posts.
 Export profiles, followers & replies through REST, MCP, SDKs, CLI, webhooks & Apify.
 It's an X (Twitter) API alternative. Public reads need no X (Twitter) developer account.
@@ -68,19 +71,19 @@ Xquik is independent and not affiliated with X Corp.
 
 <p align="center">
   <strong>English</strong> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.es.md">Español</a> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.tr.md">Türkçe</a> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.zh-CN.md">简体中文</a> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.ja.md">日本語</a> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.ko.md">한국어</a> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.de.md">Deutsch</a> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.fr.md">Français</a> ·
-  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/README.it.md">Italiano</a>
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.es.md">Español</a> ·
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.tr.md">Türkçe</a> ·
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.zh-CN.md">简体中文</a> ·
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.ja.md">日本語</a> ·
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.ko.md">한국어</a> ·
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.de.md">Deutsch</a> ·
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.fr.md">Français</a> ·
+  <a href="https://github.com/Xquik-dev/x-twitter-scraper/blob/master/i18n/README.it.md">Italiano</a>
 </p>
 
 <!-- trust:win:start -->
 
-The Xquik X Tweet Scraper read 170 tweets per second on 2026-10-15. That cost $0.155 per 1,000. The fastest of 4 rival Actors read 12.5 per second. The cheapest cost $0.173 per 1,000. [Compare each run](https://xquik.com/benchmarks#benchmark-x-tweet-scraper).
+The Xquik X Tweet Scraper read 170 tweets per second on 2026-10-15. That cost $0.155 per 1,000. The fastest of 4 rival Actors read 12.5 per second. The cheapest cost $0.173 per 1,000. [Compare each run](https://xquik.com/benchmarks#benchmark-x-tweet-scraper). Most rival Actors charge before they filter or dedup. Xquik charges only for delivered, unique, filter-matching results.
 
 <!-- trust:win:end -->
 
@@ -215,20 +218,6 @@ over.
 [Read the Tweet search reference](https://docs.xquik.com/api-reference/x/search-tweets)
 or [open the complete documentation](https://docs.xquik.com).
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://youtu.be/4UOSpoOoC3Y?t=367">
-        <img src="https://img.youtube.com/vi/4UOSpoOoC3Y/maxresdefault.jpg" alt="Framer connects Xquik MCP to coding agents" width="720">
-      </a>
-      <br>
-      <strong>Framer demo</strong>
-      <br>
-      <sub>Watch <a href="https://youtu.be/4UOSpoOoC3Y?t=367">Connect Framer to Claude Code, Codex, Cursor, and more</a> at 6:07 for the Xquik MCP connection.</sub>
-    </td>
-  </tr>
-</table>
-
 <!-- trust:start -->
 
 ## Benchmarks & usage
@@ -238,12 +227,12 @@ or [open the complete documentation](https://docs.xquik.com).
 [![X (Twitter) scraper runs on Apify](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fapify-runs.json)](https://apify.com/xquik)
 [![X (Twitter) tweet scraper rating on Apify](https://img.shields.io/endpoint?url=https%3A%2F%2Fxquik.com%2Fbadges%2Fapify-rating.json)](https://apify.com/xquik/x-tweet-scraper/reviews)
 
-- 1,500+ installs of this repo's Skills on skills.sh ([source](https://skills.sh/xquik-dev/x-twitter-scraper)) <!-- trust:skills-x-twitter-scraper 1544 -->
-- 11,000+ users of Xquik's X (Twitter) scraper Actors on Apify ([source](https://apify.com/xquik)) <!-- trust:apify-users 11962 -->
-- 8,500,000+ runs of Xquik's X (Twitter) scraper Actors on Apify ([source](https://apify.com/xquik)) <!-- trust:apify-runs 8597435 -->
+- 1,500+ installs of this repo's Skills on skills.sh ([source](https://skills.sh/xquik-dev/x-twitter-scraper)) <!-- trust:skills-x-twitter-scraper 1549 -->
+- 13,000+ users of Xquik's X (Twitter) scraper Actors on Apify ([source](https://apify.com/xquik)) <!-- trust:apify-users 13160 -->
+- 9,500,000+ runs of Xquik's X (Twitter) scraper Actors on Apify ([source](https://apify.com/xquik)) <!-- trust:apify-runs 9559478 -->
 - 4.66 of 5 for the X Tweet Scraper from 16 Apify reviews ([source](https://apify.com/xquik/x-tweet-scraper/reviews)) <!-- trust:apify-rating 4.66 16 -->
 
-Checked on 2026-11-09. See each number with its date & source on [xquik.com/benchmarks](https://xquik.com/benchmarks) or as [JSON](https://xquik.com/trust.json).
+Checked on 2026-11-16. See each number with its date & source on [xquik.com/benchmarks](https://xquik.com/benchmarks) or as [JSON](https://xquik.com/trust.json).
 
 <!-- trust:end -->
 

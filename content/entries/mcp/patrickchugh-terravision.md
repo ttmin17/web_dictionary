@@ -14,29 +14,29 @@ tags:
   - aws
   - azure
 status: active
-quality_percentile: 52
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: patrickchugh/terravision
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 1678
-  last_commit: 2026-10-31T01:08:24Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.5
-  trending_score: 8.04
-  rank_current: 72
-  rank_delta: 14
+  stars: 1691
+  last_commit: 2026-11-12T23:06:35Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.8
+  trending_score: 13.1
+  rank_current: 82
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1661
     - 1662
     - 1670
     - 1678
+    - 1691
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: patrickchugh/terravision
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:49.908Z
+  fetched_at: 2026-11-16T09:16:14.859Z
   truncated: false
 type: mcp_server
 launch:

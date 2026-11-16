@@ -14,29 +14,29 @@ tags:
   - claude-ai
   - claude-code
 status: active
-quality_percentile: 53
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-05-09T23:10:58
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: rahilp/second-brain-cloudflare
   official_vendor: false
   license: MIT
 signals:
-  stars: 857
-  last_commit: 2026-10-30T11:16:05Z
-  stars_delta_7d: 14
-  stars_growth_pct: 1.7
-  trending_score: 14.23
-  rank_current: 55
-  rank_delta: 21
+  stars: 866
+  last_commit: 2026-11-10T12:57:17Z
+  stars_delta_7d: 9
+  stars_growth_pct: 1.1
+  trending_score: 9.09
+  rank_current: 93
+  rank_delta: -38
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 814
     - 826
     - 843
     - 857
+    - 866
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: rahilp/second-brain-cloudflare
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:13.248Z
+  fetched_at: 2026-11-16T09:15:34.589Z
   truncated: false
 type: mcp_server
 launch:
@@ -326,6 +326,10 @@ npm install
 npm run vectors:create
 npm run deploy
 ```
+
+`vectors:create` also creates the `workspace_id` metadata index, which lets search by meaning look only at the workspaces you can read. Without it, Vectorize matches nothing on that filter, so the brain searches the whole index instead and `/health` reports `"workspaceFilter": { "supported": false }`. On a solo brain that gives the same results. Results are always limited to your own memories, but on a team brain other people's memories can push yours out of the closest matches.
+
+A brain created before this step doesn't need the index. If a team brain's recall seems weaker, you can add it with `npm run vectors:metadata-index` and then re-embed so existing vectors enter it: call `POST /migration/reset` once, then `POST /migration/reembed` until it returns `"done": true` (both take your `Authorization: Bearer` token). Re-embedding uses Workers AI allowance for every memory. Don't add the index without re-embedding, or older memories drop out of search by meaning.
 
 Follow the [Setup Guide](https://github.com/rahilp/second-brain-cloudflare/wiki/Setup-Guide) for prerequisites, resource creation, deployment verification, and troubleshooting. Then use [Connect to AI Clients](https://github.com/rahilp/second-brain-cloudflare/wiki/Connect-to-AI-Clients) for client-specific instructions.
 

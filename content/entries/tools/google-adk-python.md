@@ -17,26 +17,26 @@ status: active
 quality_percentile: 100
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: google/adk-python
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 22155
-  last_commit: 2026-11-09T06:23:33Z
-  stars_delta_7d: 42
-  stars_growth_pct: 0.2
-  trending_score: 42.08
-  rank_current: 60
-  rank_delta: 8
+  stars: 22234
+  last_commit: 2026-11-16T06:17:36Z
+  stars_delta_7d: 79
+  stars_growth_pct: 0.4
+  trending_score: 79.28
+  rank_current: 66
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21907
     - 22008
     - 22113
     - 22155
+    - 22234
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: google/adk-python
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:16.994Z
+  fetched_at: 2026-11-16T09:16:44.656Z
   truncated: false
 type: agent_tool
 tool:
@@ -119,7 +119,8 @@ deployment-agnostic, and compatible with other frameworks.
 - **Tool Confirmation**: A [tool confirmation flow (HITL)](https://adk.dev/tools-custom/confirmation/) that can guard tool execution with explicit confirmation and custom input.
 
 - **Deploy Anywhere**: Easily containerize and deploy agents on Cloud Run or
-  scale seamlessly with Vertex AI Agent Engine.
+  scale seamlessly with Agent Runtime on Gemini Enterprise Agent Platform
+  (formerly Vertex AI Agent Engine).
 
 ## 🚀 Installation
 

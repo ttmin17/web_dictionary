@@ -4,10 +4,9 @@ name: macos
 tagline: "macOS platform guide for the agent-desktop CLI. Use for desktop
   automation on macOS: granting Accessibility and Screen Recording permission
   (TCC), wha"
-summary: "- macOS 13 or later, Intel or Apple Silicon. - Accessibility
-  permission for the app that launches agent-desktop (Terminal, iTerm2, Warp, VS
-  Code, Codex). macOS 27 and later name this list Device Control and Data
-  Acces..."
+summary: "The sandbox provider on macOS is macos: a macOS VM that needs an Apple
+  Silicon Mac, macOS 13 or later on the host and in the guest, and Xcode Command
+  Line Tools. The first setup needs a person in the guest window; clo..."
 categories:
   - agent-frameworks
 tags:
@@ -16,10 +15,10 @@ tags:
   - ai-agents
   - automation
 status: active
-quality_percentile: 69
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: vercel-labs/agent-desktop
@@ -27,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 19921
-  last_commit: 2026-11-08T20:44:28Z
-  stars_delta_7d: 3710
-  stars_growth_pct: 22.9
-  trending_score: 4559.06
+  stars: 24396
+  last_commit: 2026-11-15T12:53:40Z
+  stars_delta_7d: 4475
+  stars_growth_pct: 22.5
+  trending_score: 5480.25
   velocity_source: snapshot_delta
   sparkline_4w:
     - 16211
     - 19921
+    - 24396
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: vercel-labs/agent-desktop
   path: skills/agent-desktop-macos/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:18.460Z
+  fetched_at: 2026-11-16T09:16:44.530Z
   truncated: false
 type: agent_skill
 skill:
@@ -72,6 +72,8 @@ skill:
 Read the core skill first (`agent-desktop skills get desktop`) for the observe, act, verify loop. This skill covers only what is different on macOS. When a command fails, find the symptom in [references/troubleshooting.md](https://github.com/vercel-labs/agent-desktop/blob/main/skills/agent-desktop-macos/references/troubleshooting.md).
 
 ## Requirements
+
+The sandbox provider on macOS is `macos`: a macOS VM that needs an Apple Silicon Mac, macOS 13 or later on the host and in the guest, and Xcode Command Line Tools. The first setup needs a person in the guest window; clones need none. See `agent-browser.dev/desktop/sandboxes/macos`.
 
 - macOS 13 or later, Intel or Apple Silicon.
 - Accessibility permission for the app that launches agent-desktop (Terminal, iTerm2, Warp, VS Code, Codex). macOS 27 and later name this list Device Control and Data Access. If System Settings lists the `agent-desktop` binary separately, grant it too.

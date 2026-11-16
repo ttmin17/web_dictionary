@@ -13,13 +13,13 @@ categories:
 tags:
   - agent-memory
   - agent-skills
-  - ai-agents
   - ai-note-taking
+  - ai-second-brain
 status: active
-quality_percentile: 62
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-03-24T11:58:12
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: eugeniughelbur/obsidian-second-brain
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 5237
-  last_commit: 2026-11-08T23:56:53Z
-  stars_delta_7d: 71
-  stars_growth_pct: 1.4
-  trending_score: 71.98
-  rank_current: 75
-  rank_delta: -7
+  stars: 5344
+  last_commit: 2026-11-15T18:28:52Z
+  stars_delta_7d: 107
+  stars_growth_pct: 2
+  trending_score: 109.19
+  rank_current: 81
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4811
     - 4920
     - 5166
     - 5237
+    - 5344
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: eugeniughelbur/obsidian-second-brain
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:02.932Z
+  fetched_at: 2026-11-16T09:16:34.003Z
   truncated: true
 type: agent_skill
 skill:

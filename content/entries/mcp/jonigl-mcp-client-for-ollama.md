@@ -15,29 +15,29 @@ tags:
   - harness
   - linux
 status: active
-quality_percentile: 43
+quality_percentile: 39
 selection_reason: quality_percentile
 first_seen: 2025-04-23T21:05:02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: jonigl/mcp-client-for-ollama
   official_vendor: false
   license: MIT
 signals:
-  stars: 837
+  stars: 836
   last_commit: 2026-10-13T00:55:22Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0.1
-  trending_score: 1
-  rank_current: 106
-  rank_delta: -10
+  stars_delta_7d: 0
+  stars_growth_pct: 0
+  trending_score: 0
+  rank_current: 118
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 831
     - 832
     - 836
     - 837
+    - 836
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: jonigl/mcp-client-for-ollama
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:13.258Z
+  fetched_at: 2026-11-16T09:15:35.089Z
   truncated: true
 type: mcp_server
 launch:

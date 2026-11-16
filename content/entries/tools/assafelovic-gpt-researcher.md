@@ -13,29 +13,29 @@ tags:
   - llms
   - python
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: assafelovic/gpt-researcher
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 30594
-  last_commit: 2026-11-09T09:19:17Z
-  stars_delta_7d: 96
-  stars_growth_pct: 0.3
-  trending_score: 96.3
-  rank_current: 38
-  rank_delta: 13
+  stars: 30718
+  last_commit: 2026-11-12T19:34:46Z
+  stars_delta_7d: 124
+  stars_growth_pct: 0.4
+  trending_score: 124.5
+  rank_current: 54
+  rank_delta: -16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30163
     - 30295
     - 30498
     - 30594
+    - 30718
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: assafelovic/gpt-researcher
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:43.261Z
+  fetched_at: 2026-11-16T09:14:56.496Z
   truncated: false
 type: agent_tool
 tool:

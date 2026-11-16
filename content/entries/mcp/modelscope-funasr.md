@@ -15,29 +15,29 @@ tags:
   - chinese
   - emotion-recognition
 status: active
-quality_percentile: 79
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2022-11-24T02:28:11
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: modelscope/FunASR
   official_vendor: false
   license: MIT
 signals:
-  stars: 20973
-  last_commit: 2026-11-09T04:49:20Z
-  stars_delta_7d: 26
-  stars_growth_pct: 0.1
-  trending_score: 26.03
-  rank_current: 38
-  rank_delta: -14
+  stars: 21042
+  last_commit: 2026-11-15T17:33:49Z
+  stars_delta_7d: 69
+  stars_growth_pct: 0.3
+  trending_score: 69.23
+  rank_current: 32
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 20748
     - 20817
     - 20947
     - 20973
+    - 21042
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: modelscope/FunASR
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:43.282Z
+  fetched_at: 2026-11-16T09:14:56.463Z
   truncated: false
 type: mcp_server
 launch:
@@ -421,7 +421,9 @@ recordings with the same evaluation scope.
 ## What's new
 
 - **MOSS-Transcribe-Diarize** brings long-form ASR, timestamps, and anonymous speaker labels to FunASR services, Docker, Kubernetes, vLLM/SGLang workflows, and FunClip. [Deploy MOSS ->](https://github.com/modelscope/FunASR/blob/main/docs/moss_transcribe_diarize.md)
-- **FunASR 1.4.24** ignores empty non-linguistic symbols to prevent tokenizer loops, fixes padded variance normalization, and prevents CIF crashes in mixed batches containing zero-fire samples. [Fix #3852](https://github.com/modelscope/FunASR/pull/3852), [fix #3853](https://github.com/modelscope/FunASR/pull/3853), [fix #3854](https://github.com/modelscope/FunASR/pull/3854). A checkpoint trained with both `norm_means=True` and `norm_vars=True` needs recognition-quality reevaluation because normalized features change; `norm_vars=False` remains the default. Install with `python -m pip install -U "funasr==1.4.24"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.24)
+- **FunASR 1.4.26** preserves word spaces between English/Korean VAD segments and returns plain text for HTTP `response_format=text`. [#3874](https://github.com/modelscope/FunASR/pull/3874), [#3883](https://github.com/modelscope/FunASR/pull/3883). `python -m pip install -U "funasr==1.4.26"`. [Release / 验证范围](https://github.com/modelscope/FunASR/releases/tag/v1.4.26)
+  **FunASR 1.4.25** restores Python 3.12 boolean argument parsing without `distutils` and preserves normalized error messages; removes synthetic leading spaces from Latin sentence timestamps while preserving boundaries and raw text. [Fix #3863](https://github.com/modelscope/FunASR/pull/3863), [fix #3866](https://github.com/modelscope/FunASR/pull/3866). Install with `python -m pip install -U "funasr==1.4.25"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.25)
+  **FunASR 1.4.24** ignores empty non-linguistic symbols to prevent tokenizer loops, fixes padded variance normalization, and prevents CIF crashes in mixed batches containing zero-fire samples. [Fix #3852](https://github.com/modelscope/FunASR/pull/3852), [fix #3853](https://github.com/modelscope/FunASR/pull/3853), [fix #3854](https://github.com/modelscope/FunASR/pull/3854). A checkpoint trained with both `norm_means=True` and `norm_vars=True` needs recognition-quality reevaluation because normalized features change; `norm_vars=False` remains the default. Install with `python -m pip install -U "funasr==1.4.24"`. [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.24)
   **FunASR 1.4.23** fixes the online frontend cursor for `lfr_m=lfr_n=1` and redundant empty final offline VAD chunks. With a supplied `token_list`, SentencePiece `ids2tokens` returns model pieces; use `tokens2text` for text. Without `token_list`, legacy text decoding is unchanged. [Fix #3849](https://github.com/modelscope/FunASR/pull/3849), [fix #3783](https://github.com/modelscope/FunASR/pull/3783). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.23)
   **FunASR 1.4.22** honors per-call `merge_length_s` and evaluates dynamic VAD silence thresholds per frame using the current segment duration, preserving the fixed-threshold opt-out. [Fix #3841](https://github.com/modelscope/FunASR/pull/3841), [fix #3833](https://github.com/modelscope/FunASR/pull/3833). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.22)
   **FunASR 1.4.21** preserves the streaming punctuation cache on empty or whitespace chunks; nonempty inference is unchanged. [Fix #3824](https://github.com/modelscope/FunASR/pull/3824). [Release and verification scope ->](https://github.com/modelscope/FunASR/releases/tag/v1.4.21)

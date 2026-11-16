@@ -12,29 +12,29 @@ tags:
   - autonomous-agents
   - claude-code
 status: active
-quality_percentile: 55
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: MaxMiksa/Autonomous-Company
   official_vendor: false
   license: MIT
 signals:
-  stars: 3195
-  last_commit: 2026-10-30T17:54:45Z
+  stars: 3201
+  last_commit: 2026-11-13T17:54:43Z
   stars_delta_7d: 6
   stars_growth_pct: 0.2
   trending_score: 6.01
-  rank_current: 107
-  rank_delta: -6
+  rank_current: 128
+  rank_delta: -21
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3145
     - 3157
     - 3189
     - 3195
+    - 3201
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: MaxMiksa/Autonomous-Company
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:31.448Z
+  fetched_at: 2026-11-16T09:16:59.480Z
   truncated: false
 type: agent_tool
 tool:

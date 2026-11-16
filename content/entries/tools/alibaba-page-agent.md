@@ -12,29 +12,29 @@ tags:
   - javascript
   - typescript
 status: active
-quality_percentile: 84
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: alibaba/page-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 29651
-  last_commit: 2026-11-04T05:41:21Z
-  stars_delta_7d: 16
+  stars: 29694
+  last_commit: 2026-11-15T12:25:35Z
+  stars_delta_7d: 43
   stars_growth_pct: 0.1
-  trending_score: 16.01
-  rank_current: 95
-  rank_delta: -13
+  trending_score: 43.06
+  rank_current: 88
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 29496
     - 29563
     - 29635
     - 29651
+    - 29694
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: alibaba/page-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:16.985Z
+  fetched_at: 2026-11-16T09:16:43.940Z
   truncated: false
 type: agent_tool
 tool:

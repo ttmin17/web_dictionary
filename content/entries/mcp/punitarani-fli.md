@@ -2,9 +2,9 @@
 slug: punitarani-fli
 name: fli
 tagline: Google Flights MCP, CLI and Python Library
-summary: 🔍 Powerful Search One-way flight searches Multi-city flight searches
-  Flexible departure times Multi-airline support Cabin class selection Stop
-  preferences Custom result sorting
+summary: "Powered by Google Flights Explore (GetExploreDestinations): one call
+  returns dozens of destinations with their cheapest fares when the destination
+  is flexible."
 categories:
   - domain-research
 tags:
@@ -13,29 +13,29 @@ tags:
   - google-flights
   - google-flights-api
 status: active
-quality_percentile: 32
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: punitarani/fli
   official_vendor: false
   license: MIT
 signals:
-  stars: 3489
-  last_commit: 2026-09-20T23:05:06Z
-  stars_delta_7d: 12
-  stars_growth_pct: 0.3
-  trending_score: 12.04
-  rank_current: 64
-  rank_delta: -16
+  stars: 3504
+  last_commit: 2026-11-11T23:49:13Z
+  stars_delta_7d: 15
+  stars_growth_pct: 0.4
+  trending_score: 15.06
+  rank_current: 77
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3234
     - 3430
     - 3477
     - 3489
+    - 3504
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: punitarani/fli
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:55.234Z
+  fetched_at: 2026-11-16T09:15:12.365Z
   truncated: false
 type: mcp_server
 launch:
@@ -102,12 +102,13 @@ fli-mcp-http  # serves at http://127.0.0.1:8000/mcp/
 
 ### MCP Tools Available
 
-The MCP server provides two main tools:
+The MCP server provides these main tools:
 
 | Tool                 | Description                                                 |
 |----------------------|-------------------------------------------------------------|
 | **`search_flights`** | Search for flights on a specific date with detailed filters |
 | **`search_dates`**   | Find the cheapest travel dates across a flexible date range |
+| **`search_explore`** | Discover cheap destinations from an origin ("fly anywhere") |
 
 #### `search_flights` Parameters
 
@@ -173,6 +174,39 @@ The MCP server provides two main tools:
 | `infants_on_lap`    | int    | Number of lap infants (under 2, no seat)                    |
 
 > Same passenger limits as `search_flights`: total 1-9, `infants_on_lap` ≤ `passengers`.
+
+#### `search_explore` Parameters
+
+Powered by Google Flights Explore (`GetExploreDestinations`): one call returns
+dozens of destinations with their cheapest fares when the destination is
+flexible.
+
+| Parameter             | Type   | Description                                                  |
+|-----------------------|--------|--------------------------------------------------------------|
+| `origin`              | string | Airport IATA code (e.g. 'JFK') or a city mid (e.g. '/m/04jpl') |
+| `destination`         | string | ANYWHERE (default), EUROPE, SOUTHERN_EUROPE, ASIA, AFRICA, NORTH_AMERICA, SOUTH_AMERICA, OCEANIA, or a region or country knowledge-graph mid (not an airport or city) |
+| `departure_date`      | string | Departure date in YYYY-MM-DD format (required)               |
+| `round_trip`          | bool   | Price round trips instead of one-ways (needs a fixed trip length) |
+| `trip_min_nights`     | int    | Trip length in nights (round trips: one fixed value, 1-23)   |
+| `trip_max_nights`     | int    | Must equal `trip_min_nights` for round trips                 |
+| `max_price`           | int    | Maximum fare cap                                             |
+| `cabin_class`         | string | ECONOMY, PREMIUM_ECONOMY, BUSINESS, or FIRST                 |
+| `max_stops`           | string | ANY, NON_STOP, ONE_STOP, or TWO_PLUS_STOPS                   |
+| `airlines`            | list   | Filter by airline codes (e.g., ['BA', 'AA'])                 |
+| `exclude_airlines`    | list   | Airline IATA codes to **exclude**                            |
+| `alliance`            | list   | Restrict to alliances: ONEWORLD, SKYTEAM, STAR_ALLIANCE      |
+| `exclude_alliance`    | list   | Alliance names to **exclude**                                |
+| `max_flight_duration` | int    | Maximum flight duration in minutes                           |
+| `passengers`          | int    | Number of adult passengers (default 1)                       |
+| `currency`            | string | ISO 4217 currency code (e.g. 'EUR', 'JPY')                   |
+| `language`            | string | BCP-47 language code (e.g. 'en-GB')                          |
+| `country`             | string | ISO 3166-1 alpha-2 country code (e.g. 'GB')                  |
+| `sort_by_price`       | bool   | Sort destinations by price (default true)                    |
+| `limit`               | int    | Maximum number of destinations to return                     |
+
+Each priced destination includes the airline, stops, duration, destination
+airport, and a `flights_url` deep link; pass the `destination_airport` to
+`search_flights` for bookable itineraries.
 
 ## Quick Start
 

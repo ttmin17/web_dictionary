@@ -14,27 +14,28 @@ tags:
   - formal-verification
   - infrastructure-as-code
 status: active
-quality_percentile: 73
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: fabio-rovai/open-ontologies
   official_vendor: false
   license: MIT
 signals:
-  stars: 2856
-  last_commit: 2026-11-04T23:13:28Z
-  stars_delta_7d: 37
-  stars_growth_pct: 1.3
-  trending_score: 37.49
-  rank_current: 27
-  rank_delta: null
+  stars: 2909
+  last_commit: 2026-11-16T02:09:45Z
+  stars_delta_7d: 53
+  stars_growth_pct: 1.9
+  trending_score: 53.98
+  rank_current: 41
+  rank_delta: -14
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2819
     - 2856
+    - 2909
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: fabio-rovai/open-ontologies
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.453Z
+  fetched_at: 2026-11-16T09:15:16.451Z
   truncated: false
 type: mcp_server
 launch:
@@ -460,7 +461,7 @@ chmod +x open-ontologies-x86_64-unknown-linux-gnu && mv open-ontologies-x86_64-u
 # Docker
 docker pull ghcr.io/fabio-rovai/open-ontologies:latest
 
-# From source (Rust 1.88+)
+# From source (Rust 1.89+)
 cargo build --release --features embeddings,plugins,sql
 ```
 

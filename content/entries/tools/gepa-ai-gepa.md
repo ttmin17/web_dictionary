@@ -13,24 +13,27 @@ tags:
   - discovery
   - distributed-evolutionary-algorithms
 status: active
-quality_percentile: 62
+quality_percentile: 56
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: gepa-ai/gepa
   official_vendor: false
   license: MIT
 signals:
-  stars: 7343
-  last_commit: 2026-11-09T09:09:36Z
-  stars_delta_7d: 111
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 7442
+  last_commit: 2026-11-09T12:46:31Z
+  stars_delta_7d: 99
+  stars_growth_pct: 1.3
+  trending_score: 100.33
+  rank_current: 61
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 7343
+    - 7442
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: gepa-ai/gepa
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:02.934Z
+  fetched_at: 2026-11-16T09:16:29.261Z
   truncated: false
 type: agent_tool
 tool:

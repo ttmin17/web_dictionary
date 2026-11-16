@@ -1,8 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-community-marketing
 name: community-marketing
-tagline: Build and leverage online communities to drive product growth and brand
-  loyalty. Use when the user wants to create a community strategy, grow a Discor
+tagline: "When the user wants to build or grow an online community, or asks
+  whether a community is worth it, where to host it, or why members stay quiet:
+  Discor"
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -15,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,20 +45,16 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/community-marketing/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.915Z
+  fetched_at: 2026-11-16T09:15:48.047Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: community-marketing
-  description: 'Build and leverage online communities to drive product growth and
-    brand loyalty. Use when the user wants to create a community strategy, grow
-    a Discord or Slack community, manage a forum or subreddit, build brand
-    advocates, increase word-of-mouth, drive community-led growth, engage users
-    post-signup, or turn customers into evangelists. Trigger phrases: "build a
-    community," "community strategy," "Discord community," "Slack community,"
-    "community-led growth," "brand advocates," "user community," "forum
-    strategy," "community engagement," "grow our community," "ambassador
-    program," "community flywheel."'
+  description: "When the user wants to build or grow an online community, or asks
+    whether a community is worth it, where to host it, or why members stay
+    quiet: Discord, Slack, forums, participation, community-led growth,
+    advocates. For referral programs, see referrals. For creator partnerships,
+    see influencer-marketing."
   folder_path: skills/community-marketing
   extra_files:
     - evals/evals.json

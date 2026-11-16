@@ -15,10 +15,10 @@ tags:
   - adobe-premiere-pro
   - adobe-premiere-pro-mcp
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: hetpatel-11/Adobe_Premiere_Pro_MCP
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 835
+  stars: 881
   last_commit: 2026-11-02T23:20:08Z
-  stars_delta_7d: 16
-  stars_growth_pct: 2
-  trending_score: 16.31
-  rank_current: 112
-  rank_delta: -9
+  stars_delta_7d: 46
+  stars_growth_pct: 5.5
+  trending_score: 48.53
+  rank_current: 103
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 721
     - 758
     - 819
     - 835
+    - 881
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: hetpatel-11/Adobe_Premiere_Pro_MCP
   path: claude-plugins/premiere-pro-mcp/skills/edit-premiere-project/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:13.588Z
+  fetched_at: 2026-11-16T09:15:34.926Z
   truncated: false
 type: agent_skill
 skill:

@@ -14,29 +14,29 @@ tags:
   - automation
   - browser
 status: active
-quality_percentile: 75
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: nanobrowser/nanobrowser
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14266
-  last_commit: 2026-11-08T09:03:45Z
-  stars_delta_7d: 21
-  stars_growth_pct: 0.1
-  trending_score: 21.03
-  rank_current: 84
+  stars: 14318
+  last_commit: 2026-11-10T03:43:10Z
+  stars_delta_7d: 52
+  stars_growth_pct: 0.4
+  trending_score: 52.19
+  rank_current: 79
   rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 14121
     - 14181
     - 14245
     - 14266
+    - 14318
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: nanobrowser/nanobrowser
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:17.703Z
+  fetched_at: 2026-11-16T09:16:44.644Z
   truncated: false
 type: agent_tool
 tool:
@@ -132,7 +132,7 @@ You can also set a site to **Allow** (go ahead in both modes), **Ask** (ask in b
 
 | Kind | Providers |
 | --- | --- |
-| Cloud | Anthropic, OpenAI, Google Gemini, OpenRouter, xAI Grok, DeepSeek, Mistral, and any OpenAI-compatible endpoint |
+| Cloud | Anthropic, OpenAI, Google Gemini, AWS Bedrock, OpenRouter, xAI Grok, DeepSeek, Mistral, and any OpenAI-compatible endpoint |
 | Local | Ollama and LM Studio, and other servers (llama.cpp, vLLM and others) through the OpenAI-compatible provider |
 
 - **A model must support tool calling.** Test models in Settings checks each model and marks the ones that cannot be used.

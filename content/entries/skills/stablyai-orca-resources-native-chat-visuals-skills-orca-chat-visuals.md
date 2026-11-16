@@ -15,10 +15,10 @@ tags:
   - automation
   - bot
 status: active
-quality_percentile: 65
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 119733
-  last_commit: 2026-11-09T09:22:54Z
-  stars_delta_7d: 3570
-  stars_growth_pct: 3.1
-  trending_score: 3679.72
-  rank_current: 4
-  rank_delta: 0
+  stars: 126156
+  last_commit: 2026-11-16T09:11:48Z
+  stars_delta_7d: 6423
+  stars_growth_pct: 5.4
+  trending_score: 6767.56
+  rank_current: 1
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 97177
     - 106220
     - 116163
     - 119733
+    - 126156
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: stablyai/orca
   path: resources/native-chat-visuals/skills/orca-chat-visuals/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:19.238Z
+  fetched_at: 2026-11-16T09:15:38.047Z
   truncated: false
 type: agent_skill
 skill:

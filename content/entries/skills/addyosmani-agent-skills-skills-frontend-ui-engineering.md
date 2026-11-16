@@ -16,10 +16,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 114287
-  last_commit: 2026-11-01T19:24:49Z
-  stars_delta_7d: 890
-  stars_growth_pct: 0.8
-  trending_score: 896.99
+  stars: 118091
+  last_commit: 2026-11-14T04:33:56Z
+  stars_delta_7d: 3804
+  stars_growth_pct: 3.3
+  trending_score: 3930.61
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 108318
     - 110580
     - 113397
     - 114287
+    - 118091
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/frontend-ui-engineering/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:20.791Z
+  fetched_at: 2026-11-16T09:15:42.865Z
   truncated: false
 type: agent_skill
 skill:
@@ -78,6 +78,10 @@ Build production-quality user interfaces that are accessible, performant, and vi
 - Implementing responsive layouts
 - Adding interactivity or state management
 - Fixing visual or UX issues
+
+## Verify With What the Project Has
+
+Run the project's own test, type-check, or lint commands. Don't install a framework, test runner, or type checker just to check your work; if the project has none, review the code against the [Verification](#verification) list and say what you could not run.
 
 ## Component Architecture
 
@@ -239,6 +243,8 @@ Don't skip heading levels. Don't use heading styles for non-heading content.
 
 Every component must meet these standards:
 
+For menus, dialogs, tabs, listboxes and comboboxes, follow the [WAI-ARIA APG pattern](https://www.w3.org/WAI/ARIA/apg/patterns/) exactly.
+
 ### Keyboard Navigation
 
 ```tsx
@@ -388,7 +394,7 @@ For detailed accessibility requirements and testing tools, see `../../references
 
 ## Verification
 
-After building UI:
+After building UI, check what you can with the project's own tooling, and review the rest against this list. Don't add dependencies or install toolchains only to verify; say which checks you couldn't run.
 
 - [ ] Component renders without console errors
 - [ ] All interactive elements are keyboard accessible (Tab through the page)

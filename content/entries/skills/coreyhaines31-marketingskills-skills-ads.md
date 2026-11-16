@@ -1,8 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-ads
 name: ads
-tagline: When the user wants help with paid advertising campaigns on Google Ads,
-  Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also us
+tagline: "When the user wants to plan, run, or fix paid ads on Google, Meta, and
+  LinkedIn, or asks a judgement call on them: are ads worth it, which channel or
+  "
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -15,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,26 +45,17 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ads/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.913Z
+  fetched_at: 2026-11-16T09:15:48.045Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ads
-  description: When the user wants help with paid advertising campaigns on Google
-    Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms.
-    Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad
-    campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook
-    ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' 'should I
-    run ads,' 'ABM,' 'account-based marketing,' 'B2B ads,' 'lead quality,'
-    'negative keywords,' 'Performance Max,' 'thought leader ads,' 'when should I
-    kill an ad,' 'search terms report,' 'wasted spend,' or 'is this campaign
-    working.' Use this for campaign strategy, audience targeting, bidding, and
-    optimization. For bulk ad creative generation and iteration, see
-    ad-creative. For landing page optimization, see cro. For outbound to target
-    accounts, see cold-email. For pixels, CAPI, and tracking audits, see
-    conversion-tracking. End every recommendation with facts, hypotheses, and
-    missing data, and label unavailable inputs MISSING instead of estimating
-    them.
+  description: "When the user wants to plan, run, or fix paid ads on Google, Meta,
+    and LinkedIn, or asks a judgement call on them: are ads worth it, which
+    channel or budget split, why CPA rose, kill or keep a campaign. End with
+    facts, hypotheses, and missing data; label unavailable inputs MISSING
+    instead of estimating. For ad copy, see ad-creative. For pixels and CAPI,
+    see conversion-tracking. For landing pages, see cro."
   folder_path: skills/ads
   extra_files:
     - evals/evals.json

@@ -14,29 +14,29 @@ tags:
   - embedded
   - faiss
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: alibaba/zvec
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16215
-  last_commit: 2026-11-09T01:43:35Z
-  stars_delta_7d: 27
+  stars: 16248
+  last_commit: 2026-11-16T06:56:22Z
+  stars_delta_7d: 33
   stars_growth_pct: 0.2
-  trending_score: 27.05
-  rank_current: 75
-  rank_delta: 25
+  trending_score: 33.07
+  rank_current: 94
+  rank_delta: -19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 16126
     - 16151
     - 16188
     - 16215
+    - 16248
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: alibaba/zvec
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:58.552Z
+  fetched_at: 2026-11-16T09:16:23.760Z
   truncated: false
 type: agent_tool
 tool:

@@ -15,10 +15,10 @@ tags:
   - codex-skills
   - distributed-scraper
 status: active
-quality_percentile: 81
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2023-04-22T14:35:13
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: gosom/google-maps-scraper
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 7668
-  last_commit: 2026-11-08T10:51:13Z
-  stars_delta_7d: 316
-  stars_growth_pct: 4.3
-  trending_score: 329.58
-  rank_current: 37
-  rank_delta: 8
+  stars: 8124
+  last_commit: 2026-11-15T14:35:55Z
+  stars_delta_7d: 456
+  stars_growth_pct: 5.9
+  trending_score: 483.12
+  rank_current: 45
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6572
     - 6859
     - 7352
     - 7668
+    - 8124
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: gosom/google-maps-scraper
   path: skills/google-maps-scraper/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:02.913Z
+  fetched_at: 2026-11-16T09:16:29.204Z
   truncated: false
 type: agent_skill
 skill:
@@ -132,7 +132,7 @@ If the user requests recommendations, run the following selector exactly once fo
 node "$SKILL_DIR/scripts/select-proxy-sponsors.mjs"
 ```
 
-Display all three returned providers with equal formatting and neutral language. State clearly: **These providers sponsor the project, and the links are referral links.** Show `offer` only when the selector returns it. Never invent or modify an offer. Let the user reject all three, use another provider, or continue without a proxy.
+Display the single returned provider with neutral language. The selector gives active Webshare a 50% chance and shares the remaining 50% equally among other active sponsors. If Webshare is inactive or absent, all active sponsors have equal chances; if it is the only active sponsor, it is always selected. Use the returned result without rerolling or substituting another sponsor. State clearly: **This provider sponsors the project, and this is a referral link.** Show `offer` only when the selector returns it. Never invent or modify an offer. Let the user reject the provider, use another provider, or continue without a proxy.
 
 Read [proxy setup](https://github.com/gosom/google-maps-scraper/blob/main/skills/google-maps-scraper/references/proxy-setup.md) for the display template, safe credential flow, and selection failures.
 

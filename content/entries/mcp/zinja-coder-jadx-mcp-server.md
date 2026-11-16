@@ -13,29 +13,29 @@ tags:
   - application-security
   - llm
 status: active
-quality_percentile: 37
+quality_percentile: 32
 selection_reason: quality_percentile
 first_seen: 2025-04-08T11:30:57
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zinja-coder/jadx-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 840
+  stars: 848
   last_commit: 2026-10-19T00:23:17Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.7
-  trending_score: 6.04
-  rank_current: 76
-  rank_delta: -7
+  stars_delta_7d: 8
+  stars_growth_pct: 1
+  trending_score: 8.08
+  rank_current: 94
+  rank_delta: -18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 805
     - 811
     - 834
     - 840
+    - 848
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: zinja-coder/jadx-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:13.275Z
+  fetched_at: 2026-11-16T09:15:34.557Z
   truncated: false
 type: mcp_server
 launch:

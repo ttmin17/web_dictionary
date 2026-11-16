@@ -15,10 +15,10 @@ tags:
   - code-interpreter
   - copilot
 status: active
-quality_percentile: 61
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: e2b-dev/E2B
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14776
-  last_commit: 2026-11-09T07:11:03Z
-  stars_delta_7d: 55
-  stars_growth_pct: 0.4
-  trending_score: 55.21
-  rank_current: 85
-  rank_delta: -2
+  stars: 14887
+  last_commit: 2026-11-16T07:08:30Z
+  stars_delta_7d: 111
+  stars_growth_pct: 0.8
+  trending_score: 111.83
+  rank_current: 80
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 14439
     - 14557
     - 14721
     - 14776
+    - 14887
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: e2b-dev/E2B
   path: skills/stripe-projects/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:17.742Z
+  fetched_at: 2026-11-16T09:16:44.788Z
   truncated: false
 type: agent_skill
 skill:
@@ -56,7 +56,7 @@ skill:
     E2B CLI, JavaScript SDK, Python SDK, or Code Interpreter SDK.
   folder_path: skills/stripe-projects
   extra_files: []
-  pack_total_skills: 1
+  pack_total_skills: 2
   is_pack_primary: true
   clients:
     - claude-code

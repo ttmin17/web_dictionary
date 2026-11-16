@@ -16,24 +16,25 @@ status: active
 quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ParadevAI/Paradev
   official_vendor: false
   license: MIT
 signals:
-  stars: 16118
-  last_commit: 2026-11-09T09:20:27Z
-  stars_delta_7d: 158
-  stars_growth_pct: 1
-  trending_score: 159.56
-  rank_current: 10
-  rank_delta: null
+  stars: 16323
+  last_commit: 2026-11-16T08:05:15Z
+  stars_delta_7d: 205
+  stars_growth_pct: 1.3
+  trending_score: 207.61
+  rank_current: 15
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
     - 15960
     - 16118
+    - 16323
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +43,7 @@ readme_source:
   repo: ParadevAI/Paradev
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.186Z
+  fetched_at: 2026-11-16T09:16:03.439Z
   truncated: false
 type: mcp_server
 launch:
@@ -71,7 +72,7 @@ Run Claude Code, Codex, or another CLI agent with terminals, code review, and br
 
 ## What is Paradev?
 
-Paradev is a desktop app for running CLI coding agents in parallel. Each task gets its own Git worktree, branch, and terminals, so Claude Code, Codex, OpenCode, Gemini CLI, Cursor Agent, or any other CLI agent can work on several tasks in one repository at the same time.
+Paradev is an open-source desktop app for running CLI coding agents in parallel, released under the [MIT License](https://github.com/ParadevAI/Paradev/blob/main/LICENSE.md). Each task gets its own Git worktree, branch, and terminals, so Claude Code, Codex, OpenCode, Gemini CLI, Cursor Agent, or any other CLI agent can work on several tasks in one repository at the same time.
 
 Paradev is for developers who already use a coding agent in the terminal and want to run more than one task at once, without juggling terminal tabs and branches by hand.
 

@@ -17,7 +17,7 @@ status: active
 quality_percentile: 97
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: google/agents-cli
@@ -25,17 +25,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 6325
-  last_commit: 2026-11-04T17:44:59Z
-  stars_delta_7d: 21
-  stars_growth_pct: 0.3
-  trending_score: 21.07
+  stars: 6359
+  last_commit: 2026-11-12T15:04:58Z
+  stars_delta_7d: 34
+  stars_growth_pct: 0.5
+  trending_score: 34.18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6099
     - 6176
     - 6304
     - 6325
+    - 6359
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: google/agents-cli
   path: skills/google-agents-cli-scaffold/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:22.292Z
+  fetched_at: 2026-11-16T09:16:52.196Z
   truncated: false
 type: agent_skill
 skill:
@@ -184,7 +184,7 @@ agents-cli scaffold enhance . --cicd-runner github_actions
 > **`adk_python` and `adk_go` are the only built-in templates.** `adk_python` is the default, so a Go project
 > needs `--agent adk_go`. `adk` is an alias for `adk_python`.
 > Other frameworks and third-party templates ship as template repos you scaffold
-> from directly: `--agent google/agents-cli/extensions/langchain/template@v1.13.0`, with nothing installed. First-party
+> from directly: `--agent google/agents-cli/extensions/langchain/template@v1.14.0`, with nothing installed. First-party
 > templates live in `extensions/` (`langchain/template`, `claude/template`); see
 > `/google-agents-cli-workflow` → `references/extension.md` to publish your own. Capabilities
 > beyond the template — retrieval, sandboxed execution, memory, OAuth, guardrails — are

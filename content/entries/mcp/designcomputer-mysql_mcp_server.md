@@ -13,29 +13,29 @@ tags:
   - database
   - llm
 status: active
-quality_percentile: 72
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2024-12-03T20:53:52
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: designcomputer/mysql_mcp_server
   official_vendor: false
   license: MIT
 signals:
-  stars: 1410
+  stars: 1418
   last_commit: 2026-10-28T19:14:33Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.1
-  trending_score: 2
-  rank_current: 102
-  rank_delta: -7
+  stars_delta_7d: 8
+  stars_growth_pct: 0.6
+  trending_score: 8.05
+  rank_current: 95
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1399
     - 1403
     - 1408
     - 1410
+    - 1418
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: designcomputer/mysql_mcp_server
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:12.709Z
+  fetched_at: 2026-11-16T09:15:33.742Z
   truncated: false
 type: mcp_server
 launch:

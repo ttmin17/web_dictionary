@@ -18,26 +18,26 @@ status: active
 quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: lidge-jun/opencodex
   official_vendor: false
   license: MIT
 signals:
-  stars: 18311
-  last_commit: 2026-11-09T09:18:00Z
-  stars_delta_7d: 83
-  stars_growth_pct: 0.5
-  trending_score: 83.38
-  rank_current: 44
-  rank_delta: -10
+  stars: 18588
+  last_commit: 2026-11-16T09:05:03Z
+  stars_delta_7d: 277
+  stars_growth_pct: 1.5
+  trending_score: 281.19
+  rank_current: 26
+  rank_delta: 18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17586
     - 17906
     - 18228
     - 18311
+    - 18588
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: lidge-jun/opencodex
   path: README.md
   branch: dev
-  fetched_at: 2026-11-09T09:27:38.208Z
+  fetched_at: 2026-11-16T09:16:03.507Z
   truncated: false
 type: agent_tool
 tool:
@@ -380,7 +380,7 @@ OpenCodex tracks process-retained state in the categories below. Each has a docu
   store, which is pinned and never evicted.
 - **4 observed buffers** (translator accumulators, image/OAuth/Grok tails) are
   monitored for in-flight byte pressure without eviction.
-- **31 state-store registrations** handle expiry sweeps (60 s interval) and
+- **32 state-store registrations** handle expiry sweeps (60 s interval) and
   config-generation reconciliation so stale provider/account keys are removed.
 - **Path and fingerprint memos** (workspace metadata, hardened identities, installation
   salts, mode-hint capabilities) use insertion-order LRU caps (8–128 entries).

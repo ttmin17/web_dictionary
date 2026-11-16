@@ -19,26 +19,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-02-24T22:01:00
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: DeusData/codebase-memory-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 48383
-  last_commit: 2026-11-07T05:43:50Z
-  stars_delta_7d: 230
-  stars_growth_pct: 0.5
-  trending_score: 231.1
-  rank_current: 7
-  rank_delta: 1
+  stars: 48712
+  last_commit: 2026-11-14T22:03:40Z
+  stars_delta_7d: 329
+  stars_growth_pct: 0.7
+  trending_score: 331.24
+  rank_current: 14
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 46887
     - 47498
     - 48153
     - 48383
+    - 48712
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: DeusData/codebase-memory-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.635Z
+  fetched_at: 2026-11-16T09:14:55.577Z
   truncated: true
 type: mcp_server
 launch:
@@ -65,7 +65,7 @@ launch:
 
 Give your coding agent structural context through [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), or query the graph directly from the CLI. **The MCP server is the core of the project.** Its optional visual companion, **CBM Lens, is in open beta (v0.0.1)**, with a source reader, architecture maps, the Galaxy graph, coverage diagnostics, architecture decisions, and local code chat.
 
-The native C backend exposes **17 MCP tools**, parses [languages and file formats](#language-support) with vendored grammars, and adds [Hybrid LSP](#hybrid-lsp) type resolution for supported languages. The installer supports **45 automatic or conditional client integrations**, including client configuration, skills, agent profiles, and applicable hooks. Indexing and graph queries need no hosted service or API key. Focused graph queries can reduce repeated file reads and token use; see the [measured results](#performance).
+The native C backend exposes **17 MCP tools**, parses [languages and file formats](#language-support) with vendored grammars, and adds [Hybrid LSP](#hybrid-lsp) type resolution for supported languages. The installer supports **46 automatic or conditional client integrations**, including client configuration, skills, agent profiles, and applicable hooks. Indexing and graph queries need no hosted service or API key. Focused graph queries can reduce repeated file reads and token use; see the [measured results](#performance).
 
 [Quick start](#quick-start) · [Capabilities](#features) · [Documentation](#documentation-connected-to-code) · [Infrastructure](#infrastructure-and-deployment) · [Smart CI](#smart-ci-and-test-impact) · [Explore CBM Lens](#cbm-lens-beta-code-visualization-and-source-navigation) · [Agent setup](#agent-setup-skills-profiles-and-hooks) · [MCP tools](#mcp-tools)
 
@@ -414,7 +414,7 @@ Use the graph to explain which tests a change reaches, and use that evidence to 
 
 **Narrowing currently supports C/C++ family code with this repository's test conventions or declared equivalents.** It is not general test selection for every language CBM indexes. Missing, stale, incompatible, or incomplete evidence broadens the selection or returns `run_all`; static reachability without admitted coverage never omits a suite. Begin with report-only shadow mode and validate your harness before enabling gating.
 
-In this repository, test narrowing is wired to the Linux x86_64 test leg when `TEST_IMPACT_MODE=gate`; release and dry-run workflows retain full execution. See the [Smart CI guide](https://github.com/DeusData/codebase-memory-mcp/blob/main/docs/SMART_CI.md) for supported conventions, coverage admission, setup, version requirements, and fallback behavior.
+In this repository, test narrowing is on for every PR unless `TEST_IMPACT_MODE` says otherwise: the Linux x86_64 test leg runs the selection, and the arm64, macOS and Windows legs run it with every platform-specific suite whole; release and dry-run workflows retain full execution. See the [Smart CI guide](https://github.com/DeusData/codebase-memory-mcp/blob/main/docs/SMART_CI.md) for supported conventions, coverage admission, setup, version requirements, and fallback behavior.
 
 ### Edge types (selected)
 - `CALLS`: a callable is invoked at the source site
@@ -443,7 +443,7 @@ In this repository, test narrowing is wired to the Linux x86_64 test leg when `T
 - `SEMANTICALLY_RELATED` (vocabulary-mismatch, same-language, score ≥ 0.80)
 
 ### Indexing pipeline
-- **162 vendored tree-sitter grammars** compiled into the binary
+- **164 vendored tree-sitter grammars** compiled into the binary
 - **Generic package / module resolution**: bare specifiers like `@myorg/pkg`, `github.com/foo/bar`, `use my_crate::foo` resolved via manifest scanning (`package.json`, `go.mod`, `Cargo.toml`, `pyproject.toml`, `composer.json`, `pubspec.yaml`, `pom.xml`, `build.gradle`, `mix.exs`, `*.gemspec`)
 - **Infrastructure-as-code indexing**: Dockerfiles (`Dockerfile.*`, `*.Dockerfile`, `Containerfile`: bases, what the container runs, `ENV`), container images (`Image`: the normalised repository, tag and digest on the edges; a repository built from several Dockerfiles, one per component tag, gets an `Image` per component), docker compose services (`Resource`), Kubernetes manifests (`Resource`, with `group`, `version`, `kind`, `namespace`, `labels` as `k=v,k2=v2`), Kustomize overlays (`IMPORTS` to their entries and patch files, `OVERRIDE` from their patches), Helm charts (`Chart`, `DEPENDS_ON`), Terraform / OpenTofu (`.tf`, `.tofu`, `.tfvars`) as graph nodes. A Service walks to the code it runs: Service → workload → `Image` → Dockerfile → `main`
 - **[Hybrid LSP semantic type resolution](#hybrid-lsp)** for Python, TypeScript / JavaScript / JSX / TSX, PHP, C#, Go, C, C++, Java, Kotlin, Rust, and Perl; a lightweight C implementation of language type-resolution algorithms, structurally inspired by and compatible with major language servers including tsserver / typescript-go, pyright, gopls, Roslyn, Eclipse JDT, and rust-analyzer (parameter binding, return-type inference, generic substitution, JSX component dispatch, JSDoc inference for plain JS files, namespace + trait + late-static-binding resolution for PHP, file-scoped namespaces + records + LINQ method syntax for C#, class-hierarchy + overload + lambda resolution for Java, extension-function + scope-function resolution for Kotlin, trait-method + UFCS resolution for Rust)

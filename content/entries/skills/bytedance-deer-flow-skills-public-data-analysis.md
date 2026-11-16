@@ -15,10 +15,10 @@ tags:
   - agentic-workflow
   - ai-agents
 status: active
-quality_percentile: 80
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: bytedance/deer-flow
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 85169
-  last_commit: 2026-11-09T09:06:05Z
-  stars_delta_7d: 147
-  stars_growth_pct: 0.2
-  trending_score: 147.25
+  stars: 85389
+  last_commit: 2026-11-16T08:04:42Z
+  stars_delta_7d: 220
+  stars_growth_pct: 0.3
+  trending_score: 220.57
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 84103
     - 84431
     - 85022
     - 85169
+    - 85389
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: bytedance/deer-flow
   path: skills/public/data-analysis/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:15.114Z
+  fetched_at: 2026-11-16T09:16:42.732Z
   truncated: false
 type: agent_skill
 skill:
@@ -80,7 +80,24 @@ Prepare the Python environment before running analyses. Install the required pac
 python -m pip install duckdb openpyxl
 ```
 
-If either package is missing, the script exits with a setup instruction; it does not invoke an installer or modify the environment. DuckDB's existing spatial-extension setup for loading files is unchanged.
+If either package is missing, the script exits with a setup instruction; it does not invoke an installer or modify the environment. DuckDB's spatial extension is initialized only for `.xlsx` input. CSV and legacy `.xls` analysis do not install or load it, so they can run offline with an empty extension cache.
+
+Legacy Excel 97–2003 (`.xls`) workbooks additionally require:
+
+```bash
+python -m pip install pandas xlrd
+```
+
+These optional packages are loaded only for `.xls` input. A missing package produces
+an explicit setup instruction. Legacy workbooks are read sheet by sheet with pandas'
+xlrd engine, preserving cell values (including literal `NA` strings and leading
+zeros in text identifiers) and treating empty cells as nulls. Columns with
+incompatible cell types, such as a date and a number, are stored as text with
+nulls preserved. Compatible numeric types still produce numeric columns.
+Completely empty sheets are skipped. The `.xlsx` reader
+continues to use openpyxl and DuckDB's spatial extension. A legacy workbook that
+cannot be opened is reported and skipped so remaining inputs can still be
+analyzed. The command fails if no input produces a table.
 
 ## Core Capabilities
 

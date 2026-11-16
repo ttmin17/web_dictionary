@@ -18,7 +18,7 @@ status: active
 quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zhayujie/CowAgent
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 47849
-  last_commit: 2026-11-09T09:14:14Z
-  stars_delta_7d: 47
-  stars_growth_pct: 0.1
-  trending_score: 47.05
+  stars: 47948
+  last_commit: 2026-11-16T09:05:26Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.2
+  trending_score: 99.2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 47461
     - 47600
     - 47802
     - 47849
+    - 47948
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: zhayujie/CowAgent
   path: skills/knowledge-wiki/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:27:26.682Z
+  fetched_at: 2026-11-16T09:15:50.883Z
   truncated: false
 type: agent_skill
 skill:

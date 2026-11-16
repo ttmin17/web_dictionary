@@ -14,29 +14,29 @@ tags:
   - document-ai
   - generative-ai
 status: active
-quality_percentile: 73
+quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Zipstack/unstract
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 7435
-  last_commit: 2026-11-09T08:59:26Z
-  stars_delta_7d: 18
-  stars_growth_pct: 0.2
-  trending_score: 18.04
-  rank_current: 90
-  rank_delta: -27
+  stars: 7455
+  last_commit: 2026-11-16T08:23:08Z
+  stars_delta_7d: 20
+  stars_growth_pct: 0.3
+  trending_score: 20.05
+  rank_current: 105
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7283
     - 7298
     - 7417
     - 7435
+    - 7455
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Zipstack/unstract
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:52.353Z
+  fetched_at: 2026-11-16T09:15:07.843Z
   truncated: false
 type: agent_tool
 tool:

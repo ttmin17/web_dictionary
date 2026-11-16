@@ -16,7 +16,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-math/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.055Z
+  fetched_at: 2026-11-16T09:16:39.037Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,13 +53,14 @@ skill:
     vector pool and when clone() is the wrong tool, interpolation with lerp,
     slerp, damp and moveTowards, and the argument defaults that silently drop a
     component. Triggers on: Vector2d, Vector3d, ObservableVector2d,
-    ObservableVector3d, Matrix2d, Matrix3d, vector, vector maths, dot, cross,
-    normalize, length, distance, angle, lerp, slerp, damp, moveTowards, project,
-    clamp, degToRad, radToDeg, clone, vector pool, vector3dPool, setMuted,
-    setCallback, my vector is wrong, z is zero, scale ignores z., moveTowards
-    ignores z, projectN, currentTransform, setTransform, matrix, transform
-    matrix, column-major, val, Float32Array, basis matrix, orientation matrix,
-    Noise, getNoise1d, flicker, wobble."
+    ObservableVector3d, Matrix2d, Matrix3d, Quaternion, vector, vector maths,
+    dot, cross, normalize, length, distance, angle, lerp, slerp, damp,
+    moveTowards, project, clamp, degToRad, radToDeg, clone, vector pool,
+    vector3dPool, setMuted, setCallback, my vector is wrong, z is zero, scale
+    ignores z, moveTowards ignores z, setPosition, projectN, currentTransform,
+    setTransform, matrix, transform matrix, column-major, val, Float32Array,
+    basis matrix, orientation matrix, Noise, getNoise1d, flicker, wobble, Color,
+    toArray, color components."
   folder_path: packages/melonjs/skills/melonjs-math
   extra_files: []
   pack_total_skills: 25
@@ -162,6 +164,9 @@ v.scale(2, 2, 2);    // (1,2,3) -> (2,4,6)   what you meant
 v.set(10, 20);       // z is now 0, whatever it was
 ```
 
+To move a renderable, `setPosition(x, y)` (20.8) is the call that keeps its
+depth: leave out `z` and it stays as it was, where `pos.set(x, y)` zeroes it.
+
 **`Vector3d.pos` on a renderable is typed `Vector2d`.** `Renderable.pos` is an
 `ObservableVector3d` at run time but is declared through `Polygon` as a
 `Vector2d`, so `.z`, `.setMuted` and `.setCallback` need a cast from
@@ -182,7 +187,7 @@ The 2D one is the z component of the 3D cross, which is the useful scalar for
 ```js
 a.lerp(b, t);            // straight line, t in 0..1
 a.slerp(b, t);           // along the ARC, constant angular rate
-a.damp(b, lambda, dt);   // frame-rate independent ease toward b
+a.damp(b, lambda, dt);   // frame-rate independent ease toward b (dt in seconds)
 a.moveTowards(b, step);  // fixed distance per call, never overshoots
 ```
 
@@ -348,6 +353,34 @@ rounded to single precision. That is where they were always heading, since
 this is what reaches the GPU, but it means a value read back out is not
 bit-identical to the double you wrote.
 
+### Orientations: `Quaternion`
+
+A `Quaternion` is an orientation in 3D: what a 3D physics adapter's
+`getRotation` returns and `setRotation` takes. It turns without the gimbal
+lock of three angles, and blends between two orientations along the shortest
+arc with `slerp`.
+
+```js
+const q = new Quaternion().setFromAxisAngle(new Vector3d(0, 1, 0), Math.PI / 2);
+q.apply(v);                       // turns v IN PLACE (+X goes to -Z here)
+a.multiply(b);                    // a = a × b: b is applied first, then a
+a.slerp(b, 0.25);                 // a quarter of the way from a to b, in place
+mesh.currentTransform.val.set(q.toMatrix3d().val); // its turn as a matrix
+```
+
+Like the vectors, its methods mutate `this` and return it, so `clone()` first
+to keep the original. The two that write somewhere else return what they
+wrote, as their `Matrix3d` namesakes do: `apply(v)` returns `v`, and
+`toMatrix3d(out)` returns the matrix. `length2()` is the squared length, as on
+a vector.
+
+`setFromAxisAngle(axis, angle)` takes the **axis first**, the other way round
+from `Matrix3d#rotate(angle, axis)`. `setFromMatrix3d(m)` reads a turn back
+out of a matrix and takes a scale out on the way, so a renderable's
+`currentTransform` can be read as it is. A zero or `NaN` axis, an angle that
+is not finite, or a zero quaternion normalized, gives the identity rather than
+`NaN`.
+
 ## Utilities
 
 ```js
@@ -357,11 +390,13 @@ math.clamp(v, lo, hi);
 math.lerp(a, b, t);              // scalars
 math.damp(a, b, lambda, dt);     // frame-rate independent
 math.degToRad(deg);  math.radToDeg(rad);
-math.random(lo, hi);             // integer
+math.random(lo, hi);             // integer, hi EXCLUDED: random(1, 6) never gives 6
 math.randomFloat(lo, hi);
-math.weightedRandom(lo, hi);     // integer, biased toward LO
+math.weightedRandom(lo, hi);     // integer, biased toward LO, hi excluded
 math.round(n, decimals);        // nearest; a tie goes up, as Math.round: -2.5 → -2
 math.pow(n);                     // n squared
+math.lerpArray([1, 0.5, 0], t);  // a value along evenly spaced samples, t in 0..1
+math.isPowerOfTwo(n);  math.nextPowerOfTwo(n);
 math.DEG_TO_RAD  math.RAD_TO_DEG  math.TAU  math.ETA  math.EPSILON
 ```
 
@@ -384,19 +419,35 @@ about ±0.6), `frequency` is in changes per unit of the input, and the same seed
 gives the same field every run. A sum of sines repeats where people notice it,
 and `Math.random()` every frame jitters instead of drifting.
 
+## `Color#toArray()` is the colour itself
+
+The same rule holds for colours: `color.toArray()` hands back the colour's own
+`Float32Array` of normalized `[r, g, b, a]`, not a copy. Write into it and the
+colour changes; keep it and it changes when the colour does. Copy what you
+mean to keep or change:
+
+```js
+const rgb = color.toArray().slice(0, 3);   // three numbers in 0..1, yours
+```
+
 ## Symptoms
 
 | symptom | cause |
 |---|---|
 | z unchanged after scaling | `scale(s)` leaves z alone; pass `scale(s, s, s)` |
-| z became 0 for no reason | `set(x, y)` defaults z to 0 |
+| z became 0 for no reason | `set(x, y)` defaults z to 0; move a renderable with `setPosition(x, y)` |
 | the original vector changed | the method mutates; `copy()` into something first |
 | a position callback fires twice and sees a half-updated vector, or `pos.floorSelf()` returns something that is not `pos` | before 20.13 the observable `negateSelf` / `floorSelf` / `ceilSelf` / `clampSelf` wrote component by component; upgrade |
 | `math.round(-2.7)` is -2, or a large value comes back negative | before 20.13 `round` truncated toward zero through 32-bit integers; upgrade |
+| `math.isPowerOfTwo(0)` is true, or a fraction passes | before 20.13 it accepted zero, negative and fractional values; upgrade |
 | memory climbs in a loop | `clone()` or `negate()`/`floor()`/`ceil()` per frame |
+| memory taken by dropped `clone()`s never comes back | before 20.9 the pool kept every instance it handed out; upgrade, and release what you clone |
 | two helper results are the same object | a shared scratch vector was returned |
+| a colour changes by itself, or values read from one change later | `Color#toArray()` is the colour's own array: `slice()` it before changing or keeping it |
 | `.z` is a type error | `Renderable.pos` is declared `Vector2d` (#1510) |
 | rotation eases oddly between directions | `lerp` on directions; use `slerp` |
+| an orientation came back applied in the wrong order | `a.multiply(b)` applies `b` first; `premultiply` for the other order |
+| `setFromAxisAngle` gives no rotation at all | the arguments are `(axis, angle)`; `(angle, axis)`, the order of `Matrix3d#rotate`, reads as no axis |
 | you built your own 16-number array | `Renderable.currentTransform` is already a `Matrix3d`; write its `val` |
 | a value read back from a matrix differs | `val` is `Float32Array`; it holds float32 |
 | easing differs at 120fps | per-frame `lerp`; use `damp` |

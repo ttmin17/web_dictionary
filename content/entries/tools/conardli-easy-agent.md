@@ -15,29 +15,29 @@ tags:
   - cli
   - coding-agent
 status: active
-quality_percentile: 60
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ConardLi/easy-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 1024
-  last_commit: 2026-11-08T15:15:32Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.2
-  trending_score: 2
-  rank_current: 127
-  rank_delta: 1
+  stars: 1030
+  last_commit: 2026-11-15T04:22:45Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.6
+  trending_score: 6.04
+  rank_current: 125
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1016
     - 1015
     - 1022
     - 1024
+    - 1030
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: ConardLi/easy-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.808Z
+  fetched_at: 2026-11-16T09:16:56.716Z
   truncated: false
 type: agent_tool
 tool:
@@ -257,7 +257,7 @@ Run `eagent --help` for every startup option. Useful REPL commands include:
 |---|---|
 | `/help` | List commands and shortcuts |
 | `/model`, `/mode`, `/think`, `/effort` | Control model and reasoning behavior |
-| `/config`, `/status`, `/doctor`, `/context` | Inspect configuration and runtime health |
+| `/config`, `/status`, `/doctor`, `/context [details]` | Inspect configuration, runtime health, and what the last request carried |
 | `/resume`, `/history`, `/export`, `/copy` | Work with sessions and output |
 | `/rewind`, `/diff` | Inspect or restore file changes |
 | `/permissions` | Inspect permission rules |

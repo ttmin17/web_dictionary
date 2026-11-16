@@ -15,10 +15,10 @@ tags:
   - claude-code-skill
   - marketing-automation
 status: active
-quality_percentile: 77
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-seo
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27547
-  last_commit: 2026-11-01T06:07:26Z
-  stars_delta_7d: 687
-  stars_growth_pct: 2.6
-  trending_score: 704.57
+  stars: 29837
+  last_commit: 2026-11-16T06:16:01Z
+  stars_delta_7d: 2290
+  stars_growth_pct: 8.3
+  trending_score: 2480.37
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 19212
     - 21373
     - 26860
     - 27547
+    - 29837
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: AgriciDaniel/claude-seo
   path: skills/seo-backlinks/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.020Z
+  fetched_at: 2026-11-16T09:16:01.339Z
   truncated: false
 type: agent_skill
 skill:
@@ -208,6 +208,22 @@ Output:
 **DataForSEO only:** `backlinks_backlinks` with date filters for 30/60/90 day changes
 
 **Verification Crawler:** For known links, verify current status with `"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run verify_backlinks.py --target <url> --links <file> --json`
+
+Read each result's `status` (add `--head-only` for a fast page-existence check without link parsing):
+
+| `status` | How to interpret it |
+|----------|---------------------|
+| `verified` | Link to the target found on the page. Read `rel_attributes` and `page_nofollow` before calling it followed. |
+| `link_removed` | Page loads but its HTML has no link to the target. |
+| `unverifiable_js` | Page looks JS-rendered; the link may exist. Report as unconfirmed, not removed. |
+| `lost` | Source page is gone: a GET returned 404 or 410. |
+| `server_error` | Source server answered 5xx. Temporary until proven otherwise: recheck later, never report as lost. |
+| `exists` | `--head-only`: page is reachable, link not checked. A `redirect_url` here is only an https or www switch. |
+| `moved` | `--head-only`: page redirects to another host or path (`redirect_url`). Rerun without `--head-only` to see if the link survived. |
+| `error` | Not checked (blocked URL, timeout, or HTTP 403/429 where the host refused the checker). Read `error`; say "could not check", not "lost". |
+
+- `page_nofollow: true`: the page has a robots nofollow (meta robots or `X-Robots-Tag`), so every link on it is nofollow even when `rel_attributes` is `["follow"]`. Count the link as nofollow.
+- `redirect_url`: the final URL when the source redirected, otherwise `null`. The link was checked on that final page; update the stored source URL when `status` is `moved`.
 
 **Note:** Free sources cannot track new/lost links over time. If this section is requested without DataForSEO, inform the user: "Link velocity tracking requires the DataForSEO extension. Free sources provide point-in-time snapshots only."
 

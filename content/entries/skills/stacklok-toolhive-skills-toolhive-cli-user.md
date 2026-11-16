@@ -15,10 +15,10 @@ tags:
   - golang
   - kubernetes
 status: active
-quality_percentile: 83
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: stacklok/toolhive
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2329
-  last_commit: 2026-11-09T08:59:34Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.2
-  trending_score: 4.01
-  rank_current: 128
-  rank_delta: -1
+  stars: 2342
+  last_commit: 2026-11-16T09:10:50Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.6
+  trending_score: 13.07
+  rank_current: 126
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2295
     - 2311
     - 2325
     - 2329
+    - 2342
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: stacklok/toolhive
   path: skills/toolhive-cli-user/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.250Z
+  fetched_at: 2026-11-16T09:15:24.856Z
   truncated: false
 type: agent_skill
 skill:

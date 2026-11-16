@@ -11,29 +11,29 @@ tags:
   - checklist
   - css
 status: active
-quality_percentile: 62
+quality_percentile: 55
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: thedaviddias/Front-End-Checklist
   official_vendor: false
   license: MIT
 signals:
-  stars: 74680
+  stars: 74748
   last_commit: 2026-10-31T05:44:22Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0
-  trending_score: 31.01
-  rank_current: 34
-  rank_delta: -3
+  stars_delta_7d: 68
+  stars_growth_pct: 0.1
+  trending_score: 68.06
+  rank_current: 35
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 74506
     - 74565
     - 74649
     - 74680
+    - 74748
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: thedaviddias/Front-End-Checklist
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:11.183Z
+  fetched_at: 2026-11-16T09:16:39.215Z
   truncated: true
 type: mcp_server
 launch:

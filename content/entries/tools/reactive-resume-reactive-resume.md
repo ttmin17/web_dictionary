@@ -14,29 +14,29 @@ tags:
   - hacktoberfest
   - javascript
 status: active
-quality_percentile: 79
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: reactive-resume/reactive-resume
   official_vendor: false
   license: MIT
 signals:
-  stars: 45519
-  last_commit: 2026-11-08T20:43:39Z
-  stars_delta_7d: 149
-  stars_growth_pct: 0.3
-  trending_score: 149.49
-  rank_current: 24
-  rank_delta: 2
+  stars: 45802
+  last_commit: 2026-11-15T13:42:12Z
+  stars_delta_7d: 283
+  stars_growth_pct: 0.6
+  trending_score: 284.76
+  rank_current: 25
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 44513
     - 44867
     - 45370
     - 45519
+    - 45802
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: reactive-resume/reactive-resume
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.737Z
+  fetched_at: 2026-11-16T09:14:55.585Z
   truncated: false
 type: agent_tool
 tool:
@@ -324,7 +324,7 @@ This builds the checked-out source. For a deployment using published images, fol
 | Category         | Technology                               |
 | ---------------- | ---------------------------------------- |
 | Web app          | React 19 SPA, TanStack Router, and Vite  |
-| Server           | Hono on Node.js 24 or Cloudflare Workers |
+| Server           | Hono on Node.js 26 or Cloudflare Workers |
 | Language         | TypeScript                               |
 | Monorepo         | pnpm and Turborepo                       |
 | Database         | PostgreSQL with Drizzle ORM              |

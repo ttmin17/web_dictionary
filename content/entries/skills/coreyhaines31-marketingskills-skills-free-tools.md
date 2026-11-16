@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-free-tools
 name: free-tools
-tagline: When the user wants to plan, evaluate, or build a free tool for
-  marketing purposes — lead generation, SEO value, or brand awareness. Also use
-  when the
+tagline: "When the user wants to plan or build a free tool as marketing, or asks
+  whether a tool idea is worth building or which one to pick: calculators,
+  grader"
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -16,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,20 +45,15 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/free-tools/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.918Z
+  fetched_at: 2026-11-16T09:15:48.051Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: free-tools
-  description: When the user wants to plan, evaluate, or build a free tool for
-    marketing purposes — lead generation, SEO value, or brand awareness. Also
-    use when the user mentions "engineering as marketing," "free tool,"
-    "marketing tool," "calculator," "generator," "interactive tool," "lead gen
-    tool," "build a tool for leads," "free resource," "ROI calculator," "grader
-    tool," "audit tool," "should I build a free tool," or "tools for lead gen."
-    Use this whenever someone wants to build something useful and give it away
-    to attract leads or earn links. For downloadable content lead magnets
-    (ebooks, checklists, templates), see lead-magnets.
+  description: "When the user wants to plan or build a free tool as marketing, or
+    asks whether a tool idea is worth building or which one to pick:
+    calculators, graders, generators, and other interactive tools for leads,
+    SEO, and links. For downloadable lead magnets, see lead-magnets."
   folder_path: skills/free-tools
   extra_files:
     - evals/evals.json

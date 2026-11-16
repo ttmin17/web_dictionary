@@ -15,29 +15,29 @@ tags:
   - aec
   - agent-skills
 status: active
-quality_percentile: 95
+quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: pascalorg/editor
   official_vendor: false
   license: MIT
 signals:
-  stars: 25407
-  last_commit: 2026-11-09T09:05:14Z
-  stars_delta_7d: 70
-  stars_growth_pct: 0.3
-  trending_score: 70.19
-  rank_current: 46
-  rank_delta: 1
+  stars: 25536
+  last_commit: 2026-11-14T06:42:01Z
+  stars_delta_7d: 129
+  stars_growth_pct: 0.5
+  trending_score: 129.65
+  rank_current: 52
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 24973
     - 25114
     - 25337
     - 25407
+    - 25536
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: pascalorg/editor
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:43.249Z
+  fetched_at: 2026-11-16T09:14:56.506Z
   truncated: false
 type: agent_tool
 tool:

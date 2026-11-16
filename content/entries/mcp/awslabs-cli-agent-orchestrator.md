@@ -14,29 +14,29 @@ tags:
   - ai-coding-assistant
   - antigravity
 status: active
-quality_percentile: 89
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: awslabs/cli-agent-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1532
-  last_commit: 2026-11-09T09:10:04Z
-  stars_delta_7d: 16
-  stars_growth_pct: 1.1
-  trending_score: 16.17
-  rank_current: 51
-  rank_delta: 0
+  stars: 1563
+  last_commit: 2026-11-16T09:10:48Z
+  stars_delta_7d: 31
+  stars_growth_pct: 2
+  trending_score: 31.63
+  rank_current: 53
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1451
     - 1473
     - 1516
     - 1532
+    - 1563
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: awslabs/cli-agent-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.627Z
+  fetched_at: 2026-11-16T09:15:33.777Z
   truncated: false
 type: mcp_server
 launch:
@@ -214,7 +214,8 @@ provider override while keeping the same sequence.
 
 ### Configure and integrate
 
-- [Ephemeral agents](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/ephemeral-agents.md): opt-in create-only profiles and their limits.
+- [Ephemeral agents](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/ephemeral-agents.md): opt-in, single-use helper agents that another agent creates
+  and launches, and their limits.
 - [Ephemeral agents setup runbook](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/ephemeral-agents-agent-setup.md): step-by-step setup of
   ephemeral agents and a decider, written for an agent to follow.
 - [Agent profiles](https://github.com/awslabs/cli-agent-orchestrator/blob/main/docs/agent-profile.md): profile schema, discovery, provider

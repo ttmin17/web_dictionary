@@ -12,10 +12,10 @@ tags:
   - ai-coding
   - claude-code
 status: active
-quality_percentile: 88
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8636
-  last_commit: 2026-11-08T21:57:39Z
-  stars_delta_7d: 301
-  stars_growth_pct: 3.6
-  trending_score: 311.87
+  stars: 9237
+  last_commit: 2026-11-16T06:28:35Z
+  stars_delta_7d: 601
+  stars_growth_pct: 7
+  trending_score: 642.83
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7849
     - 8020
     - 8335
     - 8636
+    - 9237
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/comment-writer/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:53.522Z
+  fetched_at: 2026-11-16T09:16:29.026Z
   truncated: false
 type: agent_skill
 skill:
@@ -113,7 +113,7 @@ For the next PR, add links to the previous and following PRs so the chain stays 
 ### Ask for split
 
 ```markdown
-This PR exceeds the 400-line budget, so we need to split it or justify `size:exception`.
+This PR is large for one review (about 600 changed lines). Could we split it, or follow the repo's size policy if it allows one PR?
 
 Suggested order: foundation + tests first, then integration, then docs. That gives each review a clear start and end.
 ```

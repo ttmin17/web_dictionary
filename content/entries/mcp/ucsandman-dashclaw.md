@@ -14,29 +14,29 @@ tags:
   - agent-runtime
   - ai-agents
 status: active
-quality_percentile: 45
+quality_percentile: 44
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ucsandman/DashClaw
   official_vendor: false
   license: MIT
 signals:
-  stars: 316
-  last_commit: 2026-11-09T06:30:27Z
+  stars: 318
+  last_commit: 2026-11-14T03:14:12Z
   stars_delta_7d: 2
   stars_growth_pct: 0.6
   trending_score: 2.01
-  rank_current: 98
-  rank_delta: 8
+  rank_current: 109
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 313
-    - 313
     - 314
     - 316
+    - 318
 language: en
 needs_keys: true
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: ucsandman/DashClaw
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:42.624Z
+  fetched_at: 2026-11-16T09:17:08.315Z
   truncated: false
 type: mcp_server
 launch:

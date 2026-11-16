@@ -17,26 +17,26 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: stickerdaniel/linkedin-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4155
-  last_commit: 2026-11-09T04:49:42Z
-  stars_delta_7d: 38
-  stars_growth_pct: 0.9
-  trending_score: 38.35
-  rank_current: 25
-  rank_delta: 3
+  stars: 4226
+  last_commit: 2026-11-16T02:14:16Z
+  stars_delta_7d: 71
+  stars_growth_pct: 1.7
+  trending_score: 72.21
+  rank_current: 29
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3925
     - 4015
     - 4117
     - 4155
+    - 4226
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: stickerdaniel/linkedin-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.738Z
+  fetched_at: 2026-11-16T09:15:10.537Z
   truncated: false
 type: mcp_server
 launch:
@@ -70,35 +70,35 @@ launch:
 
 Give your AI agents access to LinkedIn through your own browser session. Read profiles, research companies, find jobs, and manage conversations and connection requests.
 
-> This is an independent open-source project, not affiliated with LinkedIn or Microsoft. LinkedIn is a trademark of LinkedIn Corporation, used here only to identify the service this software interacts with.
+> Independent open-source project. Not affiliated with LinkedIn or Microsoft. LinkedIn is a trademark of LinkedIn Corporation.
 
 <br/>
 <details open>
 <summary><strong>LinkedIn MCP Sponsor</strong></summary>
 <br/>
-<a href="https://linkupapi.com/?utm_source=stickerdaniel" target="_blank">
+<a href="https://golink.onl/linkupapi-banner" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/df9f3784-4db3-4a30-a908-ca9aae32f54c">
     <img src="https://github.com/user-attachments/assets/e3a019f0-0dbe-4b91-8e41-684d5ea69893" alt="LinkupAPI, the outreach API for your AI agents" width="100%">
   </picture>
 </a>
 
-> Running LinkedIn agents in production? [**LinkupAPI**](https://linkupapi.com/?utm_source=stickerdaniel) is the hosted outreach API built for scale, across LinkedIn Classic, Sales Navigator, and Recruiter, plus email, WhatsApp, and iMessage.
+> Running LinkedIn agents in production? [**LinkupAPI**](https://golink.onl/linkupapi-link) is the hosted outreach API built for scale, across LinkedIn Classic, Sales Navigator, and Recruiter, plus email, WhatsApp, and iMessage.
 
-[Try LinkupAPI free →](https://linkupapi.com/?utm_source=stickerdaniel)
+[Try LinkupAPI free →](https://golink.onl/linkupapi-free)
 
 <br/>
 
-<a href="https://cadenza.page/?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=oss_sponsor&amp;utm_content=banner" target="_blank">
+<a href="https://golink.onl/cadenza-banner" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/e7dc04a7-4b2c-4f8f-bffa-77895f02a9b4">
     <img src="https://github.com/user-attachments/assets/8b8ffaf4-ac80-4943-bb14-88562d636a35" alt="Cadenza, hosted LinkedIn MCP for your AI assistant" width="100%">
   </picture>
 </a>
 
-> [**Cadenza**](https://cadenza.page/?utm_source=github&utm_medium=readme&utm_campaign=oss_sponsor&utm_content=name) is the single hosted MCP server for all your LinkedIn needs. It covers Classic, Sales Navigator, and Recruiter with 100+ actions, each within limits you set. Works on web, desktop, and mobile.
+> [**Cadenza**](https://golink.onl/cadenza-link) is the single hosted MCP server for all your LinkedIn needs. It covers Classic, Sales Navigator, and Recruiter with 100+ actions, each within limits you set. Works on web, desktop, and mobile.
 
-Use code <strong>FOUNDING20</strong> for 20% off your first year. <a href="https://cadenza.page/?utm_source=github&amp;utm_medium=readme&amp;utm_campaign=oss_sponsor&amp;utm_content=cta">Try Cadenza →</a>
+Use code <strong>FOUNDING20</strong> for 20% off your first year. <a href="https://golink.onl/cadenza-cta">Try Cadenza →</a>
 
 <br/>
 
@@ -115,16 +115,16 @@ Use code <strong>FOUNDING20</strong> for 20% off your first year. <a href="https
 
 <br/>
 
-<a href="https://zernio.link/daniel-sticker" target="_blank">
+<a href="https://golink.onl/zernio-banner" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/f8b34875-c2b7-4466-b430-51fda4875720">
     <img src="https://github.com/user-attachments/assets/ef30cb05-80a7-4b03-a9d4-186c6db2fe43" alt="Zernio, official APIs for every social channel" width="100%">
   </picture>
 </a>
 
-> [**Zernio**](https://zernio.link/daniel-sticker) gives your agents official APIs for every social channel. Post, reply, and run ads on Instagram, TikTok, X, YouTube, Threads, and more, through one API or MCP server.
+> [**Zernio**](https://golink.onl/zernio-link) gives your agents official APIs for every social channel. Post, reply, and run ads on Instagram, TikTok, X, YouTube, Threads, and more, through one API or MCP server.
 
-[Try Zernio free →](https://zernio.link/daniel-sticker)
+[Try Zernio free →](https://golink.onl/zernio-free)
 </details>
 
 ---
@@ -159,7 +159,7 @@ Use code <strong>FOUNDING20</strong> for 20% off your first year. <a href="https
 | `search_jobs` | Find job postings by keyword and location, with job IDs for reading details. |
 | `get_saved_jobs` | List your saved job postings, with job IDs for looking up their details. |
 | `dismiss_job` | Dismiss a job from job search so later searches no longer show it. Irreversible. |
-| `search_people` | Find people by keyword, location, connection degree, and current company. |
+| `search_people` | Find people by keyword, location, degree, company, and mutual connections. |
 | `get_job_details` | Read a job posting's description, requirements, and company details. |
 | `get_job_apply_url` | Check whether a job uses Easy Apply or links to an employer's application. |
 | `get_easy_apply_form` | Read an Easy Apply form's fields, options and prefilled values. Never submits. |

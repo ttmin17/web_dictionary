@@ -13,29 +13,29 @@ tags:
   - agentic-workflow
   - ai-chat
 status: active
-quality_percentile: 50
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mario-andreschak/FLUJO
   official_vendor: false
   license: MIT
 signals:
-  stars: 673
-  last_commit: 2026-11-08T18:23:22Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 116
-  rank_delta: -26
+  stars: 675
+  last_commit: 2026-11-15T18:23:26Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.3
+  trending_score: 2.01
+  rank_current: 107
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 663
     - 666
     - 673
     - 673
+    - 675
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: mario-andreschak/FLUJO
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:34.213Z
+  fetched_at: 2026-11-16T09:17:02.672Z
   truncated: false
 type: mcp_server
 launch:
@@ -70,7 +70,7 @@ launch:
 [**Install FLUJO ↓**](#-quick-install-recommended) · [**Explore features ↓**](#-key-features) · [**Watch the walkthrough →**](https://flujo.com.co/film/) · [**Website →**](https://flujo.com.co/) · [**Online demo →**](https://try.flujo.com.co/)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/mario-andreschak/FLUJO/main/LICENSE)
-[![Version](https://img.shields.io/badge/version-3.48.7-green.svg)](https://raw.githubusercontent.com/mario-andreschak/FLUJO/main/package.json)
+[![Version](https://img.shields.io/badge/version-3.48.9-green.svg)](https://raw.githubusercontent.com/mario-andreschak/FLUJO/main/package.json)
 
 </div>
 

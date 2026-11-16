@@ -15,29 +15,29 @@ tags:
   - ai-agents
   - ai-roles
 status: active
-quality_percentile: 82
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: jnMetaCode/agency-agents-zh
   official_vendor: false
   license: MIT
 signals:
-  stars: 21971
-  last_commit: 2026-11-04T02:48:07Z
-  stars_delta_7d: 84
-  stars_growth_pct: 0.4
-  trending_score: 84.32
-  rank_current: 43
-  rank_delta: -6
+  stars: 22115
+  last_commit: 2026-11-14T13:01:40Z
+  stars_delta_7d: 144
+  stars_growth_pct: 0.7
+  trending_score: 144.94
+  rank_current: 44
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21355
     - 21602
     - 21887
     - 21971
+    - 22115
 language: zh
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: jnMetaCode/agency-agents-zh
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:34.031Z
+  fetched_at: 2026-11-16T09:16:01.665Z
   truncated: true
 type: agent_tool
 tool:
@@ -201,6 +201,41 @@ tool:
 </td>
 </tr>
 </table>
+
+<table>
+<tr>
+<td width="25%">
+  <a href="https://apixo.ai/zh?utm_source=github&utm_medium=sponsorship&utm_campaign=agency_agents&utm_content=logo" target="_blank">
+    <img src="https://raw.githubusercontent.com/jnMetaCode/agency-agents-zh/main/assets/sponsors/apixo-ai-card-450x250.png" alt="APIXO AI: 一站式 AI 视频制作与多模态创作平台" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+**[APIXO AI](https://apixo.ai/zh?utm_source=github&utm_medium=sponsorship&utm_campaign=agency_agents&utm_content=brand_mention)：一站式 AI 视频制作与多模态创作平台**
+原生支持 MCP 协议与统一多模态 API，一键直连各类 Agent 框架与自动化工作流。
+集成 Seedream 5.5 旗舰生图（**[API 低至 $0.014/张起](https://apixo.ai/zh/models/seedream-5-5?utm_source=github&utm_medium=sponsorship&utm_campaign=agency_agents&utm_content=seedream_5_5)**）、Seedance 2.5 视频与 Suno 音乐模型。中国开发者免海外信用卡、支持银联即开即用，注册即赠免费体验额度！
+👉 **[快速查看 MCP 协议集成指南与接入示例 →](https://apixo.ai/zh/mcp?utm_source=github&utm_medium=sponsorship&utm_campaign=agency_agents&utm_content=mcp_page)**
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<td width="25%">
+  <a href="https://beichenapi.com/register?aff=RM34GKKSY7EC">
+    <img src="https://raw.githubusercontent.com/jnMetaCode/agency-agents-zh/main/assets/sponsor-beichenapi.jpg" alt="北辰 API — 稳定、高效的多模型 API 聚合服务" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+感谢 [北辰 API](https://beichenapi.com/register?aff=RM34GKKSY7EC) 赞助本项目！北辰 API 提供稳定、高效的多模型 API 聚合服务，支持 DeepSeek、GPT-6.1、Gemini 4A / 4C、Kimi K3.1 Pro 等主流模型，适用于 AI 编程、Agent 开发及多模型调用场景。平台目前已上线 Kimi K3.1 Pro、GPT-6.1 Terra、Gemini 4A / 4C，并提供自建 Gemini / GPT / DS 号池，接入便捷，适合开发者与团队使用。🎁 通过[此链接注册](https://beichenapi.com/register?aff=RM34GKKSY7EC)即可了解更多服务信息。
+
+</td>
+</tr>
+</table>
+
 
 ---
 

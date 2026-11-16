@@ -15,29 +15,29 @@ tags:
   - agent-to-agent
   - ai-agents
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: 777genius/agent-teams-ai
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2449
-  last_commit: 2026-11-09T09:08:53Z
-  stars_delta_7d: 43
-  stars_growth_pct: 1.8
-  trending_score: 43.77
-  rank_current: 59
-  rank_delta: 21
+  stars: 2495
+  last_commit: 2026-11-16T09:08:31Z
+  stars_delta_7d: 46
+  stars_growth_pct: 1.9
+  trending_score: 46.86
+  rank_current: 85
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2278
     - 2332
     - 2406
     - 2449
+    - 2495
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: 777genius/agent-teams-ai
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.645Z
+  fetched_at: 2026-11-16T09:15:16.654Z
   truncated: false
 type: agent_tool
 tool:
@@ -97,7 +97,7 @@ tool:
 <tr>
 <td width="50%">
   <a href="https://github.com/777genius/agent-teams-ai/blob/main/docs/screenshots/task-detail-animated.gif">
-    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/task-detail-animated.gif" alt="Agent Teams AI product demo" width="100%" loading="lazy" />
+    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/task-detail-animated.gif" alt="Agent graph showing messages, activity, and task progress" width="100%" loading="lazy" />
   </a>
 </td>
 <td width="50%">
@@ -120,8 +120,8 @@ tool:
 </tr>
 <tr>
 <td width="50%">
-  <a href="https://github.com/777genius/agent-teams-ai/blob/main/docs/screenshots/12.png">
-    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/12.webp" alt="Full-screen team chat with replies, attachments, mentions, and drafts" width="100%" loading="lazy" />
+  <a href="https://github.com/777genius/agent-teams-ai/blob/main/docs/screenshots/team-chat.png">
+    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/team-chat.webp" alt="Group chats with replies, attachments, an inline chart, and archived conversations" width="100%" loading="lazy" />
   </a>
 </td>
 <td width="50%">
@@ -138,14 +138,14 @@ tool:
 </td>
 <td width="50%">
   <a href="https://github.com/777genius/agent-teams-ai/blob/main/docs/screenshots/4.png">
-    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/4.webp" alt="Team members with roles, runtimes, and models" width="100%" loading="lazy" />
+    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/4.webp" alt="Built-in terminal running checks and a local development server" width="100%" loading="lazy" />
   </a>
 </td>
 </tr>
 <tr>
 <td width="50%">
   <a href="https://github.com/777genius/agent-teams-ai/blob/main/docs/screenshots/13.png">
-    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/13.webp" alt="Connected AI coding providers and subscription limits" width="100%" loading="lazy" />
+    <img src="https://raw.githubusercontent.com/777genius/agent-teams-ai/main/docs/screenshots/previews/13.webp" alt="Provider settings with connected AI coding services and available plans" width="100%" loading="lazy" />
   </a>
 </td>
 <td width="50%">

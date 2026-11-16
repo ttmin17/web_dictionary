@@ -15,29 +15,29 @@ tags:
   - gpt
   - llm
 status: active
-quality_percentile: 30
+quality_percentile: 44
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: blazickjp/arxiv-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3263
-  last_commit: 2026-10-08T13:08:10Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.2
-  trending_score: 5.01
-  rank_current: 84
-  rank_delta: -14
+  stars: 3282
+  last_commit: 2026-11-14T17:47:28Z
+  stars_delta_7d: 19
+  stars_growth_pct: 0.6
+  trending_score: 19.11
+  rank_current: 67
+  rank_delta: 17
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3224
     - 3235
     - 3258
     - 3263
+    - 3282
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: blazickjp/arxiv-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:55.298Z
+  fetched_at: 2026-11-16T09:15:16.415Z
   truncated: false
 type: mcp_server
 launch:

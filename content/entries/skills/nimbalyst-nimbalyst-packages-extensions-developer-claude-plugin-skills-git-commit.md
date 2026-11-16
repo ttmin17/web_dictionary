@@ -16,10 +16,10 @@ tags:
   - ai-agents
   - ai-coding-assistant
 status: active
-quality_percentile: 80
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: nimbalyst/nimbalyst
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2047
-  last_commit: 2026-11-04T07:28:07Z
-  stars_delta_7d: 24
-  stars_growth_pct: 1.2
-  trending_score: 24.28
+  stars: 2079
+  last_commit: 2026-11-15T21:10:54Z
+  stars_delta_7d: 32
+  stars_growth_pct: 1.6
+  trending_score: 32.5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1931
     - 1975
     - 2023
     - 2047
+    - 2079
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: nimbalyst/nimbalyst
   path: packages/extensions/developer/claude-plugin/skills/git-commit/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.662Z
+  fetched_at: 2026-11-16T09:16:56.594Z
   truncated: false
 type: agent_skill
 skill:
@@ -81,11 +81,13 @@ This skill is for the "Commit with AI" feature which provides an interactive com
 
 2. **Get session-edited files (fallback only)**
    Only if no file list was provided in the prompt:
-   Call `mcp__nimbalyst__get_session_edited_files` to get ALL files you edited during this AI session, then cross-reference with git status.
+   Call `mcp__nimbalyst__get_session_edited_files` to get ALL files you edited during this AI session, then cross-reference with `git status --porcelain -uall` (`-uall` lists every untracked file instead of collapsing a folder to `dir/`).
 
 3. **Propose the commit**
    Call `mcp__nimbalyst__developer_git_commit_proposal` with:
    - `filesToStage`: ALL session-edited files that have changes (do not cherry-pick a subset)
+     A directory path is allowed: it expands to every modified, deleted and untracked non-ignored file under it, like `git add <dir>`. The user sees the expanded list, and files under it edited only by other sessions arrive unchecked (files this session also edited stay checked).
+   - `excludePaths` (optional): literal files or directory prefixes to leave out after expansion. No globs.
    - `commitMessage`: A well-crafted commit message following the guidelines below
    - `reasoning`: Explanation of why these files were selected
 

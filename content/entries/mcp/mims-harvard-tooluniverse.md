@@ -15,26 +15,26 @@ status: active
 quality_percentile: 38
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mims-harvard/ToolUniverse
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1779
-  last_commit: 2026-11-09T08:53:00Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.1
-  trending_score: 2
-  rank_current: 101
-  rank_delta: -27
+  stars: 1791
+  last_commit: 2026-11-16T07:02:17Z
+  stars_delta_7d: 12
+  stars_growth_pct: 0.7
+  trending_score: 12.08
+  rank_current: 87
+  rank_delta: 14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1746
     - 1759
     - 1777
     - 1779
+    - 1791
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: mims-harvard/ToolUniverse
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:31.372Z
+  fetched_at: 2026-11-16T09:16:59.378Z
   truncated: false
 type: mcp_server
 launch:
@@ -142,7 +142,7 @@ ToolUniverse is an ecosystem for creating AI scientist systems from any large la
 - [**Tool Composition**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/tool_composition.html): Chain tools for sequential or parallel execution in self-directed workflows
 - [**Compact Mode**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/building_ai_scientists/compact_mode.html): Reduces 2,700+ tools to 4-5 core discovery tools, saving ~99% context window
 - [**CLI (`tu`)**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/tu_cli.html): Discover, inspect, run, and test tools directly from the terminal — 14 subcommands for interactive and scripted workflows
-- [**Agent Skills**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/skills_showcase.html): 68 pre-built research workflows for drug discovery, precision oncology, rare disease diagnosis, pharmacovigilance, and more
+- [**Agent Skills**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/skills_showcase.html): 153 pre-built research skills for drug discovery, precision oncology, rare disease diagnosis, pharmacovigilance, and more, plus 63 that install a GPU-backed model locally
 - [**Literature Search**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/literature_search_tools_tutorial.html): Unified search across PubMed, Semantic Scholar, ArXiv, BioRxiv, Europe PMC, and more
 - [**Two-Tier Result Caching**](https://zitniklab.hms.harvard.edu/ToolUniverse/guide/cache_system.html): In-memory LRU + SQLite persistence with per-tool fingerprinting for 10x speedup, offline support, and reproducibility
 - [**Continuous Expansion**](https://zitniklab.hms.harvard.edu/ToolUniverse/expand_tooluniverse/index.html): Register new tools locally or remotely without additional configuration

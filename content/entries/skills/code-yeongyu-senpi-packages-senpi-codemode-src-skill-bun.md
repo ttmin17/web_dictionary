@@ -14,10 +14,10 @@ tags:
   - coding-agent
   - llm
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: code-yeongyu/senpi
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 514
-  last_commit: 2026-11-09T08:42:55Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.4
-  trending_score: 2.01
+  stars: 520
+  last_commit: 2026-11-16T09:11:13Z
+  stars_delta_7d: 6
+  stars_growth_pct: 1.2
+  trending_score: 6.07
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 484
     - 497
     - 512
     - 514
+    - 520
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: code-yeongyu/senpi
   path: packages/senpi-codemode/src/skill/bun/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:31.234Z
+  fetched_at: 2026-11-16T09:16:59.220Z
   truncated: false
 type: agent_skill
 skill:
@@ -122,7 +122,7 @@ Free wins (no code change): 2x lower CPU, 13-48% less server memory, 2-2.5x fast
 1. **Eval-first, builtin-first.** The `eval` js kernel runs on Bun (that is why this skill is present): call `Bun.*` APIs directly inside js cells and reach for `bash` or a spawned `bun` only for CLI surfaces (`bun test`, `bun build`, `bun pm`) or work that needs a separate process. The Replaces column above is a ban list for new dependencies in production code, test helpers and one-off scripts alike.
 2. **Anything that must outlive a cell starts outside it.** The kernel SIGKILLs every `Bun.spawn` child when its cell settles, so browsers, daemons, dev servers, remote `ssh` jobs and slow git hooks start through `tool.monitor({ command })` or `tool.bash({ run_in_background: true })`; a stopped long `Bun.$` cell restarts the kernel and loses every global, so helpers live in an importable file.
 3. **`Bun.$` runs one command with array-interpolated args; real shell syntax goes to bash.** `${"a b"}` is ONE argument, `$?`/`$VAR` are literal, `for`/`until`/heredocs are parse errors or silent `command not found` with rc 0, and `VAR=x cmd` is not applied to a binary — each of these produced a false-green gate. Use `` $`cmd ${[args]}`.nothrow().quiet() `` for a command and `Bun.spawn(["bash", "-c", script], { env: process.env, stdin: "ignore" })` for a script.
-4. **Every `Bun.spawn` passes `env: process.env`, and re-spawns Bun as `process.execPath`.** An env-less child gets the environment the process STARTED with (runtime HOME/TMPDIR edits never arrive), and `"bun"` from PATH has resolved to three different shims on our machines. Give a child that reads stdin `stdin: "ignore"` or an explicit end, or it waits for EOF forever.
+4. **Every `Bun.spawn` passes `env: process.env`, and re-spawns Bun as `process.execPath` — but only when this runtime IS standalone Bun.** An env-less child gets the environment the process STARTED with (runtime HOME/TMPDIR edits never arrive), and `"bun"` from PATH has resolved to three different shims on our machines. Inside a compiled host (the OmO engine, any `--compile` binary) `process.execPath` is the host binary itself, not Bun: spawning it with a script path starts another agent instead of running the script (omo#12569). There, resolve `bun` through PATH — senpi appends a real Bun shim to PATH — and never hand a script path to an unverified `process.execPath`. Give a child that reads stdin `stdin: "ignore"` or an explicit end, or it waits for EOF forever.
 5. **`bun test` gets its timeout on the command line and exact paths with `./`.** `--timeout N` is the only budget that reaches every file (a preload's `setDefaultTimeout` covers the first file, bunfig's is ignored); a timeout SIGTERMs every child the test spawned, so a database started in `beforeAll` dies with it; `bun test path.ts` without `./` is a substring filter. The full table is in [test](https://github.com/code-yeongyu/senpi/blob/main/packages/senpi-codemode/src/skill/bun/references/test.md) — read it before writing or debugging a suite.
 6. **Measure with the Bun the work targets.** The kernel's `Bun.version`, the shell's `bun --version` and a repo's pinned Bun (CI `bun-version`, `devDependencies.bun`) differ on one machine and 1.4.2 vs 1.4.3 changed test outcomes, so evidence runs use the pin; probe a feature in an empty directory, because `bun check`/`bun fmt`/`bun lint` otherwise run a same-named package.json script. Installs: `CI=1`, visible output, and after `--ignore-scripts` run `node node_modules/bun/install.js` — [install](https://github.com/code-yeongyu/senpi/blob/main/packages/senpi-codemode/src/skill/bun/references/install.md) lists why.
 7. **Read the matching reference before using an unfamiliar API** — signatures and caveats (`Bun.markdown` HTML is unsanitized, HTTP/3 is experimental, `writer({ append: true })` truncated a results file) live there, not here; [session-recipes](https://github.com/code-yeongyu/senpi/blob/main/packages/senpi-codemode/src/skill/bun/references/session-recipes.md) holds the rest of the session-learned traps.

@@ -14,29 +14,29 @@ tags:
   - compression
   - context-engineering
 status: active
-quality_percentile: 85
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-01-07T19:58:51
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: headroomlabs-ai/headroom
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 79191
-  last_commit: 2026-11-09T06:35:45Z
-  stars_delta_7d: 293
-  stars_growth_pct: 0.4
-  trending_score: 294.09
+  stars: 79779
+  last_commit: 2026-11-16T08:43:08Z
+  stars_delta_7d: 588
+  stars_growth_pct: 0.7
+  trending_score: 592.37
   rank_current: 16
-  rank_delta: -1
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 75939
     - 77847
     - 78898
     - 79191
+    - 79779
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: headroomlabs-ai/headroom
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:22.543Z
+  fetched_at: 2026-11-16T09:15:44.625Z
   truncated: false
 type: agent_tool
 tool:
@@ -225,12 +225,12 @@ print(f"Saved {result.tokens_saved} tokens ({result.compression_ratio:.0%})")
 ```
 
 Launch a wrapped agent session each time, so the setup runs. `headroom wrap`
-starts a local proxy, installs **[Serena](https://github.com/oraios/serena)** for
-semantic code navigation, and launches the agent configured to route through
-Headroom. For Claude Code, Serena is registered for the wrapped project only
-(as a `local`-scope MCP server in `~/.claude.json`). Use
-`--code-memory-scope user` to make it available in every project, or
-`--code-memory none` to skip it. `headroom unwrap` removes either registration.
+starts a local proxy and launches the agent configured to route through
+Headroom. Add `--code-memory serena` to also install
+**[Serena](https://github.com/oraios/serena)** for semantic code navigation (off
+by default). For Claude Code, Serena is registered for the wrapped project only
+(as a `local`-scope MCP server in `~/.claude.json`); use `--code-memory-scope user`
+to make it available in every project. `headroom unwrap` removes either registration.
 
 `headroom wrap ...` is session-scoped: its proxy exits with the wrapped agent.
 For a proxy that survives reboots, use the turnkey `headroom deploy` command.
@@ -245,8 +245,8 @@ is the TypeScript SDK — a library you import
 ## Proof: measured token savings
 
 Four scenarios built from real MCP server output formats, measured with the
-provider tokenizer and the shipped `compress()`. Seeded and offline, so you get
-the same numbers we did:
+provider tokenizer and the shipped `compress()` at its default configuration.
+Seeded and offline, so you get the same numbers we did:
 
 ```bash
 uv run python benchmarks/index_proof_table.py --seed 20260902
@@ -785,7 +785,7 @@ framework, and is reversible.
 Headroom is the proxy, and it compresses everything flowing through it whatever
 sits upstream. Our recommended companion is
 **[Serena](https://github.com/oraios/serena)** for semantic code navigation,
-installed by default when you wrap an agent, plus **Ponytail** if you want leaner
+installed with `headroom wrap --code-memory serena`, plus **Ponytail** if you want leaner
 model output. Everything else is your call — attach a code-memory MCP, Graphify,
 Caveman, or any other MCP server, and Headroom compresses downstream of all of it.
 

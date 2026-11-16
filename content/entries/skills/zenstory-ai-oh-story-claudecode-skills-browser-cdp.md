@@ -14,10 +14,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-04-22T16:35:39
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8448
-  last_commit: 2026-11-09T04:53:43Z
-  stars_delta_7d: 124
-  stars_growth_pct: 1.5
-  trending_score: 125.85
-  rank_current: 59
-  rank_delta: 3
+  stars: 8649
+  last_commit: 2026-11-13T06:27:00Z
+  stars_delta_7d: 201
+  stars_growth_pct: 2.4
+  trending_score: 205.78
+  rank_current: 63
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7737
     - 8006
     - 8324
     - 8448
+    - 8649
 language: zh
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/browser-cdp/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:00.603Z
+  fetched_at: 2026-11-16T09:16:33.367Z
   truncated: false
 type: agent_skill
 skill:
@@ -176,7 +176,7 @@ EOF
   - macOS / Linux：`pgrep -af chrome-debug-profile`
   - Windows（PowerShell）：`Get-CimInstance Win32_Process | Where-Object CommandLine -like '*chrome-debug-profile*' | Select-Object ProcessId,CommandLine`；没有 PowerShell 的旧系统才用 `wmic process get ProcessId,CommandLine | findstr chrome-debug-profile`
   核验 PID 后用 `kill -9 {PID}` / `taskkill /F /PID {PID}`，无法核验则停止。**手工清理不得按 Chrome 可执行文件名批量结束进程**；启动脚本仍走上述同意流程。
-- 登录态失效：用 `node {SKILL_DIR}/scripts/setup-cdp-chrome.js 9222 --reset` 重新复制来源 profile，按上方「需要结束 Chrome 时」先 dry-run、征得同意再加 `--yes`。
+- 登录态失效：用 `node {SKILL_DIR}/scripts/setup-cdp-chrome.js 9222 --reset` 重新复制来源 profile，按上方「需要结束 Chrome 时」先 dry-run、征得同意再加 `--yes`。Chrome 127+（尤其 Windows 应用绑定加密或 macOS 钥匙串授权隔离）下若 `--reset` 后仍未带出 Cookie，请用户在已启动的 debug Chrome 窗口里手动登录一次——后续不传 `--reset` 时 `~/chrome-debug-profile` 会持久保留该登录态。
 
 ---
 
@@ -224,6 +224,6 @@ timeout 30 agent-browser --cdp 9222 eval "window.location.replace('https://www.q
 | CDP 端口未监听 | `--detect-only` 再确认；端口被占用就换端口，下游命令一起改（见「换端口」） |
 | 页面跳转到登录页 | `snapshot -i` 找登录按钮并操作 |
 | `eval` 返回 `null` | 检查 localStorage key 名；含引号的 JS 用 `eval -b` 或 `--stdin` |
-| 登录态过期 | `setup-cdp-chrome.js 9222 --reset`，按同意流程先 dry-run、同意后加 `--yes` |
+| 登录态过期或 `--reset` 后仍掉登录 | 先按同意流程跑 `setup-cdp-chrome.js 9222 --reset`；若因 Chrome 127+ 应用绑定加密仍未带出 Cookie，直接在弹出的 debug Chrome 窗口登录一次（后续不加 `--reset` 会持久保留） |
 | 有多个 Chrome profile | `--profile "Profile 1"` 指定；显式传 `--profile` 会重建，按同意流程 |
 | Chrome 不会启动（30s 超时） | 检查端口冲突；查看 `~/chrome-debug-profile/` 是否损坏；仍不行再按同意流程试 `--reset` |

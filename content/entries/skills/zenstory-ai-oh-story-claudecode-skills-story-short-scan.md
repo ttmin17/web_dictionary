@@ -11,10 +11,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -22,17 +22,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8448
-  last_commit: 2026-11-09T04:53:43Z
-  stars_delta_7d: 124
-  stars_growth_pct: 1.5
-  trending_score: 125.85
+  stars: 8649
+  last_commit: 2026-11-13T06:27:00Z
+  stars_delta_7d: 201
+  stars_growth_pct: 2.4
+  trending_score: 205.78
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7737
     - 8006
     - 8324
     - 8448
+    - 8649
 language: zh
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-short-scan/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:00.605Z
+  fetched_at: 2026-11-16T09:16:33.369Z
   truncated: false
 type: agent_skill
 skill:
@@ -103,7 +103,7 @@ skill:
 
 有真实样本时，以聚合结果和平台参考的「分析维度」为准。趋势需对比同口径的多期样本；仅用内置知识时只给待验证候选，不填写当前数量、占比或涨跌。
 
-1. **情绪排行**：按本节末的情绪表把题材、标签归入六种写作情绪，按样本数量比较。每本书根据简介判断读者读完的感受，只归一类；标签只是线索，无法判断的计「待定」。悬疑题材按简介落点分：最后揭开真相的归反转震撼，留下寒意的归细思极恐
+1. **情绪排行**：按本节末的情绪表把题材、标签归入六种写作情绪，按样本数量比较。优先根据简介判断读者读完的感受，只归一类；无简介或简介极短时结合书名冲突句式与标签归类，仍无法判断的计「待定」。悬疑题材按落点分：最后揭开真相的归反转震撼，留下寒意的归细思极恐
 2. **题材热点**：聚合的题材表和标签热词里反复出现的设定、场景
 3. **篇幅分布**：聚合的字数分布与各题材字数中位
 4. **简介与书名写法**：抽样简介怎么前置冲突、留悬念，书名常见词与代表作标题；可对照 [real-market-data](https://github.com/zenstory-ai/oh-story-claudecode/blob/main/skills/story-short-scan/references/real-market-data.md) 的历史写法

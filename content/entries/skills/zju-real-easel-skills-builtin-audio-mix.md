@@ -16,7 +16,7 @@ status: active
 quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ZJU-REAL/Easel
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4529
-  last_commit: 2026-11-09T08:42:34Z
-  stars_delta_7d: 92
-  stars_growth_pct: 2.1
-  trending_score: 93.91
+  stars: 4719
+  last_commit: 2026-11-15T18:07:22Z
+  stars_delta_7d: 190
+  stars_growth_pct: 4.2
+  trending_score: 197.97
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3844
     - 4090
     - 4437
     - 4529
+    - 4719
 language: zh
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: ZJU-REAL/Easel
   path: skills/builtin/audio-mix/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:53.744Z
+  fetched_at: 2026-11-16T09:16:18.533Z
   truncated: false
 type: agent_skill
 skill:

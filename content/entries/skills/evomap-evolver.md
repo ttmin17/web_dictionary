@@ -15,10 +15,10 @@ tags:
   - agent-framework
   - agent-protocol
 status: active
-quality_percentile: 87
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: EvoMap/evolver
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 8734
-  last_commit: 2026-11-08T02:06:08Z
-  stars_delta_7d: 12
+  stars: 8745
+  last_commit: 2026-11-12T06:39:05Z
+  stars_delta_7d: 11
   stars_growth_pct: 0.1
-  trending_score: 12.02
-  rank_current: 116
-  rank_delta: 4
+  trending_score: 11.01
+  rank_current: 129
+  rank_delta: -13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8687
     - 8702
     - 8722
     - 8734
+    - 8745
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: EvoMap/evolver
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:34.259Z
+  fetched_at: 2026-11-16T09:17:04.131Z
   truncated: false
 type: agent_skill
 skill:

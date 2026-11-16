@@ -14,10 +14,10 @@ tags:
   - claude-code-skill
   - marketing-automation
 status: active
-quality_percentile: 77
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-seo
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27547
-  last_commit: 2026-11-01T06:07:26Z
-  stars_delta_7d: 687
-  stars_growth_pct: 2.6
-  trending_score: 704.57
+  stars: 29837
+  last_commit: 2026-11-16T06:16:01Z
+  stars_delta_7d: 2290
+  stars_growth_pct: 8.3
+  trending_score: 2480.37
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 19212
     - 21373
     - 26860
     - 27547
+    - 29837
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: AgriciDaniel/claude-seo
   path: extensions/banana/skills/seo-image-gen/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.019Z
+  fetched_at: 2026-11-16T09:16:01.338Z
   truncated: false
 type: agent_skill
 skill:

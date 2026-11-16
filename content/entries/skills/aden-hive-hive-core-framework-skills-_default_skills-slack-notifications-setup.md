@@ -15,10 +15,10 @@ tags:
   - anthropic
   - automation
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: aden-hive/hive
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11148
+  stars: 11162
   last_commit: 2026-11-08T01:41:04Z
-  stars_delta_7d: 6
+  stars_delta_7d: 14
   stars_growth_pct: 0.1
-  trending_score: 6
+  trending_score: 14.02
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11108
     - 11122
     - 11142
     - 11148
+    - 11162
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: aden-hive/hive
   path: core/framework/skills/_default_skills/slack-notifications-setup/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:01.338Z
+  fetched_at: 2026-11-16T09:16:26.488Z
   truncated: false
 type: agent_skill
 skill:

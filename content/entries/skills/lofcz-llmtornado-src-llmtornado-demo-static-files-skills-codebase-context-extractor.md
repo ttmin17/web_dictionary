@@ -16,7 +16,7 @@ status: active
 quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: lofcz/LLMTornado
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 652
-  last_commit: 2026-11-09T08:22:09Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0.2
-  trending_score: 1
+  stars: 654
+  last_commit: 2026-11-13T14:16:53Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.3
+  trending_score: 2.01
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 647
     - 649
     - 651
     - 652
+    - 654
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: lofcz/LLMTornado
   path: src/LlmTornado.Demo/Static/Files/Skills/codebase-context-extractor/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:45.275Z
+  fetched_at: 2026-11-16T09:17:11.128Z
   truncated: false
 type: agent_skill
 skill:

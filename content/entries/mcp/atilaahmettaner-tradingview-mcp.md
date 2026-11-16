@@ -13,29 +13,29 @@ tags:
   - futures
   - market-data
 status: active
-quality_percentile: 86
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: atilaahmettaner/tradingview-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 5244
-  last_commit: 2026-11-07T14:05:59Z
-  stars_delta_7d: 29
-  stars_growth_pct: 0.6
-  trending_score: 29.16
-  rank_current: 36
-  rank_delta: 0
+  stars: 5295
+  last_commit: 2026-11-15T13:20:34Z
+  stars_delta_7d: 51
+  stars_growth_pct: 1
+  trending_score: 51.5
+  rank_current: 44
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5083
     - 5138
     - 5215
     - 5244
+    - 5295
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: atilaahmettaner/tradingview-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.584Z
+  fetched_at: 2026-11-16T09:15:08.261Z
   truncated: false
 type: mcp_server
 launch:
@@ -78,6 +78,8 @@ Backtesting + live sentiment + Yahoo Finance + 39 technical-analysis tools — t
   <br>
   <sub>One click opens Claude's connector dialog with TradingMCP filled in; sign in with the email you subscribe with. Other apps: <a href="https://tradingmcp.ai/connect?utm_source=github&utm_medium=readme&utm_content=connect_other">tradingmcp.ai/connect</a></sub>
 </p>
+
+**Sponsor:** [Whop](https://whop.com/start/?code=TVMCP&utm_source=majoragv&utm_medium=sponsor&utm_campaign=tvmcp): sell your courses, software and communities online.
 
 **[Morning market brief in one prompt](https://tradingmcp.ai/?utm_source=github&utm_medium=readme&utm_content=brief):** ask "give me this morning's market brief" and get global indices, futures, the Bitcoin pulse and the hosted Markets panel in one answer. Charts are drawn right in the chat (demo below). In Grok Bot, [add the Market Brief bot](https://x.ai/bot/7KuzDNTqOKomzcZirrvdz) to get one on weekday mornings.
 

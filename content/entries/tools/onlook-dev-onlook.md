@@ -15,28 +15,29 @@ tags:
   - cursor
   - design
 status: active
-quality_percentile: 53
+quality_percentile: 47
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: onlook-dev/onlook
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 27147
+  stars: 27225
   last_commit: 2026-10-21T20:42:29Z
-  stars_delta_7d: 27
-  stars_growth_pct: 0.1
-  trending_score: 27.03
-  rank_current: 76
-  rank_delta: -12
+  stars_delta_7d: 78
+  stars_growth_pct: 0.3
+  trending_score: 78.22
+  rank_current: 68
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
     - 27006
     - 27120
     - 27147
+    - 27225
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: onlook-dev/onlook
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:34.065Z
+  fetched_at: 2026-11-16T09:15:55.320Z
   truncated: false
 type: agent_tool
 tool:

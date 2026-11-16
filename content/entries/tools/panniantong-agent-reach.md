@@ -13,29 +13,29 @@ tags:
   - ai-search
   - automation
 status: active
-quality_percentile: 89
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Panniantong/Agent-Reach
   official_vendor: false
   license: MIT
 signals:
-  stars: 110433
+  stars: 112165
   last_commit: 2026-11-08T02:17:48Z
-  stars_delta_7d: 1408
-  stars_growth_pct: 1.3
-  trending_score: 1426.18
-  rank_current: 6
-  rank_delta: 0
+  stars_delta_7d: 1732
+  stars_growth_pct: 1.6
+  trending_score: 1759.16
+  rank_current: 10
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 99237
     - 102687
     - 109025
     - 110433
+    - 112165
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: Panniantong/Agent-Reach
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:22.461Z
+  fetched_at: 2026-11-16T09:15:40.001Z
   truncated: false
 type: agent_tool
 tool:

@@ -15,10 +15,10 @@ tags:
   - docx-converter
   - gemini-cli-extension
 status: active
-quality_percentile: 22
+quality_percentile: 21
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: dealfluence/adeu
@@ -26,14 +26,15 @@ source:
   license: MIT
 signals:
   stars: 170
-  last_commit: 2026-11-08T08:44:32Z
+  last_commit: 2026-11-13T12:03:37Z
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 121
-  rank_delta: null
+  rank_current: 120
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
+    - 170
     - 170
     - 170
 language: en
@@ -44,7 +45,7 @@ readme_source:
   repo: dealfluence/adeu
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:45.423Z
+  fetched_at: 2026-11-16T09:17:11.379Z
   truncated: false
 type: mcp_server
 launch:
@@ -86,7 +87,7 @@ Adeu ships as a [Claude Code plugin](https://docs.claude.com/en/docs/claude-code
 /plugin install adeu-redlining@adeu-skills
 ```
 
-For best results, also connect either the Node MCP server (`npx -y @adeu/mcp-server`) or the Python MCP server (`uvx --from adeu adeu-server`). The plugin works without an MCP server too — it falls back to driving the `uvx adeu` CLI via Bash.
+For best results, also connect either the Node MCP server (`npx -y @adeu/mcp-server`) or the Python MCP server (`uvx --from "adeu[mcp]" adeu-server`). The plugin works without an MCP server too — it falls back to driving the `uvx adeu` CLI via Bash.
 
 ### Other Skills-Compatible Agents (Cursor, Windsurf, VS Code Copilot, etc.)
 Adeu's redlining skill follows the open [Agent Skills specification](https://agentskills.io) and works with any compatible agent:
@@ -131,7 +132,7 @@ For IDEs or clients that configure MCP servers via JSON, you can use either the 
   "mcpServers": {
     "adeu": {
       "command": "uvx",
-      "args": ["--from", "adeu", "adeu-server"]
+      "args": ["--from", "adeu[mcp]", "adeu-server"]
     }
   }
 }
@@ -151,9 +152,10 @@ You can guarantee the best behavioral results by adding this context to your age
 > **Role:** Document Specialist
 > **Tools:**
 >
-> - `read_docx(clean_view=True)`: Read the final "clean" version of the text to understand context. Use `search_query` and `page` filters to locate specific clauses without reading the whole document.
-> - `process_document_batch`: **Commit & Negotiate Mode.** Apply a unified list of changes. Use `type: "modify"` for specific search-and-replace text edits (supports `match_mode="all"` and `regex=True` for bulk updates), and `type: "accept"`, `"reject"`, or `"reply"` to manage existing Track Changes and Comments by ID.
-> - `finalize_document`: **Pre-Send Scrub.** Strip dangerous metadata, author names, and internal tracking IDs, lock the document (`protection_mode="read_only"`), and prepare it for distribution.
+> - `read_docx`: Start with `mode="changes"` to triage existing tracked changes (`Chg:N`) and comments (`Com:N`), `search_query` (with optional `page="4-5"` range) to locate specific clauses, `mode="fields"` to inspect form fields (`CC:<N>`), or `mode="outline"` followed by bounded page ranges (`page="1-8"`) to read sections without loading the whole file.
+> - `process_document_batch`: **Commit & Negotiate Mode.** Apply a unified, sequentially evaluated list of changes in one call: `type: "modify"` for search-and-replace text edits (supports Markdown headings/bold/italic/pipe tables, `{#cell:<id>}` empty-cell anchors, `match_mode="all"`, `regex=True`, and single or `[{"text": ..., "author": ...}]` comments), `type: "set_field"` for form fields, `type: "accept"`, `"reject"` (with optional `part`), or `"reply"` for existing markup, and `type: "insert_row"` / `"delete_row"` for table rows. Pass `markup_mode="manual"` when inline strikethrough/underline formatting is requested instead of Track Changes.
+> - `diff_docx_files`: Compare two `.docx` files; pass `output_path` and `author_name` to write the comparison as a tracked-changes `.docx` in one step.
+> - `finalize_document`: **Pre-Send Scrub.** Strip metadata, author names, and internal tracking IDs, lock the document (`protection_mode="read_only"`), and prepare it for distribution.
 
 ### Live MS Word Integration
 If you are running on Windows with Microsoft Word installed, Adeu can act as a real-time copilot, editing the active document right in front of you. This requires running the Python MCP server backend (see Developer Tools below).

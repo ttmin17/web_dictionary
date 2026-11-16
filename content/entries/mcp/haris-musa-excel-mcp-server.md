@@ -14,29 +14,29 @@ tags:
   - claude
   - cursor
 status: active
-quality_percentile: 83
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2025-02-12T06:39:48
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: haris-musa/excel-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 4284
-  last_commit: 2026-11-09T08:25:34Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.1
-  trending_score: 6.01
-  rank_current: 78
-  rank_delta: 2
+  stars: 4309
+  last_commit: 2026-11-15T19:18:12Z
+  stars_delta_7d: 25
+  stars_growth_pct: 0.6
+  trending_score: 25.15
+  rank_current: 62
+  rank_delta: 16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4248
     - 4264
     - 4278
     - 4284
+    - 4309
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: haris-musa/excel-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.731Z
+  fetched_at: 2026-11-16T09:15:12.214Z
   truncated: false
 type: mcp_server
 launch:
@@ -100,8 +100,8 @@ Excel**, and runs on Windows, macOS and Linux.
 - Sparklines (line, column, win/loss)
 
 **Formulas and dynamic arrays**
-- Formulas are calculated without Excel by a built-in engine (about 260 functions, checked
-  against more than 2,500 formulas recorded from real Excel), so `read_range` returns values
+- Formulas are calculated without Excel by a built-in engine (479 functions, checked
+  against more than 25,000 formulas recorded from real Excel), so `read_range` returns values
   for files that were never opened in Excel
 - Dynamic arrays (`FILTER`, `SORT`, `UNIQUE`, `SEQUENCE`, `LET`) are stored as Excel stores
   them and spill into the cells next to them
@@ -259,7 +259,7 @@ docker run -p 8017:8017 -v "$PWD/workbooks:/data" -e EXCEL_MCP_AUTH_TOKEN=change
 | `--max-file-mb N` | `EXCEL_MCP_MAX_FILE_MB` | `100` | Largest workbook the server opens. Also sets the unpacked-size limit (10 times this) that every opened or uploaded workbook must stay under; parts compressed over 500:1 are refused |
 | `--max-cells N` | `EXCEL_MCP_MAX_CELLS` | `100000` | Most cells one call may read, write or format; reads are still returned in pages; also bounds text to 256 characters per cell on average |
 | `--max-pivot-cells N` | `EXCEL_MCP_MAX_PIVOT_CELLS` | `3000000` | Largest PivotTable source in cells (a 230,000-row, 13-column sheet); creating one from the biggest sources takes a minute and about 2 GB of memory |
-| `--max-loaded-cells N` | `EXCEL_MCP_MAX_LOADED_CELLS` | `3000000` | Most cells and rows of a workbook that may be loaded into memory at once, about 0.5 KB each (a 3,000,000 limit is about 1.5 GB). A workbook with more is refused by the tools that must load whole sheets; `read_range` and the other streaming reads, and edits of large sheets that parse only some rows, are not limited by the size of the sheet |
+| `--max-loaded-cells N` | `EXCEL_MCP_MAX_LOADED_CELLS` | `3000000` | Most cells and rows of a workbook that may be loaded into memory at once, about 0.5 KB each (a 3,000,000 limit is about 1.5 GB). A workbook with more is refused by the tools that must load whole sheets; `read_range` and the other streaming reads, and edits of large sheets that parse only some rows, are not limited by the size of the sheet. It also limits, to 128 characters per cell, the formula text that shared formulas expand to |
 | `--log-level LEVEL` | | `WARNING` | Logging on stderr |
 | `--host HOST` | `EXCEL_MCP_HOST` | `127.0.0.1` | HTTP listen address |
 | `--port PORT` | `EXCEL_MCP_PORT` | `8017` | HTTP port |
@@ -377,8 +377,9 @@ Please report vulnerabilities privately; see [SECURITY.md](https://github.com/ha
 
 - Formulas are stored in the file, and Excel calculates them when it opens it. So that
   `read_range` is useful before that, `values` mode calculates formulas that have no saved
-  result with a built-in calculator (about 260 functions: math, statistics, financial and
-  bond, dates, text, lookup, logical, LET, sorting and filtering). Results Excel saved are
+  result with a built-in calculator (479 functions: math, statistics and distributions,
+  regression, database, engineering, financial and bond, dates, text, lookup, logical, LET and
+  LAMBDA, sorting and filtering). Results Excel saved are
   always preferred. A formula the calculator cannot reproduce exactly as Excel does (an
   unsupported function, a circular reference, or an Excel quirk it does not replicate) is
   returned as null and listed in `uncalculated` with the reason; it is never guessed.

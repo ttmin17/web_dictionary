@@ -13,29 +13,29 @@ tags:
   - anthropic
   - anti-bot-bypass
 status: active
-quality_percentile: 54
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: vibheksoni/stealth-browser-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 3352
-  last_commit: 2026-11-05T18:35:03Z
-  stars_delta_7d: 17
-  stars_growth_pct: 0.5
-  trending_score: 17.09
-  rank_current: 50
-  rank_delta: -5
+  stars: 3366
+  last_commit: 2026-11-09T14:04:20Z
+  stars_delta_7d: 14
+  stars_growth_pct: 0.4
+  trending_score: 14.06
+  rank_current: 79
+  rank_delta: -29
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3000
     - 3281
     - 3335
     - 3352
+    - 3366
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: vibheksoni/stealth-browser-mcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:26:55.257Z
+  fetched_at: 2026-11-16T09:15:16.378Z
   truncated: false
 type: mcp_server
 launch:

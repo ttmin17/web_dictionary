@@ -11,29 +11,29 @@ tags:
   - "12306"
   - train-tickets
 status: slowing
-quality_percentile: 22
+quality_percentile: 18
 selection_reason: quality_percentile
 first_seen: 2025-04-14T14:31:32
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Joooook/12306-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2430
+  stars: 2446
   last_commit: 2026-07-31T06:22:59Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.2
-  trending_score: 6.01
-  rank_current: 80
-  rank_delta: -5
+  stars_delta_7d: 16
+  stars_growth_pct: 0.7
+  trending_score: 16.11
+  rank_current: 70
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2395
     - 2406
     - 2424
     - 2430
+    - 2446
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Joooook/12306-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.620Z
+  fetched_at: 2026-11-16T09:15:16.625Z
   truncated: false
 type: mcp_server
 launch:

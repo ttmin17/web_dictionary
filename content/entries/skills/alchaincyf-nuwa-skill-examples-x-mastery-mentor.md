@@ -15,10 +15,10 @@ tags:
   - claude-code
   - claude-code-skills
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: alchaincyf/nuwa-skill
@@ -26,14 +26,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 37853
-  last_commit: 2026-11-03T08:51:23Z
-  stars_delta_7d: 1133
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 38389
+  last_commit: 2026-11-15T05:31:03Z
+  stars_delta_7d: 536
+  stars_growth_pct: 1.4
+  trending_score: 543.59
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 37853
+    - 38389
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: alchaincyf/nuwa-skill
   path: examples/x-mastery-mentor/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:32.663Z
+  fetched_at: 2026-11-16T09:15:52.454Z
   truncated: false
 type: agent_skill
 skill:

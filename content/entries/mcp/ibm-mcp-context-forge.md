@@ -15,29 +15,29 @@ tags:
   - asyncio
   - authentication-middleware
 status: active
-quality_percentile: 96
+quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2025-05-08T08:16:59
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: IBM/mcp-context-forge
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4777
-  last_commit: 2026-11-09T01:01:05Z
-  stars_delta_7d: 20
-  stars_growth_pct: 0.4
-  trending_score: 20.08
-  rank_current: 45
-  rank_delta: -6
+  stars: 4830
+  last_commit: 2026-11-16T09:06:38Z
+  stars_delta_7d: 53
+  stars_growth_pct: 1.1
+  trending_score: 53.59
+  rank_current: 42
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4649
     - 4692
     - 4757
     - 4777
+    - 4830
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: IBM/mcp-context-forge
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:03.931Z
+  fetched_at: 2026-11-16T09:15:24.802Z
   truncated: false
 type: mcp_server
 launch:

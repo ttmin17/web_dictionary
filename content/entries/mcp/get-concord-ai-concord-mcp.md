@@ -2,8 +2,8 @@
 slug: get-concord-ai-concord-mcp
 name: concord-mcp
 tagline: Live messaging for coding agents
-summary: Let Claude Code, Codex, Cursor, Gemini CLI, Grok Build, Goose, and
-  GitHub Copilot CLI talk to each other.
+summary: Let Claude Code, Codex, Cursor, Gemini CLI, Grok Build, Goose, GitHub
+  Copilot CLI, and OpenCode talk to each other.
 categories:
   - coding-agents
 tags:
@@ -12,27 +12,28 @@ tags:
   - claude-code
   - code-review
 status: active
-quality_percentile: 30
+quality_percentile: 29
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Get-Concord-AI/concord-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 1004
-  last_commit: 2026-11-08T23:30:25Z
-  stars_delta_7d: 38
-  stars_growth_pct: 3.9
-  trending_score: 39.49
-  rank_current: 24
-  rank_delta: null
+  stars: 1158
+  last_commit: 2026-11-13T12:25:11Z
+  stars_delta_7d: 154
+  stars_growth_pct: 15.3
+  trending_score: 177.62
+  rank_current: 18
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 966
     - 1004
+    - 1158
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: Get-Concord-AI/concord-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:12.840Z
+  fetched_at: 2026-11-16T09:15:33.803Z
   truncated: false
 type: mcp_server
 launch:
@@ -62,7 +63,7 @@ launch:
 
 <h1 align="center">Concord MCP</h1>
 
-<p align="center"><strong>Let Claude Code, Codex, Cursor, Gemini CLI, Grok Build, Goose, and GitHub Copilot CLI talk to each other.</strong></p>
+<p align="center"><strong>Let Claude Code, Codex, Cursor, Gemini CLI, Grok Build, Goose, GitHub Copilot CLI, and OpenCode talk to each other.</strong></p>
 
 <p align="center">
   The open-source, local-first communication and coordination layer for AI coding agents.
@@ -84,6 +85,19 @@ launch:
   <a href="#supported-agents">Supported agents</a> ·
   <a href="https://getconcord.ai">Website</a> ·
   <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/CONTRIBUTING.md">Contributing</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.md">English</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.zh-CN.md">简体中文</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.zh-TW.md">繁體中文</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.ja.md">日本語</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.ko.md">한국어</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.es.md">Español</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.pt-BR.md">Português</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.fr.md">Français</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.de.md">Deutsch</a> |
+  <a href="https://github.com/Get-Concord-AI/concord-mcp/blob/main/README.ru.md">Русский</a>
 </p>
 
 ## See it work
@@ -202,6 +216,7 @@ aside once no session started before the link is running (nothing is deleted).
 | Goose                              | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/goose.md)              |
 | Google Antigravity                 | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/antigravity.md)        |
 | GitHub Copilot CLI                 | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/github-copilot-cli.md) |
+| OpenCode                           | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/opencode.md)           |
 | Devin CLI                          | Project-level setup via `concord setup`            |
 | Conductor (Claude Code, Codex)     | [Setup and delivery](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/conductor.md)          |
 | Any other MCP-capable coding agent | [Manual setup](https://github.com/Get-Concord-AI/concord-mcp/blob/main/docs/other-mcp-clients.md)        |
@@ -242,8 +257,11 @@ review state through one small MCP server.
 | `finish_work`   | records evidence and optionally marks a task review-ready, complete, or closed              |
 
 Writes accept an `agent_id`, which keeps presence live just by working.
-`inspect_work` shows **who is here** and flags **stale claims** — an active
-claim whose owning agent has gone away without handing off.
+`inspect_work` shows **who is here** with three separate signals — heartbeat,
+last activity, and the status the agent reported (writing never changes the
+reported status) — and flags **stale claims**: work whose owning agent has gone
+away without handing off, an assignment nobody accepted, or in-progress work
+with no owning agent at all.
 
 For live agent-to-agent communication, run `concord setup`, then restart existing
 client sessions once. A prompt uses `update_work` with `operation: "prompt"`, the

@@ -15,29 +15,29 @@ tags:
   - ai-agents
   - autogen
 status: active
-quality_percentile: 89
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: doobidoo/mcp-memory-service
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2099
-  last_commit: 2026-11-08T16:04:54Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.6
-  trending_score: 13.08
-  rank_current: 59
-  rank_delta: -3
+  stars: 2130
+  last_commit: 2026-11-16T06:46:12Z
+  stars_delta_7d: 31
+  stars_growth_pct: 1.5
+  trending_score: 31.46
+  rank_current: 54
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2021
     - 2046
     - 2086
     - 2099
+    - 2130
 language: en
 needs_keys: false
 prerequisites:
@@ -47,7 +47,7 @@ readme_source:
   repo: doobidoo/mcp-memory-service
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.331Z
+  fetched_at: 2026-11-16T09:15:24.707Z
   truncated: false
 type: mcp_server
 launch:
@@ -121,8 +121,35 @@ Your AI assistant forgets everything when you start a new chat. You spend 10 min
 **1. Install:**
 
 ```bash
-pip install mcp-memory-service
+pip install "mcp-memory-service[sqlite]"
 ```
+
+The `[sqlite]` extra brings the local ONNX embedding model. Without it, semantic
+search falls back to hash embeddings.
+
+<details>
+<summary><strong>Using uv instead of pip</strong></summary>
+
+Install the `memory` command into its own environment:
+
+```bash
+uv tool install "mcp-memory-service[sqlite]"
+```
+
+Or skip the install and let your client start the server through `uvx`:
+
+```json
+{
+  "mcpServers": {
+    "memory": {
+      "command": "uvx",
+      "args": ["--from", "mcp-memory-service[sqlite]", "memory", "server"]
+    }
+  }
+}
+```
+
+</details>
 
 **2. Configure your AI client:**
 
@@ -351,7 +378,7 @@ Backends, embedding models, quality scoring and every environment variable:
 - **[Configuration Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/mastery/configuration-guide.md)** – Backend options and customization
 - **[Architecture Overview](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/architecture.md)** – How it works under the hood
 - **[Knowledge Graph Dashboard](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/features/knowledge-graph-dashboard.md)** – Interactive graph visualization
-- **[Benchmarks](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/BENCHMARKS.md)** – LongMemEval, DevBench, LoCoMo, with run commands
+- **[Benchmarks](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/BENCHMARKS.md)** – LongMemEval, DevBench, LoCoMo, xerj agent-memory, with run commands
 - **[Migration Guide](https://github.com/doobidoo/mcp-memory-service/blob/main/docs/MIGRATION.md)** – Upgrading between major versions
 - **[Troubleshooting](https://github.com/doobidoo/mcp-memory-service/tree/main/docs/troubleshooting)** – Common issues and solutions
 - **[Wiki](https://github.com/doobidoo/mcp-memory-service/wiki)** – Long-form guides and API reference

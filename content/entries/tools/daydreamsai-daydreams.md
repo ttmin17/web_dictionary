@@ -11,29 +11,29 @@ tags:
   - agent-frameworks
   - agents
 status: active
-quality_percentile: 50
+quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: daydreamsai/daydreams
   official_vendor: false
   license: MIT
 signals:
-  stars: 624
+  stars: 626
   last_commit: 2026-10-09T00:51:38Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 143
-  rank_delta: -4
+  stars_delta_7d: 2
+  stars_growth_pct: 0.3
+  trending_score: 2.01
+  rank_current: 134
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 621
     - 623
     - 624
     - 624
+    - 626
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: daydreamsai/daydreams
   path: readme.md
   branch: main
-  fetched_at: 2026-11-09T09:28:42.588Z
+  fetched_at: 2026-11-16T09:17:08.276Z
   truncated: false
 type: agent_tool
 tool:

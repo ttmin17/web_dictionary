@@ -16,7 +16,7 @@ status: active
 quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mcp-use/mcp-use
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 10859
-  last_commit: 2026-11-07T20:09:55Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.1
-  trending_score: 11.01
+  stars: 10979
+  last_commit: 2026-11-13T22:02:51Z
+  stars_delta_7d: 120
+  stars_growth_pct: 1.1
+  trending_score: 121.33
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 10785
     - 10814
     - 10848
     - 10859
+    - 10979
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: mcp-use/mcp-use
   path: skills/openapi-to-mcp/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:52.184Z
+  fetched_at: 2026-11-16T09:15:07.645Z
   truncated: false
 type: agent_skill
 skill:
@@ -69,7 +69,7 @@ skill:
     - references/deploy.md
     - references/mapping-rules.md
     - references/testing.md
-  pack_total_skills: 7
+  pack_total_skills: 8
   is_pack_primary: false
   clients:
     - claude-code

@@ -14,29 +14,29 @@ tags:
   - anthropic
   - autonomous-agents
 status: active
-quality_percentile: 75
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: vxcontrol/pentagi
   official_vendor: false
   license: MIT
 signals:
-  stars: 33749
-  last_commit: 2026-10-22T23:26:13Z
-  stars_delta_7d: 361
-  stars_growth_pct: 1.1
-  trending_score: 364.9
-  rank_current: 12
-  rank_delta: 6
+  stars: 34237
+  last_commit: 2026-11-13T23:40:49Z
+  stars_delta_7d: 488
+  stars_growth_pct: 1.4
+  trending_score: 495.06
+  rank_current: 17
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 31207
     - 32446
     - 33388
     - 33749
+    - 34237
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: vxcontrol/pentagi
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:15.535Z
+  fetched_at: 2026-11-16T09:16:42.894Z
   truncated: true
 type: agent_tool
 tool:

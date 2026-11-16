@@ -14,10 +14,10 @@ tags:
   - claude-code-commands
   - claude-skills
 status: active
-quality_percentile: 92
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: davepoon/buildwithclaude
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3733
-  last_commit: 2026-11-08T06:05:38Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.2
-  trending_score: 8.02
+  stars: 3752
+  last_commit: 2026-11-16T03:44:41Z
+  stars_delta_7d: 19
+  stars_growth_pct: 0.5
+  trending_score: 19.1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3650
     - 3678
     - 3725
     - 3733
+    - 3752
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: davepoon/buildwithclaude
   path: plugins/all-skills/skills/agent-memory-discipline/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.195Z
+  fetched_at: 2026-11-16T09:15:16.252Z
   truncated: false
 type: agent_skill
 skill:

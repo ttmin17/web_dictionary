@@ -15,10 +15,10 @@ tags:
   - ai-workflows
   - airflow-alternative
 status: active
-quality_percentile: 78
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2022-04-22T13:00:42
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: dagucloud/dagu
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 4568
-  last_commit: 2026-11-09T02:09:09Z
-  stars_delta_7d: 19
-  stars_growth_pct: 0.4
-  trending_score: 19.08
-  rank_current: 109
-  rank_delta: -16
+  stars: 4615
+  last_commit: 2026-11-16T09:07:17Z
+  stars_delta_7d: 47
+  stars_growth_pct: 1
+  trending_score: 47.48
+  rank_current: 104
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4383
     - 4445
     - 4549
     - 4568
+    - 4615
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: dagucloud/dagu
   path: skills/dagu/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.552Z
+  fetched_at: 2026-11-16T09:15:10.467Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,7 +54,8 @@ skill:
   description: Authors, validates, and troubleshoots Dagu DAG definitions and
     assists with Dagu CLI operations. Use when creating or debugging DAG YAML,
     choosing Dagu commands, or inspecting and managing DAGs and runs from the
-    CLI.
+    CLI. Also covers operating a running Dagu server (MCP, REST, remote CLI
+    context).
   folder_path: skills/dagu
   extra_files:
     - references/build.md
@@ -63,6 +64,7 @@ skill:
     - references/dagu-action.md
     - references/file-dependencies.md
     - references/harnesses.md
+    - references/server-operations.md
     - references/steptypes.md
   pack_total_skills: 1
   is_pack_primary: true
@@ -83,6 +85,7 @@ Load only the reference file that matches the task.
 - Use `type: build` only for local regular-file pipelines whose unchanged transformations should be reused across runs.
 - Prefer `id` on every step. Omit `name` unless the display label must differ from the step ID.
 - Prefer `dagu schema ...` and `dagu validate ...` over guessing field names or shapes.
+- For requests against a running Dagu server (list, create, run, stop, schedule), follow `references/server-operations.md`: detect whether a server exists without asking, then prefer MCP, then REST, then a CLI remote context, and use the local CLI or file edits only as a stated last resort. With no server detected, work locally as usual. A local CLI pointed at the server's data directory is not a server request.
 - Prefer `action: template.render` when generating text files, prompts, or artifacts instead of assembling them with shell `echo` or heredocs.
 - Prefer `action: js.run` for transforming data between steps (parsing, filtering, reshaping, extracting with regular expressions, computing values) instead of `python -c`, Python or Node heredocs, or `awk`, `sed`, and `jq` pipelines in `run:`. It needs no interpreter on the host or worker, Dagu passes its script as written so `${...}` and `$` need no escaping, syntax errors fail validation before a run, and its returned value is clean stdout for `output:`. Pass data in with `with.input` or `with.input_file`. Keep `run:` for invoking CLIs and for work that needs the network, the filesystem, environment variables, or a library; `js.run` has none of these. A single jq path such as `.items[].id` is fine in `jq.filter`.
 - Prefer `file.*` actions for local file operations such as stat, read, write, copy, move, delete, mkdir, and list instead of shelling out to `cp`, `mv`, `rm`, or `mkdir`.
@@ -282,6 +285,7 @@ Load only the file you need:
 - `references/steptypes.md` when choosing an action or checking action-specific behavior such as `human.task`, `dag.run`, `parallel`, `git.worktree.*`, `jq.filter`, `js.run`, `file.*`, `xlsx.*`, `state.*`, `template.render`, `chat.completion`, `browser.*`, or `computer.*`
 - `references/dagu-action.md` when creating a reusable `dagu-action.yaml` package or checking action input/output schema behavior
 - `references/cli.md` when choosing or using Dagu CLI commands, including workflow inspection, execution, and cleanup operations, and browser sessions for building a browser step on a site you have not seen
+- `references/server-operations.md` when the task targets a running Dagu server: reading or changing DAGs, starting, stopping or retrying runs, or checking run status and logs through MCP, REST, or a remote context
 - `references/context.md` when using `${context.*}` metadata references or declared step `outputs:`
 - `references/build.md` when creating or troubleshooting a `type: build` file workflow, path references, reuse decisions, or `--no-reuse`
 - `references/file-dependencies.md` when a DAG needs scripts, configuration, or other files from its working directory

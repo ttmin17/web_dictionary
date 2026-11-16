@@ -17,26 +17,26 @@ status: active
 quality_percentile: 100
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: open-multi-agent/open-multi-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 7052
-  last_commit: 2026-11-06T17:37:25Z
-  stars_delta_7d: 6
+  stars: 7060
+  last_commit: 2026-11-13T16:46:59Z
+  stars_delta_7d: 8
   stars_growth_pct: 0.1
-  trending_score: 6.01
-  rank_current: 105
-  rank_delta: 7
+  trending_score: 8.01
+  rank_current: 122
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7005
     - 7024
     - 7046
     - 7052
+    - 7060
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: open-multi-agent/open-multi-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:38.553Z
+  fetched_at: 2026-11-16T09:17:04.397Z
   truncated: false
 type: agent_tool
 tool:

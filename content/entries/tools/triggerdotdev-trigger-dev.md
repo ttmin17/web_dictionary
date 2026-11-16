@@ -13,29 +13,29 @@ tags:
   - automation
   - background-jobs
 status: active
-quality_percentile: 86
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: triggerdotdev/trigger.dev
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 16734
-  last_commit: 2026-11-03T11:54:09Z
-  stars_delta_7d: 18
-  stars_growth_pct: 0.1
-  trending_score: 18.02
+  stars: 16771
+  last_commit: 2026-11-13T17:42:02Z
+  stars_delta_7d: 37
+  stars_growth_pct: 0.2
+  trending_score: 37.08
   rank_current: 91
-  rank_delta: -18
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 16571
     - 16617
     - 16716
     - 16734
+    - 16771
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: triggerdotdev/trigger.dev
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:47.566Z
+  fetched_at: 2026-11-16T09:15:01.870Z
   truncated: false
 type: agent_tool
 tool:

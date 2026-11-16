@@ -13,10 +13,10 @@ tags:
   - esp32
   - firmware
 status: active
-quality_percentile: 95
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ruvnet/RuView
@@ -24,14 +24,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 103119
-  last_commit: 2026-11-09T06:22:16Z
-  stars_delta_7d: 1386
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 104414
+  last_commit: 2026-11-16T06:24:21Z
+  stars_delta_7d: 1295
+  stars_growth_pct: 1.3
+  trending_score: 1311.26
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 103119
+    - 104414
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,7 +40,7 @@ readme_source:
   repo: ruvnet/RuView
   path: plugins/ruview/skills/ruview-hardware-setup/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:23.832Z
+  fetched_at: 2026-11-16T09:15:41.294Z
   truncated: false
 type: agent_skill
 skill:

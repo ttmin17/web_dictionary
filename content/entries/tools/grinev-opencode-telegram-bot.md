@@ -14,29 +14,29 @@ tags:
   - coding-agent
   - developer-tools
 status: active
-quality_percentile: 56
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: grinev/opencode-telegram-bot
   official_vendor: false
   license: MIT
 signals:
-  stars: 1344
-  last_commit: 2026-11-06T22:18:44Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.3
-  trending_score: 4.01
-  rank_current: 119
-  rank_delta: -27
+  stars: 1360
+  last_commit: 2026-11-15T12:30:30Z
+  stars_delta_7d: 16
+  stars_growth_pct: 1.2
+  trending_score: 16.19
+  rank_current: 107
+  rank_delta: 12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1266
     - 1286
     - 1340
     - 1344
+    - 1360
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: grinev/opencode-telegram-bot
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.885Z
+  fetched_at: 2026-11-16T09:16:54.088Z
   truncated: false
 type: agent_tool
 tool:
@@ -119,18 +119,20 @@ Languages: English (`en`), العربية (`ar`), Deutsch (`de`), Español (`es`
 - **Remote coding** — send prompts to OpenCode from anywhere, receive complete results with code sent as files
 - **Session management** — create new sessions or continue existing ones, search sessions by title or ID in `/sessions`, and find projects by name in `/projects`
 - **Track live session** — follow a live OpenCode CLI session; see [Track Existing Session](#track-existing-session)
-- **Background session notifications** — get short notifications when detached or non-current sessions in the current project/worktree reply, ask questions, or request permissions. Turn them off in `/settings` (default on); that silences the chat notices only and does not stop tracking or cancel a pending request
+- **Background session notifications** — get short notifications when detached or non-current sessions in the current project/worktree reply, ask questions, or request permissions. Turn them off in `/settings` (default on); that silences the chat notices only and does not stop tracking or cancel a pending request. The button on a notification opens its session in that session's own project and worktree, even after you switched to another one
 - **Live status** — pinned message with current project/worktree, model, context usage, and changed files list, updated in real time
 - **Model switching** — pick models from OpenCode favorites and recent history directly in the chat (favorites are shown first), or browse all models by provider
 - **Agent modes** — switch between Plan and Build modes on the fly
 - **Subagent activity** — watch live subagent progress in chat, including the current task, agent, model (with variant when set), and active tool step
-- **Custom Commands** — run OpenCode custom commands (and built-ins like `init`/`review`) from an inline menu with confirmation
-- **Skills Catalog** — browse OpenCode skills from an inline menu and run them immediately or with arguments in the next message
+- **Custom Commands** — browse and search OpenCode custom commands (and built-ins like `init`/`review`) by name or description in `/commands`, then run them with confirmation
+- **Skills Catalog** — browse and search OpenCode skills by name or description in `/skills`, then run them immediately or with arguments in the next message
 - **Session goals (V2)** — `/goal` asks for the objective in a separate text message and confirms automatic work and token spending. Start and Continue use the selected agent, model and variant, including in a fresh session before any ordinary prompt. The bottom keyboard keeps its short objective and Pause, Continue or Delete below queued messages. Pause stops future continuations; `/abort` also interrupts the current turn. To create another goal, stop and delete the old one first
 - **Interactive Q&A** — answer agent questions and approve permissions via inline buttons
 - **Runtime settings** — use `/settings` to change runtime preferences; see [Runtime Settings](#runtime-settings)
 - **Voice prompts** — send voice/audio messages, transcribe them via a Whisper-compatible API, and optionally enable spoken replies in `/settings`
 - **File attachments** — send images, PDF documents, and text-based files to OpenCode, including multiple files in one Telegram album
+- **Images in replies** — project-relative Markdown images such as `![Chart](https://raw.githubusercontent.com/grinev/opencode-telegram-bot/main/chart.png)` appear as native photos inside the assistant's reply, including replay and scheduled results, on V1/V2 without shared storage
+- **Reply documents** — ordinary project-relative Markdown links such as `[Report](https://github.com/grinev/opencode-telegram-bot/blob/main/report.pdf)` deliver files after the complete reply text, in link order, before the footer, including replay and scheduled results. Files are read through OpenCode on V1/V2, including Docker without shared storage. V2 and V1 binary files keep their original bytes; V1 text files contain the server's trimmed text, without leading/trailing whitespace or the final newline. Code, bare paths and external URLs do not attach files; `![alt](https://raw.githubusercontent.com/grinev/opencode-telegram-bot/main/path)` remains a photo. `OUTGOING_DOCUMENT_MAX_SIZE_MB` limits these documents and `/ls` downloads independently of code/diff and incoming-file limits. Raw mode is unchanged
 - **Scheduled tasks** — schedule prompts to run later or on a recurring interval; see [Scheduled Tasks](#scheduled-tasks)
 - **Message queue** — messages sent while the agent is busy are held and sent one by one afterwards (Queue) or, on OpenCode V2, steered into the running task (Steer); each waiting message is a bottom-keyboard button you can tap to withdraw it; `/detach` leaves waiting messages to the session they were sent to
 - **Context control** — tap the bottom 📊 button to see context usage and the latest assistant message's tokens and cost; compact from the details with an inline confirmation
@@ -230,7 +232,7 @@ opencode-telegram config
 | `/abort`          | Abort the current task                                  |
 | `/detach`         | Detach from the current session without stopping it     |
 | `/sessions`       | Browse, search by title or ID, and switch sessions        |
-| `/recent`         | Browse recent sessions across projects and worktrees, see their status and attach directly |
+| `/recent`         | Browse recent sessions across projects and worktrees, see their status — including a 🔔 for a reply not shown in the chat yet — and attach directly |
 | `/messages`       | Browse user messages, revert or fork from a previous state     |
 | `/projects`       | Browse, search by name, and switch OpenCode projects      |
 | `/worktree`       | Switch between existing git worktrees                   |
@@ -238,8 +240,8 @@ opencode-telegram config
 | `/ls`             | List directory contents, then tap to open or download   |
 | `/settings`       | Change bot settings                                     |
 | `/rename`         | Rename the current session                              |
-| `/commands`       | Browse and run custom commands                          |
-| `/skills`         | Browse and run OpenCode skills                          |
+| `/commands`       | Browse, search by name or description, and run custom commands |
+| `/skills`         | Browse, search by name or description, and run OpenCode skills |
 | `/mcps`           | Browse and toggle MCP servers                           |
 | `/task`           | Create a scheduled task                                 |
 | `/tasklist`       | Browse, delete and enable or disable recurring scheduled tasks |
@@ -272,6 +274,23 @@ Scheduled tasks let you prepare prompts in advance and run them automatically la
 - If a recurring task is still running when its next interval arrives, the bot does not start a parallel copy of the same task and does not replay missed intervals later
 - By default, the bot waits up to 120 minutes for one scheduled task run; change this with `SCHEDULED_TASK_EXECUTION_TIMEOUT_MINUTES` if needed
 - Up to 10 scheduled tasks can exist at once by default; change this with `TASK_LIMIT` in your `.env`
+
+### Conditional silence
+
+To skip delivery when there is nothing to report, put the condition in the task's prompt yourself. The bot does not append instructions or change the stored prompt. For example:
+
+```text
+Check the project for new dependency security advisories. Report new findings.
+If there are no new findings, reply with exactly: [SILENT]
+```
+
+For successful once and recurring tasks, `[SILENT]` suppresses the entire result: no completion heading, response body, attachments, footer, or replacement notice. The run still succeeds: once tasks are removed as usual, and recurring tasks keep their normal run count and next scheduled run. Suppressed results are not queued for later delivery, even while another session is busy.
+
+Matching is intentionally soft: the marker can be the whole response, a standalone first or last nonblank line, or a literal prefix such as `[SILENT]No changes`. Case and outer whitespace are ignored. Whole-response and edge-line candidates accept surrounding Unicode punctuation (except square brackets), so `**[SILENT]**` works; these candidates must be at most 64 characters before punctuation is stripped. A literal prefix has no response-length limit. Backticks and code fences are not stripped, malformed brackets are not repaired, and no other marker or short-response threshold is supported.
+
+A mere mention such as `No changes. [SILENT]` is delivered normally. Errors and empty-response errors keep their existing handling. Ordinary chat replies are unaffected.
+
+This is different from `SCHEDULED_TASK_DISABLE_NOTIFICATION` or notification-sound muting in `/settings`: muting still delivers messages, while `[SILENT]` skips delivery entirely.
 
 ## Track Existing Session
 
@@ -365,7 +384,10 @@ Configuration can be provided through process environment variables or an `.env`
 | `MESSAGE_FORMAT_MODE`                      | Assistant reply formatting mode: `markdown` (native Telegram rich blocks) or `raw` (plain text)                       |    No    | `markdown`               |
 | `MESSAGE_MERGE_WINDOW_MS`                  | Merge Telegram-split long text messages into one prompt after this wait window (ms); `0` disables merging             |    No    | `1500`                   |
 | `INITIAL_SETTINGS_PRESET`                  | JSON object that seeds default `/settings` values on first run (keys not yet persisted); see [Runtime Settings](#runtime-settings) |    No    | `{}`                     |
-| `CODE_FILE_MAX_SIZE_KB`                    | Max file size (KB) to send as document                                                                                |    No    | `100`                    |
+| `CODE_FILE_MAX_SIZE_KB`                    | Max size (KB) for code/diff documents, incoming text files and `/ls` attach-to-prompt; not outgoing project downloads |    No    | `100`                    |
+| `OUTGOING_DOCUMENT_MAX_SIZE_MB`            | Max outgoing project document size in MiB (1024 × 1024 bytes), shared by Markdown file links and `/ls` downloads; capped at 50, invalid/non-positive values use 50, exact limit allowed | No | `50` |
+| `FILE_INBOX_DIR`                           | Directory for documents the model cannot ingest: the original file is saved there and its absolute path is passed to the agent; must be readable by the OpenCode server | No | `<bot home>/inbox` |
+| `FILE_INBOX_RETENTION_DAYS`                | Delete locally saved uploads older than this many days; `0` keeps them forever                                         |    No    | `7`                      |
 | `STT_API_URL`                              | Whisper-compatible API base URL (enables voice/audio transcription)                                                   |    No    | —                        |
 | `STT_API_KEY`                              | API key for your STT provider                                                                                         |    No    | —                        |
 | `STT_MODEL`                                | STT model name passed to `/audio/transcriptions`                                                                      |    No    | `whisper-large-v3-turbo` |
@@ -534,7 +556,19 @@ The API contract is:
 - **Authorization:** `Bearer {DOC_EXTRACTOR_API_KEY}` (only sent when a key is configured)
 - **Response:** JSON `{ "text": "extracted content..." }`
 
-If the extractor is not configured and the model doesn't support documents, the bot replies with a notice and forwards only the caption text.
+If the extractor is not configured and the model doesn't support documents, the original file is saved locally instead (see below).
+
+### Unsupported Documents (Local Files)
+
+Telegram documents that cannot be passed to the model — `.zip`, `.sqlite`, `.bin`, or an office file the current model cannot ingest — are saved unchanged, and the agent gets an absolute path to the original file in the prompt. The bot does not parse, convert or extract anything from these files; the agent decides how to inspect them.
+
+- Files are written to `FILE_INBOX_DIR` (`<bot home>/inbox` by default). Each upload gets its own directory, so the original filename is kept; directories are created with mode `700` and files with `600` on Linux and macOS.
+- The prompt marks the path as a local file, never as a native model attachment.
+- Saved uploads older than `FILE_INBOX_RETENTION_DAYS` (default `7`; `0` keeps them) are removed the next time a file is saved. Only directories the bot created are pruned, so other files in a shared inbox are left alone.
+- The Telegram Bot API does not allow bots to download files larger than 20 MB, so such uploads are rejected with a notice and nothing is sent to OpenCode.
+- Albums are handled the same way: supported items are attached natively and unsupported ones are saved locally in the same prompt.
+
+If the bot and the OpenCode server do not share a filesystem (Docker, a remote server), mount the same directory into both and set `FILE_INBOX_DIR` to the path **as the OpenCode server sees it**. The bot cannot verify that the agent can read the path; when the directories are not shared, the agent reports back that the file is unavailable.
 
 ### Model Configuration
 
@@ -629,6 +663,7 @@ Runtime state (settings, logs, SQLite databases) is stored in a Docker named vol
 All configuration is provided through environment variables in the `.env` file. Compose also sets `OPENCODE_TELEGRAM_CONTAINER=1` so the bot can warn about commands that need the host filesystem or a local OpenCode process.
 
 - `OPENCODE_API_URL` — URL of the OpenCode server. On Linux with the default compose file this is `http://127.0.0.1:4096` via `network_mode: host`. The Desktop override sets `http://host.docker.internal:4096`.
+- `FILE_INBOX_DIR` — by default unsupported documents are saved to `/app/data/inbox` inside the container, a path OpenCode on the host cannot read. Bind-mount a host directory that the OpenCode server can read and set `FILE_INBOX_DIR` to it; see [Unsupported Documents](#unsupported-documents-local-files).
 - `BOT_HEALTH_PORT` — the image serves a health endpoint on `127.0.0.1:3100` by default, and its `HEALTHCHECK` probes `/health/live`: the container is `unhealthy` only when the bot itself does not answer, or when the endpoint could not start (for example, the port is taken on the host under `network_mode: host`; the log says why). OpenCode being down does not make the container unhealthy — `/health` reports it as `degraded` and `/health/ready` answers `503`. Set another port in `.env` if 3100 is taken, or `0` to turn the endpoint off (the healthcheck then always passes). The endpoint is reachable from the host's loopback with the Linux compose file and only from inside the container with the Desktop override.
 - **OpenCode V2 in Docker** — both compose files point to a V1 server on port 4096. For V2, set `OPENCODE_SERVER_VERSION=v2`, `OPENCODE_SERVER_PASSWORD` and `OPENCODE_API_URL` together: in `.env` on Linux (for example `http://127.0.0.1:49374`), and by changing the URL in `docker-compose.desktop.yml` on Docker Desktop to the host address the V2 server listens on.
 

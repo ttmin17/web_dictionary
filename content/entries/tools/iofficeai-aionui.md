@@ -13,29 +13,29 @@ tags:
   - ai-agent
   - chat
 status: active
-quality_percentile: 71
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: iOfficeAI/AionUi
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 34144
+  stars: 34312
   last_commit: 2026-11-05T05:31:20Z
-  stars_delta_7d: 93
-  stars_growth_pct: 0.3
-  trending_score: 93.25
-  rank_current: 39
-  rank_delta: 0
+  stars_delta_7d: 168
+  stars_growth_pct: 0.5
+  trending_score: 168.83
+  rank_current: 40
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 33626
     - 33774
     - 34051
     - 34144
+    - 34312
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: iOfficeAI/AionUi
   path: readme.md
   branch: main
-  fetched_at: 2026-11-09T09:27:30.320Z
+  fetched_at: 2026-11-16T09:15:50.390Z
   truncated: false
 type: agent_tool
 tool:

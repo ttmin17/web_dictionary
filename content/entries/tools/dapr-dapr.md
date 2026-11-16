@@ -13,29 +13,29 @@ tags:
   - distributed-systems
   - durable-execution
 status: active
-quality_percentile: 62
+quality_percentile: 68
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: dapr/dapr
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 26179
-  last_commit: 2026-11-06T16:02:52Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0
-  trending_score: 6
-  rank_current: 112
-  rank_delta: 7
+  stars: 26195
+  last_commit: 2026-11-13T17:27:52Z
+  stars_delta_7d: 16
+  stars_growth_pct: 0.1
+  trending_score: 16.01
+  rank_current: 109
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 26155
     - 26158
     - 26173
     - 26179
+    - 26195
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: dapr/dapr
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:17.007Z
+  fetched_at: 2026-11-16T09:16:43.891Z
   truncated: false
 type: agent_tool
 tool:

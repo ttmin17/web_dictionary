@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 62
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Jakeschincariol/replica-skill
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8543
+  stars: 9485
   last_commit: 2026-10-03T12:07:53Z
-  stars_delta_7d: 837
-  stars_growth_pct: 10.9
-  trending_score: 927.91
+  stars_delta_7d: 942
+  stars_growth_pct: 11
+  trending_score: 1045.87
   velocity_source: snapshot_delta
   sparkline_4w:
     - 7706
     - 8543
+    - 9485
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: Jakeschincariol/replica-skill
   path: replica-test/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:59.761Z
+  fetched_at: 2026-11-16T09:16:14.710Z
   truncated: false
 type: agent_skill
 skill:

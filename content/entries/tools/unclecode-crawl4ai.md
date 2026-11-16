@@ -15,29 +15,29 @@ tags:
   - crawler
   - data-extraction
 status: active
-quality_percentile: 88
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: unclecode/crawl4ai
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 87128
-  last_commit: 2026-11-04T12:20:01Z
-  stars_delta_7d: 187
-  stars_growth_pct: 0.2
-  trending_score: 187.4
-  rank_current: 21
-  rank_delta: 0
+  stars: 87418
+  last_commit: 2026-11-13T13:32:17Z
+  stars_delta_7d: 290
+  stars_growth_pct: 0.3
+  trending_score: 290.97
+  rank_current: 22
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 85806
     - 86279
     - 86941
     - 87128
+    - 87418
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: unclecode/crawl4ai
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:11.147Z
+  fetched_at: 2026-11-16T09:16:39.194Z
   truncated: false
 type: agent_tool
 tool:

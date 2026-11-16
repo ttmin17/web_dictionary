@@ -15,29 +15,29 @@ tags:
   - gpu
   - llama
 status: active
-quality_percentile: 83
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: lemonade-sdk/lemonade
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6157
-  last_commit: 2026-11-09T07:00:59Z
-  stars_delta_7d: 46
-  stars_growth_pct: 0.8
-  trending_score: 46.35
-  rank_current: 58
-  rank_delta: 7
+  stars: 6222
+  last_commit: 2026-11-16T08:48:45Z
+  stars_delta_7d: 65
+  stars_growth_pct: 1.1
+  trending_score: 65.69
+  rank_current: 75
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5930
     - 5999
     - 6111
     - 6157
+    - 6222
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: lemonade-sdk/lemonade
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:52.376Z
+  fetched_at: 2026-11-16T09:15:08.372Z
   truncated: false
 type: agent_tool
 tool:

@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 71
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: OthmanAdi/planning-with-files
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27960
-  last_commit: 2026-11-07T11:24:31Z
-  stars_delta_7d: 63
-  stars_growth_pct: 0.2
-  trending_score: 63.14
+  stars: 28088
+  last_commit: 2026-11-11T20:55:30Z
+  stars_delta_7d: 128
+  stars_growth_pct: 0.5
+  trending_score: 128.59
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 27522
     - 27651
     - 27897
     - 27960
+    - 28088
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OthmanAdi/planning-with-files
   path: skills/planning-with-files/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:27:34.826Z
+  fetched_at: 2026-11-16T09:15:56.249Z
   truncated: false
 type: agent_skill
 skill:
@@ -361,9 +361,9 @@ Both slash commands carry `disable-model-invocation: true`, so invoke them expli
 
 ### PreCompact hook (auto)
 
-Both supported routes register a `PreCompact` hook with matcher `"*"`. It fires for manual and automatic compaction after the relevant hook route is active. With a selected plan, it prints a diagnostic reminder and the recorded `Plan-SHA256` when present. It stays silent without a plan and never blocks compaction.
+Both supported routes register a `PreCompact` hook with matcher `"*"`. It fires for manual and automatic compaction after the relevant hook route is active. With a selected plan, it prints a progress reminder and the recorded `Plan-SHA256` when present. It stays silent without a plan and never blocks compaction.
 
-Claude Code does not support `additionalContext` for PreCompact. Successful stdout from this event is diagnostic output, so the hook cannot make the model flush progress before compaction. Keep progress current during the task and recover from the selected files on the next prompt. The recorded digest can be compared with the plan bytes; it does not establish human approval.
+The current [Claude Code hook reference](https://code.claude.com/docs/en/hooks#precompact-output) describes successful PreCompact stdout as instructions for the compaction summary. This hook does not write planning files or start a separate tool-writing turn, so its reminder does not guarantee that unsaved progress reaches disk. Keep progress current during the task and recover from the selected files after compaction. The recorded digest can be compared with the plan bytes; it does not establish human approval.
 
 ### `/plan-goal` slash command
 

@@ -14,29 +14,29 @@ tags:
   - api-gateway
   - api-integrations
 status: active
-quality_percentile: 95
+quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Anil-matcha/open-agent-connector
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 848
+  stars: 852
   last_commit: 2026-10-23T09:37:59Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 142
-  rank_delta: -7
+  stars_delta_7d: 4
+  stars_growth_pct: 0.5
+  trending_score: 4.02
+  rank_current: 131
+  rank_delta: 11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 843
     - 845
     - 849
     - 848
+    - 852
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Anil-matcha/open-agent-connector
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:13.304Z
+  fetched_at: 2026-11-16T09:15:34.568Z
   truncated: false
 type: agent_tool
 tool:

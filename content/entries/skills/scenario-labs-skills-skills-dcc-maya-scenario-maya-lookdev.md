@@ -17,7 +17,7 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: scenario-labs/skills
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3568
-  last_commit: 2026-11-08T18:29:18Z
-  stars_delta_7d: 790
-  stars_growth_pct: 28.4
-  trending_score: 1014.66
+  stars: 3826
+  last_commit: 2026-11-16T08:23:53Z
+  stars_delta_7d: 258
+  stars_growth_pct: 7.2
+  trending_score: 276.66
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1056
     - 1139
     - 2778
     - 3568
+    - 3826
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: scenario-labs/skills
   path: skills/dcc/maya/scenario-maya-lookdev/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.082Z
+  fetched_at: 2026-11-16T09:15:28.170Z
   truncated: false
 type: agent_skill
 skill:

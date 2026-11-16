@@ -18,7 +18,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3340
-  last_commit: 2026-11-08T10:18:09Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.3
-  trending_score: 42.53
+  stars: 3411
+  last_commit: 2026-11-14T15:34:14Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2.1
+  trending_score: 72.51
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3152
     - 3214
     - 3298
     - 3340
+    - 3411
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/mcp-server-tools/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:34.064Z
+  fetched_at: 2026-11-16T09:17:02.508Z
   truncated: false
 type: agent_skill
 skill:
@@ -60,7 +60,7 @@ skill:
     scopes, expiry presets or token prefix in webapp/src/lib/mcpAuth.ts.
   folder_path: skills/mcp-server-tools
   extra_files: []
-  pack_total_skills: 17
+  pack_total_skills: 18
   is_pack_primary: false
   clients:
     - claude-code
@@ -132,7 +132,19 @@ the generated reference page, never by this skill.
   [scopeCopy.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/mcp/scopeCopy.ts) is `read` or `write` except `kali:exec`,
   the one `read-write` scope. A tool that only reads what a write needs (`get_finding_evidence`
   for `submit_finding_review`) belongs under the read scope, so a read-only token can see
-  what an agent would act on.
+  what an agent would act on. A new scope also needs a registry permission whose `mcpScopes`
+  names it ([permissions.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/authz/permissions.ts)): every call keeps only
+  the scopes the token's owner may use now (`usableScopes`,
+  [scopePermissions.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/mcp/scopePermissions.ts)), and an unmapped scope is
+  never usable with the permissions switch on.
+- **ALWAYS reach a project through `assertMcpProjectAccess(ctx.token, projectId, level)`**
+  ([mcpAuth.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/mcpAuth.ts)). Pass the whole token (a bare user id never
+  reaches a shared project) and the level of the permission behind the tool, as the app's route
+  asks it; the default `'O'` keeps the tool the owner's. The returned `userId` is the project's
+  owner: the tenant of every graph, finding, mute and triage call, never `ctx.token.userId`
+  ([sharedTenant.test.ts](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../webapp/src/lib/mcp/sharedTenant.test.ts)). To tell the owner from a
+  collaborator read `mcpProjectAccess()`'s `access.level`; an id comparison fails
+  `authzStaticGuard.test.ts` (`b54b78fe`). The rest is the `rbac-authz` skill.
 - **Order the body's checks: `requireScope` first, then no `McpToolError` before the first
   backend read.** The apiReference test proves declared scopes by calling each example and
   expecting the mocked database failure; a refusal on the example's placeholder arguments
@@ -175,4 +187,4 @@ git commit -m "docs: regenerate MCP API reference"
 
 - [MCP-Server.md](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../redamon.wiki/MCP-Server.md), section "Regenerating the API reference" - what the page is built from, and the stale-page test
 - [README.MCP.SERVER.md](https://github.com/samugit83/redamon/blob/master/skills/mcp-server-tools/../../docs/readmes/README.MCP.SERVER.md) - security model, settings allowlist, deploy wiring; §3.1-3.2 cover Agent Profiles (never an authorization input) and how the onboarding pack is generated
-- Related skills: `agentic-tool-integration`, `project-settings-cascade`, `redamon-testing`
+- Related skills: `agentic-tool-integration`, `project-settings-cascade`, `rbac-authz`, `redamon-testing`

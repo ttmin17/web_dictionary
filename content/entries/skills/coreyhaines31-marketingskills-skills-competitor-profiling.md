@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-competitor-profiling
 name: competitor-profiling
-tagline: When the user wants to research, profile, or analyze competitors from
-  their URLs. Also use when the user mentions 'competitor profile,' 'competitor
-  re
+tagline: When the user wants to research competitors into dated profiles, or
+  asks what a rival charges, claims, or is doing, or whether a conclusion about
+  them
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -16,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,22 +45,17 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/competitor-profiling/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.915Z
+  fetched_at: 2026-11-16T09:15:48.048Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: competitor-profiling
-  description: When the user wants to research, profile, or analyze competitors
-    from their URLs. Also use when the user mentions 'competitor profile,'
-    'competitor research,' 'competitor analysis,' 'profile this competitor,'
-    'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,'
-    'who are my competitors,' 'competitor landscape,' 'competitor dossier,'
-    'competitive audit,' or 'research these competitors.' Input is a list of
-    competitor URLs. Output is structured competitor profile markdown files. For
-    creating comparison/alternative pages from profiles, see competitors. For
-    sales-specific battle cards, see sales-enablement. For researching accounts
-    you're selling to, see prospecting. For how a competitor grew over time and
-    what to copy, see reverse-engineer-marketing.
+  description: "When the user wants to research competitors into dated profiles,
+    or asks what a rival charges, claims, or is doing, or whether a conclusion
+    about them is fair: positioning, pricing, features, reviews, SEO, observed
+    facts kept apart from inference. For comparison pages, see competitors. For
+    battle cards, see sales-enablement. For accounts you sell to, see
+    prospecting. For how a competitor grew, see reverse-engineer-marketing."
   folder_path: skills/competitor-profiling
   extra_files:
     - evals/evals.json

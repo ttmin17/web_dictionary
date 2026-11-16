@@ -14,10 +14,10 @@ tags:
   - agent-management
   - agent-platform
 status: active
-quality_percentile: 60
+quality_percentile: 66
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: microsoft/Sico
@@ -26,14 +26,14 @@ source:
   license: MIT
 signals:
   stars: 284
-  last_commit: 2026-11-05T23:12:10Z
+  last_commit: 2026-11-16T01:50:13Z
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 283
     - 282
+    - 284
     - 284
     - 284
 language: en
@@ -43,7 +43,7 @@ readme_source:
   repo: microsoft/Sico
   path: labs/AgentStream/exgentic/misc/skills/add-benchmark/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:42.891Z
+  fetched_at: 2026-11-16T09:17:11.612Z
   truncated: false
 type: agent_skill
 skill:

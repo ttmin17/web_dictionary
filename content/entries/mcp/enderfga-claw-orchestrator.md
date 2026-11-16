@@ -12,29 +12,29 @@ tags:
   - agent-orchestration
   - agentic-workflow
 status: active
-quality_percentile: 56
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Enderfga/claw-orchestrator
   official_vendor: false
   license: MIT
 signals:
-  stars: 603
-  last_commit: 2026-11-08T05:31:12Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.3
-  trending_score: 2.01
-  rank_current: 97
-  rank_delta: 3
+  stars: 609
+  last_commit: 2026-11-15T02:57:49Z
+  stars_delta_7d: 6
+  stars_growth_pct: 1
+  trending_score: 6.06
+  rank_current: 99
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 595
     - 599
     - 601
     - 603
+    - 609
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: Enderfga/claw-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.799Z
+  fetched_at: 2026-11-16T09:16:56.713Z
   truncated: false
 type: mcp_server
 launch:
@@ -100,6 +100,11 @@ https://github.com/user-attachments/assets/5bf9bea8-e5ac-4632-a292-a80a45831dff
 
 ## News
 
+- **[2026-11]** v7.23.0: Antigravity sessions follow agy 1.5.9: every permission mode is passed explicitly, and
+  Gemini 4 models are registered, with `agy-pro` on Gemini 4 Argon.
+- **[2026-11]** v7.22.0: Claude sessions can run under several Claude accounts and move to the next one when
+  an account reaches its usage limit, continuing the same conversation.
+- **[2026-11]** v7.21.0: the plugin loads when OpenClaw installs it, with no native module to build.
 - **[2026-11]** v7.20.0: a fan-out agent can run as a goal, so several agents can each work a copy of a
   project until it is done, in parallel.
 - **[2026-11]** v7.19.0: a fan-out agent can run in a directory of its own, so several agents can write code
@@ -165,7 +170,9 @@ clawo goal --objective-file GOAL.md --check "npm run bench:check" --check-timeou
 ```
 
 The server writes an access token to `~/.openclaw/server-token` and the CLI reads it from there. To sign in the
-browser once, open `http://127.0.0.1:18796/login?token=<token>&redirect=/dash`.
+browser once, open `http://127.0.0.1:18796/login?token=<token>&redirect=/dash`. The token grants full control,
+including running commands as the server's user, so keep it private; see
+[Security model](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/getting-started.md#security-model) before exposing the server beyond localhost.
 
 - 🧪 **Acceptance contracts and evidence bundles** ([guide](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/verification.md))
 - 🔁 **Workflows, resume and the goal node** ([guide](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/workflow.md))
@@ -199,9 +206,9 @@ engine, so one dropdown switches between Claude, Codex, Antigravity and Grok mod
 
 | Engine      | CLI        | Tested version                  |
 | ----------- | ---------- | ------------------------------- |
-| Claude Code | `claude`   | 2.1.319                         |
-| Codex       | `codex`    | 0.166.0                         |
-| Antigravity | `agy`      | 1.5.3                           |
+| Claude Code | `claude`   | 2.1.325                         |
+| Codex       | `codex`    | 0.169.0                         |
+| Antigravity | `agy`      | 1.5.9                           |
 | Grok Build  | `grok`     | 1.0.77                          |
 | OpenCode    | `opencode` | 1.19.5                          |
 | ACP agent   | any        | Kimi Code 2.3.1, dsh 0.2.1-rc.2 |
@@ -233,6 +240,7 @@ orchestrator does not edit its own code unattended.
 | **Persistent sessions**     | Long-lived agents kept alive across requests, with context, tool, model and worktree control.                                 | [`sessions.md`](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/sessions.md)            |
 | **Multi-engine runtime**    | One interface over the engines above, any ACP agent, and custom CLIs.                                                         | [`multi-engine.md`](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/multi-engine.md)    |
 | **Session handoff**         | Moves a live conversation to another engine or model in the same workspace; the old session keeps running.                   | [`sessions.md`](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/sessions.md)            |
+| **Claude accounts**         | Several Claude accounts, keys or gateways; a session moves to the next one at its usage limit and keeps its conversation.    | [`multi-engine.md`](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/multi-engine.md#claude-accounts-and-rotation)|
 | **Verification plane**      | Acceptance contracts the runtime runs itself, with an evidence bundle on disk; a run without a contract ends `unverified`.    | [`verification.md`](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/verification.md)    |
 | **Durable run kernel**      | Declarative workflows over `agent`, `goal`, `fanout`, `council`, `verifier`, `human_gate`, `router` and more, checkpointed.   | [`workflow.md`](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/workflow.md)            |
 | **Fan-out**                 | One task across N engine/model agents in parallel, with an optional synthesis pass.                                           | [`tools.md`](https://github.com/Enderfga/claw-orchestrator/blob/main/skills/references/tools.md)                  |

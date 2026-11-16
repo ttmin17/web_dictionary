@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-loading-assets/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.055Z
+  fetched_at: 2026-11-16T09:16:39.037Z
   truncated: false
 type: agent_skill
 skill:
@@ -90,7 +91,7 @@ The type strings are melonJS-specific — this is not a generic loader:
 
 | type | for |
 |---|---|
-| `"image"` | textures, sprite sheets, normal maps |
+| `"image"` | textures, sprite sheets, normal maps; `src` may be an array tried in order, such as compressed formats (`.ktx`, `.ktx2`, `.dds`, `.pvr`, `.pkm`) by priority with a PNG last |
 | `"json"` | data, texture-atlas descriptors, collision shapes from a shape editor |
 | `"tmx"` / `"tsx"` | Tiled maps and external tilesets |
 | `"audio"` | sound — **`src` is a directory**, see below |
@@ -594,6 +595,14 @@ await loader.preload(["common", "level3"]);   // ids and descriptors mix freely
   not other bundle ids.
 - **`unloadAll()`** frees every asset, audio included, whoever holds it. The
   bundles stay declared, all back to not loaded, ready to be loaded again.
+  Levels stay registered (unlike a bundle unload), so load a level's bundle
+  again before `level.load` of it.
+- **`load(asset)`, with a descriptor**, loads one asset while the game runs:
+  no loading screen, progress or loader event, only its promise (or the
+  `onload` / `onerror` callbacks). It is pinned. One already in memory
+  resolves at once with no request (the callback form returns `0` and never
+  calls `onload`), except a `"binary"`, `"fontface"`, `"aseprite"` or `"js"`
+  asset, which is fetched again.
 
 ## Loading between scenes
 
@@ -692,6 +701,7 @@ throws, the same trap as the removed `loader.onload` / `onProgress`.
 | `level.reload()` throws `level undefined not found` | the current level's own bundle was unloaded; unload the previous level's bundle after the next level is in |
 | a pause and new network requests every time the player goes back to an earlier level | that level's bundle is unloaded on leaving it although the game loops back to it; keep it loaded (see [When not to unload](#level-by-level-load-before-unload-after)) |
 | memory grows level after level although assets are unloaded (before 20.14) | unloading an image left its GPU texture in the renderer; update |
+| an asset given as a `data:` URI fails, or the default loading screen shows no logo, in a sandboxed embed or under a strict Content-Security-Policy (before 20.11) | the `data:` URI was fetched, which a `connect-src` without `data:` refuses; update, it is decoded in place |
 
 ## Related skills
 

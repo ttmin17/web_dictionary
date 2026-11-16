@@ -1,8 +1,10 @@
 ---
 slug: epoko77-ai-im-not-ai-skills-humanize-redo
 name: humanize-redo
-tagline: Agent skill from epoko77-ai/im-not-ai
-summary: Agent skill from epoko77-ai/im-not-ai
+tagline: 가장 최근 윤문 결과를 2차로 다시 다듬는다 — 특정 카테고리·문단·강도 조정도 가능. humanize-korean strict
+  윤문(Phase B)을 기존 run_id에 재실행해 잔존 finding을 처리한다. 트리거 — "/humanize-redo".
+summary: 가장 최근 윤문 결과를 2차로 다시 다듬는다 — 특정 카테고리·문단·강도 조정도 가능. humanize-korean strict
+  윤문(Phase B)을 기존 run_id에 재실행해 잔존 finding을 처리한다. 트리거 — "/humanize-redo".
 categories:
   - other
 tags:
@@ -11,10 +13,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 52
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: epoko77-ai/im-not-ai
@@ -22,16 +24,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6256
-  last_commit: 2026-10-12T09:57:11Z
-  stars_delta_7d: 209
-  stars_growth_pct: 3.5
-  trending_score: 216.22
-  velocity_source: snapshot_delta
+  stars: 6592
+  last_commit: 2026-11-16T08:04:11Z
+  stars_delta_7d: 224
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
-    - 5971
-    - 6047
     - 6256
+    - 6592
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +40,14 @@ readme_source:
   repo: epoko77-ai/im-not-ai
   path: skills/humanize-redo/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:49.222Z
+  fetched_at: 2026-11-16T09:16:34.696Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: humanize-redo
-  description: Agent skill from epoko77-ai/im-not-ai
+  description: 가장 최근 윤문 결과를 2차로 다시 다듬는다 — 특정 카테고리·문단·강도 조정도 가능. humanize-korean
+    strict 윤문(Phase B)을 기존 run_id에 재실행해 잔존 finding을 처리한다. 트리거 —
+    "/humanize-redo".
   folder_path: skills/humanize-redo
   extra_files: []
   pack_total_skills: 5

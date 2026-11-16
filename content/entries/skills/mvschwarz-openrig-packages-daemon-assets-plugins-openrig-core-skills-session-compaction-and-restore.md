@@ -15,10 +15,10 @@ tags:
   - agent-skills
   - ai-coding
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8774
-  last_commit: 2026-11-09T09:15:26Z
-  stars_delta_7d: 126
-  stars_growth_pct: 1.5
-  trending_score: 127.84
+  stars: 8867
+  last_commit: 2026-11-16T09:10:00Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.1
+  trending_score: 93.99
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7831
     - 8198
     - 8648
     - 8774
+    - 8867
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/session-compaction-and-restore/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:49.762Z
+  fetched_at: 2026-11-16T09:16:32.402Z
   truncated: false
 type: agent_skill
 skill:
@@ -223,7 +223,7 @@ A packet or marker proves retained/delivered evidence, not successful provider
 restoration; measure the resumed seat against the proof standard above.
 
 Before a planned compaction, restart or long pause, write the seat's authored recap
-with `rig context recap-write --rig <rig> --seat <seat> --file <draft>`. Its format is
+with `rig context recap-write --file <draft>`. Its format is
 in `seat-continuity-and-handover`, "Write the seat's recap before a handover". A
 rebuild reads it before `LEARNED.md`, and a profile source of `seat:RECAP.md` serves
 it after a restore.

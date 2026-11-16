@@ -11,10 +11,10 @@ tags:
   - android
   - claude-code
 status: active
-quality_percentile: 81
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: makecindy/cindy
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9577
-  last_commit: 2026-11-09T09:17:38Z
-  stars_delta_7d: 259
-  stars_growth_pct: 2.8
-  trending_score: 266.2
+  stars: 10204
+  last_commit: 2026-11-16T09:09:33Z
+  stars_delta_7d: 627
+  stars_growth_pct: 6.5
+  trending_score: 668.05
   velocity_source: snapshot_delta
   sparkline_4w:
     - 9318
     - 9577
+    - 10204
 language: zh
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: makecindy/cindy
   path: apps/desktop/resources/bot-packages/nightly-audit-engineer/0.5.2/skills/nightly-audit-engineer-getting-started/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:49.725Z
+  fetched_at: 2026-11-16T09:16:11.529Z
   truncated: false
 type: agent_skill
 skill:

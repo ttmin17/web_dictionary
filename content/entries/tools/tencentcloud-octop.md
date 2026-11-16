@@ -11,29 +11,29 @@ tags:
   - ai-agents
   - local-first
 status: active
-quality_percentile: 80
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: TencentCloud/Octop
   official_vendor: false
   license: MIT
 signals:
-  stars: 11801
-  last_commit: 2026-11-09T06:34:17Z
-  stars_delta_7d: 104
-  stars_growth_pct: 0.9
-  trending_score: 104.92
-  rank_current: 35
-  rank_delta: -13
+  stars: 12105
+  last_commit: 2026-11-16T03:57:58Z
+  stars_delta_7d: 304
+  stars_growth_pct: 2.6
+  trending_score: 311.83
+  rank_current: 21
+  rank_delta: 14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9981
     - 11085
     - 11697
     - 11801
+    - 12105
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: TencentCloud/Octop
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:19.222Z
+  fetched_at: 2026-11-16T09:16:46.118Z
   truncated: false
 type: agent_tool
 tool:
@@ -77,7 +77,7 @@ tool:
 <p align="center">
   <a href="https://www.python.org/downloads/"><img alt="Python 3.12+" src="https://img.shields.io/badge/python-3.12%2B-blue?logo=python&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green" /></a>
-  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.0.3b4-orange" /></a>
+  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.0.3b6-orange" /></a>
   <a href="https://pypi.org/project/octop/"><img src="https://img.shields.io/pypi/v/octop" alt="PyPI" /></a>
   <a href="https://github.com/astral-sh/ruff"><img alt="Code Style: Ruff" src="https://img.shields.io/badge/code%20style-ruff-000000?logo=ruff&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TencentCloud/Octop?style=social" /></a>
@@ -293,6 +293,8 @@ See [scripts/README.md](https://github.com/TencentCloud/Octop/blob/main/scripts/
 | Linux | `Octop-desktop-linux-amd64-<version>.tar.gz` / `Octop-desktop-linux-arm64-<version>.tar.gz` |
 | FnOS NAS | `Octop-fnos-docker-lite-<version>.fpk` (smaller image) / `Octop-fnos-docker-<version>.fpk` (full: desktop, OCR, local models) / `Octop-fnos-native-amd64-<version>.fpk` (x86_64, no Docker) / `Octop-fnos-native-arm64-<version>.fpk` (ARM64 fallback if no Docker) — install via App Center |
 
+Desktop installers bundle the `browser` extra only. Desktop control, OCR, and local embedding stay on the Docker image tag `:<version>-full`.
+
 See [desktop/README.md](https://github.com/TencentCloud/Octop/blob/main/desktop/README.md) for the desktop shell and [fnos/README.md](https://github.com/TencentCloud/Octop/blob/main/fnos/README.md) for the FnOS packaging guide.
 
 **Alternative — PyPI** (if you already manage Python yourself):
@@ -338,13 +340,13 @@ Open **http://127.0.0.1:8088**. With Docker, a valid `OCTOP_DEFAULT_PASSWORD` cr
 
 ```bash
 # Build and start
-docker compose -f docker/docker-compose.yml up -d
+docker compose -f deploy/docker/docker-compose.yml up -d
 
 # China mirror when ghcr.io is unreachable (no local build)
-docker compose -f docker/docker-compose.cn.yml up -d
+docker compose -f deploy/docker/docker-compose.cn.yml up -d
 
 # Or build manually
-bash docker/docker_build.sh
+bash deploy/docker/docker_build.sh
 docker run -d \
   -p 8088:8088 \
   -v octop-data:/data/.octop \
@@ -354,6 +356,8 @@ docker run -d \
 ```
 
 Open `http://localhost:8088`. A valid `OCTOP_DEFAULT_PASSWORD` creates the admin on first boot and writes credentials to `/data/.octop/credential.txt`. If it is unset or rejected by the password policy, no admin is created — complete the setup wizard (unlock password in `/data/.octop/octop-login.txt`). Override the username via `OCTOP_ADMIN_USERNAME`.
+
+The Helm chart for a shared PostgreSQL and multiple replicas is documented in [deploy/helm/octop/README.md](https://github.com/TencentCloud/Octop/blob/main/deploy/helm/octop/README.md). Install it from `oci://ghcr.io/tencentcloud/octop/charts/octop`.
 
 > **Password policy:** at least 8 characters with letters and digits.
 
@@ -411,7 +415,7 @@ To serve the dashboard under a reverse-proxy subpath (for example `https://examp
 | Local script | macOS / Linux | `bash scripts/install.sh` |
 | Local script | Windows | `scripts\install.bat` or `install.ps1` |
 | PyPI | Any | `pip install octop` (optional extras such as `local-embedding`) |
-| Docker | Any | `docker/docker-compose.yml`; China mirror: `docker/docker-compose.cn.yml` |
+| Docker | Any | `deploy/docker/docker-compose.yml`; China mirror: `deploy/docker/docker-compose.cn.yml` |
 
 All install scripts provision an isolated environment at `~/.octop/venv` and a `~/.octop/bin/octop` wrapper — they do not touch system Python.
 
@@ -491,6 +495,7 @@ Full catalog, auth kinds, and MCP modes: **[docs/connectors.md](https://github.c
 | `octop skills` | Enable/disable per-agent skills |
 | `octop plugin` | Install and manage third-party plugins |
 | `octop backup` | Export / restore backups |
+| `octop migrate` | Migrate an OpenClaw or Hermes Agent setup into an expert |
 | `octop clean` | Remove CLI state or wipe `~/.octop/` |
 | `octop memory list` | List running agents eligible for memory maintenance; no database changes. |
 | `octop memory slim [--agent ID]` | Back up and slim SQLite memory through the running host; uses the selected agent or prompts by number. Shows terminal and dashboard progress. [Details](https://github.com/TencentCloud/Octop/blob/main/docs/memory-slim.md) |
@@ -579,7 +584,7 @@ src/octop/
 
 dashboard/     frontend source (Vite) — edit here, run make build-frontend
 
-docker/        Docker Compose, entrypoint, build & deploy scripts
+deploy/        Docker (deploy/docker) and the Kubernetes Helm chart (deploy/helm/octop)
 tests/         unit/ + integration/
 ```
 

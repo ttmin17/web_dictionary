@@ -14,10 +14,10 @@ tags:
   - anthropic
   - artificial-intelligence
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 115108
-  last_commit: 2026-11-09T09:22:00Z
-  stars_delta_7d: 1814
-  stars_growth_pct: 1.6
-  trending_score: 1843.04
+  stars: 117496
+  last_commit: 2026-11-16T08:47:55Z
+  stars_delta_7d: 2388
+  stars_growth_pct: 2.1
+  trending_score: 2437.54
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 101675
     - 103202
     - 113294
     - 115108
+    - 117496
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: plugin/skills/design-is/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:21.597Z
+  fetched_at: 2026-11-16T09:15:44.019Z
   truncated: false
 type: agent_skill
 skill:
@@ -97,7 +97,7 @@ Audit each principle in this exact order. Each gets a score 0–3 and ≥1 piece
 
 Use subagents for *evidence gathering* (reading components, measuring contrast, counting elements, inspecting tokens, screenshotting via agent-browser). Keep *scoring and verdict synthesis* with the orchestrator. Reject subagent reports that score without citing evidence and redeploy.
 
-### Subagent Reporting Contract (MANDATORY)
+### Subagent Reporting Contract
 
 Each evidence subagent response must include:
 1. Sources consulted — exact file paths and line ranges, or screenshot regions
@@ -117,7 +117,7 @@ All artifacts go in `DESIGN-IS-<YYYY-MM-DD>/` at repo root (or the project the u
 
 ## Phases
 
-### Phase 0: Scope Lock (ALWAYS FIRST)
+### Phase 0: Scope Lock (runs first)
 
 Ask the user (or infer from the request) and write `00-scope.md`:
 - What is being audited? (live URL, repo path, Figma frame, component name)

@@ -14,29 +14,29 @@ tags:
   - chrome-devtools
   - debugging
 status: active
-quality_percentile: 80
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ChromeDevTools/chrome-devtools-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 55005
-  last_commit: 2026-11-09T09:22:31Z
-  stars_delta_7d: 177
-  stars_growth_pct: 0.3
-  trending_score: 177.57
-  rank_current: 8
-  rank_delta: -1
+  stars: 57311
+  last_commit: 2026-11-16T09:06:49Z
+  stars_delta_7d: 2306
+  stars_growth_pct: 4.2
+  trending_score: 2402.68
+  rank_current: 3
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 53815
     - 54164
     - 54828
     - 55005
+    - 57311
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: ChromeDevTools/chrome-devtools-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.769Z
+  fetched_at: 2026-11-16T09:14:55.626Z
   truncated: false
 type: mcp_server
 launch:
@@ -234,7 +234,7 @@ For basic browser tasks only, the `--slim` flag exposes a reduced set of tools. 
 
 ## Advanced Usage
 
-For advanced features such as handling concurrent sessions, persistent user data directories, connecting to a running Chrome instance instead of starting a new one, or debugging on Android, see our [Advanced Usage Guide][advanced-usage-guide].
+For advanced features such as handling concurrent sessions, persistent user data directories, using a custom or non-standard browser path (`--executablePath`), connecting to a running Chrome instance instead of starting a new one, or debugging on Android, see our [Advanced Usage Guide][advanced-usage-guide].
 
 ## Integrating as a browser subagent
 

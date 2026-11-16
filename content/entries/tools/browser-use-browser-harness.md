@@ -17,26 +17,26 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: browser-use/browser-harness
   official_vendor: false
   license: MIT
 signals:
-  stars: 18966
-  last_commit: 2026-11-08T23:53:30Z
-  stars_delta_7d: 87
-  stars_growth_pct: 0.5
-  trending_score: 87.4
-  rank_current: 41
-  rank_delta: 2
+  stars: 19096
+  last_commit: 2026-11-16T05:30:11Z
+  stars_delta_7d: 130
+  stars_growth_pct: 0.7
+  trending_score: 130.89
+  rank_current: 51
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 18491
     - 18620
     - 18879
     - 18966
+    - 19096
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: browser-use/browser-harness
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.159Z
+  fetched_at: 2026-11-16T09:16:03.444Z
   truncated: false
 type: agent_tool
 tool:
@@ -64,6 +64,19 @@ tool:
 ---
 
 <img src="https://raw.githubusercontent.com/browser-use/media/main/browser-harness/banner-ink.svg" alt="Browser Harness" width="100%" />
+
+> [!NOTE]
+> **Browser Harness is now the engine inside [Browser Use](https://github.com/browser-use/browser-use).** Use the `browser-use` CLI: same helpers and daemon, plus `browser-use login`, an MCP server (`browser-use --cli-mcp`) and `browser-use skill install`.
+>
+> ```bash
+> uv tool install browser-use
+> browser-use <<'PY'
+> new_tab("https://example.com")
+> print(page_info())
+> PY
+> ```
+>
+> The `browser-harness` command keeps working. Domain skills and interaction skills stay in this repo.
 
 # Browser Harness ♞
 
@@ -94,7 +107,7 @@ Try browser-harness in [Browser Use Cloud](https://cloud.browser-use.com/v4?utm_
 Paste into Claude Code or Codex (Cursor: use the [MCP config](#cursor) below):
 
 ```text
-Install or upgrade browser-harness to the latest stable version with uv using Python 3.12, register the skill from `browser-harness skill`, and connect it to my browser. Ask whether I want local browser recordings enabled; default to no and preserve my existing preference on upgrades. Follow https://github.com/browser-use/browser-harness/blob/main/install.md if setup or connection fails.
+Install browser-use with `uv tool install browser-use`, run `browser-use skill install` to register the skill, and connect it to my browser. If setup or connection fails, run `browser-use --doctor` and follow its output and the error message.
 ```
 
 The agent will open `chrome://inspect/#remote-debugging`. On first setup, tick
@@ -157,10 +170,10 @@ Use your local browser for logged-in, personal work. When you want many browsers
 
 ## MCP server
 
-`browser-harness-mcp` exposes the browser control helpers as MCP tools over
+`browser-use --cli-mcp` exposes the browser control helpers as MCP tools over
 stdio, so any MCP client (Claude Code, Devin, Cursor, etc.) can drive the
-browser without writing a second CDP layer. See [docs/MCP.md](https://github.com/browser-use/browser-harness/blob/main/docs/MCP.md) for
-setup and client configuration.
+browser without writing a second CDP layer. The older `browser-harness-mcp`
+keeps working; see [docs/MCP.md](https://github.com/browser-use/browser-harness/blob/main/docs/MCP.md).
 
 ### Cursor
 
@@ -170,10 +183,10 @@ every project. It needs [uv](https://docs.astral.sh/uv/).
 ```json
 {
   "mcpServers": {
-    "browser-harness": {
+    "browser-use": {
       "type": "stdio",
       "command": "uvx",
-      "args": ["--from", "browser-harness[mcp]", "browser-harness-mcp"]
+      "args": ["browser-use", "--cli-mcp"]
     }
   }
 }

@@ -14,10 +14,10 @@ tags:
   - ai-coding
   - chinese
 status: active
-quality_percentile: 81
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: jnMetaCode/superpowers-zh
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8503
-  last_commit: 2026-10-26T15:07:56Z
-  stars_delta_7d: 25
-  stars_growth_pct: 0.3
-  trending_score: 25.07
+  stars: 8547
+  last_commit: 2026-11-16T02:41:11Z
+  stars_delta_7d: 44
+  stars_growth_pct: 0.5
+  trending_score: 44.23
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8344
     - 8385
     - 8478
     - 8503
+    - 8547
 language: zh
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: jnMetaCode/superpowers-zh
   path: skills/diagnosing-superpowers/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:01.640Z
+  fetched_at: 2026-11-16T09:16:32.244Z
   truncated: false
 type: agent_skill
 skill:
@@ -107,7 +107,8 @@ skill:
 5. **GitHub issue** —— 当报告 §7 写的是 possible 或 likely，或你的伙伴要求时。
    按 `references/github-issues.md` 在已开放和已关闭的 issue 中搜索这些症状。
    展示匹配结果，建议把报告补充到最接近的那条。如果都不匹配，填写
-   `templates/issue.md`，写入工作区，展示确切文本，获得批准后才创建 issue。
+   `templates/issue.md`，提交者信息引用伙伴的原始请求，真人摘要必须由伙伴自己填写。
+   摘要还是占位文字时只交付草稿；摘要填好后展示最终确切文本，获得批准后才创建 issue。
    `gh` 不能附加文件；如果有打包材料，把路径给你的伙伴，让他们在浏览器里附上。
 6. **导出** —— 只在你的伙伴要求打包时进行；绝不主动打包。如果受理时的目标是 bug
    报告，说一次"可以按需提供脱敏后的打包材料"，然后等待。询问脱敏级别，并说明每一级

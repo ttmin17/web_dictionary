@@ -13,10 +13,10 @@ tags:
   - cc2api
   - claude
 status: active
-quality_percentile: 95
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2025-12-18T02:26:18
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Wei-Shaw/sub2api
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: LGPL-3.0
 signals:
-  stars: 45705
-  last_commit: 2026-11-09T03:07:28Z
-  stars_delta_7d: 203
-  stars_growth_pct: 0.4
-  trending_score: 203.91
-  rank_current: 48
-  rank_delta: -11
+  stars: 46092
+  last_commit: 2026-11-16T08:35:31Z
+  stars_delta_7d: 387
+  stars_growth_pct: 0.8
+  trending_score: 390.28
+  rank_current: 49
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 44338
     - 44843
     - 45502
     - 45705
+    - 46092
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: Wei-Shaw/sub2api
   path: skills/sub2api-admin/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:26.383Z
+  fetched_at: 2026-11-16T09:15:50.562Z
   truncated: false
 type: agent_skill
 skill:

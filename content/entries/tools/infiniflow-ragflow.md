@@ -14,29 +14,29 @@ tags:
   - agentic-ai
   - agentic-retrieval
 status: active
-quality_percentile: 76
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: infiniflow/ragflow
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 93820
-  last_commit: 2026-11-09T09:15:45Z
-  stars_delta_7d: 236
-  stars_growth_pct: 0.3
-  trending_score: 236.6
+  stars: 94230
+  last_commit: 2026-11-16T08:35:29Z
+  stars_delta_7d: 410
+  stars_growth_pct: 0.4
+  trending_score: 411.79
   rank_current: 19
-  rank_delta: 1
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 92449
     - 92879
     - 93584
     - 93820
+    - 94230
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: infiniflow/ragflow
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:11.134Z
+  fetched_at: 2026-11-16T09:16:39.205Z
   truncated: false
 type: agent_tool
 tool:
@@ -142,6 +142,7 @@ For local deployment, see [Local Deployment](#-local-deployment).
 
 ## 🔥 Latest Updates
 
+- 2026-11-06 RAGFlow 1.0.0 released.
 - 2026-09-29 RAGFlow 1.0.0-rc1 released.
 - 2026-09-10 Added website content ingestion through sitemaps.
 - 2026-08-19 Introduced Knowledge Compilation to generate Wikis, Graphs, Trees, PageIndex, Mind Maps, Timelines, and Skills at the document and dataset levels.

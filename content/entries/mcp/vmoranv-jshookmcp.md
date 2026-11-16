@@ -15,26 +15,26 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: vmoranv/jshookmcp
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2106
-  last_commit: 2026-11-06T05:43:21Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.3
-  trending_score: 7.02
-  rank_current: 75
-  rank_delta: -18
+  stars: 2119
+  last_commit: 2026-11-16T08:46:28Z
+  stars_delta_7d: 13
+  stars_growth_pct: 0.6
+  trending_score: 13.08
+  rank_current: 83
+  rank_delta: -8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2057
     - 2062
     - 2099
     - 2106
+    - 2119
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: vmoranv/jshookmcp
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:27:08.331Z
+  fetched_at: 2026-11-16T09:15:24.772Z
   truncated: false
 type: mcp_server
 launch:
@@ -278,7 +278,7 @@ For production deployments see the [Security and Production guide](https://vmora
 The built-in surface below is generated from the runtime registry and checked in CI.
 
 <!-- metadata-sync:start -->
-- Package version: `0.4.3`
+- Package version: `0.4.5`
 - Built-in tools: `736`
 - Domains: `adb-bridge`, `binary-instrument`, `browser`, `canvas`, `coordination`, `core`, `cross-domain`, `dart-inspector`, `debugger`, `encoding`, `exploit-dev`, `extension-registry`, `graphql`, `instrumentation`, `maintenance`, `memory`, `mojo-ipc`, `native-bridge`, `native-emulator`, `network`, `platform`, `process`, `protocol-analysis`, `proxy`, `session`, `sourcemap`, `streaming`, `syscall-hook`, `tasks`, `tls-inspector`, `trace`, `transform`, `v8-inspector`, `wasm`, `webgpu`, `workflow`
 - Note: this snapshot is generated from the runtime registry; do not edit the counts by hand.

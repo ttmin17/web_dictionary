@@ -16,26 +16,26 @@ status: active
 quality_percentile: 46
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: CoderLuii/HolyClaude
   official_vendor: false
   license: MIT
 signals:
-  stars: 2640
-  last_commit: 2026-11-08T09:52:38Z
-  stars_delta_7d: 25
-  stars_growth_pct: 1
-  trending_score: 25.24
-  rank_current: 78
-  rank_delta: 33
+  stars: 2661
+  last_commit: 2026-11-16T08:49:30Z
+  stars_delta_7d: 21
+  stars_growth_pct: 0.8
+  trending_score: 21.17
+  rank_current: 102
+  rank_delta: -24
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2584
     - 2593
     - 2615
     - 2640
+    - 2661
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: CoderLuii/HolyClaude
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:24.106Z
+  fetched_at: 2026-11-16T09:16:50.387Z
   truncated: true
 type: agent_tool
 tool:
@@ -103,7 +103,7 @@ v1.6.9 updates the bundled AI CLIs and developer tools using official upstream r
 > [!WARNING]
 > Dependency scans still run. Accepted upstream vulnerabilities remain listed with their installed versions, raw severity and available fixes; acceptance does not mean fixed. Retained modified third-party artifacts are identified separately from official releases. HolyClaude source checks, artifact integrity and runtime tests still block delivery. See the [dependency policy](https://github.com/CoderLuii/HolyClaude/blob/master/security/upstream-dependency-policy.json) and the release's scan evidence before deploying.
 
-Release-sensitive facts are also published in [`contracts/product-facts.json`](https://github.com/CoderLuii/HolyClaude/blob/master/contracts/product-facts.json). The release workflow checks that contract against the Dockerfile and Compose files before building images.
+Release-sensitive facts are also published in [`contracts/product-facts.json`](https://github.com/CoderLuii/HolyClaude/blob/master/contracts/product-facts.json). The release workflow checks that contract against the Dockerfile and Compose files before building images. Native Full/Slim × AMD64/ARM64 builds feed separate qualification jobs using immutable image digests. Matching release tags promote those tested images to Docker Hub and GHCR. See the [release procedure](https://github.com/CoderLuii/HolyClaude/blob/master/docs/local-release.md).
 
 So you start installing things. One by one. Then Chromium won't launch because Docker's shared memory is 64MB. Then Xvfb isn't configured. Then the UID inside the container doesn't match your host and everything is permission denied. Then you realize Claude Code's installer hangs when WORKDIR is root-owned. Then SQLite locks on your NAS mount. Then—
 

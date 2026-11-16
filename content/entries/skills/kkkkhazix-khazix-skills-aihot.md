@@ -14,10 +14,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 77
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-04-06T07:37:02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 22096
-  last_commit: 2026-11-08T08:46:42Z
-  stars_delta_7d: 105
-  stars_growth_pct: 0.5
-  trending_score: 105.5
+  stars: 22294
+  last_commit: 2026-11-15T14:19:32Z
+  stars_delta_7d: 198
+  stars_growth_pct: 0.9
+  trending_score: 199.77
   rank_current: 64
-  rank_delta: -4
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21498
     - 21661
     - 21991
     - 22096
+    - 22294
 language: zh
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: KKKKhazix/khazix-skills
   path: aihot/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:34.835Z
+  fetched_at: 2026-11-16T09:16:02.261Z
   truncated: false
 type: agent_skill
 skill:

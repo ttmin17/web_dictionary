@@ -17,26 +17,26 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: microsoft/agent-governance-toolkit
   official_vendor: true
   license: MIT
 signals:
-  stars: 6545
-  last_commit: 2026-11-09T08:40:02Z
-  stars_delta_7d: 25
+  stars: 6568
+  last_commit: 2026-11-14T23:01:59Z
+  stars_delta_7d: 23
   stars_growth_pct: 0.4
-  trending_score: 25.1
-  rank_current: 39
-  rank_delta: 7
+  trending_score: 23.08
+  rank_current: 65
+  rank_delta: -26
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6442
     - 6469
     - 6520
     - 6545
+    - 6568
 language: en
 needs_keys: true
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: microsoft/agent-governance-toolkit
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:38.578Z
+  fetched_at: 2026-11-16T09:17:04.136Z
   truncated: false
 type: mcp_server
 launch:
@@ -104,9 +104,6 @@ launch:
 [![OWASP Agentic Top 10](https://img.shields.io/badge/OWASP_Agentic_Top_10-7_Full,_3_Partial-blue)](https://raw.githubusercontent.com/microsoft/agent-governance-toolkit/main/docs/compliance/owasp-agentic-top10-architecture.md)
 [![AARM Extended](https://img.shields.io/badge/AARM-Extended_(R1–R9)-brightgreen)](https://aarm.dev/builders/agent-governance-toolkit-microsoft)
 [![ATF](https://img.shields.io/badge/ATF-All_5_Elements-brightgreen)](https://agentictrustframework.ai/ecosystem)
-
-> [!IMPORTANT]
-> **Public Preview** -- production-quality public preview releases. May have breaking changes before GA.
 
 Policy enforcement, identity, sandboxing, and SRE for autonomous AI agents. One `pip install`, any framework.
 

@@ -15,10 +15,10 @@ tags:
   - ai-video
   - claude-code
 status: active
-quality_percentile: 64
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Vincentwei1021/video-shotcraft
@@ -26,17 +26,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 18034
-  last_commit: 2026-10-29T16:17:26Z
-  stars_delta_7d: 853
-  stars_growth_pct: 5
-  trending_score: 895.35
-  rank_current: 20
-  rank_delta: null
+  stars: 20295
+  last_commit: 2026-11-15T13:34:28Z
+  stars_delta_7d: 2261
+  stars_growth_pct: 12.5
+  trending_score: 2544.47
+  rank_current: 14
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 17181
     - 18034
+    - 20295
 language: zh
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: Vincentwei1021/video-shotcraft
   path: SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.199Z
+  fetched_at: 2026-11-16T09:16:01.541Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,6 +60,7 @@ skill:
   folder_path: .
   extra_files:
     - .claude-plugin/plugin.json
+    - .github/FUNDING.yml
     - .github/ISSUE_TEMPLATE/showcase.yml
     - .github/scripts/showcase-publish.py
     - .github/workflows/contact-sheet-tests.yml
@@ -67,7 +69,6 @@ skill:
     - .github/workflows/showcase-publish.yml
     - .gitignore
     - LICENSE
-    - README.md
   pack_total_skills: 1
   is_pack_primary: true
   clients:

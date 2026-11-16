@@ -16,21 +16,24 @@ status: active
 quality_percentile: 48
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: feimacode/open-design-agent-kit
   official_vendor: false
   license: MIT
 signals:
-  stars: 1071
-  last_commit: 2026-11-09T09:06:27Z
-  stars_delta_7d: 149
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 1135
+  last_commit: 2026-11-14T09:32:48Z
+  stars_delta_7d: 64
+  stars_growth_pct: 6
+  trending_score: 67.82
+  rank_current: 36
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 1071
+    - 1135
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: feimacode/open-design-agent-kit
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:12.755Z
+  fetched_at: 2026-11-16T09:15:33.750Z
   truncated: false
 type: mcp_server
 launch:
@@ -188,6 +191,7 @@ Everything lives in [`docs/`](https://github.com/feimacode/open-design-agent-kit
 - **Gallery:** browse every bundled example and design system in the [online gallery](https://feimacode.github.io/open-design-agent-kit/), with prompts to remix one or add a design system to Claude Design. Remixable designs from the community live in [awesome-open-design](https://github.com/feimacode/awesome-open-design). Made something good? Add it there.
 - **Questions and show-and-tell:** [GitHub Discussions](https://github.com/feimacode/open-design-agent-kit/discussions).
 - **Bugs and requests:** [open an issue](https://github.com/feimacode/open-design-agent-kit/issues/new/choose).
+- **Roadmap:** what's shipped, in progress and next, grouped by northstar area, in [docs/ROADMAP.md](https://github.com/feimacode/open-design-agent-kit/blob/main/docs/ROADMAP.md).
 - **Contributing:** start with [CONTRIBUTING.md](https://github.com/feimacode/open-design-agent-kit/blob/main/CONTRIBUTING.md) and the [`good first issue`](https://github.com/feimacode/open-design-agent-kit/labels/good%20first%20issue) label.
 
 ## Provenance

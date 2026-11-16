@@ -17,26 +17,26 @@ status: active
 quality_percentile: 40
 selection_reason: quality_percentile
 first_seen: 2018-08-05T22:05:58
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: txn2/kubefwd
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4181
-  last_commit: 2026-11-03T22:36:30Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0
-  trending_score: 2
-  rank_current: 100
-  rank_delta: 3
+  stars: 4186
+  last_commit: 2026-11-10T22:34:42Z
+  stars_delta_7d: 5
+  stars_growth_pct: 0.1
+  trending_score: 5.01
+  rank_current: 101
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 4177
-    - 4177
     - 4179
     - 4181
+    - 4186
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: txn2/kubefwd
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:26:53.745Z
+  fetched_at: 2026-11-16T09:15:10.615Z
   truncated: false
 type: mcp_server
 launch:

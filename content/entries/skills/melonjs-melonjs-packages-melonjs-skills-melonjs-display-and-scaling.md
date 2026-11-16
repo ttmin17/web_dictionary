@@ -17,7 +17,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-display-and-scaling/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.053Z
+  fetched_at: 2026-11-16T09:16:39.034Z
   truncated: false
 type: agent_skill
 skill:
@@ -104,8 +105,11 @@ the usual arrangement: author once, scale to whatever you are given.
 
 ## `scale` and `scaleMethod`
 
-`scale: "auto"` turns on automatic scaling; a number is a fixed multiplier and
-`scaleMethod` is then ignored.
+`scale: "auto"` turns on automatic scaling, and so does naming any
+`scaleMethod` other than `"manual"`, even with no `scale` given:
+`{ scaleMethod: "flex" }` alone scales to its container. A number is a fixed
+multiplier, used only while `scaleMethod` is `"manual"` (the default); with
+automatic scaling on, the number is ignored.
 
 `scaleMethod` decides how the available space is used:
 
@@ -119,7 +123,8 @@ the usual arrangement: author once, scale to whatever you are given.
   both axes.
 - **`"stretch"`** scales each axis independently, so the aspect ratio is not
   preserved and circles become ovals.
-- **`"manual"`** does nothing automatic.
+- **`"manual"`**, the default, does nothing automatic with a numeric `scale`.
+  With `scale: "auto"` it scales as `"fit"` does.
 
 The distinction that matters: **`fit` scales a fixed frame; everything else
 changes how much of the world is visible.** A game whose layout assumes a
@@ -446,3 +451,4 @@ const app = new Application(1024, 576, {
 | `scaleRounding: "integer"` changes nothing | it applies to `scaleMethod: "fit"` only; the others resize the renderer |
 | text is soft but sprites are crisp | the glyphs were anti-aliased when `Text` baked them; use `BitmapText` (see below) |
 | the game shows more world on a bigger window | that is `fill-*` or `flex-*` doing their job; use `"fit"` to keep a fixed frame |
+| a numeric `scale` (say `2`) is ignored | a `scaleMethod` other than `"manual"` turns automatic scaling on, which ignores the number |

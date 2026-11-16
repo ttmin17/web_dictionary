@@ -4,7 +4,7 @@ name: dsh-our-free-model
 tagline: "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3
   在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no
   sign-up"
-summary: QQ 群：974582805（ai技术交流学习2群） 扫码或搜索群号加入群聊，一起交流插件使用心得、反馈问题与分享玩法。
+summary: QQ 群：1132377727（OFM技术交流[18群]） 扫码加入群聊，一起交流插件使用心得、反馈问题与分享玩法。
 categories:
   - agent-frameworks
 tags:
@@ -13,21 +13,21 @@ tags:
   - deepseek-harness
   - developer-tools
 status: active
-quality_percentile: 52
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Ebony-Vinyl/dsh-our-free-model
   official_vendor: false
   license: MIT
 signals:
-  stars: 66777
-  last_commit: 2026-11-09T03:18:51Z
-  stars_delta_7d: 4918
-  stars_growth_pct: 8
-  trending_score: 5309
+  stars: 76598
+  last_commit: 2026-11-16T03:20:57Z
+  stars_delta_7d: 9821
+  stars_growth_pct: 14.7
+  trending_score: 11265.39
   rank_current: 2
   rank_delta: 0
   velocity_source: snapshot_delta
@@ -35,6 +35,7 @@ signals:
     - 43586
     - 61859
     - 66777
+    - 76598
 language: zh
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: Ebony-Vinyl/dsh-our-free-model
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:11.189Z
+  fetched_at: 2026-11-16T09:16:39.262Z
   truncated: true
 type: agent_tool
 tool:
@@ -95,11 +96,11 @@ tool:
 ## 交流群
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Ebony-Vinyl/dsh-our-free-model/main/docs/images/qq-group-974582805.png" alt="ai技术交流学习2群入群二维码（群号：974582805）" width="300">
+  <img src="https://raw.githubusercontent.com/Ebony-Vinyl/dsh-our-free-model/main/docs/images/qq-group-1132377727.png" alt="OFM技术交流[18群]入群二维码（群号：1132377727）" width="300">
   <br>
-  <b>QQ 群：974582805（ai技术交流学习2群）</b>
+  <b>QQ 群：1132377727（OFM技术交流[18群]）</b>
   <br>
-  扫码或搜索群号加入群聊，一起交流插件使用心得、反馈问题与分享玩法。
+  扫码加入群聊，一起交流插件使用心得、反馈问题与分享玩法。
 </div>
 
 ---
@@ -187,7 +188,7 @@ EAC、客户端与订阅、资源库、API 接入、设置与**插件中心**）
 > `dsh-our-free-model-<版本>.tgz` 同源、同版本。只想走 npm 时可以装它：
 >
 > ```
-> dsh plugin --profile web add @ebony-vinyl/dsh-our-free-model@2.8.3
+> dsh plugin --profile web add @ebony-vinyl/dsh-our-free-model@2.8.5
 > ```
 >
 > 注意它的包名带 scope，因此挂载条目是 `@ebony-vinyl/dsh-our-free-model`，与下文
@@ -219,7 +220,7 @@ PROFILE_UPGRADE_REQUIRED: offline dependency migration is not yet available
 以真实目录手工安装时，使用可信源码打出的本地 tarball：
 
 1. 创建 `<DSH_HOME>/profiles/<profile>/vendor/`，在审核过的本仓库目录运行 `npm pack --ignore-scripts --pack-destination "<DSH_HOME>/profiles/<profile>/vendor"`，或将本仓库正式发布的同版本 tarball 放入该目录。本地打包不执行 npm 发布。
-2. 在 profile 的 `package.json` 的 dependencies 中加入 `"dsh-our-free-model": "file:./vendor/dsh-our-free-model-2.8.3.tgz"`。文件名版本跟随仓库 `package.json`，不要改成同名 npm 注册表版本；再通过宿主的安装流程解析依赖。
+2. 在 profile 的 `package.json` 的 dependencies 中加入 `"dsh-our-free-model": "file:./vendor/dsh-our-free-model-2.8.5.tgz"`。文件名版本跟随仓库 `package.json`，不要改成同名 npm 注册表版本；再通过宿主的安装流程解析依赖。
 3. 在 dsh.profile.bundles 末尾追加 `"dsh-our-free-model"`。
 
 包管理器拥有这份安装的字节时，同时将 bundle config 或插件 `settings.json` 的 `distribution` 设为 `managed`，由包管理器统一更新；应用内升级、公告 feed 与热重载会停用，模型功能保留。以后更新时替换可信 tarball 并同步依赖路径，避免包管理器按旧锁文件恢复旧版本。
@@ -832,5 +833,12 @@ MIT，见 LICENSE。
 
 本项目为独立插件，与任何模型提供方无隶属、认可或赞助关系。使用该插件访问免费额度受各提供方
 自身条款约束；在超出个人机器的场景中部署前，请先确认这些条款。
+
+## 致谢
+
+感谢 [Jet（iJetLi）](https://gitee.com/iJetLi) 的渠道包（`vendor/channel-pack/`，MIT）——
+十个内置账号渠道的登录、账号池与本地网关都出自这里，许可证与出处见该目录下的 LICENSE 与 NOTICE.md；
+也感谢 [opencode2api](https://github.com/jasonxu114514/opencode2api)（`src/o2a/`，GPL-3.0）——
+免费车道的请求整形移植自它，逐文件对照表见 `src/o2a/SYNC.md`。
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/Ebony-Vinyl/dsh-our-free-model)).*

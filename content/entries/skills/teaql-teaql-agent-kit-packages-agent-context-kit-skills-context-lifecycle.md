@@ -16,10 +16,10 @@ tags:
   - ai-coding
   - ai-native
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: teaql/teaql-agent-kit
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2819
-  last_commit: 2026-11-06T00:37:12Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0
-  trending_score: 1
+  stars: 2822
+  last_commit: 2026-11-10T10:21:25Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0.1
+  trending_score: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2818
     - 2818
-    - 2818
     - 2819
+    - 2822
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: teaql/teaql-agent-kit
   path: packages/agent-context-kit/skills/context-lifecycle/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:24.388Z
+  fetched_at: 2026-11-16T09:16:50.666Z
   truncated: false
 type: agent_skill
 skill:

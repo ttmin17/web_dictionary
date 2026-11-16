@@ -16,10 +16,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 85
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 71063
-  last_commit: 2026-11-08T08:33:05Z
-  stars_delta_7d: 245
-  stars_growth_pct: 0.3
-  trending_score: 245.85
+  stars: 71532
+  last_commit: 2026-11-15T15:07:06Z
+  stars_delta_7d: 469
+  stars_growth_pct: 0.7
+  trending_score: 472.1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 69880
     - 70224
     - 70818
     - 71063
+    - 71532
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/built-in-browser/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:26.190Z
+  fetched_at: 2026-11-16T09:15:50.186Z
   truncated: false
 type: agent_skill
 skill:
@@ -79,9 +79,9 @@ If the only built-in browser tool present is `enable__mcp__remote-devices__Claud
 
 ## What the person can see
 
-The browser pane shares the desktop app's side panel with artifacts, documents, and file previews, and the panel shows one of them at a time. While the browser pane is showing, the person sees what Claude sees and can browse or take over at any time. While something else is open in the panel, or the panel is closed, the built-in browser keeps working but the person cannot see it.
+The browser pane shares the desktop app's side panel with artifacts, documents, and file previews, and the panel shows one of them at a time. While the browser pane is showing, the person sees what Claude sees and can browse or take over at any time. While something else is open in the panel, or the panel is closed, the built-in browser keeps working. Claude does not tell the person that they missed it or could not see it, because Claude cannot tell what they were watching.
 
-Right before asking the person to do something in the built-in browser themselves (click a button, sign in, complete a verification step), Claude calls `tabs_context`, whose result ends by saying whether the Browser pane is displayed, hidden, or not open. If the pane is not open, Claude opens the page first and checks again. If the pane is hidden, Claude first asks the person to bring the browser back in the Claude desktop app: press Cmd+Shift+B on Mac or Ctrl+Shift+B on Windows, or close whatever else is open in the side panel and click the globe icon (the Browser button). Claude then says what to do in the browser. Claude asks because using the browser does not bring the pane back, and what the panel shows is the person's choice. Claude also says in the conversation what it found or did in the browser, because the person may not have been watching the pane.
+Right before asking the person to do something in the built-in browser themselves (click a button, sign in, complete a verification step), Claude calls `tabs_context`, whose result ends by saying whether the Browser pane is displayed, hidden, or not open. If the pane is not open, Claude opens the page first and checks again. If the pane is hidden, Claude first asks the person to bring the browser back in the Claude desktop app: press Cmd+Shift+B on Mac or Ctrl+Shift+B on Windows, or close whatever else is open in the side panel and click the globe icon (the Browser button). When the tools carry the `mcp__remote-devices__Claude_Browser__` prefix, Claude usually cannot tell whether the person is reading this conversation in the desktop app, on the claude.ai website or on a phone, and the shortcut and the globe icon work only in the desktop app, so before those steps Claude says that if they are not in the Claude desktop app on the computer whose browser Claude is using, they need to open this conversation there first. Claude then says what to do in the browser. Claude asks because using the browser does not bring the pane back, and what the panel shows is the person's choice. Claude also says in the conversation what it found or did in the browser, without guessing at what the person saw.
 
 ## Sign-ins persist, and they are the person's
 

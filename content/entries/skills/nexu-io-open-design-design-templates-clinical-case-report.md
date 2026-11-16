@@ -15,10 +15,10 @@ tags:
   - byok
   - claude-code-for-design
 status: active
-quality_percentile: 77
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: nexu-io/open-design
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 106727
-  last_commit: 2026-11-09T09:19:26Z
-  stars_delta_7d: 674
-  stars_growth_pct: 0.6
-  trending_score: 678.28
+  stars: 107831
+  last_commit: 2026-11-16T09:11:42Z
+  stars_delta_7d: 1104
+  stars_growth_pct: 1
+  trending_score: 1115.42
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 102299
     - 104025
     - 106053
     - 106727
+    - 107831
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: nexu-io/open-design
   path: design-templates/clinical-case-report/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:53.716Z
+  fetched_at: 2026-11-16T09:16:23.512Z
   truncated: false
 type: agent_skill
 skill:

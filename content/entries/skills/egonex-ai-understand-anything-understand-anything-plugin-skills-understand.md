@@ -17,7 +17,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Egonex-AI/Understand-Anything
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 91658
-  last_commit: 2026-11-07T05:37:08Z
-  stars_delta_7d: 796
-  stars_growth_pct: 0.9
-  trending_score: 802.97
+  stars: 92775
+  last_commit: 2026-11-15T12:10:30Z
+  stars_delta_7d: 1117
+  stars_growth_pct: 1.2
+  trending_score: 1130.61
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86920
     - 88302
     - 90862
     - 91658
+    - 92775
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,8 +43,8 @@ readme_source:
   repo: Egonex-AI/Understand-Anything
   path: understand-anything-plugin/skills/understand/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:23.656Z
-  truncated: false
+  fetched_at: 2026-11-16T09:15:41.194Z
+  truncated: true
 type: agent_skill
 skill:
   skill_name: understand
@@ -625,7 +625,7 @@ All four fields (`id`, `name`, `description`, `nodeIds`) are required.
 
 ## Phase 5 — TOUR
 
-Run this phase for full analysis and for incremental plans where `rerunTour === true`. For `PARTIAL_UPDATE`, dispatch no tour agent and do not rewrite the narrative; finalization only removes dangling node IDs from the existing steps.
+Run this phase for full analysis and for incremental plans where `rerunTour === true`. For `PARTIAL_UPDATE`, dispatch no tour agent and do not rewrite the narrative; finalization only removes dangling node IDs from the existing steps. The code-lessons step below runs under the same condition.
 
 Report to the user: `[Phase 5/7] Building guided tour...`
 
@@ -667,13 +667,13 @@ Pass these parameters in the dispatch prompt:
 > [list of ALL edges — include all edge types for complete graph topology analysis]
 > ```
 
-After the subagent completes, read `$UA_DIR/intermediate/tour.json` and normalize it into a final `tour` array. Apply these steps **in order**:
+After the subagent completes, normalize the tour **deterministically** — do NOT apply the normalization by hand. Hand-written conversion (`file:<relative-path>` for every raw path) disagrees with the resolver the finalizer uses at save time (a raw `README.md` reference must resolve to `document:README.md`, not become a dangling `file:README.md`), which would leave lesson `tourOrder` anchors describing a tour that was never saved. Instead run:
 
-1. **Unwrap envelope:** If the file contains `{ "steps": [...] }` instead of a plain array, extract the inner array. (The prompt requests a plain array, but LLMs may still produce an envelope.)
-2. **Rename legacy fields:** If any step has `nodesToInspect` instead of `nodeIds`, rename it → `nodeIds`. If any step has `whyItMatters` instead of `description`, rename it → `description`.
-3. **Convert file paths:** If `nodeIds` entries are raw file paths without a known prefix (`file:`, `config:`, `document:`, `service:`, `pipeline:`, `table:`, `schema:`, `resource:`, `endpoint:`), convert them to `file:<relative-path>`.
-4. **Drop dangling refs:** Remove any `nodeIds` entries that do not exist in the merged node set.
-5. **Sort** by `order` before saving.
+```bash
+node "<SKILL_DIR>/normalize-tour.mjs" "$PROJECT_ROOT"
+```
+
+The helper reads `$UA_DIR/intermediate/assembled-graph.json` and `$UA_DIR/intermediate/tour.json`, applies the finalizer's exact normalization (envelope unwrap, legacy-field rename, pathIndex-based reference resolution, dangling-ref removal, sort by `order`), and writes `$UA_DIR/intermediate/tour.normalized.json`. Use that file's content as the final `tour` array for every downstream step in this run — the Code Lessons dispatch below, graph assembly, and Phase 7 all reference `tour.normalized.json`, never the raw `tour.json`.
 
 Each element of the final `tour` array MUST have this shape:
 
@@ -696,6 +696,54 @@ Each element of the final `tour` array MUST have this shape:
 
 Required fields: `order`, `title`, `description`, `nodeIds`. Preserve optional `languageLesson` when present.
 
+### Code Lessons — per-file learning explanations
+
+Run this step whenever the tour is (re)built — full analysis and incremental plans with `rerunTour === true`. For `PARTIAL_UPDATE`, keep the existing `$UA_DIR/code-lessons.json` untouched (line ranges may drift slightly; the next `rerunTour` rebuild refreshes them). After ANY successful incremental save (every action except `SKIP` — `PARTIAL_UPDATE` in particular), prune entries for files the saved graph no longer contains:
+
+```bash
+node "<SKILL_DIR>/prune-code-lessons.mjs" "$PROJECT_ROOT"
+```
+
+The helper removes only orphaned entries (paths with no node in the saved graph) and leaves every surviving lesson's content untouched (the file is rewritten as normalized 2-space JSON). Incremental updates can delete or newly ignore files while their source-derived lessons survive, and the viewer would keep serving lessons the graph no longer knows about. If the prune itself fails, record the failure in `$PHASE_WARNINGS` and continue — the saved graph is already final, orphaned entries are a soft inconsistency the next run can prune again (the helper is idempotent); never roll the graph back for it.
+
+Report to the user: `[Phase 5/7] Writing code lessons...`
+
+0. **Clear stale lesson scratch files.** An interrupted earlier run can leave lesson scratch files behind — `$UA_DIR/intermediate/code-lessons.json` (single-batch raw), `code-lessons.detailed.<N>.json` (batch raws), and `code-lessons.normalized.json` (staged) — full-run initialization only creates the intermediate directory. Delete all of them before every lesson attempt, or the next writer's missing output could let those stale scratch files be normalized and published as if they belonged to this run. Never touch the served `$UA_DIR/code-lessons.json` here.
+
+1. **Resolve tour-covered files.** Read the normalized tour from `$UA_DIR/intermediate/tour.normalized.json` (written by the deterministic tour normalization above). For each normalized tour step, resolve every `nodeIds` entry to its file-level node and collect the node's `filePath`. Record for each covered file the smallest referencing step `order` as its primary tour anchor.
+
+2. **Dispatch the lesson writer in bounded batches.** A single dispatch carrying every file-level summary overflows one agent's context/output limits on large projects and loses ALL lessons when it fails, so the detailed files are dispatched in batches of at most 12, and overview-only entries are never dispatched at all (the normalization step derives them deterministically from node summaries). Use the `code-lesson-writer` agent definition (at `agents/code-lesson-writer.md`) and pass these parameters in each batch's dispatch prompt:
+
+> Write per-file code lessons for this codebase.
+> Project root: `$PROJECT_ROOT`
+> Write output to: `$UA_DIR/intermediate/code-lessons.detailed.<batchIndex>.json` (use `code-lessons.json` as the filename only when there is exactly one batch)
+>
+> Tour steps (from `$UA_DIR/intermediate/tour.normalized.json`):
+> ```json
+> [<the normalized tour array from tour.normalized.json>]
+> ```
+>
+> Detailed files (read source from disk; produce overview + sections):
+> ```json
+> [{"filePath": "src/main.tsx", "tourOrder": 2}, ...]  (only this batch's files)
+> ```
+>
+> $LANGUAGE_DIRECTIVE
+
+Retry a failed batch once (see Error Handling). If any batch still fails, the whole lesson attempt counts as failed — see step 4.
+
+3. **Normalize** the batch output(s) into a **staged** document at `$UA_DIR/intermediate/code-lessons.normalized.json`. Do NOT write `$UA_DIR/code-lessons.json` here — publication happens only after the graph/tour this run describes is actually saved (see **Lesson publication** under the incremental save gate below, and Phase 7 step 1 for full runs). Apply these steps **in order**:
+   1. **Unwrap envelope:** Accept both `{ "files": {...} }` and a bare files object at the top level of each batch document.
+   2. **Merge batches:** Combine all `code-lessons.detailed.<N>.json` documents (and the single-batch `code-lessons.json`) into one files object. Batches cover disjoint file sets; if the same key nonetheless appears twice, keep the first occurrence and record a `$PHASE_WARNINGS` entry.
+   3. **Drop unknown files:** Remove entries whose key does not exactly match a file-level node's `filePath` (relative, forward slashes).
+   4. **Add deterministic overview-only entries:** For every file-level node that is NOT in the detailed files list, add an entry `{ "overview": <the node's summary>, "sections": [] }` when no entry exists yet — derived mechanically from the graph, never from an LLM.
+   5. **Validate sections:** `lineRange` must be two integers `[start, end]` with `1 <= start <= end`; drop invalid sections, then enforce a maximum of 10 sections per file (truncate beyond that).
+   6. **Validate tour anchors:** Drop any `tourOrder` that does not match a tour step's `order`.
+   7. **Fallback overview:** If `overview` is missing or empty, substitute the matching node's `summary`.
+   8. **Stamp metadata:** Ensure `version: 1` and `generatedAt` (current ISO 8601 timestamp) are present.
+
+4. **On failure:** if any batch failed after its one retry, skip lessons entirely — delete every scratch file this attempt produced (including per-batch outputs), leave no staged document, record the failure in `$PHASE_WARNINGS`, and continue. At publication time the previously served `$UA_DIR/code-lessons.json` is removed in that case, so stale lessons never sit beside a rebuilt tour (see **Lesson publication** below). The dashboard degrades gracefully when the file is absent.
+
 ### Incremental deterministic save gate
 
 After the applicable Phase 4/5 work is complete, finalize either incremental action:
@@ -706,8 +754,16 @@ node "<SKILL_DIR>/finalize-incremental.mjs" "$PROJECT_ROOT"
 
 This helper validates/deduplicates nodes and edges, reconciles layers/tour, and independently reruns the shared symbol validator on the exact graph to be saved. It then atomically saves the graph, patches only changed fingerprints while preserving all others, removes deleted fingerprints, and only then advances `meta.json`. A cached successful merge report cannot bypass the save check. If symbol loss is first detected here, use the same one-retry procedure above, rerun merge and any required architecture/tour phases, then finalize again; if the retry was already used or remains unresolved, **STOP** with the old graph and baselines intact.
 
+**Lesson publication.** `$UA_DIR/code-lessons.json` is only ever written after the graph/tour it describes is saved, and only from lessons staged by the current invocation:
+
+- If this run attempted lessons, the finalizer exited successfully, and this run's staged `$UA_DIR/intermediate/code-lessons.normalized.json` exists, atomically move it over `$UA_DIR/code-lessons.json`.
+- If this run attempted lessons and they were skipped or failed (no staged document) while `$UA_DIR/code-lessons.json` exists, delete it — stale lessons with `tourOrder` badges for a rebuilt tour must not survive.
+- If the finalizer fails (**STOP**), touch nothing: the previous `$UA_DIR/code-lessons.json` stays beside the previous graph and tour.
+- If this run never attempted lessons — review-only `--review` reruns that skip Phase 5 and scratch cleanup, for example — leave `$UA_DIR/code-lessons.json` untouched, even when a staged document left behind by an earlier interrupted run is present; abandoned staged lessons must not be published beside a saved tour.
+- `PARTIAL_UPDATE` never attempts lessons (it keeps the existing file untouched — see the Code Lessons section above), so with no staged document the served sidecar stays as-is.
+
 - Without `--review`, report the incremental summary and **STOP**. Do not run Phase 6 or the full-save Phase 7; this is what prevents the ordinary local update from paying for whole-graph review.
-- With `--review`, copy the newly saved `$UA_DIR/knowledge-graph.json` to `$UA_DIR/intermediate/assembled-graph.json`, then continue to the full graph-reviewer path in Phase 6. Do not run the inline default reviewer.
+- With `--review`, copy the newly saved `$UA_DIR/knowledge-graph.json` to `$UA_DIR/intermediate/assembled-graph.json`, then continue to the full graph-reviewer path in Phase 6. Do not run the inline default reviewer. Lessons were already published by the save gate above (or handled per its rules), so Phase 7's lesson publication is a **no-op** on this path.
 
 ---
 
@@ -733,7 +789,7 @@ Assemble the full KnowledgeGraph JSON object:
   "nodes": [<all nodes from assembled-graph.json after Phase 3 review>],
   "edges": [<all edges from assembled-graph.json after Phase 3 review>],
   "layers": [<layers from Phase 4>],
-  "tour": [<steps from Phase 5>]
+  "tour": [<steps from `$UA_DIR/intermediate/tour.normalized.json` (Phase 5 — full runs; incremental `--review` reruns skip this assembly and keep the tour embedded in the graph the save gate copied)>]
 }
 ```
 
@@ -875,128 +931,4 @@ Pass these parameters in the dispatch prompt:
 
 ---
 
-## Phase 7 — SAVE
-
-Report to the user: `[Phase 7/7] Saving knowledge graph...`
-
-1. Write the final knowledge graph to `$UA_DIR/knowledge-graph.json`.
-
-2. **Generate structural fingerprints baseline.** This creates the basis for future automatic incremental updates and **must succeed before `meta.json` is written** — otherwise auto-update sees a fresh commit hash with no fingerprints to compare against, classifies every file as STRUCTURAL, and escalates to `FULL_UPDATE` on every subsequent commit (issue #152).
-
-   Write the input file:
-   ```bash
-   node - "$PROJECT_ROOT" "$UA_DIR/intermediate/fingerprint-input.json" <<'NODE'
-   const fs = require('fs');
-   const projectRoot = process.argv[2];
-   const outputPath = process.argv[3];
-   const input = {
-     projectRoot,
-     filePaths: [<all analyzed file paths from Phase 1, including non-code files, as JSON array>],
-     gitCommitHash: "<current commit hash>",
-   };
-   fs.writeFileSync(outputPath, JSON.stringify(input, null, 2));
-   NODE
-   ```
-
-   Then invoke the bundled script (located next to this SKILL.md):
-   ```bash
-   node "<SKILL_DIR>/build-fingerprints.mjs" \
-     "$UA_DIR/intermediate/fingerprint-input.json"
-   ```
-
-   The script uses `TreeSitterPlugin + PluginRegistry` exactly like `extract-structure.mjs`, so the baseline matches incremental comparison. The baseline MUST include every file in `scan-result.json`, not only source-code files; unsupported formats receive conservative content-only fingerprints.
-
-   **If the script exits non-zero or stdout does not include `Fingerprints baseline:`, abort Phase 7 and report the error. Do NOT proceed to step 3 (writing `meta.json`).**
-
-3. Write metadata to `$UA_DIR/meta.json` (only after step 2 succeeded):
-   ```json
-   {
-     "lastAnalyzedAt": "<ISO 8601 timestamp>",
-     "gitCommitHash": "<commit hash>",
-     "version": "1.0.0",
-     "analyzedFiles": <number of files analyzed>
-   }
-   ```
-
-4. Clean up intermediate files, **preserving `scan-result.json`** so future incremental runs can skip Phase 1 SCAN (see issue #293). We `mv` scratch dirs into a timestamped `.trash-*` instead of `rm -rf`ing them directly — this avoids tripping destructive-action gates on hardened hosts (e.g. freshness-window checks) that flag deleting directories created moments earlier (see issue #301). The delayed-purge step in Phase 0 reclaims the space once the trash is older than 7 days.
-   ```bash
-   # Preserve scan-result.json — Phase 1's deterministic file inventory.
-   # Future incremental runs (Phase 2 compute-batches.mjs --changed-files=…)
-   # need this inventory; without it, Phase 1 must re-dispatch and pay ~157k
-   # tokens / ~158s per incremental run.
-   TRASH="$UA_DIR/.trash-$(date +%s)"
-   mkdir -p "$TRASH"
-   INTER="$UA_DIR/intermediate"
-   if [ -d "$INTER" ]; then
-     # Move every entry except scan-result.json into the trash dir.
-     find "$INTER" -mindepth 1 -maxdepth 1 -not -name 'scan-result.json' -exec mv {} "$TRASH/" \; 2>/dev/null || true
-   fi
-   mv "$UA_DIR/tmp" "$TRASH/" 2>/dev/null || true
-   ```
-
-5. Report a summary to the user containing:
-   - Project name and description
-   - Files analyzed / total files (with breakdown by fileCategory: code, config, docs, infra, data, script, markup)
-   - Nodes created (broken down by type: file, function, class, config, document, service, table, endpoint, pipeline, schema, resource)
-   - Edges created (broken down by type)
-   - Layers identified (with names)
-   - Tour steps generated (count)
-   - Any warnings from the reviewer
-   - Path to the output file: `$UA_DIR/knowledge-graph.json`
-
-6. Only automatically launch the dashboard by invoking the `/understand-dashboard` skill if final graph validation passed after normalization/review fixes.
-   If final validation did not pass, report that the graph was saved with warnings and dashboard launch was skipped.
-
----
-
-## Error Handling
-
-- If any subagent dispatch fails, retry **once** with the same prompt plus additional context about the failure.
-- Track all warnings and errors from each phase in a `$PHASE_WARNINGS` list. When using `--review`, pass this list to the graph-reviewer in Phase 6. On the default path, include accumulated warnings in the Phase 7 final report.
-- If it fails a second time, skip that phase and continue with partial results.
-- ALWAYS save partial results — a partial graph is better than no graph.
-- Report any skipped phases or errors in the final summary so the user knows what happened.
-- NEVER silently drop errors. Every failure must be visible in the final report.
-
----
-
-## Reference: KnowledgeGraph Schema
-
-### Node Types (13 total)
-| Type | Description | ID Convention |
-|---|---|---|
-| `file` | Source code file | `file:<relative-path>` |
-| `function` | Function or method | `function:<relative-path>:<name>` |
-| `class` | Class, interface, or type | `class:<relative-path>:<name>` |
-| `module` | Logical module or package | `module:<name>` |
-| `concept` | Abstract concept or pattern | `concept:<name>` |
-| `config` | Configuration file (YAML, JSON, TOML, env) | `config:<relative-path>` |
-| `document` | Documentation file (Markdown, RST, TXT) | `document:<relative-path>` |
-| `service` | Deployable service definition (Dockerfile, K8s) | `service:<relative-path>` |
-| `table` | Database table or migration | `table:<relative-path>:<table-name>` |
-| `endpoint` | API endpoint or route definition | `endpoint:<relative-path>:<endpoint-name>` |
-| `pipeline` | CI/CD pipeline configuration | `pipeline:<relative-path>` |
-| `schema` | Schema definition (GraphQL, Protobuf, Prisma) | `schema:<relative-path>` |
-| `resource` | Infrastructure resource (Terraform, CloudFormation) | `resource:<relative-path>` |
-
-### Edge Types (26 total)
-| Category | Types |
-|---|---|
-| Structural | `imports`, `exports`, `contains`, `inherits`, `implements` |
-| Behavioral | `calls`, `subscribes`, `publishes`, `middleware` |
-| Data flow | `reads_from`, `writes_to`, `transforms`, `validates` |
-| Dependencies | `depends_on`, `tested_by`, `configures` |
-| Semantic | `related`, `similar_to` |
-| Infrastructure | `deploys`, `serves`, `provisions`, `triggers` |
-| Schema/Data | `migrates`, `documents`, `routes`, `defines_schema` |
-
-### Edge Weight Conventions
-| Edge Type | Weight |
-|---|---|
-| `contains` | 1.0 |
-| `inherits`, `implements` | 0.9 |
-| `calls`, `exports`, `defines_schema` | 0.8 |
-| `imports`, `deploys`, `migrates` | 0.7 |
-| `depends_on`, `configures`, `triggers` | 0.6 |
-| `tested_by`, `documents`, `provisions`, `serves`, `routes` | 0.5 |
-| All others | 0.5 (default) |
+*(README truncated for display. [Read the full README on GitHub](https://github.com/Egonex-AI/Understand-Anything)).*

@@ -15,10 +15,10 @@ tags:
   - anthropic
   - chatbot
 status: active
-quality_percentile: 85
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: asgeirtj/system_prompts_leaks
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: CC0-1.0
 signals:
-  stars: 71063
-  last_commit: 2026-11-08T08:33:05Z
-  stars_delta_7d: 245
-  stars_growth_pct: 0.3
-  trending_score: 245.85
+  stars: 71532
+  last_commit: 2026-11-15T15:07:06Z
+  stars_delta_7d: 469
+  stars_growth_pct: 0.7
+  trending_score: 472.1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 69880
     - 70224
     - 70818
     - 71063
+    - 71532
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: asgeirtj/system_prompts_leaks
   path: Anthropic/claude-code/skills/design-sync/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:26.194Z
+  fetched_at: 2026-11-16T09:15:50.192Z
   truncated: false
 type: agent_skill
 skill:

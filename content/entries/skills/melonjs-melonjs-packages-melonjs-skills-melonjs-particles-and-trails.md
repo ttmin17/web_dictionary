@@ -17,7 +17,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,16 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-particles-and-trails/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.055Z
+  fetched_at: 2026-11-16T09:16:39.037Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,10 +55,12 @@ skill:
     Covers the emitter that silently does nothing until you call an emit method.
     Triggers on: Trail3d, ribbon, exhaust trail, speed streak, ski track, tyre
     mark, ribbonNormal, ParticleEmitter, particles, particle editor, tune
-    particles, spawn depth, volume, burstParticles, streamParticles,
-    referenceSpace, ParticleEmitterSettings, elevation, minSpread, maxSpread,
-    spawn area, Trail, explosion, smoke, sparks, debris, ring, exhaust, emitter,
-    tintOverLife, colour over life, color over life, flame, fire."
+    particles, spawn depth, volume, burstParticles, streamParticles, stopStream,
+    autoDestroyOnComplete, onComplete, sprite sheet particles, framewidth,
+    randomFrame, cone, sphere, referenceSpace, ParticleEmitterSettings,
+    elevation, minSpread, maxSpread, spawn area, Trail, explosion, smoke,
+    sparks, debris, ring, exhaust, emitter, tintOverLife, colour over life,
+    color over life, flame, fire."
   folder_path: packages/melonjs/skills/melonjs-particles-and-trails
   extra_files: []
   pack_total_skills: 25
@@ -128,7 +131,8 @@ It covers every setting that changes how one emitter looks, but not:
   the one drawn on top last (or with a higher `z`).
 - **Trails.** `Trail` and `Trail3d` are separate renderables; see below.
 - **Code-only settings.** `onComplete`, `autoDestroyOnComplete`,
-  `accurateBounds`, and a `Container` as `referenceSpace` (it offers
+  `accurateBounds` (deprecated since 20.2, and does nothing), and a
+  `Container` as `referenceSpace` (it offers
   `"local"` and `"world"`). `textureAdditive` is left out: `blendMode`
   replaces it.
 - **Changes at run time.** Calling `burstParticles()` when something
@@ -322,7 +326,9 @@ debris.
 
 For one-shot effects, `autoDestroyOnComplete: true` removes the emitter once its
 particles have finished. The `onComplete` callback fires at that same moment
-either way.
+either way. A stream finishes only once it stops emitting: one left on the
+default `duration` (`Infinity`) never completes until you call `stopStream()`,
+so give a stream that should clean up after itself a `duration`.
 
 For repeated effects (muzzle flashes, impacts) keep **one** long-lived emitter
 and re-aim it per shot, rather than allocating an emitter per event.
@@ -456,6 +462,7 @@ answer when you want discrete puffs rather than a continuous ribbon.
 | the cloud follows a moving emitter | default `referenceSpace: "local"` — use `"world"` for trails |
 | particles do not travel far enough | settings tuned pre-20.2, when drawn travel was doubled |
 | one-shot emitters accumulate | missing `autoDestroyOnComplete: true` |
+| a streaming emitter with `autoDestroyOnComplete` never goes away | the stream runs on the default `duration` of `Infinity`: give it a `duration`, or call `stopStream()` |
 | every particle of an emitter is the same colour all its life | `tint` is one value for the emitter: use `tintOverLife` for a colour that changes as it ages |
 | a `tintOverLife` colour's transparency has no effect | the list sets the colour only; opacity is the particle's fade |
 | `tintOverLife` colours look muddy | the texture is coloured; author it white so the tints come through as given |

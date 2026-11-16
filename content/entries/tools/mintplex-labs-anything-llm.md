@@ -14,29 +14,29 @@ tags:
   - agent-orchestration
   - agentic-ai
 status: active
-quality_percentile: 75
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Mintplex-Labs/anything-llm
   official_vendor: false
   license: MIT
 signals:
-  stars: 68095
-  last_commit: 2026-11-07T02:20:14Z
-  stars_delta_7d: 126
-  stars_growth_pct: 0.2
-  trending_score: 126.23
-  rank_current: 31
-  rank_delta: -1
+  stars: 68331
+  last_commit: 2026-11-13T22:55:56Z
+  stars_delta_7d: 236
+  stars_growth_pct: 0.3
+  trending_score: 236.82
+  rank_current: 30
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 67297
     - 67569
     - 67969
     - 68095
+    - 68331
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: Mintplex-Labs/anything-llm
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:11.166Z
+  fetched_at: 2026-11-16T09:16:39.295Z
   truncated: false
 type: agent_tool
 tool:
@@ -63,7 +63,7 @@ tool:
 </p>
 
 <div align='center'>
-<a href="https://trendshift.io/repositories/2415" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2415" alt="Mintplex-Labs%2Fanything-llm | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/2415?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-2415" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/2415/yearly?language=JavaScript" alt="Mintplex-Labs%2Fanything-llm | Trendshift" width="250" height="55"/></a>
 </div>
 
 <p align="center">

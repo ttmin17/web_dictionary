@@ -1,8 +1,8 @@
 ---
 slug: gentleman-programming-gentle-ai-internal-assets-skills-work-unit-commits
 name: work-unit-commits
-tagline: "Plan commits as reviewable work units. Trigger: implementation, commit
-  splitting, chained PRs, or keeping tests and docs with code."
+tagline: "Plan commits as reviewable work units. Trigger: commit splitting,
+  chained PRs, or keeping tests and docs with code."
 summary: Load this skill when deciding what belongs in each commit or PR.
 categories:
   - coding-agents
@@ -12,10 +12,10 @@ tags:
   - ai-coding
   - claude-code
 status: active
-quality_percentile: 88
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8636
-  last_commit: 2026-11-08T21:57:39Z
-  stars_delta_7d: 301
-  stars_growth_pct: 3.6
-  trending_score: 311.87
+  stars: 9237
+  last_commit: 2026-11-16T06:28:35Z
+  stars_delta_7d: 601
+  stars_growth_pct: 7
+  trending_score: 642.83
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7849
     - 8020
     - 8335
     - 8636
+    - 9237
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,13 +41,13 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/work-unit-commits/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:53.523Z
+  fetched_at: 2026-11-16T09:16:29.027Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: work-unit-commits
-  description: "Plan commits as reviewable work units. Trigger: implementation,
-    commit splitting, chained PRs, or keeping tests and docs with code."
+  description: "Plan commits as reviewable work units. Trigger: commit splitting,
+    chained PRs, or keeping tests and docs with code."
   folder_path: internal/assets/skills/work-unit-commits
   extra_files: []
   pack_total_skills: 18
@@ -81,7 +81,7 @@ Use it for:
 | Keep docs with the user-visible change | Docs belong with the feature or workflow they explain. |
 | Tell a story | A reviewer should understand why each commit exists from its diff and message. |
 | Future PR-ready | Each commit should be a candidate chained PR when the change grows. |
-| Budget is not code-golf | Never shrink a diff by deleting comments, blank lines, docs, or tests, or by compressing code, to fit the review budget (400 by default, or the session `review_budget_lines`). Slice by work unit or report the overage. |
+| Budget is not code-golf | Never shrink a diff by deleting comments, blank lines, docs, or tests, or by compressing code, to fit the review budget (about 400 authored changed lines). Slice by work unit or report the overage. |
 
 ## Work Unit Checklist
 

@@ -15,26 +15,26 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: DayuanJiang/next-ai-draw-io
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 36813
-  last_commit: 2026-11-09T04:41:18Z
-  stars_delta_7d: 105
-  stars_growth_pct: 0.3
-  trending_score: 105.3
-  rank_current: 13
-  rank_delta: 0
+  stars: 36990
+  last_commit: 2026-11-15T18:20:41Z
+  stars_delta_7d: 177
+  stars_growth_pct: 0.5
+  trending_score: 177.85
+  rank_current: 17
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 36318
     - 36413
     - 36708
     - 36813
+    - 36990
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: DayuanJiang/next-ai-draw-io
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.778Z
+  fetched_at: 2026-11-16T09:14:55.664Z
   truncated: false
 type: mcp_server
 launch:

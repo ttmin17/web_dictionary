@@ -16,10 +16,10 @@ tags:
   - backlinks
   - claude
 status: active
-quality_percentile: 67
+quality_percentile: 59
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Ryze-AI-Adgent/open-seo-mcp-skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8997
+  stars: 10084
   last_commit: 2026-10-27T08:57:55Z
-  stars_delta_7d: 147
-  stars_growth_pct: 1.7
-  trending_score: 149.44
+  stars_delta_7d: 1087
+  stars_growth_pct: 12.1
+  trending_score: 1218.33
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6078
     - 7305
     - 8850
     - 8997
+    - 10084
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: Ryze-AI-Adgent/open-seo-mcp-skills
   path: skills/content-brief/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:52.066Z
+  fetched_at: 2026-11-16T09:15:07.276Z
   truncated: false
 type: agent_skill
 skill:

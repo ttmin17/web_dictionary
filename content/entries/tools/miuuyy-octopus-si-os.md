@@ -16,21 +16,24 @@ status: active
 quality_percentile: 45
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: miuuyy/Octopus-SI-OS
   official_vendor: false
   license: MIT
 signals:
-  stars: 741
-  last_commit: 2026-11-08T20:58:05Z
-  stars_delta_7d: 166
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 769
+  last_commit: 2026-11-16T07:20:38Z
+  stars_delta_7d: 28
+  stars_growth_pct: 3.8
+  trending_score: 29.06
+  rank_current: 97
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 741
+    - 769
 language: en
 needs_keys: false
 prerequisites:
@@ -39,7 +42,7 @@ readme_source:
   repo: miuuyy/Octopus-SI-OS
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:42.712Z
+  fetched_at: 2026-11-16T09:17:08.266Z
   truncated: false
 type: agent_tool
 tool:
@@ -108,23 +111,14 @@ Then package the app, open it, and sign in with ChatGPT. Press Enter in the embe
 
 <br>
 
-The native build needs headers for Node 24.15.0, whatever Node runs npm:
+The native build needs the headers of the Node version inside the pinned
+Electron, independently of the Node version running npm. The runtime helper
+downloads and verifies the headers pinned in `app/native/runtime.json`, then
+prints their path. Package and open the app:
 
 ```sh
-mkdir -p app/build
-curl -fL https://nodejs.org/download/release/v24.15.0/node-v24.15.0-headers.tar.gz \
-  -o app/build/node-v24.15.0-headers.tar.gz
-printf '%s  %s\n' \
-  9a9250039fef572d0bcc110ac5e78055faf5604421211d2d5f578ebc5a34e703 \
-  app/build/node-v24.15.0-headers.tar.gz | shasum -a 256 -c -
-tar -xzf app/build/node-v24.15.0-headers.tar.gz -C app/build
-```
-
-Package and open:
-
-```sh
-OCTOPUS_NATIVE_NODE_HEADERS="$PWD/app/build/node-v24.15.0/include/node" \
-  npm --prefix app run package:mac
+headers="$(node app/native/runtime.cjs headers)" &&
+OCTOPUS_NATIVE_NODE_HEADERS="$headers" npm --prefix app run package:mac &&
 open -n ./app/build/Octopus.app
 ```
 

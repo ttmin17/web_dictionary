@@ -2,8 +2,8 @@
 slug: melonjs-melonjs-packages-melonjs-skills-melonjs-3d-assets
 name: 3d-assets
 tagline: Use this skill when loading 3D models into melonJS — glTF and GLB
-  scenes, OBJ/MTL models, materials, imported lights, node animation, ground
-  shadows a
+  scenes, OBJ/MTL models, materials, imported lights, node animation, skinned
+  characte
 summary: 'type: "gltf" (JSON plus external buffers) and type: "glb" (single
   binary) are both loader types. A self-contained GLB is the better shipping
   format — one request, nothing to resolve relatively.'
@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,20 +44,24 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-3d-assets/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.051Z
+  fetched_at: 2026-11-16T09:16:39.029Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: 3d-assets
   description: "Use this skill when loading 3D models into melonJS — glTF and GLB
-    scenes, OBJ/MTL models, materials, imported lights, node animation, ground
-    shadows and GPU instancing. Covers level.load options including the async
-    flag, the rightHanded conversion, and exactly what the loader does and does
-    not support. Triggers on: glTF, gltf, glb, OBJ, MTL, 3D model, getGLTF,
-    getOBJ, getMTL, GLTFModel, GLTFScene, level.load glb, rightHanded,
-    lightIntensityScale, castGroundShadow, shadowGroundY,
-    EXT_mesh_gpu_instancing, KHR_lights_punctual, skinning, Blender export, 3D
-    asset."
+    scenes, OBJ/MTL models, materials, imported lights, node animation, skinned
+    characters, crossfades and attachments, ground shadows and GPU instancing.
+    Covers level.load options including the async flag, the rightHanded
+    conversion, and exactly what the loader does and does not support. Triggers
+    on: glTF, gltf, glb, OBJ, MTL, 3D model, getGLTF, getOBJ, getMTL, GLTFModel,
+    GLTFScene, level.load glb, rightHanded, lightIntensityScale,
+    castGroundShadow, shadowGroundY, EXT_mesh_gpu_instancing,
+    KHR_lights_punctual, alphaMode, doubleSided, map_d, map_bump, normalize,
+    animationspeed, skinning, skinned mesh, skin, JOINTS_0, WEIGHTS_0, rigged
+    character, Mixamo, crossfade, blend animations, reverseAnimation,
+    setAnimationTime, play backwards, attach to bone, addChildToNode,
+    getNodeTransform, getNodeNames, Blender export, 3D asset."
   folder_path: packages/melonjs/skills/melonjs-3d-assets
   extra_files: []
   pack_total_skills: 25
@@ -99,16 +104,8 @@ or it renders flat. See `melonjs-3d` for the camera.
 | `onLoaded` | `game.onLevelLoaded` | called with the **level id**, not the scene |
 | `async` | `false` | return a promise that settles once the scene is in the world, instead of a boolean |
 | `rightHanded` | `true` | see below |
-| `lights` | `true` | instantiate authored `KHR_lights_punctual` lights as `Light3d` world children |
+| `lights` | `true` | instantiate authored `KHR_lights_punctual` lights as `Light3d` children of `container`; `false` also builds the meshes unlit |
 | `lightIntensityScale` | — | keep authored intensity ratios instead of normalising every light to 1 |
-
-Those `game.` defaults are the engine's, not a recommendation. `game` is
-whichever `Application` finished `init()` last, so **pass `container`
-explicitly** from a `Stage`, where the right one is in your hand:
-
-```js
-level.load("sceneId", { container: this.app.world, scale: 40 });
-```
 | `castGroundShadow` | inherits the app setting (**on**) | blob shadows for this scene's meshes |
 | `shadowGroundY` | each object's own base | world Y of the floor the blobs land on |
 | `shadowOpacity` | `0.45` | how dark the blobs are |
@@ -118,6 +115,22 @@ level.load("sceneId", { container: this.app.world, scale: 40 });
 | `shadowDirectionX` / `shadowDirectionZ` | `0` | the ground direction they are cast along |
 | `shadowGroundNormal` | world up | up normal of the floor, for a scene that is not level |
 | `shadowLight` | — | a `Light3d` to take the direction from, re-read every draw |
+| `toonBands` | `0` | cel-shade every lit mesh into this many bands (see `melonjs-3d`) |
+| `outlineWidth` / `outlineColor` | `0` / black | an ink outline round every mesh, in world units (see `melonjs-3d`) |
+| `outlineMode` | `"world"` | `"screen"` measures `outlineWidth` in pixels, the same thickness near or far |
+| `rimLight` / `rimColor` | `0` / white | a rim light on every lit mesh (see `melonjs-3d`) |
+| `pickable` | `true` | `false` has `camera.pick` pass over the scene's meshes (see `melonjs-3d`) |
+| `crossfade` | `0` | an animated or skinned asset's default blend between clips, in ms (see Crossfading below) |
+
+Those `game.` defaults are the engine's, not a recommendation. `game` is
+whichever `Application` finished `init()` last, so **pass `container`
+explicitly** from a `Stage`, where the right one is in your hand:
+
+```js
+onResetEvent(app) {
+    level.load("sceneId", { container: app.world, scale: 40 });
+}
+```
 
 `shadowGroundPoint` is **not** on that list, and a scene load drops it without
 a warning. One floor POINT shared by every part of a scene would stack the
@@ -165,9 +178,10 @@ world.addChild(new Trigger(x, y, {
 
 Every `level.load` option above travels, including the whole ground-shadow set,
 and so do `container`, `onLoaded`, `flatten` and `setViewportBounds`. The list is
-**derived** from `level.loadOptions` rather than restated, so an option added to
-a level format arrives here for free. It used to be hand-written and had fallen
-three releases behind the glTF path (#1649).
+**derived** from the options each level format declares beside the code that
+reads them, rather than restated, so an option added to a level format arrives
+here for free. It used to be hand-written and had fallen three releases behind
+the glTF path (#1649).
 
 **`async` is deliberately excluded.** A trigger with a `color` + `duration`
 sets it itself, because it needs the promise to sequence its fade and reveal; a
@@ -195,24 +209,34 @@ Do not add a flip of your own on top; two corrections cancel back to wrong.
 The importer covers a deliberate subset:
 
 - `pbrMetallicRoughness` **base colour texture and factor**
+- `COLOR_0` **vertex colours**, multiplied with the factor and the texture
 - metallic/roughness **factors** converted to the engine's specular model
 - `emissiveFactor`, including `KHR_materials_emissive_strength`
 - `KHR_materials_unlit` — honoured, for baked/stylised workflows
 - `alphaMode: "MASK"` — the cutout threshold is applied
 - `doubleSided`
+- the base colour texture's sampler: `wrapS` / `wrapT` (repeat by default, as
+  the spec says) and `magFilter`
+
+`alphaMode: "BLEND"` is read as opaque: the loader does not set `transparent`,
+because one loaded mesh can merge materials and the flag routes the whole mesh.
+Set `transparent: true` on the part yourself (see `melonjs-3d`).
 
 Not imported: **normal maps**, metallic/roughness *textures*, occlusion maps,
-morph targets, `KHR_texture_transform`. Nothing errors — the material simply
+`KHR_texture_transform`. Nothing errors — the material simply
 arrives without them, which reads as "flatter than the preview in my authoring
-tool". Bake what you need into the base colour.
+tool". Bake what you need into the base colour. (OBJ/MTL does carry a normal
+map, see below.)
 
 **Draco compression is the exception that does error.** Its geometry sits in
 accessors with no buffer view, which the parser rejects outright, so the whole
 asset fails to load. Export uncompressed.
 
-`textureFilter` on the Application settings (`"nearest"` / `"linear"` /
-`"auto"`) drives sampling; glTF materials that declare their own sampler carry
-it through. Pixel-art models want `"nearest"`.
+`textureFilter` on the Application settings (`"auto"` / `"nearest"` /
+`"linear"` / `"linear-mipmap"`) drives sampling; glTF materials that declare
+their own sampler carry it through. Pixel-art models want `"nearest"`. A mesh
+already samples mipmaps under `"linear"`, so `"linear-mipmap"` changes nothing
+for one.
 
 ### `baseColorFactor` is LINEAR; a `tint` is sRGB
 **Pass the factor as a setting and the encoding is done for you.** `Mesh`
@@ -285,8 +309,10 @@ screen, a HUD tint or a glow, are already sRGB: `* 255` is right for those.
 ## Lights
 
 Authored `KHR_lights_punctual` lights — sun, point, spot — become `Light3d`
-world children, plus a soft ambient fill, and each keeps its authored name.
-A scene carrying any of them renders through the **lit** path automatically.
+children of the container the scene loads into, plus a soft white ambient fill
+at intensity 0.3, and each keeps its authored name. A scene carrying any of them
+renders through the **lit** path automatically (except `KHR_materials_unlit`
+materials); one carrying none renders unlit.
 
 glTF stores physical units — lux for suns, candela for lamps — and a Blender
 daylight sun is 1000+, which blows out the engine's stylised shading. So every
@@ -298,7 +324,10 @@ set, scale instead of normalising:
 level.load("diorama", { scale: 50, lightIntensityScale: 0.001 });
 ```
 
-Pass `lights: false` to manage lighting yourself.
+Pass `lights: false` to leave the authored lights out. The meshes are then built
+**unlit**, so a `Light3d` of your own does not shade them either. To light a
+scene your own way, keep the authored lights and retune them by name, or remove
+them once the load has finished and add yours: the meshes stay lit.
 
 ## Animation
 
@@ -317,11 +346,34 @@ model.setCurrentAnimation("jump", { next: "idle" }); // chain
 model.isCurrentAnimation("walk");
 model.play();
 model.pause();
+model.setAnimationTime(500);                         // like Sprite#setAnimationFrame, in ms
+model.getCurrentAnimationTime();                     // like getCurrentAnimationFrame
+model.reverseAnimation("open");                      // like Sprite#reverseAnimation
 ```
 
 `speed` is a playback multiplier (1 = authored speed), not a frame delay. Only
 an explicit `loop: false` stops looping. `setCurrentAnimation` **throws** on a
-clip name the asset does not define — check `getAnimationNames()` first.
+clip name the asset does not define — check `getAnimationNames()` first. Called
+with the clip that is already playing it returns at once and ignores its
+options, so retime a running clip through `model.animationspeed`, not a second
+`setCurrentAnimation(name, { speed })`.
+
+Moving and turning a clip around (20.16):
+
+- **`setAnimationTime(ms)`** moves the current clip to that time and poses it
+  at once. A looping clip wraps the time (`setAnimationTime(length)` is its
+  first frame); a play-once clip is held between its start and its end and
+  plays on from there, even if it had finished. It throws on a time that is
+  not a finite number, and does nothing with no clip playing. Use it to start
+  a crowd's identical walk cycles out of step.
+- **`reverseAnimation(name?)`** plays the clip backwards, as
+  `Sprite#reverseAnimation` does: each call turns it around, and it stays
+  reversed the next time it is played, starting from its end. A play-once
+  clip played backwards ends on its first frame, where `onComplete` and
+  `onended` fire. A door's "open" clip reversed is its "close".
+- **A negative `speed`** plays the clip backwards as well (both together play
+  it forwards). Before 20.16 it froze the clip on its first frame and never
+  ended it.
 
 ### Placing and moving a model
 
@@ -346,11 +398,122 @@ Constructing one directly from `loader.getGLTF(name)` is fine and is the way to
 go when the model is a game object rather than a scene — `level.load` is for
 loading a whole scene into the world.
 
-**Vertex skinning is out of scope** — `JOINTS_0` / `WEIGHTS_0` are not read, and
-neither are morph targets. A smoothly-deforming character will not deform. The
-options are: rig it hierarchically instead (separate meshes parented into a
-node tree), use `Sprite3d` billboards, or use the Spine plugin for 2D skeletal
-work.
+### Skinned characters
+
+A **skinned** mesh — one bound to a skeleton through `JOINTS_0` / `WEIGHTS_0`
+and a glTF `skin`, which is what Mixamo, Quaternius, KayKit and most rigged
+character packs export — deforms with its joints (20.16). Nothing to opt in:
+an asset with a skin loads as a `GLTFModel` (even with no clips), and its clips
+drive the joints like any other node.
+
+```js
+await loader.preload([{ name: "fox", type: "glb", src: "models/fox.glb" }]);
+
+const data = loader.getGLTF("fox");
+// size it from the asset's own bounds rather than guessing the export unit
+const scale = 200 / (data.bounds.max[1] - data.bounds.min[1]);
+const fox = new GLTFModel(data, { scale, lit: true });
+app.world.addChild(fox, 0);
+fox.setCurrentAnimation("Walk");
+```
+
+How it behaves, so nothing about it is a surprise:
+
+- **The skin is deformed on the CPU**, from the bind pose, on every frame the
+  joints move: identical on WebGPU, WebGL and Canvas, at one pass over the
+  vertices per frame. A character of a few thousand vertices costs a fraction
+  of a millisecond; a crowd of hundreds of skinned characters is the wrong use
+  — the GPU has nothing to share between them. Moving or turning the model
+  alone does **not** re-skin it.
+- **Up to four joints per vertex** (`JOINTS_0` / `WEIGHTS_0`). `JOINTS_1` /
+  `WEIGHTS_1` are ignored, so an export with more influences loses the extra
+  ones; limit influences to 4 in the exporter. Weights are renormalised to sum
+  to 1, and a weight naming a joint the skin does not have is dropped with a
+  warning.
+- **The skinned mesh's own node transform is ignored**, as the glTF spec
+  requires: the joints alone say where it is. Its part `Mesh` sits at the
+  model's origin with a cull sphere covering the rig, so it culls where it is
+  drawn.
+- `data.bounds` is measured on the **skinned rest pose**, so framing a camera
+  on it works for a rigged character.
+- Each model deforms its **own copy** of the geometry; the descriptor's arrays
+  stay the bind pose, so many models can share one loaded asset.
+- **Morph targets are not read** (facial blend shapes): the mesh keeps its base
+  shape.
+
+### Crossfading between clips
+
+`setCurrentAnimation(name, { crossfade: ms })` blends into the clip instead of
+snapping to it — the difference between a walk turning into a run and a walk
+*popping* into one. The clip being faded out keeps playing underneath while its
+weight falls to 0 (a looping one round its loop, a play-once one, or one
+chained with `next`, on to its last frame, which it then holds); with nothing
+playing, the blend starts from the rest pose.
+
+```js
+fox.setCurrentAnimation("Run", { crossfade: 250 });
+fox.setCurrentAnimation("Jump", { loop: false, next: "Idle", crossfade: 150 });
+// `next` is entered with the same crossfade
+```
+
+Set it once rather than on every call with **`model.crossfade`** (or the
+`crossfade` option of `new GLTFModel`, `GLTFScene#addTo` and `level.load`),
+like `animationspeed`: every change that does not give its own blends over it,
+`play(name)` and the string and function forms included. A call's own
+`crossfade` wins, `0` included, which is how one change snaps on a model that
+blends by default.
+
+```js
+hero.crossfade = 200;
+hero.setCurrentAnimation("Run");                    // blends over 200 ms
+hero.setCurrentAnimation("Hit", { crossfade: 0 });  // snaps
+```
+
+- Switching again **mid-fade** blends from the pose on screen, so mashing
+  buttons never pops.
+- `pause()` freezes the fade with the clip; `stop()` cancels it.
+- Rotations are slerped, translations and scales lerped, per node. It works on
+  rigid (node-TRS) rigs as well as skinned ones.
+- `crossfade` is ignored by `Sprite` and other frame animations.
+
+Ground speed has to follow the clip too, or the feet skate: tween the speed
+over the same duration (`new Tween(pace).to({ value: runSpeed }, { duration: 250 })`).
+
+### Holding things: nodes and attachments
+
+Every glTF node of a model, a part or a skeleton's joint, is reachable by its
+name (20.16). `getNodeNames()` lists them, as `getAnimationNames()` lists the
+clips.
+
+```js
+hero.getNodeNames();       // ["Armature", "mixamorig:Hips", ..., "mixamorig:RightHand", ...]
+
+// keep a sword in the right hand: it follows the clip, the crossfade and the hero
+sword.pos.set(0, -12, 0);  // its offset from the hand, along the hand's own axes
+hero.addChildToNode(sword, "mixamorig:RightHand");
+hero.removeChild(sword);   // drops it
+
+// or just ask where the hand is this frame
+const hand = hero.getNodeTransform("mixamorig:RightHand");
+spark.pos.set(hand.val[12], hand.val[13], hand.val[14]);
+```
+
+- **`addChildToNode(child, name)`** adds the child to the model like
+  `addChild`, and moves it to the node every time the model is posed. Its
+  `pos` when added is its **offset** from the node; after that `pos` is where
+  it is in the world, overwritten each pose, so set the offset first. Adding a
+  child already on a node moves it to the new one with the same offset.
+- **What turns with the node**: a `Mesh` (either handedness) or a nested
+  `GLTFModel`, from the way it was turned when added. A billboard `Sprite3d`,
+  a particle emitter or any other renderable only follows the position.
+- **The node's scale is never applied.** Mixamo armatures carry a 0.01 scale;
+  the sword keeps its own size instead of shrinking with the bone.
+- `getChildByName` finds it and `removeChild` takes it off the node; moved to
+  another container or destroyed, it stops following.
+- **`getNodeTransform(name, out?)`** returns a `Matrix3d`: the node's origin in
+  the translation (x, y and depth, the units of `pos`) and its turn, without
+  scale, in the rest. A model moved since its last pose is posed again first.
+- Both throw on a name the asset does not have: check `getNodeNames()`.
 
 ## Instancing
 
@@ -359,6 +522,11 @@ call for every copy, which is the difference between a hundred trees and a
 hundred thousand. Export with instancing enabled where your tool supports it.
 Sparse accessors on the instancing attributes are rejected with a clear error
 rather than silently misplacing every instance.
+
+Face culling is decided once per mesh, so instances with a **negative scale**
+(mirrored linked duplicates) render inside-out. Building the scene or model
+warns when it meets them; mark the material `doubleSided`, which turns culling
+off for the set.
 
 ## Ground shadows
 
@@ -418,7 +586,7 @@ world.addChild(mesh);
 ```
 
 **The MTL loader fetches the textures it references itself** — `map_Kd`,
-`map_d` and `map_bump` are resolved relative to the `.mtl` and preloaded for
+`map_d` and the normal map are resolved relative to the `.mtl` and preloaded for
 you, so there is no image entry in the manifest above. Passing `texture:`
 explicitly overrides that and pins *one* binding over the whole model, which on
 a multi-material model suppresses the per-material texture split; leave it out
@@ -426,19 +594,23 @@ unless you mean that.
 
 MTL contributes `Kd` (diffuse tint), `d` / `Tr` (opacity), `Ke` (emissive),
 `Ks` + `Ns` (specular highlight), `map_Kd` (diffuse texture), `map_d`
-(per-texel opacity) and `map_bump` / `bump` / `norm` (tangent-space normal
-map — needs `lit: true`, and the tangent frame is derived per fragment, so the
-model needs no tangent attribute). All three normal-map spellings are read as
-normal maps even though the format specifies two of them as height maps, which
-is what every exporter actually writes. Specular *maps* (`map_Ks`) and the PBR
-extension's `map_Pr` / `map_Pm` are not supported and warn — the `Pr` / `Pm`
-*scalars* are read and approximated onto the specular terms, the maps would
-need a real PBR model.
+(per-texel opacity) and `map_bump` / `map_Bump` / `bump` / `norm`
+(tangent-space normal map — needs `lit: true`, and the tangent frame is derived
+per fragment, so the model needs no tangent attribute). Every normal-map
+spelling is read as a normal map even though the format specifies `bump` and
+`map_bump` as height maps, because a normal map is what exporters actually
+write there. Specular *maps* (`map_Ks`) and the PBR extension's `map_Pr` /
+`map_Pm` are not supported and warn — the `Pr` / `Pm` *scalars* are read and
+approximated onto the specular terms, the maps would need a real PBR model.
+
+`map_d` cuts out only against a non-zero `alphaCutoff`, and the loader sets
+none: pass one in the `Mesh` settings (`alphaCutoff: 0.5`), or nothing is cut
+out.
 
 `Ka` (ambient) and `illum` (illumination model) are read onto the material and
 readable from `loader.getMTL(name)`, but take no part in shading. That is
 deliberate rather than pending: `Ka` predates scene-wide ambient light and would
-fight `Stage.ambientLightingColor`, and `illum` enumerates fixed-function
+fight an `"ambient"` `Light3d`, and `illum` enumerates fixed-function
 behaviours this renderer has no equivalent for. In particular an `illum` of 0 or
 1 nominally means "no specular", and the engine does **not** honour that — `Ns`
 stays the only gate, so a model that renders correctly today is not restyled by
@@ -534,10 +706,18 @@ const node = me.loader.getGLTF("palm").nodes[0];
 const trees = new me.InstancedMesh(0, groundY, {
     vertices: node.vertices, uvs: node.uvs,
     normals: node.normals, indices: node.indices,
+    normalize: false,     // keep the authored units; see below
     texture: palette, textureFilter: "nearest", scale: 40,
     instanceCount: count,
 });
 ```
+
+**Pass `normalize: false` whenever the geometry comes off a descriptor.** The
+default fits the geometry into a unit cube, centred, which throws away the
+authored size and the base-on-the-floor origin. Before 20.14 it was worse: the
+default normalized the loader's own array in place, so every later mesh built
+from that node, and a `level.load` of the same asset, got the shrunken
+geometry. A normalized mesh works on a copy now.
 
 `nodes` is one entry **per primitive**, each in its own local space with a
 separate `world` matrix — so this only works cleanly when the asset is a single
@@ -580,8 +760,29 @@ need a prefix.
 | the asset fails to load entirely | an external buffer/image `uri` that 404s, or Draco-compressed geometry |
 | everything is blown out white | authored lux/candela intensities; use `lightIntensityScale` |
 | materials flatter than the authoring-tool preview | no normal or metallic/roughness *textures* are imported |
-| a character does not deform | vertex skinning is out of scope; rig hierarchically or billboard |
-| animation names come back empty | the asset has no node-TRS channels (skin-only rig) |
+| a glTF `alphaMode: "BLEND"` material draws opaque | the loader does not set `transparent`; set it on that part yourself |
+| an MTL `map_d` cuts nothing out | it needs a non-zero `alphaCutoff`, which the loader does not set |
+| a mesh built from `getGLTF(name).nodes` comes out unit-sized | `normalize` defaults to `true`; pass `normalize: false` to keep the authored units |
+| after one normalized mesh of a model, the scene or other meshes of that model load shrunken (before 20.14) | the default normalized the loader's cached array in place; update, or pass `normalize: false` |
+| some copies in an imported scatter render inside-out | negative-scale (mirrored) instances under per-mesh face culling; make the material `doubleSided` |
+| a character does not deform (before 20.16) | vertex skinning was not supported: update |
+| a skinned character is a crumpled ball or a spike at the origin | weights all zero or exported for more than 4 influences — limit influences to 4 per vertex in the exporter |
+| a skinned character's face does not change expression | morph targets (blend shapes) are not read |
+| a skinned character is tiny or enormous | its export unit (often centimetres): size it from `data.bounds` rather than a fixed `scale` |
+| switching clips pops from one pose to the next | no `crossfade`: `setCurrentAnimation(name, { crossfade: 200 })`, or `model.crossfade = 200` for every change |
+| one change should snap on a model that blends by default | give that call `{ crossfade: 0 }` |
+| a clip at a negative `speed` freezes on its first frame and never ends (before 20.16) | update; `reverseAnimation()` says the same thing more plainly |
+| `setAnimationTime(length)` shows the first frame | the clip loops, so the time wraps; play it with `loop: false` to hold the end |
+| a reversed clip starts from its end the next time it plays | a clip stays reversed until reversed again, as on a `Sprite` |
+| `addChildToNode` / `getNodeTransform` throws "node … not defined" | a name the asset does not have; check `getNodeNames()` (Mixamo prefixes `mixamorig:`) |
+| an attached child jumps back to the node after setting its `pos` | `pos` is overwritten each pose; set the offset before `addChildToNode` |
+| an attached sword points the wrong way | it keeps the turn it had when added; turn it (`currentTransform.rotate`) before adding |
+| a billboard attached to a hand does not turn with it | billboards keep facing the camera and only follow the position |
+| the feet skate during a crossfade | the ground speed changes instantly while the legs blend; tween the speed over the same duration |
+| animation names come back empty | the asset has no animation clips (a rig exported without its actions) |
+| `setCurrentAnimation(name, { speed })` changes nothing | that clip is already playing, so the call returns at once; set `animationspeed` |
+| `model.scale(2)` throws "not a function" on a `GLTFModel` (before 20.14) | the `scale` option hid the method: update |
+| a `GLTFModel` ignores `pos` / `rotate` once its clip is paused or finished (before 20.14) | it was only re-posed while a clip played: update |
 | a hundred copies tank the frame rate | exported without `EXT_mesh_gpu_instancing` |
 | a whole scatter looks like one object repeated | every instance shares the group transform — vary yaw/scale per instance, rotating *after* the translate |
 | three clips where you authored one | one action per object; use a single action with a slot each |
@@ -595,12 +796,14 @@ need a prefix.
 | a shadow smeared across the whole floor | a ground plane cast its own blob — use the scene-wide opt-in |
 | `onLoaded` gets a string, not the scene | it is called with the level id; load into your own container instead |
 | scene renders flat and unlit | no `Camera3d` — the 2D-camera path is CPU-projected and unlit (with a `Camera3d` on Canvas you get a black canvas instead) |
+| scene renders in perspective but unlit | the asset carries no sun, point or spot light (or was loaded with `lights: false`), so its meshes are built unlit; author one in the asset and tune it at runtime by name |
 
 ## Related skills
 
 - `melonjs-3d` — conventions, `Camera3d`, meshes, `Light3d`, instancing, and
   `camera.setFog` (an outdoor scene almost always wants it; it is set on the
   camera, so a loaded scene needs no per-node work)
-- `melonjs-lighting` — how `Light3d` behaves once imported
+- `melonjs-lighting` — the 2D `Light2d` system; imported lights are `Light3d`,
+  covered in `melonjs-3d`
 - `melonjs-loading-assets` — the loader, asset types and base URLs
 - `melonjs-plugins` — the Spine plugin, for skeletal characters

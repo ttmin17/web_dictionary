@@ -2,8 +2,8 @@
 slug: nextlevelbuilder-ui-ux-pro-max-skill-cli-assets-skills-design
 name: design
 tagline: "Comprehensive design skill: brand identity, design tokens, UI styling,
-  logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate
-  identi"
+  logo generation (55 styles, Gemini, Atlas Cloud, MuAPI, or UberLLM AI),
+  corpora"
 summary: "- Brand identity, voice, assets - Design system tokens and specs - UI
   styling with shadcn/ui + Tailwind - Logo design and AI generation - Corporate
   identity program (CIP) deliverables - Presentations and pitch decks -..."
@@ -15,10 +15,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 78
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: nextlevelbuilder/ui-ux-pro-max-skill
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 147098
-  last_commit: 2026-11-07T19:05:11Z
-  stars_delta_7d: 1606
-  stars_growth_pct: 1.1
-  trending_score: 1623.73
+  stars: 150143
+  last_commit: 2026-11-16T04:10:04Z
+  stars_delta_7d: 3045
+  stars_growth_pct: 2.1
+  trending_score: 3108.03
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 137347
     - 140519
     - 145492
     - 147098
+    - 150143
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,14 +44,14 @@ readme_source:
   repo: nextlevelbuilder/ui-ux-pro-max-skill
   path: cli/assets/skills/design/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:18.116Z
+  fetched_at: 2026-11-16T09:15:35.725Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: design
   description: "Comprehensive design skill: brand identity, design tokens, UI
-    styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI),
-    corporate identity program (50 deliverables, CIP mockups), HTML
+    styling, logo generation (55 styles, Gemini, Atlas Cloud, MuAPI, or UberLLM
+    AI), corporate identity program (50 deliverables, CIP mockups), HTML
     presentations (Chart.js), banner design (22 styles, social/ads/web/print),
     icon design (15 styles, SVG, Gemini 3.1 Pro), social photos
     (HTML→screenshot, multi-platform). Actions: design logo, create CIP,
@@ -115,7 +115,7 @@ Script paths in this skill and its `references/` are relative to the directory t
 ## Logo Design (Built-in)
 
 55+ styles, 30 color palettes, 25 industry guides. Gemini Nano Banana, Atlas
-Cloud, and MuAPI image generation.
+Cloud, MuAPI, and UberLLM image generation.
 
 ### Logo: Generate Design Brief
 
@@ -141,6 +141,7 @@ python3 scripts/logo/generate.py --prompt "coffee shop vintage badge" --style vi
 python3 scripts/logo/generate.py --brand "TechFlow" --provider atlas
 python3 scripts/logo/generate.py --brand "TechFlow" --provider muapi
 python3 scripts/logo/generate.py --brand "TechFlow" --provider muapi --muapi-model nano-banana-pro
+python3 scripts/logo/generate.py --brand "TechFlow" --provider uberllm
 ```
 
 **IMPORTANT:** When scripts fail, try to fix them directly.
@@ -385,6 +386,9 @@ pip install google-genai pillow
 
 # Optional MuAPI provider (no extra Python package required)
 export MUAPI_API_KEY="your-key"
+
+# Optional UberLLM provider (no extra Python package required)
+export UBERLLM_API_KEY="your-key"  # https://uberllm.dev/signup
 ```
 
 MuAPI uses the asynchronous model endpoint and prediction result API. See the
@@ -395,6 +399,13 @@ for the current model-specific schemas. The logo generator supports both documen
 model slugs and sends their shared required `prompt` plus optional `aspect_ratio`
 fields; the Pro model also accepts an optional `resolution` field that this focused
 logo workflow leaves at the provider default.
+
+UberLLM uses the OpenAI-compatible `POST /v1/images/generations` route with
+`response_format: b64_json`, so the image comes back in the answer and nothing
+else is downloaded. The default model is `google/venice-nano-banana-2-lite`;
+`--uberllm-model` takes any image model id from
+`https://api.uberllm.dev/v1/models?type=image` (`GET /v1/models/<id>` shows the
+aspect ratios each model accepts). Live prices: https://uberllm.dev/models.
 
 > **Note for Windows:** Use `python` instead of `pip` where needed (e.g., `python -m pip install ...`).
 

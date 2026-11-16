@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-lighting/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.054Z
+  fetched_at: 2026-11-16T09:16:39.036Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,10 +53,10 @@ skill:
     ambient light on a Stage, multiple lights, and per-pixel normal-mapped
     sprites authored in SpriteIlluminator. Covers specular highlights via
     shininess, the ambient-cutout model, which parts need a GPU backend, and why
-    Light2d does not survive a Camera3d. Triggers on: Light2d, specular,
-    shininess, highlight, glint, lighting, ambientLight, ambientLightingColor,
-    normalMap, SpriteIlluminator, per-pixel lighting, drawLight, torch, glow,
-    darkness."
+    Light2d does not survive a Camera3d. Triggers on: Light2d, softness, soft
+    light, lightHeight, setRadii, specular, shininess, highlight, glint,
+    lighting, ambientLight, ambientLightingColor, normalMap, SpriteIlluminator,
+    per-pixel lighting, drawLight, torch, glow, darkness."
   folder_path: packages/melonjs/skills/melonjs-lighting
   extra_files: []
   pack_total_skills: 25
@@ -92,6 +93,11 @@ The constructor is `Light2d(x, y, radiusX, radiusY = radiusX, color = "#FFF",
 intensity = 0.7)`, and `pos` is the light's **centre** — its `anchorPoint` is
 `(0.5, 0.5)`, and `centerX` / `centerY` are overridden to return `pos` directly.
 Give `radiusY` a different value for a stretched, elliptical light.
+
+Resize a light with `light.setRadii(radiusX, radiusY)`, which resizes its
+bounds too. Writing `radiusX` alone changes nothing you can see: the glow, the
+hole in the darkness and the normal-map shading are all sized from the bounds,
+on every backend.
 
 A `Light2d` added to the world **registers itself with the stage's ambient
 overlay on activate**, so you add it like any other renderable and it takes part
@@ -166,6 +172,11 @@ const hero = new Sprite(x, y, {
 `normalMap` takes a loader key, or any image-like source (`HTMLImageElement`,
 canvas, `ImageBitmap`, a `Texture2d`). Assigning anything else — including an
 `HTMLVideoElement`, which would freeze on frame 0 — throws a `TypeError`.
+
+How grazing the light is comes from `light.lightHeight`, its height above the
+sprite plane in the same units as its radius (default `max(radiusX, radiusY) *
+0.075`). Lower it for light raking across the surface, which shows the relief
+off; raise it for flatter, more even shading.
 
 Normal maps are typically authored in **SpriteIlluminator**. The sidecar pattern
 above — one `_n` image beside each diffuse image — is the simplest setup, but an
@@ -271,6 +282,8 @@ See the `melonjs-3d` skill.
 | sprite not shaded by a light, only glowed over | no `normalMap` on the sprite, or the Canvas backend is active |
 | normal-mapped sprite is pure black where unlit | `Stage.ambientLightingColor` left at black |
 | the 33rd light shades nothing | `MAX_LIGHTS = 32` for the normal-map pipeline |
+| changing `radiusX` / `radiusY` does nothing | everything is sized from the bounds, which `setRadii()` updates and a bare field write does not |
+| normal-mapped relief looks flat under a light | `lightHeight` is high relative to the radius; lower it for a grazing light |
 | `TypeError` assigning `normalMap` | not an image-like value (a video element is rejected outright) |
 | lighting misaligned under a 3D camera | the 2D light pass is not projection-aware — use `Light3d` |
 

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -27,16 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +45,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-scenes-and-state/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.057Z
+  fetched_at: 2026-11-16T09:16:39.044Z
   truncated: false
 type: agent_skill
 skill:
@@ -55,10 +56,13 @@ skill:
     before state.change, the camera and world lifecycle per stage, and
     pause-aware timing. Triggers on: Tween, easing, fade out, flash, pulse,
     punch, shrink back, ease in, ease out, animate over time, countdown in
-    update, Stage, state, state.set, state.change, state.transition,
-    state.pause, onResetEvent, onDestroyEvent, onActivateEvent,
-    onDeactivateEvent, PLAY, MENU, LOADING, update loop, GAME_UPDATE, timer,
-    setTimeout, setInterval, Tween, freeze."
+    update, Stage, state, state.set, state.change, state.transition, pixelate,
+    Trigger transition, retry level, state.pause, pauseOnBlur, resumeOnFocus,
+    onResetEvent, onDestroyEvent, onActivateEvent, onDeactivateEvent, PLAY,
+    MENU, LOADING, update loop, GAME_UPDATE, timer, setTimeout, setInterval,
+    Tween, freeze, setFocusEvents, focusEvents, host or portal pause, YouTube
+    Playables onPause, save, save.add, setStorage, createCloudStorage, flush,
+    localStorage, cloud save, high score persistence."
   folder_path: packages/melonjs/skills/melonjs-scenes-and-state
   extra_files: []
   pack_total_skills: 25
@@ -124,6 +128,12 @@ was drawn unstepped, and showed the stage's background alone for one frame.
 registered for that id, and `state.set` throws if the second argument is not a
 `Stage` instance. Neither fails quietly.
 
+A change to the state that is **already current does nothing**: no
+`onDestroyEvent`, no `onResetEvent`, no transition. So a "Retry" that calls
+`state.change(state.PLAY)` from `PLAY` is ignored; reload the level with
+`level.reload()`, or go through another state (a game-over or `READY` screen)
+and back.
+
 ### Always leave `state.LOADING` — it is transitional
 
 `loader.preload()` switches to `state.LOADING` for you. Building your scene in
@@ -187,11 +197,21 @@ app.freeze(150);                             // brief hit-stop (proxies state.fr
 ```
 
 `state.transition` is global and sticky — once set it applies to every later
-`state.change`. The `"mask"` form needs its fourth argument, an `Ellipse` or
+`state.change`; `state.setTransition(id, false)` turns it off for changes
+into one state.
+The duration (1000 ms when omitted) is for each half: the cover, then the
+reveal. The `"mask"` form needs its fourth argument, an `Ellipse` or
 `Polygon`; without one it warns and falls back to a direct switch. The
 `"pixelate"` form breaks the screen up into blocks (its fourth argument is the
-largest block size in pixels). It is a shader effect, so on Canvas it does
-nothing and the state changes directly.
+largest block size in pixels; the color is not used). It is a shader effect,
+so on Canvas it does nothing and the state changes directly.
+
+A level change is not a state change, so `state.transition` does not apply to
+it. A Tiled `Trigger` that loads a level has a transition of its own, set on
+the trigger: `color` and `duration` (both needed, or the level loads with
+none), and `transition: "fade"` (the default) or `"mask"` with a `shape`.
+A `"mask"` without a `shape` fades instead, without a warning, and there is
+no pixelate form for a trigger. See `melonjs-tilemaps`.
 
 A `state.change` asked for while a transition covers the screen (Enter pressed
 twice on a menu, a timer firing as the player skips a screen) needs no guard:
@@ -214,7 +234,8 @@ this.isDirty = state.current().update(this.updateDelta) || this.isDirty;
 Only `Container.update` consults the pause — it reads `state.isPaused()` and
 skips every child that is not `updateWhenPaused`. So world children (entities,
 sprites, meshes, a `GLTFModel`) freeze correctly, while **the Stage subclass's
-own `update()` keeps running**.
+own `update()` keeps running**. (`event.GAME_UPDATE` is not emitted while
+paused, so logic hung off it stops with the world.)
 
 A game that keeps its logic in entities pauses for free and never notices. A
 game that drives the simulation from `Stage.update` — common for an endless
@@ -239,6 +260,42 @@ update(dt) {
 Worth knowing that `pauseOnBlur` (default `true`) fires on a window `blur`, not
 only on tab `visibilitychange` — so clicking another window on the same screen
 triggers it while the canvas is still fully visible.
+
+On focus, `resumeOnFocus` (default `true`) undoes only the pause the
+application applied on blur. A game the player paused from its own menu stays
+paused when the window comes back; before 20.9 it resumed underneath the menu.
+
+**Who reports the focus, and what the game does.** Two separate settings:
+
+| setting | decides | default |
+|---|---|---|
+| `device.setFocusEvents()` | **who** reports that the player switched away: the browser window (`blur`, `focus`, `visibilitychange` become `event.BLUR` / `event.FOCUS`), or nobody, leaving it to the game's host | the window |
+| `app.pauseOnBlur`, `stopOnBlur`, `resumeOnFocus` | **what** the game does on every `event.BLUR` / `event.FOCUS`, wherever it comes from | pause on blur, resume on focus |
+
+- **To keep the game running while the player is away**, turn the flags off
+  (`app.pauseOnBlur = false`). The window still reports; nothing pauses.
+- **To let a host decide when the game runs**, turn the window off and keep the
+  flags. Turning the flags off would not do it: they cannot tell the window's
+  `event.BLUR` from the host's, so the host's pause would do nothing either.
+
+**When a host decides, not the window.** A game embedded by a host that says
+when it runs, such as a web game portal's SDK (YouTube Playables forbids
+pausing on the page's visibility) or a native wrapper, stops the window
+reporting with `device.setFocusEvents(false)` and emits the engine's own
+events from the host's callbacks:
+
+```js
+device.setFocusEvents(false);   // the window's blur, focus and visibilitychange no longer count
+app.stopOnBlur = true;          // a pause stops drawing too; pauseOnBlur keeps drawing
+app.pauseOnBlur = false;
+ytgame.system.onPause(() => event.emit(event.BLUR));
+ytgame.system.onResume(() => event.emit(event.FOCUS));
+```
+
+Everything else is as with the window: `pauseOnBlur`, `stopOnBlur` and
+`resumeOnFocus` decide what happens, the sound effects are silenced and held
+keys released, and only a pause the engine applied is undone. It can be called
+before or after creating the application.
 
 ## The update loop
 
@@ -481,12 +538,99 @@ if (score > store.hiscore) { /* ... */ }
 Chained calls accumulate, so `save.add({ a: 0 }).add({ b: "" })` is typed with
 both.
 
+**No `localStorage`, no error.** Where there is none, or reading it throws (a
+sandboxed iframe such as an embedded playable page, cookies blocked), `save`
+keeps the keys in memory for the session: `add`, reads and writes all work,
+and nothing outlives the page. No `try` / `catch` is needed around it;
+`device.localStorage` is `false` when the keys will not be kept.
+
+**Somewhere other than `localStorage`.** Two calls, one for each kind of
+storage:
+
+| call | for |
+|---|---|
+| `save.setStorage(storage)` | keeping the keys in anything with `getItem`, `setItem` and `removeItem` (the `SaveStorage` type), called synchronously, as `localStorage` is |
+| `save.createCloudStorage({ data, write })` | making such a storage out of a platform's cloud save (YouTube Playables, Facebook Instant Games), which loads and saves asynchronously |
+
+`localStorage` stays the default, and `save.setStorage(localStorage)` goes back
+to it. A storage is handed the same items `localStorage` would hold:
+`me.save.<key>` with the key's value as JSON, and `me.save`, the list of keys.
+
+A platform's cloud save: load it before the game reads `save`, then hand it
+over. `data` is what the platform loaded (an object, its JSON, or nothing the
+first time); `write(items)` saves every item back:
+
+```js
+// YouTube Playables: the save is one string
+const cloud = save.createCloudStorage({
+    data: await ytgame.game.loadData(),
+    write: (items) => ytgame.game.saveData(JSON.stringify(items)),
+});
+save.setStorage(cloud);
+ytgame.system.onPause(() => cloud.flush());   // save at once when the game is paused
+
+// Facebook Instant Games: the save is a key of the player's data
+const { save: data } = await FBInstant.player.getDataAsync(["save"]);
+save.setStorage(save.createCloudStorage({
+    data,
+    write: (items) => FBInstant.player.setDataAsync({ save: items }),
+}));
+
+// either way, the game then just uses save
+const progress = save.add({ hiscore: 0 });     // the cloud value, or 0 the first time
+progress.hiscore = 4200;                       // saved to the cloud
+```
+
+What `createCloudStorage()` does for you:
+
+- It keeps every item in memory, so `save` never waits on the network.
+- The changes made together (a key and the list of keys) go in one `write()`.
+  Writes are made **one at a time**: what changes during a write goes in the
+  next one, with the latest values. A platform that refuses a save while one is
+  pending (Facebook's `PENDING_REQUEST`) never sees two.
+- A write that fails is logged, and everything is saved again with the next
+  change or `flush()`.
+- `flush()` saves now and resolves once everything is saved: call it on the
+  platform's pause or close.
+
+A storage of your own, such as a native wrapper's, only needs the three calls,
+synchronous:
+
+```js
+save.setStorage({
+    getItem: (key) => native.read(key) ?? null,
+    setItem: (key, value) => native.write(key, value),
+    removeItem: (key) => native.erase(key),
+});
+save.setStorage(localStorage);                 // and back to the default
+```
+
+When `setStorage()` switches storage:
+
+- What the new storage holds is read at once and wins. A key registered with
+  `add()` that it does not hold keeps its value and is written to it, so
+  `setStorage()` works before or after `add()`. A key that was only read from
+  the previous storage, never registered, is not carried over.
+- Nothing is copied back to the previous storage, nor removed from it.
+
 ## Symptom → cause
 
 | symptom | cause |
 |---|---|
 | scene builds once and is empty on return | content created in the constructor, not `onResetEvent` |
+| a cloud save behind `save.setStorage()` comes back with the defaults | the storage answered before its data had loaded; await the platform's load, then `save.createCloudStorage({ data, write })` |
+| the platform refuses saves (Facebook's `PENDING_REQUEST`), or the game floods it with them | a hand-written storage saving on every `setItem()`; `save.createCloudStorage()` saves the changes together, one write at a time |
+| progress made just before the player left is lost | the last save was still waiting; call the cloud storage's `flush()` on the platform's pause |
+| a saved key is gone after `save.setStorage()` | only keys registered with `save.add()` are carried over to the new storage; register it (before or after) |
+| the high score is back at its default on every visit, with no error | there is no `localStorage` there (a sandboxed iframe, cookies blocked), so `save` kept it in memory; `device.localStorage` is `false`, and `save.setStorage()` can keep it elsewhere |
+| the game pauses or goes quiet when the tab is hidden, on a portal that must decide that itself | the window still drives the focus: `device.setFocusEvents(false)`, then emit `event.BLUR` / `event.FOCUS` from the portal's callbacks |
+| a host's pause stops the game's updates but it keeps drawing | `pauseOnBlur` keeps drawing; set `stopOnBlur = true` and `pauseOnBlur = false` |
+| a host's pause does nothing, after turning `pauseOnBlur` off so the tab would not pause the game | the flags apply to every `event.BLUR`, the host's included; keep them, and stop the window reporting with `device.setFocusEvents(false)` |
 | `Undefined Stage for state 'N'` thrown | no `state.set` for that id first |
+| `state.change(state.PLAY)` from `PLAY` does nothing ("Retry" ignored) | a change to the current state is a no-op — `level.reload()`, or go through another state |
+| a level change through a `Trigger` ignores `state.transition` | it is a level change, not a state change: set `color` and `duration` (and `transition`) on the trigger |
+| the game stops updating for good after one very slow update, such as a heavy first frame (20.12 and 20.13) | the loop could no longer save enough time to step the world: update |
+| the game resumes under its own pause menu after a tab switch (before 20.9) | focus undid any pause; update, only the blur pause is undone |
 | a tween finishes in 1000 ms whatever you pass | `to()` takes `{ duration }`, not a number |
 | object frozen while its state updates | `update()` not returning `true` |
 | timers fire behind a pause menu | `window.setTimeout` instead of `timer.setTimeout` |

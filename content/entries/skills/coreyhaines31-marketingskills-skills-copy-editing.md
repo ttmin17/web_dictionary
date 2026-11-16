@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-copy-editing
 name: copy-editing
-tagline: When the user wants to edit, review, or improve existing marketing
-  copy, or refresh outdated content. Also use when the user mentions 'edit this
-  copy,
+tagline: When the user wants to edit, tighten, proofread, or refresh existing
+  copy, or asks whether to keep, cut, or change a line in it, without rewriting
+  fro
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -16,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,24 +45,17 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/copy-editing/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.917Z
+  fetched_at: 2026-11-16T09:15:48.049Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: copy-editing
-  description: When the user wants to edit, review, or improve existing marketing
-    copy, or refresh outdated content. Also use when the user mentions 'edit
-    this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,'
-    'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,'
-    'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this
-    content,' 'update this page,' 'this content is outdated,' or 'content
-    audit,' 'this sounds like AI,' 'AI slop,' 'de-slop this,' or 'make it sound
-    human.' Use this when the user already has copy and wants it improved or
-    refreshed rather than rewritten from scratch. Every edit removes AI tells
-    such as 'it's not X, it's Y' reveals, 'no X, no Y, no Z' lists, and
-    sentences that trail into extra comma clauses. A request to fix one line
-    gets a point edit that changes only that line. For writing new copy, see
-    copywriting.
+  description: "When the user wants to edit, tighten, proofread, or refresh
+    existing copy, or asks whether to keep, cut, or change a line in it, without
+    rewriting from scratch. Every edit removes AI tells: 'it's not X, it's Y'
+    reveals, 'no X, no Y, no Z' lists, and sentences that trail into extra comma
+    clauses. A request to fix one line gets a point edit to that line only. For
+    new copy, see copywriting."
   folder_path: skills/copy-editing
   extra_files:
     - evals/evals.json

@@ -13,29 +13,29 @@ tags:
   - ai-development
   - ai-development-tools
 status: active
-quality_percentile: 63
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: frankbria/ralph-claude-code
   official_vendor: false
   license: MIT
 signals:
-  stars: 9721
-  last_commit: 2026-11-07T02:33:08Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0
-  trending_score: 1
-  rank_current: 129
-  rank_delta: 5
+  stars: 9733
+  last_commit: 2026-11-14T02:33:08Z
+  stars_delta_7d: 12
+  stars_growth_pct: 0.1
+  trending_score: 12.01
+  rank_current: 115
+  rank_delta: 14
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9705
     - 9715
     - 9720
     - 9721
+    - 9733
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: frankbria/ralph-claude-code
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:46.164Z
+  fetched_at: 2026-11-16T09:16:11.751Z
   truncated: false
 type: agent_tool
 tool:

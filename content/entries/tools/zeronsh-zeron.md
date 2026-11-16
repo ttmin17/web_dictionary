@@ -14,29 +14,29 @@ tags:
   - coding-agent
   - cursor
 status: active
-quality_percentile: 51
+quality_percentile: 50
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zeronsh/zeron
   official_vendor: false
   license: MIT
 signals:
-  stars: 3482
-  last_commit: 2026-11-09T09:18:22Z
-  stars_delta_7d: 28
-  stars_growth_pct: 0.8
-  trending_score: 28.23
-  rank_current: 74
-  rank_delta: 1
+  stars: 3689
+  last_commit: 2026-11-16T06:51:37Z
+  stars_delta_7d: 207
+  stars_growth_pct: 5.9
+  trending_score: 219.31
+  rank_current: 32
+  rank_delta: 42
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3301
     - 3362
     - 3454
     - 3482
+    - 3689
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: zeronsh/zeron
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:24.113Z
+  fetched_at: 2026-11-16T09:16:50.307Z
   truncated: false
 type: agent_tool
 tool:

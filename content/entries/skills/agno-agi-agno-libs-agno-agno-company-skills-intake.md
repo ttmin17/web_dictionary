@@ -3,9 +3,8 @@ slug: agno-agi-agno-libs-agno-agno-company-skills-intake
 name: intake
 tagline: Inspect configured Sources and propose evidence-backed Backlog work.
 summary: Read the Product identified in the message and list its Sources,
-  Projects and existing Tasks. Every Task must belong to a Project. Reuse a
-  suitable Project; when none fits, call proposecompanyproject first and pass
-  th...
+  Projects and existing Tasks. Every new Task must belong to a Project. Reuse a
+  suitable Project; when none fits, call proposecompanyproject and create ev...
 categories:
   - coding-agents
 tags:
@@ -17,7 +16,7 @@ status: active
 quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: agno-agi/agno
@@ -25,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 43113
-  last_commit: 2026-11-09T08:28:49Z
-  stars_delta_7d: 40
-  stars_growth_pct: 0.1
-  trending_score: 40.04
+  stars: 43204
+  last_commit: 2026-11-16T09:03:01Z
+  stars_delta_7d: 91
+  stars_growth_pct: 0.2
+  trending_score: 91.19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 42805
     - 42891
     - 43073
     - 43113
+    - 43204
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +42,7 @@ readme_source:
   repo: agno-agi/agno
   path: libs/agno/agno/company/skills/intake/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:16.229Z
+  fetched_at: 2026-11-16T09:16:43.775Z
   truncated: false
 type: agent_skill
 skill:
@@ -61,8 +60,9 @@ skill:
 ---
 
 Read the Product identified in the message and list its Sources, Projects and existing Tasks.
-Every Task must belong to a Project. Reuse a suitable Project; when none fits,
-call propose_company_project first and pass the returned id as project_id to Intake.
+Every new Task must belong to a Project. Reuse a suitable Project; when none fits,
+call propose_company_project and create evidence-backed Backlog Tasks for review.
+Report that the Project needs human approval before its Tasks can be accepted or run.
 Use read_product_source to inspect evidence, then decide whether it supports
 actionable work. Reading or changing a file alone is not a reason for a Task.
 For each useful proposal, call intake_product_source with a concise title and

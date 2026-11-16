@@ -16,25 +16,26 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: cheaper-inference/OmniRoute
   official_vendor: false
   license: MIT
 signals:
-  stars: 85802
-  last_commit: 2026-11-09T09:22:58Z
-  stars_delta_7d: 1098
-  stars_growth_pct: 1.3
-  trending_score: 1112.23
-  rank_current: 8
+  stars: 87896
+  last_commit: 2026-11-16T08:17:33Z
+  stars_delta_7d: 2094
+  stars_growth_pct: 2.4
+  trending_score: 2145.1
+  rank_current: 7
   rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
     - 81233
     - 84704
     - 85802
+    - 87896
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: cheaper-inference/OmniRoute
   path: README.md
   branch: release/v3.8.54
-  fetched_at: 2026-11-09T09:27:22.517Z
+  fetched_at: 2026-11-16T09:15:40.036Z
   truncated: true
 type: agent_tool
 tool:
@@ -73,7 +74,7 @@ tool:
 
 **Created by [Diego Souza](https://github.com/diegosouzapw)**
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 381 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 381 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 394 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 394 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 22 routing strategies · $0 to start."/>
 
 </div>
 
@@ -103,7 +104,7 @@ tool:
 
 </h3>
 
-[![Stars](https://img.shields.io/github/stars/diegosouzapw/OmniRoute?style=social)](https://github.com/diegosouzapw/OmniRoute)
+[![Stars](https://img.shields.io/github/stars/diegosouzapw/OmniRoute?style=flat&logo=github&logoColor=white&label=Stars&color=e5ac82&labelColor=20211c)](https://github.com/diegosouzapw/OmniRoute)
 <a href="https://trendshift.io/repositories/23589" target="_blank"><img src="https://trendshift.io/api/badge/repositories/23589" alt="diegosouzapw%2FOmniRoute | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 [![Star History Rank](https://api.star-history.com/badge?repo=diegosouzapw/OmniRoute&theme=dark)](https://www.star-history.com/diegosouzapw/omniroute)
 [![olud.ai](https://olud.ai/badge.php?tool=diegosouzapw-omniroute)](https://olud.ai/project/diegosouzapw-omniroute.html)
@@ -112,14 +113,14 @@ tool:
 
 **👋 Follow the maintainer — get new providers, releases & tips first:**
 
-[![Follow Diego on LinkedIn](https://img.shields.io/badge/Follow_Diego_on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diegosouzapw/)
-[![Follow @diegosouzapw on GitHub](https://img.shields.io/github/followers/diegosouzapw?style=for-the-badge&logo=github&logoColor=white&label=Follow%20on%20GitHub&color=181717)](https://github.com/diegosouzapw)
+[![Follow Diego on LinkedIn](https://img.shields.io/badge/Follow_Diego_on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&color=e5ac82&labelColor=20211c)](https://www.linkedin.com/in/diegosouzapw/)
+[![Follow @diegosouzapw on GitHub](https://img.shields.io/github/followers/diegosouzapw?style=for-the-badge&logo=github&logoColor=white&label=Follow%20on%20GitHub&color=e5ac82&labelColor=20211c)](https://github.com/diegosouzapw)
 
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/U47eFqAXCn)
-[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/omnirouteOficial)
-[![WhatsApp Global](https://img.shields.io/badge/WhatsApp_Global-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)
-[![WhatsApp Brasil](https://img.shields.io/badge/WhatsApp_Brasil-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)
-[![Website](https://img.shields.io/badge/Website-omniroute.online-blue?logo=google-chrome&logoColor=white)](https://omniroute.online)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white&color=e5ac82&labelColor=20211c)](https://discord.gg/U47eFqAXCn)
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&color=e5ac82&labelColor=20211c)](https://t.me/omnirouteOficial)
+[![WhatsApp Global](https://img.shields.io/badge/WhatsApp_Global-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&color=e5ac82&labelColor=20211c)](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)
+[![WhatsApp Brasil](https://img.shields.io/badge/WhatsApp_Brasil-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&color=e5ac82&labelColor=20211c)](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)
+[![Website](https://img.shields.io/badge/Website-omniroute.online-blue?logo=google-chrome&logoColor=white&color=e5ac82&labelColor=20211c)](https://omniroute.online)
 
 **Questions, provider tips, roadmap & support → [Discord](https://discord.gg/U47eFqAXCn) · [Telegram](https://t.me/omnirouteOficial) · WhatsApp [🌍 Global](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4) / [🇧🇷 Brasil](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4) / [📢 Official Channel](https://whatsapp.com/channel/0029VbDwC7A3wtb5PN6a5t2R) / [Portal](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)**
 
@@ -131,7 +132,7 @@ tool:
 
 |                           |          v3.8.50          | **v3.8.51** |      `v3.8.54+`       |
 | ------------------------- | :-----------------------: | :---------: | :-------------------: |
-| 🌐 Providers              |            352            |   **358**   |          381          |
+| 🌐 Providers              |            352            |   **358**   |          394          |
 | 🧠 Unique chat model IDs  |           1320            |  **1374**   |         1491          |
 | 🖼️ Modality Bridge        | 🆕 vision + audio + video |      ✓      |           ✓           |
 | 📡 Radar free catalog     |         🆕 opt-in         |      ✓      |           ✓           |
@@ -172,7 +173,7 @@ tool:
   <tr>
     <td align="right"><b>⚙️ Features</b></td>
     <td align="center"><a href="#-combos--the-flagship">🎯 Combos</a></td>
-    <td align="center"><a href="#-381-ai-providers--153-catalog-marked-free">🌐 Providers</a></td>
+    <td align="center"><a href="#-394-ai-providers--153-catalog-marked-free">🌐 Providers</a></td>
     <td align="center"><a href="#-full-cli--a2a--mcp">🔌 CLI &amp; MCP</a></td>
   </tr>
   <tr>
@@ -308,7 +309,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 381 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 381 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 39 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 394 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 394 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 51 recurring/keyless free-forever providers · 39 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
 
 <br/>
 <br/>
@@ -323,7 +324,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 22 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
 
 </div>
 
@@ -414,7 +415,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/strategies-grid.svg" width="100%" alt="Animated examples for 18 of the 20 combo routing strategies — one tile per strategy: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized and quota-weighted are not animated; the table below describes all 20."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/strategies-grid.svg" width="100%" alt="Animated examples for 18 of the 22 combo routing strategies — one tile per strategy: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized, quota-weighted, expiry-first and jev are not animated; the table below describes all 22."/>
 
 > A **combo** is a chain of models OmniRoute routes across **automatically**. If quota runs out, a provider fails, or costs spike, the combo can move to the next eligible healthy model. 🛡️
 
@@ -438,9 +439,9 @@ No combo to create. Set your model to `auto` (or a variant) and OmniRoute builds
 
 ##
 
-### 🔀 Or build your own — 20 routing strategies
+### 🔀 Or build your own — 22 routing strategies
 
-All **20** strategies — mix & match per combo step:
+All **22** strategies — mix & match per combo step:
 
 <table>
   <tr>
@@ -548,6 +549,16 @@ All **20** strategies — mix & match per combo step:
     <td nowrap><code>pipeline</code></td>
     <td>Chain steps — each target's output feeds the next one 🔗</td>
   </tr>
+  <tr>
+    <td align="center">21</td>
+    <td nowrap><code>expiry-first</code></td>
+    <td>Spend the account whose quota would expire unused first — highest leftover with the nearest reset wins ⏳</td>
+  </tr>
+  <tr>
+    <td align="center">22</td>
+    <td nowrap><code>jev</code></td>
+    <td>Your ranked list; TypeSafe Jev picks which entries run per request, falling back to your order (opt-in flag) ⚖️</td>
+  </tr>
 </table>
 
 <sub>The Auto-Combo engine scores every candidate on **16 factors** (health, quota, cost, latency, task fit, quality, session availability…) — see [`docs/routing/AUTO-COMBO.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md).</sub>
@@ -568,7 +579,7 @@ All **20** strategies — mix & match per combo step:
 
 </div>
 
-<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 381 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
+<img src="https://raw.githubusercontent.com/cheaper-inference/OmniRoute/release/v3.8.54/docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 394 providers, 150+ free tiers built in, 22 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
 
 <sub>📊 Full methodology &amp; per-feature detail vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
@@ -638,44 +649,6 @@ any time.
 Radar is opt-in and GET-only. The OmniRoute client does not upload prompts, traffic, provider
 configuration, usage telemetry, or local announcement-dismiss state. Learn about eligibility and
 the current catalog at **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
-
-<br/>
-
-<div align="center">
-
-## ✨ What's New
-
-</div>
-
-> Recent highlights from **v3.8.20 → v3.8.54**. Full history in [`CHANGELOG.md`](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/CHANGELOG.md).
-
-- **⚖️ `quota-weighted` routing** — the 20th combo strategy skips exhausted accounts, then draws among the rest in proportion to leftover quota ÷ in-flight load, keeping existing conversations pinned. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md)
-- **🧰 Headless mode** — `omniroute serve --headless` (or `OMNIROUTE_HEADLESS=1`) runs only the `/v1/*` proxy engine, with the dashboard and dashboard-only subsystems off. → [Headless Mode](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/HEADLESS.md)
-- **🔎 Model discovery** — `/v1/models` filters by capability, context, kind and text, and `POST /v1/models/query` returns a short deterministic shortlist with the same per-key visibility. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
-- **🔑 Per-key routing control** — pin an API key to one model or combo with `forcedModel`, and add or remove a key's models and combos atomically (`/api/keys/{id}/access`). → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md) · [OpenAPI](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/openapi.yaml)
-- **🛡️ Finer PII controls** — per-type selection, up to 20 validated custom masking patterns and per-type detection counters; masking itself stays opt-in. → [Guardrails](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/security/GUARDRAILS.md)
-- **🌍 67 languages** — dashboard, docs mirrors and CLI, with `npm run i18n:add-locale` adding a language everywhere in one command. → [i18n Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/I18N.md)
-- **🎛️ OmniConductor** — inbound A2A delegation to your agent fleet, Conductor skills on the Agent Card, and a dashboard panel with Faro push-to-talk voice chat. → [A2A Server](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/frameworks/A2A-SERVER.md)
-- **🛂 Adaptive admission & overload protection** — heavyweight chat requests queue instead of 503ing, with atomic RPM rolling leases per connection. → [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Canonical `/v1/models` ordering** — one contiguous provider-grouped block per provider (combos pinned first), stable across every catalog source. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
-- **🗜️ Compression hardening** — default-on inflation guard, Caveman packs for DE / FR / JA + Chinese (wényán), RTK filters for Gradle & .NET. → [Compression](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Honest flat-rate cost** — subscription / coding-plan providers read **$0** in cost analytics; budget, quota & routing keep estimating. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share routing** — split a shared account's quota fairly across pooled keys, work-conserving so idle slices are lent out. → [Resilience Guide](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 One-command CLI/agent setup** — 15 registered `setup-*` commands; `omniroute run` launches 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` supports 11 targets with an interactive provider+model picker and per-context favorites. → [CLI Integrations](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Remote mode** — drive a remote OmniRoute with scoped tokens (`connect` / `contexts` / `tokens`) + an `antigravity` OAuth helper for VPS installs. → [Remote Mode](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/guides/REMOTE-MODE.md)
-- **🧭 Smarter auto-routing** — `auto/<category>:<tier>` combos, **Fusion** (model panel + judge), task-aware routing, per-request model / mode / USD-budget overrides. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md)
-- **🗜️ Pluggable compression** — 12 composable engines + Compression Studios: LLMLingua-2, two-tier Ultra, omniglyph, per-step fidelity gate, GCF v3.2, drag-reorder editor. → [Compression](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Transparent MITM decrypt (TPROXY)** — capture CLIs that ignore proxy env vars, with a per-SNI CA + trust-store installer. → [MITM/TPROXY](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Cost telemetry everywhere** — `X-OmniRoute-*` cost/usage headers on every endpoint, cache-HIT savings header, per-key USD spend quotas. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
-- **🧠 Memory you control** — off by default, opt-in int8 vector quantization + typed decay, per-request `x-omniroute-no-memory`. → [Memory](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/frameworks/MEMORY.md)
-- **🛡️ Security** — prompt-injection guard on every LLM route (red-team suite), opt-in credential-masking guardrail (redacts leaked API keys/secrets in both directions), free DuckDuckGo last-resort web search, and an optional OIDC login gate for the dashboard (password login always stays available). → [Guardrails](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/security/GUARDRAILS.md)
-- **🖼️ New endpoints** — `/v1/ocr` (Mistral OCR) and `/v1/audio/translations` (Whisper-style) round out the media surface. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
-- **🎨 Image / video / audio generation** — one API for media: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, and speech providers such as ElevenLabs. → [API Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/API_REFERENCE.md)
-- **🌍 Deployment & ops** — reverse-proxy `basePath`, browser-language auto-detect, per-key device tracking, root-less MITM trust, zh-TW localization. → [Environment](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/ENVIRONMENT.md)
-- **🤝 More providers & agents** — cloud agents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) with browser + OAuth login, Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi official partnership (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… and a refreshed **381-provider catalog**. → [Providers](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Routing transparency** — every response carries an `X-OmniRoute-Decision` header naming the strategy/provider/latency that served it, a new `cache-optimized` combo strategy + Auto-Combo `cacheAffinity` factor route repeat requests back to the connection holding the cached prefix, and a read-only `/v1/auto-combo/{channel}/candidates` endpoint exposes an `auto/*` channel's live candidate pool. → [Auto-Combo](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/routing/AUTO-COMBO.md)
-- **⚡ Local performance & infra** — one-click local Redis, Cloudflare Workers / Deno Deploy relay deployers, Bifrost & Mux as supervised embedded services. → [Embedded Services](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Also in the box** — plugin framework + marketplace, Omni/Agent/GitHub skills frameworks, Obsidian vault integration (22 MCP tools), OpenAI-compatible Batch & Files APIs, semantic response cache, gamification with leaderboards, ACP agent discovery (15 built-in agents), scheduled log export to BigQuery, `auto/chaos` parallel multi-model fan-out, a Telegram bot bridge, an in-app version manager and LMArena-ELO free-provider rankings. → [Docs](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.54/docs/README.md)
 
 <br/>
 

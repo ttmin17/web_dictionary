@@ -3,8 +3,8 @@ slug: atomicstrata-llm-wiki-compiler
 name: llm-wiki-compiler
 tagline: The knowledge compiler. Raw sources in, interlinked wiki out. Inspired
   by Karpathy's LLM Wiki pattern.
-summary: "1.5.0 is the stable release on npm latest: npm install --global
-  llm-wiki-compiler."
+summary: These changes are merged for the next release. The published npm latest
+  release remains 1.5.0.
 categories:
   - coding-agents
 tags:
@@ -13,29 +13,29 @@ tags:
   - cli
   - compiler
 status: active
-quality_percentile: 59
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: atomicstrata/llm-wiki-compiler
   official_vendor: false
   license: MIT
 signals:
-  stars: 2246
-  last_commit: 2026-10-30T23:58:21Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.3
-  trending_score: 7.02
-  rank_current: 74
-  rank_delta: -7
+  stars: 2262
+  last_commit: 2026-11-14T09:14:20Z
+  stars_delta_7d: 16
+  stars_growth_pct: 0.7
+  trending_score: 16.11
+  rank_current: 71
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2197
     - 2215
     - 2239
     - 2246
+    - 2262
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: atomicstrata/llm-wiki-compiler
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.687Z
+  fetched_at: 2026-11-16T09:15:16.586Z
   truncated: false
 type: mcp_server
 launch:
@@ -58,6 +58,13 @@ launch:
 ---
 
 # llmwiki
+## On main — Leaner startup (unreleased)
+
+These changes are merged for the next release. The published npm `latest` release remains `1.5.0`.
+
+- **Less work at startup.** The CLI loads command implementations only when needed, profile schema validation is compiled ahead of time, and lock-owner checks read kernel process records where supported instead of spawning `ps`.
+- **Bun for contributors, Node for users.** Repository builds and tests use Bun and `bun.lock`; the installed CLI and SDK still run on Node.js 24 or newer. No wiki migration is needed.
+
 ## New in 1.5 — Wiki behavior separated from storage.
 
 `1.5.0` is the stable release on npm `latest`: `npm install --global llm-wiki-compiler`.
@@ -139,7 +146,7 @@ Do not use llmwiki as a general static-site generator, a heavy ontology database
 - **SDK.** `createWiki({ root })` drives ingest, compile, query, context, status, export, eval, and OKF import/export from TypeScript without shelling out.
 - **Open Knowledge Format exchange.** Export and import OKF bundles for portable, markdown-native knowledge exchange. External OKF imports are staged through the review queue by default; trusted bundles can be written live explicitly.
 - **Other portable exports.** Export JSON, JSON-LD, GraphML, Marp slides, and `llms.txt` for downstream systems.
-- **Provider portable.** Anthropic, Claude Agent SDK local login, OpenAI Codex CLI local login, OpenAI-compatible servers, Ollama, GitHub Copilot, Atlas Cloud, OrcaRouter, Converse-compatible gateways, and local OpenAI-compatible runtimes.
+- **Provider portable.** Anthropic, Claude Agent SDK local login, OpenAI Codex CLI local login, OpenAI-compatible servers, Ollama, GitHub Copilot, Atlas Cloud, OrcaRouter, Runcrate, Converse-compatible gateways, and local OpenAI-compatible runtimes.
 
 ## Configurable Lifecycle Profiles (CLP)
 
@@ -395,6 +402,7 @@ Provider selection is environment-driven:
 | GitHub Copilot | `LLMWIKI_PROVIDER=copilot`, `GITHUB_TOKEN=$(gh auth token)` |
 | Atlas Cloud | `LLMWIKI_PROVIDER=atlascloud`, `ATLASCLOUD_API_KEY` |
 | OrcaRouter | `LLMWIKI_PROVIDER=orcarouter`, `ORCAROUTER_API_KEY` |
+| Runcrate (on main) | `LLMWIKI_PROVIDER=runcrate`, `RUNCRATE_API_KEY`; separate embedding provider required when enabled, or set `LLMWIKI_EMBEDDINGS=off` |
 
 See [`docs/configuration/providers.mdx`](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/docs/configuration/providers.mdx) and [`docs/configuration/environment-variables.mdx`](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/docs/configuration/environment-variables.mdx).
 
@@ -525,14 +533,20 @@ Use them independently or together. The [`@atomicmemory/llmwiki`](https://github
 
 Contributions are welcome. If llmwiki is missing something you need, open an issue or PR and describe the workflow you are trying to support - need-driven improvements are often the best ones. If you want to contribute more generally, roadmap items are a good place to start. For larger changes to core compile, review, import/export, or retrieval semantics, please start with an issue or design discussion so we can align on the contract first.
 
-Before committing code changes, run:
+For repository development, use the Bun version pinned in `package.json` (currently `1.4.2`). Dependencies are locked in `bun.lock`, and tests use `bun:test`. Node.js 24 or newer is still required for installed-package checks.
+
+Install dependencies and run the code-change checks from the repository root:
 
 ```bash
-npx tsc --noEmit
-npm run build
-npm test
-npm run fallow:ci
+bun install --frozen-lockfile
+bunx tsc --noEmit
+bun run typecheck:tests
+bun run build
+bun run test
+bun run fallow:ci
 ```
+
+For packaging or export changes, also run `bun run test:pack`, which checks the packed packages in fresh installed consumers.
 
 See [`CONTRIBUTING.md`](https://github.com/atomicstrata/llm-wiki-compiler/blob/main/CONTRIBUTING.md).
 

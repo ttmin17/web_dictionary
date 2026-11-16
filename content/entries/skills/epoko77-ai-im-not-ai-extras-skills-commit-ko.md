@@ -1,8 +1,13 @@
 ---
 slug: epoko77-ai-im-not-ai-extras-skills-commit-ko
 name: commit-ko
-tagline: Agent skill from epoko77-ai/im-not-ai
-summary: Agent skill from epoko77-ai/im-not-ai
+tagline: AI(Claude 등)가 제안한 한글 커밋 메시지의 사무적·번역투 어휘("~을 수행함", "~을 진행함", "~적 개선을
+  실시함" 등)를 실제 개발자가 쓰는 자연스러운 한국어 커밋 메시지로 다듬는 스킬. humanize-korean과 달리 산문 문단이 아니라
+  1~2줄짜
+summary: "- 커밋 메시지 초안(subject 1줄 + 선택적 body). 여러 개면 각각 처리. - Conventional
+  Commits 형식(type(scope): subject, 예: fix(auth): 로그인 실패 시 재시도 로직을 수행함)이면
+  type/scope 접두사는 그대로 두고, 콜론 뒤 한국어 부분만 윤문 대상으로 삼는다. - (선택) 사용자가 git diff나 변경 요약을
+  함께..."
 categories:
   - other
 tags:
@@ -11,10 +16,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 52
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-10-26T07:46:02.721Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: epoko77-ai/im-not-ai
@@ -22,16 +27,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6256
-  last_commit: 2026-10-12T09:57:11Z
-  stars_delta_7d: 209
-  stars_growth_pct: 3.5
-  trending_score: 216.22
-  velocity_source: snapshot_delta
+  stars: 6592
+  last_commit: 2026-11-16T08:04:11Z
+  stars_delta_7d: 224
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
-    - 5971
-    - 6047
     - 6256
+    - 6592
 language: en
 needs_keys: false
 prerequisites: []
@@ -39,12 +43,17 @@ readme_source:
   repo: epoko77-ai/im-not-ai
   path: extras/skills/commit-ko/SKILL.md
   branch: main
-  fetched_at: 2026-10-26T07:44:49.222Z
+  fetched_at: 2026-11-16T09:16:34.696Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: commit-ko
-  description: Agent skill from epoko77-ai/im-not-ai
+  description: >
+    AI(Claude 등)가 제안한 한글 커밋 메시지의 사무적·번역투 어휘("~을 수행함", "~을 진행함", "~적 개선을 실시함" 등)를
+    실제 개발자가 쓰는 자연스러운 한국어 커밋 메시지로 다듬는 스킬. humanize-korean과 달리 산문 문단이 아니라 1~2줄짜리
+    커밋 메시지 register에 특화되어 진단·청킹 없이 단일 콜로 즉시 처리한다. 트리거 — "커밋 메시지 자연스럽게", "커밋 메시지
+    다듬어줘", "이 커밋 메시지 AI 티 나", "commit message 한국어로 자연스럽게", "커밋 메시지 어색해", "커밋 메시지
+    사람처럼".
   folder_path: extras/skills/commit-ko
   extra_files:
     - references/commit-lexicon.md

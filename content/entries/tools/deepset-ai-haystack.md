@@ -16,26 +16,26 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: deepset-ai/haystack
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 26945
-  last_commit: 2026-11-09T09:02:05Z
-  stars_delta_7d: 15
-  stars_growth_pct: 0.1
-  trending_score: 15.01
-  rank_current: 97
-  rank_delta: -21
+  stars: 27014
+  last_commit: 2026-11-16T07:26:28Z
+  stars_delta_7d: 69
+  stars_growth_pct: 0.3
+  trending_score: 69.18
+  rank_current: 71
+  rank_delta: 26
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 26773
     - 26844
     - 26930
     - 26945
+    - 27014
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: deepset-ai/haystack
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:17.039Z
+  fetched_at: 2026-11-16T09:16:43.931Z
   truncated: false
 type: agent_tool
 tool:

@@ -17,7 +17,7 @@ status: active
 quality_percentile: 92
 selection_reason: quality_percentile
 first_seen: 2026-01-05T02:59:30
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: decolua/9router
@@ -25,19 +25,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 32162
-  last_commit: 2026-11-09T01:36:54Z
-  stars_delta_7d: 191
-  stars_growth_pct: 0.6
-  trending_score: 192.14
-  rank_current: 50
-  rank_delta: -6
+  stars: 32497
+  last_commit: 2026-11-16T02:39:05Z
+  stars_delta_7d: 335
+  stars_growth_pct: 1
+  trending_score: 338.49
+  rank_current: 54
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 31045
     - 31424
     - 31971
     - 32162
+    - 32497
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: decolua/9router
   path: skills/9router-chat/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:27:31.482Z
+  fetched_at: 2026-11-16T09:15:56.475Z
   truncated: false
 type: agent_skill
 skill:

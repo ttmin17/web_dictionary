@@ -14,26 +14,26 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Yeachan-Heo/oh-my-claudecode
   official_vendor: false
   license: MIT
 signals:
-  stars: 40704
-  last_commit: 2026-11-09T09:20:03Z
-  stars_delta_7d: 99
-  stars_growth_pct: 0.2
-  trending_score: 99.24
-  rank_current: 37
-  rank_delta: -4
+  stars: 40853
+  last_commit: 2026-11-16T02:23:56Z
+  stars_delta_7d: 149
+  stars_growth_pct: 0.4
+  trending_score: 149.55
+  rank_current: 43
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 40055
     - 40270
     - 40605
     - 40704
+    - 40853
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Yeachan-Heo/oh-my-claudecode
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:26.366Z
+  fetched_at: 2026-11-16T09:15:50.379Z
   truncated: false
 type: agent_tool
 tool:

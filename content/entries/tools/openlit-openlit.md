@@ -12,29 +12,29 @@ tags:
   - ai-engineering
   - ai-observability
 status: active
-quality_percentile: 61
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: openlit/openlit
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2970
-  last_commit: 2026-11-07T21:04:23Z
-  stars_delta_7d: 49
-  stars_growth_pct: 1.7
-  trending_score: 49.82
-  rank_current: 55
-  rank_delta: 42
+  stars: 3083
+  last_commit: 2026-11-15T22:20:58Z
+  stars_delta_7d: 113
+  stars_growth_pct: 3.8
+  trending_score: 117.3
+  rank_current: 56
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2858
     - 2883
     - 2921
     - 2970
+    - 3083
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: openlit/openlit
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:24.071Z
+  fetched_at: 2026-11-16T09:16:50.253Z
   truncated: false
 type: agent_tool
 tool:

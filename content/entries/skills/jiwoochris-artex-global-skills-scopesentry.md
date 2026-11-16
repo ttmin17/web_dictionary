@@ -11,10 +11,10 @@ tags:
   - blue-team
   - cybersecurity
 status: active
-quality_percentile: 90
+quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: jiwoochris/artex-global
@@ -22,15 +22,16 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 2934
-  last_commit: 2026-10-14T07:52:45Z
-  stars_delta_7d: 188
-  stars_growth_pct: 6.8
-  trending_score: 200.87
+  stars: 3546
+  last_commit: 2026-11-09T16:14:32Z
+  stars_delta_7d: 612
+  stars_growth_pct: 20.9
+  trending_score: 739.66
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2746
     - 2934
+    - 3546
 language: zh
 needs_keys: false
 prerequisites: []
@@ -38,7 +39,7 @@ readme_source:
   repo: jiwoochris/artex-global
   path: skills/scopesentry/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:31.671Z
+  fetched_at: 2026-11-16T09:16:59.680Z
   truncated: false
 type: agent_skill
 skill:

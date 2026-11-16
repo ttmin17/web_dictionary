@@ -15,10 +15,10 @@ tags:
   - long-video-understanding
   - model-context-protocol
 status: active
-quality_percentile: 78
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1971
-  last_commit: 2026-11-09T07:44:04Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.3
-  trending_score: 5.01
-  rank_current: 126
-  rank_delta: -4
+  stars: 1986
+  last_commit: 2026-11-16T09:06:28Z
+  stars_delta_7d: 15
+  stars_growth_pct: 0.8
+  trending_score: 15.11
+  rank_current: 123
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1933
     - 1947
     - 1966
     - 1971
+    - 1986
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: NVIDIA-AI-Blueprints/video-search-and-summarization
   path: skills/benchmarking/benchmark-video-search/SKILL.md
   branch: develop
-  fetched_at: 2026-11-09T09:27:12.539Z
+  fetched_at: 2026-11-16T09:15:33.556Z
   truncated: false
 type: agent_skill
 skill:

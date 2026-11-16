@@ -19,7 +19,7 @@ status: active
 quality_percentile: 97
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: google/agents-cli
@@ -27,17 +27,17 @@ source:
   official_vendor: true
   license: Apache-2.0
 signals:
-  stars: 6325
-  last_commit: 2026-11-04T17:44:59Z
-  stars_delta_7d: 21
-  stars_growth_pct: 0.3
-  trending_score: 21.07
+  stars: 6359
+  last_commit: 2026-11-12T15:04:58Z
+  stars_delta_7d: 34
+  stars_growth_pct: 0.5
+  trending_score: 34.18
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6099
     - 6176
     - 6304
     - 6325
+    - 6359
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: google/agents-cli
   path: skills/google-agents-cli-deploy/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:22.291Z
+  fetched_at: 2026-11-16T09:16:52.195Z
   truncated: false
 type: agent_skill
 skill:
@@ -167,7 +167,11 @@ agents-cli infra single-project --apply
 | `--service-account` | Service account email for the deployed agent | All |
 | `--service-name` | Override the deployed service name (Cloud Run service or Agent Runtime display name); defaults to the project name. If you override it, consider updating your Terraform and CI (if present) — they name resources from the project name. Not supported for GKE, whose names are fully owned by Terraform. | Agent Runtime, Cloud Run |
 | `--secrets` / `--update-secrets` | Comma-separated `ENV=SECRET` or `ENV=SECRET:VERSION` pairs. Cloud Run adds them to the service's existing secrets; Agent Runtime replaces the agent's existing secrets with the ones you pass. | Agent Runtime, Cloud Run |
-| `--env-vars` / `--update-env-vars` | Comma-separated `KEY=VALUE` environment variables | All |
+| `--remove-secrets` | Comma-separated secret `KEY`s to remove. Keys that don't exist are ignored. A key can't also be in `--secrets`. Cannot be combined with `--clear-secrets`. | Agent Runtime, Cloud Run |
+| `--clear-secrets` | Remove all secrets, including ones set outside agents-cli (e.g. Terraform's `DB_PASS` for Cloud SQL sessions) and, on Cloud Run, secrets mounted as volumes. Combine with `--secrets` to replace the secret set; the clear is applied first. Cannot be combined with `--remove-secrets`. | Agent Runtime, Cloud Run |
+| `--env-vars` / `--update-env-vars` | Comma-separated `KEY=VALUE` environment variables to add or update, applied on top of the project `.env` (which every deploy propagates). On GKE, a deploy without `--image` first resets the env vars to Terraform's, so values passed on earlier deploys are dropped; keep lasting ones in `.env` or Terraform. | All |
+| `--remove-env-vars` | Comma-separated env var `KEY`s to remove. Keys that don't exist are ignored. A key can't also be in `--env-vars` or the project `.env` (delete it from `.env` instead). Defaults agents-cli sets on every deploy (e.g. `AGENT_VERSION`, `APP_URL`) are kept. Cannot be combined with `--clear-env-vars`. | Agent Runtime, Cloud Run |
+| `--clear-env-vars` | Remove all env vars, including ones set outside agents-cli (e.g. Terraform's `LOGS_BUCKET_NAME` and `OTEL_*`); secrets are kept. The project `.env`, `--env-vars` and agents-cli's defaults are applied after the clear. Cannot be combined with `--remove-env-vars`. Not on GKE, where Terraform manages the deployment's env vars. | Agent Runtime, Cloud Run |
 | `--agent-identity` | Enable [Agent Identity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/agent-identity) | Agent Runtime, Cloud Run |
 | `--no-agent-identity` | Disable Agent Identity. Passing neither `--agent-identity` nor `--no-agent-identity` follows the project's identity default in `agents-cli-manifest.yaml` when the agent is created, or keeps the current identity type on later deploys. On Cloud Run, Agent Identity can't be turned off: for a service that already has it, the deploy stops and asks you to delete the service and redeploy. | Agent Runtime, Cloud Run |
 | `--network-attachment` | Network attachment resource name for [PSC interface](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/private-service-connect-interface) (enables private VPC connectivity) | Agent Runtime |

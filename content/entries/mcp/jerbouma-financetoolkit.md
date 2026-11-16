@@ -13,29 +13,29 @@ tags:
   - factor-analysis
   - finance
 status: active
-quality_percentile: 50
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2019-04-08T11:44:25
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: JerBouma/FinanceToolkit
   official_vendor: false
   license: MIT
 signals:
-  stars: 5512
-  last_commit: 2026-11-09T07:11:02Z
-  stars_delta_7d: 16
-  stars_growth_pct: 0.3
-  trending_score: 16.05
-  rank_current: 52
-  rank_delta: 8
+  stars: 5523
+  last_commit: 2026-11-16T07:10:17Z
+  stars_delta_7d: 11
+  stars_growth_pct: 0.2
+  trending_score: 11.02
+  rank_current: 90
+  rank_delta: -38
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5439
     - 5462
     - 5496
     - 5512
+    - 5523
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: JerBouma/FinanceToolkit
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.516Z
+  fetched_at: 2026-11-16T09:15:08.286Z
   truncated: true
 type: mcp_server
 launch:
@@ -505,7 +505,7 @@ The three US funds and SMH largely hold the same companies, with SOXX and SMH sh
 
 ## Building a Diversified Portfolio
 
-A fund spreads the risk over the sector, but the sector still moves as one. The [portfolio](https://www.jeroenbouma.com/projects/financetoolkit/docs/portfolio-optimization) module builds portfolios from the tickers of any Toolkit: minimum variance, maximum Sharpe ratio, mean-variance, risk parity, Hierarchical Risk Parity, minimum CVaR, Black-Litterman, maximum diversification, minimum tracking error and growth optimal (Kelly) weights, the efficient frontier, risk contributions, stress tests and attribution. Below the semiconductor fund is combined with health care (XLV), energy (XLE), long-term Treasuries (TLT) and gold (GLD):
+A fund spreads the risk over the sector, but the sector still moves as one. The [portfolio](https://www.jeroenbouma.com/projects/financetoolkit/docs/portfolio-optimization) module builds portfolios from the tickers of any Toolkit: minimum variance, maximum Sharpe ratio, mean-variance, risk parity, Hierarchical Risk Parity, Hierarchical Equal Risk Contribution, Nested Clustered Optimization, minimum CVaR, minimum drawdown, maximum Omega and CVaR ratio, Black-Litterman, maximum diversification, minimum tracking error and growth optimal (Kelly) weights, the efficient frontier, risk contributions, stress tests and attribution. Below the semiconductor fund is combined with health care (XLV), energy (XLE), long-term Treasuries (TLT) and gold (GLD):
 
 ```python
 # Initialize the Toolkit for funds across sectors and asset classes from 2021 to 2025
@@ -597,7 +597,7 @@ https://github.com/user-attachments/assets/96ad5288-d83d-4497-a345-1841c48c29d5
 
 ### Remote server
 
-Connect directly to the hosted server at `https://financetoolkit.jeroenbouma.com/mcp`. Nothing needs to be installed locally. On first connection your client opens an OAuth consent page asking for your FMP API key; enter it once and the server handles authentication from there.
+Connect directly to the hosted server at `https://financetoolkit.jeroenbouma.com/mcp`. Nothing needs to be installed locally. On first connection your client opens an OAuth consent page asking for your FMP API key (and, optionally, a FRED API key for the corporate bond series); enter it once and the server handles authentication from there.
 
 | Client | Steps |
 |:---|:---|
@@ -605,8 +605,8 @@ Connect directly to the hosted server at `https://financetoolkit.jeroenbouma.com
 | **Claude.ai** | Customize → Connectors → Add custom connector → paste the URL |
 | **Claude Code** | `claude mcp add --transport http finance-toolkit https://financetoolkit.jeroenbouma.com/mcp` |
 | **VS Code** | Command Palette → MCP: Add Server → HTTP → paste the URL |
-| **Cursor** | Settings → Features → MCP Servers → Add new → http → paste the URL |
-| **Windsurf** | Settings → MCP Servers → Add Server → Remote/HTTP → paste the URL |
+| **Cursor** | Cursor Settings → Tools & MCP → New MCP Server → add `"finance-toolkit": { "url": "<URL>" }` |
+| **Windsurf** | Cascade panel → MCPs → Configure → add `"finance-toolkit": { "serverUrl": "<URL>" }` and refresh |
 
 ### Local installation
 
@@ -757,6 +757,8 @@ Alternatively, if your company's root certificate is already installed in your o
 
 If none of this is possible, you can accept the risk and allow requests with an API key to be sent without verification by setting `FINANCETOOLKIT_ALLOW_UNVERIFIED_SSL=1` in the same way as above. Only do so on a network you trust: the connection is then encrypted to whoever answers it, which may not be the website you think you are talking to, and your API key is readable to them.
 
+To go the other way and never send a request without verification, not even one without an API key, set `FINANCETOOLKIT_ALLOW_UNVERIFIED_SSL=0`. A hosted MCP server (the `sse` or `streamable-http` transport) does this by default, since the data it retrieves reaches every user through its cache.
+
 > **Are you part of FinancialModelingPrep?**
 
 *No, I am not*. I've merely picked them as the primary data provider given that they have a generous free tier and fair pricing compared to other providers. Therefore, any questions related to the data should go through [their contact form](https://site.financialmodelingprep.com/contact). When it comes to any type of ratios, performance metrics, risk metrics, technical indicators or economic indicators, feel free to reach out to me as this is my own work.
@@ -786,6 +788,7 @@ The Finance Toolkit has been mentioned in various blogposts, research papers, ne
 - [Fundamental Analysis using Muli-Agent System and Agentic RAG](https://connect.cfauk.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=3ae6f3fc-593a-04ec-c3b8-be5643cab479&forceDialog=0)
 
 **Newsletters & Social Media**
+- [Stack to Street podcast: Your AI Shouldn't Guess the Formula](https://www.stacktostreet.com/episodes/financetoolkit/)
 - [LinkedIn #1](https://www.linkedin.com/posts/jerry-liu-64390071_this-is-an-extremely-comprehensive-100-activity-7340897396471623681-plI4?utm_source=share&utm_medium=member_desktop&rcm=ACoAABhYAQUBkaNnlBjz_IYBRfaurU68rfoZPE8) and [Linkedin #2](https://www.linkedin.com/posts/pyquant-news_getting-clean-fundamental-data-used-to-be-activity-7314273012927651841-KXP3?utm_source=share&utm_medium=member_desktop&rcm=ACoAABhYAQUBkaNnlBjz_IYBRfaurU68rfoZPE8)
 - [Facebook](https://www.facebook.com/groups/techtitansgroup/posts/1515790739748239/)
 - [Quant Seeker](https://www.quantseeker.com/p/weekly-research-recap)

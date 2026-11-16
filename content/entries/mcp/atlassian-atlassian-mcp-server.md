@@ -15,29 +15,29 @@ tags:
   - bitbucket
   - chatgpt
 status: active
-quality_percentile: 59
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: atlassian/atlassian-mcp-server
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1151
-  last_commit: 2026-11-07T01:08:43Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.3
-  trending_score: 3.01
-  rank_current: 95
-  rank_delta: -30
+  stars: 1166
+  last_commit: 2026-11-14T00:09:44Z
+  stars_delta_7d: 15
+  stars_growth_pct: 1.3
+  trending_score: 15.2
+  rank_current: 75
+  rank_delta: 20
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1106
     - 1121
     - 1148
     - 1151
+    - 1166
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: atlassian/atlassian-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:12.796Z
+  fetched_at: 2026-11-16T09:15:33.761Z
   truncated: false
 type: mcp_server
 launch:
@@ -234,7 +234,8 @@ This repository publishes the same MCP server and skills in several package form
 | [Agent Plugins v1](https://agent-plugins.org/) | [`plugin.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/plugin.json) and [`mcp.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/mcp.json) | [`skills/`](https://github.com/atlassian/atlassian-mcp-server/blob/main/skills/) |
 | Claude Code plugin | [`.claude-plugin/plugin.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/.claude-plugin/plugin.json) and [`.claude-plugin/marketplace.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/.claude-plugin/marketplace.json) | [`.mcp.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/.mcp.json) and [`skills/`](https://github.com/atlassian/atlassian-mcp-server/blob/main/skills/) |
 | Cursor plugin | [`.cursor-plugin/plugin.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/.cursor-plugin/plugin.json) | [`.mcp.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/.mcp.json) and [`skills/`](https://github.com/atlassian/atlassian-mcp-server/blob/main/skills/) |
-| Gemini extension | [`gemini-extension.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/gemini-extension.json) | MCP server configuration embedded in the manifest |
+| Gemini Agent plugin | [`.gemini-plugin/plugin.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/.gemini-plugin/plugin.json) | [`.mcp.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/.mcp.json) and the listed [`skills/`](https://github.com/atlassian/atlassian-mcp-server/blob/main/skills/) |
+| Gemini CLI extension | [`gemini-extension.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/gemini-extension.json) | MCP server configuration embedded in the manifest |
 | MCP Registry | [`server.json`](https://github.com/atlassian/atlassian-mcp-server/blob/main/server.json) | Remote server metadata |
 
 The skills in [`skills/`](https://github.com/atlassian/atlassian-mcp-server/blob/main/skills/) target the `/v2/mcp` endpoint and are what every packaged plugin

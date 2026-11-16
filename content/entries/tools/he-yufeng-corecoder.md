@@ -3,7 +3,7 @@ slug: he-yufeng-corecoder
 name: CoreCoder
 tagline: Minimal AI coding agent (~1,000 lines of Python) inspired by Claude
   Code. Works with any LLM. Think NanoGPT for coding agents. Formerly NanoCoder.
-summary: "The nanoGPT of coding agents. A 1.4k-line engine inside 2,908 readable
+summary: "The nanoGPT of coding agents. A 1.4k-line engine inside 3,307 readable
   lines of pure Python: understand how a coding agent actually works, then fork
   your own."
 categories:
@@ -14,29 +14,29 @@ tags:
   - cli
   - coding-agent
 status: active
-quality_percentile: 80
+quality_percentile: 78
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: he-yufeng/CoreCoder
   official_vendor: false
   license: MIT
 signals:
-  stars: 1900
-  last_commit: 2026-11-09T05:51:20Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.6
-  trending_score: 11.06
-  rank_current: 100
-  rank_delta: 15
+  stars: 1920
+  last_commit: 2026-11-16T07:20:06Z
+  stars_delta_7d: 20
+  stars_growth_pct: 1.1
+  trending_score: 20.21
+  rank_current: 104
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1847
     - 1871
     - 1889
     - 1900
+    - 1920
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: he-yufeng/CoreCoder
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:24.056Z
+  fetched_at: 2026-11-16T09:16:54.562Z
   truncated: false
 type: agent_tool
 tool:
@@ -69,7 +69,7 @@ tool:
 
 # CoreCoder
 
-**The nanoGPT of coding agents. A 1.4k-line engine inside 2,908 readable lines of pure Python: understand how a coding agent actually works, then fork your own.**
+**The nanoGPT of coding agents. A 1.4k-line engine inside 3,307 readable lines of pure Python: understand how a coding agent actually works, then fork your own.**
 
 *learn from it · fork it · ship something better*
 
@@ -79,7 +79,7 @@ tool:
 [![Python](https://img.shields.io/badge/python-3.10+-blue)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://raw.githubusercontent.com/he-yufeng/CoreCoder/main/LICENSE)
 [![Tests](https://github.com/he-yufeng/CoreCoder/actions/workflows/ci.yml/badge.svg)](https://github.com/he-yufeng/CoreCoder/actions)
-[![engine](https://img.shields.io/badge/engine-1405_LoC-blue)](https://raw.githubusercontent.com/he-yufeng/CoreCoder/main/article/00-index_EN.md)
+[![engine](https://img.shields.io/badge/engine-1511_LoC-blue)](https://raw.githubusercontent.com/he-yufeng/CoreCoder/main/article/00-index_EN.md)
 [![essays](https://img.shields.io/badge/source--reading-8_bilingual-orange)](https://raw.githubusercontent.com/he-yufeng/CoreCoder/main/article/00-index_EN.md)
 
 </div>
@@ -92,7 +92,7 @@ tool:
 
 | | CoreCoder | Claude Code | aider | nanoGPT |
 |---|---|---|---|---|
-| Lines of code | ~1,405 engine / 2,908 total | hundreds of thousands (closed) | tens of thousands of Python | ~600 (two files) |
+| Lines of code | ~1,511 engine / 3,307 total | hundreds of thousands (closed) | tens of thousands of Python | ~600 (two files) |
 | Time to read it all | one afternoon | can't (closed) | a few days of slogging | one afternoon |
 | Breakpoint, change, rerun? | yes, every line | no | yes, but there's a lot | yes |
 | What it's for | understand one, then fork your own | production coding assistant | terminal pair-programming | minimal GPT for teaching |
@@ -103,9 +103,9 @@ The nanoGPT column is there as a reference point: minimal, readable, but it teac
 
 I've always felt coding agents get talked about as if they were arcane. Strip a tool like Claude Code or Cursor all the way down and the core is a `while` loop wrapped around a large model, plus seven or eight tools that let it actually do things. The hard part was never the loop; it's everything the loop has to cope with once it meets the real world. CoreCoder is the minimal version that writes that core out honestly.
 
-The engine (loop, model interface, context, tools, sessions) is 1,405 lines once you drop blank lines and comments. Counting the outer CLI, config and packaging too, the whole package is 25 files: 2,908 physical lines, 2,364 net, every one short enough to read in a single sitting. The growth since the original 1,161-line snapshot went into visible features: plan mode, hooks and checkpoints, each documented below.
+The engine (loop, model interface, context, tools, sessions) is 1,511 lines once you drop blank lines and comments. Counting the outer CLI, config and packaging too, the whole package is 26 files: 3,307 physical lines, 2,731 net, every one short enough to read in a single sitting. The growth since the original 1,161-line snapshot went into visible features: plan mode, hooks and checkpoints, each documented below.
 
-And it really runs: reads and writes files, executes shell, spawns sub-agents, compacts context in three tiers, and tells you the tokens and dollars a run burned whenever you ask. Anything that would mutate your disk or run a command stops for your consent first. The suite has 242 offline tests and an opt-in live smoke test. But the point of it running isn't to become your daily driver. It runs so the walkthrough can't lie: a reference that shows how an agent works has to actually work.
+And it really runs: reads and writes files, executes shell, spawns sub-agents, compacts context in three tiers, and tells you the tokens and dollars a run burned whenever you ask. Anything that would mutate your disk or run a command stops for your consent first. The suite has 356 offline tests and an opt-in live smoke test. But the point of it running isn't to become your daily driver. It runs so the walkthrough can't lie: a reference that shows how an agent works has to actually work.
 
 The code came out of a public teardown: open analyses have already exposed a lot of the load-bearing architecture inside production agents like Claude Code. I took the most essential layer and rewrote it honestly, in as little code as I could. So reading CoreCoder is roughly like reading a runnable, annotated take on how that kind of agent works, except it's only a minimal reimplementation, sitting right there on your machine for you to take apart and change.
 
@@ -163,7 +163,8 @@ corecoder/
 ├── permissions.py  consent for mutating tools              81 lines
 ├── hooks.py        Pre/PostToolUse shell hooks             87 lines
 ├── shell.py        POSIX shell routing (Git Bash on Windows) 61 lines
-├── mcp.py          MCP stdio client for external tools    237 lines
+├── mcp.py          MCP tools, text resources + stdio      313 lines
+├── mcp_http.py     remote Streamable HTTP transport       211 lines
 ├── prompt.py       system prompt                           41 lines
 ├── cli.py          REPL + slash commands + one-shot       393 lines
 ├── config.py       env-var config                          55 lines
@@ -177,7 +178,7 @@ corecoder/
     ├── read.py       file read                             56 lines
     ├── write.py      file write                            46 lines
     ├── todo.py       agent-maintained task checklist       79 lines
-    ├── agent.py      sub-agent teams + isolation         143 lines
+    ├── agent.py      sub-agent teams + isolation         224 lines
     └── base.py       tool base class                       32 lines
 examples/
 ├── plan_hooks_demo.py  offline plan mode + hooks demo (no API key)
@@ -211,7 +212,7 @@ Three decisions are worth a closer look, because they're the kind of call you ca
 
 **`edit_file` does search-and-replace on a unique match, not line numbers.** Line numbers are a trap: the model only has to miscount by one and it quietly edits the wrong place. Anchor on a unique snippet of the original instead. If there's no match, it hands the start of the file back so the model can re-anchor; if there are several matches, it makes the model bring more surrounding context rather than gamble on one. On a successful edit it returns a diff. Recoverable on failure, verifiable on success: the whole loop stays inside the tool.
 
-**Context isn't cut all at once when it's full; it gives ground in three tiers, cheapest first.** At half full (50%) it trims over-long tool outputs in place, a tier that's purely mechanical and costs no model call. If 70% still isn't enough, it has the model summarize the older turns into a single paragraph while keeping the most recent ones verbatim. Only at 90% does it hit the emergency tier and pull everything, summary and recent turns alike, down to its tightest form. Blunt truncation tends to throw away exactly the early decision a long task leans on most; tiering lets it surrender the least important things first instead of lopping off the oldest decisions wholesale from the start.
+**Context isn't cut all at once when it's full; it gives ground in three tiers, cheapest first.** At half full (50%) it trims over-long tool outputs in place, a tier that's purely mechanical and costs no model call. If 70% still isn't enough, it has the model summarize the older turns into a single paragraph while keeping the most recent ones verbatim. Only at 90% does it hit the emergency tier and pull everything, summary and recent turns alike, down to its tightest form. Blunt truncation tends to throw away exactly the early decision a long task leans on most; tiering lets it surrender the least important things first instead of lopping off the oldest decisions wholesale from the start. Each pass also summarizes only the turns that arrived since the last one and carries the earlier summary forward untouched, so a long session does not slowly grind an early fact into nothing through repeated summaries of summaries.
 
 **You constrain a sub-agent by withholding the tool, not by writing rules and hoping it obeys.** A spawned sub-agent gets an isolated context and its own separate history, with a toolset exactly one item shorter than the parent's: the `agent` tool itself, so it can't recursively spawn more sub-agents. Handing it one fewer tool is cleaner than legislating a rule after the fact. It also reuses the parent's model connection (its spend folded into the same running total), truncates its output once it runs past 5,000 characters down to just the opening, and runs on a shorter round limit than the parent. The same restraint, end to end.
 
@@ -228,6 +229,15 @@ report = agent_tool.execute(tasks=[
 ```
 
 One to eight workers run up to four at a time, each through the normal agent loop. Reports come back in input order, not completion order, and one worker's exception does not cancel its siblings. Shared token accounting and interactive permission prompts are serialized, so concurrency doesn't lose cost or interleave consent. There is no scheduler, shared message bus, recursive spawning, or second agent loop. `examples/multi_agent_demo.py` runs the researcher / implementer / reviewer pattern offline with scripted findings; no API key and no model-quality claim.
+
+Dependencies are just as small: set `depends_on` on a worker, and it starts only after every named dependency has finished successfully. Each dependent worker receives those upstream reports in its own prompt, while a failed dependency skips only the affected branch. Independent work in the same call still runs concurrently, and the returned report keeps the original input order:
+
+```python
+{"name": "implementer", "task": "Fix using the research", "depends_on": ["researcher"]},
+{"name": "reviewer", "task": "Review the fix", "depends_on": ["implementer"]},
+```
+
+Names must be unique, references must exist, and cycles are rejected before any worker starts. It is still one blocking tool call, not a background orchestration service.
 
 Every one of these *whys* is traced down to the actual lines of code in the series below.
 
@@ -266,7 +276,7 @@ Going deeper, the directions are out in the open too. None of the following is i
 - **The dangerous-command blocking in bash is just a regex blacklist.** It guards against slips, not a security sandbox. Facing untrusted input means reaching for seccomp or container isolation. This is the hardest of the four; it goes all the way down to the syscall and isolation layer.
 - **Retry is only exponential backoff.** No fallback model, no hard dollar budget. Follow `llm.py` down and add a fallback model chain plus a stop-on-over-budget gate; the change stays mostly inside that one file.
 - **Agent teams join before returning.** Named workers already run concurrently with isolated contexts; asynchronous background jobs, streaming progress and role-specific tool presets remain open extension points rather than another orchestration layer to add by default.
-- **No RAG, and the MCP client speaks tools only.** Retrieval-based code location for big repos is still open, and `mcp.py` leaves resources and prompts unimplemented on purpose. Either one is a real way to grow from a minimal core into your own stronger agent.
+- **No RAG, prompt API, or resource subscriptions.** MCP text references are fetched on demand; CoreCoder does not build a retrieval index or run a background synchronization loop. Retrieval-based code location for big repos is still open.
 
 The README only points; the seventh essay picks up the code details for each. Pick one and start; that's the whole reason the core is kept this small.
 
@@ -340,17 +350,34 @@ Both are plain shell; nothing here is CoreCoder-specific syntax beyond the JSON 
 
 ## MCP servers
 
-Drop a `mcp.json` under `~/.corecoder` and tools from any MCP server join the agent over stdio, the same config shape as Claude Code's:
+Drop a `mcp.json` under `~/.corecoder`. Local servers use `command`; remote Streamable HTTP servers use `url` and optional headers:
 
 ```json
 {
   "mcpServers": {
-    "filesystem": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"]}
+    "filesystem": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"]},
+    "remote": {"url": "https://your-mcp-server.example/mcp", "headers": {"Authorization": "Bearer YOUR_MCP_TOKEN"}}
   }
 }
 ```
 
-Each configured server starts as a subprocess at launch, handshakes, and lists its tools; every one is registered as `mcp__<server>__<tool>`, so hook matchers and the consent gate treat it exactly like a built-in. MCP tools stay out of the read-only set, meaning the agent asks before running one. The handshake gets fifteen seconds, a call gets sixty, and a server that dies or never answers fails that one call as an ordinary tool result instead of killing the loop. The REPL's `/mcp` lists every server with its state, and `/mcp reconnect <name>` starts a dead one fresh: new process, new handshake, and the tools the agent already holds work again with no restart. The client speaks the tools slice of the protocol (initialize, tools/list, tools/call) and nothing else, which keeps the whole thing inside `mcp.py` at about 240 lines. With no `mcp.json` there is no MCP and nothing changes. A runnable starter config lives in [`examples/mcp_filesystem.md`](https://github.com/he-yufeng/CoreCoder/blob/main/examples/mcp_filesystem.md): the reference filesystem server, scoped to one directory, behind the same consent gate.
+Both transports handshake and discover server capabilities at startup. Remote tools become `mcp__<server>__<tool>` and go through the same consent gate and hooks; remote calls are never assumed read-only. `/mcp` shows server health, and `/mcp reconnect <name>` creates a fresh process or HTTP session without replacing the tool objects held by the agent. A failed call is not replayed automatically: the server may already have acted on it.
+
+A server advertising `resources` also adds one `mcp__<server>__resources` tool. It lists resources, discovers URI templates and reads text context without expanding the catalog into the prompt. Resource-only servers work without a `tools/list` implementation. If that tool name is already taken, the bridge appends underscores until it finds a free name, leaving remote tools unchanged.
+
+For a server named `remote`, the bridge accepts these argument objects. Use a URI returned by that server in place of the example `project://guide`:
+
+```json
+{"action": "list"}
+{"action": "templates"}
+{"action": "read", "uri": "project://guide"}
+```
+
+Pass a returned `nextCursor` unchanged as `cursor` to fetch another list or template page. The URI goes to the configured server, never to a local file reader or a separate HTTP fetch. Multiple text contents retain their URI and MIME metadata; binary resources and results over 32,768 characters fail explicitly instead of being silently omitted or truncated. Resource calls keep the existing permission, plan-mode and hook checks, so fetching a reference does not add an automatic read-only grant.
+
+Startup requests use fifteen-second timeouts and tool calls use sixty. HTTP accepts JSON or SSE replies, carries the negotiated protocol and session headers, caps each response at 4 MiB, and checks the remaining call budget between body reads. DNS and status/header parsing still use the standard library's blocking network behavior, not a hard end-to-end deadline. There is no legacy SSE endpoint discovery, OAuth flow, resource subscription or prompt API. Use HTTPS for remote credentials; redirects are not followed. Configured header values are literal strings, not environment-variable templates.
+
+The tool wrappers and handshake remain in `mcp.py`; `mcp_http.py` owns only the HTTP transport. With no config, nothing changes. See the [local filesystem example](https://github.com/he-yufeng/CoreCoder/blob/main/examples/mcp_filesystem.md) or the [remote HTTP setup](https://github.com/he-yufeng/CoreCoder/blob/main/examples/mcp_http.md).
 
 ## Related Projects
 
@@ -364,7 +391,7 @@ If working through CoreCoder was useful, here are a few other tools I've built a
 
 ## Contributing / License
 
-Before you send anything, run `pytest tests/ -q` (240 tests), `ruff check`, and `compileall`, and make sure they're green. MIT licensed: fork it, learn from it, ship something better. A mention of this project is appreciated.
+Before you send anything, run `pytest tests/ -q`, `ruff check corecoder tests`, and `python -m compileall -q corecoder tests`, and make sure they're green. MIT licensed: fork it, learn from it, ship something better. A mention of this project is appreciated.
 
 ---
 

@@ -14,29 +14,29 @@ tags:
   - deepseek-harness
   - grok
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2025-12-05T17:58:26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: YishenTu/claudian
   official_vendor: false
   license: MIT
 signals:
-  stars: 15950
-  last_commit: 2026-11-09T00:48:40Z
-  stars_delta_7d: 38
-  stars_growth_pct: 0.2
-  trending_score: 38.09
-  rank_current: 63
-  rank_delta: 4
+  stars: 16004
+  last_commit: 2026-11-14T16:39:39Z
+  stars_delta_7d: 54
+  stars_growth_pct: 0.3
+  trending_score: 54.18
+  rank_current: 78
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 15725
     - 15800
     - 15912
     - 15950
+    - 16004
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: YishenTu/claudian
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.232Z
+  fetched_at: 2026-11-16T09:16:03.397Z
   truncated: false
 type: agent_tool
 tool:

@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-image
 name: image
-tagline: When the user wants to create, generate, edit, or optimize images for
-  marketing — blog heroes, social graphics, product mockups, profile banners,
-  list
+tagline: "When the user wants to create, generate, edit, or optimize marketing
+  images, or asks which approach to take (generate, design, or photograph): blog
+  he"
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -16,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,23 +45,15 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/image/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.918Z
+  fetched_at: 2026-11-16T09:15:48.051Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: image
-  description: When the user wants to create, generate, edit, or optimize images
-    for marketing — blog heroes, social graphics, product mockups, profile
-    banners, listing visuals, or brand assets. Also use when the user mentions
-    'AI image generation,' 'generate an image,' 'create a graphic,' 'product
-    mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover
-    photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Flux Kontext,'
-    'Midjourney,' 'DALL-E,' 'GPT Image,' 'ChatGPT Images,' 'Ideogram,' 'Gemini
-    image,' 'Nano Banana,' 'Recraft,' 'Stable Diffusion,' 'Canva,' 'Figma,'
-    'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for
-    general-purpose marketing image creation and optimization. For paid ad image
-    creative and platform-specific ad specs, see ad-creative. For video
-    production, see video.
+  description: "When the user wants to create, generate, edit, or optimize
+    marketing images, or asks which approach to take (generate, design, or
+    photograph): blog heroes, social graphics, product mockups, banners, OG
+    images. For ad images, see ad-creative. For video, see video."
   folder_path: skills/image
   extra_files:
     - evals/evals.json

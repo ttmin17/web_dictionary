@@ -5,7 +5,7 @@ tagline: "Open-source desktop SQL workspace with 3 built-in database drivers and
   29 shipped driver plugins, including SQL Server, DuckDB, ClickHouse and Redis.
   "
 summary: Tabularis is an open-source desktop SQL workspace with 3 built-in
-  database drivers and 29 shipped driver plugins, including DuckDB, ClickHouse,
+  database drivers and 30 shipped driver plugins, including DuckDB, ClickHouse,
   Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devi...
 categories:
   - databases-memory
@@ -15,29 +15,29 @@ tags:
   - cross-platform
   - database-client
 status: active
-quality_percentile: 79
+quality_percentile: 77
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: TabularisDB/tabularis
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 5411
-  last_commit: 2026-11-09T08:55:58Z
-  stars_delta_7d: 31
-  stars_growth_pct: 0.6
-  trending_score: 31.18
-  rank_current: 71
-  rank_delta: 3
+  stars: 5479
+  last_commit: 2026-11-16T08:57:14Z
+  stars_delta_7d: 68
+  stars_growth_pct: 1.3
+  trending_score: 68.85
+  rank_current: 72
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5236
     - 5287
     - 5380
     - 5411
+    - 5479
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: TabularisDB/tabularis
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.541Z
+  fetched_at: 2026-11-16T09:15:08.327Z
   truncated: false
 type: agent_tool
 tool:
@@ -65,7 +65,7 @@ tool:
 
 # Tabularis
 
-Tabularis is an open-source desktop SQL workspace with 3 built-in database drivers and 29 shipped driver plugins, including DuckDB, ClickHouse, Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devin (formerly Windsurf) read your schema and run queries in the same app you already use.
+Tabularis is an open-source desktop SQL workspace with 3 built-in database drivers and 30 shipped driver plugins, including DuckDB, ClickHouse, Redis and Firestore. Its built-in MCP server lets Claude, Cursor and Devin (formerly Windsurf) read your schema and run queries in the same app you already use.
 
 <p align="center">
   <b><a href="https://tabularis.dev">Website</a></b> ·
@@ -127,11 +127,11 @@ sudo snap install tabularis       # Linux
 
 Or grab an installer directly:
 
-- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_x64-setup.exe)
+- **Windows:** [![Windows](https://img.shields.io/badge/Windows-Download-blue?logo=windows)](https://github.com/TabularisDB/tabularis/releases/download/v0.32.0/tabularis_0.32.0_x64-setup.exe)
 
-- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_x64.dmg)
+- **macOS:** [![macOS (Apple Silicon)](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.32.0/tabularis_0.32.0_aarch64.dmg) [![macOS (Intel)](https://img.shields.io/badge/macOS-Intel-black?logo=apple)](https://github.com/TabularisDB/tabularis/releases/download/v0.32.0/tabularis_0.32.0_x64.dmg)
 
-- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis_0.31.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.31.0/tabularis-0.31.0-1.x86_64.rpm)
+- **Linux:** [![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-green?logo=linux)](https://github.com/TabularisDB/tabularis/releases/download/v0.32.0/tabularis_0.32.0_amd64.AppImage) [![Linux .deb](https://img.shields.io/badge/Linux-.deb-orange?logo=debian)](https://github.com/TabularisDB/tabularis/releases/download/v0.32.0/tabularis_0.32.0_amd64.deb) [![Linux .rpm](https://img.shields.io/badge/Linux-.rpm-red?logo=redhat)](https://github.com/TabularisDB/tabularis/releases/download/v0.32.0/tabularis-0.32.0-1.x86_64.rpm)
 
 The app UI is available in English, Italian, Spanish, Chinese (Simplified), Chinese (Traditional), French, German, Japanese, Russian, Korean, Tagalog, Portuguese (Brazilian) and Vietnamese.
 
@@ -184,14 +184,14 @@ The app UI is available in English, Italian, Spanish, Chinese (Simplified), Chin
 | Plugins in **any language** (JSON-RPC over stdio)                  |                ✅                |      Java/Eclipse plugins      | JavaScript plugins |          ❌           |
 | AI text-to-SQL with **local models** (Ollama)                      |                ✅                |    Cloud-based AI assistant    |         ❌         |          ❌           |
 | Visual EXPLAIN with interactive plan graphs                        |                ✅                |               ✅               |         ❌         |          ❌           |
-| Databases out of the box                                           | 3 built-in + 29 driver plugins |              100+              |        20+         |          ~10          |
+| Databases out of the box                                           | 3 built-in + 30 driver plugins |              100+              |        20+         |          ~10          |
 
 > [!NOTE]
 > Comparison as of June 2026; features in other tools may have changed since. If you need dozens of drivers, use DBeaver. Tabularis focuses on doing a few databases well.
 
 ### Database support
 
-PostgreSQL, MySQL/MariaDB and SQLite ship built in. Everything else is a plugin. The built-in PostgreSQL driver is deprecated in favour of the [PostgreSQL plugin](https://github.com/TabularisDB/tabularis-postgresql-plugin), which Tabularis installs automatically. Current coverage, mirroring the [driver & plugin coverage](https://tabularis.dev/#driver-coverage) on the website:
+PostgreSQL, MySQL/MariaDB and SQLite ship built in. Everything else is a plugin. The built-in PostgreSQL driver is deprecated in favour of the [PostgreSQL plugin](https://github.com/TabularisDB/tabularis-postgresql-plugin), which Tabularis installs automatically. Current coverage, mirroring the [driver & plugin coverage](https://tabularis.dev/plugins/drivers) on the website:
 
 **Shipped**
 
@@ -210,20 +210,22 @@ PostgreSQL, MySQL/MariaDB and SQLite ship built in. Everything else is a plugin.
 | IBM Informix             | [tabularis-informix-plugin](https://github.com/danielnuld/tabularis-informix-plugin)            | HackerNews     | [tabularis-hackernews-plugin](https://github.com/TabularisDB/tabularis-hackernews-plugin)       |
 | Cassandra / ScyllaDB     | [tabularis-cassandra-plugin](https://github.com/TabularisDB/tabularis-cassandra-plugin)         | Harper         | [tabularis-harper-plugin](https://github.com/HarperFast/tabularis-harper-plugin)                |
 | PostgreSQL               | [tabularis-postgresql-plugin](https://github.com/TabularisDB/tabularis-postgresql-plugin)       | Trino          | [tabularis-trino-plugin](https://github.com/TabularisDB/tabularis-trino-plugin)                 |
-| Neon                     | [neon-plugin](https://github.com/TabularisDB/neon-plugin)                                       | OpenSearch     | [tabularis-opensearch-plugin-go](https://github.com/Xrondev/tabularis-opensearch-plugin-go)     |
-| SurrealDB                | [tabularis-surrealdb-plugin](https://github.com/TabularisDB/tabularis-surrealdb-plugin)         |                |                                                                                                 |
+| Meilisearch              | [meilisearch-tabularis](https://github.com/NewtTheWolf/meilisearch-tabularis)                   | OpenSearch     | [tabularis-opensearch-plugin-go](https://github.com/Xrondev/tabularis-opensearch-plugin-go)     |
+| SurrealDB                | [tabularis-surrealdb-plugin](https://github.com/TabularisDB/tabularis-surrealdb-plugin)         | Firebird       | [tabularis-firebird-plugin](https://github.com/TabularisDB/tabularis-firebird-plugin)           |
 
 **On the bounty board**
 
 | Status      | Databases                                                                    |
 | ----------- | ---------------------------------------------------------------------------- |
-| In progress    | Meilisearch                  |
+| In progress    | InfluxDB                     |
 | Coming soon    | Snowflake                    |
 | Scoped         | Amazon Redshift, TiDB        |
-| Open           | Etcd, Firebird, SQL Anywhere |
+| Open           | Etcd, SQL Anywhere |
 
 > [!NOTE]
 > **Shipped** drivers are installable from the [plugin registry](https://tabularis.dev/plugins). Everything else is on the [bounty board](https://tabularis.dev/plugins/bounties): claim one, sponsor one, or [request a database](https://github.com/TabularisDB/tabularis/discussions).
+
+Published plugins also include [Neon](https://registry.tabularis.dev/plugins/neon) for cloud database management and [Google Gemini](https://registry.tabularis.dev/plugins/gemini) as an AI assistant, alongside 6 themes. These are separate from the 30 database driver plugins.
 
 ## Installation
 
@@ -404,7 +406,7 @@ Tabularis is **hackable with an external plugin system**. Plugins are standalone
 - **Install Plugins:** Browse and install community drivers from **Settings → Available Plugins**, no restart required.
 - **Manage Drivers:** View all registered drivers (built-in and plugins) in **Settings → Installed Drivers** and uninstall plugins with one click.
 - **Any Database:** Add support for DuckDB, MongoDB, or any other database by writing or installing a plugin.
-- **Plugin Registry:** Official plugins are listed in [`plugins/registry.json`](https://github.com/TabularisDB/tabularis/blob/main/plugins/registry.json).
+- **Plugin Registry:** Browse published drivers, themes, cloud integrations and AI assistants in the [Tabularium catalog](https://tabularis.dev/plugins). The app also loads legacy entries from [`plugins/registry.json`](https://github.com/TabularisDB/tabularis/blob/main/plugins/registry.json).
 - **Developer Guide:** See [`plugins/PLUGIN_GUIDE.md`](https://github.com/TabularisDB/tabularis/blob/main/plugins/PLUGIN_GUIDE.md) to build your own driver in any language.
 - **Declarative themes (development):** **Settings → Appearance** supports local packages (**Import theme → Local package**), previews and personal/VS Code imports without executable plugin activation. See the [theme author guide](https://github.com/TabularisDB/tabularis/blob/main/packages/create-plugin/THEMES.md) for the separate `tabularis-theme` CLI, packaging and release gates; public runtime/tooling rollout is not implied by this development feature.
 
@@ -435,7 +437,18 @@ Portal command reads reuse one cached D-Bus connection, while the live watcher k
 
 <sub>[Full reference on tabularis.dev →](https://tabularis.dev/wiki/ai-assistant)</sub>
 
-Optional Text-to-SQL and query explanation powered by **OpenAI**, **Anthropic**, **MiniMax**, **OpenRouter**, **Requesty**, **Ollama** (local models, no API key, full privacy), and any **OpenAI-compatible API** (Groq, Perplexity, Azure OpenAI, LocalAI, ...). Model lists are fetched from your provider and cached locally; custom models can be configured per provider.
+Optional Text-to-SQL and query explanation powered by **OpenAI**, **Anthropic**, **MiniMax**, **OpenRouter**, **Requesty**, **API Route**, **Ollama** (local models, no API key, full privacy), and any **OpenAI-compatible API** (Groq, Perplexity, Azure OpenAI, LocalAI, ...). Model lists are fetched from your provider and cached locally; custom models can be configured per provider.
+
+To use [API Route](https://www.api-route.com), open **Settings > AI**, enable AI and select **API Route**. Save your API Route key, refresh the model list and choose a default model. Alternatively, set `API_ROUTE_API_KEY` in the environment of the desktop app or web server. The integration uses `https://global.api-route.com/v1/models` and `/chat/completions`; model access and billing depend on your API Route account. The provider's proxy settings apply to both endpoints. Adding API Route does not change existing provider selections.
+
+The existing providers are **built in** and remain available offline. Install
+additional providers, including **Google Gemini**, directly from **Settings → AI**
+with **Install and use**, or manage external packages in the Plugin Center.
+All API-key providers share a declarative HTTP runtime; existing credentials,
+models, endpoints and proxy settings are preserved on upgrade. ChatGPT account
+login remains built in.
+
+To publish a provider, see the [AI assistant package guide](https://github.com/TabularisDB/tabularis/blob/main/plugins/ai-assistants/README.md).
 
 ### MCP Server: AI Agent Integration
 

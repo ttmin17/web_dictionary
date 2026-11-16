@@ -13,29 +13,29 @@ tags:
   - agentic-ai
   - agentic-workflow
 status: active
-quality_percentile: 93
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ruvnet/ruflo
   official_vendor: false
   license: MIT
 signals:
-  stars: 81313
-  last_commit: 2026-11-09T09:20:19Z
-  stars_delta_7d: 361
-  stars_growth_pct: 0.4
-  trending_score: 362.61
-  rank_current: 3
-  rank_delta: 23
+  stars: 81842
+  last_commit: 2026-11-16T06:31:53Z
+  stars_delta_7d: 529
+  stars_growth_pct: 0.7
+  trending_score: 532.44
+  rank_current: 9
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 76729
     - 79343
     - 80952
     - 81313
+    - 81842
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: ruvnet/ruflo
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.618Z
+  fetched_at: 2026-11-16T09:14:55.615Z
   truncated: false
 type: mcp_server
 launch:

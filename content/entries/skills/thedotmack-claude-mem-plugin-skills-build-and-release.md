@@ -11,10 +11,10 @@ tags:
   - anthropic
   - artificial-intelligence
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -22,17 +22,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 115108
-  last_commit: 2026-11-09T09:22:00Z
-  stars_delta_7d: 1814
-  stars_growth_pct: 1.6
-  trending_score: 1843.04
+  stars: 117496
+  last_commit: 2026-11-16T08:47:55Z
+  stars_delta_7d: 2388
+  stars_growth_pct: 2.1
+  trending_score: 2437.54
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 101675
     - 103202
     - 113294
     - 115108
+    - 117496
 language: en
 needs_keys: false
 prerequisites: []
@@ -40,7 +40,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: plugin/skills/build-and-release/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:21.596Z
+  fetched_at: 2026-11-16T09:15:44.018Z
   truncated: false
 type: agent_skill
 skill:

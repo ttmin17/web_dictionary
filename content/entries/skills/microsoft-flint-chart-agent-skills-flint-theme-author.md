@@ -16,7 +16,7 @@ status: active
 quality_percentile: 93
 selection_reason: official_vendor
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: microsoft/flint-chart
@@ -24,17 +24,17 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 4558
-  last_commit: 2026-11-09T07:50:06Z
-  stars_delta_7d: 13
-  stars_growth_pct: 0.3
-  trending_score: 13.04
+  stars: 4579
+  last_commit: 2026-11-16T07:08:57Z
+  stars_delta_7d: 21
+  stars_growth_pct: 0.5
+  trending_score: 21.1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4380
     - 4459
     - 4545
     - 4558
+    - 4579
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: microsoft/flint-chart
   path: agent-skills/flint-theme-author/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:54.240Z
+  fetched_at: 2026-11-16T09:15:11.184Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,7 +54,7 @@ skill:
     without inventing fields or changing chart semantics."
   folder_path: agent-skills/flint-theme-author
   extra_files: []
-  pack_total_skills: 4
+  pack_total_skills: 5
   is_pack_primary: false
   clients:
     - claude-code
@@ -277,6 +277,8 @@ the authored blocks and their jobs:
 ```
 
 `interaction.selectionBoundary` accepts `color`, `width`, `opacity`, `haloColor`, `haloWidth`, and `haloOpacity`. Omitted paint is grounded from the theme: foreground from `ink.accent` then primary text, and halo from the plot or canvas surface. Use explicit values only when the house has a distinct interaction treatment.
+
+`interaction.highlight` accepts `color`, `width`, `haloColor`, and `haloWidth`: the paint of the ring round a dot, the outline round a bar, cell, slice or region an annotation names, and an enclosure's outline. Unset, they take the neutral annotation grey; an update's own `highlightStyle` (or an enclosure's `color` and `width`) overrides it.
 
 This is a shape example, not a palette recommendation. Derive actual values
 from the user's references.

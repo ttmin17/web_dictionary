@@ -12,29 +12,29 @@ tags:
   - agent-harness-generator
   - agent-scaffolding
 status: active
-quality_percentile: 50
+quality_percentile: 49
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ruvnet/metaharness
   official_vendor: false
   license: MIT
 signals:
-  stars: 742
-  last_commit: 2026-11-09T08:35:29Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.5
-  trending_score: 4.02
-  rank_current: 117
-  rank_delta: -8
+  stars: 748
+  last_commit: 2026-11-16T08:33:19Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.8
+  trending_score: 6.05
+  rank_current: 124
+  rank_delta: -7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 707
     - 716
     - 738
     - 742
+    - 748
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: ruvnet/metaharness
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:34.202Z
+  fetched_at: 2026-11-16T09:17:02.668Z
   truncated: false
 type: agent_tool
 tool:

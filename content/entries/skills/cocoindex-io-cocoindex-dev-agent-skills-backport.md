@@ -15,10 +15,10 @@ tags:
   - change-data-capture
   - codebase-intelligence
 status: active
-quality_percentile: 68
+quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: cocoindex-io/cocoindex
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11832
-  last_commit: 2026-11-09T09:24:06Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.1
-  trending_score: 6
-  rank_current: 124
-  rank_delta: -23
+  stars: 11899
+  last_commit: 2026-11-14T05:59:02Z
+  stars_delta_7d: 67
+  stars_growth_pct: 0.6
+  trending_score: 67.38
+  rank_current: 95
+  rank_delta: 29
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11720
     - 11754
     - 11826
     - 11832
+    - 11899
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: cocoindex-io/cocoindex
   path: dev/agent-skills/backport/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:19.989Z
+  fetched_at: 2026-11-16T09:16:46.748Z
   truncated: false
 type: agent_skill
 skill:

@@ -17,26 +17,26 @@ status: active
 quality_percentile: 91
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: tinyhumansai/openhuman
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 42598
-  last_commit: 2026-11-08T16:21:55Z
-  stars_delta_7d: 39
-  stars_growth_pct: 0.1
-  trending_score: 39.04
-  rank_current: 62
-  rank_delta: -13
+  stars: 42712
+  last_commit: 2026-11-16T07:20:04Z
+  stars_delta_7d: 114
+  stars_growth_pct: 0.3
+  trending_score: 114.31
+  rank_current: 57
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 42157
     - 42343
     - 42559
     - 42598
+    - 42712
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: tinyhumansai/openhuman
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:15.430Z
+  fetched_at: 2026-11-16T09:16:42.880Z
   truncated: false
 type: agent_tool
 tool:

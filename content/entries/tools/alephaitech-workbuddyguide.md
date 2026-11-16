@@ -12,29 +12,29 @@ tags:
   - codex
   - guide
 status: active
-quality_percentile: 46
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: AlephAITech/WorkBuddyGuide
   official_vendor: false
   license: MIT
 signals:
-  stars: 3781
-  last_commit: 2026-10-19T09:10:37Z
-  stars_delta_7d: 34
-  stars_growth_pct: 0.9
-  trending_score: 34.31
-  rank_current: 66
-  rank_delta: -5
+  stars: 3822
+  last_commit: 2026-11-15T10:26:08Z
+  stars_delta_7d: 41
+  stars_growth_pct: 1.1
+  trending_score: 41.44
+  rank_current: 89
+  rank_delta: -23
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3516
     - 3610
     - 3747
     - 3781
+    - 3822
 language: zh
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: AlephAITech/WorkBuddyGuide
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:07.287Z
+  fetched_at: 2026-11-16T09:16:34.127Z
   truncated: false
 type: agent_tool
 tool:

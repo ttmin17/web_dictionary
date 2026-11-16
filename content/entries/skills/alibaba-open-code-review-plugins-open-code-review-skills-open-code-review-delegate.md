@@ -15,10 +15,10 @@ tags:
   - code-review-assistant
   - harness
 status: active
-quality_percentile: 63
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-05-18T02:16:36
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: alibaba/open-code-review
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 49690
-  last_commit: 2026-11-09T08:28:42Z
-  stars_delta_7d: 209
-  stars_growth_pct: 0.4
-  trending_score: 209.88
-  rank_current: 45
-  rank_delta: -13
+  stars: 52510
+  last_commit: 2026-11-16T09:10:27Z
+  stars_delta_7d: 2820
+  stars_growth_pct: 5.7
+  trending_score: 2980.04
+  rank_current: 11
+  rank_delta: 34
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 47619
     - 48292
     - 49481
     - 49690
+    - 52510
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: alibaba/open-code-review
   path: plugins/open-code-review/skills/open-code-review-delegate/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:54.319Z
+  fetched_at: 2026-11-16T09:16:15.363Z
   truncated: false
 type: agent_skill
 skill:
@@ -81,8 +81,10 @@ A skill for performing AI code review where OCR provides deterministic engineeri
 ### Step 1: Preview — Determine What to Review
 
 ```bash
-ocr delegate preview --format json [--from <ref> --to <ref>] [--commit <hash>] [--exclude <patterns>]
+ocr delegate preview --format json [--from <ref> [--to <ref>]] [--commit <hash>] [--exclude <patterns>]
 ```
+
+With `--from` and no `--to`, both delegate subcommands default to `HEAD`. Range review compares the merge-base to the target commit and excludes staged, unstaged, and untracked changes. Omit range/commit flags for workspace mode; range and commit flags are mutually exclusive.
 
 This outputs:
 - **mode** (workspace / range / commit)
@@ -96,15 +98,18 @@ This outputs:
 |----------|---------|
 | Workspace changes | `ocr delegate preview` |
 | Branch comparison | `ocr delegate preview --from main --to feature` |
+| Current branch against main | `ocr delegate preview --from main` |
 | Single commit | `ocr delegate preview -c abc123` |
 
 ### Step 2: Get Rules for Files
 
 ```bash
-ocr delegate rule --format json <path1> <path2> ...
+ocr delegate rule --format json [--from <ref> [--to <ref>]] [--commit <hash>] <path1> <path2> ...
 ```
 
 Pass the reviewable file paths from Step 1. Output is grouped by rule content — files sharing the same rule appear under one group, avoiding repetition.
+
+Pass the same range or commit flags as in Step 1 so rules are resolved against the same target. For example, pair `ocr delegate preview --from main` with `ocr delegate rule --from main --format json <path...>`.
 
 ### Step 3: Get Diffs
 
@@ -203,7 +208,7 @@ If the user requested "review and fix":
 | Flag | Description |
 |------|-------------|
 | `--from <ref>` | Source ref for range mode |
-| `--to <ref>` | Target ref for range mode |
+| `--to <ref>` | Target ref for range mode; defaults to `HEAD` when `--from` is supplied in either subcommand |
 | `-c, --commit <hash>` | Single commit mode |
 | `--repo <path>` | Repository root (default: cwd) |
 | `--rule <path>` | Custom rule.json path |

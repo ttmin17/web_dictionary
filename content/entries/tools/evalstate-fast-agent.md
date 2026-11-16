@@ -13,29 +13,29 @@ tags:
   - agent-framework
   - agent-skills
 status: active
-quality_percentile: 83
+quality_percentile: 81
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: evalstate/fast-agent
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3960
-  last_commit: 2026-11-08T07:07:07Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 136
-  rank_delta: -13
+  stars: 3970
+  last_commit: 2026-11-15T12:57:23Z
+  stars_delta_7d: 10
+  stars_growth_pct: 0.3
+  trending_score: 10.03
+  rank_current: 117
+  rank_delta: 19
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3942
     - 3949
     - 3962
     - 3960
+    - 3970
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: evalstate/fast-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:55.274Z
+  fetched_at: 2026-11-16T09:15:12.379Z
   truncated: false
 type: agent_tool
 tool:

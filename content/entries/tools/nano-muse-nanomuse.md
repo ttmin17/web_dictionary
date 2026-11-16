@@ -15,28 +15,29 @@ tags:
   - android
   - computer-use
 status: active
-quality_percentile: 80
+quality_percentile: 74
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: nano-muse/nanoMuse
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 3345
-  last_commit: 2026-11-09T04:46:54Z
-  stars_delta_7d: 137
-  stars_growth_pct: 4.3
-  trending_score: 142.85
-  rank_current: 25
-  rank_delta: -6
+  stars: 3520
+  last_commit: 2026-11-13T06:49:04Z
+  stars_delta_7d: 175
+  stars_growth_pct: 5.2
+  trending_score: 184.16
+  rank_current: 36
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2606
     - 3208
     - 3345
+    - 3520
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: nano-muse/nanoMuse
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:07.338Z
+  fetched_at: 2026-11-16T09:16:39.251Z
   truncated: false
 type: agent_tool
 tool:
@@ -150,7 +151,7 @@ All downloads come from the [latest release](https://github.com/nano-muse/nanoMu
   </tr>
   <tr>
     <td width="50%" valign="top"><b>A look of its own.</b><br>Describe one, your image model draws it, a video model makes it move. A small dragon by default.</td>
-    <td width="50%" valign="top"><b>Any model.</b><br>The relay's allowance, your own key at one of twenty-five providers (Bailian, OpenRouter, OpenAI, Gemini, DeepSeek and more), or a plan you already pay for: ChatGPT, Claude, Kimi. A provider without picture or video models leaves those two off, and the app says so.</td>
+    <td width="50%" valign="top"><b>Any model.</b><br>The relay's allowance, your own key at one of twenty-six providers (Bailian, OpenRouter, OpenAI, Gemini, DeepSeek and more), or a plan you already pay for: ChatGPT, Claude, Kimi. A provider without picture or video models leaves those two off, and the app says so.</td>
   </tr>
 </table>
 
@@ -206,8 +207,8 @@ Everyone whose change has landed on `main`, from GitHub's contributors list.
 <a href="https://github.com/Mola-maker"><img src="https://avatars.githubusercontent.com/u/229602071?v=4&s=48" width="48" height="48" alt="Mola-maker"></a>
 <a href="https://github.com/wsvn53"><img src="https://avatars.githubusercontent.com/u/912204?v=4&s=48" width="48" height="48" alt="wsvn53"></a>
 <a href="https://github.com/Longfellow1"><img src="https://avatars.githubusercontent.com/u/53395614?v=4&s=48" width="48" height="48" alt="Longfellow1"></a>
-<a href="https://github.com/z1010223zero-pixel"><img src="https://avatars.githubusercontent.com/u/228320705?v=4&s=48" width="48" height="48" alt="z1010223zero-pixel"></a>
 <a href="https://github.com/hobostay"><img src="https://avatars.githubusercontent.com/u/110803307?v=4&s=48" width="48" height="48" alt="hobostay"></a>
+<a href="https://github.com/z1010223zero-pixel"><img src="https://avatars.githubusercontent.com/u/228320705?v=4&s=48" width="48" height="48" alt="z1010223zero-pixel"></a>
 <a href="https://github.com/jiangkaiqi2005"><img src="https://avatars.githubusercontent.com/u/184961141?v=4&s=48" width="48" height="48" alt="jiangkaiqi2005"></a>
 <a href="https://github.com/cugbtang"><img src="https://avatars.githubusercontent.com/u/34121664?v=4&s=48" width="48" height="48" alt="cugbtang"></a>
 <a href="https://github.com/takiAA"><img src="https://avatars.githubusercontent.com/u/119551932?v=4&s=48" width="48" height="48" alt="takiAA"></a>
@@ -225,6 +226,7 @@ Everyone whose change has landed on `main`, from GitHub's contributors list.
 <a href="https://github.com/cypggs"><img src="https://avatars.githubusercontent.com/u/3694954?v=4&s=48" width="48" height="48" alt="cypggs"></a>
 <a href="https://github.com/aiapienthusiast"><img src="https://avatars.githubusercontent.com/u/327629069?v=4&s=48" width="48" height="48" alt="aiapienthusiast"></a>
 <a href="https://github.com/mongo027"><img src="https://avatars.githubusercontent.com/u/275146281?v=4&s=48" width="48" height="48" alt="mongo027"></a>
+<a href="https://github.com/PSA-Team-source"><img src="https://avatars.githubusercontent.com/u/155616440?v=4&s=48" width="48" height="48" alt="PSA-Team-source"></a>
 <a href="https://github.com/jasontospas"><img src="https://avatars.githubusercontent.com/u/79001000?v=4&s=48" width="48" height="48" alt="jasontospas"></a>
 <a href="https://github.com/ilya-bogin-keenable"><img src="https://avatars.githubusercontent.com/u/246701201?v=4&s=48" width="48" height="48" alt="ilya-bogin-keenable"></a>
 <a href="https://github.com/henrikdukefoss"><img src="https://avatars.githubusercontent.com/u/76407537?v=4&s=48" width="48" height="48" alt="henrikdukefoss"></a>

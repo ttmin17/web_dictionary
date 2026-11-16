@@ -12,10 +12,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 63
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: chuspeeism/dashi-ppt-skill
@@ -23,14 +23,17 @@ source:
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 10507
+  stars: 10737
   last_commit: 2026-11-06T08:26:30Z
-  stars_delta_7d: 467
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars_delta_7d: 230
+  stars_growth_pct: 2.2
+  trending_score: 235.03
+  rank_current: 58
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 10507
+    - 10737
 language: zh
 needs_keys: false
 prerequisites: []
@@ -38,7 +41,7 @@ readme_source:
   repo: chuspeeism/dashi-ppt-skill
   path: skills/dashi-ppt/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:46.029Z
+  fetched_at: 2026-11-16T09:16:07.801Z
   truncated: false
 type: agent_skill
 skill:

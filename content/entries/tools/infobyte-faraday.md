@@ -15,29 +15,29 @@ tags:
   - autonomous-pentest
   - collaboration
 status: active
-quality_percentile: 74
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: infobyte/faraday
   official_vendor: false
   license: GPL-3.0
 signals:
-  stars: 6847
+  stars: 6861
   last_commit: 2026-10-29T20:25:25Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.1
-  trending_score: 6.01
-  rank_current: 106
-  rank_delta: 8
+  stars_delta_7d: 14
+  stars_growth_pct: 0.2
+  trending_score: 14.03
+  rank_current: 111
+  rank_delta: -5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6803
     - 6821
     - 6841
     - 6847
+    - 6861
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: infobyte/faraday
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:28.336Z
+  fetched_at: 2026-11-16T09:16:59.411Z
   truncated: false
 type: agent_tool
 tool:

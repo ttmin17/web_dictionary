@@ -16,7 +16,7 @@ status: active
 quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ComposioHQ/composio
@@ -24,19 +24,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 30993
-  last_commit: 2026-11-09T09:03:41Z
-  stars_delta_7d: 56
-  stars_growth_pct: 0.2
-  trending_score: 56.1
+  stars: 31094
+  last_commit: 2026-11-16T09:12:02Z
+  stars_delta_7d: 101
+  stars_growth_pct: 0.3
+  trending_score: 101.33
   rank_current: 84
-  rank_delta: -5
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 30635
     - 30752
     - 30937
     - 30993
+    - 31094
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: ComposioHQ/composio
   path: skills/composio/SKILL.md
   branch: next
-  fetched_at: 2026-11-09T09:28:15.365Z
+  fetched_at: 2026-11-16T09:16:43.929Z
   truncated: false
 type: agent_skill
 skill:
@@ -52,9 +52,9 @@ skill:
   description: Route and complete Composio work across Composio For You and
     Composio Platform. Use when the user mentions Composio; wants an agent to
     use apps such as Gmail, Slack, GitHub, Notion, Calendar, or Linear; needs
-    first-time setup, an SDK or MCP integration, CLI operation, migration
-    guidance, current documentation, or help diagnosing a connection or tool
-    call.
+    first-time setup, an SDK or MCP integration, CLI operation, tool approvals,
+    Firewall hooks, a custom MCP server, migration guidance, current
+    documentation, or help diagnosing a connection or tool call.
   folder_path: skills/composio
   extra_files:
     - references/errors.md
@@ -104,8 +104,8 @@ Do not turn an explanation, documentation lookup, or narrow bug fix into onboard
 ## 3. Load only the relevant guidance
 
 - For You: read [Composio For You](https://github.com/ComposioHQ/composio/blob/next/skills/composio/references/for-you.md).
-- Platform: read [Composio Platform](https://github.com/ComposioHQ/composio/blob/next/skills/composio/references/platform.md).
-- Provider, connection, or execution failure: also read [Errors and provider gotchas](https://github.com/ComposioHQ/composio/blob/next/skills/composio/references/errors.md).
+- Platform: read [Composio Platform](https://github.com/ComposioHQ/composio/blob/next/skills/composio/references/platform.md). It also covers Approvals, Firewall, and Custom MCP.
+- Provider, connection, or execution failure, including a call paused for approval or blocked by Firewall: also read [Errors and provider gotchas](https://github.com/ComposioHQ/composio/blob/next/skills/composio/references/errors.md).
 
 ## Complete the selected job
 
@@ -119,14 +119,15 @@ Do not turn an explanation, documentation lookup, or narrow bug fix into onboard
 1. Establish the product before choosing credentials, URLs, SDKs, or commands.
 2. Treat dashboard onboarding as a context, not the skill's identity. When the developer arrives with an existing `COMPOSIO_API_KEY` from Getting Started, use it and never create, rotate, replace, print, or request it in chat. Do not run `composio dev init` in that path.
 3. For a general first-time Platform setup with no dashboard credential handoff, follow the current setup path in the Platform guide.
-4. Never invent toolkit or tool slugs. Discover them at runtime or with the CLI.
-5. Do not build a provider OAuth flow. Composio returns a Connect Link when authentication is needed.
-6. Use sessions for new Platform integrations. Preserve the application's existing user identity and agent architecture.
-7. Keep credentials out of source control, URLs, logs, chat, and command output.
-8. Get the log or request ID before diagnosing a failed tool call.
-9. Prefer the smallest configuration that completes the current job. Keep toolkit filters, tag policies, sandbox controls, custom auth, provider-specific hardening, and other advanced options out of the first path unless the request or existing code requires them.
-10. Do not invent repository facts. Never claim that a file, framework, environment loader, identity field, agent path, or dependency exists until it was provided or inspected. If codebase context is unavailable, state the unknown and ask for access or one necessary detail.
-11. In SDK or API examples, use exact identifiers and call shapes from a current public page or schema. Copy the documented shape for the requested language instead of translating names between TypeScript and Python; if a required detail is not documented, explain the behavior without inventing code.
+4. Reuse an existing Composio credential first: a `COMPOSIO_API_KEY`, a saved CLI login, or a saved agent identity. Only when the task needs Composio, no credential exists, and no human is available to log in, follow [Authenticate an unattended agent](https://docs.composio.dev/docs/agent-setup/unattended-authentication) and run `composio login --agent`. A mention of Composio is not a reason to create an account, and an agent account does not authorize anyone's apps.
+5. Never invent toolkit or tool slugs. Discover them at runtime or with the CLI.
+6. Do not build a provider OAuth flow. Composio returns a Connect Link when authentication is needed.
+7. Use sessions for new Platform integrations. Preserve the application's existing user identity and agent architecture.
+8. Keep credentials out of source control, URLs, logs, chat, and command output.
+9. Get the log or request ID before diagnosing a failed tool call.
+10. Prefer the smallest configuration that completes the current job. Keep toolkit filters, tag policies, approvals, Firewall hooks, Custom MCP toolkits, sandbox controls, custom auth, provider-specific hardening, and other advanced options out of the first path unless the request or existing code requires them. When the request does ask for one, such as "ask before sending" or "block prompt injection", use the documented feature instead of building a substitute in prompts or application code.
+11. Do not invent repository facts. Never claim that a file, framework, environment loader, identity field, agent path, or dependency exists until it was provided or inspected. If codebase context is unavailable, state the unknown and ask for access or one necessary detail.
+12. In SDK or API examples, use exact identifiers and call shapes from a current public page or schema. Copy the documented shape for the requested language instead of translating names between TypeScript and Python; if a required detail is not documented, explain the behavior without inventing code.
 
 ## Canonical information
 

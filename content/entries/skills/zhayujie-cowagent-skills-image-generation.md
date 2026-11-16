@@ -19,7 +19,7 @@ status: active
 quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2022-08-07T08:33:41
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zhayujie/CowAgent
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 47849
-  last_commit: 2026-11-09T09:14:14Z
-  stars_delta_7d: 47
-  stars_growth_pct: 0.1
-  trending_score: 47.05
-  rank_current: 90
-  rank_delta: -12
+  stars: 47948
+  last_commit: 2026-11-16T09:05:26Z
+  stars_delta_7d: 99
+  stars_growth_pct: 0.2
+  trending_score: 99.2
+  rank_current: 86
+  rank_delta: 4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 47461
     - 47600
     - 47802
     - 47849
+    - 47948
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: zhayujie/CowAgent
   path: skills/image-generation/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:27:26.682Z
+  fetched_at: 2026-11-16T09:15:50.883Z
   truncated: false
 type: agent_skill
 skill:
@@ -77,6 +77,7 @@ Supported models (passed via `model` only when the user asks for a specific one)
 - **Seedream (Volcengine Ark)** — `seedream-5.0-lite`, `seedream-4.5`
 - **Qwen (DashScope)** — `qwen-image-2.0`, `qwen-image-2.0-pro`
 - **MiniMax** — `image-01`
+- **CowAgent** — `gpt-image-2.5-flare`, `gpt-image-2.5-sunburst`, `gemini-3.1-flash-image`, `gemini-3-pro-image`, `seedream-5.0-pro`, `seedream-5.0-lite`
 
 ## Usage
 
@@ -157,7 +158,7 @@ On error:
 
 The script needs **at least one** of these API keys (set via `env_config` or `config.json`):
 
-`OPENAI_API_KEY` / `GEMINI_API_KEY` / `ARK_API_KEY` / `DASHSCOPE_API_KEY` / `MINIMAX_API_KEY` / `LINKAI_API_KEY`
+`OPENAI_API_KEY` / `GEMINI_API_KEY` / `ARK_API_KEY` / `DASHSCOPE_API_KEY` / `MINIMAX_API_KEY` / `COWAGENT_API_KEY` / `LINKAI_API_KEY`
 
 Each also has an optional `*_API_BASE` for custom endpoints. The script automatically picks the first configured backend and falls back to the next if it fails — no need to specify a model.
 

@@ -14,10 +14,10 @@ tags:
   - cli
   - codex
 status: active
-quality_percentile: 82
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: genspark-ai/genoffice
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 11997
-  last_commit: 2026-11-09T07:45:08Z
-  stars_delta_7d: 233
-  stars_growth_pct: 2
-  trending_score: 237.61
+  stars: 12423
+  last_commit: 2026-11-16T02:25:04Z
+  stars_delta_7d: 426
+  stars_growth_pct: 3.6
+  trending_score: 441.13
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9983
     - 10872
     - 11764
     - 11997
+    - 12423
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: genspark-ai/genoffice
   path: skills/recommended/contract-drafter/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:45.678Z
+  fetched_at: 2026-11-16T09:16:07.401Z
   truncated: false
 type: agent_skill
 skill:

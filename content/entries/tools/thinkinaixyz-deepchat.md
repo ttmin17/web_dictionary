@@ -11,29 +11,29 @@ tags:
   - ai-sdk
   - chatgpt
 status: active
-quality_percentile: 88
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ThinkInAIXYZ/deepchat
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 6387
-  last_commit: 2026-11-08T14:29:26Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0
-  trending_score: 2
-  rank_current: 125
-  rank_delta: -5
+  stars: 6397
+  last_commit: 2026-11-16T07:12:16Z
+  stars_delta_7d: 10
+  stars_growth_pct: 0.2
+  trending_score: 10.02
+  rank_current: 118
+  rank_delta: 7
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6370
     - 6371
     - 6385
     - 6387
+    - 6397
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: ThinkInAIXYZ/deepchat
   path: README.md
   branch: dev
-  fetched_at: 2026-11-09T09:28:02.933Z
+  fetched_at: 2026-11-16T09:16:33.927Z
   truncated: false
 type: agent_tool
 tool:
@@ -526,6 +526,14 @@ Common commands include `/start`, `/help`, `/pair`, `/new`, `/sessions`, `/use`,
     <td>
       <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/uberllm-color.svg" width="50" height="50" alt="UberLLM Icon"><br/>
       <a href="https://uberllm.dev/">UberLLM</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/openllm.svg" width="50" height="50" alt="OpenLLM Icon"><br/>
+      <a href="https://www.openllm.sh/">OpenLLM</a>
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/dev/src/renderer/src/assets/llm-icons/wiro.svg" width="50" height="50" alt="Wiro AI Icon"><br/>
+      <a href="https://wiro.ai/">Wiro AI</a>
     </td>
   </tr>
 

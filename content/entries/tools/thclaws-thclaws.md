@@ -12,29 +12,29 @@ tags:
   - ai-agent
   - anthropic
 status: active
-quality_percentile: 66
+quality_percentile: 65
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: thClaws/thClaws
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1255
-  last_commit: 2026-11-06T08:50:05Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.3
-  trending_score: 4.01
-  rank_current: 120
-  rank_delta: 7
+  stars: 1261
+  last_commit: 2026-11-13T04:53:47Z
+  stars_delta_7d: 6
+  stars_growth_pct: 0.5
+  trending_score: 6.03
+  rank_current: 126
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1241
     - 1243
     - 1251
     - 1255
+    - 1261
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: thClaws/thClaws
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:12.731Z
+  fetched_at: 2026-11-16T09:15:33.723Z
   truncated: false
 type: agent_tool
 tool:

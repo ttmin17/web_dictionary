@@ -14,26 +14,26 @@ status: active
 quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: strands-agents/samples
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 928
-  last_commit: 2026-11-06T22:03:19Z
-  stars_delta_7d: 4
-  stars_growth_pct: 0.4
-  trending_score: 4.02
-  rank_current: 115
-  rank_delta: 10
+  stars: 940
+  last_commit: 2026-11-10T15:24:08Z
+  stars_delta_7d: 12
+  stars_growth_pct: 1.3
+  trending_score: 12.16
+  rank_current: 112
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 910
     - 915
     - 924
     - 928
+    - 940
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: strands-agents/samples
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:31.377Z
+  fetched_at: 2026-11-16T09:17:02.683Z
   truncated: false
 type: agent_tool
 tool:

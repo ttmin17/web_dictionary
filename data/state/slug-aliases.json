@@ -1213,5 +1213,8 @@
   "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-claude": "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp",
   "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-codex": "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp",
   "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-opencode": "kungfu-systems-kungfu-framework-core-src-python-kungfu-agent-skills-amp",
-  "citrolabs-ego-lite-skills-ego-browser": "citrolabs-ego-lite-plugins-ego-skills-ego-browser"
+  "citrolabs-ego-lite-skills-ego-browser": "citrolabs-ego-lite-plugins-ego-skills-ego-browser",
+  "marker-inc-korea-autorag-plugins-remote-agents-skills-search": "marker-inc-korea-autorag-plugins-hermes-skills-search",
+  "marker-inc-korea-autorag-skills-autorag-setup": "marker-inc-korea-autorag-plugins-hermes-skills-setup",
+  "agricidaniel-claude-seo-skills-seo-bing": "agricidaniel-claude-seo-extensions-bing-webmaster-skills-seo-bing"
 }

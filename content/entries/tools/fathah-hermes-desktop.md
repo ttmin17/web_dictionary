@@ -13,28 +13,26 @@ tags:
   - chatbot
   - hermes
 status: active
-quality_percentile: 41
+quality_percentile: 54
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-05T13:14:07.410Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: fathah/hermes-desktop
   official_vendor: false
   license: MIT
 signals:
-  stars: 14535
-  last_commit: 2026-10-13T14:53:59Z
-  stars_delta_7d: 79
-  stars_growth_pct: 0.5
-  trending_score: 79.43
-  rank_current: 78
-  rank_delta: 12
-  velocity_source: snapshot_delta
+  stars: 14583
+  last_commit: 2026-11-12T13:20:12Z
+  stars_delta_7d: 429
+  stars_growth_pct: 0
+  trending_score: 0
+  velocity_source: age_velocity
   sparkline_4w:
-    - 14428
     - 14456
     - 14535
+    - 14583
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +41,7 @@ readme_source:
   repo: fathah/hermes-desktop
   path: README.md
   branch: main
-  fetched_at: 2026-11-05T13:13:44.805Z
+  fetched_at: 2026-11-16T09:16:56.744Z
   truncated: false
 type: agent_tool
 tool:

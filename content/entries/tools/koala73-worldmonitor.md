@@ -8,36 +8,36 @@ summary: Real-time global intelligence dashboard — AI-powered news aggregation
   geopolitical monitoring, and infrastructure tracking in a unified situational
   awareness interface.
 categories:
-  - cloud-infra
+  - coding-agents
 tags:
   - dashboard
+  - gemini-cli-extension
   - geopolitics
   - monitoring
-  - news
 status: active
 quality_percentile: 97
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: koala73/worldmonitor
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 90401
-  last_commit: 2026-11-09T09:21:22Z
-  stars_delta_7d: 216
-  stars_growth_pct: 0.2
-  trending_score: 216.52
+  stars: 90730
+  last_commit: 2026-11-16T09:08:24Z
+  stars_delta_7d: 329
+  stars_growth_pct: 0.4
+  trending_score: 330.2
   rank_current: 20
-  rank_delta: 3
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 88774
     - 89544
     - 90185
     - 90401
+    - 90730
 language: en
 needs_keys: false
 prerequisites:
@@ -46,11 +46,11 @@ readme_source:
   repo: koala73/worldmonitor
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.699Z
+  fetched_at: 2026-11-16T09:14:55.560Z
   truncated: false
 type: agent_tool
 tool:
-  subcategory: other
+  subcategory: coding_agent
   install_command: git clone https://github.com/koala73/worldmonitor.git
   runtime: node
   execution_mode: local
@@ -67,6 +67,8 @@ tool:
 [简体中文](https://github.com/koala73/worldmonitor/blob/main/README.zh-CN.md) | [日本語](https://github.com/koala73/worldmonitor/blob/main/README.ja-JP.md) | [Русский](https://github.com/koala73/worldmonitor/blob/main/README.ru.md)
 
 **Real-time global intelligence dashboard** — AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface.
+
+The World Monitor name and wordmark identify the official site at [www.worldmonitor.app](https://www.worldmonitor.app), so please don't present a fork as the official site.
 
 [![GitHub stars](https://img.shields.io/github/stars/koala73/worldmonitor?style=social)](https://github.com/koala73/worldmonitor/stargazers)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
@@ -276,7 +278,7 @@ npm run build:full       # Production build
 
 See [LICENSE](https://github.com/koala73/worldmonitor/blob/main/LICENSE) for the full code license and [docs/license.mdx](https://github.com/koala73/worldmonitor/blob/main/docs/license.mdx) for a plain-language summary. Commercial licensing is available as an alternative option for teams that need non-AGPL terms.
 
-Copyright (C) 2024-2026 Elie Habib. All rights reserved.
+Copyright (C) 2026 Elie Habib. All rights reserved.
 
 ---
 

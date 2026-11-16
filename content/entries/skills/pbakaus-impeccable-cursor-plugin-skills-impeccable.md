@@ -16,10 +16,10 @@ tags:
   - design
   - slop
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: pbakaus/impeccable
@@ -27,17 +27,18 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 106468
-  last_commit: 2026-11-09T05:52:35Z
-  stars_delta_7d: 3032
-  stars_growth_pct: 2.9
-  trending_score: 3120.88
+  stars: 110998
+  last_commit: 2026-11-16T07:22:59Z
+  stars_delta_7d: 4530
+  stars_growth_pct: 4.3
+  trending_score: 4722.74
   rank_current: 6
-  rank_delta: null
+  rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
     - 103436
     - 106468
+    - 110998
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +46,7 @@ readme_source:
   repo: pbakaus/impeccable
   path: cursor-plugin/skills/impeccable/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:54.032Z
+  fetched_at: 2026-11-16T09:16:14.979Z
   truncated: false
 type: agent_skill
 skill:
@@ -91,7 +92,7 @@ Core principles:
 ## Setup
 
 1. Run `"<skill-base-dir>/scripts/impeccable" context` once per session, where `<skill-base-dir>` is the directory that contains this SKILL.md (the skill folder, not a plugin root two levels above it); keep cwd at the user's project. That base directory resolves every `"<skill-base-dir>/scripts/impeccable" <verb>` command in this skill and its references. On a Windows shell without `sh`, call `& "<skill-base-dir>/scripts/impeccable.cmd"` instead. The launcher runs a self-contained binary that ships next to it or is downloaded once on first run; no Node or other runtime is required. Pass a named source file or route as `--target <path>`. It loads PRODUCT.md, DESIGN.md, the matching surface brief, and native-platform guidance when applicable; follow its directives and do not rerun it.
-2. Load the request's playbook: its Commands-table reference for an explicit/implied sub-command, or [reference/new-work.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/new-work.md) for a new surface or replacement visual world. Inspect target and incumbent visual truth before editing. When the app cannot run, start with committed visual-regression goldens or screenshot fixtures; verify target and freshness against current tokens, CSS, components, or assets, resolve conflicts, and compare theme/variant captures.
+2. Load the request's playbook: its Commands-table reference for an explicit/implied sub-command, or [reference/new-work.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/new-work.md) for a new surface, a replacement visual world, or a build from an approved comp. Some playbooks come in parts; read the part this request needs in the same step, not when the playbook later mentions it: [reference/new-work-world.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/new-work-world.md) when a visual world is created or replaced (a redesign, a new look, or no established world), [reference/new-work-comp.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/new-work-comp.md) for a build from an approved comp or on a comp-led build path, and [reference/critique-rubric.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/critique-rubric.md) for a critique whose Assessment A runs in this context (a native platform, or no sub-agent tool); a delegated Assessment A gets the rubric's path in its prompt instead. Inspect target and incumbent visual truth before editing. When the app cannot run, start with committed visual-regression goldens or screenshot fixtures; verify target and freshness against current tokens, CSS, components, or assets, resolve conflicts, and compare theme/variant captures.
 3. After resolving analysis and direction, read [reference/craft-floor.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/craft-floor.md) immediately before any UI edit, including small refinements. It carries the quality floor, the absolute bans, and the reflexes no detector catches. Do not load it for planning-only work.
 
 **Launcher unavailable:** On refusal or failure, send a separate message **before the next tool call**: “Context loading did not run; I’ll read the existing project context directly.” Then read existing PRODUCT.md and DESIGN.md without inventing missing context, follow applicable steps 2–3, including reading [reference/craft-floor.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/craft-floor.md) immediately before any UI edit, and continue through permitted tools. This applies to planning and editing; launcher failure alone does not block either.
@@ -158,5 +159,7 @@ After init writes PRODUCT.md, resume without rerunning `impeccable context`; ini
 **Hooks:** `/impeccable hooks <on|off|status|ignore-rule|ignore-file|ignore-value|reset>` manages the design detector hook for this project (auto-runs the detector after UI file edits and surfaces findings). Load [reference/hooks.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/hooks.md) when the user invokes it with any argument.
 
 **Doctor:** `/impeccable doctor` reports and repairs drift between this project's Impeccable artifacts (PRODUCT.md, DESIGN.md and its sidecar, config, surface briefs, the hook) and what this version reads. Load [reference/doctor.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/doctor.md) when the user invokes it, or when they ask what is out of date, stale, or needs refreshing. A `CONTEXT_STALE` directive in Setup's output is the cheap subset of the same report; act on it there per its own instructions rather than running doctor unasked.
+
+**Foundations:** `/impeccable foundations` runs `"<skill-base-dir>/scripts/impeccable" foundations` and walks the user through the product-foundations roadmap (secrets, 404 page, icons, CI and more); `/impeccable foundations <id>` fixes that one item. Load [reference/foundations.md](https://github.com/pbakaus/impeccable/blob/main/cursor-plugin/skills/impeccable/reference/foundations.md) when the user invokes it.
 
 **Never repair drift as a side effect of a design task.** A `CONTEXT_STALE` finding is reported, not acted on, unless the user asks. The one exception is a finding marked `auto`, which the next write to that file performs anyway.

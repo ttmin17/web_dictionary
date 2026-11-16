@@ -1,0 +1,1135 @@
+{
+  "week": "2026-W47",
+  "generated_at": "2026-11-16T09:17:13.183Z",
+  "added": [
+    {
+      "slug": "tonhowtf-omniget",
+      "name": "omniget",
+      "type": "mcp_server",
+      "stars": 14463,
+      "repo": "tonhowtf/omniget"
+    },
+    {
+      "slug": "onehumanbeing-esp32-iphone-agent",
+      "name": "esp32-iphone-agent",
+      "type": "mcp_server",
+      "stars": 5012,
+      "repo": "onehumanbeing/esp32-iphone-agent"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-internal-skills-organize",
+      "name": "organize",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-plugins-hermes-skills-automate",
+      "name": "automate",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-plugins-hermes-skills-schedule",
+      "name": "schedule",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-plugins-hermes-skills-search",
+      "name": "search",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-plugins-hermes-skills-setup",
+      "name": "setup",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-skills-autorag-doctor",
+      "name": "doctor",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-skills-autorag-lite-setup",
+      "name": "lite-setup",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "marker-inc-korea-autorag-skills-autorag",
+      "name": "autorag",
+      "type": "agent_skill",
+      "stars": 5874,
+      "repo": "Marker-Inc-Korea/AutoRAG"
+    },
+    {
+      "slug": "mixelpixx-kicad-mcp-server",
+      "name": "KiCAD-MCP-Server",
+      "type": "mcp_server",
+      "stars": 3374,
+      "repo": "mixelpixx/KiCAD-MCP-Server"
+    },
+    {
+      "slug": "remocn-remocn",
+      "name": "remocn",
+      "type": "mcp_server",
+      "stars": 1758,
+      "repo": "Remocn/remocn"
+    },
+    {
+      "slug": "ling71671-open-reverselab-tools-skills-create-reverselab-extension",
+      "name": "create-reverselab-extension",
+      "type": "agent_skill",
+      "stars": 1372,
+      "repo": "LING71671/open-reverselab"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-agentdock-user-guide",
+      "name": "user-guide",
+      "type": "agent_skill",
+      "stars": 1297,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-plugin-import",
+      "name": "plugin-import",
+      "type": "agent_skill",
+      "stars": 1297,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-skill-authoring",
+      "name": "authoring",
+      "type": "agent_skill",
+      "stars": 1297,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "uvwt-agentdock-core-skills-skill-installation",
+      "name": "installation",
+      "type": "agent_skill",
+      "stars": 1297,
+      "repo": "uvwt/agentdock"
+    },
+    {
+      "slug": "rootsunc-cnequity",
+      "name": "CNEquity",
+      "type": "mcp_server",
+      "stars": 1041,
+      "repo": "rootSunc/CNEquity"
+    },
+    {
+      "slug": "respanai-respan-gateway",
+      "name": "respan-gateway",
+      "type": "agent_tool",
+      "stars": 864,
+      "repo": "respanai/respan-gateway"
+    },
+    {
+      "slug": "oss-invisible-playwright_mcp",
+      "name": "playwright_mcp",
+      "type": "mcp_server",
+      "stars": 865,
+      "repo": "oss-invisible/playwright_mcp"
+    },
+    {
+      "slug": "pingdotgg-t3code",
+      "name": "t3code",
+      "type": "agent_tool",
+      "stars": 62009,
+      "repo": "pingdotgg/t3code"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-sheets",
+      "name": "sheets",
+      "type": "agent_skill",
+      "stars": 71532,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "asgeirtj-system_prompts_leaks-anthropic-artifact-types-whiteboard",
+      "name": "whiteboard",
+      "type": "agent_skill",
+      "stars": 71532,
+      "repo": "asgeirtj/system_prompts_leaks"
+    },
+    {
+      "slug": "obsidianmd-obsidian-skills-plugins-obsidian-skills-defuddle",
+      "name": "defuddle",
+      "type": "agent_skill",
+      "stars": 52878,
+      "repo": "obsidianmd/obsidian-skills"
+    },
+    {
+      "slug": "obsidianmd-obsidian-skills-plugins-obsidian-skills-json-canvas",
+      "name": "json-canvas",
+      "type": "agent_skill",
+      "stars": 52878,
+      "repo": "obsidianmd/obsidian-skills"
+    },
+    {
+      "slug": "obsidianmd-obsidian-skills-plugins-obsidian-skills-knap",
+      "name": "knap",
+      "type": "agent_skill",
+      "stars": 52878,
+      "repo": "obsidianmd/obsidian-skills"
+    },
+    {
+      "slug": "obsidianmd-obsidian-skills-plugins-obsidian-skills-obsidian-bases",
+      "name": "obsidian-bases",
+      "type": "agent_skill",
+      "stars": 52878,
+      "repo": "obsidianmd/obsidian-skills"
+    },
+    {
+      "slug": "obsidianmd-obsidian-skills-plugins-obsidian-skills-obsidian-cli",
+      "name": "obsidian-cli",
+      "type": "agent_skill",
+      "stars": 52878,
+      "repo": "obsidianmd/obsidian-skills"
+    },
+    {
+      "slug": "obsidianmd-obsidian-skills-plugins-obsidian-skills-obsidian-headless",
+      "name": "obsidian-headless",
+      "type": "agent_skill",
+      "stars": 52878,
+      "repo": "obsidianmd/obsidian-skills"
+    },
+    {
+      "slug": "obsidianmd-obsidian-skills-plugins-obsidian-skills-obsidian-markdown",
+      "name": "obsidian-markdown",
+      "type": "agent_skill",
+      "stars": 52878,
+      "repo": "obsidianmd/obsidian-skills"
+    },
+    {
+      "slug": "latent-spaces-brag-skills-brag-slim",
+      "name": "slim",
+      "type": "agent_skill",
+      "stars": 21642,
+      "repo": "latent-spaces/brag"
+    },
+    {
+      "slug": "latent-spaces-brag-skills-brag",
+      "name": "brag",
+      "type": "agent_skill",
+      "stars": 21642,
+      "repo": "latent-spaces/brag"
+    },
+    {
+      "slug": "zilliztech-claude-context",
+      "name": "claude-context",
+      "type": "agent_tool",
+      "stars": 12694,
+      "repo": "zilliztech/claude-context"
+    },
+    {
+      "slug": "tigerless-labs-autoharness-skills-learn",
+      "name": "learn",
+      "type": "agent_skill",
+      "stars": 11135,
+      "repo": "tigerless-labs/autoharness"
+    },
+    {
+      "slug": "nexu-io-openmotion-library-skills-openmotion-brandkit",
+      "name": "brandkit",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-library-skills-openmotion-design-remix",
+      "name": "design-remix",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-library-skills-openmotion-presenter-story",
+      "name": "presenter-story",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-packages-motion-package-examples-product-story",
+      "name": "product-story",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-skills-openmotion-director",
+      "name": "director",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-skills-openmotion-media",
+      "name": "media",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-skills-openmotion-production",
+      "name": "production",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-skills-openmotion-recreate",
+      "name": "recreate",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-skills-openmotion-reference-video",
+      "name": "reference-video",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-skills-openmotion-template-to-video",
+      "name": "template-to-video",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "nexu-io-openmotion-skills-openmotion-video-to-template",
+      "name": "video-to-template",
+      "type": "agent_skill",
+      "stars": 10016,
+      "repo": "nexu-io/openmotion"
+    },
+    {
+      "slug": "arekejoker-qwen21-nsfw-pose-skill",
+      "name": "qwen21-nsfw-pose-skill",
+      "type": "agent_skill",
+      "stars": 4426,
+      "repo": "Arekejoker/qwen21-nsfw-pose-skill"
+    },
+    {
+      "slug": "alchaincyf-darwin-skill",
+      "name": "darwin-skill",
+      "type": "agent_skill",
+      "stars": 6937,
+      "repo": "alchaincyf/darwin-skill"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-asking-user-questions",
+      "name": "asking-user-questions",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-brainstorming",
+      "name": "brainstorming",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-choosing-a-workflow",
+      "name": "choosing-a-workflow",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-importing-a-codebase",
+      "name": "importing-a-codebase",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-setting-up-a-project",
+      "name": "setting-up-a-project",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-shipping-a-pr",
+      "name": "shipping-a-pr",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-starting-a-new-project",
+      "name": "starting-a-new-project",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-writing-specs",
+      "name": "writing-specs",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-thinkrail-workflow-skills-writing-workflow-skills",
+      "name": "writing-workflow-skills",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-pi-todos-skills-todos",
+      "name": "todos",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-server-skills-managing-mcp-servers",
+      "name": "managing-mcp-servers",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-packages-spec-graph-skills-spec-graph",
+      "name": "spec-graph",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "jetbrains-thinkrail-thinkrail-extensions-web-access-skills-librarian",
+      "name": "librarian",
+      "type": "agent_skill",
+      "stars": 8293,
+      "repo": "JetBrains/thinkrail"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-codex-skills-humanize-korean",
+      "name": "humanize-korean",
+      "type": "agent_skill",
+      "stars": 6592,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-extras-skills-commit-ko",
+      "name": "commit-ko",
+      "type": "agent_skill",
+      "stars": 6592,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-skills-humanize-redo",
+      "name": "humanize-redo",
+      "type": "agent_skill",
+      "stars": 6592,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-skills-humanize-scan",
+      "name": "humanize-scan",
+      "type": "agent_skill",
+      "stars": 6592,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "epoko77-ai-im-not-ai-skills-humanize",
+      "name": "humanize",
+      "type": "agent_skill",
+      "stars": 6592,
+      "repo": "epoko77-ai/im-not-ai"
+    },
+    {
+      "slug": "fincept-corporation-finceptterminal",
+      "name": "FinceptTerminal",
+      "type": "agent_tool",
+      "stars": 33874,
+      "repo": "Fincept-Corporation/FinceptTerminal"
+    },
+    {
+      "slug": "microsoft-tokeneconomizer-plugin-codex-skills-config",
+      "name": "config",
+      "type": "agent_skill",
+      "stars": 6819,
+      "repo": "microsoft/TokenEconomizer"
+    },
+    {
+      "slug": "microsoft-tokeneconomizer-plugin-codex-skills-microskills",
+      "name": "microskills",
+      "type": "agent_skill",
+      "stars": 6819,
+      "repo": "microsoft/TokenEconomizer"
+    },
+    {
+      "slug": "microsoft-tokeneconomizer-plugin-codex-skills-repos",
+      "name": "repos",
+      "type": "agent_skill",
+      "stars": 6819,
+      "repo": "microsoft/TokenEconomizer"
+    },
+    {
+      "slug": "microsoft-tokeneconomizer-plugin-codex-skills-status",
+      "name": "status",
+      "type": "agent_skill",
+      "stars": 6819,
+      "repo": "microsoft/TokenEconomizer"
+    },
+    {
+      "slug": "microsoft-tokeneconomizer-plugin-codex-skills-toolprune",
+      "name": "toolprune",
+      "type": "agent_skill",
+      "stars": 6819,
+      "repo": "microsoft/TokenEconomizer"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-builtin-skills-visual-design",
+      "name": "visual-design",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-dingtalk-skills-dws",
+      "name": "dws",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-base",
+      "name": "lark-base",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-calendar",
+      "name": "lark-calendar",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-doc",
+      "name": "lark-doc",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-drive",
+      "name": "lark-drive",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-im",
+      "name": "lark-im",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-shared",
+      "name": "lark-shared",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-sheets",
+      "name": "lark-sheets",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-task",
+      "name": "lark-task",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-lark-skills-lark-wiki",
+      "name": "lark-wiki",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-tmeet-skills-tmeet-skill",
+      "name": "tmeet-skill",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-calendar",
+      "name": "wecomcli-calendar",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-contact",
+      "name": "wecomcli-contact",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-disk",
+      "name": "wecomcli-disk",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-doc-manage",
+      "name": "wecomcli-doc-manage",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-doc",
+      "name": "wecomcli-doc",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-email",
+      "name": "wecomcli-email",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-media",
+      "name": "wecomcli-media",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-meeting",
+      "name": "wecomcli-meeting",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-message",
+      "name": "wecomcli-message",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-pptx",
+      "name": "wecomcli-pptx",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-shared",
+      "name": "wecomcli-shared",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-sheet",
+      "name": "wecomcli-sheet",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "pinvou-pinvou-agent-pinvou3-app-src-tauri-resources-common-bundle-wecom-skills-wecomcli-smartpage",
+      "name": "wecomcli-smartpage",
+      "type": "agent_skill",
+      "stars": 3034,
+      "repo": "Pinvou/pinvou-agent"
+    },
+    {
+      "slug": "johannesjo-parallel-code",
+      "name": "parallel-code",
+      "type": "agent_tool",
+      "stars": 1091,
+      "repo": "johannesjo/parallel-code"
+    },
+    {
+      "slug": "fathah-hermes-desktop",
+      "name": "hermes-desktop",
+      "type": "agent_tool",
+      "stars": 14583,
+      "repo": "fathah/hermes-desktop"
+    },
+    {
+      "slug": "loopx-project-loopx",
+      "name": "loopx",
+      "type": "agent_tool",
+      "stars": 6687,
+      "repo": "loopx-project/loopx"
+    },
+    {
+      "slug": "video-db-director",
+      "name": "Director",
+      "type": "agent_tool",
+      "stars": 1587,
+      "repo": "video-db/Director"
+    }
+  ],
+  "removed": [
+    "0x0funky-agent-sprite-forge-skills-codeart2d",
+    "0x0funky-agent-sprite-forge-skills-generate2dmap",
+    "0x0funky-agent-sprite-forge-skills-generate2dmedia",
+    "0x0funky-agent-sprite-forge-skills-generate2dsprite",
+    "0x0funky-agent-sprite-forge-skills-video2dsprite",
+    "aaron-he-zhu-aaron-marketing-skills-ad-activate-ad-account-auditor",
+    "aaron-he-zhu-aaron-marketing-skills-ad-activate-conversion-signal-qa",
+    "aaron-he-zhu-aaron-marketing-skills-ad-activate-conversion-value-mapper",
+    "aaron-he-zhu-aaron-marketing-skills-ad-activate-placement-exclusion-manager",
+    "aaron-he-zhu-aaron-marketing-skills-ad-orchestrate-ad-creative-builder",
+    "aaron-he-zhu-aaron-marketing-skills-ad-orchestrate-ad-test-designer",
+    "aaron-he-zhu-aaron-marketing-skills-ad-orchestrate-bid-strategy-planner",
+    "aaron-he-zhu-aaron-marketing-skills-ad-orchestrate-landing-experience-checker",
+    "aaron-he-zhu-aaron-marketing-skills-ad-research-audience-segment-builder",
+    "aaron-he-zhu-aaron-marketing-skills-ad-research-campaign-architect",
+    "aaron-he-zhu-aaron-marketing-skills-ad-research-product-feed-optimizer",
+    "aaron-he-zhu-aaron-marketing-skills-ad-research-search-term-miner",
+    "aaron-he-zhu-aaron-marketing-skills-ad-scale-attribution-reconciler",
+    "aaron-he-zhu-aaron-marketing-skills-ad-scale-budget-pacing-monitor",
+    "aaron-he-zhu-aaron-marketing-skills-ad-scale-fatigue-frequency-manager",
+    "aaron-he-zhu-aaron-marketing-skills-ad-scale-paid-measurement-loop",
+    "aaron-he-zhu-aaron-marketing-skills-email-deliver-cold-outbound-sequencer",
+    "aaron-he-zhu-aaron-marketing-skills-email-deliver-email-quality-auditor",
+    "aaron-he-zhu-aaron-marketing-skills-email-deliver-inbox-placement-monitor",
+    "aaron-he-zhu-aaron-marketing-skills-email-deliver-send-experiment-designer",
+    "aaron-he-zhu-aaron-marketing-skills-email-engage-dynamic-content-personalizer",
+    "aaron-he-zhu-aaron-marketing-skills-email-engage-email-creative-builder",
+    "aaron-he-zhu-aaron-marketing-skills-email-engage-email-render-builder",
+    "aaron-he-zhu-aaron-marketing-skills-email-engage-subject-line-lab",
+    "aaron-he-zhu-aaron-marketing-skills-email-nurture-email-sequence-designer",
+    "abilityai-trinity",
+    "agricidaniel-claude-obsidian-skills-autoresearch",
+    "agricidaniel-claude-obsidian-skills-canvas",
+    "agricidaniel-claude-obsidian-skills-defuddle",
+    "agricidaniel-claude-obsidian-skills-obsidian-bases",
+    "agricidaniel-claude-obsidian-skills-obsidian-markdown",
+    "agricidaniel-claude-obsidian-skills-save",
+    "agricidaniel-claude-obsidian-skills-think",
+    "agricidaniel-claude-obsidian-skills-wiki",
+    "agricidaniel-claude-obsidian-skills-wiki-cli",
+    "agricidaniel-claude-obsidian-skills-wiki-fold",
+    "agricidaniel-claude-obsidian-skills-wiki-ingest",
+    "agricidaniel-claude-obsidian-skills-wiki-lint",
+    "agricidaniel-claude-obsidian-skills-wiki-mode",
+    "agricidaniel-claude-obsidian-skills-wiki-query",
+    "agricidaniel-claude-obsidian-skills-wiki-retrieve",
+    "agricidaniel-claude-obsidian-tests-fixtures-contracts-valid-skills-example",
+    "agricidaniel-claude-seo-skills-seo-hreflang",
+    "agricidaniel-claude-seo-skills-seo-images",
+    "ai-ql-tuui",
+    "anthropics-claude-plugins-official-plugins-claude-md-management-skills-claude-md-improver",
+    "anthropics-claude-plugins-official-plugins-claude-security-skills-claude-security",
+    "anthropics-claude-plugins-official-plugins-cwc-makers-skills-cardputer-buddy",
+    "anthropics-claude-plugins-official-plugins-cwc-makers-skills-m5-onboard",
+    "anthropics-claude-plugins-official-plugins-example-plugin-skills-example-command",
+    "anthropics-claude-plugins-official-plugins-example-plugin-skills-example-skill",
+    "anthropics-claude-plugins-official-plugins-frontend-design-skills-frontend-design",
+    "anthropics-claude-plugins-official-plugins-hookify-skills-writing-rules",
+    "anthropics-claude-plugins-official-plugins-math-olympiad-skills-math-olympiad",
+    "anthropics-claude-plugins-official-plugins-math-proof-skills-siege",
+    "anthropics-claude-plugins-official-plugins-math-proof-skills-solo",
+    "asgeirtj-system_prompts_leaks-anthropic-claude-code-skills-docs",
+    "asgeirtj-system_prompts_leaks-anthropic-claude-code-skills-doctor",
+    "bgauryy-octocode",
+    "cft0808-edict",
+    "codewhale-hq-codewhale-crates-skills-assets-skills-forget",
+    "codewhale-hq-codewhale-crates-skills-assets-skills-frontend-design",
+    "codewhale-hq-codewhale-crates-skills-assets-skills-github",
+    "codewhale-hq-codewhale-crates-skills-assets-skills-gmail",
+    "datamodel-code-generator-datamodel-code-generator-skills-datamodel-code-generator",
+    "datamodel-code-generator-datamodel-code-generator-tests-data-expected-agent_skill-preserved_skill",
+    "deepseek-ai-deepseek-harness-packages-preset-agent-preset-skills-agent-experience",
+    "deepseek-ai-deepseek-harness-packages-preset-agent-preset-skills-cordis-composition-reference",
+    "deepseek-ai-deepseek-harness-packages-preset-agent-preset-skills-cordis-plugin-development",
+    "deepseek-ai-deepseek-harness-packages-preset-agent-preset-skills-editing-cordis-compositions",
+    "deepseek-ai-deepseek-harness-packages-sandbox-sandbox-windows-acl-assets-diagnose-windows-sandbox-acl",
+    "deepseek-ai-deepseek-harness-packages-skill-skill-office-assets-office",
+    "deepseek-ai-deepseek-harness-packages-skill-skill-office-assets-office-docx",
+    "deepseek-ai-deepseek-harness-packages-skill-skill-office-assets-office-export-pdf",
+    "deepseek-ai-deepseek-harness-packages-skill-skill-office-assets-office-pptx",
+    "deepseek-ai-deepseek-harness-packages-skill-skill-office-assets-office-recalculate",
+    "deepseek-ai-deepseek-harness-packages-skill-skill-office-assets-office-render",
+    "deepseek-ai-deepseek-harness-packages-skill-skill-office-assets-office-xlsx",
+    "dreammis-social-auto-upload-skills-alipay-upload",
+    "dreammis-social-auto-upload-skills-baijiahao-upload",
+    "dreammis-social-auto-upload-skills-bilibili-upload",
+    "dreammis-social-auto-upload-skills-dayu-upload",
+    "dreammis-social-auto-upload-skills-douyin-upload",
+    "dreammis-social-auto-upload-skills-facebook-upload",
+    "dreammis-social-auto-upload-skills-hupu-upload",
+    "dreammis-social-auto-upload-skills-instagram-upload",
+    "dreammis-social-auto-upload-skills-kuaishou-upload",
+    "dreammis-social-auto-upload-skills-meta-upload",
+    "dreammis-social-auto-upload-skills-social-auto-upload",
+    "dreammis-social-auto-upload-skills-tencent-upload",
+    "dreammis-social-auto-upload-skills-tiktok-upload",
+    "dreammis-social-auto-upload-skills-weibo-upload",
+    "dreammis-social-auto-upload-skills-xiaohongshu-upload",
+    "dreammis-social-auto-upload-skills-xueqiu-upload",
+    "dreammis-social-auto-upload-skills-youtube-upload",
+    "dreammis-social-auto-upload-skills-zhihu-upload",
+    "esengine-deepseek-reasonix-examples-api-notes-kit-skills-api-notes",
+    "esengine-deepseek-reasonix-examples-frontend-page-kit-skills-frontend-page",
+    "esengine-deepseek-reasonix-examples-issue-fix-kit-skills-issue-fix",
+    "esengine-deepseek-reasonix-examples-release-note-kit-skills-release-note",
+    "esengine-deepseek-reasonix-internal-ext-skill-builtincontent-reasonix-guide",
+    "feder-cr-invisible_playwright_mcp",
+    "firecrawl-firecrawl-skills-firecrawl-build",
+    "firecrawl-firecrawl-skills-firecrawl-build-interact",
+    "firecrawl-firecrawl-skills-firecrawl-build-onboarding",
+    "firecrawl-firecrawl-skills-firecrawl-build-scrape",
+    "firecrawl-firecrawl-skills-firecrawl-build-search",
+    "google-elephant-goldfish-model-distributions-claude-skills-egm-bootstrap",
+    "google-elephant-goldfish-model-distributions-claude-skills-egm-brainstorm",
+    "google-elephant-goldfish-model-distributions-claude-skills-egm-draft",
+    "google-elephant-goldfish-model-distributions-claude-skills-egm-drift-report",
+    "google-elephant-goldfish-model-distributions-claude-skills-egm-resolve",
+    "google-elephant-goldfish-model-distributions-claude-skills-egm-review",
+    "google-elephant-goldfish-model-distributions-claude-skills-egm-review-loop",
+    "googleworkspace-cli-skills-gws-admin-reports",
+    "googleworkspace-cli-skills-gws-calendar",
+    "googleworkspace-cli-skills-gws-calendar-agenda",
+    "googleworkspace-cli-skills-gws-calendar-insert",
+    "googleworkspace-cli-skills-gws-chat",
+    "googleworkspace-cli-skills-gws-chat-send",
+    "googleworkspace-cli-skills-gws-classroom",
+    "googleworkspace-cli-skills-gws-docs",
+    "googleworkspace-cli-skills-gws-docs-write",
+    "googleworkspace-cli-skills-gws-drive",
+    "googleworkspace-cli-skills-gws-drive-upload",
+    "googleworkspace-cli-skills-gws-events",
+    "googleworkspace-cli-skills-gws-events-renew",
+    "googleworkspace-cli-skills-gws-events-subscribe",
+    "googleworkspace-cli-skills-gws-forms",
+    "googleworkspace-cli-skills-gws-gmail",
+    "googleworkspace-cli-skills-gws-gmail-forward",
+    "googleworkspace-cli-skills-gws-gmail-read",
+    "googleworkspace-cli-skills-gws-gmail-reply",
+    "googleworkspace-cli-skills-gws-gmail-reply-all",
+    "googleworkspace-cli-skills-gws-gmail-send",
+    "googleworkspace-cli-skills-gws-gmail-triage",
+    "googleworkspace-cli-skills-gws-gmail-watch",
+    "googleworkspace-cli-skills-gws-keep",
+    "googleworkspace-cli-skills-gws-meet",
+    "inferstep-atlas",
+    "intrect-io-openswarm",
+    "jarrodwatts-claude-hud-skills-hud",
+    "lemomo-ai-lemo-opuscar-plugin-skills-lemo-opuscar",
+    "ljagiello-ctf-skills-ctf-ai-ml",
+    "ljagiello-ctf-skills-ctf-crypto",
+    "ljagiello-ctf-skills-ctf-forensics",
+    "ljagiello-ctf-skills-ctf-malware",
+    "ljagiello-ctf-skills-ctf-misc",
+    "ljagiello-ctf-skills-ctf-osint",
+    "ljagiello-ctf-skills-ctf-pwn",
+    "ljagiello-ctf-skills-ctf-reverse",
+    "ljagiello-ctf-skills-ctf-similar-search",
+    "ljagiello-ctf-skills-ctf-web",
+    "ljagiello-ctf-skills-ctf-writeup",
+    "ljagiello-ctf-skills-solve-challenge",
+    "llmsresearch-paperbanana",
+    "melonjs-melonjs-packages-melonjs-skills-melonjs",
+    "nexu-io-html-anything-next-src-lib-templates-skills-article-magazine",
+    "nexu-io-html-anything-next-src-lib-templates-skills-article-sketchnote-editorial",
+    "nexu-io-html-anything-next-src-lib-templates-skills-blog-post",
+    "nexu-io-html-anything-next-src-lib-templates-skills-card-twitter",
+    "nexu-io-html-anything-next-src-lib-templates-skills-card-xiaohongshu",
+    "nexu-io-html-anything-next-src-lib-templates-skills-competitive-teardown",
+    "nexu-io-html-anything-next-src-lib-templates-skills-dashboard",
+    "nexu-io-html-anything-next-src-lib-templates-skills-data-report",
+    "nexu-io-html-anything-next-src-lib-templates-skills-dating-web",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-blueprint",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-course-module",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-dir-key-nav",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-graphify-dark",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-guizang-editorial",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-hermes-cyber",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-ljg-present",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-magazine-web",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-obsidian-claude",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-open-slide-canvas",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-pitch",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-presenter-mode",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-product-launch",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-replit",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-safety-alert",
+    "nexu-io-html-anything-next-src-lib-templates-skills-deck-simple",
+    "op7418-guizang-ppt-skill",
+    "open-webui-mcpo",
+    "promptise-com-foundry",
+    "qntx-bot",
+    "shibing624-agentica"
+  ],
+  "surging": [
+    {
+      "slug": "morluto-rea",
+      "name": "rea",
+      "type": "agent_tool",
+      "stars": 462772,
+      "stars_delta_7d": 17702,
+      "stars_growth_pct": 4,
+      "trending_score": 18406.07
+    },
+    {
+      "slug": "ebony-vinyl-dsh-our-free-model",
+      "name": "dsh-our-free-model",
+      "type": "agent_tool",
+      "stars": 76598,
+      "stars_delta_7d": 9821,
+      "stars_growth_pct": 14.7,
+      "trending_score": 11265.39
+    },
+    {
+      "slug": "stablyai-orca-resources-native-chat-visuals-skills-orca-chat-visuals",
+      "name": "chat-visuals",
+      "type": "agent_skill",
+      "stars": 126156,
+      "stars_delta_7d": 6423,
+      "stars_growth_pct": 5.4,
+      "trending_score": 6767.56
+    },
+    {
+      "slug": "milind-soni-openmausbot-skills-create-verification-skill",
+      "name": "create-verification-skill",
+      "type": "agent_skill",
+      "stars": 23784,
+      "stars_delta_7d": 4789,
+      "stars_growth_pct": 25.2,
+      "trending_score": 5996.4
+    },
+    {
+      "slug": "google-elephant-goldfish-model-skills-egm-bootstrap",
+      "name": "egm-bootstrap",
+      "type": "agent_skill",
+      "stars": 20023,
+      "stars_delta_7d": 4335,
+      "stars_growth_pct": 27.6,
+      "trending_score": 5532.87
+    },
+    {
+      "slug": "vercel-labs-agent-desktop-skills-agent-desktop-ffi",
+      "name": "ffi",
+      "type": "agent_skill",
+      "stars": 24396,
+      "stars_delta_7d": 4475,
+      "stars_growth_pct": 22.5,
+      "trending_score": 5480.25
+    },
+    {
+      "slug": "yetone-magpie-internal-sessions-testdata-droid-skills-skills-greet-user",
+      "name": "greet-user",
+      "type": "agent_skill",
+      "stars": 37346,
+      "stars_delta_7d": 4558,
+      "stars_growth_pct": 13.9,
+      "trending_score": 5191.63
+    },
+    {
+      "slug": "pbakaus-impeccable-cursor-plugin-skills-impeccable",
+      "name": "impeccable",
+      "type": "agent_skill",
+      "stars": 110998,
+      "stars_delta_7d": 4530,
+      "stars_growth_pct": 4.3,
+      "trending_score": 4722.74
+    },
+    {
+      "slug": "leonxlnx-taste-skill-skills-taste-skill",
+      "name": "design-taste-frontend",
+      "type": "agent_skill",
+      "stars": 116461,
+      "stars_delta_7d": 4246,
+      "stars_growth_pct": 3.8,
+      "trending_score": 4406.66
+    },
+    {
+      "slug": "affaan-m-ecc-docs-ko-kr-skills-backend-patterns",
+      "name": "backend-patterns",
+      "type": "agent_skill",
+      "stars": 304047,
+      "stars_delta_7d": 4190,
+      "stars_growth_pct": 1.4,
+      "trending_score": 4248.55
+    },
+    {
+      "slug": "graphify-labs-graphify",
+      "name": "graphify",
+      "type": "agent_tool",
+      "stars": 148640,
+      "stars_delta_7d": 3961,
+      "stars_growth_pct": 2.7,
+      "trending_score": 4069.44
+    },
+    {
+      "slug": "addyosmani-agent-skills-skills-api-and-interface-design",
+      "name": "api-and-interface-design",
+      "type": "agent_skill",
+      "stars": 118091,
+      "stars_delta_7d": 3804,
+      "stars_growth_pct": 3.3,
+      "trending_score": 3930.61
+    },
+    {
+      "slug": "heygen-com-hyperframes",
+      "name": "hyperframes",
+      "type": "mcp_server",
+      "stars": 84915,
+      "stars_delta_7d": 3599,
+      "stars_growth_pct": 4.4,
+      "trending_score": 3758.29
+    },
+    {
+      "slug": "d4vinci-scrapling",
+      "name": "Scrapling",
+      "type": "agent_tool",
+      "stars": 103464,
+      "stars_delta_7d": 3307,
+      "stars_growth_pct": 3.3,
+      "trending_score": 3416.19
+    },
+    {
+      "slug": "homeassistant-ai-ha-mcp",
+      "name": "ha-mcp",
+      "type": "mcp_server",
+      "stars": 7895,
+      "stars_delta_7d": 2377,
+      "stars_growth_pct": 43.1,
+      "trending_score": 3400.95
+    },
+    {
+      "slug": "nextlevelbuilder-ui-ux-pro-max-skill-cli-assets-skills-banner-design",
+      "name": "banner-design",
+      "type": "agent_skill",
+      "stars": 150143,
+      "stars_delta_7d": 3045,
+      "stars_growth_pct": 2.1,
+      "trending_score": 3108.03
+    },
+    {
+      "slug": "alibaba-open-code-review-plugins-open-code-review-skills-open-code-review-delegate",
+      "name": "delegate",
+      "type": "agent_skill",
+      "stars": 52510,
+      "stars_delta_7d": 2820,
+      "stars_growth_pct": 5.7,
+      "trending_score": 2980.04
+    },
+    {
+      "slug": "blader-humanizer",
+      "name": "humanizer",
+      "type": "agent_skill",
+      "stars": 69639,
+      "stars_delta_7d": 2835,
+      "stars_growth_pct": 4.2,
+      "trending_score": 2955.31
+    },
+    {
+      "slug": "backnotprop-plannotator-apps-kiro-cli-skills-plannotator-annotate",
+      "name": "annotate",
+      "type": "agent_skill",
+      "stars": 12132,
+      "stars_delta_7d": 2211,
+      "stars_growth_pct": 22.3,
+      "trending_score": 2703.74
+    },
+    {
+      "slug": "vincentwei1021-video-shotcraft",
+      "name": "video-shotcraft",
+      "type": "agent_skill",
+      "stars": 20295,
+      "stars_delta_7d": 2261,
+      "stars_growth_pct": 12.5,
+      "trending_score": 2544.47
+    },
+    {
+      "slug": "agricidaniel-claude-seo-extensions-ahrefs-skills-seo-ahrefs",
+      "name": "seo-ahrefs",
+      "type": "agent_skill",
+      "stars": 29837,
+      "stars_delta_7d": 2290,
+      "stars_growth_pct": 8.3,
+      "trending_score": 2480.37
+    },
+    {
+      "slug": "thedotmack-claude-mem-claude-mem-cursor-skills-agent-cost-report",
+      "name": "Agent Cost Report",
+      "type": "agent_skill",
+      "stars": 117496,
+      "stars_delta_7d": 2388,
+      "stars_growth_pct": 2.1,
+      "trending_score": 2437.54
+    },
+    {
+      "slug": "hkuds-deeptutor",
+      "name": "DeepTutor",
+      "type": "agent_tool",
+      "stars": 59616,
+      "stars_delta_7d": 2311,
+      "stars_growth_pct": 4,
+      "trending_score": 2404.2
+    },
+    {
+      "slug": "chromedevtools-chrome-devtools-mcp",
+      "name": "chrome-devtools-mcp",
+      "type": "mcp_server",
+      "stars": 57311,
+      "stars_delta_7d": 2306,
+      "stars_growth_pct": 4.2,
+      "trending_score": 2402.68
+    },
+    {
+      "slug": "copilotkit-openbot",
+      "name": "OpenBot",
+      "type": "agent_tool",
+      "stars": 12493,
+      "stars_delta_7d": 1975,
+      "stars_growth_pct": 18.8,
+      "trending_score": 2345.85
+    }
+  ],
+  "summary": {
+    "week": "2026-W47",
+    "generated_at": "2026-11-16T09:17:13.183Z",
+    "added_count": 100,
+    "removed_count": 192,
+    "surging_count": 25,
+    "total_stars_gained": 191505
+  }
+}

@@ -13,29 +13,29 @@ tags:
   - crawler
   - crawling
 status: active
-quality_percentile: 94
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: D4Vinci/Scrapling
   official_vendor: false
   license: BSD-3-Clause
 signals:
-  stars: 100157
-  last_commit: 2026-11-08T13:18:31Z
-  stars_delta_7d: 2757
-  stars_growth_pct: 2.8
-  trending_score: 2835.04
-  rank_current: 3
-  rank_delta: 1
+  stars: 103464
+  last_commit: 2026-11-14T17:28:43Z
+  stars_delta_7d: 3307
+  stars_growth_pct: 3.3
+  trending_score: 3416.19
+  rank_current: 4
+  rank_delta: -1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 88548
     - 89757
     - 97400
     - 100157
+    - 103464
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: D4Vinci/Scrapling
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.606Z
+  fetched_at: 2026-11-16T09:14:55.601Z
   truncated: false
 type: agent_tool
 tool:
@@ -320,6 +320,7 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
 <a href="https://www.webshare.io/?referral_code=48r2m2cd5uz1" target="_blank" title="The Most Reliable Proxy with Unparalleled Performance"><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/webshare.png"></a>
 <a href="https://proxiware.com/?ref=scrapling" target="_blank" title="Collect Any Data. At Any Scale."><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/proxiware.png"></a>
 <a href="https://singaporemobileproxy.com/?utm_source=scrapling&utm_medium=sponsor&utm_campaign=paid_test_q4" target="_blank" title="Dedicated 4G/5G mobile proxies on real Singapore SIMs"><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/SingaporeMobileProxy.png"></a>
+<a href="http://olostep.com/" target="_blank" title="Web Data Infrastructure for AI"><img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/olostep.png"></a>
 
 
 <!-- /sponsors -->

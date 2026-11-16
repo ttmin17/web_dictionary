@@ -1,9 +1,8 @@
 ---
 slug: gentleman-programming-gentle-ai-internal-assets-skills-rdd-defect-workflow
 name: rdd-defect-workflow
-tagline: "Trigger: RDD, receipt-driven development, review authority,
-  receipt/lineage, correction/recovery, delivery gate/kill switch, bounded
-  review defects. G"
+tagline: "Trigger: fixing RDD defects (review authority, receipts/lineage,
+  correction/recovery, delivery gate). Not for using or toggling RDD."
 summary: Load when the frontmatter trigger terms apply to a defect workflow.
 categories:
   - coding-agents
@@ -13,10 +12,10 @@ tags:
   - ai-coding
   - claude-code
 status: active
-quality_percentile: 88
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Gentleman-Programming/gentle-ai
@@ -24,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8636
-  last_commit: 2026-11-08T21:57:39Z
-  stars_delta_7d: 301
-  stars_growth_pct: 3.6
-  trending_score: 311.87
+  stars: 9237
+  last_commit: 2026-11-16T06:28:35Z
+  stars_delta_7d: 601
+  stars_growth_pct: 7
+  trending_score: 642.83
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7849
     - 8020
     - 8335
     - 8636
+    - 9237
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,14 +41,13 @@ readme_source:
   repo: Gentleman-Programming/gentle-ai
   path: internal/assets/skills/rdd-defect-workflow/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:53.523Z
+  fetched_at: 2026-11-16T09:16:29.027Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: rdd-defect-workflow
-  description: "Trigger: RDD, receipt-driven development, review authority,
-    receipt/lineage, correction/recovery, delivery gate/kill switch, bounded
-    review defects. Guide work."
+  description: "Trigger: fixing RDD defects (review authority, receipts/lineage,
+    correction/recovery, delivery gate). Not for using or toggling RDD."
   folder_path: internal/assets/skills/rdd-defect-workflow
   extra_files: []
   pack_total_skills: 18

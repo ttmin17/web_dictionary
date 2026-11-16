@@ -17,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3340
-  last_commit: 2026-11-08T10:18:09Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.3
-  trending_score: 42.53
+  stars: 3411
+  last_commit: 2026-11-14T15:34:14Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2.1
+  trending_score: 72.51
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3152
     - 3214
     - 3298
     - 3340
+    - 3411
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/llm-provider-integration/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:34.064Z
+  fetched_at: 2026-11-16T09:17:02.508Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,7 +59,7 @@ skill:
     provider row".
   folder_path: skills/llm-provider-integration
   extra_files: []
-  pack_total_skills: 17
+  pack_total_skills: 18
   is_pack_primary: false
   clients:
     - claude-code
@@ -79,9 +79,19 @@ For a non-LLM external API *tool*, use `agentic-tool-integration`.
 ## Critical Rules
 
 - **NEVER let a provider API key reach a scan container.** Keys live in exactly
-  two places: Postgres `user_llm_providers` rows and, in transit, on the wire
-  between webapp and agent. The recon / scan / MCP containers must **never** see
-  them. Do not thread a provider key through recon settings or container env.
+  two places: Postgres `user_llm_providers` and `instance_llm_providers` rows and,
+  in transit, on the wire between webapp and agent. The recon / scan / MCP
+  containers must **never** see them. Do not thread a provider key through recon
+  settings or container env.
+- **An instance provider reaches the agent only as a marked row of the owner's
+  list.** `GET /api/users/{id}/llm-providers?internal=true` (master key) appends
+  the providers Root assigned to a set the account holds, with `providerType:
+  "instance"` and the kind in `instanceProviderType`, so no "the account's openai
+  key" or "first custom provider" reader lands on one. Such a row serves only
+  `instance/<providerId>/<model>`, resolved exactly (`exact_model_provider`,
+  `instance_build_args` in [agentic/llm_builder.py](https://github.com/samugit83/redamon/blob/master/skills/llm-provider-integration/../../agentic/llm_builder.py));
+  an `instance/` id the list lacks is refused in `setup_llm`
+  (`instance_provider_unavailable`), never routed on to OpenAI.
 - **NEVER add a model id that is not prefix-routed.** Anything other than
   `claude-*` and bare OpenAI ids MUST carry a `provider/<model>` prefix, resolved by
   `parse_model_provider()` in

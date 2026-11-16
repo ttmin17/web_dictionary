@@ -14,10 +14,10 @@ tags:
   - coding-agent
   - llm
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: code-yeongyu/senpi
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 514
-  last_commit: 2026-11-09T08:42:55Z
-  stars_delta_7d: 2
-  stars_growth_pct: 0.4
-  trending_score: 2.01
+  stars: 520
+  last_commit: 2026-11-16T09:11:13Z
+  stars_delta_7d: 6
+  stars_growth_pct: 1.2
+  trending_score: 6.07
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 484
     - 497
     - 512
     - 514
+    - 520
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: code-yeongyu/senpi
   path: packages/coding-agent/src/core/extensions/builtin/imagegen/skill/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:31.234Z
+  fetched_at: 2026-11-16T09:16:59.219Z
   truncated: false
 type: agent_skill
 skill:
@@ -72,7 +72,7 @@ How to get the image right the first time, and how to fix it fast when it is not
 When image generation tooling is present in your tool set, pick the surface that actually exists right now:
 
 - If a native `image_generation` server tool is available, use it. The provider runs generation server-side and returns the image in the response stream.
-- Otherwise, call the `generate_image` tool. It sends your prompt and optional reference images to the configured OpenAI-compatible endpoint and saves the result as a png, jpeg, or webp file. The model, quality, size, background, and format controls below apply to `generate_image`, not to the native server tool.
+- Otherwise, call `generate_image`. It is eval-only, like `bash`: when an `eval` tool exists it is not in your direct tool list, so run it inside an eval cell as `tool.generate_image({ prompt: "..." })` (js) or `tool.generate_image(prompt="...")` (py); `tool_schema("generate_image")` lists every parameter. Without an eval tool it is an ordinary direct tool. It sends your prompt and optional reference images to the configured OpenAI-compatible endpoint and saves the result as a png, jpeg, or webp file. The model, quality, size, background, and format controls below apply to `generate_image`, not to the native server tool.
 
 Check your current tool set before choosing. Tool state can change mid-session (model switch, credential change), so trust the tools you can see over what this page said at startup. If both surfaces ever appear, prefer the native server tool. When the request is clear, generate directly instead of asking for confirmation; ask only when a required reference image is missing.
 

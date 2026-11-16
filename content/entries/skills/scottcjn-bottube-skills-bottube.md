@@ -13,10 +13,10 @@ tags:
   - ai-agents
   - ai-generated-content
 status: active
-quality_percentile: 74
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Scottcjn/bottube
@@ -24,17 +24,18 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 365
+  stars: 366
   last_commit: 2026-11-07T02:26:37Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 140
-  rank_delta: null
+  stars_delta_7d: 1
+  stars_growth_pct: 0.3
+  trending_score: 1
+  rank_current: 134
+  rank_delta: 6
   velocity_source: snapshot_delta
   sparkline_4w:
     - 365
     - 365
+    - 366
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: Scottcjn/bottube
   path: skills/bottube/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:34.250Z
+  fetched_at: 2026-11-16T09:17:02.701Z
   truncated: false
 type: agent_skill
 skill:

@@ -14,29 +14,29 @@ tags:
   - embodied-ai
   - esp32
 status: active
-quality_percentile: 96
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: huangjunsen0406/py-xiaozhi
   official_vendor: false
   license: MIT
 signals:
-  stars: 3548
+  stars: 3552
   last_commit: 2026-11-09T01:32:31Z
-  stars_delta_7d: 7
-  stars_growth_pct: 0.2
-  trending_score: 7.01
-  rank_current: 103
-  rank_delta: 19
+  stars_delta_7d: 4
+  stars_growth_pct: 0.1
+  trending_score: 4
+  rank_current: 133
+  rank_delta: -30
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3517
     - 3528
     - 3541
     - 3548
+    - 3552
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: huangjunsen0406/py-xiaozhi
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:55.223Z
+  fetched_at: 2026-11-16T09:15:12.358Z
   truncated: false
 type: agent_tool
 tool:

@@ -14,10 +14,10 @@ tags:
   - agent-skills
   - ai-coding
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8774
-  last_commit: 2026-11-09T09:15:26Z
-  stars_delta_7d: 126
-  stars_growth_pct: 1.5
-  trending_score: 127.84
+  stars: 8867
+  last_commit: 2026-11-16T09:10:00Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.1
+  trending_score: 93.99
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7831
     - 8198
     - 8648
     - 8774
+    - 8867
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig/skills/working-with-an-openrig-team/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:49.762Z
+  fetched_at: 2026-11-16T09:16:32.402Z
   truncated: false
 type: agent_skill
 skill:
@@ -86,6 +86,23 @@ behave; this skill is the loop around them.
 
 - Use `rig_queue_create` with `destination` (the lead, or the seat the person chose) and `body`. Write the body for a
   capable colleague: the goal, why it matters, what done looks like, and where to look. Add a one-line `summary`.
+- With a seat, end the body with the reply route, because your seat has no terminal and `rig send` can't reach it:
+
+  > To ask me anything, create a queue item to `<your seat>` (`rig queue create --destination <your seat> ...`), then
+  > block this item on that new item's id (`rig queue block <this id> --on <question id>`), so my answer wakes you. I
+  > check it whenever the person talks to me. Don't ask in your own terminal: the person isn't there. A seat's
+  > permission prompt in this work is their question too: send me its own text and choices, the seat, what it was
+  > doing and any escalation's id, unless a question about that prompt is already open at my seat. Whoever sent the
+  > question passes on the answer, and no one else does. Capture that seat again first (a changed prompt needs a new
+  > answer), then `rig send <seat> "<key>" --dangerously-interact --reason 'task <question id>: <their answer>'` with
+  > the key the prompt shows for their choice (for Escape, `$'\e'` in place of `"<key>"`, never the word). Keep the
+  > reason in single quotes so the shell runs nothing in their words, and write each `'` in them as `'\''`. A no
+  > stays a no. If they gave no answer, or their words don't clearly
+  > pick one choice (a condition the action doesn't plainly meet, say), ask me again before sending anything, and
+  > never pick a "don't ask again" choice they didn't pick. Check the effect, and never send again while it's
+  > unknown. If you hand this item on or give this work to another seat, copy this paragraph into the new item. When
+  > you finish, put the outcome in this item's resolution, with what the latest review found, and any file in its
+  > evidence ref.
 - Tell the person the `qitemId` it returns. It's how both of you find this work again.
 - If the call times out, check `rig_queue_show` with that same `qitemId` before trying again. If you retry, pass the same id
   as `qitemId`. Never retry with a new one: that creates the work twice.
@@ -96,7 +113,10 @@ behave; this skill is the loop around them.
 - When a seat hands the work on, the item names the next one. Follow the chain to the newest item before you report.
 - Report what the record says. An accepted or claimed item isn't finished work, and a quiet one isn't stuck: say what you
   saw and when it last changed.
-- Nothing wakes this chat when the team finishes. Check again when the person asks, or when they come back.
+- Before you say the work is done, find the newest review of it on the chain and tell the person its outcome. Work a
+  review sent back with something to fix isn't done, even if a commit exists: say what the review asked for.
+- Nothing wakes this chat when the team asks or finishes. While its work is open, check each time the person talks to
+  you, and when they come back.
 
 ## The team's questions
 
@@ -106,8 +126,11 @@ behave; this skill is the loop around them.
   `rig_queue_update`: `state` `done`, `closureReason` `no-follow-on`, and exactly what the person typed in `resolution`,
   nothing else: no label such as "The person's answer:", no quotation marks, and no notes, paths or summaries of your own.
   If the person isn't there to answer, leave the item open and tell them it's waiting. Never choose an answer for them.
-- Some questions go to the person directly, outside your seat. Those wait for them where they already answer the team,
-  such as the OpenRig TUI or Slack. You can mention that they're waiting; answering them isn't yours.
+- A question can be a seat's permission prompt that the operator or a team seat sent you: show it with the seat, the
+  exact action and the choices it offers, and record the person's words the same way. The agent that sent it passes
+  their answer to the seat.
+- Some questions go to a registered person directly, outside your seat. Those wait for them where they already answer
+  the team, such as the OpenRig TUI or Slack. You can mention that they're waiting; answering them isn't yours.
 
 ## Read the result
 

@@ -19,7 +19,7 @@ status: active
 quality_percentile: 99
 selection_reason: official_vendor
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: cloudflare/vibesdk
@@ -27,17 +27,17 @@ source:
   official_vendor: true
   license: MIT
 signals:
-  stars: 5463
+  stars: 5476
   last_commit: 2026-10-22T01:20:01Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.1
-  trending_score: 5
+  stars_delta_7d: 13
+  stars_growth_pct: 0.2
+  trending_score: 13.03
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5411
     - 5427
     - 5458
     - 5463
+    - 5476
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: cloudflare/vibesdk
   path: worker/agents/think/skills/frontend-design-landing-page/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:20.886Z
+  fetched_at: 2026-11-16T09:16:50.939Z
   truncated: true
 type: agent_skill
 skill:

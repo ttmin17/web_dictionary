@@ -14,29 +14,29 @@ tags:
   - cloud-native
   - fluxcd
 status: active
-quality_percentile: 67
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: skyhook-io/radar
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 4071
-  last_commit: 2026-11-09T08:17:39Z
-  stars_delta_7d: 23
-  stars_growth_pct: 0.6
-  trending_score: 23.13
-  rank_current: 41
-  rank_delta: -19
+  stars: 4133
+  last_commit: 2026-11-16T09:07:34Z
+  stars_delta_7d: 62
+  stars_growth_pct: 1.5
+  trending_score: 62.94
+  rank_current: 38
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3851
     - 3911
     - 4048
     - 4071
+    - 4133
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: skyhook-io/radar
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.725Z
+  fetched_at: 2026-11-16T09:15:10.542Z
   truncated: false
 type: mcp_server
 launch:
@@ -245,8 +245,19 @@ sudo apt install ./radar-desktop_*.deb
 
 **Fedora/RHEL** — download the `.rpm` from [GitHub Releases](https://github.com/skyhook-io/radar/releases), then:
 ```bash
-sudo rpm -i radar-desktop_*.rpm
+sudo dnf install ./radar-desktop_*.rpm
 ```
+
+**Linux (AppImage, any distro)** — download the `.AppImage` from [GitHub Releases](https://github.com/skyhook-io/radar/releases), then:
+```bash
+chmod +x radar-desktop_*_linux_amd64.AppImage
+./radar-desktop_*_linux_amd64.AppImage
+```
+The AppImage doesn't update itself. When a new version is out, Radar links to the download.
+
+If the Linux desktop app flashes black, shows black icons or crashes on NVIDIA, see [Linux desktop rendering](https://github.com/skyhook-io/radar/blob/main/docs/configuration.md#linux-desktop-rendering).
+
+Kubeconfig login plugins (`exec`) run from inside the AppImage, not from the folder you started it in. If a plugin's `args` name a file by a relative path, such as `--token-file token.json`, the plugin can't find it and Radar shows "Authentication Failed". Give the full path instead, such as `--token-file /home/you/.kube/token.json`. A relative `command`, such as `./token.sh`, works: it's looked up next to the kubeconfig file.
 
 **Scoop (Windows):**
 ```powershell
@@ -343,6 +354,7 @@ Table-based resource browser with smart columns per resource kind.
 - Search by name, filter by status or problems (CrashLoopBackOff, ImagePullBackOff, etc.)
 - Add custom columns from any label or annotation — sortable, filterable, and resizable
 - Click any resource for YAML manifest, related resources, logs, and events
+- Pod logs list init containers, marked `(init)`, and open on the init container a Pod is stuck on, so a Pod that never starts still shows why
 - Set regular or init-container images on Deployments, StatefulSets, DaemonSets, and Argo Rollouts, with live rollout progress in tables, drawers, workload views, and Applications
 
 ### Image Filesystem Viewer
@@ -449,10 +461,10 @@ Track Kubernetes spending from OpenCost metrics in a PromQL-compatible backend o
 
 ### Cluster Audit
 
-Proactive best-practices scanner with 44 checks across security, reliability, and efficiency — inspired by Polaris, Kubescape, Trivy, and NSA/CISA guidelines. Runs instantly against cached data with zero cluster-side installation.
+Proactive best-practices scanner with 48 checks across security, reliability, and efficiency — inspired by Polaris, Kubescape, Trivy, and NSA/CISA guidelines. Runs instantly against cached data with zero cluster-side installation.
 
 - Security: privileged containers, privilege escalation, host namespaces, runtime socket mounts, secrets in ConfigMaps, and more
-- Reliability: missing probes, image tag `latest`, single-replica deployments, missing PDB/topology spread, deprecated API versions
+- Reliability: missing probes, image tag `latest`, single-replica deployments, missing PDB/topology spread, deprecated API versions, CloudNativePG clusters with no backup destination, no WAL archiving, a single instance or the deprecated in-tree Barman backup
 - Efficiency: missing requests and limits, orphan ConfigMaps/Secrets, PVCs with no consumer observed, long-Pending PVCs, and Released or Failed PVs
 - Remediation guidance per finding, NSA/CISA and CIS framework labels, and per-resource opt-out via the `radarhq.io/ignore-checks` annotation
 
@@ -495,7 +507,7 @@ No auth by default (local use). See the **[Authentication Guide](https://github.
 
 Radar auto-discovers any CRD in your cluster. Popular tools get [dedicated integrations](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md) with resource views, topology, AI context and application evidence. Coverage varies by integration.
 
-The Helm chart grants read access to common built-in Kubernetes kinds; Secrets and RBAC objects depend on chart settings and the authentication mode. CRD-based integrations need the CRD installed in your cluster *and* read access; most API groups are granted by default, and the chart's [RBAC](https://github.com/skyhook-io/radar/blob/main/deploy/helm/radar/README.md#rbac) and [CRD access](https://github.com/skyhook-io/radar/blob/main/deploy/helm/radar/README.md#crd-access) sections list what is on, what is opt-in, and how to add rules.
+The Helm chart grants read access to common built-in Kubernetes kinds; Secrets, RBAC objects and CertificateSigningRequests depend on chart settings and the authentication mode. CRD-based integrations need the CRD installed in your cluster *and* read access; most API groups are granted by default, and the chart's [RBAC](https://github.com/skyhook-io/radar/blob/main/deploy/helm/radar/README.md#rbac) and [CRD access](https://github.com/skyhook-io/radar/blob/main/deploy/helm/radar/README.md#crd-access) sections list what is on, what is opt-in, and how to add rules.
 
 | Category / integration | Coverage |
 |----------|-----------|
@@ -505,7 +517,7 @@ The Helm chart grants read access to common built-in Kubernetes kinds; Secrets a
 | **Storage** | PersistentVolumeClaims, PersistentVolumes, StorageClasses |
 | **Autoscaling** | HorizontalPodAutoscalers, VerticalPodAutoscalers |
 | **Cluster** | Nodes, Namespaces, ServiceAccounts, Events |
-| **Other Kubernetes APIs** | Workloads, PodGroups, CompositePodGroups, PodCertificateRequests, ClusterTrustBundles (only when served by the cluster) |
+| **Other Kubernetes APIs** | CertificateSigningRequests; Workloads, PodGroups, CompositePodGroups, PodCertificateRequests, ClusterTrustBundles (only when served by the cluster) |
 | **GitOps (FluxCD)** | GitRepository, OCIRepository, HelmRepository, Kustomization, HelmRelease, Alert |
 | **GitOps (ArgoCD)** | Application, ApplicationSet, AppProject |
 | **Argo Rollouts** | Rollout |
@@ -532,6 +544,7 @@ The Helm chart grants read access to common built-in Kubernetes kinds; Secrets a
 | **[NATS](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md#local-runtime-evidence-rabbitmq-nats-and-vault)** | JetStream consumer backlog, acknowledgment-pending and redelivery counters - **local collection** |
 | **Velero** | Backup, Restore, Schedule, BackupStorageLocation, VolumeSnapshotLocation |
 | **External Secrets** | ExternalSecret, ClusterExternalSecret, SecretStore, ClusterSecretStore |
+| **Secrets Store CSI Driver** | [SecretProviderClass and Pod mounts](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md#secrets-store-csi-driver): mount state, object versions and synced Secrets in the Pod drawer |
 | **[Vault](https://github.com/skyhook-io/radar/blob/main/docs/integrations.md#local-runtime-evidence-rabbitmq-nats-and-vault)** | Initialization, seal and standby state - **local collection** |
 | **CloudNativePG** | Cluster, Backup, ScheduledBackup, Pooler, Database, Publication, Subscription, ImageCatalog, ClusterImageCatalog, ObjectStore — plus [dedicated views](https://github.com/skyhook-io/radar/blob/main/docs/cnpg.md) for fleet, protection and declaration triage |
 | **Crossplane** | Managed Resources (any provider), Composite Resources, Claims, Provider, ProviderConfig, Function, Configuration, Composition, CompositionRevision, XRD |

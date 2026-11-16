@@ -17,26 +17,26 @@ status: active
 quality_percentile: 33
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: autonomous-ai/openharness
   official_vendor: false
   license: MIT
 signals:
-  stars: 1447
-  last_commit: 2026-11-09T09:22:35Z
-  stars_delta_7d: 19
-  stars_growth_pct: 1.3
-  trending_score: 19.25
-  rank_current: 47
-  rank_delta: -6
+  stars: 1496
+  last_commit: 2026-11-16T08:58:47Z
+  stars_delta_7d: 49
+  stars_growth_pct: 3.4
+  trending_score: 50.66
+  rank_current: 46
+  rank_delta: 1
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1316
     - 1369
     - 1428
     - 1447
+    - 1496
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: autonomous-ai/openharness
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:38.597Z
+  fetched_at: 2026-11-16T09:17:08.253Z
   truncated: false
 type: mcp_server
 launch:

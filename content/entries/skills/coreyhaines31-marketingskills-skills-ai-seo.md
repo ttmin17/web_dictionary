@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-ai-seo
 name: ai-seo
-tagline: When the user wants to optimize content for AI search engines, get
-  cited by LLMs, or appear in AI-generated answers. Also use when the user
-  mentions '
+tagline: When the user wants to get cited and recommended in AI answers
+  (ChatGPT, Perplexity, AI Overviews), or asks why AI cites a competitor, which
+  content g
 summary: Start with this skill's core workflow. Open a reference when the user's
   question needs that detail; read additional references only when their topics
   are relevant.
@@ -15,10 +15,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,25 +44,16 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ai-seo/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.914Z
+  fetched_at: 2026-11-16T09:15:48.045Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ai-seo
-  description: When the user wants to optimize content for AI search engines, get
-    cited by LLMs, or appear in AI-generated answers. Also use when the user
-    mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,'
-    'generative engine optimization,' 'LLM optimization,' 'AI Overviews,'
-    'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI
-    visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM
-    mentions,' 'optimize for Claude/Gemini,' 'llms.txt,' 'llms-full.txt,' 'OKF,'
-    'Open Knowledge Format,' 'knowledge bundle,' 'agent-readable site,' 'agent
-    readiness,' 'is my site agent-ready,' 'WebMCP,' 'do listicles still work for
-    AI,' 'ChatGPT stopped citing comparison pages,' 'how do LLMs see our brand,'
-    'LinkedIn for AEO,' or 'AI citation format shift.' Use this whenever someone
-    wants their content to be cited or surfaced by AI assistants and AI search
-    engines. For traditional technical and on-page SEO audits, see seo-audit.
-    For structured data implementation, see schema.
+  description: "When the user wants to get cited and recommended in AI answers
+    (ChatGPT, Perplexity, AI Overviews), or asks why AI cites a competitor,
+    which content gets cited, or whether llms.txt or a page format is worth it:
+    AEO, GEO, AI visibility, agent-readable sites. For technical and on-page
+    SEO, see seo-audit. For structured data, see schema."
   folder_path: skills/ai-seo
   extra_files:
     - evals/evals.json

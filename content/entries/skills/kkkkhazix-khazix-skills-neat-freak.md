@@ -1,9 +1,8 @@
 ---
 slug: kkkkhazix-khazix-skills-neat-freak
 name: neat-freak
-tagline: "Knowledge and governance closeout: reconcile project docs, rule files
-  (CLAUDE.md/AGENTS.md), authorized agent memory, and workspace residue with
-  what "
+tagline: 知识治理收尾：让项目文档、规则文件、获准维护的记忆与工作区残留和代码及运行态对齐，下一个会话从唯一现役答案开始。触发：用户点名
+  "neat-freak"、"洁癖"、"/neat"，或明确的知识收尾意图——开发后同步文档与记忆、CLAUDE.md/记忆过期或冲突、交接前清场、审计规则是否被遵守（"把文
 summary: 一次洁癖收尾只有在相关事实面都得到明确状态后才算完成：
 categories:
   - coding-agents
@@ -13,10 +12,10 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 77
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: KKKKhazix/khazix-skills
@@ -24,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 22096
-  last_commit: 2026-11-08T08:46:42Z
-  stars_delta_7d: 105
-  stars_growth_pct: 0.5
-  trending_score: 105.5
+  stars: 22294
+  last_commit: 2026-11-15T14:19:32Z
+  stars_delta_7d: 198
+  stars_growth_pct: 0.9
+  trending_score: 199.77
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21498
     - 21661
     - 21991
     - 22096
+    - 22294
 language: zh
 needs_keys: false
 prerequisites: []
@@ -42,23 +41,14 @@ readme_source:
   repo: KKKKhazix/khazix-skills
   path: neat-freak/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:34.836Z
+  fetched_at: 2026-11-16T09:16:02.262Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: neat-freak
-  description: 'Knowledge and governance closeout: reconcile project docs, rule
-    files (CLAUDE.md/AGENTS.md), authorized agent memory, and workspace residue
-    with what the code and runtime actually do, so the next session or the next
-    person starts from one current answer. Trigger when the user names
-    "neat-freak", "洁癖", or "/neat" — and also on clear knowledge-closeout intent
-    without the name: syncing or tidying project docs/rules/memory after
-    development ("把文档和记忆整理一下", "收尾时把文档同步掉", "docs 和代码对不上了"), stale or
-    conflicting CLAUDE.md/memory, a clean handoff to a teammate or a fresh
-    session, or auditing whether workspace rules are actually followed. Do not
-    trigger for pure coding/refactoring/debugging tasks, tidying data or prose
-    (JSON, 周报, changelog announcements), or a bare "整理" with no
-    project-knowledge context.'
+  description: 知识治理收尾：让项目文档、规则文件、获准维护的记忆与工作区残留和代码及运行态对齐，下一个会话从唯一现役答案开始。触发：用户点名
+    "neat-freak"、"洁癖"、"/neat"，或明确的知识收尾意图——开发后同步文档与记忆、CLAUDE.md/记忆过期或冲突、交接前清场、审计规则是否被遵守（"把文档和记忆整理一下"、"docs
+    和代码对不上了"）。不触发：纯写代码/重构/调试、整理数据或文稿（JSON、周报、changelog）、没有项目知识语境的裸"整理"。
   folder_path: neat-freak
   extra_files:
     - evals/evals.json

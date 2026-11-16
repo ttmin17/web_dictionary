@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-conversion-tracking
 name: conversion-tracking
-tagline: "Set up, audit, verify, or fix website conversion tracking. Use when
-  the conversion is a form submission, booked meeting, chat, phone call, signup,
-  or "
+tagline: When the user wants to set up, audit, or fix conversion tracking to
+  Google Ads, Meta, GA4, LinkedIn, and TikTok, or asks why conversions are
+  missing o
 summary: One rule sits above everything else here. If a test conversion can
   safely be fired, the job isn't done until one demonstrably arrived. And if it
   can't be fired, say plainly what remains unverified rather than implying...
@@ -15,10 +15,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,25 +44,18 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/conversion-tracking/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.916Z
+  fetched_at: 2026-11-16T09:15:48.049Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: conversion-tracking
-  description: Set up, audit, verify, or fix website conversion tracking. Use when
-    the conversion is a form submission, booked meeting, chat, phone call,
-    signup, or purchase; when conversions must reach Google Ads, Meta, GA4,
-    LinkedIn, TikTok, or Microsoft Ads; when the work involves GTM tags and
-    dataLayer events, pixels, the Conversions API (CAPI), Enhanced Conversions,
-    server-side tagging, or gclid and fbclid capture; or when the user reports
-    conversion problems like "conversions stopped", "double counting", "spend
-    but no conversions", "GA4 and Google Ads don't match", or an Unverified or
-    Inactive status. Covers lead gen and ecommerce. Always fire on confirmed
-    success, never the submit click; verify a test conversion arrives; diagnose
-    before changing anything; offer free and native paths alongside paid ones
-    and disclose partner tools. For tracking plans and UTMs, see analytics. For
-    attribution models, see attribution. For campaigns and bidding, see ads. For
-    CRM lead-stage design, see revops.
+  description: "When the user wants to set up, audit, or fix conversion tracking
+    to Google Ads, Meta, GA4, LinkedIn, and TikTok, or asks why conversions are
+    missing or doubled: GTM, pixels, CAPI, Enhanced Conversions, offline
+    imports. Fire on confirmed success, not the submit click; verify a test
+    conversion arrives; diagnose before changing; offer free paths and disclose
+    partner tools. For tracking plans, see analytics. For attribution, see
+    attribution. For bidding, see ads."
   folder_path: skills/conversion-tracking
   extra_files:
     - assets/gtm-recipes/README.md

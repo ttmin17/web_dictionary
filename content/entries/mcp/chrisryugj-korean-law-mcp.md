@@ -14,29 +14,29 @@ tags:
   - claude
   - claude-desktop
 status: active
-quality_percentile: 92
+quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2025-12-19T11:03:22
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: chrisryugj/korean-law-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2850
-  last_commit: 2026-11-03T12:23:15Z
-  stars_delta_7d: 8
-  stars_growth_pct: 0.3
-  trending_score: 8.02
-  rank_current: 73
-  rank_delta: -30
+  stars: 2879
+  last_commit: 2026-11-16T03:22:50Z
+  stars_delta_7d: 29
+  stars_growth_pct: 1
+  trending_score: 29.3
+  rank_current: 58
+  rank_delta: 15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2739
     - 2787
     - 2842
     - 2850
+    - 2879
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: chrisryugj/korean-law-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.413Z
+  fetched_at: 2026-11-16T09:15:16.363Z
   truncated: false
 type: mcp_server
 launch:
@@ -75,6 +75,8 @@ launch:
 > 법제처 Open API 기반 MCP 서버 + CLI. Claude Desktop, Cursor, Windsurf, Zed, Claude.ai 등에서 바로 사용 가능.
 
 [English](https://raw.githubusercontent.com/chrisryugj/korean-law-mcp/main/README-EN.md)
+
+> **옛 주소 종료 안내 (2026. 11. 23.)** 원격 서버를 국내 공공 클라우드로 옮겼습니다. `https://korean-law-mcp.fly.dev/mcp` 는 **2026. 11. 23.** 에 멈춥니다. 커넥터·설정의 주소를 `https://mcp.gomdori.app/law` 로 바꿔 다시 등록해 주세요(본인 키는 그대로 `?oc=본인키`). 도구와 사용법은 같습니다.
 
 **바로 쓰기:** Claude.ai 커넥터에 `https://mcp.gomdori.app/law?oc=본인키` 한 줄, Claude Code는 플러그인 두 줄 → [설치 및 사용법](#설치-및-사용법)
 
@@ -497,7 +499,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 - **8개 체인 + 9개 시나리오**: 기본 체인에 상황별 확장 분석 자동 추가 (과태료 감경, 관세 통관, 위임입법 감시 등)
 - **23개 도메인 통합 검색**: `search_decisions` 하나로 판례·헌재·조세심판·공정위·노동위 등 즉시 접근
 - **캐시**: 검색 1시간, 조문 24시간 TTL
-- **원격 엔드포인트**: 설치 없이 `https://mcp.gomdori.app/law`로 바로 사용 (구 `korean-law-mcp.fly.dev/mcp`도 하위호환 유지)
+- **원격 엔드포인트**: 설치 없이 `https://mcp.gomdori.app/law`로 바로 사용 (구 `korean-law-mcp.fly.dev/mcp` 는 2026. 11. 23. 종료)
 
 ---
 

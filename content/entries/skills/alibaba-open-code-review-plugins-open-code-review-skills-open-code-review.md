@@ -14,10 +14,10 @@ tags:
   - code-review-assistant
   - harness
 status: active
-quality_percentile: 63
+quality_percentile: 69
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: alibaba/open-code-review
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 49690
-  last_commit: 2026-11-09T08:28:42Z
-  stars_delta_7d: 209
-  stars_growth_pct: 0.4
-  trending_score: 209.88
+  stars: 52510
+  last_commit: 2026-11-16T09:10:27Z
+  stars_delta_7d: 2820
+  stars_growth_pct: 5.7
+  trending_score: 2980.04
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 47619
     - 48292
     - 49481
     - 49690
+    - 52510
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: alibaba/open-code-review
   path: plugins/open-code-review/skills/open-code-review/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:54.319Z
+  fetched_at: 2026-11-16T09:16:15.364Z
   truncated: false
 type: agent_skill
 skill:
@@ -97,6 +97,7 @@ ocr review --audience agent --background "business context here" [user-args]
 - **Default** (no user arguments): reviews staged, unstaged, and untracked changes (workspace mode)
 - **Specific commit**: use `--commit` or `-c` to review a single commit against its parent
 - **Branch comparison**: use `--from <ref>` and `--to <ref>` to review diff between two refs
+- **Current branch against a base**: `--from <ref>` defaults the target to `HEAD`, equivalent to `--from <ref> --to HEAD`. This reviews committed changes from the merge-base to HEAD, excluding staged, unstaged, and untracked changes. Omit both refs to review workspace changes.
 - **Timeout**: effective timeout per review group = `--timeout` × review rounds. Default `--timeout 15` with default effort `medium` (2 rounds) gives 30 minutes; `low`/`high` give 15/45 minutes.
 - **Concurrency**: default concurrency is 8 file workers; reduce with `--concurrency <n>` if rate limits are hit
 - **Preview mode**: use `--preview` or `-p` to preview which files will be reviewed without running the LLM
@@ -109,6 +110,7 @@ ocr review --audience agent --background "business context here" [user-args]
 |-----------|---------------|
 | "review my changes" / "review the working copy" | `ocr review --audience agent -b "context"` |
 | "review this PR" / "review feature branch" | `ocr review --audience agent -b "context" --from main --to <branch>` |
+| "review the current branch against main" | `ocr review --audience agent -b "context" --from main` |
 | "review commit abc123" | `ocr review --audience agent -b "context" --commit abc123` |
 | "what would be reviewed?" (dry-run) | `ocr review --preview` |
 

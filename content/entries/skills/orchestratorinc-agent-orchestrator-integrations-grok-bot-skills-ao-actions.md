@@ -15,10 +15,10 @@ tags:
   - agent-orchestration
   - agent-swarm
 status: active
-quality_percentile: 82
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: OrchestratorInc/agent-orchestrator
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 14314
-  last_commit: 2026-11-09T09:23:57Z
-  stars_delta_7d: 187
-  stars_growth_pct: 1.3
-  trending_score: 189.48
+  stars: 14784
+  last_commit: 2026-11-16T09:03:35Z
+  stars_delta_7d: 470
+  stars_growth_pct: 3.3
+  trending_score: 485.43
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13339
     - 13656
     - 14127
     - 14314
+    - 14784
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: OrchestratorInc/agent-orchestrator
   path: integrations/grok-bot/skills/ao-actions/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:42.805Z
+  fetched_at: 2026-11-16T09:16:04.584Z
   truncated: false
 type: agent_skill
 skill:
@@ -57,7 +57,7 @@ skill:
     awake tonight\", \"every night, ...\"."
   folder_path: integrations/grok-bot/skills/ao-actions
   extra_files: []
-  pack_total_skills: 8
+  pack_total_skills: 9
   is_pack_primary: false
   clients:
     - claude-code

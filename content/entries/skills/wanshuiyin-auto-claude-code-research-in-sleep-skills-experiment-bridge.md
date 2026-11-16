@@ -13,10 +13,10 @@ tags:
   - aris
   - autonomous-agent
 status: active
-quality_percentile: 87
+quality_percentile: 86
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 18911
-  last_commit: 2026-11-08T10:12:54Z
-  stars_delta_7d: 207
-  stars_growth_pct: 1.1
-  trending_score: 209.29
+  stars: 19278
+  last_commit: 2026-11-14T09:10:57Z
+  stars_delta_7d: 367
+  stars_growth_pct: 1.9
+  trending_score: 374.12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 17693
     - 18088
     - 18704
     - 18911
+    - 19278
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: wanshuiyin/Auto-claude-code-research-in-sleep
   path: skills/experiment-bridge/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:46.953Z
+  fetched_at: 2026-11-16T09:15:01.699Z
   truncated: false
 type: agent_skill
 skill:
@@ -254,6 +254,12 @@ Wait for completion. Verify:
 - Metrics are computed and saved correctly
 - GPU memory usage is within bounds
 - Output format matches expectations
+
+For environment/preparation failures, apply the inherited stop condition in
+[`compute-env-contract.md`](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/experiment-bridge/../shared-references/compute-env-contract.md) §5
+before the code-repair loop below. Preserve attempts across `/run-experiment`
+calls; missing access, authentication, networking or driver support is not fixed
+by rewriting the training script. The following budget remains for code fixes.
 
 If sanity fails → **auto-debug before giving up**. Budget: up to **2 patch
 attempts** on the same failure, then up to **2 clean reimplements** (4 total):

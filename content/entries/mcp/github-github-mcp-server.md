@@ -13,26 +13,26 @@ status: active
 quality_percentile: 98
 selection_reason: official_vendor
 first_seen: 2025-03-04T16:42:04
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: github/github-mcp-server
   official_vendor: true
   license: MIT
 signals:
-  stars: 34344
-  last_commit: 2026-11-06T23:25:36Z
-  stars_delta_7d: 92
-  stars_growth_pct: 0.3
-  trending_score: 92.25
-  rank_current: 15
-  rank_delta: -1
+  stars: 34515
+  last_commit: 2026-11-16T01:30:51Z
+  stars_delta_7d: 171
+  stars_growth_pct: 0.5
+  trending_score: 171.85
+  rank_current: 19
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 33745
     - 33962
     - 34252
     - 34344
+    - 34515
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +41,7 @@ readme_source:
   repo: github/github-mcp-server
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:42.617Z
+  fetched_at: 2026-11-16T09:14:55.559Z
   truncated: true
 type: mcp_server
 launch:
@@ -676,5 +676,33 @@ The following sets of tools are available:
 | `copilot` | Copilot related tools (e.g. Copilot Coding Agent) |
 | `copilot_spaces` | Copilot Spaces related tools |
 | `github_support_docs_search` | Search docs to answer GitHub product and support questions |
+
+## MCP Skills
+
+The local server bundles workflow skills that replace server instructions when
+enabled with `--features=skills` (or Insiders Mode). Skills are off by default
+and are filtered to the tools available in the connection, so a restricted
+toolset may expose only part of the catalog.
+
+<!-- START AUTOMATED SKILLS -->
+- [`account-and-team-context`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/account-and-team-context/SKILL.md) — USE FOR: establishing who the authenticated account is, which organisations and teams it belongs to, who sits on a team, and who has write access to a repository. NOT FOR: finding an unfamiliar repository, or choosing what work to do next.
+- [`codebase-exploration`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/codebase-exploration/SKILL.md) — USE FOR: understanding an unfamiliar repository and how it got that way — its layout, where a behaviour is implemented, and when and why a particular function or line last changed. NOT FOR: editing files, or assessing whether a project is healthy overall.
+- [`copilot-task-delegation`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/copilot-task-delegation/SKILL.md) — USE FOR: handing a piece of work to the Copilot coding agent — judging whether an issue is scoped tightly enough to delegate, launching it, and asking for an automated first-pass review of a proposed change. NOT FOR: doing the work directly, or reviewing what comes back.
+- [`discussion-participation`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/discussion-participation/SKILL.md) — USE FOR: taking part in GitHub Discussions — finding the unanswered questions in a category, reading a thread in full, replying to it, and marking the reply that resolved it. NOT FOR: commenting on an issue or a proposed change, or working through a backlog.
+- [`issue-authoring`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/issue-authoring/SKILL.md) — USE FOR: filing one clear bug report or feature request — checking it is not already reported, choosing its type and fields, breaking it into sub-issues, and giving it a title and body someone can act on. NOT FOR: working through an existing backlog, or discussing an open question with a community.
+- [`issue-backlog-triage`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/issue-backlog-triage/SKILL.md) — USE FOR: triaging a backlog of open GitHub issues — judging which are actionable, labelling and typing them, linking duplicates and parents, and closing what is dead. NOT FOR: writing one new issue, scheduling committed work, or reviewing pull requests.
+- [`label-scheme-management`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/label-scheme-management/SKILL.md) — USE FOR: curating the label vocabulary a repository uses — adding ones it lacks, auditing which are actually applied, renaming and recolouring them, merging overlapping ones, and tidying away the unused. NOT FOR: applying an existing label to an issue, or deciding which issues matter.
+- [`notification-triage`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/notification-triage/SKILL.md) — USE FOR: working through a GitHub notification inbox — deciding what needs a reply, what to unsubscribe from, and what to mark read or done. NOT FOR: triaging a repository issue backlog, or answering review threads on one specific pull request.
+- [`project-planning`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/project-planning/SKILL.md) — USE FOR: planning and updating work on a GitHub Projects board — reading fields and views, adding issues or pull requests as items, setting status and iteration, and posting a status update. NOT FOR: triaging a repository issue backlog, or preparing a release.
+- [`pull-request-authoring`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/pull-request-authoring/SKILL.md) — USE FOR: taking a branch of work through to landed — opening the pull request, describing it, requesting reviewers, keeping it current with its base, and merging it once checks and approvals are in. NOT FOR: reviewing someone else's proposal, or acting on review comments left on yours.
+- [`pull-request-code-review`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/pull-request-code-review/SKILL.md) — USE FOR: examining someone else's pull request and delivering a verdict — reading the diff in context, leaving line-anchored comments as a batch, and approving or requesting changes. NOT FOR: replying to review comments left on your own change, or opening and merging one.
+- [`pull-request-review-feedback`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/pull-request-review-feedback/SKILL.md) — USE FOR: working through review feedback left on a pull request — reading each unresolved thread, deciding what to change, replying to the reviewer, and resolving threads. NOT FOR: producing a review of a pull request, merging one, or clearing a notification inbox.
+- [`release-preparation`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/release-preparation/SKILL.md) — USE FOR: cutting a release of a repository — picking the version, assembling the changelog since the last tag, confirming the branch is releasable, and drafting release notes. NOT FOR: assessing overall repository health, triaging security alerts, or working an issue backlog.
+- [`repository-content-changes`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/repository-content-changes/SKILL.md) — USE FOR: changing what a repository holds or whether it exists at all — opening a working branch, committing files remotely, deleting what should go, and creating, forking or removing the repository itself. NOT FOR: proposing those changes for review, or reading code you do not intend to touch.
+- [`repository-discovery`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/repository-discovery/SKILL.md) — USE FOR: finding a library, tool or organisation you cannot yet name, judging whether a candidate project is worth depending on, and keeping a starred shortlist useful. NOT FOR: searching inside a repository you have already chosen, or setting one up.
+- [`repository-health-review`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/repository-health-review/SKILL.md) — USE FOR: judging how well a repository is maintained overall — release cadence, branch and proposal age, issue inflow, build reliability, how many people can maintain it, and outstanding alert counts. NOT FOR: acting on any individual issue, alert or proposed change, or cutting a specific release.
+- [`security-alert-triage`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/security-alert-triage/SKILL.md) — USE FOR: investigating GitHub security alerts — code scanning, Dependabot, secret scanning and advisories — and deciding what to fix now, schedule, dismiss, or escalate. NOT FOR: summarising overall repository health, or reviewing feedback on a pull request.
+- [`workflow-failure-triage`](https://github.com/github/github-mcp-server/blob/main/pkg/skills/catalog/skills/workflow-failure-triage/SKILL.md) — USE FOR: diagnosing a failing GitHub Actions workflow run — a build gone red, which jobs failed, what their logs say, where the failing step is, and whether a rerun is justified. NOT FOR: judging long-term reliability trends across a repository, or deciding whether a change is ready to ship.
+<!-- END AUTOMATED SKILLS -->
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/github/github-mcp-server)).*

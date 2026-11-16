@@ -13,28 +13,28 @@ tags:
   - claude
   - claude-code
 status: active
-quality_percentile: 46
+quality_percentile: 41
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: agentforce314/clawcodex
   official_vendor: false
   license: MIT
 signals:
-  stars: 926
+  stars: 927
   last_commit: 2026-11-08T09:09:56Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 141
-  rank_delta: null
+  stars_delta_7d: 1
+  stars_growth_pct: 0.1
+  trending_score: 1
+  rank_current: 138
+  rank_delta: 3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 911
     - 927
     - 926
+    - 927
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: agentforce314/clawcodex
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.908Z
+  fetched_at: 2026-11-16T09:16:56.878Z
   truncated: true
 type: agent_tool
 tool:

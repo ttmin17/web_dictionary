@@ -16,10 +16,10 @@ tags:
   - ai-agents
   - claude-code
 status: active
-quality_percentile: 62
+quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: NVIDIA/skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 3907
-  last_commit: 2026-11-06T22:04:08Z
-  stars_delta_7d: 37
-  stars_growth_pct: 1
-  trending_score: 37.35
+  stars: 4012
+  last_commit: 2026-11-15T23:08:27Z
+  stars_delta_7d: 105
+  stars_growth_pct: 2.7
+  trending_score: 107.82
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3642
     - 3735
     - 3870
     - 3907
+    - 4012
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: NVIDIA/skills
   path: skills/bionemo-genmol-nim/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:10.993Z
+  fetched_at: 2026-11-16T09:16:36.878Z
   truncated: false
 type: agent_skill
 skill:

@@ -1,7 +1,7 @@
 ---
 slug: zereight-gitlab-mcp
 name: gitlab-mcp
-tagline: "MCP server for GitLab: 277 tools for projects, MRs, issues, pipelines,
+tagline: "MCP server for GitLab: 288 tools for projects, MRs, issues, pipelines,
   wikis and more via the GitLab REST/GraphQL API"
 summary: 📖 Documentation → · llms.txt · llms-full.txt
 categories:
@@ -15,26 +15,26 @@ status: active
 quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zereight/gitlab-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 2091
-  last_commit: 2026-11-09T03:50:32Z
-  stars_delta_7d: 6
-  stars_growth_pct: 0.3
-  trending_score: 6.02
-  rank_current: 77
-  rank_delta: -5
+  stars: 2108
+  last_commit: 2026-11-16T03:43:18Z
+  stars_delta_7d: 17
+  stars_growth_pct: 0.8
+  trending_score: 17.14
+  rank_current: 69
+  rank_delta: 8
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2049
     - 2065
     - 2085
     - 2091
+    - 2108
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: zereight/gitlab-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.451Z
+  fetched_at: 2026-11-16T09:15:28.320Z
   truncated: true
 type: mcp_server
 launch:
@@ -56,14 +56,30 @@ launch:
   confidence: manifest
 ---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zereight/gitlab-mcp/main/assets/logo.png" alt="GitLab MCP" width="160">
+</p>
+
 # GitLab MCP Server
-[English](https://github.com/zereight/gitlab-mcp/blob/main/README.md) | [한국어](https://github.com/zereight/gitlab-mcp/blob/main/README.ko.md) | [简体中文](https://github.com/zereight/gitlab-mcp/blob/main/README.zh-CN.md) | [Português (Brasil)](https://github.com/zereight/gitlab-mcp/blob/main/README.pt-BR.md)
+
+[![GitHub stars](https://badgen.net/github/stars/zereight/gitlab-mcp?icon=github&label=Star)](https://github.com/zereight/gitlab-mcp)
+[![npm downloads](https://badgen.net/npm/dm/@zereight/mcp-gitlab)](https://www.npmjs.com/package/@zereight/mcp-gitlab)
+[![npm](https://img.shields.io/npm/v/@zereight/mcp-gitlab.svg)](https://www.npmjs.com/package/@zereight/mcp-gitlab)
+[![GitHub License](https://badgen.net/github/license/zereight/gitlab-mcp)](https://github.com/zereight/gitlab-mcp/blob/main/LICENSE)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/zereight/gitlab-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/zereight/gitlab-mcp)
+[![CodeQL](https://github.com/zereight/gitlab-mcp/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/zereight/gitlab-mcp/actions/workflows/codeql.yml?query=branch%3Amain)
+[![Live API Tests](https://github.com/zereight/gitlab-mcp/actions/workflows/live-tests.yml/badge.svg?branch=main)](https://github.com/zereight/gitlab-mcp/actions/workflows/live-tests.yml?query=branch%3Amain)
+[![Ask DeepWiki](https://img.shields.io/badge/DeepWiki-Ask-blue)](https://deepwiki.com/zereight/gitlab-mcp)
+[![MCP Toplist](https://mcptoplist.com/badge/io.github.zereight%2Fgitlab-mcp.svg)](https://mcptoplist.com/server/io.github.zereight%2Fgitlab-mcp)
+[![mcpindex](https://mcpindex.ai/api/v1/badge/io-github-zereight-gitlab-mcp)](https://mcpindex.ai/server/io-github-zereight-gitlab-mcp)
+
+[English](https://raw.githubusercontent.com/zereight/gitlab-mcp/main/README.md) | [한국어](https://github.com/zereight/gitlab-mcp/blob/main/README.ko.md) | [简体中文](https://github.com/zereight/gitlab-mcp/blob/main/README.zh-CN.md) | [Português (Brasil)](https://github.com/zereight/gitlab-mcp/blob/main/README.pt-BR.md)
 
 📖 **[Documentation →](https://zereight.github.io/gitlab-mcp/)** · [llms.txt](https://github.com/zereight/gitlab-mcp/blob/main/llms.txt) · [llms-full.txt](https://github.com/zereight/gitlab-mcp/blob/main/llms-full.txt)
 
 **Default: 40 tools** (38 `core` + `discover_tools` + `help`). 288 tools exist in total (285 in toolsets + `execute_graphql` + `discover_tools` + `help`). Start lean; call `discover_tools` to activate more for this session.
 
-> **Token budget:** MCP clients send the whole `tools/list` to the model at session start. Keep the default (~40 tools, ~12k schema tokens). Call `discover_tools` to activate a category for this session (session-only; with `OAUTH_STATELESS_MODE=true` persist a named `GITLAB_TOOLSETS` list), or use [Skill + CLI](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-without-mcp.md) and skip MCP schemas. **Do not set `GITLAB_TOOLSETS=all`** — it loads ~all tools and costs ~73k schema tokens. See [tools/list size](#toolslist-size-measured-2026-11-05) and [comparison](https://github.com/zereight/gitlab-mcp/blob/main/docs/comparison/index.md).
+> **Token budget:** MCP clients send the whole `tools/list` to the model at session start. Keep the default (~40 tools, ~12k schema tokens). Call `discover_tools` to activate a category for this session (session-only; with `OAUTH_STATELESS_MODE=true` persist a named `GITLAB_TOOLSETS` list), or use [Skill + CLI](https://github.com/zereight/gitlab-mcp/blob/main/docs/getting-started/cli-without-mcp.md) and skip MCP schemas. **Do not set `GITLAB_TOOLSETS=all`** — it loads ~all tools and costs ~73k schema tokens. See [tools/list size](#toolslist-size-measured-2026-11-14) and [comparison](https://github.com/zereight/gitlab-mcp/blob/main/docs/comparison/index.md).
 
 Install the `zereight-mcp-gitlab` binary first with `npm install -g @zereight/mcp-gitlab`, or Homebrew `brew tap zereight/gitlab-mcp https://github.com/zereight/gitlab-mcp` and `brew install zereight/gitlab-mcp/zereight-mcp-gitlab`. Official MCP Registry listing: [`io.github.zereight/gitlab-mcp`](https://registry.modelcontextprotocol.io/?q=io.github.zereight%2Fgitlab-mcp). One-liner: `npx -y @zereight/mcp-gitlab@latest`.
 
@@ -214,15 +230,15 @@ Supports PAT, OAuth, read-only mode, dynamic API URLs, and remote authorization 
 | **Node.js**    | >=20.0.0                                                          | Often >=24                                   | Node.js 20+ for stdio via `mcp-remote`                                                                                                           |
 | **License**    | MIT                                                               | Varies                                       | Part of GitLab                                                                                                                                   |
 
-### tools/list size (measured 2026-11-05)
+### tools/list size (measured 2026-11-14)
 
 A client sends the whole `tools/list` result to the model at session start. Token estimate is UTF-8 bytes / 4.
 
 | Profile | Tools | JSON bytes | Est. tokens |
 | ------- | ----: | ---------: | ----------: |
-| Default (`core` + `discover_tools` + `help`) | 40 | 46,943 | 11,736 |
-| `GITLAB_TOOL_PROFILE=slim` | 39 | 45,935 | 11,484 |
-| `GITLAB_TOOLSETS=all` | 286 | 293,906 | 73,477 |
+| Default (`core` + `discover_tools` + `help`) | 40 | 47,822 | 11,956 |
+| `GITLAB_TOOL_PROFILE=slim` | 39 | 46,814 | 11,704 |
+| `GITLAB_TOOLSETS=all` | 286 | 295,933 | 73,984 |
 
 Re-measure with `npm run build && npm run test:mock` (`test/tools-list-budget.test.ts`) after description or schema changes.
 
@@ -309,7 +325,7 @@ The store path is pinned by your lock file; update it with `nix flake update git
 
 The examples use `zereight-mcp-gitlab`, a less collision-prone alias for the legacy `mcp-gitlab` binary. If your MCP client cannot find it, use the absolute path from `which zereight-mcp-gitlab`.
 
-No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.21`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. To try a fix merged to `main` before the next stable release, use `npx -y @zereight/mcp-gitlab@next`, a pre-release build that is not meant for production. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
+No global install? Pin `npx` to the previous stable release (the version these docs recommend), for example `npx -y @zereight/mcp-gitlab@2.3.27`. If you always want the newest release, use `npx -y @zereight/mcp-gitlab@latest` instead. To try a fix merged to `main` before the next stable release, use `npx -y @zereight/mcp-gitlab@next`, a pre-release build that is not meant for production. The server prints a notice to stderr on startup when a newer version is available (disable with `GITLAB_DISABLE_VERSION_CHECK=true`).
 
 #### Claude Desktop one-click install (MCP Bundle)
 
@@ -354,6 +370,8 @@ Some MCP clients (like GitHub Copilot CLI) have issues with environment variable
 - `--compact-result-chars` - Character threshold for compacting (replaces `GITLAB_MCP_COMPACT_RESULT_CHARS`; default `4000`)
 - `--compact-tools` - Comma-separated tool names to compact when oversized, without turning global compact on (replaces `GITLAB_MCP_COMPACT_TOOLS`)
 - `--list-summary-default=true` - `list_*` tools and `mr_discussions` treat an omitted `summary` argument as `true`; `summary: false` still returns the full JSON (replaces `GITLAB_MCP_LIST_SUMMARY_DEFAULT`; default off)
+- `--audit-log=true` - Opt-in NDJSON audit log of MCP tool calls for SIEM ingestion (replaces `GITLAB_AUDIT_LOG`; default off)
+- `--audit-log-file` - Append audit lines to this file; unset writes NDJSON to stderr, never stdout (replaces `GITLAB_AUDIT_LOG_FILE`)
 - `--tool-profile` - `full` (default) or `slim`. `slim` drops draft notes, emoji reactions, labels, CI catalog tools, and `create_group` from the initial list. Ignored when `GITLAB_TOOLSETS` is set (replaces `GITLAB_TOOL_PROFILE`)
 
 If you already set `GITLAB_TOOLSETS` or `--toolsets`, append `wiki`, `milestones`, or `pipelines` to that list instead of replacing it. If you already set `GITLAB_TOOLS` or `--tools`, append `validate_ci_lint` and `validate_project_ci_lint` to that list instead of replacing it. An explicit list replaces the default `core` toolset; it does not merge.
@@ -632,6 +650,7 @@ The reference document also covers:
 - dynamic tool discovery via `discover_tools` (on-demand toolset activation)
 - transport and session variables
 - proxy and TLS variables
+- opt-in SIEM audit log (`GITLAB_AUDIT_LOG`)
 
 For callback proxy mode details, see [GitLab MCP OAuth Callback Proxy](https://github.com/zereight/gitlab-mcp/blob/main/docs/auth/oauth-callback-proxy.md).
 

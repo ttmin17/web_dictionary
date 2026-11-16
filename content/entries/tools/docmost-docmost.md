@@ -16,26 +16,26 @@ status: active
 quality_percentile: 61
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: docmost/docmost
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 22267
-  last_commit: 2026-11-09T01:53:50Z
-  stars_delta_7d: 37
-  stars_growth_pct: 0.2
-  trending_score: 37.06
-  rank_current: 64
-  rank_delta: -2
+  stars: 22345
+  last_commit: 2026-11-16T00:11:52Z
+  stars_delta_7d: 78
+  stars_growth_pct: 0.4
+  trending_score: 78.27
+  rank_current: 67
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 22026
     - 22100
     - 22230
     - 22267
+    - 22345
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: docmost/docmost
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:17.006Z
+  fetched_at: 2026-11-16T09:16:44.697Z
   truncated: false
 type: agent_tool
 tool:

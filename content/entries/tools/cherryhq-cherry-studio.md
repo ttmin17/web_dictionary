@@ -13,29 +13,29 @@ tags:
   - agentic-workspace
   - ai-agents
 status: active
-quality_percentile: 70
+quality_percentile: 87
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: CherryHQ/cherry-studio
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 53360
-  last_commit: 2026-11-09T09:20:39Z
-  stars_delta_7d: 83
-  stars_growth_pct: 0.2
-  trending_score: 83.13
-  rank_current: 45
-  rank_delta: 21
+  stars: 53555
+  last_commit: 2026-11-16T09:05:20Z
+  stars_delta_7d: 195
+  stars_growth_pct: 0.4
+  trending_score: 195.71
+  rank_current: 35
+  rank_delta: 10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 52736
     - 52987
     - 53277
     - 53360
+    - 53555
 language: en
 needs_keys: false
 prerequisites:
@@ -44,11 +44,11 @@ readme_source:
   repo: CherryHQ/cherry-studio
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:53.952Z
+  fetched_at: 2026-11-16T09:16:14.898Z
   truncated: false
 type: agent_tool
 tool:
-  subcategory: other
+  subcategory: memory_rag
   install_command: git clone https://github.com/CherryHQ/cherry-studio.git
   runtime: node
   execution_mode: local

@@ -16,10 +16,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 69
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Oldcircle/geo-sleuth
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6639
-  last_commit: 2026-11-05T08:11:52Z
-  stars_delta_7d: 578
-  stars_growth_pct: 9.5
-  trending_score: 633.12
-  rank_current: 28
-  rank_delta: -11
+  stars: 7095
+  last_commit: 2026-11-16T07:05:14Z
+  stars_delta_7d: 456
+  stars_growth_pct: 6.9
+  trending_score: 487.32
+  rank_current: 43
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3399
     - 4209
     - 6061
     - 6639
+    - 7095
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,7 +47,7 @@ readme_source:
   repo: Oldcircle/geo-sleuth
   path: skills/geo-sleuth/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:02.890Z
+  fetched_at: 2026-11-16T09:16:29.195Z
   truncated: false
 type: agent_skill
 skill:

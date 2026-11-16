@@ -14,29 +14,29 @@ tags:
   - ai-agents
   - android
 status: active
-quality_percentile: 73
+quality_percentile: 95
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: firerpa/lamda
   official_vendor: false
   license: MIT
 signals:
-  stars: 8718
-  last_commit: 2026-09-27T10:05:24Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0
-  trending_score: 3
-  rank_current: 121
-  rank_delta: -28
+  stars: 8745
+  last_commit: 2026-11-15T11:32:41Z
+  stars_delta_7d: 27
+  stars_growth_pct: 0.3
+  trending_score: 27.08
+  rank_current: 98
+  rank_delta: 23
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8627
     - 8662
     - 8715
     - 8718
+    - 8745
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: firerpa/lamda
   path: README.md
   branch: "10"
-  fetched_at: 2026-11-09T09:26:51.305Z
+  fetched_at: 2026-11-16T09:15:08.012Z
   truncated: false
 type: agent_tool
 tool:
@@ -68,7 +68,7 @@ tool:
 
 <h6>An all-in-one Android automation framework that combines on-device services, AI-ready agents, and extensible tool invocation.</h6>
 
-<p align="left"><a href="https://device-farm.com/docs/en/">Documentation</a> | <a href="https://device-farm.com/docs/zh/">使用文档</a> | <a href="https://device-farm.com/contact#telegram">TELEGRAM</a> | <a href="https://device-farm.com/contact#QQ">QQ Group</a> | <a href="https://github.com/firerpa/skills">SKILLS</a> | <a href="https://device-farm.com/llms-full.txt">llms-full.txt</a> | <a href="https://github.com/firerpa/lamda/blob/10/README.zh.md">中文版本</a></p>
+<p align="left"><a href="https://device-farm.com/docs/en/">Documentation</a> | <a href="https://device-farm.com/docs/zh/">使用文档</a> | <a href="https://github.com/firerpa/skills">SKILLS</a> | <a href="https://device-farm.com/llms-full.txt">llms-full.txt</a> | <a href="https://github.com/firerpa/lamda/blob/10/README.zh.md">中文版本</a></p>
 
 FIRERPA is an **all-in-one Android device control platform**. The server runs directly on the device with **no extra runtime dependencies**; it **supports multiple generations of Android** and works **with or without root**. On the PC side, the Python client library orchestrates UI automation, remote operations, traffic capture, Hook-based reverse engineering, network proxying, distributed networking, AI agents, and **MCP** through a single service and API. Compared with stitching together Appium, mitmproxy, frida-server, adb, uiautomator2, and ad-hoc scripts and ops tools, FIRERPA offers **one source of capabilities, unified configuration, connected workflows, and a stack built for multi-device, long-running, production use**.
 

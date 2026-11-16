@@ -17,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3340
-  last_commit: 2026-11-08T10:18:09Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.3
-  trending_score: 42.53
+  stars: 3411
+  last_commit: 2026-11-14T15:34:14Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2.1
+  trending_score: 72.51
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3152
     - 3214
     - 3298
     - 3340
+    - 3411
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/priority-board-triage/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:34.064Z
+  fetched_at: 2026-11-16T09:17:02.509Z
   truncated: false
 type: agent_skill
 skill:
@@ -59,7 +59,7 @@ skill:
     components, or the MCP triage tools (triageTools.ts, verdictTools.ts).
   folder_path: skills/priority-board-triage
   extra_files: []
-  pack_total_skills: 17
+  pack_total_skills: 18
   is_pack_primary: false
   clients:
     - claude-code
@@ -113,7 +113,17 @@ For the Cypher itself, also follow `graph-db-writes`; for a new MCP tool,
   to T1 "proven" at its next rescore. (The mute guards' `_PROVEN` does read it,
   on purpose: refusing a mute on a compromised host is the safe direction.)
 - **An `app` decision is never changed or reset over MCP** (`decided_in_app`).
-  Only `app`-channel decisions by the user themself teach a detector's prior.
+  Only the owner's own `app`-channel decisions teach a detector's prior
+  (`coalesce(triage_verdict_by, user_id)` is the owner, in
+  `agentic/cypherfix_triage/fact_queries.py`): a
+  collaborator's verdict never does.
+- **The tenant is the project's owner; the person goes in a field of its own.**
+  Every triage call and write carries the owner as `user_id` (`triageCaller(auth)`
+  in [routeCaller.ts](https://github.com/samugit83/redamon/blob/master/skills/priority-board-triage/../../webapp/src/lib/triage/routeCaller.ts),
+  `assertMcpProjectAccess(...).userId` over MCP). Who acted is `triagePerson(auth)`:
+  `verdictBy` (stored as `triage_verdict_by`, sent only when not the owner),
+  `muted_by`, the audit actor, and a run's `actor_user_id`. A collaborator's id
+  as `user_id` reads and writes an empty graph of their own.
 - **A review is valid only while `triage_ai_evidence_hash == triage_evidence_hash`.**
   The hash is `bundle_hash(build_bundle(...))`: normalised, secret-redacted,
   capped. Changing the bundle, the redaction or the cap changes every hash and
@@ -192,4 +202,4 @@ cd webapp && npx vitest run src/lib/triage src/lib/mcp src/app/api/triage
 - [Priority-Board.md](https://github.com/samugit83/redamon/blob/master/skills/priority-board-triage/../../redamon.wiki/Priority-Board.md) - the user-facing model: layers, Decided by, Reset, the detail panel, MCP
 - [README.CYPHERFIX_AGENTS.md](https://github.com/samugit83/redamon/blob/master/skills/priority-board-triage/../../docs/readmes/README.CYPHERFIX_AGENTS.md) - run steps, publish, run protocol
 - [graph_db/schema_sections.md](https://github.com/samugit83/redamon/blob/master/skills/priority-board-triage/../../graph_db/schema_sections.md) - every `triage_*` property, by layer
-- Related skills: `graph-db-writes`, `mcp-server-tools`, `redamon-testing`
+- Related skills: `graph-db-writes`, `mcp-server-tools`, `rbac-authz`, `redamon-testing`

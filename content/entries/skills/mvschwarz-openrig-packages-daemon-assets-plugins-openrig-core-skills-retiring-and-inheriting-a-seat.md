@@ -14,10 +14,10 @@ tags:
   - agent-skills
   - ai-coding
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8774
-  last_commit: 2026-11-09T09:15:26Z
-  stars_delta_7d: 126
-  stars_growth_pct: 1.5
-  trending_score: 127.84
+  stars: 8867
+  last_commit: 2026-11-16T09:10:00Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.1
+  trending_score: 93.99
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7831
     - 8198
     - 8648
     - 8774
+    - 8867
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/retiring-and-inheriting-a-seat/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:49.761Z
+  fetched_at: 2026-11-16T09:16:32.401Z
   truncated: false
 type: agent_skill
 skill:
@@ -115,7 +115,7 @@ threshold you can see coming; fall back to compaction only when a transition was
    cadence, on which surface, and who will hold it after cutover. Carry each duty both in this
    packet and in durable seat state, because recurring duties are the content most often lost at
    a generation boundary while urgent one-off work carries cleanly.
-   **Write the seat's recap too:** run `rig context recap-write --rig <rig> --seat <seat> --file <draft>`
+   **Write the seat's recap too:** run `rig context recap-write --file <draft>`
    alongside updating `LEARNED.md`. A `rebuild` reads `RECAP.md` before anything else. The format
    the store checks is in `seat-continuity-and-handover`, "Write the seat's recap before a handover".
 3. **Prime the fresh successor** — `rig walk` the packet into the seat (paced delivery lets the

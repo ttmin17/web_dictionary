@@ -14,10 +14,10 @@ tags:
   - ai-agents
   - ai-coding-agent
 status: active
-quality_percentile: 58
+quality_percentile: 57
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: miqdadbadjuber/anti-slop
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8716
-  last_commit: 2026-11-08T08:22:03Z
-  stars_delta_7d: 429
-  stars_growth_pct: 5.2
-  trending_score: 451.21
+  stars: 9330
+  last_commit: 2026-11-13T12:29:58Z
+  stars_delta_7d: 614
+  stars_growth_pct: 7
+  trending_score: 657.25
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6471
     - 7198
     - 8287
     - 8716
+    - 9330
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: miqdadbadjuber/anti-slop
   path: skills/antislop/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:50.662Z
+  fetched_at: 2026-11-16T09:16:12.657Z
   truncated: false
 type: agent_skill
 skill:

@@ -15,10 +15,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 114287
-  last_commit: 2026-11-01T19:24:49Z
-  stars_delta_7d: 890
-  stars_growth_pct: 0.8
-  trending_score: 896.99
+  stars: 118091
+  last_commit: 2026-11-14T04:33:56Z
+  stars_delta_7d: 3804
+  stars_growth_pct: 3.3
+  trending_score: 3930.61
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 108318
     - 110580
     - 113397
     - 114287
+    - 118091
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/debugging-and-error-recovery/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:20.790Z
+  fetched_at: 2026-11-16T09:15:42.864Z
   truncated: false
 type: agent_skill
 skill:
@@ -53,7 +53,11 @@ skill:
     break, something that worked yesterday broke, behavior doesn't match
     expectations, or you encounter any unexpected error. Use when you need to
     figure out what broke and why — a systematic approach to finding and fixing
-    the root cause rather than guessing.
+    the root cause rather than guessing. Use when asked what broke, why a test
+    started failing, or why code throws, even when the diff, the function, or
+    the stack trace is pasted inline and the cause looks obvious from reading
+    it, so that the cause is named, the fix is minimal, and the reply says how
+    to confirm it.
   folder_path: skills/debugging-and-error-recovery
   extra_files: []
   pack_total_skills: 25

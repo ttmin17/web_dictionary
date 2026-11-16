@@ -4,9 +4,7 @@ name: Awwwards-mcp
 tagline: Free, open-source MCP server that gives AI coding agents (Claude Code,
   Codex, Cursor, OpenCode, ZCode…) design inspiration from award-winning
   websites
-summary: 'Your agent searches in natural language ("dark 3D portfolio sites",
-  "soft pastel e-commerce"), sees real screenshots inline, and pulls the design
-  DNA of any site: color palette, tech stack, design elements, award hist...'
+summary: "Project site: https://awwwards-mcp.vercel.app"
 categories:
   - media-creative
 tags:
@@ -15,24 +13,27 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 28
+quality_percentile: 34
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: INSANE0777/Awwwards-mcp
   official_vendor: false
   license: MIT
 signals:
-  stars: 525
-  last_commit: 2026-11-08T10:28:12Z
-  stars_delta_7d: 70
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 787
+  last_commit: 2026-11-14T19:10:37Z
+  stars_delta_7d: 262
+  stars_growth_pct: 49.9
+  trending_score: 392.75
+  rank_current: 13
+  rank_delta: null
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 525
+    - 787
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: INSANE0777/Awwwards-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:28.373Z
+  fetched_at: 2026-11-16T09:16:56.748Z
   truncated: true
 type: mcp_server
 launch:
@@ -59,7 +60,9 @@ Free, open-source MCP server that gives AI agents design inspiration from
 [Awwwards](https://www.awwwards.com/) — the Mobbin-style visual reference loop,
 sourced from the web's best award-winning websites.
 
-[![M8ven Score](https://m8ven.ai/badge/mcp/insane0777-awwwards-mcp-1ll2az?v=2f46bb2a1c85764573ed2516bfbb1c9b)](https://m8ven.ai/mcp/insane0777-awwwards-mcp-1ll2az?s=readme) [![mcp.market](https://mcp.market/badge/insane0777-awwwards-mcp.svg)](https://mcp.market/server/insane0777-awwwards-mcp)
+[![M8ven Score](https://m8ven.ai/badge/mcp/insane0777-awwwards-mcp-1ll2az?v=2f46bb2a1c85764573ed2516bfbb1c9b)](https://m8ven.ai/mcp/insane0777-awwwards-mcp-1ll2az?s=readme) [![mcp.market](https://mcp.market/badge/insane0777-awwwards-mcp.svg)](https://mcp.market/server/insane0777-awwwards-mcp) [![Website](https://img.shields.io/badge/Website-awwwards--mcp.vercel.app-2ea44f)](https://awwwards-mcp.vercel.app) [![Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa)](https://github.com/sponsors/INSANE0777)
+
+Project site: **https://awwwards-mcp.vercel.app**
 
 <p align="center">
   <picture>
@@ -170,6 +173,10 @@ input order, carry compact details only (no images), and report per-slug
 `compare: "mobile"` returns responsive evidence alongside `mobileBands`/`diff`
 — page overflow, small text and small tap targets at 390×844 — evidence, not a
 score.
+
+Passive `capture_scene_3d` capture and `op:"download_assets"` are stable
+features. The Three.js and Spector adapters and the `verify_build.scene3d`
+gate remain experimental and opt-in.
 
 ### Opt-in Three adapter
 
@@ -581,13 +588,43 @@ browser-smoke: capture_live_site -> image/png 17.5 KB inline, saved capture-38f7
 browser-smoke: PASS
 ```
 
+That run predates Atlas; with `AWWWARDS_MCP_ATLAS=1` the same check reports 45 tools.
+
+`npm run qualify:installed` is the release-artifact qualification. It packs
+this checkout, installs the tarball into a throwaway prefix, gives every child
+server/CLI an isolated `HOME`/`USERPROFILE`/`APPDATA` and throwaway caches, then
+runs the profile surfaces (41/13/15 with the flag off, 45/13/16 with
+`AWWWARDS_MCP_ATLAS=1`), both protocol eras, Atlas branch schemas, annotations,
+CLI refusals and a real-Chromium fixture over MCP stdio. The machine-readable
+report goes to `.qualification/installed-report.json`.
+
+Exit 0 means every required check passed **and** browser qualification was
+exercised (`qualificationScope: "full"`). An offline or `--no-browser` run is
+`qualificationScope: "offline-installed"` and is never PASS: with no failures
+it is INCOMPLETE (exit 2), and real failures still exit 1. Because a positive
+Atlas capture needs a permitted non-loopback fixture, a fully offline machine
+reports INCOMPLETE even when every other check passes. For a full browser
+qualification, point the harness at the approved owned fixture:
+
+```bash
+npm run qualify:installed -- --fixture-url https://awwwards-mcp.vercel.app/
+```
+
+The URL is validated against the compiled-in approved fixture; any other URL is
+refused before any browser launch. The equivalent environment variable is
+`AWWWARDS_QUALIFY_FIXTURE_URL`. With the fixture check passing,
+`qualificationScope` becomes `full` and exit 0 is possible. `--skip-build` refuses a
+`dist` older than `src` and reports INCOMPLETE (exit 2), so an existing build
+cannot qualify stale code.
+
 ### Resource limits and diagnostics
 
 All optional and read at startup:
 
 | Variable | Default | Effect |
 |---|---|---|
-| `AWWWARDS_MCP_PROFILE` | `full` | `core` registers only the 13 build-loop tools (`search_sites`, `get_site_details`, `analyze_page_structure`, `analyze_scroll_map`, `capture_component`, `verify_build`, `build_project`, `get_motion_dna`, `analyze_stack`, `capture_live_site`, `get_annual_categories`, `get_annual_nominees`, `get_collections`); `full` keeps all 41; `v2` (beta) replaces the list with the 15-tool consolidated surface. The old → new v2 mapping is in [awwwards-skills repository](https://github.com/INSANE0777/awwwards-skills). |
+| `AWWWARDS_MCP_PROFILE` | `full` | `core` registers only the 13 build-loop tools (`search_sites`, `get_site_details`, `analyze_page_structure`, `analyze_scroll_map`, `capture_component`, `verify_build`, `build_project`, `get_motion_dna`, `analyze_stack`, `capture_live_site`, `get_annual_categories`, `get_annual_nominees`, `get_collections`); `full` keeps all 41 (45 with `AWWWARDS_MCP_ATLAS=1`); `v2` (beta) replaces the list with the 15-tool consolidated surface (16 with `AWWWARDS_MCP_ATLAS=1`). The old → new v2 mapping is in [awwwards-skills repository](https://github.com/INSANE0777/awwwards-skills). |
+| `AWWWARDS_MCP_ATLAS` | off | `1` adds the experimental Atlas tools and v2 branches; `full` = 45 and `v2` = 16, `core` stays 13. Read once at startup. See [ATLAS.md](https://raw.githubusercontent.com/INSANE0777/Awwwards-mcp/main/ATLAS.md). |
 | `AWWWARDS_MCP_MAX_RESPONSE_BYTES` | `32000000` | Full serialized tool-result bytes (text, inline images and `structuredContent`). Larger responses replace `content` with a `{truncated:true, tool, bytes, limit, note}` JSON block; a truncated structured payload is dropped and reported as `isError: true`. |
 | `AWWWARDS_MCP_DEBUG_MEMORY` | unset | `1` logs one JSON line per tool call (duration, rss, heap) to stderr - never stdout. |
 | `AWWWARDS_MCP_IMAGE_RETENTION_DAYS` | `0` (off) | A positive N prunes cached `images/` files older than N days once at startup. |
@@ -595,9 +632,13 @@ All optional and read at startup:
 
 The v1.14.0 `AWARDS_MCP_*` spellings (one fewer W) are still accepted as a one-release fallback; the `AWWWARDS_MCP_*` name wins when both are set.
 
-`AWWWARDS_MCP_PROFILE=v2` is the opt-in beta surface: 15 tools, never registered alongside the 1.x names. Ten consolidate the old surface (`search_references`, `get_reference`, `browse_awards`, `get_index`, `inspect_page`, `analyze_motion`, `capture_page`, `audit_page`, `build_motion`, `monitor_awards`) and five are retained (`create_design_brief`, `build_project`, `verify_build`, `verify_flow`, `analyze_network_capture`). Each consolidated tool takes exactly one `request` branch. `monitor_awards` `add_watch`/`remove_watch` require `kind` and `pattern` at the schema boundary (the 1.x handler rejected them later; the valid set is the same). Profiles are exclusive and read once at startup — `full` = 41, `core` = 13, `v2` = 15 — so changing the value requires a server restart. The complete 1.x → v2 mapping for all 36 replaced names is in [awwwards-skills repository](https://github.com/INSANE0777/awwwards-skills).
+`AWWWARDS_MCP_PROFILE=v2` is the opt-in beta surface: 15 tools (16 with `AWWWARDS_MCP_ATLAS=1`), never registered alongside the 1.x names. Ten consolidate the old surface (`search_references`, `get_reference`, `browse_awards`, `get_index`, `inspect_page`, `analyze_motion`, `capture_page`, `audit_page`, `build_motion`, `monitor_awards`) and five are retained (`create_design_brief`, `build_project`, `verify_build`, `verify_flow`, `analyze_network_capture`). Each consolidated tool takes exactly one `request` branch. `monitor_awards` `add_watch`/`remove_watch` require `kind` and `pattern` at the schema boundary (the 1.x handler rejected them later; the valid set is the same). Profiles are exclusive and read once at startup - `full` = 41, `core` = 13, `v2` = 15 (45 / 13 / 16 with `AWWWARDS_MCP_ATLAS=1`) - so changing the value requires a server restart. The complete 1.x → v2 mapping for all 36 replaced names is in [awwwards-skills repository](https://github.com/INSANE0777/awwwards-skills).
 
 `capture_live_site` also accepts `inline: false` to skip the base64 preview and `maxInlineBytes` to change the budget; captures whose base64 would exceed the budget (default 2.5 MB) are saved without an inline image, decided from the raw PNG size before conversion. Inline images from `capture_pose_3d` and `capture_component` count toward the same `AWWWARDS_MCP_MAX_RESPONSE_BYTES` budget. `analyze_network_capture` reads HAR files up to 20 MB (re-checked after reading) and 2000 entries. The `analyze_bundle` import graph supports import/reexport declarations up to 8 KB each.
+
+### Experimental Atlas tools
+
+`AWWWARDS_MCP_ATLAS=1` (read once at startup) additionally registers `search_atlas`, `get_atlas`, `capture_atlas` and `export_evidence_pack` (in the `v2` profile only the last of those) together with the v2 branches `search_references` `kind:sections|components`, `get_reference` `kind:atlas_region|atlas_highlight|atlas_taxonomy`, `get_index` `kind:atlas_status` and `capture_page` `kind:atlas`. With the flag off those tools are not registered and the historical 41 / 13 / 15 surface is unchanged; the v2 branch values stay declared by their request schemas and answer with `FEATURE_DISABLED`. Atlas search is local only; candidate labels are uncalibrated hints and `empty_corpus` / `insufficient_coverage` mean not observed, never proven absent. Capture accepts a known site slug only and returns partial evidence without publication when publication is refused; `published` always reports the actual result. Exported packs stay in the local cache: `includeMedia:"references"` copies derived summaries only, while `permitted` copies an artifact only with a caller rights assertion and never overrides robots/destination refusals. See [ATLAS.md](https://github.com/INSANE0777/Awwwards-mcp/blob/main/ATLAS.md) for the tool table, scopes, evidence modes and rights constraints.
 
 ### Attach to your own browser
 
@@ -632,72 +673,5 @@ server), and pass `cdpEndpoint: "http://127.0.0.1:9222"` — or
 - **Off by default.** Without `AWWWARDS_MCP_ATTACH=1` the tool returns an error
   explaining the gate, so an agent cannot attach to a browser you did not offer.
   Keep the debugging port bound to loopback.
-
-## Skills
-
-The seven agent skills live in the separate
-[awwwards-skills repository](https://github.com/INSANE0777/awwwards-skills),
-which is their source of truth. This package does not ship them.
-
-Install them with the [`skills` CLI](https://skills.sh):
-
-```bash
-npx skills add INSANE0777/awwwards-skills
-```
-
-Tested pairing: **`awwwards-mcp@1.18.0` + `skills-v2026.11.07`**. The 1.18
-release keeps the same **41 / 13 / 15** tool surface, but rerun the
-compatibility check before a later release changes either side.
-
-The CLI detects your agents and lets you choose a project or user-level
-install, then links each skill into that agent's skills directory. Useful
-flags: `--skill <name>` for one skill, `-a <agent>` to target specific
-agents, `-g` for a user-level install, `--copy` to copy files instead of
-symlinking, and `-l` to list what the repository contains without
-installing. Any agent that reads the
-[Agent Skills standard](https://agentskills.io) layout can also use the
-`skills/<name>/` directories from that repository directly.
-
-| Skill | What it teaches |
-|-------|-----------------|
-| `awwwards-setup` | First-time onboarding: asks the user's preferences (result density, viewport, captures, local index, winner watches), persists them to `~/.awwwards-mcp/preferences.json`, and runs any one-time installs they opt into. |
-| `awwwards-inspiration` | The inspiration loop: search, judge from screenshots, pull design DNA, state a design direction, capture/motion-first builds; staying current with `new_winners` and `watch_site`. |
-| `awwwards-motion-study` | The full video chain: what to record from a live site (and what to skip), frame-by-frame review (video input or tile-per-element), the motion inventory, and build verification by re-recording. Now opens with an instrument-first pass: scroll/hover censuses, motion DNA, and pose capture before (and instead of) recording. |
-| `awwwards-doctor` | Repair: run `npm run doctor`, apply its fixes, re-anchor parsers after real awwwards.com drift, recover the in-flight task that surfaced the failure. |
-| `awwwards-section-loop` | Section-by-section rebuilding: band map → per-section capture → build → verify the aggregate band score → lock → next; selector fallback rules, shared-canvas one-unit rule, and the lock-before-next discipline. |
-| `recreate` | `/recreate <url>` — the full link-to-site playbook: study-build disclaimer gate → evidence capture (bands, components, censuses, motion DNA, pose, bundle) → hand build with exact assets → scroll-anchor QA gate → project conversion **only on request** (`build_project`, native structure + authored motion) → handoff. |
-| `motion-authoring` | `/authored` conversions: topology (master scrub vs independent triggers), manifest contract (evidence, never hand-marked measured), intent mapping, per-target surfaces (no double GSAP), and the desktop + 390 mobile parity gate. |
-
-| Agent | Skills directory |
-|-------|------------------|
-| Claude Code | `~/.claude/skills/` |
-| pi | `~/.pi/agent/skills/` (also reads `~/.agents/skills/`) |
-| ZCode | `~/.zcode/skills/` |
-| Agent Skills-standard agents | `~/.agents/skills/` |
-
-Each installed skill is self-contained: it carries its own `v2-routing.md`
-reference and, where needed, the `_memory/techniques.json` registry. Edit and
-test skills in the awwwards-skills repository; this MCP repository does not
-carry skill copies.
-
-## Indexing (recommended)
-
-`search_sites` works out of the box, but its depth is limited by polite live
-scraping (~31 sites per filter page). Build a local index once and searches
-draw from thousands of award-winning sites instantly:
-
-```bash
-npx -y -p awwwards-mcp awwwards-index      # once published
-# or, from a local checkout of this repo:
-npm run index
-```
-
-- Crawls all ~200 tag pages at 1 request/second (~4 minutes) into the local
-  SQLite cache at `~/.awwwards-mcp/`.
-- Resumable: interrupt it and re-run — completed pages are skipped.
-- The MCP server re-indexes automatically in the background whenever the
-  index is older than 7 days (never blocking your session). Completed crawl
-  checkpoints are cleared so each refresh actually revisits the tag pages.
-  Run `get_index_status` to inspect progress or the last crawl error.
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/INSANE0777/Awwwards-mcp)).*

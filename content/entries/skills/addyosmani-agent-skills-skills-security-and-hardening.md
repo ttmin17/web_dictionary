@@ -15,10 +15,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 114287
-  last_commit: 2026-11-01T19:24:49Z
-  stars_delta_7d: 890
-  stars_growth_pct: 0.8
-  trending_score: 896.99
+  stars: 118091
+  last_commit: 2026-11-14T04:33:56Z
+  stars_delta_7d: 3804
+  stars_growth_pct: 3.3
+  trending_score: 3930.61
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 108318
     - 110580
     - 113397
     - 114287
+    - 118091
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/security-and-hardening/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:20.792Z
+  fetched_at: 2026-11-16T09:15:42.867Z
   truncated: false
 type: agent_skill
 skill:
@@ -103,7 +103,7 @@ Controls bolted on without a threat model are guesses. Before hardening, spend f
 
 4. **Write abuse cases next to use cases.** For each feature, ask "how would I misuse this?" — then make that your first test.
 
-If you can't name the trust boundaries for a feature, you're not ready to secure it. This is OWASP **A04: Insecure Design** — most breaches begin in design, not code.
+If you can't name the trust boundaries for a feature, you're not ready to secure it. This is OWASP **A06:2025 Insecure Design** — most breaches begin in design, not code.
 
 ## The Three-Tier Boundary System
 
@@ -146,7 +146,7 @@ The rules below are the workflow; a concrete implementation of each lives in [re
 
 - Parameterize every query. Never build SQL, NoSQL, or shell commands from input strings.
 - Encode output through the framework's auto-escaping. If raw HTML is unavoidable, sanitize with an allowlist sanitizer first.
-- Check **authorization** on every request, not just authentication: the authenticated user must own, or be permitted on, the specific resource (A01, IDOR).
+- Check **authorization** on every request, not just authentication: the authenticated user must own, or be permitted on, the specific resource (A01:2025, IDOR).
 
 Patterns: [Injection](https://github.com/addyosmani/agent-skills/blob/main/skills/security-and-hardening/references/hardening-patterns.md#injection), [XSS](https://github.com/addyosmani/agent-skills/blob/main/skills/security-and-hardening/references/hardening-patterns.md#cross-site-scripting-xss), [Access control](https://github.com/addyosmani/agent-skills/blob/main/skills/security-and-hardening/references/hardening-patterns.md#broken-access-control).
 
@@ -201,7 +201,7 @@ Pattern: [Secrets management](https://github.com/addyosmani/agent-skills/blob/ma
 1. **Find the installation boundary and manager.** Use the workspace root that owns the lockfile, or an independent nested project only when it is outside that workspace. Corroborate `packageManager` (when present), the lockfile, and CI; stop on disagreement or competing lockfiles. Pin the manager version.
 2. **Block dependency scripts before first execution.** Bootstrap with scripts disabled or a documented fail-closed policy, inspect the pending script source, approve only the minimum, commit the policy, then verify with a clean frozen/immutable install. Never blanket-approve.
 3. **Run the native audit against the committed lockfile before every release.** Triage critical/high by **reachability** (runtime, build, test, deploy paths) and fix availability. Never apply forced remediation (`npm audit fix --force` or equivalent) automatically, since forced fixes may cross declared dependency ranges; preview, read changelogs, test each upgrade. Document every deferral with a reason and a review date.
-4. **Audits only match known advisories.** They do not catch a newly malicious or typosquatted package (`cross-env` vs `crossenv`). Review new dependencies, lockfile diffs, and script-policy changes together: ownership, maintenance, release age, provenance, transitive graph. Verify registry signatures where supported (`npm audit signatures`, `pnpm audit signatures`) and treat their absence as a signal to investigate, not automatic proof of compromise (A06, LLM03).
+4. **Audits only match known advisories.** They do not catch a newly malicious or typosquatted package (`cross-env` vs `crossenv`). Review new dependencies, lockfile diffs, and script-policy changes together: ownership, maintenance, release age, provenance, transitive graph. Verify registry signatures where supported (`npm audit signatures`, `pnpm audit signatures`) and treat their absence as a signal to investigate, not automatic proof of compromise (A03:2025, LLM03).
 
 Triage decision tree: [Dependency audit triage](https://github.com/addyosmani/agent-skills/blob/main/skills/security-and-hardening/references/hardening-patterns.md#dependency-audit-triage). Manager matrix and install-script gate: `../../references/security-checklist.md`.
 

@@ -11,29 +11,29 @@ tags:
   - autocad
   - cad
 status: active
-quality_percentile: 54
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: wzyn20051216/solidworks-automation-skill
   official_vendor: false
   license: MIT
 signals:
-  stars: 1896
-  last_commit: 2026-11-04T06:14:35Z
-  stars_delta_7d: 143
-  stars_growth_pct: 8.2
-  trending_score: 154.67
-  rank_current: 22
-  rank_delta: 13
+  stars: 2120
+  last_commit: 2026-11-11T15:39:29Z
+  stars_delta_7d: 224
+  stars_growth_pct: 11.8
+  trending_score: 250.46
+  rank_current: 28
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1291
     - 1484
     - 1753
     - 1896
+    - 2120
 language: zh
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: wzyn20051216/solidworks-automation-skill
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.616Z
+  fetched_at: 2026-11-16T09:15:24.827Z
   truncated: false
 type: agent_tool
 tool:
@@ -70,7 +70,7 @@ tool:
 
 工具调用成功，不代表任务真的完成；需要 Review 的任务会经过结果验证后再交付。
 
-当前发布版本为 **v2.0.1**：技能 ZIP、CAD Studio 安装版与便携版统一版本并包含同版运行时。下载入口和升级说明见 [v2.0.1 发布说明](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/docs/releases/v2.0.1.md)。
+当前发布版本为 **v2.1.1**。CAD Studio 展示工程阶段验收项，工作台和对话中的明确改动会标记受影响的旧结果。技能 ZIP、MCPB、CAD Studio 安装版与便携版使用同版运行时。下载和升级见 [v2.1.1 发布说明](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/docs/releases/v2.1.1.md)。
 
 CAD Studio 会对各生产执行器统一检查交付文件是否为本轮新增或内容已变化；旧文件拒绝交付，证据不足转为待复核。扫描范围、兼容性与验证方法见[本轮交付门禁](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/references/delivery-freshness.md)。
 
@@ -113,7 +113,7 @@ AI 负责理解意图、查证 API、规划步骤；Execution Core 保证执行�
 | Python | 3.10+（本机真机验收使用 3.12） | `python -V` |
 | Node.js | 20+（工作台、MCP 注册与 Skill 安装器） | `node -v` |
 | Git | 任意较新版本（安装器通过 `git clone` / `git pull` 获取与更新仓库） | `git --version` |
-| SolidWorks | 2024 或 2026，需合法许可 | `python scripts/cad_doctor.py` |
+| SolidWorks | 原生建模需本机安装并许可；按能力查看 [已验证版本](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/capabilities.yaml) | `python scripts/cad_doctor.py` |
 | AutoCAD | 可选，仅 DWG/DXF 子技能需要 | — |
 
 安装 Python 依赖：
@@ -173,6 +173,8 @@ npx github:wzyn20051216/solidworks-automation-skill --target claude
 若 `npx` 在当前网络环境不可用，改用下方 Option 2 的克隆方式，再执行 `node install.js`。
 
 ### Option 2 — MCP
+
+支持 MCPB 的 Windows 桌面客户端可导入发布页的标准 `.mcpb` 扩展。若当前发行尚未附带该文件，也可从 Git 检出构建。首次安装、`uv` 准备和构建方法见 [MCPB 扩展说明](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/mcp-server/README.md#windows-mcpb-扩展)。
 
 ```powershell
 git clone https://github.com/wzyn20051216/solidworks-automation-skill.git
@@ -292,7 +294,7 @@ Artifacts + Evidence
    不要直接引用维护者的验收结论。
 3. **L2 通过 ≠ 治理闭环。** 必需检查只保护 `main`；指向特性分支的 PR（含 stacked PR）不受该规则约束。
 
-原生 SolidWorks 操作当前以 **2026** 为支持与验收目标。方案 B 保留现有执行架构，修复失败状态、原生阵列、草图可编辑性和文档归属，并提供可选 HTTP 与可验证的产物取回。
+近期原生 SolidWorks 回归以 **2026 SP1.1** 为基线，部分能力另有 **2024** 真机记录。以 [能力清单](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/capabilities.yaml) 中对应能力的 `verified_versions`、等级和限制为准；未列出的版本需单独验证。环境诊断只检查安装和运行条件，工程功能按实际任务验收。
 
 **完整模式暴露 69 个命名工具；默认发现模式只暴露 3 个检索入口**（`sw_search_tools` /
 `sw_describe_tool` / `sw_call_tool`）。原有命名工具保持兼容；发现模式
@@ -331,7 +333,7 @@ Artifacts + Evidence
 | `pilot` | 已实现但仍需人工复核 |
 | `blocked` | 当前环境或能力不允许自动交付 |
 
-真机基线：SolidWorks 2024 / 2026、AutoCAD 2024。未验证能力不会被包装成无人值守交付。
+SolidWorks 按上述能力清单核对。AutoCAD 真机证据覆盖对应的 2024 能力；试点功能保留人工复核。
 
 - 完整能力矩阵（每个能力的精确等级/版本/限制）→ [`capabilities.yaml`](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/capabilities.yaml)
 - 领域工作流 → [`subskills/`](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/subskills/) · [`SUBSKILLS.md`](https://github.com/wzyn20051216/solidworks-automation-skill/blob/main/SUBSKILLS.md)

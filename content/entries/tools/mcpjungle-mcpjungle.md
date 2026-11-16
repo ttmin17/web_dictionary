@@ -13,28 +13,29 @@ tags:
   - mcp-gateway
   - mcp-registry
 status: active
-quality_percentile: 66
+quality_percentile: 58
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mcpjungle/MCPJungle
   official_vendor: false
   license: MPL-2.0
 signals:
-  stars: 1616
+  stars: 1625
   last_commit: 2026-11-03T22:51:07Z
-  stars_delta_7d: 17
-  stars_growth_pct: 1.1
-  trending_score: 17.18
-  rank_current: 92
-  rank_delta: -60
+  stars_delta_7d: 9
+  stars_growth_pct: 0.6
+  trending_score: 9.05
+  rank_current: 119
+  rank_delta: -27
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1310
     - 1599
     - 1616
+    - 1625
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +44,7 @@ readme_source:
   repo: mcpjungle/MCPJungle
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:08.591Z
+  fetched_at: 2026-11-16T09:15:33.765Z
   truncated: false
 type: agent_tool
 tool:

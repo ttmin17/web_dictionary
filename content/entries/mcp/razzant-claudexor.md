@@ -16,29 +16,29 @@ tags:
   - ai-coding
   - ai-coding-assistant
 status: active
-quality_percentile: 42
+quality_percentile: 41
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: razzant/claudexor
   official_vendor: false
   license: MIT
 signals:
-  stars: 523
-  last_commit: 2026-11-09T00:34:47Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 117
-  rank_delta: -26
+  stars: 525
+  last_commit: 2026-11-16T07:32:33Z
+  stars_delta_7d: 2
+  stars_growth_pct: 0.4
+  trending_score: 2.01
+  rank_current: 108
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 515
     - 517
     - 523
     - 523
+    - 525
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: razzant/claudexor
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:28.316Z
+  fetched_at: 2026-11-16T09:16:56.760Z
   truncated: true
 type: mcp_server
 launch:
@@ -80,7 +80,7 @@ with a vendor quota source (Antigravity, Claude, and Codex). Cursor's internal
 dashboard supplies dated monetary resources, not an execution-quota verdict.
 Everything runs on your machine, files are the source of truth, and there is no telemetry.
 
-Current status: **v5.1.0**. See "Stability at 2.0" below for what is a stable
+Current status: **v6.1.2**. See "Stability at 2.0" below for what is a stable
 contract and what remains experimental; retired verbs and mode ids hard-error
 with the new spelling instead of silently aliasing.
 
@@ -136,8 +136,16 @@ composer](https://raw.githubusercontent.com/razzant/claudexor/main/docs/assets/a
 
 ## Prerequisites
 
-- Node.js >= 24.15 (the daemon, CLI, and every surface run on Node)
-- pnpm (via corepack: `corepack enable pnpm`)
+- **macOS app:** macOS 26 or newer. The app includes its own Node runtime; you
+  do not need to install Node or pnpm.
+- **CLI and daemon from npm:** Node.js 24.15 or newer and npm, on macOS or
+  Linux; use the latest Node 24 release for its security fixes. Windows support
+  is partial: daemon and vendor-program installation checks run there, but
+  login and runs on Windows are not qualified yet (see
+  [docs/FEATURES.md](https://github.com/razzant/claudexor/blob/main/docs/FEATURES.md)).
+- **Building from source:** the same Node.js and pnpm (`corepack enable pnpm`);
+  on macOS also the Xcode Command Line Tools, which compile a native helper.
+  See [From a source checkout](#from-a-source-checkout).
 - Git for Git-backed worktrees, candidate envelopes, and source-control delivery.
   Explicit directory execution supports direct work and selected-input copies
   without Git; Doctor reports Git availability, and
@@ -149,31 +157,15 @@ composer](https://raw.githubusercontent.com/razzant/claudexor/main/docs/assets/a
   `ANTHROPIC_API_KEY`, ... as fallbacks; the raw-API route needs only a key).
   Log in through Claudexor, not the bare vendor CLI — see
   [Install And Login](https://github.com/razzant/claudexor/blob/main/docs/AGENT_ONBOARDING.md#install-and-login)
-- macOS for the desktop app; the CLI/daemon also run on Linux
 
 ## Install
 
-CLI + daemon from npm (installs the `claudexor` and `claudexord` bins):
+### macOS app
 
-```bash
-npm install -g claudexor
-claudexor doctor
-```
+The signed and notarized app requires **macOS 26 or newer**.
 
-`pr` delivery requires the pinned publication scanner, which the npm packages do
-not bundle. Prepare it once with `claudexor scanner prepare`, or offline from the
-official archive with `claudexor scanner prepare --from-archive <file>`; a running
-daemon picks it up at its next `pr`. See
-[Publication scanner](https://github.com/razzant/claudexor/blob/main/docs/ARCHITECTURE.md#publication-scanner).
-
-You can also build from source — see Quickstart below.
-
-On a Mac, the app is the easiest way in — it ships as a signed and
-notarized DMG, so it installs like any ordinary Mac app, with no Gatekeeper
-warnings:
-
-1. Download `Claudexor-<version>.dmg` from
-   [Releases](https://github.com/razzant/claudexor/releases).
+1. Download `Claudexor-<version>.dmg` from the
+   [latest release](https://github.com/razzant/claudexor/releases/latest).
 2. Drag `Claudexor.app` into `Applications`.
 3. Open it. The app starts its bundled Claudexor engine, then onboarding checks
    the external Git and harness route needed by the work you select.
@@ -187,26 +179,46 @@ separate capabilities checked before a run starts. (The v1.0.0 DMG was unsigned
 — if you kept it, either upgrade or approve it via System Settings → Privacy &
 Security → Open Anyway.)
 
-Host integrations may install one vendor CLI into Claudexor's managed local
-toolchain with
-`claudexor harness install <harness> --target local --yes --json`; a host may
-bind that explicit unattended authorization to the user's Connect action.
-Npm recipes install exact selected versions under `~/.claudexor/node`;
-Codex resolves latest once by default; `--release-tested` explicitly selects
-the separately tested baseline instead of that lookup (a runnable managed copy
-at or above it is kept; installing it still needs the npm registry), and an
-unavailable registry refuses instead of falling back. Cursor remains unpinned, so its JSON
-receipt records the downloaded installer's SHA-256 and byte length.
-Every successful executed receipt also records the absolute installed launcher
-and its verified version; a zero-exit installer without that postcondition is a
-typed failure. On Windows, Codex and Claude use the npm package's declared
-native or Node entrypoint. Doctor, login and runs share that selection, including
-ordinary user npm prefixes on PATH. The receipt identifies the vendor entrypoint;
-launch it through Claudexor so Node entrypoints retain their interpreter and
-arguments. Custom batch programs are not treated as standard npm wrappers.
-Omitting `--target` preserves the disclosed remote-host flow, its prefix and
-its exit-code contract; the install lease and the post-install proof are part
-of the unattended local contract and do not apply there.
+### CLI from npm
+
+With **Node.js 24.15 or newer** (use the latest Node 24 release), install the
+CLI and daemon from npm:
+
+```bash
+npm install -g claudexor
+claudexor doctor
+```
+
+This installs the `claudexor` and `claudexord` commands; you need neither a
+source checkout nor pnpm. Continue with the [quickstart](#quickstart) to
+connect an account and ask a first question.
+
+`pr` delivery requires the pinned publication scanner, which the npm packages do
+not bundle. Prepare it once with `claudexor scanner prepare`, or offline from the
+official archive with `claudexor scanner prepare --from-archive <file>`; a running
+daemon picks it up at its next `pr`. See
+[Publication scanner](https://github.com/razzant/claudexor/blob/main/docs/ARCHITECTURE.md#publication-scanner).
+
+### Harness setup
+
+Install a missing vendor program with
+`claudexor harness install <harness> --yes --json`; a host may bind that explicit
+authorization to the user's Connect action. Update the selected program with
+`claudexor harness update <harness> --yes --json`. Both use the adapter's vendor
+command under the installation HOME, and accept `--vendor-version <exact>` only
+where supported. `claudexor harness inspect --latest --json` shows the selected
+path/version, published version, action commands and available release notes.
+The engine decides whether an update exists; an unknown comparison is shown as
+unknown. Version reads happen when requested, including opening a version view,
+with no engine update timer.
+
+Receipts record actual commands, script URL/size/hash, before/after identity and
+vendor diagnostics. A successful install requires the program to answer its own
+version probe. Windows has vendor routes for Claude, Codex, Antigravity, Grok and
+Copilot; Cursor Windows (#667) and OpenCode's unattended Windows installation and
+second line (#668) remain unsupported. OpenCode stays on 1.x. A package-manager
+copy's updater may only advise; that sentence is the result. Vendor programs
+live in [vendor directories](https://github.com/razzant/claudexor/blob/main/docs/ARCHITECTURE.md) and are pruned by the vendor.
 
 ## Remote SSH
 
@@ -224,16 +236,12 @@ connection the app verifies and installs a signed, no-`sudo` runtime under
 `~/.claudexor/remote/`, then reaches its loopback-only control API through an
 SSH local forward. Vendor CLIs and their credentials remain on the server and
 with the vendors. Claudexor can install a harness CLI on the host for you
-through a disclosed, exact-version flow — `claudexor harness install`, or
-Settings → Harnesses for a connected host: Claude, Codex, GitHub Copilot and
-OpenCode install one exact npm version that the host's runtime selects and
-shows before confirmation (a current runtime resolves Codex's npm latest once;
-the others use their release baseline), while the Cursor and Antigravity vendor
-scripts are downloaded in full and run in the visible terminal where you watch
-them; nothing is installed before the exact package/version/destination install
-recipe is disclosed and confirmed. An embedding host may instead pass
-`--target local --yes`, which installs into the managed toolchain root and
-must prove the launcher it installed before reporting success.
+through `claudexor harness install`, or Settings → Harnesses for a connected
+host. The menu reads the host engine's inventory; confirmation shows its vendor
+command, installation HOME and script evidence. Preview and execution use the
+same immutable remote runtime. A current install uses the vendor's current copy;
+the terminal receipt records the actual version and script bytes. The app
+refreshes Harness Doctor afterwards.
 (Installing them on the host yourself works too.) Then sign in from the app,
 which runs each vendor's own login in an embedded SSH terminal (Codex uses
 device auth). Remote threads include an embedded SSH terminal and an
@@ -277,7 +285,7 @@ client verifiers themselves stay fail-closed for the waived versions too).
   may be exact-pinned by a host that owns its Claudexor daemon lifecycle. The
   archive contains only ordinary directories/files (internal package links are
   materialized), so its format needs no POSIX symlink support. The host supplies
-  the exact full Node toolchain proven by its reviewed pin, launches
+  the exact Node runtime proven by its reviewed pin, launches
   `claudexord.bundle.cjs`, invokes operational commands through the adjacent
   `claudexor.bundle.cjs`, verifies `--probe` against the pinned
   `{version,buildSha}`, and uses
@@ -294,19 +302,45 @@ client verifiers themselves stay fail-closed for the waived versions too).
   `CLAUDEXOR_DAEMON_SOCK`, or the lifecycle command may address another daemon.
   A Windows consumer still owns a native
   extract/`--probe`/handshake/`--stop` smoke before claiming Windows support.
-  npm-backed local installation additionally requires the toolchain's own
-  npm entrypoint — `<node-root>/lib/node_modules/npm/bin/npm-cli.js` beside
-  `bin/node` on POSIX, `node_modules\npm\bin\npm-cli.js` beside `node.exe`
-  on Windows; Claudexor never falls back to a `npm` found on ambient `PATH`.
-  Local Windows installation supports Codex and Claude through their declared
-  native or Node npm entrypoints; other installer recipes retain their typed
-  platform restrictions.
+  Vendor maintenance uses the same adapter-declared commands and installation
+  HOME as the CLI; the host needs no npm for that operation. Available actions
+  and platform limits come from the engine inventory.
 - **npm** — CLI/daemon installs update the ordinary way:
   `npm install -g claudexor@latest`. `claudexor release check` reports whether a
   newer engine runtime is published, verifying the same signed manifest
   fail-closed (npm users update via npm).
 
 ## Quickstart
+
+Start with one coding agent and one account. In the macOS app, follow
+onboarding to connect that account, choose a small project and select **Ask**.
+Try: "Explain how this project is organized and where its tests live."
+The answer and its execution evidence stay in the conversation.
+
+With the CLI, sign in through Claudexor, never with the bare vendor CLI. A
+subscription login is the default route; an API key is a paid fallback (see
+[Routing, Auth, And Secrets](#routing-auth-and-secrets) for other harnesses,
+keys and when a key is used). If `claudexor doctor` cannot find the agent's
+program, install it first ([Harness setup](#harness-setup)). Complete a Codex
+sign-in in a private browser window or one signed into no other OpenAI account.
+Then ask from your project directory:
+
+```bash
+claudexor auth login codex    # or: claude, cursor
+cd /path/to/your/project
+claudexor ask "Explain how this project is organized and where its tests live."
+```
+
+With a subscription login, usage counts against that plan; an API key is billed
+by its provider. When the run ends, the CLI prints its run ID:
+`claudexor inspect <run_id>` shows that run's answer and evidence again, and
+`claudexor follow <run_id>` replays it and, while it is still running, lets you
+answer its questions. Do not repeat the task just to read its result. You can
+add accounts, request changes or compare approaches later.
+
+### From a source checkout
+
+These build steps are for contributors and source installations:
 
 ```bash
 pnpm install --frozen-lockfile
@@ -345,9 +379,10 @@ does not bypass built-in critical/security human gates.
 
 ### Processing and ordinary folders
 
-`--processing standard|fast|economy` requests service for the selected model; it
-does not change the reasoning effort or routing goal. Native capabilities and
-observed service remain visible, and Fast stays within existing money limits.
+`--processing standard|fast|ultrafast|economy` requests service for the selected
+model; it does not change the reasoning effort or routing goal. Native capabilities
+and observed service remain visible, and Fast or Ultrafast stays within existing
+money limits.
 See the [Processing rule](https://github.com/razzant/claudexor/blob/main/docs/DEVELOPMENT.md#processing-preference).
 `--prompt-cache-ttl 5m|1h` sets the native prompt-cache lifetime of Claude Code's
 main conversation and helpers; omitting it keeps native defaults. See
@@ -840,10 +875,13 @@ reusable `--attach-resource` refs and the MCP upload tools are specified in
 [`docs/INTEGRATIONS.md`](https://github.com/razzant/claudexor/blob/main/docs/INTEGRATIONS.md#document-ingress-and-resource-references).
 
 Keep ONE `AGENTS.md` at your project root as the source of truth for
-project-specific instructions. Claudexor bridges it to Claude Code automatically
-(a thin generated `CLAUDE.md`, hand-written files never overwritten), so every
-harness reads the same guidance. Full behavior in docs/INTEGRATIONS.md "Project
-Instruction Files".
+project-specific instructions. Claudexor keeps vendor-native instruction
+semantics explicit and may create a thin generated `CLAUDE.md` only inside a
+disposable Git envelope; it never mutates the durable project root just to
+bridge a route. In-place, thread, directory and read-only runs get no bridge;
+keep your own `CLAUDE.md` importing `@AGENTS.md` or state required instructions
+in the prompt. File creation is not proof that a model read the
+instructions. Full behavior is in docs/INTEGRATIONS.md "Project Instruction Files".
 
 Host integrations are managed by `claudexor plugin
 install|status|doctor|repair|uninstall <cursor|claude|codex|opencode|all>`.
@@ -1069,42 +1107,5 @@ user-invoked except the app's update check on foreground; there is no update tim
 or auto-update ping.
 Files named `telemetry/` are **local only**: cost/latency averages and run evidence,
 not transmitted analytics.
-
-## Uninstall / where your data lives
-
-Claudexor owns these locations:
-
-- `~/.claudexor/v3/` — the active global config (`config.yaml`), per-repo trust
-  grants (`trust/`), the file-only secret store (`secrets.json`), daemon global
-  journal and process state (`daemon/`: token, socket, log), local harness
-  metrics (`telemetry/`), host-plugin ownership state (`plugins/`), and
-  user-level runs for no-project asks.
-- `~/.cache/claudexor/` — Claudexor caches, including the no-project repository
-  workspace (`no-project/`); include it in a complete pre-upgrade backup.
-- `~/.claudexor/runtime/` — the installed engine-runtime closures the macOS app
-  updates in place (QA-071): `versions/<version>/` holds each unpacked closure,
-  `current.json` names the active one, and `last-known-good.json` is the rollback
-  target. This sits directly under `~/.claudexor/` (NOT under `v3/`); Node stays
-  app-owned in the .app bundle. Deleting it just makes the app fall back to its
-  bundled runtime on next launch.
-- `~/.claudexor/v2/` is the ARCHIVED prior root. v3 boots on its own fresh root
-  and never imports or mutates v2; keep it if you want the old run history,
-  otherwise it is safe to delete. Files directly under `~/.claudexor/` (and any
-  older v1 layout) are likewise legacy user bytes that v3 leaves untouched.
-- `~/Library/LaunchAgents/com.claudexor.claudexord.plist` — only if you opted
-  into the launchd autostart.
-- `~/.claudexor/v3/projects/<project-sha256>/` — daemon-owned project journals,
-  run artifacts, and isolated-thread worktrees. Isolated worktrees may hold
-  unapplied work; apply or export it before removing this external namespace.
-- A repository's `.claudexor/` directory is user-owned versioned configuration.
-  Claudexor does not create, rewrite, or remove it during uninstall.
-- Host-plugin artifacts in vendor config trees — remove them with
-  `claudexor plugin uninstall all` (ownership-aware; it only deletes
-  Claudexor-owned files).
-
-Uninstalling is: `claudexor plugin uninstall all`, `claudexor daemon stop`,
-then remove the daemon-owned paths above (and npm/global install or the app
-bundle). Do not delete a repository's `.claudexor/` directory as part of the
-product uninstall.
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/razzant/claudexor)).*

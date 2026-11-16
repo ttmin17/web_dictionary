@@ -15,10 +15,10 @@ tags:
   - ai-coding
   - ai-native
 status: active
-quality_percentile: 97
+quality_percentile: 96
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: teaql/teaql-agent-kit
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 2819
-  last_commit: 2026-11-06T00:37:12Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0
-  trending_score: 1
+  stars: 2822
+  last_commit: 2026-11-10T10:21:25Z
+  stars_delta_7d: 3
+  stars_growth_pct: 0.1
+  trending_score: 3
   velocity_source: snapshot_delta
   sparkline_4w:
     - 2818
     - 2818
-    - 2818
     - 2819
+    - 2822
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: teaql/teaql-agent-kit
   path: skills/build-teaql-app/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:24.388Z
+  fetched_at: 2026-11-16T09:16:50.667Z
   truncated: false
 type: agent_skill
 skill:
@@ -393,13 +393,16 @@ WARNING: When chaining commands, do NOT use `cd dir && cmd && cd dir && cmd`. Th
 
 ### CLI path semantics
 
+Place generated library and application directories directly under the project
+root, for example `rust-lib-core/` and `rust-app-console/`.
+
 `--cwd` is the base directory for every relative `--output` path. When both
-flags are present, pass the workspace directory once: use an absolute
-`--cwd /path/to/app-playground` together with a child-only output such as
+flags are present, pass the project root once: use an absolute
+`--cwd /path/to/project` together with a child-only output such as
 `--output rust-lib-core`. Never repeat the cwd suffix in output (for example,
-do not combine `--cwd app-playground` with
-`--output app-playground/rust-lib-core`), because that creates
-`app-playground/app-playground/rust-lib-core`.
+do not combine `--cwd project` with
+`--output project/rust-lib-core`), because that creates
+`project/project/rust-lib-core`.
 
 Before generation, resolve the intended output path conceptually as
 `<cwd>/<relative-output>` and confirm it equals the requested destination. An

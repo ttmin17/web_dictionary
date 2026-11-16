@@ -13,29 +13,29 @@ tags:
   - anthropic
   - chatgpt
 status: active
-quality_percentile: 85
+quality_percentile: 84
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: NousResearch/hermes-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 261892
-  last_commit: 2026-11-09T09:21:27Z
-  stars_delta_7d: 1139
-  stars_growth_pct: 0.4
-  trending_score: 1143.98
-  rank_current: 7
-  rank_delta: 1
+  stars: 263750
+  last_commit: 2026-11-16T08:53:57Z
+  stars_delta_7d: 1858
+  stars_growth_pct: 0.7
+  trending_score: 1871.18
+  rank_current: 9
+  rank_delta: -2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 255031
     - 257151
     - 260753
     - 261892
+    - 263750
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: NousResearch/hermes-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:17.551Z
+  fetched_at: 2026-11-16T09:15:35.119Z
   truncated: false
 type: agent_tool
 tool:

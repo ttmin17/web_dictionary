@@ -12,10 +12,10 @@ tags:
   - ai-novel-writing
   - ai-writing
 status: active
-quality_percentile: 81
+quality_percentile: 79
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: zenstory-ai/oh-story-claudecode
@@ -23,17 +23,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 8448
-  last_commit: 2026-11-09T04:53:43Z
-  stars_delta_7d: 124
-  stars_growth_pct: 1.5
-  trending_score: 125.85
+  stars: 8649
+  last_commit: 2026-11-13T06:27:00Z
+  stars_delta_7d: 201
+  stars_growth_pct: 2.4
+  trending_score: 205.78
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7737
     - 8006
     - 8324
     - 8448
+    - 8649
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +41,7 @@ readme_source:
   repo: zenstory-ai/oh-story-claudecode
   path: skills/story-long-write/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:28:00.604Z
+  fetched_at: 2026-11-16T09:16:33.368Z
   truncated: false
 type: agent_skill
 skill:
@@ -106,7 +106,7 @@ skill:
 
 > 专业 agent 只查当前宿主：Claude `.claude/agents`、OpenCode `.opencode/agents`、Codex `.codex/agents` TOML、Antigravity `.agents/agents`（`invoke_subagent` + 同名 `TypeName`）；ZCode 查已启用插件注册的同名角色，用 `Agent` 工具按实际 schema 派发，不要求 `.zcode/agents`。返回 unknown agent 时按下面的降级处理，不因宿主名或其他端目录存在而降级。
 >
-> 版本：项目根 `.story-deployed` 的 `agents_version` 与本版 `agents_version: 42` 不一致（缺失、非整数、更小或更大）时照常按当前宿主角色来源检查并 spawn，只对作者说一句「写作助手是旧版，运行 /story-setup（ZCode 先更新插件）后新开会话」；大于 42 时额外提示先更新 oh-story-claudecode。只有当前宿主角色缺失或不暴露调用能力时才降级 solo/direct，对作者只说「这次我自己写」。
+> 版本：项目根 `.story-deployed` 的 `agents_version` 与本版 `agents_version: 44` 不一致（缺失、非整数、更小或更大）时照常按当前宿主角色来源检查并 spawn，只对作者说一句「写作助手是旧版，运行 /story-setup（ZCode 先更新插件）后新开会话」；大于 44 时额外提示先更新 oh-story-claudecode。只有当前宿主角色缺失或不暴露调用能力时才降级 solo/direct，对作者只说「这次我自己写」。
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 slug: coreyhaines31-marketingskills-skills-ab-testing
 name: ab-testing
-tagline: When the user wants to plan, design, or implement an A/B test or
-  experiment, or build a growth experimentation program. Also use when the user
-  mention
+tagline: "When the user wants to plan, run, or read A/B tests, or asks a
+  judgement call on one: is the result real, can we stop, which version won, is
+  this wort"
 summary: "Check for product marketing context first: If
   .agents/product-marketing.md exists (or .claude/product-marketing.md, or the
   legacy product-marketing-context.md filename, in older setups), read it before
@@ -16,10 +16,10 @@ tags:
   - ai-seo
   - claude
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: coreyhaines31/marketingskills
@@ -27,19 +27,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 59301
-  last_commit: 2026-11-06T17:53:06Z
-  stars_delta_7d: 663
-  stars_growth_pct: 1.1
-  trending_score: 670.5
-  rank_current: 27
-  rank_delta: -5
+  stars: 60667
+  last_commit: 2026-11-11T17:49:23Z
+  stars_delta_7d: 1366
+  stars_growth_pct: 2.3
+  trending_score: 1397.47
+  rank_current: 22
+  rank_delta: 5
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 55431
     - 56570
     - 58638
     - 59301
+    - 60667
 language: en
 needs_keys: false
 prerequisites: []
@@ -47,22 +47,16 @@ readme_source:
   repo: coreyhaines31/marketingskills
   path: skills/ab-testing/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:29.912Z
+  fetched_at: 2026-11-16T09:15:48.044Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: ab-testing
-  description: When the user wants to plan, design, or implement an A/B test or
-    experiment, or build a growth experimentation program. Also use when the
-    user mentions "A/B test," "split test," "experiment," "test this change,"
-    "variant copy," "multivariate test," "hypothesis," "should I test this,"
-    "which version is better," "test two versions," "statistical significance,"
-    "how long should I run this test," "growth experiments," "experiment
-    velocity," "experiment backlog," "ICE score," "experimentation program," or
-    "experiment playbook." Use this whenever someone is comparing two approaches
-    and wants to measure which performs better, or when they want to build a
-    systematic experimentation practice. For tracking implementation, see
-    analytics. For page-level conversion optimization, see cro.
+  description: "When the user wants to plan, run, or read A/B tests, or asks a
+    judgement call on one: is the result real, can we stop, which version won,
+    is this worth testing at all: sample size, duration, significance,
+    hypotheses, and experiment backlogs. For tracking setup, see analytics. For
+    page-level conversion fixes, see cro."
   folder_path: skills/ab-testing
   extra_files:
     - evals/evals.json

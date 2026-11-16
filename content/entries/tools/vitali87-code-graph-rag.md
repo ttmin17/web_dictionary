@@ -15,29 +15,29 @@ tags:
   - code-analysis
   - code-understanding
 status: active
-quality_percentile: 90
+quality_percentile: 89
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: vitali87/code-graph-rag
   official_vendor: false
   license: MIT
 signals:
-  stars: 5347
-  last_commit: 2026-11-09T08:29:32Z
-  stars_delta_7d: 33
-  stars_growth_pct: 0.6
-  trending_score: 33.2
-  rank_current: 68
-  rank_delta: 36
+  stars: 5355
+  last_commit: 2026-11-16T09:02:51Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.1
+  trending_score: 8.01
+  rank_current: 123
+  rank_delta: -55
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 5266
     - 5284
     - 5314
     - 5347
+    - 5355
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: vitali87/code-graph-rag
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:53.518Z
+  fetched_at: 2026-11-16T09:15:08.296Z
   truncated: false
 type: agent_tool
 tool:
@@ -127,10 +127,11 @@ Code-Graph-RAG parses a multi-language codebase with Tree-sitter, sharpened by c
 ## Latest News 🔥
 
 <!-- SECTION:latest_news -->
-- **Continuous Integration Improvements**: Enhanced release cadence tracking and ensured accurate green status for deferred releases.
-- **Code Quality & Clarity**: Resolved several code style and correctness issues including foreach loop variable typing and Python method receiver handling.
-- **Build Process Refinement**: Reduced the default install package count and improved makefile functionality for host/port watching.
-- **Feature Control**: Prevented the use of `--no-endpoint-roots` when endpoint data is absent.
+- **Import Resolution**: Enhanced resolution of imports, particularly for CommonJS renamed properties and path-qualified functions.
+- **Incremental Builds**: Ensured unchanged classes retain their field types across incremental syncs.
+- **Python Property Access**: Scoped Python property reads to their respective receivers.
+- **Cross-Language Imports**: Rejected cross-language internal import targets to improve clarity.
+- **Constructor Initialisation**: Correctly handled attribute field initializers in TS/JS, Java and C# constructors.
 <!-- /SECTION:latest_news -->
 
 See [NEWS.md](https://github.com/vitali87/code-graph-rag/blob/main/NEWS.md) for the full history.

@@ -15,26 +15,26 @@ status: active
 quality_percentile: 99
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: morluto/rea
   official_vendor: false
   license: MIT
 signals:
-  stars: 445070
-  last_commit: 2026-11-09T07:03:35Z
-  stars_delta_7d: 12149
-  stars_growth_pct: 2.8
-  trending_score: 12489.94
+  stars: 462772
+  last_commit: 2026-11-16T08:49:01Z
+  stars_delta_7d: 17702
+  stars_growth_pct: 4
+  trending_score: 18406.07
   rank_current: 1
   rank_delta: 0
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 327205
     - 386611
     - 432921
     - 445070
+    - 462772
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: morluto/rea
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:13.254Z
+  fetched_at: 2026-11-16T09:15:35.105Z
   truncated: false
 type: agent_tool
 tool:
@@ -65,7 +65,7 @@ tool:
 <div align="center">
 
 **English** · [简体中文](https://github.com/morluto/rea/blob/main/docs/readme/README_zh.md) · [繁體中文](https://github.com/morluto/rea/blob/main/docs/readme/README_zh-TW.md) · [日本語](https://github.com/morluto/rea/blob/main/docs/readme/README_ja.md) · [한국어](https://github.com/morluto/rea/blob/main/docs/readme/README_ko.md) · [Türkçe](https://github.com/morluto/rea/blob/main/docs/readme/README_tr.md) · [Русский](https://github.com/morluto/rea/blob/main/docs/readme/README_ru.md) · [Tiếng Việt](https://github.com/morluto/rea/blob/main/docs/readme/README_vi.md) · [ไทย](https://github.com/morluto/rea/blob/main/docs/readme/README_th.md) · [Deutsch](https://github.com/morluto/rea/blob/main/docs/readme/README_de.md) · [Español](https://github.com/morluto/rea/blob/main/docs/readme/README_es.md) · [Français](https://github.com/morluto/rea/blob/main/docs/readme/README_fr.md) · [Українська](https://github.com/morluto/rea/blob/main/docs/readme/README_uk.md) · [Polski](https://github.com/morluto/rea/blob/main/docs/readme/README_pl.md) · [Português (Brasil)](https://github.com/morluto/rea/blob/main/docs/readme/README_pt-BR.md) · [العربية](https://github.com/morluto/rea/blob/main/docs/readme/README_ar.md) · [فارسی](https://github.com/morluto/rea/blob/main/docs/readme/README_fa.md) · [Bahasa Indonesia](https://github.com/morluto/rea/blob/main/docs/readme/README_id.md) · [Italiano](https://github.com/morluto/rea/blob/main/docs/readme/README_it.md)
-· [Ελληνικά](https://github.com/morluto/rea/blob/main/docs/readme/README_el.md) · [മലയാളം](https://github.com/morluto/rea/blob/main/docs/readme/README_ml.md) · [Roman Urdu](https://github.com/morluto/rea/blob/main/docs/readme/README_ur-Latn.md) · [Română](https://github.com/morluto/rea/blob/main/docs/readme/README_ro.md)
+· [Ελληνικά](https://github.com/morluto/rea/blob/main/docs/readme/README_el.md) · [മലയാളം](https://github.com/morluto/rea/blob/main/docs/readme/README_ml.md) · [Roman Urdu](https://github.com/morluto/rea/blob/main/docs/readme/README_ur-Latn.md) · [Română](https://github.com/morluto/rea/blob/main/docs/readme/README_ro.md) · [Български](https://github.com/morluto/rea/blob/main/docs/readme/README_bg.md)
 
 # REA: Reverse Engineer Anything
 
@@ -135,7 +135,7 @@ Setup registers REA with your agent and installs matching workflow instructions.
 ## Quick start
 
 On Linux, Ghidra, JADX, firmware tool launches and static JavaScript/Electron
-analysis require a procps-compatible `ps` on REA's `PATH` for process ownership
+analysis require a procps-compatible system `ps` for process ownership
 checks. Recovery steps are in `docs/getting-started/installation.md` under
 "Linux owned-process prerequisite".
 
@@ -156,20 +156,20 @@ project. Installation and recovery details are in the setup guide below.
 
 Setup supports Claude Code, Codex, Cursor, Gemini CLI, Grok Build and
 [other agents](https://raw.githubusercontent.com/morluto/rea/main/docs/getting-started/installation.md#supported-agents). See
-[installation and setup](https://github.com/morluto/rea/blob/main/docs/getting-started/installation.md) for provider configuration and
-manual MCP registration and Claude Code/Codex plugin installation.
+[installation and setup](https://github.com/morluto/rea/blob/main/docs/getting-started/installation.md) for provider configuration,
+manual MCP registration, Claude Code/Codex plugins, and the Cursor Marketplace
+plugin.
 
-MCP uses compact input schemas by default to reduce context overhead. Set
-`REA_MCP_INPUT_SCHEMA_PROFILE=full` in your MCP registration when you need the
-complete advertised field guidance and nested validation details. Both profiles
-keep the full tool set and canonical server validation. See
-"Compact input schema profile" in the MCP contracts guide.
+MCP advertises compact input schemas to reduce context overhead; guidance a
+compact schema omits follows the tool description. The full tool set and
+canonical server validation are unchanged. See "Compact input schema profile"
+in the MCP contracts guide.
 
-Complete output schemas are advertised by default. If your client caps the
-complete `tools/list` frame, set `REA_MCP_OUTPUT_SCHEMA_PROFILE=compact` to
-bound each advertised output schema, or `off` to omit output schemas entirely.
-Both settings keep canonical server-side validation and complete structured
-results. See "Output schemas" in the MCP contracts guide.
+Output schemas are omitted from `tools/list` by default: no model API reads
+them, and REA validates every result itself. Set
+`REA_MCP_OUTPUT_SCHEMA_PROFILE=compact` to advertise each output schema within
+a 4,096-byte budget. Both settings keep canonical server-side validation and
+complete structured results. See "Output schemas" in the MCP contracts guide.
 
 ### Ask your agent
 
@@ -268,6 +268,7 @@ Additional tools and host support depend on the target:
 | Rust binaries           | Embedded cargo-auditable crate names, versions, sources and dependency edges                      | Built-in static ELF/PE/thin Mach-O inspection; [Rust binaries](https://github.com/morluto/rea/blob/main/docs/rust-binaries.md)                                                                                |
 | PE certificates         | Authenticode WIN_CERTIFICATE entries and PKCS#7 signer/X.509 identity fields                      | Built-in static PE inspection; [PE certificates](https://github.com/morluto/rea/blob/main/docs/pe-certificates.md)                                                                                            |
 | PE imports              | Import and delay-load DLL names, ordinals, IAT RVAs and pefile import hash                        | Built-in static PE inspection; [PE imports](https://github.com/morluto/rea/blob/main/docs/pe-imports.md)                                                                                                      |
+| Windows shortcuts       | Shell Link target, arguments, working dir, ExtraData and Tracker droid facts                      | Built-in static LNK inspection; [Windows shortcuts](https://github.com/morluto/rea/blob/main/docs/guides/native/windows-shortcut.md)                                                                          |
 | ELF notes               | PT_NOTE/SHT_NOTE owners, types, GNU build-id and ABI-tag fields                                   | Built-in static ELF inspection; [ELF notes](https://github.com/morluto/rea/blob/main/docs/elf-notes.md)                                                                                                       |
 | Binary hardening        | PIE, NX, RELRO, CFG and related header flags for ELF, PE and Mach-O                               | Built-in static header inspection; [binary hardening](https://github.com/morluto/rea/blob/main/docs/binary-hardening.md)                                                                                      |
 | Apple IPS crashes       | .ips metadata, threads, images, registers and documented crash classes                            | Built-in static JSON inspection; [Apple IPS](https://github.com/morluto/rea/blob/main/docs/apple-ips.md)                                                                                                      |
@@ -277,7 +278,7 @@ Additional tools and host support depend on the target:
 | EVM bytecode            | Dispatch selectors, byte offsets, inferred arguments and mutability                               | Local raw/hex carrier on Linux x64; [offline EVM guide](https://github.com/morluto/rea/blob/main/docs/guides/evm/evm-bytecode.md)                                                                             |
 | SQLite databases        | Tables, columns, indexes, views, triggers and selected ordinary-table rows                        | Local database/WAL snapshot; Node.js 24.x >=24.15 or 26+ with native SQLite limits                                                                                   |
 | Recorded Linux crashes  | Raw notes, every recorded thread's registers/signals and optional mapping candidates              | Caller-supplied pwntools on Linux x64; optional GDB/pwndbg; [recorded crashes](https://github.com/morluto/rea/blob/main/docs/guides/native/recorded-crashes.md)                                               |
-| JavaScript / Electron   | Modules, imports, source maps, routes, IPC and native add-on relationships                        | Node.js and npm; Linux: procps-compatible `ps`; [application analysis](https://github.com/morluto/rea/blob/main/docs/guides/javascript/javascript-application-workflows.md)                                   |
+| JavaScript / Electron   | Modules, imports, source maps, routes, IPC, native add-ons, `rea audit-release-exposure`          | Node.js and npm; Linux: procps-compatible `ps`; [application analysis](https://github.com/morluto/rea/blob/main/docs/guides/javascript/javascript-application-workflows.md)                                   |
 | Websites                | Page structure, scripts, network observations and requested screenshots                           | A Chrome-family browser; [browser analysis](https://github.com/morluto/rea/blob/main/docs/guides/web/browser-observation.md)                                                                                  |
 | Saved network captures  | Requests, responses, exposed payloads and source locations                                        | HAR or Fiddler Everywhere SAZ; mitmdump on Linux for native mitmproxy; [capture guide](https://github.com/morluto/rea/blob/main/docs/guides/web/web-network-captures.md)                                      |
 | .NET assemblies         | Metadata, CIL instructions, declared native dependencies and build comparisons                    | None (static only); [managed-code guide](https://github.com/morluto/rea/blob/main/docs/guides/managed/managed-code-analysis.md)                                                                               |
@@ -294,6 +295,7 @@ Additional tools and host support depend on the target:
 | Packages and resources  | File inventories, digests, plists, Apple bundle anatomy and extracted resources                   | [Artifact and JavaScript guide](https://github.com/morluto/rea/blob/main/docs/guides/javascript/javascript-artifact-reconstruction.md), [Apple applications](https://github.com/morluto/rea/blob/main/docs/guides/apple/apple-application-analysis.md) |
 | Process behavior        | Terminal output, interactions, exit and filesystem observations, and run comparisons              | Linux/macOS with a native PTY; [process capture](https://github.com/morluto/rea/blob/main/docs/guides/runtime/process-capture.md)                                                                             |
 | PyInstaller executables | CArchive members, Python version, entry scripts and extracted bytecode                            | None (static only); [Python packaged applications](https://github.com/morluto/rea/blob/main/docs/python-packaged-applications.md)                                                                             |
+| Deno compile binaries   | Virtual files, entry point, recorded options, npm snapshot length                                 | None (static only); [Deno compile executables](https://github.com/morluto/rea/blob/main/docs/deno-standalone.md)                                                                                              |
 
 Static JavaScript and .NET inspection read the supplied files without running
 the application. Runtime capture runs or interacts with the selected target
@@ -398,6 +400,12 @@ REA exports a runnable environment with a basic test to check that it starts and
 [Build an environment](https://rea.tools/guides/rl-environments/) ·
 [Environment reference](https://github.com/morluto/rea/blob/main/docs/agent-environments.md) ·
 [Watch the demo on X](https://x.com/reatools/status/2112574822584918075?s=20)
+
+### Desktop app environments
+
+REA can also build an environment of a Linux desktop app, which an agent uses through screenshots, the mouse and the keyboard. From a one-line request, such as "Build me a Gnote environment where the agent adds olive oil to the shopping list note", your agent installs the app on a local build computer, writes the task, exports the environment and checks the task in a fresh computer. The machine that builds it needs Linux on amd64 or arm64, Docker and the agentenv framework version the guide pins.
+
+[Set up desktop app environments](https://github.com/morluto/rea/blob/main/docs/desktop-build-computer.md)
 
 ## FAQ
 

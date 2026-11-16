@@ -14,29 +14,29 @@ tags:
   - hermes-agent
   - nous-research
 status: active
-quality_percentile: 84
+quality_percentile: 83
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: nesquena/hermes-webui
   official_vendor: false
   license: MIT
 signals:
-  stars: 19455
-  last_commit: 2026-11-09T08:30:46Z
-  stars_delta_7d: 51
-  stars_growth_pct: 0.3
-  trending_score: 51.13
-  rank_current: 54
-  rank_delta: -4
+  stars: 19541
+  last_commit: 2026-11-16T08:39:07Z
+  stars_delta_7d: 86
+  stars_growth_pct: 0.4
+  trending_score: 86.38
+  rank_current: 64
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 19028
     - 19190
     - 19404
     - 19455
+    - 19541
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +45,7 @@ readme_source:
   repo: nesquena/hermes-webui
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:17.699Z
+  fetched_at: 2026-11-16T09:16:45.079Z
   truncated: true
 type: agent_tool
 tool:
@@ -430,6 +430,13 @@ runner contract does not yet provide atomic goal replacement and kickoff; WebUI
 never substitutes local goal execution. `/goal status`, `pause`, `resume`, and
 `clear` delegate to the runner when supported. Legacy-direct and legacy-journal
 goal kickoff behavior is unchanged for supported routes. Normal runner chat supports provider-only model aliases.
+
+`/goal <text>` reads Hermes Agent's inline completion-contract lines (`outcome:`,
+`verification:`, `constraints:`, `boundaries:`, `stop when:`) into the goal's contract
+and keeps the first plain line(s) as the goal. `/goal gate …` is refused with HTTP 400
+(`error: unsupported_gate`) on every backend, without changing the goal or starting a run:
+gates rerun shell commands after every turn and WebUI has no rule yet for who may add them.
+Use `/goal -- <text>` for a goal that starts with a control word such as `gate` or `pause`.
 
 Server-initiated turns retain the pre-session stale-Agent-runtime barrier. It
 runs before loading the session; named-profile alias and Gateway routing happen

@@ -13,29 +13,29 @@ tags:
   - claude
   - cli
 status: active
-quality_percentile: 91
+quality_percentile: 90
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: 1jehuang/jcode
   official_vendor: false
   license: MIT
 signals:
-  stars: 21633
-  last_commit: 2026-11-09T03:26:15Z
-  stars_delta_7d: 128
-  stars_growth_pct: 0.6
-  trending_score: 128.76
-  rank_current: 28
-  rank_delta: 8
+  stars: 21807
+  last_commit: 2026-11-16T08:14:11Z
+  stars_delta_7d: 174
+  stars_growth_pct: 0.8
+  trending_score: 175.4
+  rank_current: 39
+  rank_delta: -11
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 21020
     - 21210
     - 21505
     - 21633
+    - 21807
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: 1jehuang/jcode
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:20.361Z
+  fetched_at: 2026-11-16T09:16:46.888Z
   truncated: false
 type: agent_tool
 tool:

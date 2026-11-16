@@ -12,29 +12,29 @@ tags:
   - agent-skills
   - xget
 status: active
-quality_percentile: 81
+quality_percentile: 75
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: xixu-me/xget
   official_vendor: false
   license: AGPL-3.0
 signals:
-  stars: 8215
+  stars: 8219
   last_commit: 2026-11-05T08:47:34Z
-  stars_delta_7d: 3
+  stars_delta_7d: 4
   stars_growth_pct: 0
-  trending_score: 3
-  rank_current: 122
-  rank_delta: 10
+  trending_score: 4
+  rank_current: 132
+  rank_delta: -10
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 8194
     - 8206
     - 8212
     - 8215
+    - 8219
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: xixu-me/xget
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:58.643Z
+  fetched_at: 2026-11-16T09:16:29.259Z
   truncated: true
 type: agent_tool
 tool:

@@ -13,10 +13,10 @@ tags:
   - agent-skills
   - ai-coding
 status: active
-quality_percentile: 63
+quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mvschwarz/openrig
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 8774
-  last_commit: 2026-11-09T09:15:26Z
-  stars_delta_7d: 126
-  stars_growth_pct: 1.5
-  trending_score: 127.84
+  stars: 8867
+  last_commit: 2026-11-16T09:10:00Z
+  stars_delta_7d: 93
+  stars_growth_pct: 1.1
+  trending_score: 93.99
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 7831
     - 8198
     - 8648
     - 8774
+    - 8867
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: mvschwarz/openrig
   path: packages/daemon/assets/plugins/openrig-core/skills/openrig-user/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:49.760Z
+  fetched_at: 2026-11-16T09:16:32.400Z
   truncated: true
 type: agent_skill
 skill:
@@ -149,6 +149,17 @@ rig queue handoff <qitem-id> \
 
 A queue write (`create`, `claim`, `update`, `handoff`, `handoff-and-complete`) answers with the row it wrote; a
 handoff answers with the closed row and its successor. When that answer shows what you need to establish, use it.
+
+`queue update` is stricter: before it reports success, the CLI reads the row back from the canonical queue and checks
+every requested row field using daemon semantics (including normalized deadlines and appended closing resolutions).
+When `--note` is present, it first records the transition cursor and then requires a newer canonical transition,
+recorded under the actor the write was sent as, that carries those note bytes as written or with only what the daemon
+adds for that request (the reopen prefix, the summary suffix, a revised deadline's receipt). Another writer's note, or
+a note that only starts the same way, doesn't count. If that cursor can't be read, the write is still sent, and the
+note can't be shown to be new: the command says so and exits non-zero. A failed post-write check exits non-zero and
+says the write may have committed. Reconcile with `rig queue show <id> --full --json` before retrying. Preserve that
+exit status in wrappers, and use `set -o pipefail` when piping its output so a downstream formatter cannot turn
+failure into success.
 
 `create` also prints `Queue create request ID: <id> (not proof of persistence)` on stderr *before* it sends the write,
 so an interrupted create can be reconciled. That ID names a request, not a row. The row is the `qitemId` on stdout
@@ -1074,25 +1085,5 @@ in `CODEX_HOME` (default `~/.codex`). A seat that names its own home in `env:` r
 
 Seats may share a home. OpenRig writes its own settings (Codex hooks, managed `config.toml` and plugin; Claude's
 first-run trust settings) into the seat's home.
-
-### Move one Codex seat to another login
-
-For a Codex seat on Linux. The login must already be saved in the Codex home the seat runs on (`rig seat status <seat>`
-shows it). Other operating systems, and moving a seat to another home, aren't supported by this command yet: say so instead
-of improvising. A Claude seat moves differently; see the next section.
-
-1. **Save each login once, in that home:** `CODEX_HOME=<home> codex login` (the person signs in), then
-   `CODEX_HOME=<home> rig auth save <name>`. `rig auth list --codex-home <home>` lists them.
-2. **Check:** `rig provider precheck --seat <seat> --to-account <name>` shows the home, what the seat is doing, and every
-   peer on that home. A refusal says what's missing, and nothing changes.
-3. **Move:** `rig provider switch --seat <seat> --to-account <name>`. It saves the home's current login as
-   `before-switch-<time>`, activates the chosen one, and restarts the seat in place on the same conversation. If the
-   current login can't be saved first, nothing changes. Peers on the home aren't restarted. Each keeps its current login
-   only until its next token refresh, when Codex stops it with "signed in to another account". Run the printed
-   `rig seat restart <peer> --keep-conversation --reason "..."` for each to move it too. Don't sign in again in that home: that replaces
-   the login you just switched to.
-4. **Confirm:** after the seat completes a real tool-using turn, run the printed
-   `rig seat restart <seat> --keep-conversation --verify --expect-account <its Account line>`. Until then the move is
-   unconfirmed. An uncertain restart is reported; never restart it a second time.
 
 *(README truncated for display. [Read the full README on GitHub](https://github.com/mvschwarz/openrig)).*

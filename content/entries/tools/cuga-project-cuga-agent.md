@@ -13,29 +13,29 @@ tags:
   - ai-agents
   - coding-agent
 status: active
-quality_percentile: 75
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: cuga-project/cuga-agent
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1140
-  last_commit: 2026-11-08T20:49:10Z
-  stars_delta_7d: 54
-  stars_growth_pct: 5
-  trending_score: 56.69
-  rank_current: 52
-  rank_delta: 46
+  stars: 1187
+  last_commit: 2026-11-16T09:08:52Z
+  stars_delta_7d: 47
+  stars_growth_pct: 4.1
+  trending_score: 48.94
+  rank_current: 83
+  rank_delta: -31
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1042
     - 1049
     - 1086
     - 1140
+    - 1187
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: cuga-project/cuga-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.820Z
+  fetched_at: 2026-11-16T09:16:54.116Z
   truncated: false
 type: agent_tool
 tool:

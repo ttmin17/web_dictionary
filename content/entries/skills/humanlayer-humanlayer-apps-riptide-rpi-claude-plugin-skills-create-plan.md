@@ -13,10 +13,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 64
+quality_percentile: 70
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: humanlayer/humanlayer
@@ -24,16 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 12845
-  last_commit: 2026-11-05T23:04:55Z
-  stars_delta_7d: 35
+  stars: 12889
+  last_commit: 2026-11-16T06:27:49Z
+  stars_delta_7d: 44
   stars_growth_pct: 0.3
-  trending_score: 35.1
+  trending_score: 44.15
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12528
     - 12810
     - 12845
+    - 12889
 language: en
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: humanlayer/humanlayer
   path: apps/riptide-rpi-claude-plugin/skills/create-plan/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:45.682Z
+  fetched_at: 2026-11-16T09:16:07.601Z
   truncated: false
 type: agent_skill
 skill:

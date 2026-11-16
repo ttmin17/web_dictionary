@@ -9,29 +9,29 @@ categories:
 tags:
   - agents
 status: active
-quality_percentile: 74
+quality_percentile: 73
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: apify/apify-mcp-server
   official_vendor: false
   license: MIT
 signals:
-  stars: 15357
-  last_commit: 2026-11-08T17:30:42Z
-  stars_delta_7d: 491
-  stars_growth_pct: 3.3
-  trending_score: 507.22
-  rank_current: 2
-  rank_delta: 1
+  stars: 16451
+  last_commit: 2026-11-13T22:31:34Z
+  stars_delta_7d: 1094
+  stars_growth_pct: 7.1
+  trending_score: 1171.93
+  rank_current: 5
+  rank_delta: -3
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11927
     - 13196
     - 14866
     - 15357
+    - 16451
 language: en
 needs_keys: false
 prerequisites:
@@ -40,7 +40,7 @@ readme_source:
   repo: apify/apify-mcp-server
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:26:47.553Z
+  fetched_at: 2026-11-16T09:15:01.920Z
   truncated: false
 type: mcp_server
 launch:
@@ -433,7 +433,7 @@ Follow-ups work too. "Show me the next 10 results from that run" makes the agent
 
 ## 📡 Telemetry
 
-The Apify MCP server collects telemetry about tool calls to help Apify understand usage patterns and improve the service. Telemetry is **on** by default. With telemetry on, Actor searches in Apify Store send the MCP session ID as `_traceId`, and tool-call events carry it as `trace_id`. `search-actors` also sends `_useCase`, a one-sentence reason for the search written by the model, which Apify uses to improve Store search results. The stdio transport also uses [Sentry](https://sentry.io) for error tracking, which helps the Apify team find and fix issues faster.
+The Apify MCP server collects telemetry about tool calls to help Apify understand usage patterns and improve the service. Telemetry is **on** by default. With telemetry on, Actor searches in Apify Store send the first 12 hex characters of the SHA-256 hash of the MCP session ID as `_traceId`, and tool-call events carry it as `trace_id`. `search-actors` also sends `_useCase`, a one-sentence reason for the search written by the model, which Apify uses to improve Store search results. The stdio transport also uses [Sentry](https://sentry.io) for error tracking, which helps the Apify team find and fix issues faster.
 
 To opt out, including Sentry, set the `telemetry-enabled` URL parameter or the `--telemetry-enabled` CLI flag to `false`, or set `TELEMETRY_ENABLED=false`. CLI flags take precedence over environment variables.
 
@@ -450,6 +450,7 @@ TELEMETRY_ENABLED=false npx @apify/actors-mcp-server
 
 - **The local server won't start.** Check your Node.js version: the package requires Node.js 22 or later.
 - **Authentication fails.** Reconnect so the client repeats the OAuth flow, or switch to a Bearer token. For the local server, check that `APIFY_TOKEN` is set in the client's server configuration, not only in your shell.
+- **VS Code says the OAuth app is not registered.** Run **Authentication: Remove Dynamic Authentication Providers**, select Apify, and sign in again.
 - **Client features vary.** Any MCP client can connect, but support for dynamic tool lists, OAuth, and MCP Apps differs between clients.
 - **Invalid Actor input.** When `call-actor` fails because of invalid input, the error includes the Actor's input schema so the agent can correct the input and retry.
 

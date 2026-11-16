@@ -12,29 +12,29 @@ tags:
   - cli
   - coding-agent
 status: active
-quality_percentile: 46
+quality_percentile: 42
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: anus-dev/ANUS
   official_vendor: false
   license: MIT
 signals:
-  stars: 6562
+  stars: 6559
   last_commit: 2026-10-01T16:32:18Z
-  stars_delta_7d: 3
+  stars_delta_7d: 0
   stars_growth_pct: 0
-  trending_score: 3
-  rank_current: 123
-  rank_delta: 7
+  trending_score: 0
+  rank_current: 140
+  rank_delta: -17
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 6549
     - 6553
     - 6559
     - 6562
+    - 6559
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: anus-dev/ANUS
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:20.290Z
+  fetched_at: 2026-11-16T09:16:46.945Z
   truncated: false
 type: agent_tool
 tool:

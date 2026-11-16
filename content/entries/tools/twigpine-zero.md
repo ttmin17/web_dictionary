@@ -14,26 +14,26 @@ status: active
 quality_percentile: 60
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Twigpine/zero
   official_vendor: false
   license: MIT
 signals:
-  stars: 1781
-  last_commit: 2026-11-09T09:06:39Z
+  stars: 1780
+  last_commit: 2026-11-16T08:54:44Z
   stars_delta_7d: 0
   stars_growth_pct: 0
   trending_score: 0
-  rank_current: 137
-  rank_delta: -38
+  rank_current: 141
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 1737
     - 1744
     - 1781
     - 1781
+    - 1780
 language: en
 needs_keys: false
 prerequisites:
@@ -42,7 +42,7 @@ readme_source:
   repo: Twigpine/zero
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.812Z
+  fetched_at: 2026-11-16T09:16:54.292Z
   truncated: false
 type: agent_tool
 tool:
@@ -67,7 +67,7 @@ tool:
 
 <p align="center">
   <a href="https://github.com/Twigpine/zero/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-blue"></a>
-  <img alt="Go 1.26.10+" src="https://img.shields.io/badge/Go-1.26.10+-00ADD8?logo=go&logoColor=white">
+  <img alt="Go 1.26.11+" src="https://img.shields.io/badge/Go-1.26.11+-00ADD8?logo=go&logoColor=white">
   <img alt="25+ providers" src="https://img.shields.io/badge/providers-25+-34E2EA">
   <a href="https://discord.gg/CaQDS6wdFn"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white"></a>
   <a href="https://vercel.com/open-source-program"><img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge-2026.svg"></a>
@@ -223,7 +223,7 @@ irm https://raw.githubusercontent.com/Twigpine/zero/main/scripts/install.ps1 | i
 
 ### From source
 
-Source builds require Go 1.26.10+.
+Source builds require Go 1.26.11+.
 
 ```bash
 git clone https://github.com/Twigpine/zero.git

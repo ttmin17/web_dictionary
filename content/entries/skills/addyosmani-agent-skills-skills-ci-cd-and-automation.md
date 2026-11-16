@@ -16,10 +16,10 @@ tags:
   - claude-code
   - codex
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: addyosmani/agent-skills
@@ -27,17 +27,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 114287
-  last_commit: 2026-11-01T19:24:49Z
-  stars_delta_7d: 890
-  stars_growth_pct: 0.8
-  trending_score: 896.99
+  stars: 118091
+  last_commit: 2026-11-14T04:33:56Z
+  stars_delta_7d: 3804
+  stars_growth_pct: 3.3
+  trending_score: 3930.61
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 108318
     - 110580
     - 113397
     - 114287
+    - 118091
 language: en
 needs_keys: false
 prerequisites: []
@@ -45,7 +45,7 @@ readme_source:
   repo: addyosmani/agent-skills
   path: skills/ci-cd-and-automation/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:20.789Z
+  fetched_at: 2026-11-16T09:15:42.863Z
   truncated: false
 type: agent_skill
 skill:

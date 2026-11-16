@@ -1,11 +1,12 @@
 ---
 slug: melonjs-melonjs-packages-melonjs-skills-melonjs-deployment
 name: deployment
-tagline: Use this skill when packaging, shipping or scaffolding a melonJS game —
-  starting a project with create-melonjs, building for the web, wrapping as a na
-summary: The project name is required — without it the command prints its usage
-  and exits. It downloads the melonJS TypeScript boilerplate (Vite, TypeScript
-  and the debug plugin already wired in), which saves you the top-level...
+tagline: "Use this skill when packaging, shipping or scaffolding a melonJS game
+  — starting a project with create-melonjs, building for the web, browser
+  support "
+summary: "The project name is required — without it the command prints its usage
+  and exits — and it names a new directory: an existing one is refused. It
+  downloads the melonJS TypeScript boilerplate (Vite, TypeScript and the de..."
 categories:
   - media-creative
 tags:
@@ -17,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -25,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,18 +44,17 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-deployment/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.053Z
+  fetched_at: 2026-11-16T09:16:39.034Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: deployment
   description: "Use this skill when packaging, shipping or scaffolding a melonJS
-    game — starting a project with create-melonjs, building for the web,
-    wrapping as a native app with Capacitor or Cordova, publishing to WeChat
-    Mini Games or Facebook Instant Games, browser support and transpiling.
+    game — starting a project with create-melonjs, building for the web, browser
+    support and transpiling, and bundle size. For running inside a game portal,
+    a native app, a mini-game runtime or with no DOM, use melonjs-platforms.
     Triggers on: create-melonjs, scaffold, new project, build, deploy, publish,
-    Capacitor, Cordova, native app, iOS, Android, WeChat, Instant Games, browser
-    support, transpile, ES2022, bundle size, tree-shaking."
+    browser support, transpile, ES2022, bundle size, tree-shaking."
   folder_path: packages/melonjs/skills/melonjs-deployment
   extra_files: []
   pack_total_skills: 25
@@ -75,9 +76,11 @@ npm create melonjs@latest my-game
 ```
 
 The project name is required — without it the command prints its usage and
-exits. It downloads the melonJS TypeScript boilerplate (Vite, TypeScript and the
-debug plugin already wired in), which saves you the top-level-await and
-asset-path issues that a hand-rolled config usually hits first.
+exits — and it names a new directory: an existing one is refused. It downloads
+the melonJS TypeScript boilerplate (Vite, TypeScript and the debug plugin
+already wired in), which saves you the top-level-await and asset-path issues
+that a hand-rolled config usually hits first. Then `npm install` and
+`npm run dev` in that directory.
 
 ## Adding melonJS to an existing project
 
@@ -125,25 +128,13 @@ Two caveats worth knowing:
 - Downlevelled private class members become `WeakMap` lookups, and melonJS uses
   them in the renderer's hot paths. This is a real trade, not a free switch.
 
-## Native apps
+## Platforms: portals, native apps, mini-games, no DOM
 
-**Capacitor** is the current recommendation for iOS and Android — see
-`@melonjs/capacitor-plugin`. **Cordova** also works and is documented, but is the
-older route.
-
-The thing that breaks first in both is asset loading: the app is served from
-`file://`, where `fetch()` cannot read local files. melonJS's loader falls back
-to XHR for that scheme, so engine-loaded assets work — but any `fetch()` in
-*your* game code will fail there.
-
-## Mini-game platforms
-
-**WeChat Mini Games** and **Facebook Instant Games** are both documented in the
-wiki. Note that `device.platform.isWeixin` detects WeChat's **in-app browser**,
-which is a normal WebView. WeChat *Mini Games* are a different runtime with no
-DOM, and need platform-specific adaptation rather than just detection — the one
-hook the engine offers is that the renderer adopts a `globalThis.canvas` when
-the runtime's adapter provides one, instead of creating its own.
+Running inside a game portal (YouTube Playables, Facebook Instant Games), a
+native app wrapper (Capacitor, Cordova), a mini-game runtime (WeChat Mini
+Games), or with no DOM at all (nx.js on the Nintendo Switch, a Web Worker) is
+covered by `melonjs-platforms`: each platform's setup, and the shared way of
+handing pausing, saving and sound to the platform.
 
 ## Size
 
@@ -161,11 +152,12 @@ are not decoded into memory.
 |---|---|
 | blank page, syntax error in the console | browser older than the ES2022 target |
 | transpiling changes nothing | build config excludes `node_modules` |
-| assets 404 in a packaged native app | `fetch()` in game code — `file://` needs XHR |
 | a built-in method is missing after transpiling | transpiling is syntax-only; polyfills are separate |
 | bundle much larger than expected | tree-shaking recovers little — subsystems are interconnected |
 
 ## Related skills
 
+- `melonjs-platforms` — portals, native apps, mini-games and runtimes with no DOM
 - `melonjs` — the companion packages, including the Capacitor plugin
+- `melonjs-plugins` — registering the Capacitor plugin, and its helpers
 - `melonjs-getting-started` — the Application bootstrap the template produces

@@ -13,29 +13,29 @@ tags:
   - ai-assistant
   - claude
 status: active
-quality_percentile: 55
+quality_percentile: 66
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ShenSeanChen/waku-agent
   official_vendor: false
   license: MIT
 signals:
-  stars: 2152
-  last_commit: 2026-10-23T18:49:21Z
-  stars_delta_7d: 17
-  stars_growth_pct: 0.8
-  trending_score: 17.14
-  rank_current: 93
-  rank_delta: 9
+  stars: 2178
+  last_commit: 2026-11-15T05:09:43Z
+  stars_delta_7d: 26
+  stars_growth_pct: 1.2
+  trending_score: 26.31
+  rank_current: 99
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2051
     - 2104
     - 2135
     - 2152
+    - 2178
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: ShenSeanChen/waku-agent
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:38.592Z
+  fetched_at: 2026-11-16T09:17:04.128Z
   truncated: false
 type: agent_tool
 tool:
@@ -135,12 +135,12 @@ Waku's own memory is local. **[Waku Memory](https://www.waku.one)** is the hoste
 share across agents: save something in Claude Code, recall it here.
 
 ```bash
-pip install 'waku-agent[mcp]'           # in a checkout: uv pip install -e '.[mcp]'
-waku connect waku-memory                # or /connect waku-memory in the dashboard chat
+waku plugin install waku@waku-memory    # or /plugin install waku@waku-memory in the dashboard chat
+waku mcp login waku_memory              # sign in, once, in your browser
 waku skill export --to claude,codex     # carry Waku's skills to Claude Code and Codex too
 ```
 
-Your browser opens once to sign in. To connect Claude Code, Codex, Hermes or Grok Bot to the
+That installs the Waku plugin, the one Claude Code and Codex use. To connect Claude Code, Codex, Hermes or Grok Bot to the
 same memory, see [integrations](https://github.com/ShenSeanChen/waku-agent/blob/main/docs/integrations.md#share-one-memory-with-your-other-agents-waku-memory).
 For live data when it researches, `waku connect treg` (or `/connect treg`) signs in to your own
 [treg](https://treg.to) account the same way; see [integrations](https://github.com/ShenSeanChen/waku-agent/blob/main/docs/integrations.md#live-data-for-research-treg).

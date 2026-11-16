@@ -4,7 +4,7 @@ name: Hypha
 tagline: Harness-oriented agent system framework for production-grade LLM agent
   applications
 summary: Agent Core + Production Harness for governed, durable, and reusable
-  domain agents.
+  domain agent.
 categories:
   - agent-frameworks
 tags:
@@ -13,29 +13,29 @@ tags:
   - agent-memory
   - agent-runtime
 status: active
-quality_percentile: 33
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: CodeSoul-co/Hypha
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 451
-  last_commit: 2026-09-04T06:52:51Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 118
-  rank_delta: -17
+  stars: 452
+  last_commit: 2026-11-15T17:19:15Z
+  stars_delta_7d: 1
+  stars_growth_pct: 0.2
+  trending_score: 1
+  rank_current: 116
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 448
     - 449
     - 451
     - 451
+    - 452
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: CodeSoul-co/Hypha
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:42.606Z
+  fetched_at: 2026-11-16T09:17:08.340Z
   truncated: false
 type: mcp_server
 launch:
@@ -62,7 +62,7 @@ launch:
 </p>
 
 <p align="center">
-  <strong>Agent Core + Production Harness for governed, durable, and reusable domain agents.</strong>
+  <strong>Agent Core + Production Harness for governed, durable, and reusable domain agent.</strong>
 </p>
 
 <p align="center">
@@ -80,9 +80,7 @@ launch:
   · <a href="https://www.npmjs.com/org/codesoul-co">npm Packages</a>
 </p>
 
-> **Current public release:** v1.0.1, with 15 aligned packages named
 > `@codesoul-co/hypha-*`. The [versioned user guide](https://codesoul-co.github.io/Hypha/)
-> includes an API atlas for every package, custom FSM control, and a complete composition example.
 
 ## What is hypha?
 

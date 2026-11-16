@@ -16,27 +16,28 @@ tags:
   - appium-alternative
   - claude-code
 status: active
-quality_percentile: 90
+quality_percentile: 85
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: mobile-next/mobile-mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 10425
-  last_commit: 2026-11-07T08:39:20Z
-  stars_delta_7d: 111
-  stars_growth_pct: 1.1
-  trending_score: 112.19
-  rank_current: 12
-  rank_delta: null
+  stars: 10610
+  last_commit: 2026-11-11T14:34:17Z
+  stars_delta_7d: 185
+  stars_growth_pct: 1.8
+  trending_score: 188.28
+  rank_current: 16
+  rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 10314
     - 10425
+    - 10610
 language: en
 needs_keys: false
 prerequisites:
@@ -45,7 +46,7 @@ readme_source:
   repo: mobile-next/mobile-mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:51.019Z
+  fetched_at: 2026-11-16T09:15:06.193Z
   truncated: false
 type: mcp_server
 launch:

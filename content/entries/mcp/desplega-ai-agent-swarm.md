@@ -12,27 +12,28 @@ tags:
   - agent-runtime
   - agent-swarm
 status: active
-quality_percentile: 35
+quality_percentile: 34
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: desplega-ai/agent-swarm
   official_vendor: false
   license: MIT
 signals:
-  stars: 1030
-  last_commit: 2026-11-09T09:14:59Z
-  stars_delta_7d: 22
-  stars_growth_pct: 2.2
-  trending_score: 22.48
-  rank_current: 42
-  rank_delta: null
+  stars: 1059
+  last_commit: 2026-11-16T07:15:58Z
+  stars_delta_7d: 29
+  stars_growth_pct: 2.8
+  trending_score: 29.82
+  rank_current: 57
+  rank_delta: -15
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1008
     - 1030
+    - 1059
 language: en
 needs_keys: false
 prerequisites:
@@ -41,7 +42,7 @@ readme_source:
   repo: desplega-ai/agent-swarm
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:27.799Z
+  fetched_at: 2026-11-16T09:16:54.112Z
   truncated: false
 type: mcp_server
 launch:
@@ -173,7 +174,7 @@ Kubernetes: [install the OCI Helm chart](https://github.com/desplega-ai/agent-sw
 
 ## Integrations
 
-Slack · GitHub · GitLab · Azure DevOps · Linear · Jira · AgentMail · WhatsApp (Kapso) · Telegram, Teams and Discord ([Chat SDK](https://docs.agent-swarm.dev/docs/integrations/chat-sdk)) · Composio · Sentry · Devin · [Serply search](https://docs.agent-swarm.dev/docs/integrations/serply). [Integration guides](https://docs.agent-swarm.dev/docs/integrations).
+Slack · GitHub · GitLab · Azure DevOps · Linear · Jira · AgentMail · WhatsApp (Kapso) · Telegram, Teams, Discord and Rocket.Chat ([Chat SDK](https://docs.agent-swarm.dev/docs/integrations/chat-sdk)) · Composio · Sentry · Devin · [Serply search](https://docs.agent-swarm.dev/docs/integrations/serply). [Integration guides](https://docs.agent-swarm.dev/docs/integrations).
 
 AgentMail archives verified inbound deliveries before acknowledging them and retains the archive for 30 days, including mail excluded from task routing. See the [contact inbox triage runbook](https://github.com/desplega-ai/agent-swarm/blob/main/runbooks/contact-inbox-triage.md) for retention, coverage limits, and rollout instructions.
 

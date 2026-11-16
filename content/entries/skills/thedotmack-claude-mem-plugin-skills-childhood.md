@@ -15,10 +15,10 @@ tags:
   - anthropic
   - artificial-intelligence
 status: active
-quality_percentile: 72
+quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: thedotmack/claude-mem
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 115108
-  last_commit: 2026-11-09T09:22:00Z
-  stars_delta_7d: 1814
-  stars_growth_pct: 1.6
-  trending_score: 1843.04
+  stars: 117496
+  last_commit: 2026-11-16T08:47:55Z
+  stars_delta_7d: 2388
+  stars_growth_pct: 2.1
+  trending_score: 2437.54
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 101675
     - 103202
     - 113294
     - 115108
+    - 117496
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: thedotmack/claude-mem
   path: plugin/skills/childhood/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:21.597Z
+  fetched_at: 2026-11-16T09:15:44.018Z
   truncated: false
 type: agent_skill
 skill:
@@ -93,6 +93,7 @@ Publication can lag behind a successful command. An exact-version 404 or stale d
 - Honor the requested observation window. Without one, watch through 30 minutes after the release first becomes publicly available or production becomes ready, whichever affected surface is later. For an older release, do a fresh sweep and inspect the completed late CI and reports covering that interval.
 - Poll pending or changing checks every 30–60 seconds; check steady signals every 2–5 minutes. Keep individual waits at most 60 seconds so user steering and progress updates remain responsive. An unavailable API is a coverage gap, not evidence that the release is healthy.
 - Verify each finding before changing code. Distinguish a release regression, a pre-existing issue, an operational failure, and a resolved/transient signal; give each its own evidence and next action.
+- For a verified claude-mem release regression, pull back the promotion with the **Pull back a bad release** bullet in [version-bump](https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/childhood/../version-bump/SKILL.md) step 13. A pull-back downgrades no install and is part of the release already authorized, so it needs no new authorization. Then ship the fix as a new patch release, as the next bullet describes.
 - Make focused fixes, run checks appropriate to the change, and use the repository's normal PR/release/deployment process. Use [babysit](https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/childhood/../babysit/SKILL.md) for a repair PR and [version-bump](https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/childhood/../version-bump/SKILL.md) when a new claude-mem release is authorized. Published versions and existing tags stay immutable.
 - After a repair ships, restart observation for the changed delivery surface and rerun its affected user path. Preserve unrelated worktrees, workers, registrations, user settings, and inference/provider policy.
 - A repeated infrastructure failure or deleted notification webhook needs a concrete follow-up. Keep it pending with its cause and owner action; do not repeatedly retry it or announce success to another destination.

@@ -15,10 +15,10 @@ tags:
   - codex
   - computer-use
 status: active
-quality_percentile: 82
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-11-02
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: milind-soni/OpenMausBot
@@ -26,15 +26,16 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 18995
-  last_commit: 2026-11-09T04:53:35Z
-  stars_delta_7d: 6412
-  stars_growth_pct: 51
-  trending_score: 9679.4
+  stars: 23784
+  last_commit: 2026-11-16T09:07:36Z
+  stars_delta_7d: 4789
+  stars_growth_pct: 25.2
+  trending_score: 5996.4
   velocity_source: snapshot_delta
   sparkline_4w:
     - 12583
     - 18995
+    - 23784
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: milind-soni/OpenMausBot
   path: skills/phone-harness/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.670Z
+  fetched_at: 2026-11-16T09:16:03.198Z
   truncated: false
 type: agent_skill
 skill:
@@ -55,7 +56,7 @@ skill:
   extra_files:
     - agents/openai.yaml
     - manifest.json
-  pack_total_skills: 4
+  pack_total_skills: 6
   is_pack_primary: false
   clients:
     - claude-code
@@ -76,10 +77,14 @@ with Bash, raw `adb`, `subprocess`, an emulator, network ADB, or Tailscale.
 2. Call `open_app` with the human app name. Do not scan the launcher first.
    Use `list_apps` only when the name is ambiguous or not found, then pass the
    package name.
-3. Call `read_screen` before choosing a target and after every action. Prefer
-   `tap_text`; use `screenshot` and pixel `tap` only when accessibility text
-   cannot identify the target.
-4. Use `swipe`, `type_text`, and `press` for interaction, verifying each step.
+3. Call `read_screen` before choosing a target. After that, to act and see the
+   result, put the action and `read_screen` in one `batch`. Prefer `tap_text`;
+   use `screenshot` and pixel `tap` only when accessibility text cannot
+   identify the target.
+4. Use `swipe`, `type_text`, and `press` for interaction. When you know the
+   next few steps, put them in one `batch`, and end the batch where the next
+   screen is uncertain, such as after a step that may open a dialog. To wait
+   for content to load, add a `wait` step to the batch, not Bash `sleep`.
 
 The tools operate the user's real phone. Navigate and read only what the task
 needs. Stop before sending, posting, purchasing, booking, deleting, changing

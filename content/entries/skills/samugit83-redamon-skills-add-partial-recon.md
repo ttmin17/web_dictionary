@@ -17,7 +17,7 @@ status: active
 quality_percentile: 94
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: samugit83/redamon
@@ -25,17 +25,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 3340
-  last_commit: 2026-11-08T10:18:09Z
-  stars_delta_7d: 42
-  stars_growth_pct: 1.3
-  trending_score: 42.53
+  stars: 3411
+  last_commit: 2026-11-14T15:34:14Z
+  stars_delta_7d: 71
+  stars_growth_pct: 2.1
+  trending_score: 72.51
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 3152
     - 3214
     - 3298
     - 3340
+    - 3411
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +43,7 @@ readme_source:
   repo: samugit83/redamon
   path: skills/add-partial-recon/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:34.064Z
+  fetched_at: 2026-11-16T09:17:02.508Z
   truncated: false
 type: agent_skill
 skill:
@@ -58,7 +58,7 @@ skill:
     single-phase re-run.
   folder_path: skills/add-partial-recon
   extra_files: []
-  pack_total_skills: 17
+  pack_total_skills: 18
   is_pack_primary: false
   clients:
     - claude-code
@@ -82,6 +82,18 @@ graph-sourced inputs, the modal, and the single-phase re-run.
 - **NEVER let partial-recon results create duplicate nodes.** Partial runs merge
   into the **existing** graph and must dedup via `MERGE` on the tenant triple -
   see `graph-db-writes`. Partial and full share the same graph.
+- **NEVER write back a field the partial run did not measure.** A builder
+  rebuilds a full-run dict from the graph; handed whole to a full-pipeline
+  writer, every node in it is rewritten from the graph's own lossy copy. Give
+  the writer only what your tool measured (`measured_port_data` in
+  [port_scanning.py](https://github.com/samugit83/redamon/blob/master/skills/add-partial-recon/../../recon/partial_recon_modules/port_scanning.py) cuts
+  port data to it), or write a dedicated Cypher for your tool's own fields. A
+  shared writer never takes `IP.is_cdn` from true to false, sets
+  `Port.passive_only` false only for a port its caller saw (a detail carrying
+  the graph's mark is none: `update_graph_from_port_scan` in
+  [port_mixin.py](https://github.com/samugit83/redamon/blob/master/skills/add-partial-recon/../../graph_db/mixins/recon/port_mixin.py)), and writes
+  enrichment fields (category, sample values, provenance) with `coalesce` or
+  `ON CREATE SET`.
 - **NEVER expose a graph-only input type as a manual textarea.** `SECTION_INPUT_MAP`
   in [nodeMapping.ts](https://github.com/samugit83/redamon/blob/master/skills/add-partial-recon/../../webapp/src/components/projects/ProjectForm/nodeMapping.ts)
   lists what the tool reads from the graph, but only the types that make sense for

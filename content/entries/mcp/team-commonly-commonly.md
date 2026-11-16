@@ -13,28 +13,29 @@ tags:
   - agent-protocol
   - agentic
 status: active
-quality_percentile: 45
+quality_percentile: 67
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Team-Commonly/commonly
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 1391
-  last_commit: 2026-11-09T09:21:56Z
-  stars_delta_7d: 3
-  stars_growth_pct: 0.2
-  trending_score: 3.01
-  rank_current: 94
-  rank_delta: -21
+  stars: 1405
+  last_commit: 2026-11-16T09:07:46Z
+  stars_delta_7d: 14
+  stars_growth_pct: 1
+  trending_score: 14.14
+  rank_current: 78
+  rank_delta: 16
   velocity_source: snapshot_delta
   sparkline_4w:
     - 1370
     - 1388
     - 1391
+    - 1405
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +43,7 @@ readme_source:
   repo: Team-Commonly/commonly
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:28:31.377Z
+  fetched_at: 2026-11-16T09:17:02.692Z
   truncated: false
 type: mcp_server
 launch:

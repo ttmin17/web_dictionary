@@ -13,29 +13,29 @@ tags:
   - cli
   - codex
 status: active
-quality_percentile: 64
+quality_percentile: 63
 selection_reason: quality_percentile
 first_seen: 2026-04-13T22:11:53
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: getagentseal/codeburn
   official_vendor: false
   license: MIT
 signals:
-  stars: 11736
-  last_commit: 2026-11-08T16:12:38Z
-  stars_delta_7d: 38
-  stars_growth_pct: 0.3
-  trending_score: 38.12
-  rank_current: 26
-  rank_delta: -1
+  stars: 11825
+  last_commit: 2026-11-13T14:42:10Z
+  stars_delta_7d: 89
+  stars_growth_pct: 0.8
+  trending_score: 89.67
+  rank_current: 24
+  rank_delta: 2
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 11511
     - 11578
     - 11698
     - 11736
+    - 11825
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: getagentseal/codeburn
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:41.741Z
+  fetched_at: 2026-11-16T09:16:07.780Z
   truncated: false
 type: mcp_server
 launch:

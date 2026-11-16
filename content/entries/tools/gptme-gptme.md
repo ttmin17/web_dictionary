@@ -13,29 +13,29 @@ tags:
   - ai-assistant
   - anthropic
 status: active
-quality_percentile: 55
+quality_percentile: 53
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: gptme/gptme
   official_vendor: false
   license: MIT
 signals:
-  stars: 4470
-  last_commit: 2026-11-09T08:59:44Z
-  stars_delta_7d: 1
-  stars_growth_pct: 0
-  trending_score: 1
-  rank_current: 130
-  rank_delta: 1
+  stars: 4482
+  last_commit: 2026-11-16T08:56:14Z
+  stars_delta_7d: 12
+  stars_growth_pct: 0.3
+  trending_score: 12.03
+  rank_current: 114
+  rank_delta: 16
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 4456
     - 4463
     - 4469
     - 4470
+    - 4482
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: gptme/gptme
   path: README.md
   branch: master
-  fetched_at: 2026-11-09T09:28:31.408Z
+  fetched_at: 2026-11-16T09:16:59.433Z
   truncated: false
 type: agent_tool
 tool:
@@ -484,7 +484,7 @@ This stack is simple and composable: selectors improve work choice, lessons stee
 
 ### Prerequisites
 
-- Python 3.11 or newer
+- Python 3.11.5 or newer
 - Credentials for at least one LLM provider:
   - Fastest no-credit-card path: start `gptme`, choose **OpenRouter** in the
     startup provider setup (browser OAuth), then run
@@ -506,7 +506,7 @@ This stack is simple and composable: selectors improve work choice, lessons stee
 For full setup instructions, see the [Getting Started guide][docs-getting-started].
 
 ```sh
-# With pipx (recommended, requires Python 3.11+)
+# With pipx (recommended, requires Python 3.11.5+)
 pipx install gptme
 
 # With uv
@@ -764,7 +764,7 @@ Grok Bot, Devin). See [Alternatives][docs-alternatives] for the maintained table
 curl -sSf https://gptme.ai/install.sh | sh   # auto-detects uv or pipx
 ```
 
-Or install directly with `pipx install gptme` / `uv tool install gptme` (Python 3.11+).
+Or install directly with `pipx install gptme` / `uv tool install gptme` (Python 3.11.5+).
 See [Installation](#installation) above, the [Getting Started guide][docs-getting-started],
 and [System dependencies][docs-system-dependencies] for the extras individual tools need.
 

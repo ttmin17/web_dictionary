@@ -13,29 +13,29 @@ tags:
   - ai-agents
   - autogen-alternative
 status: active
-quality_percentile: 49
+quality_percentile: 52
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: jnMetaCode/agency-orchestrator
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 2458
-  last_commit: 2026-11-03T09:04:08Z
-  stars_delta_7d: 11
-  stars_growth_pct: 0.4
-  trending_score: 11.05
-  rank_current: 65
-  rank_delta: -11
+  stars: 2470
+  last_commit: 2026-11-11T08:54:30Z
+  stars_delta_7d: 12
+  stars_growth_pct: 0.5
+  trending_score: 12.06
+  rank_current: 88
+  rank_delta: -23
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2382
     - 2405
     - 2447
     - 2458
+    - 2470
 language: zh
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: jnMetaCode/agency-orchestrator
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.654Z
+  fetched_at: 2026-11-16T09:15:16.630Z
   truncated: false
 type: mcp_server
 launch:

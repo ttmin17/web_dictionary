@@ -15,29 +15,29 @@ tags:
   - alert-triage
   - blue-team
 status: active
-quality_percentile: 86
+quality_percentile: 88
 selection_reason: quality_percentile
 first_seen: 2026-05-02T03:30:19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: beenuar/AiSOC
   official_vendor: false
   license: MIT
 signals:
-  stars: 6844
-  last_commit: 2026-11-09T08:30:22Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
-  rank_current: 135
-  rank_delta: -128
+  stars: 7901
+  last_commit: 2026-11-16T08:38:37Z
+  stars_delta_7d: 1057
+  stars_growth_pct: 15.4
+  trending_score: 1220.25
+  rank_current: 12
+  rank_delta: 123
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2418
     - 3838
     - 7350
     - 6844
+    - 7901
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: beenuar/AiSOC
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:27:04.003Z
+  fetched_at: 2026-11-16T09:15:20.965Z
   truncated: false
 type: agent_tool
 tool:
@@ -65,7 +65,7 @@ tool:
 
 **An open-source, self-hostable AI Security Operations Center.** It ingests your security telemetry, detects and correlates threats, investigates them with AI agents whose reasoning is fully auditable, and proposes responses a human approves.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-22.2.0-f59e0b?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/CHANGELOG.md) [![CI](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-23.4.0-f59e0b?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/CHANGELOG.md) [![CI](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/ci.yml)
 [![CodeQL](https://img.shields.io/github/actions/workflow/status/beenuar/AiSOC/codeql.yml?branch=main&label=CodeQL&style=flat-square)](https://github.com/beenuar/AiSOC/actions/workflows/codeql.yml) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/beenuar/AiSOC/badge)](https://securityscorecards.dev/viewer/?uri=github.com/beenuar/AiSOC) [![Technical Guide](https://img.shields.io/badge/Technical%20Guide-28%20page%20PDF-dc2626?style=flat-square)](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf)
 
 **[Technical Guide (PDF)](https://raw.githubusercontent.com/beenuar/AiSOC/main/apps/web/public/papers/aisoc-technical-guide.pdf)** · [Docs](https://beenuar.github.io/AiSOC/) · [Architecture](https://raw.githubusercontent.com/beenuar/AiSOC/main/docs/architecture/README.md) · [What actually works](https://github.com/beenuar/AiSOC/blob/main/docs/audit/REPOSITORY_REALITY.md) · [Discussions](https://github.com/beenuar/AiSOC/discussions)
@@ -77,7 +77,7 @@ tool:
 ## What AiSOC does
 
 Telemetry arrives from your security tools. AiSOC normalizes it, runs the 2966 executable rules of
-its 7407-rule library, groups what fires into incidents, investigates each one with an AI agent whose
+its 7408-rule library, groups what fires into incidents, investigates each one with an AI agent whose
 every prompt and tool call is recorded, and proposes an action. New threat intelligence re-sweeps the
 history you already collected, and a human approves before anything reaches a vendor.
 
@@ -149,7 +149,7 @@ curl -X POST http://localhost:8081/v1/ingest/batch \
        "title":"Encoded PowerShell from Office","host":"WIN-FIN-01"}]}'
 ```
 
-Or pull, by configuring one of **91 click-and-connect data connectors** in **Settings → Connectors**
+Or pull, by configuring one of **97 click-and-connect data connectors** in **Settings → Connectors**
 — Splunk, Sentinel, Elastic, CrowdStrike, Okta, AWS and Kubernetes audit among those with
 vendor-specific normalization and setup docs
 ([coverage](https://beenuar.github.io/AiSOC/docs/connectors/api-coverage)). Without a vendor profile
@@ -169,7 +169,7 @@ rule is harder to find than a missing one: of the 2,005 Splunk rules bundled her
 ## How it works
 
 Ingest normalizes to a common shape and stamps an **activity projection** on every event — actor, action, resource, location, outcome, with `actor.kind` read from each vendor's own documented field rather than inferred — then Kafka carries it.
-Then fusion runs 2966 executable detection rules, of 7407 on disk, plus 76 sliding-window rules (73 count across events; 3 match an ordered sequence), applies **your tenant's own tuning** on top — the disables, floors and suppressions the console writes, so a rule you turned off actually stops firing — and decides what becomes an alert.
+Then fusion runs 2966 executable detection rules, of 7408 on disk, plus 76 sliding-window rules (73 count across events; 3 match an ordered sequence), applies **your tenant's own tuning** on top — the disables, floors and suppressions the console writes, so a rule you turned off actually stops firing — and decides what becomes an alert.
 Correlation groups related alerts, an agent investigates and writes its reasoning to the Investigation Ledger, and a playbook may start from the result. Separately, new threat intelligence sweeps the lake for sightings you already collected, and a hypothesis becomes a hunt without anyone writing a query — the model fills a closed schema and every value is bound as a parameter, so it cannot express a query at all.
 
 **A playbook triggered by an alert previews before it acts.** Three switches must agree — the
@@ -250,7 +250,7 @@ Agents triage alerts and investigate incidents. What they can and cannot do:
 | Capability | Status | Tested | Production ready |
 |---|---|---|---|
 | Ingest → detect → correlate → alert | Stable | E2E + unit | Yes |
-| Detection engine (2966 executable rules) of 7407 | Stable | Replay proof | Yes |
+| Detection engine (2966 executable rules) of 7408 | Stable | Replay proof | Yes |
 | Alert correlation into incidents | Stable | Unit | Yes |
 | REST API + web console | Stable | Unit + integration | Yes |
 | AI triage + Investigation Ledger | Stable | Live Postgres ledger + a PR-gated local-model agent run. No hosted provider has been exercised | Yes, copilot mode |

@@ -16,26 +16,26 @@ status: active
 quality_percentile: 93
 selection_reason: quality_percentile
 first_seen: 2026-10-14
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: awslabs/mcp
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 9893
-  last_commit: 2026-11-08T16:24:41Z
-  stars_delta_7d: 14
-  stars_growth_pct: 0.1
-  trending_score: 14.02
-  rank_current: 58
-  rank_delta: -9
+  stars: 9928
+  last_commit: 2026-11-15T05:48:52Z
+  stars_delta_7d: 35
+  stars_growth_pct: 0.4
+  trending_score: 35.12
+  rank_current: 49
+  rank_delta: 9
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 9793
     - 9832
     - 9879
     - 9893
+    - 9928
 language: en
 needs_keys: false
 prerequisites:
@@ -44,7 +44,7 @@ readme_source:
   repo: awslabs/mcp
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:51.094Z
+  fetched_at: 2026-11-16T09:15:06.169Z
   truncated: true
 type: mcp_server
 launch:

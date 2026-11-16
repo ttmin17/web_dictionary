@@ -18,26 +18,26 @@ status: active
 quality_percentile: 98
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: OpenByteInc/QuantDinger
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13645
-  last_commit: 2026-11-08T08:17:07Z
-  stars_delta_7d: 104
-  stars_growth_pct: 0.8
-  trending_score: 104.8
-  rank_current: 36
-  rank_delta: -7
+  stars: 13799
+  last_commit: 2026-11-16T08:40:35Z
+  stars_delta_7d: 154
+  stars_growth_pct: 1.1
+  trending_score: 155.74
+  rank_current: 42
+  rank_delta: -6
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 12908
     - 13130
     - 13541
     - 13645
+    - 13799
 language: en
 needs_keys: false
 prerequisites:
@@ -46,7 +46,7 @@ readme_source:
   repo: OpenByteInc/QuantDinger
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:47.575Z
+  fetched_at: 2026-11-16T09:15:01.993Z
   truncated: false
 type: agent_tool
 tool:

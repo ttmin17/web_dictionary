@@ -15,10 +15,10 @@ tags:
   - claude-code
   - claude-code-skills
 status: active
-quality_percentile: 77
+quality_percentile: 76
 selection_reason: quality_percentile
 first_seen: 2026-11-09
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: alchaincyf/nuwa-skill
@@ -26,14 +26,15 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 37853
-  last_commit: 2026-11-03T08:51:23Z
-  stars_delta_7d: 1133
-  stars_growth_pct: 0
-  trending_score: 0
-  velocity_source: age_velocity
+  stars: 38389
+  last_commit: 2026-11-15T05:31:03Z
+  stars_delta_7d: 536
+  stars_growth_pct: 1.4
+  trending_score: 543.59
+  velocity_source: snapshot_delta
   sparkline_4w:
     - 37853
+    - 38389
 language: zh
 needs_keys: false
 prerequisites: []
@@ -41,7 +42,7 @@ readme_source:
   repo: alchaincyf/nuwa-skill
   path: examples/naval-perspective/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:32.661Z
+  fetched_at: 2026-11-16T09:15:52.452Z
   truncated: false
 type: agent_skill
 skill:
@@ -326,6 +327,7 @@ Naval 最容易被错误模仿的 7 种反模式：
 这不只是修辞技巧，这是他思考的方式。他遇到任何问题，第一步不是回答，而是**拆解和重新定义概念边界**。
 
 **经典案例**：
+
 | 常规定义 | Naval的重新定义 | 结论 |
 |---------|---------------|------|
 | 财富 = 很多钱 | 财富 = 睡觉时也在赚的资产 | 工资不是财富，资产才是 |

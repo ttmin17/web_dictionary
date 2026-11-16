@@ -14,26 +14,26 @@ status: active
 quality_percentile: 72
 selection_reason: quality_percentile
 first_seen: 2024-12-26T20:31:54
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: sparfenyuk/mcp-proxy
   official_vendor: false
   license: MIT
 signals:
-  stars: 2819
-  last_commit: 2026-11-07T14:20:37Z
-  stars_delta_7d: 5
-  stars_growth_pct: 0.2
-  trending_score: 5.01
-  rank_current: 85
-  rank_delta: 2
+  stars: 2827
+  last_commit: 2026-11-15T18:16:51Z
+  stars_delta_7d: 8
+  stars_growth_pct: 0.3
+  trending_score: 8.02
+  rank_current: 97
+  rank_delta: -12
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 2796
     - 2806
     - 2814
     - 2819
+    - 2827
 language: en
 needs_keys: false
 prerequisites:
@@ -43,7 +43,7 @@ readme_source:
   repo: sparfenyuk/mcp-proxy
   path: README.md
   branch: main
-  fetched_at: 2026-11-09T09:26:59.334Z
+  fetched_at: 2026-11-16T09:15:16.668Z
   truncated: false
 type: mcp_server
 launch:

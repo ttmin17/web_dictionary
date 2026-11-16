@@ -13,10 +13,10 @@ tags:
   - alertmanager
   - clickhouse
 status: active
-quality_percentile: 83
+quality_percentile: 82
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: ccfos/nightingale
@@ -24,17 +24,17 @@ source:
   official_vendor: false
   license: Apache-2.0
 signals:
-  stars: 13468
-  last_commit: 2026-11-06T14:17:27Z
-  stars_delta_7d: 17
-  stars_growth_pct: 0.1
-  trending_score: 17.02
+  stars: 13492
+  last_commit: 2026-11-16T09:07:07Z
+  stars_delta_7d: 24
+  stars_growth_pct: 0.2
+  trending_score: 24.04
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 13365
     - 13390
     - 13451
     - 13468
+    - 13492
 language: en
 needs_keys: false
 prerequisites: []
@@ -42,7 +42,7 @@ readme_source:
   repo: ccfos/nightingale
   path: aiagent/skill/embedded/builtin/promql-generator/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:26:50.841Z
+  fetched_at: 2026-11-16T09:15:06.003Z
   truncated: false
 type: agent_skill
 skill:

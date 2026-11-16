@@ -18,7 +18,7 @@ status: active
 quality_percentile: 62
 selection_reason: quality_percentile
 first_seen: 2026-10-26
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: melonjs/melonJS
@@ -26,16 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 6442
-  last_commit: 2026-11-09T09:17:57Z
-  stars_delta_7d: 0
-  stars_growth_pct: 0
-  trending_score: 0
+  stars: 6506
+  last_commit: 2026-11-16T09:03:16Z
+  stars_delta_7d: 64
+  stars_growth_pct: 1
+  trending_score: 64.64
   velocity_source: snapshot_delta
   sparkline_4w:
     - 6419
     - 6442
     - 6442
+    - 6506
 language: en
 needs_keys: false
 prerequisites: []
@@ -43,7 +44,7 @@ readme_source:
   repo: melonjs/melonJS
   path: packages/melonjs/skills/melonjs-sprites-and-animation/SKILL.md
   branch: master
-  fetched_at: 2026-11-09T09:28:07.057Z
+  fetched_at: 2026-11-16T09:16:39.044Z
   truncated: false
 type: agent_skill
 skill:
@@ -54,9 +55,9 @@ skill:
     TextureAtlas for TexturePacker/ShoeBox/Aseprite, tint, flip,
     NineSliceSprite, and the centred anchorPoint that offsets naive positioning.
     Triggers on: Sprite, new Sprite, addAnimation, setCurrentAnimation,
-    isCurrentAnimation, TextureAtlas, TexturePacker, Aseprite, ShoeBox, atlas,
-    region, framewidth, frameheight, tint, flipX, flipY, NineSliceSprite,
-    animation."
+    isCurrentAnimation, onFrame, onComplete, play, pause, flicker, anchorPoint,
+    TextureAtlas, TexturePacker, Aseprite, ShoeBox, atlas, region, framewidth,
+    frameheight, tint, flipX, flipY, NineSliceSprite, animation."
   folder_path: packages/melonjs/skills/melonjs-sprites-and-animation
   extra_files: []
   pack_total_skills: 25
@@ -83,6 +84,10 @@ sprites appear to disagree.
 const s = new Sprite(100, 100, { image: "hero", framewidth: 64, frameheight: 64 });
 
 s.anchorPoint.set(0, 0);   // switch to top-left positioning if you prefer
+
+// or in the settings, by name: "top-left", "bottom" (the feet), "center",
+// "top", "left", "right", "top-right", "bottom-left", "bottom-right"
+const hero = new Sprite(x, y, { image: "hero", anchorPoint: "bottom" });
 ```
 
 Writing top-left maths against the centred default puts everything half a sprite
@@ -141,7 +146,8 @@ to that animation when this one ends. An **options object** takes
 `{ loop, next, speed, onComplete, onFrame }`, and only an explicit `loop: false`
 stops the looping. A **bare function** is the legacy form: it fires at *every* cycle end,
 and only holds the last frame if it returns `false`. Omit the argument entirely
-and the animation loops forever.
+and the animation loops forever. The options type also has a `crossfade`, which
+only a 3D `GLTFModel` reads (see `melonjs-3d-assets`); a sprite ignores it.
 
 `onFrame(frame)` is called with frame 0 when the animation starts, then with each
 frame playback reaches, so a footstep or a hit lands on its frame without polling
@@ -156,7 +162,16 @@ attack) needs no manual switch back to idle.
 
 Re-selecting the animation that is already current is a no-op, so calling
 `setCurrentAnimation` every frame is safe, and an `isCurrentAnimation` check
-around it adds nothing. An unknown id throws.
+around it adds nothing. **The exception is a `loop: false` run that has
+finished**: selecting it again plays it again, so a death animation selected
+every frame replays forever. Select a play-once animation once, on the event
+that starts it. An unknown id throws.
+
+A frame can carry its own delay, as `{ name, delay }` in place of the index or
+region name: `[{ name: 3, delay: 200 }, { name: 4, delay: 100 }]`.
+`play(name?, options?)` switches and plays (or, with no name, resumes),
+`pause()` freezes the current frame and `stop()` rewinds to the first one and
+pauses there; the options are `setCurrentAnimation`'s.
 
 `addAnimation` with an id that exists replaces it, which is how you change an
 animation's frames or speed (`hero.addAnimation("walk", [4, 5, 6, 7], 200)`).
@@ -167,9 +182,10 @@ finished `loop: false` run holds the new last frame, and the
 a shorter strip threw on the next `update()` and a longer one never reached its
 new frames.
 
-A frame the texture does not have (a number past the end of the sheet, a name
-the atlas does not hold) is left out with a console warning naming it, and
-the frames that exist play in order; `addAnimation` returns how many it kept.
+Since 20.14, a frame the texture does not have (a number past the end of the
+sheet, a name the atlas does not hold) is left out with a console warning
+naming it, and the frames that exist play in order; `addAnimation` returns how
+many it kept.
 
 ## Texture atlases
 
@@ -264,6 +280,8 @@ Two consequences:
 | event handlers leak on pooled objects | bound in the constructor rather than `onActivateEvent` |
 | animation never advances | no `framewidth`/`frameheight`, so the sheet is one frame |
 | animation plays once and stops | `{ loop: false }`, or a callback that returned `false` |
+| a `loop: false` animation keeps replaying | `setCurrentAnimation` called every frame: a finished play-once run is restarted by selecting it again |
+| a one-frame animation never calls its `onComplete` | a looping one-frame animation does not step; play it with `loop: false` or `next` (before 20.12 even those never completed) |
 | `TypeError` reading `offset` or `delay` in `update()` after re-adding the playing animation with fewer frames, or a longer one never shows its new frames | before 20.13 redefining the current animation kept its old frame count; upgrade |
 | a console warning `addAnimation("walk"): no frame … in the texture`, or a `TypeError` reading `delay` / `offset` on an older melonJS | a frame number or name the sheet or atlas does not have (often an atlas re-exported without one of its images): fix the frame list or re-export the atlas |
 | `this` is wrong in a `flicker(ms, callback)` callback, or a flicker started from it stops at once | before 20.13.0 the callback ran on an internal object and the flicker was stopped after it; now `this` is the sprite and the flicker has already ended |

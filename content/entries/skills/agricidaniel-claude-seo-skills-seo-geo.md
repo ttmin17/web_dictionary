@@ -15,10 +15,10 @@ tags:
   - claude-code-skill
   - marketing-automation
 status: active
-quality_percentile: 77
+quality_percentile: 80
 selection_reason: quality_percentile
 first_seen: 2026-10-19
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: AgriciDaniel/claude-seo
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 27547
-  last_commit: 2026-11-01T06:07:26Z
-  stars_delta_7d: 687
-  stars_growth_pct: 2.6
-  trending_score: 704.57
+  stars: 29837
+  last_commit: 2026-11-16T06:16:01Z
+  stars_delta_7d: 2290
+  stars_growth_pct: 8.3
+  trending_score: 2480.37
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 19212
     - 21373
     - 26860
     - 27547
+    - 29837
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,7 +44,7 @@ readme_source:
   repo: AgriciDaniel/claude-seo
   path: skills/seo-geo/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:38.021Z
+  fetched_at: 2026-11-16T09:16:01.341Z
   truncated: false
 type: agent_skill
 skill:
@@ -103,8 +103,8 @@ with their source and date, or leave them out.
 
 ## Critical Insight: Brand Mentions > Backlinks
 
-**Brand mentions correlate 3x more strongly with AI visibility than backlinks.**
-(Ahrefs study of 75,000 brands, published 2025-12-12; it follows Ahrefs' May 2025 AI Overviews study)
+**In Ahrefs' study of 75,000 brands, brand mentions correlated about 3x more strongly with AI visibility than backlinks did.**
+(Published 2025-12-12; it follows Ahrefs' May 2025 AI Overviews study. This is a correlation across brands, not evidence that adding mentions causes citations.)
 
 | Signal | Correlation with AI Citations |
 |--------|------------------------------|
@@ -119,6 +119,8 @@ with their source and date, or leave them out.
 ---
 
 ## GEO Analysis Criteria (Updated)
+
+The category weights below (25/20/15/20/20) are this skill's own heuristic for prioritizing a checklist, not a measured model. Never present the resulting score as a predicted citation rate.
 
 ### 1. Citability Score (25%)
 
@@ -145,7 +147,7 @@ your most citable, self-contained answer rather than burying it below the fold.
 
 ### 2. Structural Readability (20%)
 
-**92% of AI Overview citations come from top-10 ranking pages**, but 47% come from pages ranking below position 5, demonstrating different selection logic.
+Third-party studies report that **most AI Overview citations come from top-10 ranking pages** (figures around 92%), with a large share from below position 5. The source is not recorded here and the figures were not re-verified; quote them only with a source.
 
 **Strong signals:**
 - Clean H1->H2->H3 heading hierarchy
@@ -177,7 +179,7 @@ Multi-modal content can support selection in AI answers (third-party claims only
 **Strong signals:**
 - Author byline with credentials
 - Publication date and last-updated date
-- **Recency**, content under 3 months old is ~3x more likely to be cited in AI answers; pages left stale 6+ months lose citation eligibility (SE Ranking, 1.3M-citation study). A scheduled refresh program is one of the highest-leverage GEO plays.
+- **Recency**: in SE Ranking's 1.3M-citation study, content updated within 3 months was cited about 3x more often. That is a correlation; no AI search system documents a staleness cutoff. Refresh pages whose facts, prices or screenshots have changed rather than on a fixed clock.
 - Citations to primary sources (studies, official docs, data)
 - Organization credentials and affiliations
 - Expert quotes with attribution
@@ -385,14 +387,15 @@ Google added many AI citation/source surfaces across AI Overviews **and** AI Mod
 
 For AI Overviews or AI Mode visibility changes, check the dated product and
 core-update entries first:
-`"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run seo_updates.py --kind product --kind core --json`.
-Treat a stale ledger (`freshness.stale`) as incomplete.
+`"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run seo_updates.py --kind product --kind core --limit 0 --json`.
+`--limit 0` lists every match (the default stops at the 10 newest and sets
+`truncated`). Treat a stale ledger (`freshness.stale`) as incomplete.
 
 ## Output
 
 Generate `GEO-ANALYSIS.md` with:
 
-1. **GEO Readiness Score: XX/100**
+1. **GEO Readiness Score: XX/100** (a heuristic checklist score; see the note under GEO Analysis Criteria)
 2. **Platform breakdown** (Google AIO, ChatGPT, Perplexity): give a score only for platforms measured with a tool (for example DataForSEO or SE Ranking); otherwise report qualitative readiness and say it was not measured
 3. **AI Crawler Access Status** -- report each crawler separately with the
    capability it governs. Training access (`GPTBot`, `Google-Extended`, `CCBot`,

@@ -18,7 +18,7 @@ status: active
 quality_percentile: 71
 selection_reason: quality_percentile
 first_seen: 2026-03-15T02:30:51
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: Egonex-AI/Understand-Anything
@@ -26,19 +26,19 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 91658
-  last_commit: 2026-11-07T05:37:08Z
-  stars_delta_7d: 796
-  stars_growth_pct: 0.9
-  trending_score: 802.97
-  rank_current: 22
+  stars: 92775
+  last_commit: 2026-11-15T12:10:30Z
+  stars_delta_7d: 1117
+  stars_growth_pct: 1.2
+  trending_score: 1130.61
+  rank_current: 26
   rank_delta: -4
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 86920
     - 88302
     - 90862
     - 91658
+    - 92775
 language: en
 needs_keys: false
 prerequisites: []
@@ -46,7 +46,7 @@ readme_source:
   repo: Egonex-AI/Understand-Anything
   path: understand-anything-plugin/skills/understand-chat/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:23.654Z
+  fetched_at: 2026-11-16T09:15:41.189Z
   truncated: false
 type: agent_skill
 skill:

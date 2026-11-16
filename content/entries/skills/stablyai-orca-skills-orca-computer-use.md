@@ -1,9 +1,9 @@
 ---
 slug: stablyai-orca-skills-orca-computer-use
 name: computer-use
-tagline: "Drives the GUI of a visible local app window through `orca computer`:
-  accessibility tree, clicks, typing, menus, dialogs, and screenshots in native
-  ap"
+tagline: "Drives the GUI of a local app window in the background through `orca
+  computer`, without bringing it forward or taking the user's keyboard and
+  pointer "
 summary: "- If the ORCACLICOMMAND environment variable is set, use its value.
   Orca exports this for managed WSL sessions. - Otherwise, in a dev checkout
   whose session exposes ORCADEVREPOROOT, use orca-dev. - Otherwise, on Linux..."
@@ -15,10 +15,10 @@ tags:
   - automation
   - bot
 status: active
-quality_percentile: 65
+quality_percentile: 64
 selection_reason: quality_percentile
 first_seen: 2026-11-05
-last_updated: 2026-11-09T09:28:46.976Z
+last_updated: 2026-11-16T09:17:13.266Z
 source:
   kind: github_repo
   repo: stablyai/orca
@@ -26,17 +26,17 @@ source:
   official_vendor: false
   license: MIT
 signals:
-  stars: 119733
-  last_commit: 2026-11-09T09:22:54Z
-  stars_delta_7d: 3570
-  stars_growth_pct: 3.1
-  trending_score: 3679.72
+  stars: 126156
+  last_commit: 2026-11-16T09:11:48Z
+  stars_delta_7d: 6423
+  stars_growth_pct: 5.4
+  trending_score: 6767.56
   velocity_source: snapshot_delta
   sparkline_4w:
-    - 97177
     - 106220
     - 116163
     - 119733
+    - 126156
 language: en
 needs_keys: false
 prerequisites: []
@@ -44,18 +44,19 @@ readme_source:
   repo: stablyai/orca
   path: skills/orca-computer-use/SKILL.md
   branch: main
-  fetched_at: 2026-11-09T09:27:19.238Z
+  fetched_at: 2026-11-16T09:15:38.047Z
   truncated: false
 type: agent_skill
 skill:
   skill_name: computer-use
-  description: "Drives the GUI of a visible local app window through `orca
-    computer`: accessibility tree, clicks, typing, menus, dialogs, and
-    screenshots in native apps and external browser windows (Chrome, Edge,
-    Safari) or webviews. Prefer a programmatic path (shell, filesystem, git,
-    HTTP, existing CLIs) whenever it can complete the task. Use only when a
-    visible window needs GUI control those cannot reach. Do not use for Orca's
-    embedded browser (`orca-cli`)."
+  description: "Drives the GUI of a local app window in the background through
+    `orca computer`, without bringing it forward or taking the user's keyboard
+    and pointer where the platform allows: accessibility tree, clicks, typing,
+    menus, dialogs, and screenshots in native apps and external browser windows
+    (Chrome, Edge, Safari) or webviews. Prefer a programmatic path (shell,
+    filesystem, git, HTTP, existing CLIs) whenever it can complete the task. Use
+    only when an app window needs GUI control those cannot reach. Do not use for
+    Orca's embedded browser (`orca-cli`)."
   folder_path: skills/orca-computer-use
   extra_files: []
   pack_total_skills: 12
@@ -96,8 +97,14 @@ ORCA skills get computer-use
 ```
 
 Prefer `--json`. Use the selected executable's `--help` for commands or flags the guide does
-not cover. If a command reports that Orca is not running, start it with `ORCA open --json`
-and retry. If it fails with `runtime_access_denied`, your sandbox blocked the connection:
-re-run it with escalated permissions, and do not run `ORCA open` or restart Orca. If
-`skills get` is unknown, explain that updating Orca restores the guide; use `--help` for
-read-only discovery and do not guess unsupported commands.
+not cover. A `runtime_unavailable` error is usually transient while Orca is busy or
+restarting: wait a few seconds and retry the command. Before retrying a command that changes
+something, check whether it already took effect, and reuse any request ID the error names.
+`ORCA open` can bring Orca's window to the front over the user's work, so never run it to
+retry a failed command. Run it only when the user asks, or when Orca is really not running:
+`ORCA status --json` reports `result.app.running: false`, or every command, `ORCA status`
+included, still cannot connect after about 30 seconds of retries. If a command fails with
+`runtime_access_denied`, your sandbox blocked the connection: re-run it with escalated
+permissions, and do not run `ORCA open` or restart Orca. If `skills get` is unknown, explain
+that updating Orca restores the guide; use `--help` for read-only discovery and do not guess
+unsupported commands.
